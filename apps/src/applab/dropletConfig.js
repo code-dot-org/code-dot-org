@@ -243,6 +243,7 @@ export var blocks = [
   },
   {...audioApiDropletConfig.playSound, category: 'UI controls'},
   {...audioApiDropletConfig.stopSound, category: 'UI controls'},
+  {...audioApiDropletConfig.playSpeech, category: 'UI controls'},
   {
     func: 'showElement',
     parent: api,
@@ -361,7 +362,8 @@ export var blocks = [
     category: 'Canvas',
     paramButtons: {minArgs: 1, maxArgs: 3},
     paletteParams: ['id', 'width', 'height'],
-    params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT]
+    params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT],
+    docFunc: 'createCanvasNoAssign'
   },
   {
     func: 'setActiveCanvas',
@@ -1131,8 +1133,14 @@ export var blocks = [
   }
 ];
 
-if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
-  blocks.push({...audioApiDropletConfig.playSpeech, category: 'UI controls'});
+if (experiments.isEnabled(experiments.APPLAB_ML)) {
+  blocks.push({
+    func: 'getPrediction',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['model_name', 'model_id', 'testValues', 'callback'],
+    params: ['"myModel"', '"modelId"', 'testValues', 'function (value) {\n \n}']
+  });
 }
 
 export const categories = {

@@ -10,4 +10,4 @@
 require('../frame')();
 require('../../../build/package/js/en_us/applab_locale.js');
 
-module.exports = window.blockly.applab_locale;
+module.exports = window.locales.applab_locale;

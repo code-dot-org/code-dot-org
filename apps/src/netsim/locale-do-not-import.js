@@ -9,4 +9,8 @@
 // locale for netsim
 
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
-module.exports = safeLoadLocale('netsim_locale');
+import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+
+let locale = safeLoadLocale('netsim_locale');
+locale = localeWithI18nStringTracker(locale, 'netsim_locale');
+module.exports = locale;

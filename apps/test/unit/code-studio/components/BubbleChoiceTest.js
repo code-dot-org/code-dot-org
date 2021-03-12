@@ -7,7 +7,7 @@ import * as utils from '@cdo/apps/utils';
 
 const fakeSublevels = [
   {
-    id: 1,
+    id: '1',
     display_name: 'Choice 1',
     thumbnail_url: 'some-fake.url/kittens.png',
     url: '/s/script/stage/1/puzzle/2/sublevel/1',
@@ -17,7 +17,7 @@ const fakeSublevels = [
     status: 'perfect'
   },
   {
-    id: 2,
+    id: '2',
     display_name: 'Choice 2',
     thumbnail_url: null,
     url: '/s/script/stage/1/puzzle/2/sublevel/2',
@@ -30,11 +30,12 @@ const fakeSublevels = [
 
 const DEFAULT_PROPS = {
   level: {
+    id: '123',
     display_name: 'Bubble Choice',
     description: 'Choose one or more levels!',
     sublevels: fakeSublevels,
     previous_level_url: '/s/script/stage/1/puzzle/1',
-    next_level_url: '/s/script/stage/1/puzzle/3',
+    redirect_url: '/s/script/stage/1/puzzle/3',
     script_url: '/s/script',
     name: 'Bubble Choice',
     type: 'BubbleChoice',
@@ -48,7 +49,7 @@ describe('BubbleChoice', () => {
     assert.equal(2, wrapper.find('SublevelCard').length);
   });
 
-  describe('back and continue buttons', () => {
+  describe('back and finish buttons', () => {
     beforeEach(() => {
       sinon.stub(utils, 'navigateToHref');
     });
@@ -69,19 +70,19 @@ describe('BubbleChoice', () => {
         DEFAULT_PROPS.level.previous_level_url + window.location.search
       );
 
-      const continueButton = wrapper.find('button').at(1);
-      assert.equal('Continue', continueButton.text());
-      continueButton.simulate('click');
+      const finishButton = wrapper.find('button').at(1);
+      assert.equal('Finish', finishButton.text());
+      finishButton.simulate('click');
       expect(utils.navigateToHref).to.have.been.calledWith(
-        DEFAULT_PROPS.level.next_level_url + window.location.search
+        DEFAULT_PROPS.level.redirect_url + window.location.search
       );
     });
 
-    it('redirect to script page if no previous/next levels', () => {
+    it('redirect to script page if no previous_level/redirect urls', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         previous_level_url: null,
-        next_level_url: null
+        redirect_url: null
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
@@ -116,18 +117,18 @@ describe('BubbleChoice', () => {
       assert.notEqual('Back', buttons.at(1).text());
     });
 
-    it('hides continue button if no next level or script url', () => {
+    it('hides finish button if no redirect or script url', () => {
       const level = {
         ...DEFAULT_PROPS.level,
-        next_level_url: null,
+        redirect_url: null,
         script_url: null
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
       assert.equal(2, buttons.length);
-      assert(!['Finish', 'Continue'].includes(buttons.at(0).text()));
-      assert(!['Finish', 'Continue'].includes(buttons.at(1).text()));
+      assert.notEqual('Finish', buttons.at(0).text());
+      assert.notEqual('Finish', buttons.at(1).text());
     });
   });
 });

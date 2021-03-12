@@ -1,0 +1,178 @@
+{
+  "ka-GE": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "მოქმედებები",
+              "Events": "მოვლენები",
+              "Loops": "ციკლები",
+              "Math": "მათემატიკა",
+              "Logic": "ლოგიკა",
+              "Games/Score": "თამაშები/ქულა"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Events": "მოვლენები",
+              "Numbers": "რიცხვები",
+              "Logic": "ლოგიკა"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "ვარსკვლავის დახატვა",
+                "parameters": {
+                  "points": "ქულები",
+                  "length": "სიგრძე"
+                }
+              },
+              "draw a circle": {
+                "name": "წრის დახატვა"
+              },
+              "draw a pinwheel": {
+                "name": "ბზრიალას დახატვა",
+                "parameters": {
+                  "length": "სიგრძე",
+                  "repeat": "გაიმეორეთ"
+                }
+              },
+              "draw a triangle": {
+                "name": "სამკუთხედის დახატვა",
+                "parameters": {
+                  "length": "სიგრძე"
+                }
+              },
+              "draw a shape": {
+                "name": "ფორმის დახატვა",
+                "parameters": {
+                  "length": "სიგრძე"
+                }
+              },
+              "draw a house": {
+                "name": "სახლის დახატვა",
+                "parameters": {
+                  "length": "სიგრძე"
+                }
+              },
+              "draw a square": {
+                "name": "კვადრატის დახატვა",
+                "parameters": {
+                  "length": "სიგრძე"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Sprites": "სპრაიტები",
+              "Actions": "მოქმედებები",
+              "Events": "მოვლენები",
+              "Behaviors": "ქცევა"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Events": "მოვლენები",
+              "Numbers": "რიცხვები",
+              "Logic": "ლოგიკა"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "მოქმედებები",
+              "Brushes": "ფუნჯები",
+              "Loops": "ციკლები",
+              "Math": "მათემატიკა",
+              "Logic": "ლოგიკა",
+              "Functions": "ფუნქციები",
+              "Variables": "ცვლადები"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Sprites": "სპრაიტები",
+              "Locations": "მდებარეობები",
+              "Actions": "მოქმედებები",
+              "Events": "მოვლენები",
+              "Behaviors": "ქცევა",
+              "Variables": "ცვლადები",
+              "Math": "მათემატიკა",
+              "Logic": "ლოგიკა",
+              "Functions": "ფუნქციები",
+              "Text": "ტექსტი",
+              "Comments": "კომენტარები"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Sprites": "სპრაიტები",
+              "Locations": "მდებარეობები",
+              "Actions": "მოქმედებები",
+              "Events": "მოვლენები",
+              "Behaviors": "ქცევა",
+              "Variables": "ცვლადები",
+              "Math": "მათემატიკა",
+              "Logic": "ლოგიკა",
+              "Functions": "ფუნქციები",
+              "Text": "ტექსტი",
+              "Comments": "კომენტარები"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "მოქმედებები",
+              "Brushes": "ფუნჯები",
+              "Loops": "ციკლები",
+              "Math": "მათემატიკა",
+              "Logic": "ლოგიკა",
+              "Functions": "ფუნქციები",
+              "Variables": "ცვლადები"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Sprites": "სპრაიტები",
+              "Actions": "მოქმედებები",
+              "Events": "მოვლენები",
+              "Logic": "ლოგიკა",
+              "Math": "მათემატიკა"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "სამყარო",
+              "Sprites": "სპრაიტები",
+              "Actions": "მოქმედებები",
+              "Behaviors": "ქცევა",
+              "Events": "მოვლენები",
+              "Locations": "მდებარეობები",
+              "Logic": "ლოგიკა",
+              "Loops": "ციკლები",
+              "Math": "მათემატიკა",
+              "Variables": "ცვლადები",
+              "Functions": "ფუნქციები",
+              "Comments": "კომენტარები"
+            }
+          }
+        }
+      }
+    }
+  }
+}

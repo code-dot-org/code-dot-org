@@ -1,0 +1,22 @@
+---
+it:
+  data:
+    shared_functions:
+      driving with arrow keys: guida con tasti freccia
+      fluttering: ondeggiamento
+      growing: crescita
+      jittering: pulsazione
+      moving east: spostamento verso est
+      moving east and looping: spostamento verso est e ciclo
+      moving north: spostamento verso nord
+      moving south: spostamento verso sud
+      moving west: spostamento verso ovest
+      moving west and looping: spostamento verso ovest e ciclo
+      moving with arrow keys: movimento con tasti freccia
+      patrolling: pattugliamento
+      shrinking: contrazione
+      spinning left: rotazione anti-oraria
+      spinning right: rotazione oraria
+      swimming left and right: nuotata sinistra-destra
+      wandering: movimento casuale
+      wobbling: barcollamento

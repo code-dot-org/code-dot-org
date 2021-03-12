@@ -159,12 +159,12 @@ describe('TooltipOverlay', () => {
       );
     });
 
-    it('floors the given coordinates', function() {
+    it('rounds the given coordinates', function() {
       const props = {
         mouseX: 1.3,
         mouseY: 2.9
       };
-      expect(coordinatesProvider()(props)).to.equal('x: 1, y: 2');
+      expect(coordinatesProvider()(props)).to.equal('x: 1, y: 3');
     });
   });
 

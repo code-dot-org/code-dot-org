@@ -19,14 +19,14 @@ module SurveyResultsHelper
   end
 
   def show_nps_survey?(kind)
+    return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
     return false unless current_user
+    # Nov 2020: only display to half of teachers
+    return false unless current_user.id.even?
     return false unless language == "en"
     return false if current_user.under_13?
-    return false if existing_survey_result?(kind)
     return false unless country_us?
     return false unless account_existed_14_days?
-
-    return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
 
     # There is no reason not to show the survey, so show the survey.
     return true

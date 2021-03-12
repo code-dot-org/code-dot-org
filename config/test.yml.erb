@@ -5,6 +5,9 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 
+# Configurations for making calls to the Immersive Reader API on Azure
+imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
+
 # Disable Secrets for CI, unit-test runs,
 # and other non-chef_managed environments (e.g., preloading Spring for Rails tests).
 <% if ci_test || !chef_managed -%>

@@ -5,7 +5,7 @@ Feature: Game Lab Export
 Scenario: Export library animation
   Given I start a new Game Lab project
   And I switch to the animation tab
-  And I add the bear animation from the library
+  And I add the bear animal head animation from the library
   And I switch to the code tab in Game Lab
   And I press "runButton"
 

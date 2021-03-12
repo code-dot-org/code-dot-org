@@ -10,4 +10,4 @@
 require('../frame')();
 require('../../../build/package/js/en_us/netsim_locale.js');
 
-module.exports = window.blockly.netsim_locale;
+module.exports = window.locales.netsim_locale;

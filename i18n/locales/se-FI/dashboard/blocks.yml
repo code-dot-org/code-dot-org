@@ -82,9 +82,6 @@ se:
             MOVES.Clown: Gangnam
             MOVES.Kick: Násti
             MOVES.ThisOrThat: Dát vai Duot
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} daga {MOVE} {DIR} vaikko man galle geardde"
         options:
@@ -102,9 +99,6 @@ se:
             MOVES.Clown: Gangnam
             MOVES.Kick: Násti
             MOVES.ThisOrThat: Dát vai Duot
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: rievdat {SPRITE} {PROPERTY} {VAL}:in
         options:
@@ -174,9 +168,6 @@ se:
             MOVES.Kick: Násti
             MOVES.XArmsUp: Faŋut
             MOVES.ThisOrThat: Dát vai Duot
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: "{SPRITE} daga {MOVE} {DIR} ovtta geardde"
         options:
@@ -204,9 +195,6 @@ se:
             MOVES.Kick: Násti
             MOVES.XArmsUp: Faŋut
             MOVES.ThisOrThat: Dát vai Duot
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: gearddut juohke {N} távtta maŋŋil {START}
       Dancelab_everySeconds:
@@ -885,6 +873,7 @@ se:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: dáppe {N} {UNIT}
         options:
           UNIT:
             '"frames"': govat
@@ -928,6 +917,7 @@ se:
         options:
           CHOICE:
             '"this"': dát
+            '"other"': eará
       gamelab_getTime:
         text: áigi {UNIT}
         options:
@@ -936,6 +926,7 @@ se:
       gamelab_hideTitleScreen:
         text: čiega šearpma bajilčállaga
       gamelab_isKeyPressed:
+        text: go {KEY} lea deaddiluvvon
         options:
           KEY:
             '"a"': a
@@ -998,6 +989,13 @@ se:
             '"z"': z
       gamelab_locationAt:
         text: 'sadji x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Davvi
+            '"East"': Nuorta
+            '"South"': Lulli
+            '"West"': Oarji
       gamelab_locationMouse:
         text: sáhpán sadji
       gamelab_locationOf:
@@ -1006,6 +1004,8 @@ se:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
+      gamelab_makeNumSprites:
+        text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
       gamelab_mirrorSprite:
         text: "{SPRITE} geahčesta {DIRECTION}"
       gamelab_mouseLocation:
@@ -1024,6 +1024,8 @@ se:
             '"West"': Oarji
       gamelab_moveToward:
         text: sirdde  {SPRITE} pixeliid {DISTANCE} {TARGET} guvlui
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1062,6 +1064,8 @@ se:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': násttit
             undefined: ii oktage
+      gamelab_setBackgroundImageAs:
+        text: bija duogábeali dása {IMG}
       gamelab_setProp:
         text: bija {SPRITE} {PROPERTY} dása {VAL}
         options:
@@ -1147,6 +1151,8 @@ se:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": Ii leat guolli
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mu-gilkor
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ii leat mu-gilkor
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1485,7 +1491,6 @@ se:
             '"stoneBricks"': geađgediillat
             '"mossyStoneBricks"': jeagilduvvon geađgediillat
             '"crackedStoneBricks"': cuovkanan geađgediillat
-            '"decorativeStoneBricks"': girjás geađgediillat
             '"blueCoralBlock"': alit korálla blohkka
             '"pinkCoralBlock"': čuvgesrukses korálla blohkka
             '"magentaCoralBlock"': mageanta korálla blohkka

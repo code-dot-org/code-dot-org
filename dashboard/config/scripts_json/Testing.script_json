@@ -1,0 +1,110 @@
+{
+  "script": {
+    "name": "Testing",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "Testing"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Testing",
+      "name": "Testing",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Testing",
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "K-1 Maze 2"
+        ],
+        "lesson.key": "Testing",
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      },
+      "level_keys": [
+        "K-1 Maze 2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "2-3 Maze 1"
+        ],
+        "lesson.key": "Testing",
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      },
+      "level_keys": [
+        "2-3 Maze 1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "K-1 Maze 2",
+        "script_level.level_keys": [
+          "K-1 Maze 2"
+        ],
+        "lesson.key": "Testing",
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Maze 1",
+        "script_level.level_keys": [
+          "2-3 Maze 1"
+        ],
+        "lesson.key": "Testing",
+        "lesson_group.key": "",
+        "script.name": "Testing"
+      }
+    }
+  ]
+}

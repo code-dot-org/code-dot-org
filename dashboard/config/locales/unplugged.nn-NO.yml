@@ -247,6 +247,7 @@ nn:
           på eit plan, og så avgjøre om dei to punkta (eller spelefigurane) rører
           kvarandre.
       courseA_unplugged_loops:
+        title: Løkker utan datamaskin
         desc: I denne oppgåve skal du lære om løkker!
       courseB_unplugged_MRF:
         title: Aktivitet utan datamaskiner
@@ -381,12 +382,41 @@ nn:
           nyttig praksis.  '
       swipeRightPassThrough:
         title: Økt med rekrutteringsscenariar
+        desc: "# Øving med rekrutteringsscenarioer\r\n\r\n## Sveip til høgre for datavitskap\r\nI
+          denne øvinga nyttar vi eit berktøy som heiter \"Sveip til høgre for datavitskap\",
+          som er utvikla av partnarane våre i MIT. I Sveip til høgre for datavitskap,
+          kan du lese gjennom nokre studentprofilar og vurdere ulike utsagn som du
+          kan bruke for å overtyde han eller ho om å bruke i kurset om prinsipper
+          for datavitskap. \r\n\r\n### Slik fungerer det\r\nNår du spelar Sveip til
+          høgre for datavitskap ser du ei rekke påstandar du kan seie til kvar elev.
+          Du sveiper høre på det påstandar som du tenker kan vere effektive i å overbevise
+          elevane til å delta i kurset og sveipe til venstre på dei som ikkje er så
+          effektive. Gjennom øvinga vil vi diskutere som ei gruppe dine tankar om
+          påstandar som er mest effektive i å få elevar til å bli med i faget datavitskap
+          og du vil ha høve til å sjå korleis andre folk i workshopen sveipa på kvart
+          argument. \r\n\r\n\r\nNår du klikkar fortsett under, sender vi deg til spelet
+          saman med Code.org-epostadressa du er innlogga med."
       swipeRightPassThrough-test123:
         title: Økt med rekrutteringsscenariar
+        desc: "# Øving med rekrutteringsscenarioer\r\n\r\n## Sveip til høgre for datavitskap\r\nI
+          denne øvinga nyttar vi eit berktøy som heiter \"Sveip til høgre for datavitskap\",
+          som er utvikla av partnarane våre i MIT. I Sveip til høgre for datavitskap,
+          kan du lese gjennom nokre studentprofilar og vurdere ulike utsagn som du
+          kan bruke for å overtyde han eller ho om å bruke i kurset om prinsipper
+          for datavitskap. \r\n\r\n### Slik fungerer det\r\nNår du spelar Sveip til
+          høgre for datavitskap ser du ei rekke påstandar du kan seie til kvar elev.
+          Du sveiper høre på det påstandar som du tenker kan vere effektive i å overbevise
+          elevane til å delta i kurset og sveipe til venstre på dei som ikkje er så
+          effektive. Gjennom øvinga vil vi diskutere som ei gruppe dine tankar om
+          påstandar som er mest effektive i å få elevar til å bli med i faget datavitskap
+          og du vil ha høve til å sjå korleis andre folk i workshopen sveipa på kvart
+          argument. \r\n\r\n\r\nNår du klikkar fortsett under, sender vi deg til spelet
+          saman med Code.org-epostadressa du er innlogga med."
       brad-repro-bug-000:
         title: Brad Repro Bug 000
       courseB_unplugged_MRF_2018:
         title: Mine robotvener
+        desc: Lær å programmere med å skrive kode for venene dine!
       PlantASeed_2018:
         title: 'Verkelege algoritmar: Plante eit frø'
         desc: Denne oppgåva viser korleis vi bruker algoritmer i dagleglivet, her
@@ -401,6 +431,7 @@ nn:
         desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar
           introduserer korleis du skal vere trygg når du navigerer på nettet.
       courseA_unplugged_loops_2018:
+        title: Løkker utan datamaskin
         desc: I denne oppgåve skal du lære om løkker!
       BigEvent_2018:
         title: Den store hendinga
@@ -451,15 +482,34 @@ nn:
           på meir enn ein måte.
       MoveItMoveIt_2018:
         title: Flytt den, flytt den
+      courseB_unplugged_CnC_2018:
+        title: Det er supert å lage og spele rettferdig
+      courseE_unplugged_CnC_2018:
+        title: Digital deling
       RelayProgramming_2018:
         title: Programmeringsstafett
       courseB_unplugged_MRF_2019:
         title: Mine robotvener
+        desc: Lær å programmere med å skrive kode for venene dine!
+      BuildingAFoundation_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Mine løkkete robotvener
       Conditionals_2019:
         title: Betingelser
         desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill
           og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss
           eg trekk eit svart kort, får du poeng."
+      courseF_unplugged_powerOfWords_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Programmering på millimeterpapir
         desc: Elevene nyttar forhåndsbestemte kommandoar til å lage ei algoritme (ei
@@ -477,6 +527,19 @@ nn:
           alternativer. Denne leksjonen tar det konseptet eit steg vidare då det illustrerer
           korleis ei datamaskin kan lagre enda meir kompleks informasjon (som til
           dømes bilete og fargar) binært óg.
+      courseE_unplugged_privateInformation_2019:
+        title: Privat og personleg informasjon
+      SongwritingParameters_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Digital deling
+      Internet_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.Internet_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'oversetting manglar: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'oversetting manglar: en-US.data.unplugged.Crowdsourcing_2018.desc'
       GettingLoopy_2019:
         title: Me blir sløyfete
         desc: Denne leksjonen introduserer programmeringskonseptet løkker (gjentatt
@@ -514,6 +577,7 @@ nn:
         desc: Internettet er ein mektig, men nokre gongar ein farleg stad. Lærarar
           introduserer korleis du skal vere trygg når du navigerer på nettet.
       courseA_unplugged_loops_2019:
+        title: Løkker utan datamaskin
         desc: I denne oppgåve skal du lære om løkker!
       MoveItMoveIt_2019:
         title: Flytt den, flytt den
@@ -521,10 +585,29 @@ nn:
         title: Dine digitale fotspor
         desc: Lærarar introduserer for elevane ideen om å putte informasjon om seg
           sjølv på nett skapar eit digital fotavtrykk eller "sti" som har konsekvensar.
+      courseB_unplugged_CnC_2019:
+        title: Det er supert å lage og spele rettferdig
+      courseE_simon_says_2019:
+        title: Simon seier
+        desc: "Spel eit spel og tenk på kva kommandoar som trengs for å få det riktige
+          resultatet.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Sterke passord
+        desc: Utforsk kvifor folk bruker passord, lær deg fordelene av å bruke passord
+          og oppdag strategiar for å lage og halde på sterke, sikre passord.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
+        desc: '_Merknad frå Josh: til skilnad frå første øving, har eg formattert
+          dette som ei typisk øving utan datamaskin._'
       timeforcs_demo_conditionals:
         title: Betingelser
         desc: For å lære om betinga instruksjonar skal elevane spele eit kortspill
           og lage reglar som "Viss eg trekk eit raudt kort, får eg eit poeng" og "Viss
           eg trekk eit svart kort, får du poeng."
+      TheRightApp_2019:
+        title: Den rette appen
+        desc: "* Alle nyttar datamaskiner i dag, spesielt smarte telefonar. \r\n*
+          Applikasjonar i smarttelefonar, eller \"appar\", hjelper folk med å gjere
+          ting som å snakke med venner, høyre på musikk, kjøpe ting eller berre finne
+          ting på nett.\r\n* Det er viktig for programmerarar å forstå andre folk
+          sine behov og designe appar som tek vare på det behovet!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

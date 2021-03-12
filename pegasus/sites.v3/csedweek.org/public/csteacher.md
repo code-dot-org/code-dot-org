@@ -23,7 +23,7 @@ NOTE: Computer science can be celebrated throughout the year, not just in Decemb
 
 - Make sure to see NCWIT's [10 ways to recruit girls to CS](https://www.ncwit.org/resources/top-10-ways-recruiting-high-school-women-your-computing-classes/top-10-ways-recruiting) for ideas on activities to grow participation by women.
 - Do an open house of your course offerings for parents and explain how CS connects to 21st century jobs.
-- Pitch CS education to your local school board, superintendent, or principal. Start with [these PowerPoint slides](/files/CS-pitch-basic-stats.pptx), [this video](https://www.youtube.com/watch?v=MwLXrN0Yguk&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q), or [these talking points](https://www.ncwit.org/resources/moving-beyond-computer-literacy-why-schools-should-teach-computer-science).
+- Pitch CS education to your local school board, superintendent, or principal. Start with [these PowerPoint slides](/files/computer_science_advocacy.pptx), [this video](https://www.youtube.com/watch?v=MwLXrN0Yguk&feature=c4-overview-vl&list=PLzdnOPI1iJNe1WmdkMG-Ca8cLQpdEAL7Q), or [these talking points](https://www.ncwit.org/resources/moving-beyond-computer-literacy-why-schools-should-teach-computer-science).
 - Reach out to your local four year college's CS department chair about having your students visit the campus.
 - Reach out to your local chamber of commerce to have students visit a local employer that depends on computing professionals.
 

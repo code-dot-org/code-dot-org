@@ -628,7 +628,8 @@
             "name": "desenhar janelas"
           },
           "rectangle": {
-            "name": "retângulo"
+            "name": "retângulo",
+            "description": "lol"
           },
           "sun": {
             "name": "sol"
@@ -646,7 +647,8 @@
             "name": "triângulo"
           },
           "square": {
-            "name": "quadrado"
+            "name": "quadrado",
+            "description": "lol"
           }
         },
         "Geometric Sun_2018": {
@@ -660,7 +662,8 @@
             "name": "desenhar janelas"
           },
           "rectangle": {
-            "name": "retângulo"
+            "name": "retângulo",
+            "description": "lol"
           },
           "sun": {
             "name": "sol"
@@ -678,12 +681,16 @@
             "name": "triângulo"
           },
           "square": {
-            "name": "quadrado"
+            "name": "quadrado",
+            "description": "lol"
           }
         },
         "Guess The Number": {
           "check guess": {
-            "name": "checar palpite"
+            "name": "checar palpite",
+            "parameters": {
+              "theGuess": "o palpite"
+            }
           }
         },
         "InspirationalArtwork": {
@@ -3018,7 +3025,8 @@
             "name": "desenhar um quadrado",
             "parameters": {
               "length": "comprimento"
-            }
+            },
+            "description": "Desenho um quadrado com um parâmetro de comprimento"
           },
           "checker": {
             "name": "verificador",
@@ -3048,7 +3056,8 @@
             "name": "desenhar um quadrado",
             "parameters": {
               "length": "comprimento"
-            }
+            },
+            "description": "Desenho um quadrado com um parâmetro de comprimento"
           }
         },
         "courseF_artist_fwp3": {
@@ -3546,6 +3555,49 @@
           },
           "draw bit": {
             "name": "desenhar_bit"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "desenhe uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "name": "desenhar um cata-vento",
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "name": "desenhar uma forma",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhe uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
           }
         }
       }

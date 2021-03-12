@@ -60,6 +60,10 @@ body.pin_bottom {
   left: 0;
 }
 
+body.oceans-blue {
+  background-color: $oceans_deep_blue;
+}
+
 h1 {
   font-family: $gotham-extra-bold;
   font-weight: normal;
@@ -139,7 +143,7 @@ img.video_thumbnail {
 
 .header-wrapper {
   padding-top: 0;
-  min-height: 60px;
+  min-height: 50px;
   position: relative;
   user-select: none;
 
@@ -330,6 +334,17 @@ img.video_thumbnail {
   #signin_button .header_button {
     margin-top: 6px;
   }
+
+  #sign_in_or_user {
+    &.z_index_above_modal {
+      z-index: 1050;
+
+      // Usually transparent, so adding teal allows button to render in front
+      .header_user {
+        background-color: $teal;
+      }
+    }
+  }
 }
 
 #language_dir.rtl #pageheader-wrapper {
@@ -345,20 +360,69 @@ img.video_thumbnail {
 }
 
 #header-banner {
-  top: 0;
-  position: absolute;
-  width: 100%;
-  height: 320px;
-  z-index: -1000;
-  background-position: 90% 10%;
   background-size: cover;
+  background-position: 90% 30%;
+  display: flex;
+  justify-content: center;
 
-  &.header-banner-short {
-    height: 180px;
+  .bannerContent {
+    max-width: 60%;
   }
 
-  &.header-banner-courses {
-    background-position: 75% 10%;
+  /*
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+   */
+  html[dir=rtl] & {
+    transform: scaleX(-1);
+    /*
+      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+      layout is not backwards
+     */
+    .bannerContentContainer {
+      transform: scaleX(-1);
+    }
+  }
+
+  #projects-page & {
+    margin-bottom: 16px;
+  }
+}
+
+#header-banner-overflow {
+  margin: 16px;
+}
+
+#header-banner, #header-banner-overflow {
+  .children {
+    margin-top: 16px;
+  }
+}
+
+.bannerContentContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 16px;
+}
+#courses-container {
+  #header-banner {
+    background-position: 75% 40%;
+  }
+
+  .announcements {
+    margin-top: 16px;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .content {
+      width: 100%;
+      margin: 0 16px;
+    }
   }
 }
 
@@ -395,7 +459,7 @@ img.video_thumbnail {
 }
 
 /* This styling helps to push the footer to the bottom of a page. */
-$footer_height: 165px;
+$footer_height: 270px;
 $footer_padding-top: 20px;
 $footer_padding-bottom: 20px;
 $footer_fullheight: $footer_height + $footer_padding-top + $footer_padding-bottom;
@@ -432,6 +496,10 @@ html, body {
   a:hover {
     text-decoration: underline;
   }
+  .powered-by-aws {
+    width: 100%;
+    margin-top: 12px;
+  }
   select {
     width: auto;
     font-size: 11px;
@@ -447,6 +515,37 @@ html, body {
   .dim {
     display: inline-block;
     opacity: 0.5;
+  }
+
+  .container {
+    html[dir=rtl] & {
+      float: right;
+    }
+
+    .row {
+      [class*="span"] {
+        html[dir=rtl] & {
+          float: right;
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        a {
+          html[dir=rtl] & {
+            float: right;
+          }
+        }
+
+        div.dim {
+          html[dir=rtl] & {
+            float: right;
+            margin-left: 4px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -678,6 +777,11 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
+.oceans-blue .small-footer-base {
+  background-color: initial;
+  border-top: initial;
+}
+
 .header_separator {
   padding-left: 2px;
   margin-bottom: -18px;
@@ -719,6 +823,7 @@ $small-footer-standard-width: 400px;
 .full_container {
   padding: 0 25px 25px 25px;
 }
+
 body.embedded_iframe {
   .full_container {
     padding-left: 0;
@@ -728,7 +833,6 @@ body.embedded_iframe {
 .responsive_full_container {
   padding: 0 10px 10px 10px;
 }
-
 
 $default-modal-width: 640px;
 
@@ -809,6 +913,7 @@ $default-modal-width: 640px;
 .video-player-rounded-corners {
   border-radius: 10px;
   border-width: 0;
+  overflow: hidden;
 }
 
 .video-player-full-width {
@@ -823,52 +928,6 @@ $default-modal-width: 640px;
   position: relative;
   // Specifically supports 16x9 aspect ratio
   padding-top: 56.25%;
-}
-
-@media screen and (max-height: 1330px) {
-  .standalone-video-full-width {
-    max-width: 1973px;
-  }
-}
-@media screen and (max-height: 1240px) {
-  .standalone-video-full-width {
-    max-width: 1813px;
-  }
-}
-@media screen and (max-height: 1150px) {
-  .standalone-video-full-width {
-    max-width: 1653px;
-  }
-}
-@media screen and (max-height: 1060px) {
-  .standalone-video-full-width {
-    max-width: 1493px;
-  }
-}
-@media screen and (max-height: 970px) {
-  .standalone-video-full-width {
-    max-width: 1333px;
-  }
-}
-@media screen and (max-height: 880px) {
-  .standalone-video-full-width {
-    max-width: 1173px;
-  }
-}
-@media screen and (max-height: 790px) {
-  .standalone-video-full-width {
-    max-width: 1013px;
-  }
-}
-@media screen and (max-height: 700px) {
-  .standalone-video-full-width {
-    max-width: 853px;
-  }
-}
-@media screen and (max-height: 610px) {
-  .standalone-video-full-width {
-    max-width: 693px;
-  }
 }
 
 .buttons-right-aligned {
@@ -1159,6 +1218,18 @@ input.header_input {
   padding: 5px;
 }
 
+.oceans-blue {
+  #codeApp {
+    .loading {
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
+    }
+
+    .slow_load {
+      color: $white;
+    }
+  }
+}
+
 #codeApp {
   position: relative;
 
@@ -1335,18 +1406,49 @@ body.iframe_embed_app_and_code {
   }
 
   html[dir=rtl] .flip-x-close & {
-    left: auto;
-    right: $cornerOffset;
+    right: auto;
+    left: $cornerOffset;
   }
 
   html[dir=rtl] .flip-x-close &:hover {
-    left: auto;
-    right: $cornerOffset - $movement;
+    right: auto;
+    left: $cornerOffset - $movement;
   }
 }
 
 .x-close {
   @include close-button($cornerOffset: -20px);
+}
+
+.open-link {
+  $startWidth: 61px;
+  $startHeight: 59px;
+  $cornerOffset: -20px;
+  $growth: 3px;
+  $movement: 1px;
+
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  background: image-url("open_button.png") no-repeat center center;
+  background-size: 100% auto;
+
+  top: $cornerOffset;
+  right: -30px + $startWidth;
+  width: $startWidth;
+  height: $startHeight;
+  &:hover {
+    width: $startWidth + $growth;
+    height: $startHeight + $growth;
+  }
+}
+.open-link > a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .qtip-content {
@@ -1882,6 +1984,20 @@ a.download-video {
 
     #gdpr-section {
       flex-wrap: wrap;
+      .checkbox {
+        label {
+          align-items: baseline;
+          input[type=checkbox] {
+            align-self: auto;
+          }
+        }
+      }
+      #gdpr-label {
+        margin: 0 10px;
+        span {
+          padding: 0;
+        }
+      }
     }
   }
 }
@@ -1956,6 +2072,12 @@ a.download-video {
     &.with-google_oauth2 {
       background-color: $google_red;
       border: 1px solid $google_red;
+      &:disabled {
+        border: 1px solid $lighter_gray;
+        background-color: $lighter_gray;
+        @include box-shadow(none);
+        cursor: not-allowed;
+      }
     }
 
     &.with-facebook {
@@ -2311,7 +2433,7 @@ a.download-video {
 
 .standalone-video {
   width: 853px;
-  margin: auto;
+  margin: 10px auto 0 auto;
 
   .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
@@ -3207,6 +3329,10 @@ code {
   }
 }
 
+.breadcrumb-header {
+  margin-top: 10px;
+}
+
 #survey-submission-thankyou {
   color: $purple;
   font-size: 18px;
@@ -3365,6 +3491,10 @@ h2.danger {
   text-align: center;
 }
 
+.foorm-adjust-dropdown-height {
+  height: calc(2em + 10px) !important;
+}
+
 #parent-email-banner {
   position: fixed;
   bottom: 0;
@@ -3475,3 +3605,75 @@ h2.danger {
     display: none;
   }
 }
+
+// Some images must not be flipped over even in RTL
+html[dir=rtl] {
+  img[src="/blockly/media/skins/jigsaw/blocks.png"] {
+    -webkit-transform: none !important;
+    transform: none !important;
+  }
+}
+#add-parent-email {
+  #remove-parent-email-link {
+    color: $red;
+  }
+}
+
+.immersive-reader-button {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  float: right;
+  margin-top: 1px !important;
+  height: 16px !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+
+  html[dir=rtl] & {
+    float: left;
+  }
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
+    position: relative;
+    z-index: 1000;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
+}
+
+#mapbox-location-search-container {
+  .mapbox-location-search-container {
+    width: 100%;
+  }
+
+  .mapboxgl-ctrl-geocoder {
+    min-width: 100%;
+    z-index: 2;
+    box-shadow: none;
+    border: 1px solid $bootstrap_border_color;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  input {
+    height: 36px;
+    margin: 0;
+    border: none;
+    padding: 0 34px;
+    &.readOnly {
+      width: 100%;
+    }
+  }
+
+  .mapboxgl-ctrl-geocoder--suggestion {
+    color: $default_text;
+    font-family: $gotham-regular, sans-serif;
+  }
+}
+
+@import "NpsSurveyBlock";

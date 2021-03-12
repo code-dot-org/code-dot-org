@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:06:04.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "In your own words explain the difference between a problem and an algorithm.",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19306,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "ffdWuiwcVkbWc5WqG0DIBB1fECmSaeKNBS3u3OodLdxusaf1sipFuH5U8/qX\n2kLAwRLqa6YfCcyu7bqhFO5BTp3mN6B604zLU2rZA3FFkYp1weemXJsDkY6T\neJ+5pvYj6gLvx2NX+91oC7ZtAg4MXR9TVFYKdrgnDnZSjiV5PRTd6envCIVn\nda/irpZ8KMidrQYXOdH2JAfG0YLlcpAF2GfkJ/Re5sUMJ3m4nnmH3Y/JESDj\nxMPxfEpK8iiy880QBoHyO7PK21ZIGYEUJpt2io4A7xOkczwKQGP9c0kq8Gie\nx3Rvn0XEqPRg+hjgJQ64Wvah5+NYagZ0jl7RQikGMNFrFLN/EV8BaHOEIT6z\ngYJGmaDKD6J9YULGRlnBER5V//srPoXFeabqW6wdOtSMEyoIA2Urn6xP8ZI9\nV3C4lwumNl2hIO8gufFAGEVKYbwq\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 20:36:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-03 21:13:32 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-10-03 21:14:03 +0000\",\"changed\":[\"title\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-10-03 21:20:54 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

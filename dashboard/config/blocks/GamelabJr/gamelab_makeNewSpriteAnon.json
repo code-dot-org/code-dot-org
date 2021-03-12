@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "makeNewSpriteAnon",
+    "docFunc": "gamelab_makeNewSpriteAnon",
     "inline": false,
     "blockText": "make new {ANIMATION_NAME} sprite at {LOCATION}",
     "color": [

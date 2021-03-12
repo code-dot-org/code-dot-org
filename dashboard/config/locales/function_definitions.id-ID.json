@@ -220,7 +220,7 @@
         },
         "4-5 Artist 8": {
           "draw circle": {
-            "name": "gambar lingkaran"
+            "name": "gambar loop"
           },
           "draw goal": {
             "name": "gambar tujuan"
@@ -1524,7 +1524,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },
@@ -1532,7 +1532,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },
@@ -1579,7 +1579,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "panjang",
-              "min": "menit"
+              "min": "min"
             }
           }
         },
@@ -1705,6 +1705,47 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "kumpulkan"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "gambar bintang",
+            "parameters": {
+              "points": "poin",
+              "length": "panjang"
+            }
+          },
+          "draw a circle": {
+            "name": "Gambar sebuah lingkaran"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "panjang",
+              "repeat": "Ulangi"
+            }
+          },
+          "draw a triangle": {
+            "name": "menggambar sebuah segitiga",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a house": {
+            "name": "gambar sebuah rumah",
+            "parameters": {
+              "length": "panjang"
+            }
+          },
+          "draw a square": {
+            "name": "menggambar sebuah persegi empat",
+            "parameters": {
+              "length": "panjang"
+            }
           }
         }
       }

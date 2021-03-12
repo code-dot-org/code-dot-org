@@ -64,13 +64,8 @@ export function cleanupMicroBitComponents(
   }
 
   if (components.lightSensor) {
-    components.lightSensor.state = {
-      threshold: 128,
-      rangeMin: 0,
-      rangeMax: 255,
-      currentReading: 0
-    };
     components.lightSensor.stop();
+    components.lightSensor.reset();
   }
 
   dynamicComponents.forEach(component => {

@@ -3,10 +3,12 @@ require 'cdo/honeybadger'
 module UserMultiAuthHelper
   def oauth_tokens_for_provider(provider)
     if migrated?
-      authentication_option = AuthenticationOption.find_by(
+      # Grab the most recently updated authentication option with the
+      # given credential type
+      authentication_option = AuthenticationOption.where(
         credential_type: provider,
         user_id: id
-      )
+      ).order(updated_at: :desc).first
       authentication_option_data = authentication_option&.data_hash || {}
       {
         oauth_token: authentication_option_data[:oauth_token],

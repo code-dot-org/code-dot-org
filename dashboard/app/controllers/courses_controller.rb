@@ -7,14 +7,13 @@ class CoursesController < ApplicationController
   authorize_resource class: 'UnitGroup', except: [:index]
 
   def index
-    view_options(full_width: true, responsive_content: true, has_i18n: true)
+    view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
       format.html do
         @is_teacher = (current_user && current_user.teacher?) || params[:view] == 'teacher'
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
-        @header_banner_image_filename = !@is_teacher ? "courses-hero-student" : "courses-hero-teacher"
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
       end
       format.json do
@@ -79,7 +78,10 @@ class CoursesController < ApplicationController
   end
 
   def create
-    unit_group = UnitGroup.new(name: params.require(:course).require(:name))
+    unit_group = UnitGroup.new(
+      name: params.require(:course).require(:name),
+      has_numbered_units: true
+    )
     if unit_group.save
       redirect_to action: :edit, course_name: unit_group.name
     else
@@ -92,7 +94,7 @@ class CoursesController < ApplicationController
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
     unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
     # Convert checkbox values from a string ("on") to a boolean.
-    [:has_verified_resources, :visible, :is_stable].each {|key| params[key] = !!params[key]}
+    [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     unit_group.update(course_params)
     redirect_to course_path(unit_group)
   end
@@ -110,14 +112,17 @@ class CoursesController < ApplicationController
       :title,
       :description_short,
       :description_student,
-      :description_teacher
+      :description_teacher,
+      :version_title
     ).to_h
   end
 
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment, :visible, :is_stable).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :visible, :is_stable, :announcements).to_h
+    cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
+    cp
   end
 
   def set_redirect_override

@@ -1,2 +1,6 @@
 import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
-module.exports = safeLoadLocale('dance_locale');
+import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
+
+let locale = safeLoadLocale('dance_locale');
+locale = localeWithI18nStringTracker(locale, 'dance_locale');
+module.exports = locale;

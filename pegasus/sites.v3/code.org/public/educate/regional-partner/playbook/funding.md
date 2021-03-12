@@ -15,7 +15,7 @@ noindex: true
 **Fundraising Playbook:**<br/>
 
 - [Playbook start](#start)
-- [Types of funders](#funders)
+- [Types of funders definitions](#funders)
 - [Fundraising strategy and best practices](#strategy)
 - [Donor research](#research)
 - [Outreach](#outreach)

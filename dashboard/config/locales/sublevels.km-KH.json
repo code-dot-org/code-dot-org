@@ -1,0 +1,175 @@
+{
+  "km-KH": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "សកម្មភាព",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Loops": "រង្វិល​ជុំ",
+              "Math": "គណិត​វិទ្យា",
+              "Logic": "តក្ក",
+              "Games/Score": "ល្បែង/ពិន្ទុ"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Dancers": "អ្នករាំ",
+              "Properties": "ធាតុ",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Numbers": "ចំនួន",
+              "Logic": "តក្ក"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "គូរផ្កាយមួយ",
+                "parameters": {
+                  "points": "ពិន្ទុ",
+                  "length": "ប្រវែង"
+                }
+              },
+              "draw a circle": {
+                "name": "គូរ​រង្វង់​មួយ"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "ប្រវែង",
+                  "repeat": "ធ្វើ​ឡើង​វិញ"
+                }
+              },
+              "draw a triangle": {
+                "name": "គូរ​ត្រីកោណ​មួយ",
+                "parameters": {
+                  "length": "ប្រវែង"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "ប្រវែង"
+                }
+              },
+              "draw a house": {
+                "name": "គូរ​ផ្ទះ​មួយ",
+                "parameters": {
+                  "length": "ប្រវែង"
+                }
+              },
+              "draw a square": {
+                "name": "គូរ​ការេ​មួយ",
+                "parameters": {
+                  "length": "ប្រវែង"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Actions": "សកម្មភាព",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Behaviors": "ឥរិយាបទ"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Dancers": "អ្នករាំ",
+              "Properties": "ធាតុ",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Numbers": "ចំនួន",
+              "Logic": "តក្ក"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "សកម្មភាព",
+              "Brushes": "ច្រាស់",
+              "Loops": "រង្វិល​ជុំ",
+              "Math": "គណិត​វិទ្យា",
+              "Logic": "តក្ក",
+              "Functions": "អនុ​គមន៍",
+              "Variables": "អ​ថេរ"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Locations": "ទីតាំង",
+              "Actions": "សកម្មភាព",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Behaviors": "ឥរិយាបទ",
+              "Variables": "អ​ថេរ",
+              "Math": "គណិត​វិទ្យា",
+              "Logic": "តក្ក",
+              "Functions": "អនុ​គមន៍",
+              "Text": "អត្ថ​​បទ",
+              "Comments": "មតិយោបល់"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Locations": "ទីតាំង",
+              "Actions": "សកម្មភាព",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Behaviors": "ឥរិយាបទ",
+              "Variables": "អ​ថេរ",
+              "Math": "គណិត​វិទ្យា",
+              "Logic": "តក្ក",
+              "Functions": "អនុ​គមន៍",
+              "Text": "អត្ថ​​បទ",
+              "Comments": "មតិយោបល់"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "សកម្មភាព",
+              "Brushes": "ច្រាស់",
+              "Loops": "រង្វិល​ជុំ",
+              "Math": "គណិត​វិទ្យា",
+              "Logic": "តក្ក",
+              "Functions": "អនុ​គមន៍",
+              "Variables": "អ​ថេរ"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Actions": "សកម្មភាព",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Logic": "តក្ក",
+              "Math": "គណិត​វិទ្យា"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "ពិភពលោក",
+              "Actions": "សកម្មភាព",
+              "Behaviors": "ឥរិយាបទ",
+              "Events": "ព្រឹត្តិការណ៍",
+              "Locations": "ទីតាំង",
+              "Logic": "តក្ក",
+              "Loops": "រង្វិល​ជុំ",
+              "Math": "គណិត​វិទ្យា",
+              "Variables": "អ​ថេរ",
+              "Functions": "អនុ​គមន៍",
+              "Comments": "មតិយោបល់"
+            }
+          }
+        }
+      }
+    }
+  }
+}

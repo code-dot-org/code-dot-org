@@ -272,7 +272,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find regional partner summer workshops for state fallback' do
-    mock_illinois_object = OpenStruct.new(state_code: "IL")
+    mock_illinois_object = OpenStruct.new(country_code: "US", state_code: "IL")
     Geocoder.expects(:search).returns([mock_illinois_object])
 
     regional_partner = create :regional_partner_illinois
@@ -283,7 +283,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find no regional partner summer workshops for a state' do
-    mock_washington_object = OpenStruct.new(state_code: "WA")
+    mock_washington_object = OpenStruct.new(country_code: "US", state_code: "WA")
     Geocoder.expects(:search).returns([mock_washington_object])
 
     get :find, params: {zip_code: 98104}

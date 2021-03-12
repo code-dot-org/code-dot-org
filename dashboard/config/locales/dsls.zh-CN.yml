@@ -75,6 +75,14 @@ zh-CN:
         questions:
         - text: 根据游戏规则，哪一组卡片的得分是正确的？
         title: 选择题
+        teacher_markdown: |-
+          ##老师们：
+
+          学生们也许会误解如何做，而这里是一个很好的改正的机会。假如学生认为这里**没有**正确的答案，他们也许有一个对条件语的误解。
+
+          这是一个能帮忙解释的视频：
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -4020,6 +4028,10 @@ zh-CN:
           <strong>主要思想：多个屏幕 - 一个代码工作区。</strong> 这是处理 "click" 事件的代码，来设置为<em>有不同图片的另一个屏幕</em> - <em>goodbyeScreen</em>。现在不能看到那张图片或屏幕，因为没有选择那个屏幕。无论如何，它的代码可以写在这里。</p>
 
           </div>
+        teacher_markdown: |-
+          #### 卡到屏幕
+
+          团队可以假设在纸质原型中的每张卡是一个在软件实验室中的一个屏幕，以简略实验过程。事实上，多个相似的屏幕可以由一个屏幕组成，但是屏幕中所含的东西按实际情况切换。在下节课中，学生将会学习这是则么做成的，但是，这是不在本活动应该预计学生使用这种方法。
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # 我的循环机器人朋友们Jr.
@@ -5125,6 +5137,15 @@ zh-CN:
 
           ### 接下来就要试试了！
 
+        teacher_markdown: "#### 事实：\n\n这节课有很多要学，但是许多关于事件是如何在应用实验室中运行是对于这节课是完全不需要的，假如学生对编程在应用实验室中完成的，在这些重点上要清楚：\n\n*没有“画”永久循环\n*`onEvent()`（当事件发生时）模块需要：\n
+          \   *元素标识\n    *一个事件（如“······被点击”或“鼠标在······”）\n    *程序在某事件发生时（这种句子叫做匿名函数，由绿色模块表示）\n
+          \   *在`onEvent()`（当事件发生时）中的程序会在任何时间运行，只要驱动性的事件发生。\n\n####与游戏实验室对比：\n\n在游戏实验室中，我们会用以下方式检测按钮是否被点击并反应：\n\n
+          \   function draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t//
+          Do something\n       \t}\n    }\n\n在应用实验室中,我们会用本方式检测假如一个按钮是否被点击并做什么作为反应：\n\n
+          \   onEvent(\"button\", \"click\", function () {\n    \t// Do something\n
+          \   });\n\n在应用实验室示例中，函数是另一种在onEvent（当事件发生时）函数的成分，只是成分必须是函数本身。我们可以另外建立一个函数然后这样写：\n\n
+          \   function doSomething() {\n    \t// Do something\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\n在第二个示例中，注意我们有给予函数`doSomething`（做什么）到`onEvent`（当事件发生时）函数，我们不加入闭合符带后面。这是因为我们没有设定函数作为物品。"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
@@ -5508,17 +5529,18 @@ zh-CN:
         - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: 这个程序不会失败。松鼠会到达橡子的位置。
-          feedback: 不正确。斯奎特在最后转向时走错了路。
-        - text: 松鼠在转最后一个弯的时候，它会走错路。
+        - text: 斯奎特会被橡子吸引，这说明了这个程序没有缺陷。
+          feedback: 不正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - text: 因为斯奎特转向了错误的方向，所以斯奎特不会碰到橡子
           correct: true
-          feedback: 叮咚！答对啦！
-        - text: 松鼠走的路太少，最终不会到达橡子的位置。
-          feedback: 不正确。在斯奎特转向错误的方向后，走的步数太少。
+          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
+        - text: 斯奎特不会碰到橡子因为没有足够的`向前移动`模块。
+          correct: true
+          feedback: 正确。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         - text: 我不知道。
-          feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
+          feedback: 这段代码中有两个缺陷。首先，斯奎特转向了错误的方向，第二，斯奎特向前移动的步数不足以到达橡子。
         questions:
-        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
+        - text: 在代码中寻找缺陷。斯奎特是否能碰到橡子？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -6466,6 +6488,22 @@ zh-CN:
         - text: 此代码使用了一个新模块。你认为在你按下“运行”时会发生什么？
       courseD_project_exemplars_2020_2021:
         content1: 测试Markdown文本页面
+        markdown: |
+          #项目例子：
+
+          你即将要开始在你的最终项目上工作。不过，在你开始之前，花一些时间看看以下的例子：
+
+
+          | Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | The ball changes speed when it bounces! | Avoid the stormtroopers or they'll multiply! |
+
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Your backup dancers keep switching up their moves! | Try adding more color and background to this scene! |
       courseE_multi_bee_functions_predict1:
         answers:
         - text: 同样的程序也会通过这一关。
@@ -6619,8 +6657,42 @@ zh-CN:
 
       courseE_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          要开始最终项目了。在开始前，花些时间来看看示例项目。
+
+          ## 精灵图实验室
+
+          | 怪物跳舞 (精灵图实验室) | 纸杯蛋糕游戏 (精灵图实验室) |
+          |---|---|
+          | [![怪物跳舞 (精灵图实验室)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "怪物跳舞 (精灵图实验室)")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "纸杯蛋糕游戏 (精灵图实验室)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | 试试为游戏添加文本或分数！ | 试试为游戏添加文本或分数！ |
+
+          ## 小艺术家
+
+          | 图案 (小艺术家) | 函数的花 (小艺术家) |
+          |---|---|
+          | [![图案 (小艺术家)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "图案 (小艺术家)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![函数的花 (小艺术家)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "函数的花 (小艺术家)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | 用嵌套循环来创造！ | 用函数来创造！ |
+
       courseExpress_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          你即将要开始创造你的结业项目，但是在你开始之前，花一些时间看看例子。
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Get your disco on while your backup dancers switch it up! | Try adding more color and background to this scene! |
+
+          | Snowflake Flowers (Frozen) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Let's get creative with functions! | Try adding text or a score to this game! |
+
       courseF_bee_variables_8a_2018:
         answers:
         - text: 蜜蜂不会收集任何花蜜，因为变量名称不是“收集”。
@@ -7187,6 +7259,25 @@ zh-CN:
 
       courseF_project_exemplars_2019_2020:
         content1: 测试Markdown文本页面
+        markdown: |+
+          # 项目示例
+
+          要开始最终项目了。开始前，花点时间来看看示例项目。
+
+          ## 精灵图实验室
+
+          | 纸杯蛋糕游戏 (精灵图实验室) | 直升机游戏 (精灵图实验室) |
+          |---|---|
+          | [![#纸杯蛋糕游戏 (精灵图实验室)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#直升机游戏 (精灵图实验室)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | 试试给游戏加上文字或分数！ | 试试给游戏加上文字或分数！ |
+
+          ## 小艺术家
+
+          | 花丛 (小艺术家) | 螺旋 (小艺术家) |
+          |---|---|
+          | [![花丛 (小艺术家)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![螺旋 (小艺术家)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | 用变量发挥创意！ | 用循环发挥创意！ |
+
       coursee_prediction_artistfunction2:
         answers:
         - text: 艺术家将正确解决谜题。
@@ -7271,6 +7362,7 @@ zh-CN:
 
           ##资料
           * [铝箔船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活动指导 (微软版(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [谷歌文档](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+        title: 计算机科学发现学生课前问卷
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: 计算机科学发现快速问卷！
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
@@ -7339,10 +7431,33 @@ zh-CN:
         title: 计算机科学发现快速问卷！
       csf_be_a_super_digital_citizen:
         content1: 描述
+        markdown: |-
+          # 超级电子公民
+
+          ## 我们应该在有网络霸凌时怎么做？
       csf_password_power-up:
         content1: 描述
+        markdown: |-
+          # 加强你的密码
+          ## 密码小窍门：
+
+          *使用你记得住的**短语**。
+          *只有**家长**能知道你的密码。
+          *绝对不能使用你的**私人资料**作为密码。
+          *密码必须要是**八字节**长。
+          *在密码中用字母，数字和**符号**。
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: 描述
+        markdown: |
+          # STOP 意思
+
+          ## 假如有人在网上对你不友好，你应该怎么做？
+          ***S**离开（Step away）
+          ***T**告诉可信的成年人 （Tell a trusted adult）
+          ***O**
+          ***P**暂停然后在网上想   (Pause and thing online
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           我的网上邻居
@@ -7403,3 +7518,245 @@ zh-CN:
         markdown: "# 在电脑实验室中表现\n  \n<br/><br/>    \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\n前往教学计划\n</button> \n</a>\n\n<br/><br/>\n<a class=\"btn
           btn-large btn-primary next-stage submitButton\">继续</a>\n"
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # 个人资料和隐私
+
+          ## 你可以在网上分享什么信息？
+      courseD_EOC_2020:
+        description: 你已经完成了课程D！点击以创建项目。
+        display_name: 课程结束项目
+      courseE_EOC_2020:
+        description: 你已经完成了课程E！点击以创建项目。
+        display_name: 课程结束项目
+      csf_digital_trails:
+        markdown: |-
+          # 顺着电子线索
+          ##什么东西是可以在你的电子足迹
+      OPD-K5 About_copy:
+        markdown: "#欢迎到“如何教育计算机科学基础”\n\n<img src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n##这个在线课程是做什么的？ \n这个在线课程时计划用于向老师们介绍 Code.org 的计算机科学基础教纲和资料。以阅读，观看视频，完成互动性难题和回顾学习进程，你会发展属于你自己对计算机科学基础教学的理解。\n\n##这个在线课程是给谁的？\n这个在线课程时设计给**计划教计算机科学基础的小学老师**。这意味着从一般教师到理工科教师到图使馆管理员及在中间的某类职业。\n\n假如你是<a
+          href=\"https://code.org/educate/csd\" target=\"blank\">中学</a>或<a href=\"https://code.org/educate/csp\"
+          target=\"blank\">高中</a>的老师， 我们建议您参考以下资料<a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\">深入性，更专业性的职业成长机会</a>。\n\n##我可以从这个在线课程中学习计算机科学吗？\n虽然这里有机会了解和练习基本编程理论，并了解它们是如何向学生展示的。这不是一个专门性的对成年人开发的课程。不过，在课程的结尾，我们会为您提供其他资料以更深入钻研计算机科学理论。\n\n##为上这个网上课程我需要用经验吗？\n没有过往编程或计算机科学教学经历在写该课程时已经考虑了。
+          \n\n##这个在线课程需要多长时间? \n完成这个课程大概需要4至6小时。\n\n##我可以切换这个课程字的大小吗？\n我们知道并承认文本在此平台可能会有点小！
+          \n\n是文本变大：\n- 在苹果平台上，点击“命令”和“+”；\n- 在Windows系统上，点击“控制（Ctrl）”和“+”。\n\n使文本变小：
+          \n- 在苹果平台上，点击“命令”和“-”；\n- 在Windows系统上，点击“控制（Ctrl）”和“-”。"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # 语言的力量
+
+          ## 在有人在网上使用攻击性的语言时，你应该做什么？
+      courseF_EOC_2020:
+        description: 你已经完成了课程F！点击以创建项目。
+        display_name: 课程结束项目
+      OPD-K5 Outline_copy:
+        markdown: "#课程大纲\n\n这个课程分为四个概念，每个概念有属于自己的课程。每个课程有几个不同的活动，这些活动对学生和老师来说是由圆圈，阶段或难题标注，这是你在这个课程会学到什么：\n\n##开始\n\n###第一课：欢迎到“教学计算机科学基础”（15分钟长）\n-
+          回顾课程细节\n- 理解什么计算机科学及其与“编程”或“电脑科学”的不同\n- 理解教授和学习计算机科学的好处\n- 写属于你的教案\n\n###第二课：了解计算机科学基础课程（15到20分钟长）\n-
+          了解本课程的内容和教授顺序\n- 探索哪个阶段最适合您的学生\n- 理解老师在本课程的重要性\n- 理解不同种类的计算机科学基础章节\n\n##基本编程和教学的练习\n\n###第三课：序列（15-45分钟长）\n-
+          明确“程序”和“算法”\n- 找到序列是在何时在计算机科学基础课程中介绍给学生的\n- 理解如何用 Code.org 的可视化编程语言写简单程序\n-
+          探索一个线下的序列的课程并在课堂中举一反三\n- 思考如何使用课程计划\n\n###第四课：循环（15-45分钟长）\n- 讲解“循环”和它们的重要性\n-
+          找到循环是在何时在计算机科学基础课程中介绍给学生的\n- 探索一个线下关于循环的课程并在课堂中举一反三\n- 创造简单循环\n- 理解配对编程的好处\n\n###第五课：事件（15-45分钟长）\n-
+          讲解“事件”并解释它们的重要性\n- 找到事件是在何时在计算机科学基础课程中介绍给学生的\n- 探索一个线下关于事件的课程并在课堂中举一反三\n-
+          创造简单事件\n- 理解如何调试您的软件\n\n###第六课：条件语句（15-45分钟长）\n- 讲解“条件语句”并解释它们的重要性\n- 找到条件语句是在何时在计算机科学基础课程中介绍给学生的\n-
+          探索一个线下关于条件语句的课程并在课堂中举一反三\n- 创造简单条件语句\n- 知道创造教学日志的好处\n\n###第七课：课程结束项目（15-45分钟长）\n-
+          理解课程结束项目的好处\n- 找到课程结束项目是在何时在计算机科学基础课程中介绍给学生的\n- 练习写一个项目\n\n##[Optional]深入钻研：课程E和F
+          \n我们建议您在开始教课程E和F之前完成这部分。这个章节将一些相对较难的概念教授给相对更有经验的学生。\n\n###第九课：函数（30-45分钟长）\n-
+          决定假如您还是否计划教课程E和F\n- 讲解“函数”并解释它们的重要性\n- 找到函数是在何时在计算机科学基础课程中介绍给学生的\n- 探索一个线下关于函数的课程并在课堂中举一反三\n-
+          创造简单函数\n\n###"
+      OPD-K5 Why teach CS_copy:
+        markdown: "#为什么教计算机科学与技术？\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
+          class=\"level-image\">\n\n###**培养重要技能***\n研究表明计算机科学与技术提供学生发展批判性思维，创造力，问题解决技能和使用真实技术的机会.
+          \n\n###**在学习上的进步**\n你不需要成为理工学老师就能发现计算机科学与技术的好处。<a href=\"https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e\"
+          target=\"blank\">近日的一个研究</a>发现有资源的老师所教的学生在学完计算机科学基础课后，在标准考试中获得更好的成绩。 \n\n###**在孩子还小的时候建立自信心和兴趣**\n如果我们等到高中甚至是大学才向学生们介绍计算机科学，有些学生可能已经决定计算机科学不是他们所擅长的或认为他们不可能跟上上过补习班的\n在学生还在小学时就教授计算机科学，学生学习该科目作为必修课，大家都可以知道这个课程则么样，并决定假如他们会爱上这个课程。\n\n###**有趣**\n计算机科学给予学生合作，创新和表达的机会！
+          \n\n###**需要更多理由吗？**\n Code.org 有很多很有用的资源可供您，您的学生，管理员，家长们和社区使用。理解计算机科学为什么在课堂中很重要。看以下的激发性视频系列，或以下关于计算机科学对教育的影响的资料。\n\n><a
+          href=\"http://code.org/educate/inspire\" target=\"blank\"><button class=\"default\">探索有激发性的视频>></button></a>\n\n><a
+          href=\"http://code.org/promote\" target=\"blank\"><button class=\"default\">探索研究结果>></button></a>\n\n<img
+          src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">"
+      courseExpress_EOC_2020:
+        display_name: 课程结束项目
+        description: 你已经完成了本课程！点击以创建项目。
+      CSD Interactive Animations and Games Post-Project Test:
+        title: 互动动画和游戏 项目后测试
+      CSD Physical Computing Post-Project Test:
+        title: 物理计算 项目后测试
+      CSD User Centered Design Post-Project Test:
+        title: 以用户为中心的设计：项目后测试
+      CSD Web Development Post-Project Test:
+        title: 网页开发 项目后测试
+      csd-post-survey-2017-levelgroup:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2017-levelgroup_2018:
+        title: 计算机科学发现期末学生调查
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: |+
+          # 计算机科学发现课后问卷
+
+          **你的输入和反馈对我们非常重要！** 我们会用它来：
+
+          * 改进课程
+          * 了解你的体验
+          * 告诉我们今后想要学习的主题
+
+          非常感谢花时间来帮助计算机科学发现变得更好！
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey/stage/1/puzzle/1/page/1" target="top">点击这里完成计算机科学发现课后问卷！！！</a>
+
+          (在新窗口中打开)
+
+          <br>
+
+
+
+
+
+      csd-post-survey-intro-2019:
+        markdown: |+
+          # 计算机科学发现 课后问卷
+
+          **您的输入和反馈对我们非常重要！** 这些反馈会用来：
+
+          * 了解您的体验
+          * 改进课程
+
+          感谢花时间来帮助计算机科学原理变得更好！
+
+      csd-post-survey-levelgroup_2019:
+        title: 计算机科学发现期末学生调查
+      OPD-K5 CS Tips_copy:
+        markdown: |-
+          #使用这个在线课程
+
+          在你完成这个课程是，你会对计算机科学基础会给予你的知识给有了解。
+
+          假如你发现你自己有问题，下面的资料也许能帮助你探索并帮你了解这个课程。你可以随时回到这个界面！
+
+          ---
+
+          ##知识模块
+          这个课程的主页如下。这个界面是分解成四个**知识模块**的。这折射了计算机科学课程是如何撰写的。
+
+          ![](https://images.code.org/5227343bf74975b4678e42b50fdcd085-image-1573235429162.50.02 AM.png)
+          ##课程
+
+          每个单元是由**课程**构成的，每个课程表示了不同的主题和想法。
+
+          ##等级（气泡）
+          每个阶段是由等级构成的，等级的标注看起来像气泡。**钻石**表示了视频，文本或是问题。有一些**圆圈**是一些需要你完成的在线难题，这些难题是一个让你联系编程概念的地方。其他的**圆圈**是用来回答开放性问题的，开放性问题会要求你提交一个答案，往后再返回更改。气泡的颜色会随着你的进程更改。在这个在线专业建设性课程你将会看到以下的几种气泡：
+          <br/>
+
+          <img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+          <br/>
+      CSD U1 Test:
+        title: 计算机和解决问题 项目后测试
+      CSD U5 test:
+        title: 数据和社会 项目后测试
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #概述
+          班级作业是组队设计一个能装尽可能多硬币的铝箔船。当课程最后，小组回顾他们的活动经历、以及与解决的问题建立的联系时，他们就会主动完成剩下的课程。
+
+          ##资料
+          * [铝箔船](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - 活动指导 (微软版(https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [谷歌文档](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      csd-pre-survey-2017-levelgroup_2018:
+        title: 计算机科学发现学生课前问卷
+      csd-pre-survey-levelgroup_2019:
+        title: 计算机科学发现学生课前问卷
+      outbreak_story:
+        content1: 描述
+        markdown: "# 大爆发：创建你自己的模拟\n\n## 欢迎到怪物镇！\n怪物镇通常是一个开心和健康的地方。怪物们喜欢探索和访问朋友。 \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n一天，一个怪物开始感觉不适。怪物接触了一个**病毒**！一个病毒是一个可以使你生病的东西。但是怪物们不是很担心。他们继续访问朋友。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久后，另外两个怪物病了。这是同一个病毒！他们好像从他们的朋友感染上了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n这个病毒逐渐的传播到了其他怪物身上。健康的怪物们开始担心他们全都会生病。生病的怪物们担心他们会传播病毒到他人身上。\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## 阻止传播\n幸运的是，在研究完病毒之后，怪物镇的邻居们发现戴上口罩会缓解病毒的传播。带上口罩后，生病的怪物们会降低传播病毒的几率。\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"><img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          接下来会发生什么？\n\n今天，你们将会创造你自己的关于怪物镇病毒爆发的**模拟**。一个模拟是一个关于某物的计算机模型。学习编程并预算接下来会在怪物镇发生什么。\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *病毒会传播多快？*\n\n* *人人都会生病吗？*\n\n当你完成时，向其他人分享你的模拟。分享你认为我们可以做什么以在有病毒时保护其他人的健康。 "
+      outbreak_story2:
+        content1: 描述
+        markdown: "# 疫情爆发：像科学家一样思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n模拟是学习现实世界中难以观察的事物的好方法。它们帮助科学家解决问题，安全有效地测试新想法。你的模拟是一种展示怪物镇病毒爆发景象的方法。\n\n##
+          重置和重复！\n即使你自己编写代码，也不可能确切地知道当你按下运行时将发生什么。怪物随机漫步，所以你不知道病毒传播的速度是快还是慢。无论何时更改代码，请确保多次运行模拟。事物不会以同样的方式发生两次！\n\n##
+          收集数据\n试着在运行模拟时写下观察结果。你可以计算生病的怪物数量，或使用计时器查看事物发生的速度。例如，如果没有人戴口罩，那么所有怪物都生病通常需要多久？
+          \n\n## 进行预测\n如果你理解了你的模型，你就可以用它来进行预测。你甚至可以更改模拟运行的方式，并猜测将会发生什么不同的情况。例如：\n*
+          如果有两倍数量的怪物会发生什么？\n* 如果怪物以一半的速度移动会发生什么？\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## 怪物镇像真实世界吗？\n任何模型所能达到的逼真程度都是有限的。 \n* 你的疫情爆发模拟与真实世界的病毒爆发有什么共同点？\n*
+          有什么区别？\n当你完成这个活动后，与老师或你的家人讨论这些问题！\n\n## 我们还能对什么建模？\n你已经创建了魔鬼镇疫情爆发的工作模型。哪些事情是你希望它能而你的模拟却无法做或显示的？继续前进，学习更多模型：\n*
+          增加模拟中的怪物数量\n* 帮助怪物从病毒中恢复\n* 概率，免疫，疫苗，等等！\n\n你还可以与其他人分享你的模拟模型，或者分享你认为在病毒来到城镇时我们可以做些什么来帮助他人保持健康的信息。 "
+      OPD-K5 Participation_copy:
+        markdown: |
+          # 计划你的课程
+
+          在你开始上课之前，先花点时间想一想你的学习需求、目标以及在网上自学的经验--如果这是你第一次参与网上课程，这一步尤为重要！
+
+          ## 参与课前调研
+
+          我们希望让你尽可能多地从这次专业培训中获益。因此，我们邀请你参与填写<a href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">这份简短的问卷</a>。该问卷将询问你参与本次课程希望达成的目标，让我们对你有一些了解从而向你提供更好的支持和帮助。
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/93175711692159?user_id=<user_id/>" target="blank">T参与课前调研</a>
+
+          ## 按你的节奏来
+
+          自定义进度的在线课程旨在让你对课程有全面的掌控，并能自由控制学习进度。 ** 虽然我们针对每个学习阶段给出了参考时长，你仍可按照自己的时间和进度来完成整个课程。**如果你发现在某个阶段花费了更多或更少的时间，请不要担心！ 我们的主要目的是让你在玩得开心的同时掌握一些基础知识，并以最适合你的方式将所学内容应用到课堂实践中。
+
+          ## 随时得到帮助
+
+          如果你在课程中遇到困难，请前往 <a href="http://support.code.org" target="blank">support.code.org</a>，并查看 <a href="https://forum.code.org/" target="blank">我们的社区论坛</a>。你有可能在那里找到问题的答案。如果你没能找到答案或仍然被问题困扰，发邮件到 <a href="mailto:support@code.org" target="blank">support@code.org</a> ，Code.org 的工作人员会尽快给你回复。
+
+          我们强烈推荐另一种获得帮助的方式，是与一个同伴或一个小组一起学习这个在线课程！
+
+          ##找到适合你的学习方式
+
+          最后，在线学习并不适合所有人。本课程没有配备教师或内置机制能让你与其他学习者进行实时交流。如果您发现自己需要更多一对一的关注，或者你在有真实合作参与的线下课堂上学习效果更好，推荐你参与我们的<a href="http://code.org/professional-development-workshops" target="blank">面对面专业发展研讨会</a>。
+      outbreak_freeplay_choice:
+        display_name: 自由发挥
+        description: 你已完成教程！不断更改或改进你的项目。你可以选择继续使用相同的块或尝试扩展工具箱。

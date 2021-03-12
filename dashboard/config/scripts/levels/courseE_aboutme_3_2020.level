@@ -30,6 +30,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "free_play": "false",
+    "validation_enabled": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "hide_view_data_button": "false",

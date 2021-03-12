@@ -12,7 +12,7 @@ title: Cum sa organizezi Hour of Code pentru cartiere
 
 ## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
 
-### 1. Recruit local schools
+### 1. Recrutează școlile locale
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

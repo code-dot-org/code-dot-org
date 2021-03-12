@@ -65,6 +65,7 @@ class ProgressBoxForLessonNumber extends Component {
         <a
           href={linkToLessonPlan}
           target="_blank"
+          rel="noopener noreferrer"
           data-for={tooltipId}
           data-tip
           onClick={this.handleClick}

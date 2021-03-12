@@ -117,6 +117,7 @@ se:
         title: Fuomáš Oktibeaškkehemiid ja Pytagoras
         desc: Mearridit goas šearpmas objeavttat guoskkahuvvojit lea dehálaš aspeakta eanas spealuin. Dán lekšuvnnas mii geahččat movt Pytagoras ja Gaskaid MihtidanForme sáhttet geavahuvvot mihtidit gaskka guovtti čujuhusas ovtta sajis, ja de mearridit movt diet guokte čujuhusa (dahje speallanfigurat) guoskkadeaba.
       courseA_unplugged_loops:
+        title: Mohkit Neahtahaga
         desc: Dán lekšuvnnas don oahpat mohkiid birra!
       courseB_unplugged_MRF:
         title: Neahtahaga Doaibma
@@ -219,6 +220,7 @@ se:
         title: Mannat Sihkkaris Sajiide 
         desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
       courseA_unplugged_loops_2018:
+        title: Mohkit Neahtahaga
         desc: Dán lekšuvnnas don oahpat mohkiid birra!
       BigEvent_2018:
         title: Stuora Dáhpáhus
@@ -261,6 +263,8 @@ se:
       BuildingAFoundation_2019:
         title: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.title'
         desc: 'jorgalus váilu: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Mu Mohkke Robota Olbmát
       Conditionals_2019:
         desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá" ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
       courseF_unplugged_powerOfWords_2019:
@@ -283,6 +287,7 @@ se:
         title: Binára Govat
         desc: Vaikko ollu olbmot jurddašit binára leat buiga nullat ja ovttežat, ohppe min ovddeš oahppit ahte informašuvnnas sáhttet leat oallut binára molssaeavttut. Dán lekšuvnnas joatkit dán viidáseappot, go dát čájeha movt dihtor sáhttá vurket vel eanet kompleaksa informašuvnnaid (ovdamearkka dihte govat ja ivnnit) binárain maiddái.
       courseE_unplugged_privateInformation_2019:
+        title: Priváhta ja Persovnnlaš Dieđut
         desc: Ovdánahtton Common Sense Education, Dát lekšuvdna čájeha erohusaid gaskkal informášuvnna mii lea sihkar juogadit online ja informášuvnna mii leat lea nu.
       SongwritingParameters_2019:
         title: 'jorgalus váilu: en-US.data.unplugged.SongwritingParameters_2018.title'
@@ -323,6 +328,7 @@ se:
         title: Mannat Sihkkaris Sajiide 
         desc: Interneahtta lea fámolaš, ja muhtun geardde maid várálaš báiki. Oahpaheaddjit čájehit movt don sáhtát leat oadjebas go navigeret Interneahtas.
       courseA_unplugged_loops_2019:
+        title: Mohkit Neahtahaga
         desc: Dán lekšuvnnas don oahpat mohkiid birra!
       DigitalFootprint_2019:
         title: Du Digitála Luodda
@@ -348,4 +354,5 @@ se:
       timeforcs_demo_conditionals:
         desc: Oahppat evttolaš dadjama birra, oahppit spellet koartaspealu ja ráhkadit njuolggadusaid nu go Jus mun geasán rukses koartta, oaččun ovtta čuoggá" ja "Jus mun geasán čáhppes koartta, de oaččut don ovtta čuoggá."
       TheRightApp_2019:
+        title: Dat Rievttes App:a
         desc: "* Juohkehaš geavaha dihtoriid dán áiggi, earenoamážit smartatelefuvnnaid. \\r\n* Smartatelefuvnna applikašuvnnat, dahje \"app:at\", veahkehit olbmuid čoavdit áššiid nu go hupmat olbmáiguin, guldalit musihka, gávppašit, dahje ohcat neahtas.\\r\n* Lea dehálaš ahte programmerárat ipmirdit earáid dárbbuid ja designejit app:aid daid mielde!\\r\n\\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

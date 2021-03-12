@@ -22,59 +22,65 @@ class UserHelpersTest < ActiveSupport::TestCase
 
   test 'generate_username for new username' do
     # A new username should not receive a suffix.
-    assert_equal 'captain_picard',
-      UserHelpers.generate_username(User, 'Captain Picard')
+    assert_equal 'grace',
+      UserHelpers.generate_username(User, 'Grace')
+  end
+
+  test 'generate_username for new username only has first name' do
+    # A new username with a first and last name should only keep the first name for privacy reasons.
+    assert_equal 'grace',
+      UserHelpers.generate_username(User, 'Grace Hopper')
   end
 
   test 'generate_username for different usernames' do
     # Different usernames do not generate spurious collisions.
     create_user_with_username 'captain_picard'
     assert_equal 'captain', UserHelpers.generate_username(User, 'Captain')
-    assert_equal 'captain_p', UserHelpers.generate_username(User, 'Captain   P')
+    assert_equal 'grace', UserHelpers.generate_username(User, 'Grace')
   end
 
   test 'generate_username for existing username via dart throwing' do
-    create_user_with_username 'captain_picard'
+    create_user_with_username 'captain'
 
     # An existing username attempts the username, fails, and receives '784'.
     srand 0
-    assert_equal 'captain_picard784',
-      UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard784'
+    assert_equal 'captain784',
+      UserHelpers.generate_username(User, 'Captain')
+    create_user_with_username 'captain784'
 
-    # The next Captain Picard attempts '784', fails, and receives '659'
+    # The next Captain attempts '784', fails, and receives '659'
     srand 0
-    assert_equal 'captain_picard659',
-      UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard659'
+    assert_equal 'captain659',
+      UserHelpers.generate_username(User, 'Captain')
+    create_user_with_username 'captain659'
 
-    # The next Captain Picard attempts '784' and '659', fails, and
+    # The next Captain attempts '784' and '659', fails, and
     # receives '4264'.
     srand 0
-    assert_equal 'captain_picard4264',
-      UserHelpers.generate_username(User, 'Captain Picard')
-    create_user_with_username 'captain_picard4264'
+    assert_equal 'captain4264',
+      UserHelpers.generate_username(User, 'Captain')
+    create_user_with_username 'captain4264'
 
-    # The next Captain Picard attempts the above, fails and receives '5859'.
+    # The next Captain attempts the above, fails and receives '5859'.
     srand 0
-    assert_equal 'captain_picard5859',
-      UserHelpers.generate_username(User, 'Captain Picard')
+    assert_equal 'captain5859',
+      UserHelpers.generate_username(User, 'Captain')
   end
 
   test 'generate_username for existing username via fallback' do
-    ['', 784, 659, 4264, 5859, 51993, 96293, 54824, 47456, 383298, 593063, 548242, 474564].each do |suffix|
-      create_user_with_username "captain_picard#{suffix}"
+    ['', 784, 659, 4264, 5859, 51993, 96293, 54824, 47456, 383298, 593063, 548242].each do |suffix|
+      create_user_with_username "captain#{suffix}"
     end
 
     srand 0
-    assert_equal 'captain_picard383299',
-      UserHelpers.generate_username(User, 'Captain Picard')
+    assert_equal 'captain474564',
+      UserHelpers.generate_username(User, 'Captain')
   end
 
   test 'generate_username for long names' do
-    assert_equal 'this_is_a_really',
+    assert_equal 'there',
       UserHelpers.generate_username(
-        User, 'This is a really long name' + ' blah' * 10
+        User, 'There is a really long name' + ' blah' * 10
       )
   end
 
@@ -83,9 +89,9 @@ class UserHelpersTest < ActiveSupport::TestCase
   end
 
   test 'generate_username for parentheses and apostrophes' do
-    assert_equal 'kermit_the_frog',
-      UserHelpers.generate_username(User, 'Kermit (the frog)')
-    assert_equal 'd_andre_means',
+    assert_equal 'kermit_frog',
+      UserHelpers.generate_username(User, 'Kermit(frog)')
+    assert_equal 'd_andre',
       UserHelpers.generate_username(User, "D'Andre Means")
   end
 
@@ -96,8 +102,8 @@ class UserHelpersTest < ActiveSupport::TestCase
 
   test 'generate_username' do
     default_params = {email: 'foo@bar.com', password: 'foosbars', name: 'tester', user_type: User::TYPE_STUDENT, age: 28}
-    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'this is a really long name blah blah blah blah blah blah']
-    expected_usernames = %w(coder_a coder_b captain_picard captain_picard784 captain_picard659 this_is_a_really)
+    names = ['a', 'b', 'Captain Picard', 'Captain Picard', 'Captain Picard', 'there is a really long name blah blah blah blah blah blah']
+    expected_usernames = %w(coder_a coder_b captain captain784 captain659 there)
 
     i = 0
     users = names.map do |name|

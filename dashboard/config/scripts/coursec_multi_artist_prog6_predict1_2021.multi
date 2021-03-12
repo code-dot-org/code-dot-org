@@ -1,0 +1,6 @@
+name 'courseC_multi_artist_prog6_predict1_2021'
+question 'Look carefully at the code below. What will happen when you click "Run"?'
+wrong 'The artist will draw a triangle with three equal sides.', feedback: 'Incorrect.  The artist draws a square.'
+wrong 'The artist will draw a single line.', feedback: 'Incorrect.  The artist draws a square.'
+right 'The artist will draw a square.', feedback: 'Correct!'
+wrong 'The artist will draw a pentagon', feedback: 'Incorrect. The artist draws a square.'

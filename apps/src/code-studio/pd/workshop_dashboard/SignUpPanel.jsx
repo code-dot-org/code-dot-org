@@ -21,7 +21,7 @@ export default class SignUpPanel extends React.Component {
         <p>
           Share this link with teachers who need to sign up for your workshop.
         </p>
-        <a href={signupUrl} target="_blank">
+        <a href={signupUrl} target="_blank" rel="noopener noreferrer">
           {signupUrl}
         </a>
       </WorkshopPanel>

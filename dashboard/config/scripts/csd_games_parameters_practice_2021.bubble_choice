@@ -1,0 +1,7 @@
+name 'CSD Games parameters practice_2021'
+display_name 'Practice with Parameters'
+
+sublevels
+level 'CSD U3 shapes behind_2021'
+level 'CSD U3 shapes missing_2021'
+level 'CSD U3 shapes scene_2021'

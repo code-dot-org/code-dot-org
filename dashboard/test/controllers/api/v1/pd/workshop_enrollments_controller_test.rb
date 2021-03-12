@@ -109,6 +109,18 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal @enrollment.email, response_json[0]['email']
   end
 
+  test 'facilitators can see enrollments in their workshops in csv format' do
+    sign_in @facilitator
+    get :index, params: {workshop_id: @workshop.id, format: :csv}
+    assert_response :success
+
+    response_csv = CSV.parse(@response.body)
+    assert_equal 2, response_csv.length
+    header_row = response_csv[0]
+    enrollment_row = response_csv[1]
+    assert_equal @enrollment.email, enrollment_row[header_row.find_index('Email')]
+  end
+
   test 'facilitators cannot see enrollments in workshops they are not facilitating' do
     sign_in @facilitator
     get :index, params: {workshop_id: @unrelated_workshop.id}

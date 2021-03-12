@@ -14,6 +14,7 @@ module LevelsHelper
   include ApplicationHelper
   include UsersHelper
   include NotesHelper
+  include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
     if script_level.script.name == Script::HOC_NAME
@@ -21,14 +22,14 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      if script_level.lesson.lockable?
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
-      else
+      if script_level.lesson.numbered_lesson?
         puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+      else
+        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
       sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
-    elsif script_level.lesson.lockable?
+    elsif !script_level.lesson.numbered_lesson?
       script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
@@ -239,7 +240,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -253,6 +254,7 @@ module LevelsHelper
       end
 
     if @script_level && @level.can_have_feedback?
+      @app_options[:serverScriptId] = @script.id
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
     end
@@ -308,13 +310,16 @@ module LevelsHelper
     use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_javalab = @level.is_a?(Javalab)
+    use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
+    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
         use_droplet: use_droplet,
+        use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
         use_gamelab: use_gamelab,
@@ -348,8 +353,12 @@ module LevelsHelper
   end
 
   def set_hint_prompt_options(level_options)
-    if @script && @script.hint_prompt_enabled?
-      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold
+    # Default was selected based on analysis of calculated thresholds for
+    # levels in Courses 2, 3, 4 and the 2017 versions of Courses A-F. See PR
+    # #36507 for more details.
+    default_hint_prompt_attempts_threshold = 6.5
+    if @script&.hint_prompt_enabled?
+      level_options[:hintPromptAttemptsThreshold] = @level.hint_prompt_attempts_threshold || default_hint_prompt_attempts_threshold
     end
   end
 
@@ -453,7 +462,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -461,48 +470,8 @@ module LevelsHelper
   end
 
   def azure_speech_service_options
-    speech_service_options = {}
-
-    if @level.game.use_azure_speech_service? && !CDO.azure_speech_service_region.nil? && !CDO.azure_speech_service_key.nil?
-      # First, get the token
-      token_uri = URI.parse("https://#{CDO.azure_speech_service_region}.api.cognitive.microsoft.com/sts/v1.0/issueToken")
-      token_header = {'Ocp-Apim-Subscription-Key': CDO.azure_speech_service_key}
-      token_http_request = Net::HTTP.new(token_uri.host, token_uri.port)
-      token_http_request.use_ssl = true
-      token_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      token_request = Net::HTTP::Post.new(token_uri.request_uri, token_header)
-      token_response = token_http_request.request(token_request)
-      speech_service_options[:azureSpeechServiceToken] = token_response.body
-      speech_service_options[:azureSpeechServiceRegion] = CDO.azure_speech_service_region
-
-      # Then, get the list of voices and languages
-      voice_uri = URI.parse("https://#{CDO.azure_speech_service_region}.tts.speech.microsoft.com/cognitiveservices/voices/list")
-      voice_header = {'Authorization': 'Bearer ' + token_response.body}
-      voice_http_request = Net::HTTP.new(voice_uri.host, voice_uri.port)
-      voice_http_request.use_ssl = true
-      voice_http_request.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      voice_request = Net::HTTP::Get.new(voice_uri.request_uri, voice_header)
-      voice_response = voice_http_request.request(voice_request)
-
-      all_voices = voice_response.body && voice_response.body.length >= 2 ? JSON.parse(voice_response.body) : {}
-      language_dictionary = {}
-      language_dictionary = language_dictionary.transform_keys {|locale| Languages.get_native_name_by_locale(locale)}
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
-      all_voices.each do |voice|
-        native_locale_name = Languages.get_native_name_by_locale(voice["Locale"])
-        next if native_locale_name.empty?
-        language_dictionary[native_locale_name[0][:native_name_s]] ||= {}
-        language_dictionary[native_locale_name[0][:native_name_s]][voice["Gender"].downcase] ||= voice["ShortName"]
-        language_dictionary[native_locale_name[0][:native_name_s]]["languageCode"] ||= voice["Locale"]
-      end
-
-      language_dictionary.delete_if {|_, voices| voices.length < 3}
-
-      speech_service_options[:azureSpeechServiceLanguages] = language_dictionary
-    end
-    speech_service_options
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH
-    speech_service_options
+    return {} unless @level.game.use_azure_speech_service?
+    {voices: AzureTextToSpeech.get_voices || {}}
   end
 
   # Options hash for Blockly
@@ -593,7 +562,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && (!!CDO.aws_access_key || !!CDO.aws_role) && !!CDO.cloudfront_key_pair_id
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
     use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
     app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
     app_options[:isStartMode] = @is_start_mode || false
@@ -638,7 +607,9 @@ module LevelsHelper
       art_from_html: URI.escape(I18n.t('footer.art_from_html', current_year: Time.now.year)),
       code_from_html: URI.escape(I18n.t('footer.code_from_html')),
       powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year))
+      trademark: URI.escape(I18n.t('footer.trademark', current_year: Time.now.year)),
+      built_on_github: I18n.t('footer.built_on_github'),
+      google_copyright: URI.escape(I18n.t('footer.google_copyright'))
     }
   end
 
@@ -772,7 +743,7 @@ module LevelsHelper
   def session_id
     # session.id may not be available on the first visit unless we write to the session first.
     session['init'] = true
-    session.id
+    session.id.to_s
   end
 
   def user_or_session_id
@@ -785,13 +756,39 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
+  end
+
   # Assign a firebase authentication token based on the firebase secret,
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 

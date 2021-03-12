@@ -1457,6 +1457,78 @@
     "dsls": {
       "description": "You have reached the last lesson of Course D! Choose a project to create.",
       "display_name": "End of Course Project"
+    },
+    "sublevels": {
+      "CourseD_EOC_bounce1": {
+        "display_name": "Create a basketball game",
+        "short_instructions": "Create your own basketball game!",
+        "long_instructions": "Create your own basketball game!"
+      },
+      "CourseD_EOC_starwars": {
+        "display_name": "Create a Star Wars game",
+        "short_instructions": "Create your own Star Wars game!",
+        "long_instructions": "Create your own Star Wars game!"
+      },
+      "CourseD_EOC_dance": {
+        "display_name": "Create a dance",
+        "short_instructions": "Create your own dance!",
+        "long_instructions": "Create your own dance!"
+      },
+      "CourseD_EOC_artist": {
+        "display_name": "Create a drawing",
+        "short_instructions": "Create your own drawing!",
+        "long_instructions": "Create your own drawing!",
+        "function_definitions": {
+          "draw a star": {
+            "name": "draw a star",
+            "description": "draw a star with given points and sides of given length",
+            "parameters": {
+              "points": "points",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "draw a circle",
+            "description": "draw a circle of given radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "sides",
+              "length": "length",
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "draw a triangle",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "name": "draw a shape",
+            "parameters": {
+              "sides": "sides",
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "draw a house",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "draw a square",
+            "parameters": {
+              "length": "length"
+            }
+          }
+        }
+      }
     }
   }
 }

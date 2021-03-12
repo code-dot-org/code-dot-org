@@ -114,6 +114,55 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'script2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "cannot remove CourseScripts that cannot change course version" do
+      course_version = create :course_version
+      unit_group = create :unit_group, course_version: course_version
+
+      script1 = create :script, name: 'script1'
+      create(:unit_group_unit, unit_group: unit_group, position: 0, script: script1)
+      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'script2'))
+
+      lesson = create :lesson
+      resource = create :resource, course_version: course_version
+      lesson.resources = [resource]
+      lesson_group = create :lesson_group, lessons: [lesson]
+      script1.lesson_groups = [lesson_group]
+
+      error = assert_raises RuntimeError do
+        unit_group.update_scripts(['script2'])
+      end
+      assert_includes error.message, 'Cannot remove scripts that have resources or vocabulary'
+
+      unit_group.reload
+      assert_equal 2, unit_group.default_unit_group_units.length
+    end
+
+    test "cannot add CourseScripts that cannot change course version" do
+      course_version1 = create :course_version
+      unit_group1 = create :unit_group, course_version: course_version1
+      course_version2 = create :course_version
+      unit_group2 = create :unit_group, course_version: course_version2
+
+      script1 = create :script, name: 'script1'
+      script2 = create :script, name: 'script2'
+      create(:unit_group_unit, unit_group: unit_group1, position: 0, script: script1)
+      create(:unit_group_unit, unit_group: unit_group2, position: 0, script: script2)
+
+      lesson = create :lesson
+      resource = create :resource, course_version: course_version2
+      lesson.resources = [resource]
+      lesson_group = create :lesson_group, lessons: [lesson]
+      script2.lesson_groups = [lesson_group]
+
+      error = assert_raises RuntimeError do
+        unit_group1.update_scripts(['script1', 'script2'])
+      end
+      assert_includes error.message, 'Cannot add scripts that have resources or vocabulary'
+
+      unit_group1.reload
+      assert_equal 1, unit_group1.default_unit_group_units.length
+    end
+
     test "remove CourseScripts" do
       unit_group = create :unit_group
 
@@ -142,7 +191,8 @@ class UnitGroupTest < ActiveSupport::TestCase
               'title' => 'my-unit-group-title',
               'description_short' => 'short description',
               'description_student' => 'Student description here',
-              'description_teacher' => 'Teacher description here'
+              'description_teacher' => 'Teacher description here',
+              'version_title' => 'Version title',
             }
           }
         },
@@ -168,20 +218,22 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :visible, :is_stable,
                   :pilot_experiment, :description_short, :description_student,
-                  :description_teacher, :scripts, :teacher_resources,
-                  :has_verified_resources, :versions, :show_assign_button], summary.keys
+                  :description_teacher, :version_title, :scripts, :teacher_resources,
+                  :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
+                  :announcements], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
     assert_equal 'Student description here', summary[:description_student]
     assert_equal 'Teacher description here', summary[:description_teacher]
+    assert_equal 'Version title', summary[:version_title]
     assert_equal 2, summary[:scripts].length
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal false, summary[:has_verified_resources]
 
-    # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
+    # spot check that we have fields that show up in Script.summarize(false)
     assert_equal 'script1', summary[:scripts][0][:name]
-    assert_equal 'script1-description', summary[:scripts][0]['description']
+    assert_equal 'script1-description', summary[:scripts][0][:description]
 
     assert_equal 1, summary[:versions].length
     assert_equal 'my-unit-group', summary[:versions].first[:name]
@@ -189,7 +241,56 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
-    assert_nil summary[:scripts][0]['stageDescriptions']
+    assert_nil summary[:scripts][0][:stageDescriptions]
+  end
+
+  test 'summarize with numbered units' do
+    unit_group = create :unit_group, name: 'my-unit-group'
+    script1 = create(:script, name: 'script1')
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: script1)
+    script2 = create(:script, name: 'script2')
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: script2)
+
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'course' => {
+          'name' => {
+            'my-unit-group' => {
+              'title' => 'my-unit-group-title',
+            }
+          }
+        },
+        'script' => {
+          'name' => {
+            'script1' => {
+              'title' => 'script1-title'
+            },
+            'script2' => {
+              'title' => 'script2-title'
+            }
+          },
+        },
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'script1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'script1-title', script1.summarize[:title]
+
+    assert_equal 'script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'script2-title', script2.summarize[:title]
+
+    unit_group.has_numbered_units = true
+    unit_group.save!
+
+    assert_equal 'Unit 1 - script1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'Unit 1 - script1-title', script1.summarize[:title]
+
+    assert_equal 'Unit 2 - script2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'Unit 2 - script2-title', script2.summarize[:title]
   end
 
   test 'summarize_version' do

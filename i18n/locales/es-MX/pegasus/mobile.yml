@@ -977,6 +977,7 @@
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2019)
+  pre-express-2020_name: Curso Express para prelectores (2020)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: "Curso acelerado"
@@ -1438,6 +1439,7 @@
   compatibility_hide_this_warning: "Ocultar esta advertencia"
   compatibility_unsupported_browser: "Tu navegador no es compatible. Por favor, actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
   compatibility_unsupported_browser_markdown: "Tu navegador no es compatible. Actualiza tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url}) Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."
+  starwars_shortcode: "estrella"
   mc_shortcode: "mc"
   flappy_shortcode: "aletear"
   header_home: "Inicio"
@@ -1550,6 +1552,7 @@
   hoc_overview_partner_activities_body: "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
   hoc_overview_partner_activities_link: "Ver actividades"
   hoc_overview_start_tutorial: "Comenzar"
+  hoc_overview_more_resources: "Quieres más información recursos para animar a tus estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras, o con poca conectividad, comparte este paquete que contiene [actividades desconectadas de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "Ver la guía para docentes"
   hoc2018_creativity: "creatividad"
   hoc2018_creativity_create: "Crear"
@@ -1686,3 +1689,12 @@
   hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte 2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: "Aprende desde casa"
   homepage_slot_text_blurb_at_home: "Aprender es fácil con estos recursos"
+  page_not_available_button: "Volver a la página de inicio"
+  footer_powered_by_aws: "Impulsado por Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Solo en inglés"
+  footer_privacy_policy: "Política de privacidad"
+  footer_about: "Acerca de"
+  footer_partners: "Socios"
+  footer_donate: "Dona"
+  footer_support: "Soporte"
+  footer_terms: "Términos"

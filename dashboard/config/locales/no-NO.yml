@@ -159,9 +159,17 @@
     mismatch_password: De to passordene du skrev inn samsvarer ikke
     student_consent: Jeg bekrefter at jeg har mine foreldre eller foresattes tillatelse
       til å bruke tjenestene fra Code.org.
-    agree_us_website: Jeg aksepterer å bruke et nettsted som er basert i USA.
-    my_data_to_us: Mine data fra bruken av dette nettstedet kan sendes til, lagres
-      eller behandles i USA.
+    agree_us_data_transfer_student: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk av dette nettstedet til USA** med formål om
+      å hoste og behandle slike data."
+    agree_us_data_transfer_teacher: "**Jeg godtar at Code.org kan overføre data (inkludert
+      personopplysninger) fra min bruk (og mine studenters bruk) av dette nettstedet
+      til USA** med formål om å hoste og behandle slike data."
+    data_collection_us: Jeg forstår at Code.org er et non profit-nettsted basert i
+      USA og at lovgivningen for datainnhenting i USA kan være annerledes enn for
+      landet mitt.
+    visit_privacy: Besøk [personvernpraksisen](%{privacy_url}) til Code.org for å
+      finne ut mer.
     additional_information: Vi trenger noen flere opplysninger for å fortsette registreringen
       din.
     user_type_button: Oppdater kontotype
@@ -1152,12 +1160,6 @@
   courses_category: Alle kurs
   cookie_banner:
     accept: Jeg samtykker
-  gdpr_dialog:
-    heading: Aksepterer du å bruke et nettsted som er basert i USA?
-    message: Dine data fra bruken av dette nettstedet kan sendes til, lagres eller
-      behandles i USA.
-    logout: Logg ut
-    true: Ja
   page_not_found_title: Side Ikke Funnet
   page_not_found_header: '404: Side Ikke Funnet'
   page_not_found_description: Siden du leter etter finnes ikke på denne adressen.

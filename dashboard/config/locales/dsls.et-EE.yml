@@ -1840,3 +1840,5 @@ et-EE:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Tasuta mäng

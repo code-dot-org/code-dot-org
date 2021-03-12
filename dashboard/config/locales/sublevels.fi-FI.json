@@ -1,0 +1,175 @@
+{
+  "fi-FI": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Toiminnot",
+              "Events": "Tapahtumat",
+              "Loops": "Silmukat",
+              "Math": "Matematiikka",
+              "Logic": "Logiikka",
+              "Games/Score": "Pelit/pistemäärä"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Maailma",
+              "Dancers": "Tanssijat",
+              "Properties": "Ominaisuudet",
+              "Events": "Tapahtumat",
+              "Numbers": "Numerot",
+              "Logic": "Logiikka"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "piirrä tähti",
+                "parameters": {
+                  "points": "pisteet",
+                  "length": "pituus"
+                }
+              },
+              "draw a circle": {
+                "name": "piirrä ympyrä"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "pituus",
+                  "repeat": "toista"
+                }
+              },
+              "draw a triangle": {
+                "name": "piirrä kolmio",
+                "parameters": {
+                  "length": "pituus"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "pituus"
+                }
+              },
+              "draw a house": {
+                "name": "piirrä talo",
+                "parameters": {
+                  "length": "pituus"
+                }
+              },
+              "draw a square": {
+                "name": "piirrä neliö",
+                "parameters": {
+                  "length": "pituus"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Maailma",
+              "Actions": "Toiminnot",
+              "Events": "Tapahtumat",
+              "Behaviors": "Käyttäytymiset"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Maailma",
+              "Dancers": "Tanssijat",
+              "Properties": "Ominaisuudet",
+              "Events": "Tapahtumat",
+              "Numbers": "Numerot",
+              "Logic": "Logiikka"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Toiminnot",
+              "Brushes": "Harjat",
+              "Loops": "Silmukat",
+              "Math": "Matematiikka",
+              "Logic": "Logiikka",
+              "Functions": "Funktiot",
+              "Variables": "Muuttujat"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Maailma",
+              "Locations": "Sijainnit",
+              "Actions": "Toiminnot",
+              "Events": "Tapahtumat",
+              "Behaviors": "Käyttäytymiset",
+              "Variables": "Muuttujat",
+              "Math": "Matematiikka",
+              "Logic": "Logiikka",
+              "Functions": "Funktiot",
+              "Text": "teksti",
+              "Comments": "Kommentit"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Maailma",
+              "Locations": "Sijainnit",
+              "Actions": "Toiminnot",
+              "Events": "Tapahtumat",
+              "Behaviors": "Käyttäytymiset",
+              "Variables": "Muuttujat",
+              "Math": "Matematiikka",
+              "Logic": "Logiikka",
+              "Functions": "Funktiot",
+              "Text": "teksti",
+              "Comments": "Kommentit"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Toiminnot",
+              "Brushes": "Harjat",
+              "Loops": "Silmukat",
+              "Math": "Matematiikka",
+              "Logic": "Logiikka",
+              "Functions": "Funktiot",
+              "Variables": "Muuttujat"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Maailma",
+              "Actions": "Toiminnot",
+              "Events": "Tapahtumat",
+              "Logic": "Logiikka",
+              "Math": "Matematiikka"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Maailma",
+              "Actions": "Toiminnot",
+              "Behaviors": "Käyttäytymiset",
+              "Events": "Tapahtumat",
+              "Locations": "Sijainnit",
+              "Logic": "Logiikka",
+              "Loops": "Silmukat",
+              "Math": "Matematiikka",
+              "Variables": "Muuttujat",
+              "Functions": "Funktiot",
+              "Comments": "Kommentit"
+            }
+          }
+        }
+      }
+    }
+  }
+}

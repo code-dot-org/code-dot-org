@@ -30,7 +30,7 @@ Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer in
 
 #### Varför är det viktigt?
 
-Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 55 percent of schools in the U.S. don't teach computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
+Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 53 percent of schools in the U.S. don't teach computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -38,7 +38,7 @@ Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner 
 
 #### Om Code.org
 
-Code.org är en offentlig, ideell organisation till förmån för ett större intresse för datavetenskap och med mål om större jämställhet inom IT-området. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 

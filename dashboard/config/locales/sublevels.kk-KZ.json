@@ -1,0 +1,148 @@
+{
+  "kk-KZ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар",
+              "Loops": "Ілмек",
+              "Math": "Математика",
+              "Logic": "Логика"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Шаралар",
+              "Logic": "Логика"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "жұлдыз салу",
+                "parameters": {
+                  "length": "ұзындық"
+                }
+              },
+              "draw a circle": {
+                "name": "Шеңбер салу"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "ұзындық",
+                  "repeat": "қайтала"
+                }
+              },
+              "draw a triangle": {
+                "name": "үшбұрыш салу",
+                "parameters": {
+                  "length": "ұзындық"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "ұзындық"
+                }
+              },
+              "draw a house": {
+                "name": "үй салу",
+                "parameters": {
+                  "length": "ұзындық"
+                }
+              },
+              "draw a square": {
+                "name": "төртбұрыш салу",
+                "parameters": {
+                  "length": "ұзындық"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "Шаралар",
+              "Logic": "Логика"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Loops": "Ілмек",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "Функциялар",
+              "Variables": "Айнымалылар"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар",
+              "Variables": "Айнымалылар",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "Функциялар",
+              "Text": "Мәтін"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар",
+              "Variables": "Айнымалылар",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "Функциялар",
+              "Text": "Мәтін"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Loops": "Ілмек",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "Функциялар",
+              "Variables": "Айнымалылар"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар",
+              "Logic": "Логика",
+              "Math": "Математика"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Іс-әрекеттер",
+              "Events": "Шаралар",
+              "Logic": "Логика",
+              "Loops": "Ілмек",
+              "Math": "Математика",
+              "Variables": "Айнымалылар",
+              "Functions": "Функциялар"
+            }
+          }
+        }
+      }
+    }
+  }
+}

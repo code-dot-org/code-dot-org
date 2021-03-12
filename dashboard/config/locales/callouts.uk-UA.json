@@ -508,6 +508,25 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
+        },
+        "outbreak2": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
+        },
+        "outbreak7": {
+          "costumes_callout": "Клацніть, щоб створити новий костюм"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Коли будете готові, натисніть \"Запустити\", щоб спробувати програму."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Натисни \"Запустити\", щоб почати рух."
         }
       }
     }

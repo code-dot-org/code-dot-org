@@ -11,7 +11,7 @@
     "args": [
       {
         "name": "BREAK",
-        "empty": true
+        "dummy": true
       },
       {
         "name": "TITLE"

@@ -14,6 +14,13 @@ uk:
         та спробуйте знову.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: недійсне. Зверніть увагу, що кожне посилання можна використовувати
+                лише один раз для відновлення пароля, і працюватиме лише останнє надіслане
+                посилання.
       messages:
         blank: необхідне
         blank_plural: необхідні
@@ -47,6 +54,7 @@ uk:
         finish_sign_up_subheader_provider_markdown: Заповніть наступну інформацію
           для завершення створення облікового запису в Code.org з **%{provider}**
           **%{email}**.
+        reset_password_token: Посилання для скидання пароля, за яким ви перейшли
         error:
           future: не може бути в майбутньому
   beta: бета-версія
@@ -65,7 +73,10 @@ uk:
   heading_x_of_y: "%{heading} (сторінка %{x} з %{y})"
   join_section:
     code:
+      title: Приєднатися до розділу на Code.org
       placeholder: Код групи (ABCDEF)
+      instructions: 'Введіть, будь ласка, 6-ти літерний код, який вам надав учитель
+        (приклад: "ABCDEF"), щоб приєднатися до розділу.'
       instructions_short: Введіть ваші 6 букв коду класу
       submit: Приєднатися
   add_hint_form:
@@ -96,6 +107,9 @@ uk:
     continue_with: Продовжити з %{provider}
     sign_in_with: Увійти через %{provider}
     signed_in: Увійшли!
+    signed_out_markdown: "### Ви вийшли з [Code.org](%{url})."
+    sign_out_of_markdown: "#### Ви скористались %{provider} для входу. [Клацніть тут]
+      (%{url}) щоб вийти з %{provider}."
     already_signedup: Вже зареєстровані?
     notyet_signedup: Ще не приєдналися?
     google_oauth2: обліковий запис Google
@@ -113,11 +127,27 @@ uk:
       доведеться увійти, набравши свій пароль нижче.
     use_clever: Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Будь
       ласка, увійдіть через ваш Clever Portal замість цього.
+    invalid_provider: На жаль, облікові записи %{provider} не можна зв'язати з обліковими
+      записами Code.org.
+    migration_required: На жаль, ми не можемо підключати або відключати облікові записи,
+      які використовують стару версію облікового запису. Оновіть, будь ласка, версію
+      облікового запису.
     unable_to_connect_provider: Не вдається підключити ваш аккаунт Code.org до вашого
       %{provider} аккаунту. Будь ласка, спробуйте ще раз.
+    disconnect_successful: Успішно! Ми від’єднали зовнішній обліковий запис від вашого
+      облікового запису на Code.org.
     already_in_use: Ваш аккаунт %{provider} вже підключений до іншого облікового запису
       Code.org.
     already_linked: Ваш аккаунт %{provider} вже зв'язаний до вашого профілю Code.org.
+    existing_account:
+      account_exists: Гарна новина! У вас вже є обліковий запис Code.org, який використовує
+        %{email}
+      sign_in: Будь ласка, увійдіть у свій існуючий обліковий запис. Потім ви зможете
+        зв’язати свій профіль %{provider} на сторінці Налаштувань облікового запису.
+      sign_up: Це не ваша електронна пошта? Хочете створити новий обліковий запис
+        з іншою електронною адресою? Ви також зможете зв’язати свій профіль %{provider}
+        на сторінці Налаштувань облікового запису, якщо ви вирішите створити новий
+        обліковий запис.
   signup_form:
     email_signup: Зареєструйтесь за допомогою вашої електронної пошти
     student_count: "%{count} учнів вже зареєструвались."
@@ -170,10 +200,21 @@ uk:
     mismatch_password: Введені вами паролі не збігаються
     student_consent: Я підтверджую що у мене є згода моїх батьків і законних опікунів
       на дозвіл використання Code.org.
-    agree_us_website: Я згоден використовувати веб-сайт, що знаходиться на території
-      США.
-    my_data_to_us: Дані про моє використання цього веб-сайту можуть направлятися в
-      США, а також зберігатися або оброблятися на території США.
+    agree_us_data_transfer_student: "**Я погоджуюсь з тим, що Code.org може передавати
+      дані (включаючи особисті дані) мого користування цим веб-сайтом до США** з метою
+      зберігання та обробки таких даних."
+    agree_us_data_transfer_teacher: "**Я погоджуюсь з тим, що Code.org може передавати
+      дані (включаючи особисті дані) мого користування (і користування моїми учнями)
+      цим веб-сайтом до США** з метою зберігання та обробки таких даних."
+    data_collection_us: Я розумію, що Code.org - це некомерційний веб-сайт, який розміщено
+      в США, і що закони, що регулюють збір даних у США, можуть відрізнятися від законів
+      моєї країни.
+    visit_privacy: Відвідайте сторінку [Політика конфіденційності] (%{privacy_url})
+      Code.org, щоб дізнатися більше.
+    student_terms_markdown: Адреси електронної пошти не зберігаються у формі, яка
+      дозволяє нам контактувати з учнями. Учні ніколи не отримуватимуть електронних
+      листів від Code.org, окрім для відновлення пароля. Докладнішу інформацію дивіться
+      у нашій [Політиці конфіденційності] (http://code.org/privacy).
     additional_information: Нам потрібна додаткова інформація, щоб продовжити реєстрацію.
     user_type_button: Оновлення типу облікового запису
     user_type_label: Тип облікового запису
@@ -184,6 +225,7 @@ uk:
     error: Виникла помилка.
     email_preference_question: Чи можемо ми сповіщати вас про оновлення курсів, локальних
       можливості та інші новини з області інформатики за допомогою електронної пошти?
+    email_preference_privacy: "(Дивіться нашу політику конфіденційності)"
     email_preference_yes: Так
     email_preference_no: Ні
     email_preference_required: Необхідно вказати перевагу електронній пошті.
@@ -234,6 +276,8 @@ uk:
     login: Вхід
     invalid_login: Помилковий логін, будь ласка, спробуйте знову
     pair_programming: Я працюю з партнером за одним комп'ютером
+    student_privacy_markdown: Дізнайтеся більше, чому ви не бачите свого повного імені
+      [тут](%{student_privacy_blog}).
   password:
     reset_form:
       title: Забули пароль?
@@ -284,6 +328,7 @@ uk:
     invite_sent: Запрошення надіслано
     added_teacher: "%{name} додано як Вашого учителя"
     registered: Ви зареєструвались на %{section_name}.
+    captcha_required: Будь ласка, заповніть капчу, щоб приєднатися до цього розділу.
     error:
       signed_in: Будь ласка, вийдіть перед продовженням
       username_not_found: Користувача %{username} не знайдено
@@ -331,14 +376,17 @@ uk:
     header:
       finished_hoc: Я вже завершив мою Годину коду
       sign_in_to_save: Увійдіть для збереження досягнень
+      my_dashboard: Моя майстерня
       course_catalog: Каталог курсів
       project_gallery: Проекти
       sections: Секції
       help_support: Допомога та підтримка
       report_bug: Сповістити про проблему
+      report_abuse: Повідомити про порушення
       teacher_community: Спільнота вчителів
       documentation: Документація
       tutorials: Навчальні матеріали
+      web_lab_documentation: Документація веб-лабораторії
       educate_overview: Огляд для педагога
       educate_elementary: Початкова школа
       educate_middle: Середня школа
@@ -364,6 +412,7 @@ uk:
       help_us: Допомога нам
       teach: Вчити
       about: Про
+      legal: Конфіденційність та юридична інформація
       legal_privacy: Політика конфіденційності
       legal_tos: Умови надання послуг
     user:
@@ -400,10 +449,12 @@ uk:
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: Майнкрафт
       playlab: Ігрова студія
+      scratch: Scratch
       sports: Спорт
       starwars: Зоряні війни
       starwarsblocks: Зоряні війни (блоки)
       starwarsblocks_hour: Зоряні війни (блоки)
+      view_all: Переглянути всі проекти...
     popup:
       progress_for_user: Прогрес %{name}
       progress: Ваш прогрес
@@ -442,6 +493,7 @@ uk:
       worked_with: У співпраці з
       update_lock_settings: Оновити настройки блокування тут.
       clear_response: Очистити відповідь
+    student_code_view_diabled: Код учня не можна переглянути для цієї активності.
   user:
     email_confirm_needed: 'Адресу електронної пошти не підтверджено:'
     email_confirm_needed_required: 'Ваша адреса електронної пошти %{email} не підтверджена:'
@@ -503,12 +555,16 @@ uk:
       (для відновлення пароля)
     update: Оновити обліковий запис
     account_successfully_updated: Обліковий запис успішно оновлено.
+    auth_option_saved: Ви успішно зв’язали свій обліковий запис %{provider} з електронною
+      поштою %{email}.
+    auth_option_saved_no_email: Ви успішно зв’язали свій обліковий запис %{provider}.
     update_email: Оновити
     for_parents_and_guardians: Для батьків й опікунів
     link_a_parent_email: Прив’яжіть до цього облікового запису електронну пошту батьків/опікуна,
       щоб бути в курсі успіхів і проектів дитини. Ви також зможете скористуватися
       цією електронною поштою для відновлення пароля.
     parent_guardian_email_label: Електронна пошта батьків/опікуна
+    remove_parent_email_label: Видалити
     none: Немає
     only_one_parent_email_supported_warning: Примітка. Наразі ми можемо зареєструвати
       лише одну електронну пошту батьків/опікуна на один обліковий запис учня.
@@ -555,10 +611,14 @@ uk:
     test_videos_help: Випробуйте наш новий відео-плеєр у своїй школі
     try_beta_courses: Новинка! Спробуйте наші бета-курси для учнів 1-5 класів
     use_as_teacher: Використовуйте цей сайт як вчитель
+    heading_elementary_markdown: "## 20-годинні курси для \n# Основ інформатики (для
+      будь-якого віку)"
     your_gallery: Галерея
     no_primary_course: Спробуйте курс Code Studio
     choose_next_course: Спробуйте курс Студії коду, обравши один з варіантів
     print_certificate: Друкувати сертифікат
+  certificate_sponsor_message: "%{sponsor_name} зробив щедрий подарунок, щоб спонсорувати
+    ваше навчання. "
   move_students:
     new_section_dne: Вибачте, але групи %{new_section_code} не існує. Вкажіть інший
       код групи.
@@ -615,6 +675,8 @@ uk:
     code_from_html: Code.org використовує p5.play, за ліцензією <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>.
     powered_by_aws: На потужностях Amazon Web Services
+    google_copyright: "&copy; Google Inc. використовується з дозволу.  Google Classroom
+      є товарним знаком Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, Логотип CODE та Hour
       of Code&reg; з торговими марками Code.org."
     copyright: Авторські права
@@ -660,6 +722,9 @@ uk:
       gamelab_unsupported_tablet: Game Lab працює найкраще на настільному або портативному
         комп'ютері з мишкою і клавіатурою. Можуть виникнути проблеми з цим інструментом
         на вашому поточному пристрої.
+      oceans_unsupported_browser: Цей браузер не підтримує цей посібник.  Спробуйте
+        відвідати цю сторінку за допомогою Edge, Chrome, Firefox або іншого сучасного
+        браузера.
       weblab_unsupported_browser: На жаль в даний час виникають проблеми із завантаженням
         Web Lab в даному браузері. Може знадобитися використання іншого браузера поки
         ця проблема не буде вирішена. Вибачаємося за завдані незручності.
@@ -764,10 +829,13 @@ uk:
       title: Майнкрафт
     hero:
       title: Майнкрафт
+      body: Майнкрафт повернувся до Години коду з новеньким підручником! Подорожуйте
+        Майнкрафтом з кодом.
     sports:
       title: Спорт
       body: Створи баскетбольну гру або поєднуй різні спортивні ігри.
     text-compression:
+      title: Стиснення тексту
       body: У цьому уроці, студенти будуть використовувати текстовий компресійний
         віджет для стиснення тексту шляхом заміни модулів з символами.
     unplugged:
@@ -791,6 +859,8 @@ uk:
       audience: Вік 14+
       cta: Почати навчання
   landing:
+    prerelease_tutorial: Цей посібник знаходиться у ** бета-версії **. Він підлягає
+      перегляду по мірі отримання відгуків та внесення вдосконалень.
     report_bug: Повідомити про помилку
     support: Отримати допомогу
     support_url: "//support.code.org"
@@ -855,6 +925,8 @@ uk:
     open_response_body: Дякуємо за вашу відповідь!
     correct_title: Правильно
     correct_body: Це правильна відповідь.
+  lesson_extras:
+    bonus_level: Додатковий рівень
   dialog:
     ok: Гаразд
     startover_title: Ви впевнені, що хочете почати все спочатку?
@@ -869,6 +941,12 @@ uk:
   age_interstitial:
     age: Ваш вік
     header: Оновити відомості про обліковий запис
+    warning: Ми в процесі оновлення нашого досвіду, щоб надати вам ще сильніший захист
+      конфіденційності. Для цього нам потрібно, щоб існуючі користувачі ввели тут
+      свій вік.
+    disclaimer: Як завжди, code.org ніколи не здаватими в оренду, не продаватиме та
+      не передаватиме цю інформацію третім особам.
+    sign_out_markdown: Якщо ви не хочете вказувати свій вік, ви можете [вийти](%{url}).
   terms_interstitial:
     title: Оновлені умови надання послуг та політики конфіденційності
     intro_desc: 'Ми оновили наші умови користування та політику конфіденційності.
@@ -909,6 +987,17 @@ uk:
       як погоджуватися з цип. Зверніть увагу на те, що інструменти для навчання JavaScript
       можуть бути недоступні для ваших учнів(студентів, дітей), через оновлення умов.
     review_terms: Переглянути оновлені домовленості
+  donor_interstitial:
+    title: Ваші безкоштовні курси з Інформатики стали можливими завдяки ...
+    subtitle: Ми хотіли б подякувати щедрим донорам, підтримка яких зробила можливим
+      успіх Code.org. Ми прагнемо залишати Code.org безкоштовним для шкіл та студентів
+      у всьому світі, завдяки постійній щедрості наших [донорів](%{donors_url})!
+    local_supporters: Місцеві спонсори
+    global_supporters: Глобальні спонсори
+    support_codeorg_1: Кожен долар, наданий Code.org, дає можливість більшій кількості
+      учнів.
+    support_codeorg_2: "[Пожертвуйте зараз](%{donate_url}) для підтримки Code.org."
+    get_started: Розпочинайте з Code.org
   school_info_interstitial:
     title: Ми хочемо принести Computer Science кожному студенту - допоможіть нам відслідковувати
       наш прогрес!
@@ -1021,8 +1110,10 @@ uk:
   peer_review:
     accepted:
       name: Прийнято
+      description_markdown: "**Так**, ця заявка **відповідає** вимогам"
     rejected:
       name: Відхилено
+      description_markdown: "**Ні**, ця заявка **не відповідає** вимогам"
     escalated:
       name: Ескалація
       description: Я хочу, щоб вчитель переглянув цю роботу
@@ -1103,6 +1194,11 @@ uk:
     який урок вам потрібен.
   hidden_script: Ваш вчитель не очікував побачити вас тут. Будь ласка, запитайте у
     нього на якій темі ви повинні бути.
+  no_course_access_student: Ви не маєте доступу до цього курсу. Будь ласка, запитайте
+    у свого вчителя, який курс ви повинні пройти.
+  no_course_access_teacher: Ви не маєте доступу до цього курсу. Якщо ви вважаєте,
+    що повинні мати доступ до цього курсу, напишіть на support@code.org, щоб ми могли
+    виправити ситуацію.
   no_script_access_student: У вас немає доступу до цього пристрою. Будь ласка, запитайте
     свого вчителя, в якому відділенні ви повинні бути.
   no_script_access_teacher: У вас немає доступу до цього пристрою. Якщо ви вважаєте,
@@ -1111,6 +1207,7 @@ uk:
   return_unit_overview: Перейти до огляду теми
   return_course_overview: Перейти до огляду розділу
   view_all_units: Переглянути всі теми
+  view_teacher_guide: Переглянути рекомендації для вчителя
   pd:
     form_labels:
       first_name: Ім'я
@@ -1121,6 +1218,8 @@ uk:
       gender: Гендерна приналежність
       school_name: Назва школи
       school_country: Країна твоєї школи
+      colombian_school_department: Навчальний відділ
+      colombian_school_municipality: Навчальний муніципалітет
       colombian_school_name: Назва школи
       ages: Які віку ви навчали в цьому році?
       subjects: Яким предметам ви навчали в цьому році?
@@ -1151,6 +1250,7 @@ uk:
       school_country:
         canada: Канада
         chile: Чилі
+        colombia: Колумбія
         israel: Ізраїль
         malaysia: Малайзія
         mexico: Мексика
@@ -1169,26 +1269,64 @@ uk:
         ict: IKT
         math: Математика
         science: Природничі науки
+        history: Історія / Суспільні науки
         la: Мови
+        efl: Англійська як іноземна мова
+        music: Музика
+        art: Мистецтво
+        other: 'Інше:'
       resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
         kodable: Kodable
         lightbot: Світлячок
+        scratch: Scratch
+        tynker: Tynker
+        other: 'Інше:'
       robotics:
+        grok: Grok Learning
         kodable: Kodable
+        lego: LEGO навчання
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        wonder: Wonder Workshop
+        other: 'Інше:'
       workshop_course:
+        csf_af: Основи інформатики (Курси A-F)
+        csf_express: Основи інформатики (Вступ до прискорених та Прискорені)
+        csd: Відкриття інформатики
         csp: "'16-'17 принципи інформатики"
+        not_applicable: Не застосовується
       email_opt_in:
         opt_in_yes: Так
         opt_in_no: Ні
+    international_opt_in:
+      title: 'Семінар відвідування '
+      facilitator_not_listed: Мій ведучий відсутній у списку
+      facilitator_not_applicable: Не застосовується
+      organizer_not_listed: Мій організатор відсутній у списку
+  courses_category: Всі курси
   cookie_banner:
+    more_information: Переглянути політику конфіденційності в Code.org.
     accept: Погоджуюся
-  gdpr_dialog:
-    message: Дані про моє використання цього веб-сайту можуть направлятися в США,
-      а також зберігатися або оброблятися на території США.
-    true: Так
   page_not_found_title: Сторінка не знайдена
   page_not_found_header: '404: Сторінка не знайдена'
   copy: Скопіювати
+  confirm: Підтвердити
+  maker:
+    google_oauth:
+      login_with_google: Увійдіть до Maker App за допомогою Google
+      enter_code: 'Будь ласка, введіть код, отриманий під час входу за допомогою облікового
+        запису Google у браузері за замовчуванням. '
+      error_token_expired: Термін дії маркера закінчився. Будь ласка, увійдіть ще
+        раз, щоб отримати новий маркер.
+      error_no_code: Будь ласка, введіть свій логін.
+      confirm_login: Виберіть "Підтвердити", щоб увійти за допомогою свого облікового
+        записа Google.
   parent_email_banner:
     text: "**Ви один з батьків або опікун? **Прив’яжіть до цього облікового запису
       свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"

@@ -18,7 +18,7 @@
 #
 require 'dynamic_config/gatekeeper'
 
-class HintViewRequest < ActiveRecord::Base
+class HintViewRequest < ApplicationRecord
   belongs_to :user
   belongs_to :script
   belongs_to :level

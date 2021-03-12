@@ -6,19 +6,27 @@ it:
         csd_category_name: Alla scoperta dell'informatica ('17-'18)
         csd_2018_category_name: Alla scoperta dell'informatica ('18-'19)
         csd_2019_category_name: Alla scoperta dell'informatica ('19-'20)
+        csd_2020_category_name: Alla Scoperta dell'Informatica ('20-'21)
+        csd_pilot_category_name: Pilot di Alla Scoperta dell'Informatica
         csf_category_name: Corsi base
         csf_2018_category_name: Fondamenti di Informatica (2018)
+        csf_2019_category_name: Fondamenti di Informatica ('19-'20)
+        csf_2020_category_name: Fondamenti di Informatica ('20-'21)
         csf_international_category_name: Fondamenti di Informatica (in Italiano)
         csf2_draft_category_name: 'Corsi A - F: In fase di sviluppo'
         csp_category_name: Princìpi dell'Informatica (versione 2015-16)
         csp_2018_category_name: Principi di informatica ('18-'19)
         csp_2019_category_name: Principi di informatica ('19-'20)
+        csp_2020_category_name: Principi di Informatica ('20-'21)
         cspexams_category_name: Prova pratica di principi d'informatica
         csp17_category_name: Principi di informatica ('17-'18)
         full_course_category_name: Corsi Avanzati
         hoc_category_name: L'Ora del Codice
         math_category_name: Matematica
         research_studies_category_name: Studi di Ricerca
+        twenty_hour_category_name: 20-Ore
+        tts_category_name: Sintesi Vocale
+        other_category_name: Altro
       name:
         course1:
           title: Corso 1
@@ -68,6 +76,12 @@ it:
               name: 'Laboratorio: Crea una Storia'
             The Big Event:
               name: Il grande evento
+          student_description: Il Corso 1 è rivolto a studenti che stanno iniziando
+            a leggere. Gli studenti creano programmi che sviluppano la capacità di
+            risolvere problemi e di perseverare su problemi difficili, e permettono
+            loro di collaborare con altri. Alla fine del corso gli studenti creano
+            i loro giochi o le loro storie, che possono condividere. Il corso è raccomandato
+            per la prima e la seconda elementare.
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che
@@ -117,6 +131,11 @@ it:
               name: Il grande evento
             Your Digital Footprint:
               name: Segui le tracce digitali
+          student_description: Il Corso 2 è rivolto a studenti delle scuole elementari
+            che hanno già imparato a leggere e non hanno precedenti esperienze di
+            programmazione. Nel corso gli studenti creano programmi per risolvere
+            problemi e sviluppare giochi interattivi o storie da condividere. Il corso
+            è raccomandato dalla terza elementare.
         course3:
           title: Corso 3
           description: Il Corso 3 è rivolto a studenti che hanno già svolto il Corso
@@ -172,6 +191,12 @@ it:
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
               name: 'Laboratorio: Crea una Storia'
+          student_description: Il Corso 3 è rivolto a studenti che hanno già svolto
+            il Corso 2. Gli studenti approfondiscono i concetti della programmazione
+            introdotti nei corsi precedenti e imparano a definire soluzioni flessibili
+            per problemi complessi. Alla fine del corso gli studenti creano giochi
+            interattivi e storie da condividere con tutti. Il corso è raccomandato
+            a partire dalla quarta elementare.
         playlab:
           title: Laboratorio
           description: Crea una storia o inventa un gioco col Laboratorio!
@@ -179,6 +204,7 @@ it:
           lessons:
             Play Lab:
               name: Laboratorio
+          student_description: Crea una storia o inventa un gioco col Laboratorio!
         artist:
           title: Artista
           description: Disegna fantastiche immagini e decorazioni con l'artista!
@@ -186,6 +212,7 @@ it:
           lessons:
             Artist:
               name: Artista
+          student_description: Disegna fantastiche immagini e decorazioni con l'artista!
         hourofcode:
           title: Labirinto Classico
           description: Impara i concetti base dell'informatica con i personaggi di
@@ -195,6 +222,8 @@ it:
           lessons:
             Maze:
               name: 'Labirinto: Sequenze e Cicli'
+          student_description: Impara i concetti base dell'informatica con i personaggi
+            di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
         frozen:
           title: Programma con Anna ed Elsa
           description: Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano
@@ -206,6 +235,10 @@ it:
           lessons:
             Artist:
               name: Artista
+          student_description: Usa la programmazione per unirti ad Anna ed Elsa mentre
+            esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve,
+            pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale
+            che potrai poi condividere con i tuoi amici!
         course4:
           title: Corso 4
           description: Il corso 4 è rivolto agli studenti che hanno già seguito i
@@ -263,6 +296,12 @@ it:
               name: Composizione di Canzoni con Parametri
             'Unplugged: Tangrams':
               name: Tangram
+          student_description: Il corso 4 è rivolto agli studenti che hanno già seguito
+            i corsi 2 e 3. Gli studenti imparano come affrontare problemi di maggiore
+            complessità e a combinare diversi concetti per risolvere i diversi problemi
+            proposti. Una volta completato questo corso, gli studenti saranno in grado
+            di creare programmi abbastanza complessi, anche con l'utilizzo di cicli
+            con contatore e funzioni con parametri.
         Course4pre:
           title: Prerequisiti del Corso 4
           description: Una breve presentazione dei concetti importanti per gli studenti
@@ -288,6 +327,8 @@ it:
               name: 'Contadina: Cicli "Mentre"'
             'Maze: Sequence':
               name: 'Labirinto: Sequenze'
+          student_description: Una breve presentazione dei concetti importanti per
+            gli studenti che non hanno svolto i Corsi 2 e 3.
         usability:
           title: Test di Usabilità
           description: Una selezione di 4 livelli del corso per i test di usabilità.
@@ -302,6 +343,8 @@ it:
               name: Introduzione
             Variables:
               name: Variabili
+          student_description: Una selezione di 4 livelli del corso per i test di
+            usabilità.
         algebra:
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
@@ -347,6 +390,7 @@ it:
               name: Tradizionale &ndash; La Ricetta della Progettazione
             'Unplugged: Video Games and Coordinate Planes':
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
+          student_description: Impara la Programmazione Funzionale mediante l'Algebra
         infinity:
           title: Disney Infinity
           description: Usa il Laboratorio per creare una storia o inventare un gioco
@@ -356,6 +400,8 @@ it:
           lessons:
             Infinity:
               name: Infinito
+          student_description: Usa il Laboratorio per creare una storia o inventare
+            un gioco con i personaggi di Disney Infinity.
         algebrademo:
           title: Demo per l'Algebra
           description: Un po' di esercizi per dimostrare l'ambiente ed il linguaggio
@@ -373,6 +419,8 @@ it:
               name: Costruzione di Disegni
             The Design Recipe:
               name: La Ricetta della Progettazione
+          student_description: Un po' di esercizi per dimostrare l'ambiente ed il
+            linguaggio di programmazione usati nel corso "Informatica in Algebra"
         K5PD:
           lessons:
             Computer Science Pedagogy:
@@ -424,6 +472,7 @@ it:
               name: Peer to Peer - Inviare Numeri
             Routers and addresses:
               name: Router ed indirizzi
+          student_description: Impariamo come funziona Internet
         pixelation:
           title: Conversione di pixel
           description: Crea immagini utilizzando bit e byte.
@@ -439,6 +488,7 @@ it:
               name: Colore Pixellazione Freeplay
             Color Pixelation Tutorial:
               name: Tutorial Colore Pixellazione
+          student_description: Crea immagini utilizzando bit e byte.
         20-hour:
           title: Corso rapido in 20 ore
           description: Questo corso rapido in 20 lezioni introduce in modo sintetico
@@ -491,6 +541,11 @@ it:
               name: Il Labirinto
             Wrap-up:
               name: Conclusione
+          student_description: Questo corso rapido in 20 lezioni introduce in modo
+            sintetico i concetti fondamentali dell'informatica e della programmazione.
+            Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è
+            divertente per imparare un po' di informatica a qualunque età. Fai i corsi
+            2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.
         edit-code:
           title: Modifica il Codice
           description: Modifica il Codice
@@ -498,12 +553,15 @@ it:
           lessons:
             Applab:
               name: Sviluppo App
+            Hoc2015 Blockly:
+              name: Hoc2015 Blockly
             Play Lab:
               name: Laboratorio
             The Artist:
               name: L'artista
             The Maze:
               name: Il Labirinto
+          student_description: Modifica il Codice
         events:
           title: Eventi
           description: Eventi
@@ -517,6 +575,7 @@ it:
               name: Eval
             Studio:
               name: Studio
+          student_description: Eventi
         flappy:
           title: Flappy
           description: Vuoi creare la tua versione del gioco "Flappy" in meno di 10
@@ -526,6 +585,8 @@ it:
           lessons:
             Flappy Code:
               name: Flappy
+          student_description: Vuoi creare la tua versione del gioco "Flappy" in meno
+            di 10 minuti? Prova questo corso!
         jigsaw:
           title: Puzzle
           description: Esercitazione introduttiva per imparare come "trascinare e
@@ -535,6 +596,8 @@ it:
           lessons:
             Jigsaw:
               name: Puzzle
+          student_description: Esercitazione introduttiva per imparare come "trascinare
+            e rilasciare" (drag and drop)
         step:
           title: Fai un passo
           description: Passo del corso
@@ -542,6 +605,7 @@ it:
           lessons:
             Step:
               name: Fai un passo
+          student_description: Passo del corso
         Hour of Code:
           title: L'Ora del Codice 2013
           description: Prova i fondamenti dell'informatica con i personaggi di Angry
@@ -551,6 +615,8 @@ it:
           lessons:
             Hour of Code 2013:
               name: L'Ora del Codice 2013
+          student_description: Prova i fondamenti dell'informatica con i personaggi
+            di Angry Birds e di Plants vs. Zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -576,6 +642,8 @@ it:
               name: Codifica Numeri nel Mondo Reale
             Encoding and Sending Text:
               name: Codifica ed Invio Testo
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
             Number Systems:
               name: Sistema di numerazione
             Personal Innovations:
@@ -602,14 +670,24 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algPDmiami:
           lessons:
             Booleans:
               name: Valori Booleani
+            Design Recipe Practice:
+              name: Pratica di Progettazione della Scaletta
             Evaluation Blocks:
               name: Blocchi di Valutazione
+            Luigi's Pizza:
+              name: Pizza di Luigi
+            Rocket-Height:
+              name: Altitudine
             Sam the Bat:
               name: Sam il Pipistrello
             Strings and Images:
@@ -629,10 +707,23 @@ it:
           lessons:
             Text Compression:
               name: Compressione del testo
+          student_description: Compressione del testo identificando modelli ripetuti.
         CSPPD:
           lessons:
+            Exploring CSP Instructional Materials:
+              name: Esplorare i Materiali Educativi CSP
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            What is CSP?:
+              name: Cos'è il CSP?
         CSPLessonSamples:
           lessons:
             Lesson 14:
@@ -641,31 +732,116 @@ it:
               name: Lezione 15
         ECSPD:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         sciencePD:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         rbo-reference:
           lessons:
             reference:
               name: riferimento
+        Test Wednesday:
+          lessons:
+            PDK5 Intro:
+              name: Intro PDK5
         cspunit3:
           description_short: Programmazione
           lessons:
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Beyond Buttons Toward Apps:
+              name: Oltre i Pulsanti Verso le App
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Compound Conditional Logic:
+              name: Logica Condizionale del Composto
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
             Creating Functions:
               name: Creazione di funzioni
+            Creating functions with Parameters:
+              name: Creare le Funzioni con i Parametri
+            Digital Assistant Project:
+              name: Progetto dell'Assistente Digitale
+            Event-Driven Programming and Debugging:
+              name: Programmazione Guidata dagli Eventi e Debugging
+            Events Unplugged:
+              name: Eventi Tradizionali
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
+            Introducing Design Mode:
+              name: Introducendo la Modalità di Progettazione
             Introduction to Arrays:
               name: Introduzione agli array
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
+            Introduction to Digital Assistants:
+              name: Introduzione agli Assistenti Digitali
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            Multi-screen Apps:
+              name: App Multischermo
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Understanding Program Flow and Logic:
+              name: Comprendere Flusso e Logica del Programma
+            User Input and Strings:
+              name: Input Utente e Stringhe
+            Using Simple Commands:
+              name: Usare Comandi Semplici
+            Using Variables in Apps:
+              name: Usare le Variabili nelle App
             While Loops:
               name: Cicli "mentre"
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -686,14 +862,30 @@ it:
               name: La Ricetta della Progettazione
         ECSPD-NexTech:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         ECSPD-iZone:
           lessons:
+            Growth Mindset:
+              name: Mentalità di Crescita
+            Impact of Computer Science:
+              name: Impatto dell'Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
+            Teaching Strategies:
+              name: Insegnare le Strategie
             What is ECS?:
               name: Cos'è l'ECS?
         algebraPD-NexTech:
@@ -704,8 +896,12 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algebraPD-iZone:
           lessons:
             Course Overview:
@@ -714,43 +910,143 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         sciencePD-NexTech:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         sciencePD-iZone:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         sciencePD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Creating Breeds in Starlogo Nova:
+              name: Creare Varietà in Starlogo Nova
+            Epidemic Model Extensions:
+              name: Estensioni del Modello Epidemico
+            Revisiting Agent Movement:
+              name: Rivisita il Movimento dell'Agente
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         sciencePD3:
           lessons:
+            Decode and Share:
+              name: Decodifica e Condividi
+            Mystery Model:
+              name: Modello Misterioso
             Welcome Back!:
               name: Bentornato!
         cspunit2:
           description_short: Programmazione
           lessons:
+            Algorithms Detour - How Routers Learn:
+              name: Come i Router Imparano
+            Cracking the Code:
+              name: Crackare il Codice
+            DNS in the Real World:
+              name: DNS nel Mondo Reale
+            Encryption Algorithms:
+              name: Chiavi e Password
+            HTTP and Abstraction:
+              name: HTTP e Astrazione su Internet
+            Invent an Addressing Protocol:
+              name: Inventare un Protocollo di Indirizzamento
+            One Way Functions - Ice Cream Vans:
+              name: Funzioni Una Tantum - Il Problema dell'Hotspot WiFi
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            Practice PT - Cybersecurity Innovations:
+              name: Pratica PT - Innovazioni della Sicurezza Informatica
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
+            Public Key Crypto:
+              name: Crittografia della Chiave Pubblica
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Tell Me a Secret - Encrypting Text:
+              name: La Necessità della Codifica
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            The Need for DNS:
+              name: La Necessità del DNS
         algebraPD2a:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Big Game - Animation:
+              name: Grande Gioco - Animazione
+            Big Game - Booleans:
+              name: Grande Gioco - Booleani
+            Big Game - Collision Detection:
+              name: Grande Gioco - Rilevamento delle Collisioni
+            Big Game - Player Movement:
+              name: Grande Gioco - Movimento del Giocatore
+            Big Game - Variables:
+              name: Grande Gioco - Variabili
             Booleans:
               name: Valori Booleani
             Defining Variables:
@@ -759,12 +1055,18 @@ it:
               name: Blocchi di Valutazione
             Free Play:
               name: Tempo di giocare
+            Luigi's Pizza:
+              name: Pizza di Luigi
+            Rocket-Height:
+              name: Altitudine
             Sam the Bat:
               name: Sam il Pipistrello
             Strings and Images:
               name: Stringhe e Immagini
             The Design Recipe:
               name: La Ricetta della Progettazione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         allthethings:
           title: Tutte le cose!
           description: Tutte le tipologie di livello per il test dell'interfaccia
@@ -772,6 +1074,10 @@ it:
           description_short: Tutte le tipologie di livello per il test dell'interfaccia
             utente
           lessons:
+            Anonymous student survey:
+              name: Sondaggio anonimo dello studente
+            Anonymous student survey 2:
+              name: Sondaggio anonimo dello studente 2
             AppLab:
               name: Sviluppo App
             Artist:
@@ -802,6 +1108,8 @@ it:
               name: Conversione di pixel
             PlayLab:
               name: Laboratorio
+            Public Key Cryptography:
+              name: Crittografia della Chiave Pubblica
             Studio:
               name: Studio
             Text Compression:
@@ -810,6 +1118,10 @@ it:
               name: Sviluppo Web
             Sprite Lab:
               name: Laboratorio dei Personaggi
+            AI Lab:
+              name: Laboratorio di Intelligenza Artificiale
+          student_description: Tutte le tipologie di livello per il test dell'interfaccia
+            utente
         algebraPD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -831,12 +1143,16 @@ it:
               name: Blocchi di Valutazione
             Next Steps:
               name: Passi successivi
+            Rocket-Height:
+              name: Altitudine
             Strings and Images:
               name: Stringhe e Immagini
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
             Writing Contracts:
               name: Contratti di Scrittura
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         cspfacilitator:
           lessons:
             App Lab:
@@ -880,6 +1196,9 @@ it:
               name: Passi successivi
             Planning:
               name: Gestione della classe
+          student_description: 'Guida online gratuita per imparare autonomamente come
+            insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
         ECSPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -895,6 +1214,8 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         algebraPD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -906,24 +1227,34 @@ it:
               name: La Ricetta della Progettazione
             Welcome!:
               name: Benvenuto!
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         sciencePD2b:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         science-PD2:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         Equity-OnlinePD:
           lessons:
             Getting Started:
@@ -935,10 +1266,14 @@ it:
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           lessons:
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Welcome!:
               name: Benvenuto!
             Wrap-Up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         ECSPD2-iZone:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -954,6 +1289,8 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         ECSPD2-NexTech:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
@@ -969,10 +1306,18 @@ it:
               name: Benvenuto!
             Wrap-up:
               name: Conclusione
+          student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
+            learning)'
         CSPPD2:
           lessons:
             Getting Started:
               name: Per cominciare
+            Practice PT:
+              name: Pratica PT
+            Welcome to the Course!:
+              name: Benvenuto al Corso!
+            Wrap Up and Next Steps:
+              name: Riscaldamento e Prossimi Passaggi
         asUnplugged:
           lessons:
             Binary Bracelets:
@@ -993,30 +1338,124 @@ it:
               name: Composizione di canzoni
             The Big Event:
               name: Il grande evento
+        algebraPD3a:
+          lessons:
+            Updates - The Big Game and Projects:
+              name: Aggiornamenti - Il Grande Gioco ed i Progetti
+            Updates - The Design Recipe:
+              name: Aggiornamenti - Progettazione della Scaletta
         sciencePD3_pre1:
           lessons:
+            Prep With Your Modules:
+              name: Preparazione Con i Tuoi Moduli
             Welcome Back!:
               name: Bentornato!
+        frequency_analysis:
+          lessons:
+            Frequency Analysis:
+              name: Analisi di Frequenza
         ECSPD3-Unit2:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 2:
+              name: Introduzione all'Unità 2
+            Lesson Overviews:
+              name: Panoramiche della Lezione
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 2 Challenge:
+              name: Sfida Unità 2
         ECSPD3-Unit3:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 3:
+              name: Introduzione all'Unità 3
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 3 Challenge:
+              name: Sfida dell'Unità 3
+            Unit 3 Day-by-Day:
+              name: Unità 3 Giorno dopo Giorno
         ECSPD3-Unit4:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 4:
+              name: Introduzione all'Unità 4
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 4 Challenge:
+              name: Sfida dell'Unità 4
+            Unit 4 Day-by-Day:
+              name: Unità 4 Giorno per Giorno
         ECSPD3-Unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Introduction to the Unit 5 Challenge:
+              name: Introduzione alla Sfida dell'Unità 5
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+            Unit 5 lessons:
+              name: Lezioni dell'unità 5
         ECSPD3-Unit6:
           lessons:
+            Alternative Ideas for Unit 6:
+              name: Idee Alternative per l'Unità 6
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 6 Challenge:
+              name: Sfida dell'Unità 6
+            Unit 6 Overview:
+              name: Panoramica dell'Unità 6
+            Unit 6 lessons:
+              name: Lezioni dell'Unità 6
+        cspunit4draft:
+          lessons:
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Compiling Data:
+              name: Compilare i Dati
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Data, Security, and Privacy:
+              name: Dati, Sicurezza e Privacy
+            Designing Data Collection:
+              name: Progettare la Raccolta dei Dati
+            Designing for Your User:
+              name: Progettare per il Tuo Utente
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            How is Data Collected?:
+              name: Come sono Raccolti i Dati?
+            Import, Export, and Visualize Data:
+              name: Importa, Esporta e Visualizza i Dati
+            Interpreting Data Visualizations:
+              name: Interpretare le Visualizzazioni dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1029,8 +1468,12 @@ it:
               name: Per cominciare
         CSPPD3-Unit2:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
         Special Fun:
           description_short: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
@@ -1045,6 +1488,9 @@ it:
             Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
             finché ci sono!
           description_audience: Da 10 anni in su (dopo il Corso 3)
+          student_description: Qualcosa di speciale per coloro che ne conoscono l'esistenza.
+            Questi esercizi potrebbero non essere disponibili a lungo, così divertiti
+            finché ci sono!
         iceage:
           title: Laboratorio con L'Era Glaciale
           description: Crea una storia oppure fai un gioco con il Laboratorio con
@@ -1054,15 +1500,33 @@ it:
           lessons:
             Ice Age Play Lab:
               name: Laboratorio con L'Era Glaciale
+          student_description: Crea una storia oppure fai un gioco con il Laboratorio
+            con L'Era Glaciale!
         CSPPD3-Unit3:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
         cspunit3temp:
           description_short: Programmazione
           lessons:
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
             Introduction to Arrays:
               name: Introduzione agli array
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
             While Loops:
               name: Cicli "mentre"
         gumball:
@@ -1074,6 +1538,8 @@ it:
           lessons:
             Gumball Play Lab:
               name: Laboratorio con Gumball
+          student_description: Crea una storia oppure fai un gioco con il Laboratorio
+            con Gumball!
         starwars:
           title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description: Impara a programmare i droidi e crea la tua versione di Guerre
@@ -1083,6 +1549,8 @@ it:
           lessons:
             Hour of Code 2015:
               name: L'Ora del Codice 2015
+          student_description: Impara a programmare i droidi e crea la tua versione
+            di Guerre Stellari, in una galassia lontana lontana...
         starwarsblocks:
           title: 'Guerre Stellari: Costruisci una galassia con il codice'
           description: Impara a programmare i droidi e crea la tua versione di Guerre
@@ -1092,6 +1560,8 @@ it:
           lessons:
             Hour of Code 2015:
               name: L'Ora del Codice 2015
+          student_description: Impara a programmare i droidi e crea la tua versione
+            di Guerre Stellari, in una galassia lontana lontana...
         mc:
           title: L'Ora del Codice con Minecraft
           description: Usa i blocchi di codice per avventurarti in questo mondo di
@@ -1100,6 +1570,8 @@ it:
           lessons:
             Hour of Code 2015:
               name: L'Ora del Codice 2015
+          student_description: Usa i blocchi di codice per avventurarti nel mondo
+            di Minecraft con Steve o Alex.
         oceans:
           title: L'Intelligenza Artificiale per il mare
           description: Impara come si può usare l'Intelligenza Artificiale per risolvere
@@ -1109,6 +1581,14 @@ it:
           lessons:
             Oceans:
               name: L'Intelligenza Artificiale per il mare
+          student_description: Impara come si può usare l'Intelligenza Artificiale
+            per risolvere i problemi del mondo di oggi.
+        CSPPD3-Unit3-pt2:
+          lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
+            Share out and Submit:
+              name: Condividi e Invia
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1119,14 +1599,47 @@ it:
           description_short: Programmazione
         cspunit4:
           description_short: Programmazione
+          lessons:
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
         CSPPD3-Unit4:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+        cspunit6draft:
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         CSPPD3-Unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+        cspunit6:
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         AlgebraA:
           description: Impara la Programmazione Funzionale mediante l'Algebra
           description_short: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1149,6 +1662,7 @@ it:
               name: Tradizionale &ndash; Contratti
             'Unplugged: The Design Recipe':
               name: Tradizionale &ndash; La Ricetta della Progettazione
+          student_description: Impara la Programmazione Funzionale mediante l'Algebra
         AlgebraB:
           title: Informatica in Algebra
           description: Impara la Programmazione Funzionale mediante l'Algebra
@@ -1177,6 +1691,7 @@ it:
               name: Tradizionale &ndash; Istruzioni Condizionali e Funzioni a Tratti
             'Unplugged: Video Games and Coordinate Planes':
               name: Tradizionale &ndash; Videogiochi e Piani Cartesiani
+          student_description: Impara la Programmazione Funzionale mediante l'Algebra
         algebraPD1:
           title: Informatica nell'algebra Parte 1
           lessons:
@@ -1186,8 +1701,12 @@ it:
               name: Blocchi di Valutazione
             Introduction to PD:
               name: Introduzione a PD
+            Preparing for in-person PD:
+              name: Prepararsi al SP di persona
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         algebraPD3c:
           lessons:
             Getting Started:
@@ -1205,8 +1724,14 @@ it:
               name: Numeri Binari
             Number Systems:
               name: Sistema di numerazione
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
             Personal Innovations:
               name: Innovazione personale
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
+            Routers and Redundancy:
+              name: Router e Ridondanza
             Sending Binary Messages:
               name: Inviare Messaggi Binari
             Sending Binary Messages with the Internet Simulator:
@@ -1215,6 +1740,10 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            The Need for DNS:
+              name: La Necessità del DNS
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp2-2017:
@@ -1229,10 +1758,26 @@ it:
           lessons:
             Bytes and File Sizes:
               name: Byte e Dimensioni File
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
             Encoding B&W Images:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
             Text Compression:
               name: Compressione del testo
             Post-Course Survey:
@@ -1247,8 +1792,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
             Post-Course Survey:
               name: Sondaggio Post-corso
         csp4-2017:
@@ -1261,6 +1820,10 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Cracking the Code:
+              name: Crackare il Codice
+            Practice PT - Cybersecurity Innovations:
+              name: Pratica PT - Innovazioni della Sicurezza Informatica
             Simple Encryption:
               name: Crittografia semplice
             Post-Course Survey:
@@ -1276,10 +1839,46 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Beyond Buttons Toward Apps:
+              name: Oltre i Pulsanti Verso le App
+            Canvas and Arrays in Apps:
+              name: Tele e Insiemi nelle App
+            Compound Conditional Logic:
+              name: Logica Condizionale del Composto
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            Digital Assistant Project:
+              name: Progetto dell'Assistente Digitale
+            Event-Driven Programming and Debugging:
+              name: Programmazione Guidata dagli Eventi e Debugging
+            Events Unplugged:
+              name: Eventi Tradizionali
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            Image Scroller with Key Events:
+              name: Scorrimento Immagine con Eventi Chiave
+            Introducing Design Mode:
+              name: Introducendo la Modalità di Progettazione
             Introduction to Arrays:
               name: Introduzione agli array
             Introduction to Conditional Logic:
               name: Introduzione alla logica condizionale
+            Introduction to Digital Assistants:
+              name: Introduzione agli Assistenti Digitali
+            Loops and Simulations:
+              name: Cicli e Simulazioni
+            Multi-screen Apps:
+              name: App Multischermo
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Understanding Program Flow and Logic:
+              name: Comprendere Flusso e Logica del Programma
+            User Input and Strings:
+              name: Input Utente e Stringhe
+            Using Variables in Apps:
+              name: Usare le Variabili nelle App
             While Loops:
               name: Cicli "mentre"
             Post-Course Survey:
@@ -1288,7 +1887,7 @@ it:
           description_short: Programmazione
           lessons:
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Functions:
@@ -1297,10 +1896,31 @@ it:
               name: Velocità
         2016_sciencePD_phase1:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         TEMP CSD Unit 3:
           description_short: Programmazione
           lessons:
@@ -1316,12 +1936,35 @@ it:
               name: Introduzione a PD
             Teacher Dashboard:
               name: Cruscotto dell'Insegnante
+            Why Computer Science belongs in Algebra:
+              name: Perché l'Informatica appartiene all'Algebra
         sciencePD1:
           lessons:
+            Agent Based Modeling of Complex Adaptive Systems:
+              name: Modellazione Basata sull'Agente di Sistemi Adattivi Complessi
+            Computational Thinking And The Framework For K-12 Science Education:
+              name: Pensiero Computazionale ed il Quadro per l'Istruzione Scientifica
+                del K-12
+            Dispositions and Classroom Culture:
+              name: Disposizioni e Cultura di Classe
+            Introduction to Complex Adaptive Systems:
+              name: Introduzione ai Sistemi Adattivi Complessi
+            Introduction to Computational Science:
+              name: Introduzione alla Scienza Informatica
             Introduction to PD:
               name: Introduzione a PD
+            Introduction to StarLogo Nova:
+              name: Introduzione a StarLogo Nova
+            Post-Survey:
+              name: Post-Sondaggio
             The Tutorial:
               name: Tutorial
+            Using Computer Models in Science:
+              name: Usare i Modelli Informatici nella Scienza
+            Using Models in the Classroom:
+              name: Usare i Modelli in Classe
+            What to Expect:
+              name: Cosa Aspettarsi
         cspunit1-support:
           lesson_groups:
             required:
@@ -1381,6 +2024,8 @@ it:
               name: Correzione errori (debugging)
             Events:
               name: Eventi
+            Events Unplugged:
+              name: Eventi Tradizionali
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
@@ -1409,6 +2054,8 @@ it:
               name: Correzione errori (debugging)
             Events:
               name: Eventi
+            Events Unplugged:
+              name: Eventi Tradizionali
             'Jigsaw: Learn to drag and drop':
               name: 'Puzzle: Impara come trascinare e rilasciare (drag and drop)'
             Loops:
@@ -1463,24 +2110,78 @@ it:
               name: Conclusione
         ecs-unit2:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 2:
+              name: Introduzione all'Unità 2
+            Lesson Overviews:
+              name: Panoramiche della Lezione
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 2 Challenge:
+              name: Sfida Unità 2
         ecs-unit3:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 3:
+              name: Introduzione all'Unità 3
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 3 Challenge:
+              name: Sfida dell'Unità 3
+            Unit 3 Day-by-Day:
+              name: Unità 3 Giorno dopo Giorno
         ecs-unit4:
           lessons:
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
             Getting Started:
               name: Per cominciare
+            Intro to Unit 4:
+              name: Introduzione all'Unità 4
+            Teaching Strategies:
+              name: Insegnare le Strategie
+            Unit 4 Challenge:
+              name: Sfida dell'Unità 4
+            Unit 4 Day-by-Day:
+              name: Unità 4 Giorno per Giorno
         ecs-unit5:
           lessons:
+            Complete the Challenge:
+              name: Completa la Sfida
             Getting Started:
               name: Per cominciare
+            Introduction to the Unit 5 Challenge:
+              name: Introduzione alla Sfida dell'Unità 5
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 5 Overview:
+              name: Panoramica Unità 5
+            Unit 5 lessons:
+              name: Lezioni dell'unità 5
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
         ecs-unit6:
           lessons:
+            Alternative Ideas for Unit 6:
+              name: Idee Alternative per l'Unità 6
             Getting Started:
               name: Per cominciare
+            Share out and Submit:
+              name: Condividi e Invia
+            Unit 6 Challenge:
+              name: Sfida dell'Unità 6
+            Unit 6 Overview:
+              name: Panoramica dell'Unità 6
+            Unit 6 lessons:
+              name: Lezioni dell'Unità 6
+            Close & Next Steps:
+              name: Chiudi e Prossimi Passaggi
         grade3:
           lessons:
             'Artist: Nested Loops':
@@ -1517,7 +2218,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             Variables:
@@ -1581,6 +2282,10 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csp-online-test:
           lesson_groups:
             required:
@@ -1589,6 +2294,9 @@ it:
               display_name: Contenuto
             practice:
               display_name: Pratiche d'insegnante
+          lessons:
+            Unit 5 Overview:
+              name: Panoramica Unità 5
         csp1-support:
           lesson_groups:
             required:
@@ -1604,6 +2312,11 @@ it:
           lessons:
             Bounce:
               name: Ping-Pong
+          student_description: Scegli la tua squadra e fai una partita di basket
+        sample-csp5:
+          lessons:
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1648,6 +2361,8 @@ it:
           lessons:
             Minecraft Hour of Code Designer:
               name: Programma il tuo Minecraft
+          student_description: Programma animali e altre creature di Minecraft nella
+            tua versione di questo gioco.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1889,22 +2604,29 @@ it:
           lessons:
             Sports:
               name: Sport
+          student_description: Combina diversi sport
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
               name: Benvenuto!
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Wrap-Up:
               name: Conclusione
         2016_sciencePD_phase2b:
           lessons:
             Welcome!:
               name: Benvenuto!
+            Thinking Ahead to Implementation:
+              name: Pensare in Anticipo all'Implementazione
             Wrap-Up:
               name: Conclusione
         sciencepd3-2016:
           lessons:
             Welcome Back!:
               name: Bentornato!
+            Prep With Your Modules:
+              name: Preparazione Con i Tuoi Moduli
         csp3-support:
           lesson_groups:
             required:
@@ -1964,6 +2686,9 @@ it:
               display_name: Contenuto
             practice:
               display_name: Pratiche d'insegnante
+          lessons:
+            Unit 5 Overview:
+              name: Panoramica Unità 5
         csppostap-2017:
           lesson_groups:
             content:
@@ -1971,6 +2696,8 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
             Post-Course Survey:
               name: Sondaggio Post-corso
         csd6-draft:
@@ -1986,6 +2713,8 @@ it:
               name: Cicli con contatore
             Map:
               name: Mappa
+            Arrays:
+              name: Insiemi
             Functions with Parameters:
               name: Funzioni con parametri
         workshop-gamelab:
@@ -1994,6 +2723,8 @@ it:
               name: Introduzione
             Sprites:
               name: Personaggi
+            Input:
+              name: Input
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -2033,6 +2764,8 @@ it:
               name: Liste
             For Loops:
               name: Cicli con contatore
+            Arrays:
+              name: Insiemi
             Functions with Parameters:
               name: Funzioni con parametri
             Functions with Parameters_:
@@ -2050,7 +2783,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd5-2017:
@@ -2068,13 +2801,25 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
+        csd1-old:
+          lessons:
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd2-draft:
           lessons:
             Lists:
               name: Liste
+        csd1-draft:
+          lessons:
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd3-chapters:
           lessons:
             Drawing in Game Lab:
@@ -2088,7 +2833,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
             'Chapter 1: Images and Animation':
@@ -2222,6 +2967,10 @@ it:
                 e di applicare tutte le competenze di programmazione che hanno imparato
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         courseb-2017:
           title: Corso B
           assignment_family_title: Corso B
@@ -2262,6 +3011,10 @@ it:
               name: Ancora programmazione nel labirinto
             Programming with Rey and BB-8:
               name: Programmare con Rey e BB-8
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursec-2017:
           title: Corso C
           assignment_family_title: Corso C
@@ -2305,6 +3058,12 @@ it:
               name: Cicli con l'artista
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
         coursed-2017:
           title: Corso D
           assignment_family_title: Corso D
@@ -2506,6 +3265,12 @@ it:
                 con il debugging nell'ambiente della Collezionista. Gli studenti potranno
                 esercitarsi a leggere e correggere il codice per risolvere gli esercizi
                 con semplici algoritmi contenenti cicli e cicli annidati.
+          student_description: 'In questo corso vengono insegnati nuovi concetti di
+            informatica tra cui algoritmi, cicli annidati, cicli "mentre", istruzioni
+            condizionali ed eventi. Vengono introdotti alcuni concetti di cittadinanza
+            digitale ed è possibile creare il proprio gioco o la propria storia che
+            è poi possibile condividere con gli amici. ATTENZIONE: qui a destra scegli
+            la versione 2018, è la più aggiornata in italiano ==>'
         coursee-2017:
           title: Corso E
           assignment_family_title: Corso E
@@ -2724,6 +3489,11 @@ it:
               name: Cicli annidati
             Functions in Harvester:
               name: Funzioni con la Contadina
+          student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali
+            ed eventi per poi introdurre le funzioni. Nella seconda parte di questo
+            corso, puoi progettare e creare un progetto finale che potrai condividere
+            con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursef-2017:
           title: Corso F
           assignment_family_title: Corso F
@@ -2891,6 +3661,12 @@ it:
               name: Cicli Annidati con l'Ape e lo Zombie
             Nested Loops with Frozen:
               name: Cicli annidati con Frozen
+          student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
+            e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -3075,6 +3851,10 @@ it:
               name: Istruzioni condizionali & cicli con la contadina
             Until Loops in Maze:
               name: Cicli "fino a che" nel labirinto
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         pre-express-2017:
           title: Corso rapido pre-scolare
           assignment_family_title: Corso rapido pre-scolare
@@ -3112,6 +3892,10 @@ it:
               name: 'Laboratorio: Eventi'
             Spelling Bee:
               name: Ape Sapiente
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -3128,8 +3912,20 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         csd4-draft:
           lesson_groups:
             csd4_1:
@@ -3153,6 +3949,9 @@ it:
               name: Introduzione a Sviluppo App - Per cominciare
             Intro to App Lab:
               name: Introduzione a Sviluppo App
+          student_description: Crea la tua app in JavaScript usando la programmazione
+            a blocchi o in formato testo. Se ti sei già esercitato con i blocchi,
+            spingi le tue abilità al livello successivo.
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -3472,12 +4271,26 @@ it:
             cspAssessment:
               display_name: Valutazione del Capitolo
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         pwc:
           lessons:
             Personal Innovations:
               name: Innovazione personale
+            What is a Computer?:
+              name: Cos'è un Computer?
             Simple Encryption:
               name: Crittografia semplice
             Creating Webpages:
@@ -3497,6 +4310,8 @@ it:
               name: 'Minecraft\: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
               name: L'Ora del Codice con Minecraft
+          student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
+            attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
           lessons:
             Intro to AppLab - Choose Your Own Adventure:
@@ -3690,7 +4505,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd3-2018:
@@ -3715,7 +4530,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         csd2-2018:
@@ -3840,6 +4655,10 @@ it:
               name: Sequenze di istruzioni con Angry Birds
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stefi e il grande progetto
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         express-2018:
           title: Corso Rapido (2018)
           assignment_family_title: Corso Rapido
@@ -3979,6 +4798,10 @@ it:
               name: Programmazione a staffetta
             Graph Paper Programming:
               name: Programmazione su carta a quadretti
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         courseb-2018:
           title: Corso B (2018)
           assignment_family_title: Corso B
@@ -4026,6 +4849,10 @@ it:
               name: Muovilo, muovilo
             Copyright and Creativity:
               name: È fantastico creare e comportarsi lealmente
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursed-2018:
           title: Corso D (2018)
           assignment_family_title: Corso D
@@ -4092,6 +4919,11 @@ it:
               name: Cicli Annidati con l'Ape
             Nested Loops in Maze:
               name: Cicli annidati nel labirinto
+          student_description: 'Gli studenti sviluppano la comprensione dei cicli
+            annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi.
+            Oltre alla programmazione, gli studenti vengono introdotti al concetto
+            di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         jr-test:
           lessons:
             Alien Dance Party - Input:
@@ -4141,6 +4973,12 @@ it:
               name: Braccialetti binari
             Looking Ahead:
               name: Uno sguardo avanti con Minecraft
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
         csd6-2018:
           lesson_groups:
             csd6_1:
@@ -4355,6 +5193,11 @@ it:
               name: Giraffa domestica
             Copyright and Creativity:
               name: Condivisione digitale
+          student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali
+            ed eventi per poi introdurre le funzioni. Nella seconda parte di questo
+            corso, puoi progettare e creare un progetto finale che potrai condividere
+            con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursef-2018:
           title: Corso F (2018)
           assignment_family_title: Corso F
@@ -4540,6 +5383,12 @@ it:
               name: Funzioni con Minecraft
             Conditionals in Farmer:
               name: Istruzioni condizionali con la contadina
+          student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
+            e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -4563,6 +5412,16 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            The Need for DNS:
+              name: La Necessità del DNS
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
         csd1-2018:
           lesson_groups:
             cspSurvey:
@@ -4578,6 +5437,10 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -4609,6 +5472,22 @@ it:
               name: Codifica Immagini B&N
             Encoding Color Images:
               name: Codifica Immagini Colori
+            Lossy Compression and File Formats:
+              name: Compressione Dati in Perdita e Formati del File
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
         csp3-2018:
           description_short: Programmazione
           lesson_groups:
@@ -4619,8 +5498,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
+            Creating Functions with Parameters:
+              name: Creare le Funzioni con i Parametri
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp-explore-2018:
@@ -4649,6 +5542,10 @@ it:
           lessons:
             Simple Encryption:
               name: Crittografia semplice
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp5-2018:
@@ -4660,10 +5557,24 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
+            'Practice PT: Create':
+              name: 'Pratica PT: Crea'
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csppostap-2018:
@@ -4674,6 +5585,23 @@ it:
               display_name: 'Capitolo 2: Apps e Database'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
         spritelab:
           lessons:
             Alien Dance Party - Input:
@@ -4835,6 +5763,10 @@ it:
               name: Cicli con Scrat
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stefi e il grande progetto
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         spritelab-validated:
           lessons:
             Alien Dance Party - Input:
@@ -4873,6 +5805,7 @@ it:
           lessons:
             Dance Party:
               name: Ballando col codice
+          student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -4884,6 +5817,9 @@ it:
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
             Usa la tua creatività e le competenze di problem solving per esplorare
             e creare mondi sottomarini grazie alla potenza della programmazione.
+          student_description: Anche quest'anno Minecraft propone un'attività nuova
+            di zecca! Usa la tua creatività e le competenze di problem solving per
+            esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
         dance--draft:
           lessons:
             Dance Party:
@@ -4920,6 +5856,8 @@ it:
           lessons:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+          student_description: Vai oltre alla prima ora di programmazione creando
+            progetti più complessi.
         coursef-2019:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e
             istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
@@ -5131,6 +6069,12 @@ it:
                 digitale.
             Running Simulations:
               name: Simulazioni in corso
+          student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
+            e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
         dance-low:
           title: Ballando col codice (versione per connessioni lente)
           description_short: Crea un ballo tutto tuo e condividilo con i tuoi amici!
@@ -5313,6 +6257,11 @@ it:
                 il loro gioco.
             Dance Party:
               name: Ballando col codice
+          student_description: 'Gli studenti sviluppano la comprensione dei cicli
+            annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi.
+            Oltre alla programmazione, gli studenti vengono introdotti al concetto
+            di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursee-2019:
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
@@ -5509,10 +6458,17 @@ it:
               name: Istruzioni Condizionali con Minecraft
             Digital Sharing:
               name: Condivisione digitale
+            Simon Says:
+              name: Simone Dice
             'Conditionals in Minecraft: Voyage Aquatic':
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Songwriting:
               name: Composizione di canzoni
+          student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali
+            ed eventi per poi introdurre le funzioni. Nella seconda parte di questo
+            corso, puoi progettare e creare un progetto finale che potrai condividere
+            con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         express-2019:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -5640,6 +6596,10 @@ it:
               name: Istruzioni condizionali in Minecraft - Viaggio acquatico
             Concept Practice with Minecraft:
               name: Teoria e pratica con Minecraft
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -5655,6 +6615,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         andrea-test:
           lesson_groups:
             required:
@@ -5673,6 +6639,8 @@ it:
           lessons:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+          student_description: Vai oltre alla prima ora di programmazione creando
+            progetti più complessi.
         coursec-2019:
           description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi.
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
@@ -5738,8 +6706,16 @@ it:
               name: I miei amici robotici (per i più piccoli)
             'Loops: My Loopy Robotic Friends':
               name: I miei ciclici amici robotici (per i più piccoli)
+            Powerful Passwords:
+              name: Password Potenti
             Sticker Art with Loops:
               name: Cicli con l'artista
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -5851,6 +6827,10 @@ it:
                 con una breve discussione introduttiva sui comportamenti da tenere
                 in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
                 per completare degli esercizi online.
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         courseb-2019:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
@@ -5912,6 +6892,8 @@ it:
                 un gioco nel Laboratorio!
             'Loops: Getting Loopy':
               name: Diventare ripetitivi
+            The Right App:
+              name: L'App Giusta
             Loops in Harvester:
               name: Cicli con la contadina
             Programming in Maze:
@@ -5925,6 +6907,10 @@ it:
                 con una breve discussione introduttiva sui comportamenti da tenere
                 in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
                 per completare degli esercizi online.
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         pre-express-2019:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -5986,6 +6972,10 @@ it:
               name: Una battaglia con gli eventi
             Ocean Scene with Loops:
               name: Al mare con i cicli
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         removed19:
           lessons:
             'Debugging: Unspotted Bugs':
@@ -6007,6 +6997,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-2019:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6029,9 +7021,11 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
         csd4-2019:
           lesson_groups:
             csd4_1:
@@ -6042,6 +7036,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -6050,6 +7047,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2019:
           lesson_groups:
             csd6_1:
@@ -6061,6 +7061,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csp4-pilot:
           lesson_groups:
             csp_variables:
@@ -6107,6 +7109,16 @@ it:
               name: Inviare Numeri
             The Internet:
               name: Internet
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            Packets and Making a Reliable Internet:
+              name: Pacchetti e Creare un Internet Affidabile
+            The Need for DNS:
+              name: La Necessità del DNS
+            Practice PT - The Internet and Society:
+              name: Pratica PT - Internet e la Società
         csp2-2019:
           lesson_groups:
             csp2_1_2018:
@@ -6134,8 +7146,20 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp4-2019:
@@ -6147,6 +7171,10 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Finding Trends with Visualizations:
+              name: Trovare Argomenti con Visualizzazioni
+            Check Your Assumptions:
+              name: Verifica le Tue Ipotesi
             Simple Encryption:
               name: Crittografia semplice
             Mid-Year Survey:
@@ -6160,10 +7188,22 @@ it:
             cspSurvey:
               display_name: Sondaggio
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
             Mid-Year Survey:
               name: Sondaggio di metà anno
         csp-explore-2019:
@@ -6189,6 +7229,19 @@ it:
               display_name: 'Capitolo 2: Apps e Database'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Good and Bad Data Visualizations:
+              name: Visualizzazioni Buone e Cattive dei Dati
+            Making Data Visualizations:
+              name: Creare Visualizzazioni dei Dati
+            Discover a Data Story:
+              name: Scopri una Storia sui Dati
+            Cleaning Data:
+              name: Cancellare i Dati
+            Creating Summary Tables:
+              name: Creare Tabelle di Sommario
+            Creating Javascript Objects:
+              name: Creare Oggetti Javascript
         csp1-pilot:
           lesson_groups:
             cspSurvey:
@@ -6204,6 +7257,8 @@ it:
               name: Inviare Messaggi Binari con il Simulatore di Internet
             Binary Numbers:
               name: Numeri Binari
+        csd-tests:
+          title: Test finali CSD
         time4csdemo:
           lesson_groups:
             ramp_up:
@@ -6477,6 +7532,10 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Cos'è un Computer?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -6498,6 +7557,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd2-pilot:
           description_short: "  Imparare a costruire il tuo sito web con Sviluppo
             Web."
@@ -6511,6 +7576,8 @@ it:
           lessons:
             Lists:
               name: Liste
+            Post-Project Test:
+              name: Test finale
         csd3-pilot:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6533,9 +7600,15 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
+            Shapes and Parameters:
+              name: Shapes and Parameters
+            Random Numbers:
+              name: Random Numbers
         csp3-pilot:
           lesson_groups:
             content:
@@ -6572,6 +7645,9 @@ it:
               display_name: Panoramica
             content:
               display_name: Contenuto
+          lessons:
+            Focus Area 1:
+              name: Curriculum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -6630,12 +7706,22 @@ it:
           lesson_groups:
             csd1_2:
               display_name: 'Capitolo 2: Computers e Problem Solvig'
+          lessons:
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csp2-pilot:
           lesson_groups:
             content:
               display_name: Contenuto
             required:
               display_name: Panoramica
+          lessons:
+            Routers and Redundancy:
+              name: Router e Ridondanza
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
         peru-2019:
           lessons:
             Introduction:
@@ -6664,6 +7750,7 @@ it:
           lessons:
             Dance Party:
               name: Ballando col codice
+          student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
         k5-onlinepd-2019:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -6754,6 +7841,9 @@ it:
               name: Analizza le tue riflessioni
             End of Course projects:
               name: Progetti di fine corso
+          student_description: 'Guida online gratuita per imparare autonomamente come
+            insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
         dance-extras-2019:
           title: Continua a ballare (2019)
           description: Vai oltre alla prima ora di programmazione creando progetti
@@ -6763,6 +7853,8 @@ it:
           lessons:
             Dance Party - Go Further:
               name: Ballando col codice - Spingiti oltre
+          student_description: Vai oltre alla prima ora di programmazione creando
+            progetti più complessi.
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -6781,10 +7873,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -6866,10 +7962,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -6893,10 +7993,14 @@ it:
               name: Istruzioni condizionali
             'Events: The Big Event':
               name: Il grande evento
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+            Access Ability:
+              name: Abilità di Accesso
         csp7-pilot:
           lesson_groups:
             csp_parameters_return_values:
@@ -6941,6 +8045,9 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -6956,6 +8063,12 @@ it:
                 di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza
                 fatta, con particolare riferimento alle strategie di problem solving
                 che utilizzeranno nel resto del corso. '
+            The Problem Solving Process:
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              name: Cos'è un Computer?
+            Post-Project Test:
+              name: Test finale
         csd4-2020:
           lesson_groups:
             csd4_1:
@@ -6966,6 +8079,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -6974,6 +8090,9 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
             cspSurvey:
               display_name: Sondaggio
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csd6-2020:
           lesson_groups:
             csd6_1:
@@ -6985,6 +8104,8 @@ it:
           lessons:
             Functions with Parameters:
               name: Funzioni con parametri
+            Post-Project Test:
+              name: Test finale
         csd3-2020:
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
@@ -6998,16 +8119,22 @@ it:
           lessons:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              name: Shapes and Parameters
             Variables:
               name: Variabili
+            Random Numbers:
+              name: Random Numbers
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
             Text:
               name: Testo
             Sprites:
@@ -7096,6 +8223,10 @@ it:
                 e di applicare tutte le competenze di programmazione che hanno imparato
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 una storia nel Laboratorio!
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         courseb-2020:
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
             Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
@@ -7143,6 +8274,8 @@ it:
                 e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
                 Alla fine di questa lezione, gli studenti avranno l'opportunità di
                 creare le proprie immagini utilizzando i cicli.
+            The Right App:
+              name: L'App Giusta
             'Events: The Big Event':
               name: Il grande evento (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere
@@ -7156,6 +8289,10 @@ it:
                 applicare tutte le competenze di programmazione che hanno imparato
                 per creare un gioco animato. È il momento di essere creativi e costruire
                 un gioco nel Laboratorio!
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursec-2020:
           description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi.
             Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
@@ -7182,6 +8319,8 @@ it:
           lessons:
             Screen Out the Mean:
               name: Cittadinanza digitale - Caccia via le cattiverie dallo schermo
+            Powerful Passwords:
+              name: Password Potenti
             'Programming: My Robotic Friends':
               name: I miei amici robotici (per i più piccoli)
             Programming in Maze:
@@ -7217,6 +8356,12 @@ it:
                 un gioco nel Laboratorio!
             'End of Course Project: Create a Play Lab Game':
               name: Progetto di fine corso
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
         coursed-2020:
           description: 'Gli studenti sviluppano la comprensione dei cicli annidati,
             dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre
@@ -7388,6 +8533,11 @@ it:
               name: Ballando col codice
             End of Course Project:
               name: Progetto di fine corso
+          student_description: 'Gli studenti sviluppano la comprensione dei cicli
+            annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi.
+            Oltre alla programmazione, gli studenti vengono introdotti al concetto
+            di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursee-2020:
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed
             eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
@@ -7425,6 +8575,8 @@ it:
                 offrono flessibilità nella programmazione eseguendo intere sezioni
                 di codice solo se una certa condizione è vera, altrimenti viene eseguito
                 un insieme di istruzioni alternativo.
+            Simon Says:
+              name: Simone Dice
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
@@ -7492,6 +8644,11 @@ it:
                 Gli studenti dovrebbero essere incoraggiati a rispettare i diritti
                 degli artisti come parte integrante dell'etica di un buon cittadino
                 digitale.
+          student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali
+            ed eventi per poi introdurre le funzioni. Nella seconda parte di questo
+            corso, puoi progettare e creare un progetto finale che potrai condividere
+            con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         coursef-2020:
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e
             istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
@@ -7617,6 +8774,12 @@ it:
               name: Progetto di fine corso
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
+          student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
+            e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
         express-2020:
           title: Corso Rapido (2017)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -7726,6 +8889,10 @@ it:
               name: Introduzione al laboratorio dei personaggi
             Alien Dance Party:
               name: La festa degli alieni
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         pre-express-2020:
           title: Corso Rapido pre-scolare (2019)
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -7808,6 +8975,10 @@ it:
               name: In movimento con gli eventi
             A Royal Battle with Events:
               name: Una battaglia con gli eventi
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -7821,6 +8992,11 @@ it:
           lesson_groups:
             csp_unit2_2020:
               display_name: Princìpi dell'Informatica - Unità 2
+          lessons:
+            The Need for Addressing:
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              name: Router e Ridondanza
         csp3-2020:
           lessons:
             Debugging:
@@ -7831,10 +9007,24 @@ it:
             csp3_1_2018:
               display_name: 'Unit 3: Introduzione alla Programmazione'
           lessons:
+            The Need For Programming Languages:
+              name: La Necessità dei Linguaggi di Programmazione
+            Using Simple Commands:
+              name: Usare Comandi Semplici
             Creating Functions:
               name: Creazione di funzioni
+            Functions and Top-Down Design:
+              name: Funzioni e Design dall'Alto al Basso
+            APIs and Function Parameters:
+              name: API e Parametri di Funzione
+            Looping and Random Numbers:
+              name: Cicli e Numeri Casuali
+            Practice PT - Design a Digital Scene:
+              name: Pratica PT - Progetta una Scena Digitale
         jess-test-script:
           lessons:
+            Tools:
+              name: Strumenti
             Debugging:
               name: Correzione errori (debugging)
         csd2-virtual:
@@ -7843,12 +9033,27 @@ it:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
             csd2_2:
               display_name: 'Capitolo 2: Styling e CSS'
+          lessons:
+            Post-Project Test:
+              name: Test finale
         csp5-virtual:
           lessons:
+            Multi-screen Apps:
+              name: App Multischermo
+            Controlling Memory with Variables:
+              name: Controllare la Memoria con le Variabili
+            User Input and Strings:
+              name: Input Utente e Stringhe
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
             Intro to App Lab:
               name: Introduzione a Sviluppo App
             Variables:
@@ -7863,7 +9068,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
         code-break:
@@ -7881,8 +9086,14 @@ it:
           lessons:
             While Loops:
               name: Cicli "mentre"
+            Loops and Simulations:
+              name: Cicli e Simulazioni
             Introduction to Arrays:
               name: Introduzione agli array
+            Processing Arrays:
+              name: Elaborare gli Insiemi
+            Functions with Return Values:
+              name: Funzioni con Valori Restituiti
         k5-onlinepd-2020:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -7927,6 +9138,9 @@ it:
               display_name: Approfondimenti (per i corsi E ed F)
             k5_next_steps_1:
               display_name: Passi successivi
+          student_description: 'Guida online gratuita per imparare autonomamente come
+            insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
         dani-june-2020-test:
           lesson_groups:
             cspSurvey:
@@ -7939,8 +9153,12 @@ it:
           lessons:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              name: Shapes and Parameters
             Variables:
               name: Variabili
+            Random Numbers:
+              name: Random Numbers
             Sprites:
               name: Personaggi
             Text:
@@ -7950,9 +9168,11 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Rilevamento delle Collisioni
+              name: Collision Detection
             Functions:
               name: Funzioni
+            Post-Project Test:
+              name: Test finale
           lesson_groups:
             csd3_1:
               display_name: Contenuto
@@ -7988,3 +9208,1284 @@ it:
           lesson_groups:
             lg_1:
               display_name: Contenuto
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Corso A
+            Course B:
+              name: Corso B
+            CS Discoveries:
+              name: Alla scoperta dell'informatica
+        virustest:
+          title: Simulare un'epidemia
+          description_short: Usa Sprite Lab per creare una simulazione di un'epidemia
+            di virus.
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: L'Intelligenza Artificiale per il mare
+            intro-categorical:
+              name: Lezione 5
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Codifica di una simulazione
+          lesson_groups:
+            outbreak:
+              display_name: Simulazione dell'epidemia
+          title: Simulazione dell'epidemia
+          description_short: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+          description: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+          name: epidemia
+          student_description: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+        2021drafting:
+          lessons:
+            Course F Introduction:
+              name: Introduzione al Laboratorio dei Personaggi
+            Virus Simulation for Code Bytes:
+              name: Codifica di una simulazione
+            Sprites in Action:
+              name: Personaggi in azione
+          lesson_groups:
+            introduction:
+              display_name: Introduzione
+            lessonGroup-3:
+              display_name: Variabili
+            outbreak:
+              display_name: Simulazione dell'epidemia
+        csd1-2021:
+          lessons:
+            The Problem Solving Process:
+              key: Il Processo di Risoluzione dei Problemi
+              name: Il Processo di Risoluzione dei Problemi
+            What is a Computer?:
+              key: Cos'è un Computer?
+              name: Cos'è un Computer?
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csd1_1:
+              display_name: 'Capitolo 1: il Problem Solving'
+            csd1_2:
+              display_name: 'Capitolo 2: Computers e Problem Solvig'
+        csd2-2021:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
+            Web."
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+        csd3-2021:
+          description_short: Impara a programmare animazioni, arte interattiva e giochi
+            in Sviluppo Giochi.
+          lessons:
+            Drawing in Game Lab:
+              key: Disegnare in Sviluppo Giochi
+              name: Disegnare in Sviluppo Giochi
+            Shapes and Parameters:
+              key: Shapes and Parameters
+              name: Shapes and Parameters
+            Variables:
+              key: Variabili
+              name: Variabili
+            Random Numbers:
+              key: Random Numbers
+              name: Random Numbers
+            Sprites:
+              key: Personaggi
+              name: Personaggi
+            Text:
+              key: Testo
+              name: Testo
+            Conditionals:
+              key: Istruzioni condizionali
+              name: Istruzioni condizionali
+            Velocity:
+              key: Velocità
+              name: Velocità
+            Collision Detection:
+              key: Collision Detection
+              name: Collision Detection
+            Functions:
+              key: Funzioni
+              name: Funzioni
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd3_1:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            csd3_2:
+              display_name: 'Capitolo 2: Costruzione di Giochi'
+            cspSurvey:
+              display_name: Sondaggio
+        csd4-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd5-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        csd6-2021:
+          lessons:
+            Functions with Parameters:
+              key: Funzioni con parametri
+              name: Funzioni con parametri
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd6_1:
+              display_name: 'Capitolo 1: Output Hardware'
+            csd6_2:
+              display_name: 'Capitolo 2: Input Hardware'
+            cspSurvey:
+              display_name: Sondaggio
+        csp1-2021:
+          lessons:
+            Binary Numbers:
+              key: Numeri Binari
+              name: Numeri Binari
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaggio
+            csp_unit1_2020:
+              display_name: Princìpi dell'Informatica - Unità 1
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: La Necessità dell'Indirizzamento
+              name: La Necessità dell'Indirizzamento
+            Routers and Redundancy:
+              key: Router e Ridondanza
+              name: Router e Ridondanza
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Princìpi dell'Informatica - Unità 2
+        csp3-2021:
+          lessons:
+            Debugging:
+              key: Correzione errori (debugging)
+              name: Correzione errori (debugging)
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabili
+            csp_conditionals:
+              display_name: Istruzioni condizionali
+            csp_functions:
+              display_name: Funzioni
+            csp_project:
+              display_name: Progetto
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Cicli
+            csp_traversals:
+              display_name: Traversali
+            csp_project:
+              display_name: Progetto
+        csp7-2021:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parametri e Valori di Ritorno
+            csp_libraries:
+              display_name: Librerie
+        csp10-2021:
+          lessons:
+            'Project: Innovation Simulation Part 6':
+              description_student: Panoramica della lezione
+            'Project: Innovation Simulation Part 7':
+              description_student: Panoramica della lezione
+        coursea-2021:
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet.
+            Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
+            aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per bambini che non leggono
+            ancora.
+          description_audience: Da 4 a 7 anni
+          lessons:
+            Learn to Drag and Drop:
+              key: Impara come Trascinare i Blocchi
+              name: Impara come Trascinare i Blocchi
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
+            'Programming: Happy Maps':
+              key: 'Programmazione: Mappe felici'
+              name: Mappe felici
+              description_teacher: Il passaggio da algoritmo a programmazione può
+                essere più immediato se gli studenti capiscono la differenza tra pianificare
+                una sequenza e codificare tale sequenza in un linguaggio opportuno.
+                Questa attività aiuterà gli studenti ad acquisire esperienza leggendo
+                e scrivendo del codice costituito da semplici simboli.
+            Sequencing with Scrat:
+              key: Sequenze di istruzioni con Scrat
+              name: Sequenze di istruzioni con Scrat
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
+            Programming in Ice Age:
+              key: Programmazione con l'Era Glaciale
+              name: Programmare con Scrat
+            Programming with Rey and BB-8:
+              key: Programmare con Rey e BB-8
+              name: Programmare con Rey e BB-8
+            'Loops: Happy Loops':
+              key: Cicli felici
+              name: Cicli felici
+              description_teacher: I cicli sono uno strumento molto utile e potente
+                nella programmazione. Per capire quanto utili possono essere, gli
+                studenti dovranno essere condotti a desiderare un modo più semplice
+                per risolvere problemi banali.
+            Loops in Ice Age:
+              key: Cicli con l'Era glaciale
+              name: Cicli con Scrat
+            Loops in Collector:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+              description_teacher: Basandosi sul concetto di istruzioni ripetute appreso
+                in "Cicli Felici", in questa lezione gli studenti utilizzeranno i
+                cicli per raccogliere dei diamanti su Code.org in modo più efficiente.
+            Ocean Scene with Loops:
+              key: Al mare con i cicli
+              name: Al mare con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
+            'Events: The Big Event':
+              key: Il grande evento
+              name: Il grande evento (per i più piccoli)
+              description_teacher: Gli eventi sono un ottimo strumento per aggiungere
+                variazioni ad un algoritmo già scritto. A volte si desidera che il
+                proprio programma risponda all'utente esattamente quando l'utente
+                ne ha bisogno. Gli eventi servono proprio a questo.
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: In movimento con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        courseb-2021:
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet.
+            Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
+            aggiornata in italiano ==>'
+          description_short: Introduzione all'informatica per alunni che devono imparare
+            a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
+          description_audience: Da 5 a 8 anni
+          lessons:
+            Move It, Move It:
+              key: Muovilo, muovilo
+              name: Muovilo, muovilo
+            Sequencing in Maze:
+              name: Sequenze di istruzioni con Angry Birds
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
+            Programming in Maze:
+              key: Programmare con Angry Birds
+              name: Programmare con Angry Bird
+            Programming in Harvester:
+              key: Programmazione con la contadina
+              name: Programmare con la contadina
+            'Loops: Getting Loopy':
+              key: 'Cicli: diventare ripetitivi'
+              name: Diventare ripetitivi
+            Loops in Harvester:
+              key: Cicli con la contadina
+              name: Cicli con la contadina
+            Loops in Collector:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+            Loops in Artist:
+              key: Cicli con l'artista
+              name: Disegnare giardini con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
+            The Right App:
+              key: L'App Giusta
+              name: L'App Giusta
+            'Events: The Big Event':
+              key: Il grande evento
+              name: Il grande evento (per i più piccoli)
+              description_teacher: Gli eventi sono un ottimo strumento per aggiungere
+                variazioni ad un algoritmo già scritto. A volte si desidera che il
+                proprio programma risponda all'utente esattamente quando l'utente
+                ne ha bisogno. Gli eventi servono proprio a questo.
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: Una battaglia con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        coursec-2021:
+          description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi.
+            Traduci le tue iniziali in binario, indaga sulle diverse tecniche di risoluzione
+            dei problemi e impara a reagire correttamente al cyberbullismo. Alla fine
+            del corso, puoi creare e condividere un gioco interattivo o una storia
+            animata! ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
+            in italiano ==>'
+          description_short: Impara le basi dell'informatica e crea disegni, storie
+            animate o giochi interattivi.
+          description_audience: Da 6 a 10 anni
+          lessons:
+            'Programming: My Robotic Friends':
+              key: I miei amici robotici
+              name: I miei amici robotici (per i più piccoli)
+            Programming in Maze:
+              key: Programmare con Angry Birds
+              name: Programmare con Angry Bird
+            Debugging in Maze:
+              key: Correzione di errori nel labirinto
+              name: Correzione di errori nel labirinto
+            Programming in Collector:
+              key: Programmare la collezionista
+              name: Programmare con la collezionista
+            Programming in Artist:
+              key: Programmare l'artista
+              name: Programmare con l'artista
+            Binary Bracelets:
+              key: Braccialetti binari
+              name: Braccialetti binari
+            'Loops: My Loopy Robotic Friends':
+              key: I miei ciclici amici robotici
+              name: I miei ciclici amici robotici (per i più piccoli)
+            Loops with Rey and BB-8:
+              key: Cicli con Rey e BB-8
+              name: Cicli con Rey e BB-8
+            Loops in Harvester:
+              key: Cicli con la contadina
+              name: Cicli con la contadina
+            Looking Ahead:
+              key: Uno sguardo in avanti
+              name: Uno sguardo avanti con Minecraft
+            Sticker Art with Loops:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            'Events: The Big Event':
+              key: Il grande evento
+              name: Il grande evento
+            Build a Flappy Game:
+              key: Realizzare un gioco Flappy
+              name: Realizzare un gioco Flappy
+            Events in Play Lab:
+              key: 'Laboratorio: Eventi'
+              name: Giocare con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
+            'End of Course Project: Create a Play Lab Game':
+              name: Progetto di fine corso
+          lesson_groups:
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_binary:
+              display_name: Binario
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          student_description: 'Crea programmi con sequenze di istruzioni, cicli ed
+            eventi. Traduci le tue iniziali in binario, indaga sulle diverse tecniche
+            di risoluzione dei problemi e impara a reagire correttamente al cyberbullismo.
+            Alla fine del corso, puoi creare e condividere un gioco interattivo o
+            una storia animata! ATTENZIONE: qui a destra scegli la versione 2018,
+            è la più aggiornata in italiano ==>'
+        coursed-2021:
+          description: 'Gli studenti sviluppano la comprensione dei cicli annidati,
+            dei cicli "mentre", delle istruzioni condizionali e degli eventi. Oltre
+            alla programmazione, gli studenti vengono introdotti al concetto di cittadinanza
+            digitale. ATTENZIONE: qui a destra scegli la versione 2018, è la più aggiornata
+            in italiano ==>'
+          description_short: Impara le istruzioni condizionali e sviluppa le tue capacità
+            artistiche per cerare un disegno, una storia o un gioco.
+          description_audience: Da 7 a 11 anni
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmi: Programmazione su carta a quadretti'
+              name: Programmazione su carta a quadretti
+            Introduction to Online Puzzles:
+              key: Introduzione agli esercizi online
+              name: Introduzione agli esercizi online
+              description_student: Questa lezione ti permetterà di far pratica con
+                le abilità di cui avrai bisogno in questo corso.
+              description_teacher: 'Negli esercizi di questa lezione, gli studenti
+                inizieranno con un''introduzione (o un ripasso a seconda dell''esperienza
+                della classe) dell''ambiente di lavoro online di Code.org. Con alcuni
+                video verranno presentate le funzionalità di base dell''ambiente di
+                lavoro, inclusi i pulsanti "Esegui", "Ripristina" e "Fai un passo".
+                Altre indicazioni presentate in questi video: trascinamento, connessione
+                ed eliminazione dei blocchi (questo tipo di programmazione a blocchi
+                è denominata Blockly). Successivamente, gli studenti potranno esercitarsi
+                nel labirinto con le sequenze di istruzioni e il debugging. Infine,
+                gli studenti vedranno nuovi tipi di esercizi come la Collezionista,
+                l''Artista e la Contadina, in cui impareranno le basi dei Cicli (istruzioni
+                di ripetizione).'
+            Relay Programming:
+              key: Programmazione a staffetta
+              name: Programmazione a staffetta
+              description_student: Ricordi quando facevi i primi disegni con il coding
+                all'inizio del corso? In questa lezione lavorerai in gruppo per fare
+                qualcosa di molto simile!
+              description_teacher: 'Questa attività inizierà con una breve lezione
+                sulla correzione degli errori (debugging) e sulla perseveranza, poi
+                partirà una corsa contro il tempo: gli studenti si suddividono in
+                squadre e lavorano insieme per scrivere un programma un''istruzione
+                alla volta.'
+            Debugging in Collector:
+              key: Debugging con la collezionista
+              name: Debugging con la collezionista
+              description_student: 'Hai mai avuto problemi durante la programmazione?
+                In questa lezione imparerai i segreti del debugging: il processo di
+                cercare e risolvere i problemi nel codice. '
+              description_teacher: In questa attività online, gli studenti si eserciteranno
+                con il debugging nell'ambiente della Collezionista. Gli studenti potranno
+                esercitarsi a leggere e correggere il codice per risolvere gli esercizi
+                con semplici algoritmi contenenti cicli e cicli annidati.
+            Events in Bounce:
+              key: Rimbalzando con gli eventi
+              name: Rimbalzando con gli eventi
+              description_student: Ti piacerebbe poter giocare con dei videogiochi
+                a scuola? In questa lezione potrai crearne uno tutto tuo!
+              description_teacher: In questa attività online, gli studenti impareranno
+                cosa sono gli Eventi e come i computer li usano in programmi come
+                i videogiochi. Gli studenti creeranno dei programmi che reagiscono
+                agli Eventi (come la pressione dei pulsanti freccia). Alla fine della
+                lezione, gli studenti avranno la possibilità di personalizzare il
+                proprio gioco modificando velocità e suoni.
+            Build a Star Wars Game:
+              key: Realizza un gioco con Star Wars
+              name: Realizza un gioco con Star Wars
+              description_teacher: In questa lezione, gli studenti metteranno in pratica
+                l'uso degli eventi per creare un gioco che potranno poi condividere
+                online. Con R2-D2 e altri personaggi di Star Wars, gli studenti saranno
+                guidati attraverso gli eventi, infine avranno un loro spazio per creare
+                il loro gioco.
+            Dance Party:
+              key: Ballando col codice
+              name: Ballando col codice
+            Loops in Ice Age:
+              key: Cicli con l'Era glaciale
+              name: Cicli con l'Era glaciale
+            Loops in Artist:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            Nested Loops in Bee:
+              key: Cicli Annidati con l'Ape
+              name: Cicli annidati nel labirinto
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di spingere la loro comprensione dei Cicli ad un livello
+                completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti
+                impareranno a programmare un ciclo all'interno di un altro ciclo.
+                Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti
+                in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
+            Conditionals with Cards:
+              key: Istruzioni condizionali con le carte da gioco
+              name: Istruzioni condizionali con le carte da gioco
+              description_student: È ora di fare un gioco in cui guadagni punti solo
+                a certe condizioni!
+              description_teacher: In questa lezione viene mostrato come le istruzioni
+                condizionali possano essere usate per adattare un programma a specifiche
+                condizioni. Non sempre abbiamo tutte le informazioni necessarie quando
+                scriviamo un programma. A volte si vuole fare qualcosa di diverso
+                in una situazione rispetto ad un'altra, anche se non si sa a priori
+                quale situazione sarà vera quando il codice verrà eseguito. È in questi
+                casi che entrano in gioco le istruzioni condizionali. Queste permettono
+                a un computer di prendere delle decisioni sulla base delle condizioni
+                che sussisteranno ogni volta che il codice verrà eseguito.
+            Conditionals in Bee:
+              key: Istruzioni condizionali con l'ape
+              name: Istruzioni condizionali con l'ape
+              description_student: Ora che hai capito le istruzioni condizionali,
+                è ora di sfruttarle per programmare l'ape a raccogliere il nettare
+                e fare il miele.
+              description_teacher: Fino a questo momento gli studenti hanno scritto
+                programmi che vengono eseguiti esattamente nello stesso modo ogni
+                volta che vengono eseguiti - questo dà sicurezza, ma non è molto flessibile.
+                In questa lezione, la classe inizierà a scrivere codice contenente
+                istruzioni condizionali, questo permetterà di scrivere programmi che
+                funzionano in modo diverso a seconda delle specifiche condizioni incontrate.
+            While Loops in Farmer:
+              key: Cicli "mentre" con la contadina
+              name: Cicli "mentre" con la contadina
+              description_student: 'I cicli sono molto utili nella programmazione.
+                Grazie a questa lezione imparerai un nuovo tipo di cicli: i cicli
+                "mentre"!'
+            Until Loops in Maze:
+              key: Cicli "fino a che" nel labirinto
+              name: Cicli "fino a che" nel labirinto
+            Conditionals & Loops in Harvester:
+              key: Istruzioni condizionali & cicli con la contadina
+              name: Istruzioni condizionali & cicli con la contadina
+              description_student: Non è sempre facile capire quale istruzione condizionale
+                usare. Questa lezione ti aiuterà a prendere confidenza e imparare
+                a fare le scelte corrette.
+              description_teacher: Gli studenti si eserciteranno con i cicli `mentre`,
+                i cicli `ripeti fino a che` e le istruzioni `se / altrimenti`. Tutti
+                questi blocchi utilizzano delle istruzioni condizionali. Esercitandosi
+                su tutti e tre, gli studenti impareranno a scrivere codice complesso
+                e flessibile.
+            'Unplugged: Binary':
+              key: Binario
+              name: Immagini binarie
+              description_teacher: Anche se molti pensano al sistema binario come
+                costituito rigorosamente da zeri e uni, gli studenti verranno introdotti
+                all'idea che i dati possono essere rappresentati in una varietà di
+                opzioni binarie. Questa lezione sviluppa ulteriormente questo concetto
+                illustrando come un computer possa memorizzare dati ancora più complessi
+                (ad esempio immagini e colori) in formato binario.
+            Artist Binary:
+              key: Artista binario
+              name: Artista binario
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+            lesson-6:
+              name: Uno sguardo avanti con Minecraft
+            lesson-1:
+              name: Cittadinanza digitale - Il potere delle parole
+              description_student: Il bullismo non va mai bene. In questa lezione
+                imparerai cosa si può dire online e cosa deve essere evitato.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_events:
+              display_name: Eventi
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            end_of_course_project:
+              display_name: Progetto di fine corso
+            lessonGroup-6:
+              display_name: Cittadinanza digitale
+          student_description: 'Gli studenti sviluppano la comprensione dei cicli
+            annidati, dei cicli "mentre", delle istruzioni condizionali e degli eventi.
+            Oltre alla programmazione, gli studenti vengono introdotti al concetto
+            di cittadinanza digitale. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        coursee-2021:
+          description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed
+            eventi per poi introdurre le funzioni. Nella seconda parte di questo corso,
+            puoi progettare e creare un progetto finale che potrai condividere con
+            i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+          description_short: Dopo aver ripassato i principi introdotti nei Corsi C
+            & D, ci si spinge oltre, aggiungendo il concetto di funzione.
+          description_audience: Da 8 a 12 anni
+          lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: Istruzioni condizionali in Minecraft - Viaggio acquatico
+              name: Istruzioni condizionali in Minecraft - Viaggio acquatico
+            Conditionals:
+              key: Istruzioni condizionali
+              name: Istruzioni condizionali con la contadina
+              description_teacher: Questa lezione introduce gli studenti allo studio
+                dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli
+                mentre_ sono cicli che continuano a ripetere le istruzioni finché
+                una certa condizione è vera. I cicli mentre sono usati quando il programmatore
+                non conosce a priori il numero esatto di volte che le istruzioni devono
+                essere ripetute, ma conosce quale condizione debba essere vera per
+                consentire al ciclo di continuare. Le istruzioni `se / altrimenti`
+                offrono flessibilità nella programmazione eseguendo intere sezioni
+                di codice solo se una certa condizione è vera, altrimenti viene eseguito
+                un insieme di istruzioni alternativo.
+            Simon Says:
+              key: Simone Dice
+            Alien Dance Party with Sprite Lab:
+              key: La festa degli alieni con il Laboratorio dei personaggi
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Private and Personal Information:
+              key: Cittadinanza digitale - Dati personali e altri dati
+              name: Cittadinanza digitale - Dati personali e altri dati
+            Digital Sharing:
+              key: Condivisione digitale
+              name: Condivisione digitale
+            Nested Loops in Bee:
+              key: Cicli Annidati con l'Ape
+              name: Cicli annidati nel labirinto
+              description_student: Cicli all'interno di altri cicli, all'interno di
+                altri cicli... Cosa significa? In questa lezione imparerai cosa succede
+                quando inserisci un ciclo all'interno di un altro ciclo.
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di spingere la loro comprensione dei Cicli ad un livello
+                completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti
+                impareranno a programmare un ciclo all'interno di un altro ciclo.
+                Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti
+                in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
+            Nested Loops in Artist:
+              key: Cicli annidati con l'artista
+              name: Cicli annidati con l'artista
+              description_student: Ancora cicli annidati! Questa volta realizzerai
+                alcuni disegni STRAORDINARI con i cicli annidati.
+            Nested Loops in Frozen:
+              key: Cicli annidati con Frozen
+              name: Cicli annidati con Frozen
+            'Functions: Songwriting':
+              key: 'Funzioni: Composizione di Canzoni'
+              name: Composizione di canzoni
+              description_teacher: Una delle strutture più belle nell'informatica
+                è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi
+                che è possibile utilizzare più e più volte all'interno di un programma
+                più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente
+                perché raggruppare blocchi di codice all'interno di funzioni possa
+                essere una pratica utile.
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Functions in Harvester:
+              key: Funzioni con la Contadina
+              name: Funzioni con la contadina
+            Functions in Artist:
+              key: Funzioni con l'artista
+              name: Funzioni con l'artista
+              description_teacher: Gli studenti saranno introdotti all'uso delle funzioni
+                su Code.org. Nell'ambiente dell'Artista verranno create e modificate
+                figure magnifiche sfruttando la potenza delle funzioni. Per schemi
+                più complessi, gli studenti impareranno ad usare le funzioni annidate,
+                richiamando una funzione dall'interno di un'altra.
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_sprites:
+              display_name: Personaggi
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_nested_loops:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          student_description: 'Si inizia con algoritmi, cicli, istruzioni condizionali
+            ed eventi per poi introdurre le funzioni. Nella seconda parte di questo
+            corso, puoi progettare e creare un progetto finale che potrai condividere
+            con i tuoi amici e familiari. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        coursef-2021:
+          description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e
+            istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica
+            e crea disegni, storie o giochi interattivi.
+          description_audience: Da 9 a 13 anni
+          lessons:
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Events with Sprite Lab:
+              name: La festa degli alieni con il Laboratorio dei personaggi
+            Loops with the Artist:
+              key: Cicli con l'Artista
+            Nested Loops in the Maze:
+              name: Cicli annidati nel labirinto
+              description_student: Cicli all'interno di altri cicli, all'interno di
+                altri cicli... Cosa significa? In questa lezione imparerai cosa succede
+                quando inserisci un ciclo all'interno di un altro ciclo.
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di spingere la loro comprensione dei Cicli ad un livello
+                completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti
+                impareranno a programmare un ciclo all'interno di un altro ciclo.
+                Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti
+                in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
+            The Power of Words:
+              key: Cittadinanza digitale - Il potere delle parole
+              name: Cittadinanza digitale - Il potere delle parole
+              description_student: Il bullismo non va mai bene. In questa lezione
+                imparerai cosa si può dire online e cosa deve essere evitato.
+            Envelope Variables:
+              key: Variabili e buste
+              name: Variabili e buste
+              description_student: 'Buste e variabili hanno qualcosa in comune: entrambe
+                contengono cose importanti. In questa lezione impari cosa sono le
+                variabili e quante cose importante puoi fare con esse.'
+              description_teacher: Le variabili sono usate come contenitori per valori
+                quali numeri o parole. Le variabili consentono molta libertà al programmatore.
+                Invece di dover scrivere una frase molte volte o di ricordarsi un
+                numero complicato, gli informatici usano le variabili per far riferimento
+                a queste informazione. Questa lezione spiega cosa sono le variabili
+                e come possiamo usarle in molti modi differenti. Il concetto di "variabile"
+                non è facile da comprendere, pertanto raccomandiamo di assegnare parecchio
+                tempo per la discussione alla fine della lezione.
+            Variables as Constant in Artist:
+              name: Variabili con l'artista
+            Variables that Change in Bee:
+              name: Modifica delle variabili con l'ape
+            Variables that Change in Artist:
+              name: Modifica delle variabili con l'artista
+            AI for Oceans:
+              key: L'Intelligenza Artificiale per il mare
+              name: L'Intelligenza Artificiale per il mare
+            Internet:
+              key: Internet
+              name: Internet
+              description_teacher: Anche se molte persone usano Internet ogni giorno,
+                non molti sanno come funziona. In questa lezione, gli studenti faranno
+                finta di navigare in Internet, imparando a conoscere connessioni,
+                URL, indirizzi IP e DNS.
+            For Loop Fun:
+              key: Divertiti usando i cicli con contatore
+              name: Divertiti usando i cicli con contatore
+              description_student: Ti divertirai moltissimo imparando i cicli con
+                contatore!
+              description_teacher: 'Sappiamo che i cicli ci permettono di ripetere
+                più e più volte le stesse azioni, ma ora impareremo come usare i cicli
+                con strutture aggiuntive. Queste nuove strutture permetteranno agli
+                studenti di creare un codice più potente e dinamico. '
+            For Loops in Bee:
+              key: Cicli con contatore con l'ape
+              name: Cicli con contatore con l'ape
+              description_student: Zzz Zzz. In questi esercizi guiderai l'ape fino
+                al nettare e al miele usando i cicli con contatore!
+              description_teacher: Questa lezione con l'Ape è dedicata ai cicli con
+                contatore e l'uso di una variabile incrementale per risolvere esercizi
+                più complicati. Gli studenti inizieranno ripassando i cicli delle
+                lezioni precedenti, poi proseguiranno usando i cicli con contatore
+                per risolvere più efficacemente problemi più complicati.
+            For Loops in Artist:
+              key: Cicli con contatore con l'artista
+              name: Cicli con contatore con l'artista
+              description_student: Preparati a creare il tuo prossimo capolavoro.
+                Qui userai i cicli con contatore per creare immagini sbalorditive.
+              description_teacher: In questa lezione, gli studenti continuano ad esercitarsi
+                con i cicli, questa volta con l'Artista. Gli studenti completeranno
+                gli esercizi combinando i concetti di variabili, cicli e cicli con
+                contatore per creare progetti complessi. Alla fine avranno la possibilità
+                di creare il proprio progetto in un esercizio libero.
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            csf_digcit:
+              display_name: Cittadinanza digitale
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          student_description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni
+            e istruzioni condizionali. Indaga sulle diverse tecniche di risoluzione
+            dei problemi e discuti sull''impatto sociale dell''informatica e di Internet.
+            Nella seconda parte di questo corso, pianifica e crea un progetto di fine
+            corso che puoi condividere con amici ed familiari. ATTENZIONE: qui a destra
+            scegli la versione 2018, è la più aggiornata in italiano ==>'
+        express-2021:
+          title: Corso Rapido (2017)
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet.
+            Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
+            aggiornata in italiano ==>'
+          description_short: 'Introduzione all''informatica: mette a disposizione
+            di studenti più grandi, il meglio del nostro curriculum per la scuola
+            primaria.'
+          lessons:
+            Dance Party:
+              key: Ballando col codice
+              name: Ballando col codice
+            Programming with Angry Birds:
+              key: Programmare con Angry Bird
+              name: Programmare con Angry Bird
+            Debugging with Scrat:
+              key: Debugging con Scrat
+              name: Debugging con Scrat
+            Collecting Treasure with Laurel:
+              key: Programmare con la collezionista
+              name: Programmare con la collezionista
+            Creating Art with Code:
+              key: Programmare con l'artista
+              name: Programmare con l'artista
+            Loops with Rey and BB-8:
+              key: Cicli con Rey e BB-8
+              name: Cicli con Rey e BB-8
+            Sticker Art with Loops:
+              key: Cicli con l'artista
+              name: Cicli con l'artista
+            Nested Loops in Maze:
+              key: Cicli annidati nel labirinto
+              name: Cicli annidati nel labirinto
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di spingere la loro comprensione dei Cicli ad un livello
+                completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti
+                impareranno a programmare un ciclo all'interno di un altro ciclo.
+                Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti
+                in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
+            Snowflakes with Anna and Elsa:
+              key: Cicli annidati con Frozen
+              name: Cicli annidati con Frozen
+            'Looking Ahead with Minecraft ':
+              name: Uno sguardo avanti con Minecraft
+            If/Else with Bee:
+              key: Istruzioni condizionali con l'ape
+              name: Istruzioni condizionali con l'ape
+              description_student: Ora che hai capito le istruzioni condizionali,
+                è ora di sfruttarle per programmare l'ape a raccogliere il nettare
+                e fare il miele.
+              description_teacher: Fino a questo momento gli studenti hanno scritto
+                programmi che vengono eseguiti esattamente nello stesso modo ogni
+                volta che vengono eseguiti - questo dà sicurezza, ma non è molto flessibile.
+                In questa lezione, la classe inizierà a scrivere codice contenente
+                istruzioni condizionali, questo permetterà di scrivere programmi che
+                funzionano in modo diverso a seconda delle specifiche condizioni incontrate.
+            While Loops with the Farmer:
+              key: Cicli "mentre" con la contadina
+              name: Cicli "mentre" con la contadina
+              description_student: 'I cicli sono molto utili nella programmazione.
+                Grazie a questa lezione imparerai un nuovo tipo di cicli: i cicli
+                "mentre"!'
+              description_teacher: Quando gli studenti raggiungono questa lezione,
+                dovrebbero aver già fatto parecchia pratica con i cicli `ripeti`,
+                quindi è giunto il momento di mettere tutto insieme. I cicli Mentre
+                sono cicli che continuano a ripetere un insieme di istruzioni "mentre"
+                una certa condizione è soddisfatta. I cicli Mentre sono usati quando
+                il programmatore non conosce a priori il numero di volte per cui il
+                ciclo deve essere ripetuto, ma sa quale condizione deve essere vera
+                affinché il ciclo debba continuare a ripetersi. Ad esempio, gli studenti
+                dovranno fare in modo che la Contadina riempia le buche e rimuova
+                i mucchi di terra. Non conosceranno la profondità delle buche o l'altezza
+                dei mucchi di terra, ma sapranno che hanno bisogno di continuare a
+                riempire le buche e rimuovere i mucchi di terra fino a quando il terreno
+                non sarà piatto.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: Istruzioni condizionali in Minecraft - Viaggio acquatico
+              name: Istruzioni condizionali in Minecraft - Viaggio acquatico
+            Until Loops in Maze:
+              key: Cicli "fino a che" nel labirinto
+              name: Cicli "fino a che" nel labirinto
+            Harvesting with Conditionals:
+              key: Istruzioni condizionali & cicli con la contadina
+              name: Istruzioni condizionali & cicli con la contadina
+              description_student: Non è sempre facile capire quale istruzione condizionale
+                usare. Questa lezione ti aiuterà a prendere confidenza e imparare
+                a fare le scelte corrette.
+              description_teacher: Gli studenti si eserciteranno con i cicli `mentre`,
+                i cicli `ripeti fino a che` e le istruzioni `se / altrimenti`. Tutti
+                questi blocchi utilizzano delle istruzioni condizionali. Esercitandosi
+                su tutti e tre, gli studenti impareranno a scrivere codice complesso
+                e flessibile.
+            Functions in Minecraft:
+              key: Funzioni con Minecraft
+              name: Funzioni con Minecraft
+            Functions with Harvester:
+              key: Funzioni con la contadina
+              name: Funzioni con la contadina
+            Functions with Artist:
+              key: Funzioni con l'artista
+              name: Funzioni con l'artista
+              description_teacher: Gli studenti saranno introdotti all'uso delle funzioni
+                su Code.org. Nell'ambiente dell'Artista verranno create e modificate
+                figure magnifiche sfruttando la potenza delle funzioni. Per schemi
+                più complessi, gli studenti impareranno ad usare le funzioni annidate,
+                richiamando una funzione dall'interno di un'altra.
+            Variables with Artist:
+              key: Variabili con l'artista
+              name: Variabili con l'artista
+            Changing Variables with Bee:
+              key: Modifica delle variabili con l'ape
+              name: Modifica delle variabili con l'ape
+            Changing Variables with Artist:
+              key: Modifica delle variabili con l'artista
+              name: Modifica delle variabili con l'artista
+            For Loops with Bee:
+              key: Cicli con contatore con l'ape
+              name: Cicli con contatore con l'ape
+              description_student: Zzz Zzz. In questi esercizi guiderai l'ape fino
+                al nettare e al miele usando i cicli con contatore!
+              description_teacher: Questa lezione con l'Ape è dedicata ai cicli con
+                contatore e l'uso di una variabile incrementale per risolvere esercizi
+                più complicati. Gli studenti inizieranno ripassando i cicli delle
+                lezioni precedenti, poi proseguiranno usando i cicli con contatore
+                per risolvere più efficacemente problemi più complicati.
+            For Loops with Artist:
+              key: Cicli con contatore con l'artista
+              name: Cicli con contatore con l'artista
+              description_student: Preparati a creare il tuo prossimo capolavoro.
+                Qui userai i cicli con contatore per creare immagini sbalorditive.
+              description_teacher: In questa lezione, gli studenti continuano ad esercitarsi
+                con i cicli, questa volta con l'Artista. Gli studenti completeranno
+                gli esercizi combinando i concetti di variabili, cicli e cicli con
+                contatore per creare progetti complessi. Alla fine avranno la possibilità
+                di creare il proprio progetto in un esercizio libero.
+            Swimming Fish in Sprite Lab:
+              key: Introduzione al laboratorio dei personaggi
+              name: Introduzione al laboratorio dei personaggi
+            Alien Dance Party:
+              key: La festa degli alieni
+              name: La festa degli alieni
+            End of Course Project:
+              key: Progetto di fine corso
+              name: Progetto di fine corso
+          lesson_groups:
+            csf_warmup:
+              display_name: Riscaldamento
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_conditionals:
+              display_name: Istruzioni condizionali
+            csf_functions:
+              display_name: Funzioni
+            csf_variables:
+              display_name: Variabili
+            csf_for_loops:
+              display_name: Cicli con contatore
+            csf_sprites:
+              display_name: Personaggi
+            end_of_course_project:
+              display_name: Progetto di fine corso
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        pre-express-2021:
+          title: Corso Rapido pre-scolare (2019)
+          description: 'Impara le basi dell''informatica e della sicurezza su Internet.
+            Alla fine del corso, potrai creare il tuo gioco o la tua storia che potrai
+            condividere. ATTENZIONE: qui a destra scegli la versione 2018, è la più
+            aggiornata in italiano ==>'
+          description_short: 'Introduzione all''informatica per studenti pre-scolari:
+            mette insieme il meglio dei nostri corsi per la scuola dell''infanzia
+            e per la prima classe della scuola primaria.'
+          lessons:
+            Learn to Drag and Drop:
+              key: Impara come Trascinare i Blocchi
+              name: Impara come Trascinare i Blocchi
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
+            Sequencing with Scrat:
+              key: Sequenze di istruzioni con Scrat
+              name: Sequenze di istruzioni con Scrat
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
+            Programming in with Angry Birds:
+              name: Programmare con Angry Bird
+            Programming with Rey and BB-8:
+              key: Programmare con Rey e BB-8
+              name: Programmare con Rey e BB-8
+            Programming in Harvester:
+              key: Programmazione con la contadina
+              name: Programmare con la contadina
+            Loops with Scrat:
+              key: Cicli con Scrat
+              name: Cicli con Scrat
+            Loops with Laurel:
+              key: Cicli con la collezionista
+              name: Cicli con la collezionista
+            Ocean Scene with Loops:
+              key: Al mare con i cicli
+              name: Al mare con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
+            Drawing Gardens with Loops:
+              key: Disegnare giardini con i cicli
+              name: Disegnare giardini con i cicli
+              description_teacher: Tornando ai cicli, gli studenti imparano a disegnare
+                immagini ripetendo semplici sequenze di istruzioni. Nella precedente
+                lezione, i cicli sono stati utilizzati per attraversare un labirinto
+                e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli.
+                Alla fine di questa lezione, gli studenti avranno l'opportunità di
+                creare le proprie immagini utilizzando i cicli.
+            On the Move with Events:
+              key: In movimento con gli eventi
+              name: In movimento con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a utilizzare gli eventi del Laboratorio
+                e di applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                una storia nel Laboratorio!
+            A Royal Battle with Events:
+              key: Una battaglia con gli eventi
+              name: Una battaglia con gli eventi
+              description_teacher: In questa attività online, gli studenti avranno
+                l'opportunità di imparare a usare gli eventi del Laboratorio e di
+                applicare tutte le competenze di programmazione che hanno imparato
+                per creare un gioco animato. È il momento di essere creativi e costruire
+                un gioco nel Laboratorio!
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequenze di istruzioni
+            csf_loops:
+              display_name: Cicli
+            csf_events:
+              display_name: Eventi
+          student_description: 'Impara le basi dell''informatica e della sicurezza
+            su Internet. Alla fine del corso, potrai creare il tuo gioco o la tua
+            storia che potrai condividere. ATTENZIONE: qui a destra scegli la versione
+            2018, è la più aggiornata in italiano ==>'
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Codifica di una simulazione
+            Course F Introduction:
+              name: Introduzione al Laboratorio dei Personaggi
+            Sprites in Action:
+              name: Personaggi in azione
+          lesson_groups:
+            ramp_up:
+              display_name: Introduzione
+            outbreak:
+              display_name: Simulazione dell'epidemia
+            lessonGroup-3:
+              display_name: Variabili
+            Sprites:
+              display_name: Personaggi
+        csd4-preview-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd4_1:
+              display_name: 'Capitolo 1: Design a cura dell''Utente'
+            csd4_2:
+              display_name: 'Capitolo 2: Prototipazione di App'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+            csdSurvey:
+              display_name: Sondaggio
+        csd5-preview-2021:
+          lessons:
+            Post-Project Test:
+              key: Test finale
+              name: Test finale
+          lesson_groups:
+            csd5_1:
+              display_name: 'Capitolo 1: Rappresentazione delle informazioni'
+            csd5_2:
+              display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+            cspSurvey:
+              display_name: Sondaggio
+        contagion-pilot:
+          description_short: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+          description: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+          student_description: Usa Sprite Lab per programmare la simulazione di un'epidemia
+            di virus.
+        ai-unit-pilot:
+          lessons:
+            intro:
+              name: Lezione 1
+            lesson1:
+              name: Lezione 1
+            lesson2:
+              name: Lezione 2
+            lesson3:
+              name: Lezione 3
+            lesson4:
+              name: Lezione 4
+            lesson5:
+              name: Lezione 5
+            lesson6:
+              name: Lezione 6
+            lesson7:
+              name: Lezione 7
+            lesson8:
+              name: Lezione 8
+            lesson9:
+              name: Lezione 9
+            lesson10:
+              name: Lezione 10
+            lesson11:
+              name: Lezione 11
+            lesson12:
+              name: Lezione 12
+            lesson13:
+              name: Lezione 13
+            lesson14:
+              name: Lezione 14
+            lesson15:
+              name: Lezione 15
+            lesson16:
+              name: Lezione 16
+            lesson17:
+              name: Lezione 17
+            lesson18:
+              name: Lezione 18
+            lesson19:
+              name: Lezione 19
+            lesson20:
+              name: Lezione 20
+        csa1-pilot:
+          lessons:
+            lesson-1:
+              name: Lezione 1
+        k5-onlinepd-2021:
+          title: Fondamenti di Informatica - Corso per insegnanti
+          description: 'Guida online gratuita per imparare autonomamente come insegnare
+            l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
+          student_description: 'Guida online gratuita per imparare autonomamente come
+            insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
+          description_short: 'Guida online gratuita per imparare autonomamente come
+            insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica"
+            (titolo originale: CSF - Computer Science Fundamentals).'
+          description_audience: 'Guida online gratuita per imparare autonomamente
+            come insegnare l''informatica usando il corso di Code.org "Fondamenti
+            di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Benvenuti in "Fondamenti di Informatica - Corso per insegnanti"
+              name: Introduzione
+            Understanding the Computer Science Fundamentals Courses:
+              key: Introduzione ai corsi di Fondamenti di informatica (CSF)
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
+            Sequencing:
+              key: Sequenze di istruzioni
+              name: Sequenze di istruzioni
+            Loops:
+              key: Cicli
+              name: Cicli
+            Events:
+              key: Eventi
+              name: Eventi
+            Conditionals:
+              key: Istruzioni condizionali
+              name: Istruzioni condizionali
+            End of Course projects:
+              key: Progetti di fine corso
+              name: Progetti di fine corso
+            Functions:
+              key: Funzioni
+              name: Funzioni
+            Variables:
+              key: Variabili
+              name: Variabili
+            For Loops:
+              key: Cicli con contatore
+              name: Cicli con contatore
+            Sprite Lab:
+              key: Laboratorio dei Personaggi
+              name: Laboratorio dei Personaggi
+            Reviewing your reflections:
+              key: Analizza le tue riflessioni
+              name: Analizza le tue riflessioni
+            Next steps:
+              key: Passi successivi
+              name: Passi successivi
+            Getting Started:
+              name: Per cominciare
+            What is Code.org:
+              name: Introduzione ai corsi di Fondamenti di informatica (CSF)
+            Lesson Planning:
+              name: Pianificazione Lezione
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introduzione
+            k5_basic_concepts_1:
+              display_name: Concetti base di informatica e relative tecniche di insegnamento
+            k5_diving_deeper_1:
+              display_name: Approfondimenti (per i corsi E ed F)
+            k5_next_steps_1:
+              display_name: Passi successivi
+            Introduction:
+              display_name: Introduzione

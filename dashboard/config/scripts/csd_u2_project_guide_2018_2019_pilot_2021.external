@@ -1,0 +1,39 @@
+name 'CSD U2 project guide_2018_2019_pilot_2021'
+editor_experiment ''
+display_name 'Project Guide'
+title 'Your Personal Website'
+description 'description here'
+markdown <<MARKDOWN
+# Your Personal Web Page
+
+In the next few levels, you'll be completing and publishing your personal web page.  This is your chance to share your ideas with the world, and also to show all the things that you have learned.
+
+You'll need...
+
+* Your completed project guide
+* The images you downloaded
+* The project rubric
+
+Here are the things you have learned...
+
+* How to use HTML to structure the content of your page
+* How to use CSS to style the text, colors, and layout of your page
+* How to format your code to make it easier to read
+* How to debug HTML and CSS code
+* How to use use images in a responsible way
+* How to protect your personal information online
+
+## Examples
+
+<div style="float: left; text-align:center;"><strong>The Cutest Dog</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+<div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+# Planning Checkpoint
+
+Check over student plans before allowing them to continue on the rest of the levels.
+MARKDOWN

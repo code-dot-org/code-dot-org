@@ -8,7 +8,6 @@ import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 var getAssetDropdown = require('@cdo/apps/assetManagement/getAssetDropdown');
 import {getStore} from '@cdo/apps/redux';
-import experiments from '@cdo/apps/util/experiments';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -56,6 +55,7 @@ module.exports.blocks = [
   //  {func: 'height', category: 'World', type: 'readonlyproperty', noAutocomplete: true },
   {...audioApiDropletConfig.playSound, category: 'World'},
   {...audioApiDropletConfig.stopSound, category: 'World'},
+  {...audioApiDropletConfig.playSpeech, category: 'World'},
   {
     func: 'keyIsPressed',
     category: 'World',
@@ -1928,13 +1928,6 @@ draw() - USEFUL?
   // Advanced
 ];
 
-if (experiments.isEnabled(experiments.TEXT_TO_SPEECH_BLOCK)) {
-  module.exports.blocks.push({
-    ...audioApiDropletConfig.playSpeech,
-    category: 'World'
-  });
-}
-
 module.exports.categories = {
   World: {
     id: 'world',
@@ -1975,7 +1968,7 @@ module.exports.categories = {
   Advanced: {
     id: 'advanced',
     color: 'blue',
-    rgb: color.droplet_blue,
+    rgb: color.droplet_bright_blue,
     blocks: []
   }
 };

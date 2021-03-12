@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:04:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": " Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
+    "title": "Updating Variables",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 17866,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "RSEGluZ6GWlvQLx7l51M5bihrz0P5n5chSNIRc/oSzgzw7GsHTfMlOYIy/mX\nRT2DGRmBQbJy72wlQyYG/wk2C+N8njm52qtSKNo4Jx14mdeilRIE8K2X+jCx\nSHQHBE0EV8AGeEAXrennl8lDX2SPhlvfECoudXWTEOubTJ25mFLLVY9FW0d9\nVe2uJI5wIEJ9UfGNnSYFFbbhdU1UOs6c18WgJU437JnJlJhs7+ASW5AE70bt\nJHYmE3qL4+KM/8VwH7qCvbx46hk+I1+4dqXU3uAiZ72zps8KrOEbrZfcrrz4\n9rmJKXENVosMlRVND8w5ykBIW2o0mX9+JCJ5ueEht3WfLfm8N+RCgaOJkdwK\ng/RNiwby4x89CN/2UfXw9O/nrH1/VWtc3Yas4gRWwtlfWg==\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 20:36:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-04-11 15:45:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

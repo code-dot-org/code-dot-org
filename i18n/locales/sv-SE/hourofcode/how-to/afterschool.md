@@ -1,12 +1,18 @@
 ---
-title: Så-gör-du guide
+title: Hour of Code How-to Guide for After-school
 ---
 
 {{ signup_button }}
 
 # Hur man undervisar Hour of Code på fritids och i föreningar
 
-### Häng på och introducera en grupp elever till deras första programmeringstimme med dessa steg. Hour of Code är enkelt att delta i - även för nybörjare! Om du vill ha ett extra par händer kan du nå ut till en [volontär]({{ urls/volunteer_local }}) som kan hjälpa till att leda en Hour of Code utanför skoltid. 
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -14,27 +20,27 @@ title: Så-gör-du guide
 
 ## 2. Välj en övning
 
-Vi erbjuder ett stort utbud av roliga [entimmes-lektioner]({{ urls/learn }}) för deltagare av alla åldrar, skapade av flera olika samarbetspartners. [Testa här!]({{ urls/learn }})
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
-**Alla Hour of Code-lektioner** kräver minimalt med förberedelser för arrangörer, och är självledda - vilket tillåter barnen att jobba i sin egen takt och på egen nivå. 
+**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Behöver du ett förslag på upplägg för Hour of Code på fritids eller i din förening?** Kolla in den här [mallen](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. Marknadsför din Hour of Code
 
-Marknadsför din Hour of Code [med dessa verktyg]({{ urls/promote_resources }}) och uppmuntra andra att hålla egna evenemang.
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
 
 ## 4. Planera vad du behöver för teknik - datorer är inte nödvändiga
 
-Den bästa Hour of Code-upplevelsen fås med datorer med internet. Men du behöver **inte** en dator för varje barn, och du kan även göra Hour of Code helt utan datorer.
+Den bästa Hour of Code-upplevelsen fås med datorer med internet. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-Testa övningarna på elevdatorer eller surfplattor. Kontrollera att de fungerar korrekt (med ljud och video). **Är internet-uppkopplingen långsam?** Planera att se videor gemensamt, så att varje elev inte behöver ladda ner sina egna videos. Eller prova övningar som fungerar utan internet eller teknik.
+Testa övningarna på elevdatorer eller surfplattor. Kontrollera att de fungerar korrekt (med ljud och video). **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Fixa hörlurar till din klass, eller be eleverna att ta med sig egna, om de övningar du väljer fungerar bäst med ljud.
 
-**Har du inte tillräckligt många enheter?** Använd [parprogrammering](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). När elever sitter i par, hjälper de varandra och behöver mindre stöttning av läraren. De ser också att programmering är socialt och bygger på samarbete.
 
 ## 5. Börja din Hour of Code med en inspirerande video
 
@@ -47,17 +53,17 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 - [President Obama uppmanar alla elever att lära sig datavetenskap.](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Hitta fler inspirerande videor [här](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Det är inga problem om du är helt helt ny till datavetenskap. Här är några idéer att introducera din Hour of Code-aktivitet:**
+**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
 
 - Förklara hur teknik påverkar våra liv genom exempel som alla elever i klassrummet förstår. Berätta om appar och teknik som används för att rädda liv, hjälpa människor, få människor att samverka, o. s. v.
 - Lista saker som använder kod i vardagslivet.
 - Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
 
-**Behöver du mer handledning?** Ladda ner vår [mall för lektionsplanering](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6. Koda!
 
-**Led deltagarna till aktiviteten** - skriv länken till övningen på en whiteboard-tavla. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 **When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 

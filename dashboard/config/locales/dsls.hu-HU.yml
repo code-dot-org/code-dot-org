@@ -53,12 +53,12 @@ hu-HU:
         - {}
         - {}
         - {}
-        content2: Használja a kulcsot a kódok és a hozzá tartozó betűk párosításához
+        content2: Használd a betűket és a kódokat a párosításhoz!
         questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "***N***"
+        - text: "***O***"
+        - text: "***P***"
+        - text: "***Q***"
         title: Megfelelő
       2-3 Conditionals Multi 1:
         answers:
@@ -224,7 +224,8 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Válaszd ki a legmegfelelőbb blokkokat!
+        - text: Válaszd ki a legmegfelelőbb blokkokat! A lila virágokban 0 vagy 1
+            nektár van.
       2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -1135,7 +1136,7 @@ hu-HU:
         - correct: true
         questions:
         - text: Melyik állatnak van olyan digitális lábnyoma, ami a <strong>legnagyobb
-            veszélyben </strong> hagyja őt?
+            veszélybe</strong> sodorja őt?
         title: Feleletválasztós
       K-1 Getting Loopy Multi 1:
         answers:
@@ -1446,16 +1447,28 @@ hu-HU:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: A motkány eléri a makkot. Nincsenek hibák a kódban.
+          feedback: Helytelen. A motkány mindjárt rossz irányba fordul, aztán nem
+            lép eleget ahhoz, hogy elérjen a makkig.
+        - text: A motkány nem ér el a makkig, mivel rossz irányba fordul.
+          correct: true
+          feedback: Helyes! A motkány mindjárt az elején rossz irányba fordul, aztán
+            nem lép eleget ahhoz, hogy a makkig elérjen.
+        - text: A motkány nem ér el a makkig, mert nincs elég 'előrelépni' blokk a
+            kódban.
+          correct: true
+          feedback: Helyes! A motkány mindjárt az elején rossz irányba fordul, aztán
+            nem lép eleget ahhoz, hogy a makkig elérjen.
+        - feedback: Két hiba is van a kódban. Először is, a motkány rossz irányba
+            fordul, aztán nem lép eleget előre, hogy elérjen a makkig.
         questions:
-        - {}
+        - text: Keress hibákat a kódban! Elér a motkány a makkig, vagy van valami
+            gond a kóddal?
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1463,7 +1476,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1471,7 +1485,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1479,7 +1494,8 @@ hu-HU:
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1951,7 +1967,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1959,7 +1976,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1967,7 +1985,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -1975,7 +1994,8 @@ hu-HU:
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
-        - correct: true
+        - text: A madár eljut a malacig.
+          correct: true
         - {}
         - {}
         questions:
@@ -2267,39 +2287,212 @@ hu-HU:
         - {}
       csf_be_a_super_digital_citizen:
         content1: a leírás itt található
+        markdown: |
+          # Szuper Digitális Állampolgár
+
+          ## Hogyan szólaljunk fel, ha internetes zaklatást tapasztalunk?
       csf_password_power-up:
         content1: a leírás itt található
+        markdown: |
+          #  Javítsd fel a jelszavadat
+
+          ## Tippek, amikkel emlékezni tudsz a jelszavadra
+
+          * Kezdd egy **mondattal**, amire emlékezni fogsz.
+          * Csak a **szüleid** ismerjék a jelszvadat.
+          * Soha ne használj **személyes** adatot a jelszavadban.
+          * Legalább **nyolc** karakterből álló jelszót alkoss.
+          * Használj betűket, számokat és **szimbólumokat** a jelszavadban.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: a leírás itt található
+        markdown: |
+          # STOP szemétkedés
+
+          ## Mit tehetsz, ha valaki az interneten zaklat, szemétkedik veled?
+
+          * **S**arkon fordulni
+          * **T**alálni valakit, akiben megbízol
+          * **O**ldalak rendbetétele
+          * **P**illanatnyi szünet és online gondolkodás.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+          feedback: Helyes!
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Nem tudom.
+          feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
-        - {}
+        - text: Nézd meg alaposan ezt a kódot! Ha a kódot lefuttatnánk (figyelmen
+            kívül hagyva az esetleges hibákat), hány kincset gyűjtene összesen Laurel?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel 4 kincset gyűjt be ezzel a kóddal.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - text: Laurel olyan helyen próbál kincset gyűjteni, ahol nincs kincs, és
+            ez hibát okoz.
+          correct: true
+        - text: Laurel összegyűjti az összes kincset.
+          feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
+            nincs, és ez hibát okoz.
+        - feedback: Laurel olyan helyről próbál meg kincset gyűjteni, ahol nincs,
+            és ez hibát okoz.
         questions:
         - {}
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Az Online Szomszédságom
+
+          ## Hogyan juss el biztonságosan valahová online?
+      CSD U1 Test:
+        title: Számítógépek és problémamegoldás projektzáró teszt
+      outbreak_story:
+        content1: a leírás itt található
+      outbreak_story2:
+        content1: a leírás itt található
+      outbreak_freeplay_choice:
+        display_name: Ingyenes Játék
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |
+          # Mozdulj, mozdulj!
+
+          Használj térképet, és adj parancsokat, hogy elérd a célt.
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # A szavak ereje
+
+          ## Mit tegyél, ha valaki szemétkedik, vagy bántó kifejezéseket használ az interneten?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Privát és személyes információk
+          ## Milyen információk azok, amik online megosztása rendben van?
+      courseD_EOC_2020:
+        description: Elértél a D tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseD_project_exemplars_2020_2021:
+        markdown: |+
+          # Project Példák
+
+          Most pedig nekiláthatsz a végső projektednek. Mielőtt elkezdenéd, tölts el egy kis időt a példaprojektek megtekintésével.
+
+
+          | Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | A labda sebessége változik, amikor visszapattanik! | Óvakodi a rohamosztagosoktól, különben sokasodnak! |
+
+
+          | Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | A háttértáncosok folyamatosan változtatják a mozdulataikat| Próbálj meg több színt és hátteret hozzáadni ehhez a képhez! |
+
+      courseE_EOC_2020:
+        description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseE_project_exemplars_2019_2020:
+        markdown: "# Projekt példák\n\nNekiállhatsz az utolsó projektednek. Mielőtt
+          elkezded, szánj egy kis időt, hogy megnézz néhány példa projektet. \n\n##
+          Sprite Lab\n\n| Szörny Tánc (Sprite Lab) | Cupcake Játék (Sprite Lab) |\n|---|---|\n|
+          [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Adj hozzá szöveget vagy pontszámot, hogy játszhass! | Adj hozzá szöveget
+          vagy pontszámot, hogy játszhass! |\n\n## Artist\n\n| Minta (Művész) | Hópehely
+          virágok (Jégvarázs) |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Alkoss valamit beágyazott ciklusokkal! | Légy kreatív, használj függvényeket!
+          |\n"
+      courseExpress_EOC_2020:
+        description: Elértél az Express Tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseExpress_project_exemplars_2019_2020:
+        markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
+          nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
+          \n\n| Panic! a Diszkóban (Dance Party) | Tengerparti színpad (Művész) |\n|---|---|\n|
+          [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view)
+          |\n| A háttértáncosok felveszik a ritmust! | Adj több színt és hátteret
+          a színpadhoz! |\n\n| Hópehely virágok (Jégvarázs) | Repülőgép játék (Sprite
+          Lab) |\n|---|---|\n| [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png
+          \"Airplane Game (Sprite Lab )\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          \ |\n| Alkoss valamit függvényekkel! | Adj szöveget vagy pontokat a játékohoz!
+          |\n\n"
+      courseF_EOC_2020:
+        description: Elértél az F tanfolyam utolsó leckéjéhez! Válassz egy projektet,
+          amit elkészítesz.
+      courseF_project_exemplars_2019_2020:
+        markdown: "# Projekt Példák\n\nElkezdheted az utolsó projektedet. Mielőtt
+          nekilátsz, szánj egy kis időt arra, hogy megnézel néhány példa projektet.
+          \n\n## Sprite Lab\n\n| Cupcake Játék (Sprite Lab) | \tRepülőgép Játék (Sprite
+          Lab) |\n|---|---|\n| [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png
+          \"Airplane Game (Sprite Lab)\")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)
+          |\n| Adj szöveget vagy pontszámot a játékhoz! | Adj szöveget vagy pontszámot
+          a játékhoz! |\n\n## Művész\n\n| Virágok (Művész) | Spirál (Művész) |\n|---|---|\n|
+          [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png
+          \"Flowers (Artist)\")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view)
+          | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png
+          \"Spiral (Artist)\")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)
+          \ |\n| Alkoss valamit változókkal | Légy kreatív számláló ciklusok használatával!
+          |\n\n"
+      csf_digital_trails:
+        markdown: |-
+          # Kövesda digitális nyomot
+
+          ## Milyen információk azok, amiket biztonságosan megoszthatsz, amik részei lehetnek a digitális lábnyomodnak?
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Gonoszkodás a képernyőn
+
+          Ma arról fogunk tanulni, hogy mit kell tenned, ha valaki gonosz veled az interneten

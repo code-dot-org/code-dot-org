@@ -1,0 +1,16 @@
+tr:
+  data:
+    shared_functions:
+      growing: büyüme
+      jittering: kararsızlık
+      moving east: doğuya ilerleme
+      moving north: kuzeye ilerleme
+      moving south: güneye ilerleme
+      moving west: batıya ilerleme
+      moving with arrow keys: ok tuşları ile hareket
+      patrolling: kontrol sağlama
+      shrinking: küçülme
+      spinning left: sola dönme
+      spinning right: sağa dönme
+      swimming left and right: sola ve sağa yüzme
+      wandering: gezinme

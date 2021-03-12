@@ -1,0 +1,30 @@
+teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"]]
+pilot_experiment 'contagion-pilot'
+
+lesson_group 'contagion', display_name: 'Contagion'
+lesson 'how things spread', display_name: 'How Things Spread', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'How Things Spread'
+
+lesson 'contagion simulator setup', display_name: 'Contagion Simulator Setup', has_lesson_plan: false
+level 'contagion_story', progression: 'Welcome to Monster Town'
+level 'contagion_setup', progression: 'Creating a Simulation'
+level 'contagion_events', progression: 'Programming Our Rules'
+level 'contagion_data', progression: 'Data Tracking: Model 1'
+level 'contagion_stop', progression: 'STOP!'
+level 'contagion_masks', progression: 'Slowing the Contagion with Masks'
+
+lesson 'sometimes but not always', display_name: 'Sometimes, but Not Always', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Sometimes, but Not Always'
+
+lesson 'modifying your model', display_name: 'Modifying Your model', has_lesson_plan: false
+level 'contagion_scientist', progression: 'Thinking Like a Scientist'
+level 'contagion_chance', progression: '90% Chance'
+level 'contagion_more chance', progression: 'Model 2'
+level 'contagion_stop', progression: 'STOP!'
+level 'contagion_modify_chance', progression: 'Model 3'
+level 'contagion_stop_again', progression: 'STOP AGAIN!'
+level 'contagion_vaccine', progression: 'Vaccines'
+
+lesson 'telling a data story', display_name: 'Telling a Data Story', has_lesson_plan: false
+level 'contagion_lesson1_markdown', progression: 'Telling a Data Story'
+

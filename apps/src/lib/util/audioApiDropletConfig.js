@@ -37,7 +37,7 @@ const dropletConfig = {
     parent: executors,
     paramButtons: {minArgs: 2, maxArgs: 3},
     paletteParams: ['text', 'gender', 'language'],
-    params: ['"Hello World!"', '"female"', '"en-US"'],
+    params: ['"Hello World!"', '"female"', '"English"'],
     dropdown: {
       1: ['"female"', '"male"'],
       2: getLanguages.bind(null)
@@ -55,7 +55,7 @@ function chooseAsset(typeFilter, callback) {
 }
 
 function getLanguages() {
-  return Object.keys(appOptions.azureSpeechServiceLanguages).map(
+  return Object.keys(appOptions.azureSpeechServiceVoices).map(
     language => `"${language}"`
   );
 }

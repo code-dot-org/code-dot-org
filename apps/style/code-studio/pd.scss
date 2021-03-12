@@ -193,3 +193,8 @@ form .form-required-field {
     padding: 10px 20px 10px 20px;
   }
 }
+
+.submission-download-datepicker .form-control {
+    z-index: -1 !important;
+}
+

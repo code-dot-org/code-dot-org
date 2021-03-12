@@ -1,0 +1,1840 @@
+{
+  "script": {
+    "name": "csp7-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}",
+      "pilot_experiment": "csp-piloters",
+      "curriculum_umbrella": "CSP",
+      "hideable_lessons": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp7-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_parameters_return_values",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Parameters and Return Values"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "csp_libraries",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Libraries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "required",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Overview"
+      },
+      "seeding_key": {
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "optional_stages",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Optional Stages"
+      },
+      "seeding_key": {
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Parameters and Return Explore",
+      "name": "Parameters and Return Explore",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Parameters and Return Investigate",
+      "name": "Parameters and Return Investigate",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Parameters and Return Practice",
+      "name": "Parameters and Return Practice",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Parameters and Return Make",
+      "name": "Parameters and Return Make",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Libraries Explore",
+      "name": "Libraries Explore",
+      "absolute_position": 5,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Libraries Investigate",
+      "name": "Libraries Investigate",
+      "absolute_position": 6,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Libraries Practice",
+      "name": "Libraries Practice",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Project - Make a Library Part 1",
+      "name": "Project - Make a Library Part 1",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Project - Make a Library Part 2",
+      "name": "Project - Make a Library Part 2",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Project - Make a Library Part 3",
+      "name": "Project - Make a Library Part 3",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Lesson 11: Assessment Day",
+      "name": "Lesson 11: Assessment Day",
+      "absolute_position": 11,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Unit 7 STUDENT Survey",
+      "name": "Unit 7 STUDENT Survey",
+      "absolute_position": 12,
+      "lockable": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 7 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "Unit 7 TEACHER Survey",
+      "name": "Unit 7 TEACHER Survey",
+      "absolute_position": 13,
+      "lockable": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 7 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "key": "[OLD] Parameters and Return Make",
+      "name": "[OLD] Parameters and Return Make",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L1 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L1 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7L1 CFU Return"
+        ],
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7L1 CFU Return"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L2 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L2 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Investigate Rock"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Investigate Rock"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Investigate Poetry App"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Investigate Poetry App"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7L2 CSP CFU Param and Return"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7L2 CSP CFU Param and Return"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L3 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L3 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "console.log Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 1"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice Part 1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "console.log Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 2"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice Part 2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "console.log Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 4"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice Part 4"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "console.log Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 3"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice Part 3"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "console.log Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 5"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice Part 5"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "App Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Investigate Calculator App"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Investigate Calculator App"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "App Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Practice App 2"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Practice App 2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "MOD Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Practice MOD"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 10,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding: AP Practice"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U73 CFU Param Return AP"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U73 CFU Param Return AP"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L4 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L4 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Try the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App_2020"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App_2020"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Make the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App Project_2020"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App Project_2020"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L5 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L5 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 L04 Exit Ticket"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 L04 Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L6 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L6 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Turn On Student Created Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Full Year Pilot Experiments Dashboard - Libraries"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "Full Year Pilot Experiments Dashboard - Libraries"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "States App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7L6 States App Investigation"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7L6 States App Investigation"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Pigify App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7L6 Pigify App Investigation"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7L6 Pigify App Investigation"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7L6 CSP CFU Libraries"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7L6 CSP CFU Libraries"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L7 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L7 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Using Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Practice 3"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Practice 3"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Using Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Practice 5"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Practice 5"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Testing Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Practice 2"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Practice 2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Testing Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Practice 1"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Practice 1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Testing Libraries"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Practice 4"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Practice 4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L8 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Build Your Library"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 1"
+        ],
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Project Part 1"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L9 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Build Your Library"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 2"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Project Part 2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Test a Classmate's Library"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Project Test a Library"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Project Test a Library"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L10 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L10 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Build Your Library"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 3"
+        ],
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Libraries Project Part 3"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L12 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7L12 SFLP 20-21"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 7 Exam"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP Unit 7 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP Unit 7 AP-Style Assessment _2020"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 7 STUDENT Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7 20-21 Student Pilot Survey"
+        ],
+        "lesson.key": "Unit 7 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7 20-21 Student Pilot Survey"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 7 TEACHER Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7 20-21 Teacher Pilot Survey"
+        ],
+        "lesson.key": "Unit 7 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "CSP U7 20-21 Teacher Pilot Survey"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Try the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 1"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 1"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 2"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 2"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 3"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 3"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 4"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 4"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Build the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 5"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 5"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 6,
+      "assessment": true,
+      "properties": {
+        "progression": "Build the Rock Paper Scissors App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 6"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      },
+      "level_keys": [
+        "U7 Param Return Make RPS App 6"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L1 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L1 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7L1 CFU Return",
+        "script_level.level_keys": [
+          "U7L1 CFU Return"
+        ],
+        "lesson.key": "Parameters and Return Explore",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L2 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L2 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Investigate Rock",
+        "script_level.level_keys": [
+          "U7 Param Return Investigate Rock"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Investigate Poetry App",
+        "script_level.level_keys": [
+          "U7 Param Investigate Poetry App"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7L2 CSP CFU Param and Return",
+        "script_level.level_keys": [
+          "U7L2 CSP CFU Param and Return"
+        ],
+        "lesson.key": "Parameters and Return Investigate",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L3 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L3 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice Part 1",
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 1"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice Part 2",
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 2"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice Part 4",
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 4"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice Part 3",
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 3"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice Part 5",
+        "script_level.level_keys": [
+          "U7 Param Return Practice Part 5"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Investigate Calculator App",
+        "script_level.level_keys": [
+          "U7 Param Investigate Calculator App"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Practice App 2",
+        "script_level.level_keys": [
+          "U7 Param Practice App 2"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Practice MOD",
+        "script_level.level_keys": [
+          "U7 Param Return Practice MOD"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U73 CFU Param Return AP",
+        "script_level.level_keys": [
+          "U73 CFU Param Return AP"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L4 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L4 SFLP 20-21"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App_2020",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App_2020"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App Project_2020",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App Project_2020"
+        ],
+        "lesson.key": "Parameters and Return Make",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L5 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L5 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 L04 Exit Ticket",
+        "script_level.level_keys": [
+          "U7 L04 Exit Ticket"
+        ],
+        "lesson.key": "Libraries Explore",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L6 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L6 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Full Year Pilot Experiments Dashboard - Libraries",
+        "script_level.level_keys": [
+          "Full Year Pilot Experiments Dashboard - Libraries"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7L6 States App Investigation",
+        "script_level.level_keys": [
+          "U7L6 States App Investigation"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7L6 Pigify App Investigation",
+        "script_level.level_keys": [
+          "U7L6 Pigify App Investigation"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7L6 CSP CFU Libraries",
+        "script_level.level_keys": [
+          "U7L6 CSP CFU Libraries"
+        ],
+        "lesson.key": "Libraries Investigate",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L7 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L7 SFLP 20-21"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Practice 3",
+        "script_level.level_keys": [
+          "U7 Libraries Practice 3"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Practice 5",
+        "script_level.level_keys": [
+          "U7 Libraries Practice 5"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Practice 2",
+        "script_level.level_keys": [
+          "U7 Libraries Practice 2"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Practice 1",
+        "script_level.level_keys": [
+          "U7 Libraries Practice 1"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Practice 4",
+        "script_level.level_keys": [
+          "U7 Libraries Practice 4"
+        ],
+        "lesson.key": "Libraries Practice",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L8 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L8 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Project Part 1",
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 1"
+        ],
+        "lesson.key": "Project - Make a Library Part 1",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L9 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L9 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Project Part 2",
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 2"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Project Test a Library",
+        "script_level.level_keys": [
+          "U7 Libraries Project Test a Library"
+        ],
+        "lesson.key": "Project - Make a Library Part 2",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L10 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L10 SFLP 20-21"
+        ],
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Libraries Project Part 3",
+        "script_level.level_keys": [
+          "U7 Libraries Project Part 3"
+        ],
+        "lesson.key": "Project - Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L12 SFLP 20-21",
+        "script_level.level_keys": [
+          "CSP U7L12 SFLP 20-21"
+        ],
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP Unit 7 AP-Style Assessment _2020",
+        "script_level.level_keys": [
+          "CSP Unit 7 AP-Style Assessment _2020"
+        ],
+        "lesson.key": "Lesson 11: Assessment Day",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7 20-21 Student Pilot Survey",
+        "script_level.level_keys": [
+          "CSP U7 20-21 Student Pilot Survey"
+        ],
+        "lesson.key": "Unit 7 STUDENT Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7 20-21 Teacher Pilot Survey",
+        "script_level.level_keys": [
+          "CSP U7 20-21 Teacher Pilot Survey"
+        ],
+        "lesson.key": "Unit 7 TEACHER Survey",
+        "lesson_group.key": "required",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 1",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 1"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 2",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 2"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 3",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 3"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 4",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 4"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 5",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 5"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Return Make RPS App 6",
+        "script_level.level_keys": [
+          "U7 Param Return Make RPS App 6"
+        ],
+        "lesson.key": "[OLD] Parameters and Return Make",
+        "lesson_group.key": "optional_stages",
+        "script.name": "csp7-pilot"
+      }
+    }
+  ]
+}

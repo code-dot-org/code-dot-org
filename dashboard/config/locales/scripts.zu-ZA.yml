@@ -61,3 +61,12 @@ zu:
           lessons:
             Text:
               name: Umbhalo
+        csd3-2021:
+          lessons:
+            Text:
+              key: Umbhalo
+              name: Umbhalo
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo

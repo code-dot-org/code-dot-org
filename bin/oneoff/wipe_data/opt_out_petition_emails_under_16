@@ -8,7 +8,7 @@
 # our Contact Rollups process does not currently have any functionality to delete emails from Pardot that were deleted
 # in our database, but it does comply with GDPR by opting out those email addresses.
 require_relative '../../../lib/cdo/only_one'
-exit(1) unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require File.expand_path('../../../../pegasus/src/env', __FILE__)
 require src_dir 'database'

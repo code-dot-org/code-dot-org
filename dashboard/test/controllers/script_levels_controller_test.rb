@@ -20,9 +20,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
-    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
-    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
-    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
+    @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 1', name: 'Laurel Stage 1', absolute_position: 1, relative_position: '1')
+    @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 2', name: 'Laurel Stage 2', absolute_position: 2, relative_position: '2')
+    @custom_lesson_3 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Stage 3', name: 'Laurel Stage 3', absolute_position: 3, relative_position: '3')
     @custom_s1_l1 = create(
       :script_level,
       script: @custom_script,
@@ -58,6 +58,83 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   setup do
     client_state.reset
     Gatekeeper.clear
+    AzureTextToSpeech.stubs(:get_voices).returns({})
+  end
+
+  teardown do
+    AzureTextToSpeech.unstub(:get_voices)
+  end
+
+  test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp1-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp1-2020/stage/14/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position - 1,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+  end
+
+  test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
+    @unit = create :script, name: 'csp2-2020'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
+    @external = create(:external, name: 'markdown level')
+    @external_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@external])
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @external_sl.position
+    }
+
+    assert_response :success
+    assert_includes @response.body, '/s/csp2-2020/stage/9/'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position
+    }
+
+    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
+
+    get :show, params: {
+      script_id: @unit.name,
+      stage_position: @lockable_lesson.absolute_position,
+      id: @lockable_level_group_sl.position,
+      puzzle_page: 1
+    }
+
+    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
   end
 
   test 'should show script level for twenty hour' do
@@ -744,6 +821,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal script_level, assigns(:script_level)
   end
 
+  test "show with the login_required param should redirect when not logged in" do
+    script_level = Script.find_by_name('courseb-2017').script_levels.first
+
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: script_level.lesson.absolute_position,
+      id: script_level.position,
+      login_required: "true"
+    }
+
+    assert_redirected_to_sign_in
+  end
+
   test "show with the reset param should reset session when not logged in" do
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
@@ -996,6 +1086,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal last_attempt_data, assigns(:last_attempt)
   end
 
+  test 'renders error message when attempting to view a student\'s work while not signed in' do
+    # Note that this also applies when trying to view a student's work for a
+    # cached page, as we tend to do for high-traffic levels.
+
+    get :show, params: {
+      script_id: @script,
+      stage_position: @script_level.lesson,
+      id: @script_level.position,
+      user_id: @student.id,
+      section_id: @section.id
+    }
+
+    assert_response :success
+    assert_includes response.body, 'Student code cannot be viewed for this activity.'
+  end
+
   test 'loads applab if you are a teacher viewing your student and they have a channel id' do
     sign_in @teacher
 
@@ -1151,7 +1257,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     lesson_group = create(:lesson_group, script: script)
     script.update(professional_learning_course: true)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = Artist.first
+    level = create(:level, :with_ideal_level_source)
     script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     get :show, params: {
@@ -1164,17 +1270,18 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'student cannot view solution' do
-    sl = ScriptLevel.joins(:script, :levels).find_by(
-      scripts: {name: 'allthethings'},
-      levels: Level.key_to_params('K-1 Artist1 1')
-    )
+    script = create :script
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:level, :with_ideal_level_source)
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     sign_in @student
 
     get :show, params: {
-      script_id: sl.script,
-      stage_position: sl.lesson,
-      id: sl,
+      script_id: script,
+      stage_position: lesson,
+      id: script_level,
       solution: true
     }
     assert_response :forbidden
@@ -1486,7 +1593,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal [], hidden
   end
 
-  test "hidden_stage_ids for user signed in" do
+  test "hidden_stage_ids for student signed in" do
     SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
 
     sign_in @student
@@ -1494,7 +1601,19 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     hidden = JSON.parse(response.body)
-    assert_equal [@custom_lesson_1.id.to_s], hidden
+    assert_equal [@custom_lesson_1.id], hidden
+  end
+
+  test "hidden_stage_ids for teacher signed in" do
+    SectionHiddenLesson.create(section_id: @section.id, stage_id: @custom_lesson_1.id)
+
+    sign_in @teacher
+    response = get :hidden_stage_ids, params: {script_id: @script.name}
+    assert_response :success
+
+    hidden = JSON.parse(response.body)
+    expected = {@section.id.to_s => [@custom_lesson_1.id]}
+    assert_equal expected, hidden
   end
 
   def put_student_in_section(student, teacher, script)

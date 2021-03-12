@@ -1,0 +1,179 @@
+{
+  "ur-PK": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "ایکشنز",
+              "Events": "ایونٹس/واقعات",
+              "Loops": "لوپس",
+              "Math": "ریاضی",
+              "Logic": "منطق",
+              "Games/Score": "گیم/اسکور"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "دنیا",
+              "Dancers": "رقص",
+              "Properties": "پراپرٹیز",
+              "Events": "ایونٹس/واقعات",
+              "Numbers": "نمبرز",
+              "Logic": "منطق"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "ایک ستارہ کا خاکہ بنائیں",
+                "parameters": {
+                  "length": "لمبائی"
+                }
+              },
+              "draw a circle": {
+                "name": "ایک دائرہ بنائیں"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "لمبائی",
+                  "repeat": "دوبارہ"
+                }
+              },
+              "draw a triangle": {
+                "name": "ایک مثلث بنائیں",
+                "parameters": {
+                  "length": "لمبائی"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "لمبائی"
+                }
+              },
+              "draw a house": {
+                "name": "ایک گھر بنائیں",
+                "parameters": {
+                  "length": "لمبائی"
+                }
+              },
+              "draw a square": {
+                "name": "ایک مربع بنائیں",
+                "parameters": {
+                  "length": "لمبائی"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "دنیا",
+              "Actions": "ایکشنز",
+              "Events": "ایونٹس/واقعات",
+              "Behaviors": "رویے"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "دنیا",
+              "Dancers": "رقص",
+              "Properties": "پراپرٹیز",
+              "Events": "ایونٹس/واقعات",
+              "Numbers": "نمبرز",
+              "Logic": "منطق"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ایکشنز",
+              "Brushes": "برش",
+              "Loops": "لوپس",
+              "Math": "ریاضی",
+              "Logic": "منطق",
+              "Variables": "متغیرات"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "دنیا",
+              "Locations": "مقامات",
+              "Actions": "ایکشنز",
+              "Events": "ایونٹس/واقعات",
+              "Behaviors": "رویے",
+              "Variables": "متغیرات",
+              "Math": "ریاضی",
+              "Logic": "منطق",
+              "Text": "متن",
+              "Comments": "تبصرے"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "دنیا",
+              "Locations": "مقامات",
+              "Actions": "ایکشنز",
+              "Events": "ایونٹس/واقعات",
+              "Behaviors": "رویے",
+              "Variables": "متغیرات",
+              "Math": "ریاضی",
+              "Logic": "منطق",
+              "Text": "متن",
+              "Comments": "تبصرے"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ایکشنز",
+              "Brushes": "برش",
+              "Loops": "لوپس",
+              "Math": "ریاضی",
+              "Logic": "منطق",
+              "Variables": "متغیرات"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "دنیا",
+              "Actions": "ایکشنز",
+              "Events": "ایونٹس/واقعات",
+              "Logic": "منطق",
+              "Math": "ریاضی"
+            },
+            "behavior_names": {
+              "recovering": "ریکور کرتے ہوئے",
+              "moving left and right": "دائیں اور بائیں حرکت کرنا",
+              "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "دنیا",
+              "Actions": "ایکشنز",
+              "Behaviors": "رویے",
+              "Events": "ایونٹس/واقعات",
+              "Locations": "مقامات",
+              "Logic": "منطق",
+              "Loops": "لوپس",
+              "Math": "ریاضی",
+              "Variables": "متغیرات",
+              "Comments": "تبصرے"
+            },
+            "behavior_names": {
+              "recovering": "ریکور کرتے ہوئے",
+              "moving left and right": "دائیں اور بائیں حرکت کرنا",
+              "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+            }
+          }
+        }
+      }
+    }
+  }
+}

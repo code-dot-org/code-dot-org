@@ -1,4 +1,5 @@
 - if SchoolInfoInterstitialHelper.show?(current_user) || @force_school_info_interstitial
+  - SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
   = render partial: 'layouts/school_info_interstitial', locals: {show_header: false, user: current_user, form_name: "user[school_info_attributes]"}
 
 = render partial: 'pd/jotform_loader'

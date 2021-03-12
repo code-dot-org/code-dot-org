@@ -1,0 +1,21 @@
+name 'contagion_lesson1_markdown'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Contagion Simulator
+
+
+<img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" >
+
+<br/>
+
+Simulations are a great way to learn things that can be hard to observe in the real world. They help scientists solve problems and test new ideas safely and efficiently. Your simulation is a way to show how a virus outbreak in Monster Town might look.
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this lesson, students will explore factors that contribute to a contagion, how things spread from one person to another. The activities in this lesson are designed to give students a hands-on experience to better understand how people can get infected through chains of interactions.
+MARKDOWN

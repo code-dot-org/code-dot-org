@@ -1896,6 +1896,10 @@
       "moving west": "moving west",
       "patrolling": "patrolling",
       "swimming left and right": "swimming left and right"
+    },
+    "placeholder_texts": {
+      "40d7755b0c04b15ca69f0f8d8c510f91": "Feed the bunny!",
+      "498cd895eb5a102c5aeb977e2b928dee": "Thank you!"
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/23/puzzle/5": {
@@ -1923,6 +1927,11 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
+    },
+    "placeholder_texts": {
+      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
+      "8437002ea42b64a5fd68abfb2ab8dae0": "Game over.",
+      "c865bfd8e0c78020ace8e1376d3cc9ad": "You lost."
     }
   },
   "https://studio.code.org/s/coursee-2018/stage/24/puzzle/1": {

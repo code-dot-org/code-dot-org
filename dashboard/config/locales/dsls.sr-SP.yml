@@ -1819,3 +1819,5 @@ sr-SP:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Free Play

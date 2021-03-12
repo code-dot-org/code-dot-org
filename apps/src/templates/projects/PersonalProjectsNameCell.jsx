@@ -41,6 +41,7 @@ class PersonalProjectsNameCell extends Component {
             style={tableLayoutStyles.link}
             href={url}
             target="_blank"
+            rel="noopener noreferrer"
             className="ui-projects-table-project-name"
           >
             {projectName}

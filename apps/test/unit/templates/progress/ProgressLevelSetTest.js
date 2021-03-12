@@ -1,4 +1,4 @@
-import {assert} from '../../../util/deprecatedChai';
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
@@ -60,5 +60,22 @@ describe('ProgressLevelSet', function() {
       />
     );
     assert.equal(wrapper.find('ProgressPill').props().text, '');
+  });
+
+  it('renders a pill with unplugged text when only level is unplugged', () => {
+    const wrapper = shallow(
+      <ProgressLevelSet
+        name={undefined}
+        levels={[fakeLevel({isUnplugged: true})].map(level => ({
+          ...level,
+          name: undefined
+        }))}
+        disabled={false}
+      />
+    );
+    assert.equal(
+      wrapper.find('ProgressPill').props().text,
+      'Unplugged Activity'
+    );
   });
 });

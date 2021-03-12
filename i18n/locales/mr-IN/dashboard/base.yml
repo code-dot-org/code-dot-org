@@ -12,6 +12,8 @@
 #available at http://guides.rubyonrails.org/i18n.html.
 mr:
   or: "किंवा"
+  courses_page:
+    title_student: "संगणक विज्ञान शिकुया"
   continue: 'सुरू ठेवा'
   signup_form:
     user_type_student: "विध्यार्थी"
@@ -41,6 +43,7 @@ mr:
       signup: 'अकाउंट तयार करा'
       create: 'बनवा'
       dance: 'डांस पार्टी'
+      minecraft_adventurer: 'माईनक्राफ्ट साहस'
   teacher:
     panel:
       student: 'विध्यार्थी'
@@ -70,6 +73,8 @@ mr:
       title: 'डांस पार्टी'
     dance-2019:
       title: 'डांस पार्टी'
+    minecraft2016:
+      body: "माईनक्राफ्टच्या स्वत:च्या आवृत्तीत प्राणी आणि इतर माईनक्राफ्ट प्राणी प्रोग्राम करा."
   landing:
     help_support: "सहाय्य आणि मदत"
   dialog:
@@ -80,6 +85,8 @@ mr:
     privacy: "गोपनीयता धोरण"
     accept_tos: "Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता\nधोरण](%{privacy_url}) साठी संमती देता."
     print: "प्रिंट"
+  race_interstitial:
+    decline: "Band"
   project:
     projects: "प्रकल्प"
     project_gallery: "प्रकल्प"
@@ -89,8 +96,6 @@ mr:
       email_opt_in:
         opt_in_yes: 'होय'
         opt_in_no: 'नाही'
-  gdpr_dialog:
-    yes: 'होय'
   parent_email_banner:
     text: "**तुम्ही आई-वडील किंवा पालक आहात का?** तुमचे ईमेल या खात्याशी जोडा म्हणजे तुम्हाला मुलाची प्रगती आणि प्रकल्प याबद्दलचे अपडेट्स मिळत राहतील!"
     link_your_email: "तुमचे ईमेल जोडा"

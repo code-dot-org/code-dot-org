@@ -4,5 +4,5 @@ version_year '2019'
 is_stable true
 
 lesson_group 'lg_1', display_name: 'Content'
-lesson 'Lesson'
+lesson 'Lesson', display_name: 'Lesson'
 level 'courseB_video_Unspotted'

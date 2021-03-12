@@ -1,0 +1,26 @@
+{
+  "category": "Math",
+  "config": {
+    "color": [
+      258,
+      "0.35",
+      "0.62"
+    ],
+    "func": "beginCollectingData",
+    "blockText": "begin collecting data {BREAK} value {VALUE} with label {LABEL}",
+    "args": [
+      {
+        "name": "BREAK",
+        "dummy": true
+      },
+      {
+        "name": "VALUE",
+        "defer": true
+      },
+      {
+        "name": "LABEL"
+      }
+    ],
+    "inline": false
+  }
+}

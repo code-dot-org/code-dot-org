@@ -1,0 +1,70 @@
+{
+  "script": {
+    "name": "test-migrated-overrides",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0,
+      "pilot_experiment": "my-pilot-experiment",
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": "my-family-name",
+    "seeding_key": {
+      "script.name": "test-migrated-overrides"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "my lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "my lesson group"
+      },
+      "seeding_key": {
+        "lesson_group.key": "my lesson group",
+        "script.name": "test-migrated-overrides"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "my lesson",
+      "name": "my lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "my lesson",
+        "lesson_group.key": "my lesson group",
+        "script.name": "test-migrated-overrides"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "objectives": [
+
+  ]
+}

@@ -1,0 +1,10 @@
+name 'PrivatePersonalInformation-Unplugged_2021'
+editor_experiment ''
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Private and Personal Information
+
+## What information about you is OK to share online?
+MARKDOWN

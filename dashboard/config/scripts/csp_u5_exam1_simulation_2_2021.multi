@@ -1,0 +1,36 @@
+name 'csp-u5-exam1-simulation-2_2021'
+editor_experiment ''
+
+
+wrong '`random(1,100) = 40`'
+wrong '`random(1,100) = 60`'
+wrong '`random(1,100) <= 40`'
+right '`random(1,100) <= 60`'
+
+
+markdown <<MARKDOWN
+A restaurant knows from historical data that 60 out of 100 of its customers purchase a full meal while 40 out of 100 only order a side dish. The program below is intended to simulate the orders of 1000 customers.
+
+```
+fullMeal ← 0
+sideDish ← 0
+REPEAT 1000 TIMES
+{
+	IF (<MISSING CODE>)
+	{
+		fullMeal ← fullMeal + 1
+	}
+	ELSE
+	{
+		sideDish ← sideDish + 1
+	}
+}
+DISPLAY (fullMeal)
+DISPLAY ("full meals were ordered,")
+DISPLAY (sideDish)
+DISPLAY ("side dishes were ordered.")
+```
+
+Which of the following can be used to replace `<MISSING CODE>` so that the simulation works as intended?
+
+MARKDOWN

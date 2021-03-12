@@ -130,7 +130,11 @@ export default class DetailViewApplicationSpecificQuestions extends React.Compon
           <h4>{this.state.principalApproval}</h4>
           <p>
             Link to principal approval form:{' '}
-            <a href={principalApprovalUrl} target="_blank">
+            <a
+              href={principalApprovalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {principalApprovalUrl}
             </a>
           </p>

@@ -1,15 +1,12 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
-exit(1) unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
 JOTFORM_SURVEY_RESPONSE_CLASSES = [
-  Pd::WorkshopDailySurvey,
-  Pd::WorkshopFacilitatorDailySurvey,
-  Pd::PostCourseSurvey,
   Pd::MiscSurvey
 ].freeze
 

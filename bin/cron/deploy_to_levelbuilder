@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
-exit(1) unless only_one_running?(__FILE__)
+abort 'Script already running' unless only_one_running?(__FILE__)
 
 # A script that performs a merge of the test branch into the levelbuilder branch.
 #

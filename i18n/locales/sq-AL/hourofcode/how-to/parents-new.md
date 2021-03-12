@@ -3,88 +3,88 @@ title: Udhëzues për prindërit
 ---
 
 # How to do an Hour of Code with your child
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">recent studies show</a>: children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+Mencuba Hour of Code ialah cara mudah dan menyeronokkan bagi memperkenalkan anak anda kepada sains komputer, mungkin buat pertama kalinya.     Bukan sahaja sains komputer menjadi asas untuk semua bidang pengajian, tetapi <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">kajian terkini menunjukkan</a>: kanak-kanak yang belajar sains komputer mempunyai prestasi lebih baik dalam mata pelajaran lain, cemerlang dalam menyelesaikan masalah dan <font color="00adbc"><b>17% lebih berkemungkinan mendaftar untuk memasuki kolej</b></font>.
 
-You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
+Anda boleh menyertai puluhan juta pelajar dari seluruh dunia dalam acara global ini.     Bersama, kita boleh memberikan inspirasi kepada kanak-kanak untuk belajar, memecahkan stereotaip dan membantu kanak-kanak menemui minat baharu.     Terbaik daripada semua ini, anda telah mempunyai semua yang anda perlukan untuk membawa Hour of Code (Sejam Mengekod) pulang ke rumah anda!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
-The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
+<h3>  Apakah yang saya perlukan untuk bermula?  </h3>
+  Hour of Code (Sejam Mengekod) adalah mudah dikendalikan - walaupun untuk mereka yang baharu bermula.     Anda tidak perlu mempunyai pengalaman dalam sains komputer atau mengajar untuk mengendalikan aktiviti menyeronokkan bagi anak anda yang akan membuatkan mereka belajar dan ketawa.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+Anda boleh mencuba Hour of Code (Sejam Mengekod) dengan komputer, tablet, telefon pintar, atau tanpa menggunakan komputer sepenuhnya!     Berikut ialah cara memulakannya.
 
 ***
 
-## 1) Explore activities and tutorials.
+## 1) Terokai aktiviti dan tutorial.
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 
-There are countless <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> available to you if you’re working on a computer with internet access. We encourage you to take a look at some of your options ahead of time so that you can help guide your child towards exercises they’ll enjoy.
+Terdapat sangat banyak <a href="https://hourofcode.com/us/learn">aktiviti Hour of Code (Sejam Mengekod)</a> tersedia untuk anda jika anda menggunakan komputer yang boleh mengakses internet.     Kami menggalakkan anda melihat beberapa pilihan terlebih dahulu supaya anda boleh membantu membimbing anak anda ke arah latihan yang akan menggembirakan mereka.
 
-All of our activities integrate problem-solving and critical-thinking with fun and creativity, but here are some student favorites:
+Semua aktiviti kami menggabungkan penyelesaian masalah dan pemikiran kritis dengan keseronokan dan kreativiti, tetapi berikut ialah beberapa aktiviti kegemaran pelajar:
 
-- For the child who loves to play: <a href="https://code.org/minecraft">Minecraft</a> or <a href="https://code.org/dance">Dance Party</a>
-- For the child who loves Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, or <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>
-- For the child who loves to learn: <a href="https://code.org/oceans">AI for Oceans</a> or <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Make Music with Scratch</a>
+- Untuk kanak-kanak yang suka bermain: <a href="https://code.org/minecraft">Minecraft</a> atau <a href="https://code.org/dance">Dance Party</a>  
+- Untuk kanak-kanak yang suka Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, atau <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Moana</a>  
+- Untuk kanak-kanak yang suka belajar: <a href="https://code.org/oceans">AI for Oceans (Kecerdasan Buatan untuk Lautan)</a> atau <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Mencipta Muzik dengan Menggunakan Scratch</a>  
 
-<h3>Low-tech or no-tech?</h3>
-If you’ll be using limited or no technology, you can filter <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> by selecting “No computers or devices” in the <em>Classroom technology</em> section.
+<h3>  Berteknologi rendah atau tanpa teknologi?  </h3>
+  Jika anda akan menggunakan teknologi terhad atau tanpa teknologi, anda boleh menyaring <a href="https://hourofcode.com/us/learn">aktiviti Hour of Code (Sejam Mengekod)</a> dengan memilih “Tanpa komputer atau peranti” dalam <em>bahagian</em> teknologi Kelas.
 
 [<img src="/images/fit-500/Marketing/filtering-activities-hoc.jpg" />]({{ urls/learn }})
 
-You can also check out these <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">short videos</a> for more ideas on how to facilitate an unplugged activity at home!
+Anda juga boleh menonton <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcpfa4LtbaIl35gqir_5XUu">video pendek ini</a> untuk lebih banyak idea mengenai cara mengendalikan aktiviti tanpa menggunakan komputer di rumah!!
 
-## 2) Prepare ahead of time
-Now that you have some tutorials in mind, it may be helpful to try these activities on your device before introducing them to your child.
+## 2) Bersiap sedia dengan lebih awal
+Kini, anda mempunyai beberapa idea mengenai tutorial, mungkin ia sangat berguna untuk anda mencuba aktiviti ini dalam peranti anda sebelum memperkenalkannya kepada anak anda.
 
 [<img src="/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg" />]({{ urls/learn }})
 
-<h3>More than one child at home?</h3>
-Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
+<h3>  Anda memiliki lebih daripada seorang anak di rumah?  </h3>
+  Pertimbangkan untuk memberikan kepada setiap anak anda fon kepala jika mereka akan menggunakan peranti yang berasingan.     Menurut cara ini, mereka akan dapat bermain aktiviti dengan bunyi tanpa mengganggu antara satu sama lain.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
+Jika anda hanya akan menggunakan satu peranti, atau hanya mahu membuatkan Hour of Code (Sejam Mengekod) anda lebih berinteraktif, cuba <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pengaturcaraan berpasangan</a>.     Pengaturcaraan berpasangan menggalakkan kanak-kanak bekerjasama.     Apabila mereka bergandingan, mereka membantu antara satu sama lain untuk menyelesaikan masalah.   Ata gjithashtu do ta kuptojnë që shkencat kompjuterike janë sociale dhe bashkëpunuese.
 
-<h3>Get the kids excited! </h3>
-This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
+<h3>  Buatkan kanak-kanak teruja!   </h3>
+  Ini ialah peluang terbaik untuk menambahkan jenis aktiviti baharu pada hari anak anda.     Anda boleh memberikan keseronokan melangkaui satu tutorial dengan cadangan ini:
 
-- Show them an <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">inspirational video</a> that features one of their favorite role models
-- Inspire them with a video on one of the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">many careers</a> that computer science skills can lead to
-- <a href="https://store.code.org/">Order some swag</a>! You can choose from t-shirts, stickers, or even temporary tattoos. Share it with them right away to get them excited, or save it for the end of your Hour of Code as a special prize.
+- Tunjukkan kepada mereka <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video inspirasi</a> yang menampilkan seorang daripada model peranan kegemaran mereka
+- Berikan inspirasi kepada mereka dengan video mengenai satu daripada <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">banyak kerjaya</a> yang boleh diwujudkan dengan kemahiran sains komputer
+- <a href="https://store.code.org/">Pesan beberapa barangan promosi</a>!     Anda boleh memilih daripada kemeja-T, pelekat, atau bahkan tatu sementara.     Kongsinya bersama mereka dengan segera untuk membuatkan mereka berasa teruja, atau simpannya hingga tamat aktiviti Hour of Code (Sejam Mengekod) anda sebagai hadiah istimewa.  
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
-## 3) Tips for introducing your child to CS
+## 3) Petua untuk memperkenalkan anak anda kepada CS
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity and get you both thinking about CS:
+Tiada masalah jika anda dan anak anda baharu dengan sains komputer.     Berikut ialah beberapa idea untuk memperkenalkan aktiviti Hour of Code (Sejam Mengekod) anda dan mendorong anda berdua berfikir tentang CS:
 
-- Explain ways that technology impacts our lives, with specific examples that may interest your child. For example, you could talk about medicine or connecting people virtually. Also, check out <a href="https://code.org/csforgood">Code.org/CSforGood</a> for suggested discussion questions.
-- Together, list everyday things that use code in order to work properly.
+- Terangkan cara teknologi memberi kesan kepada kehidupan kita, dengan contoh khusus yang boleh menarik minat anak anda.     Sebagai contohnya, anda boleh bercakap tentang perubatan atau menghubungkan individu secara maya.     Juga, cuba lihat <a href="https://code.org/csforgood">Code.org/CSforGood</a> soalan perbincangan yang dicadangkan.
+- Bersama-sama, senaraikan perkara seharian yang menggunakan kod untuk berfungsi dengan baik.
 
 [<img src="/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg" />]({{ urls/learn }})
 
-<h3>Have girls at home?</h3>
-<a href="https://code.org/girls">Here are our recommendations</a> to help spark their interest in computer science. **Pro-tip**: You can start just by telling them they’d be great at it!
+<h3>  Ada anak perempuan di rumah?  </h3>
+  <a href="https://code.org/girls">Berikut ialah saranan kami</a> untuk membantu mencetuskan minat mereka dalam bidang sains komputer.     **Petua pakar**: Anda boleh bermula dengan hanya memberitahu mereka bahawa mereka akan melakukannya dengan cemerlang!
 
-<h3>Problem-solve together</h3>
-Lastly, when your child comes across difficulties it's okay to respond:
+<h3>  Bersama menyelesaikan masalah  </h3>
+  Akhir sekali, apabila anak anda menghadapi kesukaran, tidak menjadi masalah untuk anda menjelaskan:
 - “I don’t know. Let’s figure this out together.”
 - "Teknologjia nuk punon gjithmon ashtu siç duam ne."
 - "Të mësuarit se si të programosh është si të mësosh një gjuhë të re; nuk do të jesh i rrjedhshëm menjëherë"
 
-Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
+Sains komputer ialah bidang pembelajaran tentang cara "menyahpepijat" situasi yang tidak mengikut jangkaan seperti yang telah kita tetapkan.     Bersama-sama, anda dan anak anda boleh memikirkan cara yang kreatif untuk menyelesaikan masalah itu!
 
 
-## 4) Don’t forget to celebrate!
+## 4) Jangan lupa meraikannya!
 
-The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
+Hour of Code (Sejam Mengekod) ialah acara global dan keluarga anda berhak meraikannya.     Berikut ialah beberapa cara menjadikan Hour of Code (Sejam Mengekod) anda lebih istimewa:
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Cetak <a href="https://staging.code.org/certificates">Sijil Hour of Code (Sejam Mengekod)</a> yang anda berikan apabila anak anda melengkapkan aktiviti mereka
+- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Cetak pelekat</a> di rumah atau <a href="https://store.code.org/">beli pelekat tersebut dalam talian</a>, sebagai kejutan tambahan.
+- Kongsi foto dan video Hour of Code (Sejam Mengekod) di rumah anda dalam media sosial.   Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>Çfarë vjen pas Orës së Kodimit?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+Computer science doesn’t have to end with the Hour of Code!   Walaupun 90% ibu bapa mahu anak mereka mempelajari sains komputer, kebanyakan sekolah masih tidak mengajarnya.     Untuk membantu, kurikulum kami berasaskan web dan boleh digunakan secara percuma, selama-lamanya.     <a href="https://code.org/yourschool">Ketahui cara</a> membawa CS ke sekolah anak anda hari ini.

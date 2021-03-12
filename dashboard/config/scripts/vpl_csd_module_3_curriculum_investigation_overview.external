@@ -1,0 +1,18 @@
+name 'VPL - CSD Module 3 Curriculum Investigation Overview'
+editor_experiment ''
+display_name 'CSD Module 3 Overview'
+
+title 'CSD Module 3 Overview'
+markdown <<MARKDOWN
+# Curriculum Investigation
+**Estimated time: 60 minutes**
+
+##Overview
+
+In the following sections, you will investigate two lessons and the Problem Solving Process in Unit 4.  Each lesson includes an investigation and task. Reflection prompts throughout these sections are also provided to further guide planning and implementation.  As you investigate the curriculum, you may want to write down ideas in your journal as you continue to reflect on how to support active learning and healthy group dynamics.
+
+##Lesson Investigations
+* Lesson 1: Analysis of Design (~25 minutes)
+* Problem Solving Process (~10 minutes)
+* Lesson 2:  Understanding Your User (~25 minutes)
+MARKDOWN

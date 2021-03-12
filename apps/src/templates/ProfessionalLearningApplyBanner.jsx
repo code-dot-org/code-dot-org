@@ -130,7 +130,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
     } else if (this.props.nominated) {
       return 'CONGRATULATIONS! You’ve been nominated for a scholarship!';
     } else {
-      return 'SEATS OPEN - 2020 Professional Learning for Middle and High School Teachers';
+      return 'SEATS OPEN - 2021 Professional Learning for Middle and High School teachers';
     }
   }
 
@@ -179,7 +179,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Join us
+                    Apply Now
                   </button>
                 </div>
               </div>
@@ -189,7 +189,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               >
                 <div>
                   <button type="button" style={this.styles.button}>
-                    Join us
+                    Apply Now
                   </button>
                 </div>
               </div>

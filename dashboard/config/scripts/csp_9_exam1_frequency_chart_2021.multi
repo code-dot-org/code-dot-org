@@ -1,0 +1,14 @@
+name 'csp-9-exam1-frequency_chart_2021'
+editor_experiment ''
+wrong 'Pens are a better writing tool than pencils'
+wrong 'More people use pens than pencils'
+wrong 'The number of pens sold has increased slowly over time'
+right 'At any point in time there are typically more people searching for the word \"pen\" than \"pencil\"'
+
+
+
+markdown <<MARKDOWN
+![](https://images.code.org/c7bdbc45a7642867eea1357de4826b6f-image-1583551097971.57.27 PM.png)
+
+The chart above shows the frequency of searches for the words "pencil" and "pen" over a 5 year period. Which of the following is the best interpretation of the chart above?
+MARKDOWN

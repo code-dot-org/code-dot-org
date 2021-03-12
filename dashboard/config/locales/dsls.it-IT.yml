@@ -81,6 +81,14 @@ it-IT:
             &emsp; Se (la CARTA è di CUORI)<br>
             &emsp; &emsp; Assegna alla TUA squadra 1 punto.
         title: Esercizio di Verifica (Risposte Multiple)
+        teacher_markdown: |-
+          ## Insegnanti:
+
+          Gli studenti potrebbero operare in base ad idee errate, e questo è un grande posto per stuzzicarli. Se gli studenti pensano che *non* ci sia una risposta esatta, allora potrebbero aver capito male le condizionali.
+
+          Ecco un video che aiuta a capire cosa succede in questa domanda:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -127,13 +135,15 @@ it-IT:
         title: Esercizio di Verifica (Associazioni)
       2-3 Maze Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         questions:
         - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
       2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
@@ -163,16 +173,21 @@ it-IT:
         questions:
         - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
       2-3 artist functions multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
         - text: Scegli la sequenza di blocchi che disegna correttamente la figura
             qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
             illustrata ancora più a sinistra.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
@@ -188,22 +203,28 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - text: Quale figura viene disegnata da questo ciclo?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         questions:
         - text: Quale figura viene disegnata da questo programma?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
       2-3 artist match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
@@ -241,13 +262,15 @@ it-IT:
         title: Esercizio di Verifica (Risposte Multiple)
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
       2-3 maze match 1:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
@@ -261,13 +284,15 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
       4-5 Algorithms Match 1:
         answers:
         - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
@@ -423,71 +448,86 @@ it-IT:
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi ti fa disegnare un rettangolo avente il
             perimetro pari a 100 pixel?
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Quale figura è simmetrica (rispetto ad un asse verticale)?
         title: Esercizio di Verifica (Risposte Multiple)
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content2: Un fiore viola può avere 3, 2 oppure 1 dose di nettare, ma non puoi
           saperlo prima di eseguire il programma. Quali blocchi controllano e raccolgono
           correttamente tutto il nettare da un fiore viola?
         questions:
         - text: Scegli la sequenza di blocchi che risolve l'esercizio.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - text: Quale versione della funzione è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
@@ -501,13 +541,15 @@ it-IT:
         title: Esercizio di Verifica (Associazioni)
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Quale sequenza di blocchi è corretta?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       Begin planning your project:
         content1: descrizione qui
         markdown: "# Il processo di progettazione\nProgettare software significa risolvere
@@ -582,8 +624,26 @@ it-IT:
           **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018_2019:
         content1: descrizione qui
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare la realizzazione del tuo progetto finale. Prima di partire, dedica un po' di tempo ad osservare alcuni progetti di esempio.
+
+          | Scoiattolo affamato | Storia aliena |
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Scoiattolo affamato (Laboratorio)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Scoiattolo affamato (Laboratorio)"</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Storia aliena (Laboratorio)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Storia aliena (Laboratorio)"</a>|
+          | Prova ad aggiungere dei suoni a questo gioco! | Prova ad aggiungere un'altra scena a questa storia! |
       Begin planning your project_2018_2019_2020:
         content1: descrizione qui
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare la realizzazione del tuo progetto finale. Prima di partire, dedica un po' di tempo ad osservare alcuni progetti di esempio.
+
+          | Scoiattolo affamato | Storia aliena |
+          |---|---|
+          |<a href="https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view" target="blank">![Scoiattolo affamato (Laboratorio)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Scoiattolo affamato (Laboratorio)"</a>| <a href="https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view" target="blank">![Storia aliena (Laboratorio)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Storia aliena (Laboratorio)"</a>|
+          | Prova ad aggiungere dei suoni a questo gioco! | Prova ad aggiungere un'altra scena a questa storia! |
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -623,6 +683,12 @@ it-IT:
             AM.png
         content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
           Scegli da una delle opzioni a destra.
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
+
+          <div class="clear"></div>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -840,11 +906,16 @@ it-IT:
         content1: descrizione qui
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         content1: Abbina il codice HTML buggato con la descrizione del suo bug.
         questions:
         - text: L'attributo 'src' è scritto in modo scorretto.
@@ -852,6 +923,11 @@ it-IT:
         - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
         - text: L'indirizzo immagine non è dato come attributo 'src'
         - text: C'è uno spazio nel nome del file
+        teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
+          la comprensione da parte degli studenti della sintassi del tag `<img>`,
+          il suo scopo principale è quello di rendere gli studenti consapevoli dei
+          tipi più comuni di bug che possono incontrare quando aggiungono immagini
+          alle pagine web.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -932,55 +1008,49 @@ it-IT:
         content1: descrizione qui
       CSD U3 - conditionals - Matching:
         answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
-        content1: Abbina l'espressione booleana alla descrizione in inglese.
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Match the boolean expression to the English description.
         questions:
-        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
-            gatto?
-        - text: La rotazione del personaggio cane x è minore di quella del personaggio
-            gatto x?
+        - text: Is the dog sprite's rotation less than the cat sprite's rotation?
+        - text: Is the dog sprite's x less than the cat sprite's x?
         - {}
         - {}
         - {}
-        title: 'Abbinamento: Comparazione Operatori'
+        title: 'Matching: Comparison Operators'
       CSD U3 - conditionals - Matching_2018:
         answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
-        content1: Abbina l'espressione booleana alla descrizione in inglese.
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Match the boolean expression to the English description.
         questions:
-        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
-            gatto?
-        - text: La rotazione del personaggio cane x è minore di quella del personaggio
-            gatto x?
+        - text: Is the dog sprite's rotation less than the cat sprite's rotation?
+        - text: Is the dog sprite's x less than the cat sprite's x?
         - {}
         - {}
         - {}
-        title: 'Abbinamento: Comparazione Operatori'
+        title: 'Matching: Comparison Operators'
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
-        content1: Abbina l'espressione booleana alla descrizione in inglese.
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Match the boolean expression to the English description.
         questions:
-        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
-            gatto?
-        - text: La rotazione del personaggio cane x è minore di quella del personaggio
-            gatto x?
+        - text: Is the dog sprite's rotation less than the cat sprite's rotation?
+        - text: Is the dog sprite's x less than the cat sprite's x?
         - {}
         - {}
         - {}
-        title: 'Abbinamento: Comparazione Operatori'
+        title: 'Matching: Comparison Operators'
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1099,10 +1169,11 @@ it-IT:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 combining rep:
@@ -1449,15 +1520,18 @@ it-IT:
         questions:
         - text: Quale sequenza di blocchi ti fa completare il disegno?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
         questions:
         - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
       K-1 Artist 2 Match 2:
         answers:
         - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
@@ -1474,25 +1548,28 @@ it-IT:
         title: Esercizio di Verifica (Corrispondenza)
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
         questions:
         - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
             dosi di nettare ottieni?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
           correct: true
         questions:
         - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
             dosi di nettare ottieni?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
       K-1 Bee Loops Match 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
@@ -1572,16 +1649,18 @@ it-IT:
         - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
             per farmi arrivare al maialino?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
       K-1 Maze Loops Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         questions:
         - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
             sulla sinistra?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
       K-1 Maze Loops Multi 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
@@ -1592,6 +1671,7 @@ it-IT:
         - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
             di blocchi sulla sinistra.
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
       K-1 Maze Match 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
@@ -1616,6 +1696,7 @@ it-IT:
         questions:
         - text: Quale sequenza di blocchi mi fa arrivare al maialino?
         title: 'Labirinto: Sequenze e Cicli'
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
       K-1 Move It Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
@@ -1658,6 +1739,7 @@ it-IT:
         - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
             parola "MOVE"?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
       K-1 Word Search Multi 3:
         answers:
         - text: SET
@@ -1668,6 +1750,7 @@ it-IT:
         - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
             a scrivere?
         title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
       Multi-Screen Apps:
         content1: descrizione qui
       New Challenge Introduction:
@@ -4131,40 +4214,60 @@ it-IT:
 
       behaviors 1 predict:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Lo sprite girerà
+          feedback: Sbagliato.
+        - text: 'Lo sprite si rimpicciolerà '
+          correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.
-        - feedback: Sbagliata
+        - text: Lo sprite si muoverà.
+          feedback: Sbagliato.
+        - text: Lo sprite cambierà colori.
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Clicca il pulsante "modifica" per vedere come funziona il 'comportamento
+            misterioso'. Studia il codice all'interno, poi fai un pronostico.
       behaviors 1 predict_2020:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Lo sprite girerà
+          feedback: Sbagliato.
+        - text: 'Lo sprite si rimpicciolerà '
+          correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.
-        - feedback: Sbagliata
+        - text: Lo sprite si muoverà.
+          feedback: Sbagliato.
+        - text: Lo sprite cambierà colori.
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Clicca il pulsante "modifica" per vedere come funziona il 'comportamento
+            misterioso'. Studia il codice all'interno, poi fai un pronostico.
       behaviors 4 predict:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Sinistra poi giù
+          feedback: Sbagliato.
+        - text: Diagonalmente
+          correct: true
           feedback: Corretto!
-        - feedback: 'Sbagliato. '
-        - feedback: Sbagliata
+        - text: Zig zag
+          feedback: 'Sbagliato. '
+        - text: Giù, poi sinistra
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Fai un pronostico. In che direzione si sposterà il satellite verso
+            la galassia?
       behaviors 4 predict_2020:
         answers:
-        - feedback: Sbagliato.
-        - correct: true
+        - text: Sinistra poi giù
+          feedback: Sbagliato.
+        - text: Diagonalmente
+          correct: true
           feedback: Corretto!
-        - feedback: 'Sbagliato. '
-        - feedback: Sbagliata
+        - text: Zig zag
+          feedback: 'Sbagliato. '
+        - text: Giù, poi sinistra
+          feedback: Sbagliata
         questions:
-        - {}
+        - text: Fai un pronostico. In che direzione si sposterà il satellite verso
+            la galassia?
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
@@ -4342,21 +4445,25 @@ it-IT:
             errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
-          feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
-        - text: Scrat andrà nella direzione sbagliata dopo l'ultima curva.
+        - text: Scrat raggiungerà la ghianda. Non ci sono bug nel codice.
+          feedback: Errato. Prima, Scart si gira nella direzione errata, poi non si
+            muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non raggiungerà la ghianda perché si gira dal lato sbagliato.
           correct: true
-          feedback: Corretto!
-        - text: Scrat non farà abbastanza passi e si fermerà prima di aver raggiunto
-            la ghianda.
-          feedback: Sbagliato. Il fatto che Scrat non faccia abbastanza passi avviene
-            dopo che ha già girato nella direzione sbagliata.
+          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
+            si muove in avanti abbastanza volte per raggiungere la ghianda.
+        - text: Scrat non raggiungerà la ghianda perché non ci sono abbastanza blocchi
+            'vai avanti'.
+          correct: true
+          feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
+            si muove in avanti abbastanza volte per raggiungere la ghianda.
         - text: Non lo so.
-          feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
-            l'ultima curva.
+          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
+            sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
+            la ghianda.
         questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
+        - text: Cerca i bug in questo codice. Scrat raggiungerà la ghianda o c'è un
+            problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
@@ -4559,6 +4666,8 @@ it-IT:
             Cosa succederà quando cliccherai su "Esegui"?
       courseD_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione del Corso D! Scegli un progetto
+          da creare.
       courseD_external_binary1:
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
           è un modo di rappresentare i dati usando solo due opzioni alternative. In
@@ -4967,22 +5076,36 @@ it-IT:
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+          correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
+          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
+            ad ogni fiore e fa il miele ad ogni nido.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+            all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
+          feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
+            da ogni fiore e creare miele in ogni alveare.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
             ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: L'ape otterrà il nettare ad ogni fiore e farà il miele ad ogni nido.
+          correct: true
           feedback: Corretto!
         - text: L'ape cercherà di prendere il nettare sia dai fiori che dai favi.
+          feedback: Errato. Il blocco 'se al fiore' fa prendere il nettare all'ape
+            ad ogni fiore e fa il miele ad ogni nido.
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+            all'ape ad ogni fiore e fare il miele ad ogni nido..
         - text: Non lo so.
+          feedback: La casella "se presso il fiore" fa prendere all'ape il nettare
+            da ogni fiore e creare miele in ogni alveare.
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
             Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
@@ -5604,6 +5727,7 @@ it-IT:
             quando cliccherai su "Esegui"?
       courseE_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto la fine del Corso E! Scegli un progetto da creare.
       courseE_multi_bee_functions_predict1:
         answers:
         - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
@@ -5769,8 +5893,11 @@ it-IT:
         - text: Cosa succederà quando cliccherai su "Esegui"?
       courseExpress_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione del Corso Express! Scegli un progetto
+          da creare.
       courseF_EOC_2020:
         display_name: Progetto di fine corso
+        description: Hai raggiunto la fine del Corso F! Scegli un progetto da creare.
       courseF_bee_variables_8a_2018:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5790,6 +5917,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili multiple con l'ape
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5809,6 +5937,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili multiple con l'ape
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
@@ -5828,6 +5957,7 @@ it-IT:
         questions:
         - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
             raccolto l'ape?
+        title: Variabili multiple con l'ape
       courseF_external_variableConstant:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -5873,6 +6003,7 @@ it-IT:
           ### **Algoritmo** - Una sequenza di passi per svolgere un'attività\n\n*
           ### **Programma** - Un algoritmo tradotto in un linguaggio comprensibile
           ed eseguibile da una macchina\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_algorithms_intro:
         markdown: |
           # **In questa lezione...**
@@ -5890,6 +6021,7 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_conditionals_end:
         markdown: "# **Hai appena imparato cosa sono le \"istruzioni condizionali\"!**\n\n###
           Le istruzioni condizionali sono estremamente utili in informatica. Immagina
@@ -5902,11 +6034,13 @@ it-IT:
           programma controlla per decidere se eseguire una certa azione\n\n* ### **Istruzioni
           condizionali** - Istruzioni che vengono eseguite solo se si verificano certe
           condizioni\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_conditionals_intro:
         markdown: "# **In questa lezione...**\n\n### Le **condizioni** sono delle
           situazioni che possono essere vere o false. \n\n### Imparerai come usare
           le condizioni nei programmi, per far avvenire le cose `mentre`, `fino a
           che` o `se` una certa situazione è vera!\n---\n\n## **Blocchi da conoscere**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_debugging_end:
         markdown: |
           # **Hai appena imparato cos'è il "debugging"!**
@@ -5924,6 +6058,7 @@ it-IT:
           * ### **Debugging** - Trovare e correggere gli errori in algoritmi o programmi
 
           * ### **Perseveranza** - Non arrendersi!
+        content1: Test Markdown Textbook Page
       courseF_markdown_debugging_intro:
         markdown: |
           # In questa lezione...
@@ -5943,6 +6078,7 @@ it-IT:
           ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
 
           ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -5959,6 +6095,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end_2019:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -5975,6 +6112,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_end_2019_2020:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli con contatore"!**
@@ -5991,6 +6129,7 @@ it-IT:
 
           ### **Ciclo con contatore** - È un ciclo dotato di valore iniziale, valore finale e passo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro:
         markdown: |+
           # **In questa lezione...**
@@ -6013,6 +6152,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro_2019:
         markdown: |+
           # **In questa lezione...**
@@ -6035,6 +6175,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_forloops_intro_2019_2020:
         markdown: |+
           # **In questa lezione...**
@@ -6057,6 +6198,7 @@ it-IT:
 
           ![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_loops_end:
         markdown: "# **Hai appena imparato cosa sono i \"cicli\"!**  \n\n### **Un
           ciclo consiste nell'eseguire più e più volte una certa azione.** In altre
@@ -6067,6 +6209,7 @@ it-IT:
           all'interno di un blocco `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
           ### **Ciclo** - L'esecuzione ripetuta di una certa azione\n\n* ### **Ripetere**
           - Fare qualcosa più e più volte \n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_loops_intro:
         markdown: |
           # In questa lezione...
@@ -6082,6 +6225,7 @@ it-IT:
           ## Blocchi da conoscere
 
           ![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)
+        content1: Test Markdown Textbook Page
       courseF_markdown_nestedloops_end:
         markdown: |+
           # **Hai appena imparato cosa sono i "cicli annidati"!**
@@ -6096,6 +6240,7 @@ it-IT:
 
           ### __Cicli annidati__ - Un ciclo contenuto all'interno di un altro ciclo
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_nestedloops_intro:
         markdown: |
           # **In questa lezione...**
@@ -6111,6 +6256,7 @@ it-IT:
           ## **Blocchi da conoscere**
 
           ![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6118,6 +6264,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end_2019:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6125,6 +6272,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_end_2019_2020:
         markdown: "# **Hai appena imparato cosa sono le \"variabili\"!**\n\n### Per
           poter essere usata, una variabile ha bisogno di un nome e di un valore.
@@ -6132,6 +6280,7 @@ it-IT:
           una variabile può essere usata in ogni punto del programma. \n\n---\n\n##
           **Termini da conoscere**\n\n### **Variabile** - Un contenitore per un dato
           che può cambiare\n\n"
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro:
         markdown: |+
           # **In questa lezione...**
@@ -6146,6 +6295,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro_2019:
         markdown: |+
           # **In questa lezione...**
@@ -6160,6 +6310,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_markdown_variables_intro_2019_2020:
         markdown: |+
           # **In questa lezione...**
@@ -6174,6 +6325,7 @@ it-IT:
           ![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)
 
 
+        content1: Test Markdown Textbook Page
       courseF_multi_artist_for10_predict1:
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
@@ -6625,12 +6777,39 @@ it-IT:
           * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
 
           [/key]
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
       csf_be_a_super_digital_citizen:
         content1: descrizione qui
+        markdown: |-
+          # Cittadino Super Digitale
+
+          ## Come possiamo essere sostenitori quando vediamo il cyberbullismo?
       csf_password_power-up:
         content1: descrizione qui
+        markdown: |-
+          # Migliora la Tua Password
+
+          ## Suggerimenti della Password da Ricordare
+
+          * Inizia con una **frase** memorabile
+          * Solo i tuoi **genitori** dovrebbero sapere la tua password.
+          * Crea password con almeno **otto** caratteri.
+          * Usa lettere, numeri e **simboli** nella tua password.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descrizione qui
+        markdown: |-
+          # STOP alla Cattiveria
+
+          ## Cosa dovresti fare se qualcuno è cattivo con te online?
+
+          * **S**egnalalo ad un adulto fidato.
+          * **T**ieniti lontano dal dispositivo.
+          * **O**ttieni il permesso dal genitore di usare quel sito.
+          * **P**ensa online e metti in pausa.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image.1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
@@ -6704,3 +6883,781 @@ it-IT:
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
+      CSD U1 Test:
+        title: Computer e Risoluzione dei Problemi - Verifica finale
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
+          con fogli di alluminio che possano imbarcare più centesimi possibili. Alla
+          fine della lezione i gruppi riflettono sulle esperienze acquisite con l'attività
+          e le metteranno in relazione con le modalità di risoluzione dei problemi
+          che utilizzeranno per il resto del corso. \n\n\n## Risorse\n\n* [Barche
+          Alluminio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Guida Attività (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: |
+          [key]
+
+          * [Barche in alluminio - esemplari](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guida per l'attività ([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
+      csd-pre-survey-levelgroup_2019:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
+      outbreak_story:
+        content1: descrizione qui
+        markdown: "# Epidemia: codifica la tua simulazione\n\n## Benvenuto a Monster
+          Town!\nMonster Town, solitamente, era un luogo sano e felice. I mostri di
+          Monster Town adoravano girovagare per visitare i loro amici. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nUn giorno, uno dei mostri iniziò a sentirsi male.
+          Il mostro aveva preso un **virus**! Un virus è un minuscolo germe che può
+          farti ammalare. Gli altri mostri non erano troppo preoccupati. Continuavano
+          a visitare i loro amici.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPoco dopo, altri due mostri si ammalarono. Era lo
+          stesso virus! Sembra che avessero preso il virus dal loro amico.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nIl virus si diffuse lentamente ad altri mostri che
+          si trovavano nelle vicinanze. I mostri sani iniziarono a preoccuparsi pensando
+          che tutti si sarebbero ammalati. I mostri malati iniziarono a preoccuparsi
+          di passare il virus a tutti gli altri.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Fermare la diffusione\nFortunatamente,
+          dopo aver studiato il virus, i vicini di Monster Town fecero un'importante
+          scoperta. Si resero conto che avevano meno probabilità di diffondere il
+          virus se indossavano delle mascherine. Con le mascherine per il viso, i
+          mostri malati avevano meno probabilità di passare il virus ai mostri sani.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Cosa succederà dopo?\n\nOggi scriverai il codice per creare ed eseguire
+          una **simulazione** dell'epidemia di virus a Monster Town. Una simulazione
+          è un modello al computer di un processo o sistema. Impariamo a programmare
+          e fare previsioni su ciò che accadrà ai vicini di Monster Town.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Con che velocità si diffonderà il
+          virus?*\n\n* *Si ammaleranno tutti?*\n\n* *In che modo le mascherine saranno
+          d'aiuto?*\n\n\nUna volta terminato, condividi la tua simulazione con gli
+          altri. Condividi il tuo messaggio su cosa pensi che possiamo fare per aiutare
+          a mantenere gli altri in buona salute quando un virus arriva in città. "
+      outbreak_story2:
+        content1: descrizione qui
+        markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
+          per imparare cose che possono essere difficili da osservare nel mondo reale.
+          Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
+          sicuro ed efficiente. La tua simulazione è un modo per mostrare come potrebbe
+          apparire un'epidemia da virus a Monster Town.\n\n## Ripristina e riproduci!\nAnche
+          quando scrivi tu stesso il codice, è impossibile sapere esattamente cosa
+          succederà quando premi esegui. I mostri vagano in modo casuale, quindi non
+          sai se il virus si diffonderà velocemente o lentamente. Ogni volta che modifichi
+          il codice, assicurati di eseguire la simulazione più di una volta. Le cose
+          non succederanno due volte allo stesso modo!\n\n## Raccolta dati\nProva
+          a scrivere le tue osservazioni mentre esegui la simulazione. Puoi contare
+          il numero di mostri che si ammalano o utilizzare un timer per vedere quanto
+          velocemente accadono le cose. Ad esempio, quanto tempo ci vuole di solito
+          perché tutti i mostri si ammalino se nessuno ha la mascherina? \n\n## Fare
+          previsioni\nSe comprendi il tuo modello, puoi usarlo per fare previsioni.
+          Puoi persino modificare il modo in cui viene eseguita la simulazione e indovinare
+          cosa accadrà diversamente. Per esempio:\n* Cosa succederebbe se ci fossero
+          il doppio dei mostri?\n* Cosa succederebbe se i mostri si muovessero a metà
+          della velocità?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Monster Town è come il mondo reale?\nC'è un
+          limite al grado di realismo di qualsiasi modello. \n* Che cosa ha in comune
+          la simulazione dell'epidemia con le epidemie di virus nel mondo reale?\n*
+          Quali sono le differenze?\nDopo aver completato questa attività, discuti
+          queste domande con gli insegnanti o con la tua famiglia!\n\n## Cos'altro
+          possiamo rappresentare?\nHai già creato un modello funzionante dell'epidemia
+          a Monster Town. Quali cose non è possibile riprodurre o mostrare nella simulazione
+          che vorresti fosse possibile? Premi Continua per andare avanti e imparare
+          ancora di più a  rappresentare:\n* Aumentare il numero di mostri nella simulazione\n*
+          Aiutare i mostri a riprendersi dal virus\n* Probabilità, immunità, vaccini
+          e altro!\n\nPuoi anche condividere il tuo modello di simulazione con altri
+          o condividere un messaggio su ciò che pensi che possiamo fare per aiutare
+          a mantenere gli altri in buona salute quando un virus arriva in città. "
+      BigEvent-Unplugged:
+        markdown: |-
+          # Il Grande Evento
+
+          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+      BigEvent-Unplugged_2020:
+        markdown: |-
+          # Il Grande Evento
+
+          In informatica, gli eventi sono azioni monitorate da un computer. In questa lezione reagirai differentemente in base al pulsante che viene premuto.
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Braccialetti Binari
+
+          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Braccialetti Binari
+
+          Crea un braccialetto che rappresenta il tuo nome in un sistema compreso dai computer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Immagini Binarie
+
+          Comunica come ricreare un'immagine usando solo due valori semplici.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Immagini Binarie
+
+          Comunica come ricreare un'immagine usando solo due valori semplici.
+      CSD U3 Entertainment:
+        teacher_markdown: |
+          Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.
+
+          ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Overview
+
+          This site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.
+
+          ### Relevant fields
+
+          * Film/TV
+          * Animation
+          * Robotics/Animatronics
+          * Games
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Overview
+
+          Videos featuring a range of people working in diverse areas of the game industry, talking about what they do.
+
+          ### Relevant Fields
+
+          * Games
+          * Animation
+          * Art
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Overview
+
+          Music Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for "computer science" or "programming" will reveal some interesting articles.
+
+          ### Relevant Fields
+
+          * Music
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Overview
+
+          While this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.
+
+          ### Relevant Fields
+
+          * All
+        markdown: |+
+          # Starting Your Search
+
+          To find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for "Computer science and &#95;&#95;&#95;&#95;&#95;&#95;" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.
+
+
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          # Overview
+
+          The class is asked to consider the "problems" of boredom and self expression, and to reflect on how they approach those problems in their own lives. From there, they will explore how Computer Science in general, and programming specifically, plays a role in either a specific form of entertainment or as a vehicle for self expression.
+
+
+          ## Resources
+
+          * [CS in Entertainment - Activity Guide](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: |+
+          * [CS in Entertainment](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit) - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))
+
+
+      CSD U3 Lesson Overview 2:
+        markdown: |
+          # Overview
+
+          This lesson explores the challenges of communicating how to draw with shapes and use a tool that introduces how this problem is approached in Game Lab.The class uses a Game Lab tool  to interactively place shapes on Game Lab's 400 by 400 grid. Partners then take turns instructing each other how to draw a hidden image using this tool, accounting for many of the challenges of programming in Game Lab.
+
+
+          ## Resources
+
+          * [Drawing Shapes - Activity Guide](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+        teacher_markdown: |
+          [key]
+
+          * [Drawing Shapes](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+          [/key]
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # Overview
+
+          The class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. The lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.
+          ## Vocabulary
+
+          * **Bug** - Part of a program that does not work correctly.
+          * **Debugging** - Finding and fixing problems in your algorithm or program.
+          * **Program** - An algorithm that has been coded into something that can be run by a machine.
+
+          ## Introduced Code
+
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [fill()](//studio.code.org/docs/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Overview
+
+          This lesson extends the drawing skills to include width and height and introduces the concept of random number generation. The class learns to draw with versions of ellipse() and rect() that include width and height parameters and to use the background() block to fill the screen with color. At the end of the progression the class is introduced to the randomNumber() block and uses the new blocks to draw a randomized rainbow snake.
+          ## Vocabulary
+
+          * **Parameter** - An extra piece of information that you pass to the function to customize it for a specific need.
+
+          ## Introduced Code
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD User Centered Design Post-Project Test:
+        title: 'Design Incentrato sull''Utente: Test Post-Progetto'
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Condizionali con le Carte
+
+          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Condizionali con le Carte
+
+          Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Cittadinanza Digitale
+
+          Alcune informazioni non sono sicure da condividere online. Questa lezione ti aiuterà a imparare la differenza tra informazioni sicure e private.
+      GraphPaperProgramming-Unplugged:
+        markdown: |-
+          # Programmazione su Carta Grafica
+
+          Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
+      GraphPaperProgramming-Unplugged_2020:
+        markdown: |-
+          # Programmazione su Carta Grafica
+
+          Scrivi algoritmi che i tuoi compagni di classe possano usare per disegnare immagini.
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # I Miei Amici Robotici
+
+          Impara a programmare scrivendo il codice per i tuoi amici!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # I Miei Amici Robotici
+
+          Impara a programmare scrivendo il codice per i tuoi amici!
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # Il Potere delle Parole
+
+          ## Cosa dovresti fare quando qualcuno usa un linguaggio cattivo od offensivo su internet?
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Password Potente
+
+          Esplora perché le persone usano le password, imparane i benefici e scopri le strategie per creare e mantenere le password forti e sicure.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Informazioni Private e Personali
+
+          ## Quali informazioni su di te si possono condividere online?
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Scherma la Cattiveria
+
+          Oggi imparerai cosa fare se qualcuno è cattivo online.
+      SimonSays-Unplugged:
+        markdown: |-
+          # Simone Dice
+
+          Gioca un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      SimonSays-Unplugged_2020:
+        markdown: |-
+          # Simone Dice
+
+          Gioca un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      gradek1_activity_beNice:
+        markdown: "# Comportamento corretto bene in aula computer\n  \n<br/><br/>
+          \   \n    \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
+          target=\"_new\">\n<button>\nVai al piano di lavoro della lezione\n</button>\n</a>\n\n<br/><br/>\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">Continua</a>"
+      CSD U5 test:
+        title: Test Post-Progetto sui Dati e la Società
+      outbreak_freeplay_choice:
+        display_name: Tempo di giocare
+        description: Hai completato l'esercitazione! Continua ad apportare modifiche
+          o miglioramenti al tuo progetto. Puoi scegliere di continuare a lavorare
+          con gli stessi blocchi o provare una casetta degli attrezzi ampliata.
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Interactive Animations and Games Post-Project Test
+      CSD Physical Computing Post-Project Test:
+        title: Test post-progetto di informatica fisica
+      CSD U3 Entertainment_2018_2019:
+        markdown: |+
+          # Starting Your Search
+
+          To find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for "Computer science and &#95;&#95;&#95;&#95;&#95;&#95;" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.
+
+
+        teacher_markdown: |
+          Here are a few sites to get students started.  These sites are generally appropriate for school, but the content with them changes frequently, so **we strongly suggest that you check each site for inappropriate content before sharing it with students**.
+
+          [key]
+
+          ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Overview
+
+          This site is focused on news about Disney, but you might be surprised by the large role that CS plays in all of their different forms of entertainment. Because this isn't a CS focused site, you'll need to use the search function to find relevant articles.
+
+          ### Relevant fields
+
+          * Film/TV
+          * Animation
+          * Robotics/Animatronics
+          * Games
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Overview
+
+          Videos featuring a range of people working in diverse areas of the game industry, talking about what they do.
+
+          ### Relevant Fields
+
+          * Games
+          * Animation
+          * Art
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Overview
+
+          Music Think Tank is a blog targeted at people working in the music industry. It's not a CS specific site, but searching for "computer science" or "programming" will reveal some interesting articles.
+
+          ### Relevant Fields
+
+          * Music
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Overview
+
+          While this podcast doesn't feature much in the way of formal professional programming (as in, people who do this for a living), it is a great resource to see the varied ways in which amateurs are making entertainment with code.
+
+          ### Relevant Fields
+
+          * All
+
+          [/key]
+      CSD Web Development Post-Project Test:
+        title: Test post-progetto di sviluppo web
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          # Crowdsourcing
+
+          Guarda come il crowdsourcing, una tecnica di problem-solving comune nell'informatica, può aiutarti a completare un compito insieme come classe in modo più efficiente che se dovessi farlo da solo.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Progettare per l'accessibilità
+
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
+          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
+          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
+          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Progettare per l'accessibilità
+
+          * Nel mondo dell'informatica, **l'accessibilità** riguarda la creazione di tecnologia per persone con disabilità.
+          * Le disabilità includono disabilità fisiche, uditive, visive e molte altre.
+          * Le disabilità sono diverse e hanno un impatto sulle persone in modi diversi, compreso il modo in cui usano la tecnologia come le app per gli smartphone.
+          * Progettare app che siano accessibili alle persone con disabilità rende queste app migliori anche per tutti gli altri!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalFootprint-Unplugged:
+        markdown: |-
+          # La tua Impronta Digitale
+
+          Inserire informazioni su di te online crea un'impronta digitale.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Condivisione digitale
+
+          In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Condivisione digitale
+
+          In questa lezione considererai le sfide e i benefici del rispetto della proprietà e del copyright, in particolare negli ambienti digitali.
+      EnvelopeVariables-Unplugged:
+        markdown: "# Variabili involucro \n\nLe variabili permettono molta libertà
+          nell'informatica. Questa lezione aiuta a spiegare cosa sono le variabili
+          e come possiamo usarle in molti modi diversi."
+      EnvelopeVariables-Unplugged_2020:
+        markdown: "# Variabili involucro \n\nLe variabili permettono molta libertà
+          nell'informatica. Questa lezione aiuta a spiegare cosa sono le variabili
+          e come possiamo usarle in molti modi diversi."
+      ForLoopFun-Unplugged:
+        markdown: |-
+          # Per divertirsi con i loop
+
+          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+      ForLoopFun-Unplugged_2020:
+        markdown: |-
+          # Per divertirsi con i loop
+
+          Sappiamo che i loop ci permettono di fare le cose più e più volte, ma ora impareremo come usare i loop con una struttura extra incorporata.
+      GettingLoopy-Unplugged:
+        markdown: |-
+          # Ripetizione
+
+          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+      GettingLoopy-Unplugged_2020:
+        markdown: |-
+          # Ripetizione
+
+          Questa lezione introduce, nella programmazione, il concetto della ripetizione a ciclo attraverso un'attività di ballo.
+      Internet-Unplugged:
+        markdown: |-
+          # Internet.
+
+          Costruisci il tuo Internet in classe usando solo pezzi di carta.
+      Internet-Unplugged_2020:
+        markdown: |-
+          # Internet.
+
+          Costruisci il tuo Internet in classe usando solo pezzi di carta.
+      MoveItMoveIt-Unplugged:
+        markdown: |-
+          # Spostalo, Spostalo
+
+          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+      MoveItMoveIt-Unplugged_2020:
+        markdown: |-
+          # Spostalo, Spostalo
+
+          Usa una mappa e dai comandi per raggiungere l'obiettivo.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # I miei amici robot ripetitivi
+
+          Rendete i vostri programmi più brevi usando i loop!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # I miei amici robot ripetitivi
+
+          Rendete i vostri programmi più brevi usando i loop!
+      PicturingData-Unplugged:
+        markdown: |-
+          # Raffigurare dati.
+
+          Usa un progetto Play Lab per raccogliere dati e fare previsioni.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          # Raffigurare dati.
+
+          Usa un progetto Play Lab per raccogliere dati e fare previsioni.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # Il potere delle parole
+
+          Oggi imparerete cosa fare se qualcuno è cattivo online.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Informazioni private e personali
+
+          Sviluppata dalla Common Sense Education, questa lezione riguarda la differenza tra le informazioni che sono sicure da condividere online e quelle che non lo sono.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
+          insieme per trascrivere dei programmi atti a disegnare immagini. "
+      RelayProgramming-Unplugged_2020:
+        markdown: "# Programmazione a staffetta\n\nDividetevi in squadre e lavorate
+          insieme per trascrivere dei programmi atti a disegnare immagini. "
+      Social Sleuth_2018_2019:
+        markdown: "# Social Sleuth\n\nAvrai bisogno del <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
+          Foglio di lavoro Social Sleuth </a> per completare questa attività.\n\n##
+          Profili\n\nClicca sull'immagine di ogni profilo per aprirlo.\n\n### FaceSpace\n\n|
+          FaceSpace: Lizzie Dell | FaceSpace: John T | FaceSpace: Haley G. |\n| ---------
+          | ------ | ------ |\n| <a href=\"https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/\"
+          target=\"_blank\"> <img src=\"https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11
+          PM.png\" style=\"width:400px\"> </a> | <a "
+        teacher_markdown: |-
+          #### Social Sleuth
+
+          **Fase 1:** Gli studenti guardano tutte le pagine dei social media fornite su Code Studio. Le pagine rappresentano diversi individui unici, ognuno dei quali ha un account su tre piattaforme di social media. Sono distribuite come segue (non condividerle con gli studenti):
+
+          | FaceSpace | Chirpr | instantframe |
+          | ------------- | --------- | --------- | ------------ |
+          | John Thomas | John T | @johnsnow | johnsnow |
+          | Haley Gutierrez | Haley G | @flyinghail | desertrider |
+          | Lizzie Dell | Lizzie Dell| @lillizard | photolizzie |
+
+
+          **Suggerimento:**
+
+          Agli studenti viene chiesto di scegliere due utenti tra i profili disponibili, ma se hai poco tempo, puoi chiedere agli studenti di completare solo una delle tracce.
+
+          **Fase 2:** Una volta che hanno guardato le pagine, gli studenti cercheranno di capire chi sono i due utenti e di rispondere ad alcune domande dettagliate su di loro. Le domande sulle tracce sono progettate per spingere gli studenti a combinare i dettagli da più piattaforme sociali e a capire che insieme i profili rappresentano informazioni più dettagliate di quelle che gli utenti probabilmente intendono rivelare su se stessi. Alcune domande potrebbero non avere una risposta per tutti gli utenti, o potrebbero avere diversi livelli di dettagli (indirizzo completo per un utente, ma solo una città e uno stato per un altro).
+
+          **Condividete:** Fate condividere alla classe le tracce che hanno sviluppato attraverso l'attività.
+
+          **Discutere:**
+
+          * Quali informazioni sono state più difficili da trovare?
+          * Quali dettagli erano innocui da soli, ma rivelavano informazioni private quando venivano combinati con altri dettagli?
+          * In che modo questo vi fa pensare in modo diverso a ciò che scegliete di pubblicare online?
+      Songwriting-Unplugged:
+        markdown: |-
+          # Scrivereunacanzone.
+
+          Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Scrivereunacanzone.
+
+          Usa il concetto di ritornello in una canzone per imparare a definire e nominare le funzioni.
+      TheRightAppMarkdownLevel_2019:
+        markdown: |-
+          # L'App Giusta
+
+          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
+          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
+          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel_2019_2020:
+        markdown: |-
+          # L'App Giusta
+
+          * Tutti usano i computer oggigiorno, specialmente gli smartphone.
+          * Le applicazioni per smartphone, o "app", aiutano le persone a fare cose come parlare con gli amici, ascoltare la musica, fare compere o semplicemente esplorare il web.
+          * È importante per i programmatori capire i bisogni altrui e progettare app tenendoli a mente!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      courseE_project_exemplars_2019:
+        markdown: |2-
+
+          # Esempi di progetti
+
+          Stai per iniziare il tuo progetto finale. Prima di iniziare, passa un po' di tempo a guardare i progetti di esempio.
+
+          ## Sprite Lab
+
+          | Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |
+          (https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Prova ad aggiungere un testo o un punteggio a questo gioco! | Prova ad aggiungere un testo o un punteggio a questo gioco! |
+
+          ## Artista
+
+          | Pattern (Artista) | Funzione Fiori (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Diventiamo creativi con i loop annidati! | Diventiamo creativi con le funzioni! |
+        content1: Test Markdown Textbook Page
+      courseF_project_exemplars_2019:
+        markdown: |-
+          # Esempi di progetti
+
+          Stai per iniziare il tuo progetto finale. Prima di iniziare, passa un po' di tempo a guardare i progetti di esempio.
+
+          ## Sprite Lab
+
+          | Gioco del pasticcino (Sprite Lab) | Gioco dell'elicottero (Sprite Lab) |
+          |---|---|
+          | [![#Gioco del pasticcino (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Gioco dell'elicottero (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Prova ad aggiungere un testo o un punteggio a questo gioco! | Prova ad aggiungere un testo o un punteggio a questo gioco! |
+
+          ## Artista
+
+          | Fiori (Artista) | Spirale (Artista) |
+          |---|---|
+          | [![Fiori (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spirale (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Diventiamo creativi con le variabili! | Diventiamo creativi con i For Loop! |
+        content1: Test Markdown Textbook Page
+      csd-post-survey-intro-2019:
+        markdown: |+
+          # CS Discoveries Post-Course Survey
+
+          **Your input and feedback is important to us!** We use it to:
+
+          * understand your experience
+          * make improvements to the course
+
+          Thanks for taking the time to help make CS Discoveries even better!
+
+      csf_digital_trails:
+        markdown: |-
+          # Segui la Traccia Digitale
+
+          ## Quali informazioni sono OK da avere nella tua impronta digitale?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          # Il Mio Vicino Online
+
+          ## Come fai in sicurezza nei posti online?
+      courseD_project_exemplars_2020_2021:
+        content1: Test Markdown Textbook Page
+      courseE_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page
+      courseExpress_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page
+      courseF_project_exemplars_2019_2020:
+        content1: Test Markdown Textbook Page
+      'Overview: Design Mode':
+        markdown: |-
+          # Benvenuto alla Modalità di Progettazione dell'App Lab
+          Nella "Modalità di Progettazione" dell'App Lab trascina e rilascia gli elementi dell'Interfaccia Utente nell'app.
+
+          ### Vocabolario
+          * **Interfaccia Utente (UI)** - Come una persona (utente) interagisce con il computer o app.
+          * **Elementi dell'UI** o oggetti, come pulsanti, immagini, caselle di testo, menu a tendina, schermate e così via.
+
+          ## Esempio
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          Vedrai una nuova serie di interruttori sull'area dell'app che ti faranno passare tra "Modalità di Progettazione" e "Modalità Codice".</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Aggiungere un elemento è facile come trascinarlo e rilasciarlo nell'app dove preferisci. Una volta che è sulla schermata dell'app puoi riposizionarlo, ridimensionarlo e cambiarne molte altre proprietà.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La scheda <em>Proprietà</em> ti mostra tutto ciò che vuoi modificare sull'aspetto dell'elemento dell'UI.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>L'<strong>ID dell'elemento</strong> è importante perché p come ti riferisci all'elemento nel tuo codice. Discuteremo degli ID dell'elemento più avanti.</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puoi creare il testo che l'utente vede sul testo del pulsante come preferisci.</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Scorri in giù per vedere altre proprietà per un elemento dell'UI che potrebbero essere "nascoste" in basso.</p>
+          </div>
+
+          <div style="clear: both"></div>
+
+          **Ora prova tu!**
+      'Overview: Images':
+        markdown: "# Immagini\n\n## Inserisci un URL di un'immagine sul web\n\n<img
+          src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nCi sono diversi modi per ottenere
+          l'URL di un'immagine.  \n\nUna tecnica comune (mostrata a destra) è quella
+          di trovare un'immagine che ti piace su una pagina web e poi fare click col
+          destro (o click+ctrl) e scegliere un'opzione che dice qualcosa tipo \"Copia
+          Indirizzo Immagine\" che puoi poi incollare nella casella di testo nell'App
+          Lab.\n\nSe non sei sicuro, puoi anche scegliere un'opzione come \"Apri Immagine
+          in Nuova Scheda\" che isola l'immagine e l'URL sarà mostrato nella barra
+          dell'indirizzo, che puoi copiare/incollare nell'App Lab.\n\n**Errore Comune**:
+          Usare l'URL del *sito web di ricerca di un'immagine* invece che un URL dell'immagine
+          stessa.\n\n* Assicurati di ottenere il percorso al file reale dell'immagine
+          - qualcosa che finisca con **.jpg**, **.gif** o **.png**.\n* Un URL che
+          inizia per: 'https://www.google.com/search?1=cat&espv=2&biw=1497....' è
+          probabilmente errato.\n\n\n## Carica le tue immagini\n\nSe hai immagini
+          salvate sul tuo computer puoi caricarle nel **gestore risorse** dell'app
+          lab. Basta **cliccare Carica File** e seguire le istruzioni su schermo.\n\nPer
+          le immagini il file deve essere di tipo: **.jpg**, **.png**, o **.gif**\n\nUna
+          volta caricata l'immagine devi **Scegliere** di impostare l'immagine in
+          quel file. Se aggiungi immagini multiple le vedrai tutte elencate ogni volta
+          che carichi un file e puoi scegliere di usare *qualsiasi* file che hai già
+          caricato.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Clicca Continua per provarci!\n\n\n"
+      'Overview: onEvent':
+        markdown: |-
+          # Rispondere all'Input dell'Utente
+
+          Dovrai navigare nella Modalità Codice per farlo realmente rispondere all'utente. L'App Lab attende a rispondere a certi **eventi** che si verificano in un programma. Il blocco 'onEvent' specifica quale elemento dell'UI deve attendere per un evento.
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>Passa alla Modalità Codice</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          Trascina un blocco <code>onEvent</code> dagli strumenti nell'area di lavoro.</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          Usa il menu a tendina per selezionare l'<em>ID</em> dell'elemento dell'UI che vuoi configurare per rispondere a qualche evento. Gli ID di tutti gli elementi dell'UI aggiunti nella modalità progettazione saranno elencati qui.</p><p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          Usa il menu a tendina per selezionare il <em>tipo</em> di evento a cui vuoi rispondere. (Usa solo "click" per ora).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          Aggiungi il codice nella funzione che vuoi eseguire <em>quando</em> l'utente innesca l'evento. La funzione sarà eseguita ogni volta che l'utente innesca l'evento specifico.</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica
+      csd-post-survey-levelgroup-2018:
+        title: Sondaggio Studenti di Fine del Corso Scoperte di Informatica

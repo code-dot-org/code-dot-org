@@ -1,0 +1,199 @@
+{
+  "el-GR": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Ενέργειες",
+              "Events": "Συμβάντα",
+              "Loops": "Βρόχοι",
+              "Math": "Μαθηματικά",
+              "Logic": "Λογική",
+              "Games/Score": "Παιχνίδια/Σκορ"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Dancers": "Χορευτές",
+              "Properties": "Ιδιότητες",
+              "Events": "Συμβάντα",
+              "Numbers": "Αριθμοί",
+              "Logic": "Λογική"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "σχεδίασε ένα αστέρι",
+                "description": "Να σχεδιάζει ένα αστέρι με δεδομένες κορυφές και πλευρές με δεδομένο μήκος",
+                "parameters": {
+                  "points": "πόντοι",
+                  "length": "μήκος"
+                }
+              },
+              "draw a circle": {
+                "name": "Σχεδίασε ένα κύκλο",
+                "description": "να σχεδιάζει ένα κύκλο δεδομένης ακτίνας",
+                "parameters": {
+                  "radius": "ακτίνα"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "να σχεδιάζει έναν μύλο",
+                "parameters": {
+                  "sides": "πλευρές",
+                  "length": "μήκος",
+                  "repeat": "επανάλαβε"
+                }
+              },
+              "draw a triangle": {
+                "name": "σχεδίασε ένα τρίγωνο",
+                "parameters": {
+                  "length": "μήκος"
+                }
+              },
+              "draw a shape": {
+                "name": "να σχεδιάζει ένα σχήμα",
+                "parameters": {
+                  "sides": "πλευρές",
+                  "length": "μήκος"
+                }
+              },
+              "draw a house": {
+                "name": "σχεδίασε ένα σπίτι",
+                "parameters": {
+                  "length": "μήκος"
+                }
+              },
+              "draw a square": {
+                "name": "σχεδίασε ένα τετράγωνο",
+                "parameters": {
+                  "length": "μήκος"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Sprites": "Χαρακτήρας",
+              "Actions": "Ενέργειες",
+              "Events": "Συμβάντα",
+              "Behaviors": "Συμπεριφορές"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Dancers": "Χορευτές",
+              "Properties": "Ιδιότητες",
+              "Events": "Συμβάντα",
+              "Numbers": "Αριθμοί",
+              "Logic": "Λογική"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ενέργειες",
+              "Brushes": "Πινέλα",
+              "Loops": "Βρόχοι",
+              "Math": "Μαθηματικά",
+              "Logic": "Λογική",
+              "Functions": "Συναρτήσεις",
+              "Variables": "Μεταβλητές"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Sprites": "Χαρακτήρας",
+              "Locations": "Τοποθεσίες",
+              "Actions": "Ενέργειες",
+              "Events": "Συμβάντα",
+              "Behaviors": "Συμπεριφορές",
+              "Variables": "Μεταβλητές",
+              "Math": "Μαθηματικά",
+              "Logic": "Λογική",
+              "Functions": "Συναρτήσεις",
+              "Text": "κείμενο",
+              "Comments": "Σχόλια"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Sprites": "Χαρακτήρας",
+              "Locations": "Τοποθεσίες",
+              "Actions": "Ενέργειες",
+              "Events": "Συμβάντα",
+              "Behaviors": "Συμπεριφορές",
+              "Variables": "Μεταβλητές",
+              "Math": "Μαθηματικά",
+              "Logic": "Λογική",
+              "Functions": "Συναρτήσεις",
+              "Text": "κείμενο",
+              "Comments": "Σχόλια"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Ενέργειες",
+              "Brushes": "Πινέλα",
+              "Loops": "Βρόχοι",
+              "Math": "Μαθηματικά",
+              "Logic": "Λογική",
+              "Functions": "Συναρτήσεις",
+              "Variables": "Μεταβλητές"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Sprites": "Χαρακτήρας",
+              "Actions": "Ενέργειες",
+              "Events": "Συμβάντα",
+              "Logic": "Λογική",
+              "Math": "Μαθηματικά"
+            },
+            "behavior_names": {
+              "recovering": "αναρρώνοντας",
+              "moving left and right": "κίνηση αριστερά και δεξιά",
+              "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Κόσμος",
+              "Sprites": "Χαρακτήρας",
+              "Actions": "Ενέργειες",
+              "Behaviors": "Συμπεριφορές",
+              "Events": "Συμβάντα",
+              "Locations": "Τοποθεσίες",
+              "Logic": "Λογική",
+              "Loops": "Βρόχοι",
+              "Math": "Μαθηματικά",
+              "Variables": "Μεταβλητές",
+              "Functions": "Συναρτήσεις",
+              "Comments": "Σχόλια"
+            },
+            "behavior_names": {
+              "recovering": "αναρρώνοντας",
+              "moving left and right": "κίνηση αριστερά και δεξιά",
+              "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+            }
+          }
+        }
+      }
+    }
+  }
+}

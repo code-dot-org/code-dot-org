@@ -1,0 +1,10 @@
+name 'BinaryImages-Unplugged_2021'
+video_key 'C4_unplugged_binary'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Binary Images
+
+Communicate how to recreate an image using just two simple values.
+MARKDOWN

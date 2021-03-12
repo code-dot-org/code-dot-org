@@ -1,6 +1,9 @@
 import React from 'react';
+import $ from 'jquery';
+import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
+import * as client from '@cdo/apps/util/userSectionClient';
 import {UnconnectedManageStudentActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
 const DEFAULT_PROPS = {
@@ -61,5 +64,30 @@ describe('ManageStudentsActionsCell', () => {
       <ManageStudentsActionsCell {...DEFAULT_PROPS} canEdit={false} />
     );
     expect(wrapper).not.to.contain('Edit');
+  });
+
+  describe('onDelete', () => {
+    beforeEach(() => {
+      sinon.stub($, 'ajax').returns({
+        done: sinon
+          .stub()
+          .callsArg(0)
+          .returns({fail: () => {}})
+      });
+      sinon.stub(client, 'getCurrentSection').callsArgWith(1, 'testSection');
+    });
+
+    afterEach(() => {
+      client.getCurrentSection.restore();
+      $.ajax.restore();
+    });
+
+    it('Updates the section information', () => {
+      const setSectionSpy = sinon.spy();
+      const props = {...DEFAULT_PROPS, ...{setSection: setSectionSpy}};
+      const wrapper = shallow(<ManageStudentsActionsCell {...props} />);
+      wrapper.instance().onConfirmDelete();
+      expect(setSectionSpy).to.have.been.calledOnceWith('testSection');
+    });
   });
 });

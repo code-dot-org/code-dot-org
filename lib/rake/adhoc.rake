@@ -12,11 +12,13 @@ namespace :adhoc do
         branch: ENV['BRANCH'] || ENV['branch'],
         database: ENV['DATABASE'],
         frontends: ENV['FRONTENDS'],
-        cdn_enabled: ENV['CDN_ENABLED']
+        cdn_enabled: ENV['CDN_ENABLED'],
+        alarms: ENV['ALARMS']
       )),
       log: CDO.log,
       verbose: ENV['VERBOSE'],
       quiet: ENV['QUIET'],
+      import_resources: ENV['IMPORT_RESOURCES'],
     )
   end
 

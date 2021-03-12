@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -23,12 +22,18 @@ import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
+// HTML tags that are disallowed in WebLab. These tags will be removed from users' projects.
+const DISALLOWED_HTML_TAGS = ['script'];
+
 /**
  * An instantiable WebLab class
  */
 
 // Global singleton
 let webLab_ = null;
+
+// The max size in bytes for a WebLab project. 20 megabytes == 20971520 bytes
+const MAX_PROJECT_CAPACITY = 20971520;
 
 const WebLab = function() {
   this.skin = null;
@@ -79,6 +84,8 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  this.disallowedHtmlTags = DISALLOWED_HTML_TAGS;
+  getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
 
@@ -168,6 +175,7 @@ WebLab.prototype.init = function(config) {
     this.studioApp_.initProjectTemplateWorkspaceIconCallout();
     this.studioApp_.alertIfCompletedWhilePairing(config);
     this.studioApp_.initVersionHistoryUI(config);
+    this.studioApp_.initTimeSpent();
 
     let finishButton = document.getElementById('finishButton');
     if (finishButton) {
@@ -189,7 +197,8 @@ WebLab.prototype.init = function(config) {
     documentationUrl: 'https://studio.code.org/docs/weblab/',
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    validationEnabled: !!config.level.validationEnabled
   });
 
   this.readOnly = config.readonlyWorkspace;
@@ -234,6 +243,7 @@ WebLab.prototype.init = function(config) {
   }
 
   function onRefreshPreview() {
+    this.studioApp_.debouncedSilentlyReport(this.level.id);
     project.autosave(() => {
       if (this.brambleHost) {
         this.brambleHost.refreshPreview();
@@ -290,29 +300,70 @@ WebLab.prototype.init = function(config) {
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      return weblabMsg.confirmExitWithUnsavedChanges();
-    }
-  };
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
 };
 
-WebLab.prototype.onFinish = function(submit) {
-  const onComplete = submit
-    ? onSubmitComplete
-    : this.studioApp_.onContinue.bind(this.studioApp_);
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
+};
+
+WebLab.prototype.reportResult = function(submit, validated) {
+  let onComplete, testResult;
+
+  if (validated) {
+    testResult = TestResults.FREE_PLAY;
+    onComplete = submit
+      ? onSubmitComplete
+      : this.studioApp_.onContinue.bind(this.studioApp_);
+  } else {
+    testResult = TestResults.FREE_PLAY_UNCHANGED_FAIL;
+    onComplete = submit
+      ? onSubmitComplete
+      : () => {
+          this.studioApp_.displayFeedback({
+            feedbackType: testResult,
+            level: this.level
+          });
+        };
+  }
 
   project.autosave(() => {
     this.studioApp_.report({
       app: 'weblab',
       level: this.level.id,
-      result: true,
-      testResult: TestResults.FREE_PLAY,
+      result: validated,
+      testResult: testResult,
       program: this.getCurrentFilesVersionId() || '',
       submitted: submit,
       onComplete: onComplete
     });
   });
+};
+
+WebLab.prototype.onFinish = function(submit) {
+  if (this.level.validationEnabled) {
+    this.brambleHost.validateProjectChanged(validated =>
+      this.reportResult(submit, validated)
+    );
+  } else {
+    this.reportResult(submit, true /* validated */);
+  }
+};
+
+WebLab.prototype.getMaxProjectCapacity = function() {
+  return getStore().getState().maxProjectCapacity;
+};
+
+WebLab.prototype.setProjectSize = function(bytes) {
+  getStore().dispatch(actions.changeProjectSize(bytes));
 };
 
 WebLab.prototype.getCodeAsync = function() {
@@ -516,7 +567,8 @@ WebLab.prototype.loadFileEntries = function() {
       project.filesVersionId = filesVersionId;
     }
     if (this.brambleHost) {
-      this.brambleHost.syncFiles(() => {});
+      // Refresh the file tree after files have been synced with Bramble.
+      this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
     }
   };
 

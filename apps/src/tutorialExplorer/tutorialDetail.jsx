@@ -248,6 +248,7 @@ export default class TutorialDetail extends React.Component {
                   <a
                     href={this.props.item.url}
                     target="_blank"
+                    rel="noopener noreferrer"
                     onClick={this.startTutorialClicked}
                   >
                     {imageComponent}
@@ -287,6 +288,7 @@ export default class TutorialDetail extends React.Component {
                     <a
                       href={this.props.item.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       onClick={this.startTutorialClicked}
                     >
                       <button type="button" style={{marginTop: 20}}>
@@ -307,6 +309,7 @@ export default class TutorialDetail extends React.Component {
                           <a
                             href={this.props.item.teachers_notes}
                             target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <i
                               className="fa fa-external-link"
@@ -332,6 +335,7 @@ export default class TutorialDetail extends React.Component {
                                 this.props.item.short_code
                               }`}
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {`https://hourofcode.com/${
                                 this.props.item.short_code

@@ -5,6 +5,7 @@ ur:
       category:
         hoc_category_name: آور-آف-کوڈ
         math_category_name: ریاضی
+        other_category_name: دیگر
       name:
         course2:
           lessons:
@@ -14,6 +15,7 @@ ur:
           title: اینا اور ایلسا کے ساتھ کوڈ
           description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
           description_short: آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔
+          student_description: آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔
         usability:
           lessons:
             Variables:
@@ -52,6 +54,7 @@ ur:
           title: ایونٹس/واقعات
           description: ایونٹس/واقعات
           description_short: ایونٹس/واقعات
+          student_description: ایونٹس/واقعات
         step:
           title: اسٹیپ
           lessons:
@@ -579,3 +582,144 @@ ur:
           lessons:
             Lesson:
               name: سبق
+        virustest:
+          title: وباء کے پھیلنے کا سیمیولیشن
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
+          lesson_groups:
+            outbreak:
+              display_name: وباء کی سیمولیشن
+          title: وباء کا سیمیولیٹر
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          name: وباء کا پھیلنا
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرات
+            outbreak:
+              display_name: وباء کی سیمولیشن
+        csd3-2021:
+          lessons:
+            Variables:
+              key: متغیرات
+              name: متغیرات
+            Text:
+              key: متن
+              name: متن
+            Conditionals:
+              key: شرائط
+              name: شرائط
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرات
+            csp_conditionals:
+              display_name: شرائط
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: فہرستیں
+            csp_loops:
+              display_name: لوپس
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        coursed-2021:
+          lessons:
+            Dance Party:
+              key: ڈانس پارٹی
+              name: ڈانس پارٹی
+            'Unplugged: Binary':
+              name: ثنائی تصاویر
+          lesson_groups:
+            csf_events:
+              display_name: ایونٹس/واقعات
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+        coursee-2021:
+          lessons:
+            Conditionals:
+              key: شرائط
+          lesson_groups:
+            ramp_up:
+              display_name: لوپس
+            csf_nested_loops:
+              display_name: شرائط
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: لفافہ متغیرات
+              name: لفافہ متغیرات
+          lesson_groups:
+            csf_variables:
+              display_name: متغیرات
+        express-2021:
+          lessons:
+            Dance Party:
+              key: ڈانس پارٹی
+              name: ڈانس پارٹی
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_conditionals:
+              display_name: شرائط
+            csf_variables:
+              display_name: متغیرات
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: لوپس
+            csf_events:
+              display_name: ایونٹس/واقعات
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: ایک سیمولیشن کا کوڈ لکھنا
+          lesson_groups:
+            outbreak:
+              display_name: وباء کی سیمولیشن
+            lessonGroup-3:
+              display_name: متغیرات
+        contagion-pilot:
+          description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+          student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: لوپس
+              name: لوپس
+            Events:
+              key: ایونٹس/واقعات
+              name: ایونٹس/واقعات
+            Conditionals:
+              key: شرائط
+              name: شرائط
+            Variables:
+              key: متغیرات
+              name: متغیرات

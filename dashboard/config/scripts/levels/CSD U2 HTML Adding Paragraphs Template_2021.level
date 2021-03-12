@@ -1,0 +1,22 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:31.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html>\\n  <head>\\n  </head>\\n  <body>\\n\\n\\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
+    "hide_share_and_remix": "false",
+    "long_instructions": "# Add Text to the Body\r\n\r\nWhen you start any Web Lab project it will automatically add `<!DOCTYPE>`, `<html>`, `<head>`, and `<body>` tags to your project. When you add content to your projects you'll need to do it between the `<body>` and `</body>` tags since it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write three separate sentences about any topic you like inside of the body tags of your web page\r\n* Hit \"Refresh and Save\" if you don't see the changes in the Preview area\r\n* Compare your work with a neighbor. Make sure you're placing code in the same place.\r\n",
+    "parent_level_id": 20001,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-03-19 19:59:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</Weblab>

@@ -13,7 +13,6 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
       create :pd_enrollment, email: other_teacher.email, workshop: workshop
     end
 
-    create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
     @ended_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csf_workshop
     other_enrollment = create :pd_enrollment, email: @teacher.email, workshop: @csd_workshop
     create :pd_enrollment, email: @teacher.email, workshop: @csp_workshop

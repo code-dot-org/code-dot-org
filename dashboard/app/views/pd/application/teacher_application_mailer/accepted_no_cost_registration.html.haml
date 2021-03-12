@@ -7,7 +7,8 @@
 %p
   Congratulations! We are excited to offer you a seat in
   = @application.effective_regional_partner_name + "'s"
-  2020-21 Professional Learning Program for
+  = @application.year
+  Professional Learning Program for
   = @application.course_name + ","
   - if @application.regional_partner
     %strong at no cost to you or your school,
@@ -49,12 +50,12 @@
     = link_to('Register Here', registration_url) + '.'
   %li
     If you want to decline your seat, let me know as soon as possible
-    using the contact information above so we can accommodate another teacher.
+    using the contact information below so we can accommodate another teacher.
   %li
     %strong Mark your calendar for your summer workshop!
-    Details about the dates/location of your workshop can be found at
+    Details about your workshop can be found at
     = link_to('this registration link', registration_url) + '.'
-    You will receive more details about travel, lodging, and meals (if applicable)
+    You will receive more details
     approximately six weeks prior to your summer workshop.
   %li
     Share the good news with your school! Start talking with your
@@ -68,6 +69,8 @@
 %p
   Congratulations again! We look forward to receiving your registration
   within two weeks.
+
+= render partial: 'questions_concerns'
 
 %p
   = render partial: 'partner_signature'

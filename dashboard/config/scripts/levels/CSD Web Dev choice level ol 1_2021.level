@@ -1,0 +1,31 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2020-12-04T21:49:33.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "hide_share_and_remix": "true",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h2>Top Five Reasons a Turtle is the Best Pet<\\/h2>\\r\\n    \\r\\n    They are cute.\\r\\n    They are easy to take care of.\\r\\n    They don't bite or scratch.\\r\\n    They will eat all your leftovers.\\r\\n    They are good listeners.\\r\\n   \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "encrypted_examples": "4GYDWnw74rlT4/7W9VmcvG8Bb6csaXPgUFFmFT+AxA8sFRohH9Cg8UqwgYbB\npWvlY7E8PySHd1OJOJ+4O+V2AQ==\n",
+    "submittable": "false",
+    "parent_level_id": 23026,
+    "name_suffix": "_2021",
+    "long_instructions": "# Ordered Lists\r\n<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\r\n\r\n::: details [**What are the two types of lists?**]\r\n There are two types of lists in HTML, ordered and unordered lists.\r\n:::\r\n\r\n::: details [**What is an ordered list?**]\r\n\r\nAn ordered list is a set of bulleted items which are numbered.\r\n<br /><br />\r\nAn ordered list element has the tag `<ol>` . This is an abbreviation for <strong>O</strong>rdered <strong>L</strong>ist. Each item in the list is marked by a list item element `<li>`;. This is an abbreviation for <strong>L</strong>ist <strong>I</strong>tem.  The list item element is a child element, which means that it goes inside of its parent element, the ordered list (`<ol>`).\r\n:::\r\n\r\n\r\n::: details [**How do I make an ordered list?**]\r\n\r\nMaking an ordered list has two steps: making the list and adding the list items.  To make the ordered list, write the ordered list tags `<ol></ol>`.  Next, add your list items **inside** the ordered list tags.  To make each list item, use the list item tags `<li></li>` and write the list item inside the tags.\r\n\r\nIt can be helpful to indent your `<li>` tags so it's clear they are contained in the `<ol>` tag.\r\n:::\r\n\r\n\r\n\r\n</div>\r\n\r\nAn ordered list is like an unordered (bulleted) list, but it has numbers. Just use the `<ol>` tag instead of `<ul>`.\r\n\r\n# Do This\r\n\r\n* Use the `<ol>` and `<li>` tags to structure this content into an ordered list.\r\n\r\n::: details [**Show me an example of working code.**]\r\n\r\n<table border=\"1\">\r\n<tr>\r\n<td>Example</td>\r\n<td>Result</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n\r\n```\r\n<ol>\r\n  <li>Step 1 </li>\r\n  <li>Step 2 </li>\r\n  <li>Step 3 </li>\r\n</ol>\r\n```\r\n</td>\r\n<td><img src=\"https://images.code.org/3ef357cfad8ac98a8b30beb229ebcb78-image-1473446360428.39.04 PM.png\" style=\"width:200px\"></td>\r\n</tr>\r\n</table>\r\n\r\n\r\n:::",
+    "reference_links": [
+      "/docs/concepts/html/html-tags/",
+      "/docs/concepts/html/headings-and-paragraphs/"
+    ],
+    "map_reference": "/docs/concepts/html/lists/",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "display_name": "Create ordered list",
+    "bubble_choice_description": "Use the <ol> tag to create a numbered list",
+    "thumbnail_url": "https://images.code.org/b3186e83c3e3bd2680a1a300e5abd126-image-1493238064706.17.03 PM.png"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-11 04:30:44 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-11 04:51:25 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-20 21:55:19 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-09-20 15:34:42 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"},{\"changed_at\":\"2018-12-10 21:32:28 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-01-30 02:31:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-06 21:56:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-10-03 21:53:58 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-27 22:14:58 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-31 17:46:29 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-03-31 17:47:22 +0000\",\"changed\":[\"encrypted_examples\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":975,\"changed_by_email\":\"andrew.hu@code.org\"},{\"changed_at\":\"2020-06-08 16:04:47 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-08 19:53:39 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</Weblab>

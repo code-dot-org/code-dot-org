@@ -153,7 +153,7 @@ class TeacherPanel extends React.Component {
               <SelectedStudentInfo
                 students={students}
                 selectedStudent={currentStudent}
-                level={currentStudentScriptLevel}
+                userLevel={currentStudentScriptLevel}
                 onSelectUser={id => this.onSelectUser(id, 'iterator')}
                 getSelectedUserId={this.props.getSelectedUserId}
               />
@@ -170,6 +170,7 @@ class TeacherPanel extends React.Component {
                     color="blue"
                     href={example}
                     target="_blank"
+                    rel="noopener noreferrer"
                   />
                 ))}
               </div>
@@ -189,6 +190,7 @@ class TeacherPanel extends React.Component {
                 <a
                   href={teacherDashboardUrl(selectedSection.id)}
                   target="_blank"
+                  rel="noopener noreferrer"
                   style={styles.teacherDashboardLink}
                   onClick={() => this.logToFirehose('select_teacher_dashboard')}
                 >
@@ -227,7 +229,7 @@ class TeacherPanel extends React.Component {
             )}
           {viewAs === ViewType.Teacher && (students || []).length > 0 && (
             <StudentTable
-              levels={currentSectionScriptLevels}
+              userLevels={currentSectionScriptLevels}
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'select_specific')}
               getSelectedUserId={this.props.getSelectedUserId}

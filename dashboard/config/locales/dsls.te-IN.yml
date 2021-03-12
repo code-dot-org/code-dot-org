@@ -1006,7 +1006,7 @@ te-IN:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}

@@ -97,17 +97,8 @@ class SliderEvents extends React.Component {
 
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "input", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' value: " + getNumber("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} value: " + getNumber("${id}"));\n}`;
+    return `onEvent("${id}", "input", ${callback});`;
   }
 
   insertInput = () => {

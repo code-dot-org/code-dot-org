@@ -64,7 +64,8 @@ class ProgressPill extends React.Component {
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
     selectedSectionId: PropTypes.string,
-    progressStyle: PropTypes.bool
+    progressStyle: PropTypes.bool,
+    onSingleLevelClick: PropTypes.func
   };
 
   render() {
@@ -79,15 +80,23 @@ class ProgressPill extends React.Component {
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    let url = multiLevelStep || disabled ? undefined : levels[0].url;
+    let url =
+      multiLevelStep || disabled || this.props.onSingleLevelClick
+        ? undefined
+        : levels[0].url;
     if (url && selectedSectionId) {
       url += stringifyQueryParams({section_id: selectedSectionId});
     }
+    let onClick =
+      !multiLevelStep && !disabled && !url
+        ? () => this.props.onSingleLevelClick(levels[0])
+        : undefined;
 
     let style = {
       ...styles.levelPill,
       ...(url && hoverStyle),
-      ...(!multiLevelStep && levelProgressStyle(levels[0], false))
+      ...(!multiLevelStep &&
+        levelProgressStyle(levels[0].status, levels[0].kind, false))
     };
 
     // If we're passed a tooltip, we also need to reference it from our div
@@ -110,6 +119,7 @@ class ProgressPill extends React.Component {
         href={url}
         style={{textDecoration: 'none'}}
         className="uitest-ProgressPill"
+        onClick={onClick}
       >
         <div {...tooltipProps} style={style}>
           {icon && <FontAwesome icon={icon} />}

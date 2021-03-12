@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {makeEnum} from '@cdo/apps/utils';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -11,6 +10,7 @@ export const sectionShape = PropTypes.shape({
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
+  ttsAutoplayEnabled: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
@@ -37,6 +37,7 @@ export const summarizedSectionShape = PropTypes.shape({
   name: PropTypes.string,
   numberOfStudents: PropTypes.number,
   pairing_allowed: PropTypes.bool,
+  tts_autoplay_enabled: PropTypes.bool,
   providerManaged: PropTypes.bool,
   script: PropTypes.object,
   sharing_disabled: PropTypes.bool,
@@ -119,12 +120,6 @@ export const loadErrorShape = PropTypes.shape({
   status: PropTypes.number.isRequired,
   message: PropTypes.string.isRequired
 });
-
-export const OAuthSectionTypes = makeEnum(
-  'google_classroom',
-  'clever',
-  'microsoft_classroom'
-);
 
 export const sortableSectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,

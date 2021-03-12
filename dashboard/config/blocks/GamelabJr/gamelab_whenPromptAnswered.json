@@ -1,0 +1,22 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "whenPromptAnswered",
+    "blockText": "when {VAR} answered",
+    "args": [
+      {
+        "name": "VAR",
+        "customInput": "variableNamePicker"
+      }
+    ],
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "eventBlock": true
+  }
+}

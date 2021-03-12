@@ -89,9 +89,8 @@ class AnimationPickerListItem extends React.Component {
         display: this.state.loaded ? 'block' : 'none'
       }
     ];
-
     const iconImageSrc = this.props.category
-      ? `/blockly/media/gamelab/animation-previews/category_${
+      ? `/blockly/media/p5lab/animation-previews/category_${
           this.props.category
         }.png`
       : '';

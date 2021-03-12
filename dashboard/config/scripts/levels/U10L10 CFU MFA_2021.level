@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:14:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Reflection: Multifactor Authentication",
+    "long_instructions": "\r\nWhat concerns do you have about multifactor authentication? Is it a good long term solution for data privacy? ",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19650,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Reflection Multiple Representations",
+    "encrypted_solution": "6LK9x9NrqsZ0V3hSHanj3/XyZJcuraiai6rwAgmmHiEMECn0Hc9T743klzjH\nlpbJc5E78Rbty2I9ZmxlbbvCKcv4Ytl5VUABtzRsg7UEug1FNnSNFMuVMx/2\n6Mk7YtTzN/RWIiHO73oeVUdWhF6ojA==\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "encrypted": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-30 19:51:43 +0000\",\"changed\":[\"name\",\"notes\",\"title\",\"markdown_instructions\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:46:49 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-21 15:36:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-24 19:46:07 +0000\",\"changed\":[],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2020-11-12 17:10:22 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]"
+}]]></config>
+</FreeResponse>

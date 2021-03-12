@@ -5,6 +5,8 @@ const PROGRAM_CSD =
 const PROGRAM_CSP =
   'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)';
 
+const YEAR = '2021-2022';
+
 const styles = {
   indented: {
     marginLeft: 20
@@ -33,4 +35,4 @@ const styles = {
   }
 };
 
-export {PROGRAM_CSD, PROGRAM_CSP, styles};
+export {PROGRAM_CSD, PROGRAM_CSP, YEAR, styles};

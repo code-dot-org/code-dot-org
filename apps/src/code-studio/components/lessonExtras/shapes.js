@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const bonusLevel = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   display_name: PropTypes.string.isRequired,
   description: PropTypes.string,
   thumbnail_url: PropTypes.string,

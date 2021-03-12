@@ -1,0 +1,28 @@
+name 'VPL - CSD U6 Chapter 1 Project'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Unit 6 - End of Chapter 1 Project
+## Lesson 9: Make a Game
+**Estimated time: 20 minutes**
+
+Unit 6, Chapter 1 ends with Lesson 9 in which students develop an app of their own design that uses the Circuit Playground to output information.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
+
+
+## Explore Unit 6 - Chapter 1 Project Resources
+
+* Review the lesson plan, <a href="https://curriculum.code.org/csd-20/unit6/9/" target="_blank">Lesson 9: Project - Make a Game</a>
+
+	* Focus on the project resources included:
+    	* rubric
+        * CS practices reflection
+        * project guide
+        * sample marked rubrics
+        	* <a href="https://studio.code.org/projects/applab/-ODbnR6B7QwGmuuPHuouNAe_d5X0MYp4kcadvKJ8qvQ/view" target="_blank">Exemplar - Make a Game 1</a> 
+        
+
+**Note:** Circuit Playground required to run Make a Game 1.  However, you can preview the code used to program it.
+
+MARKDOWN

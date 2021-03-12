@@ -72,9 +72,9 @@
       .header_left
         .header_logo
           - if current_user
-            = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), '/home', {id: "logo_home_link"})
           - else
-            = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), CDO.code_org_url, {id: "logo_home_link"})
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level
@@ -88,18 +88,10 @@
       .header_right
         - if !@hide_sign_in_option && signin_button_enabled
           #sign_in_or_user
-            = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
-        = render file: Rails.root.join('..', 'shared', 'haml', 'help_button.haml'), locals: hamburger_options
-        = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+            = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header.haml')), type: :haml, locals: user_header_options
+        = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'help_button.haml')), type: :haml, locals: hamburger_options
+        = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')), type: :haml, locals: hamburger_options
   }
-
-- if request.path == "/home"
-  #header-banner{class: "header-banner-short", style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
-- elsif request.path == "/courses"
-  #header-banner.header-banner-courses{class: user_type ? "header-banner-short" : "", style: "background-image: url(\"/shared/images/banners/#{@header_banner_image_filename}.jpg\")"}
-
-- if ["/projects", "/projects/public", "/projects/libraries"].include? request.path
-  #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 
 :ruby
   if should_show_progress
@@ -110,18 +102,10 @@
       lesson_extras_enabled = view_as.lesson_extras_enabled?(script)
     end
 
-    # don't trust outside content in parameter :puzzle_page - should be integer, so immediately call to_i
-    puzzle_page = params[:puzzle_page] ? params[:puzzle_page].to_i : ApplicationHelper::PUZZLE_PAGE_NONE
-
-    if script_level
-      uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
-    else
-      # A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
-      uid = SharedConstants::LEVEL_KIND.stage_extras
-    end
-
+    puzzle_page = params[:puzzle_page] ? params[:puzzle_page] : ApplicationHelper::PUZZLE_PAGE_NONE
 
     script_data = script.summarize_header
+    lesson_group_data = script.lesson_groups.map(&:summarize)
     stage_data = (@stage || script_level.lesson).summarize
     # If caching, we don't know the sign in state, and should be nil
     signed_in = @public_caching ? 'null' : !brakeman_no_warn(current_user).nil?
@@ -154,13 +138,15 @@
     //<![CDATA[
     dashboard.header.build(
       #{script_data.to_json},
+      #{lesson_group_data.to_json},
       #{stage_data.to_json},
       #{user_progress},
-      "#{uid}",
+      "#{script_level&.level_id || -1}",
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
-      #{script_name_data.to_json}
+      #{script_name_data.to_json},
+      #{!script_level}
     )
     //]]>
 

@@ -54,13 +54,6 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     assert_includes QueuedAccountPurge.needing_manual_review, q2
   end
 
-  test "needing_manual_review omits Pardot::InvalidApiKeyException" do
-    q1 = create :queued_account_purge
-    q2 = create :queued_account_purge, reason_for_review: 'Pardot::InvalidApiKeyException'
-    assert_includes QueuedAccountPurge.needing_manual_review, q1
-    refute_includes QueuedAccountPurge.needing_manual_review, q2
-  end
-
   test "needing_manual_review omits Net::ReadTimeout" do
     q1 = create :queued_account_purge
     q2 = create :queued_account_purge, reason_for_review: 'Net::ReadTimeout'

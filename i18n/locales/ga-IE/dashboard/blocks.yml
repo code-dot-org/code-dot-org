@@ -88,9 +88,6 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
@@ -109,9 +106,6 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: 'méadaigh {PROPERTY} de gach {SPRITE}: {VAL}'
         options:
@@ -188,9 +182,6 @@ ga:
             MOVES.XArmsUp: Síneadh
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_doMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} uair amháin
         options:
@@ -219,9 +210,6 @@ ga:
             MOVES.XArmsUp: Síneadh
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
-          DIR:
-            '1': "→"
-            "-1": "←"
       Dancelab_everyMeasuresRange:
         text: 'athdhéan gach {N} tomhas tar éis {START} '
       Dancelab_everySeconds:
@@ -1006,6 +994,7 @@ ga:
             '"y"': ionad y
             '"direction"': treo gluaiseachta
             '"tint"': imir
+            '"speed"': luas
       gamelab_getThisSprite:
         options:
           CHOICE:
@@ -1128,6 +1117,8 @@ ga:
         text: nuair a stopann {SPRITE} {BEHAVIOR}
       gamelab_removeTint:
         text: bain an dath de {THIS}
+      gamelab_repeatForever:
+        text: go deo na ndeor
       gamelab_setAnimation:
         text: athraigh culaith {THIS} go {ANIMATION}
       gamelab_setBackground:
@@ -1148,6 +1139,15 @@ ga:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi uisce
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
             undefined: gan chúlra
+      gamelab_setBackgroundImageAs:
+        text: 'socraigh an cúlra: {IMG}'
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': tamall
+            '100': large
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1157,6 +1157,7 @@ ga:
             '"x"': ionad x
             '"y"': ionad y
             '"direction"': treo gluaiseachta
+            '"speed"': luas
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
@@ -1245,6 +1246,8 @@ ga:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ní iasc é
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mo-lipéad
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ní mo-lipéad é
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1597,7 +1600,6 @@ ga:
             '"stoneBricks"': brící cloiche
             '"mossyStoneBricks"': brící cloiche caonaigh
             '"crackedStoneBricks"': brící cloiche gágacha
-            '"decorativeStoneBricks"': brící cloiche maisiúla
             '"blueCoralBlock"': bloc coiréil ghoirm
             '"pinkCoralBlock"': bloc coiréil bhándeirg
             '"magentaCoralBlock"': bloc coiréil mhaigeanta

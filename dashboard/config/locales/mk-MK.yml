@@ -1,9 +1,23 @@
 ---
 mk:
+  errors:
+    messages:
+      not_saved: 'Ве молиме поправете ги следните грешки:'
+      too_young: Оваа содржина има рестрикции за возраст и не е достапна за помлади
+        студенти.
+      teacher_must_accept_terms: Оваа содржина има рестрикции за возраст и не е достапна
+        за помлади студенти. Замолете го вашиот професор да ги прифати ажурираните
+        услови за услуга за да ви даде пристап до содржината. Вашиот професор може
+        да го направи ова со пријавување во Code Studio и притискање на "Преглед на
+        ажурирани услови„ копчето близу врвот на Code Studio почетната страна.
   submit: Поднеси
   cancel: Откажи
   or: или
   continue: Продолжи
+  signin_form:
+    submit: Најави се
+  signinsection:
+    login: Најави се
   password:
     reset_form:
       submit: Поднеси
@@ -11,14 +25,24 @@ mk:
     edit: Измени
     submit: Поднеси
   nav:
+    header:
+      course_catalog: Каталог на курсеви
+      project_gallery: Проекти
+      report_bug: Пријави проблем
+      about: За нас
     user:
+      signin: Најави се
       create: Креирај
+      gamelab: Работилница за апликации
       infinity: Бесконечно
   user:
     create_personal_login_terms_markdown: By creating a personal login, I agree to
       be bound by the Code.org [terms of service](%{terms_of_service_url}). If I am
       under 13 years of age, I confirm that I have my parent or legal guardian's permission
       to use the Code.org services even without a teacher.
+  upsell:
+    gamelab:
+      title: Работилница за апликации
   dialog:
     ok: Во ред
     startover_title: Дали сте сигурни дека сакате да започнете?
@@ -44,7 +68,10 @@ mk:
     save: Зачувај во галерија
   race_interstitial:
     submit: Поднеси
+    decline: затвори
   project:
+    projects: Проекти
+    project_gallery: Проекти
     name: Име
     saved: Зачувано во галерија!
   pd:

@@ -31,7 +31,8 @@
             "parameters": {
               "width": "ширина",
               "height": "висота"
-            }
+            },
+            "name": "draw_rect"
           }
         },
         "2-3 Artist Debugging 10": {
@@ -193,20 +194,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "щось зробити"
+          },
+          "patrol": {
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "персонаж"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "персонаж"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -214,7 +220,8 @@
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -222,7 +229,8 @@
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -331,13 +339,15 @@
           "n-sided shape": {
             "name": "n-стороння фігура",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           },
           "draw a loop": {
             "name": "намалювати цикл",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           },
           "draw spiral circle": {
@@ -350,7 +360,8 @@
           "draw a loop": {
             "name": "намалювати цикл",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           },
           "n-sided shape": {
@@ -385,16 +396,25 @@
         "MC_HOC_2017_Ali": {
           "build short bridge": {
             "name": "побудувати короткий міст"
+          },
+          "build long bridge": {
+            "name": "побудувати довгий міст"
           }
         },
         "MC_HOC_2017_Ali_2019": {
           "build short bridge": {
             "name": "побудувати короткий міст"
+          },
+          "build long bridge": {
+            "name": "побудувати довгий міст"
           }
         },
         "MC_HOC_2017_Ali_2020": {
           "build short bridge": {
             "name": "побудувати короткий міст"
+          },
+          "build long bridge": {
+            "name": "побудувати довгий міст"
           }
         },
         "MC_HOC_2017_FP20x20": {
@@ -507,13 +527,15 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           },
           "do something": {
             "name": "щось зробити",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -521,7 +543,8 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -529,7 +552,8 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -537,14 +561,16 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
         "NEW Course 4 Artist Params 14": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -554,16 +580,23 @@
             "parameters": {
               "points": "балів",
               "length": "довжина"
-            }
+            },
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини"
           },
           "draw a circle": {
-            "name": "намалювати коло"
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "довжина",
-              "repeat": "повторити"
-            }
+              "repeat": "повторити",
+              "sides": "сторони"
+            },
+            "name": "draw a pinwheel"
           },
           "draw a triangle": {
             "name": "намалювати трикутник",
@@ -573,8 +606,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "довжина"
-            }
+              "length": "довжина",
+              "sides": "сторони"
+            },
+            "name": "намалювати фігуру"
           },
           "draw a house": {
             "name": "намалювати будинок",
@@ -585,7 +620,8 @@
           "draw a square": {
             "name": "намалювати квадрат",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -674,7 +710,8 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -684,13 +721,15 @@
             "parameters": {
               "height": "висота",
               "actor": "персонаж"
-            }
+            },
+            "description": "блок функції \"стрибок\" з параметрами висоти та персонажа"
           },
           "patrol": {
             "parameters": {
               "actor": "персонаж",
               "speed": "швидкість"
-            }
+            },
+            "name": "патрулювання"
           }
         },
         "New Artist Project": {
@@ -794,7 +833,10 @@
             }
           },
           "draw a polygon": {
-            "name": "намалюйте багатокутник"
+            "name": "намалюйте багатокутник",
+            "parameters": {
+              "sides": "сторони"
+            }
           },
           "draw a square 20": {
             "name": "намалювати квадрат 20"
@@ -1290,6 +1332,9 @@
         "courseE_farmer_concept2": {
           "do something": {
             "name": "щось зробити"
+          },
+          "get pumpkin": {
+            "name": "отримати гарбуз"
           }
         },
         "courseE_farmer_concept3": {
@@ -1404,7 +1449,8 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -1412,14 +1458,16 @@
           "draw a polygon": {
             "name": "намалюйте багатокутник",
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
         "courseF_artist_fwp6": {
           "draw a spiral edge": {
             "parameters": {
-              "length": "довжина"
+              "length": "довжина",
+              "sides": "сторони"
             }
           }
         },
@@ -1427,7 +1475,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "довжина",
-              "min": "мінімум"
+              "min": "мінімум",
+              "sides": "сторони"
             }
           }
         },
@@ -1435,7 +1484,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "довжина",
-              "min": "мінімум"
+              "min": "мінімум",
+              "sides": "сторони"
             }
           }
         },
@@ -1445,16 +1495,23 @@
             "parameters": {
               "points": "балів",
               "length": "довжина"
-            }
+            },
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини"
           },
           "draw a circle": {
-            "name": "намалювати коло"
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "довжина",
-              "repeat": "повторити"
-            }
+              "repeat": "повторити",
+              "sides": "сторони"
+            },
+            "name": "draw a pinwheel"
           },
           "draw a triangle": {
             "name": "намалювати трикутник",
@@ -1464,8 +1521,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "довжина"
-            }
+              "length": "довжина",
+              "sides": "сторони"
+            },
+            "name": "намалювати фігуру"
           },
           "draw a house": {
             "name": "намалювати будинок",
@@ -1482,7 +1541,8 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "довжина",
-              "min": "мінімум"
+              "min": "мінімум",
+              "sides": "сторони"
             }
           }
         },
@@ -1493,7 +1553,10 @@
             }
           },
           "draw a polygon": {
-            "name": "намалюйте багатокутник"
+            "name": "намалюйте багатокутник",
+            "parameters": {
+              "sides": "сторони"
+            }
           },
           "draw a square 20": {
             "name": "намалювати квадрат 20"
@@ -1604,6 +1667,317 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "збирати"
+          }
+        },
+        "K-1 Artist2 4": {
+          "draw rectangle": {
+            "name": "намалюйте прямокутник"
+          }
+        },
+        "K-1 Artist2 5": {
+          "draw rectangle": {
+            "name": "намалюйте прямокутник"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"просте\" рішення"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "\"просте\" рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "потенційне рішення"
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "побудувати міст"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "виправити довгий шлях"
+          },
+          "fix short path": {
+            "name": "виправити короткий шлях"
+          }
+        },
+        "Standalone_Artist_8": {
+          "draw a shape": {
+            "name": "намалювати фігуру"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "моя функція"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "намалювати зірку",
+            "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини",
+            "parameters": {
+              "points": "балів",
+              "length": "довжина"
+            }
+          },
+          "draw a circle": {
+            "name": "намалювати коло",
+            "description": "намалювати коло заданого радіуса",
+            "parameters": {
+              "radius": "радіус"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "draw a pinwheel",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина",
+              "repeat": "повторити"
+            }
+          },
+          "draw a triangle": {
+            "name": "намалювати трикутник",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a shape": {
+            "name": "намалювати фігуру",
+            "parameters": {
+              "sides": "сторони",
+              "length": "довжина"
+            }
+          },
+          "draw a house": {
+            "name": "намалювати будинок",
+            "parameters": {
+              "length": "довжина"
+            }
+          },
+          "draw a square": {
+            "name": "намалювати квадрат",
+            "parameters": {
+              "length": "довжина"
+            }
+          }
+        },
+        "courseE_farmer_concept2_2018": {
+          "get pumpkin": {
+            "name": "отримати гарбуз"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "pick along path": {
+            "name": "підібрати по шляху"
+          },
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "get all pumpkins": {
+            "name": "отримати всі гарбузи"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "садова площа"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "садова площа"
           }
         }
       }

@@ -223,7 +223,20 @@
         "frozen square iterative": "Det ser ut til vi har laget et halvt kvadrat. La oss sette sammen fire linjer for å lage et kvadrat.",
         "frozen square loop": "Hei, jeg heter Anna av Arendelle! La oss lage et kvadrat ved hjelp av \"Gjenta\" blokken som bruker færre blokker. Hvor mange ganger trenger \"Gjenta\" blokken gå gjennom blokkene inni for å lage et kvadrat?",
         "frozen square loop 3x": "La oss lage tre firkanter med spissen mot hverandre. Husk å snu 120 grader før hvert nytt firkant.",
-        "frozen square snowflake": "Får du til å lage et snøfnugg ved å bruke \"repeter\"-blokken til å lage 10 kvadrater og \"Snu\"-blokken for å snu deg 36 grader mellom hvert kvadrat?"
+        "frozen square snowflake": "Får du til å lage et snøfnugg ved å bruke \"repeter\"-blokken til å lage 10 kvadrater og \"Snu\"-blokken for å snu deg 36 grader mellom hvert kvadrat?",
+        "K-1 Maze Loops 10": "Få meg bort til grisen! Bruker du gjenta-løkken, blir det lettere.",
+        "K-1 Maze Loops 11": "Få meg bort til grisen! Bruker du gjenta-løkken, blir det lettere.",
+        "K-1 Maze Loops 12": "Få meg bort til grisen! Bruker du gjenta-løkken, blir det lettere.",
+        "K-1 Maze Loops 3": "Få meg bort til grisen! Bruk gjenta-løkken.",
+        "K-1 Maze Loops 5": "Få meg bort til grisen! Bruk gjenta-løkken.",
+        "K-1 Maze Loops 6": "Få meg bort til grisen! Bruk gjenta-løkken.",
+        "K-1 Maze Loops 7": "Få meg bort til grisen! Bruk gjenta-løkken.",
+        "K-1 Maze Loops 8": "Bruk 'gjenta'-løkker for å få meg bort til grisen.",
+        "K-1 Maze Loops Assessment 1": "Se alt vi har lært! Bruk en 'gjenta'-løkke til å få meg bort til grisen!",
+        "course1_artist_loops_challenge2": "La oss spille et spill! Tegn så mange X-er du klarer! Klarer du tre på rad?",
+        "course1_artist_loops_challenge3": "**Kvitre!**\n_\"Kan du hjelpe meg å lage to fuglekasser?\"_",
+        "course1_playlab_events_challenge1": "_\"Hvor gjemmer vennene mine seg? I dette spillet kan du vise vennen min, katten Olive, ved å trykke på meg!\"_\n\nTrykker du på Olive, vil Robin dukke opp! Kan du skrive koden for å vise resten av karakterene også?\n\nHusk å bruke hint om du sitter fast i denne oppgaven. Hintene vil hjelpe deg med å løse oppgaven steg-for-steg. ",
+        "course1_playlab_events_challenge2": "_\"La oss ha en fest! Gi vennene mine noe å gjøre når du trykker på dem.\"_\n\nHva vil du dyrene skal si? Hva annet kan skje?\n\nHusk å bruke hintene om du sitter fast. Hintene vil gi deg tips til morsomme ting du kan prøve!\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)"
       }
     }
   }

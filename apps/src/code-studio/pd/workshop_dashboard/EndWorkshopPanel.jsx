@@ -14,20 +14,16 @@ const warningStyle = {
 const earlyCloseWarning = (
   <div>
     <span style={warningStyle}>Warning: </span>There are still sessions
-    remaining for this workshop. Once you end a workshop:
-    <ul>
-      <li>The post-workshop survey is automatically sent to attendees.</li>
-      <li>Surveys can’t be unsent and will not be resent.</li>
-      <li>Attendance is locked.</li>
-    </ul>
+    remaining for this workshop. Once you end a workshop, attendance is locked.
+    <br />
+    <br />
     Are you sure you want to end this workshop now?
   </div>
 );
 
 const normalCloseWarning = (
   <div>
-    Ending this workshop will close the attendance and send the end of workshop
-    survey to participants.
+    Ending this workshop will close the attendance.
     <br />
     <br />
     Are you sure you want to end this workshop now?
@@ -90,20 +86,14 @@ export default class EndWorkshopPanel extends React.Component {
     return (
       <WorkshopPanel header="End Workshop:">
         <div>
-          <p>
-            After the last day of your workshop, you must end the workshop. This
-            will generate a report to Code.org as well as email teachers a
-            survey regarding the workshop.
-          </p>
-          <Button onClick={this.handleEndWorkshopClick}>
-            End Workshop and Send Survey
-          </Button>
+          <p>After the last day of your workshop, you must end the workshop.</p>
+          <Button onClick={this.handleEndWorkshopClick}>End Workshop</Button>
           <ConfirmationDialog
             show={this.state.showEndWorkshopConfirmation}
             onOk={this.handleEndWorkshopConfirmed}
             okText={'Yes, end this workshop'}
             onCancel={this.handleEndWorkshopCancel}
-            headerText="End workshop and send survey"
+            headerText="End workshop"
             bodyText={isReadyToClose ? normalCloseWarning : earlyCloseWarning}
             width={isReadyToClose ? 500 : 800}
           />

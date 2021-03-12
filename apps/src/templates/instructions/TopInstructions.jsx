@@ -22,7 +22,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from './CollapserIcon';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -30,6 +30,7 @@ import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
+import {hasInstructions} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -117,6 +118,32 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  },
+  collapserIcon: {
+    showHideButton: {
+      position: 'absolute',
+      top: 0,
+      margin: 0,
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
+      fontSize: 18,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.white
+      }
+    },
+    showHideButtonLtr: {
+      left: 8
+    },
+    showHideButtonRtl: {
+      right: 8
+    },
+    teacherOnlyColor: {
+      color: color.lightest_cyan,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.default_text
+      }
+    }
   }
 };
 
@@ -160,7 +187,7 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    collapsed: PropTypes.bool.isRequired,
+    isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
@@ -297,14 +324,16 @@ class TopInstructions extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (
-      !nextProps.collapsed &&
+      !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
       nextProps.height < nextProps.maxHeight &&
       !(
         nextProps.hidden ||
-        (!nextProps.shortInstructions &&
-          !nextProps.longInstructions &&
-          !nextProps.hasContainedLevels)
+        !hasInstructions(
+          nextProps.shortInstructions,
+          nextProps.longInstructions,
+          nextProps.hasContainedLevels
+        )
       )
     ) {
       this.props.setInstructionsRenderedHeight(
@@ -330,7 +359,7 @@ class TopInstructions extends Component {
    * via a call to handleHeightResize from HeightResizer.
    */
   getItemTop = () => {
-    return this.refs.topInstructions.getBoundingClientRect().top;
+    return this.topInstructions.getBoundingClientRect().top;
   };
 
   /**
@@ -352,12 +381,19 @@ class TopInstructions extends Component {
    */
 
   adjustMaxNeededHeight = () => {
+    const {
+      hidden,
+      shortInstructions,
+      longInstructions,
+      hasContainedLevels,
+      maxHeight,
+      setInstructionsMaxHeightNeeded
+    } = this.props;
+
     // if not showing the instructions area the max needed height should be 0
     if (
-      this.props.hidden ||
-      (!this.props.shortInstructions &&
-        !this.props.longInstructions &&
-        !this.props.hasContainedLevels)
+      hidden ||
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return 0;
     }
@@ -365,16 +401,16 @@ class TopInstructions extends Component {
     let element;
     switch (this.state.tabSelected) {
       case TabType.RESOURCES:
-        element = this.refs.helpTab;
+        element = this.helpTab;
         break;
       case TabType.INSTRUCTIONS:
-        element = this.refs.instructions;
+        element = this.instructions;
         break;
       case TabType.COMMENTS:
-        element = this.refs.commentTab;
+        element = this.commentTab;
         break;
       case TabType.TEACHER_ONLY:
-        element = this.refs.teacherOnlyTab;
+        element = this.teacherOnlyTab;
         break;
     }
     const maxNeededHeight =
@@ -382,8 +418,8 @@ class TopInstructions extends Component {
       HEADER_HEIGHT +
       RESIZER_HEIGHT;
 
-    if (this.props.maxHeight !== maxNeededHeight) {
-      this.props.setInstructionsMaxHeightNeeded(maxNeededHeight);
+    if (maxHeight !== maxNeededHeight) {
+      setInstructionsMaxHeightNeeded(maxNeededHeight);
     }
     return maxNeededHeight;
   };
@@ -393,7 +429,7 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
-    if (this.props.collapsed) {
+    if (this.props.isCollapsed) {
       firehoseClient.putRecord({
         study: 'top-instructions',
         event: 'expand-instructions',
@@ -411,11 +447,11 @@ class TopInstructions extends Component {
       });
     }
 
-    const collapsed = !this.props.collapsed;
+    const isCollapsed = !this.props.isCollapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed && this.props.noInstructionsWhenCollapsed) {
+    if (isCollapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -578,7 +614,7 @@ class TopInstructions extends Component {
 
     if (
       hidden ||
-      (!shortInstructions && !longInstructions && !hasContainedLevels)
+      !hasInstructions(shortInstructions, longInstructions, hasContainedLevels)
     ) {
       return <div />;
     }
@@ -586,8 +622,20 @@ class TopInstructions extends Component {
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
+    const collapserIconStyles = {
+      ...styles.collapserIcon.showHideButton,
+      ...(this.props.isRtl
+        ? styles.collapserIcon.showHideButtonRtl
+        : styles.collapserIcon.showHideButtonLtr),
+      ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    };
+
     return (
-      <div style={mainStyle} className="editor-column" ref="topInstructions">
+      <div
+        style={mainStyle}
+        className="editor-column"
+        ref={ref => (this.topInstructions = ref)}
+      >
         <PaneHeader
           hasFocus={false}
           teacherOnly={teacherOnly}
@@ -601,6 +649,7 @@ class TopInstructions extends Component {
                 <InlineAudio
                   src={ttsUrl}
                   style={this.props.isRtl ? audioStyleRTL : audioStyle}
+                  autoplayTriggerElementId="codeApp"
                 />
               )}
             {this.props.documentationUrl &&
@@ -667,16 +716,15 @@ class TopInstructions extends Component {
             {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
-                  collapsed={this.props.collapsed}
+                  isCollapsed={this.props.isCollapsed}
                   onClick={this.handleClickCollapser}
-                  teacherOnly={teacherOnly}
-                  isRtl={this.props.isRtl}
+                  style={collapserIconStyles}
                 />
               )}
           </div>
         </PaneHeader>
         <div
-          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
+          style={[this.props.isCollapsed && isCSDorCSP && commonStyles.hidden]}
         >
           <div
             style={[
@@ -689,11 +737,21 @@ class TopInstructions extends Component {
             ]}
             id="scroll-container"
           >
-            <div ref="instructions">
+            <div
+              ref={ref => {
+                if (ref) {
+                  this.instructions = ref;
+                }
+              }}
+            >
               {this.props.hasContainedLevels && (
                 <div>
                   <ContainedLevel
-                    ref="instructions"
+                    ref={ref => {
+                      if (ref) {
+                        this.instructions = ref;
+                      }
+                    }}
                     hidden={this.state.tabSelected !== TabType.INSTRUCTIONS}
                   />
                 </div>
@@ -702,7 +760,11 @@ class TopInstructions extends Component {
                 isCSF &&
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <InstructionsCSF
-                    ref="instructions"
+                    ref={ref => {
+                      if (ref) {
+                        this.instructions = ref;
+                      }
+                    }}
                     handleClickCollapser={this.handleClickCollapser}
                     adjustMaxNeededHeight={this.adjustMaxNeededHeight}
                     isEmbedView={this.props.isEmbedView}
@@ -716,7 +778,11 @@ class TopInstructions extends Component {
                 this.state.tabSelected === TabType.INSTRUCTIONS && (
                   <div>
                     <Instructions
-                      ref="instructions"
+                      ref={ref => {
+                        if (ref) {
+                          this.instructions = ref;
+                        }
+                      }}
                       longInstructions={this.props.longInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
@@ -726,7 +792,7 @@ class TopInstructions extends Component {
             </div>
             {this.state.tabSelected === TabType.RESOURCES && (
               <HelpTabContents
-                ref="helpTab"
+                ref={ref => (this.helpTab = ref)}
                 videoData={videoData}
                 mapReference={this.props.mapReference}
                 referenceLinks={this.props.referenceLinks}
@@ -742,7 +808,7 @@ class TopInstructions extends Component {
                   !this.state.teacherViewingStudentWork
                 }
                 rubric={this.state.rubric}
-                ref="commentTab"
+                ref={ref => (this.commentTab = ref)}
                 latestFeedback={this.state.feedbacks}
                 token={this.state.token}
               />
@@ -752,12 +818,15 @@ class TopInstructions extends Component {
                 <div>
                   {this.props.hasContainedLevels && (
                     <ContainedLevelAnswer
-                      ref="teacherOnlyTab"
+                      ref={ref => (this.teacherOnlyTab = ref)}
                       hidden={this.state.tabSelected !== TabType.TEACHER_ONLY}
                     />
                   )}
                   {this.state.tabSelected === TabType.TEACHER_ONLY && (
-                    <TeacherOnlyMarkdown ref="teacherOnlyTab" />
+                    <TeacherOnlyMarkdown
+                      ref={ref => (this.teacherOnlyTab = ref)}
+                      content={this.props.teacherMarkdown}
+                    />
                   )}
                 </div>
               )}
@@ -788,7 +857,7 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed,
+    isCollapsed: state.instructions.isCollapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     levelVideos: state.instructions.levelVideos,

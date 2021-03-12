@@ -30,7 +30,7 @@ Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt
 
 #### Miért fontos mindez?
 
-A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. Azonban az Egyesült Államok iskoláinak 55%-a nem tanít számítástechnikát. Ideje felzárkózni a 21. századhoz. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br /> <br />
+A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. But 53 percent of schools in the U.S. don't teach computer science. Ideje felzárkózni a 21. századhoz. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br /> <br />
 
 #### Egy idézet, amelyet nyugodtan felhasználhatsz
 

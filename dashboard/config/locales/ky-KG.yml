@@ -183,6 +183,4 @@ ky:
       email_opt_in:
         opt_in_yes: Ооба
         opt_in_no: Жок
-  gdpr_dialog:
-    true: Ооба
   copy: Көчүрүү

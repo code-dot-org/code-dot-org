@@ -2,10 +2,16 @@ var spriteId = 0;
 var nativeSpriteMap = {};
 var inputEvents = [];
 var behaviors = [];
+var userInputEventCallbacks = {};
+var newSprites = {};
+var totalPauseTime = 0;
+var currentPauseStartTime = 0;
 
 export var background;
-export var title = '';
-export var subtitle = '';
+export var screenText = {};
+export var defaultSpriteSize = 100;
+export var printLog = [];
+export var promptVars = {};
 
 export function reset() {
   spriteId = 0;
@@ -13,7 +19,29 @@ export function reset() {
   inputEvents = [];
   behaviors = [];
   background = 'white';
-  title = subtitle = '';
+  userInputEventCallbacks = {};
+  defaultSpriteSize = 100;
+  totalPauseTime = 0;
+  printLog = [];
+  promptVars = {};
+  screenText = {};
+}
+
+export function startPause(time) {
+  currentPauseStartTime = time;
+}
+
+export function endPause(time) {
+  totalPauseTime += time - currentPauseStartTime;
+  currentPauseStartTime = 0;
+}
+
+/**
+ * Returns World.seconds adjusted to exclude time during which the app was paused
+ */
+export function getAdjustedWorldTime(p5Inst) {
+  const current = new Date().getTime();
+  return Math.round((current - p5Inst._startTime - totalPauseTime) / 1000);
 }
 
 /**
@@ -117,13 +145,19 @@ export function getSpriteIdsInUse() {
  * @param {Sprite} sprite
  * @returns {Number} A unique id to reference the sprite.
  */
-export function addSprite(sprite, name) {
+export function addSprite(sprite, name, animation) {
   nativeSpriteMap[spriteId] = sprite;
   sprite.id = spriteId;
   if (name) {
     enforceUniqueSpriteName(name);
     sprite.name = name;
   }
+  if (animation) {
+    // Add to new sprites map so we can fire a "when sprite created" event if needed
+    newSprites[animation] = newSprites[animation] || [];
+    newSprites[animation].push(sprite);
+  }
+
   spriteId++;
   return sprite.id;
 }
@@ -149,20 +183,69 @@ export function deleteSprite(spriteId) {
   delete nativeSpriteMap[spriteId];
 }
 
+export function registerPrompt(promptText, variableName, setterCallback) {
+  if (!variableName) {
+    return;
+  }
+  if (promptVars[variableName] === undefined) {
+    // Set explicitly to null so that we can tell that there *is* a prompt
+    // for this variable name, it just hasn't been answered yet.
+    promptVars[variableName] = null;
+  }
+
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].setterCallbacks.push(setterCallback);
+}
+
+export function registerPromptAnswerCallback(variableName, userCallback) {
+  if (!variableName) {
+    return;
+  }
+  if (!userInputEventCallbacks[variableName]) {
+    userInputEventCallbacks[variableName] = {
+      setterCallbacks: [],
+      userCallbacks: []
+    };
+  }
+  userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
+}
+
+export function onPromptAnswer(variableName, userInput) {
+  promptVars[variableName] = userInput;
+  const callbacks = userInputEventCallbacks[variableName];
+  if (callbacks) {
+    // Make sure to call the setter callback to set the variable
+    // before the user callback, which may rely on the variable's new value
+    callbacks.setterCallbacks.forEach(callback => {
+      callback(userInput);
+    });
+    callbacks.userCallbacks.forEach(callback => {
+      callback();
+    });
+  }
+}
+
 export function addEvent(type, args, callback) {
   inputEvents.push({type: type, args: args, callback: callback});
+}
+
+export function clearCollectDataEvents() {
+  inputEvents = inputEvents.filter(e => e.type !== 'collectData');
 }
 
 function atTimeEvent(inputEvent, p5Inst) {
   if (inputEvent.args.unit === 'seconds') {
     const previousTime = inputEvent.previousTime || 0;
-    inputEvent.previousTime = p5Inst.World.seconds;
+    const worldTime = getAdjustedWorldTime(p5Inst);
+    inputEvent.previousTime = worldTime;
     // There are many ticks per second, but we only want to fire the event once (on the first tick where
-    // World.seconds matches the event argument)
-    if (
-      p5Inst.World.seconds === inputEvent.args.n &&
-      previousTime !== inputEvent.args.n
-    ) {
+    // the time matches the event argument)
+    if (worldTime === inputEvent.args.n && previousTime !== inputEvent.args.n) {
       // Call callback with no extra args
       return [{}];
     }
@@ -174,6 +257,26 @@ function atTimeEvent(inputEvent, p5Inst) {
   }
   // Don't call callback
   return [];
+}
+
+function collectDataEvent(inputEvent, p5Inst) {
+  const previous = inputEvent.previous || 0;
+  const worldTime = getAdjustedWorldTime(p5Inst);
+  inputEvent.previous = worldTime;
+
+  // Only log data once per second
+  if (worldTime !== previous) {
+    // Call callback with no extra args
+    return [{}];
+  } else {
+    // Don't call callback
+    return [];
+  }
+}
+
+function repeatForeverEvent(inputEvent, p5Inst) {
+  // No condition to check, just always call callback with no extra args
+  return [{}];
 }
 
 function whenPressEvent(inputEvent, p5Inst) {
@@ -288,10 +391,32 @@ function whileClickEvent(inputEvent, p5Inst) {
   return callbackArgList;
 }
 
-function checkEvent(inputEvent, p5Inst) {
+function whenSpriteCreatedEvent(inputEvent, p5Inst) {
+  let callbackArgList = [];
+  let sprites = newSprites[inputEvent.args.costume] || [];
+  sprites.forEach(sprite => {
+    callbackArgList.push({newSprite: sprite.id});
+  });
+  return callbackArgList;
+}
+
+/**
+ * @param {Object} inputEvent
+ * @param p5Inst - the running P5 instance
+ * Checks whether the condition of the event is met, and if so, returns the arguments to pass to the user's
+ * callback function. An event can trigger multiple invocations of the callback in a single tick of the
+ * draw loop, so this will return an array of callback arguments.
+ * @return {Array.<Object>} Each element of this array gives the arguments that will be passed
+ * to the event callback.
+ */
+function getCallbackArgListForEvent(inputEvent, p5Inst) {
   switch (inputEvent.type) {
     case 'atTime':
       return atTimeEvent(inputEvent, p5Inst);
+    case 'collectData':
+      return collectDataEvent(inputEvent, p5Inst);
+    case 'repeatForever':
+      return repeatForeverEvent(inputEvent, p5Inst);
     case 'whenpress':
       return whenPressEvent(inputEvent, p5Inst);
     case 'whilepress':
@@ -304,16 +429,21 @@ function checkEvent(inputEvent, p5Inst) {
       return whenClickEvent(inputEvent, p5Inst);
     case 'whileclick':
       return whileClickEvent(inputEvent, p5Inst);
+    case 'whenSpriteCreated':
+      return whenSpriteCreatedEvent(inputEvent, p5Inst);
   }
 }
 
 export function runEvents(p5Inst) {
   inputEvents.forEach(inputEvent => {
-    let callbackArgList = checkEvent(inputEvent, p5Inst);
+    let callbackArgList = getCallbackArgListForEvent(inputEvent, p5Inst);
     callbackArgList.forEach(args => {
       inputEvent.callback(args);
     });
   });
+
+  // Clear newSprites. Used for whenSpriteCreated events and should be reset every tick.
+  newSprites = {};
 }
 
 export function addBehavior(sprite, behavior) {

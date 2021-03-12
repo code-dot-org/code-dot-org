@@ -1,0 +1,21 @@
+name 'U10 SSQRP2 part 4_2021'
+editor_experiment ''
+
+
+
+
+
+
+description 'Which of the following is LEAST likely to be a benefit of _Snappy_?'
+wrong 'Users are happier after using the app.'
+wrong 'Town can attract tourists based on the number of "Happiness Moments" tagged with that town\'s location.'
+right 'Users may not rank other user\'s "Happiness Moments" because they want to stay on the top of the leaderboard. '
+wrong 'Users look for "Happiness Moments" to document in their everyday lives.'
+
+
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

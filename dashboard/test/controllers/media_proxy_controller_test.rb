@@ -20,7 +20,7 @@ class MediaProxyControllerTest < ActionController::TestCase
       assert_equal content_type, response.content_type
       cache_control = response['Cache-Control']
       assert cache_control =~ /public/i, 'Response should be publically cacheable'
-      assert cache_control =~ /max-age=315576000/i, 'Response should expired in 10 years'
+      assert cache_control =~ /max-age=#{ActiveSupport::Duration.build(10.years).to_i}/i, 'Response should expired in 10 years'
       assert cache_control =~ /no-transform/
       assert_equal response['Content-Transfer-Encoding'], 'binary'
       assert_equal response['Content-Disposition'], 'inline'

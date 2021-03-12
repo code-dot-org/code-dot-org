@@ -43,6 +43,7 @@ const child_process = require('child_process');
 
 const SILENCED = [
   // app types loaded conditionally from _apps_dependencies.html.haml
+  'ailab',
   'applab',
   'bounce',
   'calc',
@@ -52,6 +53,7 @@ const SILENCED = [
   'fish',
   'flappy',
   'gamelab',
+  'javalab',
   'jigsaw',
   'maze',
   'netsim',
@@ -83,6 +85,7 @@ const SILENCED = [
 
   // other entry points
   'blockly',
+  'googleblockly',
   'brambleHost',
   'levelbuilder'
 ];

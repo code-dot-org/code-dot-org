@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
-import {OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
 
 export default storybook => {

@@ -94,7 +94,11 @@ class LibraryTable extends React.Component {
 
     return (
       <div>
-        <a style={styles.tableName} onClick={this.toggleCollapsed}>
+        <a
+          style={styles.tableName}
+          onClick={this.toggleCollapsed}
+          className="uitest-dataset-table-link"
+        >
           <FontAwesome className="fa fa-fw" icon={icon} />
           <span>{this.props.name}</span>
         </a>
@@ -103,7 +107,7 @@ class LibraryTable extends React.Component {
             <div style={styles.tableDescription}>
               {datasetInfo.lastUpdated && (
                 <span style={styles.lastUpdated}>
-                  {msg.lastUpdated({
+                  {msg.lastUpdatedWithTime({
                     time: moment(datasetInfo.lastUpdated).fromNow()
                   })}
                 </span>
@@ -112,7 +116,11 @@ class LibraryTable extends React.Component {
 
               {datasetInfo.docUrl && (
                 <span style={{display: 'block'}}>
-                  <a target="_blank" href={datasetInfo.docUrl}>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={datasetInfo.docUrl}
+                  >
                     {msg.moreInfo()}
                   </a>
                 </span>
@@ -132,6 +140,7 @@ class LibraryTable extends React.Component {
                 style={styles.preview}
                 type="button"
                 onClick={() => this.props.onShowPreview(this.props.name)}
+                className="uitest-dataset-preview-btn"
               >
                 {msg.preview()}
               </button>

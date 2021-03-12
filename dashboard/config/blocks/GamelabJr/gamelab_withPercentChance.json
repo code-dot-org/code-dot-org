@@ -1,0 +1,22 @@
+{
+  "category": "Control",
+  "config": {
+    "func": "withPercentChance",
+    "blockText": "if {NUM}% chance\n{STATEMENT}",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number"
+      },
+      {
+        "name": "STATEMENT",
+        "statement": true
+      }
+    ],
+    "color": [
+      197,
+      0.88,
+      0.78
+    ]
+  }
+}

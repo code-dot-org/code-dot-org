@@ -1,0 +1,7 @@
+name 'ml-hypothesis'
+title 'Creating a Data Hypothesis'
+description ''
+
+markdown <<MARKDOWN
+This is more unplugged.
+MARKDOWN

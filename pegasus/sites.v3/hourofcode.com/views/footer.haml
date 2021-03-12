@@ -19,3 +19,8 @@
     = hoc_s(:footer_copyright_message).gsub(/%{current_year}/, "#{Time.now.year}")
     %br
     = hoc_s(:footer_trademark_message)
+    %br
+    = hoc_s(:footer_built_on_github)
+  #powered-by-aws
+    %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+      %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}

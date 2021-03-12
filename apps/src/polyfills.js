@@ -1,7 +1,3 @@
-/**
- * "Pointer Events Polyfill" to support pointer events on Safari
- */
-import 'pepjs';
 import wickedGoodXpath from 'wgxpath';
 
 /**

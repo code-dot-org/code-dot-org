@@ -1,12 +1,12 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2017-05-16T21:05:33.000Z",
-  "user_id": 1,
   "properties": {
     "video_key": "C2_relay_programming",
     "hint_prompt_attempts_threshold": 2
   },
+  "game_id": 31,
+  "created_at": "2017-05-16T21:05:33.000Z",
+  "user_id": 1,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-08-15 15:09:32 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {

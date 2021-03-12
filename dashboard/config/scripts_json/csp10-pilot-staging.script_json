@@ -1,0 +1,3249 @@
+{
+  "script": {
+    "name": "csp10-pilot-staging",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "project_sharing": true,
+      "curriculum_umbrella": "CSP"
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csp10-pilot-staging"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csp_variables",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Variables"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_conditionals",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Conditionals"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_functions",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Functions"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "csp_project",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Variables Explore",
+      "name": "Variables Explore",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Variables Investigate",
+      "name": "Variables Investigate",
+      "absolute_position": 2,
+      "lockable": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Variables Practice",
+      "name": "Variables Practice",
+      "absolute_position": 3,
+      "lockable": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Variables Make",
+      "name": "Variables Make",
+      "absolute_position": 4,
+      "lockable": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Variables)",
+      "name": "Student Survey (Variables)",
+      "absolute_position": 5,
+      "lockable": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Teacher Surveys (Variables)",
+      "name": "Teacher Surveys (Variables)",
+      "absolute_position": 6,
+      "lockable": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Surveys (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Conditionals Explore",
+      "name": "Conditionals Explore",
+      "absolute_position": 7,
+      "lockable": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Conditionals Investigate",
+      "name": "Conditionals Investigate",
+      "absolute_position": 8,
+      "lockable": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Conditionals Practice",
+      "name": "Conditionals Practice",
+      "absolute_position": 9,
+      "lockable": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Conditional Make",
+      "name": "Conditional Make",
+      "absolute_position": 10,
+      "lockable": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Student Survey (Conditionals)",
+      "name": "Student Survey (Conditionals)",
+      "absolute_position": 11,
+      "lockable": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Survey (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Teacher Surveys (Conditionals)",
+      "name": "Teacher Surveys (Conditionals)",
+      "absolute_position": 12,
+      "lockable": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher Surveys (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Functions Explore / Investigate",
+      "name": "Functions Explore / Investigate",
+      "absolute_position": 13,
+      "lockable": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Functions Practice",
+      "name": "Functions Practice",
+      "absolute_position": 14,
+      "lockable": false,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Functions Make",
+      "name": "Functions Make",
+      "absolute_position": 15,
+      "lockable": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Practice PT Part 1",
+      "name": "Practice PT Part 1",
+      "absolute_position": 16,
+      "lockable": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Practice PT Part 2",
+      "name": "Practice PT Part 2",
+      "absolute_position": 17,
+      "lockable": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Practice PT Part 3",
+      "name": "Practice PT Part 3",
+      "absolute_position": 18,
+      "lockable": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Practice PT Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "key": "Unit 4 Assessment",
+      "name": "Unit 4 Assessment",
+      "absolute_position": 19,
+      "lockable": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4 My Pet Rock Example App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "CSP U4 My Pet Rock Example App"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L01 Poetry App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L01 Poetry App"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L01 Thermostat App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L01 Thermostat App"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 L02 CYU MC"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U1 L02 CYU MC"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v1"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v1"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1 Code"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v1 Code"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v2"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v2"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v3"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v3"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt2"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v3 pt2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Thermostat App v3"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt3"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 Thermostat App v3 pt3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L02 CYU Exit Ticket"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L02 CYU Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Assigning Numbers and Strings"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables numbers practice 4"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 3"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 5"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Variables and Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 6"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variable Scope: Local vs. Global"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Debugging Scope Issues"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Scope Issue"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Putting it Together"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L03 Variables operator practice 4"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project Sample"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project Sample"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 1"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project 1"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 2"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project 2"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 3"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project 3"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Photo Liker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 4"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L04 Variables Make Project 4"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Variables)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pilot Student Survey"
+        ],
+        "lesson.key": "Student Survey (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Pilot Student Survey"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Teacher Surveys (Variables)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pilot Teacher Surveys CSP2021"
+        ],
+        "lesson.key": "Teacher Surveys (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Pilot Teacher Surveys CSP2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Introduction to Conditionals: Boolean Expressions"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Introduction to Conditionals: Boolean Expressions"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L05 CYU Exit Ticket"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L05 CYU Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": true,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if Statements"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v4"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v4 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v4 Code"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if-else Statements"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: if-else-if Statements"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v5"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v5"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Else Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v5 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v5 Code"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators: AND OR"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators: AND OR"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v6"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v6"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators: AND OR"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v6 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 Thermostat App v6 Code"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 11,
+      "assessment": null,
+      "properties": {
+        "progression": "Patterns: If-else-if"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Checking Multiple Conditions with If-elseif"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Checking Multiple Conditions with If-elseif"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 12,
+      "assessment": null,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L06 CYU Exit Ticket"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L06 CYU Exit Ticket"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 1"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 1"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 2"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 2"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 3"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 3"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 10"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 10"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 4"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 4"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 5"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 5"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "If-Statements"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 6"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 6"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 7"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 7"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 8"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 8"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 10,
+      "assessment": null,
+      "properties": {
+        "progression": "Logical Operators"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 9"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L07 Conditionals Practice 9"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Sample"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L08 Conditionals Make Project Sample"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Flowchart"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L08 Conditionals Make Project Flowchart"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 1"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L08 Museum Ticket Generator 1"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 2"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L08 Museum Ticket Generator 2"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 4"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L08 Museum Ticket Generator 4"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Museum Ticket Generator App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 5"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L08 Museum Ticket Generator 5"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey (Conditionals)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pilot Student Survey Conditionals"
+        ],
+        "lesson.key": "Student Survey (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Pilot Student Survey Conditionals"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Teacher Surveys (Conditionals)"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Pilot Teacher Surveys Conditionals CSP2021"
+        ],
+        "lesson.key": "Teacher Surveys (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Pilot Teacher Surveys Conditionals CSP2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Explore Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Functions Song"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L09 Functions Song"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4L09 Intro to Functions Video"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4L09 Intro to Functions Video"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Score Clicker Investigate"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L09 Score Clicker Investigate"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Declaring and Calling Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L09 Thermostat App v7"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L09 Thermostat App v7"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Update Screen Pattern"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "updateScreen Pattern"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "updateScreen Pattern"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice Calling Functions 1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 1"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 1"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 2"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 3"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Practice 3"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Declare and Call Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Build Practice 2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Build Practice 2"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Function Scope"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Debugging Variable Scope and Functions"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "Debugging Variable Scope and Functions"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Function Scope"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Functions Scope Practice 1 v2"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "When to Declare Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "When to Make Functions Map"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "When to Make Functions Map"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 9,
+      "assessment": null,
+      "properties": {
+        "progression": "When to Declare Functions"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L10 Making Functions Practice"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L10 Making Functions Practice"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 1"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 1"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 2"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 2"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 3"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 3"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 4"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 5,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4.5"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 4.5"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 6,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4.75"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 4.75"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 7,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 5"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 5"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 8,
+      "assessment": null,
+      "properties": {
+        "progression": "Make the Quote Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 6"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L11 Functions Make 6"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L12 Practice PT 1"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Sample Apps"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L12 Practice PT 2"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Screens"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 1"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Variables"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 2"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+        "progression": "Create the Function"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 3"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 3"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+        "progression": "Add onEvents"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 4"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L13 Practice PT 4"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Test Your Decision Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L14 Practice PT 1"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+        "progression": "Submit Your Decision Maker App"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "U4 L14 Practice PT 2"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 4 Assessment"
+        ],
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      },
+      "level_keys": [
+        "CSP 20-21 Unit 4 Assessment"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U4 My Pet Rock Example App",
+        "script_level.level_keys": [
+          "CSP U4 My Pet Rock Example App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L01 Poetry App",
+        "script_level.level_keys": [
+          "U4 L01 Poetry App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L01 Thermostat App",
+        "script_level.level_keys": [
+          "U4 L01 Thermostat App"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 L02 CYU MC",
+        "script_level.level_keys": [
+          "U1 L02 CYU MC"
+        ],
+        "lesson.key": "Variables Explore",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v1",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v1 Code",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v1 Code"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v2",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v2"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v3",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v3 pt2",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt2"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 Thermostat App v3 pt3",
+        "script_level.level_keys": [
+          "U4 L02 Thermostat App v3 pt3"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L02 CYU Exit Ticket",
+        "script_level.level_keys": [
+          "U4 L02 CYU Exit Ticket"
+        ],
+        "lesson.key": "Variables Investigate",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 1",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 1"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables numbers practice 4",
+        "script_level.level_keys": [
+          "U4 L03 Variables numbers practice 4"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 1",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 1"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 3",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 3"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 2",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 2"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 5",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 5"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 6",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 6"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variable Scope: Local vs. Global",
+        "script_level.level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Scope Issue",
+        "script_level.level_keys": [
+          "U4 L03 Scope Issue"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L03 Variables operator practice 4",
+        "script_level.level_keys": [
+          "U4 L03 Variables operator practice 4"
+        ],
+        "lesson.key": "Variables Practice",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project Sample",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project Sample"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project 1",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 1"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project 2",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 2"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project 3",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 3"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L04 Variables Make Project 4",
+        "script_level.level_keys": [
+          "U4 L04 Variables Make Project 4"
+        ],
+        "lesson.key": "Variables Make",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pilot Student Survey",
+        "script_level.level_keys": [
+          "Pilot Student Survey"
+        ],
+        "lesson.key": "Student Survey (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pilot Teacher Surveys CSP2021",
+        "script_level.level_keys": [
+          "Pilot Teacher Surveys CSP2021"
+        ],
+        "lesson.key": "Teacher Surveys (Variables)",
+        "lesson_group.key": "csp_variables",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Introduction to Conditionals: Boolean Expressions",
+        "script_level.level_keys": [
+          "U4 L06 Introduction to Conditionals: Boolean Expressions"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L05 CYU Exit Ticket",
+        "script_level.level_keys": [
+          "U4 L05 CYU Exit Ticket"
+        ],
+        "lesson.key": "Conditionals Explore",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if Statements",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v4",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v4"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v4 Code",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v4 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if-else Statements",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: if-else-if Statements",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: if-else-if Statements"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v5",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v5"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v5 Code",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v5 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L06 Introduction to Conditionals: Compound Boolean Expressions",
+        "script_level.level_keys": [
+          "U4L06 Introduction to Conditionals: Compound Boolean Expressions"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v6",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v6"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 Thermostat App v6 Code",
+        "script_level.level_keys": [
+          "U4 L06 Thermostat App v6 Code"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Checking Multiple Conditions with If-elseif",
+        "script_level.level_keys": [
+          "Checking Multiple Conditions with If-elseif"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L06 CYU Exit Ticket",
+        "script_level.level_keys": [
+          "U4 L06 CYU Exit Ticket"
+        ],
+        "lesson.key": "Conditionals Investigate",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 1",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 1"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 2",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 2"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 3",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 3"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 10",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 10"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 4",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 4"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 5",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 5"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 6",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 6"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 7",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 7"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 8",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 8"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L07 Conditionals Practice 9",
+        "script_level.level_keys": [
+          "U4 L07 Conditionals Practice 9"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L08 Conditionals Make Project Sample",
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Sample"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L08 Conditionals Make Project Flowchart",
+        "script_level.level_keys": [
+          "U4 L08 Conditionals Make Project Flowchart"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08 Museum Ticket Generator 1",
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 1"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08 Museum Ticket Generator 2",
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 2"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08 Museum Ticket Generator 4",
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 4"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L08 Museum Ticket Generator 5",
+        "script_level.level_keys": [
+          "U4L08 Museum Ticket Generator 5"
+        ],
+        "lesson.key": "Conditional Make",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pilot Student Survey Conditionals",
+        "script_level.level_keys": [
+          "Pilot Student Survey Conditionals"
+        ],
+        "lesson.key": "Student Survey (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Pilot Teacher Surveys Conditionals CSP2021",
+        "script_level.level_keys": [
+          "Pilot Teacher Surveys Conditionals CSP2021"
+        ],
+        "lesson.key": "Teacher Surveys (Conditionals)",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Functions Song",
+        "script_level.level_keys": [
+          "U4 L09 Functions Song"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4L09 Intro to Functions Video",
+        "script_level.level_keys": [
+          "U4L09 Intro to Functions Video"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Score Clicker Investigate",
+        "script_level.level_keys": [
+          "U4 L09 Score Clicker Investigate"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L09 Thermostat App v7",
+        "script_level.level_keys": [
+          "U4 L09 Thermostat App v7"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "updateScreen Pattern",
+        "script_level.level_keys": [
+          "updateScreen Pattern"
+        ],
+        "lesson.key": "Functions Explore / Investigate",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice Calling Functions 1",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 1",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 1"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 2",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Practice 3",
+        "script_level.level_keys": [
+          "U4 L10 Functions Practice 3"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Build Practice 2",
+        "script_level.level_keys": [
+          "U4 L10 Functions Build Practice 2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Debugging Variable Scope and Functions",
+        "script_level.level_keys": [
+          "Debugging Variable Scope and Functions"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Functions Scope Practice 1 v2",
+        "script_level.level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "When to Make Functions Map",
+        "script_level.level_keys": [
+          "When to Make Functions Map"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L10 Making Functions Practice",
+        "script_level.level_keys": [
+          "U4 L10 Making Functions Practice"
+        ],
+        "lesson.key": "Functions Practice",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 1",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 1"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 2",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 2"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 3",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 3"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 4",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 4.5",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4.5"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 4.75",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 4.75"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 5",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 5"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L11 Functions Make 6",
+        "script_level.level_keys": [
+          "U4 L11 Functions Make 6"
+        ],
+        "lesson.key": "Functions Make",
+        "lesson_group.key": "csp_functions",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L12 Practice PT 1",
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L12 Practice PT 2",
+        "script_level.level_keys": [
+          "U4 L12 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 1",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 2",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 3",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 3"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L13 Practice PT 4",
+        "script_level.level_keys": [
+          "U4 L13 Practice PT 4"
+        ],
+        "lesson.key": "Practice PT Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L14 Practice PT 1",
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 1"
+        ],
+        "lesson.key": "Practice PT Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4 L14 Practice PT 2",
+        "script_level.level_keys": [
+          "U4 L14 Practice PT 2"
+        ],
+        "lesson.key": "Practice PT Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP 20-21 Unit 4 Assessment",
+        "script_level.level_keys": [
+          "CSP 20-21 Unit 4 Assessment"
+        ],
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp10-pilot-staging"
+      }
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "sv-SE": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Åtgärder",
+              "Events": "Händelser",
+              "Loops": "loopar",
+              "Math": "Matte",
+              "Logic": "Logik",
+              "Games/Score": "Spel/Poäng"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Världen",
+              "Dancers": "Dansare",
+              "Properties": "Egenskaper",
+              "Events": "Händelser",
+              "Numbers": "Siffror",
+              "Logic": "Logik"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "rita en stjärna",
+                "parameters": {
+                  "points": "poäng",
+                  "length": "längd"
+                }
+              },
+              "draw a circle": {
+                "name": "rita en circel"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "längd",
+                  "repeat": "upprepa"
+                }
+              },
+              "draw a triangle": {
+                "name": "rita en triangel",
+                "parameters": {
+                  "length": "längd"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "längd"
+                }
+              },
+              "draw a house": {
+                "name": "rita ett hus",
+                "parameters": {
+                  "length": "längd"
+                }
+              },
+              "draw a square": {
+                "name": "rita en kvadrat",
+                "parameters": {
+                  "length": "längd"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Världen",
+              "Actions": "Åtgärder",
+              "Events": "Händelser",
+              "Behaviors": "Beteenden"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Världen",
+              "Dancers": "Dansare",
+              "Properties": "Egenskaper",
+              "Events": "Händelser",
+              "Numbers": "Siffror",
+              "Logic": "Logik"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Åtgärder",
+              "Brushes": "Borstar",
+              "Loops": "loopar",
+              "Math": "Matte",
+              "Logic": "Logik",
+              "Functions": "funktioner",
+              "Variables": "variabler"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Världen",
+              "Locations": "Platser",
+              "Actions": "Åtgärder",
+              "Events": "Händelser",
+              "Behaviors": "Beteenden",
+              "Variables": "variabler",
+              "Math": "Matte",
+              "Logic": "Logik",
+              "Functions": "funktioner",
+              "Text": "text",
+              "Comments": "Kommentarer"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Världen",
+              "Locations": "Platser",
+              "Actions": "Åtgärder",
+              "Events": "Händelser",
+              "Behaviors": "Beteenden",
+              "Variables": "variabler",
+              "Math": "Matte",
+              "Logic": "Logik",
+              "Functions": "funktioner",
+              "Text": "text",
+              "Comments": "Kommentarer"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Åtgärder",
+              "Brushes": "Borstar",
+              "Loops": "loopar",
+              "Math": "Matte",
+              "Logic": "Logik",
+              "Functions": "funktioner",
+              "Variables": "variabler"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Världen",
+              "Actions": "Åtgärder",
+              "Events": "Händelser",
+              "Logic": "Logik",
+              "Math": "Matte"
+            },
+            "behavior_names": {
+              "recovering": "återhämtning",
+              "moving left and right": "flytta vänster och höger",
+              "moving with arrow keys": "flytta med piltangenter"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Världen",
+              "Actions": "Åtgärder",
+              "Behaviors": "Beteenden",
+              "Events": "Händelser",
+              "Locations": "Platser",
+              "Logic": "Logik",
+              "Loops": "loopar",
+              "Math": "Matte",
+              "Variables": "variabler",
+              "Functions": "funktioner",
+              "Comments": "Kommentarer"
+            },
+            "behavior_names": {
+              "recovering": "återhämtning",
+              "moving left and right": "flytta vänster och höger",
+              "moving with arrow keys": "flytta med piltangenter"
+            }
+          }
+        }
+      }
+    }
+  }
+}

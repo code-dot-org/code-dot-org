@@ -40,3 +40,32 @@
         PasswordLength: 10
         ExcludePunctuation: True
       Name: !Sub "CfnStack/${AWS::StackName}/database-secret"
+
+  DBProxy:
+    Type: AWS::RDS::DBProxy
+    Properties:
+      DBProxyName: !Ref AWS::StackName
+      EngineFamily: MYSQL
+      RoleArn: !GetAtt DBProxyRole.Arn
+      Auth: [{AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret, IAMAuth: DISABLED}]
+      VpcSubnetIds: <%=subnets.to_json%>
+      VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+  DBProxyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'rds'%>
+      Policies:
+        - PolicyName: RDSProxy
+          PolicyDocument:
+            Statement:
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret}
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+  DBProxyTargetGroup:
+    Type: AWS::RDS::DBProxyTargetGroup
+    DependsOn: [Aurora0, Aurora1]
+    Properties:
+      DBProxyName: !Ref DBProxy
+      DBClusterIdentifiers: [!Ref AuroraCluster]
+      TargetGroupName: default
+      ConnectionPoolConfigurationInfo:
+        ConnectionBorrowTimeout: 10

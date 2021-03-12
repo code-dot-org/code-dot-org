@@ -33,7 +33,8 @@ class AuthenticationOption < ApplicationRecord
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
 
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
-  validate :cred_type_and_auth_id_must_be_unique
+
+  validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at]}
 
   after_create :set_primary_contact_info
 
@@ -181,18 +182,6 @@ class AuthenticationOption < ApplicationRecord
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
       errors.add :email, I18n.t('errors.messages.taken')
-    end
-  end
-
-  private def cred_type_and_auth_id_must_be_unique
-    # skip the db lookup if possible
-    return unless authentication_id.present? &&
-      (credential_type_changed? || authentication_id_changed?) &&
-      errors.blank?
-
-    other = User.find_by_credential(type: credential_type, id: authentication_id)
-    if other && other != user
-      errors.add :credential_type, I18n.t('errors.messages.taken')
     end
   end
 end

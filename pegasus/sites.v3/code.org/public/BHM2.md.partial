@@ -1,0 +1,229 @@
+---
+title: Code.org celebrates Black History Month
+video_player: true
+theme: responsive
+style_min: true
+social:
+  "og:title": "Code.org celebrates Black History Month"
+  "og:description": "Celebrating Black pioneers in computer science and lifting up Black voices for computer science"
+  "og:image": "code.org/images/oceans/oceans-overview.png"
+  "og:image:width": 485
+  "og:image:height": 235
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+<link href="/css/marketing.css" rel="stylesheet">
+<link href="/css/ai-videos.css" rel="stylesheet">
+
+<a id="top"></a>
+
+<div class="bhm-banner">
+  <div class="col-20 banner-pt1">
+    <img style="width: 100%; max-width:200px; width: 100%;" src="images/bhm/bhm-logo.png"/>
+  </div>
+  <div class="col-80 banner-pt2">
+    <h3  style="margin: 40px 0 0;">Code.org celebrates</h3>
+    <h1 style="margin:5px 0 ;">BLACK HISTORY MONTH</h1>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<hr class="bhm-border"/>
+<div class="column-container" style="margin-top: 35px;">
+ <div class="col-50">
+   {{ codebytes_promoreel }} 
+ </div>  
+<div class="col-50" style="padding-left:20px;">
+  <h2 class="bhm-heading">Black Voices for Computer Science</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+</div>
+<div class="clear"></div>
+</div>
+
+<hr class="bhm-border"/>
+
+<a id="bhm-panel"></a>
+<div class="rounded-box bp3">
+  <h2 class="bhm-heading">Panel: Recruiting Black teachers and students into CS</h2>
+  <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+  <p>Join us on <a href>zoom</a> or stream on <a href>YouTube</a>.</p>
+  <h3 style="margin-bottom:25px">Featuring:</h3>
+  <div class="column-container">
+    <div class="col-20" style="text-align:center">
+      <img src="/images/avatars/pat-panel.png" class="bordered-circle">
+      <p> <i>Moderator:</i> <br/> Person Name <br/>Person Title, Organization
+      </p>
+    </div>
+    <div class="col-20" style="text-align:center">
+      <img src="/images/avatars/pat-panel.png" class="bordered-circle">
+      <p> <i>Panelist:</i><br>Person Name<br> Person Title, Organization
+      </p>
+    </div>
+    <div class="col-20" style="text-align:center">
+      <img src="/images/avatars/pat-panel.png" class="bordered-circle">
+      <p> <i>Panelist:</i><br>Person Name<br> Person Title, Organization
+      </p>
+    </div>
+    <div class="col-20" style="text-align:center">
+      <img src="/images/avatars/pat-panel.png" class="bordered-circle">
+      <p> <i>Panelist:</i><br>Person Name<br> Person Title, Organization
+      </p>
+    </div>
+    <div class="col-20" style="text-align:center">
+      <img src="/images/avatars/pat-panel.png" class="bordered-circle">
+      <p> <i>Panelist:</i><br>Person Name<br> Person Title, Organization
+      </p>
+    </div>
+    <div style="clear: both; margin-bottom: 20px"></div>
+  </div>
+</div>
+
+<hr class="bhm-border"/>
+<h2 class="bhm-heading">Black pioneers in computer science history</h2>
+<div class="column-container">
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-annie-easley.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Annie Easley</h3>
+      <p class="smalltext" >One of the first African-Americans computer scientists at NASA. Leading member of the team that developed the software for the Centaur rocket stage.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-clarence-skip-ellis.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Clarence "Skip" Ellis</h3>
+      <p class="smalltext" >First African-American to earn a Ph.D. in Computer Science. A pioneer in groupware and technology that enables real-time collaborative editing of documents.  
+</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile"  >
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-dorothy-vaughn.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Dorothy Vaughn</h3>
+      <p class="smalltext" >Mathematician and "human computer" at NACA then NASA. The first African-American woman group supervisor at the Langley Research Center. Awarded the Congressional Gold Medal in 2109.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-evelyn-boyd-granville.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Evelyn Boyd Granville</h3>
+    <p class="smalltext" >Second African-American woman to receive a Ph.D. in Mathematics from an American University. Wrote programs at IBM that helped analyze satellite orbits and later worked on NASA's Apollo program.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-jerry-lawson.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Jerry Lawson</h3>
+      <p class="smalltext" >Electronic engineer that lead the team at Fairchild that pioneered the commercial video game cartridge. Dubbed by some as the "Father of Modern Gaming."</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile"  >
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-katherine-Johnson.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Katherine Johnson</h3>
+     <p class="smalltext" > 35-year career at NACA/NASA, working on Project Mercury, the Apollo program, the Space Shuttle program, and plans for mission to Mars. Awarded the Presidential Medal of Freedom in 2015.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-mark-dean.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Mark Dean</h3>
+      <p class="smalltext" >Computer engineer who led a design team for making a one-gigahertz computer processor chip. Holds three of nine patents as the co-creator of the IBM PC released in 1981.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile">
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-melba-roy-mouton.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Melba Roy Mouton</h3>
+      <p class="smalltext" >Assistant. Chief of Research Programs at NASA's Trajectory and Geodynamics Division in the 1960s. Head Computer Programmer and then Program Production Section Chief at Goddard Space Flight Center.</p>
+    </div>
+  </div>
+</div>
+<div class="col-33">
+  <div class="rounded-tile"  >
+    <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><img class="rounded-tile-img" src="/images/fill-485x235/bhm/bhm-roy-clay.jpg" >
+    </a>
+    <div class="rounded-info">
+      <h3 class="rounded-info-h" >Roy Clay Sr</h3>
+      <p class="smalltext" > Founding member of the computer division at Hewlett-Packard, leading the team that created the HP 2116A. Founder and CEO of ROD-L Electronics. Member Silicon Valley Engineering Council's Hall of Fame.</p>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+</div>
+
+<hr class="bhm-border"/>
+
+<a id="black_voices_videos"></a>
+<h2 class="bhm-heading">More black voices in computer science </h2>
+
+<p style="margin-bottom: 25px">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+<div class="column-container">
+  <div class="col-50 embedvid" >{{ vid_whyicode }}
+  </div>
+  <div class="col-50 embedvid">{{ athome_vid_howcomputers }}
+  </div>
+  <div style="clear: both"></div>
+</div>
+<!--<h2>More resources</h2>
+<div class="tile-container-responsive" style="padding-left: 5px">
+  <div class="col-50" style="margin-right: 20px">
+    <div class="tutorial-tile">
+      <a href="/csforgood" target="_blank"><img class="tutorial-tile-img" src="/images/fill-485x260/ai/csforgood_ai.png">
+      </a>
+    <div class="tutorial-info">
+      <h3 style="margin-top: 0px;">CS for Good</h3>
+      <div class="smalltext">Resources to inspire students to think deeply about the role computer science can play in creating a more equitable and sustainable world.</div>
+      <a href="/csforgood" target="_blank">
+        <button class="tutorial-info-start tutorial-gray">View Resources</button>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+  <div class="col-50">
+    <div class="tutorial-tile">
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <img class="tutorial-tile-img" src="/images/fill-485x260/ai/imagine-cup-2.png">
+      </a>
+    <div class="tutorial-info">
+      <h3 style="margin-top: 0px;">Imagine Cup Junior</h3>
+      <div class="smalltext">This global AI for Good challenge introduces students to Microsoft’s AI for Good initiatives, empowering them to solve a problem in the world with the power of AI.
+
+</div>
+      <a href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
+        <button class="tutorial-info-start tutorial-gray">View Resources</button>
+      </a>
+      <div class="clear"></div>
+    </div>
+  </div>
+  </div>
+</div>
+-->
+
+

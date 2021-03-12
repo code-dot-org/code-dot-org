@@ -1,0 +1,19 @@
+
+
+h1 {
+  color: grey;
+  text-align: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color:#679196;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}

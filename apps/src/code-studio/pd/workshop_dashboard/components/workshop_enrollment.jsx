@@ -43,7 +43,7 @@ export default class WorkshopEnrollment extends React.Component {
       const signupUrl =
         location.origin + '/pd/workshops/' + this.props.workshopId + '/enroll';
       const signupLink = (
-        <a href={signupUrl} target="_blank">
+        <a href={signupUrl} target="_blank" rel="noopener noreferrer">
           {signupUrl}
         </a>
       );

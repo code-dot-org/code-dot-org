@@ -1,0 +1,120 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2020-12-04T22:28:29.000Z",
+  "level_num": "custom",
+  "user_id": 6,
+  "properties": {
+    "skin": "bee",
+    "short_instructions": "Collect all the nectar and make all the honey.",
+    "step_mode": "1",
+    "is_k1": "false",
+    "start_direction": "1",
+    "flower_type": "redWithNectar",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,1,1,1,1,1,1,0],[0,2,1,\"P\",\"P\",\"P\",1,0],[0,1,1,1,1,1,1,0],[0,1,1,1,1,1,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "skip_instructions_popup": "false",
+    "ideal": "10",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "never_autoplay_video": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "fast_get_nectar_animation": "true",
+    "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":2,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0}]]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Can you find a path that reaches every flower and honeycomb without hitting any trees? The best path is a spiral.\",\"hint_id\":\"courseD_bee_conditionals_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d3b0b72dff3ec9f5c15a025cf72d0f46/courseD_bee_conditionals_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square.\",\"hint_id\":\"courseD_bee_conditionals_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/296e9f75b762faa1f95a15373bca6a12/courseD_bee_conditionals_challenge1.mp3\"}]",
+    "instructions_important": "false",
+    "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "step_speed": "1",
+    "nectar_goal": "7",
+    "honey_goal": "7",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 21381,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 21:26:48 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 17:41:48 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-23 16:34:32 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-31 21:46:09 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="bee_ifElseFlower">
+          <title name="LOC">atFlower</title>
+        </block>
+        <block type="bee_ifFlower">
+          <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_untilBlocked"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <recommended_blocks>
+      <xml/>
+    </recommended_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">7</title>
+              <statement name="DO">
+                <block type="maze_untilBlocked">
+                  <statement name="DO">
+                    <block type="bee_ifElseFlower">
+                      <title name="LOC">atFlower</title>
+                      <statement name="DO">
+                        <block type="maze_nectar"/>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="bee_ifFlower">
+                          <title name="LOC">atHoneycomb</title>
+                          <statement name="DO">
+                            <block type="maze_honey"/>
+                          </statement>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_moveForward"/>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="maze_turn">
+                      <title name="DIR">turnRight</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Karel>

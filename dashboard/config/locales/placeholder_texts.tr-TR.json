@@ -1,0 +1,232 @@
+{
+  "tr-TR": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Merhaba Dünya!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "mavi",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "kırmızı",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Kazandın!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Teşekkür ederiz!"
+        },
+        "courseE_aboutme_1": {
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
+        },
+        "courseE_aboutme_1_2020": {
+          "b63151482630edd1589a9ac24d107c49": "Bu benim! Rikki! Kodlama yapmayı, Thuy ile takılmayı ve dondurmayı yemeyi severim!",
+          "810896b14fc6615f0c76628b9b6a727e": "Bu, benim en iyi arkadaşım Thuy! Sporda gerçekten de çok iyi!",
+          "5d48ecdd8e3baeb99c6a8dcb7faa13dd": "Dondurma, en sevdiğim ikram! Ama muhtemelen bunu koltukta yememeliyim...",
+          "a50ec512bdd98483a7cdcd88cbe11933": "Bu, evcil hayvanım tavşan, Bayan Lolipop! Ona neden bu ismi verdiğimi bilmiyorum!",
+          "6f97975a0bda0c9219915161149cbb26": "Bu, benim bilgisayarım! HER zaman onda kodlama yaparım!",
+          "1c6636ce086fef9305c6e3d25e37d5b2": "İşte size bir sır: Thuy çok gıdıklanıyor!",
+          "fce3b93eaa64a8869c47ba25daa8887f": "Harika!",
+          "41a18649f969a00ec0b2feba20db997f": "Bence bu renk sende daha iyi duruyor, Bayan Lolipop!",
+          "756afb811df2eb3ec88a9e98f3dcaa8d": "Bu bilgisayar, delice kodlama becerilerimin altından kalkamıyor!"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Find the Wizard": {
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Üçe kadar say ve kaybolacağım! Beni bulmak için aklından1 ile 400 arasında bir sayı tut!",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Beni buldun!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Metni buraya yazın",
+          "30fcc1693fa8402931d13ac3a5f396fd": "başlığı buraya yazın"
+        }
+      }
+    }
+  }
+}

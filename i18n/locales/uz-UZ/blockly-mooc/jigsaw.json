@@ -1,10 +1,10 @@
 {
   "continue": "Davom etish",
-  "nextLevel": "",
-  "no": "",
-  "numBlocksNeeded": "",
+  "nextLevel": "Tabriklaymiz! Siz ushbu jumboqni yechdingiz.",
+  "no": "yo‘q",
+  "numBlocksNeeded": "Ushbu jumboqni %1 blok bilan yechish mumkin.",
   "reinfFeedbackMsg": "o'yinga qaytish uchun siz \"Takrorlash\" tugmasini bosishingiz mumkin.",
-  "share": "",
-  "shareGame": "",
-  "yes": ""
+  "share": "Ulashish",
+  "shareGame": "O‘yiningizni baham ko‘ring:",
+  "yes": "Ha"
 }

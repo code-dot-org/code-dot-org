@@ -1,0 +1,182 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "name": "page 1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "612_facilitator_post_header",
+          "html": "<p><span style=\"font-size: 18pt;\"><strong><span>{workshop_course} {workshop_subject}: Facilitator Post-Workshop Survey</span></strong></span></p><p><After leading your {workshop_course} workshop this week, we ask that you please take&nbsp;<strong>5 minutes</strong> to share some feedback about your workshop experience and development as a facilitator.</p><p>In the event that Code.org shares feedback with workshop organizers, we will do our best to anonymize your responses.</p>"
+        },
+        {
+          "type": "html",
+          "name": "reflecting_header",
+          "html": "<p><span style=\"font-size: 18pt;\"><strong>Reflecting on this workshop</strong></span></p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "which_agenda",
+          "title": "What workshop agenda did you use?",
+          "choices": [
+            {
+              "value": "virtual",
+              "text": "Virtual"
+            },
+            {
+              "value": "in_person",
+              "text": "In Person"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "followup_virtual_agenda",
+          "visibleIf": "{which_agenda} = 'virtual'",
+          "title": "What type of Virtual Agenda did you use?",
+          "hasOther": true,
+          "choices": [
+            {
+              "value": "m1",
+              "text": "M1"
+            },
+            {
+              "value": "m2",
+              "text": "M2"
+            },
+            {
+              "value": "m1_m2",
+              "text": "M1 + M2"
+            },
+            {
+              "value": "m3",
+              "text": "M3"
+            },
+            {
+              "value": "m4",
+              "text": "M4"
+            },
+            {
+              "value": "m3_4",
+              "text": "M3 + M4"
+            },
+            {
+              "value": "m5",
+              "text": "M5"
+            },
+            {
+              "value": "m6",
+              "text": "M6"
+            },
+            {
+              "value": "m5_m6",
+              "text": "M5 + M6"
+            },
+            {
+              "value": "m7",
+              "text": "M7"
+            },
+            {
+              "value": "m8",
+              "text": "M8"
+            },
+            {
+              "value": "m7_m8",
+              "text": "M7 + M8"
+            },
+            {
+              "value": "kick_off",
+              "text": "Kick Off"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "followup_in_person_agenda",
+          "visibleIf": "{which_agenda} = 'in_person'",
+          "hasOther": true,
+          "title": "What type of In Person Agenda did you use?",
+          "choices": [
+            {
+              "value": "w1",
+              "text": "W1"
+            },
+            {
+              "value": "w2",
+              "text": "W2"
+            },
+            {
+              "value": "w1_2",
+              "text": "W1 + W2"
+            },
+            {
+              "value": "w3",
+              "text": "W3"
+            },
+            {
+              "value": "w4",
+              "text": "W4"
+            },
+            {
+              "value": "w3_4",
+              "text": "W3 + W4"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "feedback_resources",
+          "title": "Do you have any feedback about the workshop resources that you’d like to share with us? We’re particularly interested in knowing if you felt set up for success with the materials we’ve provided (e.g., agenda, slides, supporting documents, prior training, etc)."
+        },
+        {
+          "type": "comment",
+          "name": "feedback_2things_well",
+          "title": "What are two things you felt you did well in this workshop?"
+        },
+        {
+          "type": "comment",
+          "name": "feedback_2things_improve",
+          "title": "What are two things that you could improve upon for your next workshop?"
+        },
+        {
+          "type": "checkbox",
+          "name": "develop_areas",
+          "title": "Looking forward, in what areas would you like to develop as a facilitator? (select all that apply)",
+          "choices": [
+            {
+              "value": "modifying_workshop_agenda_local_needs",
+              "text": "Modifying workshop agendas to meet local needs"
+            },
+            {
+              "value": "strategies_support_cs_leader",
+              "text": "Strategies and support for being a CS ed leader in my region."
+            },
+            {
+              "value": "leading_challenging_conversations",
+              "text": "Leading challenging conversations "
+            },
+            {
+              "value": "participant_engagement_strategies",
+              "text": "Participant engagement strategies"
+            },
+            {
+              "value": "building_community_cohorts",
+              "text": "Building community in cohorts"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "comment",
+          "name": "Other_Comments",
+          "title": "Please use the space below to provide any other feedback or questions on your mind.  This may include:\noutstanding questions or concerns after this workshop\nadditional tools, resources or trainings that would be helpful "
+        },
+        {
+          "type": "html",
+          "name": "thank_you_reminders",
+          "html": "<p>Thanks for your time and honesty!</p>"
+        }
+      ]
+    }
+  ]
+}

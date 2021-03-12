@@ -11,6 +11,14 @@ const projectTypes = JSON.parse(script.dataset.widgetTypes);
 const viewer = JSON.parse(script.dataset.viewer);
 const store = getStore();
 
+config.bonusLevels = config.bonusLevels.map(bonus => {
+  bonus.levels = bonus.levels.map(level => {
+    level.id = level.id.toString();
+    return level;
+  });
+  return bonus;
+});
+
 ReactDOM.render(
   <Provider store={store}>
     <LessonExtras

@@ -6,11 +6,8 @@ import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import ScriptAnnouncements from './ScriptAnnouncements';
-import {
-  announcementShape,
-  VisibilityType
-} from '@cdo/apps/code-studio/scriptAnnouncementsRedux';
+import Announcements from './Announcements';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -24,6 +21,7 @@ import AssignmentVersionSelector, {
 import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -84,6 +82,7 @@ class ScriptOverviewHeader extends Component {
     scriptName: PropTypes.string.isRequired,
     scriptTitle: PropTypes.string.isRequired,
     scriptDescription: PropTypes.string.isRequired,
+    scriptStudentDescription: PropTypes.string.isRequired,
     betaTitle: PropTypes.string,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
@@ -120,41 +119,13 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
-  /*
-  Processes all of the announcements for the script and determines if they should be shown based
-  on the their visibility setting and the current view. For example a teacher should only see
-  announcements for Teacher-only or Teacher and Student.
-  Also defaults to old announcements without a visibility to be Teacher-only.
-  Lastly checks if the non-verified teacher announcement should be shown to a teacher and
-  adds the announcement if needed.
-   */
-  filterAnnouncements = currentView => {
-    const currentAnnouncements = [];
-    this.props.announcements.forEach(element => {
-      if (element.visibility === VisibilityType.teacherAndStudent) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Teacher' &&
-        (element.visibility === VisibilityType.teacher ||
-          element.visibility === undefined)
-      ) {
-        currentAnnouncements.push(element);
-      } else if (
-        currentView === 'Student' &&
-        element.visibility === VisibilityType.student
-      ) {
-        currentAnnouncements.push(element);
-      }
-    });
-    return currentAnnouncements;
-  };
-
   render() {
     const {
       plcHeaderProps,
       scriptName,
       scriptTitle,
       scriptDescription,
+      scriptStudentDescription,
       betaTitle,
       viewAs,
       isSignedIn,
@@ -203,9 +174,10 @@ class ScriptOverviewHeader extends Component {
           />
         )}
         {isSignedIn && (
-          <ScriptAnnouncements
-            announcements={this.filterAnnouncements(viewAs)}
+          <Announcements
+            announcements={this.props.announcements}
             width={SCRIPT_OVERVIEW_WIDTH}
+            viewAs={viewAs}
           />
         )}
         {userId && <StudentFeedbackNotification studentId={userId} />}
@@ -258,7 +230,20 @@ class ScriptOverviewHeader extends Component {
                 />
               )}
             </div>
-            <p style={styles.description}>{scriptDescription}</p>
+            {viewAs === ViewType.Teacher && (
+              <SafeMarkdown
+                style={styles.description}
+                openExternalLinksInNewTab={true}
+                markdown={scriptDescription}
+              />
+            )}
+            {viewAs === ViewType.Student && (
+              <SafeMarkdown
+                style={styles.description}
+                openExternalLinksInNewTab={true}
+                markdown={scriptStudentDescription}
+              />
+            )}
           </div>
           <ProtectedStatefulDiv ref={element => (this.protected = element)} />
         </div>
@@ -271,11 +256,12 @@ export const UnconnectedScriptOverviewHeader = ScriptOverviewHeader;
 
 export default connect(state => ({
   plcHeaderProps: state.plcHeader,
-  announcements: state.scriptAnnouncements || [],
+  announcements: state.announcements || [],
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
+  scriptStudentDescription: state.progress.scriptStudentDescription,
   betaTitle: state.progress.betaTitle,
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,

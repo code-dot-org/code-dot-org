@@ -116,6 +116,10 @@ sl:
     valid_password: "Veljavno geslo!"
     invalid_password: "Geslo mora imeti vsaj 6 znakov"
     mismatch_password: "Vneseni gesli nista enaki"
+    agree_us_data_transfer_student: '**Strinjam se, da lahko Code.org prenese podatke (vključno z osebnimi podatki) iz moje uporabe tega spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja teh podatkov.'
+    agree_us_data_transfer_teacher: '**Strinjam se, da lahko Code.org prenese podatke (vključno z osebnimi podatki) iz moje uporabe (in uporabe mojih študentov) tega spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja teh podatkov.'
+    data_collection_us: "Razumem, da je Code.org neprofitno spletno mesto iz ZDA in da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji državi."
+    visit_privacy: 'Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.'
     additional_information: "Potrebujemo nekaj dodatnih informacij za uspešno prijavo."
     user_type_teacher: "Učitelj/ica"
     user_type_student: "Učenec"
@@ -631,6 +635,4 @@ sl:
         opt_in_no: 'Ne'
   cookie_banner:
     accept: 'Strinjam se'
-  gdpr_dialog:
-    yes: 'Da'
   copy: 'Kopiraj'

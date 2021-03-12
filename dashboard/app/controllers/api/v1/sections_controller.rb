@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -50,7 +50,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
         stage_extras: params['lesson_extras'] || false,
-        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
+        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
+        tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled]
       }
     )
     render head :bad_request unless section
@@ -95,6 +96,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
     fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
 
     section.update!(fields)
@@ -120,6 +122,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return
     end
     result = @section.add_student current_user
+    # add_student returns 'failure' when id of current user is owner of @section
+    if result == 'failure'
+      render json: {
+        result: 'section_owned'
+      }, status: :bad_request
+      return
+    end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: result
@@ -162,6 +171,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     scripts = Script.valid_scripts(current_user).map(&:assignable_info)
     render json: scripts
+  end
+
+  # GET /api/v1/sections/require_captcha
+  # Get the recaptcha site key for frontend and whether current user requires captcha verification
+  def require_captcha
+    return head :forbidden unless current_user
+    site_key = CDO.recaptcha_site_key
+    render json: {key: site_key}
   end
 
   private

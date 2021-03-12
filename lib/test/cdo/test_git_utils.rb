@@ -31,4 +31,23 @@ class GitUtilsTest < Minitest::Test
     )
     assert_equal 0, files.length, 'ignores files in dashboard/test/ui'
   end
+
+  def test_current_branch_merged_into
+    GitUtils.stubs(:current_branch).returns("current_branch")
+    GitUtils.stubs(:merged_branches).returns(
+      %w(
+        staging
+        some_other_branch
+      )
+    )
+    refute GitUtils.current_branch_merged_into?("staging")
+    GitUtils.stubs(:merged_branches).returns(
+      %w(
+        staging
+        current_branch
+        some_other_branch
+      )
+    )
+    assert GitUtils.current_branch_merged_into?("staging")
+  end
 end

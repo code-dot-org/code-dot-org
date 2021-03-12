@@ -1,0 +1,90 @@
+login_required true
+hideable_lessons true
+student_detail_progress_view true
+teacher_resources [["lessonPlans", "https://curriculum.code.org/csd-preview-21/unit5/"], ["teacherForum", "https://forum.code.org/c/csd"], ["vocabulary", "https://curriculum.code.org/csd-preview-21/unit5/vocab"], ["standardMappings", "https://curriculum.code.org/csd-preview-21/unit5/standards/"]]
+has_verified_resources true
+curriculum_path 'https://curriculum.code.org/csd-preview-21/unit5/{LESSON}'
+pilot_experiment 'csd-2021-preview'
+project_sharing true
+curriculum_umbrella 'CSD'
+
+lesson_group 'csd5_1', display_name: 'Chapter 1: Representing Information'
+lesson 'Representation Matters', display_name: 'Representation Matters', has_lesson_plan: true
+level 'CSD U5L01 autoSFLP_preview-2021', named: true
+
+lesson 'Patterns and Representation', display_name: 'Patterns and Representation', has_lesson_plan: true
+level 'CSD U5L02 autoSFLP_preview-2021', named: true
+
+lesson 'ASCII and Binary Representation', display_name: 'ASCII and Binary Representation', has_lesson_plan: true
+level 'CSD U5L03 autoSFLP_preview-2021', named: true
+
+lesson 'Representing Images', display_name: 'Representing Images', has_lesson_plan: true
+level 'CSD U5L04 autoSFLP_preview-2021', named: true
+level 'CSD U5 black white images pixelation_preview-2021', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 2_preview-2021', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 3_preview-2021', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 4_preview-2021', progression: 'Representing Images'
+level 'CSD U5 black white images pixelation 5_preview-2021', progression: 'Representing Images'
+
+lesson 'Representing Numbers', display_name: 'Representing Numbers', has_lesson_plan: true
+level 'CSD U5L05 autoSFLP_preview-2021', named: true
+level 'CSD U5 binary widget_2021', progression: 'Binary Number Widget'
+level 'CSD U5 binary video_preview-2021', named: true
+
+lesson 'Combining Representations', display_name: 'Combining Representations', has_lesson_plan: true
+level 'CSD U5L06 autoSFLP_preview-2021', named: true
+level 'CSD U5 binary 8 bits-2021', progression: '8-Bit Binary Number Widget'
+
+lesson 'Keeping Data Secret', display_name: 'Keeping Data Secret', has_lesson_plan: true
+level 'CSD U5L07 autoSFLP_preview-2021', named: true
+
+lesson 'Project - Create a Representation', display_name: 'Project - Create a Representation', has_lesson_plan: true
+level 'CSD U5L08 autoSFLP_preview-2021', named: true
+level 'csd-pulse-check-survey-1-levelgroup U5Ch1_preview-2021', progression: 'Reflection', assessment: true
+
+lesson_group 'csd5_2', display_name: 'Chapter 2: Solving Data Problems'
+lesson 'Problem Solving and Data', display_name: 'Problem Solving and Data', has_lesson_plan: true
+level 'CSD U5L09 autoSFLP_preview-2021', named: true
+
+lesson 'Structuring Data', display_name: 'Structuring Data', has_lesson_plan: true
+level 'CSD U5L10 autoSFLP_preview-2021', named: true
+level 'CSD U5 Pizza_2021', progression: 'Pizza Party Data'
+
+lesson 'Interpreting Data', display_name: 'Interpreting Data', has_lesson_plan: true
+level 'CSD U5L11 autoSFLP_preview-2021', named: true
+
+lesson 'Making Decisions with Data', display_name: 'Making Decisions with Data', has_lesson_plan: true
+level 'CSD U5L12 autoSFLP_preview-2021', named: true
+
+lesson 'Automating Data Decisions', display_name: 'Automating Data Decisions', has_lesson_plan: true
+level 'CSD U5L13 autoSFLP_preview-2021', named: true
+
+lesson 'Problem Solving with Big Data', display_name: 'Problem Solving with Big Data', has_lesson_plan: true
+level 'CSD U5L14 autoSFLP_preview-2021', named: true
+level 'CSD U5 Netflix Data Video_preview-2021', progression: 'Problem Solving'
+level 'CSD U5 Waze Data Video_preview-2021', progression: 'Problem Solving'
+level 'CSD U5 Amazon Data Video_preview-2021', progression: 'Problem Solving'
+
+lesson 'Data and Machine Learning', display_name: 'Data and Machine Learning', has_lesson_plan: true
+level 'CSD U5L15 autoSFLP_preview-2021', named: true
+level 'Oceans_Video_Machine_Learning', progression: 'Data and Machine Learning'
+level 'Oceans_FishVTrash', progression: 'Data and Machine Learning'
+level 'Oceans_CreaturesVTrashDemo', progression: 'Data and Machine Learning'
+level 'Oceans_CreaturesVTrash', progression: 'Data and Machine Learning'
+level 'Oceans_Video_Training_Data', progression: 'Data and Machine Learning'
+level 'Oceans_Short', progression: 'Data and Machine Learning'
+level 'Oceans_Long', progression: 'Data and Machine Learning'
+
+lesson 'Project - Make a Recommendation', display_name: 'Project - Make a Recommendation', has_lesson_plan: true
+level 'CSD U5L16 autoSFLP_preview-2021', named: true
+level 'csd u5 recommender sample_preview-2021', named: true
+level 'csd-pulse-check-survey-1-levelgroup U5Ch2_preview-2021', progression: 'Reflection', assessment: true
+
+lesson 'Post-Project Test', display_name: 'Post-Project Test', lockable: true, has_lesson_plan: false
+level 'CSD U5 test_preview-2021', assessment: true
+
+lesson_group 'cspSurvey', display_name: 'Survey'
+lesson 'CS Discoveries Post Course survey', display_name: 'CS Discoveries Post Course survey', lockable: true, has_lesson_plan: false
+level 'csd-post-survey-intro-2019_preview-2021'
+level 'csd-post-survey-levelgroup_preview-2021', assessment: true
+

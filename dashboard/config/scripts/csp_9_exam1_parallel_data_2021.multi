@@ -1,0 +1,15 @@
+name 'csp-9-exam1-parallel-data_2021'
+editor_experiment ''
+wrong 'Data analysis involving two or more columns of data'
+wrong 'Data analysis involving both string and numeric data'
+right 'Data analysis involving large datasets'
+wrong 'Data analysis that could result in two or more different types of visualizations'
+
+
+
+
+
+markdown <<MARKDOWN
+In which of the following situations would parallel systems MOST likely be used to help analyze data?
+
+MARKDOWN

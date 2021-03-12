@@ -1,0 +1,31 @@
+name 'csp-u1-exam1-intellectual-property_2021'
+height 'auto'
+
+question 'Which of the following is true of intellectual property?'
+wrong ‘Information created on a computer is not owned by anyone since only analog information is protected under copyright law.’
+wrong ‘You do not need to cite work created by someone else if both the original work and your use of it are in digital form.’
+right ‘Creative Commons enables content creators to freely distribute their otherwise copyrighted work.’
+wrong ‘Creative Commons has severely hindered broad and open access to digital information’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Creative Commons works within copyright law. It allows creators to grant permission to everyone in the world to use their work in certain ways.
+
+[Lesson 11 - Intellectual Property](https://curriculum.code.org/csp-20/unit1/11/) contains a video explaining the purpose of Creative Commons.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.F.1: Material created on a computer is the intellectual property of the creator or an organization. 
+
+* IOC-1.F.6: The use of material created by someone other than you should always be cited. 
+
+* IOC-1.F.5: Some examples of legal ways to use materials created by someone else include:
+	* Creative Commons—a public copyright license that enables the free distribution of an otherwise copyrighted work. This is used when the content creator wants to give others the right to share, use, and build upon the work they have created. 
+	* open source—programs that are made freely available and may be redistributed and modified
+	* open access—online research output free of any and all restrictions on access and free of many restrictions on use, such as copyright or license restrictions
+:::
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

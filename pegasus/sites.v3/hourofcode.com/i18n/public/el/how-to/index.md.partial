@@ -1,5 +1,5 @@
 ---
-title: Οδηγός βήμα-βήμα
+title: Hour of Code How-to Guide
 layout: wide
 nav: how_to_nav
 ---
@@ -8,23 +8,46 @@ nav: how_to_nav
 
 # Σχεδιάστε τη δική σας Ώρα του Κώδικα
 
-### Γίνετε μέλος του κινήματος και εισάγετε μια ομάδα μαθητών στην πρώτη τους ώρα Πληροφορικής με αυτά τα βήματα. Η Ώρα του Κώδικα είναι εύκολο να υλοποιηθεί - ακόμα και για αρχάριους! Αν θέλετε βοήθεια, μπορείτε να βρείτε έναν [τοπικό εθελοντή]({{ urls/volunteer_local }}) που θα σας βοηθήσει να υλοποιήσετε μία Ώρα του Κώδικά στην τάξη σας.
+### Join the movement and introduce your students to computer science with these steps.
 
-### Δείτε τον [οδηγό συμμετοχής αν έχετε ακόμη ερωτήσεις]({{ localized_files/participation_guide }}).
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Δείτε τον [οδηγό συμμετοχής αν έχετε ακόμη ερωτήσεις]({{ localized_files/participation_guide }}).
+
+- [Watch the Hour of Code how-to video](#how-to-video)
+- [Explore activities and tutorials](#explore-activities)
+- [Create your plan for the day](#create-your-plan)
+- [Promote your Hour of Code](#promote-your-hour)
+- [How to start your Hour of Code strong](#how-to-start)
+- [Get coding](#code)
+- [Celebrate your students' success](#celebrate)
+- [Άλλοι πόροι για την ενότητα "Η ώρα του Κώδικα" για εκπαιδευτικούς](#other-resources)
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## Παρακολουθείστε αυτό το επεξηγηματικό βίντεο <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+<a id="how-to-video"></a>
 
-## 2. Explore Activities and Tutorials
+## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+
+* * *
+
+<a id="explore-activities"></a>
+
+## 2. Explore activities and tutorials
 
 Παρέχουμε μια ποικιλία από διασκεδαστικά, [μαθήματα-οδηγούς για μαθητές]({{ urls/learn }}) για όλες τις ηλικίες και τα επίπεδα εμπειρίας. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
-[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+[![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-## 3. Create your Plan for the Day
+* * *
+
+<a id="create-your-plan"></a>
+
+## 3. Create your plan for the day
 
 ### Think about your technology needs - computers are optional!
 
@@ -33,11 +56,15 @@ Explore the activities and decide ahead of time if you want to choose a single t
 - Παρέχετε ακουστικά στην τάξη σας, ή ζητήστε από τους μαθητές να φέρουν τα δικά τους, αν το μάθημα που επιλέγετε λειτουργεί καλύτερα με ήχο.
 - Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Όταν οι μαθητές συνεργάζονται, βοηθούν ο ένας τον άλλο και να βασίζονται λιγότερο στον εκπαιδευτικό. Καταλαβαίνουν επίσης ότι η Επιστήμη των Υπολογιστών είναι κοινωνική και συνεργατική.
 
-<img src="/images/fit-450/group_ipad.jpg" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Pick a day and time
 
 People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+
+* * *
+
+<a id="promote-your-hour"></a>
 
 ## 4. Promote your Hour of Code
 
@@ -59,7 +86,11 @@ Lead up to the event by sharing [inspirational videos](/promote/resources) highl
 
 Learn more about posters, videos, stickers and other ways to [promote your event](/promote/resources#posters) to your community.
 
-## 5. Start your Hour of Code Strong
+* * *
+
+<a id="how-to-start"></a>
+
+## 5. How to start your Hour of Code strong
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -74,9 +105,13 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Εξηγήστε τους τρόπους που η τεχνολογία επηρεάζει τις ζωές μας, με παραδείγματα που θα προκαλέσουν το ενδιαφέρον αγοριών και κοριτσιών (μιλήστε για το διάσωση ζωών, τη βοήθεια σε ανθρώπους, τη σύνδεση ατόμων κτλ).
 - Ως τάξη, φτιάξτε μια λίστα με πράγματα που χρησιμοποιούν κώδικα στην καθημερινή ζωή.
-- Δείτε [εδώ]({{ urls/girls }}) συμβουλές για το πώς να κάνετε ενδιαφέρουσα την επιστήμη των υπολογιστών στα κορίτσια. 
+- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
 
-## 6. Get Coding!
+* * *
+
+<a id="code"></a>
+
+## 6. Get coding!
 
 Κατευθύνετε τους μαθητές σε αυτήν την δραστηριότητα
 
@@ -93,11 +128,15 @@ It’s okay if both you and your students are brand new to computer science. Her
 - Οι μαθητές μπορούν να δουν όλα τα μαθήματα-οδηγούς και να [δοκιμάσουν κάποια άλλη δραστηριότητα της Ώρας του Κώδικα]({{ urls/learn }}).
 - Ή, ζητήστε από τους μαθητές που έχουν τελειώσει νωρίς, να βοηθήσουν του συμμαθητές τους που έχουν δυσκολίες με την δραστηριότητα.
 
-## 7. Celebrate your Students' Success
+* * *
+
+<a id="celebrate"></a>
+
+## 7. Celebrate your students' success
 
 [col-33]
 
-![](/images/fit-450/boy-certificate.jpg)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -108,12 +147,14 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 * * *
 
+<a id="other-resources"></a>
+
 ## Άλλοι πόροι για την Ώρα του Κώδικα για εκπαιδευτικούς:
 
 - Επισκεφτείτε το [Ώρα του Κώδικα - Φόρουμ για Εκπαιδευτικούς](http://forum.code.org/c/plc/hour-of-code) για συμβουλές, προτάσεις και υποστήριξη από άλλους εκπαιδευτικούς.
 - Συμβουλευτείτε τη σελίδα [Συχνές ερωτήσεις για την Ώρα του Κώδικα](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-## Τι γίνεται μετά την Ώρα του Κώδικα;
+### Τι γίνεται μετά την Ώρα του Κώδικα;
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 

@@ -52,7 +52,8 @@ class FoormPreviewController < ApplicationController
       regional_partner_name: params[:regionalPartnerName] || "Regional Partner A",
       is_virtual: params[:isVirtual] == 'true' || false,
       is_friday_institute: params[:isFridayInstitute] == 'true' || false,
-      num_facilitators: 3
+      num_facilitators: 3,
+      workshop_agenda: params[:workshopAgenda] || "module1"
     }
 
     @script_data = {

@@ -8,7 +8,8 @@ export class ScholarshipDropdown extends React.Component {
     scholarshipStatus: PropTypes.string,
     dropdownOptions: PropTypes.array,
     onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool.isRequired
   };
 
   render() {

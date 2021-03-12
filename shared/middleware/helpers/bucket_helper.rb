@@ -285,10 +285,6 @@ class BucketHelper
     copy_source = @bucket + '/' + s3_path(owner_id, storage_app_id, source_filename)
     response = s3.copy_object(bucket: @bucket, key: key, copy_source: copy_source)
 
-    # TODO: (bbuchanan) Handle abuse_score metadata for animations.
-    # When copying an object, should also copy its abuse_score metadata.
-    # https://www.pivotaltracker.com/story/show/117949241
-
     # Delete the old version, if doing an in-place replace
     s3.delete_object(bucket: @bucket, key: key, version_id: version) if version
 

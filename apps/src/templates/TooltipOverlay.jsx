@@ -163,6 +163,6 @@ export function textProvider(label) {
 export function coordinatesProvider(flip) {
   return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
-    return `x: ${Math.floor(props.mouseX)}, y: ${Math.floor(y)}`;
+    return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
   };
 }

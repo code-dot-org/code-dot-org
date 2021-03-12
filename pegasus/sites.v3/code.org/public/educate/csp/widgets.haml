@@ -23,15 +23,6 @@ video_player: true
       %a{href: CDO.code_org_url('/textcompression'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/2/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2-2019/stage/2/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -63,15 +54,6 @@ video_player: true
     = view :display_video_thumbnail, id: 'bw_pixelation', video_code: 'rJOa5Q5a1WM', play_button: 'center', download_path: 'https://videos.code.org/2015/csp/pixelation_bw.mp4', letterbox: 'false'
   .tool-desc
     The black and white version of this widget simply encodes images with 1 bit per pixel—0 is black, 1 is white. Students can encode the width and height of their images with metadata. It’s a great tool for students who are just getting started.
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/3/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2-2019/stage/3/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -82,15 +64,6 @@ video_player: true
   %img.tool-thumbnail{src: '/images/app-lab/color-pixelation.png'}
   .tool-desc
     The color version of this widget lets students encode each pixel with any number of bits from 1 to 24. This widget will help them understand much more deeply how RGB colors work and why hexadecimal representation is so useful for looking at long strings of binary values. A challenge for students: Try your hand at mixing digital colors by writing the binary for them yourself!
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp2-2018/4/Teacher'), target:'_blank'}
-          Lesson plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp2-2019/stage/4/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   %br
   %strong Example:
@@ -118,33 +91,18 @@ video_player: true
       %a{href: CDO.studio_url('/s/frequency_analysis'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp4-2018/7/Teacher'), target:'_blank'}
-          Lesson plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp4-2018/stage/7/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
-
+  .clear{style: "clear: both"}       
   %h2 Vigenere cipher widget
   %img.tool-thumbnail{src: '/images/app-lab/vigenere-cipher.png'}
   .tool-desc
     This widget is used in the same lesson as the random substitution cipher, and allows students to play with a much more sophisticated encryption technique that was considered virtually unbreakable for a very long time. The Vigenère cipher is similar to the Caesar or random substitution ciphers, but the alphabetic shift changes for each letter based on a secret key.
+    %br
+    %strong Note:
+    this widget is no longer used in the Code.org CS Principles curriculum
     .standalone-tool
       %a{href: CDO.studio_url('/s/vigenere'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.code_org_url('/curriculum/csp4-2018/8/Teacher'), target:'_blank'}
-          Lesson Plan
-      %li
-        %i.fa.fa-external-link-square
-        %a{href: CDO.studio_url('/s/csp4-2018/stage/8/puzzle/1'), target:'_blank'}
-          Stage in CS Principles
   .clear
   .back-to-top
     %a{href: '#'}
@@ -170,41 +128,7 @@ video_player: true
       %a{href: CDO.code_org_url('/internetsimulator'), target:'_blank'}
         %button
           Try standalone tool
-    %ul.tool-links{style: 'margin-left: 40px;'}
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/3/Teacher'), target:'_blank'}
-          Lesson Plan for U1L3: Sending Binary Messages with the Internet Simulator
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/6/Teacher'), target:'_blank'}
-          Lesson Plan for U1L6: Sending Numbers
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/7/Teacher'), target:'_blank'}
-          Lesson Plan for U1L7: Encoding and Sending Formatted Text
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/9/Teacher'), target:'_blank'}
-          Lesson Plan for U1L9: The Need for Addressing
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/10/Teacher'), target:'_blank'}
-          Lesson Plan for U1L10: Routers and Redundancy
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/11/Teacher'), target:'_blank'}
-          Lesson Plan for U1L11: Packings and Making a Reliable Internet
-      %li
-        %i.fa.fa-file-text
-        %a{href: CDO.code_org_url('/curriculum/csp1-2018/12/Teacher'), target:'_blank'}
-          Lesson Plan for U1L12: The Need for DNS
     %br
-  %strong Mapping of Lessons to Internet Concepts
-  %img.tool-thumbnail{src: '/images/app-lab/internet-simulator-lessons.png', style: 'width: 100%'}
-  %br
-  %strong Example:
-  How two students communicate with each other using the internet simulator widget.
   %img.animated-gif{src: CDO.code_org_url('/images/app-lab/netsim-animated.gif')}
   .back-to-top
     %a{href: '#'}

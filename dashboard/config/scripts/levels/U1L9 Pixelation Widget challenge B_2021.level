@@ -1,0 +1,27 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "short_instructions": "Work with a partner to digitally represent an image. ",
+    "long_instructions": "# Challenge B\r\n\r\n<img src = \"https://images.code.org/14ad3cec6a2364e2ce3fadd55b8c217e-image-1563808438255.PNG\" style=\"float:right; margin:0 20px\" width=200>\r\n\r\n\r\n\r\n**The problem:** Work to digitally represent this image using sampling. Reference your activity guide. ",
+    "version": "1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "parent_level_id": 18887,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false",
+    "encrypted": "false",
+    "v1_initial_width": "0",
+    "v1_initial_height": "0"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-05-03 23:58:00 +0000\",\"changed\":[\"notes\",\"published\",\"markdown_instructions\",\"data\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-07-22 15:05:10 +0000\",\"changed\":[\"version\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:11:14 +0000\",\"changed\":[\"short_instructions\",\"long_instructions\",\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:11:51 +0000\",\"changed\":[\"data\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:12:46 +0000\",\"changed\":[\"v1_initial_width\",\"v1_initial_height\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 15:14:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-23 15:40:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-12 20:47:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</Pixelation>

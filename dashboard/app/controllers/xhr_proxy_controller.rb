@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     allrecipes.com
     apex.oracle.com
+    api.coinlayer.com
     api.data.gov
     api.datamuse.com
     api.energidataservice.dk
@@ -36,16 +37,19 @@ class XhrProxyController < ApplicationController
     api.foursquare.com
     api.fungenerators.com
     api.nasa.gov
+    api.opencagedata.com
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.si.edu
     api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
     api.uclassify.com
+    api.waqi.info
     api.zippopotam.us
     atlas.media.mit.edu
     bible-api.com
@@ -71,6 +75,7 @@ class XhrProxyController < ApplicationController
     lakeside-cs.org
     maps.googleapis.com
     opentdb.com
+    pixabay.com
     pokeapi.co
     qrng.anu.edu.au
     quandl.com
@@ -90,11 +95,14 @@ class XhrProxyController < ApplicationController
     spreadsheets.google.com
     stats.minecraftservers.org
     swapi.co
+    thecatapi.com
+    thedogapi.com
     theunitedstates.io
     transitchicago.com
     translate.yandex.net
     vpic.nhtsa.dot.gov
     wikipedia.org
+    worldclockapi.com
     words.bighugelabs.com
   ).freeze
 

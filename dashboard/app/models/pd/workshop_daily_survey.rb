@@ -3,8 +3,8 @@
 # Table name: pd_workshop_daily_surveys
 #
 #  id             :integer          not null, primary key
-#  form_id        :integer          not null
-#  submission_id  :integer          not null
+#  form_id        :bigint           not null
+#  submission_id  :bigint           not null
 #  user_id        :integer          not null
 #  pd_session_id  :integer
 #  pd_workshop_id :integer          not null
@@ -23,8 +23,12 @@
 #  index_pd_workshop_daily_surveys_on_user_workshop_day_form  (user_id,pd_workshop_id,day,form_id) UNIQUE
 #
 
+# NOTE: This is a legacy model and no new surveys should be added here. All new surveys should use Foorm.
+# This class is no longer actively synced via our JotForm cron jobs (fill_jotform_placeholders,
+# sync_jotforms, process_jotform_data).
+
 module Pd
-  class WorkshopDailySurvey < ActiveRecord::Base
+  class WorkshopDailySurvey < ApplicationRecord
     include JotFormBackedForm
     include SharedWorkshopConstants
     include Pd::WorkshopSurveyConstants

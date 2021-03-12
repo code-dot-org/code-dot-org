@@ -5,6 +5,7 @@ import React from 'react';
 import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import FontAwesome from '../../templates/FontAwesome';
 
 const styles = {
   outerContainer: {
@@ -24,8 +25,11 @@ const styles = {
   },
   dropdownLabel: {
     display: 'flex',
-    flexDeirection: 'row',
-    alignItems: 'center'
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingRight: '10px',
+    cursor: 'pointer'
   }
 };
 
@@ -60,6 +64,11 @@ export default class ThemeDropdown extends React.Component {
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
             <img style={styles.icon} src={themeOption.icon} />
             <div style={styles.label}>{themeOption.displayName}</div>
+            <div className="checkbox">
+              {selectedValue === themeOption.option && (
+                <FontAwesome icon="check" />
+              )}
+            </div>
           </div>
         )
       };
@@ -73,6 +82,7 @@ export default class ThemeDropdown extends React.Component {
           onChange={this.handleChange}
           options={renderedOptions}
           placeholder={''}
+          clearable={false}
         />
       </div>
     );

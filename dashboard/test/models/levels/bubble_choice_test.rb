@@ -9,7 +9,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     create :game, name: 'BubbleChoice'
 
     @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel2 = create :level, name: 'choice_2'
+    @sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
     @script_level = create :script_level, levels: [@bubble_choice]
@@ -95,6 +95,7 @@ DSL
   test 'summarize' do
     summary = @bubble_choice.summarize
     expected_summary = {
+      id: @bubble_choice.id.to_s,
       display_name: @bubble_choice.display_name,
       description: @bubble_choice.description,
       name: @bubble_choice.name,
@@ -106,19 +107,63 @@ DSL
     assert_equal expected_summary, summary
   end
 
+  test 'summarize with translations' do
+    # Create and save translations to I18n backend
+    level_translated_display_name = 'translated BubbleChoice display name'
+    level_translated_description = 'translated BubbleChoice description'
+    sublevel_translated_display_name = 'translated sublevel display name'
+    sublevel_translated_short_instruction = 'translated sublevel short instruction'
+    custom_i18n = {
+      data: {
+        dsls: {
+          @bubble_choice.name => {
+            display_name: level_translated_display_name,
+            description: level_translated_description
+          }
+        },
+        display_name: {
+          @sublevel1.name => sublevel_translated_display_name
+        },
+        short_instructions: {
+          @sublevel2.name => sublevel_translated_short_instruction
+        }
+      }
+    }
+
+    test_locale = :'te-ST'
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    # Expected summary with translations
+    expected_sublevel_summary = @bubble_choice.summarize_sublevels
+    expected_sublevel_summary[0][:display_name] = sublevel_translated_display_name
+    expected_sublevel_summary[1][:short_instructions] = sublevel_translated_short_instruction
+    expected_summary = {
+      id: @bubble_choice.id.to_s,
+      display_name: level_translated_display_name,
+      description: level_translated_description,
+      name: @bubble_choice.name,
+      type: @bubble_choice.type,
+      teacher_markdown: @bubble_choice.teacher_markdown,
+      sublevels: expected_sublevel_summary
+    }
+
+    summary = @bubble_choice.summarize should_localize: true
+    assert_equal expected_summary, summary
+  end
+
   test 'summarize with script_level' do
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     assert_nil summary[:previous_level_url]
-    assert_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
 
     @script_level.stubs(:previous_level).returns(create(:script_level))
-    @script_level.stubs(:next_level).returns(create(:script_level))
     summary = @bubble_choice.summarize(script_level: @script_level)
 
     refute_nil summary[:previous_level_url]
-    refute_nil summary[:next_level_url]
+    refute_nil summary[:redirect_url]
     refute_nil summary[:script_url]
   end
 
@@ -127,8 +172,8 @@ DSL
     expected_summary = [
       {
         # level_id and id are used by different features so keeping both
-        level_id: @sublevel1.id,
-        id: @sublevel1.id,
+        level_id: @sublevel1.id.to_s,
+        id: @sublevel1.id.to_s,
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
@@ -137,11 +182,12 @@ DSL
         name: @sublevel1.name,
         position: 1,
         letter: 'a',
-        icon: nil
+        icon: nil,
+        status: 'not_tried'
       },
       {
-        level_id: @sublevel2.id,
-        id: @sublevel2.id,
+        level_id: @sublevel2.id.to_s,
+        id: @sublevel2.id.to_s,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
@@ -150,7 +196,9 @@ DSL
         name: @sublevel2.name,
         position: 2,
         letter: 'b',
-        icon: nil
+        icon: nil,
+        status: 'not_tried',
+        short_instructions: @sublevel2.short_instructions
       }
     ]
 
@@ -247,6 +295,7 @@ DSL
     end.once
 
     bubble_choice_copy = bubble_choice.clone_with_suffix('_copy')
+    assert_equal 'bubble choice_copy', bubble_choice_copy.name
 
     expected_names = %w(sublevel_1_copy sublevel_2_copy sublevel_3_copy)
     assert_equal expected_names, bubble_choice_copy.sublevels.map(&:name)

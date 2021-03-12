@@ -1,0 +1,83 @@
+{
+  "script": {
+    "name": "csd-post-survey",
+    "wrapup_video_id": null,
+    "hidden": false,
+    "login_required": true,
+    "properties": {
+      "exclude_csf_column_in_legend": true,
+      "has_verified_resources": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "csd-post-survey"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "csd_survey",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd-post-survey"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "CSD post-course survey",
+      "name": "CSD post-course survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd-post-survey"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "CS Discoveries Post-course Survey"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup-2018-2nd-semester"
+        ],
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd-post-survey"
+      },
+      "level_keys": [
+        "csd-post-survey-2017-levelgroup-2018-2nd-semester"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-2017-levelgroup-2018-2nd-semester",
+        "script_level.level_keys": [
+          "csd-post-survey-2017-levelgroup-2018-2nd-semester"
+        ],
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "csd_survey",
+        "script.name": "csd-post-survey"
+      }
+    }
+  ]
+}

@@ -74,6 +74,16 @@ routing_rules = [
   },
   {
     condition: {
+      key_prefix_equals: "plcsf-current/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsf-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
       key_prefix_equals: "plcsd/"
     },
     redirect: {
@@ -84,7 +94,27 @@ routing_rules = [
   },
   {
     condition: {
+      key_prefix_equals: "plcsd-current/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsd-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
       key_prefix_equals: "plcsp/"
+    },
+    redirect: {
+      host_name: HOST_NAME,
+      replace_key_prefix_with: "plcsp-20/",
+      http_redirect_code: "302"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "plcsp-current/"
     },
     redirect: {
       host_name: HOST_NAME,

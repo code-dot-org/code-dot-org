@@ -7,7 +7,11 @@ import {mergeActivityResult, activityCssClass} from './activityUtils';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {ViewType, SET_VIEW_TYPE} from './viewAsRedux';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  processedLevel,
+  getLevelResult
+} from '@cdo/apps/templates/progress/progressHelpers';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {authorizeLockable} from './stageLockRedux';
 
@@ -27,6 +31,8 @@ const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
+const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
+const OVERWRITE_PROGRESS = 'progress/OVERWRITE_PROGRESS';
 
 const PEER_REVIEW_ID = -1;
 
@@ -38,10 +44,12 @@ const initialState = {
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   stages: null,
+  lessonGroups: null,
   scriptId: null,
   scriptName: null,
   scriptTitle: null,
   courseId: null,
+  isLessonExtras: false,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
@@ -57,7 +65,13 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
-  stageExtrasEnabled: false
+  stageExtrasEnabled: false,
+  // Note: usingDbProgress === "user is logged in". However, it is
+  // possible that we can get the user progress back from the DB
+  // prior to having information about the user login state.
+  // TODO: Use sign in state to determine where to source user progress from
+  usingDbProgress: false,
+  currentPageNumber: PUZZLE_PAGE_NONE
 };
 
 /**
@@ -76,15 +90,26 @@ export default function reducer(state = initialState, action) {
       professionalLearningCourse: action.professionalLearningCourse,
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
+      lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       scriptTitle: action.scriptTitle,
       scriptDescription: action.scriptDescription,
+      scriptStudentDescription: action.scriptStudentDescription,
       betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentStageId,
-      hasFullProgress: action.isFullProgress
+      hasFullProgress: action.isFullProgress,
+      isLessonExtras: action.isLessonExtras,
+      currentPageNumber: action.currentPageNumber
+    };
+  }
+
+  if (action.type === USE_DB_PROGRESS) {
+    return {
+      ...state,
+      usingDbProgress: true
     };
   }
 
@@ -92,6 +117,13 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       levelProgress: initialState.levelProgress
+    };
+  }
+
+  if (action.type === OVERWRITE_PROGRESS) {
+    return {
+      ...state,
+      levelProgress: action.levelProgress
     };
   }
 
@@ -250,40 +282,22 @@ function bestResultLevelId(levelIds, progressData) {
 }
 
 /**
- * Given a level that we get from the server using either /api/user_progress or
- * /dashboardapi/section_level_progress, extracts the result, appropriately
- * discerning a locked/submitted result for certain levels.
- */
-export const getLevelResult = level => {
-  if (level.status === LevelStatus.locked) {
-    return TestResults.LOCKED_RESULT;
-  }
-  if (level.readonly_answers) {
-    return TestResults.READONLY_SUBMISSION_RESULT;
-  }
-  if (level.submitted) {
-    return TestResults.SUBMITTED_RESULT;
-  }
-
-  return level.result;
-};
-
-/**
- * Does some processing of our passed in stages, namely
+ * Does some processing of our passed in lesson, namely
  * - Removes 'hidden' field
- * - Adds 'stageNumber' field for non-lockable, non-PLC stages
+ * - Adds 'stageNumber' field for non-PLC lessons which
+ * are not lockable or have a lesson plan
  */
-export function processedStages(stages, isPlc) {
-  let numberOfNonLockableStages = 0;
+export function processedStages(lessons, isPlc) {
+  let numLessonsWithLessonPlan = 0;
 
-  return stages.map(stage => {
+  return lessons.map(lesson => {
     let stageNumber;
-    if (!isPlc && !stage.lockable) {
-      numberOfNonLockableStages++;
-      stageNumber = numberOfNonLockableStages;
+    if (!isPlc && lesson.numberedLesson) {
+      numLessonsWithLessonPlan++;
+      stageNumber = numLessonsWithLessonPlan;
     }
     return {
-      ..._.omit(stage, 'hidden'),
+      ..._.omit(lesson, 'hidden'),
       stageNumber
     };
   });
@@ -302,7 +316,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
   // If we have a userId, we can clear any progress in redux and request all progress
   // from the server.
   if (userId) {
-    dispatch({type: CLEAR_PROGRESS});
+    dispatch(clearProgress());
   }
 
   return $.ajax({
@@ -344,8 +358,8 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     }
 
     // Merge progress from server
-    if (data.levels) {
-      const levelProgress = _.mapValues(data.levels, getLevelResult);
+    if (data.progress) {
+      const levelProgress = _.mapValues(data.progress, getLevelResult);
       dispatch(mergeProgress(levelProgress));
 
       if (data.peerReviewsPerformed) {
@@ -365,32 +379,53 @@ export const initProgress = ({
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isLessonExtras,
+  currentPageNumber
 }) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
+  lessonGroups,
   peerReviewLessonInfo,
   scriptId,
   scriptName,
   scriptTitle,
   scriptDescription,
+  scriptStudentDescription,
   betaTitle,
   courseId,
-  isFullProgress
+  isFullProgress,
+  isLessonExtras,
+  currentPageNumber
+});
+
+export const clearProgress = () => ({
+  type: CLEAR_PROGRESS
+});
+
+export const useDbProgress = () => ({
+  type: USE_DB_PROGRESS
 });
 
 export const mergeProgress = levelProgress => ({
   type: MERGE_PROGRESS,
+  levelProgress
+});
+
+export const overwriteProgress = levelProgress => ({
+  type: OVERWRITE_PROGRESS,
   levelProgress
 });
 
@@ -465,6 +500,7 @@ const lessonFromStage = stage =>
     'lockable',
     'stageNumber',
     'lesson_plan_html_url',
+    'student_lesson_plan_html_url',
     'description_student',
     'description_teacher'
   ]);
@@ -506,10 +542,7 @@ const peerReviewLevels = state =>
  */
 const isCurrentLevel = (currentLevelId, level) => {
   return (
-    !!currentLevelId &&
-    ((level.ids &&
-      level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
-      level.uid === currentLevelId)
+    !!currentLevelId && (level.id && level.id.indexOf(currentLevelId) !== -1)
   );
 };
 
@@ -530,10 +563,11 @@ const levelWithStatus = (
       );
     }
   }
+  const normalizedLevel = processedLevel(level);
   return {
-    ...processedLevel(level),
+    ...normalizedLevel,
     status: statusForLevel(level, levelProgress),
-    isCurrentLevel: isCurrentLevel(currentLevelId, level),
+    isCurrentLevel: isCurrentLevel(currentLevelId, normalizedLevel),
     paired: levelPairing[level.activeId],
     readonlyAnswers: level.readonly_answers
   };
@@ -660,6 +694,19 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
 
   const allLevels = levelsByLesson(state);
 
+  state.lessonGroups.forEach(lessonGroup => {
+    byGroup[lessonGroup.display_name] = {
+      lessonGroup: {
+        id: lessonGroup.id,
+        displayName: lessonGroup.display_name,
+        description: lessonGroup.description,
+        bigQuestions: lessonGroup.big_questions
+      },
+      lessons: [],
+      levels: []
+    };
+  });
+
   state.stages.forEach((lesson, index) => {
     const group = lesson.lesson_group_display_name;
     const lessonAtIndex = lessonFromStageAtIndex(state, index);
@@ -668,14 +715,10 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
       lessonLevels = lessonLevels.filter(level => !level.bonus);
     }
 
-    byGroup[group] = byGroup[group] || {
-      group,
-      lessons: [],
-      levels: []
-    };
-
-    byGroup[group].lessons.push(lessonAtIndex);
-    byGroup[group].levels.push(lessonLevels);
+    if (byGroup[group]) {
+      byGroup[group].lessons.push(lessonAtIndex);
+      byGroup[group].levels.push(lessonLevels);
+    }
   });
 
   // Peer reviews get their own group, but these levels/lesson are stored
@@ -684,6 +727,12 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
   if (state.peerReviewLessonInfo) {
     byGroup[state.peerReviewLessonInfo.lesson_group_display_name] = {
       group: state.peerReviewLessonInfo.lesson_group_display_name,
+      lessonGroup: {
+        id: null, //Peer reviews do not have descriptions or big questions so they won't need an id to track clicks
+        displayName: state.peerReviewLessonInfo.lesson_group_display_name,
+        description: null,
+        bigQuestions: null
+      },
       lessons: [peerReviewLesson(state)],
       levels: [peerReviewLevels(state)]
     };
@@ -706,6 +755,9 @@ export const groupedLessons = (state, includeBonusLevels = false) => {
  */
 export const progressionsFromLevels = levels => {
   const progressions = [];
+  if (levels.length === 0) {
+    return progressions;
+  }
   let currentProgression = {
     start: 0,
     name: levels[0].progression || levels[0].name,

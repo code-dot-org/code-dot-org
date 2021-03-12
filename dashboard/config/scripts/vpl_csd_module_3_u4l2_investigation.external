@@ -4,23 +4,22 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Lesson Investigation: Unit 4 Lesson 2
+#Lesson 2: Understanding Your User
+**Estimated Time: 25 minutes**
 
-**Estimated Time: 30 minutes**
+## Investigation Goals
 
-## Overview
+**Consider how this lesson supports students in thinking about intended users as well as potential users.  Also, consider how this lesson continues to include empathy as a part of the Problem Solving Process.**
 
-Now, let's go on to investigate Unit 4, Lesson 2: Understanding Your User which encourages students to think about how to design for different users.  Students engage in choosing a product for a specific user, critiquing product design, and suggesting improvements. 
+## Investigation Tasks
 
-Lesson 2 builds on Lesson 1 by having students consider potential users, in addition to the users a product was originally designed for. Empathy is still a component of the design process, but now includes potential users. Students continue to apply the Problem Solving Process.
-
-## Goals
+* Read the lesson plan for <a href="https://curriculum.code.org/csd-20/unit4/2/" target="_blank">Lesson 2: Understanding Your User </a> 
 
 * Review user profiles that students will use
 
-* Identify ways to assess students on
-	* making connections between a user profile and user preferences for a product
-    * making connections between a user profile and adding features to a product 
+* Identify ways for students to make connections between
+	* a user profile and user preferences for a product
+    * a user profile and adding features to a product 
 
 
 
