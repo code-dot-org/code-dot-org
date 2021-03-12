@@ -257,13 +257,6 @@ export const allDatasets = [
     metadataPath: "datasets/nutrition.json",
     imagePath: "datasets/temp.jpg"
   },
-  {
-    id: "nutrition",
-    name: "Nutrition",
-    path: "datasets/nutrition.csv",
-    metadataPath: "datasets/nutrition.json",
-    imagePath: "datasets/temp.jpg"
-  },
    {
     id: "student_survey",
     name: "Student Lifestyle Survey",
