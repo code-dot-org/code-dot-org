@@ -1328,10 +1328,6 @@ FactoryGirl.define do
     association :teacher
     association :level
     association :script
-
-    script_level do |tf|
-      create :script_level, script: tf.script, levels: [tf.level]
-    end
   end
 
   factory :teacher_score do
