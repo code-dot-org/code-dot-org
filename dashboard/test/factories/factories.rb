@@ -1329,8 +1329,10 @@ FactoryGirl.define do
     association :level
     association :script
 
-    after(:build) do |tf|
-      create :script_level, script: tf.script, levels: [tf.level]
+    trait :with_script_level do
+      after(:build) do |tf|
+        create :script_level, script: tf.script, levels: [tf.level]
+      end
     end
   end
 
