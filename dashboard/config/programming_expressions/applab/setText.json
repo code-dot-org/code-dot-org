@@ -1,1 +1,12 @@
-{"func":"setText","category":"UI controls","paletteParams":["id","text"],"params":["\"id\"","\"text\""]}
+{
+  "func": "setText",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "text"
+  ],
+  "params": [
+    "\"id\"",
+    "\"text\""
+  ]
+}

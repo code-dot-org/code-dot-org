@@ -1,1 +1,4 @@
-{"func":"lightSensor","category":"Circuit"}
+{
+  "func": "lightSensor",
+  "category": "Circuit"
+}

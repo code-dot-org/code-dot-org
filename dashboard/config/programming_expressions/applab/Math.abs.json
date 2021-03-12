@@ -1,1 +1,9 @@
-{"func":"Math.abs","category":"Math","type":"value","params":["__"],"docFunc":"mathAbs"}
+{
+  "func": "Math.abs",
+  "category": "Math",
+  "type": "value",
+  "params": [
+    "__"
+  ],
+  "docFunc": "mathAbs"
+}

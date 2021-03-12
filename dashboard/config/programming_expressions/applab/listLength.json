@@ -1,1 +1,7 @@
-{"func":"listLength","block":"list.length","category":"Variables","noAutocomplete":true,"type":"property"}
+{
+  "func": "listLength",
+  "block": "list.length",
+  "category": "Variables",
+  "noAutocomplete": true,
+  "type": "property"
+}

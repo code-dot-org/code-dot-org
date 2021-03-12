@@ -1,1 +1,5 @@
-{"func":"getDirection","category":"Turtle","type":"value"}
+{
+  "func": "getDirection",
+  "category": "Turtle",
+  "type": "value"
+}

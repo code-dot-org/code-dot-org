@@ -1,1 +1,5 @@
-{"func":"lightSensor.threshold","category":"Circuit","type":"property"}
+{
+  "func": "lightSensor.threshold",
+  "category": "Circuit",
+  "type": "property"
+}

@@ -1,1 +1,18 @@
-{"func":"accelerometer.getOrientation","category":"Circuit","type":"value","paletteParams":["orientationType"],"params":["\"inclination\""],"dropdown":{"0":["\"inclination\"","\"pitch\"","\"roll\""]}}
+{
+  "func": "accelerometer.getOrientation",
+  "category": "Circuit",
+  "type": "value",
+  "paletteParams": [
+    "orientationType"
+  ],
+  "params": [
+    "\"inclination\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"inclination\"",
+      "\"pitch\"",
+      "\"roll\""
+    ]
+  }
+}

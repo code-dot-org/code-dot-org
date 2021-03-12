@@ -1,1 +1,5 @@
-{"func":"mathMin","block":"Math.min(__)","category":"Math"}
+{
+  "func": "mathMin",
+  "block": "Math.min(__)",
+  "category": "Math"
+}

@@ -1,1 +1,5 @@
-{"func":"callMyFunction","block":"myFunction()","category":"Functions"}
+{
+  "func": "callMyFunction",
+  "block": "myFunction()",
+  "category": "Functions"
+}

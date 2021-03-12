@@ -1,1 +1,6 @@
-{"func":"led","category":"Circuit","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "led",
+  "category": "Circuit",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

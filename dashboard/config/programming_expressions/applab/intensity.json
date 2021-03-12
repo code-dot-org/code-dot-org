@@ -1,1 +1,8 @@
-{"func":"intensity","category":"Circuit","params":["25"],"modeOptionName":"*.intensity"}
+{
+  "func": "intensity",
+  "category": "Circuit",
+  "params": [
+    "25"
+  ],
+  "modeOptionName": "*.intensity"
+}

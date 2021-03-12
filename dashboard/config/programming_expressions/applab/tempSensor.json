@@ -1,1 +1,4 @@
-{"func":"tempSensor","category":"Circuit"}
+{
+  "func": "tempSensor",
+  "category": "Circuit"
+}

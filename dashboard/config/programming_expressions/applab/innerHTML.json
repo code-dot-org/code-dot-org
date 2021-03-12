@@ -1,1 +1,8 @@
-{"func":"innerHTML","category":"Advanced","params":["\"id\"","\"html\""]}
+{
+  "func": "innerHTML",
+  "category": "Advanced",
+  "params": [
+    "\"id\"",
+    "\"html\""
+  ]
+}

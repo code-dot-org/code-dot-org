@@ -1,1 +1,5 @@
-{"func":"soundSensor.threshold","category":"Circuit","type":"property"}
+{
+  "func": "soundSensor.threshold",
+  "category": "Circuit",
+  "type": "property"
+}

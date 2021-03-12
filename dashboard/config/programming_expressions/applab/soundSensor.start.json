@@ -1,1 +1,5 @@
-{"func":"soundSensor.start","category":"Circuit","noAutocomplete":true}
+{
+  "func": "soundSensor.start",
+  "category": "Circuit",
+  "noAutocomplete": true
+}

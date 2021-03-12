@@ -1,1 +1,6 @@
-{"func":"length","category":"Variables","modeOptionName":"*.length","type":"property"}
+{
+  "func": "length",
+  "category": "Variables",
+  "modeOptionName": "*.length",
+  "type": "property"
+}

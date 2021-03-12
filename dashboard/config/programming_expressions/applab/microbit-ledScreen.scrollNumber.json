@@ -1,1 +1,11 @@
-{"func":"ledScreen.scrollNumber","docFunc": "microbit-ledScreen.scrollNumber","category":"micro:bit","params":["100"],"paletteParams":["number"]}
+{
+  "func": "ledScreen.scrollNumber",
+  "docFunc": "microbit-ledScreen.scrollNumber",
+  "category": "micro:bit",
+  "params": [
+    "100"
+  ],
+  "paletteParams": [
+    "number"
+  ]
+}

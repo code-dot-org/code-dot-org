@@ -1,1 +1,4 @@
-{"func":"accelerometer.start","category":"Circuit"}
+{
+  "func": "accelerometer.start",
+  "category": "Circuit"
+}

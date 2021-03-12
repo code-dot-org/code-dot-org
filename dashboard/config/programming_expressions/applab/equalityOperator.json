@@ -1,1 +1,5 @@
-{"func":"equalityOperator","block":"__ == __","category":"Math"}
+{
+  "func": "equalityOperator",
+  "block": "__ == __",
+  "category": "Math"
+}

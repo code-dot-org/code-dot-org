@@ -1,1 +1,4 @@
-{"func":"clearCanvas","category":"Canvas"}
+{
+  "func": "clearCanvas",
+  "category": "Canvas"
+}

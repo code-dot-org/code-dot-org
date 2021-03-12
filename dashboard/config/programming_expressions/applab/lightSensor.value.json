@@ -1,1 +1,5 @@
-{"func":"lightSensor.value","category":"Circuit","type":"readonlyproperty"}
+{
+  "func": "lightSensor.value",
+  "category": "Circuit",
+  "type": "readonlyproperty"
+}

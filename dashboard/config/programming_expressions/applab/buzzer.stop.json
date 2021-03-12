@@ -1,1 +1,4 @@
-{"func":"buzzer.stop","category":"Circuit"}
+{
+  "func": "buzzer.stop",
+  "category": "Circuit"
+}

@@ -1,1 +1,13 @@
-{"func":"appendItem","category":"Variables","paletteParams":["list","item"],"params":["list","\"f\""],"dontMarshal":true}
+{
+  "func": "appendItem",
+  "category": "Variables",
+  "paletteParams": [
+    "list",
+    "item"
+  ],
+  "params": [
+    "list",
+    "\"f\""
+  ],
+  "dontMarshal": true
+}

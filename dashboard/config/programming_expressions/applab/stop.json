@@ -1,1 +1,4 @@
-{"func":"stop","category":"Circuit"}
+{
+  "func": "stop",
+  "category": "Circuit"
+}
