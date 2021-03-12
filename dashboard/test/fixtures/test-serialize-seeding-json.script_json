@@ -12,6 +12,7 @@
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
+    "serialized_at": "2021-03-12 02:50:09 UTC",
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
@@ -898,6 +899,32 @@
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__c"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-2"
       }
     }
   ],

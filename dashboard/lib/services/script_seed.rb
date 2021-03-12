@@ -473,11 +473,11 @@ module Services
     def self.import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
       return [] if lessons_programming_expressions_data.blank?
 
-      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lv_data|
-        lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
+      lessons_programming_expressions_to_import = lessons_programming_expressions_data.map do |lpe_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == ls_data['seeding_key']['programming_expression.key']}.first&.id
+        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == lpe_data['seeding_key']['programming_expression.key']}.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
