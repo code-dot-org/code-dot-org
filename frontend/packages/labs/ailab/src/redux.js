@@ -61,6 +61,7 @@ const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
+const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_COLUMN_REF = "SET_COLUMN_REF";
@@ -201,6 +202,10 @@ export function setCurrentPanel(currentPanel) {
 
 export function setCurrentColumn(currentColumn) {
   return { type: SET_CURRENT_COLUMN, currentColumn };
+}
+
+export function setHighlightColumn(highlightColumn) {
+  return { type: SET_HIGHLIGHT_COLUMN, highlightColumn };
 }
 
 export function setResultsPhase(phase) {
@@ -467,6 +472,12 @@ export default function rootReducer(state = initialState, action) {
       ...state,
       currentPanel: action.currentPanel,
       currentColumn: undefined
+    };
+  }
+  if (action.type === SET_HIGHLIGHT_COLUMN) {
+    return {
+      ...state,
+      highlightColumn: action.highlightColumn
     };
   }
   if (action.type === SET_CURRENT_COLUMN) {
