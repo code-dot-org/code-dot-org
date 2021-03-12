@@ -14,11 +14,12 @@ $content-view-width: $content-width - $student-list-width;
     table-layout: fixed;
     border: 1px solid;
     border-color: $border-gray;
+    border-collapse: separate;
   }
   th {
     background-color: $table-header;
     color: $charcoal;
-    border-width: 0px 1px 2px 0px;
+    border-width: 0px 1px 1px 0px;
     border-color: $border-gray;
     height: $row-height;
   }
@@ -32,18 +33,27 @@ $content-view-width: $content-width - $student-list-width;
       border-right: 0px;
     }
   }
-  tr {
-    .primary-row {
+  .primary-row {
+    td {
       height: $row-height;
-      display: flex;
     }
-    .expanded-row {
+  }
+  .expanded-row {
+    td {
       height: $expanded-row-height;
-      border-width: 0px 0px 1px 0px;
+      border-width: 0px 1px 1px 0px;
       border-style: solid;
       border-color: $border-gray;
     }
-    .first-expanded-row {
+    td:last-of-type {
+      border-width: 0px 0px 1px 0px;
+    }
+  }
+  .first-expanded-row {
+    td {
+      border-width: 1px 1px 1px 0px;
+    }
+    td:last-of-type {
       border-width: 1px 0px;
     }
   }
@@ -52,14 +62,17 @@ $content-view-width: $content-width - $student-list-width;
     th {
       width: $student-list-width;
     }
-    tbody {
-      tr,
+    .progress-table-student-name {
+      width: $student-list-width;
+    }
+    .expanded-row {
       td {
-        display: block;
-        width: 100%;
+        border-width: 0px 0px 1px 0px;
       }
+    }
+    .first-expanded-row {
       td {
-        height: inherit;
+        border-width: 1px 0px;
       }
     }
   }

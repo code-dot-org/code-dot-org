@@ -11,7 +11,6 @@ import {
 import {lessonIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers';
 import progressTableStyles from './progressTableStyles.scss';
 import ProgressTableLessonNumber from './ProgressTableLessonNumber';
-import {progressTableRowWrapper} from './progressTableHelpers';
 
 // Extra header column to account for scrollbar in progress tables
 const gutterHeader = {
@@ -30,6 +29,7 @@ const styles = {
 export default class ProgressTableContentView extends React.Component {
   static propTypes = {
     rows: PropTypes.arrayOf(studentTableRowType).isRequired,
+    onRow: PropTypes.func.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     onClickLesson: PropTypes.func.isRequired,
@@ -93,11 +93,10 @@ export default class ProgressTableContentView extends React.Component {
   }
 
   contentCellFormatter(_, {rowData, columnIndex}) {
-    const formattedCell = this.props.lessonCellFormatters[
-      rowData.expansionIndex
-    ](this.props.scriptData.stages[columnIndex], rowData.student);
-
-    return progressTableRowWrapper(rowData, formattedCell);
+    return this.props.lessonCellFormatters[rowData.expansionIndex](
+      this.props.scriptData.stages[columnIndex],
+      rowData.student
+    );
   }
 
   /**
@@ -174,6 +173,7 @@ export default class ProgressTableContentView extends React.Component {
         />
         <Virtualized.Body
           rows={this.props.rows}
+          onRow={this.props.onRow}
           rowKey={'id'}
           onScroll={this.props.onScroll}
           style={{
