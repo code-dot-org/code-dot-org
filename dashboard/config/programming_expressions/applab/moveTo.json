@@ -1,0 +1,12 @@
+{
+  "func": "moveTo",
+  "category": "Turtle",
+  "paletteParams": [
+    "x",
+    "y"
+  ],
+  "params": [
+    "0",
+    "0"
+  ]
+}
