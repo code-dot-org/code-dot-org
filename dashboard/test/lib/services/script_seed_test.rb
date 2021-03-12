@@ -339,6 +339,34 @@ module Services
       )
     end
 
+    test 'seed updates lesson standards' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      # create the standard outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the standard for us.
+      new_standard = create :standard, description: 'New Standard'
+
+      expected_descriptions = [
+        script.lessons.first.standards.last.description,
+        new_standard.description
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.standards.first.destroy
+        lesson.standards.push(new_standard)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_descriptions, lesson.standards.map(&:description)
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
