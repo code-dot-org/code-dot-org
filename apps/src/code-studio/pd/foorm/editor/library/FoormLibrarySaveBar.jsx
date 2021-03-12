@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ConfirmationDialog from '../../components/confirmation_dialog';
+import ConfirmationDialog from '../../../components/confirmation_dialog';
 import {connect} from 'react-redux';
 import {
   Modal,
@@ -14,7 +14,7 @@ import {
   FormControl
 } from 'react-bootstrap';
 import Select from 'react-select/lib/Select';
-import {SelectStyleProps} from '../../constants';
+import {SelectStyleProps} from '../../../constants';
 import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
@@ -25,7 +25,7 @@ import {
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
-} from '../editor/foormEditorRedux';
+} from '../foormEditorRedux';
 
 const styles = {
   saveButtonBackground: {

@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import FoormEntityEditor from './editor/components/FoormEntityEditor';
-import FoormEntityLoadButtons from './editor/components/FoormEntityLoadButtons';
+import FoormEntityEditor from '../components/FoormEntityEditor';
+import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
   setAvailableSubEntities,
   setLastSaved,
@@ -11,8 +11,8 @@ import {
   setHasJSONError,
   setLastSavedQuestions,
   setLibraryData
-} from './editor/foormEditorRedux';
-import FoormLibrarySaveBar from '@cdo/apps/code-studio/pd/foorm/library_editor/FoormLibrarySaveBar';
+} from '../foormEditorRedux';
+import FoormLibrarySaveBar from './FoormLibrarySaveBar';
 
 // TODO: dedupe these styles
 const styles = {
