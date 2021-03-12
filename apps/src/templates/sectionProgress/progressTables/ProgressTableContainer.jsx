@@ -10,6 +10,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import classnames from 'classnames';
 
 /**
  * Since our progress tables are built out of standard HTML table elements,
@@ -166,6 +167,19 @@ class ProgressTableContainer extends React.Component {
     });
   }
 
+  onRow = row => {
+    const rowClassName = classnames({
+      'dark-row': row.hasDarkBackground,
+      'primary-row': row.expansionIndex === 0,
+      'expanded-row': row.expansionIndex > 0,
+      'first-expanded-row': row.expansionIndex === 1
+    });
+
+    return {
+      className: rowClassName
+    };
+  };
+
   render() {
     return (
       <div style={styles.container} className="progress-table">
@@ -174,6 +188,7 @@ class ProgressTableContainer extends React.Component {
             ref={r => (this.studentList = r)}
             headers={[i18n.lesson(), ...(this.props.extraHeaderLabels || [])]}
             rows={this.state.rows}
+            onRow={this.onRow}
             sectionId={this.props.section.id}
             scriptData={this.props.scriptData}
             studentTimestamps={this.props.studentTimestamps}
@@ -185,6 +200,7 @@ class ProgressTableContainer extends React.Component {
           <ProgressTableContentView
             ref={r => (this.contentView = r)}
             rows={this.state.rows}
+            onRow={this.onRow}
             needsGutter={this.needsContentHeaderGutter()}
             onScroll={this.onScroll}
             scriptData={this.props.scriptData}
