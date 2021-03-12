@@ -657,6 +657,7 @@ class InstructionsCSF extends React.Component {
                 message={this.props.feedback.message}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
             {this.shouldDisplayHintPrompt() && (

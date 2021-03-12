@@ -13,7 +13,8 @@ class InlineFeedback extends Component {
     message: PropTypes.string.isRequired,
     styles: PropTypes.object,
     isMinecraft: PropTypes.bool,
-    skinId: PropTypes.string
+    skinId: PropTypes.string,
+    textToSpeechEnabled: PropTypes.string
   };
 
   /**
@@ -40,6 +41,7 @@ class InlineFeedback extends Component {
         ttsMessage={message}
         isMinecraft={this.props.isMinecraft}
         skinId={this.props.skinId}
+        textToSpeechEnabled={this.props.textToSpeechEnabled}
       >
         <div className="uitest-topInstructions-inline-feedback">
           <SafeMarkdown markdown={message} />
