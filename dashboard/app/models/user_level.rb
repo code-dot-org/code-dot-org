@@ -143,8 +143,20 @@ class UserLevel < ApplicationRecord
     unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
+  def locked=(val)
+    user_level.unlocked_at = if val
+                               nil
+                             else
+                               Time.now
+                             end
+  end
+
   def locked?
-    return true unless unlocked_at && unlocked_at > AUTOLOCK_PERIOD.ago
+    if unlocked_at.nil?
+      return true
+    else
+      return unlocked_at < AUTOLOCK_PERIOD.ago
+    end
   end
 
   def show_as_locked?(stage)
