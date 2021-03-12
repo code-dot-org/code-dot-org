@@ -389,6 +389,8 @@ namespace :seed do
 
     # patterns are relative to dashboard directory
     watched_files = FileList[
+      # Many rails models contain seeding code
+      'app/models/**/*',
       'app/dsl/**/*',
       'config/**/*',
       'db/**/*',
