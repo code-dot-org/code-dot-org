@@ -35,7 +35,7 @@ module Foorm
         {
           id: library_question.id,
           name: library_question.question_name,
-          type: JSON.parse(library_question.question)['type']
+          type: JSON.parse(library_question.question)['type'] || 'unknown'
         }
       end
       question_names.sort_by! {|library_question| [library_question[:type], library_question[:name]]}
