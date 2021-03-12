@@ -571,6 +571,30 @@ module Services
       )
     end
 
+    # Standards are owned by the course version. We need to make sure all the
+    # standards we need for this script are created, but we should never remove
+    # a standard because it might be in use by another script in this course
+    # version.
+    test 'seed deletes lessons_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.standards.count
+        lesson.standards.delete(lesson.standards.first)
+        assert_equal 1, lesson.standards.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsStandard'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true, hidden: true)
       assert script.seeded_from.nil?
