@@ -1,0 +1,7 @@
+{
+  "category": "Logic",
+  "config": {
+    "docFunc": "codestudio_andOrOperator",
+    "func": "logic_operation"
+  }
+}

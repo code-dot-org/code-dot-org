@@ -1,0 +1,7 @@
+{
+  "func": "maxSpeed",
+  "category": "Sprites",
+  "modeOptionName": "*.maxSpeed",
+  "type": "property",
+  "noAutocomplete": true
+}
