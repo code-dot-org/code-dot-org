@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-04 21:11:46 UTC",
+    "serialized_at": "2021-03-10 21:07:42 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -2196,7 +2196,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\n\n![](https://curriculum.code.org/media/uploads/hexagon2018.png)"
+            "markdown": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
           }
         ]
       },
@@ -2265,7 +2265,7 @@
       "key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
       "position": 1,
       "properties": {
-        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n"
+        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n"
       },
       "seeding_key": {
         "activity_section.key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
@@ -2889,7 +2889,7 @@
       "key": "757cf64e-7e90-497f-b26c-1fe874540d52",
       "position": 1,
       "properties": {
-        "description": "### Loopy Forms & Their Functions (45-60  minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n[**Loopy Forms & Their Functions**](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community.  Artist needs to help his friends design their house by drawing blueprints. It is important that students understands basic shapes and how each shape serves different functions in the house blueprints. They will then write opinion pieces, supply reasons and use linking words to justify their design choices.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.1:** Write opinion pieces in which they introduce the topic or book they are writing about, state an opinion, supply reasons that support the opinion, use linking words (e.g., because, and, also) to connect opinion and reasons, and provide a concluding statement or section.\n\n- **CCSS.MATH.CONTENT.2.G.A.1:** Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.\n\n - **NGSS.K-2-ETS1-2:** Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.\n"
+        "description": "### Loopy Forms & Their Functions (45-60  minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n[**Loopy Forms & Their Functions**](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community.  Artist needs to help his friends design their house by drawing blueprints. It is important that students understands basic shapes and how each shape serves different functions in the house blueprints. They will then write opinion pieces, supply reasons and use linking words to justify their design choices.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.1:** Write opinion pieces in which they introduce the topic or book they are writing about, state an opinion, supply reasons that support the opinion, use linking words (e.g., because, and, also) to connect opinion and reasons, and provide a concluding statement or section.\n\n- **CCSS.MATH.CONTENT.2.G.A.1:** Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.\n\n - **NGSS.K-2-ETS1-2:** Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.\n"
       },
       "seeding_key": {
         "activity_section.key": "757cf64e-7e90-497f-b26c-1fe874540d52",
@@ -4547,7 +4547,7 @@
       "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Artist Intro with JR Hildebrand",
         "level_keys": [
@@ -4573,7 +4573,7 @@
       "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4599,7 +4599,7 @@
       "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4625,7 +4625,7 @@
       "chapter": 46,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4651,7 +4651,7 @@
       "chapter": 47,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4677,7 +4677,7 @@
       "chapter": 48,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4703,7 +4703,7 @@
       "chapter": 49,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4729,7 +4729,7 @@
       "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4756,7 +4756,7 @@
       "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4782,7 +4782,7 @@
       "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4808,7 +4808,7 @@
       "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4834,7 +4834,7 @@
       "chapter": 54,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5720,7 +5720,7 @@
       "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5746,7 +5746,7 @@
       "chapter": 89,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5772,7 +5772,7 @@
       "chapter": 90,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5798,7 +5798,7 @@
       "chapter": 91,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5824,7 +5824,7 @@
       "chapter": 92,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5850,7 +5850,7 @@
       "chapter": 93,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5876,7 +5876,7 @@
       "chapter": 94,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5902,7 +5902,7 @@
       "chapter": 95,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Sticker Design",
         "level_keys": [
@@ -5928,7 +5928,7 @@
       "chapter": 96,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -9184,6 +9184,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -9192,6 +9194,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -9200,6 +9204,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -9208,6 +9214,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -9216,6 +9224,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -9224,6 +9234,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -9232,6 +9244,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -9240,6 +9254,8 @@
       "key": "sequencing",
       "word": "Sequencing",
       "definition": "Putting commands in correct order so computers can read the commands.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "sequencing"
       }
@@ -9248,6 +9264,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -9256,6 +9274,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -9264,6 +9284,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -9272,6 +9294,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -9280,6 +9304,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -9288,6 +9314,8 @@
       "key": "binary",
       "word": "Binary",
       "definition": "A way of representing information using only two options.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "binary"
       }
@@ -9296,6 +9324,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -9304,6 +9334,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -9312,6 +9344,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -9320,6 +9354,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -9328,6 +9364,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -9336,6 +9374,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -9344,6 +9384,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -9352,6 +9394,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -9360,6 +9404,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
@@ -9368,6 +9414,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
@@ -9376,6 +9424,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
