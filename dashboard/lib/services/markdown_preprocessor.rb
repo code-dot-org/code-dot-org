@@ -37,6 +37,12 @@ module Services
       end
     end
 
+    # Returns the key which can be used to create the reference syntax for the
+    # given Vocabulary object.
+    def self.build_vocab_key(vocab)
+      [vocab.key, vocab.course_version.course_offering.key, vocab.course_version.key].join('/')
+    end
+
     # Returns a copy of `content` with all occurrences of Vocabulary references
     # substituted with the equivalent HTML span.
     #
@@ -61,6 +67,12 @@ module Services
           match
         end
       end
+    end
+
+    # Returns the key which can be used to create the reference syntax for the
+    # given Resource object.
+    def self.build_resource_key(resource)
+      [resource.key, resource.course_version.course_offering.key, resource.course_version.key].join('/')
     end
 
     # Returns a copy of `content` with all occurrences of Resource links
