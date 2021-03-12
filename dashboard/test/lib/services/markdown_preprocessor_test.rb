@@ -7,7 +7,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
       course_offering: course_offering,
       key: '1999'
 
-    create :resource,
+    @first_resource = create :resource,
       key: 'first-resource',
       name: "First Resource",
       url: "example.com/first",
@@ -18,7 +18,7 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
       url: "example.com/second",
       course_version: course_version
 
-    create :vocabulary,
+    @first_vocabulary = create :vocabulary,
       key: 'first_vocab',
       word: "First Vocabulary",
       definition: "The first of the vocabulary entries.",
@@ -236,5 +236,15 @@ class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
 
     assert_equal(/\[test ((?-mix:f)+)\/((?-mix:b)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Foo, Bar]))
     assert_equal(/\[test ((?-mix:b)+)\/((?-mix:f)+)\]/, Services::MarkdownPreprocessor.build_key_re('test', [Bar, Foo]))
+  end
+
+  test 'build_vocab_key' do
+    assert_equal 'first_vocab/test-course/1999',
+      Services::MarkdownPreprocessor.build_vocab_key(@first_vocabulary)
+  end
+
+  test 'build_resource_key' do
+    assert_equal 'first-resource/test-course/1999',
+      Services::MarkdownPreprocessor.build_resource_key(@first_resource)
   end
 end
