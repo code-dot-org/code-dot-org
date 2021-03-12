@@ -1,0 +1,11 @@
+{
+  "func": "getImageURL",
+  "category": "UI controls",
+  "paletteParams": [
+    "id"
+  ],
+  "params": [
+    "\"id\""
+  ],
+  "type": "value"
+}
