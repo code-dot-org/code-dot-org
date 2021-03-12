@@ -38,7 +38,7 @@ class ProgressTableSummaryView extends React.Component {
     this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
   }
 
-  lessonProgress(lesson, student) {
+  getLessonProgress(lesson, student) {
     return this.props.lessonProgressByStudent[student.id][lesson.id];
   }
 
@@ -46,7 +46,7 @@ class ProgressTableSummaryView extends React.Component {
     return (
       <ProgressTableSummaryCell
         studentId={student.id}
-        studentLessonProgress={this.lessonProgress(lesson, student)}
+        studentLessonProgress={this.getLessonProgress(lesson, student)}
         isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
         onSelectDetailView={() => this.props.onClickLesson(lesson.position)}
       />
@@ -54,12 +54,12 @@ class ProgressTableSummaryView extends React.Component {
   }
 
   timeSpentCellFormatter(lesson, student) {
-    const progress = this.lessonProgress(lesson, student);
+    const progress = this.getLessonProgress(lesson, student);
     return <ProgressTableTextCell text={timeSpentFormatter(progress)} />;
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    const progress = this.lessonProgress(lesson, student);
+    const progress = this.getLessonProgress(lesson, student);
     return <ProgressTableTextCell text={lastUpdatedFormatter(progress)} />;
   }
 
