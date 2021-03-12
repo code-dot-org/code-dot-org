@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
@@ -15,10 +14,12 @@ const styles = {
   paneHeaderOverride: {
     color: color.default_text
   },
-  audioStyleRTL: {
+  audioRTL: {
     wrapper: {
       float: 'left'
-    },
+    }
+  },
+  audio: {
     button: {
       height: 24,
       marginTop: '3px',
@@ -30,28 +31,12 @@ const styles = {
       paddingLeft: 12
     }
   },
-  audioStyle: {
+  audioLTR: {
     wrapper: {
       float: 'right'
-    },
-    button: {
-      height: 24,
-      marginTop: '3px',
-      marginBottom: '3px'
-    },
-    buttonImg: {
-      lineHeight: '24px',
-      fontSize: 15,
-      paddingLeft: 12
     }
   },
-  helpTabsRtl: {
-    float: 'right',
-    paddingTop: 6,
-    paddingRight: 30
-  },
   helpTabs: {
-    float: 'left',
     paddingTop: 6,
     paddingLeft: 30
   },
@@ -99,8 +84,6 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
-
-    // redux provided
     isMinecraft,
     ttsLongInstructionsUrl,
     hasContainedLevels,
@@ -135,7 +118,10 @@ function TopInstructionsHeader(props) {
           (hasContainedLevels || isCSDorCSP) && (
             <InlineAudio
               src={ttsLongInstructionsUrl}
-              style={isRtl ? styles.audioStyleRTL : styles.audioStyle}
+              style={{
+                ...styles.audio,
+                ...(isRtl ? styles.audioRTL : styles.audioLTR)
+              }}
               autoplayTriggerElementId="codeApp"
             />
           )}
@@ -149,7 +135,7 @@ function TopInstructionsHeader(props) {
             isMinecraft={isMinecraft}
           />
         )}
-        <div style={isRtl ? styles.helpTabsRtl : styles.helpTabs}>
+        <div style={{...styles.helpTabs, float: isRtl ? 'right' : 'left'}}>
           <InstructionsTab
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
@@ -232,15 +218,4 @@ TopInstructionsHeader.propTypes = {
   isCollapsed: PropTypes.bool.isRequired
 };
 
-export const UnconnectedTopInstructionsHeader = TopInstructionsHeader;
-
-export default connect(state => ({
-  isMinecraft: !!state.pageConstants.isMinecraft,
-  ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-  hasContainedLevels: state.pageConstants.hasContainedLevels,
-  isRtl: state.isRtl,
-  documentationUrl: state.pageConstants.documentationUrl,
-  teacherMarkdown: state.instructions.teacherMarkdown,
-  isEmbedView: state.pageConstants.isEmbedView,
-  isCollapsed: state.instructions.isCollapsed
-}))(TopInstructionsHeader);
+export default TopInstructionsHeader;
