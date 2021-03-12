@@ -8,7 +8,7 @@ import {
   resetCodeMirror,
   confirmNoUnsavedChanges
 } from '../forms/editorHelpers.js';
-import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/FoormLibraryEditorManager';
+import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import foorm, {
   setAvailableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
