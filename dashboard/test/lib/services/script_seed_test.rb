@@ -316,9 +316,11 @@ module Services
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
+        key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
+        key = Vocabulary.uniquify_key(key, script.course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
-          key: "#{lesson.name}-vocab-3",
+          key: key,
           definition: "new definition",
           course_version: script.course_version
         )
@@ -763,15 +765,20 @@ module Services
         is_migrated: true
       )
 
+      # Make sure that family name and version year each conform to the
+      # expected formats.
+      family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
+      version_year = "1999"
+
       if with_unit_group
-        unit_group = create :unit_group, family_name: "#{name_prefix}-family", version_year: "#{name_prefix}-version"
+        unit_group = create :unit_group, family_name: family_name, version_year: version_year
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
         CourseOffering.add_course_offering(unit_group)
       else
         script.update!(
           is_course: true,
-          family_name: "#{name_prefix}-family",
-          version_year: "#{name_prefix}-version"
+          family_name: family_name,
+          version_year: version_year
         )
         CourseOffering.add_course_offering(script)
       end
@@ -820,7 +827,10 @@ module Services
         end
 
         (1..num_vocabularies_per_lesson).each do |v|
-          vocab = create :vocabulary, key: "#{lesson.name}-vocab-#{v}", course_version: course_version
+          key = "#{lesson.name}-vocab-#{v}"
+          key = Vocabulary.sanitize_key(key)
+          key = Vocabulary.uniquify_key(key, course_version.id)
+          vocab = create :vocabulary, key: key, course_version: course_version
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
         end
 
