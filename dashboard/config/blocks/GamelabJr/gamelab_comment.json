@@ -2,6 +2,7 @@
   "category": "Comments",
   "config": {
     "blockText": "comment: {COMMENT}",
+    "docFunc": "gamelab_comment",
     "func": "comment",
     "color": [
       0,
