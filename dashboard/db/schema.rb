@@ -1680,7 +1680,6 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.integer "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
     t.integer "analytics_section_id"
