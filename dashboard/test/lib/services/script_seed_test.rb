@@ -26,7 +26,7 @@ module Services
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
-      # File.write(filename, ScriptSeed.serialize_seeding_json(script))
+      #File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
       expected = JSON.parse(File.read(filename))
       actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
@@ -64,8 +64,9 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   21 queries - two for each model, + one extra query each for Lessons,
-      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels, Resources, and Vocabulary.
+      #   30 queries - two for each model, + one extra query each for Lessons,
+      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
+      #     ProgrammingExpression, Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
@@ -81,7 +82,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(85) do
+      assert_queries(89) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -339,6 +340,32 @@ module Services
       )
     end
 
+    test 'seed updates lesson programming expressions' do
+      script = create_script_tree
+
+      # create the programming expression outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the programming expression for us.
+      new_programming_expression = create :programming_expression, key: 'new-block'
+
+      expected_keys = [
+        script.lessons.first.programming_expressions.last.key,
+        new_programming_expression.key
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions.push(new_programming_expression)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_keys, lesson.programming_expressions.map(&:key)
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -370,6 +397,7 @@ module Services
       expected_counts['LevelsScriptLevel'] -= 16
       expected_counts['LessonsResource'] -= 4
       expected_counts['LessonsVocabulary'] -= 4
+      expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
       assert_equal expected_counts, get_counts
     end
@@ -402,6 +430,7 @@ module Services
       expected_counts['LevelsScriptLevel'] -= 8
       expected_counts['LessonsResource'] -= 2
       expected_counts['LessonsVocabulary'] -= 2
+      expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
       assert_equal expected_counts, get_counts
     end
@@ -569,6 +598,29 @@ module Services
       )
     end
 
+    # Programming Expressions are shared across all courses. We need to make sure all the
+    # programming expressions we need for this script are created, but we should never remove
+    # a programming expression because it might be in use by another script.
+    test 'seed deletes lessons_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.programming_expressions.count
+        lesson.programming_expressions.delete(lesson.programming_expressions.first)
+        assert_equal 1, lesson.programming_expressions.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsProgrammingExpression'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true, hidden: true)
       assert script.seeded_from.nil?
@@ -601,7 +653,8 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary, Objective
+        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
+        LessonsProgrammingExpression, Objective
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -631,6 +684,10 @@ module Services
         assert_vocabularies_equal(
           s1.lessons.map(&:vocabularies).flatten,
           s2.lessons.map(&:vocabularies).flatten
+        )
+        assert_programming_expressions_equal(
+          s1.lessons.map(&:programming_expressions).flatten,
+          s2.lessons.map(&:programming_expressions).flatten
         )
         assert_objectives_equal(
           s1.lessons.map(&:objectives).flatten,
@@ -691,6 +748,12 @@ module Services
       end
     end
 
+    def assert_programming_expressions_equal(programming_expression1, programming_expression2)
+      programming_expression1.zip(programming_expression2).each do |pe1, pe2|
+        assert_attributes_equal(pe1, pe2)
+      end
+    end
+
     def assert_objectives_equal(objectives1, objectives2)
       objectives1.zip(objectives2).each do |o1, o2|
         assert_attributes_equal(o1, o2, ['lesson_id'])
@@ -712,6 +775,7 @@ module Services
       num_script_levels_per_section: 2,
       num_resources_per_lesson: 2,
       num_vocabularies_per_lesson: 2,
+      num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       with_unit_group: false
     )
@@ -725,15 +789,20 @@ module Services
         is_migrated: true
       )
 
+      # Make sure that family name and version year each conform to the
+      # expected formats.
+      family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
+      version_year = "1999"
+
       if with_unit_group
-        unit_group = create :unit_group, family_name: "#{name_prefix}-family", version_year: "#{name_prefix}-version"
+        unit_group = create :unit_group, family_name: family_name, version_year: version_year
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
         CourseOffering.add_course_offering(unit_group)
       else
         script.update!(
           is_course: true,
-          family_name: "#{name_prefix}-family",
-          version_year: "#{name_prefix}-version"
+          family_name: family_name,
+          version_year: version_year
         )
         CourseOffering.add_course_offering(script)
       end
@@ -787,6 +856,11 @@ module Services
           key = Vocabulary.uniquify_key(key, course_version.id)
           vocab = create :vocabulary, key: key, course_version: course_version
           LessonsVocabulary.find_or_create_by!(vocabulary: vocab, lesson: lesson)
+        end
+
+        (1..num_programming_expressions_per_lesson).each do |pe|
+          programming_expression = create :programming_expression, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
         (1..num_objectives_per_lesson).each do |o|

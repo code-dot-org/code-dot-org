@@ -8,7 +8,7 @@
       "curriculum_path": "my_curriculum_path",
       "is_migrated": true,
       "is_course": true,
-      "version_year": "test-serialize-seeding-json-version"
+      "version_year": "1999"
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
@@ -898,6 +898,32 @@
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__c"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-2"
       }
     }
   ],

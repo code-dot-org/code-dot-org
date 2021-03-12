@@ -1,0 +1,20 @@
+{
+  "func": "ellipse",
+  "category": "Drawing",
+  "paramButtons": {
+    "minArgs": 2,
+    "maxArgs": 4
+  },
+  "paletteParams": [
+    "x",
+    "y",
+    "w",
+    "h"
+  ],
+  "params": [
+    "200",
+    "200",
+    "400",
+    "400"
+  ]
+}

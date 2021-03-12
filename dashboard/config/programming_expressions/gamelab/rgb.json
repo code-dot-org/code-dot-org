@@ -1,0 +1,19 @@
+{
+  "func": "rgb",
+  "category": "Drawing",
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 4
+  },
+  "paletteParams": [
+    "r",
+    "g",
+    "b"
+  ],
+  "params": [
+    "255",
+    "255",
+    "255"
+  ],
+  "type": "value"
+}

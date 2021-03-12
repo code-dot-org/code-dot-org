@@ -1,0 +1,11 @@
+{
+  "func": "setVisibleEach",
+  "category": "Groups",
+  "paletteParams": [
+    "bool"
+  ],
+  "params": [
+    "false"
+  ],
+  "modeOptionName": "*.setVisibleEach"
+}

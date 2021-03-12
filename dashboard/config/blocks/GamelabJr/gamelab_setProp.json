@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "setProp",
+    "docFunc": "gamelab_setProp",
     "blockText": "set {SPRITE} {PROPERTY} to {VAL}",
     "args": [
       {

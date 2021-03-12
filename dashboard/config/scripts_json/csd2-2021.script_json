@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:40 UTC",
+    "serialized_at": "2021-03-12 19:05:33 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -2214,7 +2214,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\n"
+            "markdown": "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n\n\n"
           }
         ],
         "name": "Tags Poster\r"
@@ -6107,7 +6107,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Pair Programming",
         "level_keys": [
@@ -6133,7 +6133,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6159,7 +6159,7 @@
       "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6185,7 +6185,7 @@
       "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6237,7 +6237,7 @@
       "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Debugging",
         "level_keys": [
@@ -6263,7 +6263,7 @@
       "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6315,7 +6315,7 @@
       "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -10850,16 +10850,6 @@
       }
     },
     {
-      "key": "search_engine",
-      "word": "Search Engine",
-      "definition": "A program that searches for items on the World Wide Web.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "search_engine"
-      }
-    },
-    {
       "key": "trustworthy",
       "word": "Trustworthy",
       "definition": "reliable, honest, and truthful ",
@@ -10867,6 +10857,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "trustworthy"
+      }
+    },
+    {
+      "key": "search_engine",
+      "word": "Search Engine",
+      "definition": "A program that searches for items on the World Wide Web.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "search_engine"
       }
     },
     {
@@ -10950,13 +10950,13 @@
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "search_engine"
+        "vocabulary.key": "trustworthy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "trustworthy"
+        "vocabulary.key": "search_engine"
       }
     },
     {
