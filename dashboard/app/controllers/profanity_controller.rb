@@ -31,11 +31,6 @@ class ProfanityController < ApplicationController
     end
 
     # If we make it here, the request should be throttled.
-    Honeybadger.notify(
-      error_class: 'RequestThrottledWarning',
-      error_message: "Client throttled for POST #{request.path}",
-      context: {throttle_id: id, is_ip: throttle_ip, limit: limit, period: period}
-    )
     head :too_many_requests
   end
 
