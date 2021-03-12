@@ -348,7 +348,7 @@ module Services
       new_programming_expression = create :programming_expression, key: 'new-block'
 
       expected_keys = [
-        script.lessons.first.standards.last.key,
+        script.lessons.first.programming_expressions.last.key,
         new_programming_expression.key
       ]
 
