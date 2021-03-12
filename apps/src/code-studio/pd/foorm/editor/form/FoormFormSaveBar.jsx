@@ -1,10 +1,8 @@
-// Save bar that stays at bottom of the screen of the Foorm Editor.
-// Shows last saved time, any errors, and requires confirmation for published surveys.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ConfirmationDialog from '../../components/confirmation_dialog';
+import ConfirmationDialog from '../../../components/confirmation_dialog';
 import {connect} from 'react-redux';
 import {
   Modal,
@@ -14,17 +12,16 @@ import {
   FormControl
 } from 'react-bootstrap';
 import Select from 'react-select/lib/Select';
-import {SelectStyleProps} from '../../constants';
+import {SelectStyleProps} from '../../../constants';
 import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setFormData,
-  addAvilableForm,
-  setFormQuestions,
+  addAvailableEntity,
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
-} from './foormEditorRedux';
+} from '../foormEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -99,24 +96,25 @@ const confirmationDialogNames = {
   publish: 'publish'
 };
 
-class FoormSaveBar extends Component {
+// Save bar that stays at bottom of the screen of the Foorm Editor when editing forms.
+// Shows last saved time, any errors, and requires confirmation for published forms.
+class FoormFormSaveBar extends Component {
   static propTypes = {
     formCategories: PropTypes.array,
     resetCodeMirror: PropTypes.func,
 
     // Populated by Redux
     formQuestions: PropTypes.object,
-    formHasError: PropTypes.bool,
+    hasJSONError: PropTypes.bool,
     isFormPublished: PropTypes.bool,
     formId: PropTypes.number,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
-    addAvilableForm: PropTypes.func,
-    setFormQuestions: PropTypes.func,
+    addAvailableForm: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestions: PropTypes.func
+    setLastSavedFormQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -214,7 +212,7 @@ class FoormSaveBar extends Component {
           showNewFormSave: false
         });
         // adds new form to form dropdown
-        this.props.addAvilableForm({
+        this.props.addAvailableForm({
           name: result.name,
           version: result.version,
           id: result.id
@@ -244,7 +242,7 @@ class FoormSaveBar extends Component {
       id: result.id,
       questions: updatedQuestions
     });
-    this.props.setLastSavedQuestions(updatedQuestions);
+    this.props.setLastSavedFormQuestions(updatedQuestions);
   }
 
   handleSaveError(result) {
@@ -335,19 +333,19 @@ class FoormSaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.formHasError && (
+            !this.props.hasJSONError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.formHasError && (
+          {this.props.hasJSONError && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.formHasError && (
+          {this.props.saveError && !this.props.hasJSONError && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -364,7 +362,7 @@ class FoormSaveBar extends Component {
               type="button"
               style={styles.button}
               onClick={this.handlePublish}
-              disabled={this.state.isSaving || this.props.formHasError}
+              disabled={this.state.isSaving || this.props.hasJSONError}
             >
               Publish
             </button>
@@ -374,7 +372,7 @@ class FoormSaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.formHasError}
+            disabled={this.state.isSaving || this.props.hasJSONError}
           >
             Save
           </button>
@@ -411,23 +409,24 @@ class FoormSaveBar extends Component {
   }
 }
 
+export const UnconnectedFoormFormSaveBar = FoormFormSaveBar;
+
 export default connect(
   state => ({
-    formQuestions: state.foorm.formQuestions || {},
+    formQuestions: state.foorm.questions || {},
     isFormPublished: state.foorm.isFormPublished,
-    formHasError: state.foorm.hasError,
+    hasJSONError: state.foorm.hasJSONError,
     formId: state.foorm.formId,
     lastSaved: state.foorm.lastSaved,
     saveError: state.foorm.saveError
   }),
   dispatch => ({
     setFormData: formData => dispatch(setFormData(formData)),
-    addAvilableForm: formMetadata => dispatch(addAvilableForm(formMetadata)),
-    setFormQuestions: formQuestions =>
-      dispatch(setFormQuestions(formQuestions)),
+    addAvailableForm: formMetadata =>
+      dispatch(addAvailableEntity(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setLastSavedQuestions: formQuestions =>
+    setLastSavedFormQuestions: formQuestions =>
       dispatch(setLastSavedQuestions(formQuestions))
   })
-)(FoormSaveBar);
+)(FoormFormSaveBar);

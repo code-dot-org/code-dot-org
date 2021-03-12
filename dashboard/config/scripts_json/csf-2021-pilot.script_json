@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 15:38:26 UTC",
+    "serialized_at": "2021-03-10 22:21:35 UTC",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -60,21 +60,6 @@
   ],
   "lessons": [
     {
-      "key": "Making Sprites",
-      "name": "Making Sprites",
-      "absolute_position": 1,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Making Sprites",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
       "key": "introducing-spritelab",
       "name": "Introducing Sprite Lab",
       "absolute_position": 1,
@@ -90,9 +75,24 @@
       }
     },
     {
+      "key": "Making Sprites",
+      "name": "Making Sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Sprites",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
       "key": "Sprites in Action",
       "name": "Sprites in Action",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
@@ -107,7 +107,7 @@
     {
       "key": "blank-space-stories",
       "name": "Blank Space Stories",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
@@ -123,7 +123,7 @@
     {
       "key": "texts-and-prompts",
       "name": "Text and Prompts",
-      "absolute_position": 3,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 5,
@@ -138,7 +138,7 @@
     {
       "key": "user-input-programs",
       "name": "Mini-Project: User Input Programs",
-      "absolute_position": 4,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
@@ -158,6 +158,81 @@
 
   ],
   "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Video: Introducing Sprite Lab",
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
+        "lesson.key": "introducing-spritelab",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "CourseEF_video_IntroSpriteLab_2020"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Sample Apps",
+        "level_keys": [
+          "courseF_intro_apps"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_apps"
+        ],
+        "lesson.key": "introducing-spritelab",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_intro_apps"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Writing Code",
+        "level_keys": [
+          "courseF_intro_birds_puzzle"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_intro_birds_puzzle"
+        ],
+        "lesson.key": "introducing-spritelab",
+        "lesson_group.key": "Sprites",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_intro_birds_puzzle"
+      ]
+    },
     {
       "chapter": 4,
       "position": 1,
@@ -381,81 +456,6 @@
       },
       "level_keys": [
         "courseF_sprites_freeplay"
-      ]
-    },
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Video: Introducing Sprite Lab",
-        "level_keys": [
-          "CourseEF_video_IntroSpriteLab_2020"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseEF_video_IntroSpriteLab_2020"
-        ],
-        "lesson.key": "introducing-spritelab",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "CourseEF_video_IntroSpriteLab_2020"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Exploration: Sample Apps",
-        "level_keys": [
-          "courseF_intro_apps"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_intro_apps"
-        ],
-        "lesson.key": "introducing-spritelab",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "courseF_intro_apps"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Exploration: Writing Code",
-        "level_keys": [
-          "courseF_intro_birds_puzzle"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_intro_birds_puzzle"
-        ],
-        "lesson.key": "introducing-spritelab",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "courseF_intro_birds_puzzle"
       ]
     },
     {
