@@ -167,6 +167,7 @@ class InstructionsCSF extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -595,7 +596,7 @@ class InstructionsCSF extends React.Component {
           >
             <ChatBubble
               ttsUrl={ttsUrl}
-              textToSpeechEnabled={!!ttsUrl}
+              textToSpeechEnabled={this.props.textToSpeechEnabled}
               isMinecraft={this.props.isMinecraft}
               skinId={this.props.skinId}
             >
@@ -665,6 +666,7 @@ class InstructionsCSF extends React.Component {
                 onDismiss={this.dismissHintPrompt}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
           </div>
@@ -738,6 +740,8 @@ export default connect(
       ),
       ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
+      textToSpeechEnabled:
+        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
       longInstructions: state.instructions.longInstructions,
