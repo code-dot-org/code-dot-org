@@ -4,8 +4,6 @@ import SelectDataset from "./UIComponents/SelectDataset";
 import DataDisplay from "./UIComponents/DataDisplay";
 import ColumnInspector from "./UIComponents/ColumnInspector";
 import PhraseBuilder from "./UIComponents/PhraseBuilder";
-import CrossTab from "./UIComponents/CrossTab";
-import ScatterPlot from "./UIComponents/ScatterPlot";
 import DataCard from "./UIComponents/DataCard";
 import TrainingSettings from "./UIComponents/TrainingSettings";
 import TrainModel from "./UIComponents/TrainModel";
@@ -131,13 +129,13 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.columnRefs = {};
+    this.columnPositions = {};
   }
 
   setColumnRef = (columnId, ref) => {
     if (ref) {
       const rect = ref.getBoundingClientRect();
-      this.columnRefs[columnId] = rect.left + rect.width;
+      this.columnPositions[columnId] = rect.left + rect.width;
     }
   };
 
@@ -170,7 +168,7 @@ class App extends Component {
             <ContainerLeft>
               <DataDisplay setColumnRef={this.setColumnRef} />
             </ContainerLeft>
-            <ColumnInspector columnRefs={this.columnRefs} />
+            <ColumnInspector columnPositions={this.columnPositions} />
             <ContainerRight>
               <PhraseBuilder />
             </ContainerRight>

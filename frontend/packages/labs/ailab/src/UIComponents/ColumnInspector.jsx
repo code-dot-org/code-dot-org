@@ -57,7 +57,7 @@ class ColumnInspector extends Component {
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     hideSpecifyColumns: PropTypes.bool,
-    columnRefs: PropTypes.object
+    columnPositions: PropTypes.object
   };
 
   handleChangeDataType = (event, feature) => {
@@ -104,8 +104,8 @@ class ColumnInspector extends Component {
     let leftPosition = 0;
 
     if (currentColumnData) {
-      if (this.props.columnRefs[currentColumnData.id]) {
-        leftPosition = this.props.columnRefs[currentColumnData.id];
+      if (this.props.columnPositions[currentColumnData.id]) {
+        leftPosition = this.props.columnPositions[currentColumnData.id];
       }
     }
 
@@ -115,14 +115,8 @@ class ColumnInspector extends Component {
           id="column-inspector"
           style={{
             ...styles.panel,
-            ...{
-              position: "absolute",
-              border: "1px solid",
-              top: 90,
-              left: leftPosition,
-              height: "initial",
-              zIndex: 1
-            }
+            ...styles.popupPanel,
+            left: leftPosition
           }}
         >
           <div onClick={this.onClose} style={styles.popupClose}>
