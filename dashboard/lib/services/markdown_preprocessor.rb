@@ -32,21 +32,28 @@ module Services
       cache_key = "MarkdownPreprocessor/process/#{Digest::MD5.hexdigest(content)}"
       Rails.cache.fetch(cache_key, cache_options) do
         sub_resource_links! content
-        sub_vocab_links! content
+        sub_vocab_definitions! content
         content
       end
     end
 
-    # Returns a copy of `content` with all occurrences of Vocabulary links
-    # substituted with the equivalent Markdown links
-    def self.sub_vocab_links(content)
-      sub_vocab_links!(content.dup)
+    # Returns a copy of `content` with all occurrences of Vocabulary references
+    # substituted with the equivalent HTML span
+    def self.sub_vocab_definitions(content)
+      sub_vocab_definitions!(content.dup)
     end
 
-    # Performs the substitutions of MarkdownPreprocessor#sub_vocab_links in
-    # place
-    def self.sub_vocab_links!(content)
-      # TODO
+    # Performs the substitutions of MarkdownPreprocessor#sub_vocab_definitions
+    # in place
+    def self.sub_vocab_definitions!(content)
+      content.gsub!(/\[v (#{Vocabulary::KEY_CHAR_RE}+)\]/) do |match|
+        vocab = Vocabulary.find_by(key: $1)
+        if vocab.present?
+          "<span class=\"vocab\" title=#{vocab.definition.inspect}>#{vocab.word}</span>"
+        else
+          match
+        end
+      end
     end
 
     # Returns a copy of `content` with all occurrences of Resource links
