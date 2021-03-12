@@ -1,0 +1,15 @@
+{
+  "func": "animation",
+  "category": "Animations",
+  "paletteParams": [
+    "animation",
+    "x",
+    "y"
+  ],
+  "params": [
+    "anim",
+    "50",
+    "50"
+  ],
+  "noAutocomplete": true
+}

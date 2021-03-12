@@ -1,0 +1,21 @@
+{
+  "func": "rgb",
+  "category": "UI controls",
+  "paramButtons": {
+    "minArgs": 3,
+    "maxArgs": 4
+  },
+  "paletteParams": [
+    "r",
+    "g",
+    "b",
+    "a"
+  ],
+  "params": [
+    "250",
+    "0",
+    "75",
+    "0.5"
+  ],
+  "type": "value"
+}

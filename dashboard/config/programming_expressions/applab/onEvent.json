@@ -1,0 +1,17 @@
+{
+  "func": "onEvent",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "type",
+    "callback"
+  ],
+  "params": [
+    "\"id\"",
+    "\"click\"",
+    "function( ) {\n  \n}"
+  ],
+  "allowFunctionDrop": {
+    "2": true
+  }
+}
