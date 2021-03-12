@@ -1,1 +1,5 @@
-{"func":"camera.zoom","category":"World","type":"property"}
+{
+  "func": "camera.zoom",
+  "category": "World",
+  "type": "property"
+}

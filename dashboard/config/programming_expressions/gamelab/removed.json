@@ -1,1 +1,7 @@
-{"func":"removed","category":"Sprites","modeOptionName":"*.removed","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "removed",
+  "category": "Sprites",
+  "modeOptionName": "*.removed",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

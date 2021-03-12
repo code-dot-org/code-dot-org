@@ -1,1 +1,6 @@
-{"func":"stop","category":"Animations","modeOptionName":"*.stop","noAutocomplete":true}
+{
+  "func": "stop",
+  "category": "Animations",
+  "modeOptionName": "*.stop",
+  "noAutocomplete": true
+}

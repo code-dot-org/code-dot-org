@@ -1,1 +1,5 @@
-{"func":"World.frameCount","category":"World","type":"readonlyproperty"}
+{
+  "func": "World.frameCount",
+  "category": "World",
+  "type": "readonlyproperty"
+}

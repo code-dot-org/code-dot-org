@@ -1,1 +1,10 @@
-{"func":"clearInterval","category":"Control","paletteParams":["__"],"params":["__"]}
+{
+  "func": "clearInterval",
+  "category": "Control",
+  "paletteParams": [
+    "__"
+  ],
+  "params": [
+    "__"
+  ]
+}

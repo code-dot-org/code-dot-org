@@ -1,1 +1,11 @@
-{"func":"setMirrorYEach","category":"Groups","paletteParams":["dir"],"params":["-1"],"modeOptionName":"*.setMirrorYEach"}
+{
+  "func": "setMirrorYEach",
+  "category": "Groups",
+  "paletteParams": [
+    "dir"
+  ],
+  "params": [
+    "-1"
+  ],
+  "modeOptionName": "*.setMirrorYEach"
+}

@@ -1,1 +1,6 @@
-{"func":"sprite.height","category":"Sprites","modeOptionName":"*.height","type":"property"}
+{
+  "func": "sprite.height",
+  "category": "Sprites",
+  "modeOptionName": "*.height",
+  "type": "property"
+}

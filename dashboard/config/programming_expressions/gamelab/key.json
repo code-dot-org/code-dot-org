@@ -1,1 +1,6 @@
-{"func":"key","category":"World","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "key",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

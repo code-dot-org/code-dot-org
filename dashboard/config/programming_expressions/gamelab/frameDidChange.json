@@ -1,1 +1,6 @@
-{"func":"frameDidChange","category":"Sprites","modeOptionName":"*.frameDidChange","type":"value"}
+{
+  "func": "frameDidChange",
+  "category": "Sprites",
+  "modeOptionName": "*.frameDidChange",
+  "type": "value"
+}

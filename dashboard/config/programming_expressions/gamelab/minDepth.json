@@ -1,1 +1,6 @@
-{"func":"minDepth","category":"Groups","modeOptionName":"*.minDepth","type":"value"}
+{
+  "func": "minDepth",
+  "category": "Groups",
+  "modeOptionName": "*.minDepth",
+  "type": "value"
+}

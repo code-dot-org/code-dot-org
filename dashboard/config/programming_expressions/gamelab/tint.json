@@ -1,1 +1,6 @@
-{"func":"tint","category":"Sprites","modeOptionName":"*.tint","type":"property"}
+{
+  "func": "tint",
+  "category": "Sprites",
+  "modeOptionName": "*.tint",
+  "type": "property"
+}

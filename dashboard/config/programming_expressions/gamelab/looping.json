@@ -1,1 +1,7 @@
-{"func":"looping","category":"Animations","modeOptionName":"*.looping","type":"property","noAutocomplete":true}
+{
+  "func": "looping",
+  "category": "Animations",
+  "modeOptionName": "*.looping",
+  "type": "property",
+  "noAutocomplete": true
+}

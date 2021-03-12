@@ -1,1 +1,11 @@
-{"func":"sq","category":"Math","paletteParams":["num"],"params":["2"],"type":"value"}
+{
+  "func": "sq",
+  "category": "Math",
+  "paletteParams": [
+    "num"
+  ],
+  "params": [
+    "2"
+  ],
+  "type": "value"
+}

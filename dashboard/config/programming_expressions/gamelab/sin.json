@@ -1,1 +1,11 @@
-{"func":"sin","category":"Math","paletteParams":["angle"],"params":["0"],"type":"value"}
+{
+  "func": "sin",
+  "category": "Math",
+  "paletteParams": [
+    "angle"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

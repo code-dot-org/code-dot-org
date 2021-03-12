@@ -1,1 +1,5 @@
-{"func":"setKeyValue","category":"World","noAutocomplete":true}
+{
+  "func": "setKeyValue",
+  "category": "World",
+  "noAutocomplete": true
+}

@@ -1,1 +1,6 @@
-{"func":"mouseY","category":"World","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "mouseY",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

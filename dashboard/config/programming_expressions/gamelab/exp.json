@@ -1,1 +1,11 @@
-{"func":"exp","category":"Math","paletteParams":["num"],"params":["1"],"type":"value"}
+{
+  "func": "exp",
+  "category": "Math",
+  "paletteParams": [
+    "num"
+  ],
+  "params": [
+    "1"
+  ],
+  "type": "value"
+}

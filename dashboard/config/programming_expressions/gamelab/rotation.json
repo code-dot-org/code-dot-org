@@ -1,1 +1,6 @@
-{"func":"rotation","category":"Sprites","modeOptionName":"*.rotation","type":"property"}
+{
+  "func": "rotation",
+  "category": "Sprites",
+  "modeOptionName": "*.rotation",
+  "type": "property"
+}

@@ -1,1 +1,10 @@
-{"func":"randomSeed","category":"Math","paletteParams":["seed"],"params":["99"]}
+{
+  "func": "randomSeed",
+  "category": "Math",
+  "paletteParams": [
+    "seed"
+  ],
+  "params": [
+    "99"
+  ]
+}

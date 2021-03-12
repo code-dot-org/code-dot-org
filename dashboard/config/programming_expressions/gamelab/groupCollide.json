@@ -1,1 +1,12 @@
-{"func":"group.collide","category":"Groups","paletteParams":["target"],"params":["target"],"modeOptionName":"group_collide","noAutocomplete":true}
+{
+  "func": "group.collide",
+  "category": "Groups",
+  "paletteParams": [
+    "target"
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_collide",
+  "noAutocomplete": true
+}

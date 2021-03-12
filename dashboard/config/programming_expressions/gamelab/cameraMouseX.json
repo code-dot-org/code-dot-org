@@ -1,1 +1,5 @@
-{"func":"camera.mouseX","category":"World","type":"readonlyproperty"}
+{
+  "func": "camera.mouseX",
+  "category": "World",
+  "type": "readonlyproperty"
+}

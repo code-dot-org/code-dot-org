@@ -1,1 +1,5 @@
-{"func":"World.allSprites","category":"World","type":"readonlyproperty"}
+{
+  "func": "World.allSprites",
+  "category": "World",
+  "type": "readonlyproperty"
+}

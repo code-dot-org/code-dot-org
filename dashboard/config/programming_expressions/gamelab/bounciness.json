@@ -1,1 +1,6 @@
-{"func":"bounciness","category":"Sprites","modeOptionName":"*.bounciness","type":"property"}
+{
+  "func": "bounciness",
+  "category": "Sprites",
+  "modeOptionName": "*.bounciness",
+  "type": "property"
+}

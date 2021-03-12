@@ -1,1 +1,6 @@
-{"func":"sprite.width","category":"Sprites","modeOptionName":"*.width","type":"property"}
+{
+  "func": "sprite.width",
+  "category": "Sprites",
+  "modeOptionName": "*.width",
+  "type": "property"
+}

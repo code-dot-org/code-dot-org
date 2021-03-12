@@ -1,1 +1,6 @@
-{"func":"x","category":"Sprites","modeOptionName":"*.x","type":"property"}
+{
+  "func": "x",
+  "category": "Sprites",
+  "modeOptionName": "*.x",
+  "type": "property"
+}

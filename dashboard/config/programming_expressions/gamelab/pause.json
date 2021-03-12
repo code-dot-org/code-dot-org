@@ -1,1 +1,5 @@
-{"func":"pause","category":"Sprites","modeOptionName":"*.pause"}
+{
+  "func": "pause",
+  "category": "Sprites",
+  "modeOptionName": "*.pause"
+}

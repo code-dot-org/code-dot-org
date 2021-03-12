@@ -1,1 +1,7 @@
-{"func":"clone","category":"Animations","modeOptionName":"*.clone","type":"value","noAutocomplete":true}
+{
+  "func": "clone",
+  "category": "Animations",
+  "modeOptionName": "*.clone",
+  "type": "value",
+  "noAutocomplete": true
+}

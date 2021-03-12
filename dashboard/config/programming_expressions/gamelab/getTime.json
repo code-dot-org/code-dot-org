@@ -1,1 +1,6 @@
-{"func":"getTime","block":"getTime()","category":"Control","type":"value"}
+{
+  "func": "getTime",
+  "block": "getTime()",
+  "category": "Control",
+  "type": "value"
+}

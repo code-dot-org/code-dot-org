@@ -1,1 +1,6 @@
-{"func":"shapeColor","category":"Sprites","modeOptionName":"*.shapeColor","type":"property"}
+{
+  "func": "shapeColor",
+  "category": "Sprites",
+  "modeOptionName": "*.shapeColor",
+  "type": "property"
+}

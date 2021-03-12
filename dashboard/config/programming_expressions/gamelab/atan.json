@@ -1,1 +1,11 @@
-{"func":"atan","category":"Math","paletteParams":["value"],"params":["0"],"type":"value"}
+{
+  "func": "atan",
+  "category": "Math",
+  "paletteParams": [
+    "value"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

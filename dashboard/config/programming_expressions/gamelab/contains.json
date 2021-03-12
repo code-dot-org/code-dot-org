@@ -1,1 +1,12 @@
-{"func":"contains","category":"Groups","paletteParams":["sprite"],"params":["sprite"],"modeOptionName":"*.contains","type":"value"}
+{
+  "func": "contains",
+  "category": "Groups",
+  "paletteParams": [
+    "sprite"
+  ],
+  "params": [
+    "sprite"
+  ],
+  "modeOptionName": "*.contains",
+  "type": "value"
+}

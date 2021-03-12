@@ -1,1 +1,6 @@
-{"func":"scale","category":"Sprites","modeOptionName":"*.scale","type":"property"}
+{
+  "func": "scale",
+  "category": "Sprites",
+  "modeOptionName": "*.scale",
+  "type": "property"
+}

@@ -1,1 +1,16 @@
-{"func":"regularPolygon","category":"Drawing","paletteParams":["x","y","sides","size"],"params":["200","200","5","50"]}
+{
+  "func": "regularPolygon",
+  "category": "Drawing",
+  "paletteParams": [
+    "x",
+    "y",
+    "sides",
+    "size"
+  ],
+  "params": [
+    "200",
+    "200",
+    "5",
+    "50"
+  ]
+}

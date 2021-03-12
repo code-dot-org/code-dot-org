@@ -1,1 +1,5 @@
-{"func":"mouseDidMove","category":"World","type":"value"}
+{
+  "func": "mouseDidMove",
+  "category": "World",
+  "type": "value"
+}

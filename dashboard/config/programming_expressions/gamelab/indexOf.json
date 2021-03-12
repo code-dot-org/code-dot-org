@@ -1,1 +1,12 @@
-{"func":"indexOf","category":"Variables","paletteParams":["searchValue"],"params":["\"World\""],"modeOptionName":"*.indexOf","type":"value"}
+{
+  "func": "indexOf",
+  "category": "Variables",
+  "paletteParams": [
+    "searchValue"
+  ],
+  "params": [
+    "\"World\""
+  ],
+  "modeOptionName": "*.indexOf",
+  "type": "value"
+}
