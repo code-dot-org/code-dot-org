@@ -9,7 +9,10 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
-import FoormEditor from '../../../../../src/code-studio/pd/foorm/FoormEditor';
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormFormSaveBar, {
+  UnconnectedFoormFormSaveBar
+} from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import foorm, {
   setFormData
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
@@ -32,10 +35,22 @@ describe('FoormEditor', () => {
 
     store = getStore();
 
-    defaultProps = {
-      populateCodeMirror: () => {},
+    const HeaderTitle = React.createElement('h1', null, 'A title');
+    const SaveBar = React.createElement(FoormFormSaveBar, {
       resetCodeMirror: () => {},
       formCategories: ['surveys/pd', 'surveys/teacher']
+    });
+
+    defaultProps = {
+      populateCodeMirror: () => {},
+      preparePreview: () => {},
+      previewQuestions: {},
+      previewErrors: [],
+      forceRerenderKey: 0,
+      headerTitle: HeaderTitle,
+      validateURL: '/a/fake/url',
+      validateDataKey: 'a_string',
+      saveBar: SaveBar
     };
   });
 
@@ -47,7 +62,7 @@ describe('FoormEditor', () => {
     const combinedProps = {...defaultProps, ...overrideProps};
     return mount(
       <Provider store={store}>
-        <FoormEditor {...combinedProps} />
+        <FoormEntityEditor {...combinedProps} />
       </Provider>
     );
   };
@@ -95,7 +110,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
@@ -127,7 +142,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const publishButton = saveBar.find('button').at(0);
     expect(publishButton.contains('Publish')).to.be.true;
@@ -171,7 +186,7 @@ describe('FoormEditor', () => {
       'Save error'
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(1);
     expect(saveButton.contains('Save')).to.be.true;
@@ -207,7 +222,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveData)
     ]);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -246,7 +261,9 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(samplePublishedFormData));
     wrapper.update();
 
-    const saveBarButtons = wrapper.find('FoormSaveBar').find('button');
+    const saveBarButtons = wrapper
+      .find(UnconnectedFoormFormSaveBar)
+      .find('button');
     const saveButton = saveBarButtons.at(0);
 
     expect(saveButton.contains('Publish')).to.be.false;
@@ -260,7 +277,7 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(samplePublishedFormData));
     wrapper.update();
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -297,7 +314,7 @@ describe('FoormEditor', () => {
     store.dispatch(setFormData(sampleDraftFormData));
     wrapper.update();
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Publish')).to.be.true;
@@ -343,7 +360,7 @@ describe('FoormEditor', () => {
     // expect to see no form name
     expect(wrapper.find('FoormEditorHeader').find('h2').length).to.equal(0);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     // click save button
     const saveButton = saveBar.find('button').at(1);
@@ -393,7 +410,7 @@ describe('FoormEditor', () => {
     // expect to see no form name
     expect(wrapper.find('FoormEditorHeader').find('h2').length).to.equal(0);
 
-    const saveBar = wrapper.find('FoormSaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormFormSaveBar);
 
     // click save button
     const saveButton = saveBar.find('button').at(1);

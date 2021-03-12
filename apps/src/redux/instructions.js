@@ -41,7 +41,7 @@ const instructionsInitialState = {
   longInstructions: undefined,
   teacherMarkdown: undefined,
   hasContainedLevels: false,
-  collapsed: false,
+  isCollapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
   renderedHeight: 0,
   // The amount of vertical space consumed by the TopInstructions component
@@ -77,10 +77,10 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       mapReference,
       referenceLinks
     } = action;
-    let collapsed = state.collapsed;
+    let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
       // If we only have short instructions, we want to be in collapsed mode
-      collapsed = true;
+      isCollapsed = true;
     }
     return Object.assign({}, state, {
       noInstructionsWhenCollapsed,
@@ -90,7 +90,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
-      collapsed,
+      isCollapsed,
       levelVideos,
       mapReference,
       referenceLinks
@@ -99,7 +99,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return Object.assign({}, state, {
-      collapsed: !state.collapsed
+      isCollapsed: !state.isCollapsed
     });
   }
 
@@ -110,7 +110,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   ) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
-      expandedHeight: !state.collapsed ? action.height : state.expandedHeight
+      expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight
     });
   }
 
