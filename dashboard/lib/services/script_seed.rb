@@ -63,6 +63,7 @@ module Services
         lessons_resources: lessons_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
+        programming_expressions: ProgrammingExpression.all,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives
       )
@@ -196,6 +197,7 @@ module Services
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
+        seed_context.programming_expressions = ProgrammingExpression.all
         seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
 
