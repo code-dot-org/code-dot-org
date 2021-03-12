@@ -6,6 +6,7 @@ const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
 const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
 const SET_AVAILABLE_SUB_ENTITIES = 'foormEditor/SET_AVAILABLE_SUB_ENTITIES';
 const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
+const ADD_AVAILABLE_SUB_ENTITY = 'foormEditor/ADD_AVAILABLE_SUB_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
@@ -53,6 +54,11 @@ export const setAvailableEntities = entitiesMetadata => ({
   entitiesMetadata
 });
 
+export const addAvailableEntity = entityMetadata => ({
+  type: ADD_AVAILABLE_ENTITY,
+  entityMetadata
+});
+
 // "Sub-entities" are the list of library questions
 // in a selected library that a user can choose to edit.
 // There is no equivalent "sub-entity" when editing forms currently.
@@ -61,11 +67,9 @@ export const setAvailableSubEntities = subEntitiesMetadata => ({
   subEntitiesMetadata
 });
 
-// An "entity" (form or library) is added to the list of forms or libraries that can be edited
-// after a new form or library is created.
-export const addAvailableEntity = entityMetadata => ({
-  type: ADD_AVAILABLE_ENTITY,
-  entityMetadata
+export const addAvailableSubEntity = subEntityMetadata => ({
+  type: ADD_AVAILABLE_SUB_ENTITY,
+  subEntityMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -92,17 +96,16 @@ const initialState = {
   lastSaved: null,
   lastSavedQuestions: '',
   // State specific to Foorm Form editor
-  isFormPublished: null,
+  formId: null,
   formName: null,
   formVersion: null,
-  formId: null,
+  isFormPublished: null,
   // State specific to Foorm Library editor
-  libraryQuestion: '',
-  libraryQuestionName: null,
-  libraryQuestionId: null,
-  libraryName: null,
   libraryId: null,
-  libraryVersion: null
+  libraryName: null,
+  libraryVersion: null,
+  libraryQuestionId: null,
+  libraryQuestionName: null
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -131,7 +134,7 @@ export default function foormEditorRedux(state = initialState, action) {
   if (action.type === SET_LIBRARY_QUESTION_DATA) {
     return {
       ...state,
-      question: action.libraryQuestionData['question'],
+      questions: action.libraryQuestionData['question'],
       libraryQuestionName: action.libraryQuestionData['name'],
       libraryQuestionId: action.libraryQuestionData['id']
     };
@@ -157,11 +160,25 @@ export default function foormEditorRedux(state = initialState, action) {
     };
   }
   if (action.type === ADD_AVAILABLE_ENTITY) {
-    let newEntitiesList = [...state.availableEntities];
-    newEntitiesList.push(action.entityMetadata);
+    let updatedEntities = mergeNewItem(
+      state.availableEntities,
+      action.entityMetadata
+    );
+
     return {
       ...state,
-      availableEntities: newEntitiesList
+      availableEntities: updatedEntities
+    };
+  }
+  if (action.type === ADD_AVAILABLE_SUB_ENTITY) {
+    let updatedSubEntities = mergeNewItem(
+      state.availableSubEntities,
+      action.subEntityMetadata
+    );
+
+    return {
+      ...state,
+      availableSubEntities: updatedSubEntities
     };
   }
   if (action.type === SET_LAST_SAVED) {
@@ -184,4 +201,10 @@ export default function foormEditorRedux(state = initialState, action) {
   }
 
   return state;
+}
+
+function mergeNewItem(oldItems, newItem) {
+  let unchangedItems = oldItems.filter(item => item['id'] !== newItem['id']);
+
+  return [...unchangedItems, newItem];
 }
