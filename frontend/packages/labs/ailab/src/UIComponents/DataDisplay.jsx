@@ -14,7 +14,6 @@ class DataDisplay extends Component {
     setHighlightColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     highlightColumn: PropTypes.string,
-    currentPanel: PropTypes.string,
     setColumnRef: PropTypes.func
   };
 
@@ -38,9 +37,9 @@ class DataDisplay extends Component {
         style = styles.dataDisplayHeaderHighlighted;
       }
     } else {
-      if (false && key === this.props.labelColumn) {
+      if (key === this.props.labelColumn) {
         style = styles.dataDisplayHeaderLabelUnselected;
-      } else if (false && this.props.selectedFeatures.includes(key)) {
+      } else if (this.props.selectedFeatures.includes(key)) {
         style = styles.dataDisplayHeaderFeatureUnselected;
       } else {
         style = styles.dataDisplayHeaderUnselected;
@@ -86,7 +85,6 @@ class DataDisplay extends Component {
     const {
       data,
       setCurrentColumn,
-      currentPanel,
       setColumnRef,
       setHighlightColumn
     } = this.props;
@@ -172,8 +170,7 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
-    highlightColumn: state.highlightColumn,
-    currentPanel: state.currentPanel
+    highlightColumn: state.highlightColumn
   }),
   dispatch => ({
     setCurrentColumn(column) {

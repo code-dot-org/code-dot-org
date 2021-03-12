@@ -131,15 +131,13 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      columnRefs: {}
-    };
+    this.columnRefs = {};
   }
 
   setColumnRef = (columnId, ref) => {
     if (ref) {
       const rect = ref.getBoundingClientRect();
-      this.state.columnRefs[columnId] = rect.left + rect.width;
+      this.columnRefs[columnId] = rect.left + rect.width;
     }
   };
 
@@ -172,7 +170,7 @@ class App extends Component {
             <ContainerLeft>
               <DataDisplay setColumnRef={this.setColumnRef} />
             </ContainerLeft>
-            <ColumnInspector columnRefs={this.state.columnRefs} />
+            <ColumnInspector columnRefs={this.columnRefs} />
             <ContainerRight>
               <PhraseBuilder />
               {false && currentPanel === "dataDisplayLabel" && (

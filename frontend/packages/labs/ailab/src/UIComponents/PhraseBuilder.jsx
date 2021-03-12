@@ -9,19 +9,16 @@ import {
   addSelectedFeature,
   removeSelectedFeature
 } from "../redux";
-import { ColumnTypes, styles } from "../constants.js";
-import { Bar } from "react-chartjs-2";
+import { styles } from "../constants.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 class PhraseBuilder extends Component {
   static propTypes = {
     labelColumn: PropTypes.string,
-    currentColumnData: PropTypes.object,
     setLabelColumn: PropTypes.func.isRequired,
     addSelectedFeature: PropTypes.func.isRequired,
     removeSelectedFeature: PropTypes.func.isRequired,
-    rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     hideSpecifyColumns: PropTypes.bool,
     selectableLabels: PropTypes.array,
@@ -43,26 +40,11 @@ class PhraseBuilder extends Component {
 
   render() {
     const {
-      currentColumnData,
-      rangesByColumn,
       labelColumn,
       selectedFeatures,
       selectableLabels,
       selectableFeatures
     } = this.props;
-
-    if (
-      currentColumnData &&
-      currentColumnData.dataType === ColumnTypes.CATEGORICAL
-    ) {
-      barData.labels = Object.values(currentColumnData.uniqueOptions);
-      barData.datasets[0].data = barData.labels.map(option => {
-        return currentColumnData.frequencies[option];
-      });
-      barData.datasets[0].label = currentColumnData.id;
-    }
-
-    const maxLabelsInHistogram = 4;
 
     return (
       <div
