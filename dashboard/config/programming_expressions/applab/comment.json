@@ -1,0 +1,6 @@
+{
+  "func": "comment",
+  "block": "// Comment",
+  "expansion": "// ",
+  "category": "Functions"
+}

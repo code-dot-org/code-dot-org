@@ -4,7 +4,7 @@
 <br />
 <br />
 
-Date of Last Revision: March 11, 2020
+Date of Last Revision: March 11, 2021
 
 You can review the previous Privacy Policy [here](https://code.org/privacy-sep2020).
 
@@ -151,7 +151,7 @@ Code.org offers a tool called the [“Internet Simulator”](https://code.org/i
 
 In addition, Teachers may provide written feedback to their Students on coursework. Users may also send messages to Code.org for customer-support requests.
 
-Other than the above, the Services support no other form of messaging among Users.
+Other than the above, the Services do not directly provide any other form of messaging among Users (although Users may use Code.org tools to create apps that support messaging among individuals).
 
 <a name="student-email-addresses"></a>
 ### Student Email Addresses

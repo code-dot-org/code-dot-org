@@ -8,7 +8,7 @@
       "curriculum_path": "my_curriculum_path",
       "is_migrated": true,
       "is_course": true,
-      "version_year": "test-serialize-seeding-json-version"
+      "version_year": "1999"
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",

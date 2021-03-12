@@ -1,0 +1,6 @@
+{
+  "func": "getScaledHeight",
+  "category": "Sprites",
+  "modeOptionName": "*.getScaledHeight",
+  "type": "value"
+}
