@@ -167,7 +167,7 @@ class FoormLibraryEditorManager extends React.Component {
     this.initializeLibraryQuestion(true);
   }
 
-  initializeLibraryQuestion = showCodeMirror => {
+  initializeLibraryQuestion(showCodeMirror) {
     this.updateLibraryQuestionData({
       question: {},
       name: null,
@@ -179,19 +179,19 @@ class FoormLibraryEditorManager extends React.Component {
       hasLoadError: false,
       showCodeMirror: showCodeMirror
     });
-  };
+  }
 
-  resetSaveStatus = () => {
+  resetSaveStatus() {
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
-  };
+  }
 
-  updateLibraryQuestionData = libraryQuestionData => {
+  updateLibraryQuestionData(libraryQuestionData) {
     this.props.setLibraryQuestionData(libraryQuestionData);
     this.props.setHasJSONError(false);
     this.props.setLastSavedQuestions(libraryQuestionData['question']);
     this.props.resetCodeMirror(libraryQuestionData['question']);
-  };
+  }
 
   areLibraryQuestionsAvailable() {
     return !!(
