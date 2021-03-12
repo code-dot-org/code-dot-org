@@ -10,7 +10,9 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+// TODO: use generic FoormEntityEditor component
 import FoormLibraryEditor from '../../../../../src/code-studio/pd/foorm/FoormLibraryEditor';
+// TODO: use generic FoormEditorRedux store
 import foorm, {
   setLibraryData,
   setLibraryQuestionData
