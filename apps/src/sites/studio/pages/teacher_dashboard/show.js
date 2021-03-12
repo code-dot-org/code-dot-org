@@ -21,7 +21,9 @@ import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress, {
+  setShowSectionProgressDetails
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
@@ -35,17 +37,20 @@ import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
-const section = scriptData.section;
-const sections = scriptData.sections;
-const validGrades = scriptData.validGrades;
-const validScripts = scriptData.validScripts;
-const studentScriptIds = scriptData.studentScriptIds;
-const validCourses = scriptData.validCourses;
-const currentUserId = scriptData.currentUserId;
-const hasSeenStandardsReportInfo = scriptData.hasSeenStandardsReportInfo;
-const localeCode = scriptData.localeCode;
-const textToSpeechScriptIds = scriptData.textToSpeechScriptIds;
-const preReaderScriptIds = scriptData.preReaderScriptIds;
+const {
+  section,
+  sections,
+  validGrades,
+  validScripts,
+  studentScriptIds,
+  validCourses,
+  currentUserId,
+  hasSeenStandardsReportInfo,
+  localeCode,
+  textToSpeechScriptIds,
+  preReaderScriptIds,
+  showSectionProgressDetails
+} = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -79,6 +84,7 @@ $(document).ready(function() {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
+  store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
 
   if (!section.sharing_disabled && section.script.project_sharing) {
     store.dispatch(setShowSharingColumn(true));

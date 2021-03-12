@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-08 19:38:08 UTC",
+    "serialized_at": "2021-03-10 21:57:31 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -3446,7 +3446,7 @@
       "key": "0266eaa6-e5a9-4d9a-8c7f-3e73f4b704b3",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a **while loop**. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the **while loop** with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the **while loop**. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 30%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this **while loop** experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a **while loop**, you continue moving forward and do not return to the previous **loop** just because the conditions match again.\n\n####-Or-",
+        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a **while loop**. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the **while loop** with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the **while loop**. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n\n![](https://images.code.org/b290021fdaad9c750c91f80ca5d6dccc-express17.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this **while loop** experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a **while loop**, you continue moving forward and do not return to the previous **loop** just because the conditions match again.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -5910,7 +5910,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5936,7 +5936,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5962,7 +5962,7 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Nested Loops with the Bee",
         "level_keys": [
@@ -5988,7 +5988,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6014,7 +6014,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6040,7 +6040,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6066,7 +6066,7 @@
       "chapter": 88,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6092,7 +6092,7 @@
       "chapter": 89,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6118,7 +6118,7 @@
       "chapter": 90,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6144,7 +6144,7 @@
       "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6171,7 +6171,7 @@
       "chapter": 92,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6197,7 +6197,7 @@
       "chapter": 93,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6223,7 +6223,7 @@
       "chapter": 94,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6249,7 +6249,7 @@
       "chapter": 95,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6275,7 +6275,7 @@
       "chapter": 96,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6537,7 +6537,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Powered Minecart_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6690,7 +6693,7 @@
       "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If Statements",
         "level_keys": [
@@ -6716,7 +6719,7 @@
       "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6742,7 +6745,7 @@
       "chapter": 114,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6768,7 +6771,7 @@
       "chapter": 115,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6794,7 +6797,7 @@
       "chapter": 116,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6820,7 +6823,7 @@
       "chapter": 117,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6846,7 +6849,7 @@
       "chapter": 118,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6872,7 +6875,7 @@
       "chapter": 119,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If and If/Else Statements",
         "level_keys": [
@@ -6898,7 +6901,7 @@
       "chapter": 120,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6924,7 +6927,7 @@
       "chapter": 121,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6950,7 +6953,7 @@
       "chapter": 122,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6977,7 +6980,7 @@
       "chapter": 123,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7003,7 +7006,7 @@
       "chapter": 124,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7029,7 +7032,7 @@
       "chapter": 125,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7055,7 +7058,7 @@
       "chapter": 126,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7081,7 +7084,7 @@
       "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7107,7 +7110,7 @@
       "chapter": 128,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7133,7 +7136,7 @@
       "chapter": 129,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7159,7 +7162,7 @@
       "chapter": 130,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
@@ -7185,7 +7188,7 @@
       "chapter": 131,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7211,7 +7214,7 @@
       "chapter": 132,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7237,7 +7240,7 @@
       "chapter": 133,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7263,7 +7266,7 @@
       "chapter": 134,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7289,7 +7292,7 @@
       "chapter": 135,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7315,7 +7318,7 @@
       "chapter": 136,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7342,7 +7345,7 @@
       "chapter": 137,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7368,7 +7371,7 @@
       "chapter": 138,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7394,7 +7397,7 @@
       "chapter": 139,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7420,7 +7423,7 @@
       "chapter": 140,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
