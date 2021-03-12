@@ -639,6 +639,10 @@ module Services
           s1.lessons.map(&:objectives).flatten,
           s2.lessons.map(&:objectives).flatten
         )
+        assert_standards_equal(
+          s1.lessons.map(&:standards).flatten,
+          s2.lessons.map(&:standards).flatten,
+        )
       end
     end
 
@@ -697,6 +701,12 @@ module Services
     def assert_objectives_equal(objectives1, objectives2)
       objectives1.zip(objectives2).each do |o1, o2|
         assert_attributes_equal(o1, o2, ['lesson_id'])
+      end
+    end
+
+    def assert_standards_equal(standards1, standards2)
+      standards1.zip(standards2).each do |s1, s2|
+        assert_attributes_equal(s1, s2)
       end
     end
 
