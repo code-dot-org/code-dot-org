@@ -10,7 +10,8 @@ const HintPrompt = ({
   onDismiss,
   borderColor,
   isMinecraft,
-  skinId
+  skinId,
+  textToSpeechEnabled
 }) => {
   const buttonStyles = {
     common: {
@@ -35,6 +36,7 @@ const HintPrompt = ({
       ttsMessage={message}
       isMinecraft={isMinecraft}
       skinId={skinId}
+      textToSpeechEnabled={textToSpeechEnabled}
     >
       <p>{message}</p>
       <button
@@ -60,7 +62,8 @@ HintPrompt.propTypes = {
   onConfirm: PropTypes.func.isRequired,
   onDismiss: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
-  skinId: PropTypes.string.isRequired
+  skinId: PropTypes.string.isRequired,
+  textToSpeechEnabled: PropTypes.bool
 };
 
 export default Radium(HintPrompt);
