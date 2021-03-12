@@ -1,0 +1,11 @@
+{
+  "func": "floor",
+  "category": "Math",
+  "paletteParams": [
+    "num"
+  ],
+  "params": [
+    "0.9"
+  ],
+  "type": "value"
+}

@@ -1,0 +1,10 @@
+{
+  "func": "led.blink",
+  "category": "Circuit",
+  "paletteParams": [
+    "interval"
+  ],
+  "params": [
+    "200"
+  ]
+}
