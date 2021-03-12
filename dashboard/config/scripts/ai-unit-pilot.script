@@ -7,7 +7,9 @@ level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
 level 'Oceans_Short', progression: 'Recognizing Fish Features'
 level 'Oceans_Long', progression: 'Recognizing Expressions'
 
-lesson 'lesson2', display_name: 'How Computers Learn (Unplugged)', has_lesson_plan: true
+lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
+level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
 
 lesson 'lesson3', display_name: 'AI for Social Good (Unplugged)', has_lesson_plan: true
 
