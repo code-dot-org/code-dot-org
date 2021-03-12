@@ -26,7 +26,7 @@ module Services
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
-      File.write(filename, ScriptSeed.serialize_seeding_json(script))
+      #File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
       expected = JSON.parse(File.read(filename))
       actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
