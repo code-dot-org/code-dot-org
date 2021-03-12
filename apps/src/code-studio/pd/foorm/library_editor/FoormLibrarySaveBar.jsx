@@ -20,12 +20,12 @@ import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setLibraryQuestionData,
   setLibraryData,
-  addAvailableLibrary,
-  addAvailableLibraryQuestion,
+  addAvailableEntity,
+  addAvailableSubEntity,
   setLastSaved,
   setSaveError,
-  setLastSavedQuestion
-} from './foormLibraryEditorRedux';
+  setLastSavedQuestions
+} from '../editor/foormEditorRedux';
 
 const styles = {
   saveButtonBackground: {
@@ -74,10 +74,10 @@ class FoormLibrarySaveBar extends Component {
     resetCodeMirror: PropTypes.func,
 
     // Populated by Redux
-    libraryQuestion: PropTypes.object,
-    libraryHasError: PropTypes.bool,
-    libraryQuestionId: PropTypes.number,
     libraryId: PropTypes.number,
+    libraryQuestionId: PropTypes.number,
+    questions: PropTypes.object,
+    hasJSONError: PropTypes.bool,
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setLibraryData: PropTypes.func,
@@ -86,7 +86,7 @@ class FoormLibrarySaveBar extends Component {
     addAvailableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedQuestion: PropTypes.func
+    setLastSavedLibraryQuestionQuestions: PropTypes.func
   };
 
   constructor(props) {
@@ -175,7 +175,7 @@ class FoormLibrarySaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        question: this.props.libraryQuestion
+        question: this.props.questions
       })
     })
       .done(result => {
@@ -212,7 +212,7 @@ class FoormLibrarySaveBar extends Component {
       processData: false,
       data: JSON.stringify({
         name: this.state.libraryQuestionName,
-        question: this.props.libraryQuestion,
+        question: this.props.questions,
         library_id: this.props.libraryId,
         library_name: fullLibraryName
       })
@@ -262,7 +262,7 @@ class FoormLibrarySaveBar extends Component {
       id: libraryQuestion.id,
       question: updatedQuestion
     });
-    this.props.setLastSavedQuestion(updatedQuestion);
+    this.props.setLastSavedLibraryQuestionQuestions(updatedQuestion);
   }
 
   handleSaveError(result) {
@@ -404,19 +404,19 @@ class FoormLibrarySaveBar extends Component {
         <div style={styles.saveButtonBackground} className="saveBar">
           {this.props.lastSaved &&
             !this.props.saveError &&
-            !this.props.libraryHasError && (
+            !this.props.hasJSONError && (
               <div style={styles.lastSaved} className="lastSavedMessage">
                 {`Last saved at: ${new Date(
                   this.props.lastSaved
                 ).toLocaleString()}`}
               </div>
             )}
-          {this.props.libraryHasError && (
+          {this.props.hasJSONError && (
             <div style={styles.error}>
               {`Please fix parsing error before saving. See the errors noted on the left side of the editor.`}
             </div>
           )}
-          {this.props.saveError && !this.props.libraryHasError && (
+          {this.props.saveError && !this.props.hasJSONError && (
             <div
               style={styles.error}
               className="saveErrorMessage"
@@ -432,7 +432,7 @@ class FoormLibrarySaveBar extends Component {
             type="button"
             style={styles.button}
             onClick={this.handleSave}
-            disabled={this.state.isSaving || this.props.libraryHasError}
+            disabled={this.state.isSaving || this.props.hasJSONError}
           >
             Save
           </button>
@@ -458,24 +458,24 @@ class FoormLibrarySaveBar extends Component {
 
 export default connect(
   state => ({
-    libraryQuestion: state.foorm.libraryQuestion || {},
-    libraryHasError: state.foorm.hasError,
+    questions: state.foorm.questions || {},
+    hasJSONError: state.foorm.hasJSONError,
+    libraryId: state.foorm.libraryId,
     libraryQuestionId: state.foorm.libraryQuestionId,
     lastSaved: state.foorm.lastSaved,
-    saveError: state.foorm.saveError,
-    libraryId: state.foorm.libraryId
+    saveError: state.foorm.saveError
   }),
   dispatch => ({
     setLibraryQuestionData: libraryQuestionData =>
       dispatch(setLibraryQuestionData(libraryQuestionData)),
     setLibraryData: libraryData => dispatch(setLibraryData(libraryData)),
     addAvailableLibrary: libraryMetadata =>
-      dispatch(addAvailableLibrary(libraryMetadata)),
+      dispatch(addAvailableEntity(libraryMetadata)),
     addAvailableLibraryQuestion: libraryQuestionMetadata =>
-      dispatch(addAvailableLibraryQuestion(libraryQuestionMetadata)),
+      dispatch(addAvailableSubEntity(libraryQuestionMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
-    setLastSavedQuestion: libraryQuestion =>
-      dispatch(setLastSavedQuestion(libraryQuestion))
+    setLastSavedLibraryQuestionQuestions: libraryQuestionQuestions =>
+      dispatch(setLastSavedQuestions(libraryQuestionQuestions))
   })
 )(FoormLibrarySaveBar);
