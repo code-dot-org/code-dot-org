@@ -2,7 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getEmptyCellDetails, setCurrentColumn, setHighlightColumn } from "../redux";
+import { setCurrentColumn, setHighlightColumn } from "../redux";
 import { styles } from "../constants";
 
 class DataDisplay extends Component {
@@ -10,34 +10,12 @@ class DataDisplay extends Component {
     data: PropTypes.array,
     labelColumn: PropTypes.string,
     selectedFeatures: PropTypes.array,
-    emptyCellDetails: PropTypes.array,
     setCurrentColumn: PropTypes.func,
     setHighlightColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     highlightColumn: PropTypes.string,
     currentPanel: PropTypes.string,
     setColumnRef: PropTypes.func
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showRawData: true,
-      showEmptyCellDetails: false
-    };
-  }
-
-  toggleRawData = () => {
-    this.setState({
-      showRawData: !this.state.showRawData
-    });
-  };
-
-  toggleEmptyCellDetails = () => {
-    this.setState({
-      showEmptyCellDetails: !this.state.showEmptyCellDetails
-    });
   };
 
   getColumnHeaderStyle = key => {
@@ -105,7 +83,13 @@ class DataDisplay extends Component {
   };
 
   render() {
-    const { data, setCurrentColumn, currentPanel, setColumnRef, setHighlightColumn } = this.props;
+    const {
+      data,
+      setCurrentColumn,
+      currentPanel,
+      setColumnRef,
+      setHighlightColumn
+    } = this.props;
 
     return (
       <div id="data-display" style={styles.panel}>
@@ -125,59 +109,55 @@ class DataDisplay extends Component {
             {"."}
           </span>
         </div>
-        {this.state.showRawData && (
-          <div style={styles.tableParent} onScroll={() => setCurrentColumn(undefined)}>
-            <table style={styles.dataDisplayTable}>
-              <thead>
-                <tr>
-                  {data.length > 0 &&
-                    Object.keys(data[0]).map(key => {
-                      return (
-                        <th
-                          key={key}
-                          style={this.getColumnHeaderStyle(key)}
-                          onClick={() => setCurrentColumn(key)}
-                          ref={ref => setColumnRef(key, ref)}
-                          onMouseEnter={() => setHighlightColumn(key)}
-                          onMouseLeave={() => setHighlightColumn(undefined)}
-                        >
-                          {key}
-                        </th>
-                      );
-                    })}
-                </tr>
-              </thead>
-              <tbody>
+        <div
+          style={styles.tableParent}
+          onScroll={() => setCurrentColumn(undefined)}
+        >
+          <table style={styles.dataDisplayTable}>
+            <thead>
+              <tr>
                 {data.length > 0 &&
-                  data.map((row, index) => {
+                  Object.keys(data[0]).map(key => {
                     return (
-                      <tr key={index}>
-                        {data.length > 0 &&
-                          Object.keys(row).map(key => {
-                            return (
-                              <td
-                                key={key}
-                                style={this.getColumnCellStyle(key)}
-                                onClick={() => setCurrentColumn(key)}
-                                onMouseEnter={() => setHighlightColumn(key)}
-                                onMouseLeave={() => setHighlightColumn(undefined)}
-                              >
-                                {row[key]}
-                              </td>
-                            );
-                          })}
-                      </tr>
+                      <th
+                        key={key}
+                        style={this.getColumnHeaderStyle(key)}
+                        onClick={() => setCurrentColumn(key)}
+                        ref={ref => setColumnRef(key, ref)}
+                        onMouseEnter={() => setHighlightColumn(key)}
+                        onMouseLeave={() => setHighlightColumn(undefined)}
+                      >
+                        {key}
+                      </th>
                     );
                   })}
-              </tbody>
-            </table>
-          </div>
-        )}
-        {!this.state.showRawData && (
-          <button type="button" onClick={this.toggleRawData}>
-            show data
-          </button>
-        )}
+              </tr>
+            </thead>
+            <tbody>
+              {data.length > 0 &&
+                data.map((row, index) => {
+                  return (
+                    <tr key={index}>
+                      {data.length > 0 &&
+                        Object.keys(row).map(key => {
+                          return (
+                            <td
+                              key={key}
+                              style={this.getColumnCellStyle(key)}
+                              onClick={() => setCurrentColumn(key)}
+                              onMouseEnter={() => setHighlightColumn(key)}
+                              onMouseLeave={() => setHighlightColumn(undefined)}
+                            >
+                              {row[key]}
+                            </td>
+                          );
+                        })}
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
         <div style={styles.mediumText}>
           There are {this.props.data.length} rows of data.
         </div>
@@ -191,7 +171,6 @@ export default connect(
     data: state.data,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
-    emptyCellDetails: getEmptyCellDetails(state),
     currentColumn: state.currentColumn,
     highlightColumn: state.highlightColumn,
     currentPanel: state.currentPanel
