@@ -6,7 +6,7 @@ theme: responsive
 [<img src="/shared/images/student_privacy_pledge.png" width="120" target="_blank">](http://studentprivacypledge.org/)
 
 # Privacy Policy
-Date of Last Revision: March 11, 2020
+Date of Last Revision: March 11, 2021
 
 You can review the previous Privacy Policy [here](/privacy-sep2020).
 
