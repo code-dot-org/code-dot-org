@@ -64,7 +64,7 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   23 queries - two for each model, + one extra query each for Lessons,
+      #   30 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     ProgrammingExpression, Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -82,7 +82,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(87) do
+      assert_queries(89) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -128,7 +128,6 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       script.lessons.each {|l| l.resources.destroy_all}
       script.lessons.each {|l| l.vocabularies.destroy_all}
-      script.lessons.each {|l| l.programming_expressions.destroy_all}
       script.freeze
       expected_counts = get_counts
 
@@ -344,14 +343,19 @@ module Services
     test 'seed updates lesson programming expressions' do
       script = create_script_tree
 
+      # create the programming expression outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the programming expression for us.
+      new_programming_expression = create :programming_expression, key: 'new-block'
+
+      expected_keys = [
+        script.lessons.first.standards.last.key,
+        new_programming_expression.key
+      ]
+
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.programming_expressions.first.update!(name: 'newBlock')
-        lesson.programming_expressions.create(
-          key: 'newBlock',
-          name: 'newBlock',
-          programming_environment_id: 1
-        )
+        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions.push(new_programming_expression)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -359,10 +363,7 @@ module Services
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
-      assert_equal(
-        ['newBlock'],
-        lesson.programming_expressions.map(&:key)
-      )
+      assert_equal expected_keys, lesson.programming_expressions.map(&:key)
     end
 
     test 'seed deletes lesson_groups' do
@@ -595,6 +596,29 @@ module Services
         ['Updated Description', 'fake description', 'New Description'],
         lesson.objectives.map(&:description)
       )
+    end
+
+    # Programming Expressions are shared across all courses. We need to make sure all the
+    # programming expressions we need for this script are created, but we should never remove
+    # a programming expression because it might be in use by another script.
+    test 'seed deletes lessons_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.programming_expressions.count
+        lesson.programming_expressions.delete(lesson.programming_expressions.first)
+        assert_equal 1, lesson.programming_expressions.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsProgrammingExpression'] -= 1
+      assert_equal expected_counts, get_counts
     end
 
     test 'import_script sets seeded_from from serialized_at' do

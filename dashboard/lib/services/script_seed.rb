@@ -20,8 +20,8 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :lessons_programming_expressions,
-      :objectives, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_expressions,
+      :lessons_programming_expressions, :objectives, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -477,7 +477,7 @@ module Services
         lesson_id = seed_context.lessons.select {|l| l.key == lv_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        programming_expression_id = ProgrammingExpression.find_by(key: lv_data['seeding_key']['programming_expression.key']).id
+        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == ls_data['seeding_key']['programming_expression.key']}.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
@@ -486,9 +486,15 @@ module Services
         )
       end
 
-      existing_programming_expressions = LessonsProgrammingExpression.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      # destroy_outdated_objects won't work on LessonsProgrammingExpression objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all LessonsProgrammingExpressions using 1 query per lesson, and then re-importing all
+      # LessonsProgrammingExpressions in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the LessonsStandard model.
+      seed_context.lessons.each {|l| l.programming_expressions = []}
+
       LessonsProgrammingExpression.import! lessons_programming_expressions_to_import, on_duplicate_key_update: get_columns(LessonsProgrammingExpression)
-      destroy_outdated_objects(LessonsProgrammingExpression, existing_programming_expressions, lessons_programming_expressions_to_import, seed_context)
+      LessonsProgrammingExpression.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.import_objectives(objectives_data, seed_context)
