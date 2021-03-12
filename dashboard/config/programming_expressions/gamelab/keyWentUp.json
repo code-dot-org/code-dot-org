@@ -1,0 +1,21 @@
+{
+  "func": "keyWentUp",
+  "paletteParams": [
+    "code"
+  ],
+  "params": [
+    "\"up\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"up\"",
+      "\"down\"",
+      "\"left\"",
+      "\"right\"",
+      "\"space\"",
+      "\"a\""
+    ]
+  },
+  "category": "World",
+  "type": "value"
+}
