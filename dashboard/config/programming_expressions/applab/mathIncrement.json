@@ -1,1 +1,5 @@
-{"func":"mathIncrement","block":"__++","category":"Math"}
+{
+  "func": "mathIncrement",
+  "block": "__++",
+  "category": "Math"
+}

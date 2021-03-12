@@ -1,1 +1,5 @@
-{"func":"accelerometer.sensitivity","category":"Circuit","type":"property"}
+{
+  "func": "accelerometer.sensitivity",
+  "category": "Circuit",
+  "type": "property"
+}

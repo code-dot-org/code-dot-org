@@ -1,1 +1,12 @@
-{"func":"textInput","category":"UI controls","paletteParams":["id","text"],"params":["\"id\"","\"text\""]}
+{
+  "func": "textInput",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "text"
+  ],
+  "params": [
+    "\"id\"",
+    "\"text\""
+  ]
+}

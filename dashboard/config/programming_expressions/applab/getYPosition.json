@@ -1,1 +1,11 @@
-{"func":"getYPosition","category":"UI controls","paletteParams":["id"],"params":["\"id\""],"type":"value"}
+{
+  "func": "getYPosition",
+  "category": "UI controls",
+  "paletteParams": [
+    "id"
+  ],
+  "params": [
+    "\"id\""
+  ],
+  "type": "value"
+}

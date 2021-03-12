@@ -1,1 +1,5 @@
-{"func":"colorLeds","category":"Circuit","type":"readonlyproperty"}
+{
+  "func": "colorLeds",
+  "category": "Circuit",
+  "type": "readonlyproperty"
+}

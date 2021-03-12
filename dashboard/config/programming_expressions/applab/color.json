@@ -1,1 +1,15 @@
-{"func":"color","category":"Circuit","paletteParams":["color"],"params":["\"#FF00FF\""],"paramButtons":{"minArgs":1,"maxArgs":3},"modeOptionName":"*.color"}
+{
+  "func": "color",
+  "category": "Circuit",
+  "paletteParams": [
+    "color"
+  ],
+  "params": [
+    "\"#FF00FF\""
+  ],
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 3
+  },
+  "modeOptionName": "*.color"
+}

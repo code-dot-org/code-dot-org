@@ -1,1 +1,6 @@
-{"func":"lightSensor.start","docFunc":"microbit-lightSensor.start","category":"micro:bit","noAutocomplete":true}
+{
+  "func": "lightSensor.start",
+  "docFunc": "microbit-lightSensor.start",
+  "category": "micro:bit",
+  "noAutocomplete": true
+}

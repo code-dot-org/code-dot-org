@@ -1,1 +1,13 @@
-{"func":"ledScreen.off","docFunc": "microbit-ledScreen.off","category":"micro:bit","params":["0","0"],"paletteParams":["x","y"]}
+{
+  "func": "ledScreen.off",
+  "docFunc": "microbit-ledScreen.off",
+  "category": "micro:bit",
+  "params": [
+    "0",
+    "0"
+  ],
+  "paletteParams": [
+    "x",
+    "y"
+  ]
+}

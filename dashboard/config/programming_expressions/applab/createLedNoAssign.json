@@ -1,1 +1,12 @@
-{"func":"createLed","category":"Maker","paletteParams":["pin"],"params":["0"],"type":"either", "docFunc": "createLedNoAssign"}
+{
+  "func": "createLed",
+  "category": "Maker",
+  "paletteParams": [
+    "pin"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "either",
+  "docFunc": "createLedNoAssign"
+}

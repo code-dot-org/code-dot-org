@@ -1,1 +1,9 @@
-{"func":"Math.pow","category":"Math","type":"value","params":["__"],"docFunc":"mathPow"}
+{
+  "func": "Math.pow",
+  "category": "Math",
+  "type": "value",
+  "params": [
+    "__"
+  ],
+  "docFunc": "mathPow"
+}

@@ -1,1 +1,13 @@
-{"func":"buzzer.playSong","docFunc":"buzzerplaysong","category":"Circuit","paletteParams":["notes","tempo"],"paramButtons":{"minArgs":1,"maxArgs":2}}
+{
+  "func": "buzzer.playSong",
+  "docFunc": "buzzerplaysong",
+  "category": "Circuit",
+  "paletteParams": [
+    "notes",
+    "tempo"
+  ],
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 2
+  }
+}

@@ -1,1 +1,12 @@
-{"func":"createButton","category":"Maker","paletteParams":["pin"],"params":["0"],"type":"either", "docFunc": "createButtonNoAssign"}
+{
+  "func": "createButton",
+  "category": "Maker",
+  "paletteParams": [
+    "pin"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "either",
+  "docFunc": "createButtonNoAssign"
+}

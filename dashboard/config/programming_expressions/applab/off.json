@@ -1,1 +1,5 @@
-{"func":"off","category":"Circuit","modeOptionName":"*.off"}
+{
+  "func": "off",
+  "category": "Circuit",
+  "modeOptionName": "*.off"
+}

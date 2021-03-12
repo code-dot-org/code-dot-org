@@ -1,1 +1,18 @@
-{"func":"checkbox","category":"UI controls","paletteParams":["id","checked"],"params":["\"id\"","false"],"dropdown":{"1":["true","false"]}}
+{
+  "func": "checkbox",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "checked"
+  ],
+  "params": [
+    "\"id\"",
+    "false"
+  ],
+  "dropdown": {
+    "1": [
+      "true",
+      "false"
+    ]
+  }
+}

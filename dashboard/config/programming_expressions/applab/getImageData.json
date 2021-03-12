@@ -1,1 +1,11 @@
-{"func":"getImageData","category":"Canvas","paletteParams":["x","y","width","height"],"type":"value"}
+{
+  "func": "getImageData",
+  "category": "Canvas",
+  "paletteParams": [
+    "x",
+    "y",
+    "width",
+    "height"
+  ],
+  "type": "value"
+}

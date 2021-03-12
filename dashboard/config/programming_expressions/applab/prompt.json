@@ -1,1 +1,8 @@
-{"func":"prompt","category":"Variables","type":"value","params":["__"]}
+{
+  "func": "prompt",
+  "category": "Variables",
+  "type": "value",
+  "params": [
+    "__"
+  ]
+}

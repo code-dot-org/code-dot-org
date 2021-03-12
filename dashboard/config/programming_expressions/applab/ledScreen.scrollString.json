@@ -1,1 +1,10 @@
-{"func":"ledScreen.scrollString","category":"micro:bit","params":["\"Hello World!\""],"paletteParams":["string"]}
+{
+  "func": "ledScreen.scrollString",
+  "category": "micro:bit",
+  "params": [
+    "\"Hello World!\""
+  ],
+  "paletteParams": [
+    "string"
+  ]
+}

@@ -1,1 +1,5 @@
-{"func":"%","category":"Math","docFunc":"moduloOperator"}
+{
+  "func": "%",
+  "category": "Math",
+  "docFunc": "moduloOperator"
+}

@@ -1,1 +1,6 @@
-{"func":"buzzer","category":"Circuit","type":"readonlyproperty","noAutocomplete":true}
+{
+  "func": "buzzer",
+  "category": "Circuit",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

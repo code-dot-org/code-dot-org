@@ -1,1 +1,5 @@
-{"func":"subtractOperator","block":"__ - __","category":"Math"}
+{
+  "func": "subtractOperator",
+  "block": "__ - __",
+  "category": "Math"
+}

@@ -1,1 +1,10 @@
-{"func":"getAttribute","category":"Advanced","params":["\"id\"","\"scrollHeight\""],"type":"value","noAutocomplete":true}
+{
+  "func": "getAttribute",
+  "category": "Advanced",
+  "params": [
+    "\"id\"",
+    "\"scrollHeight\""
+  ],
+  "type": "value",
+  "noAutocomplete": true
+}
