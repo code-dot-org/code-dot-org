@@ -22,7 +22,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from './CollapserIcon';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -118,6 +118,32 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  },
+  collapserIcon: {
+    showHideButton: {
+      position: 'absolute',
+      top: 0,
+      margin: 0,
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
+      fontSize: 18,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.white
+      }
+    },
+    showHideButtonLtr: {
+      left: 8
+    },
+    showHideButtonRtl: {
+      right: 8
+    },
+    teacherOnlyColor: {
+      color: color.lightest_cyan,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.default_text
+      }
+    }
   }
 };
 
@@ -161,7 +187,7 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    collapsed: PropTypes.bool,
+    isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
@@ -306,7 +332,7 @@ class TopInstructions extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (
-      !nextProps.collapsed &&
+      !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
       nextProps.height < nextProps.maxHeight &&
       !(
@@ -411,7 +437,7 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
-    if (this.props.collapsed) {
+    if (this.props.isCollapsed) {
       firehoseClient.putRecord({
         study: 'top-instructions',
         event: 'expand-instructions',
@@ -429,11 +455,11 @@ class TopInstructions extends Component {
       });
     }
 
-    const collapsed = !this.props.collapsed;
+    const isCollapsed = !this.props.isCollapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed && this.props.noInstructionsWhenCollapsed) {
+    if (isCollapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -606,6 +632,14 @@ class TopInstructions extends Component {
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
 
+    const collapserIconStyles = {
+      ...styles.collapserIcon.showHideButton,
+      ...(this.props.isRtl
+        ? styles.collapserIcon.showHideButtonRtl
+        : styles.collapserIcon.showHideButtonLtr),
+      ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    };
+
     return (
       <div
         style={mainStyle}
@@ -625,6 +659,7 @@ class TopInstructions extends Component {
                 <InlineAudio
                   src={ttsUrl}
                   style={this.props.isRtl ? audioStyleRTL : audioStyle}
+                  autoplayTriggerElementId="codeApp"
                 />
               )}
             {this.props.documentationUrl &&
@@ -691,16 +726,15 @@ class TopInstructions extends Component {
             {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
-                  collapsed={this.props.collapsed}
+                  isCollapsed={this.props.isCollapsed}
                   onClick={this.handleClickCollapser}
-                  teacherOnly={teacherOnly}
-                  isRtl={this.props.isRtl}
+                  style={collapserIconStyles}
                 />
               )}
           </div>
         </PaneHeader>
         <div
-          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
+          style={[this.props.isCollapsed && isCSDorCSP && commonStyles.hidden]}
         >
           <div
             style={[
@@ -836,7 +870,7 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed,
+    isCollapsed: state.instructions.isCollapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     levelVideos: state.instructions.levelVideos,

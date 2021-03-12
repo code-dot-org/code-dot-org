@@ -324,9 +324,7 @@ class InstructionsCSF extends React.Component {
   getMinHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = Math.min(
@@ -363,9 +361,7 @@ class InstructionsCSF extends React.Component {
   getMaxHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = getOuterHeight(this.instructions, true);
@@ -678,6 +674,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
+              isMinecraft={this.props.isMinecraft}
+              isRtl={this.props.isRtl}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -701,6 +699,7 @@ class InstructionsCSF extends React.Component {
                   RESIZER_HEIGHT -
                   styles.scrollButtons.top
                 }
+                isMinecraft={this.props.isMinecraft}
               />
             )}
           </div>
@@ -722,7 +721,7 @@ export default connect(
       isRtl: state.isRtl,
       noVisualization: state.pageConstants.noVisualization,
       feedback: state.instructions.feedback,
-      collapsed: state.instructions.collapsed,
+      collapsed: state.instructions.isCollapsed,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,

@@ -125,23 +125,20 @@ export function lessonIsAllAssessment(levels) {
 }
 
 /**
- * Computes progress status percentages for a set of levels.
- * @param {{id:studentLevelProgressType}} studentLevelProgress An object keyed by
- * level id containing objects representing the student's progress in that level
+ * Computes summary of a student's progress in a lesson's levels.
+ * @param {{id: studentLevelProgressType}} studentLevelProgress
+ * An object keyed by level id containing objects representing the student's
+ * progress in that level
  * @param {levelType[]} levels An array of levels
- * @returns {studentLessonProgressType} An object representing student's progress
- * in the lesson
- *
- * Note: this function will replace `summarizeProgressInStage` below once we
- * refactor the legacy StudentProgressSummaryCell component
+ * @returns {studentLessonProgressType}
+ * An object representing student's progress in the lesson
  */
-export function progressForLesson(studentLevelProgress, levels) {
+function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   // Filter any bonus levels as they do not count toward progress.
-  const filteredLevels = levels.filter(level => !level.bonus);
-  const statuses = filteredLevels.map(level => {
-    const levelProgress = studentLevelProgress[level.id];
-    return (levelProgress && levelProgress.status) || LevelStatus.not_tried;
-  });
+  const filteredLevels = lessonLevels.filter(level => !level.bonus);
+  if (!filteredLevels.length) {
+    return null;
+  }
 
   const completedStatuses = [
     LevelStatus.perfect,
@@ -151,87 +148,72 @@ export function progressForLesson(studentLevelProgress, levels) {
     LevelStatus.readonly
   ];
 
-  const statusCounts = statuses.reduce(
-    (counts, status) => {
-      counts.attempted += status === LevelStatus.attempted;
-      counts.imperfect += status === LevelStatus.passed;
-      counts.completed += completedStatuses.includes(status);
-      return counts;
-    },
-    {attempted: 0, imperfect: 0, completed: 0}
-  );
-  const incomplete =
-    statuses.length - statusCounts.completed - statusCounts.imperfect;
-  const isLessonStarted =
-    statusCounts.attempted + statusCounts.imperfect + statusCounts.completed >
-    0;
-
-  const getPercent = count => (100 * count) / statuses.length;
-  return {
-    isStarted: isLessonStarted,
-    imperfectPercent: getPercent(statusCounts.imperfect),
-    completedPercent: getPercent(statusCounts.completed),
-    incompletePercent: getPercent(incomplete)
-  };
-}
-
-/**
- * Summarizes stage progress data.
- * @param {{id:studentLevelProgressType}} studentProgress An object keyed by
- * level id containing objects representing the student's progress in that level
- * @param {levelType[]} levels An array of the levels in a stage
- * @returns {object} An object with a total count of levels in each of the
- * following buckets: total, completed, imperfect, incomplete, attempted.
- */
-export function summarizeProgressInStage(studentProgress, levels) {
-  // Filter any bonus levels as they do not count toward progress.
-  const filteredLevels = levels.filter(level => !level.bonus);
-
-  // Get counts of statuses
-  let statusCounts = {
-    total: 0,
-    completed: 0,
-    imperfect: 0,
-    incomplete: 0,
-    attempted: 0
-  };
+  let attempted = 0;
+  let imperfect = 0;
+  let completed = 0;
+  let timeSpent = 0;
+  let lastTimestamp = 0;
 
   filteredLevels.forEach(level => {
-    const levelProgress = studentProgress[level.id];
-    statusCounts.total++;
-    if (!levelProgress) {
-      statusCounts.incomplete++;
-      return;
-    }
-    switch (levelProgress.status) {
-      case LevelStatus.perfect:
-      case LevelStatus.submitted:
-      case LevelStatus.free_play_complete:
-      case LevelStatus.completed_assessment:
-      case LevelStatus.readonly:
-        statusCounts.completed++;
-        break;
-      case LevelStatus.not_tried:
-        statusCounts.incomplete++;
-        break;
-      case LevelStatus.attempted:
-        statusCounts.incomplete++;
-        statusCounts.attempted++;
-        break;
-      case LevelStatus.passed:
-        statusCounts.imperfect++;
-        break;
-      // All others are assumed to be not tried
-      default:
-        statusCounts.incomplete++;
+    const levelProgress = studentLevelProgress[level.id];
+    if (levelProgress) {
+      attempted += levelProgress.status === LevelStatus.attempted;
+      imperfect += levelProgress.status === LevelStatus.passed;
+      completed += completedStatuses.includes(levelProgress.status);
+      timeSpent += levelProgress.timeSpent;
+      lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp);
     }
   });
-  return statusCounts;
+
+  const incomplete = filteredLevels.length - completed - imperfect;
+  const isLessonStarted = attempted + imperfect + completed > 0;
+
+  const getPercent = count => (100 * count) / filteredLevels.length;
+  return {
+    isStarted: isLessonStarted,
+    incompletePercent: getPercent(incomplete),
+    imperfectPercent: getPercent(imperfect),
+    completedPercent: getPercent(completed),
+    timeSpent: timeSpent,
+    lastTimestamp: lastTimestamp
+  };
 }
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
- * contains more data than we need. This filters to the parts our views care about.
+ * Computes studentLessonProgressType objects for each lesson from the provided
+ * level progress data for each student.
+ * @param {studentId: {levelId: studentLevelProgressType}} sectionLevelProgress
+ * An object keyed by student id all the student's level progress data
+ * @param {lessonType[]} lessons An array of lessons
+ * @returns {studentId: {lessonId: studentLessonProgressType}}
+ * An object containing lesson progress data for each student in a section
+ */
+export function lessonProgressForSection(sectionLevelProgress, lessons) {
+  // create empty "dictionary" to store lesson progress for each student
+  const sectionLessonProgress = {};
+  Object.entries(sectionLevelProgress).forEach(
+    // key: studentId, value: "dictionary" of level progress for that student
+    ([studentId, studentLevelProgress]) => {
+      // create empty "dictionary" to store per-lesson progress for student
+      const studentLessonProgress = {};
+      // for each lesson, summarize student's progress based on level progress
+      lessons.forEach(lesson => {
+        studentLessonProgress[lesson.id] = lessonProgressForStudent(
+          studentLevelProgress,
+          lesson.levels
+        );
+      });
+      // add student progress to section progress
+      sectionLessonProgress[studentId] = studentLessonProgress;
+    }
+  );
+  return sectionLessonProgress;
+}
+
+/**
+ * The level object passed down to use via the server (and stored in
+ * script.stages.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `levelType` oject.
  */
 export const processedLevel = level => {
   return {

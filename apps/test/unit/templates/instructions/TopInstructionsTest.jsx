@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   expandedHeight: 300,
   maxHeight: 300,
   longInstructions: 'Some instructions for the level',
-  collapsed: false,
+  isCollapsed: false,
   noVisualization: false,
   toggleInstructionsCollapsed: () => {},
   setInstructionsHeight: () => {},

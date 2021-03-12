@@ -103,7 +103,7 @@ class LevelDetailsDialog extends Component {
           height={this.state.height}
           maxHeight={Math.min(this.state.maxHeight, MAX_LEVEL_HEIGHT)}
           expandedHeight={this.state.height}
-          collapsed={false}
+          isCollapsed={false}
           hidden={false}
           isEmbedView={false}
           mainStyle={{paddingBottom: 5}}

@@ -3182,8 +3182,23 @@ bs:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
             'Programming: Happy Maps':
               name: Vesele Mape
+              description_teacher: Most od algoritama do programiranja može biti veoma
+                kratak ako učenici razumiju razliku između planiranja redoslijeda
+                i kodiranja tog redosljeda u odgovarajući jezik. Ovako aktivnost će
+                pomoći učenicima da prikupe iskustvo čitanja i pisanja u stenografskom
+                kodu.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
             csf_digcit:
               display_name: Digitalno Državljanstvo
@@ -3200,6 +3215,11 @@ bs:
             Move It, Move It:
               key: Pomakni, Pomakni
               name: Pomakni, Pomakni
+            Sequencing in Maze:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
             'Loops: Getting Loopy':
               name: Zapetljavanje
           lesson_groups:
@@ -3256,6 +3276,8 @@ bs:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno Državljanstvo
+            lessonGroup-6:
+              display_name: Digitalno Državljanstvo
         coursee-2021:
           lessons:
             Conditionals:
@@ -3306,6 +3328,17 @@ bs:
         pre-express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
+          lessons:
+            Learn to Drag and Drop:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
+            Sequencing with Scrat:
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
           lesson_groups:
             csf_loops:
               display_name: Petlje
@@ -3335,3 +3368,32 @@ bs:
               name: Lekcija 14
             lesson15:
               name: Lekcija 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
+            Loops:
+              key: Petlje
+              name: Petlje
+            Events:
+              key: Događaji
+              name: Događaji
+            Conditionals:
+              key: Uvjeti
+              name: Uvjeti
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Varijable
+              name: Varijable
+            For Loops:
+              key: Od-Do-Za Petlje
+              name: Od-Do-Za Petlje
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
+            k5_next_steps_1:
+              display_name: Slijedeći Koraci
+            Introduction:
+              display_name: Uvod

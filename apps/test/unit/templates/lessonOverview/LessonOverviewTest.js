@@ -9,6 +9,7 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
+import _ from 'lodash';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -69,6 +70,12 @@ describe('LessonOverview', () => {
             word: 'Algorithm',
             definition: 'A list of steps to finish a task.'
           }
+        ],
+        programmingExpressions: [
+          {
+            name: 'playSound',
+            link: '/docs/applab/playSound'
+          }
         ]
       },
       activities: [],
@@ -88,15 +95,17 @@ describe('LessonOverview', () => {
 
     expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
 
-    const safeMarkdowns = wrapper.find('SafeMarkdown');
-    expect(safeMarkdowns.at(0).props().markdown).to.contain('Lesson Overview');
-    expect(safeMarkdowns.at(1).props().markdown).to.contain(
+    const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
+      'Lesson Overview'
+    );
+    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
       'The purpose of the lesson is for people to learn'
     );
-    expect(safeMarkdowns.at(2).props().markdown).to.contain(
+    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
       'Assessment Opportunities Details'
     );
-    expect(safeMarkdowns.at(3).props().markdown).to.contain('- One');
+    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
@@ -152,5 +161,19 @@ describe('LessonOverview', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
     assert.equal(resourceSection.find('ul').length, 2);
+  });
+
+  it('displays the introduced code', () => {
+    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const codeSection = wrapper.find('#unit-test-introduced-code');
+    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+  });
+
+  it('does not display the introduced code if no code', () => {
+    const newDefaultProps = _.cloneDeep(defaultProps);
+    newDefaultProps.lesson.programmingExpressions = [];
+
+    const wrapper = shallow(<LessonOverview {...newDefaultProps} />);
+    assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 });

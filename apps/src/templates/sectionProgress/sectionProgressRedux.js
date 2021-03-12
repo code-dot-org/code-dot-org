@@ -10,6 +10,8 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_SCRIPT = 'sectionProgress/ADD_DATA_BY_SCRIPT';
+const SET_SHOW_SECTION_PROGRESS_DETAILS =
+  'teacherDashboard/SET_SHOW_SECTION_PROGRESS_DETAILS';
 
 // Action creators
 export const startLoadingProgress = () => ({type: START_LOADING_PROGRESS});
@@ -29,6 +31,10 @@ export const addDataByScript = data => ({
   type: ADD_DATA_BY_SCRIPT,
   data
 });
+export const setShowSectionProgressDetails = showSectionProgressDetails => ({
+  type: SET_SHOW_SECTION_PROGRESS_DETAILS,
+  showSectionProgressDetails
+});
 
 const INITIAL_LESSON_OF_INTEREST = 1;
 
@@ -37,10 +43,13 @@ const initialState = {
   currentView: ViewType.SUMMARY,
   scriptDataByScript: {},
   studentLevelProgressByScript: {},
+  studentLessonProgressByScript: {},
   studentLastUpdateByScript: {},
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
-  isRefreshingProgress: false
+  isRefreshingProgress: false,
+  // pilot flag for showing time spent and last updated in the progress table
+  showSectionProgressDetails: false
 };
 
 export default function sectionProgress(state = initialState, action) {
@@ -86,6 +95,12 @@ export default function sectionProgress(state = initialState, action) {
       lessonOfInterest: action.lessonOfInterest
     };
   }
+  if (action.type === SET_SHOW_SECTION_PROGRESS_DETAILS) {
+    return {
+      ...state,
+      showSectionProgressDetails: action.showSectionProgressDetails
+    };
+  }
   if (action.type === SET_SECTION) {
     // Setting the section is the first action to be called when switching
     // sections, which requires us to reset our state. This might need to change
@@ -104,6 +119,10 @@ export default function sectionProgress(state = initialState, action) {
       studentLevelProgressByScript: {
         ...state.studentLevelProgressByScript,
         ...action.data.studentLevelProgressByScript
+      },
+      studentLessonProgressByScript: {
+        ...state.studentLessonProgressByScript,
+        ...action.data.studentLessonProgressByScript
       },
       studentLastUpdateByScript: {
         ...state.studentLastUpdateByScript,

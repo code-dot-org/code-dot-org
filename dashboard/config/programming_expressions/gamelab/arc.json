@@ -1,0 +1,20 @@
+{
+  "func": "arc",
+  "category": "Drawing",
+  "paletteParams": [
+    "x",
+    "y",
+    "w",
+    "h",
+    "start",
+    "stop"
+  ],
+  "params": [
+    "0",
+    "0",
+    "800",
+    "800",
+    "0",
+    "90"
+  ]
+}

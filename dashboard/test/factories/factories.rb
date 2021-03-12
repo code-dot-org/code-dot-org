@@ -4,8 +4,8 @@ FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
   factory :course_offering do
-    sequence(:key) {|n| "bogus-course-offering-#{n}"}
-    sequence(:display_name) {|n| "bogus-course-offering-#{n}"}
+    sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
+    sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
   end
 
   factory :course_version do
@@ -819,7 +819,7 @@ FactoryGirl.define do
 
   factory :vocabulary do
     association :course_version
-    sequence(:key) {|n| "vocab-#{n}"}
+    sequence(:key, 'a') {|char| "vocab_#{char}"}
     word 'word'
     definition 'definition'
   end
@@ -830,7 +830,8 @@ FactoryGirl.define do
 
   factory :programming_expression do
     association :programming_environment
-    sequence(:name) {|n| "programming-expression-#{n}"}
+    sequence(:name) {|n| "programming expression #{n}"}
+    sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do

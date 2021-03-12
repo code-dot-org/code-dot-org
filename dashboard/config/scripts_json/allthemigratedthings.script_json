@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-02-26 18:58:51 UTC",
+    "serialized_at": "2021-03-02 01:06:08 UTC",
     "seeding_key": {
       "script.name": "allthemigratedthings"
     }
@@ -44,6 +44,19 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "UI/Eyes Test Content",
+        "description": "All lessons which are examined by automated UI or Eyes tests."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "allthemigratedthings"
       }
     }
@@ -123,6 +136,34 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "allthemigratedthings"
       }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Printable Lesson Plans",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.",
+        "assessment_opportunities": "assessment opp",
+        "purpose": "purpose",
+        "preparation": "prep",
+        "announcements": [
+          {
+            "notice": "Announcements should not show up",
+            "details": "If this is visible in print mode, something is wrong.",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher and student"
+          }
+        ]
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthemigratedthings"
+      }
     }
   ],
   "lesson_activities": [
@@ -161,6 +202,19 @@
         "lesson_activity.key": "b4638094-9212-48f6-8725-7f1f7aa7b13b",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthemigratedthings"
+      }
+    },
+    {
+      "key": "e406b746-2b7f-4631-b8fe-9df85984bf1e",
+      "position": 1,
+      "properties": {
+        "name": "Basic Example"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "allthemigratedthings"
       }
     }
@@ -216,6 +270,47 @@
       "seeding_key": {
         "activity_section.key": "6c23550a-7e5d-448f-8af6-120183a59c20",
         "lesson_activity.key": "b4638094-9212-48f6-8725-7f1f7aa7b13b"
+      }
+    },
+    {
+      "key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
+      "position": 1,
+      "properties": {
+        "name": "This is a basic example of UI content",
+        "description": "We've just got in here examples of a bunch of the stuff you can include on the page."
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe8f5c7-49ff-4274-be32-731fad0dda5a",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
+      }
+    },
+    {
+      "key": "436888cd-47e2-4a63-8a63-12ee0273eb42",
+      "position": 2,
+      "properties": {
+        "name": "callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A basic callout"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "436888cd-47e2-4a63-8a63-12ee0273eb42",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
+      }
+    },
+    {
+      "key": "a85c218f-7269-4b2f-b29b-91da44794ace",
+      "position": 3,
+      "properties": {
+        "name": "image",
+        "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a85c218f-7269-4b2f-b29b-91da44794ace",
+        "lesson_activity.key": "e406b746-2b7f-4631-b8fe-9df85984bf1e"
       }
     }
   ],
@@ -302,11 +397,11 @@
   ],
   "vocabularies": [
     {
-      "key": "Word",
+      "key": "word",
       "word": "Word",
       "definition": "This is a definition of the word word",
       "seeding_key": {
-        "vocabulary.key": "Word"
+        "vocabulary.key": "word"
       }
     }
   ],
@@ -314,7 +409,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "Word"
+        "vocabulary.key": "word"
       }
     }
   ],
