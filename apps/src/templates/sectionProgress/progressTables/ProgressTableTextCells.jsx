@@ -26,7 +26,6 @@ const styles = {
 export function ProgressTableTextCell({text}) {
   return <div style={styles.text}>{text}</div>;
 }
-
 ProgressTableTextCell.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
 };
@@ -34,7 +33,6 @@ ProgressTableTextCell.propTypes = {
 export function ProgressTableTextLabelCell({text}) {
   return <div style={styles.label}>{text}</div>;
 }
-
 ProgressTableTextLabelCell.propTypes = {
   text: PropTypes.string.isRequired
 };
@@ -48,7 +46,6 @@ export function ProgressTableTextCellGroup({texts}) {
     </div>
   );
 }
-
 ProgressTableTextCellGroup.propTypes = {
   texts: PropTypes.array.isRequired
 };
