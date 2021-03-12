@@ -1224,6 +1224,10 @@ export function getScatterPlotData(state) {
     return null;
   }
 
+  if (state.labelColumn === state.currentColumn) {
+    return null;
+  }
+
   // For each row, record the X (feature value) and Y (label value).
   const data = [];
   for (let row of state.data) {
