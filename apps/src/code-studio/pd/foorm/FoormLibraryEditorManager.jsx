@@ -1,12 +1,8 @@
-// Main page for Foorm Library Editor interface. Will initially show a choice
-// between loading an existing configuration or an empty configuration.
-// After that choice is made, will render FoormLibraryEditor with the chosen configuration.
-
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
 import FoormEntityEditor from './editor/components/FoormEntityEditor';
+import FoormEntityLoadButtons from './editor/components/FoormEntityLoadButtons';
 import {
   setAvailableSubEntities,
   setLastSaved,
@@ -32,6 +28,17 @@ const styles = {
 const JSONErrorMessage =
   'There is a parsing error in the JSON being edited. Errors are noted on the left side of the editor.';
 
+/*
+Parent component for editing Foorm Libraries --
+specifically, for editing individual Library Questions that are the
+atomic unit that underlie each Libraries.
+Library Questions can be reused across multiple Foorm Forms.
+Will initially show a choice between loading an existing library or an empty library.
+If an existing library is chosen, a user will then choose between editing an existing
+library question, or creating a new one.
+Finally, after these choices are made, we render FoormLibraryEditor with the chosen
+library question to allow editing that library question.
+*/
 class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
@@ -63,47 +70,36 @@ class FoormLibraryEditorManager extends React.Component {
     previewQuestions: null
   };
 
-  getFormattedLibraryDropdownOptions() {
+  getLibraryChoices() {
     return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
       const libraryName = libraryNameAndVersion['name'];
       const libraryVersion = libraryNameAndVersion['version'];
 
-      return this.renderMenuItem(
-        () => this.loadLibraryQuestions(libraryNameAndVersion),
-        `${libraryName}, version ${libraryVersion}`,
-        i
-      );
+      return {
+        metadata: libraryNameAndVersion,
+        text: `${libraryName}, version ${libraryVersion}`
+      };
     });
   }
 
-  getFormattedLibraryQuestionDropdownOptions() {
+  getLibraryQuestionChoices() {
     return this.props.availableLibraryQuestionsForCurrentLibrary.map(
       (libraryQuestionAndType, i) => {
         const libraryQuestionName = libraryQuestionAndType['name'];
         const libraryQuestionType = libraryQuestionAndType['type'];
-        const libraryQuestionId = libraryQuestionAndType['id'];
 
-        return this.renderMenuItem(
-          () => this.loadLibraryQuestionContent(libraryQuestionId),
-          `${libraryQuestionName} (${libraryQuestionType})`,
-          i
-        );
+        return {
+          metadata: libraryQuestionAndType,
+          text: `${libraryQuestionName} (${libraryQuestionType})`
+        };
       }
     );
   }
 
-  renderMenuItem = (clickHandler, textToDisplay, key) => {
-    return (
-      <MenuItem key={key} eventKey={key} onClick={clickHandler}>
-        {textToDisplay}
-      </MenuItem>
-    );
-  };
+  loadLibraryQuestionChoices(libraryMetadata) {
+    const libraryId = libraryMetadata.id;
 
-  loadLibraryQuestions(selectedLibraryNameAndVersion) {
-    const libraryId = selectedLibraryNameAndVersion['id'];
-
-    this.props.setLibraryData(selectedLibraryNameAndVersion);
+    this.props.setLibraryData(libraryMetadata);
     this.initializeLibraryQuestion(false);
 
     $.ajax({
@@ -123,7 +119,9 @@ class FoormLibraryEditorManager extends React.Component {
       });
   }
 
-  loadLibraryQuestionContent(libraryQuestionId) {
+  loadLibraryQuestionData(libraryQuestionMetadata) {
+    const libraryQuestionId = libraryQuestionMetadata.id;
+
     this.resetSaveStatus();
     $.ajax({
       url: `/foorm/library_questions/${libraryQuestionId}`,
@@ -159,7 +157,7 @@ class FoormLibraryEditorManager extends React.Component {
     });
   }
 
-  initializeNewLibrary = () => {
+  initializeNewLibrary() {
     this.props.setAvailableLibraryQuestions([]);
     this.props.setLibraryData({
       name: null,
@@ -167,7 +165,7 @@ class FoormLibraryEditorManager extends React.Component {
       id: null
     });
     this.initializeLibraryQuestion(true);
-  };
+  }
 
   initializeLibraryQuestion = showCodeMirror => {
     this.updateLibraryQuestionData({
@@ -195,12 +193,17 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetCodeMirror(libraryQuestionData['question']);
   };
 
-  areLibraryQuestionOptionsAvailable = () => {
+  areLibraryQuestionsAvailable() {
     return !!(
       this.props.libraryId &&
       this.props.availableLibraryQuestionsForCurrentLibrary
     );
-  };
+  }
+
+  // Callback for FoormLoadButtons
+  showCodeMirror() {
+    this.setState({showCodeMirror: true});
+  }
 
   getPreviewErrors() {
     return this.props.hasJSONError ? [JSONErrorMessage] : [];
@@ -245,35 +248,27 @@ class FoormLibraryEditorManager extends React.Component {
           </a>{' '}
           to get started.
         </p>
-        <div>
-          <DropdownButton
-            id="load_config"
-            title="Load Library..."
-            className="btn"
-          >
-            {this.getFormattedLibraryDropdownOptions()}
-          </DropdownButton>
-          <Button onClick={this.initializeNewLibrary} className="btn">
-            New Library
-          </Button>
-        </div>
-        <div>
-          <DropdownButton
-            id="load_config"
-            title="Load Library Question..."
-            className="btn"
-            disabled={!this.areLibraryQuestionOptionsAvailable()}
-          >
-            {this.getFormattedLibraryQuestionDropdownOptions()}
-          </DropdownButton>
-          <Button
-            onClick={() => this.initializeLibraryQuestion(true)}
-            className="btn"
-            disabled={!this.areLibraryQuestionOptionsAvailable()}
-          >
-            New Library Question
-          </Button>
-        </div>
+        <FoormEntityLoadButtons
+          resetCodeMirror={this.props.resetCodeMirror}
+          resetSelectedData={() => this.initializeNewLibrary()}
+          showCodeMirror={() => this.showCodeMirror()}
+          onSelect={libraryMetadata =>
+            this.loadLibraryQuestionChoices(libraryMetadata)
+          }
+          foormEntities={this.getLibraryChoices()}
+          foormEntityName="Library"
+        />
+        <FoormEntityLoadButtons
+          resetCodeMirror={this.props.resetCodeMirror}
+          resetSelectedData={() => this.initializeLibraryQuestion(true)}
+          showCodeMirror={() => this.showCodeMirror()}
+          onSelect={libraryQuestionMetadata =>
+            this.loadLibraryQuestionData(libraryQuestionMetadata)
+          }
+          foormEntities={this.getLibraryQuestionChoices()}
+          foormEntityName="Library Question"
+          isDisabled={!this.areLibraryQuestionsAvailable()}
+        />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>
             Could not load the selected library or library question.

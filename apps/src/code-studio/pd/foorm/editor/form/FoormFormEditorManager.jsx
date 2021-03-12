@@ -25,9 +25,11 @@ const styles = {
   }
 };
 
-// Parent component for editing Foorm forms. Will initially show a choice
-// between loading an existing form or an empty form.
-// After that choice is made, will render FoormEntityEditor with the chosen form to allow editing that form.
+/*
+Parent component for editing Foorm forms. Will initially show a choice
+between loading an existing form or an empty form.
+After that choice is made, will render FoormEntityEditor with the chosen form to allow editing that form.
+*/
 class FoormFormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
@@ -55,21 +57,22 @@ class FoormFormEditorManager extends React.Component {
     previewQuestions: null
   };
 
-  getAvailableFormChoices() {
+  getAvailableForms() {
     return this.props.availableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
-      const formId = formNameAndVersion['id'];
 
       return {
-        id: formId,
+        metadata: formNameAndVersion,
         text: `${formName}, version ${formVersion}`
       };
     });
   }
 
   // Callback for FoormLoadButtons
-  loadFormData(formId) {
+  loadFormData(formMetadata) {
+    const formId = formMetadata.id;
+
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -214,11 +217,11 @@ class FoormFormEditorManager extends React.Component {
         </p>
         <FoormEntityLoadButtons
           resetCodeMirror={this.props.resetCodeMirror}
-          setSelectedData={this.props.setFormData}
           resetSelectedData={() => this.resetSelectedData()}
           showCodeMirror={() => this.showCodeMirror()}
-          onSelect={formId => this.loadFormData(formId)}
-          foormEntities={this.getAvailableFormChoices()}
+          onSelect={formMetadata => this.loadFormData(formMetadata)}
+          foormEntities={this.getAvailableForms()}
+          foormEntityName="Form"
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
