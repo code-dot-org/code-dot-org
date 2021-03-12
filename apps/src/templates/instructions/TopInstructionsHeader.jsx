@@ -208,13 +208,13 @@ function TopInstructionsHeader(props) {
 }
 
 TopInstructionsHeader.propTypes = {
-  teacherOnly: PropTypes.bool.isRequired,
+  teacherOnly: PropTypes.bool,
   tabSelected: PropTypes.string.isRequired,
-  isCSDorCSP: PropTypes.bool.isRequired,
-  displayHelpTab: PropTypes.bool.isRequired,
-  displayFeedback: PropTypes.bool.isRequired,
+  isCSDorCSP: PropTypes.bool,
+  displayHelpTab: PropTypes.bool,
+  displayFeedback: PropTypes.bool,
   displayKeyConcept: PropTypes.bool,
-  isViewingAsTeacher: PropTypes.bool.isRequired,
+  isViewingAsTeacher: PropTypes.bool,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
