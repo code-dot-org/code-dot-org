@@ -1065,6 +1065,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_hideHaiku:
+        text: hide haiku
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1210,6 +1212,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_printHaiku:
+        text: show haiku [BREAK][0] poem title [TITLE][1] poem author [AUTHOR][2] line 1 [LINE1][3] line 2 [LINE2][4] line 3 [LINE3][5]
       gamelab_printText:
         text: print [TEXT][0]
       gamelab_randColor:

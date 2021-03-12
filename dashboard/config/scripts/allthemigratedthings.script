@@ -16,3 +16,7 @@ lesson 'lesson-2', display_name: 'Second Lesson', has_lesson_plan: true
 
 lesson 'lesson-3', display_name: 'Third Lesson', has_lesson_plan: true
 
+lesson_group 'lessonGroup-4', display_name: 'UI/Eyes Test Content'
+lesson_group_description 'All lessons which are examined by automated UI or Eyes tests.'
+lesson 'lesson-4', display_name: 'Printable', has_lesson_plan: true
+

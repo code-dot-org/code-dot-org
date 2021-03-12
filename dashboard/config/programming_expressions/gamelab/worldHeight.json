@@ -1,0 +1,5 @@
+{
+  "func": "World.height",
+  "category": "World",
+  "type": "readonlyproperty"
+}

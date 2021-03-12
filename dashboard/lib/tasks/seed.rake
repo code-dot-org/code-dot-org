@@ -71,6 +71,7 @@ namespace :seed do
     '20-hour',
     'algebra',
     'allthehiddenthings',
+    'allthemigratedthings',
     'alltheplcthings',
     'allthethings',
     'allthettsthings',
@@ -183,6 +184,7 @@ namespace :seed do
     :games,
     :custom_levels,
     :dsls,
+    :programming_expressions,
     :blocks,
     :shared_blockly_functions,
     :libraries,
@@ -293,6 +295,11 @@ namespace :seed do
     Framework.seed_all
     StandardCategory.seed_all
     Standard.seed
+  end
+
+  timed_task programming_expressions: :environment do
+    ProgrammingEnvironment.seed_all
+    ProgrammingExpression.seed_all
   end
 
   # Seeds the data in school_districts

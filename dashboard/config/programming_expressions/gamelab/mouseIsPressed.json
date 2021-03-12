@@ -1,0 +1,6 @@
+{
+  "func": "mouseIsPressed",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

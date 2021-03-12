@@ -104,7 +104,7 @@ class MarkdownInstructions extends React.Component {
           inTopPane && this.props.collapsible && styles.inTopPaneCanCollapse
         ]}
       >
-        <EnhancedSafeMarkdown markdown={markdown} expandableImages={true} />
+        <EnhancedSafeMarkdown markdown={markdown} expandableImages />
       </div>
     );
   }

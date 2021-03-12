@@ -9,20 +9,21 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-06 01:04:44 UTC",
     "seeding_key": {
       "script.name": "k5-onlinepd-2021"
     }
   },
   "lesson_groups": [
     {
-      "key": "k5_getting_started_1",
+      "key": "Implementing and Teaching CS",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Getting Started"
+        "display_name": "Implementing and Teaching CS"
       },
       "seeding_key": {
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -31,7 +32,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Basic Coding Concepts and Teaching Practices"
+        "display_name": "CS Fundamentals Concepts"
       },
       "seeding_key": {
         "lesson_group.key": "k5_basic_concepts_1",
@@ -39,21 +40,9 @@
       }
     },
     {
-      "key": "k5_diving_deeper_1",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Diving Deeper: Courses E and F"
-      },
-      "seeding_key": {
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
       "key": "k5_next_steps_1",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Next Steps"
       },
@@ -66,7 +55,7 @@
   "lessons": [
     {
       "key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-      "name": "Welcome to \"Teaching Computer Science Fundamentals\"",
+      "name": "Introduction",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -75,13 +64,13 @@
       },
       "seeding_key": {
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
-      "key": "Understanding the Computer Science Fundamentals Courses",
-      "name": "Understanding the Computer Science Fundamentals Courses",
+      "key": "Getting Started",
+      "name": "Getting Started",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -89,18 +78,63 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Lesson Planning",
+      "name": "Lesson Planning",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "CS Teaching and Student Practices",
+      "name": "CS Teaching and Student Practices",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Implementation Approaches and Barriers",
+      "name": "Implementation Approaches and Barriers",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "key": "Sequencing",
       "name": "Sequencing",
-      "absolute_position": 3,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 3,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -110,16 +144,16 @@
       }
     },
     {
-      "key": "Loops",
-      "name": "Loops",
-      "absolute_position": 4,
+      "key": "Sprite Lab",
+      "name": "Sprite Lab",
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -127,10 +161,10 @@
     {
       "key": "Events",
       "name": "Events",
-      "absolute_position": 5,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 5,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -142,10 +176,10 @@
     {
       "key": "Conditionals",
       "name": "Conditionals",
-      "absolute_position": 6,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 6,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -157,10 +191,10 @@
     {
       "key": "End of Course projects",
       "name": "End of Course projects",
-      "absolute_position": 7,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 7,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -172,51 +206,6 @@
     {
       "key": "Functions",
       "name": "Functions",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "key": "Variables",
-      "name": "Variables",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "key": "For Loops",
-      "name": "For Loops",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "key": "Sprite Lab",
-      "name": "Sprite Lab",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
@@ -224,18 +213,48 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson.key": "Functions",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "Variables",
+      "name": "Variables",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "lesson_group.key": "k5_basic_concepts_1",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "key": "For Loops",
+      "name": "For Loops",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "key": "Reviewing your reflections",
       "name": "Reviewing your reflections",
-      "absolute_position": 12,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -247,10 +266,10 @@
     {
       "key": "Next steps",
       "name": "Next steps",
-      "absolute_position": 13,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -284,7 +303,7 @@
           "OPD-K5 About_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -308,7 +327,7 @@
           "OPD-K5 WhatIsCS_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -332,7 +351,7 @@
           "OPD-K5 Why teach CS_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -356,7 +375,7 @@
           "OPD-K5 Outline_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -380,7 +399,7 @@
           "OPD-K5 CS Tips_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -404,7 +423,7 @@
           "OPD-K5 Participation_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -428,7 +447,7 @@
           "OPD-K5 whats your plan_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -441,22 +460,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Getting Started",
         "level_keys": [
-          "OPD-K5 CS Video_copy_2021"
+          "OPD-K5 GettingStarted1_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 CS Video_copy_2021"
+          "OPD-K5 GettingStarted1_2021"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 CS Video_copy_2021"
+        "OPD-K5 GettingStarted1_2021"
       ]
     },
     {
@@ -465,22 +485,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Getting Started",
         "level_keys": [
-          "OPD-K5 Welcome 2_copy_2021"
+          "OPD-K5 GettingStarted2"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Welcome 2_copy_2021"
+          "OPD-K5 GettingStarted2"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Welcome 2_copy_2021"
+        "OPD-K5 GettingStarted2"
       ]
     },
     {
@@ -489,146 +510,402 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Getting Started",
         "level_keys": [
-          "OPD-K5 role_of_teacher_2021"
+          "OPD-K5 GettingStarted_Reflection"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 role_of_teacher_2021"
+          "OPD-K5 GettingStarted_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 role_of_teacher_2021"
+        "OPD-K5 GettingStarted_Reflection"
       ]
     },
     {
       "chapter": 11,
-      "position": 4,
+      "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Lesson Planning",
         "level_keys": [
-          "OPD-K5 types of lessons_2021"
+          "OPD-K5 LessonPlanning1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 types of lessons_2021"
+          "OPD-K5 LessonPlanning1"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 types of lessons_2021"
+        "OPD-K5 LessonPlanning1"
       ]
     },
     {
       "chapter": 12,
-      "position": 5,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Lesson Planning",
         "level_keys": [
-          "OPD-K5 lesson plans_2021"
+          "OPD-K5 LessonPlanning2"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 lesson plans_2021"
+          "OPD-K5 LessonPlanning2"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 lesson plans_2021"
+        "OPD-K5 LessonPlanning2"
       ]
     },
     {
       "chapter": 13,
-      "position": 6,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Lesson Planning",
         "level_keys": [
-          "OPD-K5 Unplugged Video_copy_2021"
+          "OPD-K5 LessonPlanning_Reflection"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Unplugged Video_copy_2021"
+          "OPD-K5 LessonPlanning_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Unplugged Video_copy_2021"
+        "OPD-K5 LessonPlanning_Reflection"
       ]
     },
     {
       "chapter": 14,
-      "position": 7,
+      "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "CS Teaching and Student Practices",
         "level_keys": [
-          "OPD-K5 What is Mastery_copy_2021"
+          "OPD-K5 CSTeachingLearning1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 What is Mastery_copy_2021"
+          "OPD-K5 CSTeachingLearning1"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 What is Mastery_copy_2021"
+        "OPD-K5 CSTeachingLearning1"
       ]
     },
     {
       "chapter": 15,
-      "position": 8,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "CS Teaching and Student Practices",
         "level_keys": [
-          "OPD-K5 Stage2Go_copy_2021"
+          "OPD-K5 CSTeachingLearning_Reflection"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage2Go_copy_2021"
+          "OPD-K5 CSTeachingLearning_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage2Go_copy_2021"
+        "OPD-K5 CSTeachingLearning_Reflection"
       ]
     },
     {
       "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "CS Teaching and Student Practices",
+        "level_keys": [
+          "OPD-K5 CSTeachingLearning2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CSTeachingLearning2"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CSTeachingLearning2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "CS Teaching and Student Practices",
+        "level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 CS_StudentPractices_Reflection"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "CS Teaching and Student Practices",
+        "level_keys": [
+          "OPD-K5 DebuggingPairProgramming"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 DebuggingPairProgramming"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "CS Teaching and Student Practices",
+        "level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 DebuggingPairProgramming_Reflection"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 AddressingImplementationBarriers"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementationBarriers"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 AddressingImplementationBarriers"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 AddressingImplementation1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationApproach_Reflection"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers1_Reflection"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers2_Reflection"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Implementation Approaches and Barriers",
+        "level_keys": [
+          "OPD-K5 ImplementationBarriers1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      },
+      "level_keys": [
+        "OPD-K5 ImplementationBarriers1"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -652,7 +929,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -676,7 +953,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -700,7 +977,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -724,7 +1001,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -748,7 +1025,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -772,7 +1049,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -796,7 +1073,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -820,7 +1097,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -845,7 +1122,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -869,7 +1146,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -893,7 +1170,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": null,
       "assessment": null,
@@ -917,296 +1194,295 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage4Start_copy_2021"
+          "OPD-K5 sprite lab_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage4Start_copy_2021"
+          "OPD-K5 sprite lab_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage4Start_copy_2021"
+        "OPD-K5 sprite lab_2021"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 loops introduced_2021"
+          "OPD-K5 sprite lab introduction_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 loops introduced_2021"
+          "OPD-K5 sprite lab introduction_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 loops introduced_2021"
+        "OPD-K5 sprite lab introduction_2021"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 Stage4Go_copy_2021"
+          "OPD-K5 sprite lab unplugged_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Stage4Go_copy_2021"
+          "OPD-K5 sprite lab unplugged_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Stage4Go_copy_2021"
+        "OPD-K5 sprite lab unplugged_2021"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 RepeatBlock_2021"
+          "OPD-K5 sprite lab video_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 RepeatBlock_2021"
+          "OPD-K5 sprite lab video_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 RepeatBlock_2021"
+        "OPD-K5 sprite lab video_2021"
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "courseC_starWars_loops2_2021"
+          "OPD-K5-spritelab-1_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops2_2021"
+          "OPD-K5-spritelab-1_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops2_2021"
+        "OPD-K5-spritelab-1_2021"
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "courseC_starWars_loops4_2021"
+          "OPD-K5-spritelab-2_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops4_2021"
+          "OPD-K5-spritelab-2_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops4_2021"
+        "OPD-K5-spritelab-2_2021"
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "courseC_starWars_loops5_2021"
+          "OPD-K5-spritelab-3_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops5_2021"
+          "OPD-K5-spritelab-3_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops5_2021"
+        "OPD-K5-spritelab-3_2021"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "courseC_starWars_loops6_2021"
+          "OPD-K5-spritelab-4_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops6_2021"
+          "OPD-K5-spritelab-4_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops6_2021"
+        "OPD-K5-spritelab-4_2021"
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "courseC_starWars_loops7_2021"
+          "OPD-K5-spritelab-5-video_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops7_2021"
+          "OPD-K5-spritelab-5-video_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops7_2021"
+        "OPD-K5-spritelab-5-video_2021"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 47,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "challenge": true,
         "level_keys": [
-          "courseC_starWars_loops8_2021"
+          "OPD-K5-spritelab-6_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_starWars_loops8_2021"
+          "OPD-K5-spritelab-6_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "courseC_starWars_loops8_2021"
+        "OPD-K5-spritelab-6_2021"
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 48,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 Pair_copy_2021"
+          "OPD-K5-spritelab-7_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 Pair_copy_2021"
+          "OPD-K5-spritelab-7_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 Pair_copy_2021"
+        "OPD-K5-spritelab-7_2021"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 49,
       "position": 12,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
         "level_keys": [
-          "OPD-K5 loops free response_2021"
+          "OPD-K5 sprite lab free response_2021"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5 loops free response_2021"
+          "OPD-K5 sprite lab free response_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
-        "OPD-K5 loops free response_2021"
+        "OPD-K5 sprite lab free response_2021"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1230,7 +1506,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1254,7 +1530,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1278,7 +1554,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1302,7 +1578,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1326,7 +1602,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1350,7 +1626,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 56,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1374,7 +1650,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 57,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1398,7 +1674,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 58,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1422,7 +1698,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 59,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1446,7 +1722,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 60,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1470,7 +1746,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1494,7 +1770,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1518,7 +1794,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1542,7 +1818,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1566,7 +1842,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1590,7 +1866,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1614,7 +1890,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1638,7 +1914,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 68,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1662,7 +1938,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 69,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1687,7 +1963,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 70,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1711,7 +1987,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 71,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1735,7 +2011,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1759,7 +2035,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1783,7 +2059,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1807,7 +2083,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1831,7 +2107,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1855,7 +2131,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 77,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1879,7 +2155,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 78,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1903,7 +2179,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 79,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1927,7 +2203,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 80,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1951,7 +2227,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 81,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1975,7 +2251,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 82,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1999,7 +2275,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2015,7 +2291,7 @@
           "OPD-K5 diving deeper intro_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2023,7 +2299,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2039,7 +2315,7 @@
           "OPD-K5 Stage6Start_copy_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2047,7 +2323,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -2063,7 +2339,7 @@
           "OPD-K5 functions introduced_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2071,7 +2347,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 86,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -2087,7 +2363,7 @@
           "OPD-K5 Stage6Go_copy_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2095,7 +2371,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 87,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -2111,7 +2387,7 @@
           "courseE_artist_functions1_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2119,7 +2395,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 88,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -2135,7 +2411,7 @@
           "courseE_artist_functions_predict1_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2143,7 +2419,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 89,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -2159,7 +2435,7 @@
           "courseE_video_functionsArtist_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2167,7 +2443,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 90,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -2183,7 +2459,7 @@
           "courseE_artist_functions2_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2191,7 +2467,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 91,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -2207,7 +2483,7 @@
           "courseE_artist_functions3_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2215,7 +2491,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 92,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -2231,7 +2507,7 @@
           "courseE_artist_functions4_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2239,7 +2515,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 93,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -2255,7 +2531,7 @@
           "courseE_artist_functions5_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2263,7 +2539,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 94,
       "position": 12,
       "activity_section_position": null,
       "assessment": null,
@@ -2279,7 +2555,7 @@
           "OPD-K5 functions free response_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2287,7 +2563,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2303,7 +2579,7 @@
           "OPD-K5 variables_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2311,7 +2587,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2327,7 +2603,7 @@
           "OPD-K5 variables introduction_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2335,7 +2611,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -2351,7 +2627,7 @@
           "OPD-K5 variables unplugged_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2359,7 +2635,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -2375,7 +2651,7 @@
           "OPD-K5-variables-1_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2383,7 +2659,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -2399,7 +2675,7 @@
           "OPD-K5-variables-2_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2407,7 +2683,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -2423,7 +2699,7 @@
           "OPD-K5-variables-3-video_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2431,7 +2707,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -2447,7 +2723,7 @@
           "OPD-K5-variables-4_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2455,7 +2731,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -2471,7 +2747,7 @@
           "OPD-K5-variables-5_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2479,7 +2755,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -2495,7 +2771,7 @@
           "OPD-K5-variables-6_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2503,7 +2779,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -2519,7 +2795,7 @@
           "OPD-K5-variables-7_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2527,7 +2803,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -2543,7 +2819,7 @@
           "OPD-K5 variables free response_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2551,7 +2827,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2567,7 +2843,7 @@
           "OPD-K5 for loops intro_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2575,7 +2851,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2591,7 +2867,7 @@
           "OPD-K5 for loops introduction_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2599,7 +2875,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -2615,7 +2891,7 @@
           "OPD-K5 for loops_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2623,7 +2899,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -2639,7 +2915,7 @@
           "OPD-K5-forloops-1_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2647,7 +2923,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -2663,7 +2939,7 @@
           "OPD-K5-forloops-2_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2671,7 +2947,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -2687,7 +2963,7 @@
           "OPD-K5-forloops-3-video_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2695,7 +2971,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -2711,7 +2987,7 @@
           "OPD-K5-forloops-4_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2719,7 +2995,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -2735,7 +3011,7 @@
           "OPD-K5-forloops-5_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2743,7 +3019,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -2759,7 +3035,7 @@
           "OPD-K5-forloops-6_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2767,7 +3043,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 115,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -2783,7 +3059,7 @@
           "OPD-K5-forloops-7_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2791,7 +3067,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 116,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -2807,7 +3083,7 @@
           "OPD-K5 for loops free response_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       },
       "level_keys": [
@@ -2815,295 +3091,7 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab_2021"
-      ]
-    },
-    {
-      "chapter": 108,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab introduction_2021"
-      ]
-    },
-    {
-      "chapter": 109,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 110,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab video_2021"
-      ]
-    },
-    {
-      "chapter": 111,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-1_2021"
-      ]
-    },
-    {
-      "chapter": 112,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-2_2021"
-      ]
-    },
-    {
-      "chapter": 113,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-3_2021"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-4_2021"
-      ]
-    },
-    {
-      "chapter": 115,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-5-video_2021"
-      ]
-    },
-    {
-      "chapter": 116,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-6_2021"
-      ]
-    },
-    {
       "chapter": 117,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5-spritelab-7_2021"
-      ]
-    },
-    {
-      "chapter": 118,
-      "position": 12,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "OPD-K5 sprite lab free response_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab free response_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      },
-      "level_keys": [
-        "OPD-K5 sprite lab free response_2021"
-      ]
-    },
-    {
-      "chapter": 119,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -3127,7 +3115,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -3151,7 +3139,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -3175,7 +3163,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -3199,7 +3187,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -3223,7 +3211,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -3247,7 +3235,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -3271,7 +3259,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -3295,7 +3283,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -3319,7 +3307,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -3343,7 +3331,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 127,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -3367,7 +3355,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 128,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -3391,7 +3379,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 129,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -3415,7 +3403,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 130,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -3439,7 +3427,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 131,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -3463,7 +3451,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 132,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -3487,7 +3475,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 133,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -3511,7 +3499,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 134,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -3543,7 +3531,7 @@
           "OPD-K5 About_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3554,7 +3542,7 @@
           "OPD-K5 WhatIsCS_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3565,7 +3553,7 @@
           "OPD-K5 Why teach CS_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3576,7 +3564,7 @@
           "OPD-K5 Outline_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3587,7 +3575,7 @@
           "OPD-K5 CS Tips_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3598,7 +3586,7 @@
           "OPD-K5 Participation_copy_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3609,95 +3597,205 @@
           "OPD-K5 whats your plan_2021"
         ],
         "lesson.key": "Welcome to \"Teaching Computer Science Fundamentals\"",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 CS Video_copy_2021",
+        "level.key": "OPD-K5 GettingStarted1_2021",
         "script_level.level_keys": [
-          "OPD-K5 CS Video_copy_2021"
+          "OPD-K5 GettingStarted1_2021"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Welcome 2_copy_2021",
+        "level.key": "OPD-K5 GettingStarted2",
         "script_level.level_keys": [
-          "OPD-K5 Welcome 2_copy_2021"
+          "OPD-K5 GettingStarted2"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 role_of_teacher_2021",
+        "level.key": "OPD-K5 GettingStarted_Reflection",
         "script_level.level_keys": [
-          "OPD-K5 role_of_teacher_2021"
+          "OPD-K5 GettingStarted_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 types of lessons_2021",
+        "level.key": "OPD-K5 LessonPlanning1",
         "script_level.level_keys": [
-          "OPD-K5 types of lessons_2021"
+          "OPD-K5 LessonPlanning1"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 lesson plans_2021",
+        "level.key": "OPD-K5 LessonPlanning2",
         "script_level.level_keys": [
-          "OPD-K5 lesson plans_2021"
+          "OPD-K5 LessonPlanning2"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Unplugged Video_copy_2021",
+        "level.key": "OPD-K5 LessonPlanning_Reflection",
         "script_level.level_keys": [
-          "OPD-K5 Unplugged Video_copy_2021"
+          "OPD-K5 LessonPlanning_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "Lesson Planning",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 What is Mastery_copy_2021",
+        "level.key": "OPD-K5 CSTeachingLearning1",
         "script_level.level_keys": [
-          "OPD-K5 What is Mastery_copy_2021"
+          "OPD-K5 CSTeachingLearning1"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage2Go_copy_2021",
+        "level.key": "OPD-K5 CSTeachingLearning_Reflection",
         "script_level.level_keys": [
-          "OPD-K5 Stage2Go_copy_2021"
+          "OPD-K5 CSTeachingLearning_Reflection"
         ],
-        "lesson.key": "Understanding the Computer Science Fundamentals Courses",
-        "lesson_group.key": "k5_getting_started_1",
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CSTeachingLearning2",
+        "script_level.level_keys": [
+          "OPD-K5 CSTeachingLearning2"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 CS_StudentPractices_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 CS_StudentPractices_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 DebuggingPairProgramming",
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 DebuggingPairProgramming_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 DebuggingPairProgramming_Reflection"
+        ],
+        "lesson.key": "CS Teaching and Student Practices",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 AddressingImplementationBarriers",
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementationBarriers"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 AddressingImplementation1",
+        "script_level.level_keys": [
+          "OPD-K5 AddressingImplementation1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationApproach_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationApproach_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers1_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers2_Reflection",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers2_Reflection"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
+        "script.name": "k5-onlinepd-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 ImplementationBarriers1",
+        "script_level.level_keys": [
+          "OPD-K5 ImplementationBarriers1"
+        ],
+        "lesson.key": "Implementation Approaches and Barriers",
+        "lesson_group.key": "Implementing and Teaching CS",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -3835,132 +3933,132 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage4Start_copy_2021",
+        "level.key": "OPD-K5 sprite lab_2021",
         "script_level.level_keys": [
-          "OPD-K5 Stage4Start_copy_2021"
+          "OPD-K5 sprite lab_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 loops introduced_2021",
+        "level.key": "OPD-K5 sprite lab introduction_2021",
         "script_level.level_keys": [
-          "OPD-K5 loops introduced_2021"
+          "OPD-K5 sprite lab introduction_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Stage4Go_copy_2021",
+        "level.key": "OPD-K5 sprite lab unplugged_2021",
         "script_level.level_keys": [
-          "OPD-K5 Stage4Go_copy_2021"
+          "OPD-K5 sprite lab unplugged_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 RepeatBlock_2021",
+        "level.key": "OPD-K5 sprite lab video_2021",
         "script_level.level_keys": [
-          "OPD-K5 RepeatBlock_2021"
+          "OPD-K5 sprite lab video_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops2_2021",
+        "level.key": "OPD-K5-spritelab-1_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops2_2021"
+          "OPD-K5-spritelab-1_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops4_2021",
+        "level.key": "OPD-K5-spritelab-2_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops4_2021"
+          "OPD-K5-spritelab-2_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops5_2021",
+        "level.key": "OPD-K5-spritelab-3_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops5_2021"
+          "OPD-K5-spritelab-3_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops6_2021",
+        "level.key": "OPD-K5-spritelab-4_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops6_2021"
+          "OPD-K5-spritelab-4_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops7_2021",
+        "level.key": "OPD-K5-spritelab-5-video_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops7_2021"
+          "OPD-K5-spritelab-5-video_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseC_starWars_loops8_2021",
+        "level.key": "OPD-K5-spritelab-6_2021",
         "script_level.level_keys": [
-          "courseC_starWars_loops8_2021"
+          "OPD-K5-spritelab-6_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 Pair_copy_2021",
+        "level.key": "OPD-K5-spritelab-7_2021",
         "script_level.level_keys": [
-          "OPD-K5 Pair_copy_2021"
+          "OPD-K5-spritelab-7_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5 loops free response_2021",
+        "level.key": "OPD-K5 sprite lab free response_2021",
         "script_level.level_keys": [
-          "OPD-K5 loops free response_2021"
+          "OPD-K5 sprite lab free response_2021"
         ],
-        "lesson.key": "Loops",
+        "lesson.key": "Sprite Lab",
         "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
@@ -4335,7 +4433,7 @@
           "OPD-K5 diving deeper intro_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4346,7 +4444,7 @@
           "OPD-K5 Stage6Start_copy_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4357,7 +4455,7 @@
           "OPD-K5 functions introduced_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4368,7 +4466,7 @@
           "OPD-K5 Stage6Go_copy_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4379,7 +4477,7 @@
           "courseE_artist_functions1_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4390,7 +4488,7 @@
           "courseE_artist_functions_predict1_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4401,7 +4499,7 @@
           "courseE_video_functionsArtist_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4412,7 +4510,7 @@
           "courseE_artist_functions2_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4423,7 +4521,7 @@
           "courseE_artist_functions3_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4434,7 +4532,7 @@
           "courseE_artist_functions4_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4445,7 +4543,7 @@
           "courseE_artist_functions5_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4456,7 +4554,7 @@
           "OPD-K5 functions free response_2021"
         ],
         "lesson.key": "Functions",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4467,7 +4565,7 @@
           "OPD-K5 variables_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4478,7 +4576,7 @@
           "OPD-K5 variables introduction_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4489,7 +4587,7 @@
           "OPD-K5 variables unplugged_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4500,7 +4598,7 @@
           "OPD-K5-variables-1_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4511,7 +4609,7 @@
           "OPD-K5-variables-2_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4522,7 +4620,7 @@
           "OPD-K5-variables-3-video_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4533,7 +4631,7 @@
           "OPD-K5-variables-4_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4544,7 +4642,7 @@
           "OPD-K5-variables-5_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4555,7 +4653,7 @@
           "OPD-K5-variables-6_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4566,7 +4664,7 @@
           "OPD-K5-variables-7_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4577,7 +4675,7 @@
           "OPD-K5 variables free response_2021"
         ],
         "lesson.key": "Variables",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4588,7 +4686,7 @@
           "OPD-K5 for loops intro_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4599,7 +4697,7 @@
           "OPD-K5 for loops introduction_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4610,7 +4708,7 @@
           "OPD-K5 for loops_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4621,7 +4719,7 @@
           "OPD-K5-forloops-1_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4632,7 +4730,7 @@
           "OPD-K5-forloops-2_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4643,7 +4741,7 @@
           "OPD-K5-forloops-3-video_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4654,7 +4752,7 @@
           "OPD-K5-forloops-4_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4665,7 +4763,7 @@
           "OPD-K5-forloops-5_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4676,7 +4774,7 @@
           "OPD-K5-forloops-6_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4687,7 +4785,7 @@
           "OPD-K5-forloops-7_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
@@ -4698,139 +4796,7 @@
           "OPD-K5 for loops free response_2021"
         ],
         "lesson.key": "For Loops",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab introduction_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab introduction_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab unplugged_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab unplugged_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab video_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-1_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-1_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-2_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-2_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-3_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-3_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-4_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-4_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-5-video_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-5-video_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-6_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-6_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5-spritelab-7_2021",
-        "script_level.level_keys": [
-          "OPD-K5-spritelab-7_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
-        "script.name": "k5-onlinepd-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "OPD-K5 sprite lab free response_2021",
-        "script_level.level_keys": [
-          "OPD-K5 sprite lab free response_2021"
-        ],
-        "lesson.key": "Sprite Lab",
-        "lesson_group.key": "k5_diving_deeper_1",
+        "lesson_group.key": "k5_basic_concepts_1",
         "script.name": "k5-onlinepd-2021"
       }
     },
