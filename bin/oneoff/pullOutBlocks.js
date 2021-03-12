@@ -16,16 +16,15 @@ var gamelabBlocksToImport = [
 ];
 
 applabBlocksToImport.forEach(block => {
-  console.log(JSON.stringify(block));
   fs.writeFile(
-    `../../dashboard/config/programming_expressions/applab/${block.func}.json`,
-    JSON.stringify(block),
+    `dashboard/config/programming_expressions/applab/${block.func}.json`,
+    JSON.stringify(block, null, 2),
     function(err) {
       if (err) {
         throw err;
       }
       console.log(
-        `Saved! ../../dashboard/config/programming_expressions/applab/${
+        `Saved! dashboard/config/programming_expressions/applab/${
           block.func
         }.json`
       );
@@ -34,16 +33,15 @@ applabBlocksToImport.forEach(block => {
 });
 
 gamelabBlocksToImport.forEach(block => {
-  console.log(JSON.stringify(block));
   fs.writeFile(
-    `../../dashboard/config/programming_expressions/gamelab/${block.func}.json`,
-    JSON.stringify(block),
+    `dashboard/config/programming_expressions/gamelab/${block.func}.json`,
+    JSON.stringify(block, null, 2),
     function(err) {
       if (err) {
         throw err;
       }
       console.log(
-        `Saved! ../../dashboard/config/programming_expressions/gamelab/${
+        `Saved! dashboard/config/programming_expressions/gamelab/${
           block.func
         }.json`
       );
