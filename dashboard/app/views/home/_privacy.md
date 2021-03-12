@@ -4,7 +4,7 @@
 <br />
 <br />
 
-Date of Last Revision: March 11, 2020
+Date of Last Revision: March 11, 2021
 
 You can review the previous Privacy Policy [here](https://code.org/privacy-sep2020).
 
