@@ -49,7 +49,6 @@ class ProfanityControllerTest < ActionController::TestCase
 
   test 'find: returns 429 if request is throttled' do
     ProfanityHelper.expects(:throttled_find_profanities).once.returns(nil)
-    Honeybadger.expects(:notify).once
     post :find, params: {text: 'hola', locale: 'es-MX'}
     assert_response :too_many_requests
   end

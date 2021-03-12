@@ -1,0 +1,5 @@
+{
+  "func": "World.mouseY",
+  "category": "World",
+  "type": "readonlyproperty"
+}

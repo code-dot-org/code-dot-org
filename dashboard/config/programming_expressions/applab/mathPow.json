@@ -1,0 +1,5 @@
+{
+  "func": "mathPow",
+  "block": "Math.pow(__, __)",
+  "category": "Math"
+}
