@@ -82,7 +82,7 @@ class ScatterPlot extends Component {
 
     return (
       scatterPlotData && (
-        <div id="scatter-plot">
+        <div id="scatter-plot" style={styles.halfPanel}>
           <div style={styles.largeText}>Correlation Information</div>
           <div style={styles.scrollableContents}>
             <div style={{ ...styles.scrollingContents, height: 300 }}>

@@ -137,13 +137,11 @@ class App extends Component {
   }
 
   setColumnRef = (columnId, ref) => {
-
     if (ref) {
       const rect = ref.getBoundingClientRect();
       this.state.columnRefs[columnId] = rect.left + rect.width;
-      console.log(columnId, ref, ref.getBoundingClientRect());
     }
-  }
+  };
 
   render() {
     const {
@@ -172,14 +170,18 @@ class App extends Component {
         {["dataDisplay"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
-              <DataDisplay setColumnRef={this.setColumnRef}/>
+              <DataDisplay setColumnRef={this.setColumnRef} />
             </ContainerLeft>
-            <ColumnInspector columnRefs={this.state.columnRefs}/>
+            <ColumnInspector columnRefs={this.state.columnRefs} />
             <ContainerRight>
               <PhraseBuilder />
-              {false && currentPanel === "dataDisplayLabel" && <ColumnInspector />}
+              {false && currentPanel === "dataDisplayLabel" && (
+                <ColumnInspector />
+              )}
               {false && currentPanel === "dataDisplayFeatures" && <CrossTab />}
-              {false && currentPanel === "dataDisplayFeatures" && <ScatterPlot />}
+              {false && currentPanel === "dataDisplayFeatures" && (
+                <ScatterPlot />
+              )}
             </ContainerRight>
           </BodyContainer>
         )}

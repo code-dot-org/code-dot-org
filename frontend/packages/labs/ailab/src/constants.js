@@ -388,5 +388,19 @@ export const styles = {
     right: 10,
     cursor: "pointer",
     fontSize: 12
+  },
+
+  phraseBuilderSelect: {
+    fontSize: 24,
+    marginTop: 10,
+    padding: 6,
+    cursor: "pointer"
+  },
+
+  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
+
+  halfPanel: {
+    float: "left",
+    width: "50%"
   }
 };

@@ -96,18 +96,16 @@ class DataDisplay extends Component {
           <span style={styles.statementLabel}>
             {this.props.labelColumn || "..."}
           </span>
-          {true && (
-            <span>
-              {" "}
-              based on{" "}
-              <span style={styles.statementFeature}>
-                {this.props.selectedFeatures.length > 0
-                  ? this.props.selectedFeatures.join(", ")
-                  : ".."}
-              </span>
-              {"."}
+          <span>
+            {" "}
+            based on{" "}
+            <span style={styles.statementFeature}>
+              {this.props.selectedFeatures.length > 0
+                ? this.props.selectedFeatures.join(", ")
+                : ".."}
             </span>
-          )}
+            {"."}
+          </span>
         </div>
         {this.state.showRawData && (
           <div style={styles.tableParent} onScroll={() => setCurrentColumn(undefined)}>

@@ -77,7 +77,7 @@ class PhraseBuilder extends Component {
         <select
           value={labelColumn}
           onChange={this.handleChangeLabelSelect}
-          style={{ fontSize: 24, marginTop: 10, padding: 6 }}
+          style={styles.phraseBuilderSelect}
         >
           <option>{""}</option>
           {selectableLabels.map((feature, index) => {
@@ -92,7 +92,7 @@ class PhraseBuilder extends Component {
         <div style={styles.phraseBuilderHeader}>Based on...</div>
         {selectedFeatures.map((feature, index) => {
           return (
-            <div key={index} style={{ padding: 10, paddingBottom: 0, position: "relative" }}>
+            <div key={index} style={styles.phraseBuilderFeature}>
               {feature}
               <div
                 onClick={() => this.removeSelectedFeature(feature)}
@@ -103,11 +103,10 @@ class PhraseBuilder extends Component {
             </div>
           );
         })}
-        {/*<div>+ Add feature</div>*/}
         <select
           value={""}
           onChange={this.handleChangeFeatureSelect}
-          style={{ fontSize: 24, marginTop: 10, padding: 6 }}
+          style={styles.phraseBuilderSelect}
         >
           <option key="default" value="" disabled>
             + Add feature

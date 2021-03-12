@@ -24,7 +24,7 @@ class CrossTab extends Component {
 
     return (
       crossTabData && (
-        <div id="cross-tab">
+        <div id="cross-tab" style={styles.halfPanel}>
           {/*<div style={styles.largeText}>Correlation Information</div>*/}
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>

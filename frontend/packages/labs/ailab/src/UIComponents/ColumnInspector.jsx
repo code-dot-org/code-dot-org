@@ -106,11 +106,8 @@ class ColumnInspector extends Component {
     if (currentColumnData) {
       if (this.props.columnRefs[currentColumnData.id]) {
         leftPosition = this.props.columnRefs[currentColumnData.id];
-        //console.log(this.props.columnRefs[currentColumnData.id].getBoundingClientRect());
       }
     }
-
-    console.log("rendering column inspector!");
 
     return (
       currentColumnData && (
@@ -118,13 +115,13 @@ class ColumnInspector extends Component {
           id="column-inspector"
           style={{
             ...styles.panel,
-            ...styles.rightPanel,
             ...{
               position: "absolute",
               border: "1px solid",
               top: 90,
               left: leftPosition,
-              height: "initial"
+              height: "initial",
+              zIndex: 1
             }
           }}
         >
@@ -166,7 +163,7 @@ class ColumnInspector extends Component {
               </label>
 
               {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                <div style={{float: "left", width: "50%"}}>
+                <div style={styles.halfPanel}>
                   {barData.labels.length <= maxLabelsInHistogram && (
                     <Bar
                       data={barData}
@@ -185,10 +182,8 @@ class ColumnInspector extends Component {
                 </div>
               )}
 
-              <div style={{float: "left", width: "50%"}}>
-                <ScatterPlot/>
-                <CrossTab />
-              </div>
+              <ScatterPlot />
+              <CrossTab />
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
