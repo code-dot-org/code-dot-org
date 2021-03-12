@@ -23,10 +23,8 @@ OptionParser.new do |opts|
 end.parse!
 CDO.log.info "Called with options: #{options}"
 
-# To speed up the queries, we limit the query to an id range that we know covers
-# all possible affected users
-START_USER_ID = 1
-END_USER_ID = 75_096_352
+start_user_id = User.first.id
+end_user_id = User.last.id
 
 BATCH_SIZE = 200
 
@@ -35,7 +33,7 @@ users_with_project_purge_errors = 0
 User.
   with_deleted.
   where.not(purged_at: nil).
-  find_in_batches(start: START_USER_ID, finish: END_USER_ID, batch_size: BATCH_SIZE) do |user_batch|
+  find_in_batches(start: start_user_id, finish: end_user_id, batch_size: BATCH_SIZE) do |user_batch|
   user_batch.each do |user|
     if options[:actually_delete]
       delete_project_backed_progress(user)
@@ -49,4 +47,4 @@ User.
 end
 
 CDO.log.info "Script completed"
-CDO.log.info "S3 Objects deleted #{users_destroyed} users with #{destroy_user_errors} errors"
+CDO.log.info "S3 Objects deleted for #{users_purged_of_project_objects} users with #{users_with_project_purge_errors} errors"
