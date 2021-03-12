@@ -66,7 +66,7 @@ class ProgressTableContainer extends React.Component {
           student: student,
           expansionIndex: 0,
           isExpanded: false,
-          hasDarkBackground: index % 2 === 1
+          useDarkBackground: index % 2 === 1
         };
       })
     };
@@ -146,7 +146,7 @@ class ProgressTableContainer extends React.Component {
         id: idForExpansionIndex(rowData.student.id, i),
         student: rowData.student,
         expansionIndex: i,
-        hasDarkBackground: rowData.hasDarkBackground
+        useDarkBackground: rowData.useDarkBackground
       });
     }
     const rows = [...this.state.rows];
@@ -169,7 +169,7 @@ class ProgressTableContainer extends React.Component {
 
   onRow = row => {
     const rowClassName = classnames({
-      'dark-row': row.hasDarkBackground,
+      'dark-row': row.useDarkBackground,
       'primary-row': row.expansionIndex === 0,
       'expanded-row': row.expansionIndex > 0,
       'first-expanded-row': row.expansionIndex === 1

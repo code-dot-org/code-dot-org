@@ -40,14 +40,14 @@ export const ViewType = {
  * @property {number} expansionIndex 0 for the primary row,
  * otherwise 1-based index of expanded row
  * @property {bool} isExpanded used by primary row to track state
- * @property {bool} hasDarkBackground used by primary row to determine background color
+ * @property {bool} useDarkBackground used by primary row to determine background color
  */
 export const studentTableRowType = PropTypes.shape({
   id: PropTypes.string.isRequired,
   student: studentType.isRequired,
   expansionIndex: PropTypes.number.isRequired,
   isExpanded: PropTypes.bool,
-  hasDarkBackground: PropTypes.bool
+  useDarkBackground: PropTypes.bool
 });
 
 export const tooltipIdForStudent = studentId =>

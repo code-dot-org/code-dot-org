@@ -48,12 +48,12 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
-  studentProgress(student) {
+  getStudentProgress(student) {
     return this.props.levelProgressByStudent[student.id];
   }
 
   detailCellFormatter(lesson, student) {
-    const studentProgress = this.studentProgress(student);
+    const studentProgress = this.getStudentProgress(student);
     return (
       <ProgressTableDetailCell
         studentId={student.id}
@@ -66,7 +66,7 @@ class ProgressTableDetailView extends React.Component {
   }
 
   timeSpentCellFormatter(lesson, student) {
-    const studentProgress = this.studentProgress(student);
+    const studentProgress = this.getStudentProgress(student);
     const progressTexts = lesson.levels.map(level =>
       timeSpentFormatter(studentProgress[level.id])
     );
@@ -74,7 +74,7 @@ class ProgressTableDetailView extends React.Component {
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    const studentProgress = this.studentProgress(student);
+    const studentProgress = this.getStudentProgress(student);
     const lastUpdatedTexts = lesson.levels.map(level =>
       lastUpdatedFormatter(studentProgress[level.id])
     );
