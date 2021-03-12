@@ -92,6 +92,7 @@ class ProgressTableStudentName extends React.PureComponent {
 
     return (
       <div
+        className="progress-table-student-name"
         style={progressStyles.studentListContent}
         data-tip
         data-for={tooltipId}

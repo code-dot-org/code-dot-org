@@ -12,11 +12,11 @@ import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {ProgressTableTextLabelCell} from './ProgressTableTextCells';
-import {progressTableRowWrapper} from './progressTableHelpers';
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
     rows: PropTypes.arrayOf(studentTableRowType).isRequired,
+    onRow: PropTypes.func.isRequired,
     sectionId: PropTypes.number.isRequired,
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -35,8 +35,7 @@ export default class ProgressTableStudentList extends React.Component {
   bodyComponent = null;
 
   cellFormatter(_, {rowData}) {
-    const formattedRow = this.rowTypeFormatter(rowData);
-    return progressTableRowWrapper(rowData, formattedRow);
+    return this.rowTypeFormatter(rowData);
   }
 
   rowTypeFormatter(rowData) {
@@ -109,6 +108,7 @@ export default class ProgressTableStudentList extends React.Component {
         />
         <Virtualized.Body
           rows={this.props.rows}
+          onRow={this.props.onRow}
           rowKey={'id'}
           style={{
             overflowX: 'scroll',
