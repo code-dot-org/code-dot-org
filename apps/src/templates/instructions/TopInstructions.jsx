@@ -26,12 +26,7 @@ import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
-import {
-  getTeacherFeedbackForStudent,
-  getTeacherFeedbackForTeacher,
-  getRubric,
-  incrementVisitCount
-} from './topInstructionsHelpers';
+import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
@@ -118,6 +113,7 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
@@ -153,8 +149,11 @@ class TopInstructions extends Component {
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
 
+    this.isViewingAsStudent = this.props.viewAs === ViewType.Student;
+    this.isViewingAsTeacher = this.props.viewAs === ViewType.Teacher;
+
     const teacherViewingStudentWork =
-      this.isViewingAsTeacher() &&
+      this.isViewingAsTeacher &&
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
@@ -171,6 +170,11 @@ class TopInstructions extends Component {
       fetchingData: true,
       token: null
     };
+
+    this.instructions = null;
+    this.helpTab = null;
+    this.commentTab = null;
+    this.teacherOnlyTab = null;
   }
 
   /**
@@ -190,10 +194,11 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (this.isViewingAsStudent() && user && serverLevelId) {
+    if (this.isViewingAsStudent && user && serverLevelId) {
       promises.push(
-        getTeacherFeedbackForStudent(user, serverLevelId).done(
-          (data, _, request) => {
+        topInstructionsDataApi
+          .getTeacherFeedbackForStudent(user, serverLevelId)
+          .done((data, _, request) => {
             // If student has feedback make their default tab the feedback tab instead of instructions
             if (data[0] && (data[0].comment || data[0].performance)) {
               this.setState({
@@ -203,13 +208,12 @@ class TopInstructions extends Component {
               });
               this.incrementFeedbackVisitCount();
             }
-          }
-        )
+          })
       );
     }
     if (serverLevelId) {
       promises.push(
-        getRubric(serverLevelId).done(data => {
+        topInstructionsDataApi.getRubric(serverLevelId).done(data => {
           this.setState({rubric: data});
         })
       );
@@ -222,14 +226,14 @@ class TopInstructions extends Component {
       studentId
     ) {
       promises.push(
-        getTeacherFeedbackForTeacher(studentId, serverLevelId, user).done(
-          (data, textStatus, request) => {
+        topInstructionsDataApi
+          .getTeacherFeedbackForTeacher(studentId, serverLevelId, user)
+          .done((data, textStatus, request) => {
             this.setState({
               feedbacks: request.status === 204 ? [] : [data],
               token: request.getResponseHeader('csrf-token')
             });
-          }
-        )
+          })
       );
     }
 
@@ -373,7 +377,7 @@ class TopInstructions extends Component {
       ? 'expand-instructions'
       : 'collapse-instructions';
 
-    this.recordTopInstructionsEvent(eventName, {
+    this.recordEvent(eventName, {
       data_json: JSON.stringify({
         csfStyleInstructions: !noInstructionsWhenCollapsed
       })
@@ -395,7 +399,7 @@ class TopInstructions extends Component {
     win.focus();
   };
 
-  recordTopInstructionsEvent(eventName, additionalData = {}) {
+  recordEvent(eventName, additionalData = {}) {
     const record = {
       study: 'top-instructions',
       event: eventName,
@@ -410,7 +414,7 @@ class TopInstructions extends Component {
       this.scrollToTopOfTab();
       this.adjustMaxNeededHeight();
     });
-    this.recordTopInstructionsEvent('click-help-and-tips-tab');
+    this.recordEvent('click-help-and-tips-tab');
   };
 
   handleInstructionTabClick = () => {
@@ -428,7 +432,7 @@ class TopInstructions extends Component {
     if (this.state.tabSelected !== TabType.COMMENTS) {
       this.incrementFeedbackVisitCount();
     }
-    this.recordTopInstructionsEvent('click-feedback-tab');
+    this.recordEvent('click-feedback-tab');
 
     this.setState({tabSelected: TabType.COMMENTS}, () => {
       this.forceTabResizeToMaxHeight();
@@ -441,7 +445,7 @@ class TopInstructions extends Component {
       this.scrollToTopOfTab();
       this.adjustMaxNeededHeight();
     });
-    this.recordTopInstructionsEvent('click-teacher-only-tab');
+    this.recordEvent('click-teacher-only-tab');
   };
 
   scrollToTopOfTab = () => {
@@ -459,24 +463,62 @@ class TopInstructions extends Component {
     () => {
       const latestFeedback = this.state.feedbacks[0];
       if (!this.state.teacherViewingStudentWork && latestFeedback) {
-        incrementVisitCount(latestFeedback.id, this.state.token);
+        topInstructionsDataApi.incrementVisitCount(
+          latestFeedback.id,
+          this.state.token
+        );
       }
     },
     5000,
     {leading: true}
   );
 
-  isViewingAsStudent = () => {
-    return this.props.viewAs === ViewType.Student;
-  };
-
-  isViewingAsTeacher = () => {
-    return this.props.viewAs === ViewType.Teacher;
-  };
-
   setInstructionsRef(ref) {
     if (ref) {
       this.instructions = ref;
+    }
+  }
+
+  renderInstructions(isCSF) {
+    const {
+      longInstructions,
+      hasContainedLevels,
+      isEmbedView,
+      isBlockly,
+      noInstructionsWhenCollapsed
+    } = this.props;
+    const {teacherViewingStudentWork, tabSelected} = this.state;
+
+    if (hasContainedLevels) {
+      return (
+        <div>
+          <ContainedLevel
+            ref={ref => this.setInstructionsRef(ref)}
+            hidden={tabSelected !== TabType.INSTRUCTIONS}
+          />
+        </div>
+      );
+    } else if (isCSF && tabSelected === TabType.INSTRUCTIONS) {
+      return (
+        <InstructionsCSF
+          ref={ref => this.setInstructionsRef(ref)}
+          handleClickCollapser={this.handleClickCollapser}
+          adjustMaxNeededHeight={this.adjustMaxNeededHeight}
+          isEmbedView={isEmbedView}
+          teacherViewingStudentWork={teacherViewingStudentWork}
+        />
+      );
+    } else if (tabSelected === TabType.INSTRUCTIONS) {
+      return (
+        <Instructions
+          ref={ref => this.setInstructionsRef(ref)}
+          longInstructions={longInstructions}
+          onResize={this.adjustMaxNeededHeight}
+          inTopPane
+          isBlockly={isBlockly}
+          collapsible={noInstructionsWhenCollapsed}
+        />
+      );
     }
   }
 
@@ -501,8 +543,9 @@ class TopInstructions extends Component {
       user,
       mainStyle,
       containerStyle,
-      isBlockly,
-      resizable
+      resizable,
+      documentationUrl,
+      ttsLongInstructionsUrl
     } = this.props;
 
     const {
@@ -520,7 +563,7 @@ class TopInstructions extends Component {
     const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
-    const mainStyle = [
+    const topInstructionsStyle = [
       !mainStyle && (isRtl ? styles.mainRtl : styles.main),
       mainStyle,
       {
@@ -529,6 +572,13 @@ class TopInstructions extends Component {
       noVisualization && styles.noViz,
       isEmbedView && styles.embedView,
       widgetMode && (isRtl ? {right: widgetWidth} : {left: widgetWidth})
+    ];
+
+    const instructionsContainerStyle = [
+      isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
+        ? styles.csfBody
+        : containerStyle || styles.body,
+      isMinecraft && craftStyles.instructionsBody
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -540,7 +590,7 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
     const studentHasFeedback =
-      this.isViewingAsStudent() &&
+      this.isViewingAsStudent &&
       feedbacks.length > 0 &&
       !!(feedbacks[0].comment || feedbacks[0].performance);
 
@@ -553,8 +603,8 @@ class TopInstructions extends Component {
      */
     const displayKeyConcept =
       rubric &&
-      ((this.isViewingAsStudent() && !studentHasFeedback) ||
-        (this.isViewingAsTeacher() && !teacherViewingStudentWork));
+      ((this.isViewingAsStudent && !studentHasFeedback) ||
+        (this.isViewingAsTeacher && !teacherViewingStudentWork));
 
     const displayFeedback =
       displayKeyConcept || teacherViewingStudentWork || studentHasFeedback;
@@ -571,9 +621,23 @@ class TopInstructions extends Component {
       return <div />;
     }
 
+    // ideally these props would get accessed directly from the redux
+    // store in the child, however TopInstructions is also used in
+    // in unconnected context, so we need to manually send these props through
+    const passThroughHeaderProps = {
+      isMinecraft,
+      ttsLongInstructionsUrl,
+      hasContainedLevels,
+      isRtl,
+      documentationUrl,
+      teacherMarkdown,
+      isEmbedView,
+      isCollapsed
+    };
+
     return (
       <div
-        style={mainStyle}
+        style={topInstructionsStyle}
         className="editor-column"
         ref={ref => (this.topInstructions = ref)}
       >
@@ -584,7 +648,7 @@ class TopInstructions extends Component {
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedback}
           displayKeyConcept={displayKeyConcept}
-          isViewingAsTeacher={this.isViewingAsTeacher()}
+          isViewingAsTeacher={this.isViewingAsTeacher}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={this.handleInstructionTabClick}
@@ -592,51 +656,12 @@ class TopInstructions extends Component {
           handleCommentTabClick={this.handleCommentTabClick}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           handleClickCollapser={this.handleClickCollapser}
+          {...passThroughHeaderProps}
         />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
-          <div
-            style={[
-              isCSF &&
-              !hasContainedLevels &&
-              tabSelected === TabType.INSTRUCTIONS
-                ? styles.csfBody
-                : containerStyle || styles.body,
-              isMinecraft && craftStyles.instructionsBody
-            ]}
-            id="scroll-container"
-          >
+          <div style={instructionsContainerStyle} id="scroll-container">
             <div ref={ref => this.setInstructionsRef(ref)}>
-              {hasContainedLevels && (
-                <div>
-                  <ContainedLevel
-                    ref={ref => this.setInstructionsRef(ref)}
-                    hidden={tabSelected !== TabType.INSTRUCTIONS}
-                  />
-                </div>
-              )}
-              {!hasContainedLevels &&
-                isCSF &&
-                tabSelected === TabType.INSTRUCTIONS && (
-                  <InstructionsCSF
-                    ref={ref => this.setInstructionsRef(ref)}
-                    handleClickCollapser={this.handleClickCollapser}
-                    adjustMaxNeededHeight={this.adjustMaxNeededHeight}
-                    isEmbedView={isEmbedView}
-                    teacherViewingStudentWork={teacherViewingStudentWork}
-                  />
-                )}
-              {!hasContainedLevels &&
-                isCSDorCSP &&
-                tabSelected === TabType.INSTRUCTIONS && (
-                  <Instructions
-                    ref={ref => this.setInstructionsRef(ref)}
-                    longInstructions={longInstructions}
-                    onResize={this.adjustMaxNeededHeight}
-                    inTopPane
-                    isBlockly={isBlockly}
-                    collapsible={noInstructionsWhenCollapsed}
-                  />
-                )}
+              {this.renderInstructions(isCSF)}
             </div>
             {tabSelected === TabType.RESOURCES && (
               <HelpTabContents
@@ -652,7 +677,7 @@ class TopInstructions extends Component {
                 visible={tabSelected === TabType.COMMENTS}
                 displayKeyConcept={displayKeyConcept}
                 disabledMode={
-                  this.isViewingAsStudent() || !teacherViewingStudentWork
+                  this.isViewingAsStudent || !teacherViewingStudentWork
                 }
                 rubric={rubric}
                 ref={ref => (this.commentTab = ref)}
@@ -660,7 +685,7 @@ class TopInstructions extends Component {
                 token={token}
               />
             )}
-            {this.isViewingAsTeacher() &&
+            {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (
@@ -690,6 +715,8 @@ class TopInstructions extends Component {
     );
   }
 }
+// Note: ususally the unconnected component is only used for tests, in this case it is used
+// in LevelDetailsDialog, so all of it's children may not rely on the redux store for data
 export const UnconnectedTopInstructions = Radium(TopInstructions);
 export default connect(
   state => ({
@@ -704,6 +731,7 @@ export default connect(
       state.instructions.maxNeededHeight
     ),
     longInstructions: state.instructions.longInstructions,
+    ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     noVisualization: state.pageConstants.noVisualization,
     isCollapsed: state.instructions.isCollapsed,
     documentationUrl: state.pageConstants.documentationUrl,

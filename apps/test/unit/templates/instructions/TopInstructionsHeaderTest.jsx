@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTopInstructionsHeader as TopInstructionsHeader} from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {TabType} from '@cdo/apps/templates/instructions/TopInstructions';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
@@ -22,8 +22,6 @@ const DEFAULT_PROPS = {
   handleCommentTabClick: () => {},
   handleTeacherOnlyTabClick: () => {},
   handleClickCollapser: () => {},
-
-  // redux provided
   isMinecraft: false,
   ttsLongInstructionsUrl: '',
   hasContainedLevels: false,
