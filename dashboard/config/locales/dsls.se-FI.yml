@@ -1201,7 +1201,7 @@ se-FI:
         answers:
         - {}
         - correct: true
-        - {}
+        - correct: true
         - {}
         questions:
         - {}
@@ -1993,3 +1993,5 @@ se-FI:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: Friddja Speallan

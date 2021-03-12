@@ -87,6 +87,9 @@ function validateReport(report) {
       case 'allowMultipleSends':
         validateType('allowMultipleSends', value, 'boolean');
         break;
+      case 'skipSuccessCallback':
+        validateType('skipSuccessCallback', value, 'boolean');
+        break;
       case 'level':
         if (value !== null) {
           if (report.app === 'level_group' || isContainedLevel) {
@@ -145,6 +148,9 @@ function validateReport(report) {
       case 'time':
         validateType('time', value, 'number');
         break;
+      case 'timeSinceLastMilestone':
+        validateType('timeSinceLastMilestone', value, 'number');
+        break;
       case 'lines':
         validateType('lines', value, 'number');
         break;
@@ -190,8 +196,11 @@ function validateReport(report) {
  * @property {boolean} allowMultipleSends - ??
  * @property {number} lines - number of lines of code written.
  * @property {number} serverLevelId - ??
+ * @property {boolean} skipSuccessCallback - Whether we should ignore the success result from ajax
  * @property {?} submitted - ??
  * @property {?} time - ??
+ * @property {number} timeSinceLastMilestone- The time since navigating to this page or since the last
+ * milestone was recorded, whichever is more recent. It is used to calculated time spent on a level.
  * @property {?} attempt - ??
  * @property {?} image - ??
  * @property {boolean} pass - true if the attempt is passing.
@@ -226,6 +235,7 @@ reporting.sendReport = function(report) {
     'testResult',
     'submitted',
     'time',
+    'timeSinceLastMilestone',
     'lines',
     'attempt',
     'image'
@@ -241,14 +251,7 @@ reporting.sendReport = function(report) {
     queryItems.push(key + '=' + report[key]);
   }
   const queryString = queryItems.join('&');
-
-  clientState.trackProgress(
-    report.result,
-    report.lines,
-    report.testResult,
-    appOptions.scriptName,
-    report.serverLevelId || appOptions.serverLevelId
-  );
+  clientState.trackLines(report.result, report.lines);
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
@@ -274,6 +277,14 @@ reporting.sendReport = function(report) {
   }
 
   if (postMilestone) {
+    var onNoSuccess = xhr => {
+      if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+        return;
+      }
+      report.error = xhr.responseText;
+      reportComplete(report, getFallbackResponse(report));
+    };
+
     var thisAjax = $.ajax({
       type: 'POST',
       url: report.callback,
@@ -291,7 +302,8 @@ reporting.sendReport = function(report) {
         );
       },
       success: function(response) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+        if (report.skipSuccessCallback === true) {
+          onNoSuccess(response);
           return;
         }
         if (appOptions.hasContainedLevels && !response.redirect) {
@@ -310,13 +322,7 @@ reporting.sendReport = function(report) {
         }
         reportComplete(report, response);
       },
-      error: function(xhr, textStatus, thrownError) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
-        }
-        report.error = xhr.responseText;
-        reportComplete(report, getFallbackResponse(report));
-      }
+      error: xhr => onNoSuccess(xhr)
     });
 
     lastAjaxRequest = thisAjax;

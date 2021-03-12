@@ -47,6 +47,10 @@ export function isPaused(state) {
   return state.runState.isDebuggerPaused;
 }
 
+export function isRunning(state) {
+  return state.runState.isRunning;
+}
+
 export function isEditWhileRun(state) {
   return state.runState.isEditWhileRun;
 }
@@ -92,7 +96,8 @@ export const selectors = {
   canRunNext,
   getLogOutput,
   getMaxLogLevel,
-  isOpen
+  isOpen,
+  isRunning
 };
 
 // actions

@@ -1,0 +1,183 @@
+{
+  "ms-MY": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Tindakan",
+              "Events": "Acara-acara",
+              "Loops": "Gelung",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Games/Score": "Permainan/Skor"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunia",
+              "Dancers": "Penari",
+              "Properties": "Hartanah",
+              "Events": "Acara-acara",
+              "Numbers": "Nombor",
+              "Logic": "Logik"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "panjang",
+                  "repeat": "Ulang"
+                }
+              },
+              "draw a triangle": {
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a house": {
+                "parameters": {
+                  "length": "panjang"
+                }
+              },
+              "draw a square": {
+                "name": "lukis segi empat",
+                "parameters": {
+                  "length": "panjang"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Jin",
+              "Actions": "Tindakan",
+              "Events": "Acara-acara",
+              "Behaviors": "Tingkah laku"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunia",
+              "Dancers": "Penari",
+              "Properties": "Hartanah",
+              "Events": "Acara-acara",
+              "Numbers": "Nombor",
+              "Logic": "Logik"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Tindakan",
+              "Brushes": "Berus",
+              "Loops": "Gelung",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Fungsi",
+              "Variables": "Pembolehubah"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Jin",
+              "Locations": "Lokasi",
+              "Actions": "Tindakan",
+              "Events": "Acara-acara",
+              "Behaviors": "Tingkah laku",
+              "Variables": "Pembolehubah",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Fungsi",
+              "Text": "teks",
+              "Comments": "Komen"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Jin",
+              "Locations": "Lokasi",
+              "Actions": "Tindakan",
+              "Events": "Acara-acara",
+              "Behaviors": "Tingkah laku",
+              "Variables": "Pembolehubah",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Fungsi",
+              "Text": "teks",
+              "Comments": "Komen"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Tindakan",
+              "Brushes": "Berus",
+              "Loops": "Gelung",
+              "Math": "Matematik",
+              "Logic": "Logik",
+              "Functions": "Fungsi",
+              "Variables": "Pembolehubah"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Jin",
+              "Actions": "Tindakan",
+              "Events": "Acara-acara",
+              "Logic": "Logik",
+              "Math": "Matematik"
+            },
+            "behavior_names": {
+              "recovering": "pulih",
+              "moving left and right": "bergerak kiri dan kanan",
+              "moving with arrow keys": "bergerak dengan kunci arah"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Dunia",
+              "Sprites": "Jin",
+              "Actions": "Tindakan",
+              "Behaviors": "Tingkah laku",
+              "Events": "Acara-acara",
+              "Locations": "Lokasi",
+              "Logic": "Logik",
+              "Loops": "Gelung",
+              "Math": "Matematik",
+              "Variables": "Pembolehubah",
+              "Functions": "Fungsi",
+              "Comments": "Komen"
+            },
+            "behavior_names": {
+              "recovering": "pulih",
+              "moving left and right": "bergerak kiri dan kanan",
+              "moving with arrow keys": "bergerak dengan kunci arah"
+            }
+          }
+        }
+      }
+    }
+  }
+}

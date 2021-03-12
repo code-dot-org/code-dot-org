@@ -94,6 +94,8 @@ def main
         SUBJECT_NAMES
         SUBJECTS
         VIRTUAL_ONLY_SUBJECTS
+        MUST_SUPPRESS_EMAIL_SUBJECTS
+        ACADEMIC_YEAR_WORKSHOP_SUBJECTS
         LEGACY_SUBJECTS
         STATES
         WORKSHOP_APPLICATION_STATES
@@ -127,7 +129,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher2021ApplicationConstants,
+      source_module: Pd::Teacher2122ApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
@@ -136,7 +138,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval2021ApplicationConstants,
+      source_module: Pd::PrincipalApproval2122ApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"

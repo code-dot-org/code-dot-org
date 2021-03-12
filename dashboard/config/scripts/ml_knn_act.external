@@ -1,0 +1,24 @@
+name 'ml-knn-act'
+title 'Act out model with continuous labels (KNN)'
+description ''
+
+markdown <<MARKDOWN
+# Act Out a model with continuous labels (KNN)
+
+## Lesson Sequence Notes
+- Part of 3-lesson sequence
+- Focus in these 3 lessons: **Feature Iteration**. 
+	- How does our selection of features impact the model we create?
+    - How can we tell which features are useful for models versus some that aren't impactful?
+
+## Curriculum Lesson Notes
+- Unplugged Lesson
+- Go through physical activity simulating KNN algorithm
+- In selecting which features to represent, can visually see when clusters are created that create a better model vs when clusters aren't created and you get an erratic model. Which features you pick impacts how good your model is.
+
+## AI-Lab Notes
+- None
+
+## Dataset / Model Notes:
+- Made-up dataset (probably in close consultation with curriculum) to act out the algorithm
+MARKDOWN

@@ -189,7 +189,7 @@ export const install = (blockly, blockInstallOptions) => {
     [i18n.blockTurnRight() + ' \u21BB', 'right']
   ];
 
-  blockly.Generator.get('JavaScript').craft_entityTurn = function() {
+  blockly.getGenerator().craft_entityTurn = function() {
     // Generate JavaScript for turning left or right.
     const dir = this.getTitleValue('DIR');
     const methodCalls = {
@@ -224,7 +224,7 @@ export const install = (blockly, blockInstallOptions) => {
     [i18n.turnRandom(), 'random']
   ];
 
-  blockly.Generator.get('JavaScript').craft_entityTurnLR = function() {
+  blockly.getGenerator().craft_entityTurnLR = function() {
     // Generate JavaScript for turning left or right.
     const dir = this.getTitleValue('DIR');
     const methodCalls = {
@@ -263,7 +263,7 @@ export const install = (blockly, blockInstallOptions) => {
     [i18n.blockTurnRight() + ' \u21BB', 'right']
   ];
 
-  blockly.Generator.get('JavaScript').craft_turn = function() {
+  blockly.getGenerator().craft_turn = function() {
     // Generate JavaScript for turning left or right.
     const dir = this.getTitleValue('DIR');
     const methodCall = dir === 'left' ? 'turnLeft' : 'turnRight';
@@ -317,7 +317,8 @@ export const install = (blockly, blockInstallOptions) => {
     return function() {
       return statementNames
         .map(statementName => {
-          const callback = blockly.Generator.get('JavaScript')
+          const callback = blockly
+            .getGenerator()
             .statementToCode(this, statementName)
             .replace(/\n/g, '');
           return `onEventTriggered("${blockType}", ${
@@ -330,9 +331,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   function createEventBlockForEntity(entityID, displayName) {
     blockly.Blocks[`craft_${entityID}`] = blockFor(displayName);
-    blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(
-      entityID
-    );
+    blockly.getGenerator()[`craft_${entityID}`] = generatorFor(entityID);
   }
 
   function createLimitedEventBlockForEntity(
@@ -342,7 +341,7 @@ export const install = (blockly, blockInstallOptions) => {
     statementNames
   ) {
     blockly.Blocks[`craft_${entityID}`] = blockFor(displayName, statementNames);
-    blockly.Generator.get('JavaScript')[`craft_${entityID}`] = generatorFor(
+    blockly.getGenerator()[`craft_${entityID}`] = generatorFor(
       entityType,
       statementNames
     );
@@ -433,8 +432,9 @@ export const install = (blockly, blockInstallOptions) => {
       }
     };
 
-    blockly.Generator.get('JavaScript')[`craft_${functionName}`] = function() {
-      const callback = blockly.Generator.get('JavaScript')
+    blockly.getGenerator()[`craft_${functionName}`] = function() {
+      const callback = blockly
+        .getGenerator()
         .statementToCode(this, 'DO')
         .replace(/\n/g, '');
       return `onGlobalEventTriggered(${eventType}, "${callback}", 'block_id_${
@@ -480,9 +480,7 @@ export const install = (blockly, blockInstallOptions) => {
       }
     };
 
-    blockly.Generator.get('JavaScript')[
-      `craft_${simpleFunctionName}`
-    ] = function() {
+    blockly.getGenerator()[`craft_${simpleFunctionName}`] = function() {
       const dropdownValue = this.getTitleValue('TYPE');
       return `${simpleFunctionName}('${dropdownValue}', event.targetIdentifier, 'block_id_${
         this.id
@@ -501,9 +499,7 @@ export const install = (blockly, blockInstallOptions) => {
       }
     };
 
-    blockly.Generator.get('JavaScript')[
-      `craft_${simpleFunctionName}`
-    ] = function() {
+    blockly.getGenerator()[`craft_${simpleFunctionName}`] = function() {
       return `${simpleFunctionName}(event.targetIdentifier, 'block_id_${
         this.id
       }');\n`;
@@ -532,7 +528,7 @@ export const install = (blockly, blockInstallOptions) => {
       }
     };
 
-    blockly.Generator.get('JavaScript')[`craft_${blockName}`] = function() {
+    blockly.getGenerator()[`craft_${blockName}`] = function() {
       const thingToTarget = this.getTitleValue('TYPE');
       return `${simpleFunctionName}(event.targetIdentifier, '${thingToTarget}', 'block_id_${
         this.id
@@ -587,11 +583,8 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_forever = function() {
-    const innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+  blockly.getGenerator().craft_forever = function() {
+    const innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return `repeat('block_id_${
       this.id
     }', function(event) { ${innerCode} }, -1, event.targetIdentifier);`;
@@ -616,12 +609,9 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_repeatTimes = function() {
+  blockly.getGenerator().craft_repeatTimes = function() {
     const times = this.getTitleValue('TIMES');
-    const innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+    const innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return `repeat('block_id_${
       this.id
     }', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
@@ -638,11 +628,8 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_repeatRandom = function() {
-    const innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+  blockly.getGenerator().craft_repeatRandom = function() {
+    const innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return `repeatRandom('block_id_${
       this.id
     }', function(event) { ${innerCode} }, event.targetIdentifier);`;
@@ -668,12 +655,9 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_repeatDropdown = function() {
+  blockly.getGenerator().craft_repeatDropdown = function() {
     const times = this.getTitleValue('TIMES');
-    const innerCode = blockly.Generator.get('JavaScript').statementToCode(
-      this,
-      'DO'
-    );
+    const innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return `repeat('block_id_${
       this.id
     }', function(event) { ${innerCode} }, ${times}, event.targetIdentifier);`;
@@ -710,7 +694,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript')[`craft_spawnEntity`] = function() {
+  blockly.getGenerator()[`craft_spawnEntity`] = function() {
     const type = this.getTitleValue('TYPE');
     const direction = this.getTitleValue('DIRECTION');
     return `spawnEntity('${type}', '${direction}', 'block_id_${this.id}');\n`;
@@ -736,7 +720,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript')[`craft_spawnEntityRandom`] = function() {
+  blockly.getGenerator()[`craft_spawnEntityRandom`] = function() {
     const type = this.getTitleValue('TYPE');
     return `spawnEntityRandom('${type}', 'block_id_${this.id}');\n`;
   };
@@ -751,7 +735,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveEntityNorth = function() {
+  blockly.getGenerator().craft_moveEntityNorth = function() {
     return "moveEntityNorth(block, 'block_id_" + this.id + "');\n";
   };
 
@@ -765,7 +749,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveEntitySouth = function() {
+  blockly.getGenerator().craft_moveEntitySouth = function() {
     return "moveEntitySouth(block, 'block_id_" + this.id + "');\n";
   };
 
@@ -779,7 +763,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveEntityEast = function() {
+  blockly.getGenerator().craft_moveEntityEast = function() {
     return "moveEntityEast(block, 'block_id_" + this.id + "');\n";
   };
 
@@ -793,7 +777,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_moveEntityWest = function() {
+  blockly.getGenerator().craft_moveEntityWest = function() {
     return "moveEntityWest(block, 'block_id_" + this.id + "');\n";
   };
 
@@ -826,7 +810,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_playSound = function() {
+  blockly.getGenerator().craft_playSound = function() {
     const blockType = this.getTitleValue('TYPE');
     return `playSound('${blockType}', event.targetIdentifier, 'block_id_${
       this.id
@@ -852,7 +836,7 @@ export const install = (blockly, blockInstallOptions) => {
     }
   };
 
-  blockly.Generator.get('JavaScript').craft_addScore = function() {
+  blockly.getGenerator().craft_addScore = function() {
     const score = this.getTitleValue('SCORE');
     return `addScore('${score}', 'block_id_${this.id}');\n`;
   };

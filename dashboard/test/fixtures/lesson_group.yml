@@ -9,7 +9,7 @@ lesson_group_2037:
       name: Etc/UTC
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2020-05-21 19:48:29.000000000 Z
+    utc: &3 2020-07-19 04:28:21.000000000 Z
     zone: *2
     time: *3
   position: 1
@@ -24,7 +24,7 @@ lesson_group_2039:
     zone: *2
     time: *4
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &5 2020-05-21 19:48:31.000000000 Z
+    utc: &5 2020-07-19 04:28:21.000000000 Z
     zone: *2
     time: *5
   position: 1
@@ -39,7 +39,7 @@ lesson_group_2041:
     zone: *2
     time: *6
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &7 2020-05-21 19:48:31.000000000 Z
+    utc: &7 2020-07-19 04:28:21.000000000 Z
     zone: *2
     time: *7
   position: 1
@@ -54,7 +54,7 @@ lesson_group_2218:
     zone: *2
     time: *8
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &9 2020-05-21 19:51:23.000000000 Z
+    utc: &9 2020-07-19 04:35:31.000000000 Z
     zone: *2
     time: *9
   position: 1
@@ -69,7 +69,7 @@ lesson_group_2265:
     zone: *2
     time: *10
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &11 2020-05-21 19:51:46.000000000 Z
+    utc: &11 2020-07-19 04:37:21.000000000 Z
     zone: *2
     time: *11
   position: 1
@@ -84,7 +84,7 @@ lesson_group_2208:
     zone: *2
     time: *12
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &13 2020-05-21 19:51:21.000000000 Z
+    utc: &13 2020-07-19 04:35:16.000000000 Z
     zone: *2
     time: *13
   position: 1
@@ -99,7 +99,7 @@ lesson_group_2238:
     zone: *2
     time: *14
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &15 2020-05-21 19:51:35.000000000 Z
+    utc: &15 2020-07-19 04:36:24.000000000 Z
     zone: *2
     time: *15
   position: 1
@@ -114,7 +114,7 @@ lesson_group_2108:
     zone: *2
     time: *16
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &17 2020-05-21 19:48:49.000000000 Z
+    utc: &17 2020-07-19 04:28:35.000000000 Z
     zone: *2
     time: *17
   position: 1
@@ -129,7 +129,7 @@ lesson_group_2083:
     zone: *2
     time: *18
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &19 2020-05-21 19:48:40.000000000 Z
+    utc: &19 2020-07-19 04:28:30.000000000 Z
     zone: *2
     time: *19
   position: 1
@@ -144,7 +144,7 @@ lesson_group_2279:
     zone: *2
     time: *20
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &21 2020-05-22 01:53:13.000000000 Z
+    utc: &21 2020-07-18 01:06:46.000000000 Z
     zone: *2
     time: *21
   position: 1
@@ -159,7 +159,7 @@ lesson_group_2036:
     zone: *2
     time: *22
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &23 2020-05-21 19:48:27.000000000 Z
+    utc: &23 2020-07-19 04:16:46.000000000 Z
     zone: *2
     time: *23
   position: 1
@@ -174,7 +174,7 @@ lesson_group_2118:
     zone: *2
     time: *24
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &25 2020-05-21 19:48:57.000000000 Z
+    utc: &25 2020-07-19 04:28:44.000000000 Z
     zone: *2
     time: *25
   position: 1
@@ -189,7 +189,7 @@ lesson_group_2119:
     zone: *2
     time: *26
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &27 2020-05-21 19:48:59.000000000 Z
+    utc: &27 2020-07-19 04:28:44.000000000 Z
     zone: *2
     time: *27
   position: 1
@@ -204,7 +204,7 @@ lesson_group_2120:
     zone: *2
     time: *28
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &29 2020-05-21 19:49:00.000000000 Z
+    utc: &29 2020-07-19 04:28:45.000000000 Z
     zone: *2
     time: *29
   position: 1
@@ -219,7 +219,7 @@ lesson_group_2121:
     zone: *2
     time: *30
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &31 2020-05-21 19:49:01.000000000 Z
+    utc: &31 2020-07-19 04:28:46.000000000 Z
     zone: *2
     time: *31
   position: 1
@@ -234,7 +234,7 @@ lesson_group_2174:
     zone: *2
     time: *32
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &33 2020-05-21 19:50:56.000000000 Z
+    utc: &33 2020-07-19 04:33:37.000000000 Z
     zone: *2
     time: *33
   position: 1
@@ -249,7 +249,7 @@ lesson_group_2175:
     zone: *2
     time: *34
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &35 2020-05-21 19:50:56.000000000 Z
+    utc: &35 2020-07-19 04:33:38.000000000 Z
     zone: *2
     time: *35
   position: 1
@@ -264,7 +264,7 @@ lesson_group_2176:
     zone: *2
     time: *36
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &37 2020-05-21 19:50:58.000000000 Z
+    utc: &37 2020-07-19 04:33:53.000000000 Z
     zone: *2
     time: *37
   position: 1
@@ -279,7 +279,7 @@ lesson_group_2178:
     zone: *2
     time: *38
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &39 2020-05-21 19:51:00.000000000 Z
+    utc: &39 2020-07-19 04:33:59.000000000 Z
     zone: *2
     time: *39
   position: 1
@@ -294,7 +294,7 @@ lesson_group_2180:
     zone: *2
     time: *40
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &41 2020-05-21 19:51:02.000000000 Z
+    utc: &41 2020-07-19 04:34:04.000000000 Z
     zone: *2
     time: *41
   position: 1
@@ -309,7 +309,7 @@ lesson_group_2181:
     zone: *2
     time: *42
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &43 2020-05-21 19:51:02.000000000 Z
+    utc: &43 2020-07-19 04:34:08.000000000 Z
     zone: *2
     time: *43
   position: 1
@@ -324,7 +324,7 @@ lesson_group_2063:
     zone: *2
     time: *44
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &45 2020-05-21 19:48:36.000000000 Z
+    utc: &45 2020-07-19 04:28:25.000000000 Z
     zone: *2
     time: *45
   position: 1
@@ -339,7 +339,7 @@ lesson_group_2100:
     zone: *2
     time: *46
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &47 2020-05-21 19:48:46.000000000 Z
+    utc: &47 2020-07-19 04:28:34.000000000 Z
     zone: *2
     time: *47
   position: 1
@@ -354,7 +354,7 @@ lesson_group_2122:
     zone: *2
     time: *48
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &49 2020-05-21 19:49:02.000000000 Z
+    utc: &49 2020-07-19 04:28:46.000000000 Z
     zone: *2
     time: *49
   position: 1
@@ -369,7 +369,7 @@ lesson_group_2125:
     zone: *2
     time: *50
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &51 2020-05-21 19:49:05.000000000 Z
+    utc: &51 2020-07-19 04:28:51.000000000 Z
     zone: *2
     time: *51
   position: 1
@@ -384,7 +384,7 @@ lesson_group_2128:
     zone: *2
     time: *52
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &53 2020-05-21 19:49:09.000000000 Z
+    utc: &53 2020-07-19 04:28:56.000000000 Z
     zone: *2
     time: *53
   position: 1
@@ -399,7 +399,7 @@ lesson_group_2131:
     zone: *2
     time: *54
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &55 2020-05-21 19:49:13.000000000 Z
+    utc: &55 2020-07-19 04:29:03.000000000 Z
     zone: *2
     time: *55
   position: 1
@@ -549,7 +549,7 @@ lesson_group_2240:
     zone: *2
     time: *74
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &75 2020-05-21 19:51:36.000000000 Z
+    utc: &75 2020-07-19 04:36:33.000000000 Z
     zone: *2
     time: *75
   position: 1

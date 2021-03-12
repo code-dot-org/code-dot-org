@@ -1,5 +1,5 @@
 ---
-title: Інструкції
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # Як вчити одну Годину Коду в позашкільних класах і клубах
 
-### Приєднайтесь до цього руху, і познайомте групу учнів з їхньою першою годиною інформатики за допомогою наступних кроків. The Hour of Code is easy to run - even for beginners! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. Але вам **не** потрібен комп'ютер для кожної дитини, і ви навіть можете робити Годину коду без комп'ютера взагалі.
+Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
 Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 Забезпечте навушники своєму класові, або попросіть учнів принести власні, якщо обраний вами підручник працює найкраще зі звуком.
 
-**Не маєте достатньо пристроїв?** Застосовуйте [парне програмування](https://www.youtube.com/watch?v=vgkahOzFH2Q). Коли учні працюють спільно, вони допомагають один одному і менше покладаються на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Коли учні працюють спільно, вони допомагають один одному і менше покладаються на вчителя. Таким чином вони дізнаються, що інформатика є соціальною та груповою діяльністю.
 
 ## 5. Розпочніть свою Годину коду з перегляду відео для натхнення
 

@@ -245,7 +245,9 @@
           "spinning and growing": "旋转和放大\n"
         },
         "courseE_Dogger_2": {
-          "wandering": "徘徊"
+          "wandering": "徘徊",
+          "drive left": "左行车",
+          "drive right": "右行车"
         },
         "courseE_aboutme_1": {
           "wandering": "徘徊"
@@ -279,6 +281,65 @@
         },
         "courseF_project_1": {
           "wandering": "徘徊"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "徘徊 2",
+          "wandering 1": "徘徊 1"
+        },
+        "outbreak1": {
+          "wandering": "徘徊",
+          "recovering": "恢复"
+        },
+        "outbreak2": {
+          "wandering": "徘徊",
+          "recovering": "恢复"
+        },
+        "outbreak3": {
+          "wandering": "徘徊",
+          "recovering": "恢复"
+        },
+        "outbreak4": {
+          "wandering": "徘徊",
+          "recovering": "恢复",
+          "moving with arrow keys": "使用方向键移动"
+        },
+        "outbreak5": {
+          "wandering": "徘徊",
+          "recovering": "恢复"
+        },
+        "outbreak6": {
+          "wandering": "徘徊",
+          "recovering": "恢复"
+        },
+        "outbreak7": {
+          "wandering": "徘徊",
+          "recovering": "恢复",
+          "moving left and right": "左右移动",
+          "moving with arrow keys": "使用方向键移动"
+        },
+        "outbreak8": {
+          "wandering": "徘徊",
+          "recovering": "恢复",
+          "moving left and right": "左右移动",
+          "moving with arrow keys": "使用方向键移动"
+        },
+        "outbreak_freeplay": {
+          "wandering": "徘徊",
+          "recovering": "恢复",
+          "moving left and right": "左右移动",
+          "moving with arrow keys": "使用方向键移动"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "徘徊"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "wandering": "徘徊"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "恢复",
+          "wandering": "徘徊",
+          "moving left and right": "左右移动",
+          "moving with arrow keys": "使用方向键移动"
         }
       }
     }

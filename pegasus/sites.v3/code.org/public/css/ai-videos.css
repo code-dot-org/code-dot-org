@@ -1,0 +1,6 @@
+/* Special CSS to add borders to video thumbnail images for code.org/ai */
+
+.ai-video-collection .thumbnail-image {
+  border: 1px solid #696969;
+}
+

@@ -17,7 +17,7 @@
 #
 require 'state_abbr'
 
-class Pd::RegionalPartnerMapping < ActiveRecord::Base
+class Pd::RegionalPartnerMapping < ApplicationRecord
   acts_as_paranoid # use deleted_at column instead of deleting rows
   belongs_to :regional_partner
 

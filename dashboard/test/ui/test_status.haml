@@ -49,7 +49,7 @@
                 %td.status
                 %td.log-link
                 %td.rerun-command
-                  - rerun_command = "bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature}"
+                  - rerun_command = "bundle exec ./runner.rb --html #{type == 'Eyes' ? '--eyes' : ''} -c #{browser} -f #{feature} &"
                   %button.copy-button{'data-clipboard-text': rerun_command}= "Copy Rerun Cmd"
       %div#help-text
         %p

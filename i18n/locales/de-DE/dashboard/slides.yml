@@ -1876,7 +1876,7 @@ de:
         text: "Aber dafür brauche ich deine Hilfe. Beginne das Tutorial zu bearbeiten, fange an zu lernen, wie man kodiert, und ich werde euch nach ein paar Levels treffen, okay? Wünscht mir Glück! Ich glaube, es geht hier entlang. Au! Kaktus! Mir geht‘s gut!"
       7:
         image: 'notes/mc_2017_agent_intro_7.png'
-        text: "Um die Aufgabe \"Hour of Code\" abzuschließen, musst du Code schreiben, der den Agenten zu programmiert. Du wirst mit dem Agenten zusammenarbeiten, um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände, die du für deine Reise benötigst, einsammeln kannst. Nur der Agent kann Bausteine platzieren und auflösen, und nur du kannst Gegenstände einsammeln. Dein Bildschirm ist in drei Hauptteile gegliedert. Auf der linken Seite befindet sich Minecraft."
+        text: "Um die Aufgabe \"Hour of Code\" abzuschließen, musst du Code schreiben, der den Agenten programmiert. Du wirst mit dem Agenten zusammenarbeiten, um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände, die du für deine Reise benötigst, einsammeln kannst. Nur der Agent kann Bausteine platzieren und auflösen, und nur du kannst Gegenstände einsammeln. Dein Bildschirm ist in drei Hauptteile gegliedert. Auf der linken Seite befindet sich Minecraft."
       8:
         image: 'notes/mc_2017_agent_intro_8.png'
         text: "Der mittlere Bereich ist die Werkzeugkiste mit Befehlen, die der Agent verstehen kann."
@@ -1885,7 +1885,7 @@ de:
         text: "Auf der rechten Seite befindet sich der Arbeitsbereich. Dort stapelst du die Befehle, um dein Programm zur Steuerung des Agenten zu erstellen."
       10:
         image: 'notes/mc_2017_agent_intro_10.png'
-        text: "Der Agent kann gehen, sich drehen und Druckplatten aktivieren. Er kann auch Bausteine zerstören und Bausteine platzieren. Wenn er den Baustein wie diese Minecart-Schienen platziert, gehen sie von selbst darunter."
+        text: "Der Agent kann gehen, sich drehen und Druckplatten aktivieren. Er kann auch Bausteine zerstören und Bausteine platzieren. Wenn er den Baustein wie diese Loren-Schienen platziert, gehen sie von selbst darunter."
       11:
         image: 'notes/mc_2017_agent_intro_11.png'
         text: "Hast du vergessen, was du in einem Level tun musst, findest du oben die nötigen Anweisungen."
@@ -1913,7 +1913,7 @@ de:
         text: "Katie: Nun, du musst lernen, wie man Schleifen benutzt. Schleifen sind Dinge, die Entwickler schreiben, um einem Computer Befehle zu geben, die immer wieder ausgeführt werden können. Stacy: Verstanden, also denke ich, dass es tatsächlich einige davon gibt, die in den nächsten Levels auftauchen, also mach weiter und versuche es mit Schleifen."
       7:
         image: 'notes/mc_2017_repeat_7.png'
-        text: "Im nächsten Level kannst du eine Schleife verwenden, um den Agenten auf dem Pfad zu bewegen. Ziehe den Wiederholungsbaustein in den Arbeitsbereich und platziere den Bausteien „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins. Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu tun, ohne einen ganzen Haufen Bausteine in den Arbeitsbereich ziehen zu müssen. Du kannst wählen, wie oft du wiederholen möchtest, indem du eine Zahl in den Wiederholungsbaustein einträgst."
+        text: "Im nächsten Level kannst du eine Schleife verwenden, um den Agenten auf dem Pfad zu bewegen. Ziehe den Wiederholungsbaustein in den Arbeitsbereich und platziere den Baustein „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins. Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu tun, ohne einen ganzen Haufen Bausteine in den Arbeitsbereich ziehen zu müssen. Du kannst wählen, wie oft du wiederholen möchtest, indem du eine Zahl in den Wiederholungsbaustein einträgst."
       8:
         image: 'notes/mc_2017_repeat_8.png'
         text: "Du kannst auch Abbiegungen und mehrere Befehle in den Wiederholungsbaustein einfügen, aber versuche vorerst, eine Wiederholung zu verwenden, um den Agenten ein paar Schritte vorwärts zu bewegen. Denke daran, wenn du an einem Puzzle hängen bleibst, kannst du immer auf die blaue Schaltfläche Zurücksetzen drücken und es erneut versuchen."

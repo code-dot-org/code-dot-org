@@ -1,0 +1,16 @@
+name 'csp-9-exam1-algorithm-bias-bank-1_2021'
+editor_experiment ''
+wrong 'The algorithm will not be biased because using machine learning eliminates human biases'
+wrong 'While the algorithm may be biased, the eventual decision made the algorithm will not be'
+right 'The algorithm will likely reflect the human biases in the data used to train it'
+wrong 'Machine learning algorithms cannot be developed using biased data so if there is bias in the data it will be impossible to develop the algorithm'
+
+
+markdown <<MARKDOWN
+A bank is developing an algorithm that will help them decide who to make loans to. As input the algorithm will consider information about the person applying for the loan and the amount of money requested, and as output the algorithm will decide whether the bank should give that loan.
+
+The bank intends to develop the algorithm using machine learning techniques. The algorithm will be trained using data from past loan decisions made by human bankers.
+
+Which of the following best describes whether this algorithm will include bias?
+
+MARKDOWN

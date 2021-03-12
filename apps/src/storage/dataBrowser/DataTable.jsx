@@ -219,7 +219,7 @@ class DataTable extends React.Component {
       <div>
         <DataEntryError isVisible={this.state.showError} />
         <div style={{overflow: 'auto', height: 'calc(100vh - 300px)'}}>
-          <table style={styles.table}>
+          <table style={styles.table} className="uitest-data-table-content">
             <tbody>
               <tr>
                 {columnNames.map(columnName => (

@@ -1,0 +1,5 @@
+{
+  "func": "declareAssign_x_promptNum",
+  "block": "var x = promptNum(\"Enter a value\");",
+  "category": "Variables"
+}

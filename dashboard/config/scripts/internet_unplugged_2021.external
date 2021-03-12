@@ -1,0 +1,10 @@
+name 'Internet-Unplugged_2021'
+video_key 'Unplug10'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# The Internet
+
+Build your own Internet in the classroom just using pieces of paper.
+MARKDOWN

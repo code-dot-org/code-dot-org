@@ -13,7 +13,7 @@
 #  index_pd_teachercon_surveys_on_pd_enrollment_id  (pd_enrollment_id) UNIQUE
 #
 
-class Pd::TeacherconSurvey < ActiveRecord::Base
+class Pd::TeacherconSurvey < ApplicationRecord
   include Pd::FacilitatorSpecificForm
 
   DISAGREES = [

@@ -13,6 +13,7 @@ DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/g
 SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
+SKIP_CATEGORIES = DEPRECATED_CATEGORIES
 
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
@@ -75,7 +76,7 @@ class ManifestBuilder
     EOS
 
     if @options[:spritelab] && @options[:upload_to_s3]
-      info "Uploading file to S3"
+      info "Uploading manifests/spritelabCostumeLibrary.json to S3"
       AWS::S3.upload_to_bucket(
         DEFAULT_S3_BUCKET,
         "manifests/spritelabCostumeLibrary.json",
@@ -214,7 +215,7 @@ The animation has been skipped.
       normalized_category_map[key.tr(' ', '_')] = value
     end
 
-    info "Uploading file to S3"
+    info "Uploading manifests/spritelabCostumeLibrary.#{locale}.json to S3"
     AWS::S3.upload_to_bucket(
       DEFAULT_S3_BUCKET,
       "manifests/spritelabCostumeLibrary.#{locale}.json",
@@ -282,11 +283,16 @@ The animation has been skipped.
 
     # Parallelize metadata construction because some objects will require an
     # extra S3 request to get version IDs or image dimensions.
-    Parallel.map(animation_objects.keys, finish: lambda do |name, _, result|
+    #
+    # TODO: remove 'in_threads: 0' once the i18n-dev server RAM has been increased over 8 GB
+    # https://codedotorg.atlassian.net/browse/FND-1460
+    Parallel.map(animation_objects.keys, in_threads: 0, finish: lambda do |name, _, result|
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.
       if result.is_a? Hash
-        animation_metadata_by_name[name] = result
+        unless SKIP_CATEGORIES.include? result["categories"][0]
+          animation_metadata_by_name[name] = result
+        end
       else
         @warnings.push result
       end
@@ -353,7 +359,15 @@ The animation has been skipped.
 
       # Record target version in the metadata, so environments (and projects)
       # consistently reference the version they originally imported.
-      metadata['version'] = objects['png'].object.version_id
+      begin
+        metadata['version'] = objects['png'].object.version_id
+      rescue Aws::Errors::ServiceError => service_error
+        next <<-WARN
+There was an error retrieving the version_id for #{name}.png from S3:
+#{service_error}
+The animation has been skipped.
+        WARN
+      end
 
       # Generate appropriate sourceUrl pointing to the animation library API
       metadata['sourceUrl'] = "/api/v1/animation-library/#{@options[:spritelab] ? 'spritelab' : 'gamelab'}/#{metadata['version']}/#{name}.png"
@@ -400,7 +414,8 @@ The animation has been skipped.
     animation_metadata.each do |name, metadata|
       categories = metadata['categories']
       categories.each do |category|
-        category_map[category] = (category_map[category] + [name]).uniq.sort
+        normalized_category = category.tr(' ', '_')
+        category_map[normalized_category] = (category_map[normalized_category] + [name]).uniq.sort
       end
       category_progress_bar.increment unless category_progress_bar.nil?
     end

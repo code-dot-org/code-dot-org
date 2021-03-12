@@ -69,6 +69,7 @@ de:
   previous_page: Vorherige Seite
   next_page: Nächste Seite
   next_resource: Nächste Ressource
+  done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: Abbrechen
   okay: Okay
   or: oder
@@ -153,7 +154,7 @@ de:
       Projekte und Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     overview_markdown: Erstellen Sie ein persönliches Benutzerkonto, um Ihre Fortschritte
       zu verfolgen und Ihre Klasse zu verwalten. [Die verschiedenen Stufen und Rätsel](/)
-      können Sie auch ohne Benutzerkennung ansehen; zum Speichern Ihrer Projekte und
+      können Sie auch ohne Benutzerkennung ansehen. Zum Speichern Ihrer Projekte und
       Fortschritte benötigen Sie jedoch ein Benutzerkonto.
     hoc_already_signed_up_heading: Starte ohne dich einzuloggen
     hoc_already_signed_up_content: "Sie haben sich angemeldet, eine 'Hour of Code'
@@ -196,9 +197,19 @@ de:
     mismatch_password: Die eingegebenen Passwörter stimmen nicht überein
     student_consent: Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten
       habe, die Dienste von Code.org zu nutzen.
-    agree_us_website: Ich akzeptiere die Nutzung einer Website mit Sitz in den USA.
-    my_data_to_us: Daten aus meiner Nutzung dieser Site können in die USA geschickt
-      werden und dort gespeichert und verarbeitet werden.
+    agree_us_data_transfer_student: "**Ich stimme zu, dass Code.org Daten (einschließlich
+      personenbezogener Daten) über meine Nutzung dieser Website in die Vereinigten
+      Staaten** zum Zwecke des Hostings und der Verarbeitung solcher Daten übertragen
+      darf."
+    agree_us_data_transfer_teacher: "**Ich stimme zu, dass Code.org Daten (einschließlich
+      personenbezogener Daten) über meine Nutzung (und der Nutzung dieser Website
+      durch meine Studierenden) in die Vereinigten Staaten** zum Zwecke des Hostings
+      und der Verarbeitung solcher Daten übertragen darf."
+    data_collection_us: Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige
+      Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen
+      in meinem Land abweichen können.
+    visit_privacy: Lesen Sie die [Datenschutzerklärung](%{privacy_url}) von Code.org,
+      um mehr zu erfahren.
     student_terms_markdown: E-Mail-Adressen werden nicht in einer Form gespeichert,
       die es uns ermöglicht, mit den Studenten in Kontakt zu treten. Schüler werden
       niemals E-Mails von Code.org erhalten, außer zur Wiederherstellung des Passworts.
@@ -218,12 +229,13 @@ de:
     email_preference_yes: Ja
     email_preference_no: Nein
     email_preference_required: Sie müssen eine bevorzugte Emailadresse angeben.
-    parent_account_checkbox: Ich bin einer der Eltern/ein Vormund und melde mich für
-      mein Kind an.
-    parent_account_email_progress_permission: Dürfen wir Ihnen gelegentliche Updates
-      über den Fortschritt Ihres Kindes und Projekte, Updates über dessen Kurs und
-      Informatik per E-Mail senden? [(Siehe unsere Datenschutzbestimmungen)](%{privacy_policy_url})
-    parent_account_email_label: E-Mail der Eltern/Erziehungsberechtigten
+    parent_account_checkbox: Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und
+      melde mich im Namen meines Kindes an
+    parent_account_email_progress_permission: Dürfen wir Sie gelegentlich per E-Mail
+      über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den
+      Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten
+      Sie unsere Datenschutzerklärung)](%{privacy_policy_url})
+    parent_account_email_label: Eltern/Vormund E-Mail
   school_info:
     title: Schulinformationen (optional)
     school_country: Land der Schule
@@ -512,7 +524,8 @@ de:
     current_password_hint: "(wir benötigen dein aktuelles Passwort, um deine Änderungen
       zu bestätigen)"
     delete: Account löschen
-    delete_text: Klicken Sie auf der unten stehenden Taste, um Ihren Account zu löschen.
+    delete_text: Wenn Sie Ihren Account löschen, gehen alle Informationen und Fortschritte
+      verloren, die mit diesem Account verbunden sind.
     delete_text_teacher_managed_note: Du hast keine Berechtigung, dieses Konto zu
       löschen, da es von deinem Lehrer verwaltet wird. Dein(e) Lehrer müssen dich
       aus ihren Bereichen entfernen, bevor du dein Konto löschen kannst.
@@ -521,9 +534,9 @@ de:
     delete_confirm: Bist du sicher, dass du deinen Account löschen willst?
     deleted_user: Gelöschter Benutzer
     no_password_because_oauth: Kein Passwort, da du dich als Drittanbieter einloggst.
-    no_password_because_sponsored: Wende dich an deinen Lehrer um dich um dein Passwort
-      zu kümmern.
-    create_personal_login: Erstelle ein persönliches Login
+    no_password_because_sponsored: Wende dich an deinen Lehrer um dein Passwort zu
+      verwalten.
+    create_personal_login: Erstelle ein persönliches Login Kennwort
     create_personal_login_under_13_info: Wenn du dein Code.org-Konto auch nach dem
       Ende des Schuljahres weiter nutzen möchtest, bitte deinen Elternteil/Vormund,
       dir zu helfen, dein persönliches Login zu erstellen.
@@ -566,15 +579,16 @@ de:
       %{email} verknüpft.
     auth_option_saved_no_email: Du hast erfolgreich deinen %{provider} Account verbunden.
     update_email: Aktualisieren
-    for_parents_and_guardians: Für Eltern und und Erziehungsberechtigte
-    link_a_parent_email: Verbinden Sie Eltern/Erziehungsberechtigte mit diesem Konto,
-      damit Sie stets über den aktuellen Fortschritt und die Projekte Ihres Kindes
-      informiert sind. Sie können diese E-Mail-Adresse auch für die Passwortwiederherstellung
-      verwenden.
+    for_parents_and_guardians: Für Eltern und Erziehungsberechtigte
+    link_a_parent_email: Verlinken Sie die E-Mail-Adresse eines Elternteils/Erziehungsberechtigten
+      mit diesem Konto, um über die Fortschritte und Projekte Ihres Kindes auf dem
+      Laufenden zu bleiben. Sie können diese E-Mail-Adresse auch zur Wiederherstellung
+      von Passwörtern verwenden.
     parent_guardian_email_label: Eltern / Erziehungsberechtigten E-Mail-Adresse
     none: Keiner
-    only_one_parent_email_supported_warning: 'Hinweis: Es kann derzeit nur eine E-Mail-Adresse
-      von Eltern/Erziehungsberechtigten mit dem Schülerkonto verbunden werden.'
+    only_one_parent_email_supported_warning: 'Hinweis: Zur Zeit können wir nur eine
+      E-Mail-Adresse eines Elternteils/Erziehungsberechtigten pro SchülerInnen-Konto
+      unterstützen.'
     encrypted: verschlüsselt
   user_level:
     completed: Abgeschlossen
@@ -1377,15 +1391,6 @@ de:
       stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.
     more_information: Siehe Datenschutzerklärung von Code.org.
     accept: Ich stimme zu
-  gdpr_dialog:
-    heading: Sind Sie damit einverstanden, eine Website mit Sitz in den Vereinigten
-      Staaten zu nutzen?
-    message: Daten aus deiner Nutzung dieser Site können in die USA geschickt werden
-      und dort gespeichert und verarbeitet werden.
-    link_intro: Für Details siehe unsere
-    privacy_policy: Datenschutzerklärung
-    logout: Abmelden
-    true: Ja
   page_not_found_title: Seite nicht gefunden
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
@@ -1407,8 +1412,10 @@ de:
       error_invalid_user: Ungültige Benutzer ID. Versuche dich später wieder einzuloggen.
       error_no_code: Bitte geben Sie ihren Login Code ein
   parent_email_banner:
-    text: "** Sind Sie die Eltern oder Erziehungsberechtigten?** Verbinden Sie Ihre
-      E-Mail-Adresse mit diesem Konto, damit Sie stets über den aktuellen Fortschritt
-      und die Projekte Ihres Kindes informiert sind!"
-    link_your_email: Ihre E-Mail-Adresse verlinken
-    not_now: Später
+    text: "**Sind Sie ein Elternteil oder ein(e) Erziehungsberechtigte(r)?* Verlinken
+      Sie Ihre E-Mail-Adresse mit diesem Konto, um über die Fortschritte und Projekte
+      Ihres Kindes auf dem Laufenden zu bleiben!"
+    link_your_email: E-Mail-Adresse Verlinken
+    not_now: 'Nicht jetzt
+
+'

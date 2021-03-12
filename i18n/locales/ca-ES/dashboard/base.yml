@@ -139,8 +139,6 @@ ca:
     invalid_password: "La contrasenya ha de tenir almenys 6 caràcters"
     mismatch_password: "Les dues contrasenyes que has introduït no coincideixen"
     student_consent: "Confirmo que tinc l'autorització dels meus pares o tutors legals per utilitzar los serveis de Code.org."
-    agree_us_website: "Estic d'acord a utilitzar un lloc web basat als Estats Units."
-    my_data_to_us: "Les dades del meu ús d'aquest lloc poden ser enviades, emmagatzemades o processades als Estats Units."
     additional_information: "Necessitem alguna informació addicional per continuar amb la vostra inscripció."
     user_type_button: "Actualitzeu el tipus de compte"
     user_type_label: "Tipus de compte"
@@ -634,7 +632,4 @@ ca:
         opt_in_no: 'No'
   cookie_banner:
     accept: 'D''acord'
-  gdpr_dialog:
-    message: 'Les dades del meu ús d''aquest lloc poden ser enviades, emmagatzemades o processades als Estats Units.'
-    yes: 'Sí'
   copy: 'Copiar'

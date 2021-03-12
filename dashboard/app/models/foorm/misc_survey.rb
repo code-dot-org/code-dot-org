@@ -15,12 +15,17 @@
 #  index_misc_survey_foorm_submissions_on_foorm_id  (foorm_submission_id) UNIQUE
 #
 
-class Foorm::MiscSurvey < ActiveRecord::Base
+class Foorm::MiscSurvey < ApplicationRecord
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
 
   def self.all_form_data
     [
+      {
+        form_name: 'surveys/teachers/nps_survey',
+        misc_form_path: 'nps_survey',
+        allow_multiple_submissions: false
+      },
       {
         form_name: 'surveys/teachers/teacher_end_of_year_survey',
         misc_form_path: 'csf_post_course',
@@ -56,6 +61,11 @@ class Foorm::MiscSurvey < ActiveRecord::Base
         misc_form_path: 'csp_post_course_pd',
         survey_data: {course: 'CS Principles', pd: true},
         allow_multiple_submissions: false
+      },
+      {
+        form_name: 'surveys/pd/csd_csp_facilitator_post_survey',
+        misc_form_path: 'facilitator_post_survey',
+        allow_multiple_submissions: true
       }
     ]
   end

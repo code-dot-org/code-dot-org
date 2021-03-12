@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -33,6 +33,7 @@ class Weblab < Level
     is_project_level
     encrypted_examples
     submittable
+    validation_enabled
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -41,7 +42,8 @@ class Weblab < Level
         user: params[:user],
         game: Game.weblab,
         level_num: 'custom',
-        properties: {}
+        properties: {},
+        validation_enabled: true
       )
     )
   end

@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mojave--mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -14,55 +14,103 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v8.15.0
      yarn --version  # --> 1.16.0
      ```
-1. If using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, if using SSH: `git@github.com:code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.17`
+1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`, 
+1. `gem install bundler -v 1.17.3`
 1. `rbenv rehash`
 1. `cd code-dot-org`
-1. `bundle install` (Problems running this step? See [tips](#bundle-install-tips) below.)
+1. `bundle install`
+    * This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 1. `bundle exec rake install:hooks`
     <details>
-        <summary>Troubleshoot: `rake aborted!..` </summary>
+      <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
 
-        If you have issue "rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0. Prepending `bundle exec` to your command may solve this."
-            * Follow the instructions and make sure you added `bundle exec` in front of the `rake install:hooks` command
+      * If you have issue `"rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0."`, make sure you add `bundle exec` in front of the `rake install:hooks` command
     </details>
     <details>
-        <summary>Troubleshoot: wrong version of rake </summary>
+      <summary>Troubleshoot: wrong version of rake </summary>
 
-        You might get a message at some point about having the wrong version of rake. If so, try:
+      * You might get a message at some point about having the wrong version of rake. If so, try:
+        ```
         $> gem uninstall rake
         $> bundle update rake
+        ```
     </details>
 
 1. `bundle exec rake install`
-    * This can take a LONG time. You can see if progress is being made by opening up a second shell and starting `mysql -u root`. Run the following command twice, with approximately a 5-10 second delay between
-  each run `select table_schema, table_name, table_rows from information_schema.tables where table_schema like 'dashboard_development' order by table_rows;`  If you see a change in the last couple of rows, the
-  install is working correctly.
+    * This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
+
+1. fix your database charset and collation to match our servers
+    * `bin/dashboard-sql`
+    * `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
+    * `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
+
 1. `bundle exec rake build`
     * This may fail if your are on a Mac and your OSX XCode Command Line Tools were not installed properly. See Bundle Install Tips for more information.
 1. (Optional, Code.org engineers only) Setup AWS - Ask a Code.org engineer how to complete this step
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## OS-specific prerequisites
 
-### OS X Mojave / Mavericks / Yosemite / El Capitan / Sierra
+### OS X Catalina
 
-1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+1. Choose shell. Starting in Catalina, [the default shell for new users is zsh](https://support.apple.com/en-us/HT208050). Most developers at Code.org are still using bash so that may be a smoother experience for now.
+    <details>
+      <summary>To use bash:</summary>
+
+      * Switch the default shell back to bash and disable the warning:
+        * `chsh -s /bin/bash`
+        * Add the following to `~/.bash_profile` or your desired shell configuration file:
+          ```
+          export BASH_SILENCE_DEPRECATION_WARNING=1
+          ```
+    </details>
+    <details>
+      <summary>Optional configuration steps for zsh:</summary>
+              
+      * Setup git prompt and git autocompletion
+        * Download git-prompt.sh
+          ```
+          mkdir -p ~/bin/oh-my-zsh
+          curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/gitfast/git-prompt.sh > ~/bin/oh-my-zsh/git-prompt.sh
+          ```
+        * Add the following to `~/.zshrc` or your desired shell configuration file:
+          ```
+          # git prompt
+          source ~/bin/oh-my-zsh/git-prompt.sh
+          GIT_PS1_SHOWCOLORHINTS=1
+          GIT_PS1_SHOWDIRTYSTATE=1
+          GIT_PS1_SHOWUNTRACKEDFILES=1
+          setopt PROMPT_SUBST ; PS1='%m:%~$(__git_ps1 " (%s)")\$ '
+           
+          # git completion
+          source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.zsh >/dev/null 2>&1
+           
+          # make git checkout not show remote branches
+          GIT_COMPLETION_CHECKOUT_NO_GUESS=1
+          autoload -Uz compinit && compinit
+          ```
+        * fix any problems with compinit:
+          ```
+          compaudit | xargs chmod g-w
+          ```
+    </details>
+1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
     <details>
-        <summary>Troubleshoot: <code>Formula.sha1</code> is disabled or <code>Error: pdftk: undefined method sha1' for #&lt;Class:...&gt;</code></summary>
+      <summary>Troubleshoot: pdftk errors</summary>
 
-        If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
+      * If it complains about pdftk, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb from the above command seems to not have serious side effects (it will cause `PDFMergerTest` to fail). It may be a new URL is needed in the dependency list, see https://leancrew.com/all-this/2017/01/pdftk/
     </details>
     <details>
-        <summary>Troubleshoot: old version of `&lt;package&gt;`</summary>
+      <summary>Troubleshoot: old version of <code>&lt;package&gt;</code></summary>
 
-        If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+      * If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
     </details>
 1. Set up MySQL
     1. Force link 5.7 version: `brew link mysql@5.7 --force`
@@ -93,7 +141,11 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `nvm install 8.15.0 && nvm alias default 8.15.0` this command should make this version the default version and print something like: `Creating default alias: default -> 8.15.0 (-> v8.15.0)`
     1. `npm install -g yarn@1.16.0`.
     1. (Note: You will have to come back to this step after you clone your repository) Reinstall node_modules `cd apps; yarn; cd ..`
-1. (El Capitan only) Ensure that openssl is linked: `brew link --force openssl`
+1. Install OpenSSL:
+    1. `brew install openssl`
+    1. `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
+1. [Check rmagick version](#rmagick)
+1. If you want to render personalized certificates locally, see these special instructions regarding [ImageMagick with pango](#imagemagick-with-pango).
 1. Prevent future problems related to the `Too many open files` error:
     1. Add the following to `~/.bash_profile` or your desired shell configuration file:
         ```
@@ -105,21 +157,16 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     1. `xcode-select --install`
 
     <details>
-              <summary>Troubleshoot: command line tools already installed</summary>
+      <summary>Troubleshoot: command line tools already installed</summary>
 
-              If it complains
-
-              ```xcode-select: error: command line tools are already installed, use "Software Update" to install updates```
-
-              check to make sure XCode is downloaded and up to date manually.
-
+      If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
     </details>
 
-1. Install the [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+1. Install the Java 8 JDK: `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) 
+### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -171,7 +218,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 16.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 
@@ -184,7 +231,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 
 ### Alternative: Use an Ubuntu VM
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 18.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -196,7 +243,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
      * **Step 4: Storage**: Increase storage to 100GiB
@@ -249,7 +296,7 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 ### Ruby
 
-We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:
@@ -273,6 +320,71 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
 - `gem install rmagick -v 2.15.4`
+
+### ImageMagick with Pango
+
+**Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
+
+Certificates have been greatly improved with the ability to apply text in many languages.  
+
+This is done by using “pango”.  It seems on Linux machines, ImageMagick already contains Pango, but on macOS it doesn’t... at least as installed using brew.
+
+So we need to install a version of ImageMagick that includes Pango.  There are tons of threads online where people can’t get it to work.
+
+The good news is that we figured out a solution.
+
+First modify the ImageMagick formula in brew, using
+
+```
+brew edit imagemagick
+```
+
+Note that one developer found they needed to `brew edit imagemagick@6`.)
+
+Change `--without-pango` to `--with-pango`.  However, that’s not enough.  Add
+
+```
+depends_on "pango"
+```
+
+near the similar entries.  This is the step that we couldn’t find online anywhere.
+
+Then
+
+```
+brew uninstall imagemagick
+```
+
+(Note that one developer found they needed to  and `brew uninstall imagemagick@6`.)
+Then
+
+```
+brew install imagemagick@6 --build-from-source
+```
+
+Then, because it’s `@6`, we need to
+
+```
+brew link imagemagick@6 --force
+```
+
+to make it generally accessible from both the command line and from rmagick.
+(We still use `imagemagick@6` because we need magicwand, whatever that is.)
+Now, we have Pango in our ImageMagick, which we can test with
+
+```
+convert pango:"test text" test.png
+```
+
+Finally, it’s likely that we now have a slightly different version of ImageMagick.
+We need rmagick to rediscover that with
+
+```
+bundle remove rmagick
+bundle add rmagick
+```
+
+Restart `dashboard-server` and if all went well, we see text rendering on customized certificates again.
 
 #### libv8
 
@@ -304,6 +416,13 @@ If you run into the error message `can't find gem bundler (>= 0.a) with executab
 - `gem install bundler -v BUNDLED_WITH_VERSION`, where the version is the `BUNDLED WITH` version in [Gemfile.lock](./Gemfile.lock)).
 - `bundle install`
 
+#### thin
+
+If you run into error messages about `implicit declaration of function thin_xxx` when trying to compile the native extensions for thin:
+- `gem install thin -v THIN_VERSION -- --with-cflags="-Wno-error=implicit-function-declaration"` where THIN_VERSION is the current version of thin in [Gemfile.lock](./Gemfile.lock)).
+
+(More info [here](https://github.com/macournoyer/thin/pull/364))
+
 #### Xcode Set Up
 
 OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
@@ -316,4 +435,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
+[ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso

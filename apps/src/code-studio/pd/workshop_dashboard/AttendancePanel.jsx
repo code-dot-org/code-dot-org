@@ -21,7 +21,7 @@ export default class AttendancePanel extends React.Component {
   getSessionAttendanceLink(session) {
     const url = this.getSessionAttendanceUrl(session);
     return (
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         {url}
       </a>
     );

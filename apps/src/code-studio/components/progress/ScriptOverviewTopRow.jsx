@@ -3,17 +3,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {
-  stringForType,
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -43,6 +42,9 @@ const styles = {
   },
   dropdown: {
     display: 'inline-block'
+  },
+  resourcesRow: {
+    display: 'flex'
   }
 };
 
@@ -60,7 +62,10 @@ class ScriptOverviewTopRow extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
-    showAssignButton: PropTypes.bool
+    showAssignButton: PropTypes.bool,
+    unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
+    weeklyInstructionalMinutes: PropTypes.number,
+    showCalendar: PropTypes.bool
   };
 
   render() {
@@ -77,7 +82,10 @@ class ScriptOverviewTopRow extends React.Component {
       isRtl,
       resources,
       showAssignButton,
-      assignedSectionId
+      assignedSectionId,
+      showCalendar,
+      unitCalendarLessons,
+      weeklyInstructionalMinutes
     } = this.props;
 
     return (
@@ -101,22 +109,24 @@ class ScriptOverviewTopRow extends React.Component {
             {assignedSectionId && <Assigned />}
           </div>
         )}
-        {!professionalLearningCourse &&
-          viewAs === ViewType.Teacher &&
-          resources.length > 0 && (
-            <div style={styles.dropdown}>
-              <DropdownButton
-                text={i18n.teacherResources()}
-                color={Button.ButtonColor.blue}
-              >
-                {resources.map(({type, link}, index) => (
-                  <a key={index} href={link} target="_blank">
-                    {stringForType[type]}
-                  </a>
-                ))}
-              </DropdownButton>
-            </div>
+
+        <div style={styles.resourcesRow}>
+          {!professionalLearningCourse &&
+            viewAs === ViewType.Teacher &&
+            resources.length > 0 && (
+              <TeacherResourcesDropdown
+                resources={resources}
+                unitId={scriptId}
+              />
+            )}
+          {showCalendar && viewAs === ViewType.Teacher && (
+            <UnitCalendarButton
+              lessons={unitCalendarLessons}
+              weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+              scriptId={scriptId}
+            />
           )}
+        </div>
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner
             sections={sectionsForDropdown}

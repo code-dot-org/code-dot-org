@@ -2,8 +2,6 @@
 require_relative('../config/environment')
 require 'cdo/properties'
 
-k1_scripts = Script.all.select(&:text_to_speech_enabled?)
-
 def clean(value)
   if value.nil?
     return ''
@@ -20,49 +18,58 @@ def text_translated?(left, right)
   clean(left) != clean(right)
 end
 
-TextToSpeech::VOICES.keys.each do |lang|
-  next if lang == :'en-US'
+def update_level_tts_i18n(level, script=nil)
+  # Short Instructions
 
-  I18n.locale = lang
-  puts "updating text-to-speech for #{I18n.locale}"
-  k1_scripts.each do |script|
-    script.levels.each do |level|
-      next unless level.is_a?(Blockly)
+  translated_text = level.tts_short_instructions_text
+  english_text = TextToSpeech.sanitize(level.short_instructions || "")
 
-      # Short Instructions
+  context = 'update_level_i18n'
+  if translated_text.present? && text_translated?(translated_text, english_text)
+    level.tts_upload_to_s3(translated_text, context)
+  end
 
-      translated_text = TextToSpeech.sanitize(level.localized_short_instructions || "")
-      english_text = TextToSpeech.sanitize(level.short_instructions || "")
+  # Long Instructions
 
-      if text_translated?(translated_text, english_text)
-        level.tts_upload_to_s3(translated_text)
-      end
+  unless script && (script.csf_international? || script.twenty_hour?)
+    translated_text = level.tts_long_instructions_text
+    english_text = TextToSpeech.sanitize(level.long_instructions || "")
 
-      # Long Instructions
+    if translated_text.present? && text_translated?(translated_text, english_text)
+      level.tts_upload_to_s3(translated_text, context)
+    end
+  end
 
-      unless script.csf_international? || script.twenty_hour?
-        translated_text = TextToSpeech.sanitize(level.localized_long_instructions || "")
-        english_text = TextToSpeech.sanitize(level.long_instructions || "")
+  # Authored Hints
 
-        if text_translated?(translated_text, english_text)
-          level.tts_upload_to_s3(translated_text)
-        end
-      end
+  return unless level.localized_authored_hints
+  translated_hints = JSON.parse(level.localized_authored_hints)
+  english_hints = JSON.parse(level.authored_hints)
 
-      # Authored Hints
+  translated_hints.zip(english_hints).each do |translated_hint, english_hint|
+    translated_text = TextToSpeech.sanitize(translated_hint["hint_markdown"])
+    english_text = TextToSpeech.sanitize(english_hint["hint_markdown"])
 
-      next unless level.localized_authored_hints
-      translated_hints = JSON.parse(level.localized_authored_hints)
-      english_hints = JSON.parse(level.authored_hints)
+    if translated_text.present? && text_translated?(translated_text, english_text)
+      level.tts_upload_to_s3(translated_text, context)
+    end
+  end
+end
 
-      translated_hints.zip(english_hints).each do |translated_hint, english_hint|
-        translated_text = TextToSpeech.sanitize(translated_hint["hint_markdown"])
-        english_text = TextToSpeech.sanitize(english_hint["hint_markdown"])
+def main
+  k1_scripts = Script.all.select(&:text_to_speech_enabled?)
+  TextToSpeech::VOICES.keys.each do |lang|
+    next if lang == :'en-US'
 
-        if text_translated?(translated_text, english_text)
-          level.tts_upload_to_s3(translated_text)
-        end
+    I18n.locale = lang
+    puts "updating text-to-speech for #{I18n.locale}"
+    k1_scripts.each do |script|
+      script.levels.each do |level|
+        next unless level.is_a?(Blockly)
+        update_level_tts_i18n(level, script)
       end
     end
   end
 end
+
+main if __FILE__ == $0

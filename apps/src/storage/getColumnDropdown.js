@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import msg from '@cdo/locale';
 import {getFirstParam} from '../dropletUtils';
-import {stripQuotes} from '../utils';
 import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
 
 function openModal(type, callback, table) {
@@ -38,9 +37,17 @@ export function getTables() {
   };
 }
 
+function getTableNameFromColumnSocket(socket, editor) {
+  const paramValue = getFirstParam('getColumn', socket.parent, editor);
+  // The socket value has an extra set of double quotes. Trim off the first
+  // and last characters to remove, but don't use utils.stripQuotes because
+  // there may be other quotes in the table name (for example, apostrophes)
+  return paramValue.substring(1, paramValue.length - 1);
+}
+
 export function getColumns() {
-  return function() {
-    const tableName = stripQuotes(getFirstParam('getColumn', this.parent));
+  return function(editor) {
+    const tableName = getTableNameFromColumnSocket(this, editor);
     return [
       {
         text: msg.choosePrefix(),
@@ -53,3 +60,7 @@ export function getColumns() {
     ];
   };
 }
+
+export var __TestInterface = {
+  getTableNameFromColumnSocket: getTableNameFromColumnSocket
+};

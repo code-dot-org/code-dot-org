@@ -82,6 +82,11 @@ const styles = {
   disabledStageExtras: {
     backgroundColor: color.lighter_gray,
     color: color.white
+  },
+  highlighted: {
+    color: color.white,
+    backgroundColor: color.orange,
+    borderColor: color.orange
   }
 };
 
@@ -106,7 +111,8 @@ class ProgressBubble extends React.Component {
     pairingIconEnabled: PropTypes.bool,
     hideToolTips: PropTypes.bool,
     stageExtrasEnabled: PropTypes.bool,
-    hideAssessmentIcon: PropTypes.bool
+    hideAssessmentIcon: PropTypes.bool,
+    onClick: PropTypes.func
   };
 
   static defaultProps = {
@@ -138,7 +144,8 @@ class ProgressBubble extends React.Component {
       currentLocation,
       lessonTrophyEnabled,
       pairingIconEnabled,
-      hideAssessmentIcon
+      hideAssessmentIcon,
+      onClick
     } = this.props;
 
     const levelIsAssessment = isLevelAssessment(level);
@@ -158,12 +165,13 @@ class ProgressBubble extends React.Component {
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel &&
         (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level, disabled),
-      ...(disabled && level.bonus && styles.disabledStageExtras)
+      ...levelProgressStyle(level.status, level.kind, disabled),
+      ...(disabled && level.bonus && styles.disabledStageExtras),
+      ...(level.highlighted && styles.highlighted)
     };
 
     let href = '';
-    if (!disabled && url) {
+    if (!disabled && url && !onClick) {
       const queryParams = queryString.parse(currentLocation.search);
 
       if (selectedSectionId) {
@@ -234,7 +242,7 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
-              {level.letter && (
+              {level.letter && !smallBubble && (
                 <span id="test-bubble-letter"> {level.letter} </span>
               )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
@@ -274,6 +282,16 @@ class ProgressBubble extends React.Component {
               ? this.recordProgressTabProgressBubbleClick
               : null
           }
+        >
+          {bubble}
+        </a>
+      );
+    } else if (onClick) {
+      bubble = (
+        <a
+          style={{textDecoration: 'none'}}
+          className="uitest-ProgressBubble"
+          onClick={() => onClick(level)}
         >
           {bubble}
         </a>

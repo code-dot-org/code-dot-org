@@ -1,0 +1,230 @@
+{
+  "is-IS": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Takk fyrir!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Þú sigrar!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Halló heimur!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "blár",
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "rauður",
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Þú sigrar!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Takk fyrir!"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "fíll hefur safnað "
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Borð: ",
+          "013405bba4219ed238e87658786699b6": " Stig: "
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": " -skor- "
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": " -skor- "
+        },
+        "course4_playlab_variables_challenge1": {
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " hver?",
+          "40f4f24106dde9234f43bf30465647e0": "Bank, bank.",
+          "3986de660e6560710c546cb2f22c12f3": "Hver er þar?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabæti!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "b8bc42495234cdcdcd3ed49dad120a84": "Meg",
+          "8292c7cbebf598e875ccd0c008958922": " hver?",
+          "40f4f24106dde9234f43bf30465647e0": "Bank, bank.",
+          "3986de660e6560710c546cb2f22c12f3": "Hver er þar?",
+          "812febf38bfe564d348136e1b9e71bcd": "Megabæti!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Find the Wizard": {
+          "0b895ef4c917e50663bc2a7327cbee3d": "Þú fannst mig!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "skrifaðu texta hér",
+          "30fcc1693fa8402931d13ac3a5f396fd": "skrifaðu titil hér"
+        }
+      }
+    }
+  }
+}

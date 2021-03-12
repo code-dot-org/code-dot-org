@@ -1,0 +1,98 @@
+---
+title: crwdns2466754:0crwdne2466754:0
+---
+
+# crwdns169308:0crwdne169308:0
+
+crwdns2465604:0crwdne2465604:0 crwdns2465606:0crwdne2465606:0
+
+crwdns2465608:0crwdne2465608:0 crwdns2465610:0crwdne2465610:0 crwdns2465612:0crwdne2465612:0
+
+[![](crwdns2465616:0crwdne2465616:0)](crwdns2465614:0{{ urls/learn }}crwdne2465614:0)
+
+<h3>crwdns2465618:0crwdne2465618:0</h3>
+
+crwdns2465620:0crwdne2465620:0 crwdns2465622:0crwdne2465622:0
+
+crwdns2465624:0crwdne2465624:0
+
+[<button>crwdns2465628:0crwdne2465628:0</button>](crwdns2471664:0{{ localized_files/hourofcode_parent_how_to }}crwdne2471664:0)
+
+* * *
+
+## crwdns2465630:0crwdne2465630:0
+
+[![](crwdns2465634:0crwdne2465634:0)](crwdns2465632:0{{ urls/learn }}crwdne2465632:0)
+
+crwdns2465636:0crwdne2465636:0 crwdns2465638:0crwdne2465638:0
+
+crwdns2465640:0crwdne2465640:0
+
+- crwdns2465642:0crwdne2465642:0
+- crwdns2465644:0%7Ccrwdnd2465644:0%7Ccrwdnd2465644:0%7Ccrwdnd2465644:0%7Ccrwdne2465644:0
+- crwdns2465646:0crwdne2465646:0
+
+<h3>crwdns2465648:0crwdne2465648:0</h3>
+
+crwdns2465650:0crwdne2465650:0
+
+[![](crwdns2465654:0crwdne2465654:0)](crwdns2465652:0{{ urls/learn }}crwdne2465652:0)
+
+crwdns2465656:0crwdne2465656:0
+
+## crwdns2465658:0crwdne2465658:0
+
+crwdns2465660:0crwdne2465660:0
+
+[![](crwdns2465664:0crwdne2465664:0)](crwdns2465662:0{{ urls/learn }}crwdne2465662:0)
+
+<h3>crwdns2465666:0crwdne2465666:0</h3>
+
+crwdns2465668:0crwdne2465668:0
+
+crwdns2465670:0crwdne2465670:0 crwdns2465672:0crwdne2465672:0 crwdns2465674:0crwdne2465674:0 crwdns2465676:0crwdne2465676:0
+
+<h3>crwdns2465678:0crwdne2465678:0 </h3>
+
+crwdns2465680:0crwdne2465680:0
+
+- crwdns2465682:0crwdne2465682:0
+- crwdns2465684:0crwdne2465684:0
+- crwdns2465686:0crwdne2465686:0 crwdns2465688:0crwdne2465688:0 crwdns2465690:0crwdne2465690:0 
+
+<a href="crwdns2465692:0crwdne2465692:0" target="_blank"><img src="crwdns2465694:0crwdne2465694:0"></a>
+
+## crwdns2465696:0crwdne2465696:0
+
+crwdns2465698:0crwdne2465698:0
+
+- crwdns2465700:0crwdne2465700:0 crwdns2465702:0crwdne2465702:0 crwdns2465704:0crwdne2465704:0
+- crwdns2465706:0crwdne2465706:0
+
+[![](crwdns2465710:0crwdne2465710:0)](crwdns2465708:0{{ urls/learn }}crwdne2465708:0)
+
+<h3>crwdns2466756:0crwdne2466756:0</h3>
+
+crwdns2465714:0crwdne2465714:0 crwdns2465716:0crwdne2465716:0
+
+<h3>crwdns2465718:0crwdne2465718:0</h3>
+
+crwdns2465720:0crwdne2465720:0 crwdns2465722:0crwdne2465722:0
+
+crwdns2465724:0crwdne2465724:0
+
+## crwdns2465726:0crwdne2465726:0
+
+crwdns2465728:0crwdne2465728:0
+
+- crwdns2465730:0crwdne2465730:0 
+- crwdns2465732:0crwdne2465732:0 
+- crwdns2465734:0crwdne2465734:0
+
+[![](crwdns2465738:0crwdne2465738:0)](crwdns2465736:0{{ urls/learn }}crwdne2465736:0)
+
+<h2>crwdns2465740:0crwdne2465740:0</h2>
+
+crwdns2465742:0crwdne2465742:0 crwdns2465744:0crwdne2465744:0 crwdns2465746:0crwdne2465746:0 crwdns2465748:0crwdne2465748:0
+
+[<button>crwdns2465752:0crwdne2465752:0</button>](crwdns2471666:0{{ localized_files/hourofcode_parent_how_to }}crwdne2471666:0)

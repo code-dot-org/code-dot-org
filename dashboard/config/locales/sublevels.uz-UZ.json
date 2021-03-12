@@ -1,0 +1,263 @@
+{
+  "uz-UZ": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Harakatlar",
+              "Events": "Hodisalar",
+              "Loops": "Sikllar",
+              "Math": "Matematik",
+              "Logic": "Mantiq",
+              "Games/Score": "O‘yinlar/Hisob"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Dancers": "Raqqoslar",
+              "Properties": "Xususiyatlar",
+              "Events": "Hodisalar",
+              "Numbers": "Sonlar",
+              "Logic": "Mantiq"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "yulduz chizish",
+                "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+                "parameters": {
+                  "points": "ballar",
+                  "length": "uzunlik"
+                }
+              },
+              "draw a circle": {
+                "name": "aylana chizish",
+                "description": "berilgan radiusda doira chizish",
+                "parameters": {
+                  "radius": "radius"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "parrak chizish",
+                "parameters": {
+                  "sides": "tomonlar",
+                  "length": "uzunlik",
+                  "repeat": "takrorlash"
+                }
+              },
+              "draw a triangle": {
+                "name": "uchburchak chizish",
+                "parameters": {
+                  "length": "uzunlik"
+                }
+              },
+              "draw a shape": {
+                "name": "shakl chizish",
+                "parameters": {
+                  "sides": "tomonlar",
+                  "length": "uzunlik"
+                }
+              },
+              "draw a house": {
+                "name": "uy chizish",
+                "parameters": {
+                  "length": "uzunlik"
+                }
+              },
+              "draw a square": {
+                "name": "kvadrat chizish",
+                "parameters": {
+                  "length": "uzunlik"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Sprites": "Spraytlar",
+              "Actions": "Harakatlar",
+              "Events": "Hodisalar",
+              "Behaviors": "Xatti-harakatlar"
+            },
+            "behavior_names": {
+              "wandering": "daydish",
+              "moving east": "sharqqa yurish",
+              "spinning left": "chap tarafga aylanish",
+              "spinning right": "o'ng tarafga aylanish",
+              "shrinking": "kichrayish",
+              "growing": "o'sish",
+              "moving south": "janubga yurish",
+              "swimming left and right": "chapga va o'ngga suzish",
+              "moving north": "shimolga yurish",
+              "jittering": "titrash",
+              "moving west": "g'arbga yurish",
+              "patrolling": "patrullash"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Dancers": "Raqqoslar",
+              "Properties": "Xususiyatlar",
+              "Events": "Hodisalar",
+              "Numbers": "Sonlar",
+              "Logic": "Mantiq"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Harakatlar",
+              "Brushes": "Choʻtkalar",
+              "Loops": "Sikllar",
+              "Math": "Matematik",
+              "Logic": "Mantiq",
+              "Functions": "Funksiyalar",
+              "Variables": "O‘zgaruvchilar"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Sprites": "Spraytlar",
+              "Locations": "Joylashuvlar",
+              "Actions": "Harakatlar",
+              "Events": "Hodisalar",
+              "Behaviors": "Xatti-harakatlar",
+              "Variables": "O‘zgaruvchilar",
+              "Math": "Matematik",
+              "Logic": "Mantiq",
+              "Functions": "Funksiyalar",
+              "Text": "Matn",
+              "Comments": "Fikrlar"
+            },
+            "behavior_names": {
+              "moving east": "sharqqa yurish",
+              "spinning left": "chap tarafga aylanish",
+              "spinning right": "o'ng tarafga aylanish",
+              "shrinking": "kichrayish",
+              "growing": "o'sish",
+              "moving south": "janubga yurish",
+              "swimming left and right": "chapga va o'ngga suzish",
+              "moving north": "shimolga yurish",
+              "jittering": "titrash",
+              "moving west": "g'arbga yurish",
+              "patrolling": "patrullash",
+              "wandering": "daydish"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Sprites": "Spraytlar",
+              "Locations": "Joylashuvlar",
+              "Actions": "Harakatlar",
+              "Events": "Hodisalar",
+              "Behaviors": "Xatti-harakatlar",
+              "Variables": "O‘zgaruvchilar",
+              "Math": "Matematik",
+              "Logic": "Mantiq",
+              "Functions": "Funksiyalar",
+              "Text": "Matn",
+              "Comments": "Fikrlar"
+            },
+            "behavior_names": {
+              "moving east": "sharqqa yurish",
+              "spinning left": "chap tarafga aylanish",
+              "spinning right": "o'ng tarafga aylanish",
+              "shrinking": "kichrayish",
+              "growing": "o'sish",
+              "moving south": "janubga yurish",
+              "swimming left and right": "chapga va o'ngga suzish",
+              "moving north": "shimolga yurish",
+              "jittering": "titrash",
+              "moving west": "g'arbga yurish",
+              "patrolling": "patrullash",
+              "wandering": "daydish"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Harakatlar",
+              "Brushes": "Choʻtkalar",
+              "Loops": "Sikllar",
+              "Math": "Matematik",
+              "Logic": "Mantiq",
+              "Functions": "Funksiyalar",
+              "Variables": "O‘zgaruvchilar"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Sprites": "Spraytlar",
+              "Actions": "Harakatlar",
+              "Events": "Hodisalar",
+              "Logic": "Mantiq",
+              "Math": "Matematik"
+            },
+            "behavior_names": {
+              "recovering": "tiklanish",
+              "wandering": "daydish",
+              "moving east": "sharqqa yurish",
+              "spinning left": "chap tarafga aylanish",
+              "spinning right": "o'ng tarafga aylanish",
+              "shrinking": "kichrayish",
+              "growing": "o'sish",
+              "moving south": "janubga yurish",
+              "moving left and right": "chapga va o'ngga harakat qilish",
+              "moving north": "shimolga yurish",
+              "jittering": "titrash",
+              "moving west": "g'arbga yurish",
+              "patrolling": "patrullash",
+              "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Dunyo",
+              "Sprites": "Spraytlar",
+              "Actions": "Harakatlar",
+              "Behaviors": "Xatti-harakatlar",
+              "Events": "Hodisalar",
+              "Locations": "Joylashuvlar",
+              "Logic": "Mantiq",
+              "Loops": "Sikllar",
+              "Math": "Matematik",
+              "Variables": "O‘zgaruvchilar",
+              "Functions": "Funksiyalar",
+              "Comments": "Fikrlar"
+            },
+            "behavior_names": {
+              "recovering": "tiklanish",
+              "wandering": "daydish",
+              "moving east": "sharqqa yurish",
+              "spinning left": "chap tarafga aylanish",
+              "spinning right": "o'ng tarafga aylanish",
+              "shrinking": "kichrayish",
+              "growing": "o'sish",
+              "moving south": "janubga yurish",
+              "moving left and right": "chapga va o'ngga harakat qilish",
+              "moving north": "shimolga yurish",
+              "jittering": "titrash",
+              "moving west": "g'arbga yurish",
+              "patrolling": "patrullash",
+              "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+            }
+          }
+        }
+      }
+    }
+  }
+}

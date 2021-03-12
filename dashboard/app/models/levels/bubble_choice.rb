@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -71,30 +71,39 @@ class BubbleChoice < DSLDefined
   # Summarizes the level.
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels,
   # previous/next levels, and script will be included in the summary.
-  # @param [Integer] user_id. Optional. If provided, the "perfect" field will be calculated
-  # in the sublevel summary.
+  # @param [User] user
+  # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
-  def summarize(script_level: nil, user_id: nil)
+  def summarize(script_level: nil, user: nil, should_localize: false)
+    user_id = user ? user.id : nil
     summary = {
+      id: id.to_s,
       display_name: display_name,
       description: description,
       name: name,
       type: type,
       teacher_markdown: teacher_markdown,
-      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
+      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
     }
 
     if script_level
       previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-      next_level_url = script_level.next_level ? build_script_level_url(script_level.next_level) : nil
+      redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
 
       summary.merge!(
         {
           previous_level_url: previous_level_url,
-          next_level_url: next_level_url,
+          redirect_url: redirect_url,
           script_url: script_url(script_level.script)
         }
       )
+    end
+
+    if should_localize
+      %i[display_name description].each do |property|
+        localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
+        summary[property] = localized_value unless localized_value.nil?
+      end
     end
 
     summary
@@ -104,17 +113,18 @@ class BubbleChoice < DSLDefined
   # @param [ScriptLevel] script_level. Optional. If provided, the URLs for sublevels
   # will be included in the summary.
   # @param [Integer] user_id. Optional. If provided, "perfect" field will be calculated for sublevels.
-  # @return [Hash[]]
-  def summarize_sublevels(script_level: nil, user_id: nil)
+  # @param [Boolean] should_localize If true, translate the summary.
+  # @return [Array]
+  def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
     sublevels.each_with_index do |level, index|
-      level_info = level.summary_for_lesson_plans
+      level_info = level.summary_for_lesson_plans.symbolize_keys
 
       alphabet = ('a'..'z').to_a
 
       level_info.merge!(
         {
-          id: level.id,
+          id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
@@ -133,6 +143,17 @@ class BubbleChoice < DSLDefined
       if user_id
         level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
         level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
+      else
+        # Pass an empty status if the user is not logged in so the ProgressBubble
+        # in the sublevel display can render correctly.
+        level_info[:status] = SharedConstants::LEVEL_STATUS.not_tried
+      end
+
+      if should_localize
+        %i[display_name short_instructions long_instructions].each do |property|
+          localized_value = I18n.t(level.name, scope: [:data, property], default: nil, smart: true)
+          level_info[property] = localized_value unless localized_value.nil?
+        end
       end
 
       summary << level_info

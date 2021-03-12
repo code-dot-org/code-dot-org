@@ -3,11 +3,11 @@
 # Table name: pd_survey_questions
 #
 #  id                 :integer          not null, primary key
-#  form_id            :integer
+#  form_id            :bigint
 #  questions          :text(65535)      not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
-#  last_submission_id :integer
+#  last_submission_id :bigint
 #
 # Indexes
 #

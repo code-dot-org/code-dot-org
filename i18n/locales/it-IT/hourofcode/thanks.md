@@ -28,7 +28,7 @@ Scegli un'[esercitazione dell'Ora del Codice](https://hourofcode.com/learn) per 
 
 Ordina dei gadget per coinvolgere maggiormente gli studenti andando sul [Negozio Amazon](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) di Code.org. Ordina i [poster](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (e ricevi un ulteriore 50% di sconto), kit dell'Ora del Codice, adesivi e molto altro! Ma affrettati, le scorte sono limitate.
 
-# Andare oltre un'Ora del Codice
+# Vai oltre un'Ora del Codice
 
 {{ go_beyond_hoc }}
 

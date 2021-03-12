@@ -1,0 +1,231 @@
+{
+  "uk-UA": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Дії",
+              "Events": "Події",
+              "Loops": "Цикли",
+              "Math": "Математика",
+              "Logic": "Логіка",
+              "Games/Score": "Ігри / рахунок"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Світ",
+              "Dancers": "Виконавці",
+              "Properties": "Властивості",
+              "Events": "Події",
+              "Numbers": "Числа",
+              "Logic": "Логіка"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "намалювати зірку",
+                "parameters": {
+                  "points": "балів",
+                  "length": "довжина"
+                },
+                "description": "намалювати зірку із заданими вершинами та сторонами заданої довжини"
+              },
+              "draw a circle": {
+                "name": "намалювати коло",
+                "description": "намалювати коло заданого радіуса",
+                "parameters": {
+                  "radius": "радіус"
+                }
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "довжина",
+                  "repeat": "повторити",
+                  "sides": "сторони"
+                },
+                "name": "draw a pinwheel"
+              },
+              "draw a triangle": {
+                "name": "намалювати трикутник",
+                "parameters": {
+                  "length": "довжина"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "довжина",
+                  "sides": "сторони"
+                },
+                "name": "намалювати фігуру"
+              },
+              "draw a house": {
+                "name": "намалювати будинок",
+                "parameters": {
+                  "length": "довжина"
+                }
+              },
+              "draw a square": {
+                "name": "намалювати квадрат",
+                "parameters": {
+                  "length": "довжина"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Світ",
+              "Sprites": "Спрайти",
+              "Actions": "Дії",
+              "Events": "Події",
+              "Behaviors": "Поведінка"
+            },
+            "behavior_names": {
+              "wandering": "бродіння",
+              "shrinking": "стиснення",
+              "growing": "ріст",
+              "patrolling": "патрулювання"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Світ",
+              "Dancers": "Виконавці",
+              "Properties": "Властивості",
+              "Events": "Події",
+              "Numbers": "Числа",
+              "Logic": "Логіка"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Дії",
+              "Brushes": "Кисті",
+              "Loops": "Цикли",
+              "Math": "Математика",
+              "Logic": "Логіка",
+              "Functions": "Функції",
+              "Variables": "Змінні"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Світ",
+              "Sprites": "Спрайти",
+              "Locations": "Розташування",
+              "Actions": "Дії",
+              "Events": "Події",
+              "Behaviors": "Поведінка",
+              "Variables": "Змінні",
+              "Math": "Математика",
+              "Logic": "Логіка",
+              "Functions": "Функції",
+              "Text": "Текст",
+              "Comments": "Коментарі"
+            },
+            "behavior_names": {
+              "shrinking": "стиснення",
+              "growing": "ріст",
+              "patrolling": "патрулювання",
+              "wandering": "бродіння"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Світ",
+              "Sprites": "Спрайти",
+              "Locations": "Розташування",
+              "Actions": "Дії",
+              "Events": "Події",
+              "Behaviors": "Поведінка",
+              "Variables": "Змінні",
+              "Math": "Математика",
+              "Logic": "Логіка",
+              "Functions": "Функції",
+              "Text": "Текст",
+              "Comments": "Коментарі"
+            },
+            "behavior_names": {
+              "shrinking": "стиснення",
+              "growing": "ріст",
+              "patrolling": "патрулювання",
+              "wandering": "бродіння"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Дії",
+              "Brushes": "Кисті",
+              "Loops": "Цикли",
+              "Math": "Математика",
+              "Logic": "Логіка",
+              "Functions": "Функції",
+              "Variables": "Змінні"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Світ",
+              "Sprites": "Спрайти",
+              "Actions": "Дії",
+              "Events": "Події",
+              "Logic": "Логіка",
+              "Math": "Математика"
+            },
+            "behavior_names": {
+              "recovering": "видужання",
+              "wandering": "бродіння",
+              "shrinking": "стиснення",
+              "growing": "ріст",
+              "moving left and right": "рух ліворуч та праворуч",
+              "patrolling": "патрулювання",
+              "moving with arrow keys": "рух за стрілками"
+            },
+            "display_name": "Стандартний набір інструментів",
+            "short_instructions": "Внесіть будь-які зміни або вдосконалення у свій проект.",
+            "long_instructions": "# Вільна гра\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*Чудова робота! Ви дуже допомогли всім жителям Монстро-міста. Сподіваємось, ви поділитесь тим, що дізналися, з іншими. * \n\n</div>\n\nВи закінчили підручник! Можете внести будь-які зміни або вдосконалення у свій проект. Натисніть кнопку \"Поділитися\" у верхній частині сторінки, щоб надіслати свій проект друзям і родичам. "
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Світ",
+              "Sprites": "Спрайти",
+              "Actions": "Дії",
+              "Behaviors": "Поведінка",
+              "Events": "Події",
+              "Locations": "Розташування",
+              "Logic": "Логіка",
+              "Loops": "Цикли",
+              "Math": "Математика",
+              "Variables": "Змінні",
+              "Functions": "Функції",
+              "Comments": "Коментарі"
+            },
+            "behavior_names": {
+              "recovering": "видужання",
+              "wandering": "бродіння",
+              "shrinking": "стиснення",
+              "growing": "ріст",
+              "moving left and right": "рух ліворуч та праворуч",
+              "patrolling": "патрулювання",
+              "moving with arrow keys": "рух за стрілками"
+            },
+            "display_name": "Розширений набір інструментів",
+            "short_instructions": "Внесіть будь-які зміни або вдосконалення у свій проект.",
+            "long_instructions": "# Вільна гра\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*Чудова робота! Ви дуже допомогли всім мешканцям Монстро-міста. Сподіваємось, ви поділитесь тим, що дізнались, з іншими.*\n\n</div>\n\nВи завершили підручник! Внесіть будь-які зміни чи вдосконалення до свого проекту. Натисніть кнопку \"Поділитись\" вгорі сторінки, щоб надіслати проект своїм друзям чи рідним. Набір інструментів був значно розширен."
+          }
+        }
+      }
+    }
+  }
+}

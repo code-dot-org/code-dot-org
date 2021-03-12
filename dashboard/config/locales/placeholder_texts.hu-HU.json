@@ -1,0 +1,210 @@
+{
+  "hu-HU": {
+    "data": {
+      "placeholder_texts": {
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Köszönjük!"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Helló világ!"
+        },
+        "courseF_playlab_variables2b": {
+          "48d6215903dff56238e52e8891380c8f": "kék",
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables5c": {
+          "bda9643ac6601722a28f238714274da4": "piros",
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Nyertél!",
+          "498cd895eb5a102c5aeb977e2b928dee": "Köszönjük!"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "az elefánt ennyit gyűjtött:"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "Find the Wizard": {
+          "0b895ef4c917e50663bc2a7327cbee3d": "Megtaláltál!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+        }
+      }
+    }
+  }
+}

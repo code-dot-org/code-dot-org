@@ -586,6 +586,7 @@
         "courseF_artist_for1_2018": "Freie Gestaltung Für-Schleifen (Beginn)",
         "courseF_artist_for1_2019": "Freie Gestaltung Für-Schleifen (Beginn)",
         "courseF_artist_for1_2020": "Freie Gestaltung Für-Schleifen (Beginn)",
+        "courseF_extras_sim": "Deine eigene Simulation!",
         "courseF_project_1": "Sprite Lab Beispielprojekt",
         "courseF_video_csMatters": "Projekte am Ende des Kurses",
         "courseF_video_csMatters_2018": "Video: Informatik-Angelegenheiten",
@@ -597,7 +598,17 @@
         "csd-pre-survey-levelgroup_2019": "Unterrichtsübersicht",
         "scrat_loops_C-F_video": "Schleifen im Ice Age Video",
         "scrat_loops_C-F_video_2019": "Schleifen im Ice Age Video",
-        "scrat_loops_C-F_video_2020": "Schleifen im Ice Age Video"
+        "scrat_loops_C-F_video_2020": "Schleifen im Ice Age Video",
+        "CSD U1L01 TFMD_2018": "Unterrichtsübersicht",
+        "CSD U1L01 TFMD_2019": "Unterrichtsübersicht",
+        "spritelab_extras_repeat": "Lauter Sprites!",
+        "outbreak1": "Virus Simulation",
+        "outbreak2": "Virus Simulation",
+        "outbreak3": "Virus Simulation",
+        "outbreak4": "Modifiziere deine Simulation",
+        "outbreak6": "Zufällige Chance",
+        "outbreak7": "Immunität und Impfungen",
+        "outbreak8": "Teile eine Nachricht"
       }
     }
   }

@@ -88,7 +88,12 @@ export class WorkshopSummaryReport extends React.Component {
   formatWorkshopId = workshop_id => {
     const href = this.context.router.createHref(`/workshops/${workshop_id}`);
     return (
-      <a href={href} target="_blank" style={styles.link}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={styles.link}
+      >
         {workshop_id}
       </a>
     );
@@ -96,7 +101,12 @@ export class WorkshopSummaryReport extends React.Component {
 
   formatUrl = url => {
     return (
-      <a href={url} target="_blank" style={styles.link}>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={styles.link}
+      >
         {url}
       </a>
     );

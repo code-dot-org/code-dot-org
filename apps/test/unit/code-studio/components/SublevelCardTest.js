@@ -6,7 +6,7 @@ import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 const DEFAULT_PROPS = {
   isLessonExtra: false,
   sublevel: {
-    id: 1,
+    id: '1',
     display_name: 'Choice 1',
     description: 'Sublevel 1 is lots of fun',
     thumbnail_url: 'some-fake.url/kittens.png',
@@ -21,7 +21,7 @@ const DEFAULT_PROPS = {
 const LESSON_EXTRAS_DEFAULT_PROPS = {
   isLessonExtra: true,
   sublevel: {
-    id: 1,
+    id: '1',
     display_name: 'Choice 1',
     description: 'Sublevel 1 is lots of fun',
     thumbnail_url: 'some-fake.url/kittens.png',
@@ -32,7 +32,7 @@ const LESSON_EXTRAS_DEFAULT_PROPS = {
 };
 
 const sublevel_no_thumbnail = {
-  id: 1,
+  id: '1',
   display_name: 'Choice 1',
   description: 'Sublevel 1 is lots of fun',
   thumbnail_url: null,

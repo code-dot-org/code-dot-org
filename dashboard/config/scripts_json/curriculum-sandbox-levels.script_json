@@ -1,0 +1,695 @@
+{
+  "script": {
+    "name": "curriculum-sandbox-levels",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+      "peer_reviews_to_complete": 0
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "curriculum-sandbox-levels"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "display name"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Course A",
+      "name": "Course A",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "Course B",
+      "name": "Course B",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "Course E/F",
+      "name": "Course E/F",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Course E/F",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "CS Discoveries",
+      "name": "CS Discoveries",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "key": "contagions",
+      "name": "Content Integration: Contagions",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq10_predict1_2018"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq10_predict1_2018"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseB_maze_seq10_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseB_maze_seq1_predict1_2018"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_maze_seq1_predict1_2018"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseB_maze_seq1_predict1_2018"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops3_predict1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops3_predict1"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseA_collector_loops3_predict1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops11_predict2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops11_predict2"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseA_collector_loops11_predict2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseA_artist_loops11_predict2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_artist_loops11_predict2"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseA_artist_loops11_predict2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq2_predict1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq2_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseA_maze_seq2_predict1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseA_maze_seq12_predict2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_maze_seq12_predict2"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseA_maze_seq12_predict2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseB_collector_loops3_predict1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_collector_loops3_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseB_collector_loops3_predict1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_predict1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_artist_loops8_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "courseB_artist_loops8_predict1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "teacherSandboxFish"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "teacherSandboxFish"
+        ],
+        "lesson.key": "Course E/F",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "teacherSandboxFish"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "Swimming Fish Teacher Sandbox"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Swimming Fish Teacher Sandbox"
+        ],
+        "lesson.key": "Course E/F",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "Swimming Fish Teacher Sandbox"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP word search big"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search big"
+        ],
+        "lesson.key": "CS Discoveries",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP word search big"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "csd digital unplugged PSP seating big"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating big"
+        ],
+        "lesson.key": "CS Discoveries",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "csd digital unplugged PSP seating big"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 2: Bridging Activity",
+        "level_keys": [
+          "contagion_teachers"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "contagion_teachers"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 3: Dice Roll",
+        "level_keys": [
+          "6sidedDie"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "6sidedDie"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 4: Collecting Data",
+        "level_keys": [
+          "contagion_teachers2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      },
+      "level_keys": [
+        "contagion_teachers2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq10_predict1_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq10_predict1_2018"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_maze_seq1_predict1_2018",
+        "script_level.level_keys": [
+          "courseB_maze_seq1_predict1_2018"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_collector_loops3_predict1",
+        "script_level.level_keys": [
+          "courseA_collector_loops3_predict1"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_collector_loops11_predict2",
+        "script_level.level_keys": [
+          "courseA_collector_loops11_predict2"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_artist_loops11_predict2",
+        "script_level.level_keys": [
+          "courseA_artist_loops11_predict2"
+        ],
+        "lesson.key": "Course A",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq2_predict1",
+        "script_level.level_keys": [
+          "courseA_maze_seq2_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseA_maze_seq12_predict2",
+        "script_level.level_keys": [
+          "courseA_maze_seq12_predict2"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_collector_loops3_predict1",
+        "script_level.level_keys": [
+          "courseB_collector_loops3_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_artist_loops8_predict1",
+        "script_level.level_keys": [
+          "courseB_artist_loops8_predict1"
+        ],
+        "lesson.key": "Course B",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "teacherSandboxFish",
+        "script_level.level_keys": [
+          "teacherSandboxFish"
+        ],
+        "lesson.key": "Course E/F",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Swimming Fish Teacher Sandbox",
+        "script_level.level_keys": [
+          "Swimming Fish Teacher Sandbox"
+        ],
+        "lesson.key": "Course E/F",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP word search big",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP word search big"
+        ],
+        "lesson.key": "CS Discoveries",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd digital unplugged PSP seating big",
+        "script_level.level_keys": [
+          "csd digital unplugged PSP seating big"
+        ],
+        "lesson.key": "CS Discoveries",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers",
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "6sidedDie",
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers2",
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagions",
+        "lesson_group.key": "lesson group",
+        "script.name": "curriculum-sandbox-levels"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}

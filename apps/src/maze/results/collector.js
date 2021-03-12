@@ -164,7 +164,7 @@ export default class CollectorHandler extends ResultsHandler {
         });
       case true:
         // Remove this case when we turn the bubble dialog on for everyone
-        if (!experiments.isEnabled('bubbleDialog')) {
+        if (!experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
           return mazeMsg.collectorCollectedEverything({
             count: this.getPotentialMaxCollected()
           });

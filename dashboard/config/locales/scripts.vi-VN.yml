@@ -17,6 +17,7 @@ vi:
         hoc_category_name: Giờ của mã
         math_category_name: thuật toán
         research_studies_category_name: Các nghiên cứu
+        other_category_name: Khác
       name:
         course1:
           title: Khóa học 1
@@ -25,8 +26,8 @@ vi:
             người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực vượt qua
             các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu chuyện riêng
             mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
-          description_short: Khóa học 1 được thiết kế cho trẻ mới biết đọc.
-          description_audience: 4-6 tuổi
+          description_short: Giới thiệu về khoa học máy tính cho người đọc sớm.
+          description_audience: Tuổi từ 4-6
           lessons:
             'Artist: Loops':
               name: 'Nghệ sĩ: vòng'
@@ -66,15 +67,19 @@ vi:
               name: 'phòng thí nghiệm trò chơi: Tạo ra một câu chuyện'
             The Big Event:
               name: Sự kiện lớn
+          student_description: Bắt đầu với Khoá học 1 cho trẻ mới biết đọc. Học viên
+            sẽ được thiết kế các chương trình máy tính có thể giúp họ học cách hợp
+            tác với người khác, phát triển các kỹ năng giải quyết vấn đề, và nỗ lực
+            vượt qua các việc khó. Học viên sẽ có thể tạo ra một trò chơi hoặc câu
+            chuyện riêng mà họ có thể chia sẻ. Phù hợp cho lớp K-1 (6 tuổi).
         course2:
           title: Khóa học 2
           description: Khóa học 2 được thiết kế cho người biết đọc và không có kinh
             nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương trình
             để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia sẻ
             những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
-          description_short: Khóa học 2 được thiết kế dành cho những sinh viên có
-            khả năng đọc.
-          description_audience: Lứa tuổi 6 + (yêu cầu biết đọc)
+          description_short: Giới thiệu về khoa học máy tính cho học sinh có thể đọc.
+          description_audience: 6 tuổi trở lên (yêu cầu đọc)
           lessons:
             'Artist: Debugging':
               name: 'Nghệ sĩ: gỡ lỗi'
@@ -116,6 +121,10 @@ vi:
               name: Sự kiện lớn
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số
+          student_description: Khóa học 2 được thiết kế cho người biết đọc và không
+            có kinh nghiệm lập trình. Trong khóa học này, học viên sẽ tạo ra các chương
+            trình để giải quyết vấn đề và phát triển các trò chơi tương tác hoặc chia
+            sẻ những mẩu chuyện. Khuyến khích cho học sinh từ lớp 2 đến lớp 5.
         course3:
           title: Khóa học 3
           description: Khóa học 3 được thiết kế cho những người đã học qua khóa 2.
@@ -152,13 +161,13 @@ vi:
             Dice Race:
               name: Vòng quay xúc sắc
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Farmer: While Loops':
               name: Nông dân - trong các vòng
             Functional Suncatchers:
               name: Chức năng của tấm hứng ánh nắng
             Internet:
-              name: Kết nối mạng
+              name: internet
             Maze:
               name: Mê cung
             'Maze: Conditionals':
@@ -169,6 +178,12 @@ vi:
               name: 'Phòng trò chơi : Thiết kế trò chơi'
             'Studio: Create a Story':
               name: 'phòng thí nghiệm trò chơi: Tạo ra một câu chuyện'
+          student_description: Khóa học 3 được thiết kế cho những người đã học qua
+            khóa 2. Học viên sẽ nghiên cứu sâu hơn cách lập trình về chủ đề đã được
+            giới thiệu trong các khóa học trước đó với các giải pháp linh hoạt cho
+            các vấn đề phức tạp hơn. Cuối khóa học này, học viên tạo cốt truyện và
+            trò chơi có tương tác mà họ muốn chia sẻ với bất cứ ai. Khuyến khích cho
+            học sinh các lớp 4-5.
         playlab:
           title: Phòng trò chơi
           description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng thí
@@ -178,6 +193,8 @@ vi:
           lessons:
             Play Lab:
               name: Phòng trò chơi
+          student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
+            phòng thí nghiệm trò chơi!
         artist:
           title: Họa sĩ
           description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
@@ -185,6 +202,7 @@ vi:
           lessons:
             Artist:
               name: Họa sĩ
+          student_description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
         hourofcode:
           title: Mê cung cổ điển
           description: Hãy thử những nền tảng của khoa học máy tính với các nhân vật
@@ -194,6 +212,8 @@ vi:
           lessons:
             Maze:
               name: Mê cung
+          student_description: Hãy thử những nền tảng của khoa học máy tính với các
+            nhân vật từ Angry Birds, Plants vs Zombies và Scrat từ Ice Age!
         frozen:
           title: Mã hóa cùng  Anna và Elsa
           description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá sự
@@ -203,6 +223,10 @@ vi:
           lessons:
             Artist:
               name: Họa sĩ
+          student_description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám
+            phá sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu
+            như bạn trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau
+            đó bạn có thể chia sẻ với bạn bè của bạn!
         course4:
           title: Khóa học 4
           description: Khóa học 4 được thiết kế cho những học sinh đã hoàn thành khóa
@@ -259,6 +283,12 @@ vi:
               name: 'Chưa hoạt động: Sáng tác với tham số'
             'Unplugged: Tangrams':
               name: 'Chưa hoạt động: Tangrams'
+          student_description: Khóa học 4 được thiết kế cho những học sinh đã hoàn
+            thành khóa học 2 và 3. Học sinh sẽ học cách giải các câu đố với sự phức
+            tạp tăng lên cũng như tìm hiểu làm thế nào để kết hợp một số khái niệm
+            khi giải quyết các thách thức. Khi hoàn tất khóa học này, học sinh sẽ
+            tạo ra chương trình sử dụng nhiều kỹ năng, bao gồm vòng lặp, hàm có tham
+            số. Khuyến nghị cho lớp 4-8.
         Course4pre:
           title: Khóa học 4 điều kiện tiên quyết
           description: Một dựng lên các khái niệm ngắn cho những sinh viên đã không
@@ -286,6 +316,8 @@ vi:
               name: Nông dân - trong các vòng
             'Maze: Sequence':
               name: 'Mê cung: Trình tự'
+          student_description: Một dựng lên các khái niệm ngắn cho những sinh viên
+            đã không thực hiện khóa học 2 và 3.
         usability:
           lessons:
             Binary:
@@ -349,6 +381,8 @@ vi:
           lessons:
             Infinity:
               name: Vô cùng
+          student_description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
+            hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -471,6 +505,9 @@ vi:
               name: mê cung
             Wrap-up:
               name: Gói gọn
+          student_description: Khóa học 20-giờ sẽ giới thiệu mục đích ngành khoa học
+            máy tính và các khái niệm lập trình. Khóa học được soạn cho các lớp K-8,
+            tuy nhiên nó khá thú vị để tìm hiểu ở tất cả các lứa tuổi.
         edit-code:
           title: Hiệu chỉnh mã
           description: Hiệu chỉnh mã
@@ -486,6 +523,7 @@ vi:
               name: nghệ sĩ
             The Maze:
               name: mê cung
+          student_description: Hiệu chỉnh mã
         events:
           title: Các sự kiện
           description: Các sự kiện
@@ -499,6 +537,7 @@ vi:
               name: Eval
             Studio:
               name: Studio
+          student_description: Các sự kiện
         flappy:
           title: Lập trình Flappy
           description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút?
@@ -507,6 +546,8 @@ vi:
           lessons:
             Flappy Code:
               name: Lập trình Flappy
+          student_description: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy
+            10 phút? Hãy thử lớp học lập trình Flappy của chúng tôi!
         jigsaw:
           title: Ghép hình
           description: Thử các trò chơi xếp hình của chúng tôi
@@ -514,6 +555,7 @@ vi:
           lessons:
             Jigsaw:
               name: Ghép hình
+          student_description: Thử các trò chơi xếp hình của chúng tôi
         step:
           title: Thực hiện từng bước
           description: Hướng dẫn các bước
@@ -521,6 +563,7 @@ vi:
           lessons:
             Step:
               name: Thực hiện từng bước
+          student_description: Hướng dẫn các bước
         Hour of Code:
           title: Giờ Lập trình 2013
           description: thử những căn bản của khoa học máy tính với các đặc tính từ
@@ -530,6 +573,8 @@ vi:
           lessons:
             Hour of Code 2013:
               name: Giờ Lập trình 2013
+          student_description: thử những căn bản của khoa học máy tính với các đặc
+            tính từ Angry bird và Plants vs zombies!
         CodeStudioPuzzleChallenge:
           lessons:
             Puzzles:
@@ -747,6 +792,8 @@ vi:
               name: Sử dụng các biến số trong ứng dụng
             While Loops:
               name: Vòng lặp "trong khi"
+            Creating Functions with Parameters:
+              name: Tạo ra Chức năng với các tham số
         algebraPD3:
           lessons:
             Computer Science Pedagogy:
@@ -885,6 +932,7 @@ vi:
               name: hoan nghênh!
             Wrap-Up:
               name: Tổng hợp
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         sciencePD3:
           lessons:
             Decode and Share:
@@ -968,6 +1016,7 @@ vi:
               name: Văn bản và hình ảnh
             The Design Recipe:
               name: Công thức thiết kế
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         allthethings:
           title: Tất cả những điều này!
           description: Tất cả các loại cấp bậc để người dùng thử nghiệm giao diện
@@ -1048,6 +1097,8 @@ vi:
               name: Tham khảo chương trình đào tạo
             Contained Levels:
               name: Các cấp độ có chứa
+          student_description: Tất cả các loại cấp bậc để người dùng thử nghiệm giao
+            diện
         algebraPD2b:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1074,6 +1125,7 @@ vi:
               name: Văn bản và hình ảnh
             Writing Contracts:
               name: Hợp đồng bằng văn bản
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         cspfacilitator:
           lessons:
             App Lab:
@@ -1138,6 +1190,7 @@ vi:
               name: hoan nghênh!
             Wrap-up:
               name: Gói gọn
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         equityPD:
           lessons:
             Equity PD:
@@ -1158,6 +1211,7 @@ vi:
               name: Công thức thiết kế
             Welcome!:
               name: hoan nghênh!
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         sciencePD2b:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1176,6 +1230,7 @@ vi:
               name: hoan nghênh!
             Wrap-Up:
               name: Tổng hợp
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1200,6 +1255,7 @@ vi:
               name: hoan nghênh!
             Wrap-Up:
               name: Tổng hợp
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         Equity-OnlinePD:
           lessons:
             Creating Equitable Learning Environments:
@@ -1228,6 +1284,7 @@ vi:
               name: hoan nghênh!
             Wrap-Up:
               name: Tổng hợp
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         ECSPD2-iZone:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1252,6 +1309,7 @@ vi:
               name: hoan nghênh!
             Wrap-up:
               name: Gói gọn
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         ECSPD2-NexTech:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -1276,6 +1334,7 @@ vi:
               name: hoan nghênh!
             Wrap-up:
               name: Gói gọn
+          student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         CSPPD2:
           lessons:
             Getting Started:
@@ -1322,6 +1381,8 @@ vi:
           lessons:
             Vigenere:
               name: Vigenere
+          student_description: Sử dụng tiện ích mật mã Vigenere để khám phá việc mã
+            hóa và giải mã các thông điệp bằng cách sử dụng thuật toán mật mã Vigenere.
         algebraPD3a:
           lessons:
             Lesson Prep:
@@ -1548,6 +1609,8 @@ vi:
           lessons:
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
+          student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
+            Ice Age Play Lab!
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1616,6 +1679,8 @@ vi:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+          student_description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với
+            Ice Age Play Lab!
         starwars:
           title: 'Chiến Tranh Các Vì Sao: Xây Thiên Hà bằng lâp trình'
           description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
@@ -1625,6 +1690,8 @@ vi:
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+          student_description: Tìm hiểu để lập trình droids, và tạo trò chơi Star
+            Wars của riêng bạn trong một thiên hà xa xôi.
         starwarsblocks:
           title: 'Chiến Tranh Các Vì Sao: Xây Thiên Hà bằng lâp trình'
           description: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của
@@ -1634,6 +1701,8 @@ vi:
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+          student_description: Tìm hiểu để lập trình droids, và tạo trò chơi Star
+            Wars của riêng bạn trong một thiên hà xa xôi.
         mc:
           title: Minecraft Hour of Code
           description: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào chuyến phiêu
@@ -1642,12 +1711,16 @@ vi:
           lessons:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+          student_description: Hãy sử dụng các khối mã để đưa Steve hoặc Alex vào
+            chuyến phiêu lưu khám phá thế giới Minecraft
         oceans:
           title: Trí Tuệ Nhân Tạo cho Đại Dương
           description: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết
             các vấn đề của thế giới.
           description_short: Tìm hiểu cách AI và học máy có thể được sử dụng để giải
             quyết các vấn đề của thế giới.
+          student_description: Tìm hiểu cách AI và học máy có thể được sử dụng để
+            giải quyết các vấn đề của thế giới.
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1808,6 +1881,7 @@ vi:
               name: 'Chưa cắm phít được: Chức năng nhanh chóng'
             'Unplugged: The Design Recipe':
               name: 'Unplugged: Các bước thiết kế'
+          student_description: Tìm hiểu lập trình chức năng thông qua đại số
         AlgebraB:
           title: 'Khoa học máy tính trong Đại số: Khoá học B'
           description: Tìm hiểu lập trình chức năng thông qua đại số
@@ -1835,6 +1909,7 @@ vi:
               name: 'Unplugged: Điều kiện và đường chức năng'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Unplugged: Trò chơi điện tử và trục tọa độ'
+          student_description: Tìm hiểu lập trình chức năng thông qua đại số
         gamelab-hackathon:
           lessons:
             Middle_School_Hackathon:
@@ -2369,7 +2444,7 @@ vi:
             Contained Levels:
               name: Các cấp độ có chứa
             Game Lab:
-              name: Kho Trò chơi
+              name: Phòng thí nghiệm trò chơi
         cspunit1-support-test:
           lessons:
             Unit 1 Overview:
@@ -2542,7 +2617,7 @@ vi:
         grade4:
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Songwriting:
               name: Sáng tác với tham số
         grade1:
@@ -2576,7 +2651,7 @@ vi:
             'Bee: Functions with Parameters':
               name: 'Ong: Chức năng với tham số'
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Final Project - Review/Revise Day:
               name: Dự án cuối cùng - Xem lại/ Sửa đổi ngày
             'Play Lab: Variables':
@@ -3065,6 +3140,7 @@ vi:
           lessons:
             Bounce:
               name: Bật lại
+          student_description: Chọn đội của bạn và chơi một trò chơi bóng rổ
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3194,6 +3270,8 @@ vi:
           lessons:
             Minecraft Hour of Code Designer:
               name: Nhà thiết kế Giờ lập trình Minecraft
+          student_description: Chương trình động vật và sinh vật Minecraft khác trong
+            phiên bản Minecraft của riêng bạn.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -3241,7 +3319,7 @@ vi:
             More Programming with CS4FN:
               name: Lập trình nhiều hơn với CS4FN
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
@@ -3256,9 +3334,9 @@ vi:
               display_name: Nội dung
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Introduction:
@@ -3271,7 +3349,7 @@ vi:
               display_name: Nội dung
           lessons:
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -3869,6 +3947,7 @@ vi:
               name: CSD thứ tư
             CSD Thursday:
               name: CSD thứ năm
+          student_description: NA
         csp1-dlp:
           title: CSP Phần 1 Học tập sâu hơn
           description_audience: Người điều phối nguyên lý CS trong đào tạo
@@ -4044,9 +4123,9 @@ vi:
             Introduction:
               name: Giới thiệu
             Internet:
-              name: Kết nối mạng
+              name: internet
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Envelope Variables:
               name: Các biến phong bì
             For Loop Fun:
@@ -4150,6 +4229,8 @@ vi:
               name: Giới thiệu về AppLab
             'Lesson 1: App Lab Intro':
               name: 'Bài 1: Giới thiệu App Lab'
+          student_description: Những bài học giới thiệu bạn đến App Lab thông qua
+            một loạt các dự án sáng tạo.
         e-f-ramp:
           title: Khóa học E & F Ramp
           lessons:
@@ -4170,7 +4251,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Bee/Zombie:
@@ -4183,7 +4264,7 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: 'Chưa hoạt động: nhị phân'
             Artist Binary:
@@ -4250,7 +4331,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         new-f:
@@ -4359,6 +4440,8 @@ vi:
           lessons:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+          student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
+            cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
           lessons:
             Intro to AppLab - Your First App:
@@ -4430,7 +4513,7 @@ vi:
             Conditionals:
               name: Điều kiện
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
         course-f-2018:
@@ -4716,7 +4799,7 @@ vi:
             Building a Foundation:
               name: Xây dựng nền tảng
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: Hình ảnh Nhị phân
             Artist Binary:
@@ -5357,6 +5440,8 @@ vi:
               name: giai đoạn mới
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+          student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ
+            với bạn bè của mình!
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5387,6 +5472,8 @@ vi:
         dance-extras:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
+          student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
+            tưởng dự án mở rộng.
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -5394,9 +5481,9 @@ vi:
             csf_for_loops:
               display_name: Cho vòng lặp
             csf_internet:
-              display_name: Kết nối mạng
+              display_name: internet
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -5435,7 +5522,7 @@ vi:
             csf_binary:
               display_name: Nhị phân
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -5444,7 +5531,7 @@ vi:
             Loops in Ice Age:
               name: Vòng lặp trong Kỷ băng hà
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             'Unplugged: Binary':
               name: Hình ảnh Nhị phân
             Artist Binary:
@@ -5454,7 +5541,7 @@ vi:
         coursee-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_nested_loops:
               display_name: Vòng lặp lồng nhau
             csf_functions:
@@ -5471,7 +5558,7 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Nested Loops in Frozen:
@@ -5512,7 +5599,7 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Internet:
-              name: Kết nối mạng
+              name: internet
             Crowdsourcing:
               name: Đa nguồn
             Dance Party:
@@ -5551,10 +5638,12 @@ vi:
           title: Hãy Tiếp tục Nhảy
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
+          student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
+            tưởng dự án mở rộng.
         coursec-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_binary:
@@ -5577,11 +5666,11 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         gamelab:
-          title: Kho Trò chơi
+          title: Phòng thí nghiệm trò chơi
         coursea-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -5607,7 +5696,7 @@ vi:
         courseb-2019:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6402,6 +6491,8 @@ vi:
           lessons:
             Deeper Learning Overview:
               name: Tổng quan học tập sâu
+            Focus Area 1:
+              name: Chương trình
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -6524,6 +6615,8 @@ vi:
           lessons:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
+          student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ
+            với bạn bè của mình!
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -6570,6 +6663,8 @@ vi:
         dance-extras-2019:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự
             án mở rộng.
+          student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
+            tưởng dự án mở rộng.
         csp10-pilot:
           lessons:
             new stage:
@@ -6594,7 +6689,7 @@ vi:
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_conditionals:
               display_name: Điều kiện
             csf_nested_loops:
@@ -6619,7 +6714,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
@@ -6636,7 +6731,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
@@ -6857,7 +6952,7 @@ vi:
         coursea-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6879,7 +6974,7 @@ vi:
         courseb-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_loops:
@@ -6898,7 +6993,7 @@ vi:
         coursec-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_sequencing:
               display_name: Chuỗi tuần tự
             csf_binary:
@@ -6927,7 +7022,7 @@ vi:
             csf_binary:
               display_name: Nhị phân
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -6940,13 +7035,13 @@ vi:
             Artist Binary:
               name: Nghệ sĩ nhị phân
             Digital Citizenship:
-              name: Dân kỹ thuật số
+              name: Công dân số
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_nested_loops:
               display_name: Vòng lặp lồng nhau
             csf_functions:
@@ -6961,7 +7056,7 @@ vi:
         coursef-2020:
           lesson_groups:
             csf_digcit:
-              display_name: Dân kỹ thuật số
+              display_name: Công dân số
             csf_variables:
               display_name: Các biến
             csf_for_loops:
@@ -7382,3 +7477,513 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        virustest:
+          title: Mô phỏng dịch bệnh bùng phát
+          description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh
+            bùng phát vi rút.
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            visualizing:
+              name: Làm dự liệu hiển thị được
+        outbreak:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+          lesson_groups:
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+          title: Trình mô phỏng dịch bệnh bùng phát
+          description_short: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
+            bùng phát do vi rút.
+          description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng
+            phát do vi rút.
+          name: dịch bệnh bùng phát
+          student_description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
+            bùng phát do vi rút.
+        2021drafting:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+          lesson_groups:
+            introduction:
+              display_name: Giới thiệu
+            lessonGroup-3:
+              display_name: Các biến
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+        csd1-2021:
+          lessons:
+            CS Discoveries Pre-survey:
+              key: Tiền khảo sát CS Discoveries
+              name: Tiền khảo sát CS Discoveries
+            Intro to Problem Solving:
+              key: Giới thiệu phần giải quyết vấn đề
+              name: Giới thiệu phần giải quyết vấn đề
+            The Problem Solving Process:
+              key: Quá trình giải quyết vấn đề
+              name: Quá trình giải quyết vấn đề
+            Exploring Problem Solving:
+              key: Khám phá Giải quyết vấn đề
+              name: Khám phá Giải quyết vấn đề
+            What is a Computer?:
+              key: Máy tính là gì?
+              name: Máy tính là gì?
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd2-2021:
+          description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
+            Kho Dữ liệu Web."
+          lessons:
+            Digital Footprint:
+              key: Dấu vết số
+              name: Dấu vết số
+            Styling Text with CSS:
+              key: Tạo phong cách cho văn bản với CSS
+              name: Tạo phong cách cho văn bản với CSS
+              description_teacher: "Bài học này giới thiệu CSS là một cách để phong
+                cách các thành phần trên trang. Học sinh tìm hiểu cú pháp cơ bản cho
+                bộ quy tắc CSS và sau đó tìm hiểu tính chất tác động đến các thành
+                phần văn bản HTML. Họ làm việc trên một trang HTML về chủ sở hữu kỷ
+                lục thế giới Guinness, bổ sung vào phong cách riêng của họ cho trang
+                được cung cấp. Ở cuối cấp độ, học sinh áp dụng những gì họ đã học
+                về phong cách cho các thành phần văn bản để thêm vào các trang web
+                cá nhân của họ. \r \r \n"
+            Intellectual Property:
+              key: Sở hữu trí tuệ
+              name: Sở hữu trí tuệ
+            Styling Elements with CSS:
+              key: Tạo phong cách cho các thành phần với CSS
+              name: Tạo phong cách cho các thành phần với CSS
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd3-2021:
+          description_short: Lập trình
+          lessons:
+            Drawing in Game Lab:
+              key: Bản vẽ trong Kho trò chơi
+              name: Bản vẽ trong Kho trò chơi
+              description_teacher: Sinh viên được giới thiệu đến Kho dữ liệu trò chơi,
+                môi trường lập trình cho các Phần này, và bắt đầu sử dụng nó để định
+                vị hình dạng trên màn hình. Họ tìm hiểu những điều cơ bản trong việc
+                xác định trình tự và gỡ lỗi, cũng như một vài lệnh đơn giản. Vào cuối
+                của bài học, học sinh sẽ có thể để lập trình hình ảnh giống như những
+                gì họ đã thực hiện với công cụ vẽ trong bài học trước đó.
+            Variables:
+              key: Các biến
+              name: Các biến
+            Text:
+              key: Văn bản
+              name: Văn bản
+            Conditionals:
+              key: Điều kiện
+              name: Điều kiện
+            Project - Interactive Card:
+              key: 'Dự án: Thẻ tương tác'
+              name: 'Dự án: Thẻ tương tác'
+            Velocity:
+              description_teacher: Sau một đánh giá ngắn gọn về làm thế nào các mô
+                hình truy cập được sử dụng để di chuyển các nhân vật, lớp học được
+                giới thiệu với các thuộc tính thiết lập tốc độ vận tốc và vòng quay
+                một cách trực tiếp. Khi họ sử dụng các thuộc tính mới bằng nhiều cách
+                khác nhau, họ xây dựng những kỹ năng mà họ cần để tạo ra trò chơi
+                với thanh cuộn cơ bản.
+            Collision Detection:
+              key: Phát hiện va chạm
+              name: Phát hiện va chạm
+            Complex Sprite Movement:
+              key: Di chuyển nhân vật phức tạp
+              name: Di chuyển nhân vật phức tạp
+            Collisions:
+              key: Va chạm
+              name: Va chạm
+            Functions:
+              key: Các hàm
+              name: Các hàm
+            The Game Design Process:
+              key: Quá trình thiết kế trò chơi
+              name: Quá trình thiết kế trò chơi
+            Using the Game Design Process:
+              key: Sử dụng quy trình thiết kế trò chơi
+              name: Sử dụng quy trình thiết kế trò chơi
+            Project - Design a Game:
+              key: Dự án - thiết kế một trò chơi
+              name: Dự án - thiết kế một trò chơi
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Phân tích thiết kế
+              name: Phân tích thiết kế
+            Understanding Your User:
+              key: Tìm hiểu về người dùng của bạn
+              name: Tìm hiểu về người dùng của bạn
+            Designing Apps for Good:
+              key: Thiết kế ứng dụng nhằm mục đích tốt
+              name: Thiết kế ứng dụng nhằm mục đích tốt
+            Market Research:
+              key: Nghiên cứu thị trường
+              name: Nghiên cứu thị trường
+            Paper Prototypes:
+              key: Nguyên mẫu giấy
+              name: Nguyên mẫu giấy
+            Prototype Testing:
+              key: Thử nghiệm nguyên mẫu
+              name: Thử nghiệm nguyên mẫu
+            Testing the App:
+              key: Thử Ứng dụng
+              name: Thử Ứng dụng
+            Improving and Iterating:
+              key: Cải thiện và Lặp lại
+              name: Cải thiện và Lặp lại
+            Build a Paper Prototype:
+              name: Nguyên mẫu giấy
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csd6-2021:
+          lessons:
+            Making Music:
+              key: Tạo âm nhạc
+              name: Tạo âm nhạc
+            Functions with Parameters:
+              key: Hàm và tham số
+              name: Hàm và tham số
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp1-2021:
+          lessons:
+            CS Principles Pre-survey:
+              key: Nguyên lý KHMT trước khi khảo sát
+              name: Nguyên lý KHMT trước khi khảo sát
+            Representing Information:
+              key: Miêu tả thông tin
+              name: Miêu tả thông tin
+            Binary Numbers:
+              key: Số nhị phân
+              name: Số nhị phân
+            Intellectual Property:
+              key: Sở hữu trí tuệ
+              name: Sở hữu trí tuệ
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        csp2-2021:
+          lessons:
+            The Need for Addressing:
+              key: Sự cần thiết cho các địa chỉ
+              name: Sự cần thiết cho các địa chỉ
+            Routers and Redundancy:
+              key: Bộ định tuyến và dự phòng
+              name: Bộ định tuyến và dự phòng
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Các biến
+            csp_conditionals:
+              display_name: Điều kiện
+            csp_functions:
+              display_name: Các hàm
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Danh sách
+            csp_loops:
+              display_name: Vòng lặp
+        csp8-2021:
+          lessons:
+            Create PT - Complete the Task:
+              key: Tạo PT - hoàn thành nhiệm vụ
+              name: Tạo PT - hoàn thành nhiệm vụ
+        coursea-2021:
+          lessons:
+            'Programming: Happy Maps':
+              name: Bản đồ thú vị
+            Sequencing with Scrat:
+              key: Học về chuỗi tuần tự cùng sóc Scrat
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+              description_student: Viết chương trình để Scrat tìm đến hạt sồi.
+            Programming with Rey and BB-8:
+              key: Lập trình cùng Rey và robot BB-8
+              name: Lập trình cùng Rey và robot BB-8
+            Loops in Ice Age:
+              key: Vòng lặp trong Kỷ băng hà
+            Ocean Scene with Loops:
+              key: Vòng lặp trong câu chuyện về biển
+              name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        courseb-2021:
+          lessons:
+            Move It, Move It:
+              key: Di chuyển nó, di chuyển nó
+              name: Di chuyển nó, di chuyển nó
+            Sequencing in Maze:
+              key: Chuỗi tuần tự trong mê cung
+              name: Chuỗi tuần tự cùng Angry Birds
+            Programming in Maze:
+              key: Lập trình trong mê cung
+            'Loops: Getting Loopy':
+              name: Tạo vòng lặp
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        coursec-2021:
+          lessons:
+            Programming in Maze:
+              key: Lập trình trong mê cung
+            Binary Bracelets:
+              key: Vòng đeo tay nhị phân
+              name: Vòng đeo tay nhị phân
+            Looking Ahead:
+              key: Nhìn về phía trước
+              name: Nhìn về phía trước
+            'Events: The Big Event':
+              name: Sự kiện lớn
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_binary:
+              display_name: Nhị phân
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        coursed-2021:
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              name: lập trình đồ thị trên giấy
+            Relay Programming:
+              key: Chương trình chuyển tiếp
+              name: Chương trình chuyển tiếp
+            Dance Party:
+              key: Bữa Tiệc Khiêu Vũ
+              name: Bữa Tiệc Khiêu Vũ
+            Loops in Ice Age:
+              key: Vòng lặp trong Kỷ băng hà
+              name: Vòng lặp trong Kỷ băng hà
+            'Unplugged: Binary':
+              key: 'Chưa hoạt động: nhị phân'
+              name: Hình ảnh Nhị phân
+            Artist Binary:
+              key: Nghệ sĩ nhị phân
+              name: Nghệ sĩ nhị phân
+            lesson-6:
+              name: Nhìn về phía trước
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_events:
+              display_name: Các sự kiện
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_binary:
+              display_name: Nhị phân
+            csf_digcit:
+              display_name: Công dân số
+            lessonGroup-6:
+              display_name: Công dân số
+        coursee-2021:
+          lessons:
+            Sequencing in the Maze:
+              key: Chuỗi tuần tự trong mê cung
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              key: Điều kiện
+            Nested Loops in Frozen:
+              name: Vòng lặp lồng với Frozen
+            'Functions: Songwriting':
+              name: Sáng tác với tham số
+          lesson_groups:
+            ramp_up:
+              display_name: Vòng lặp
+            csf_digcit:
+              display_name: Công dân số
+            csf_nested_loops:
+              display_name: Điều kiện
+            csf_functions:
+              display_name: Các hàm
+        coursef-2021:
+          lessons:
+            Envelope Variables:
+              key: Các biến phong bì
+              name: Các biến phong bì
+            AI for Oceans:
+              key: Trí Tuệ Nhân Tạo cho Đại Dương
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
+            Internet:
+              key: internet
+              name: Internet
+            For Loop Fun:
+              key: Cho vòng lặp vui vẻ
+              name: Cho vòng lặp vui vẻ
+          lesson_groups:
+            csf_digcit:
+              display_name: Công dân số
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
+        express-2021:
+          lessons:
+            Dance Party:
+              key: Bữa Tiệc Khiêu Vũ
+              name: Bữa Tiệc Khiêu Vũ
+            Debugging with Scrat:
+              key: Gỡ lỗi với Scrat
+              name: Gỡ lỗi với Scrat
+            'Looking Ahead with Minecraft ':
+              name: Nhìn về phía trước
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_conditionals:
+              display_name: Điều kiện
+            csf_functions:
+              display_name: Các hàm
+            csf_variables:
+              display_name: Các biến
+            csf_for_loops:
+              display_name: Cho vòng lặp
+        pre-express-2021:
+          lessons:
+            Sequencing with Scrat:
+              key: Học về chuỗi tuần tự cùng sóc Scrat
+              name: Học về chuỗi tuần tự cùng sóc Scrat
+            Programming with Rey and BB-8:
+              key: Lập trình cùng Rey và robot BB-8
+              name: Lập trình cùng Rey và robot BB-8
+            Ocean Scene with Loops:
+              key: Vòng lặp trong câu chuyện về biển
+              name: Vòng lặp trong câu chuyện về biển
+          lesson_groups:
+            csf_sequencing:
+              display_name: Chuỗi tuần tự
+            csf_loops:
+              display_name: Vòng lặp
+            csf_events:
+              display_name: Các sự kiện
+        csf-2021-pilot:
+          lessons:
+            Virus Simulation for Code Bytes:
+              name: Lập trình mô phỏng
+          lesson_groups:
+            ramp_up:
+              display_name: Giới thiệu
+            outbreak:
+              display_name: Mô phỏng dịch bệnh bùng phát
+            lessonGroup-3:
+              display_name: Các biến
+        csd4-preview-2021:
+          lessons:
+            Analysis of Design:
+              key: Phân tích thiết kế
+              name: Phân tích thiết kế
+            Understanding Your User:
+              key: Tìm hiểu về người dùng của bạn
+              name: Tìm hiểu về người dùng của bạn
+            Designing Apps for Good:
+              key: Thiết kế ứng dụng nhằm mục đích tốt
+              name: Thiết kế ứng dụng nhằm mục đích tốt
+            Market Research:
+              key: Nghiên cứu thị trường
+              name: Nghiên cứu thị trường
+            Paper Prototypes:
+              key: Nguyên mẫu giấy
+              name: Nguyên mẫu giấy
+            Prototype Testing:
+              key: Thử nghiệm nguyên mẫu
+              name: Thử nghiệm nguyên mẫu
+            Testing the App:
+              key: Thử Ứng dụng
+              name: Thử Ứng dụng
+            Improving and Iterating:
+              key: Cải thiện và Lặp lại
+              name: Cải thiện và Lặp lại
+            Build a Paper Prototype:
+              name: Nguyên mẫu giấy
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+            csdSurvey:
+              display_name: Khảo sát
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Khảo sát
+        contagion-pilot:
+          description_short: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
+            bùng phát do vi rút.
+          description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng
+            phát do vi rút.
+          student_description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
+            bùng phát do vi rút.
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Bài học 14
+            lesson15:
+              name: Bài học 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giới thiệu
+            Sequencing:
+              key: Chuỗi tuần tự
+              name: Chuỗi tuần tự
+            Loops:
+              key: Vòng lặp
+              name: Vòng lặp
+            Events:
+              key: Các sự kiện
+              name: Các sự kiện
+            Conditionals:
+              key: Điều kiện
+              name: Điều kiện
+            Functions:
+              key: Các hàm
+              name: Các hàm
+            Variables:
+              key: Các biến
+              name: Các biến
+            For Loops:
+              key: Cho vòng lặp
+              name: Cho vòng lặp
+            Getting Started:
+              name: Bắt đầu
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Giới thiệu
+            k5_next_steps_1:
+              display_name: Bước tiếp theo
+            Introduction:
+              display_name: Giới thiệu

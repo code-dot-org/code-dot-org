@@ -4,6 +4,6 @@ title: Whole School Participation
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Bütün məktəbinizin iştirak etməsini təmin edin
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Bütün məktəbləri iştirak etməsini təmin etmək üçün lazımi bütün məlumatlar burada olacaq.

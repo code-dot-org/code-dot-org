@@ -1,0 +1,77 @@
+#Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+in:
+  devise:
+    confirmations:
+      confirmed: "crwdns4344:0crwdne4344:0"
+      send_instructions: "crwdns2751:0crwdne2751:0"
+      send_paranoid_instructions: "crwdns2752:0crwdne2752:0"
+    failure:
+      already_authenticated: "crwdns2753:0crwdne2753:0"
+      inactive: "crwdns2754:0crwdne2754:0"
+      invalid: "crwdns2755:0crwdne2755:0"
+      invalid_token: "crwdns2756:0crwdne2756:0"
+      locked: "crwdns2757:0crwdne2757:0"
+      not_found_in_database: "crwdns2758:0crwdne2758:0"
+      timeout: "crwdns2759:0crwdne2759:0"
+      unauthenticated: "crwdns2760:0crwdne2760:0"
+      unconfirmed: "crwdns2761:0crwdne2761:0"
+    mailer:
+      confirmation_instructions:
+        subject: "crwdns4345:0crwdne4345:0"
+      reset_password_instructions:
+        subject: "crwdns4346:0crwdne4346:0"
+      unlock_instructions:
+        subject: "crwdns2764:0crwdne2764:0"
+    omniauth_callbacks:
+      failure: "crwdns2765:0%{kind}crwdnd2765:0%{reason}crwdne2765:0"
+      success: "crwdns2766:0%{kind}crwdne2766:0"
+    passwords:
+      no_token: "crwdns2767:0crwdne2767:0"
+      send_instructions: "crwdns2768:0crwdne2768:0"
+      send_paranoid_instructions: "crwdns2769:0crwdne2769:0"
+      updated: "crwdns2770:0crwdne2770:0"
+      updated_not_active: "crwdns2771:0crwdne2771:0"
+    registrations:
+      destroyed: "crwdns2772:0crwdne2772:0"
+      signed_up: "crwdns2773:0crwdne2773:0"
+      signed_up_but_inactive: "crwdns2774:0crwdne2774:0"
+      signed_up_but_locked: "crwdns2775:0crwdne2775:0"
+      signed_up_but_unconfirmed: "crwdns2776:0crwdne2776:0"
+      update_needs_confirmation: "crwdns2777:0crwdne2777:0"
+      updated: "crwdns2778:0crwdne2778:0"
+    sessions:
+      signed_in: "crwdns24831:0crwdne24831:0"
+      signed_out: "crwdns2780:0crwdne2780:0"
+    unlocks:
+      send_instructions: "crwdns2781:0crwdne2781:0"
+      send_paranoid_instructions: "crwdns2782:0crwdne2782:0"
+      unlocked: "crwdns2783:0crwdne2783:0"
+  errors:
+    messages:
+      already_confirmed: "crwdns2784:0crwdne2784:0"
+      confirmation_period_expired: "crwdns2785:0%{period}crwdne2785:0"
+      expired: "crwdns2786:0crwdne2786:0"
+      not_found: "crwdns2787:0crwdne2787:0"
+      not_locked: "crwdns2788:0crwdne2788:0"
+      not_saved:
+        one: "crwdns2789:0%{resource}crwdne2789:0"
+        other: "crwdns2790:0%{count}crwdnd2790:0%{resource}crwdne2790:0"
+    invitations:
+      send_instructions: 'crwdns35954:0%{email}crwdne35954:0'
+      invitation_token_invalid: 'crwdns35955:0crwdne35955:0'
+      updated: 'crwdns35956:0crwdne35956:0'
+      no_invitations_remaining: "crwdns35957:0crwdne35957:0"
+      invitation_removed: 'crwdns35958:0crwdne35958:0'
+      new:
+        header: "crwdns35959:0crwdne35959:0"
+        submit_button: "crwdns35960:0crwdne35960:0"
+      edit:
+        header: "crwdns35961:0crwdne35961:0"
+        submit_button: "crwdns35962:0crwdne35962:0"
+    mailer:
+      invitation_instructions:
+        subject: 'crwdns35963:0crwdne35963:0'
+        hello: 'crwdns35964:0%{email}crwdne35964:0'
+        someone_invited_you: 'crwdns35965:0%{url}crwdne35965:0'
+        accept: 'crwdns35966:0crwdne35966:0'
+        ignore: "crwdns35967:0crwdne35967:0"

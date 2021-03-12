@@ -16,13 +16,20 @@ const ButtonColor = {
   blue: 'blue',
   white: 'white',
   red: 'red',
-  green: 'green'
+  green: 'green',
+  purple: 'purple'
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
   narrow: 'narrow'
+};
+
+const ButtonHeight = {
+  default: 34,
+  large: 40,
+  narrow: 40
 };
 
 const styles = {
@@ -121,6 +128,23 @@ const styles = {
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
+    [ButtonColor.purple]: {
+      color: color.white,
+      backgroundColor: color.purple,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.purple,
+        borderColor: color.purple,
+        backgroundColor: color.lightest_purple
+      },
+      ':disabled': {
+        color: color.lighter_purple,
+        backgroundColor: color.lightest_purple,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
     [ButtonColor.green]: {
       color: color.white,
       backgroundColor: color.level_perfect,
@@ -140,19 +164,19 @@ const styles = {
   },
   sizes: {
     [ButtonSize.default]: {
-      height: 34,
+      height: ButtonHeight.default,
       paddingLeft: 24,
       paddingRight: 24,
       lineHeight: '34px'
     },
     [ButtonSize.large]: {
-      height: 40,
+      height: ButtonHeight.large,
       paddingLeft: 30,
       paddingRight: 30,
       lineHeight: '40px'
     },
     [ButtonSize.narrow]: {
-      height: 40,
+      height: ButtonHeight.narrow,
       paddingLeft: 10,
       paddingRight: 10,
       lineHeight: '40px'
@@ -173,6 +197,7 @@ class Button extends React.Component {
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
+    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -202,6 +227,7 @@ class Button extends React.Component {
       style,
       onClick,
       disabled,
+      download,
       id,
       tabIndex,
       isPending,
@@ -221,9 +247,24 @@ class Button extends React.Component {
       Tag = href ? 'a' : 'div';
     }
 
+    if (download && Tag !== 'a') {
+      // <button> and <div> elements do not support the download attribute, so
+      // don't let this component attempt to do that.
+      throw new Error(
+        'Attempted to use the download attribute with a non-anchor tag'
+      );
+    }
+
     const sizeStyle = __useDeprecatedTag
       ? styles.sizes[size]
       : {...styles.sizes[size], ...styles.updated};
+
+    // Opening links in new tabs with 'target=_blank' is inherently insecure.
+    // Unfortunately, we depend on this functionality in a couple of place.
+    // Fortunately, it is possible to partially mitigate some of the insecurity
+    // of this functionality by using the `rel` tag to block some of the
+    // potential exploits. Therefore, we do so here.
+    const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
     return (
       <Tag
@@ -231,7 +272,9 @@ class Button extends React.Component {
         style={[styles.main, styles.colors[color], sizeStyle, style]}
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
+        rel={rel}
         disabled={disabled}
+        download={download}
         onClick={disabled ? null : onClick}
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}
@@ -260,5 +303,6 @@ class Button extends React.Component {
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
+Button.ButtonHeight = ButtonHeight;
 
 export default Radium(Button);

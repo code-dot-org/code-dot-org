@@ -1,0 +1,6 @@
+lesson_group 'poem bot', display_name: 'Poem Bot'
+lesson 'Poem Bot', display_name: 'Poem Bot', has_lesson_plan: false
+level 'haiku_prototype_choice1', progression: 'Poem Bot Prototype'
+level 'Poem Bot_Fat Level', progression: 'Code Your Poem Bot'
+level 'Poem Bot_Fat Level_2', progression: 'New Code'
+

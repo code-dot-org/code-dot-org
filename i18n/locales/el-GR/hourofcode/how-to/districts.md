@@ -12,7 +12,7 @@ title: Η Ώρα του Κώδικα ανά περιοχή
 
 ## Καλέστε όλα τα σχολεία να λάβουν μέρους, όλους τους μαθητές να μάθουν!
 
-### 1. Recruit local schools
+### 1. Βάλτε στο παιχνίδι τοπικά σχολεία
 
 Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
 

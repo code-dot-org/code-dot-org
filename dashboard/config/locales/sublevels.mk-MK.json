@@ -1,0 +1,102 @@
+{
+  "mk-MK": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Loops": "Лупови",
+              "Math": "Математика",
+              "Logic": "Логика"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Логика"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a pinwheel": {
+                "parameters": {
+                  "repeat": "повтори"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Акции"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Logic": "Логика"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Loops": "Лупови",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Variables": "Променливи"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Variables": "Променливи",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Text": "Текст"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Variables": "Променливи",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Text": "Текст"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Loops": "Лупови",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Variables": "Променливи"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Logic": "Логика",
+              "Math": "Математика"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Акции",
+              "Logic": "Логика",
+              "Loops": "Лупови",
+              "Math": "Математика",
+              "Variables": "Променливи"
+            }
+          }
+        }
+      }
+    }
+  }
+}

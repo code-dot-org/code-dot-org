@@ -30,7 +30,7 @@ Sithemba ukuba izoletha intshisakalo kubafundi ukuba beqhubeke nefundo. Ucwaning
 
 #### Kungani lokhu kubalulekile?
 
-Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi eziyisikhombisa emelika bezikumisebenzi-efaka ubuciko nokusongoza-lapho ikhono lokufinqqwa kuyigugu. But 55 percent of schools in the U.S. don't teach computer science. Sifikile sikhathi sokuba sifike esikhathini samanje. Siyazi ukuthi akhathaliseki ukuba abafundi bethu benzani umabekhulile, noma baya emithini, kwezebhizinisi, kwezepolotiki okanye kwezobuciko, ulwazi lwethekhinoloji luzobanika ukuzethemba kanye nonqenqema wokuncintisana. <br /> <br />
+Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi eziyisikhombisa emelika bezikumisebenzi-efaka ubuciko nokusongoza-lapho ikhono lokufinqqwa kuyigugu. But 53 percent of schools in the U.S. don't teach computer science. Sifikile sikhathi sokuba sifike esikhathini samanje. Siyazi ukuthi akhathaliseki ukuba abafundi bethu benzani umabekhulile, noma baya emithini, kwezebhizinisi, kwezepolotiki okanye kwezobuciko, ulwazi lwethekhinoloji luzobanika ukuzethemba kanye nonqenqema wokuncintisana. <br /> <br />
 
 #### A quote you can use in materials
 
@@ -38,7 +38,7 @@ Ithekhinoloji ikuqula imikhakha yonke emhlabeni. Ngo 2015, ukuvuleka okuyizigidi
 
 #### Nge Code.org
 
-Code.org iyi 501c3 engenanzuzo yomphakathi ezinikele ukukhulisa ukuzibandakanya kukhompyutha sayensi kanye nokukhulisa kokuzibandakanya kwabesimame nabafundi abangamelwanga bombala. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Emva kokusonjululwa ngo 2013, Code.org ihlele umkhankaso weHora loKufingqwa - lapho yazise abafundi abandlula kukhulu lezigidi kukhompyutha sayensi ukuze kube manje - yazibandakanya nezifunda zesikole zomphakathi ezingamashumi ayisikhombisa kuzwe lonke ukwandisa amahlelo ekhompyutha sayensi. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
 
 ## Share these on social media and in emails
 

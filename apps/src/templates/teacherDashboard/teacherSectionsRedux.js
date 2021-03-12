@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
-import {OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -13,6 +13,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'stageExtras',
   'pairingAllowed',
+  'ttsAutoplayEnabled',
   'courseId',
   'scriptId',
   'grade',
@@ -44,6 +45,9 @@ const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STAGE_EXTRAS_SCRIPT_IDS =
   'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_TEXT_TO_SPEECH_SCRIPT_IDS =
+  'teacherDashboard/SET_TEXT_TO_SPEECH_SCRIPT_IDS';
+const SET_PREREADER_SCRIPT_IDS = 'teacherDashboard/SET_PREREADER_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
@@ -103,6 +107,14 @@ export const setStageExtrasScriptIds = ids => ({
   type: SET_STAGE_EXTRAS_SCRIPT_IDS,
   ids
 });
+export const setTextToSpeechScriptIds = ids => ({
+  type: SET_TEXT_TO_SPEECH_SCRIPT_IDS,
+  ids
+});
+export const setPreReaderScriptIds = ids => ({
+  type: SET_PREREADER_SCRIPT_IDS,
+  ids
+});
 export const setAuthProviders = providers => ({
   type: SET_AUTH_PROVIDERS,
   providers
@@ -155,6 +167,16 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
 };
 
 /**
+ * Removes null values from stringified object before sending firehose record
+ */
+function removeNullValues(key, val) {
+  if (val === null || typeof val === undefined) {
+    return undefined;
+  }
+  return val;
+}
+
+/**
  * Assigns a course to a given section, persisting these changes to
  * the server
  * @param {number} sectionId
@@ -162,6 +184,22 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
  * @param {number} scriptId
  */
 export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-assigned-to-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId,
+          courseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
   return (dispatch, getState) => {
     dispatch(beginEditingSection(sectionId, true));
     dispatch(
@@ -181,7 +219,24 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  */
 export const unassignSection = sectionId => (dispatch, getState) => {
   dispatch(beginEditingSection(sectionId, true));
+  const {initialCourseId, initialScriptId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  firehoseClient.putRecord(
+    {
+      study: 'assignment',
+      event: 'course-unassigned-from-section',
+      data_json: JSON.stringify(
+        {
+          sectionId,
+          scriptId: initialScriptId,
+          courseId: initialCourseId,
+          date: new Date()
+        },
+        removeNullValues
+      )
+    },
+    {includeUserId: true}
+  );
   return dispatch(finishEditingSection());
 };
 
@@ -455,6 +510,8 @@ const initialState = {
   showSectionEditDialog: false,
   saveInProgress: false,
   stageExtrasScriptIds: [],
+  textToSpeechScriptIds: [],
+  preReaderScriptIds: [],
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
   // Whether the roster dialog (used to import sections from google/clever) is open.
@@ -487,6 +544,7 @@ function newSectionData(id, courseId, scriptId, loginType) {
     providerManaged: false,
     stageExtras: true,
     pairingAllowed: true,
+    ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
     code: '',
@@ -534,6 +592,20 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       stageExtrasScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_TEXT_TO_SPEECH_SCRIPT_IDS) {
+    return {
+      ...state,
+      textToSpeechScriptIds: action.ids
+    };
+  }
+
+  if (action.type === SET_PREREADER_SCRIPT_IDS) {
+    return {
+      ...state,
+      preReaderScriptIds: action.ids
     };
   }
 
@@ -762,7 +834,12 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const stageExtraSettings = {};
+    const ttsAutoplayEnabledSettings = {};
     if (action.props.scriptId) {
+      // TODO: enable autoplay by default if script is a pre-reader script
+      // and teacher is on IE, Edge or Chrome after initial release
+      // ttsAutoplayEnabledSettings.ttsAutoplayEnabled =
+      //   state.preReaderScriptIds.indexOf(action.props.scriptId) > -1;
       const script =
         state.validAssignments[assignmentId(null, action.props.scriptId)];
       if (script) {
@@ -776,6 +853,7 @@ export default function teacherSections(state = initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
+        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
@@ -1061,6 +1139,7 @@ export const sectionFromServerSection = serverSection => ({
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.lesson_extras,
   pairingAllowed: serverSection.pairing_allowed,
+  ttsAutoplayEnabled: serverSection.tts_autoplay_enabled,
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
@@ -1096,6 +1175,7 @@ export function serverSectionFromSection(section) {
     login_type: section.loginType,
     lesson_extras: section.stageExtras,
     pairing_allowed: section.pairingAllowed,
+    tts_autoplay_enabled: section.ttsAutoplayEnabled,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined

@@ -18,7 +18,7 @@
   should_show_create_menu = !level || level.try(:is_project_level)
 
 - if should_show_create_menu
-  .header_button.create_menu
+  .header_button.create_menu{tabindex: 0, role: "button"}
     %span.create_button
       = I18n.t("#{loc_prefix}create")
     &nbsp;
@@ -34,7 +34,7 @@
         .project_link#view_all_projects
           = I18n.t("#{loc_prefix}view_all")
 - if current_user
-  .header_button.header_user.user_menu
+  .header_button.header_user.user_menu{tabindex: 0, role: "button"}
     - if current_user.can_pair? && session_pairings.present?
       %i.fa.fa-users.pairing_icon
       %span.pairing_name= I18n.t("#{loc_prefix}team")
@@ -66,6 +66,7 @@
   %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
     .header_button.header_user
       %span= I18n.t("#{loc_prefix}signin")
+      .signin_callout_wrapper
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
@@ -105,18 +106,20 @@
       $(document).off('click', hideUserOptions);
     }
     $(document).ready(function() {
-      $('.user_menu').click(function (e) {
-        if ($('.user_options').is(':hidden')) {
-          e.stopPropagation();
-          $('.user_options').slideDown();
-          $('.user_menu_arrow_down').hide();
-          $('.user_menu_arrow_up').show();
-          $(document).on('click', hideUserOptions);
-          hideCreateOptions()
-          $("#hamburger-icon").removeClass('active');
-          $("#help-icon").removeClass('active');
-          $('#hamburger #hamburger-contents').slideUp();
-          $('#help-button #help-contents').slideUp();
+      $('.user_menu').on('keypress click', function (e) {
+        if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
+          if ($('.user_options').is(':hidden')) {
+            e.stopPropagation();
+            $('.user_options').slideDown();
+            $('.user_menu_arrow_down').hide();
+            $('.user_menu_arrow_up').show();
+            $(document).on('keypress click', hideUserOptions);
+            hideCreateOptions()
+            $("#hamburger-icon").removeClass('active');
+            $("#help-icon").removeClass('active');
+            $('#hamburger #hamburger-contents').slideUp();
+            $('#help-button #help-contents').slideUp();
+          }
         }
       });
       $('.user_options').click(function (e) {
@@ -142,18 +145,20 @@
       $(document).off('click', hideCreateOptions);
     }
     $(document).ready(function() {
-      $('.create_menu').click(function (e) {
-        if ($('.create_options').is(':hidden')) {
-          e.stopPropagation();
-          $('.create_options').slideDown();
-          $('.create_menu_arrow_down').hide();
-          $('.create_menu_arrow_up').show();
-          $(document).on('click', hideCreateOptions);
-          hideUserOptions()
-          $("#hamburger-icon").removeClass('active');
-          $("#help-icon").removeClass('active');
-          $('#hamburger #hamburger-contents').slideUp();
-          $('#help-button #help-contents').slideUp();
+      $('.create_menu').on('keypress click', function (e) {
+        if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
+          if ($('.create_options').is(':hidden')) {
+            e.stopPropagation();
+            $('.create_options').slideDown();
+            $('.create_menu_arrow_down').hide();
+            $('.create_menu_arrow_up').show();
+            $(document).on('keypress click', hideCreateOptions);
+            hideUserOptions()
+            $("#hamburger-icon").removeClass('active');
+            $("#help-icon").removeClass('active');
+            $('#hamburger #hamburger-contents').slideUp();
+            $('#help-button #help-contents').slideUp();
+          }
         }
       });
       $('.create_options').click(function (e) {

@@ -1,7 +1,6 @@
 {
   "startButton": "Pradėti",
   "filterOrgNames": "Autorių",
-  "filterOrgNamesAll": "",
   "filterSortBy": "Rikiuoti pagal",
   "filterSortByDisplayWeight": "Rekomenduojama",
   "filterSortByPopularityRank": "Populiariausi",
@@ -48,7 +47,6 @@
   "roboticsButtonText": "Peržiūrėti robotikos veiklas",
   "roboticsText": "Turite robotų? Pasinaudokite šiomis veiklomis ir praveskite „Programavimo valandą“ bet kokio amžiaus mokiniams!",
   "tutorialSetNoTutorials": "Nieko neradome pagal Jūsų užklausą.\nNorėdami pamatyti daugiau veiklų, pabandykite pašalinti keletą filtrų.",
-  "tutorialDetailsMoreResources": "",
   "tutorialDetailsTeacherNotes": "Mokytojo pastabos",
   "tutorialDetailsShortLink": "Trumpa nuoroda",
   "tutorialDetailInternationalLanguages": "Kalbos",

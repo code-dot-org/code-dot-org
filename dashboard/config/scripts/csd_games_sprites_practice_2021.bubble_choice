@@ -1,0 +1,11 @@
+name 'CSD Games Sprites practice_2021'
+display_name 'Creating sprites and animations'
+description 'Use your new sprite and animation skills to complete these levels.'
+
+sublevels
+level 'CSD U3 Sprites missing_2021'
+level 'CSD U3 Sprites names_2021'
+level 'CSD U3 Sprites name sprite_2021'
+level 'CSD U3 Sprites order_2021'
+level 'CSD U3 Sprites fish_2021'
+level 'CSD U3 Sprites sprite draw_2021'

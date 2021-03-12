@@ -349,3 +349,12 @@ Then(/^the share link includes "([^"]*)"$/) do |expected_text|
   end
   expect(share_link_input.attribute('value')).to include(expected_text)
 end
+
+table_name = nil
+Then /^I save the table name from element "([^"]*)"$/ do |selector|
+  table_name = @browser.execute_script("return $('#{selector}').text()")
+end
+
+Then /^I wait until (?:element )?"([^"]*)" (?:has|contains) the saved table name$/ do |selector|
+  wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? table_name}
+end

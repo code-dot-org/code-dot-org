@@ -1,0 +1,55 @@
+{
+  "sq-AL": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Veprime",
+          "Loops": "cikle ",
+          "Math": "Matematikë",
+          "Logic": "Logjikë",
+          "Functions": "funksione",
+          "Variables": "variabla"
+        },
+        "CourseD_EOC_dance": {
+          "Events": "Ngjarje",
+          "Logic": "Logjikë"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Veprime",
+          "Events": "Ngjarje",
+          "Loops": "cikle ",
+          "Math": "Matematikë",
+          "Logic": "Logjikë"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "Actions": "Veprime",
+          "Events": "Ngjarje"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "Actions": "Veprime",
+          "Events": "Ngjarje",
+          "Variables": "variabla",
+          "Math": "Matematikë",
+          "Logic": "Logjikë",
+          "Functions": "funksione",
+          "Text": "Tekst"
+        },
+        "outbreak_freeplay": {
+          "Actions": "Veprime",
+          "Events": "Ngjarje",
+          "Logic": "Logjikë",
+          "Loops": "cikle ",
+          "Math": "Matematikë",
+          "Variables": "variabla",
+          "Functions": "funksione"
+        },
+        "outbreak_freeplay_basic": {
+          "Actions": "Veprime",
+          "Events": "Ngjarje",
+          "Logic": "Logjikë",
+          "Math": "Matematikë"
+        }
+      }
+    }
+  }
+}

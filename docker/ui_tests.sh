@@ -44,6 +44,7 @@ ignore_eyes_mismatches: true
 disable_all_eyes_running: true
 firebase_name: $FIREBASE_NAME
 firebase_secret: $FIREBASE_SECRET
+firebase_shared_secret: $FIREBASE_SHARED_SECRET
 use_my_apps: true
 build_dashboard: true
 build_pegasus: true

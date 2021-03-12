@@ -6,7 +6,7 @@ nl:
       Behaviors: Gedrag
       Brushes: Borstels
       Color: Kleur
-      Comment: Commentaar
+      Comment: Opmerking
       Comments: Opmerkingen
       Conditionals: Voorwaardelijke instructies
       Dancers: Dansers
@@ -17,12 +17,14 @@ nl:
       Game/Score: Spel/Score
       Games/Score: Spellen/Score
       Groups: Groepen
-      Locations: Locaties
+      Input: Invoer
+      Locations: Plaatsen
       Logic: Logica
       Loops: Lussen
       Math: wiskundige
       Numbers: Getallen
       Properties: Eigenschappen
+      Sprites: Sprites
       Text: Tekst
       Variables: Variabelen
       'Variables ': 'Variabelen '

@@ -40,6 +40,7 @@ module Pd
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
       SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze
     }
+
     SUBJECTS = {
       COURSE_ECS => [
         SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
@@ -92,6 +93,17 @@ module Pd
 
     VIRTUAL_ONLY_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF
+    ].freeze
+
+    # Used to suppress post-workshop emails and in create/edit workshop UI
+    MUST_SUPPRESS_EMAIL_SUBJECTS = ACADEMIC_YEAR_WORKSHOP_SUBJECTS = [
+      SUBJECT_VIRTUAL_KICKOFF,
+      SUBJECT_WORKSHOP_1,
+      SUBJECT_WORKSHOP_2,
+      SUBJECT_WORKSHOP_3,
+      SUBJECT_WORKSHOP_4,
+      SUBJECT_WORKSHOP_1_2,
+      SUBJECT_WORKSHOP_3_4
     ].freeze
 
     LEGACY_SUBJECTS = {

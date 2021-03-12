@@ -4,45 +4,718 @@ uz:
     unplugged:
       Unplug1:
         title: Informatikaga kirish
+        desc: Ushbu dars informatika tushunchasi bilan tanishtiradi va informatika
+          fanining nima bilan shug'ullanishini tushuntiradi. Shuningdek, talabalarga
+          kompyuter olimi rolini o'ynash imkoniyatini beradi. Faoliyat tugaguniga
+          qadar har bir talaba o'rgangan narsalar eslatmasini qo'lga kiritadi. Siz
+          yosh bolalarga kelgusi darslar bilan bog'liq bo'lgan so'z birikmalarini
+          o'rgatishdan voz kechishingiz mumkin, ammo ularni hozirda qiziqarli va o'yin
+          tarzida taqdim etish yanada keng imkoniyatlarni kutishdan ko'ra samaraliroq.
       Unplug2:
         title: Dasturiy fikrlash
+        desc: Qog'oz va markerlardan boshqa hech narsasiz talabalar hisoblash tafakkurining
+          to'rtta bosqichini o'rganadilar. Qisqacha tanishtirilgandan so'ng, talabalarni
+          guruhlarga ajratish kerak, u yerda ular boshqa talabalar uchun ma'lum bir
+          hayvonni (oldindan tanlangan hayvonlarning katalogidan) chizish uchun ko'rsatmalar
+          yaratishlari kerak. Vazifaning hammasi parchalanishi kerak, shundan so'ng
+          jamoalar katalogdagi barcha hayvonlarni patternlarni aniqlash uchun tahlil
+          qilishadi, hayvonlar turli xil tafsilotlarini tahlil qilishadi, so'ngra
+          ushbu ma'lumotdan foydalanib boshqa bir guruhga ma'lum bir hayvonni chizish
+          algoritmini (yo'nalishlarini) yaratadilar. Keyin jamoalar algoritmlarni
+          boshqa guruh bilan almashib, ushbu algoritm ko'rsatgan narsaga asoslanib,
+          hayvonni chizishadi. Chizma jamoa mo'ljallangandek bo'ldimi?
       Unplug3:
         title: Katakchali varaqda dasturlash
+        desc: Birontasini rasmlar chizishga "dasturlash" orqali, talabalar dasturlashning
+          maroqli va hamma uchun ochiq bo‘lgan usulda dasturlashning asosiy tushunchalari
+          bilan tajriba qilib ko‘rish imkoniga ega bo‘ladilar. Dars o'quvchilar mavjud
+          rasmni ko'paytirish uchun bir-birlariga grafik rasmdagi kvadratchalarni
+          bo'yashga ko'rsatma berish uchun belgilaridan foydalangan holda boshlanadi.
+          Agar vaqt bo‘lsa, dars talabalar o‘zlari yaratgan rasmlar bilan yakunlanishi
+          mumkin.
       Unplug4:
         title: Algoritmlar
+        desc: Ushbu dars algoritmlarni o'z ichiga oladi. Tangram shakllari va grafik
+          qog'ozlardan foydalangan holda, birinchi mashq har bir ko'rsatmani iloji
+          boricha aniq va ravshan qilish qanchalik muhimligini ko'rsatadi. Shundan
+          so'ng, o'quvchilar qog'ozni qanday qilib to'rtburchak qilib taxlashni o'rganib
+          chiqishadi va ba'zi usullar boshqalarga qaraganda ko'proq yoki kamroq qatlamlar
+          hosil qilishiga e'tibor berishadi.
       Unplug5:
         title: Funksiyalar
+        desc: Ushbu darsda o'quvchilar ip, munchoq va bezaklardan suncatcher yasashadi.
+          Talabalar bir necha marotaba takrorlanadigan qadamlarni bajaradilar, so'ngra
+          ulardan bir necha marta takrorlanadigan ba'zi "ko'nikmalar" to'plamlarini
+          aniqlash so'raladi. Ushbu ko'nikmalar aniqlangandan so'ng, ular asosiy dasturdan
+          chaqiriladi va butun go'zal ijod jarayoni bitta varaqqa yozib olinadi. Yakuniy
+          dastur ip, munchoq va bezaklardan qat'i nazar, butun sinfga yo'naltiriladi.
+          Bunga samarali erishish uchun talabalar o'ziga xos materiallarning tafsilotlarini
+          "mavhumlashtirishi" va alohida narsalar uchun umumiy shartlarni yaratishi
+          kerak. Umumiy "placeholder"lardan foydalanish o'zgaruvchilarni o'rganish
+          uchun ajoyib kirishdir.
+      Unplug6:
+        title: Shartlar
+        desc: Bu sinf o'yini. "Else, if" bayonotlar va sikllar g'oyasini kiritgandan
+          so'ng, sinf oldindan yozilgan dastur, karta to'plamlari va durang omadidan
+          foydalangan holda birgalikda mashq qilishi mumkin.
       Unplug7:
         title: Musiqa yozish
+        desc: Matnlarni o'qish aksariyat talabalar uchun juda intuitiv ishdir. Biz
+          allaqachon ma'lum bo'lgan mashg'ulotni olib boramiz va funksiyalarni aniqlash
+          va chaqirish bo'yicha jiddiy ta'limga o'tamiz. Talabalar aniqlash/chaqirish
+          jarayoni bilan tanishib chiqqandan so'ng, biz ushbu funksiya chaqiruvlari
+          ichidagi parametrlarni uzatish bilan birga qo'shimcha imkoniyatlarni qo'shamiz.
       Unplug8:
         title: Abstraksiya
+        desc: Ushbu mashg'ulot sizning o'quvchilaringizning kundalik rejimini Mad-Lib
+          uslubidagi fikrlash o'yini bilan birlashtirib, sinfingizga abstraksiya qilish
+          samaradorligini o'rganishga yordam beradi.
       Unplug9:
         title: Estafetali dasturlash
+        desc: Ushbu dars avvalgi mashg'ulotda (4. Katakchali qog'oz bilan dasturlash)
+          olingan ko'nikmalardan foydalanib, ketma-ket ishlaydigan dasturlarni to'ldirish
+          va "bug" - xatolarga dasturlarni tez-tez tekshirib turish muhimligini ta'kidlaydi.
       Unplug10:
         title: Internet
+        desc: Ushbu darsda talabalar Internetda yurgandek bo'lib, veb-manzillar, IP
+          va DNS-larni o'rganishadi.
+      Unplug11:
+        title: Xulosa
+        desc: Dastlabki 20 soatlik seriya bo'yicha xulosa darsi sinfga barcha sevimli
+          daqiqalarini qayta tiklashga yordam beradi, shu bilan birga, agar ular kompyuter
+          fanlari safarisi davom etishini xohlashsa, o'zlari bajarishi mumkin bo'lgan
+          keyingi qadamlarni ko'rsatadi.
+      UnplugHappyMaps:
+        title: Xursand Xaritalar
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
+      MoveIt:
+        title: Move It, Move It (Harakatlan)
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
+      PlantASeed:
+        title: 'Hayotiy algoritmlar: Urug‘ ekish'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
+          bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter
+          fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor
+          qaratadi.
+      BuildingAFoundation:
+        title: Poydevor qurish
+        desc: Talabalar tuzilmani faqat taqdim etilgan materiallardan foydalangan
+          holda quradilar. Tuzilmalar topshiriq shartlariga javob berishi kerak (ma'lum
+          bir balandlikka ko'tarilishi yoki ma'lum bir vaznni ko'tarishi kerak) va
+          talabalar narsalar murakkablashganda qat'iy bo'lish g'oyasini muhokama qiladilar.
+      GettingLoopy:
+        title: Sikllashtirish
+        desc: Ushbu dars raqs orqali sikllarni dasturlash kontseptsiyasi (takroriy
+          ko'rsatmalar) bilan tanishtiradi. Talabalar oddiy raqs harakatlarini o'rganadilar,
+          keyin ularni takrorlash bo'yicha ko'rsatma beriladi.
       RelayProgramming:
         title: Estafetali dasturlash
+        desc: Talabalar estafeta poygasida qatnashadilar, u yerda "Katak qog'ozli
+          dasturlash" tasviriga asoslanib algoritm yozish uchun hovli bo'ylab yuguradilar.
+          Ular bir vaqtning o'zida bitta ko'rsatma yozishlari mumkin va agar biror
+          joyda xato bo'lsa, hamma narsani shu nuqtagacha o'chirib tashlashlari kerak.
       Conditionals:
-        title: Shart buyruqlari
+        title: Shartli bayonotlar
+        desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
+          o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
+          men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      BigEvent:
+        title: Katta hodisa
+        desc: Talabalar "hodisalar"ni dasturlash kontseptsiyasi bilan tanishadilar,
+          bu kompyuter doimiy ravishda kuzatib boradigan harakatlardir. O'qituvchi
+          qog'ozdagi masofadan boshqarish pultidagi tugmachalarni bosadi va talabalar
+          qaysi tugma bosilganiga qarab javob berishadi.
+      GoingPlacesSafely:
+        title: Joylarga xavfsiz borish
+        desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
+          O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan
+          tanishtiradilar.
       GraphPaperProgramming:
         title: Katakchali varaqda dasturlash
+        desc: Talabalar chizilgan rasmni ko'paytirishga sinfdoshlarini yo'naltirish
+          uchun oldindan belgilangan buyruqlar to'plamidan foydalanib algoritm (ko'rsatmalar
+          to'plami) yozadilar.
+      PaperPlanes:
+        title: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+        desc: Ushbu dars bizning kundalik hayotimizda algoritmlardan foydalanish usullarini,
+          xususan qog'ozli samolyotlarni ishlab chiqarishni taklif qiladi. Ushbu dars
+          shuningdek, informatika fanining umumiyroq ko'rinishiga va algoritmlarning
+          muhim rol o'ynashiga bag'ishlangan.
+      BinaryBracelets:
+        title: Ikkilik bilakuzuklar
+        desc: Talabalar bilakuzuklarni o'z ismining birinchi harfining ikkilik tasviri
+          sifatida yaratadilar. Talabalar ma'lumotlarning bir nechta usulda namoyish
+          etilishi va saqlanishi mumkinligini tushunib oladilar.
+      DigitalFootprint:
+        title: Raqamli izlaringiz
+        desc: O'qituvchilar o'quvchilarga o'zlari haqida ma'lumotni Internetda joylashtirish
+          raqamli iz yoki "trail" yaratishi, bu esa oqibatlarga olib kelishi haqidagi
+          g'oyani tushuntirishadi.
       ComputationalThinking:
         title: Dasturiy fikrlash
+        desc: Talabalar hech qanday ko'rsatmalarsiz kelgan o'yinni qanday o'ynashni
+          aniqlashi uchun hisoblash tafakkurining qadamlaridan (parchalash, patternga
+          mos kelish, mavhumlik, algoritm) foydalanadilar.
+      FunctionalSuncatchers:
+        title: Funksional "quyosh ovchilari"
+        desc: Talabalar ip va munchoqlar yordamida "quyosh ovchisi"ni yaratish uchun
+          o'zgaruvchilar va funksiyalar bilan algoritm yaratadilar (kodni takroran
+          ishlatish uchun).
+      SongwritingParameters:
+        title: Qo'shiq yozish
+        desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish
+          uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
+      DiceRace:
+        title: 'Hayotiy algoritmlar: Zarlar poygasi'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini taklif
+          qiladi. Buning bir qismi sifatida talabalar zarlar poygasi o'yinining algoritmini
+          aniqlaydilar va yozadilar.
+      Internet:
+        title: Internet
+        desc: Talabalar qog'oz parchalari yordamida Internet uzatishning turli usullarini
+          aks ettiruvchi xabarlarni yuboradilar.
+      Crowdsourcing:
+        title: Kraudsorsing
+        desc: O'quvchilar kompyuter vazifasini sinf o'quvchisi sifatida birgalikda
+          bajarish uchun kompyuter fanida keng tarqalgan muammolarni hal qilish texnikasi
+          - kraudsorsingdan foydalanadilar.
+      DigitalCitizenship:
+        title: Raqamli Fuqarolik
+        desc: Talabalar shaxsiy ma'lumotlar va maxfiy ma'lumotlar o'rtasidagi farqni
+          o'rganib, Internetda almashish uchun xavfsiz va xavfli bo'lgan narsalarni
+          ajratib ko'rsatishadi.
+      TangramAlgorithms:
+        title: Tangram Algoritmlari
+        desc: Ushbu dars bizga algoritmlar haqida muhim narsani ko'rsatadi. Agar siz
+          algoritmni sodda tuzsangiz, uni ishlatishning ko'plab usullari mavjud bo'ladi.
+          Agar siz hamma bir xil natija olishiga ishonch hosil qilishni istasangiz,
+          unda sizning algoritmingiz batafsilroq ma'lumotga muhtoj.
+      EnvelopeVariables:
+        title: Konvertli o'zgaruvchilar
+        desc: O'zgaruvchilar kompyuter fanida katta erkinlikka imkon beradi. Ushbu
+          dars o'zgaruvchilar nima ekanligini va ularni qanday qilib turli xil usullarda
+          ishlatishimiz mumkinligini tushuntirishga yordam beradi. G'oyani yaxshi
+          tushunish uchun ushbu mashg'ulotdan mavhumlik darsidan oldin (yoki birgalikda)
+          foydalanish maqsadga muvofiq.
+      MadGlibs:
+        title: '"Mad Glibs" o''yini'
+        desc: Abstraksiya kompyuter olimi uchun eng muhim ko'nikmalaridan biridir.
+          Ushbu mashg'ulotda o'quvchilaringiz hikoyalarni farq qilish uchun tahlil
+          qilishlari kerak, shunda ular ularni abstraktlashtirishi mumkin. Ushbu abstraktlashtirilgan
+          hikoyalar qiziqarli va ajoyib yangi hikoyalar uchun shablonlarga aylanadi.
+      ForLoopFun:
+        title: Zavqli For sikli
+        desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon
+          beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni
+          o'rganamiz.
+      SongwritingWithParameters:
+        title: Parametrlar bilan qo‘shiq yozish
+        desc: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar
+          (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan
+          kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars
+          talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga
+          birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligiтш ga yordam
+          tushunishga beradi.
+      BinaryImages:
+        title: Ikkilik Rasmlar
+        desc: Ko‘pchilik ikkilik tizimi bu qat’iy ravishda nol va birlar deb o‘ylashiga
+          qaramasdan, avvalgi kurslarimiz talabalarga ma’lumot ikkilik tizimining
+          turli xil ko‘rinishlarida tasvirlanishi haqida ko'rsatgan.  Ushbu dars bu
+          tushunishni yana bir qadam oldinga suradi, chunki u qanday qilib kompyuter
+          yanada murakkab ma'lumotlarni (masalan, rasm va ranglarni) ikkilikda saqlanishi
+          mumkinligini tasvirlaydi.
+      VideoGamesCoordinatePlanes:
+        title: Video o'yinlar va koordinatalar tekisligi
+        desc: Siz o'ynashni yaxshi ko'radigan video o'yinlar aslida qanday qilib algebra
+          tomonidan boshqarilishini bilib oling! Algebraik ifodalar va koordinata
+          tekisligi bizga video o'yinlarning ishlashini tushunishga qanday yordam
+          berishini o'rganing va keyin o'z video o'yinningizni rejalashtirishni boshlang.
+      Contracts:
+        title: Shartnomalar, domen va oraliq
+        desc: Shartnoma (Contract)lar bizga funksiyalarni tushunish va muhokama qilish
+          uchun imkoniyat beradi. Ushbu darsda biz qanday qilib Shartnomalar yangi
+          dasturlash tili yoki funksiyani tushunishga yordam berishi mumkinligini
+          ko'rib chiqamiz.
+      DesignRecipe:
+        title: Yo'riqnoma tayyorlash
+        desc: So'nggi bosqichda talabalar juda oddiy funksiyalarni yozdilar, ammo
+          murakkab vazifalar puxta o'ylashni talab qiladi. Yo'riqnoma tayyorlash (Design
+          Recipe ) - bu funktiyalar kutilganidek ishlashini ta'minlash uchun test
+          holatlarini yozishni o'z ichiga olgan funksiyalarni  yozishga tuzilmali
+          yondashuv.
+      Booleans:
+        title: Mantiqiy o'zgaruvchilar va mantiq
+        desc: Mantiqiy ma'lumotlar bu siz ushbu kursda bilib oladigan to'rtinchi va
+          oxirgi ma'lumot turidir. Ushbu mashg'ulotda siz mantiqiy o'zgaruvchilar
+          nima ekanligini va ular bizga "mantiqiy fikrlaydigan" funksiyalarni yozishda
+          qanday yordam berishi mumkinligini bilib olasiz
+      ConditionalsPiecewiseFunctions:
+        title: Shartli bayonotlar va qismli funksiyalar
+        desc: Funksiyalarga uzatiladigan parametrlar natijalarni juda qattiq naqsh
+          asosida o'zgarishiga olib keladi. Aytaylik, biz ba'zi bir qiymatlarga ega
+          parametrlarni bitta naqshdan foydalangan holda natijalarni yaratishni xohlaymiz,
+          ammo boshqa qiymatlarda boshqa naqshdan foydalanishni xohlaymiz. Bunda shartli
+          shartlar kerak bo'ladi ...
+      CollisionDetection:
+        title: To'qnashuvni aniqlash va Pifagor teoremasi
+        desc: Ekrandagi narsalarning bir-biriga tegishini aniqlash aksariyat o'yinlarning
+          muhim jihati hisoblanadi. Ushbu darsda biz Pifagor teoremasi va masofa formulasi
+          yordamida tekislikdagi ikki nuqta orasidagi masofani o'lchashda qanday foydalanish
+          mumkinligini ko'rib chiqamiz, so'ngra ushbu ikki nuqta (yoki o'yin qahramonlarining)
+          bir-biriga tegib turganini aniqlaymiz.
+      courseA_unplugged_loops:
+        title: Sikllar Kompyutersiz
+        desc: Ushbu darsda siz sikllar haqida bilib olasiz!
+      courseB_unplugged_MRF:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Ushbu darsda siz do'stlaringizni 'dasturlaysiz'!
+      courseB_unplugged_loopyMRF:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Xuddi "Mening robot do'stlarim" mashg'ulotidagi kabi siz ham do'stlaringizni
+          "dasturlaysiz", lekin bu safar sikllar bilan!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz kimdir Internetda yomon munosabatda bo'lsa, nima qilish kerakligini
+          bilib olasiz.
+      courseD_unplugged_digitalCitizenship:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz Raqamli Fuqaro bo'lish nimani anglatishini bilib olasiz.
+      courseE_unplugged_privateInformation:
+        title: 'Hayotiy ta''lim - Maxfiy va shaxsiy ma''lumot '
+        desc: Bugun siz maxfiy va shaxsiy ma'lumotlar o'rtasidagi farqni bilib olasiz!
+      courseF_unplugged_powerOfWords:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz kimdir Internetda yomon munosabatda bo'lsa, nima qilish kerakligini
+          bilib olasiz.
+      deeper learning description:
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Hayotiy algoritmlar: Urug‘ ekish'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
+          bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter
+          fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor
+          qaratadi.
+      courseA_unplugged_happyMaps:
+        title: Xursand Xaritalar
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
+      courseA_unplugged_goingPlacesSafely:
+        title: Joylarga xavfsiz borish
+        desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
+          O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan
+          tanishtiradilar.
+      courseABC_unplugged_bigEvent:
+        title: Katta hodisa
+        desc: Talabalar "hodisalar"ni dasturlash kontseptsiyasi bilan tanishadilar,
+          bu kompyuter doimiy ravishda kuzatib boradigan harakatlardir. O'qituvchi
+          qog'ozdagi masofadan boshqarish pultidagi tugmachalarni bosadi va talabalar
+          qaysi tugma bosilganiga qarab javob berishadi.
+      courseB_unplugged_digitalFootprint:
+        title: Raqamli izlaringiz
+        desc: O'qituvchilar o'quvchilarga o'zlari haqida ma'lumotni Internetda joylashtirish
+          raqamli iz yoki "trail" yaratishi, bu esa oqibatlarga olib kelishi haqidagi
+          g'oyani tushuntirishadi.
+      courseC_unplugged_buildingAFoundation:
+        title: Poydevor qurish
+        desc: Talabalar tuzilmani faqat taqdim etilgan materiallardan foydalangan
+          holda quradilar. Tuzilmalar topshiriq shartlariga javob berishi kerak (ma'lum
+          bir balandlikka ko'tarilishi yoki ma'lum bir vaznni ko'tarishi kerak) va
+          talabalar narsalar murakkablashganda qat'iy bo'lish g'oyasini muhokama qiladilar.
+      courseC_unplugged_paperPlanes:
+        title: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+        desc: Ushbu dars bizning kundalik hayotimizda algoritmlardan foydalanish usullarini,
+          xususan qog'ozli samolyotlarni ishlab chiqarishni taklif qiladi. Ushbu dars
+          shuningdek, informatika fanining umumiyroq ko'rinishiga va algoritmlarning
+          muhim rol o'ynashiga bag'ishlangan.
+      courseC_unplugged_gettingLoopy:
+        title: Sikllashtirish
+        desc: Ushbu dars raqs orqali sikllarni dasturlash kontseptsiyasi (takroriy
+          ko'rsatmalar) bilan tanishtiradi. Talabalar oddiy raqs harakatlarini o'rganadilar,
+          keyin ularni takrorlash bo'yicha ko'rsatma beriladi.
+      courseC_unplugged_binaryBracelets:
+        title: Ikkilik bilakuzuklar
+        desc: Talabalar bilakuzuklarni o'z ismining birinchi harfining ikkilik tasviri
+          sifatida yaratadilar. Talabalar ma'lumotlarning bir nechta usulda namoyish
+          etilishi va saqlanishi mumkinligini tushunib oladilar.
       courseD_unplugged_graphPaperProgramming:
         title: Katakchali varaqda dasturlash
+        desc: Talabalar chizilgan rasmni ko'paytirishga sinfdoshlarini yo'naltirish
+          uchun oldindan belgilangan buyruqlar to'plamidan foydalanib algoritm (ko'rsatmalar
+          to'plami) yozadilar.
       courseD_unplugged_relayProgramming:
         title: Estafetali dasturlash
+        desc: Talabalar estafeta poygasida qatnashadilar, u yerda "Katak qog'ozli
+          dasturlash" tasviriga asoslanib algoritm yozish uchun hovli bo'ylab yuguradilar.
+          Ular bir vaqtning o'zida bitta ko'rsatma yozishlari mumkin va agar biror
+          joyda xato bo'lsa, hamma narsani shu nuqtagacha o'chirib tashlashlari kerak.
+      courseD_unplugged_conditionalsCards:
+        title: Conditionals with Cards
+        desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
+          o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
+          men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      courseD_unplugged_binaryImages:
+        title: Ikkilik Rasmlar
+        desc: Ko‘pchilik ikkilik tizimi bu qat’iy ravishda nol va birlar deb o‘ylashiga
+          qaramasdan, avvalgi kurslarimiz talabalarga ma’lumot ikkilik tizimining
+          turli xil ko‘rinishlarida tasvirlanishi haqida ko'rsatgan.  Ushbu dars bu
+          tushunishni yana bir qadam oldinga suradi, chunki u qanday qilib kompyuter
+          yanada murakkab ma'lumotlarni (masalan, rasm va ranglarni) ikkilikda saqlanishi
+          mumkinligini tasvirlaydi.
+      courseE_unplugged_diceRace:
+        title: 'Hayotiy Algoritmlar: Zar bilan poyga'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini taklif
+          qiladi. Buning bir qismi sifatida talabalar zarlar poygasi o'yinining algoritmini
+          aniqlaydilar va yozadilar.
+      courseE_unplugged_songwritingParameters:
+        title: Parametrlar bilan qo‘shiq yozish
+        desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish
+          uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Talabalar qog'oz parchalari yordamida Internet uzatishning turli usullarini
+          aks ettiruvchi xabarlarni yuboradilar.
+      courseE_unplugged_crowdsourcing:
+        title: Kraudsorsing
+        desc: O'quvchilar kompyuter vazifasini sinf o'quvchisi sifatida birgalikda
+          bajarish uchun kompyuter fanida keng tarqalgan muammolarni hal qilish texnikasi
+          - kraudsorsingdan foydalanadilar.
+      courseE_unplugged_songwriting:
+        title: Qo'shiq yozish
+        desc: Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish
+          uchun qo'shiqdagi xor tushunchasidan foydalanadilar.
+      courseF_unplugged_tangrams:
+        title: Tangram Algoritmlari
+        desc: Ushbu dars bizga algoritmlar haqida muhim narsani ko'rsatadi. Agar siz
+          algoritmni sodda tuzsangiz, uni ishlatishning ko'plab usullari mavjud bo'ladi.
+          Agar siz hamma bir xil natija olishiga ishonch hosil qilishni istasangiz,
+          unda sizning algoritmingiz batafsilroq ma'lumotga muhtoj.
+      courseF_unplugged_envelopeVariables:
+        title: Konvertli o'zgaruvchilar
+        desc: O'zgaruvchilar kompyuter fanida katta erkinlikka imkon beradi. Ushbu
+          dars o'zgaruvchilar nima ekanligini va ularni qanday qilib turli xil usullarda
+          ishlatishimiz mumkinligini tushuntirishga yordam beradi. G'oyani yaxshi
+          tushunish uchun ushbu mashg'ulotdan mavhumlik darsidan oldin (yoki birgalikda)
+          foydalanish maqsadga muvofiq.
+      courseF_unplugged_forLoopFun:
+        title: Zavqli For sikli
+        desc: Biz bilamizki,sikllar bizga narsalarni qayta-qayta bajarishga imkon
+          beradi, ammo endi biz qo'shimcha tuzilishga ega sikllardan qanday foydalanishni
+          o'rganamiz.
+      courseF_unplugged_songwritingParameters:
+        title: Parametrlar bilan qo‘shiq yozish
+        desc: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar
+          (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan
+          kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars
+          talabalarga intuitiv ravishda nima uchun ekanligini va kod qismlarini funksiyalarga
+          birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligiтш ga yordam
+          tushunishga beradi.
+      swipeRightPassThrough:
+        title: Ishga qabul qilish senariylari sessiyasi
+        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
+          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
+          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
+          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
+          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
+          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
+          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
+          takliflarni ko'rasiz. Talabalarni kursga yozilishga ishontirish uchun samarali
+          deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi deb hisoblagan
+          fikrlarni chapga suring. Sessiya davomida biz talabalarni CSga o'qishga
+          kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha sizning fikrlaringizni
+          guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi boshqa odamlar
+          har bir argumentni qanday siljiganini ko'rish imkoniga ega bo'lasiz. \r\n\r\n\r\nQuyida
+          davom etish tugmasini bosganingizda biz sizni o'yinga yuboramiz va Code.org
+          tizimiga kirgan elektron pochta manzilingizni yuboramiz."
+      swipeRightPassThrough-test123:
+        title: Ishga qabul qilish senariylari sessiyasi
+        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
+          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
+          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
+          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
+          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
+          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
+          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
+          takliflarni ko'rasiz. Talabalarni kursga yozilishga ishontirish uchun samarali
+          deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi deb hisoblagan
+          fikrlarni chapga suring. Sessiya davomida biz talabalarni CSga o'qishga
+          kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha sizning fikrlaringizni
+          guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi boshqa odamlar
+          har bir argumentni qanday siljiganini ko'rish imkoniga ega bo'lasiz. \r\n\r\n\r\nQuyida
+          davom etish tugmasini bosganingizda biz sizni o'yinga yuboramiz va Code.org
+          tizimiga kirgan elektron pochta manzilingizni yuboramiz."
+      brad-repro-bug-000:
+        title: Brad Repro Bug 000
+      courseB_unplugged_MRF_2018:
+        title: My Robotic Friends
+        desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      PlantASeed_2018:
+        title: 'Hayotiy algoritmlar: Urug‘ ekish'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
+          bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter
+          fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor
+          qaratadi.
+      UnplugHappyMaps_2018:
+        title: Xursand Xaritalar
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
+      GoingPlacesSafely_2018:
+        title: Joylarga xavfsiz borish
+        desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
+          O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan
+          tanishtiradilar.
+      courseA_unplugged_loops_2018:
+        title: Sikllar Kompyutersiz
+        desc: Ushbu darsda siz sikllar haqida bilib olasiz!
+      BigEvent_2018:
+        title: Katta hodisa
+        desc: Talabalar "hodisalar"ni dasturlash kontseptsiyasi bilan tanishadilar,
+          bu kompyuter doimiy ravishda kuzatib boradigan harakatlardir. O'qituvchi
+          qog'ozdagi masofadan boshqarish pultidagi tugmachalarni bosadi va talabalar
+          qaysi tugma bosilganiga qarab javob berishadi.
       GraphPaperProgramming_2018:
         title: Katakchali varaqda dasturlash
+        desc: Talabalar chizilgan rasmni ko'paytirishga sinfdoshlarini yo'naltirish
+          uchun oldindan belgilangan buyruqlar to'plamidan foydalanib algoritm (ko'rsatmalar
+          to'plami) yozadilar.
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz Raqamli Fuqaro bo'lish nimani anglatishini bilib olasiz.
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz kimdir Internetda yomon munosabatda bo'lsa, nima qilish kerakligini
+          bilib olasiz.
       Conditionals_2018:
-        title: Shart buyruqlari
+        title: Shartli bayonotlar
+        desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
+          o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
+          men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      DigitalFootprint_2018:
+        title: Raqamli izlaringiz
+        desc: O'qituvchilar o'quvchilarga o'zlari haqida ma'lumotni Internetda joylashtirish
+          raqamli iz yoki "trail" yaratishi, bu esa oqibatlarga olib kelishi haqidagi
+          g'oyani tushuntirishadi.
+      BinaryImages_2018:
+        title: Ikkilik Rasmlar
+        desc: Ko‘pchilik ikkilik tizimi bu qat’iy ravishda nol va birlar deb o‘ylashiga
+          qaramasdan, avvalgi kurslarimiz talabalarga ma’lumot ikkilik tizimining
+          turli xil ko‘rinishlarida tasvirlanishi haqida ko'rsatgan.  Ushbu dars bu
+          tushunishni yana bir qadam oldinga suradi, chunki u qanday qilib kompyuter
+          yanada murakkab ma'lumotlarni (masalan, rasm va ranglarni) ikkilikda saqlanishi
+          mumkinligini tasvirlaydi.
+      PaperPlanes_2018:
+        title: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+        desc: Ushbu dars bizning kundalik hayotimizda algoritmlardan foydalanish usullarini,
+          xususan qog'ozli samolyotlarni ishlab chiqarishni taklif qiladi. Ushbu dars
+          shuningdek, informatika fanining umumiyroq ko'rinishiga va algoritmlarning
+          muhim rol o'ynashiga bag'ishlangan.
+      GettingLoopy_2018:
+        title: Sikllashtirish
+        desc: Ushbu dars raqs orqali sikllarni dasturlash kontseptsiyasi (takroriy
+          ko'rsatmalar) bilan tanishtiradi. Talabalar oddiy raqs harakatlarini o'rganadilar,
+          keyin ularni takrorlash bo'yicha ko'rsatma beriladi.
+      BinaryBracelets_2018:
+        title: Ikkilik bilakuzuklar
+        desc: Talabalar bilakuzuklarni o'z ismining birinchi harfining ikkilik tasviri
+          sifatida yaratadilar. Talabalar ma'lumotlarning bir nechta usulda namoyish
+          etilishi va saqlanishi mumkinligini tushunib oladilar.
+      MoveItMoveIt_2018:
+        title: Move It, Move It (Harakatlan)
+      courseB_unplugged_CnC_2018:
+        title: Yaratish va Adolatli bo‘lish yaxshi.
+        desc: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari
+          asoslariga berilgan holda, bu dars talabalarga ulashishning yaratuvchan
+          jarayonini va ilhomlanishni tushunishga yordam berish uchun yaratilgan.   Shu
+          bilan birga, ijodiy ifodani targ‘ib qilish va ijodiy ish bilan adolatli
+          bo‘lish kerak.
+      courseE_unplugged_CnC_2018:
+        title: Raqamli Ulashish
+        desc: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari
+          asoslariga berilgan bu dars talabalarga, ayniqsa raqamli muhitda, mulk va
+          mualliflik huquqini namoyish qilishning foydali jihatlari va qiyinchiliklarini
+          tushunishga yordam beradi. Talabalar axloqiy raqamli fuqaro bo‘lishning
+          muhim qismi sifatida San’atkorlarning huqularini hurmat qilishi uchun rag‘batlantirilishi
+          kerak.
       RelayProgramming_2018:
         title: Estafetali dasturlash
+        desc: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik bo'yicha qisqa dars
+          bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, birgalikda birma-bir
+          ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga
+          o'tishadi.
+      courseB_unplugged_MRF_2019:
+        title: My Robotic Friends
+        desc: Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      BuildingAFoundation_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.BuildingAFoundation_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+      courseB_unplugged_loopyMRF_2019:
+        title: Mening sikllashtirilgan Robot Do‘stlarim
       Conditionals_2019:
-        title: Shart buyruqlari
+        title: Shartli bayonotlar
+        desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
+          o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
+          men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      courseF_unplugged_powerOfWords_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+      EnvelopeVariables_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.EnvelopeVariables_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+      ForLoopFun_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.ForLoopFun_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.ForLoopFun_2018.desc'
       GraphPaperProgramming_2019:
         title: Katakchali varaqda dasturlash
+        desc: Talabalar chizilgan rasmni ko'paytirishga sinfdoshlarini yo'naltirish
+          uchun oldindan belgilangan buyruqlar to'plamidan foydalanib algoritm (ko'rsatmalar
+          to'plami) yozadilar.
       RelayProgramming_2018_2019:
         title: Estafetali dasturlash
+        desc: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik bo'yicha qisqa dars
+          bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, birgalikda birma-bir
+          ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga
+          o'tishadi.
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz Raqamli Fuqaro bo'lish nimani anglatishini bilib olasiz.
+      BinaryImages_2019:
+        title: Ikkilik Rasmlar
+        desc: Ko‘pchilik ikkilik tizimi bu qat’iy ravishda nol va birlar deb o‘ylashiga
+          qaramasdan, avvalgi kurslarimiz talabalarga ma’lumot ikkilik tizimining
+          turli xil ko‘rinishlarida tasvirlanishi haqida ko'rsatgan.  Ushbu dars bu
+          tushunishni yana bir qadam oldinga suradi, chunki u qanday qilib kompyuter
+          yanada murakkab ma'lumotlarni (masalan, rasm va ranglarni) ikkilikda saqlanishi
+          mumkinligini tasvirlaydi.
+      courseE_unplugged_privateInformation_2019:
+        title: Maxfiy va Shaxsiy ma'lumotlar
+        desc: Common Sense Education tomonidan ishlab chiqilgan ushbu dars Internetda
+          ulashish uchun xavfsiz bo'lgan va xavfsiz bo'lmagan ma'lumotlarning farqi
+          haqida.
+      SongwritingParameters_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.SongwritingParameters_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.SongwritingParameters_2018.desc'
+      courseE_unplugged_CnC_2019:
+        title: Raqamli Ulashish
+        desc: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari
+          asoslariga berilgan bu dars talabalarga, ayniqsa raqamli muhitda, mulk va
+          mualliflik huquqini namoyish qilishning foydali jihatlari va qiyinchiliklarini
+          tushunishga yordam beradi. Talabalar axloqiy raqamli fuqaro bo‘lishning
+          muhim qismi sifatida San’atkorlarning huqularini hurmat qilishi uchun rag‘batlantirilishi
+          kerak.
+      Internet_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.Internet_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.Internet_2018.desc'
+      Crowdsourcing_2019:
+        title: 'tarjima qilinmagan: en-US.data.unplugged.Crowdsourcing_2018.title'
+        desc: 'tarjima qilinmagan: en-US.data.unplugged.Crowdsourcing_2018.desc'
+      GettingLoopy_2019:
+        title: Sikllashtirish
+        desc: Ushbu dars raqs orqali sikllarni dasturlash kontseptsiyasi (takroriy
+          ko'rsatmalar) bilan tanishtiradi. Talabalar oddiy raqs harakatlarini o'rganadilar,
+          keyin ularni takrorlash bo'yicha ko'rsatma beriladi.
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Kompyutersiz o‘tiladigan mashg‘ulotlar
+        desc: Bugun siz kimdir Internetda yomon munosabatda bo'lsa, nima qilish kerakligini
+          bilib olasiz.
+      BigEvent_2019:
+        title: Katta hodisa
+        desc: Talabalar "hodisalar"ni dasturlash kontseptsiyasi bilan tanishadilar,
+          bu kompyuter doimiy ravishda kuzatib boradigan harakatlardir. O'qituvchi
+          qog'ozdagi masofadan boshqarish pultidagi tugmachalarni bosadi va talabalar
+          qaysi tugma bosilganiga qarab javob berishadi.
+      BinaryBracelets_2019:
+        title: Ikkilik bilakuzuklar
+        desc: Talabalar bilakuzuklarni o'z ismining birinchi harfining ikkilik tasviri
+          sifatida yaratadilar. Talabalar ma'lumotlarning bir nechta usulda namoyish
+          etilishi va saqlanishi mumkinligini tushunib oladilar.
+      PaperPlanes_2019:
+        title: 'Hayotiy Algoritmlar: Qog''oz samolyotlar'
+        desc: Ushbu dars bizning kundalik hayotimizda algoritmlardan foydalanish usullarini,
+          xususan qog'ozli samolyotlarni ishlab chiqarishni taklif qiladi. Ushbu dars
+          shuningdek, informatika fanining umumiyroq ko'rinishiga va algoritmlarning
+          muhim rol o'ynashiga bag'ishlangan.
+      test-uid-passthrough:
+        desc: "# Ishga qabul qilish senariylari sessiyasi\r\n\r\n## CS uchun o'ngga
+          silang\r\nUshbu mashg'ulot uchun biz MIT-dagi hamkorlarimiz tomonidan ishlab
+          chiqilgan \"CS uchun o'ngga silash\" vositasidan foydalanamiz. CS uchun
+          o'ngga silash mashg'ulotida siz ba'zi talabalar profillarini o'qiysiz va
+          uni CS tamoyillari kursiga yozilish uchun ishontirish uchun foydalanishingiz
+          mumkin bo'lgan aniq bayonotlarni ko'rib chiqasiz. \r\n\r\n### Qanday ishlaydi\r\nCS
+          for Swipe o'yinida siz har bir talabaga aytishingiz mumkin bo'lgan bir qator
+          takliflarni ko'rasiz. Ma'lum talabani kursga yozilishga qiziqtirish uchun
+          samarali deb hisoblagan kotirovkalarni o'ngga suring va samarali bo'lmaydi
+          deb hisoblagan fikrlarni chapga suring. Sessiya davomida biz talabalarni
+          CSga o'qishga kirishda eng samarali bo'lgan bayonotlar turlari bo'yicha
+          sizning fikrlaringizni guruh bo'lib muhokama qilamiz va sizning ustaxonangizdagi
+          boshqa odamlar har bir argumentni qanday siljiganini ko'rish imkoniga ega
+          bo'lasiz. \r\n<br><br><br><br>\r\n\r\n<span style=\"display:none\">keyingi
+          bosqichga o'tish tugmasi</span>\r\n\r\n<a class=\"btn btn-large btn-primary
+          submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">
+          \"Swipe Right for CS\" mashg'ulotiga o'tish uchun bu yerni bosing!</a>\r\n\r"
+      PlantASeed_2019:
+        title: 'Hayotiy algoritmlar: Urug‘ ekish'
+        desc: Ushbu dars algoritmlarni kundalik hayotimizda ishlatish usullarini eslatadi,
+          bunga urug' ekish jarayonini misol qilib keltiramiz. Shuningdek, unda kompyuter
+          fanining kengroq tushunishga va algoritmlarning muhim rol o'ynashiga e'tibor
+          qaratadi.
+      UnplugHappyMaps_2019:
+        title: Xursand Xaritalar
+        desc: Talabalar bitta buyruq yordamida labirint orqali qahramonni o‘tkazish
+          uchun oddiy algoritmlarni (ko‘rsatmalar to‘plamini) yaratadilar.
+      GoingPlacesSafely_2019:
+        title: Joylarga xavfsiz borish
+        desc: Internet qiziqarli, ammo shu bilan birga ba'zida xavfli joy hamdir.
+          O'qituvchilar Internetdan foydalanishda xavfsizlikni saqlash qoidalari bilan
+          tanishtiradilar.
+      courseA_unplugged_loops_2019:
+        title: Sikllar Kompyutersiz
+        desc: Ushbu darsda siz sikllar haqida bilib olasiz!
+      MoveItMoveIt_2019:
+        title: Move It, Move It (Harakatlan)
+      DigitalFootprint_2019:
+        title: Raqamli izlaringiz
+        desc: O'qituvchilar o'quvchilarga o'zlari haqida ma'lumotni Internetda joylashtirish
+          raqamli iz yoki "trail" yaratishi, bu esa oqibatlarga olib kelishi haqidagi
+          g'oyani tushuntirishadi.
+      courseB_unplugged_CnC_2019:
+        title: Yaratish va Adolatli bo‘lish yaxshi.
+        desc: Mualliflik huquqi va ijodkorlik bo'yicha guruh tomonidan kompyuter fanlari
+          asoslariga berilgan holda, bu dars talabalarga ulashishning yaratuvchan
+          jarayonini va ilhomlanishni tushunishga yordam berish uchun yaratilgan.   Shu
+          bilan birga, ijodiy ifodani targ‘ib qilish va ijodiy ish bilan adolatli
+          bo‘lish kerak.
+      GraphingData_2019:
+        title: Ma'lumotlarni tasvirlash
+        desc: Ushbu darsda talabalar "Play Lab" loyihasi yoki haqiqiy dunyo senariyidagi
+          ma'lumotlarni to'plashadi va ulardan bashorat qilish uchun foydalanadilar.
+      courseE_unplugged_accessAbility_2019:
+        title: Kirish imkoniyati
+        desc: Miya hujumi (brainstorm) va faraziy ilovalar uchun qulay yechimlarni
+          loyihalashtirish orqali kirish imkoniyati va empatiya qiymati haqida bilib
+          oling.
+      courseE_simon_says_2019:
+        title: Simon so'zlaydi
+        desc: "O'ynang va natijaga erishish uchun qanday buyruqlar kerakligini o'ylab
+          ko'ring.\r\n\r\n![test image](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: Baquvvat parollar
+        desc: Odamlar nima uchun parollardan foydalanishlarini o'rganing, parollardan
+          foydalanishning afzalliklarini bilib oling va kuchli va xavfsiz parollarni
+          yaratish va saqlash strategiyasini toping.
+      timeforcs_demo_crowdsourcing:
+        title: Kraudsorsing
+        desc: '_Joshning eslatmasi: birinchi darsdan farqli o''laroq, men bunisini
+          odatdagi kompyutersiz dars kabi formatladim.'
       timeforcs_demo_conditionals:
-        title: Shart buyruqlari
+        title: Shartli bayonotlar
+        desc: Shartli bayonotlar to'g'risida ma'lumot olish uchun talabalar karta
+          o'yini o'ynaydilar va "Agar men qizil karta olsam, men ball olaman" va "agar
+          men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      TheRightApp_2019:
+        title: To'g'ri ilova
+        desc: "* Hozirgi kunda hamma kompyuterlardan, ayniqsa, smartfonlardan foydalanmoqda.
+          \r\n* * Smartfon ilovasi yoki \"app\" odamlarga do'stlari bilan suhbatlashish,
+          musiqa tinglash, xarid qilish yoki shunchaki Internetni o'rganish kabi ishlarni
+          bajarishda yordam beradi.\r\n* Dasturchilar boshqalarning ehtiyojlarini
+          tushunishlari va ularni hisobga olgan holda dasturlarni loyihalashlari muhimdir!\r\n\r\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"

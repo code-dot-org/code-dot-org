@@ -1,0 +1,10 @@
+{
+  "func": "showElement",
+  "category": "UI controls",
+  "paletteParams": [
+    "id"
+  ],
+  "params": [
+    "\"id\""
+  ]
+}

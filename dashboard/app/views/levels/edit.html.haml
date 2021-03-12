@@ -41,6 +41,7 @@
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    = render partial: 'levels/editors/ailab', locals: {f: f} if @level.is_a? Ailab
     -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim

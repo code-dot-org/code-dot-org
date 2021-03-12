@@ -1341,65 +1341,65 @@ sq-AL:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
+        - text: D
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: A
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2033,3 +2033,9 @@ sq-AL:
         - {}
         questions:
         - {}
+      outbreak_story:
+        content1: përshkrimi këtu
+      outbreak_story2:
+        content1: përshkrimi këtu
+      outbreak_freeplay_choice:
+        display_name: Lojë Falas

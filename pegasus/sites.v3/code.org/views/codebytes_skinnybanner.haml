@@ -1,0 +1,18 @@
+.breakoutquote{style:"padding: 0 18px; border-radius: 15px; background-image: linear-gradient(to top left, #a6e3e8, #d9f3f5)"}
+  .col-40{style:"margin-top: 18px; margin-bottom: 18px;"}
+    %a{href:"https://code.org/codebytes"}
+      %img{src:"/images/marketing/CodeBytes_CandyAsset.png", style:"max-width: 95%; padding-left:25px; margin: auto"}
+  .col-60{style:"padding:0 20px 0 10px; margin-top: 18px; margin-bottom: 18px;"}
+    %p{style:"border: 0; color: #4d575f"}
+      = I18n.t(:codebytes_skinny_banner_title)
+    %p{style:"font-size: 14px; border: 0; color: #4d575f"}
+      = I18n.t(:codebytes_skinny_banner_description)
+      = I18n.t(:codebytes_skinny_banner_english_only)
+    %p.skinny-banner-link{style:"font-size: 14px; border: 0; color: #4d575f"}
+      :css
+        .skinny-banner-link a {
+          color: #7665a0 !important;
+        }
+      
+      != I18n.t(:codebytes_skinny_banner_learn, markdown: :inline, code_bytes_url: "https://code.org/codebytes")
+  .clearboth

@@ -20,7 +20,7 @@
 
 # A named group of learning modules within a PLC course.
 # Corresponds to a Script in our regular curriculum hierarchy.
-class Plc::CourseUnit < ActiveRecord::Base
+class Plc::CourseUnit < ApplicationRecord
   belongs_to :script
   belongs_to :plc_course, class_name: '::Plc::Course'
   has_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_course_unit_id', dependent: :destroy

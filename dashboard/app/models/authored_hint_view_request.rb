@@ -12,15 +12,15 @@
 #  prev_time             :integer
 #  prev_attempt          :integer
 #  prev_test_result      :integer
-#  prev_level_source_id  :integer          unsigned
+#  prev_level_source_id  :bigint           unsigned
 #  next_time             :integer
 #  next_attempt          :integer
 #  next_test_result      :integer
-#  next_level_source_id  :integer          unsigned
+#  next_level_source_id  :bigint           unsigned
 #  final_time            :integer
 #  final_attempt         :integer
 #  final_test_result     :integer
-#  final_level_source_id :integer          unsigned
+#  final_level_source_id :bigint           unsigned
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #
@@ -35,7 +35,7 @@ require 'dynamic_config/gatekeeper'
 
 MAX_INT_VALUE = 2**31 - 1
 
-class AuthoredHintViewRequest < ActiveRecord::Base
+class AuthoredHintViewRequest < ApplicationRecord
   belongs_to :user
   belongs_to :script
   belongs_to :level

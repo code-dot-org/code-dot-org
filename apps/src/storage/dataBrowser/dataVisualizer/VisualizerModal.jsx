@@ -52,6 +52,14 @@ const styles = {
   }
 };
 
+export const OperatorType = {
+  EQUAL: 0,
+  LESS_THAN: 1,
+  LESS_THAN_OR_EQUAL: 2,
+  GREATER_THAN: 3,
+  GREATER_THAN_OR_EQUAL: 4
+};
+
 export const INITIAL_STATE = {
   isVisualizerOpen: false,
   chartTitle: '',
@@ -60,6 +68,7 @@ export const INITIAL_STATE = {
   selectedColumn1: '',
   selectedColumn2: '',
   filterColumn: '',
+  filterOperator: OperatorType.EQUAL,
   filterValue: '',
   screen: ''
 };
@@ -109,31 +118,49 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
-  getValuesForFilterColumn = memoize((records, column) => {
+  getValuesForFilterColumn = memoize((records, column, isNumeric) => {
     let values = [];
     values = Array.from(new Set(records.map(record => record[column])));
+    if (isNumeric) {
+      values.sort((a, b) => a - b); // Sort numerically
+    } else {
+      values.sort(); // Sort alphabetically
+    }
     values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
 
     return values;
   });
 
-  filterRecords = memoize((records = [], column, value) => {
-    let parsedValue;
-    if (isNumber(value)) {
-      parsedValue = parseFloat(value);
-    } else if (isBoolean(value)) {
-      parsedValue = toBoolean(value);
-    } else if (value === 'undefined') {
-      parsedValue = undefined;
-    } else if (value === 'null') {
-      parsedValue = null;
-    } else {
-      // We add quotes around strings to display in the dropdown, remove the quotes here so that
-      // we filter on the actual value
-      parsedValue = value.slice(1, -1);
+  filterRecords = memoize(
+    (records = [], column, value, operator = OperatorType.EQUAL) => {
+      let parsedValue;
+      if (isNumber(value)) {
+        parsedValue = parseFloat(value);
+      } else if (isBoolean(value)) {
+        parsedValue = toBoolean(value);
+      } else if (value === 'undefined') {
+        parsedValue = undefined;
+      } else if (value === 'null') {
+        parsedValue = null;
+      } else {
+        // We add quotes around strings to display in the dropdown, remove the quotes here so that
+        // we filter on the actual value
+        parsedValue = value.slice(1, -1);
+      }
+      switch (operator) {
+        case OperatorType.GREATER_THAN:
+          return records.filter(record => record[column] > parsedValue);
+        case OperatorType.GREATER_THAN_OR_EQUAL:
+          return records.filter(record => record[column] >= parsedValue);
+        case OperatorType.LESS_THAN:
+          return records.filter(record => record[column] < parsedValue);
+        case OperatorType.LESS_THAN_OR_EQUAL:
+          return records.filter(record => record[column] <= parsedValue);
+        default:
+          return records.filter(record => record[column] === parsedValue);
+      }
     }
-    return records.filter(record => record[column] === parsedValue);
-  });
+  );
 
   getDisplayNameForChartType(chartType) {
     switch (chartType) {
@@ -147,6 +174,20 @@ class VisualizerModal extends React.Component {
         return msg.crossTab();
       default:
         return chartType;
+    }
+  }
+  getDisplayNameForOperator(operator) {
+    switch (operator) {
+      case OperatorType.GREATER_THAN:
+        return msg.greaterThan();
+      case OperatorType.GREATER_THAN_OR_EQUAL:
+        return msg.greaterThanOrEqualTo();
+      case OperatorType.LESS_THAN:
+        return msg.lessThan();
+      case OperatorType.LESS_THAN_OR_EQUAL:
+        return msg.lessThanOrEqualTo();
+      default:
+        return msg.equalTo();
     }
   }
 
@@ -195,7 +236,8 @@ class VisualizerModal extends React.Component {
       filteredRecords = this.filterRecords(
         parsedRecords,
         this.state.filterColumn,
-        this.state.filterValue
+        this.state.filterValue,
+        this.state.filterOperator
       );
     }
     const numericColumns = this.findNumericColumns(
@@ -215,7 +257,9 @@ class VisualizerModal extends React.Component {
       ChartType.SCATTER_PLOT,
       ChartType.CROSS_TAB
     ].includes(this.state.chartType);
-
+    const isFilterColumnNumeric = numericColumns.includes(
+      this.state.filterColumn
+    );
     return (
       <span style={styles.container}>
         <button
@@ -355,16 +399,39 @@ class VisualizerModal extends React.Component {
                 onChange={event =>
                   this.setState({
                     filterColumn: event.target.value,
+                    filterOperator: OperatorType.EQUAL,
                     filterValue: ''
                   })
                 }
                 inlineLabel
               />
+              {isFilterColumnNumeric && (
+                <DropdownField
+                  displayName={msg.by()}
+                  options={[
+                    OperatorType.GREATER_THAN,
+                    OperatorType.GREATER_THAN_OR_EQUAL,
+                    OperatorType.EQUAL,
+                    OperatorType.LESS_THAN_OR_EQUAL,
+                    OperatorType.LESS_THAN
+                  ]}
+                  getDisplayNameForOption={this.getDisplayNameForOperator}
+                  disabledOptions={[]}
+                  value={this.state.filterOperator}
+                  onChange={event =>
+                    this.setState({
+                      filterOperator: parseFloat(event.target.value)
+                    })
+                  }
+                  inlineLabel
+                />
+              )}
               <DropdownField
-                displayName={msg.by()}
+                displayName={isFilterColumnNumeric ? '' : msg.by()}
                 options={this.getValuesForFilterColumn(
                   parsedRecords,
-                  this.state.filterColumn
+                  this.state.filterColumn,
+                  isFilterColumnNumeric
                 )}
                 disabledOptions={[]}
                 value={this.state.filterValue}

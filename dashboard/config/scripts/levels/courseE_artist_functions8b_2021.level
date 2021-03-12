@@ -1,0 +1,182 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-12-04T22:36:00.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist_zombie",
+    "x": "50",
+    "y": "225",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "short_instructions": "Call the `draw a square` function from inside your `draw a line of squares` function to make this even easier!",
+    "embed": "false",
+    "long_instructions": "*\"Zombie get dizzy.\"*\r\n\r\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\r\n\r\n---\r\n\r\n- The squares are *50* pixels apart.",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "disable_sharing": "false",
+    "impressive": "false",
+    "never_autoplay_video": "false",
+    "permitted_errors": "0",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You only need one `move forward` block if you're doing this correctly!\",\"hint_id\":\"courseD_artist_functions8_f\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b36847b63cc2e0d6e926d12eb2570f5c/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by making a function for a square, then try making a function for a line of squares.\",\"hint_id\":\"courseD_artist_functions8_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b4225968610b7b7235e682a5462b94e4/courseE_artist_functions8b_2018.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To make a line of squares,\\n  - repeat 3 times\\n    - draw a square\\n    - jump forward **100 pixels**\",\"hint_id\":\"courseD_artist_functions8_d\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5eea6e14c2239206cf163f7041c89a9/courseE_artist_functions8b_2018.mp3\"}]",
+    "discard_background": "false",
+    "instructions_important": "false",
+    "callout_json": "[]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "name_suffix": "_2021",
+    "parent_level_id": 21572,
+    "top_level_procedure_autopopulate": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/537b81e3e5798d447d7353c0f1cdb7f9=levelbuilder/37077.png",
+    "show_type_hints": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-26 00:48:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:28:00 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:30:19 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:30:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"x\",\"y\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:36:50 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:47:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-01 21:48:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 16:50:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:19:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-02 17:30:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"impressive\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 21:25:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <mutation name="draw a line of squares"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">draw a line of squares</title>
+        </block>
+        <block type="procedures_defnoreturn" deletable="false" editable="false">
+          <mutation/>
+          <title name="NAME">draw square</title>
+          <statement name="STACK">
+            <block type="controls_repeat" next_connection_disabled="true" can_disconnect_from_parent="false">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant" can_disconnect_from_parent="false">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant" next_connection_disabled="true" can_disconnect_from_parent="false">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Actions">
+          <block type="jump_by_constant">
+            <title name="DIR">jumpForward</title>
+            <title name="VALUE">100</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">4</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE">
+          <block type="procedures_defnoreturn">
+            <mutation/>
+            <title name="NAME">do something</title>
+          </block>
+        </category>
+        <category name="Comments">
+          <block type="comment">
+            <title name="TEXT"/>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a line of squares"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw square"/>
+                  <next>
+                    <block type="jump_by_constant">
+                      <title name="DIR">jumpForward</title>
+                      <title name="VALUE">100</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw square</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">50</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnLeft</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

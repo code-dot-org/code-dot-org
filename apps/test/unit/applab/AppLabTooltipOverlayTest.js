@@ -58,7 +58,7 @@ describe('AppLabTooltipOverlay', () => {
       expect(result.props().providers.length).to.equal(1);
       expect(result.props().providers[0]).to.be.a('function');
       expect(result.props().providers[0](result.props())).to.equal(
-        `x: ${Math.floor(TEST_MOUSE_X)}, y: ${Math.floor(TEST_MOUSE_Y)}`
+        `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
       );
     });
   });

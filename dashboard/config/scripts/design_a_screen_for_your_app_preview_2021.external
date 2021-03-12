@@ -1,0 +1,29 @@
+name 'Design a Screen for your App_preview-2021'
+display_name 'Design a Screen for your App'
+markdown <<MARKDOWN
+# Mocking Up Your App
+
+Now that you have some practice laying out elements in App Lab, you can start working on mocking your own app. With your group, divvy up the screens so that everyone is working on a different screen.
+
+Because you'll be dividing the work up, you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:
+
+* Where do navigation buttons go?
+* What colors will you use for backgrounds, text, and buttons
+* What's the general style and layout?
+
+# Naming Your Element IDs
+When you create an ID for your elements, it’s a good idea to include the name of your screen at the front of each ID. For example, if your screen name is account and you have an input box for the user’s first name, your ID for that input box would be account_firstName. 
+
+This helps differentiate the elements on your screen from the elements on everyone else’s screen. For example, if everyone on your team has a button called “home” on their screen, this can be confusing when trying to talk about the button on your screen rather than someone else’s. This will also help with future steps when it’s time to combine screens together.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### Naming Your Elements
+
+Ensuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues in the next lesson, so it pays to be a stickler here. You can provide students with the optional Screen Design Activity Guide to keep track of their element IDs.
+
+#### Working together, apart
+
+Even more so than the the paper prototyping activity, it is easy for students in this lesson to forget that they need to consider how their choices affect their team. Encourage active discussion among teams as they design screens to ensure that they are all working towards a common goal.
+MARKDOWN

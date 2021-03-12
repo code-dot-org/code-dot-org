@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import classNames from 'classnames';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import {APP_HEIGHT, APP_WIDTH} from './constants';
 import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
@@ -20,6 +21,7 @@ import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
+import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -43,6 +45,10 @@ const styles = {
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
     finishButton: PropTypes.bool.isRequired,
+    pauseHandler: PropTypes.func.isRequired,
+    hidePauseButton: PropTypes.bool.isRequired,
+
+    // From redux
     isResponsive: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
     isProjectLevel: PropTypes.bool.isRequired,
@@ -57,6 +63,10 @@ class P5LabVisualizationColumn extends React.Component {
     consoleMessages: PropTypes.array.isRequired
   };
 
+  constructor(props) {
+    super(props);
+  }
+
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
   state = {
@@ -67,7 +77,11 @@ class P5LabVisualizationColumn extends React.Component {
   pickerPointerMove = e => {
     if (this.props.pickingLocation) {
       this.props.updatePicker(
-        calculateOffsetCoordinates(this.divGameLab, e.clientX, e.clientY)
+        calculateOffsetCoordinates(
+          this.divGameLab,
+          Math.floor(e.clientX),
+          Math.floor(e.clientY)
+        )
       );
     }
   };
@@ -155,38 +169,46 @@ class P5LabVisualizationColumn extends React.Component {
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
     }
-    const spriteLab = this.props.spriteLab;
+    const isSpritelab = this.props.spriteLab;
+    const showPauseButton = isSpritelab && !this.props.hidePauseButton;
 
     return (
       <div style={{position: 'relative'}}>
-        <ProtectedVisualizationDiv>
-          <Pointable
-            id="divGameLab"
-            style={divGameLabStyle}
-            tabIndex="1"
-            onPointerMove={this.pickerPointerMove}
-            onPointerUp={this.pickerPointerUp}
-            elementRef={el => (this.divGameLab = el)}
-          />
-          <VisualizationOverlay
-            width={APP_WIDTH}
-            height={APP_HEIGHT}
-            onMouseMove={this.onMouseMove}
-          >
-            <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
-            <CrosshairOverlay flip={spriteLab} />
-            <TooltipOverlay providers={[coordinatesProvider(spriteLab)]} />
-          </VisualizationOverlay>
-        </ProtectedVisualizationDiv>
-        <TextConsole consoleMessages={this.props.consoleMessages} />
+        <div style={{position: 'relative'}}>
+          <ProtectedVisualizationDiv>
+            <Pointable
+              id="divGameLab"
+              style={divGameLabStyle}
+              tabIndex="1"
+              onPointerMove={this.pickerPointerMove}
+              onPointerUp={this.pickerPointerUp}
+              elementRef={el => (this.divGameLab = el)}
+            />
+            <VisualizationOverlay
+              width={APP_WIDTH}
+              height={APP_HEIGHT}
+              onMouseMove={this.onMouseMove}
+            >
+              <GridOverlay show={this.props.showGrid} showWhileRunning={true} />
+              <CrosshairOverlay flip={isSpritelab} />
+              <TooltipOverlay providers={[coordinatesProvider(isSpritelab)]} />
+            </VisualizationOverlay>
+          </ProtectedVisualizationDiv>
+          <TextConsole consoleMessages={this.props.consoleMessages} />
+          {isSpritelab && <SpritelabInput />}
+        </div>
+
         <GameButtons>
+          {showPauseButton && (
+            <PauseButton pauseHandler={this.props.pauseHandler} />
+          )}
           <ArrowButtons />
 
           <CompletionButton />
 
-          {!spriteLab && !isShareView && this.renderGridCheckbox()}
+          {!isSpritelab && !isShareView && this.renderGridCheckbox()}
         </GameButtons>
-        {!spriteLab && this.renderAppSpaceCoordinates()}
+        {!isSpritelab && this.renderAppSpaceCoordinates()}
         <ProtectedStatefulDiv
           id={GAMELAB_DPAD_CONTAINER_ID}
           className={classNames({responsive: isResponsive})}

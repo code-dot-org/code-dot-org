@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -310,6 +310,8 @@ class Blockly < Level
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
             set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_blocks_with_placeholder_texts(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_variable_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -388,7 +390,7 @@ class Blockly < Level
       level_prop['editCode'] = uses_droplet?
 
       # Blockly requires these fields to be objects not strings
-      %w(map initialDirt serializedMaze goal softButtons inputOutputTable).
+      %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
           concat(NetSim.json_object_attrs).
           concat(Craft.json_object_attrs).
           each do |x|
@@ -566,9 +568,104 @@ class Blockly < Level
       end
       mutation.set_attribute('name', localized_name) if localized_name
     end
+    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="VAR"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
+    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
+      behavior_name = behavior.at_xpath('./title[@name="NAME"]')
+      next unless behavior_name
+      localized_name = I18n.t(
+        behavior_name.content,
+        scope: [:data, :behavior_names, name],
+        default: nil,
+        smart: true
+      )
+      behavior_name.content = localized_name if localized_name
+    end
 
     localize_behaviors(block_xml)
     return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing variable names in "variables_get" and "parameters_get" block types
+  def localized_variable_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+    block_xml.xpath("//block[@type=\"variables_get\"]").each do |variable|
+      variable_name = variable.at_xpath('./title[@name="VAR"]')
+      next unless variable_name
+      localized_name = I18n.t(
+        variable_name.content,
+        scope: [:data, :variable_names],
+        default: nil,
+        smart: true
+      )
+      variable_name.content = localized_name if localized_name
+    end
+
+    block_xml.xpath("//block[@type=\"parameters_get\"]").each do |parameter|
+      parameter_name = parameter.at_xpath('./title[@name="VAR"]')
+      next unless parameter_name
+      localized_name = I18n.t(
+        parameter_name.content,
+        scope: [:data, :parameter_names],
+        default: nil,
+        smart: true
+      )
+      parameter_name.content = localized_name if localized_name
+    end
+
+    return block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in all possible block types.
+  # @param blocks [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
+  def localized_blocks_with_placeholder_texts(blocks)
+    return if blocks.nil?
+    block_xml = Nokogiri::XML(blocks, &:noblanks)
+
+    localize_placeholder_texts(block_xml, 'text', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_ask', ['TEXT'])
+    localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
+
+    block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in one block type.
+  # @param block_xml [Nokogiri::XML::Document]
+  # @param block_type [String]
+  # @param title_names [Array<String>]
+  # @return [Nokogiri::XML::Document]
+  def localize_placeholder_texts(block_xml, block_type, title_names)
+    block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+      title_names.each do |title_name|
+        title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+        next unless title&.content&.present?
+
+        # Must generate text_key in the same way it is created in
+        # the get_i18n_strings function in sync-in.rb script.
+        text_key = Digest::MD5.hexdigest title.content
+        localized_text = I18n.t(
+          text_key,
+          scope: [:data, :placeholder_texts, name],
+          default: nil,
+          smart: true
+        )
+        title.content = localized_text if localized_text
+      end
+    end
+    block_xml
   end
 
   def self.base_url

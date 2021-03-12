@@ -1828,7 +1828,7 @@
         },
         "courseE_Dogger_2": {
           "stop_everything": {
-            "name": "توقف_كل_شيء"
+            "name": "أوقِف_كل_شيء"
           },
           "lose": {
             "name": "اخسر"
@@ -3189,6 +3189,21 @@
             "name": "جمع الصف"
           }
         },
+        "courseF_bee_variables_6_2018": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2019": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
+        "courseF_bee_variables_6_2020": {
+          "collect stairs": {
+            "name": "اجمع السلالم\n"
+          }
+        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "اجمع"
@@ -3257,6 +3272,49 @@
           },
           "draw bit": {
             "name": "ارسم بت"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "رسم نجمة",
+            "parameters": {
+              "points": "نقاط",
+              "length": "الطول"
+            }
+          },
+          "draw a circle": {
+            "name": "رسم دائرة"
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "كرر"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
           }
         }
       }

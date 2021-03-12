@@ -1,0 +1,16 @@
+name 'csp-u2-exam1-IP-addresses_2021'
+height 'auto'
+
+question 'Which of the following best describes the purpose of an IP address?'
+right ‘IP addresses provide a unique number for identifying devices that send and receive information on the Internet’
+wrong ‘IP addresses assist in the reconstruction of a message that has been divided into many packets’
+wrong ‘IP addresses indicate the location where an internet-connected computing device was manufactured’
+wrong ‘IP addresses indicate how many times an individual packet has been requested by a router’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

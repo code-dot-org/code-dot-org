@@ -412,6 +412,11 @@ button {
   margin-top: 10px;
 }
 
+#map .mapboxgl-popup-close-button {
+  margin-top: 0px;
+  background-color: #ffa400;
+}
+
 /* Promote page */
 #promote-page h1 {
   float: left;
@@ -586,15 +591,6 @@ button {
 #hoc-certificate img {
   width: 100%;
   max-width: 100%;
-}
-
-@media all {
-  .page-break { display: none; }
-}
-
-@media print {
-  .page-break { display: block; page-break-before: always; page-break-inside: avoid;}
-  .hide-print { display: none; }
 }
 
 /* Contact Us page */

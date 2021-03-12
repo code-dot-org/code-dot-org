@@ -24,7 +24,7 @@
 #  index_school_infos_on_school_id  (school_id)
 #
 
-class SchoolInfo < ActiveRecord::Base
+class SchoolInfo < ApplicationRecord
   SCHOOL_TYPES = [
     SCHOOL_TYPE_CHARTER = "charter".freeze,
     SCHOOL_TYPE_PRIVATE = "private".freeze,

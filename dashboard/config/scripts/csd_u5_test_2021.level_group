@@ -1,0 +1,14 @@
+name 'CSD U5 test_2021'
+title 'Data and Society Post-Project Test'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'CSD U5 test clean multi_2021'
+level 'CSD U5 test encoding multi2_2021'
+level 'CSD U5 test secure multi_2021'
+level 'CSD U5 test datacount multi_2021'
+level 'CSD U5 test crosstab multi_2021'
+level 'CSD U5 test automate FR_2021'
+level 'CSD U5 test surprise FR_2021'
+level 'CSD U5 test big data FR_2021'

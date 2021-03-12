@@ -25,7 +25,7 @@ Still have questions? See below for answers to commonly asked questions or email
 **Questions about in-person workshops:**<br/>
 
 - [Does my organization need to provide facilitators for the programs?](#facilitators)
-- [Can I recruit middle & high school teachers from local districts to become a part of the 2019-20 professional learning programs in my area?](#recruit)
+- [Can I recruit middle & high school teachers from local districts to become a part of the 2020-21 professional learning programs in my area?](#recruit)
 
 
 
@@ -37,7 +37,7 @@ ________________
 
 ### **My region is already served by another organization, can we still apply to be a Regional Partner?**
 
-For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2019-20 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
+For this year, we are only looking for Regional Partners in regions where Code.org is not already working with another organization. If you are interested in participating in local Professional Learning for the 2020-21 school year, please email partner@code.org and we will connect you with the Regional Partner for your area.
 
 [**Back to the top**](#top)
 <br/>
@@ -49,17 +49,11 @@ ________________
 
 ### **Where do you still need Regional Partners?**
 
-We are particularly looking for new Regional Partners in:
-
-- Arizona
-- Montana
-- North Dakota
-- Wyoming
-
+We’re not currently recruiting for additional RPs. Please check back at a later time!
 
 [**Back to the top**](#top)
 <br/>
-________________
+________________ 
 <a id="pm"></a>
 <br/>
 <br/>
@@ -168,7 +162,7 @@ ______________________________
 <br/>
 <br/>
 
-### **Can I recruit middle & high school teachers from local districts to become a part of the 2019-20 professional learning programs in my area?**
+### **Can I recruit middle & high school teachers from local districts to become a part of the 2020-21 professional learning programs in my area?**
 
 Yes, we will be asking each partner to recruit districts and schools for the Computer Science Principles and Computer Science Discoveries programs as part of this partnership.
 
@@ -181,7 +175,7 @@ ______________________________
 
 ### **Can I recruit elementary school teachers?**
 
-Yes, Regional Partners can begin running CS Fundamentals workshops in Fall 2019 for K-5 teachers.
+Yes, Regional Partners can begin running CS Fundamentals workshops in Fall 2020 for K-5 teachers.
 
 [**Back to the top**](#top)
 <br/>

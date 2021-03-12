@@ -4,18 +4,18 @@ cs-CZ:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Začni se čtvercem<br/> dej trojúhelník nad čtverec<br/> dje trojúhelník
-            pod čtverec
+        - text: "Začni se čtvercem \ndej trojúhelník nad čtverec \ndej trojúhelník
+            pod čtverec"
         - text: "Začni se čtvercem  \nDej trojúhelník vpravo od čtverce  \nDej rovnoběžník
             pod čtverec  \nDej trojúhelník vpravo od rovnoběžníku"
           correct: true
-        - text: Začni se čtvercem<br/> Polož rovnoběžník nad čtverec<br/> dej trojúhelník
-            vpravo od rovnoběžník
+        - text: "Začni se čtvercem  \nPolož rovnoběžník nad čtverec  \nDej trojúhelník
+            vpravo od rovnoběžníku"
         - text: Začni se čtverecem <br/> dej trojúhelník pod čtverec<br/> dej rovnoběžník
             napravo od trojúhelníku
         content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
-        - text: Zvol algoritmus pro zadaný obrázek.
+        - text: Zvol algoritmus odpovídající danému obrázku.
         title: Vícenásobná volba
       2-3 Algorithms Multi 2:
         answers:
@@ -27,28 +27,28 @@ cs-CZ:
         content1: Začni s trojúhelníkem <br/> Dej čtverec pod trojúhelník <br/> dej
           další trojúhelník pod čtverec
         questions:
-        - text: Který obrázek <em>nebude</em> se provede tímto algoritmem?
+        - text: Který obrázek __neodpovídá__ tomuto algoritmu?
         title: Vícenásobná volba
       2-3 Big Event Match 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Porovnej kombinaci tlačítek s tanečními pohyby.
         questions:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Porovnání
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         content2: Použij klíč odpovídající každému kódu na tvůj dopis
         questions:
         - text: "<strong>N</strong>"
@@ -56,15 +56,26 @@ cs-CZ:
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
         title: Porovnání
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         questions:
         - text: Která sada karet skórovala správně podle pravidel hry?
         title: Vícenásobná volba
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        teacher_markdown: |-
+          ## Učitelé:
+
+          Pokud studenti tvrdí, že neexistuje správná odpověď, je možné, že chybně pochopili koncept podmínek.
+
+          Zde je k dispozici video, které může pomoci osvětlit, co se při řešení této úlohy děje.
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -95,7 +106,7 @@ cs-CZ:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
         content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
-        - text: Který program dělá tento obrázek?
+        - text: Který program vytvoří tento obrázek?
         title: Vícenásobná volba
       2-3 Maze Match 2:
         answers:
@@ -121,125 +132,151 @@ cs-CZ:
         title: Bludištní vícenásobná volba
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+          correct: true
         questions:
         - text: Který program **nevytvoří** tento obrázek?
         title: Vícenásobná volba
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
+          correct: true
         questions:
         - text: Který obrázkový program se seznamem neobsahuje žádné chyby?
         title: Vícenásobná volba
       2-3 artist debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
-        - {}
+        - text: Kterou část musíš napravit, aby byl kruh úplný?
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
+        title: 'Umělec: ladění - Vícenásobná volba 1'
       2-3 artist functions multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
         questions:
         - text: Vyber správné bloky k nakreslení tohoto obrázku pomocí zadané funkce
         title: Umělecká funkční vícenásobná volba jedna
+        content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
+          500"
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Porovnej cykly k tvaru
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         title: 'Umělec - cykly: Přiřazování 1'
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - text: Který tvar se udělá tímto cyklem?
         title: 'Umělec - cykly: Vícenásobná volba'
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         questions:
         - text: Který tvar se udělá tímto programem?
         title: 'Umělec - cykly: Vícenásobná volba'
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
       2-3 artist match 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Porovnej tvar s bloky, abys to dokončil.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: Umělecké porovnání
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Které dolní porovnání je pravdivé?
+        title: 'Včela: podmínky - vícenásobná volba 1'
       2-3 bee conditionals multi 3:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         questions:
         - text: Vyber nejlepší bloky.
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
+        title: 'Včela: podmínky - vícenásobná volba 2'
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         questions:
         - text: Které bloky sesbírají všechen nektar?
         title: 'Včela - cykly: Vícenásobná volba 1'
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Přiřaď bloky k hádankám
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: 'Bludiště: Přiřazování 1'
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         questions:
         - text: Která sada bloků je správnou odpovědí?
         title: 'Bludiště: Vícenásobná volba 1'
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
       4-5 Algorithms Match 1:
         answers:
         - text: "<h4>Nastavit skóre hráče 1 na 0</h4>"
@@ -293,8 +330,9 @@ cs-CZ:
         title: Vícenásobná volba
       4-5 Crowdsourcing Multi 1:
         answers:
-        - {}
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
+          correct: true
         questions:
         - text: Který z těchto obrázků představuje nejlépe crowdsourcing?
         title: Vícenásobná volba
@@ -320,14 +358,16 @@ cs-CZ:
         title: Vícenásobná volba
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         questions:
         - text: Když se pokusíš přihlásit ke code.org, IP adresa je nejpravděpodobnější
             z DNS?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Internet Multi 2:
         answers:
         - text: code.org
@@ -339,121 +379,153 @@ cs-CZ:
         - text: Když DNS poslal tě ke stránce na adrese IP 100.42.50.110, na kterém
             website jsi?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Songwriting Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
+          correct: true
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         questions:
-        - {}
+        - text: Jaký je největší kus této písně, které lze nastavit jako refrén? Refrén
+            se opakuje přesně pokaždé, když se vyvolá.
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
       4-5 Suncatchers Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "**STACK**"
+        - text: "**STAMP**"
+        - text: "**STAR**"
+        - text: "**RAMP**"
         content1: Porovnej každý program na slovo, které dělá pomocí poskytované skupiny
           dovedností.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Porovnání
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         questions:
         - text: Který z programů pod <em>nemá</em> přesně stejné pořadí jako Program
             1?
         title: Vícenásobná volba
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
       4-5 artist loops multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
         questions:
         - text: Které bloky vytváří návrh?
         title: 'Umělec - cykly: Vícenásobná volba'
+        content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
+          500"
       4-5 artist multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
         questions:
         - text: Které bloky nakreslí obdélník s obvodem 100?
         title: Umělecká vícenásobná volba
       4-5 artist multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
         questions:
         - text: Která kresba je symetrická?
         title: Umělecká vícenásobná volba
       4-5 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         questions:
         - text: Vyber nejlepší bloky.
         title: Včelí podmínková vícenásobná volba
+        content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: Fialová květina může mít buď 3, 2 nebo 1 nektar, ale neznáš jejich
+          počet. Které bloky správně zkontrolují a sesbírají všechen nektar z fialové
+          květiny?
       4-5 bee debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png\n"
+        - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
         questions:
         - text: Která verze funkce bude fungovat?
         title: Včelí ladící vícenásobná volba
+        content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
+        content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
       4-5 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Včelí cyklická vícenásobná volba
+        content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
       4-5 maze conditionals multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Bludištní podmínková vícenásobná volba
+        content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
+          500"
       4-5 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
         content1: Přiřaď bloky k hádankám
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
         title: Porovnávací bludiště
       4-5 maze multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         questions:
         - text: Které bloky vyřeší puzzle?
         title: Bludištní vícenásobná volba
+        content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       BigEvent-Unplugged:
         markdown: |
           # Velká událost
@@ -693,10 +765,11 @@ cs-CZ:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
@@ -1036,13 +1109,15 @@ cs-CZ:
         title: Porovnání
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
         questions:
         - text: Které zvíře má digitální stopu, kterou zanechává <strong>, je mu nejvíce
             nebezpečná</strong>?
         title: Vícenásobná volba
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
       K-1 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
@@ -1384,15 +1459,12 @@ cs-CZ:
             způsobí selhání tohoto programu?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: Program neselže. Veverka se dostane k žaludu.
-        - text: Veverka půjde po svém posledním otočení špatným směrem.
-          correct: true
-          feedback: Správně!
-        - text: Veverka udělá příliš málo kroků a skončí před žaludem.
+        - {}
+        - correct: true
+        - correct: true
         - text: Nevím.
         questions:
-        - text: Podívej se pozorně na níže uvedený kód. Jaká je první chyba, která
-            způsobí selhání tohoto programu?
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: Ptáček skončí jeden krok od prasátka.
@@ -1493,7 +1565,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1508,7 +1581,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1523,7 +1597,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -1538,7 +1613,8 @@ cs-CZ:
         - text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
           correct: true
           feedback: Správně!
-        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+        - text: BB-8 sesbírá všechen kovový šrot bez problémů.
+          feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
             ale potřebuje se posunout o tři.
         - text: Nevím.
           feedback: V prvním cyklu se BB-8 posune jen o dvě políčka, ale potřebuje
@@ -2290,39 +2366,43 @@ cs-CZ:
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+        - text: Farmářka sklidí kukuřici.
+          correct: true
           feedback: Správně!
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: Zahradnice posbírá dvě dýně.
-        - {}
-        - correct: true
+        - text: Farmářka sesbírá všechny dýně.
+        - text: Farmářka sklidí salát.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: Farmářka sklidí kukuřici.
         questions:
-        - {}
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -2591,7 +2671,7 @@ cs-CZ:
         markdown: |
           # Sleduj digitální stopu
 
-          ## Jaké informace můžeš zanechávat ve svojí digitální stopě?
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
       csf_safety_in_my_online_neighborhood:
         markdown: |
           # Mé online sousedství
@@ -2664,3 +2744,166 @@ cs-CZ:
         questions:
         - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
             spustí?
+      'Overview: Images':
+        markdown: "# Obrázky\n\n## Zadávání URL obrázku na stránku\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nExistuje několik způsobů, jak získat
+          URL obrázku.  \n\nBěžný způsob (ukázaný vpravo) je najít obrázek, který
+          se ti líbí, na nějaké stránce a kliknout na něj pravým tlačítkem (nebo ctrl-kliknutí)
+          a vybrat možnost, která říká něco jako \"Kopírovat adresu obrázku\". Tu
+          pak budeš moct vložit do textového pole v App Lab.\n\nPokud si nejsi jistý,
+          můžeš také vybrat možnost \"Otevřít obrázek v nové kartě\", což zobrazí
+          samotný obrázek a jeho URL se zobrazí ve vyhledávací liště, ze které ho
+          můžeš zkopírovat a následně vložit do App Lab.\n\n**Běžná chyba**: Použití
+          URL *stránky vyhledávání obrázku* namísto URL samotného obrázku.\n\n* Ujisti
+          se, že získáš cestu k samostatnému obrázku - něco, co končí **.jpg**, **.gif**
+          nebo **.png**.\n* URL, která začíná takhle: `https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          pravděpodobně není správná.\n\n\n## Nahrávání vlastních obrázků\n\nPokud
+          máš obrázky uložené v počítači, můžeš je nahrávat do **správce souborů**
+          App Lab. Stačí kliknout na **Nahrát soubor** a následovat dialogy na obrazovce.\n\nObrázky
+          musí být typu: **.jpg**, **.png** nebo **.gif**\n\nJakmile nahraješ obrázek,
+          musíš kliknout na **Vybrat**, abys ho vložil do souboru. Pokud přidáš několik
+          obrázků, uvidíš je všechny pokaždé, když nahraješ soubor a můžeš používat
+          *jakýkoliv* soubor, který jsi už nahrál.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          Klikni na Pokračovat a vyzkoušej si to!"
+      CSD User Centered Design Post-Project Test:
+        title: 'Design zaměřený na uživatele: Test po projektu'
+      CSD U1 Test:
+        title: Počítač a řešení problémů - test po projektu
+      CSD U5 test:
+        title: Data a společnost - test po projektu
+      outbreak_freeplay_choice:
+        display_name: Volná hra
+        description: A to je konec kurzu. Pokračujte ve změnách a vylepšování projektu.
+          Můžete dál pracovat se stejnými bloky anebo zkusit panel nástrojů rozšířit.
+      outbreak_story2:
+        markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
+          jevů, jejichž pozorování může být v reálném světě obtížné. Pomáhají vědcům
+          bezpečně a účinně řešit problémy a testovat nové nápady. Vaše simulace představuje
+          způsob, jak znázornit možný scénář šíření viru ve Městě příšerek.\n\n##
+          Resetujte a spusťte znovu!\nI když jste sami autorem svého kódu, je nemožné
+          vědět přesně, co se stane, až stisknete tlačítko Spustit. Pohyb příšerek
+          je náhodný, takže nemůžete tušit, jestli se virus rozšíří rychle, nebo pomalu.
+          Kdykoli kód upravíte, spusťte simulaci více než jednou. Každé spuštění má
+          unikátní průběh!\n\n## Shromáždění dat\nDoporučujeme zapisovat si během
+          spuštěné simulace svá pozorování. Můžete počítat, kolik příšerek se nakazí,
+          nebo pomocí časovače zjistit, jak rychle se nákaza šíří. Zkusíte třeba zjistit,
+          jak dlouho obvykle trvá, než se nakazí všechny příšerky, pokud žádná z nich
+          nemá roušku? \n\n## Předvídání\nPokud svůj model dobře znáte, může vám pomoct
+          dělat předpovědi. Můžete dokonce měnit průběh simulace a odhadovat, jak
+          se průběh změní. Například:\n* Co by se stalo, kdyby bylo ve městě dvakrát
+          tolik příšerek?\n* Co by se stalo, kdyby se příšerky pohybovaly poloviční
+          rychlostí?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Podobá se Město příšerek reálnému světu?\nKaždý
+          model může být realistický jen do určité míry. \n* Co má simulace šíření
+          společného s šířením viru v reálném světě?\n* Jaké jsou rozdíly?\nAž tuhle
+          aktivitu dokončíte, proberte tyto otázky doma nebo s učitelem ve škole!\n\n##
+          Co dalšího by se dalo modelovat?\nVytvořili jste pracovní model šíření viru
+          ve Městě příšerek. Co vaše simulace nedokáže namodelovat nebo zobrazit,
+          ale vy byste chtěli, aby to uměla? Stiskněte Pokračovat a naučte se vytvářet
+          složitější model, například:\n* zvyšovat počet příšerek v simulaci,\n* pomoct
+          příšerkám, aby se z nákazy vyléčily,\n* řešit pravděpodobnost, imunitu,
+          očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
+          nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
+          zdravé obyvatele našeho města, až k nám virus dorazí. \n"
+      outbreak_story:
+        markdown: "# Šíření: napsání vlastního simulátoru\n\n## Vítejte ve Městě příšerek!\nMěsto
+          příšerek bývalo šťastným místem a příšerky, které ho obývají, se těšily
+          dobrému zdraví. Rády se procházely a setkávaly s kamarády. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nJednoho dne se jedna z příšerek přestala cítit dobře.
+          Nakazila se virem. Ostatní příšerky to nijak zvlášť neznepokojilo. Dál navštěvovaly
+          svoje kamarády.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBrzy nato se nakazily další dvě příšerky. Byl to
+          ten samý virus! Zdálo se, že ho chytly od svého kamaráda.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirus se pomalu šířil mezi ostatní příšerky v okolí.
+          Zdravé příšerky se začaly obávat, že se nákaze nikdo nevyhne. A ty nakažené
+          měly strach, že virem nakazí všechny ostatní.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Zastavení šíření\nNaštěstí po prostudování
+          viru učinili obyvatelé Města příšerek důležitý objev. Uvědomili si, že pravděpodobnost
+          šíření viru se sníží, když budou přes ústa nosit roušku. S nasazenými rouškami
+          bylo méně pravděpodobné, že by nakažené příšerky předaly virus těm zdravým.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Co bude dál?\n\nDnes napíšete kód na vytvoření a spuštění vlastní **simulace**
+          šíření viru ve Městě příšerek. Simulace je počítačový model procesu nebo
+          systému. Naučte se kód a předpovězte, co bude dál s obyvateli Města příšerek.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Jak rychle se virus rozšíří?*\n\n*
+          *Nakazí se všichni?*\n\n* *Jak pomůžou roušky?*\n\n\nAž to budete mít, podělte
+          se o svou simulaci s ostatními. A šiřte zprávu o tom, co podle vás můžeme
+          udělat, abychom ochránili zdraví ostatních obyvatel, až virus dorazí k nám
+          do města. \n"
+      CSD U3 Entertainment:
+        markdown: |-
+          # Začni své hledání
+
+          Aby jsi nalez více o tom jakou roli hraje počítačová věda a programování v zábavě, musíš provést malý průzkum. Zkus vyhledat "Počítačová věda a &#95;&#95;&#95;&#95;&#95;&#95;", vyzkoušej vyhledání pro různé typy zábavy jako je film, televize, hudba, hry, animace, móda, atd.
+      CSD U3 Entertainment_2018_2019:
+        markdown: |-
+          # Začni své hledání
+
+          Aby jsi nalez více o tom jakou roli hraje počítačová věda a programování v zábavě, musíš provést malý průzkum. Zkus vyhledat "Počítačová věda a &#95;&#95;&#95;&#95;&#95;&#95;", vyzkoušej vyhledání pro různé typy zábavy jako je film, televize, hudba, hry, animace, móda, atd.
+        teacher_markdown: "Zde je několik webových stánek, kde mohou studenti začít.
+          Tyto stránky jsou obecně vhodné pro školy, ale jjich obsah se mění velice
+          často, proto **výrazně doporučujeme aby jste zkontrolovali každou stránku
+          na nevhodný obsah než ji budete sdílet se studenty**.\n\n[key]\n\n## Inside
+          the Magic - [insidethemagic.net](http://www.insidethemagic.net)\n\n### Přehled\n\nThis
+          site is focused on news about Disney, but you might be surprised by the
+          large role that CS plays in all of their different forms of entertainment.
+          Because this isn't a CS focused site, you'll need to use the search function
+          to find relevant articles.\n\n### Relevantní oblasti\n\n* Film/TV\n* Animace\n*
+          Robotika/Animatronika\n* Hry\n\n## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)\n\n###
+          Přehled\n\nVidea představující řadu lidí pracujících v různých oblastech
+          herního průmyslu a hovořících o tom, co dělají.\n\n### Relevantní oblasti\n\n*
+          Hry\n* Animace\n* Umění\n\n## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)\n\n###
+          Přehled\n\nMusic Think Tank je blog zaměřený na lidi pracující v hudebním
+          průmyslu. Není to stránka zaměřená na CS, ale vyhledáním hesla \"computer
+          science\" nebo \"programming\" si můžete najít zajímavé články.\n\n### Relevantní
+          oblasti\n\n* Hudba\n\n## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)\n\n###
+          Přehled\n\nI když tento podcast příliš nepředstavuje běžné profesionální
+          programování (stejně jako lidi, kteří se tím živí), je skvělým zdrojem informací
+          o různých způsobech, jak si amatéři hrají s programováním. \n\n### Relevantní
+          oblasti\n\n* Vše\n\n[/key]\n"

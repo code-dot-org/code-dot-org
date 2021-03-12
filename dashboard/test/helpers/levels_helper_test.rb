@@ -1,9 +1,11 @@
 require 'test_helper'
+require 'webmock/minitest'
 
 class LevelsHelperTest < ActionView::TestCase
   include Devise::Test::ControllerHelpers
 
   def sign_in(user)
+    user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
     stubs(:current_user).returns user
   end
@@ -423,30 +425,31 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not can_view_solution?
   end
 
-  test 'build_script_level_path differentiates lockable and non-lockable' do
-    # (position 1) Lockable 1
-    # (position 2) Non-Lockable 1
-    # (position 3) Lockable 2
-    # (position 4) Lockable 3
-    # (position 5) Non-Lockable 2
+  test 'build_script_level_path differentiates lesson and survey' do
+    # (position 1) Survey 1 (lockable: true, has_lesson_plan: false)
+    # (position 2) Lesson 1 (lockable: false, has_lesson_plan: false)
+    # (position 3) Survey 2 (lockable: true, has_lesson_plan: false)
+    # (position 4) Survey 3 (lockable: true, has_lesson_plan: false)
+    # (position 5) Lesson 2 (lockable: true, has_lesson_plan: true)
+    # (position 6) Lesson 3 (lockable: false, has_lesson_plan: true)
 
     input_dsl = <<~DSL
-      lesson 'Lockable1',
-        lockable: true;
+      lesson 'Survey1', display_name: 'Survey1', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment1';
 
-      lesson 'Nonockable1'
+      lesson 'Lesson1', display_name: 'Lesson1', has_lesson_plan: false
       assessment 'NonLockableAssessment1';
 
-      lesson 'Lockable2',
-        lockable: true;
+      lesson 'Survey2', display_name: 'Survey2', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment2';
 
-      lesson 'Lockable3',
-        lockable: true;
+      lesson 'Survey3', display_name: 'Survey3', has_lesson_plan: false, lockable: true;
       assessment 'LockableAssessment3';
 
-      lesson 'Nonockable2'
+      lesson 'Lesson2', display_name: 'Lesson2', has_lesson_plan: true, lockable: true;
+      assessment 'LockableAssessment4';
+
+      lesson 'Lesson3', display_name: 'Lesson3', has_lesson_plan: true
       assessment 'NonLockableAssessment2';
     DSL
 
@@ -454,6 +457,7 @@ class LevelsHelperTest < ActionView::TestCase
     create :level, name: 'NonLockableAssessment1'
     create :level, name: 'LockableAssessment2'
     create :level, name: 'LockableAssessment3'
+    create :level, name: 'LockableAssessment4'
     create :level, name: 'NonLockableAssessment2'
 
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
@@ -492,11 +496,17 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 2, stage.relative_position
     assert_equal '/s/test_script/stage/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+
+    stage = script.lessons[5]
+    assert_equal 6, stage.absolute_position
+    assert_equal 3, stage.relative_position
+    assert_equal '/s/test_script/stage/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/stage/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
   test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
     input_dsl = <<~DSL
-      lesson 'Test bonus level links'
+      lesson 'Test bonus level links', display_name: 'Test bonus level links'
       level 'Level1'
       level 'BonusLevel1', bonus: true
     DSL
@@ -521,7 +531,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'build_script_level_path handles bonus levels with or without solutions' do
     input_dsl = <<~DSL
-      lesson 'My cool stage'
+      lesson 'My cool stage', display_name: 'My cool stage'
       level 'Level1'
       level 'Level2'
       level 'BonusLevel1', bonus: true
@@ -643,7 +653,7 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal 'Test trailing dot in value.', data_t('multi.random question', 'Test trailing dot in key.')
   end
 
-  test 'block options are localized' do
+  test 'function block options are localized' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
     toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
@@ -679,6 +689,38 @@ class LevelsHelperTest < ActionView::TestCase
     new_start = start.sub("details", start_translated_name)
     new_start = new_start.sub("function description", start_translated_description)
     new_start = new_start.sub("parameter", start_translated_parameter)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, start
+
+    options = blockly_options
+    assert_equal new_toolbox, options[:level]["toolbox"]
+    assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'variable block options are localized' do
+    toolbox = "<xml><block type=\"variables_get\"><title name=\"VAR\">length</title></block></xml>"
+    toolbox_translated_name = "lunghezza"
+    @level.toolbox_blocks = toolbox
+
+    start = "<xml><block type=\"parameters_get\"><title name=\"VAR\">points</title></block></xml>"
+    start_translated_name = "punti"
+    @level.start_blocks = start
+
+    I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "variable_names" => {
+          "length" =>  toolbox_translated_name
+        },
+        "parameter_names" => {
+          "points" => start_translated_name
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("length", toolbox_translated_name)
+    new_start = start.sub("points", start_translated_name)
     refute_equal new_toolbox, toolbox
     refute_equal new_start, start
 
@@ -802,5 +844,37 @@ class LevelsHelperTest < ActionView::TestCase
       "<div class=\"aspect-ratio\">"\
       "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
       "</div>"
+  end
+
+  test 'sets hint prompt attempts threshold in options for level in csf script' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_equal level_options[:hintPromptAttemptsThreshold], @level.hint_prompt_attempts_threshold
+  end
+
+  test 'sets hint prompt attempts threshold in options to default if not already set' do
+    @script = create :csf_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_equal level_options[:hintPromptAttemptsThreshold], 6.5
+  end
+
+  test 'does not set hint prompt attempts threshold in options for level in csp script' do
+    @script = create :csp_script
+    @level = create :level
+    @lesson = create :lesson
+    @script_level = create :script_level, levels: [@level], lesson: @lesson
+    @level.hint_prompt_attempts_threshold = 6
+    level_options = {}
+    set_hint_prompt_options(level_options)
+    assert_nil level_options[:hintPromptAttemptsThreshold]
   end
 end

@@ -1,0 +1,28 @@
+name 'csp-u1-exam1-lossless-compression_2021'
+height 'auto'
+
+question 'Which of the following is true of lossy and lossless compression algorithms?'
+wrong ‘Lossy compression algorithms are used when perfect reconstruction of the original data is important.’
+right ‘Lossy compression algorithms are typically better than lossless compression algorithms at reducing the number of bits needed to represent a piece of data.’
+wrong ‘Lossless compression algorithms are only used to compress text data.’
+wrong ‘Lossless compression algorithms only allow for an approximate reconstruction of the original data.’
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since lossless compression keeps all the information from the original item, it cannot do as good a job of reducing the number of bits as lossy compression where some of the original information is lost. 
+
+[Lesson 9 - Lossless Compression](https://curriculum.code.org/csp-20/unit1/9/) and [Lesson 10 - Lossy Compression](https://curriculum.code.org/csp-20/unit1/10/) demonstrated the similarities and differences between these two compression methods.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-1.D.4: Lossless data compression algorithms can usually reduce the number of bits stored or transmitted while guaranteeing complete reconstruction of the original data.
+
+* DAT-1.D.5: Lossy data compression algorithms can significantly reduce the number of bits stored or transmitted but only allow reconstruction of an approximation of the original data.
+
+* DAT-1.D.6: Lossy data compression algorithms can usually reduce the number of bits stored or transmitted more than lossless compression algorithms.
+:::
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

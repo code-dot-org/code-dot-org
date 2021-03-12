@@ -95,24 +95,20 @@ class ScriptsController < ApplicationController
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
       File.delete(filename) if File.exist?(filename)
+      filename = "config/scripts_json/#{@script.name}.script_json"
+      File.delete(filename) if File.exist?(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Script.model_name.human)
   end
 
   def edit
-    beta = params[:beta].present?
-    if @script.script_levels.any?(&:has_experiment?)
-      beta = false
-      beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
-    end
+    raise "The new script editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {
-      script: @script ? @script.summarize_for_edit : {},
+      script: @script ? @script.summarize_for_script_edit : {},
       has_course: @script&.unit_groups&.any?,
-      i18n: @script ? @script.summarize_i18n : {},
-      beta: beta,
-      betaWarning: beta_warning,
-      levelKeyList: beta && Level.key_list,
+      i18n: @script ? @script.summarize_i18n_for_edit : {},
+      levelKeyList: @script.is_migrated ? Level.key_list : {},
       lessonLevelData: @script_file,
       locales: options_for_locale_select,
       script_families: ScriptConstants::FAMILY_NAMES,
@@ -122,11 +118,20 @@ class ScriptsController < ApplicationController
   end
 
   def update
+    if params[:old_script_text]
+      current_script_text = ScriptDSL.serialize_lesson_groups(@script).strip
+      old_script_text = params[:old_script_text].strip
+      if old_script_text != current_script_text
+        msg = "Could not update the script because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again."
+        raise msg
+      end
+    end
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
+      @script.reload
+      render json: @script.summarize_for_script_edit
     else
-      render action: 'edit'
+      render(status: :not_acceptable, json: @script.errors)
     end
   end
 
@@ -192,20 +197,25 @@ class ScriptsController < ApplicationController
       :project_widget_visible,
       :lesson_extras_available,
       :has_verified_resources,
-      :has_lesson_plan,
       :tts,
       :is_stable,
-      :script_announcements,
+      :is_course,
+      :show_calendar,
+      :weekly_instructional_minutes,
+      :is_migrated,
+      :announcements,
       :pilot_experiment,
       :editor_experiment,
+      :background,
+      :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:hidden] = !h[:visible_to_teachers]
-    h[:script_announcements] = JSON.parse(h[:script_announcements]) if h[:script_announcements]
+    h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
     h.delete(:visible_to_teachers)
     h
   end
@@ -217,6 +227,7 @@ class ScriptsController < ApplicationController
       :description_audience,
       :description_short,
       :description,
+      :student_description,
       :stage_descriptions
     ).to_h
   end

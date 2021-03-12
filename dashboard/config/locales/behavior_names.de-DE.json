@@ -1058,6 +1058,10 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend"
         },
+        "courseF_extras_sim": {
+          "wandering 2": "Wanderung 2",
+          "wandering 1": "Wanderung 1"
+        },
         "courseF_project_1": {
           "flying south and loop": "nach dem Süden fliegend und Schleife",
           "drive south and loop": "nach dem Süden fahrend und Schleife",
@@ -1074,6 +1078,134 @@
           "moving west": "nach Westen gehend",
           "patrolling": "patrouillierend",
           "swimming left and right": "links und rechts schwimmend"
+        },
+        "outbreak1": {
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
+        },
+        "outbreak2": {
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
+        },
+        "outbreak3": {
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
+        },
+        "outbreak4": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
+        },
+        "outbreak5": {
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
+        },
+        "outbreak6": {
+          "wandering": "wandernd",
+          "recovering": "Wiederherstellen"
+        },
+        "outbreak7": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "moving left and right": "rechts und links bewegen"
+        },
+        "outbreak8": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "moving left and right": "rechts und links bewegen"
+        },
+        "outbreak_freeplay": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "recovering": "Wiederherstellen",
+          "moving left and right": "rechts und links bewegen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "swimming left and right": "links und rechts schwimmend",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "wandering": "wandernd"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "Wiederherstellen",
+          "wandering": "wandernd",
+          "moving east": "nach Osten gehend",
+          "spinning left": "linksdrehend",
+          "spinning right": "rechtsdrehend",
+          "shrinking": "schrumpfend",
+          "growing": "wachsend",
+          "moving south": "nach Süden gehend",
+          "moving left and right": "rechts und links bewegen",
+          "moving north": "nach Norden gehend",
+          "jittering": "zitternd",
+          "moving west": "nach Westen gehend",
+          "patrolling": "patrouillierend",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten"
         }
       }
     }

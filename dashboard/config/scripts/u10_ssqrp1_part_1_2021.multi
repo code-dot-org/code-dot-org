@@ -1,0 +1,22 @@
+name 'U10 SSQRP1 part 1_2021'
+editor_experiment ''
+
+right 'the grocery list the user input'
+wrong 'the location of the grocery store'
+wrong 'the user\'s photo album on their smartphone'
+wrong 'the user\'s current location'
+
+
+markdown <<MARKDOWN
+## Single-Select Questions with Reading Passage #1
+
+### GroceryGrabbr
+
+*The following passage will be used to answer questions #1 - #5*
+<br><br><br>
+Markus is finding that it takes too long to track down all of the groceries he needs to buy from a given store. *GroceryGrabbr* to the rescue! The app allows Markus to input his shopping list and search for his local grocery store in *GroceryGrabbr's* database. If his grocery store is there, Markus is all set to go! The database stores grocery items, cost, and item location information for each grocery store. When Markus walks into the store, a notification pops up on his smartphone letting him know that *GroceryGrabbr* is ready to get to work. Each of Markus' grocery items is displayed one at a time, along with the aisle number and shelf location. After Markus grabs his items off the shelf, he hits a button on the app to navigate to the next item. The list of items is arranged so that Markus follows the most efficient path through the grocery store. When Markus finishes shopping, the total amount of money his groceries cost is displayed, which allows him to double check the total cost with the cashier. *GroceryGrabbr* pays grocery stores a small amount of money for each user who successfully uses the app and checks out of the store with over one hundred dollars worth of groceries. 
+
+**Question:**
+Which of the following data must be obtained from the user\'s smartphone in order for *GroceryGrabbr* to suggest the order for picking up groceries?
+MARKDOWN
+

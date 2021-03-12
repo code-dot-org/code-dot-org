@@ -153,7 +153,7 @@ end
 def campaign_date(format)
   @country ||= hoc_detect_country
   type = HOC_COUNTRIES[@country]['type'] || 'default'
-  language = HOC_COUNTRIES[@country]['default_language']
+  language = @language || HOC_COUNTRIES[@country]['default_language']
   id = 'campaign_date_full'
 
   case format

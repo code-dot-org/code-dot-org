@@ -1,0 +1,14 @@
+<div class="col-33" style="padding-right: 20px;">
+
+{{ ai_vid_panel }}
+
+</div>
+
+<div class="col-66">
+
+<h3>Exploring the Ethics of AI panel discussion</h3>
+<p>Go deeper with some of our favorite AI experts! This panel discussion touches on important issues like algorithmic bias and the future of work. Pair it with our <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">AI & Ethics lesson plan</a> for a great introduction to the ethics of artificial intelligence!</p> 
+
+</div>
+
+<div style="clear: both"></div>

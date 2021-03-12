@@ -19,7 +19,7 @@
 #  index_pd_attendances_on_teacher_id                    (teacher_id)
 #
 
-class Pd::Attendance < ActiveRecord::Base
+class Pd::Attendance < ApplicationRecord
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :session, class_name: 'Pd::Session', foreign_key: :pd_session_id

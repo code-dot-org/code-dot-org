@@ -1,0 +1,30 @@
+name 'VPL - CSD Module 8 Overview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Module 8: CS Discoveries Virtual Professional Learning
+
+## Module 8 Overview
+
+Welcome to the asynchronous work for Module 8 for CS Discoveries!
+
+Module 8 is a continuation of Unit 6: Chapter 1 - The Design Process and you will explore how information is gathered from the user and how computers can sense and respond to their environment. Unit 6: Chapter 2 will be discussed during the Module 8 synchronous workshop. 
+
+The suggested alternatives to teaching Unit 6 will also be discussed during the Module 8 synchronous workshop.  Add any questions you have about the suggested alternatives to the "Questions from Asynchronous Work" slide. 
+
+The asynchronous tasks during this module should take about 90 minutes to complete, but you can start and stop at your own pace.
+
+
+
+**During this asynchronous work you will:**
+
+* Identify how the getProperty() block to gathers information from users
+* Review the resources for the end of chapter project in Lesson 9 for Unit 6: Chapter 1
+* Reflect on where you are in building an equitable and inclusive classroom
+
+**Note:** You are **NOT** required to have a Circuit Playground to complete the following activities.
+
+### Let's get started!
+MARKDOWN

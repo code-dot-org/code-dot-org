@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:00:09.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## DNS and Scalability\r\n\r\nIn your own words explain the following about the Domain Name System\r\n\r\n* What problem does the DNS solve?\r\n* How does the DNS help the world wide web scale so that billions of users can access billions of web pages?",
+    "encrypted_solution": "my4IuQ4j8K4qcG/pRDtc04eIWYleKQ/2ul1Fh8B6avM/KxZQbzD4PIqXKHpY\nIRoTodB4B8Z6clFU1N9fFUULk17ukADj0k45GggwF4PSZ4B19Y9trTg3o8al\n/YNknAeGgmZLyab+4YYyKCqdxHq8CMdTNIlLB3/rLggJC2lhf035GrRD468Y\nb3TETJ+jZY2TPekFxRVdR2gBjT1k7oz1hV+Nl+WgMHjzJIS12kcXxi/0kyg/\nAku4RsrmLmETvHG6Bhe25LY76VH+unarzKL+zw3WEqQMStfPiuiGi+TQqHkF\nMFMWY2ubPHlr+SNUamZdi80GS6w8OfA1XbBHl4ETQ+mZlvxFtWDwzCGJuZJF\nSnZyRSIynBlo9kQ61OrMp6ARVNHS1SgCDWsTirV8ZiOPKnPqJrC6mCnlvDGQ\nFJWihcfqMmjzF/1qPK6CJ02jxwpkbTZZCauNJoORBKQkgfFY2H1liaJ/Boy9\n3ohLEB7kZosDJYzZVjaQXhPcHxyRu7ICVj/f4D0raI92Lpdbq7bFlg==\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:37:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 16:58:58 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-08-19 17:33:41 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-14 01:06:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

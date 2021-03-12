@@ -19,7 +19,7 @@ FactoryGirl.define do
     reason_for_review "Fake reason."
 
     trait :autoretryable do
-      reason_for_review "Pardot::InvalidApiKeyException"
+      reason_for_review "Net::ReadTimeout"
     end
   end
 end

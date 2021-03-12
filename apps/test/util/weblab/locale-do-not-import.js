@@ -10,4 +10,4 @@
 require('../frame')();
 require('../../../build/package/js/en_us/weblab_locale.js');
 
-module.exports = window.blockly.weblab_locale;
+module.exports = window.locales.weblab_locale;

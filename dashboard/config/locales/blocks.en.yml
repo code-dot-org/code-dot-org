@@ -991,6 +991,8 @@ en:
             '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} begins {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} gets target {TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -999,6 +1001,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_beginCollectingData:
+        text: begin collecting data {BREAK} value {VALUE} with label {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} bounces off {TARGET}"
       gamelab_changePropBy:
@@ -1022,6 +1026,8 @@ en:
         text: "{SPRITE}"
       gamelab_comment:
         text: 'comment: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: number of {SPRITE}
       gamelab_createNewSprite:
@@ -1032,6 +1038,8 @@ en:
         text: being draggable
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
+      gamelab_followingTargets:
+        text: following targets
       gamelab_getAllSprites:
         text: all sprites
       gamelab_getProp:
@@ -1044,6 +1052,7 @@ en:
             '"y"': y position
             '"direction"': movement direction
             '"tint"': tint
+            '"speed"': speed
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
         options:
@@ -1056,10 +1065,18 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_hideHaiku:
+        text: hide haiku
       gamelab_hideTitleScreen:
         text: hide title screen
+      gamelab_ifVarEquals:
+        text: |-
+          if {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} costume is {COSTUME}"
       gamelab_isKeyPressed:
-        text: is {KEY} pressed
+        text: "{KEY} is pressed"
         options:
           KEY:
             '"up"': up
@@ -1139,6 +1156,14 @@ en:
             '"z"': z
       gamelab_locationAt:
         text: 'location x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} pixels {DIRECTION} of {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': North
+            '"East"': East
+            '"South"': South
+            '"West"': West
       gamelab_locationMouse:
         text: mouse location
       gamelab_locationOf:
@@ -1171,6 +1196,8 @@ en:
             '"West"': West
       gamelab_moveToward:
         text: move {SPRITE} pixels {DISTANCE} toward {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_patrollingUpDown:
@@ -1185,6 +1212,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_printHaiku:
+        text: show haiku {BREAK} poem title {TITLE} poem author {AUTHOR} line 1 {LINE1} line 2 {LINE2} line 3 {LINE3}
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -1199,6 +1228,8 @@ en:
         text: sprite {SPRITE} stops {BEHAVIOR}
       gamelab_removeTint:
         text: remove color from {THIS}
+      gamelab_repeatForever:
+        text: repeat forever
       gamelab_setAnimation:
         text: change {THIS} costume to {ANIMATION}
       gamelab_setBackground:
@@ -1237,6 +1268,20 @@ en:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
             undefined: none
+      gamelab_setBackgroundImageAs:
+        text: set background to {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: set new sprite default size to {SIZE}
+        options:
+          SIZE:
+            '100': large
+            '75': medium
+            '50': small
+            '25': extra small
+      gamelab_setPrompt:
+        text: prompt user {QUESTION} for variable {VAR}
+      gamelab_setPromptWithChoices:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       gamelab_setProp:
         text: set {SPRITE} {PROPERTY} to {VAL}
         options:
@@ -1246,6 +1291,7 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} to {N}%
         options:
@@ -1270,8 +1316,14 @@ en:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_stopCollectingData:
+        text: stop collecting data
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: tumbling
       gamelab_turn:
@@ -1299,8 +1351,12 @@ en:
             '"d"': d
       gamelab_whenLeftArrow:
         text: when left arrow pressed
+      gamelab_whenPromptAnswered:
+        text: when {VAR} answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
+      gamelab_whenSpriteCreated:
+        text: when {SPRITE} created
       gamelab_whenTouching:
         text: when {SPRITE1} touches {SPRITE2}
       gamelab_whenUpArrow:
@@ -1328,6 +1384,10 @@ en:
         text: while {SPRITE1} is touching {SPRITE2}
       gamelab_whileUpArrow:
         text: while up arrow pressed
+      gamelab_withPercentChance:
+        text: |-
+          if {NUM}% chance
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x coordinate of {SPRITE}
       gamelab_yLocationOf:
@@ -1345,6 +1405,10 @@ en:
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": not fish
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": my-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": not my-label
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}
       Mikelab_changeAnim:
         text: set {SPRITE}'s to costume to {COSTUME}
       Mikelab_changePropBy:
@@ -1545,6 +1609,8 @@ en:
             MOVES.Clown: not my-label
       Mikelab_isAnim:
         text: "{SPRITE}'s costume is {COSTUME}"
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'location x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1862,7 +1928,7 @@ en:
             '"stoneBricks"': stone bricks
             '"mossyStoneBricks"': mossy stone bricks
             '"crackedStoneBricks"': cracked stone bricks
-            '"decorativeStoneBricks"': decorative stone bricks
+            '"chiseledStoneBricks"': decorative stone bricks
             '"blueCoralBlock"': blue coral block
             '"pinkCoralBlock"': pink coral block
             '"magentaCoralBlock"': magenta coral block

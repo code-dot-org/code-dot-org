@@ -3,8 +3,8 @@
 # Table name: pd_post_course_surveys
 #
 #  id            :integer          not null, primary key
-#  form_id       :integer          not null
-#  submission_id :integer          not null
+#  form_id       :bigint           not null
+#  submission_id :bigint           not null
 #  answers       :text(65535)
 #  year          :string(255)
 #  user_id       :integer          not null
@@ -20,8 +20,12 @@
 #  index_pd_post_course_surveys_on_user_id                (user_id)
 #
 
+# NOTE: This is a legacy model and no new surveys should be added here. All new surveys should use Foorm.
+# This class is no longer actively synced via our JotForm cron jobs (fill_jotform_placeholders,
+# sync_jotforms, process_jotform_data).
+
 module Pd
-  class PostCourseSurvey < ActiveRecord::Base
+  class PostCourseSurvey < ApplicationRecord
     include JotFormBackedForm
 
     VALID_YEARS = [

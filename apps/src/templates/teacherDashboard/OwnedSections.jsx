@@ -21,6 +21,7 @@ import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 const styles = {
   button: {
@@ -37,6 +38,9 @@ const styles = {
     fontSize: 14,
     paddingBottom: 5,
     color: color.charcoal
+  },
+  spinner: {
+    marginTop: '10px'
   }
 };
 
@@ -93,7 +97,7 @@ class OwnedSections extends React.Component {
     const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
-      return null;
+      return <Spinner size="large" style={styles.spinner} />;
     }
 
     const hasSections = sectionIds.length > 0;

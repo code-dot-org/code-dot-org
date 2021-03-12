@@ -2,7 +2,10 @@
   .container
     #hoc-header-branding
       %a{href:resolve_url('/')}
-        %img{src: localized_image('/images/hour-of-code-logo.png'), alt: hoc_s(:hour_of_code)}
+        - if @language == 'es' || @language == 'la'
+          %img{src: localized_image('/images/hora-del-codigo-logo.png'), alt: hoc_s(:hour_of_code)}
+        -else
+          %img{src: localized_image('/images/hour-of-code-logo.png'), alt: hoc_s(:hour_of_code)}
     #hoc-header-main
       #language-dropdown
         = view :language_dropdown

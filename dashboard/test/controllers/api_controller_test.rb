@@ -128,8 +128,8 @@ class ApiControllerTest < ActionController::TestCase
   test "should get text_responses for section with script with text response" do
     script = create :script, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
-    lesson1 = create :lesson, script: script, name: 'First Stage', lesson_group: lesson_group
-    lesson2 = create :lesson, script: script, name: 'Second Stage', lesson_group: lesson_group
+    lesson1 = create :lesson, script: script, name: 'First Stage', key: 'First Stage', lesson_group: lesson_group
+    lesson2 = create :lesson, script: script, name: 'Second Stage', key: 'Second Stage', lesson_group: lesson_group
 
     # create 2 text_match levels
     level1 = create :text_match
@@ -592,9 +592,9 @@ class ApiControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_equal 2, body['linesOfCode']
     script_level = script.script_levels[1]
-    level_id = script_level.level.id
-    assert_equal 'perfect', body['levels'][level_id.to_s]['status']
-    assert_equal 100, body['levels'][level_id.to_s]['result']
+    level_id = script_level.level.id.to_s
+    assert_equal 'perfect', body['progress'][level_id]['status']
+    assert_equal 100, body['progress'][level_id]['result']
   end
 
   test "should get user progress for lesson" do
@@ -618,10 +618,11 @@ class ApiControllerTest < ActionController::TestCase
       stage_position: 1,
       level_position: 1
     }
+    result = {"status" => "perfect", "result" => 100}
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal nil, body['disableSocialShare']
-    assert_equal 100, body['progress'][level.id.to_s]
+    assert_nil body['disableSocialShare']
+    assert_equal result, body['progress'][level.id.to_s]
     assert_equal 'level source', body['lastAttempt']['source']
 
     assert_equal(
@@ -678,7 +679,7 @@ class ApiControllerTest < ActionController::TestCase
     }
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal({"linesOfCode" => 0, "linesOfCodeText" => 'Total lines of code: 0'}, body)
+    assert_equal({}, body)
     assert_equal(
       [
         {
@@ -836,19 +837,19 @@ class ApiControllerTest < ActionController::TestCase
     get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, page: 2, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
 
     # third page has only one student (of 5 total)
     get :section_level_progress, params: {section_id: @section.id, page: 3, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].keys.length
+    assert_equal 1, data['student_progress'].keys.length
 
     # if we request 1 per page, page 6 should still work (because page 5 gave
     # us a full page of data), but page 7 should fail
@@ -873,22 +874,22 @@ class ApiControllerTest < ActionController::TestCase
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
-    assert_equal 2, data['student_timestamps'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
+    assert_equal 2, data['student_last_updates'].keys.length
     assert_equal 3, data['pagination']['total_pages']
 
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].keys.length
-    assert_equal 2, data['student_timestamps'].keys.length
+    assert_equal 2, data['student_progress'].keys.length
+    assert_equal 2, data['student_last_updates'].keys.length
 
     # third page has only one student (of 5 total)
     get :section_level_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
     assert_response :success
     data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].keys.length
-    assert_equal 1, data['student_timestamps'].keys.length
+    assert_equal 1, data['student_progress'].keys.length
+    assert_equal 1, data['student_last_updates'].keys.length
   end
 
   test "should get paired icons for paired user levels" do

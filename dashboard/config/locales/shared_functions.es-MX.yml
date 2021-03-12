@@ -1,0 +1,13 @@
+---
+es-MX:
+  data:
+    shared_functions:
+      moving north: moviéndose al norte
+      moving south: moviéndose al sur
+      moving west: moviéndose al oeste
+      moving with arrow keys: moverse con las teclas de flecha
+      patrolling: patrullando
+      shrinking: encogiendose
+      spinning left: girando a la izquierda
+      spinning right: girando a la derecha
+      wandering: deambulando

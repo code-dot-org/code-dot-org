@@ -1,14 +1,14 @@
 <Unplugged>
   <config><![CDATA[{
-  "game_id": 31,
-  "created_at": "2018-03-26T16:21:16.000Z",
-  "level_num": "custom",
-  "user_id": 684,
   "properties": {
     "video_key": "CSF_Super_Digital_Citizen",
     "parent_level_id": 9308,
     "name_suffix": "_2018"
   },
+  "game_id": 31,
+  "level_num": "custom",
+  "created_at": "2018-03-26T16:21:16.000Z",
+  "user_id": 684,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2017-07-10 20:41:02 +0000\",\"changed\":[],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
 }]]></config>

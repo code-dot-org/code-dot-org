@@ -95,7 +95,7 @@ export default class AnimationPreview extends React.Component {
       ? nextAnimation.sourceSize
       : {x: 1, y: 1};
     this.setState({
-      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x),
+      framesPerRow: Math.floor(sourceSize.x / nextAnimation.frameSize.x) || 1,
       scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
@@ -134,6 +134,11 @@ export default class AnimationPreview extends React.Component {
     };
 
     const imageStyle = {
+      // The maxWidth and maxHeight params need to be 'none' for the animation previews to animate.
+      // Our animation previews involve scaling up the size of the spritesheet such that each frame fills the container.
+      // To do the animation, the spritesheet is moved around (using xOffset and yOffset).
+      // If the image is not allowed to exceed the size of the container, the animation will show the spritesheet with all of the frames rotating
+      // instead of a single appropriate frame at a time.
       maxWidth: 'none',
       maxHeight: 'none',
       width: scaledSourceSize.x,
@@ -141,6 +146,25 @@ export default class AnimationPreview extends React.Component {
       marginLeft: xOffset,
       marginTop: yOffset
     };
+    const backgroundImageStyle = {
+      borderRadius: 10,
+      height: '100%',
+      width: '100%'
+    };
+
+    if (
+      this.props.animationProps &&
+      this.props.animationProps.categories &&
+      this.props.animationProps.categories.includes('backgrounds')
+    ) {
+      return (
+        <img
+          onLoad={this.props.onPreviewLoad}
+          src={this.props.sourceUrl || EMPTY_IMAGE}
+          style={backgroundImageStyle}
+        />
+      );
+    }
 
     return (
       <div

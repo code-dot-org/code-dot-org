@@ -10,7 +10,21 @@ module ActiveSupport
 
       included do
         include ActiveSupport::Callbacks
-        define_callbacks :setup_all, :teardown_all
+
+        # It's not 100% clear why this is necessary, but here's what we do know:
+        #
+        # Between Rails 5.0 and 5.2, the implementation of ActiveSupport callbacks was refactored to
+        # improve the backtrace experience (https://github.com/rails/rails/pull/26147). This
+        # refactoring made some changes to the way the callbacks are stored on the class, and this
+        # change seems to have resulted in our extension not being correctly applied to descendant
+        # classes. Specifically, we found ourselves in a situation where these callbacks were
+        # defined correctly on the ActiveSupport:TestCase class, but only on that class.
+        #
+        # Our naive solution is to explicitly define the callbacks on all descendant classes here at
+        # inclusion time, rather than trying to rely on class inheritance as we did before.
+        ([self] + ActiveSupport::DescendantsTracker.descendants(self)).reverse_each do |target|
+          target.define_callbacks :setup_all, :teardown_all
+        end
       end
 
       module ClassMethods

@@ -53,24 +53,29 @@ const styles = {
 
 export class TeacherPanelProgressBubble extends React.Component {
   static propTypes = {
-    level: PropTypes.object.isRequired
+    // While this userLevel object does have the properties of a levelType object, can
+    // either be more like a userLevel object or a level object depenting on whether the
+    // user has made progress. For example, if the user has progress recorded, the id
+    // property of this object is the user_level id. In this case, to get the level id,
+    // use the level_id property.
+    userLevel: PropTypes.object.isRequired
   };
 
   render() {
-    const {level} = this.props;
+    const {userLevel} = this.props;
 
-    if (level.assessment && level.passed) {
-      level.status = LevelStatus.completed_assessment;
+    if (userLevel.assessment && userLevel.passed) {
+      userLevel.status = LevelStatus.completed_assessment;
     }
 
-    const number = level.levelNumber;
+    const number = userLevel.levelNumber;
 
-    const hideNumber = level.paired || level.bonus;
+    const hideNumber = userLevel.paired || userLevel.bonus;
 
     const style = {
       ...styles.main,
-      ...(level.isConceptLevel && styles.diamond),
-      ...levelProgressStyle(level, false)
+      ...(userLevel.isConceptLevel && styles.diamond),
+      ...levelProgressStyle(userLevel.status, userLevel.kind, false)
     };
 
     // Outer div here is used to make sure our bubbles all take up equivalent
@@ -87,13 +92,13 @@ export class TeacherPanelProgressBubble extends React.Component {
         <div style={style}>
           <div
             style={{
-              fontSize: level.paired || level.bonus ? 14 : 16,
+              fontSize: userLevel.paired || userLevel.bonus ? 14 : 16,
               ...styles.contents,
-              ...(level.isConceptLevel && styles.diamondContents)
+              ...(userLevel.isConceptLevel && styles.diamondContents)
             }}
           >
-            {level.paired && <FontAwesome icon="users" />}
-            {level.bonus && <FontAwesome icon="flag-checkered" />}
+            {userLevel.paired && <FontAwesome icon="users" />}
+            {userLevel.bonus && <FontAwesome icon="flag-checkered" />}
             {!hideNumber && <span>{number}</span>}
           </div>
         </div>

@@ -1,0 +1,210 @@
+{
+  "zh-TW": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "動作",
+              "Events": "事件",
+              "Loops": "迴圈",
+              "Math": "運算",
+              "Logic": "邏輯",
+              "Games/Score": "遊戲/分數"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "世界",
+              "Dancers": "舞者",
+              "Properties": "屬性",
+              "Events": "事件",
+              "Numbers": "運算",
+              "Logic": "邏輯"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "畫顆星星",
+                "description": "根據給予的點和邊來畫一個星星吧。",
+                "parameters": {
+                  "points": "分",
+                  "length": "長度"
+                }
+              },
+              "draw a circle": {
+                "name": "畫個圓形",
+                "description": "用提供的半徑畫一個圓",
+                "parameters": {
+                  "radius": "半徑"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "畫個風車",
+                "parameters": {
+                  "sides": "邊",
+                  "length": "長度",
+                  "repeat": "重複"
+                }
+              },
+              "draw a triangle": {
+                "name": "畫個三角形",
+                "parameters": {
+                  "length": "長度"
+                }
+              },
+              "draw a shape": {
+                "name": "畫個形狀",
+                "parameters": {
+                  "sides": "邊",
+                  "length": "長度"
+                }
+              },
+              "draw a house": {
+                "name": "畫個房子",
+                "parameters": {
+                  "length": "長度"
+                }
+              },
+              "draw a square": {
+                "name": "畫個正方形",
+                "parameters": {
+                  "length": "長度"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Sprites": "角色",
+              "Actions": "動作",
+              "Events": "事件",
+              "Behaviors": "行為"
+            },
+            "behavior_names": {
+              "shrinking": "縮小"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "世界",
+              "Dancers": "舞者",
+              "Properties": "屬性",
+              "Events": "事件",
+              "Numbers": "運算",
+              "Logic": "邏輯"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "動作",
+              "Brushes": "畫筆",
+              "Loops": "迴圈",
+              "Math": "運算",
+              "Logic": "邏輯",
+              "Functions": "函式",
+              "Variables": "變數"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Sprites": "角色",
+              "Locations": "座標",
+              "Actions": "動作",
+              "Events": "事件",
+              "Behaviors": "行為",
+              "Variables": "變數",
+              "Math": "運算",
+              "Logic": "邏輯",
+              "Functions": "函式",
+              "Text": "文字",
+              "Comments": "註解"
+            },
+            "behavior_names": {
+              "shrinking": "縮小"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "世界",
+              "Sprites": "角色",
+              "Locations": "座標",
+              "Actions": "動作",
+              "Events": "事件",
+              "Behaviors": "行為",
+              "Variables": "變數",
+              "Math": "運算",
+              "Logic": "邏輯",
+              "Functions": "函式",
+              "Text": "文字",
+              "Comments": "註解"
+            },
+            "behavior_names": {
+              "shrinking": "縮小"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "動作",
+              "Brushes": "畫筆",
+              "Loops": "迴圈",
+              "Math": "運算",
+              "Logic": "邏輯",
+              "Functions": "函式",
+              "Variables": "變數"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "世界",
+              "Sprites": "角色",
+              "Actions": "動作",
+              "Events": "事件",
+              "Logic": "邏輯",
+              "Math": "運算"
+            },
+            "behavior_names": {
+              "recovering": "恢復",
+              "shrinking": "縮小",
+              "moving left and right": "左右移動",
+              "moving with arrow keys": "使用方向鍵移動"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "世界",
+              "Sprites": "角色",
+              "Actions": "動作",
+              "Behaviors": "行為",
+              "Events": "事件",
+              "Locations": "座標",
+              "Logic": "邏輯",
+              "Loops": "迴圈",
+              "Math": "運算",
+              "Variables": "變數",
+              "Functions": "函式",
+              "Comments": "註解"
+            },
+            "behavior_names": {
+              "recovering": "恢復",
+              "shrinking": "縮小",
+              "moving left and right": "左右移動",
+              "moving with arrow keys": "使用方向鍵移動"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+name 'CSD U2 Sample CSS layout_2021'
+editor_experiment ''
+display_name 'Sample Website'
+css 'unplugged'
+markdown <<MARKDOWN
+# Sample Websites
+
+Click the website below to discover some new types of styling for your pages.
+
+|Sample 1| Sample 2|Sample 3|
+|-|-|-|
+|[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13 PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47 PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|
+
+
+MARKDOWN

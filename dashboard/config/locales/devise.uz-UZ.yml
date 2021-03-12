@@ -66,17 +66,17 @@ uz:
         ko‘ring
       confirmation_period_expired: "%{period} muddat ichida tasdiqlash kerak, iltimos
         yangisini so‘rang"
-      expired: tugagan, iltimos yangisini so‘rang
+      expired: muddati tugagan, iltimos yangisini so‘rang
       not_found: topilmadi
       not_locked: qulflanmagan
       not_saved:
         one: '1 ta xato %{resource} ni saqlashga yo‘l qo‘ymayapti:'
-        other: "%{count} ta xatolar %{resource} ni saqlashga yo‘l qo‘ymayapti:"
+        other: "%{count} ta xato %{resource} ni saqlashga yo‘l qo‘ymayapti:"
     invitations:
       send_instructions: Taklifnoma %{email} ga jo‘natildi.
-      invitation_token_invalid: Keltirilgan taklifnoma tokeni mavjud emas!
+      invitation_token_invalid: Taqdim etilgan taklifnoma tokeni mavjud emas!
       updated: Parolingiz muvaffaqiyatli o‘rnatildi. Endi tizimga kirishingiz mumkin.
-      no_invitations_remaining: Taklifnoma qolmadi
+      no_invitations_remaining: Hech qanday taklifnoma qolmadi
       invitation_removed: Taklifnomangiz o‘chirilgan.
       new:
         header: Taklifnoma jo‘nating
@@ -86,11 +86,11 @@ uz:
         submit_button: Mening parolimni o‘rnat
     mailer:
       invitation_instructions:
-        subject: Taklifnoma yo‘riqnomasi
+        subject: Taklifnoma yuborish yo‘riqnomasi
         hello: Salom %{email}
-        someone_invited_you: Kimdir sizni %{url}‘ga taklif qildi, siz uni quyidagi
-          link bo‘yicha qabul qilishingiz mumkin.
+        someone_invited_you: Kimdir sizni %{url}ga taklif qildi, siz quyidagi link
+          bo‘yicha taklifni qabul qilishingiz mumkin.
         accept: Taklifnomani qabul qilish
-        ignore: Agar siz taklifnomani qabul qilishni istamasangiz, bu xabarni e‘tiborsiz
+        ignore: Agar siz taklifnomani qabul qilishni istamasangiz, bu xabarni e’tiborsiz
           qoldirishingiz mumkin.<br />Hisobingiz yuqoridagi link bo‘yicha kirib tasdiqlanmaguncha
           faollashmaydi.

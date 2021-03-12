@@ -1,0 +1,263 @@
+{
+  "sk-SK": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Akcie",
+              "Events": "Udalosti",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Games/Score": "Hry/skóre"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Dancers": "Tanečníci",
+              "Properties": "Vlastnosti",
+              "Events": "Udalosti",
+              "Numbers": "Čísla",
+              "Logic": "Logické"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "nakresli hviezdu",
+                "description": "nakresli hviezdu s danými vrcholmi a dĺžkami strán",
+                "parameters": {
+                  "points": "body",
+                  "length": "dĺžka"
+                }
+              },
+              "draw a circle": {
+                "name": "nakresli kružnicu",
+                "description": "nakresli kruh s daným polomerom",
+                "parameters": {
+                  "radius": "polomer"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "nakresli veterník",
+                "parameters": {
+                  "sides": "Strany",
+                  "length": "dĺžka",
+                  "repeat": "opakuj"
+                }
+              },
+              "draw a triangle": {
+                "name": "nakresli trojuholník",
+                "parameters": {
+                  "length": "dĺžka"
+                }
+              },
+              "draw a shape": {
+                "name": "nakresli tvar",
+                "parameters": {
+                  "sides": "Strany",
+                  "length": "dĺžka"
+                }
+              },
+              "draw a house": {
+                "name": "nakresli dom",
+                "parameters": {
+                  "length": "dĺžka"
+                }
+              },
+              "draw a square": {
+                "name": "nakresli štvorec",
+                "parameters": {
+                  "length": "dĺžka"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Sprites": "Objekt \"sprite\"",
+              "Actions": "Akcie",
+              "Events": "Udalosti",
+              "Behaviors": "Správanie"
+            },
+            "behavior_names": {
+              "wandering": "túlať sa",
+              "moving east": "posúvať sa na východ",
+              "spinning left": "rýchlo sa otočiť vľavo",
+              "spinning right": "točenie vpravo",
+              "shrinking": "zmenšovať sa",
+              "growing": "rásť",
+              "moving south": "posúvať sa na juh",
+              "swimming left and right": "plávať vľavo a vpravo",
+              "moving north": "posúvať sa na sever",
+              "jittering": "chvieť sa",
+              "moving west": "posúvať sa na západ",
+              "patrolling": "hliadkovať"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Dancers": "Tanečníci",
+              "Properties": "Vlastnosti",
+              "Events": "Udalosti",
+              "Numbers": "Čísla",
+              "Logic": "Logické"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akcie",
+              "Brushes": "Štetce",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkcie",
+              "Variables": "Premenné"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Sprites": "Objekt \"sprite\"",
+              "Locations": "Miesta",
+              "Actions": "Akcie",
+              "Events": "Udalosti",
+              "Behaviors": "Správanie",
+              "Variables": "Premenné",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkcie",
+              "Text": "Text",
+              "Comments": "Komentáre"
+            },
+            "behavior_names": {
+              "moving east": "posúvať sa na východ",
+              "spinning left": "rýchlo sa otočiť vľavo",
+              "spinning right": "točenie vpravo",
+              "shrinking": "zmenšovať sa",
+              "growing": "rásť",
+              "moving south": "posúvať sa na juh",
+              "swimming left and right": "plávať vľavo a vpravo",
+              "moving north": "posúvať sa na sever",
+              "jittering": "chvieť sa",
+              "moving west": "posúvať sa na západ",
+              "patrolling": "hliadkovať",
+              "wandering": "túlať sa"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Sprites": "Objekt \"sprite\"",
+              "Locations": "Miesta",
+              "Actions": "Akcie",
+              "Events": "Udalosti",
+              "Behaviors": "Správanie",
+              "Variables": "Premenné",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkcie",
+              "Text": "Text",
+              "Comments": "Komentáre"
+            },
+            "behavior_names": {
+              "moving east": "posúvať sa na východ",
+              "spinning left": "rýchlo sa otočiť vľavo",
+              "spinning right": "točenie vpravo",
+              "shrinking": "zmenšovať sa",
+              "growing": "rásť",
+              "moving south": "posúvať sa na juh",
+              "swimming left and right": "plávať vľavo a vpravo",
+              "moving north": "posúvať sa na sever",
+              "jittering": "chvieť sa",
+              "moving west": "posúvať sa na západ",
+              "patrolling": "hliadkovať",
+              "wandering": "túlať sa"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Akcie",
+              "Brushes": "Štetce",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Logic": "Logické",
+              "Functions": "Funkcie",
+              "Variables": "Premenné"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Sprites": "Objekt \"sprite\"",
+              "Actions": "Akcie",
+              "Events": "Udalosti",
+              "Logic": "Logické",
+              "Math": "Matematické"
+            },
+            "behavior_names": {
+              "recovering": "zotavenie",
+              "wandering": "túlať sa",
+              "moving east": "posúvať sa na východ",
+              "spinning left": "rýchlo sa otočiť vľavo",
+              "spinning right": "točenie vpravo",
+              "shrinking": "zmenšovať sa",
+              "growing": "rásť",
+              "moving south": "posúvať sa na juh",
+              "moving left and right": "pohybovať sa vľavo a vpravo",
+              "moving north": "posúvať sa na sever",
+              "jittering": "chvieť sa",
+              "moving west": "posúvať sa na západ",
+              "patrolling": "hliadkovať",
+              "moving with arrow keys": "posúvanie klávesami so šípkami"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Prostredie",
+              "Sprites": "Objekt \"sprite\"",
+              "Actions": "Akcie",
+              "Behaviors": "Správanie",
+              "Events": "Udalosti",
+              "Locations": "Miesta",
+              "Logic": "Logické",
+              "Loops": "Cykly",
+              "Math": "Matematické",
+              "Variables": "Premenné",
+              "Functions": "Funkcie",
+              "Comments": "Komentáre"
+            },
+            "behavior_names": {
+              "recovering": "zotavenie",
+              "wandering": "túlať sa",
+              "moving east": "posúvať sa na východ",
+              "spinning left": "rýchlo sa otočiť vľavo",
+              "spinning right": "točenie vpravo",
+              "shrinking": "zmenšovať sa",
+              "growing": "rásť",
+              "moving south": "posúvať sa na juh",
+              "moving left and right": "pohybovať sa vľavo a vpravo",
+              "moving north": "posúvať sa na sever",
+              "jittering": "chvieť sa",
+              "moving west": "posúvať sa na západ",
+              "patrolling": "hliadkovať",
+              "moving with arrow keys": "posúvanie klávesami so šípkami"
+            }
+          }
+        }
+      }
+    }
+  }
+}

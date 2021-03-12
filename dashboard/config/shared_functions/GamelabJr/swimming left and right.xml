@@ -4,7 +4,7 @@
     <arg name="this sprite" type="Sprite"/>
     <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
   </mutation>
-  <title name="NAME">swimming left and right</title>
+  <title name="NAME" id="swimming left and right">swimming left and right</title>
   <statement name="STACK">
     <block type="controls_if">
       <mutation elseif="1"/>
@@ -76,8 +76,13 @@
             </block>
           </value>
           <value name="DISTANCE">
-            <block type="math_number">
-              <title name="NUM">5</title>
+            <block type="gamelab_getProp">
+              <title name="PROPERTY">"speed"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
             </block>
           </value>
           <next>

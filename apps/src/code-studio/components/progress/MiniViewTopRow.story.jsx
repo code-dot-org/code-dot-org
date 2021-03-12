@@ -4,6 +4,7 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 
 const initialState = {
   progress: {
+    lessonGroups: [],
     stages: [
       {
         levels: []

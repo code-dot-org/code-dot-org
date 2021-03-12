@@ -1,0 +1,263 @@
+{
+  "ru-RU": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Действия",
+              "Events": "События",
+              "Loops": "Циклы",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Games/Score": "Игры/Счет"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Мир",
+              "Dancers": "Танцоры",
+              "Properties": "Свойства",
+              "Events": "События",
+              "Numbers": "Числа",
+              "Logic": "Логика"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "нарисовать звезду",
+                "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины",
+                "parameters": {
+                  "points": "очки",
+                  "length": "длина"
+                }
+              },
+              "draw a circle": {
+                "name": "нарисовать круг",
+                "description": "нарисуйте круг заданного радиуса",
+                "parameters": {
+                  "radius": "радиус"
+                }
+              },
+              "draw a pinwheel": {
+                "name": "нарисовать вертушку",
+                "parameters": {
+                  "sides": "стороны",
+                  "length": "длина",
+                  "repeat": "повторить"
+                }
+              },
+              "draw a triangle": {
+                "name": "нарисовать треугольник",
+                "parameters": {
+                  "length": "длина"
+                }
+              },
+              "draw a shape": {
+                "name": "нарисовать фигуру",
+                "parameters": {
+                  "sides": "стороны",
+                  "length": "длина"
+                }
+              },
+              "draw a house": {
+                "name": "нарисовать дом",
+                "parameters": {
+                  "length": "длина"
+                }
+              },
+              "draw a square": {
+                "name": "нарисовать квадрат",
+                "parameters": {
+                  "length": "длина"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Мир",
+              "Sprites": "Спрайты",
+              "Actions": "Действия",
+              "Events": "События",
+              "Behaviors": "Режимы работы"
+            },
+            "behavior_names": {
+              "wandering": "блуждание",
+              "moving east": "движение на восток",
+              "spinning left": "левостороннее вращение",
+              "spinning right": "правостороннее вращение",
+              "shrinking": "уменьшение",
+              "growing": "увеличение",
+              "moving south": "движущийся на юг",
+              "swimming left and right": "плавание налево и направо",
+              "moving north": "движение на север",
+              "jittering": "дрожание",
+              "moving west": "движение на запад",
+              "patrolling": "патрулирование"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "World": "Мир",
+              "Dancers": "Танцоры",
+              "Properties": "Свойства",
+              "Events": "События",
+              "Numbers": "Числа",
+              "Logic": "Логика"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Действия",
+              "Brushes": "Кисти",
+              "Loops": "Циклы",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "функции",
+              "Variables": "Переменные"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Мир",
+              "Sprites": "Спрайты",
+              "Locations": "Места",
+              "Actions": "Действия",
+              "Events": "События",
+              "Behaviors": "Режимы работы",
+              "Variables": "Переменные",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "функции",
+              "Text": "Текст",
+              "Comments": "Комментарии"
+            },
+            "behavior_names": {
+              "moving east": "движение на восток",
+              "spinning left": "левостороннее вращение",
+              "spinning right": "правостороннее вращение",
+              "shrinking": "уменьшение",
+              "growing": "увеличение",
+              "moving south": "движущийся на юг",
+              "swimming left and right": "плавание налево и направо",
+              "moving north": "движение на север",
+              "jittering": "дрожание",
+              "moving west": "движение на запад",
+              "patrolling": "патрулирование",
+              "wandering": "блуждание"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "World": "Мир",
+              "Sprites": "Спрайты",
+              "Locations": "Места",
+              "Actions": "Действия",
+              "Events": "События",
+              "Behaviors": "Режимы работы",
+              "Variables": "Переменные",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "функции",
+              "Text": "Текст",
+              "Comments": "Комментарии"
+            },
+            "behavior_names": {
+              "moving east": "движение на восток",
+              "spinning left": "левостороннее вращение",
+              "spinning right": "правостороннее вращение",
+              "shrinking": "уменьшение",
+              "growing": "увеличение",
+              "moving south": "движущийся на юг",
+              "swimming left and right": "плавание налево и направо",
+              "moving north": "движение на север",
+              "jittering": "дрожание",
+              "moving west": "движение на запад",
+              "patrolling": "патрулирование",
+              "wandering": "блуждание"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Действия",
+              "Brushes": "Кисти",
+              "Loops": "Циклы",
+              "Math": "Математика",
+              "Logic": "Логика",
+              "Functions": "функции",
+              "Variables": "Переменные"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "World": "Мир",
+              "Sprites": "Спрайты",
+              "Actions": "Действия",
+              "Events": "События",
+              "Logic": "Логика",
+              "Math": "Математика"
+            },
+            "behavior_names": {
+              "recovering": "выздоровление",
+              "wandering": "блуждание",
+              "moving east": "движение на восток",
+              "spinning left": "левостороннее вращение",
+              "spinning right": "правостороннее вращение",
+              "shrinking": "уменьшение",
+              "growing": "увеличение",
+              "moving south": "движущийся на юг",
+              "moving left and right": "перемещение влево и вправо",
+              "moving north": "движение на север",
+              "jittering": "дрожание",
+              "moving west": "движение на запад",
+              "patrolling": "патрулирование",
+              "moving with arrow keys": "передвижение клавишами со стрелками"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "World": "Мир",
+              "Sprites": "Спрайты",
+              "Actions": "Действия",
+              "Behaviors": "Режимы работы",
+              "Events": "События",
+              "Locations": "Места",
+              "Logic": "Логика",
+              "Loops": "Циклы",
+              "Math": "Математика",
+              "Variables": "Переменные",
+              "Functions": "функции",
+              "Comments": "Комментарии"
+            },
+            "behavior_names": {
+              "recovering": "выздоровление",
+              "wandering": "блуждание",
+              "moving east": "движение на восток",
+              "spinning left": "левостороннее вращение",
+              "spinning right": "правостороннее вращение",
+              "shrinking": "уменьшение",
+              "growing": "увеличение",
+              "moving south": "движущийся на юг",
+              "moving left and right": "перемещение влево и вправо",
+              "moving north": "движение на север",
+              "jittering": "дрожание",
+              "moving west": "движение на запад",
+              "patrolling": "патрулирование",
+              "moving with arrow keys": "передвижение клавишами со стрелками"
+            }
+          }
+        }
+      }
+    }
+  }
+}

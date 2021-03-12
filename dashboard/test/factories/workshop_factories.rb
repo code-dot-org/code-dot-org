@@ -1,11 +1,13 @@
 # Most academic year workshops are one day workshops.
 # These specific workshop types are two day workshops.
-TWO_DAY_AYW_SUBJECTS = [
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2,
-  Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2,
-  Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4
-]
+unless defined? TWO_DAY_AYW_SUBJECTS
+  TWO_DAY_AYW_SUBJECTS = [
+    Pd::Workshop::SUBJECT_CSD_WORKSHOP_1_2,
+    Pd::Workshop::SUBJECT_CSD_WORKSHOP_3_4,
+    Pd::Workshop::SUBJECT_CSP_WORKSHOP_1_2,
+    Pd::Workshop::SUBJECT_CSP_WORKSHOP_3_4
+  ]
+end
 
 #
 # Factories for different types of PD workshops
@@ -158,6 +160,7 @@ FactoryGirl.define do
       on_map false         # Never on the map
       funded               # More than half are funded
       num_facilitators 2   # Most have 2 facilitators
+      suppress_email true  # As of 2020-2021 school year, all AYW should suppress reminder emails.
 
       # Some specific academic year workshops are usually two days instead of one.
       # Add a trait making it easy to specify that we're testing a two-day workshop.

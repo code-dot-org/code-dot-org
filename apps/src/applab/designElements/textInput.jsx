@@ -65,12 +65,12 @@ class TextInputProperties extends React.Component {
         />
         <ColorPickerPropertyRow
           desc={'text color'}
-          initialValue={elementUtils.rgb2hex(element.style.color)}
+          initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
           desc={'background color'}
-          initialValue={elementUtils.rgb2hex(element.style.backgroundColor)}
+          initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <FontFamilyPropertyRow
@@ -129,17 +129,8 @@ class TextInputEvents extends React.Component {
 
   getChangeEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "change", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' entered text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} entered text: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "change", ${callback});`;
   }
 
   insertChange = () => {
@@ -148,17 +139,8 @@ class TextInputEvents extends React.Component {
 
   getInputEventCode() {
     const id = elementUtils.getId(this.props.element);
-    const code =
-      'onEvent("' +
-      id +
-      '", "input", function(event) {\n' +
-      '  console.log("' +
-      id +
-      ' current text: " + getText("' +
-      id +
-      '"));\n' +
-      '});\n';
-    return code;
+    const callback = `function( ) {\n\tconsole.log("${id} current text: " + getText("${id}"));\n}`;
+    return `onEvent("${id}", "input", ${callback});`;
   }
 
   insertInput = () => {

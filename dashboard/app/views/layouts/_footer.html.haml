@@ -1,10 +1,14 @@
 - full_width = local_assigns[:full_width]
 .navbar-static-top.footer
-  .container{ style: 'padding: 10px;' + (full_width ? 'width: 855px; margin-left: 25px;' : '') }
+  .container{ style: 'padding: 10px;' + (full_width ? 'margin: auto' : '') }
     .row
-      .span8{style: (full_width ? 'width: 560px;' : '')}
+      .span8{style: (full_width ? 'max-width: 80%;' : '')}
         - piped_spaces = full_width ? ' | ' : '&nbsp; | &nbsp;'
-        = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
+        - privacy_updated = DCDO.get('recent_privacy_policy_update', nil)
+        - if privacy_updated
+          = link_to t('footer.privacy_updated'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
+        - else
+          = link_to t('footer.privacy'), CDO.code_org_url('/privacy'), style: 'color: #ffa400;'
         .dim!= piped_spaces
         = link_to t('footer.translate'), CDO.code_org_url('/translate')
         .dim!= piped_spaces
@@ -18,10 +22,15 @@
           = sanitize(t('footer.help_from_html_old'), tags: %w(a br), attributes: %w(href))
           %br/
           = sanitize(t('footer.art_from_html_old', current_year: Time.now.year), tags: %w(a br), attributes: %w(href))
-          %br/
+          = sanitize(t('footer.google_copyright'), tags: %w(a br), attributes: %w(href))
           = sanitize(t('footer.powered_by_aws'), tags: %w(a br), attributes: %w(href))
+          %br/
+          = sanitize(t('footer.built_on_github'), tags: %w(a br), attributes: %w(href))
+        %div.powered-by-aws
+          %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+            %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
 
-      .span3{style: 'text-align: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
+      .span3{style: 'float: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
 
         -# NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
         -# user input or to persist data without also updating it to enforce UTF-8

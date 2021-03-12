@@ -5,7 +5,7 @@ module SchoolInfoInterstitialHelper
 
     return false if user.account_age_days < 7
 
-    # Interstitial should pop up the first time for the teacher if it has been at least 30 days since the teacher signed
+    # Interstitial should pop up the first time for the teacher if it has been at least 7 days since the teacher signed
     # up for an account AND the teacher hasn’t previously filled out all the fields already (e.g. as part
     # of workshop registration).
     return false if Queries::SchoolInfo.last_complete(user)
@@ -14,11 +14,6 @@ module SchoolInfoInterstitialHelper
       days_since_interstitial_seen = (DateTime.now - user.last_seen_school_info_interstitial.to_datetime).to_i
       return false if days_since_interstitial_seen < 7
     end
-
-    # We skip validation as some of our users (particularly teachers) do not pass our own
-    # validations (often because they are missing an email).
-    user.last_seen_school_info_interstitial = DateTime.now
-    user.save(validate: false)
 
     return true
   end
@@ -44,14 +39,13 @@ module SchoolInfoInterstitialHelper
     check_last_seen_school_info_interstitial = user.last_seen_school_info_interstitial&.to_datetime.nil? ||
       user.last_seen_school_info_interstitial.to_datetime < 7.days.ago
 
-    show_dialog = check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
+    check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
+  end
 
-    if show_dialog
-      # Check to ensure last seen school info interstitial is saved.
-      user.last_seen_school_info_interstitial = DateTime.now
-      user.save(validate: false)
-    end
-
-    show_dialog
+  def self.update_last_seen_timestamp(user)
+    # We skip validation as some of our users (particularly teachers) do not pass our own
+    # validations (often because they are missing an email).
+    user.last_seen_school_info_interstitial = DateTime.now
+    user.save(validate: false)
   end
 end

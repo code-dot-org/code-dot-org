@@ -3,12 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {ImagePreview} from './AniGifPreview';
 import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
-import {openDialog} from '@cdo/apps/redux/instructionsDialog';
 
-import SafeMarkdown from '../SafeMarkdown';
+import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
 
 const styles = {
   standard: {
@@ -93,21 +91,6 @@ class MarkdownInstructions extends React.Component {
     $(thisNode)
       .find('img')
       .load(this.props.onResize);
-
-    const expandableImages = thisNode.querySelectorAll('.expandable-image');
-    for (let i = 0; i < expandableImages.length; i++) {
-      const expandableImg = expandableImages[i];
-      ReactDOM.render(
-        <ImagePreview
-          url={expandableImg.dataset.url}
-          noVisualization={false}
-          showInstructionsDialog={() =>
-            this.props.showImageDialog(expandableImg.dataset.url)
-          }
-        />,
-        expandableImg
-      );
-    }
   }
 
   render() {
@@ -123,28 +106,14 @@ class MarkdownInstructions extends React.Component {
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
       >
-        <SafeMarkdown markdown={markdown} />
+        <EnhancedSafeMarkdown markdown={markdown} expandableImages />
       </div>
     );
   }
 }
 
 export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
-export default connect(
-  state => ({
-    isBlockly: state.pageConstants.isBlockly,
-    noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
-  }),
-  dispatch => ({
-    showImageDialog(imgUrl) {
-      dispatch(
-        openDialog({
-          autoClose: false,
-          imgOnly: true,
-          hintsOnly: false,
-          imgUrl
-        })
-      );
-    }
-  })
-)(Radium(MarkdownInstructions));
+export default connect(state => ({
+  isBlockly: state.pageConstants.isBlockly,
+  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
+}))(Radium(MarkdownInstructions));

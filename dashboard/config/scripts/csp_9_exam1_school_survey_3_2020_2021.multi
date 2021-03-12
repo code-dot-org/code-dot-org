@@ -1,0 +1,13 @@
+name 'csp-9-exam1-school-survey-3-2020_2021'
+editor_experiment ''
+right 'Whether students who are new to the school take longer to get to school than other students'
+wrong 'The average time it takes students to get to school'
+wrong 'The most common travel mode students use to get  to school'
+wrong 'Whether students who arrive to school later take longer to get to school'
+
+
+markdown <<MARKDOWN
+This question refers to the same table of data described above.
+
+Which information could likely NOT be found with the data collected?
+MARKDOWN

@@ -1,0 +1,151 @@
+{
+  "ca-ES": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments",
+              "Loops": "Bucles",
+              "Math": "Matemàtiques",
+              "Logic": "Lògic"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Dancers": "Dansaires",
+              "Events": "Esdeveniments",
+              "Logic": "Lògic"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "dibuixa una estrella",
+                "parameters": {
+                  "points": "punts",
+                  "length": "longitud"
+                }
+              },
+              "draw a circle": {
+                "name": "dibuixa un cercle"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "longitud",
+                  "repeat": "repeteix"
+                }
+              },
+              "draw a triangle": {
+                "name": "dibuixa un triangle",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a house": {
+                "name": "dibuixa una casa",
+                "parameters": {
+                  "length": "longitud"
+                }
+              },
+              "draw a square": {
+                "name": "dibuixa un quadrat",
+                "parameters": {
+                  "length": "longitud"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Dancers": "Dansaires",
+              "Events": "Esdeveniments",
+              "Logic": "Lògic"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Loops": "Bucles",
+              "Math": "Matemàtiques",
+              "Logic": "Lògic",
+              "Functions": "Funcions",
+              "Variables": "Variables"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments",
+              "Variables": "Variables",
+              "Math": "Matemàtiques",
+              "Logic": "Lògic",
+              "Functions": "Funcions",
+              "Text": "text"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments",
+              "Variables": "Variables",
+              "Math": "Matemàtiques",
+              "Logic": "Lògic",
+              "Functions": "Funcions",
+              "Text": "text"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Loops": "Bucles",
+              "Math": "Matemàtiques",
+              "Logic": "Lògic",
+              "Functions": "Funcions",
+              "Variables": "Variables"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments",
+              "Logic": "Lògic",
+              "Math": "Matemàtiques"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "Accions",
+              "Events": "Esdeveniments",
+              "Logic": "Lògic",
+              "Loops": "Bucles",
+              "Math": "Matemàtiques",
+              "Variables": "Variables",
+              "Functions": "Funcions"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ describe('CapacitiveTouchSensor', function() {
       'isPressed'
     );
     expect(isPressedDescriptor.set).to.be.undefined;
-    expect(isPressedDescriptor.get).to.be.defined;
+    expect(isPressedDescriptor.get).to.not.be.undefined;
   });
 
   describe(`start() and stop()`, () => {
@@ -39,11 +39,16 @@ describe('CapacitiveTouchSensor', function() {
 
   describe('emitsEvent', () => {
     let emitSpy;
+
     beforeEach(() => {
       emitSpy = sinon.spy(sensor, 'emit');
     });
 
-    it('emits the down event when it receives a high enough reading', () => {
+    afterEach(() => {
+      emitSpy.restore();
+    });
+
+    it('emits the down event when it receives a high enough reading', async () => {
       boardClient.receivedAnalogUpdate();
 
       // Seed the channel with 'unconnected' data
@@ -53,26 +58,29 @@ describe('CapacitiveTouchSensor', function() {
       // Seed the channel with 'connected' data
       boardClient.analogChannel[testPin] = 450;
 
-      setInterval(() => {
-        expect(emitSpy).to.have.been.calledOnce;
-        expect(emitSpy).to.have.been.calledWith('down');
-      }, 50);
+      // Wait for readSensorTimer to finish
+      await new Promise(resolve => setInterval(resolve, 50));
+
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('down');
     });
 
-    it('emits the up event when it receives a low enough reading', () => {
+    it('emits the up event when it receives a low enough reading', async () => {
       boardClient.receivedAnalogUpdate();
 
       // Seed the channel with 'connected' data
       boardClient.analogChannel[testPin] = 450;
       boardClient.receivedAnalogUpdate();
+      sensor.connected = true;
 
       // Seed the channel with 'unconnected' data
       boardClient.analogChannel[testPin] = 230;
 
-      setInterval(() => {
-        expect(emitSpy).to.have.been.calledOnce;
-        expect(emitSpy).to.have.been.calledWith('up');
-      }, 50);
+      // Wait for readSensorTimer to finish
+      await new Promise(resolve => setInterval(resolve, 50));
+
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('up');
     });
   });
 });

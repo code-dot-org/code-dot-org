@@ -45,7 +45,6 @@ scripts_map = {
 @script_levels = {}
 @levels = {}
 @level_concept_difficulty = {}
-@level_sources = {}
 @callouts = {}
 
 def handle_level(level)
@@ -64,14 +63,6 @@ def handle_level(level)
     lcd_attributes.delete('level_id')
     lcd_attributes = lcd_attributes.merge({"level" => "level_#{level.id}"})
     @level_concept_difficulty["level_concept_difficulty_#{level.id}"] = lcd_attributes
-  end
-
-  level_source = level.level_sources.first
-  if level_source
-    ls_attributes = level_source.attributes.clone
-    ls_attributes.delete('level_id')
-    ls_attributes = ls_attributes.merge({"level" => "level_#{level.id}"})
-    @level_sources["level_source_#{level.id}"] = ls_attributes
   end
 end
 
@@ -129,7 +120,7 @@ end
 
 prefix = Rails.root.join('test/fixtures/')
 
-File.new("#{prefix}courses.yml", 'w').write(yamlize(@unit_groups))
+File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}script.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
@@ -138,5 +129,4 @@ File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}level.yml", 'w').write(yamlize(@levels))
 File.new("#{prefix}level_concept_difficulty.yml", 'w').write(yamlize(@level_concept_difficulty))
-File.new("#{prefix}level_source.yml", 'w').write(yamlize(@level_sources))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))

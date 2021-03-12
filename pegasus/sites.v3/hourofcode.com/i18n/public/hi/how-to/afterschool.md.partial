@@ -1,5 +1,5 @@
 ---
-title: हाउ-टु गाइड
+title: Hour of Code How-to Guide for After-school
 layout: wide
 nav: how_to_nav
 ---
@@ -8,7 +8,13 @@ nav: how_to_nav
 
 # पाठशाला के बाद और संघ में अवर ओफ कोड (Hour of Code) कैसे पढ़ायें
 
-### इस आंदोलन से जुड़ें और छात्रों के एक समूह को इन चरणों के साथ कंप्यूटर विज्ञान के उनके पहले घंटे का परिचय दें। अवर ओफ कोड को चलाना आसान है - किसी नौसिखिये के लिए भी! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+### Join the movement and introduce your students to computer science with these steps.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -30,13 +36,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## 4. Plan your technology needs - computers are optional
 
-अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. लेकिन आपको हर बच्चे के लिए कंप्यूटर की ज़रूरत **नहीं हैं**, यहाँ तक कि, किसी कंप्यूटर के बिना भी आप ऑवर ऑफ़ कोड उपयोग कर सकते हैं।
+अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
 
-ट्यूटोरियल की कंप्यूटर या अन्य उपकरणों पे जाँच करे, ताकि ये सुनिश्चित हो जाए की वे ब्राउज़र पे ऑडियोऔर विडिओ के साथ ठीक से काम रहे हैं. ** कम बैंडविड्थ है? </ strong> कक्षा के सामने वीडियो दिखाने की योजना बनाएं, इसलिए प्रत्येक छात्र अपने स्वयं के वीडियो डाउनलोड नहीं कर रहा है। या अनप्लग / ऑफ़लाइन ट्यूटोरियल का इस्तेमाल करें ।</p> 
+ट्यूटोरियल की कंप्यूटर या अन्य उपकरणों पे जाँच करे, ताकि ये सुनिश्चित हो जाए की वे ब्राउज़र पे ऑडियोऔर विडिओ के साथ ठीक से काम रहे हैं. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
 
 अपनी कक्षा के लिए हेडफ़ोन प्रदान करें, या छात्रों को स्वयं लाने के लिए कहें, यदि आपके द्वारा चुना गया ट्यूटोरियल ध्वनि के साथ सबसे अच्छा काम करता है।
 
-आपके पास **पर्याप्त संगणकीय उपकरण नहीं हैं? ** [ साथ मिलके (युगुल) प्रोग्रामिंग ](https://www.youtube.com/watch?v=vgkahOzFH2Q) करें । जब छात्र भागीदारी करते हैं, तो वे एक-दूसरे की मदद करते हैं और शिक्षक पर कम निर्भर करते हैं। सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). जब छात्र भागीदारी करते हैं, तो वे एक-दूसरे की मदद करते हैं और शिक्षक पर कम निर्भर करते हैं। सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|
 
 ## 5. एक प्रेरक वीडियो के साथ अपना ऑवर ऑफ़ कोड करें शुरू करें
 

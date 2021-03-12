@@ -1,0 +1,76 @@
+{
+  "uz-UZ": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Harakatlar",
+          "Brushes": "Choʻtkalar",
+          "Loops": "Sikllar",
+          "Math": "Matematik",
+          "Logic": "Mantiq",
+          "Functions": "Funksiyalar",
+          "Variables": "O‘zgaruvchilar"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Dunyo",
+          "Dancers": "Raqqoslar",
+          "Properties": "Xususiyatlar",
+          "Events": "Hodisalar",
+          "Numbers": "Sonlar",
+          "Logic": "Mantiq"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Harakatlar",
+          "Events": "Hodisalar",
+          "Loops": "Sikllar",
+          "Math": "Matematik",
+          "Logic": "Mantiq",
+          "Games/Score": "O‘yinlar/Hisob"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Dunyo",
+          "Sprites": "Spraytlar",
+          "Actions": "Harakatlar",
+          "Events": "Hodisalar",
+          "Behaviors": "Xatti-harakatlar"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Dunyo",
+          "Sprites": "Spraytlar",
+          "Locations": "Joylashuvlar",
+          "Actions": "Harakatlar",
+          "Events": "Hodisalar",
+          "Behaviors": "Xatti-harakatlar",
+          "Variables": "O‘zgaruvchilar",
+          "Math": "Matematik",
+          "Logic": "Mantiq",
+          "Functions": "Funksiyalar",
+          "Text": "Matn",
+          "Comments": "Fikrlar"
+        },
+        "outbreak_freeplay": {
+          "World": "Dunyo",
+          "Sprites": "Spraytlar",
+          "Actions": "Harakatlar",
+          "Behaviors": "Xatti-harakatlar",
+          "Events": "Hodisalar",
+          "Locations": "Joylashuvlar",
+          "Logic": "Mantiq",
+          "Loops": "Sikllar",
+          "Math": "Matematik",
+          "Variables": "O‘zgaruvchilar",
+          "Functions": "Funksiyalar",
+          "Comments": "Fikrlar"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Dunyo",
+          "Sprites": "Spraytlar",
+          "Actions": "Harakatlar",
+          "Events": "Hodisalar",
+          "Logic": "Mantiq",
+          "Math": "Matematik"
+        }
+      }
+    }
+  }
+}

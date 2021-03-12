@@ -1659,6 +1659,10 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/puzzle/2": {
@@ -1673,6 +1677,10 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/puzzle/3": {
@@ -1685,6 +1693,10 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/puzzle/4": {
@@ -1697,6 +1709,10 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/puzzle/5": {
@@ -1704,11 +1720,19 @@
     "long_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
     "authored_hints": {
       "courseE_playLab_scaffold5_a": "To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish."
+    },
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/puzzle/6": {
     "short_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
-    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!"
+    "long_instructions": "You've finished! Now you can play your game or share it with your friends and classmates!",
+    "placeholder_texts": {
+      "2d3cdcfdd4061212e4d4930a183dad2d": "Please try again.",
+      "af142a90df4becc2aa7ae0d3acb3cc90": "Game over!"
+    }
   },
   "https://studio.code.org/s/coursee-2017/stage/20/extras?level_name=courseE_playLab_challenge1": {
     "short_instructions": "Something should happen when you get enough points or when you run out of points. Add some code to the `win game` and `lose game` functions to make the game work the way it should. \nClick the hints for ideas!",
@@ -1730,6 +1754,10 @@
       "keep playing": {
         "name": "keep playing"
       }
+    },
+    "placeholder_texts": {
+      "5cec903c4d41c49412a70a94d54999ee": "You can write something.",
+      "3e11a2dc6edb909c47778bed75a81769": "Text here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/21/puzzle/1": {
@@ -1802,6 +1830,13 @@
       "game has been won": {
         "name": "game has been won"
       }
+    },
+    "placeholder_texts": {
+      "66ca156974a9909af6aea88ad5cb915b": "Keep the zombies away from the alien, they make him sad!",
+      "66363f1551b4fdb85c85222c629013b2": "Defend the Alien!",
+      "3b3d1f8225a16aac3f372c3062d8b194": "If he gets sad, go make him happy again for more points!",
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/21/puzzle/5": {
@@ -1813,6 +1848,18 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "22b45b2cf2d4a2a3d7b3faa522013b26": "Count to three and I will disappear!  Guess a number between 1 and 400 to find me!",
+      "74e3efe12b17fe00c01147733fad486d": "Guess a number to find me!",
+      "3c5a6a6bfff469fd4c779912331f1049": "Bah!",
+      "0b895ef4c917e50663bc2a7327cbee3d": "You found me!",
+      "0464d226582401370945003bc8850990": "Mwahahahaha!",
+      "765366ef0f68387ed2a6ca3a8d24182d": "Too High!",
+      "cd4c7f8fdf063e832de1604e34dd4531": "Tee Hee!",
+      "0ceb38a3de45bf070e96e6657474f47d": "Too Low!",
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {
@@ -1826,6 +1873,10 @@
       "do something": {
         "name": "do something"
       }
+    },
+    "placeholder_texts": {
+      "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+      "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
     }
   },
   "https://studio.code.org/s/coursee-2017/stage/23/puzzle/2": {

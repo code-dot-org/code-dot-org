@@ -2,15 +2,6 @@ require_relative '../test_helper'
 require 'cdo/share_filtering'
 
 class ShareFilteringTest < Minitest::Test
-  def setup
-    Geocoder.configure(lookup: :test)
-    Geocoder::Lookup::Test.add_stub(
-      '1600 Pennsylvania Ave NW, Washington, DC 20500',
-      [{types: 'street_address'}]
-    )
-    Geocoder::Lookup::Test.set_default_stub([{types: []}])
-  end
-
   # @param title_name [String] The name of the title of the program.
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample program.
@@ -49,6 +40,10 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_with_phone_number
+    Geocoder.
+      stubs(:find_potential_street_address).
+      returns(nil)
+
     program = generate_program('My Phone Number', '123-456-7890')
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),

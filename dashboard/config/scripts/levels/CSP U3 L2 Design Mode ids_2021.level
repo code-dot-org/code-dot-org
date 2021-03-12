@@ -1,0 +1,48 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2020-12-04T22:00:57.000Z",
+  "level_num": "custom",
+  "user_id": 832,
+  "properties": {
+    "encrypted": "false",
+    "skin": "applab",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Do This\r\n\r\nIt's important that your elements have meaningful names. When you begin programming your app, you will control each element on the screen using its id. \r\n\r\n* Change \"button1\" to \"playButton\" \r\n\t* Notice: You cannot put any spaces in an id name! It's common to use Camel Case, where the first letter of each word in the id is capitalized *except* the first one. Examples: `\"playButton\"` `\"startButton\"` `\"textAreaInput\"`\r\n* Change the rest of the element ids to meaningful names that describe the function of each element. ",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "validation_enabled": "false",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "true",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "false",
+    "parent_level_id": 18782,
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"lemonade\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 224, 73);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgba(0, 0, 0, 0); border-radius: 0px; border-width: 0px; border-color: rgb(25, 58, 85); color: rgb(91, 183, 231); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; padding: 2px 15px; width: 320px; height: 45px; position: absolute; top: 25px; text-align: center; font-size: 30px; text-rendering: optimizespeed; left: 0px;\" id=\"label1\">Cookie Clicker</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; background-color: rgba(0, 0, 0, 0); border-radius: 0px; border-width: 0px; border-color: rgb(25, 58, 85); color: rgb(91, 183, 231); font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 146px; height: 18px; position: absolute; left: 85px; top: 80px; text-rendering: optimizespeed;\" id=\"label2\">Click the cookie</label><button id=\"button1\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 100px; background-color: rgb(91, 183, 231); border-radius: 6px; border-width: 0px; border-color: rgb(172, 207, 222); color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 15px; position: absolute; left: 110px; top: 380px;\">Play!</button><img src=\"//levelbuilder-studio.code.org/media?u=https%3A%2F%2Fimages.code.org%2F74451cc9f23d4c49cafd17e4d48ee91c-image-1560952117608.png\" data-canonical-image-url=\"https://images.code.org/74451cc9f23d4c49cafd17e4d48ee91c-image-1560952117608.png\" data-object-fit=\"contain\" id=\"image1\" style=\"height: 150px; width: 155px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 85px; top: 165px; margin: 0px;\"></div></div>",
+    "code_functions": {
+      "onEvent": null
+    },
+    "start_blocks": "// complete the activity in Design Mode",
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-06-17 15:31:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-17 15:34:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-17 16:38:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-18 19:52:36 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"design_mode_at_start\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:16:41 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:24:22 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:27:40 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:29:50 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:32:31 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:32:37 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:33:24 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:34:36 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:49:20 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-19 13:54:58 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-05-14 23:37:52 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2020-06-12 14:39:24 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

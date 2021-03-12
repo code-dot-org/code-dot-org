@@ -105,6 +105,6 @@ class PairingsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal [], session[:pairings]
-    assert_equal nil, session[:pairpairing_section_idngs]
+    assert_nil session[:pairpairing_section_idngs]
   end
 end

@@ -1,0 +1,9 @@
+name 'CSD U4 test prioritize multi_preview-2021'
+question 'Once issues have been categorized according to how urgent and how difficult they are to address, which issues should you address first and why?'
+
+right 'Easy, because you will be able to complete more of them in the same amount of time.'
+wrong 'Easy, because you will not get discouraged when improving your app.'
+wrong 'Difficult, because usually difficult things are more important.'
+wrong 'Difficult, because once you get them done, the easy ones will not bother you.'
+wrong 'You should do them in the order you found them, regardless of whether they are easy or difficult.'
+

@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "What are the similarities and differences between the binary and decimal systems?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18866,
+    "name_suffix": "_2021",
+    "encrypted_solution": "oQtNGzW7npPcsYU4cAx9uvOclXpMRARiLLu4Kk1Yuhm17CZe2r4aWDuphuTc\nq5MpoiXoU6zcQnZjEGVEQ4o6XpyYjo4XIV3fxbkm9MDrCRvz5Izkw+aVbbIk\na6Fk/j0FfIsTOBqjDMJtHAOYq5MNYa9mVglNr/KPEGfzvGq74/3mjFzd+3Q1\ngTUKyyXd0J1xZR+VXA9h18BdHwU1/dus3cdJnXoKjPxTcOg2jAIzgnGejwYe\nDKtvz7dDbA0f45e4NVKpvC9qVy1ll31QR75QiUOr1PJoCBIZEsq8eLkD9zoG\naAWW8N9+F9BDDateZ6RS0A4KCtbfHjJ9H0LNfgjbKzlRCFOOR1ZV4nAZnaiv\nd0y9DBLW8CDyn5+pAcxHs93UARBRVQoZQiy99j+C+J4bePcXrZrtMiF8hO8o\nDixFr/XmODcm6LwkUjkhHUZefntwe9WasWORRHE7JedAvjCjnXOggHyPd6lc\n5j9IOHuOfAHqICYCEhCCsixx7Boq93Hgi//9PtmXVHaHL/dXU9WS8qMm2kM/\nBveqXBKbAqoyYihCaXkI7hIyWPYl8hD6TJVRyJvgMQa2I0lQVN7KlMvzRhDT\n1xD6WDOPtlEqRQ3PNZZeuinNmyxcpHA8b3wUWasUAqKjuDgLSyPOKrcP2oRd\nntSmHsbwR3uV236LloZUwKHZZP6TDUCxR6Cd6CWI02ye\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Binary vs Decimal"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:25:01 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:26:45 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:29:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:33:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:33:39 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

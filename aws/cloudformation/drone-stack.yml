@@ -9,17 +9,41 @@ Parameters:
   VpcId:
     Type: AWS::EC2::VPC::Id
     Description: VpcId
-  SubnetIds:
+  ServiceSubnetIds:
     Type: List<AWS::EC2::Subnet::Id>
-    Description: Comma separated list of existing VPC Subnet Ids where ECS instances will run
-  NumWorkers:
+    Description: Comma separated list of existing VPC Subnet Ids where ECS EC2 Instances hosting Drone Service & Drone Autoscaler Service containers will be provisioned.
+  WorkerPoolMinimum:
     Type: Number
-    Description: Initial number of drone workers (also the number of concurrent builds which can run)
-    Default: 10
-  ECSAMI:
-    Description: AMI ID
+    Description: Minimum number of physical servers that the autoscaler must keep alive.
+    Default: 0
+  WorkerPoolMaximum:
+    Type: Number
+    Description: Maximum number of physical servers that the autoscaler can provision.
+    Default: 20
+  WorkerPoolMinimumAge:
+    Type: String
+    # https://autoscale.drone.io/reference/drone-pool-min-age/
+    Description: Minimum age a server must reach before it can be terminated.
+    Default: 2h
+  WorkerCapacityBuffer:
+    Type: Number
+    Description: Minimum number of idle servers available for future workloads.
+    Default: 2
+  WorkerInstanceType:
+    Type: String
+    Description: EC2 Instance Type that Autoscaler provisions to run Builds.
+    Default: m5.xlarge
+  WorkerSubnetId:
+    Type: AWS::EC2::Subnet::Id
+    Description: Existing VPC Subnet Id where ECS EC2 Instances hosting Drone Runner ("worker") containers will be provisioned.
+  DroneServerECSAMI:
+    Description: AMI ID for EC2 Instance running Drone Server ECS Service.
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
+  AutoscalerECSAMI:
+    Description: AMI ID
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ecs/optimized-ami/amazon-linux-2/recommended/image_id
 Resources:
 # ELB resources:
 # ELB / Target Group / Listener / ELB Security Group
@@ -37,6 +61,11 @@ Resources:
         - IpProtocol: tcp
           FromPort: 443
           ToPort: 443
+          CidrIp: 0.0.0.0/0
+        # Autoscaler service
+        - IpProtocol: tcp
+          FromPort: 8443
+          ToPort: 8443
           CidrIp: 0.0.0.0/0
       Tags:
         -
@@ -61,7 +90,7 @@ Resources:
       Name: !Sub "ELB-${AWS::StackName}"
       SecurityGroups:
         - !Ref ElbSecurityGroup
-      Subnets: !Ref SubnetIds
+      Subnets: !Ref ServiceSubnetIds
       Tags:
         -
           Key: Name
@@ -129,7 +158,7 @@ Resources:
         KeyName: !Sub "winter-dev-${AWS::Region}"
         SecurityGroupIds: 
           - !Ref DroneMasterEcsSecurityGroup
-        ImageId: !Ref ECSAMI
+        ImageId: !Ref DroneServerECSAMI
         InstanceType: t3.medium
         Monitoring:
           Enabled: true
@@ -142,7 +171,7 @@ Resources:
   DroneMasterEcsInstanceAsg:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      VPCZoneIdentifier: !Ref SubnetIds
+      VPCZoneIdentifier: !Ref ServiceSubnetIds
       LaunchTemplate:
         LaunchTemplateId: !Ref DroneMasterLaunchTemplate
         Version: !GetAtt DroneMasterLaunchTemplate.LatestVersionNumber
@@ -163,6 +192,7 @@ Resources:
       RequiresCompatibilities:
         - EC2
       ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
+      TaskRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneServer"
       Volumes:
         -
           Name: db-data
@@ -172,7 +202,7 @@ Resources:
         - 
           Name: drone-master
           Essential: true
-          Image: drone/drone:1.0.0-rc.5
+          Image: drone/drone:1.9.0
           MemoryReservation: 1024
           LogConfiguration:
             LogDriver: awslogs
@@ -198,7 +228,7 @@ Resources:
               Value: drone.cdn-code.org
             -
               Name: DRONE_SERVER_PROTO
-              Value: http
+              Value: https
             -
               Name: DRONE_TLS_AUTOCERT
               Value: true
@@ -216,7 +246,28 @@ Resources:
             # Needed to create first admin user: https://docs.drone.io/administration/user/admins/
             -
               Name: DRONE_USER_CREATE
-              Value: username:uponthesun,admin:true
+              Value: username:code-org,admin:true
+            # Users on this Drone server must be members of the code-dot-org GitHub Organization.
+            -
+              Name: DRONE_USER_FILTER
+              Value: code-dot-org
+            # Require authentication for all repositories https://discourse.drone.io/t/drone-default-visibility/7411
+            -
+              Name: DRONE_SERVER_PRIVATE_MODE
+              Value: true
+            # Store Drone Build logs in S3 instead of in a blob column in the logs table in the Drone Server relational database.
+            -
+              Name: AWS_DEFAULT_REGION
+              Value: us-east-1
+            -
+              Name: AWS_REGION
+              Value: us-east-1
+            -
+              Name: DRONE_S3_BUCKET
+              Value: code-dot-org
+            -
+              Name: DRONE_S3_PREFIX
+              Value: /drone-build-logs/
 
   DroneMasterEcsService:
     Type: AWS::ECS::Service
@@ -231,10 +282,194 @@ Resources:
         TargetGroupArn: !Ref DroneMasterTargetGroup
       TaskDefinition: !Ref DroneMasterTaskDefinition
 
-# Drone Worker resources:
-# Security Group / EC2 Launch Template / Autoscaling Group
-# ECS Cluster / ECS Service / ECS Task Definition
-# EC2 Scheduled Scaling Actions / ECS Scheduled Scaling Actions
+  DroneAutoscalerCloudwatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "DroneAutoscaler-${AWS::StackName}"
+      RetentionInDays: 14
+
+  DroneAutoscalerTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "${AWS::StackName}-drone-autoscaler"
+      RequiresCompatibilities:
+        - EC2
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
+      TaskRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/drone-autoscaler-ecs-task"
+      ContainerDefinitions:
+        -
+          Name: drone-autoscaler
+          Essential: true
+          Image: drone/autoscaler:1.7.3
+          MemoryReservation: 1024
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref DroneAutoscalerCloudwatchLogsGroup # TODO: implement cloud watch group
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ecs
+          PortMappings:
+            -
+              ContainerPort: 8080
+          Environment:
+            -
+              Name: AWS_IAM
+              Value: true
+
+            -
+              Name: DRONE_SERVER_HOST
+              Value: drone.cdn-code.org
+            -
+              Name: DRONE_SERVER_PROTO
+              Value: https
+            # Token generated by Drone Server for code-org admin GitHub user.
+            -
+              Name: DRONE_SERVER_TOKEN
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_SERVER_TOKEN}}'
+            -
+              Name: DRONE_POOL_MIN
+              Value: !Ref WorkerPoolMinimum
+            -
+              Name: DRONE_POOL_MAX
+              Value: !Ref WorkerPoolMaximum
+            -
+              Name: DRONE_POOL_MIN_AGE
+              Value: !Ref WorkerPoolMinimumAge
+            -
+              Name: DRONE_CAPACITY_BUFFER
+              Value: !Ref WorkerCapacityBuffer
+            -
+              Name: DRONE_DEBUG
+              Value: true
+            -
+              Name: DRONE_TRACE
+              Value: true
+
+            # BEGIN: Settings for the EC2 Instances that Drone Autoscaler provisions.
+            -
+              Name: DRONE_AMAZON_INSTANCE
+              Value: !Ref WorkerInstanceType
+            -
+              Name: DRONE_AMAZON_IAM_PROFILE_ARN
+              Value: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/DroneWorker"
+            -
+              Name: DRONE_AMAZON_REGION
+              Value: !Ref AWS::Region
+            -
+              Name: DRONE_AMAZON_SUBNET_ID
+              Value: !Ref WorkerSubnetId
+            -
+              Name: DRONE_AMAZON_SECURITY_GROUP
+              Value: !Ref DroneRunnerEcsSecurityGroup
+            -
+              Name: DRONE_AMAZON_SSHKEY
+              Value: !Sub "winter-dev-${AWS::Region}"
+            -
+              Name: DRONE_AMAZON_VOLUME_SIZE
+              Value: 50
+            # END: Settings for the EC2 Instances that Drone Autoscaler provisions.
+
+            # BEGIN: Settings for the Drone Runner ("worker"/"agent") executing on the EC2 Instances provisioned by Autoscaler.
+            -
+              Name: DRONE_AGENT_CONCURRENCY
+              Value: 1
+            -
+              Name: DRONE_AGENT_TOKEN
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
+            # END: Settings for the Drone Runner.
+
+  DroneAutoscalerEcsService:
+    Type: AWS::ECS::Service
+    DependsOn: LoadBalancerListener
+    Properties:
+      Cluster: !Ref DroneAutoscalerECSCluster
+      LaunchType: EC2
+      DesiredCount: 1
+      LoadBalancers:
+        - ContainerName: drone-autoscaler
+          ContainerPort: 8080
+          TargetGroupArn: !Ref DroneAutoscalerTargetGroup
+      TaskDefinition: !Ref DroneAutoscalerTaskDefinition
+
+  DroneAutoscalerECSCluster:
+    Type: AWS::ECS::Cluster
+
+  DroneAutoscalerLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateName: !Sub "DroneAutoscalerLaunchTemplate-${AWS::StackName}"
+      LaunchTemplateData:
+        IamInstanceProfile:
+          Name: ecsInstanceRole
+        KeyName: !Sub "winter-dev-${AWS::Region}"
+        SecurityGroupIds:
+          - !Ref DroneAutoscalerEcsSecurityGroup
+        ImageId: !Ref AutoscalerECSAMI
+        InstanceType: t3.medium
+        Monitoring:
+          Enabled: true
+        UserData:
+          Fn::Base64:
+            !Sub
+            - "#!/bin/bash\necho ECS_CLUSTER=${EcsClusterName} >> /etc/ecs/ecs.config;echo ECS_BACKEND_HOST= >> /etc/ecs/ecs.config;"
+            - {EcsClusterName: !Ref DroneAutoscalerECSCluster}
+
+  DroneAutoscalerEcsInstanceAsg:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      VPCZoneIdentifier: !Ref ServiceSubnetIds
+      LaunchTemplate:
+        LaunchTemplateId: !Ref DroneAutoscalerLaunchTemplate
+        Version: !GetAtt DroneAutoscalerLaunchTemplate.LatestVersionNumber
+      MinSize: 1
+      MaxSize: 1
+      DesiredCapacity: 1
+
+  DroneAutoscalerEcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allowed Drone Autoscaler Ports
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 1
+          ToPort: 65535
+          SourceSecurityGroupId: !Ref ElbSecurityGroup
+        - IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+          CidrIp: 0.0.0.0/0
+        -
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  AutoscalerLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref DroneMasterELB
+      Port: 8443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificate
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DroneAutoscalerTargetGroup
+
+  DroneAutoscalerTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub "AutoscalerTargGrp-${AWS::StackName}"
+      VpcId: !Ref VpcId
+      Port: 8080
+      Protocol: HTTP
+      HealthCheckPath: /healthz
+      Tags:
+        -
+          Key: Name
+          Value: !Sub "ECS ${AWS::StackName} - Autoscaler TargetGroup"
 
   DroneWorkerEcsSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -242,108 +477,22 @@ Resources:
       GroupDescription: ECS Allowed Ports
       VpcId: !Ref VpcId
 
-  DroneWorkerECSCluster:
-    Type: AWS::ECS::Cluster
-
-  DroneWorkerLaunchTemplate:
-    Type: AWS::EC2::LaunchTemplate
+  DroneRunnerEcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
     Properties:
-      LaunchTemplateName: !Sub "DroneWorkerLaunchTemplate-${AWS::StackName}"
-      LaunchTemplateData: 
-        BlockDeviceMappings: 
-          - 
-            DeviceName: /dev/xvda
-            Ebs:
-              VolumeSize: 50
-              VolumeType: gp2
-        IamInstanceProfile: 
-          Name: DroneWorker
-        KeyName: !Sub "winter-dev-${AWS::Region}"
-        SecurityGroupIds: 
-          - !Ref DroneWorkerEcsSecurityGroup
-        ImageId: ami-0c4b05c0409735671
-        InstanceType: m5.xlarge
-        Monitoring:
-          Enabled: true
-        UserData: 
-          Fn::Base64:
-            !Sub 
-              - "#!/bin/bash\necho ECS_CLUSTER=${EcsClusterName} >> /etc/ecs/ecs.config;echo ECS_BACKEND_HOST= >> /etc/ecs/ecs.config;"
-              - {EcsClusterName: !Ref DroneWorkerECSCluster}
-
-  DroneWorkerEcsInstanceAsg:
-    Type: AWS::AutoScaling::AutoScalingGroup
-    Properties:
-      VPCZoneIdentifier: !Ref SubnetIds
-      LaunchTemplate:
-        LaunchTemplateId: !Ref DroneWorkerLaunchTemplate
-        Version: !GetAtt DroneWorkerLaunchTemplate.LatestVersionNumber
-      MinSize: !Ref NumWorkers
-      MaxSize: !Ref NumWorkers
-      DesiredCapacity: !Ref NumWorkers
-
-  DroneWorkerCloudwatchLogsGroup:
-    Type: AWS::Logs::LogGroup
-    Properties:
-      LogGroupName: !Sub "DroneWorker-${AWS::StackName}"
-      RetentionInDays: 14
-
-  DroneWorkerTaskDefinition:
-    Type: AWS::ECS::TaskDefinition
-    Properties:
-      Family: !Sub "${AWS::StackName}-drone-worker"
-      RequiresCompatibilities:
-        - EC2
-      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
-      Volumes:
+      GroupDescription: Drone Runner Allowed Ports
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        # Enable Autoscaler to issue Docker API calls to EC2 Instances
         -
-          Name: docker-socket
-          Host:
-            SourcePath: /var/run/docker.sock
-      ContainerDefinitions:
-        - 
-          Name: drone-worker
-          Essential: true
-          Image: drone/agent:1.0.0-rc.5
-          MemoryReservation: 512
-          LogConfiguration:
-            LogDriver: awslogs
-            Options:
-              awslogs-group: !Ref DroneWorkerCloudwatchLogsGroup
-              awslogs-region: !Ref AWS::Region
-              awslogs-stream-prefix: ecs
-          MountPoints:
-            -
-              ContainerPath: /var/run/docker.sock
-              SourceVolume: docker-socket
-          Environment:
-            -
-              Name: DRONE_RPC_SERVER 
-              Value: 
-                !Sub 
-                  - "http://${ElbDnsName}"
-                  - {ElbDnsName: !GetAtt DroneMasterELB.DNSName}
-            # Number of concurrent builds allowed on one Drone agent
-            -
-              Name: DRONE_RUNNER_CAPACITY
-              Value: 1
-            # ECS secrets manager integration not supported by Cloudformation yet: https://github.com/aws/containers-roadmap/issues/97
-            # Instead, we must use "dynamic references": https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html
-            -
-              Name: DRONE_RPC_SECRET
-              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
-
-  DroneWorkerEcsService:
-    Type: AWS::ECS::Service
-    DependsOn: LoadBalancerListener
-    Properties:
-      Cluster: !Ref DroneWorkerECSCluster
-      LaunchType: EC2
-      DesiredCount: !Ref NumWorkers
-      TaskDefinition: !Ref DroneWorkerTaskDefinition
-      DeploymentConfiguration:
-        MaximumPercent: 100
-        MinimumHealthyPercent: 0
-      PlacementConstraints:
-        - 
-          Type: distinctInstance
+          IpProtocol: tcp
+          FromPort: 2376
+          ToPort: 2376
+          # TODO: (suresh) Restrict to Drone Autoscaler.
+          CidrIp: 0.0.0.0/0
+        # Enable SSH to EC2 Instances hosting Drone Runner from gateway
+        -
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 3.90.82.166/32

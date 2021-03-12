@@ -1,4 +1,4 @@
 login_required 'true'
 
-lesson 'lesson1'
+lesson 'lesson1', display_name: 'lesson1'
 level 'Level 1'

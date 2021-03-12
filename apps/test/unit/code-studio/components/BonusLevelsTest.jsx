@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
 };
 
 describe('BonusLevels', () => {
-  it('renders correct number of sublevels', () => {
+  it('renders correct number of bonus levels', () => {
     const wrapper = shallow(<BonusLevels {...DEFAULT_PROPS} />);
     assert.equal(7, wrapper.find('SublevelCard').length);
   });

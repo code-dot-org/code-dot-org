@@ -1,0 +1,149 @@
+{
+  "si-LK": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්",
+              "Loops": "ලූපයන්",
+              "Math": "ගණිත",
+              "Logic": "තර්කය"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "වැඩසටහන්",
+              "Logic": "තර්කය"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "තරුවක් අඳින්න",
+                "parameters": {
+                  "points": "ලකුණු",
+                  "length": "දිග"
+                }
+              },
+              "draw a circle": {
+                "name": "රවුමක් අඳින්න"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "දිග",
+                  "repeat": "repeat"
+                }
+              },
+              "draw a triangle": {
+                "name": "ත්‍රිකොණයක් අඳින්න",
+                "parameters": {
+                  "length": "දිග"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "දිග"
+                }
+              },
+              "draw a house": {
+                "name": "ගෙයක් අඳින්න",
+                "parameters": {
+                  "length": "දිග"
+                }
+              },
+              "draw a square": {
+                "name": "සමචතුරස්‍රයක් අඳින්න",
+                "parameters": {
+                  "length": "දිග"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "වැඩසටහන්",
+              "Logic": "තර්කය"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Loops": "ලූපයන්",
+              "Math": "ගණිත",
+              "Logic": "තර්කය",
+              "Functions": "ශ්‍රිතයන්",
+              "Variables": "විචල්‍යන්"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්",
+              "Variables": "විචල්‍යන්",
+              "Math": "ගණිත",
+              "Logic": "තර්කය",
+              "Functions": "ශ්‍රිතයන්",
+              "Text": "පෙළ"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්",
+              "Variables": "විචල්‍යන්",
+              "Math": "ගණිත",
+              "Logic": "තර්කය",
+              "Functions": "ශ්‍රිතයන්",
+              "Text": "පෙළ"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Loops": "ලූපයන්",
+              "Math": "ගණිත",
+              "Logic": "තර්කය",
+              "Functions": "ශ්‍රිතයන්",
+              "Variables": "විචල්‍යන්"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්",
+              "Logic": "තර්කය",
+              "Math": "ගණිත"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "ක්‍රියාවන්",
+              "Events": "වැඩසටහන්",
+              "Logic": "තර්කය",
+              "Loops": "ලූපයන්",
+              "Math": "ගණිත",
+              "Variables": "විචල්‍යන්",
+              "Functions": "ශ්‍රිතයන්"
+            }
+          }
+        }
+      }
+    }
+  }
+}

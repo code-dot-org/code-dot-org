@@ -1,0 +1,180 @@
+{
+  "script": {
+    "name": "haikubot-pilot",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-03-10 21:53:05 UTC",
+    "seeding_key": {
+      "script.name": "haikubot-pilot"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "poem bot",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Poem Bot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Poem Bot",
+      "name": "Poem Bot",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Poem Bot Prototype",
+        "level_keys": [
+          "haiku_prototype_choice1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prototype_choice1"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "haiku_prototype_choice1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Code Your Poem Bot",
+        "level_keys": [
+          "Poem Bot_Fat Level"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Fat Level"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "New Code",
+        "level_keys": [
+          "Poem Bot_Fat Level_2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "Poem Bot_Fat Level_2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "haiku_prototype_choice1",
+        "script_level.level_keys": [
+          "haiku_prototype_choice1"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Fat Level",
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Poem Bot_Fat Level_2",
+        "script_level.level_keys": [
+          "Poem Bot_Fat Level_2"
+        ],
+        "lesson.key": "Poem Bot",
+        "lesson_group.key": "poem bot",
+        "script.name": "haikubot-pilot"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "objectives": [
+
+  ]
+}

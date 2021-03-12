@@ -1,0 +1,15 @@
+---
+et:
+  data:
+    parameter_names:
+      actor: tegelane
+      counter: loendur
+      height: kõrgus
+      honey: mesi
+      left: vasakule
+      length: pikkus
+      min: min
+      points: punktid
+      size: suurus
+      speed: kiirus
+      width: laius

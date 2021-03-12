@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T22:03:59.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "long_instructions": "In your own words describe the benefits of creating functions in your code?",
+    "title": "Updating Variables",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19242,
+    "name_suffix": "_2021",
+    "instructions_important": "false",
+    "display_name": "Check Your Understanding",
+    "encrypted_solution": "0AwuY6h2ffphJgKFJfKKVfXhBYdnAZKsH6CGadZ/ZCbwG6268TnPx6ZEYR0g\nyhjYMRYKtRz5v4wDCACGGWgc8D+JK6m4B85x6pjkzcQsyoZ2RzzceOtGSfQ0\nxumwgsEfEUxVTihmq1R2TACuiTTXsin1w39FutzvgFTf7Y5wNZykfL3BSKzA\nxPzkgKnLcGVboLHoebVsaZo72jCH9AxG8oXwFT00MpxVC03ZUtRtZbt6cRok\nHcIAooypkjZLJD85C+MkB7qCfQQR6iQvuC6UgkqQpY6OEmNwecz5FLstODF+\nyyFYGtnprwzZGFAYb6HM0WRMH7vaZNj9zo4D/ivs27fgjOD1RoAk2TjYDuQP\ndmK2pYCMJVTDAL0zfXv213wazi6l7rBzkcp1OMos0VwHwA==\n",
+    "optional": "false",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-09-09 21:24:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]"
+}]]></config>
+</FreeResponse>

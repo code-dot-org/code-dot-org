@@ -10,10 +10,12 @@ import {
   COMPLETED
 } from '@cdo/apps/code-studio/components/progress/ScriptOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {
   sectionsForDropdown: [],
@@ -55,6 +57,7 @@ describe('ScriptOverviewTopRow', () => {
               size={Button.ButtonSize.large}
             />
           </div>
+          <div />
           <div>
             <span>
               <ProgressDetailToggle />
@@ -115,6 +118,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
+          <div />
           <SectionAssigner
             sections={defaultProps.sectionsForDropdown}
             courseId={defaultProps.currentCourseId}
@@ -150,21 +154,82 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <div>
-          <DropdownButton
-            text={i18n.teacherResources()}
-            color={Button.ButtonColor.blue}
-          >
-            <a href="https://example.com/a" target="_blank">
-              {i18n.curriculum()}
-            </a>
-            <a href="https://example.com/b" target="_blank">
-              {i18n.vocabulary()}
-            </a>
-          </DropdownButton>
-        </div>
+        <TeacherResourcesDropdown
+          resources={[
+            {
+              type: ResourceType.curriculum,
+              link: 'https://example.com/a'
+            },
+            {
+              type: ResourceType.vocabulary,
+              link: 'https://example.com/b'
+            }
+          ]}
+        />
       )
     ).to.be.true;
+  });
+
+  it('renders the unit calendar when showCalendar true for teacher', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        showCalendar
+        unitCalendarLessons={testLessons}
+        weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={testLessons}
+          weeklyInstructionalMinutes={90}
+          scriptId={42}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('does not render the unit calendar when showCalendar false for teacher', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        unitCalendarLessons={testLessons}
+        weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Teacher}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={testLessons}
+          weeklyInstructionalMinutes={90}
+          scriptId={42}
+        />
+      )
+    ).to.be.false;
+  });
+
+  it('does not render the unit calendar for student', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        showCalendar
+        unitCalendarLessons={testLessons}
+        weeklyInstructionalMinutes={90}
+        viewAs={ViewType.Student}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <UnitCalendarButton
+          lessons={testLessons}
+          weeklyInstructionalMinutes={90}
+          scriptId={42}
+        />
+      )
+    ).to.be.false;
   });
 
   it('renders RTL without errors', () => {

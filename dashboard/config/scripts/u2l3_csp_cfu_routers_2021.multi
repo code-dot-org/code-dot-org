@@ -1,0 +1,17 @@
+name 'U2L3 CSP CFU Routers_2021'
+editor_experiment ''
+title 'Routers'
+type 'multi2'
+question 'Pick Two: If the post office delivered mail exactly like the routers deliver messages on the Internet, which of the following statements would be true?'
+
+wrong 'One mailman would be responsible for delivering a letter from sender to receiver'
+right 'The mailman would sometimes take a different path to deliver each letter to your home'
+right 'Letters would be written on the outside of the envelope for all to read instead of letters put inside envelopes'
+wrong 'Your mail could not be delivered if a road your mailman was planning to take were under construction.'
+
+
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

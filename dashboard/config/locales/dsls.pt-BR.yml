@@ -764,6 +764,12 @@ pt-BR:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: Verificação rápida de títulos
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de nível:** Esta pergunta de múltipla escolha pede aos estudantes que escolham como os títulos em HTML serão exibidos em uma página da Web. Você pode ver quais alunos responderam corretamente à pergunta, indo até esse nível e puxando o Painel do Professor do lado direito.  Os alunos que responderam com sucesso à pergunta terão uma bolha verde.  Os alunos têm tantas chances quanto quiserem de responder corretamente, então chutar e conferir também pode levar a uma resposta correta.
+
+          <div class="clear"></div>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Visão Geral
@@ -1324,6 +1330,10 @@ pt-BR:
         - text: A extensão do arquivo (.jpg) está faltando no endereço da imagem
         - text: O endereço da imagem não se dá como um atributo 'src'
         - text: Há um espaço no nome do arquivo
+        teacher_markdown: Embora este nível possa ser utilizado para avaliar a compreensão
+          do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
+          os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
+          adicionar imagens a páginas da web.
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1656,6 +1666,56 @@ pt-BR:
           Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
 
 
+        teacher_markdown: |2-
+           Aqui há alguns poucos sites para iniciar os estudos dos alunos. Esses sites são, geralmente, apropriados para escolas, mas como o conteúdo com eles mudam frequentemente, então **nós recomendamos fortemente que voce verifique cada site por conteúdo inapropriado antes de compartilhá-los com os alunos**.
+
+          [key]
+
+          ##  Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visão geral
+
+          Esse site é focado em notícias sobre a Disney, mas você pode ser surpreendido pelo grande papel que a Ciência da Computação desenvolve em todas as suas diferentes formas de entretenimento. Porque isso não é um site focado em ciência da computação, você terá de utilizar a função de busca para localizar artigos relevantes.
+
+          ### Campos relevantes
+
+          * Filme/TV
+          * Animação
+          * Robótica/Animatronics
+          * Jogos
+
+          ## Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Visão Geral
+
+          Videos mostrando uma variedade de pessoas trabalhando em diversas áreas da indústria de jogos, falando sobre o que eles fazem.
+
+          ### Campos Relevantes
+
+          * Jogos
+          * Animação
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Visão geral
+
+          "Music Think Tank" é um blog direcionado à pessoas trabalhando na indústria musical. Não é apenas um site de ciência da computação, mas buscando por "ciência da computação" ou "programação" revelará alguns artigos interessantes.
+
+          ### Campos Relevantes
+
+          * Música
+
+          ## Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Overview
+
+          Enquanto esse podcast não provém muita informação na forma de programação profissional (como pessoa que trabalha profissionalmente), é um ótimo recurso para ver as mais variadas formas nas quais amadores estão fazendo entretenimento com código.
+
+          ### Campos Relevantes
+
+          * Todos
+          [/key]
       CSD U3 Functions Prediction define first:
         answers:
         - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
@@ -3670,6 +3730,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       Example App Types_2018_2019:
         markdown: |
           # Exemplos de tipos de aplicativos
@@ -3687,6 +3758,17 @@ pt-BR:
           Esses aplicativos são _protótipos_; eles permitem que o usuário interaja com o design sem se preocupar com a funcionalidade subjacente. Por exemplo, quando você usa o aplicativo Quiz, cada pergunta sempre responde da mesma maneira, independentemente de qual resposta você escolher.
 
           Concentrando-se primeiro em um protótipo interativo, você pode aprender muito sobre como os usuários podem usar seu aplicativo antes de investir muita energia para fazê-lo realmente funcionar.
+        teacher_markdown: |-
+          Nessa atividade, os alunos serão apresentados a uma pequena quantidade de aplicativos relativamente restritas.
+
+          * Quiz me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para alunos mais jovens ou inexperientes você pode limita-los a somente esses tipos de aplicativos. Nós escolhemos especificamente esses exemplos  porque são relativamente fáceis para prototipar no App Lab.
+
+          Se você permitir que os alunos se disperssem desses, esteja atento que alguns tipos de aplicativos são mais difíceis de criar no App Lab e pode requerer mais criatividade ao desenvolver um protótipo. Por exemplo, App Lab não tem a funcionalidade de mapeamento, logo, se os alunos quisessem uma aplicação de mapeamento, eles precisariam encontrar ou criar uma imagem estática de um mapa para usar no aplicativo.
       ForLoopFun-Unplugged:
         markdown: |
           # Divirta-se com Laços For
@@ -5628,6 +5710,21 @@ pt-BR:
           | ---------  | ------ |  ------ |
           | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
 
+        teacher_markdown: |-
+          #### Trama Social
+
+          **Passo 1:** Os alunos procuram em todas as páginas de mídia social fornecidas no Code Studio. As páginas representam vários indivíduos únicos, cada um dos quais tem uma conta em três plataformas de mídia social. Elas são distribuídas da seguinte forma (não compartilhe isto com os estudantes):
+
+
+          |               | FaceSpace  | Chirpr     | instantframe |
+          | ------------- | ---------  | ---------  | ------------ |
+          | John Thomas   | John T     | @johnsnow  | johnsnow     |
+          | Haley Gutierrez   | Haley G  | @flyinghail | desertrider  |
+          | Lizzie Dell    | Lizzie Dell| @lillizard | photolizzie  |
+
+          **Dica:**
+
+          Os estudantes são solicitados a escolher dois usuários entre os perfis disponíveis, mas se você tiver pouco tempo, você pode pedir aos estudantes que completem apenas uma das pegadas.
       Songwriting-Unplugged:
         markdown: |
           # Composição Musical
@@ -6033,20 +6130,12 @@ pt-BR:
             irá fazer o programa falhar? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - text: O programa não falhará. Scrat vai chegar à bolota.
-          feedback: Incorreto. Scrat irá para o caminho errado após sua última volta.
-        - text: Scrat irá para o caminho errado depois da sua última volta.
-          correct: true
-          feedback: Correto!
-        - text: Scrat dá poucos passos e acaba com a bolota.
-          feedback: Incorreta. Dar apenas alguns passos acontece depois que Scrat
-            vira na direção errada.
+        - {}
+        - correct: true
+        - correct: true
         - text: Eu não sei.
-          feedback: 'O primeiro erro é que o Scrat segue o caminho errado após a sua
-            volta final. '
         questions:
-        - text: 'Olhe atentamente para o código abaixo. Qual é o primeiro bug que
-            irá fazer o programa falhar? '
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: O pássaro vai acabar um passo antes do porco.
@@ -6622,22 +6711,36 @@ pt-BR:
             de mel ou *uma* flor atrás de cada nuvem.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
-        - correct: true
+        - text: A abelha pegará néctar em cada flor e fará mel em cada colmeia.
+          correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+            em cada flor e faça mel em cada colmeia.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+            em cada flor e faça mel em cada colmeia.
         - text: Eu não sei.
+          feedback: O bloco "se na flor" permite que a abelha pegue néctar em cada
+            flor e faça mel em cada colmeia.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
             depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
             de mel ou *uma* flor atrás de cada nuvem.'
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
-        - correct: true
+        - text: A abelha pegará néctar em cada flor e fará mel em cada colmeia.
+          correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+            em cada flor e faça mel em cada colmeia.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
+          feedback: Incorreto. O bloco "se na flor" permite que a abelha pegue néctar
+            em cada flor e faça mel em cada colmeia.
         - text: Eu não sei.
+          feedback: O bloco "se na flor" permite que a abelha pegue néctar em cada
+            flor e faça mel em cada colmeia.
         questions:
         - text: 'Observe atentamente o código abaixo. O que você acha que acontecerá
             depois que você clicar em "Executar"? Lembre-se: sempre haverá *um* favo
@@ -7220,6 +7323,21 @@ pt-BR:
             quando você clicar em "Executar"?
       courseD_project_exemplars_2020_2021:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Velocidade Aleatória no Quique (Basquete) | Multiplicando Stormtroopers (Guerra nas Estrelas) |
+          |---|---|
+          | [![Velocidade Aleatória no Quique (Basquete)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Velocidade Aleatória no Quique (Basquete)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplicando Stormtroopers (Guerra nas Estrelas)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplicando Stormtroopers (Guerra nas Estrelas)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | A bola muda de velocidade quando quica! | Evite os stormtroopers ou eles vão multiplicar! |
+
+
+          | Panic! at the Disco (Festa dançante) | Cena na praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de floco de neve (Congelados)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de floco de neve (Congelados)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Seus dançarinos de apoio continuam trocando seus movimentos! | Tente adicionar mais cor e plano de fundo a esta cena! |
       courseE_multi_bee_functions_predict1:
         answers:
         - text: O mesmo programa também irá funcionar para esse desafio.
@@ -7405,8 +7523,40 @@ pt-BR:
 
       courseE_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Dança do Monstro (Laboratório de Sprite) | Jogo do Bolinho (Laboratório de Sprite) |
+          |---|---|
+          | [![Dança do Monstro (Laboratório de Sprite)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Dança do Monstro (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Padrão (Artista) | Flores de flocos de neve (Congelado) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Padrão (Artista)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | Vamos ser criativos com loops misturados! | Vamos ser criativos com funções! |
       courseExpress_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projeto
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          | Panic! at the Disco (Festa Dançante) | Cena na Praia (Artista) |
+          |---|---|
+          | [![Padrão (Artista)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Padrão (Artista)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Flores de flocos de neve (Congelado)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | Ligue a sua Discoteca enquanto seus dançarinos de apoio a mudam! | Tente adicionar mais cor e plano de fundo a esta cena! |
+
+          | Flores de flocos de neve (Congelado) | Airplane Game (Sprite Lab) |
+          |---|---|
+          | [![Flores de flocos de neve (Congelado)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Flores de flocos de neve (Congelado)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Jogo do Avião (Laboratório de Sprite)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | Vamos ser criativos com funções! | Tente adicionar texto ou uma pontuação a este jogo! |
       courseF_bee_variables_8a_2018:
         answers:
         - text: A abelha não coletará nenhum néctar porque a variável não é chamada
@@ -8154,6 +8304,24 @@ pt-BR:
 
       courseF_project_exemplars_2019_2020:
         content1: Teste a Página da Apostila de Markdown
+        markdown: |-
+          # Exemplos de Projetos
+
+          Você está prestes a começar seu projeto final. Antes de você começar, passe algum tempo olhando os exemplos de projetos.
+
+          ## Laboratório de Sprite
+
+          | Jogo do Bolinho (Laboratório de Sprite) |  Jogo do Avião (Laboratório de Sprite) |
+          |---|---|
+          | [![Jogo do Bolinho (Laboratório de Sprite)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Jogo do Bolinho (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Jogo do Avião (Laboratório de Sprite)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Jogo do Avião (Laboratório de Sprite)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Tente adicionar texto ou uma pontuação a este jogo! | Tente adicionar texto ou uma pontuação a este jogo! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flores (Artista)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flores (Artista)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Espiral (Artista)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Espiral (Artista)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+          | Vamos ser criativos com variáveis! | Vamos ser criativos com Loops usando For! |
       coursee_prediction_artistfunction2:
         answers:
         - text: O artista resolverá o quebra-cabeça corretamente.
@@ -8234,6 +8402,7 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pulse-check-survey-1-levelgroup U1Ch2:
         title: |2-
 
@@ -8364,10 +8533,37 @@ pt-BR:
           Pesquisa rápida do CS Discoveries!
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
+        markdown: |-
+          # Cidadão Super Digital
+
+          ## Como podemos ser defensores quando vemos cyberbullying?
       csf_password_power-up:
         content1: descrição aqui
+        markdown: |-
+          # Reforce sua senha
+
+          ## Dicas para Memorizar sua Senha
+
+          * Comece com uma **frase** memorável.
+          * Somente seus **pais** devem saber sua senha.
+          * Nunca use nenhuma informação de identidade **privada** na sua senha.
+          * Crie senhas com pelo menos **oito** caracteres.
+          * Use letras, números e **símbolos** na sua senha.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: descrição aqui
+        markdown: |-
+          # PARE a Maldade
+
+          ## O que você deve fazer se alguém é mau com você online?
+
+          * **P**rocure se afastar.
+          * **A**cione um adulto de confiança.
+          * **R**eavalie os sites primeiro.
+          * **E**spere e pense online
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.
@@ -8445,3 +8641,201 @@ pt-BR:
           \   \n<a href=\"https://docs.google.com/document/d/18KHX5NNlmXX1Eqt8u6LFRzto7PK4dIFNv-tr1F1joUQ/edit?usp=sharing\"
           target=\"_new\">\n<button>\nIr para o plano de aulas\n</button> \n</a>\n\n<br/><br/>\n<a
           class=\"btn btn-large btn-primary next-stage submitButton\">Continuar</a>\n"
+      PowerOfWords-Unplugged_2020:
+        markdown: |-
+          # O Poder das Palavras
+
+          ## O que você deve fazer quando alguém usa linguagem perversa ou violenta na internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |-
+          # Informação Privada e Pessoal
+
+          ## Qual informação sobre você é OK para compartilhar online?
+      courseD_EOC_2020:
+        description: Você alcançou a última lição do Curso D! Escolha um projeto para
+          criar.
+      courseE_EOC_2020:
+        description: Você alcançou o final do Curso E! Escolha um projeto para criar.
+      courseExpress_EOC_2020:
+        description: Você alcançou a última lição do Curso Expresso! Escolha um projeto
+          para criar.
+      courseF_EOC_2020:
+        description: Você alcançou o final do Curso F! Escolha um projeto para criar.
+      csf_digital_trails:
+        markdown: |-
+          #Siga a Trilha Digital
+
+          ## Qual informação é OK de ter em suas pegadas digitais?
+      csf_safety_in_my_online_neighborhood:
+        markdown: |-
+          #Minha Vizinhança Online
+
+          ##Como você vai a lugares online seguros?
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      CSD Physical Computing Post-Project Test:
+        title: Teste Pós-Projeto de Computação Física
+      CSD User Centered Design Post-Project Test:
+        title: 'Design Centrado no Usuário: Teste Pós-Projeto'
+      CSD Web Development Post-Project Test:
+        title: Teste Pós-Projeto de Desenvolvimento Web
+      csd-post-survey-2017-levelgroup:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      csd-post-survey-2017-levelgroup_2018:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      csd-post-survey-2018-markdown-with-link-to-survey:
+        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
+          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
+          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
+          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
+          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
+          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      csd-post-survey-intro-2019:
+        markdown: |+
+          #Pesquisa de pós-curso sobre descobertas da CC
+
+          ** Sua opinião e feedback são importantes para nós! ** Usamos para:
+
+          * entender sua experiência
+          * fazer melhorias no curso
+
+          Obrigado por dedicar um tempo para ajudar a tornar os Princípios da CC ainda melhores!
+
+      csd-post-survey-levelgroup_2019:
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
+      CSD U1 Test:
+        title: Teste Pós-Projeto para Computadores e Resolução de Problemas
+      CSD U5 test:
+        title: Teste pós-projeto de dados e sociedade
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
+          de folha de alumínio que suportarão tantos centavos quanto for possível.
+          \ No final da aula, os grupos refletirão sobre sua experiência com a atividade
+          e farão conexões com os tipos de solução de problemas que usarão para o
+          restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      csd-pre-survey-levelgroup_2019:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      outbreak_story:
+        content1: descrição aqui
+        markdown: "# Epidemia: Codifique sua própria Simulação ## Seja bem-vindo à
+          Cidade dos Monstros! A Cidade dos Monstros costumava ser um lugar feliz
+          e saudável. Os monstros da Cidade dos Monstros adoravam passear por aí e
+          visitar seus amigos.\n\n <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> \n\nUm dia, os monstros começaram a se sentir doentes.
+          O monstro havia sido infectado com um **vírus**! Um vírus é um germe minúsculo
+          que pode adoecer uma pessoa. Os outros monstro não se preocuparam muito.
+          Eles continuaram visitando seus amigos. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> \n\nPouco tempo depois, mais dois monstros adoeceram.
+          Era o mesmo vírus! Parece que foram infectados com o vírus de um amigo.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> \n\nO vírus se espalhou lentamente para outros monstros
+          nas redondezas. Os monstros saudáveis começaram a se preocupar com a possibilidade
+          de todos ficarem doentes. Os monstros doentes começaram a se preocupar em
+          não espalhar o vírus para todo mundo. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <div style=\"display: inline-block\"> <img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n ## Felizmente interrompendo a disseminação,
+          depois de estudar o vírus, os moradores da Cidade dos Monstros fizeram uma
+          importante descoberta. Eles chegaram à conclusão de que a probabilidade
+          de espalhar o vírus seria bem menos se usassem máscaras sobre a boca. Com
+          máscaras faciais, os monstros doentes tinham menos probabilidade de passar
+          o vírus para os monstros saudáveis. \n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\"> </div> <img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          O que aconecerá em seguida? Hoje, você vai escrever um código para criar
+          e executar sua própria **simulação** da epidemia na Cidade dos Monstros.
+          A simulação é um modelo computadorizado de um processo ou sistema. Aprenda
+          a codificar e fazer previsões sobre o que acontecerá com os moradores da
+          Cidade dos Monstros. <img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-imagem-1603134705074.png\"
+          style=\"float:right; largura:15%\"> *Com que rapidez o vírus se espalhará?*Todos
+          vão ficar doentes?*Como as máscaras faciais poderão ajudar?*Quando você
+          terminar, compartilhe sua simulação com outras pessoas. Compartilhe sua
+          mensagem sobre o que você acredita que podemos fazer para ajudar a manter
+          outras pessoas saudáveis quando o vírus chegar à cidade. \n"
+      outbreak_story2:
+        content1: descrição aqui
+        markdown: "# Epidemia: Raciocínio de cientista \n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulações são uma ótima maneira de
+          aprender coisas que podem ser difíceis de se observar no mundo real. Elas
+          ajudam os cientistas a solucionar problemas e testar novas ideias em segurança
+          e com eficiência. Sua simulação é uma forma de mostrar como uma epidemia
+          de vírus na Cidade dos Monstros pode se desencadera. \n\n## Reinicialize
+          e jogue novamente!\nMesmo quando você escreve o código por conta própria,
+          é impossível saber exatamente o que acontecerá quando você pressionar Executar.
+          Os monstros caminham aleatoriamente, portanto, você não saberá se o vírus
+          vai se espalhar rápida ou lentamente. Sempre que você alterar seu código,
+          certifique-se de executar a simulação mais de uma vez. As coisas não vão
+          acontecer da mesma maneira duas vezes! \n\n## Coleta de Dados. \nTente escrever
+          suas observações sobre a execução da sua simulação. Você pode contar o número
+          de monstros que adoeceram ou utilizar um cronômetro para medir a rapidez
+          dos eventos. Por exemplo, quanto tempo geralmente leva para todos os monstros
+          adoecerem se nenhum deles usar uma máscara? \n\n## Previsões. \nSe você
+          compreender seu modelo, você pode utilizá-lo para fazer previsões. Você
+          pode até mudar a forma de execução da sua simulação e tentar prever o que
+          vai acontecer de diferente. Por exemplo: \n*O que aconteceria se houvesse
+          o dobro de monstros na cidade? \n*O que aconteceria se os monstros se movimentassem
+          à metade da velocidade atual?\n\n <img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## A Cidade dos Monstros é como o mundo real?
+          \nHá um limite para o realismo que qualquer modelo pode alcançar. \n*O que
+          a sua simulação de epidemia tem em comum com uma epidemia de vírus no mundo
+          real? \n*Quais são as diferenças? \n*Quando você concluir esta atividade,
+          discuta essas perguntas com os professores ou familiares! \n\n## O que mais
+          podemos modelar? \nVocê já criou um modelo de trabalho da epidemia na Cidade
+          dos Monstros. O que a sua simulação não é capaz de fazer ou de mostrar que
+          você gostaria de prever? Pressione Continuar para prosseguir e aprender
+          a modelar outros fatores: \n*Aumento do número de monstros na simulação.
+          \n*Ajude os monstros a se recuperar da epidemia. \n*Probabilidade, imunidade,
+          vacinas e mais! \n\nVocê também pode compartilhar seu modelo simulado com
+          outras pessoas, ou compartilhar uma mensagem sobre o que você pensa que
+          pode ser feito para ajudar a manter outras pessoas saudáveis quando um vírus
+          ataca a cidade. \n"
+      outbreak_freeplay_choice:
+        description: Você concluiu o tutorial! Continue fazendo alterações ou melhorias
+          no seu projeto. Você pode optar por continuar trabalhando com os mesmos
+          blocos ou experimentar a caixa de ferramentas ampliada.
+        display_name: Atividade livre

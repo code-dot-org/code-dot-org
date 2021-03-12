@@ -3,6 +3,11 @@ require 'cdo/activity_constants'
 FactoryGirl.allow_class_lookup = false
 
 FactoryGirl.define do
+  factory :course_offering do
+    sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
+    sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
+  end
+
   factory :course_version do
     sequence(:key) {|n| "202#{n - 1}"}
     sequence(:display_name) {|n| "2#{n - 1}-2#{n}"}
@@ -13,7 +18,11 @@ FactoryGirl.define do
     end
 
     trait :with_unit do
-      association(:content_root, factory: :script)
+      association(:content_root, factory: :script, is_course: true)
+    end
+
+    trait :with_course_offering do
+      association :course_offering
     end
   end
 
@@ -63,7 +72,7 @@ FactoryGirl.define do
 
   factory :user do
     birthday Time.zone.today - 21.years
-    email {("#{user_type}_#{(User.maximum(:id) || 0) + 1}@code.org")}
+    email {("#{user_type}_#{SecureRandom.uuid}@code.org")}
     password "00secret"
     locale 'en-US'
     sequence(:name) {|n| "User#{n} Codeberg"}
@@ -345,6 +354,11 @@ FactoryGirl.define do
       oauth_refresh_token 'fake-oauth-refresh-token'
     end
 
+    trait :microsoft_v2_sso_provider do
+      sso_provider_with_token
+      provider 'microsoft_v2_auth'
+    end
+
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider 'powerschool'
@@ -377,7 +391,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: "abcd#{user.id}",
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -394,7 +408,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::CLEVER,
-          authentication_id: '456efgh',
+          authentication_id: SecureRandom.uuid,
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
@@ -438,7 +452,7 @@ FactoryGirl.define do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
     credential_type AuthenticationOption::EMAIL
-    authentication_id {User.hash_email email}
+    authentication_id SecureRandom.uuid
 
     factory :google_authentication_option do
       credential_type AuthenticationOption::GOOGLE
@@ -672,7 +686,7 @@ FactoryGirl.define do
     level_source {create :level_source, level: level}
   end
 
-  factory :script do
+  factory :script, aliases: [:unit] do
     sequence(:name) {|n| "bogus-script-#{n}"}
 
     factory :csf_script do
@@ -693,6 +707,13 @@ FactoryGirl.define do
       after(:create) do |csp_script|
         csp_script.curriculum_umbrella = 'CSP'
         csp_script.save
+      end
+    end
+
+    factory :csa_script do
+      after(:create) do |csa_script|
+        csa_script.curriculum_umbrella = 'CSA'
+        csa_script.save
       end
     end
   end
@@ -759,6 +780,7 @@ FactoryGirl.define do
 
   factory :lesson_group do
     sequence(:key) {|n| "Bogus Lesson Group #{n}"}
+    display_name(&:key)
     script
 
     position do |lesson_group|
@@ -768,6 +790,8 @@ FactoryGirl.define do
 
   factory :lesson do
     sequence(:name) {|n| "Bogus Lesson #{n}"}
+    sequence(:key) {|n| "Bogus-Lesson-#{n}"}
+    has_lesson_plan false
     script
 
     absolute_position do |lesson|
@@ -775,16 +799,57 @@ FactoryGirl.define do
     end
 
     # relative_position is actually the same as absolute_position in our factory
-    # (i.e. it doesnt try to count lockable/non-lockable)
+    # i.e. it doesn't try to count lockable lessons without lesson plans separately
+    # from all other lessons, which is what we normally do for relative position.
     relative_position do |lesson|
       ((lesson.script.lessons.maximum(:absolute_position) || 0) + 1).to_s
     end
+  end
+
+  factory :resource do
+    association :course_version
+    url 'fake.url'
+    name 'fake name'
+  end
+
+  factory :objective do
+    sequence(:key) {|n| "objective-#{n}"}
+    description 'fake description'
+  end
+
+  factory :vocabulary do
+    association :course_version
+    sequence(:key, 'a') {|char| "vocab_#{char}"}
+    word 'word'
+    definition 'definition'
+  end
+
+  factory :programming_environment do
+    sequence(:name) {|n| "programming-environment-#{n}"}
+  end
+
+  factory :programming_expression do
+    association :programming_environment
+    sequence(:name) {|n| "programming expression #{n}"}
+    sequence(:key) {|n| "programming-expression-#{n}"}
   end
 
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'
     script_level
+  end
+
+  factory :lesson_activity do
+    sequence(:key) {|n| "lesson-activity-#{n}"}
+    sequence(:position)
+    lesson
+  end
+
+  factory :activity_section do
+    sequence(:key) {|n| "activity-section-#{n}"}
+    sequence(:position)
+    lesson_activity
   end
 
   factory :activity do
@@ -1090,7 +1155,7 @@ FactoryGirl.define do
 
   factory :school_common, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    id {(School.maximum(:id).next).to_s}
+    id {((School.maximum(:id) || 0).next).to_s}
     address_line1 "123 Sample St"
     address_line2 "attn: Main Office"
     city "Seattle"
@@ -1171,10 +1236,8 @@ FactoryGirl.define do
     contact_name "Contact Name"
     contact_email "contact@code.org"
     group 1
-    apps_open_date_csp_teacher {(Date.current - 1.day).strftime("%Y-%m-%d")}
-    apps_open_date_csd_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
-    apps_close_date_csp_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
-    apps_close_date_csd_teacher {(Date.current + 4.days).strftime("%Y-%m-%d")}
+    apps_open_date_teacher {(Date.current - 2.days).strftime("%Y-%m-%d")}
+    apps_close_date_teacher {(Date.current + 3.days).strftime("%Y-%m-%d")}
     csd_cost 10
     csp_cost 12
     cost_scholarship_information "Additional scholarship information will be here."
@@ -1264,7 +1327,11 @@ FactoryGirl.define do
     association :student
     association :teacher
     association :level
-    association :script_level
+    association :script
+
+    script_level do |tf|
+      create :script_level, script: tf.script, levels: [tf.level]
+    end
   end
 
   factory :teacher_score do

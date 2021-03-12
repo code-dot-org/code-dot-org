@@ -69,6 +69,7 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
+    textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
@@ -132,6 +133,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
       isNewSection
@@ -218,6 +220,15 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
+            <TtsAutoplayField
+              value={section.ttsAutoplayEnabled}
+              onChange={ttsAutoplayEnabled =>
+                editSectionProperties({ttsAutoplayEnabled})
+              }
+              disabled={isSaveInProgress}
+            />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -381,6 +392,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainLessonExtrasLearnMore()}
       </a>
@@ -402,6 +414,7 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
       <a
         href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
         target="_blank"
+        rel="noopener noreferrer"
       >
         {i18n.explainPairProgrammingLearnMore()}
       </a>
@@ -414,6 +427,19 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
   </div>
 );
 PairProgrammingField.propTypes = FieldProps;
+
+const TtsAutoplayField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enableTtsAutoplay()}</FieldName>
+    <FieldDescription>{i18n.explainTtsAutoplay()} </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={ttsAutoplayEnabled => onChange(ttsAutoplayEnabled)}
+      disabled={disabled}
+    />
+  </div>
+);
+TtsAutoplayField.propTypes = FieldProps;
 
 const FieldName = props => (
   <div
@@ -457,6 +483,7 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
+  textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),

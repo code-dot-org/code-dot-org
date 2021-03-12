@@ -1,0 +1,30 @@
+resource_101:
+  id: 101
+  key: resource_101
+  name: Code Studio
+  url: code.org
+  course_version: course_version_2018
+resource_102:
+  id: 102
+  key: resource_102
+  name: wiki
+  url: wikipedia.org
+  course_version: course_version_2018
+resource_103:
+  id: 103
+  key: resource_103
+  name: class slides
+  url: docs.google.com/slides
+  course_version: course_version_2018
+resource_104:
+  id: 104
+  key: resource_104
+  name: class site
+  url: testwebsite.fake
+  course_version: course_version_2018
+resource_105:
+  id: 105
+  key: resource_105
+  name: class resource
+  url: testresource.fake
+  course_version: course_version_2019

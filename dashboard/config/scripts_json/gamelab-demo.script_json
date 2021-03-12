@@ -1,0 +1,172 @@
+{
+  "script": {
+    "name": "gamelab-demo",
+    "wrapup_video_id": null,
+    "hidden": true,
+    "login_required": false,
+    "properties": {
+    },
+    "new_name": null,
+    "family_name": null,
+    "seeding_key": {
+      "script.name": "gamelab-demo"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Simple Sprite Movement",
+      "name": "Simple Sprite Movement",
+      "absolute_position": 1,
+      "lockable": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 1"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      },
+      "level_keys": [
+        "GameLab Livecode Demo 1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 2"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      },
+      "level_keys": [
+        "GameLab Livecode Demo 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 3"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      },
+      "level_keys": [
+        "GameLab Livecode Demo 3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "assessment": null,
+      "properties": {
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 4"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      },
+      "level_keys": [
+        "GameLab Livecode Demo 4"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "GameLab Livecode Demo 1",
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 1"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GameLab Livecode Demo 2",
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 2"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GameLab Livecode Demo 3",
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 3"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GameLab Livecode Demo 4",
+        "script_level.level_keys": [
+          "GameLab Livecode Demo 4"
+        ],
+        "lesson.key": "Simple Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "gamelab-demo"
+      }
+    }
+  ]
+}

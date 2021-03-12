@@ -1,0 +1,10 @@
+name 'CSD games platform challenge choice_2021'
+display_name 'Challenges'
+description 'Improve your game with these challenges!'
+
+sublevels
+level 'CSD U3 platform challenge animationfacing_2021'
+level 'CSD U3 platform challenge lives_2021'
+level 'CSD U3 platform challenge differentitem_2021'
+level 'CSD U3 platform challenge sidewalls_2021'
+level 'CSD U3 platform challenge animations_2021'

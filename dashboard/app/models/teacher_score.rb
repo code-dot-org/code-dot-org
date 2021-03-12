@@ -3,7 +3,7 @@
 # Table name: teacher_scores
 #
 #  id            :integer          not null, primary key
-#  user_level_id :integer          unsigned
+#  user_level_id :bigint           unsigned
 #  teacher_id    :integer
 #  score         :integer
 #  created_at    :datetime         not null
@@ -59,7 +59,7 @@ class TeacherScore < ApplicationRecord
   def self.get_level_scores_for_script_for_section(script_id, section_id, page)
     level_scores_by_student_by_stage_by_script = {}
     # Teacher scores are currently only relevant for unplugged lessons
-    stages = Script.find(script_id).lessons.select(&:display_as_unplugged)
+    stages = Script.find(script_id).lessons.select(&:unplugged)
     student_ids = Section.find(section_id).students.page(page).per(50).pluck(:id)
     stage_student_level_scores = {}
     stages.each do |stage|

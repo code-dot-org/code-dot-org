@@ -1,0 +1,78 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2020-12-04T22:23:57.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "ground": "true",
+    "goal": "{\"startX\":345,\"startY\":0,\"moving\":true}",
+    "scale": "{\"snapRadius\":2}",
+    "success_condition": "function successCondition() {\r\n\t        var avatarCenter = {\r\n\t          x: (Flappy.avatarX + 34) / 2,\r\n\t          y: (Flappy.avatarY + 24) / 2\r\n\t        };\r\n\t        var goalCenter = {\r\n\t          x: (Flappy.goalX + Flappy.GOAL_SIZE) / 2,\r\n\t          y: (Flappy.goalY + Flappy.GOAL_SIZE) / 2\r\n\t        };\r\n\t\r\n\t        var diff = {\r\n\t          x: Math.abs(avatarCenter.x - goalCenter.x),\r\n\t          y: Math.abs(avatarCenter.y - goalCenter.y)\r\n\t        };\r\n\t\r\n\t        return diff.x < 15 && diff.y < 15;\r\n\t      }",
+    "failure_condition": "function failureCondition() {\r\n\t        return Flappy.activeTicks() >= 120 && Flappy.SPEED === 0;\r\n\t      }",
+    "short_instructions": "Try adding a block that sets the level speed when the \"Run\" button is pressed.  Play the game and flap to the target to continue.",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "free_play": "false",
+    "obstacles": "false",
+    "score": "false",
+    "shareable": "false",
+    "long_instructions": "The `when run` event allows you to run code as soon as your game starts.  \r\n\r\nTry adding a block that sets the level speed when the \"Run\" button is pressed. \r\n\r\n---\r\n\r\nPlay the game and flap to the target to continue.",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The block you need to add is called `set speed`. \",\"hint_id\":\"courseC_flappy_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c4329249b80187e165899a20695cfe2a/courseC_flappy_events2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `set speed` block to the `when run` block to solve this puzzle.\",\"hint_id\":\"courseC_flappy_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c813cfa87e2681dd107f02f53d3b83d/courseC_flappy_events2.mp3\"}]",
+    "parent_level_id": 21260,
+    "name_suffix": "_2021",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 02:16:47 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ground\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:34:32 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:36:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 19:04:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 19:20:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:46:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:03:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:47:28 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"initialization_blocks\",\"project_template_level_name\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:48:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:00:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:15:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="flappy_whenClick" deletable="false">
+          <next>
+            <block type="flappy_flap_height">
+              <title name="VALUE">Flappy.FlapHeight.NORMAL</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_playSound"/>
+        <block type="flappy_setSpeed"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">???</title>
+        </block>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

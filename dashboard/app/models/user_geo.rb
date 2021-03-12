@@ -21,7 +21,7 @@
 #  index_user_geos_on_user_id     (user_id)
 #
 
-class UserGeo < ActiveRecord::Base
+class UserGeo < ApplicationRecord
   belongs_to :user
 
   def clear_user_geo

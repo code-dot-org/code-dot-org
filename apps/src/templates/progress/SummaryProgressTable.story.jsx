@@ -74,21 +74,21 @@ export default storybook => {
           levelsByLesson={[
             [
               {
-                id: -1,
+                id: '-1',
                 name: 'Link to submitted review',
                 status: LevelStatus.perfect,
                 url: '/peer_reviews/1',
                 levelNumber: 1
               },
               {
-                id: -1,
+                id: '-1',
                 name: 'Review a new submission',
                 status: LevelStatus.not_tried,
                 url: '/pull-review',
                 levelNumber: 2
               },
               {
-                id: -1,
+                id: '-1',
                 icon: 'fa-lock',
                 name: 'Reviews unavailable at this time',
                 status: LevelStatus.locked,

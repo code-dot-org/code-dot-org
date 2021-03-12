@@ -1168,6 +1168,23 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Bruk nedtrekkslista for å erstatte «???» med eit tal"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Klikk på kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet ditt",
+          "New Artist Project_callout2": "Trykk \"Kjør\" for å lagre og kjøre programmet",
+          "sign_in_to_save_project": "Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Klikk på kategoriene for å se blokkene i verktøykassa! Dra blokker til arbeidsområdet for å legge dem til programmet ditt!",
+          "New Play Lab Project_callout2": "Trykk \"Kjør\" for å lagre og kjøre programmet",
+          "sign_in_to_save_project": "Vil du åpne prosjektet senere? Logg på for å lagre prosjektet til kontoen din!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Den koden du putter inn her vil bli repetert så monge gongar du seier den skal, og fortsetter deretter med å køyre programmet."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Du kan endre dette nummeret.",
+          "courseE_artist_ramp8_2": "Klikk her for å skrive kor mange gongar koden skal bli gjenteke."
         }
       }
     }

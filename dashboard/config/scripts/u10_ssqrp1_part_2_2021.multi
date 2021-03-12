@@ -1,0 +1,14 @@
+name 'U10 SSQRP1 part 2_2021'
+editor_experiment ''
+
+
+description 'Which of the following data is not obtained using data collection from the smartphone, but is necessary for _GroceryGrabbr_ to create the total cost of groceries on the list?'
+wrong 'the location of the grocery store'
+wrong 'the location of the user'
+right 'the cost of groceries'
+wrong 'the shelf location of the groceries'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN

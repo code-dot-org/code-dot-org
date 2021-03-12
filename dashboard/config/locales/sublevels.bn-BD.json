@@ -1,0 +1,148 @@
+{
+  "bn-BD": {
+    "data": {
+      "sublevels": {
+        "courseD_EOC_2020": {
+          "CourseD_EOC_starwars": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী",
+              "Loops": "চক্র",
+              "Math": "গণিত",
+              "Logic": "যুক্তি"
+            }
+          },
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "ঘটনাবলী",
+              "Logic": "যুক্তি"
+            }
+          },
+          "CourseD_EOC_artist": {
+            "function_definitions": {
+              "draw a star": {
+                "name": "একটি বর্গ আঁকুন",
+                "parameters": {
+                  "length": "দৈর্ঘ্য"
+                }
+              },
+              "draw a circle": {
+                "name": "একটি বৃত্ত আঁকুন।"
+              },
+              "draw a pinwheel": {
+                "parameters": {
+                  "length": "দৈর্ঘ্য",
+                  "repeat": "পুনরাই"
+                }
+              },
+              "draw a triangle": {
+                "name": "একটি ত্রিভুজ আঁকুন।",
+                "parameters": {
+                  "length": "দৈর্ঘ্য"
+                }
+              },
+              "draw a shape": {
+                "parameters": {
+                  "length": "দৈর্ঘ্য"
+                }
+              },
+              "draw a house": {
+                "name": "একটি ঘর আঁকুন।",
+                "parameters": {
+                  "length": "দৈর্ঘ্য"
+                }
+              },
+              "draw a square": {
+                "name": "একটি বর্গ আঁকুন।",
+                "parameters": {
+                  "length": "দৈর্ঘ্য"
+                }
+              }
+            }
+          }
+        },
+        "courseE_EOC_2020": {
+          "CourseE_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী"
+            }
+          }
+        },
+        "courseExpress_EOC_2020": {
+          "CourseD_EOC_dance": {
+            "block_categories": {
+              "Events": "ঘটনাবলী",
+              "Logic": "যুক্তি"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Loops": "চক্র",
+              "Math": "গণিত",
+              "Logic": "যুক্তি",
+              "Functions": "ফাংশনগুলি",
+              "Variables": "চলকগুলো"
+            }
+          },
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী",
+              "Variables": "চলকগুলো",
+              "Math": "গণিত",
+              "Logic": "যুক্তি",
+              "Functions": "ফাংশনগুলি",
+              "Text": "পাঠ"
+            }
+          }
+        },
+        "courseF_EOC_2020": {
+          "CourseF_Project_SpriteLab_2020": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী",
+              "Variables": "চলকগুলো",
+              "Math": "গণিত",
+              "Logic": "যুক্তি",
+              "Functions": "ফাংশনগুলি",
+              "Text": "পাঠ"
+            }
+          },
+          "Course F: Artist Project_2020": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Loops": "চক্র",
+              "Math": "গণিত",
+              "Logic": "যুক্তি",
+              "Functions": "ফাংশনগুলি",
+              "Variables": "চলকগুলো"
+            }
+          }
+        },
+        "outbreak_freeplay_choice": {
+          "outbreak_freeplay_basic": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী",
+              "Logic": "যুক্তি",
+              "Math": "গণিত"
+            }
+          },
+          "outbreak_freeplay": {
+            "block_categories": {
+              "Actions": "ক্রিয়া",
+              "Events": "ঘটনাবলী",
+              "Logic": "যুক্তি",
+              "Loops": "চক্র",
+              "Math": "গণিত",
+              "Variables": "চলকগুলো",
+              "Functions": "ফাংশনগুলি"
+            }
+          }
+        }
+      }
+    }
+  }
+}

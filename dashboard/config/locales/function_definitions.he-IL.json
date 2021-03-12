@@ -3271,6 +3271,49 @@
           "draw": {
             "name": "צייר"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "צייר כוכב",
+            "parameters": {
+              "points": "נקודות",
+              "length": "אורך"
+            }
+          },
+          "draw a circle": {
+            "name": "צייר מעגל"
+          },
+          "draw a pinwheel": {
+            "name": "צייר גלגל רוח",
+            "parameters": {
+              "length": "אורך",
+              "repeat": "חזור שוב"
+            }
+          },
+          "draw a triangle": {
+            "name": "צייר משולש",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a shape": {
+            "name": "צייר צורה",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a house": {
+            "name": "צייר בית",
+            "parameters": {
+              "length": "אורך"
+            }
+          },
+          "draw a square": {
+            "name": "צייר ריבוע",
+            "parameters": {
+              "length": "אורך"
+            }
+          }
         }
       }
     }

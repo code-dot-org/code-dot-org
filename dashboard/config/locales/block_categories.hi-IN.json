@@ -1,0 +1,76 @@
+{
+  "hi-IN": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "क्रियाएँ",
+          "Brushes": "ब्रश",
+          "Loops": "फंदे",
+          "Math": "गणित",
+          "Logic": "तर्क",
+          "Functions": "कार्य",
+          "Variables": "चर"
+        },
+        "CourseD_EOC_dance": {
+          "World": "विश्व",
+          "Dancers": "नर्तकों",
+          "Properties": "गुण",
+          "Events": "घटनाएँ",
+          "Numbers": "नंबर",
+          "Logic": "तर्क"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "क्रियाएँ",
+          "Events": "घटनाएँ",
+          "Loops": "फंदे",
+          "Math": "गणित",
+          "Logic": "तर्क",
+          "Games/Score": "खेल/स्कोर"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "विश्व",
+          "Sprites": "स्प्राइट्स",
+          "Actions": "क्रियाएँ",
+          "Events": "घटनाएँ",
+          "Behaviors": "व्यवहार"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "विश्व",
+          "Sprites": "स्प्राइट्स",
+          "Locations": "स्थान",
+          "Actions": "क्रियाएँ",
+          "Events": "घटनाएँ",
+          "Behaviors": "व्यवहार",
+          "Variables": "चर",
+          "Math": "गणित",
+          "Logic": "तर्क",
+          "Functions": "कार्य",
+          "Text": "पाठ",
+          "Comments": "टिप्पणियां"
+        },
+        "outbreak_freeplay": {
+          "World": "विश्व",
+          "Sprites": "स्प्राइट्स",
+          "Actions": "क्रियाएँ",
+          "Behaviors": "व्यवहार",
+          "Events": "घटनाएँ",
+          "Locations": "स्थान",
+          "Logic": "तर्क",
+          "Loops": "फंदे",
+          "Math": "गणित",
+          "Variables": "चर",
+          "Functions": "कार्य",
+          "Comments": "टिप्पणियां"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "विश्व",
+          "Sprites": "स्प्राइट्स",
+          "Actions": "क्रियाएँ",
+          "Events": "घटनाएँ",
+          "Logic": "तर्क",
+          "Math": "गणित"
+        }
+      }
+    }
+  }
+}

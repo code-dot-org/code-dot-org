@@ -1,0 +1,27 @@
+name 'CSD U3 platform intro_2018_2019_pilot_2021'
+editor_experiment ''
+display_name 'Build a Platform Jumper'
+title 'Build a Platform Jumper'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Build a Platform Jumper
+
+As you build your platform jumper, you'll be using the problem solving process.
+
+## Define
+
+The problem is clearly defined for this game, because you already looked at a sample version.  However, you might want to make some changes.   Make sure any new features for your game are clearly defined.
+
+## Prepare
+
+Before you start to code, you need to fill out a project guide.  It will get you ready and make the coding a lot easier.
+
+## Try
+
+You'll try out your plan when you start coding.  Don't forget all of your resources, such as the documentation and Help and Tip tab, as you begin to code.
+
+## Reflect
+
+After finishing your project, you'll want to reflect on whether your game turned out how you planned, and ways that you could improve your process for the next time.
+MARKDOWN

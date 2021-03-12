@@ -160,7 +160,7 @@
           "craft2_run_button_callout": "Jakmile budeš připravený vyzkoušet svůj program, zmáčkni tlačítko \"Spustit\"."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Klikni na \"Spustit\" pro spuštění pohybu."
+          "MC_HOC_2016_New_Walk_callout2": "Klikni na \"Běh\" pro spuštění pohybu."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
@@ -473,6 +473,26 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "Fialová květinka může obsahovat buď 1 nebo 0 nektaru. Počet ale zjistíš až po spuštění kódu!"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
+          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknutím vytvořte nový kostým"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
         }
       }
     }

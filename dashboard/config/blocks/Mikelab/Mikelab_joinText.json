@@ -1,0 +1,20 @@
+{
+  "category": "Location",
+  "config": {
+    "func": "joinText",
+    "blockText": "{TEXT} {NEXT}",
+    "returnType": "String",
+    "args": [
+      {
+        "name": "TEXT",
+        "field": false,
+        "type": "String"
+      },
+      {
+        "name": "NEXT",
+        "field": false,
+        "type": "String"
+      }
+    ]
+  }
+}

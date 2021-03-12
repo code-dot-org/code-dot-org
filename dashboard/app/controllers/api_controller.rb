@@ -16,6 +16,65 @@ class ApiController < ApplicationController
     end
   end
 
+  # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
+  # Requires the following configurations
+  #   CDO.imm_reader_tenant_id
+  #   CDO.imm_reader_client_id
+  #   CDO.imm_reader_subdomain
+  #   CDO.imm_reader_client_secret
+  # @return [Hash] {token: 'string', subdomain: 'string'}
+  # @return [Hash] {error: 'string'}
+  def immersive_reader_token
+    tenant_id = CDO.imm_reader_tenant_id
+    client_id = CDO.imm_reader_client_id
+    subdomain = CDO.imm_reader_subdomain
+    client_secret = CDO.imm_reader_client_secret # Do not log this secret
+    if tenant_id.blank? || client_id.blank? || subdomain.blank? || client_secret.blank?
+      return render status: :internal_server_error, json: {error: 'Environment not configured for Immersive Reader.'}
+    end
+
+    begin
+      headers = {
+        'content-type' => 'application/x-www-form-urlencoded'
+      }
+      url = "https://login.windows.net/#{tenant_id}/oauth2/token"
+      form = {
+        'grant_type' => 'client_credentials',
+        'client_id' => client_id,
+        'client_secret' => client_secret, # Do not log this secret
+        'resource' => 'https://cognitiveservices.azure.com/'
+      }
+      auth_response = JSON.parse(RestClient.post(url, form, headers))
+      response = {
+        token: auth_response['access_token'],
+        subdomain: subdomain,
+      }
+      render json: response
+    rescue RestClient::Exception => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
+    rescue JSON::JSONError => e
+      Honeybadger.notify(
+        e,
+        error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
+        context: {
+          client_id: tenant_id,
+          tenant_id: client_id,
+          subdomain: subdomain,
+        }
+      )
+      render status: :internal_server_error, json: {error: 'Unable to get token from Azure.'}
+    end
+  end
+
   def clever_classrooms
     return head :forbidden unless current_user
 
@@ -273,8 +332,8 @@ class ApiController < ApplicationController
 
     # Get the level progress for each student
     render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -314,13 +373,7 @@ class ApiController < ApplicationController
     timestamp_by_user = progress_by_user.transform_values do |user|
       user.values.map {|level| level[:last_progress_at]}.compact.max
     end
-    # Remove last_progress_at from the return value, to keep the data sent to
-    # the client to a minimum.
-    progress_by_user.values.each do |user|
-      user.values.each do |level|
-        level.delete(:last_progress_at)
-      end
-    end
+
     [progress_by_user, timestamp_by_user]
   end
 
@@ -371,11 +424,8 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.
-        user_levels.
-        by_stage(stage).
-        pluck(:level_id, :best_result).
-        to_h
+      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
+      response[:progress] = summarize_user_progress(script, current_user)[:progress]
 
       if user_level
         response[:lastAttempt] = {

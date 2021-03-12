@@ -8,13 +8,9 @@ import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
 import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
+import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
+import {isCodeOrgBrowser} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
-const OAUTH_PROVIDERS = {
-  GOOGLE: 'google_oauth2',
-  MICROSOFT: 'microsoft_v2_auth',
-  CLEVER: 'clever',
-  FACEBOOK: 'facebook'
-};
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;
 const authOptionPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -43,14 +39,14 @@ class ManageLinkedAccounts extends React.Component {
 
   cannotDisconnectGoogle = authOption => {
     return (
-      authOption.credentialType === OAUTH_PROVIDERS.GOOGLE &&
+      authOption.credentialType === OAuthProviders.google &&
       this.props.isGoogleClassroomStudent
     );
   };
 
   cannotDisconnectClever = authOption => {
     return (
-      authOption.credentialType === OAUTH_PROVIDERS.CLEVER &&
+      authOption.credentialType === OAuthProviders.clever &&
       this.props.isCleverStudent
     );
   };
@@ -90,13 +86,13 @@ class ManageLinkedAccounts extends React.Component {
 
   getDisplayName = provider => {
     switch (provider) {
-      case OAUTH_PROVIDERS.GOOGLE:
+      case OAuthProviders.google:
         return i18n.manageLinkedAccounts_google_oauth2();
-      case OAUTH_PROVIDERS.MICROSOFT:
+      case OAuthProviders.microsoft:
         return i18n.manageLinkedAccounts_microsoft();
-      case OAUTH_PROVIDERS.CLEVER:
+      case OAuthProviders.clever:
         return i18n.manageLinkedAccounts_clever();
-      case OAUTH_PROVIDERS.FACEBOOK:
+      case OAuthProviders.facebook:
         return i18n.manageLinkedAccounts_facebook();
     }
   };
@@ -122,7 +118,7 @@ class ManageLinkedAccounts extends React.Component {
     const optionsByProvider = _.groupBy(allOptions, 'credentialType');
 
     let formattedOptions = [];
-    Object.values(OAUTH_PROVIDERS).forEach(provider => {
+    Object.values(OAuthProviders).forEach(provider => {
       const providerOptions = optionsByProvider[provider] || [
         this.emptyAuthOption(provider)
       ];
@@ -228,6 +224,15 @@ class OauthConnection extends React.Component {
       ? `/users/auth/${id}/disconnect`
       : `/users/auth/${credentialType}?action=connect`;
 
+    // There are two causes for errors: disconnectDisabledStatus and logging in to
+    // Google from the Maker App. Set the appropriate error text.
+    let disconnectDisabledMessage;
+    if (isCodeOrgBrowser() && credentialType === OAuthProviders.google) {
+      disconnectDisabledMessage = i18n.manageLinkedAccounts_makerAuthError();
+    } else if (!!disconnectDisabledStatus) {
+      disconnectDisabledMessage = this.getDisconnectDisabledTooltip();
+    }
+
     return (
       <tr>
         <td style={styles.cell}>{displayName}</td>
@@ -242,25 +247,28 @@ class OauthConnection extends React.Component {
               action={oauthToggleConnectionPath}
             >
               {/* This button intentionally uses BootstrapButton to match other
-                  account page buttons */}
+                  account page buttons.
+                  This button is disabled according to disconnectDisabledStatus or
+                  when the user is attempting this action from the Maker App for
+                  their Google Account. This action is blocked due to Google authentication
+                  security protocols.
+                  */}
               <BootstrapButton
                 type="submit"
                 style={styles.button}
                 text={buttonText}
-                disabled={!!disconnectDisabledStatus}
+                disabled={!!disconnectDisabledMessage}
               />
               <RailsAuthenticityToken />
             </form>
-            {disconnectDisabledStatus && (
+            {!!disconnectDisabledMessage && (
               <ReactTooltip
                 id={tooltipId}
                 offset={styles.tooltipOffset}
                 role="tooltip"
                 effect="solid"
               >
-                <div style={styles.tooltip}>
-                  {this.getDisconnectDisabledTooltip()}
-                </div>
+                <div style={styles.tooltip}> {disconnectDisabledMessage} </div>
               </ReactTooltip>
             )}
           </div>
@@ -273,6 +281,8 @@ class OauthConnection extends React.Component {
 
 const GUTTER = 20;
 const BUTTON_WIDTH = 105;
+const BUTTON_PADDING = 8;
+const CELL_WIDTH = tableLayoutStyles.table.width / 3;
 const styles = {
   container: {
     paddingTop: GUTTER
@@ -289,7 +299,7 @@ const styles = {
     paddingLeft: GUTTER,
     paddingRight: GUTTER,
     fontWeight: 'normal',
-    width: tableLayoutStyles.table.width / 3
+    width: CELL_WIDTH
   },
   cell: {
     ...tableLayoutStyles.cell,
@@ -304,10 +314,12 @@ const styles = {
     width: BUTTON_WIDTH,
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.charcoal,
-    padding: 8
+    padding: BUTTON_PADDING
   },
   tooltipOffset: {
-    left: -(BUTTON_WIDTH / 2)
+    left:
+      CELL_WIDTH / 2 - // This moves the tooltip to be in between the 2nd and 3rd columns of the table
+      (tableLayoutStyles.cell.padding + BUTTON_PADDING + BUTTON_WIDTH / 2) // This centers the tooltip over the button in the 3rd column
   },
   tooltip: {
     width: BUTTON_WIDTH * 2

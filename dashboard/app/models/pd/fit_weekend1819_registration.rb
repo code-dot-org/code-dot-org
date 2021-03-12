@@ -15,7 +15,7 @@
 
 # NOTE: Unlike the other year-specific FiT Weekend Registration classes (Pd::FitWeekend1920Registration),
 # this class is in its own table and does not inherit from Pd::FitWeekendRegistrationBase.
-class Pd::FitWeekend1819Registration < ActiveRecord::Base
+class Pd::FitWeekend1819Registration < ApplicationRecord
   include Pd::Form
 
   YES = 'Yes'.freeze

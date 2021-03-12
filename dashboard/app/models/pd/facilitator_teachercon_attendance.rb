@@ -25,7 +25,7 @@
 #  index_pd_facilitator_teachercon_attendances_on_user_id  (user_id)
 #
 
-class Pd::FacilitatorTeacherconAttendance < ActiveRecord::Base
+class Pd::FacilitatorTeacherconAttendance < ApplicationRecord
   DATE_FORMAT = "%B %e".freeze
 
   belongs_to :user

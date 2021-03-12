@@ -1597,6 +1597,47 @@
           "collect": {
             "name": "coletar"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "desenhar uma estrela",
+            "parameters": {
+              "points": "pontos",
+              "length": "comprimento"
+            }
+          },
+          "draw a circle": {
+            "name": "desenhar um círculo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "comprimento",
+              "repeat": "repita"
+            }
+          },
+          "draw a triangle": {
+            "name": "desenhar um triângulo",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a house": {
+            "name": "desenhar uma casa",
+            "parameters": {
+              "length": "comprimento"
+            }
+          },
+          "draw a square": {
+            "name": "desenhar um quadrado",
+            "parameters": {
+              "length": "comprimento"
+            }
+          }
         }
       }
     }

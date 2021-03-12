@@ -1,0 +1,19 @@
+name 'VPL - CSD - Module 8 - Conclusions and Connections'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Conclusions and Connections 
+**Estimated time: 10 minutes**
+
+The calendar below provides a look at the lesson progressions for Unit 6. Notice we have investigated Lessons 1 through 7  during Module 7 and with the lesson investigations in this module.  Chapter 1 focuses on building a game that uses the inputs and outputs of Circuit Playground.  
+
+We explore Chapter 2 during the Module 8 synchronous workshop. By the end of Unit 6, students should be able to design and build a physical computing device that integrates hardware inputs and outputs with software.  
+
+  
+
+The following levels focus on the End of Chapter project for Chapter 1 to help us identify what students are working towards and what will be assessed and how.
+
+![](https://images.code.org/68686518e02653f001d22b775a60164c-image-1604704925433.png)
+MARKDOWN

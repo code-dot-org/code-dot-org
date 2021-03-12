@@ -214,7 +214,7 @@
           "Course_4_Play_Lab_Vars_9_1": "Všetky Vaše bloky sú odteraz usporiadané do kategórií! Kliknite na nadpis pre zobrazenie blokov v danej kategórií."
         },
         "Course 4 Playlab For Loops 4b": {
-          "Course_4_Playlab_For_Loops_4b_1": "Všimli ste si, že premenná \"počítadlo\" má iné meno pre každú postavu? To preto, aby ste pre každú slučku \"for\" mohli mať vlastné počítadlo.",
+          "Course_4_Playlab_For_Loops_4b_1": "Všimli ste si, že premenná \"počítadlo\" má iné meno pre každú postavu? To preto, aby ste pre každú slučku \"pre\" mohli mať vlastné počítadlo.",
           "Course_4_Playlab_For_Loops_4b_2": "V tomto cvičení môžete zmeniť len \"násobky\" \"for\" slučiek."
         },
         "Course 4 SCV 6": {
@@ -305,10 +305,10 @@
           "dance_party_11_5_groups": "Tu hľadaj blok \"všetky kačice\""
         },
         "Fish Tank 3-validated_2019": {
-          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom ako tvoj kód funguje."
+          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Fish Tank 3-validated_2020": {
-          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom ako tvoj kód funguje."
+          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
@@ -431,7 +431,7 @@
           "courseE_playLab_scaffold3_1": "Dostaňte herca k tejto vlajočke pre postup do ďaľšieho levelu."
         },
         "OPD-K5-spritelab-3": {
-          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom ako tvoj kód funguje."
+          "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "OPD-K5-variables-1": {
           "grade5_artist_variables_triangles1_1": "Všimni si, že bloky majú nový spôsob zadávani čísiel. Tieto \"matematické\" bloky môžeš vytiahnuť a presúvať podľa potreby!"
@@ -516,11 +516,13 @@
         },
         "behaviors 3a": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 3a_2020": {
           "behavior_callout": "Prečo tento postup nefunguje pri prostrednej hviezde?",
-          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\"."
+          "star2_callout": "Odstráň blok s kostýmom a použi namiesto neho blok \"táto postava\".",
+          "this_sprite_callout": "Vymeň blok kostýmov nižšie za tento."
         },
         "behaviors 4": {
           "behaviors_edit": "Klikni sem  a uvidíš, ako toto správanie funguje."
@@ -812,10 +814,10 @@
           "jumpto_callout": "Tento blok je pre projekt veľmi dôležitý. Určite ho použi!"
         },
         "courseC_artist_loops1b_2019": {
-          "sticker2": "Toto pridaj do stredu tvojho programu."
+          "sticker2": "Toto pridaj do stredu svojho programu."
         },
         "courseC_artist_loops1b_2020": {
-          "sticker2": "Toto pridaj do stredu tvojho programu."
+          "sticker2": "Toto pridaj do stredu svojho programu."
         },
         "courseC_artist_loopsPrePre1a": {
           "courseC_artist_loopsPrePre1a_1": "Začnite použitím tohto bloku pre premiestnenie herca do stredu obrazovky."
@@ -1072,11 +1074,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.",
-          "stone_block_2": "Šedé bloky sú z kamena a nemôžu byť zahodené."
+          "stone_block_2": "Šedé bloky sú z kameňa a nemôžu byť zahodené."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Extra bloky môžete presunúť na panel nástrojov pre ich odstránenie.",
-          "stone_block_2": "Šedé bloky sú z kamena a nemôžu byť zahodené."
+          "stone_block_2": "Šedé bloky sú z kameňa a nemôžu byť zahodené."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Toto je váš počet blokov. Podľa toho viete, koľko takýchto blokov ešte môžete použiť."
@@ -1203,13 +1205,13 @@
           "courseE_farmer_functions1_2": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii."
         },
         "courseE_farmer_functions13_2018": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions13_2019": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions13_2020": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii."
@@ -1221,28 +1223,28 @@
           "courseE_farmer_functions1_2": "Tentokrát je panel nástrojov usporiadaný inak! Klikni na rôzne kategórie a uvidíš, ktoré bloky máš k dispozícii."
         },
         "courseE_farmer_functions1a": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions1a_2018": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions1a_2019": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions1a_2020": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions2b": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions2b_2018": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions2b_2019": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_farmer_functions2b_2020": {
-          "courseE_farmer_functions1a_1": "Táto zelenina je vybraná náhodne. Pri každom spustení programu sa zobrazí iný jej druh."
+          "courseE_farmer_functions1a_1": "Pod týmito rastlinkami sa ukrýva náhodne vybraná zelenina. Pri každom spustení programu bude iná. "
         },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Tento blok vám umožní presunúť hercov do rôznych častí hracieho poľa."
@@ -1450,6 +1452,20 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_1": "Všimni si, že bloky majú nový spôsob zadávani čísiel. Tieto \"matematické\" bloky môžeš vytiahnuť a presúvať podľa potreby!"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "Akýkoľvek kód, ktorý sem vložíš, sa zopakuje toľkokrát, koľko mu povieš. Až potom sa spustí zvyšok programu."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Toto číslo môžete zmeniť.",
+          "courseE_artist_ramp8_2": "Kliknite sem pre zadanie počtu opakovaní vášho kódu."
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknutím sem rozbalíte blok.",
+          "pointerlocation": "Sem potiahnite blok predmetu."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknite na vytvorenie nového kostýmu"
         }
       }
     }

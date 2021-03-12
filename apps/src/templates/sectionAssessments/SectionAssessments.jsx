@@ -265,9 +265,7 @@ class SectionAssessments extends Component {
                     >
                       <div>{i18n.downloadAssessmentCSV()}</div>
                     </CSVLink>
-                    <MultipleChoiceSurveyOverviewContainer
-                      openDialog={this.showMulitpleChoiceDetailDialog}
-                    />
+                    <MultipleChoiceSurveyOverviewContainer />
                     <FreeResponsesSurveyContainer
                       openDialog={this.showFreeResponseDetailDialog}
                     />

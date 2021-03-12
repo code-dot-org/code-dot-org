@@ -1,0 +1,16 @@
+{
+  "name": "csd-2021",
+  "script_names": [
+    "csd1-2021",
+    "csd2-2021",
+    "csd3-2021",
+    "csd4-2021",
+    "csd5-2021",
+    "csd6-2021"
+  ],
+  "properties": {
+    "has_numbered_units": true,
+    "version_year": "2021",
+    "family_name": "csd"
+  }
+}
