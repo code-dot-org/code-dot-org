@@ -1767,6 +1767,9 @@ class User < ApplicationRecord
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
+      if level_is_group_level && submitted
+        user_level.locked = true
+      end
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
       end
