@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-08 20:03:52 UTC",
+    "serialized_at": "2021-03-12 22:17:32 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -2969,7 +2969,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Function blocks:\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/E.7-lesson-hint.png)\r\n\r\nThe block to the left is a function declaration, a block that students will name and use to fill in the function. The block to the right is a function call, a block that makes the function code run. Students will need multiple of the function call blocks.\r\n"
+            "markdown": "Function blocks:\n\n![](https://images.code.org/88901576439e1a7b660a87952d4bf7de-E.7-lesson-hint.png)\n\nThe block to the left is a function declaration, a block that students will name and use to fill in the function. The block to the right is a function call, a block that makes the function code run. Students will need multiple of the function call blocks.\n"
           }
         ],
         "name": "Unplugged Activity Using Some Blockly",
@@ -4080,7 +4080,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4103,7 +4106,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4126,7 +4132,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4462,10 +4471,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_while1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5890,7 +5899,7 @@
       "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5916,7 +5925,7 @@
       "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5942,7 +5951,7 @@
       "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5968,7 +5977,7 @@
       "chapter": 98,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5994,7 +6003,7 @@
       "chapter": 99,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6020,7 +6029,7 @@
       "chapter": 100,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6046,7 +6055,7 @@
       "chapter": 101,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6072,7 +6081,7 @@
       "chapter": 102,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6098,7 +6107,7 @@
       "chapter": 103,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6124,7 +6133,7 @@
       "chapter": 104,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6150,7 +6159,7 @@
       "chapter": 105,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6176,7 +6185,7 @@
       "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
