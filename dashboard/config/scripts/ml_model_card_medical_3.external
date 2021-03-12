@@ -72,7 +72,5 @@ markdown <<MARKDOWN
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-## Data Concerns
 
-This dataset only contains 10 rows of data, meaning we're basing the entire model on just 10 people. Even with a high accuracy rate, we probably need more data.
 MARKDOWN

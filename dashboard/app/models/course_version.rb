@@ -24,6 +24,12 @@ class CourseVersion < ApplicationRecord
   has_many :resources
   has_many :vocabularies
 
+  KEY_CHAR_RE = /\d/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only digits; got \"%{value}\"."
+
   def units
     content_root_type == 'UnitGroup' ? content_root.default_scripts : [content_root]
   end
