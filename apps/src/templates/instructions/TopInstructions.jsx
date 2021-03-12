@@ -7,11 +7,8 @@ import {connect} from 'react-redux';
 import _ from 'lodash';
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import TeacherFeedback from './TeacherFeedback';
-import InlineAudio from './InlineAudio';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
-import PaneHeader, {PaneButton} from '../../templates/PaneHeader';
-import InstructionsTab from './InstructionsTab';
 import HelpTabContents from './HelpTabContents';
 import {
   toggleInstructionsCollapsed,
@@ -22,9 +19,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import HeightResizer from './HeightResizer';
-import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
 import InstructionsCSF from './InstructionsCSF';
@@ -37,13 +32,14 @@ import {
   getRubric,
   incrementVisitCount
 } from './topInstructionsHelpers';
+import TopInstructionsHeader from './TopInstructionsHeader';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
-const TabType = {
+export const TabType = {
   INSTRUCTIONS: 'instructions',
   RESOURCES: 'resources',
   COMMENTS: 'comments',
@@ -107,81 +103,10 @@ const styles = {
     height: undefined,
     bottom: 0
   },
-  paneHeaderOverride: {
-    color: color.default_text
-  },
   title: {
     textAlign: 'center',
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
-  },
-  helpTabs: {
-    float: 'left',
-    paddingTop: 6,
-    paddingLeft: 30
-  },
-  helpTabsRtl: {
-    float: 'right',
-    paddingTop: 6,
-    paddingRight: 30
-  },
-  collapserIcon: {
-    showHideButton: {
-      position: 'absolute',
-      top: 0,
-      margin: 0,
-      lineHeight: styleConstants['workspace-headers-height'] + 'px',
-      fontSize: 18,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.white
-      }
-    },
-    showHideButtonLtr: {
-      left: 8
-    },
-    showHideButtonRtl: {
-      right: 8
-    },
-    teacherOnlyColor: {
-      color: color.lightest_cyan,
-      ':hover': {
-        cursor: 'pointer',
-        color: color.default_text
-      }
-    }
-  }
-};
-
-const audioStyle = {
-  wrapper: {
-    float: 'right'
-  },
-  button: {
-    height: 24,
-    marginTop: '3px',
-    marginBottom: '3px'
-  },
-  buttonImg: {
-    lineHeight: '24px',
-    fontSize: 15,
-    paddingLeft: 12
-  }
-};
-
-const audioStyleRTL = {
-  wrapper: {
-    float: 'left'
-  },
-  button: {
-    height: 24,
-    marginTop: '3px',
-    marginBottom: '3px'
-  },
-  buttonImg: {
-    lineHeight: '24px',
-    fontSize: 15,
-    paddingLeft: 12
   }
 };
 
@@ -199,7 +124,6 @@ class TopInstructions extends Component {
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
-    ttsLongInstructionsUrl: PropTypes.string,
     levelVideos: PropTypes.array,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
@@ -542,13 +466,13 @@ class TopInstructions extends Component {
     {leading: true}
   );
 
-  isViewingAsStudent() {
+  isViewingAsStudent = () => {
     return this.props.viewAs === ViewType.Student;
-  }
+  };
 
-  isViewingAsTeacher() {
+  isViewingAsTeacher = () => {
     return this.props.viewAs === ViewType.Teacher;
-  }
+  };
 
   setInstructionsRef(ref) {
     if (ref) {
@@ -563,7 +487,6 @@ class TopInstructions extends Component {
       longInstructions,
       hasContainedLevels,
       noInstructionsWhenCollapsed,
-      ttsLongInstructionsUrl,
       noVisualization,
       isRtl,
       height,
@@ -572,7 +495,6 @@ class TopInstructions extends Component {
       levelVideos,
       mapReference,
       referenceLinks,
-      documentationUrl,
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
@@ -620,7 +542,7 @@ class TopInstructions extends Component {
     const studentHasFeedback =
       this.isViewingAsStudent() &&
       feedbacks.length > 0 &&
-      (feedbacks[0].comment || feedbacks[0].performance);
+      !!(feedbacks[0].comment || feedbacks[0].performance);
 
     /*
      * The feedback tab will be the Key Concept tab if there is a mini rubric and:
@@ -649,109 +571,28 @@ class TopInstructions extends Component {
       return <div />;
     }
 
-    const showContainedLevelAnswer =
-      hasContainedLevels && $('#containedLevelAnswer0').length > 0;
-
-    const collapserIconStyles = {
-      ...styles.collapserIcon.showHideButton,
-      ...(this.props.isRtl
-        ? styles.collapserIcon.showHideButtonRtl
-        : styles.collapserIcon.showHideButtonLtr),
-      ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
-    };
-
     return (
       <div
         style={mainStyle}
         className="editor-column"
         ref={ref => (this.topInstructions = ref)}
       >
-        <PaneHeader
-          hasFocus={false}
+        <TopInstructionsHeader
           teacherOnly={teacherOnly}
-          isMinecraft={isMinecraft}
-        >
-          <div style={styles.paneHeaderOverride}>
-            {/* For CSF contained levels we use the same audio button location as CSD/CSP*/}
-            {tabSelected === TabType.INSTRUCTIONS &&
-              ttsLongInstructionsUrl &&
-              (hasContainedLevels || isCSDorCSP) && (
-                <InlineAudio
-                  src={ttsLongInstructionsUrl}
-                  style={isRtl ? audioStyleRTL : audioStyle}
-                  autoplayTriggerElementId="codeApp"
-                />
-              )}
-            {documentationUrl && tabSelected !== TabType.COMMENTS && (
-              <PaneButton
-                iconClass="fa fa-book"
-                label={i18n.documentation()}
-                isRtl={isRtl}
-                headerHasFocus={false}
-                onClick={this.handleDocumentationClick}
-                isMinecraft={isMinecraft}
-              />
-            )}
-            <div style={isRtl ? styles.helpTabsRtl : styles.helpTabs}>
-              <InstructionsTab
-                className="uitest-instructionsTab"
-                onClick={this.handleInstructionTabClick}
-                selected={tabSelected === TabType.INSTRUCTIONS}
-                text={i18n.instructions()}
-                teacherOnly={teacherOnly}
-                isMinecraft={isMinecraft}
-                isRtl={isRtl}
-              />
-              {isCSDorCSP && displayHelpTab && (
-                <InstructionsTab
-                  className="uitest-helpTab"
-                  onClick={this.handleHelpTabClick}
-                  selected={tabSelected === TabType.RESOURCES}
-                  text={i18n.helpTips()}
-                  teacherOnly={teacherOnly}
-                  isMinecraft={isMinecraft}
-                  isRtl={isRtl}
-                />
-              )}
-              {isCSDorCSP &&
-                displayFeedback &&
-                (!fetchingData || teacherOnly) && (
-                  <InstructionsTab
-                    className="uitest-feedback"
-                    onClick={this.handleCommentTabClick}
-                    selected={tabSelected === TabType.COMMENTS}
-                    text={
-                      displayKeyConcept ? i18n.keyConcept() : i18n.feedback()
-                    }
-                    teacherOnly={teacherOnly}
-                    isMinecraft={isMinecraft}
-                    isRtl={isRtl}
-                  />
-                )}
-              {this.isViewingAsTeacher() &&
-                (teacherMarkdown || showContainedLevelAnswer) && (
-                  <InstructionsTab
-                    className="uitest-teacherOnlyTab"
-                    onClick={this.handleTeacherOnlyTabClick}
-                    selected={tabSelected === TabType.TEACHER_ONLY}
-                    text={i18n.teacherOnly()}
-                    teacherOnly={teacherOnly}
-                    isMinecraft={isMinecraft}
-                    isRtl={isRtl}
-                  />
-                )}
-            </div>
-            {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-            {!isEmbedView && (isCSDorCSP || hasContainedLevels) && (
-              <CollapserIcon
-                isCollapsed={isCollapsed}
-                onClick={this.handleClickCollapser}
-                teacherOnly={teacherOnly}
-                isRtl={isRtl}
-              />
-            )}
-          </div>
-        </PaneHeader>
+          tabSelected={tabSelected}
+          isCSDorCSP={isCSDorCSP}
+          displayHelpTab={displayHelpTab}
+          displayFeedback={displayFeedback}
+          displayKeyConcept={displayKeyConcept}
+          isViewingAsTeacher={this.isViewingAsTeacher()}
+          fetchingData={fetchingData}
+          handleDocumentationClick={this.handleDocumentationClick}
+          handleInstructionTabClick={this.handleInstructionTabClick}
+          handleHelpTabClick={this.handleHelpTabClick}
+          handleCommentTabClick={this.handleCommentTabClick}
+          handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
+          handleClickCollapser={this.handleClickCollapser}
+        />
         <div style={[isCollapsed && isCSDorCSP && commonStyles.hidden]}>
           <div
             style={[
@@ -787,16 +628,14 @@ class TopInstructions extends Component {
               {!hasContainedLevels &&
                 isCSDorCSP &&
                 tabSelected === TabType.INSTRUCTIONS && (
-                  <div>
-                    <Instructions
-                      ref={ref => this.setInstructionsRef(ref)}
-                      longInstructions={longInstructions}
-                      onResize={this.adjustMaxNeededHeight}
-                      inTopPane
-                      isBlockly={isBlockly}
-                      noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
-                    />
-                  </div>
+                  <Instructions
+                    ref={ref => this.setInstructionsRef(ref)}
+                    longInstructions={longInstructions}
+                    onResize={this.adjustMaxNeededHeight}
+                    inTopPane
+                    isBlockly={isBlockly}
+                    collapsible={noInstructionsWhenCollapsed}
+                  />
                 )}
             </div>
             {tabSelected === TabType.RESOURCES && (
@@ -868,7 +707,6 @@ export default connect(
     noVisualization: state.pageConstants.noVisualization,
     isCollapsed: state.instructions.isCollapsed,
     documentationUrl: state.pageConstants.documentationUrl,
-    ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     levelVideos: state.instructions.levelVideos,
     mapReference: state.instructions.mapReference,
     referenceLinks: state.instructions.referenceLinks,
