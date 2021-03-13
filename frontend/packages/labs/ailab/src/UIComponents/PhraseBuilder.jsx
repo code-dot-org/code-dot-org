@@ -58,53 +58,62 @@ class PhraseBuilder extends Component {
         }}
       >
         <div style={styles.phraseBuilderHeader}>Predict...</div>
-        <select
-          value={labelColumn === null ? "" : labelColumn}
-          onChange={this.handleChangeLabelSelect}
-          style={styles.phraseBuilderSelect}
-        >
-          <option>{""}</option>
-          {selectableLabels.map((feature, index) => {
-            return (
-              <option key={index} value={feature}>
-                {feature}
-              </option>
-            );
-          })}
-        </select>
-        <br />
-        {currentPanel === "dataDisplayFeatures" && (
-          <div>
-            <div style={styles.phraseBuilderHeader}>Based on...</div>
-            {selectedFeatures.map((feature, index) => {
+        {currentPanel === "dataDisplayLabel" && (
+          <select
+            value={labelColumn === null ? "" : labelColumn}
+            onChange={this.handleChangeLabelSelect}
+            style={styles.phraseBuilderSelect}
+          >
+            <option>{""}</option>
+            {selectableLabels.map((feature, index) => {
               return (
-                <div key={index} style={styles.phraseBuilderFeature}>
+                <option key={index} value={feature}>
                   {feature}
-                  <div
-                    onClick={() => this.removeSelectedFeature(feature)}
-                    style={styles.phraseBuilderFeatureRemove}
-                  >
-                    <FontAwesomeIcon icon={faTimes} />
-                  </div>
-                </div>
+                </option>
               );
             })}
-            <select
-              value={""}
-              onChange={this.handleChangeFeatureSelect}
-              style={styles.phraseBuilderSelect}
-            >
-              <option key="default" value="" disabled>
-                + Add feature
-              </option>
-              {selectableFeatures.map((feature, index) => {
+          </select>
+        )}
+
+
+        {currentPanel === "dataDisplayFeatures" && (
+          <div>
+            <div style={styles.phraseBuilderSelectReadonly}>
+              {labelColumn}
+            </div>
+            <br />
+            <div>
+              <div style={styles.phraseBuilderHeader}>Based on...</div>
+              {selectedFeatures.map((feature, index) => {
                 return (
-                  <option key={index} value={feature}>
+                  <div key={index} style={styles.phraseBuilderFeature}>
                     {feature}
-                  </option>
+                    <div
+                      onClick={() => this.removeSelectedFeature(feature)}
+                      style={styles.phraseBuilderFeatureRemove}
+                    >
+                      <FontAwesomeIcon icon={faTimes} />
+                    </div>
+                  </div>
                 );
               })}
-            </select>
+              <select
+                value={""}
+                onChange={this.handleChangeFeatureSelect}
+                style={styles.phraseBuilderSelect}
+              >
+                <option key="default" value="" disabled>
+                  + Add feature
+                </option>
+                {selectableFeatures.map((feature, index) => {
+                  return (
+                    <option key={index} value={feature}>
+                      {feature}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
           </div>
         )}
       </div>

@@ -413,5 +413,11 @@ export const styles = {
     cursor: "pointer"
   },
 
+  phraseBuilderSelectReadonly: {
+    fontSize: 24,
+    marginTop: 10,
+    padding: 6,
+  },
+
   phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" }
 };
