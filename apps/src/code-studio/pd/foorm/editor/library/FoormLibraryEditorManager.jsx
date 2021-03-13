@@ -43,7 +43,6 @@ class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
     resetCodeMirror: PropTypes.func,
-    libraryNamesAndVersions: PropTypes.array,
     categories: PropTypes.array,
 
     // populated by redux
@@ -157,6 +156,7 @@ class FoormLibraryEditorManager extends React.Component {
     });
   }
 
+  // Callback for FoormEntityLoadButtons (for initializing new library)
   initializeNewLibrary() {
     this.props.setAvailableLibraryQuestions([]);
     this.props.setLibraryData({
@@ -167,6 +167,7 @@ class FoormLibraryEditorManager extends React.Component {
     this.initializeLibraryQuestion(true);
   }
 
+  // Callback for FoormEntityLoadButtons (for initializing new library question)
   initializeLibraryQuestion(showCodeMirror) {
     this.updateLibraryQuestionData({
       question: {},
@@ -179,6 +180,11 @@ class FoormLibraryEditorManager extends React.Component {
       hasLoadError: false,
       showCodeMirror: showCodeMirror
     });
+  }
+
+  // Callback for FoormEntityLoadButtons
+  showCodeMirror() {
+    this.setState({showCodeMirror: true});
   }
 
   resetSaveStatus() {
@@ -198,11 +204,6 @@ class FoormLibraryEditorManager extends React.Component {
       this.props.libraryId &&
       this.props.availableLibraryQuestionsForCurrentLibrary
     );
-  }
-
-  // Callback for FoormLoadButtons
-  showCodeMirror() {
-    this.setState({showCodeMirror: true});
   }
 
   getPreviewErrors() {
@@ -304,7 +305,8 @@ export default connect(
       state.foorm.availableSubEntities || [],
     libraryId: state.foorm.libraryId,
     libraryName: state.foorm.libraryName,
-    libraryQuestionName: state.foorm.libraryQuestionName
+    libraryQuestionName: state.foorm.libraryQuestionName,
+    hasJSONError: state.foorm.hasJSONError
   }),
   dispatch => ({
     setAvailableLibraryQuestions: libraryQuestionsMetadata =>

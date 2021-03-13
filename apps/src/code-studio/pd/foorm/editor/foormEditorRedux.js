@@ -88,10 +88,10 @@ export const setLastSavedQuestions = questions => ({
 });
 
 const initialState = {
+  // State relevant for both Form and Library editors
   questions: '',
   hasJSONError: false,
   availableEntities: [],
-  availableSubEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
@@ -105,7 +105,8 @@ const initialState = {
   libraryName: null,
   libraryVersion: null,
   libraryQuestionId: null,
-  libraryQuestionName: null
+  libraryQuestionName: null,
+  availableSubEntities: []
 };
 
 export default function foormEditorRedux(state = initialState, action) {
