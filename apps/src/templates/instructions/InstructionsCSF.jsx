@@ -131,7 +131,6 @@ class InstructionsCSF extends React.Component {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
-    isBlockly: PropTypes.bool.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
     hideOverlay: PropTypes.func.isRequired,
@@ -606,8 +605,6 @@ class InstructionsCSF extends React.Component {
                 }
                 imgURL={this.props.aniGifURL}
                 inTopPane
-                isBlockly={this.props.isBlockly}
-                collapsible={true}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
@@ -715,7 +712,6 @@ export default connect(
       overlayVisible: state.instructions.overlayVisible,
       skinId: state.pageConstants.skinId,
       isMinecraft: !!state.pageConstants.isMinecraft,
-      isBlockly: !!state.pageConstants.isBlockly,
       aniGifURL: state.pageConstants.aniGifURL,
       inputOutputTable: state.pageConstants.inputOutputTable,
       isRtl: state.isRtl,
