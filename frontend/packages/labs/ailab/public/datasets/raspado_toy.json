@@ -1,0 +1,63 @@
+{
+  "card": {
+    "description": "Survey of customers in a raspado shop on whether or not they like certain raspado combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of raspado a new customer should order",
+      "potentialMisuses": "Anything other than recommendations"
+    }
+  },
+  "fields": [
+    {
+      "id": "pecan",
+      "type": "categorical",
+      "description": "Does the raspado include pecan toppings?"
+    },
+    {
+      "id": "strawberry",
+      "type": "categorical",
+      "description": "Does the raspado include strawberry toppings?"
+    },
+    {
+      "id": "vanilla",
+      "type": "categorical",
+      "description": "Does the raspado include vanilla toppings?"
+    },
+    {
+      "id": "mango",
+      "type": "categorical",
+      "description": "Does the raspado include mango toppings?"
+    },
+    {
+      "id": "lime",
+      "type": "categorical",
+      "description": "Does the raspado include lime toppings?"
+    },
+    {
+      "id": "chili en polbo",
+      "type": "categorical",
+      "description": "Does the raspado include chile en polbo toppings?"
+    },
+    {
+      "id": "lechera",
+      "type": "categorical",
+      "description": "Does the raspado include lechera toppings?"
+    },
+    {
+      "id": "coconut",
+      "type": "categorical",
+      "description": "Does the raspado include coconut toppings?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Do you like or dislike the raspado?"
+    }
+  ],
+  "defaultLabelColumn": "preference"
+}

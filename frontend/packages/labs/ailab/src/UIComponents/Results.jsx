@@ -82,7 +82,7 @@ class Results extends Component {
             {!isNaN(this.props.summaryStat.stat) && (
               <div>
                 <div style={styles.mediumText}>
-                  The calculated accuracy of this model is:
+                  Accuracy
                 </div>
                 <div style={styles.contents}>
                   {this.props.summaryStat.stat}%

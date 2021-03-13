@@ -63,6 +63,7 @@ const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_CALLBACK = "SET_INSTRUCTIONS_CALLBACK";
+const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 
 // Action creators
 export function setMode(mode) {
@@ -210,6 +211,10 @@ export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
 
+export function setSaveStatus(status) {
+  return { type: SET_SAVE_STATUS, status };
+}
+
 const initialState = {
   name: undefined,
   csvfile: undefined,
@@ -238,7 +243,8 @@ const initialState = {
   instructionCallback: undefined,
   currentPanel: "selectDataset",
   currentColumn: undefined,
-  resultsPhase: undefined
+  resultsPhase: undefined,
+  saveStatus: undefined
 };
 
 // Reducer
@@ -512,6 +518,12 @@ export default function rootReducer(state = initialState, action) {
       resultsPhase: action.phase
     };
   }
+  if (action.type === SET_SAVE_STATUS) {
+    return {
+      ...state,
+      saveStatus: action.status
+    };
+  }
   return state;
 }
 
@@ -695,12 +707,11 @@ function isEmpty(object) {
 }
 
 export function getConvertedValue(state, rawValue, column) {
-  if (!isEmpty(state.featureNumberKey)) {
-    const convertedValue = getCategoricalColumns(state).includes(column)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
-    return convertedValue;
-  }
+  const convertedValue = getCategoricalColumns(state).includes(column) &&
+    !isEmpty(state.featureNumberKey)
+    ? getKeyByValue(state.featureNumberKey[column], rawValue)
+    : rawValue;
+  return convertedValue;
 }
 
 export function getConvertedAccuracyCheckExamples(state) {
@@ -719,13 +730,8 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
-    const convertedLabel = getCategoricalColumns(state).includes(
-      state.labelColumn
-    )
-      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
-      : rawLabel;
-    return convertedLabel;
+  if (state.labelColumn) {
+    return getConvertedValue(state, rawLabel, state.labelColumn);
   }
 }
 
@@ -753,7 +759,7 @@ export function getCompatibleTrainers(state) {
 }
 
 export function isRegression(state) {
-  const mlType = getMLType(state.selectedTrainer);
+  const mlType = getMLType(getSelectedTrainer(state));
   return mlType === MLTypes.REGRESSION;
 }
 
@@ -923,9 +929,14 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.name = state.trainedModelDetails.name;
 
-  // If we have column descriptions in metadata, use that, otherwise
-  // use what the user has manually entered.
-  if (state.metadata && state.metadata.fields) {
+  // If the first column has a description, assume descriptions are in the
+  // metadata for that dataset and use them; otherwise, use manually entered
+  // column desscriptions.
+  if (
+    state.metadata &&
+    state.metadata.fields &&
+    state.metadata.fields[0].description
+  ) {
     dataToSave.columns = [];
     for (const columnDescription of getSelectedColumnDescriptions(state)) {
       dataToSave.columns.push({
@@ -1064,6 +1075,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "save") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -1088,12 +1105,12 @@ export function getPanelButtons(state) {
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
@@ -1102,10 +1119,14 @@ export function getPanelButtons(state) {
     }
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
-    next = { panel: "saveModel", text: "Continue" };
+    next = isPanelEnabled(state, "saveModel")
+      ? { panel: "saveModel", text: "Save" }
+      : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = null;
+    next = isPanelEnabled(state, "save")
+      ? { panel: "save", text: "Finish" }
+      : null;
   }
 
   return { prev, next };

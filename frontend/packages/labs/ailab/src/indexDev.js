@@ -63,8 +63,13 @@ const sampleModes = {
 let parameters = queryString.parse(location.search);
 const mode = parameters["mode"] ? sampleModes[parameters["mode"]] : null;
 
-function saveTrainedModelStub(data) {
+function onContinueStub() {
+  console.log("This would continue to the next level.");
+}
+
+function saveTrainedModelStub(data, response) {
   console.log("This would save a trained model.", data);
+  response({ id: 303, status: "success" });
 }
 
 function setInstructionsStub(instructions) {
@@ -74,6 +79,7 @@ function setInstructionsStub(instructions) {
 // Initialize the app.
 initAll({
   mode: mode,
+  onContinue: onContinueStub,
   saveTrainedModel: saveTrainedModelStub,
   setInstructions: setInstructionsStub
 });

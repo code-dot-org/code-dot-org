@@ -162,6 +162,62 @@ export const allDatasets = [
     imagePath: "datasets/pizza_toppings_toy.jpg"
   },
   {
+    id: "boba_toy",
+    name: "Bubble Tea (Toy)",
+    path: "datasets/boba_toy.csv",
+    metadataPath: "datasets/boba_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "cookies_toy",
+    name: "Cookies (Toy)",
+    path: "datasets/cookies_toy.csv",
+    metadataPath: "datasets/cookies_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "naan_toy",
+    name: "Naan (Toy)",
+    path: "datasets/naan_toy.csv",
+    metadataPath: "datasets/naan_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "poke_toy",
+    name: "Poke (Toy)",
+    path: "datasets/poke_toy.csv",
+    metadataPath: "datasets/poke_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "poutine_toy",
+    name: "Poutine (Toy)",
+    path: "datasets/poutine_toy.csv",
+    metadataPath: "datasets/poutine_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "raspado_toy",
+    name: "Raspado (Toy)",
+    path: "datasets/raspado_toy.csv",
+    metadataPath: "datasets/raspado_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "salad_toy",
+    name: "Salad (Toy)",
+    path: "datasets/salad_toy.csv",
+    metadataPath: "datasets/salad_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "salsa_toy",
+    name: "Salsa (Toy)",
+    path: "datasets/salsa_toy.csv",
+    metadataPath: "datasets/salsa_toy.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
     id: "breakfast_toy",
     name: "Breakfast Quiz",
     path: "datasets/breakfast_toy.csv",

@@ -133,7 +133,7 @@ class SelectDataset extends Component {
             />
             <p />
             <button type="button" onClick={this.handleUpload}>
-              Upload now!
+              Upload
             </button>
           </div>
         )}
