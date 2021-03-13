@@ -264,7 +264,6 @@ class ApiControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
 
     student_responses = body[@section.id.to_s]['stages'][lesson.id.to_s]
-
     if student_responses
       return student_responses[student_number - 1]
     else

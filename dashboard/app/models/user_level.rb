@@ -162,7 +162,7 @@ class UserLevel < ApplicationRecord
   def show_as_locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
-    return false if readonly_answers
+    return false if readonly_answers && unlocked_at && unlocked_at > AUTOLOCK_PERIOD.ago
     return locked? || submitted?
   end
 
