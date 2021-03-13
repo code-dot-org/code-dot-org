@@ -413,10 +413,5 @@ export const styles = {
     cursor: "pointer"
   },
 
-  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
-
-  halfPanel: {
-    float: "left",
-    width: "50%"
-  }
+  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" }
 };

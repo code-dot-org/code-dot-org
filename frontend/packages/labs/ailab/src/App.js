@@ -163,7 +163,7 @@ class App extends Component {
           </BodyContainer>
         )}
 
-        {["dataDisplay"].includes(currentPanel) && (
+        {["dataDisplayLabel", "dataDisplayFeatures"].includes(currentPanel) && (
           <BodyContainer>
             <ContainerLeft>
               <DataDisplay setColumnRef={this.setColumnRef} />

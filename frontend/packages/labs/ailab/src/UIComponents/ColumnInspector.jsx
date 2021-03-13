@@ -57,7 +57,8 @@ class ColumnInspector extends Component {
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
     hideSpecifyColumns: PropTypes.bool,
-    columnPositions: PropTypes.object
+    columnPositions: PropTypes.object,
+    currentPanel: PropTypes.string
   };
 
   handleChangeDataType = (event, feature) => {
@@ -86,7 +87,7 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const { currentColumnData, rangesByColumn } = this.props;
+    const { currentColumnData, rangesByColumn, currentPanel } = this.props;
 
     if (
       currentColumnData &&
@@ -156,28 +157,33 @@ class ColumnInspector extends Component {
                 )}
               </label>
 
-              {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
-                <div style={styles.halfPanel}>
-                  {barData.labels.length <= maxLabelsInHistogram && (
-                    <Bar
-                      data={barData}
-                      width={100}
-                      height={150}
-                      options={chartOptions}
-                    />
-                  )}
-                  {barData.labels.length > maxLabelsInHistogram && (
-                    <div>
-                      {barData.labels.length} values were found in this column.
-                      A graph is only shown when there are{" "}
-                      {maxLabelsInHistogram} or fewer.
-                    </div>
-                  )}
+              {currentPanel === "dataDisplayLabel" &&
+                currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                  <div>
+                    {barData.labels.length <= maxLabelsInHistogram && (
+                      <Bar
+                        data={barData}
+                        width={100}
+                        height={150}
+                        options={chartOptions}
+                      />
+                    )}
+                    {barData.labels.length > maxLabelsInHistogram && (
+                      <div>
+                        {barData.labels.length} values were found in this
+                        column. A graph is only shown when there are{" "}
+                        {maxLabelsInHistogram} or fewer.
+                      </div>
+                    )}
+                  </div>
+                )}
+
+              {currentPanel === "dataDisplayFeatures" && (
+                <div>
+                  <ScatterPlot />
+                  <CrossTab />
                 </div>
               )}
-
-              <ScatterPlot />
-              <CrossTab />
 
               {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
                 <div>
@@ -215,7 +221,8 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
+    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {

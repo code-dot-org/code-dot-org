@@ -23,7 +23,8 @@ class PhraseBuilder extends Component {
     hideSpecifyColumns: PropTypes.bool,
     selectableLabels: PropTypes.array,
     selectableFeatures: PropTypes.array,
-    selectedFeatures: PropTypes.array
+    selectedFeatures: PropTypes.array,
+    currentPanel: PropTypes.string
   };
 
   handleChangeLabelSelect = event => {
@@ -43,7 +44,8 @@ class PhraseBuilder extends Component {
       labelColumn,
       selectedFeatures,
       selectableLabels,
-      selectableFeatures
+      selectableFeatures,
+      currentPanel
     } = this.props;
 
     return (
@@ -57,7 +59,7 @@ class PhraseBuilder extends Component {
       >
         <div style={styles.phraseBuilderHeader}>Predict...</div>
         <select
-          value={labelColumn}
+          value={labelColumn === null ? "" : labelColumn}
           onChange={this.handleChangeLabelSelect}
           style={styles.phraseBuilderSelect}
         >
@@ -71,36 +73,40 @@ class PhraseBuilder extends Component {
           })}
         </select>
         <br />
-        <div style={styles.phraseBuilderHeader}>Based on...</div>
-        {selectedFeatures.map((feature, index) => {
-          return (
-            <div key={index} style={styles.phraseBuilderFeature}>
-              {feature}
-              <div
-                onClick={() => this.removeSelectedFeature(feature)}
-                style={styles.phraseBuilderFeatureRemove}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </div>
-            </div>
-          );
-        })}
-        <select
-          value={""}
-          onChange={this.handleChangeFeatureSelect}
-          style={styles.phraseBuilderSelect}
-        >
-          <option key="default" value="" disabled>
-            + Add feature
-          </option>
-          {selectableFeatures.map((feature, index) => {
-            return (
-              <option key={index} value={feature}>
-                {feature}
+        {currentPanel === "dataDisplayFeatures" && (
+          <div>
+            <div style={styles.phraseBuilderHeader}>Based on...</div>
+            {selectedFeatures.map((feature, index) => {
+              return (
+                <div key={index} style={styles.phraseBuilderFeature}>
+                  {feature}
+                  <div
+                    onClick={() => this.removeSelectedFeature(feature)}
+                    style={styles.phraseBuilderFeatureRemove}
+                  >
+                    <FontAwesomeIcon icon={faTimes} />
+                  </div>
+                </div>
+              );
+            })}
+            <select
+              value={""}
+              onChange={this.handleChangeFeatureSelect}
+              style={styles.phraseBuilderSelect}
+            >
+              <option key="default" value="" disabled>
+                + Add feature
               </option>
-            );
-          })}
-        </select>
+              {selectableFeatures.map((feature, index) => {
+                return (
+                  <option key={index} value={feature}>
+                    {feature}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        )}
       </div>
     );
   }
@@ -111,7 +117,8 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     selectableLabels: getSelectableLabels(state),
-    selectableFeatures: getSelectableFeatures(state)
+    selectableFeatures: getSelectableFeatures(state),
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setLabelColumn(labelColumn) {

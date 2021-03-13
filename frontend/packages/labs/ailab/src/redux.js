@@ -468,6 +468,15 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    if (action.currentPanel === "dataDisplayLabel") {
+      return {
+        ...state,
+        currentPanel: action.currentPanel,
+        currentColumn: undefined,
+        labelColumn: "",
+        selectedFeatures: []
+      };
+    }
     return {
       ...state,
       currentPanel: action.currentPanel,
@@ -700,10 +709,11 @@ function isEmpty(object) {
 }
 
 export function getConvertedValue(state, rawValue, column) {
-  const convertedValue = getCategoricalColumns(state).includes(column) &&
+  const convertedValue =
+    getCategoricalColumns(state).includes(column) &&
     !isEmpty(state.featureNumberKey)
-    ? getKeyByValue(state.featureNumberKey[column], rawValue)
-    : rawValue;
+      ? getKeyByValue(state.featureNumberKey[column], rawValue)
+      : rawValue;
   return convertedValue;
 }
 
@@ -989,7 +999,8 @@ export function getPredictAvailable(state) {
 const panelList = [
   { id: "selectDataset", label: "Import" },
   { id: "specifyColumns", label: "Columns" },
-  { id: "dataDisplay", label: "Data" },
+  { id: "dataDisplayLabel", label: "Label" },
+  { id: "dataDisplayFeatures", label: "Features" },
   { id: "selectTrainer", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
@@ -1009,6 +1020,18 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "dataDisplayLabel") {
+    if (state.data.length === 0) {
+      return false;
+    }
+  }
+
+  if (panelId === "dataDisplayFeatures") {
+    if (!state.labelColumn || state.labelcolumn === "") {
       return false;
     }
   }
@@ -1070,20 +1093,25 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "dataDisplay")
-      ? { panel: "dataDisplay", text: "Continue" }
+    next = isPanelEnabled(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Continue" }
       : null;
-  } else if (state.currentPanel === "dataDisplay") {
+  } else if (state.currentPanel === "dataDisplayLabel") {
     prev = isPanelEnabled(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
+    next = isPanelEnabled(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
+      : null;
+  } else if (state.currentPanel === "dataDisplayFeatures") {
+    prev = { panel: "dataDisplayLabel", text: "Back" };
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
-    prev = { panel: "dataDisplay", text: "Back" };
+    prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
@@ -1093,7 +1121,7 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplay", text: "Back" };
+    prev = { panel: "dataDisplayLabel", text: "Back" };
     next = isPanelEnabled(state, "saveModel")
       ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };
