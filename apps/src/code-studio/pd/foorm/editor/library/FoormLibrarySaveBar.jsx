@@ -64,9 +64,7 @@ const styles = {
   }
 };
 
-const confirmationDialogNames = {
-  save: 'save'
-};
+const saveConfirmationDialogName = 'save';
 
 class FoormLibrarySaveBar extends Component {
   static propTypes = {
@@ -89,19 +87,15 @@ class FoormLibrarySaveBar extends Component {
     setLastSavedLibraryQuestionQuestions: PropTypes.func
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      confirmationDialogBeingShownName: null,
-      isSaving: false,
-      showNewLibraryQuestionSave: false,
-      libraryQuestionName: null,
-      libraryName: null,
-      formsAppearedIn: [],
-      libraryCategory: null
-    };
-  }
+  state = {
+    confirmationDialogBeingShownName: null,
+    isSaving: false,
+    showNewLibraryQuestionSave: false,
+    libraryQuestionName: null,
+    libraryName: null,
+    formsAppearedIn: [],
+    libraryCategory: null
+  };
 
   updateQuestionUrl = () =>
     `/foorm/library_questions/${this.props.libraryQuestionId}`;
@@ -127,37 +121,13 @@ class FoormLibrarySaveBar extends Component {
     }).done(result => {
       if (result.length !== 0) {
         this.setState({
-          confirmationDialogBeingShownName: confirmationDialogNames.save,
+          confirmationDialogBeingShownName: saveConfirmationDialogName,
           formsAppearedIn: result
         });
       } else {
         this.save(this.updateQuestionUrl());
       }
     });
-  };
-
-  publishedSaveWarning = forms => {
-    let formBullets = forms.map((form, i) => <li key={i}>{form}</li>);
-
-    return (
-      <div>
-        <span style={styles.warning}>Warning: </span>This question appears in
-        one or more published surveys, listed below:
-        <ul>{formBullets}</ul>
-        Please only make safe edits as described in the{' '}
-        <a
-          href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          How To
-        </a>
-        .
-        <br />
-        <br />
-        Are you sure you want to save your changes?
-      </div>
-    );
   };
 
   handleSaveCancel = () => {
@@ -277,14 +247,19 @@ class FoormLibrarySaveBar extends Component {
     );
   }
 
-  showNameError = () =>
-    (this.state.libraryQuestionName &&
-      !this.isNameValid(this.state.libraryQuestionName)) ||
-    (this.state.libraryName && !this.isNameValid(this.state.libraryName));
+  isNameErrorShown() {
+    // True if library question name has been entered and is invalid,
+    // or library name has been entered and is invalid.
+    return (
+      (this.state.libraryQuestionName &&
+        !this.isNameValid(this.state.libraryQuestionName)) ||
+      (this.state.libraryName && !this.isNameValid(this.state.libraryName))
+    );
+  }
 
-  disableSaveNewLibraryQuestion = () => {
+  isSaveNewLibraryQuestionDisabled() {
     // disable if invalid name for library question
-    if (this.showNameError()) {
+    if (this.isNameErrorShown()) {
       return true;
     }
 
@@ -306,7 +281,31 @@ class FoormLibrarySaveBar extends Component {
     }
 
     return false;
-  };
+  }
+
+  renderPublishedSaveWarning(forms) {
+    let formBullets = forms.map((form, i) => <li key={i}>{form}</li>);
+
+    return (
+      <div>
+        <span style={styles.warning}>Warning: </span>This question appears in
+        one or more published surveys, listed below:
+        <ul>{formBullets}</ul>
+        Please only make safe edits as described in the{' '}
+        <a
+          href="https://github.com/code-dot-org/code-dot-org/wiki/%5BLevelbuilder%5d-Foorm-Editor:-Editing-a-Form#safe-edits-to-published-forms"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          How To
+        </a>
+        .
+        <br />
+        <br />
+        Are you sure you want to save your changes?
+      </div>
+    );
+  }
 
   renderNewLibraryQuestionSaveModal = () => {
     return (
@@ -373,7 +372,7 @@ class FoormLibrarySaveBar extends Component {
               }
             />
           </FormGroup>
-          {this.showNameError() && (
+          {this.isNameErrorShown() && (
             <div>
               <span style={styles.warning}>Error: </span> Library or library
               question name is invalid. Library and library question names must
@@ -386,7 +385,7 @@ class FoormLibrarySaveBar extends Component {
           <Button
             bsStyle="primary"
             onClick={this.saveNewLibraryQuestion}
-            disabled={this.disableSaveNewLibraryQuestion()}
+            disabled={this.isSaveNewLibraryQuestionDisabled()}
           >
             Save Library Question
           </Button>
@@ -441,7 +440,7 @@ class FoormLibrarySaveBar extends Component {
         <ConfirmationDialog
           show={
             this.state.confirmationDialogBeingShownName ===
-            confirmationDialogNames.save
+            saveConfirmationDialogName
           }
           onOk={() => {
             this.save(this.updateQuestionUrl());
@@ -449,7 +448,7 @@ class FoormLibrarySaveBar extends Component {
           okText={'Yes, save the library question'}
           onCancel={this.handleSaveCancel}
           headerText="Save Library Question"
-          bodyText={this.publishedSaveWarning(this.state.formsAppearedIn)}
+          bodyText={this.renderPublishedSaveWarning(this.state.formsAppearedIn)}
         />
       </div>
     );
