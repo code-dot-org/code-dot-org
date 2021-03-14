@@ -117,6 +117,10 @@ class ProgrammingExpression < ApplicationRecord
     record.name
   end
 
+  def summarize_for_lesson_edit
+    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
+  end
+
   def summarize_for_lesson_show
     {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
   end
