@@ -3,8 +3,8 @@
 # Table name: standards
 #
 #  id              :integer          not null, primary key
-#  organization    :string(255)      not null
-#  organization_id :string(255)      not null
+#  organization    :string(255)
+#  organization_id :string(255)
 #  description     :text(65535)
 #  concept         :text(65535)
 #  category_id     :bigint
@@ -28,12 +28,17 @@ class Standard < ApplicationRecord
       id: id,
       shortcode: shortcode,
       category_description: category.description,
-      description: description
+      description: description,
+
+      # deprecated fields
+      organization: organization,
+      organization_id: organization_id,
+      concept: concept
     }
   end
 
   # Loads/merges the data from a CSV into the Standards table.
-  # Can be used to overwrite the description and category of
+  # Can be used to overwrite the description and concept of
   # existing Standards and to create new Standards.
   # Will not delete existing Standards.
 
@@ -62,14 +67,19 @@ class Standard < ApplicationRecord
         category: category,
         shortcode: row['organization_id'],
         description: row['description'],
+
+        # deprecated fields to stop using
+        organization: row['organization'],
+        organization_id: row['organization_id'],
+        concept: row['concept'],
       }
-      loaded = Standard.find_by({category: parsed[:category], shortcode: parsed[:shortcode]})
+      loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
       if loaded.nil?
         begin
           Standard.new(parsed).save!
           created += 1
         rescue => error
-          puts "Error when processing #{row}: #{error.message}"
+          puts "Error when processing #{parsed[:organization]} #{parsed[:organization_id]}: #{error.message}"
         end
       else
         loaded.assign_attributes(parsed)
