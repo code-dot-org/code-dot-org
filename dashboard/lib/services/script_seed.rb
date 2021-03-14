@@ -164,7 +164,7 @@ module Services
       lessons_vocabularies_data = data['lessons_vocabularies']
       lessons_programming_expressions_data = data['lessons_programming_expressions']
       objectives_data = data['objectives']
-      lessons_standards_data = data['lessons_standards']
+      lessons_standards_data = data['lessons_standards'] || []
       seed_context = SeedContext.new
 
       Script.transaction do
