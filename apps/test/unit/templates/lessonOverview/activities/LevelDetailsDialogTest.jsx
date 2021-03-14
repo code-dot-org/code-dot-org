@@ -2,8 +2,7 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
+import LevelDetailsDialog from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, defaultProps;
@@ -12,42 +11,25 @@ describe('LevelDetailsDialogTest', () => {
     handleCloseSpy = sinon.spy();
     defaultProps = {
       handleClose: handleCloseSpy,
-      viewAs: ViewType.Teacher,
-      isRtl: false
+      scriptLevel: {
+        url: 'level.url',
+        level: {
+          type: 'External',
+          markdown: 'Some markdown'
+        }
+      }
     };
   });
 
   it('calls handleClose when dismiss is clicked', () => {
-    const wrapper = shallow(
-      <LevelDetailsDialog
-        {...defaultProps}
-        scriptLevel={{
-          url: 'level.url',
-          level: {
-            type: 'External',
-            markdown: 'Some markdown'
-          }
-        }}
-      />
-    );
+    const wrapper = shallow(<LevelDetailsDialog {...defaultProps} />);
     const dismissButton = wrapper.find('Button').at(0);
     dismissButton.simulate('click');
     expect(handleCloseSpy.calledOnce).to.be.true;
   });
 
   it('links to level url', () => {
-    const wrapper = shallow(
-      <LevelDetailsDialog
-        {...defaultProps}
-        scriptLevel={{
-          url: 'level.url',
-          level: {
-            type: 'External',
-            markdown: 'Some markdown'
-          }
-        }}
-      />
-    );
+    const wrapper = shallow(<LevelDetailsDialog {...defaultProps} />);
     const levelLink = wrapper.find('Button').at(1);
     expect(levelLink.props().href).to.equal('level.url');
   });
@@ -55,7 +37,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display an external markdown level', () => {
     const wrapper = mount(
       <LevelDetailsDialog
-        {...defaultProps}
+        handleClose={handleCloseSpy}
         scriptLevel={{
           url: 'level.url',
           level: {type: 'External', markdown: 'This is some text.'}
@@ -68,7 +50,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display a LevelGroup', () => {
     const wrapper = mount(
       <LevelDetailsDialog
-        {...defaultProps}
+        handleClose={handleCloseSpy}
         scriptLevel={{
           url: 'level.url',
           level: {type: 'LevelGroup'}
@@ -90,7 +72,7 @@ describe('LevelDetailsDialogTest', () => {
     const loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
     const wrapper = mount(
       <LevelDetailsDialog
-        {...defaultProps}
+        handleClose={handleCloseSpy}
         scriptLevel={{
           url: 'level.url',
           level: {
@@ -107,7 +89,7 @@ describe('LevelDetailsDialogTest', () => {
   it('can display a bubble choice level', () => {
     const wrapper = shallow(
       <LevelDetailsDialog
-        {...defaultProps}
+        handleClose={handleCloseSpy}
         scriptLevel={{
           id: 'scriptlevel',
           url: 'level.url',
@@ -160,7 +142,10 @@ describe('LevelDetailsDialogTest', () => {
       ]
     };
     const wrapper = shallow(
-      <LevelDetailsDialog {...defaultProps} scriptLevel={bubbleChoiceLevel} />
+      <LevelDetailsDialog
+        handleClose={handleCloseSpy}
+        scriptLevel={bubbleChoiceLevel}
+      />
     );
     wrapper
       .instance()
@@ -172,24 +157,5 @@ describe('LevelDetailsDialogTest', () => {
         .first()
         .props().markdown
     ).to.equal('Markdown1');
-  });
-
-  it('can display a CSD/CSP puzzle level', () => {
-    const wrapper = shallow(
-      <LevelDetailsDialog
-        {...defaultProps}
-        scriptLevel={{
-          id: 'scriptlevel',
-          url: 'level.url',
-          status: 'not_tried',
-          level: {
-            type: 'Weblab',
-            id: 'level',
-            longInstructions: 'long instructions'
-          }
-        }}
-      />
-    );
-    expect(wrapper.find('TopInstructions').length).to.equal(1);
   });
 });
