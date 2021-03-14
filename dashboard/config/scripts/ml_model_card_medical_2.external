@@ -5,10 +5,13 @@ description ''
 markdown <<MARKDOWN
 # Medical Priority Model Card #2
 
+<!--
+
 <img src="https://images.code.org/29028d4c429b8e4f459c89a5219bd1e0-image-1615418841315.png" width="45%" style="float:left; margin: 2px;">
 
 <img src="https://images.code.org/da71b1611fdf5a92448fca8e91340535-image-1615418909848.png" width="45%" style="float:right; margin: 2px">
 
+-->
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

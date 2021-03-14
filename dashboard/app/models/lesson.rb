@@ -44,6 +44,7 @@ class Lesson < ApplicationRecord
   # join tables needed for seeding logic
   has_many :lessons_resources
   has_many :lessons_vocabularies
+  has_many :lessons_programming_expressions
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
