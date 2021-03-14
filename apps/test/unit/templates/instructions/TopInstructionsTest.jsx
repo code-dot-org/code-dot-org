@@ -25,7 +25,6 @@ const DEFAULT_PROPS = {
   shortInstructions: '',
   hidden: false,
   isMinecraft: false,
-  isBlockly: false,
   isRtl: false
 };
 
