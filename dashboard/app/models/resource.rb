@@ -35,6 +35,8 @@ class Resource < ApplicationRecord
   validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
 
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
+  has_and_belongs_to_many :scripts, join_table: :scripts_resources
+  has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
   belongs_to :course_version
 
   before_validation :generate_key, on: :create
