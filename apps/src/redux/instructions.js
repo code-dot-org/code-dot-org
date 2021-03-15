@@ -21,8 +21,10 @@ const SET_ALLOW_INSTRUCTIONS_RESIZE =
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
-const SET_CUSTOM_INSTRUCTIONS = 'instructions/SET_CUSTOM_INSTRUCTIONS';
-const SET_CUSTOM_INSTRUCTIONS_SET = 'instructions/SET_CUSTOM_INSTRUCTIONS_SET';
+const SET_DYNAMIC_INSTRUCTIONS_DEFAULTS =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_DEFAULTS';
+const SET_DYNAMIC_INSTRUCTIONS_KEY =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_KEY';
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
 /**
@@ -40,8 +42,9 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
-  customInstructions: undefined,
-  customInstructionsSet: [],
+  dynamicInstructions: {},
+  dynamicInstructionsDefaults: {},
+  dynamicInstructionsKey: undefined,
   teacherMarkdown: undefined,
   hasContainedLevels: false,
   collapsed: false,
@@ -73,6 +76,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      dynamicInstructions,
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
@@ -90,6 +94,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      dynamicInstructions,
       teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
@@ -164,17 +169,18 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_CUSTOM_INSTRUCTIONS) {
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_DEFAULTS) {
     return Object.assign({}, state, {
-      customInstructions: action.customInstructions
+      dynamicInstructionsDefaults: action.dynamicInstructionsDefaults
     });
   }
 
-  if (action.type === SET_CUSTOM_INSTRUCTIONS_SET) {
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
     return Object.assign({}, state, {
-      customInstructionsSet: action.customInstructionsSet
+      dynamicInstructionsKey: action.dynamicInstructionsKey
     });
   }
+
   return state;
 }
 
@@ -183,6 +189,7 @@ export const setInstructionsConstants = ({
   shortInstructions,
   shortInstructions2,
   longInstructions,
+  dynamicInstructions,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
@@ -195,6 +202,7 @@ export const setInstructionsConstants = ({
   shortInstructions,
   shortInstructions2,
   longInstructions,
+  dynamicInstructions,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
@@ -253,14 +261,14 @@ export const hideOverlay = () => ({
   type: HIDE_OVERLAY
 });
 
-export const setCustomInstructions = customInstructions => ({
-  type: SET_CUSTOM_INSTRUCTIONS,
-  customInstructions: customInstructions
+export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_DEFAULTS,
+  dynamicInstructionsDefaults: dynamicInstructionsDefaults
 });
 
-export const setCustomInstructionsSet = customInstructionsSet => ({
-  type: SET_CUSTOM_INSTRUCTIONS_SET,
-  customInstructionsSet: customInstructionsSet
+export const setDynamicInstructionsKey = dynamicInstructionsKey => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_KEY,
+  dynamicInstructionsKey: dynamicInstructionsKey
 });
 
 // HELPERS
@@ -300,6 +308,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.shortInstructions
  * @param {string} config.level.instructions2
  * @param {string} config.level.longInstructions
+ * @param {string} config.level.dynamicInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
  * @param {stirng} config.level.mapReference,
@@ -326,7 +335,7 @@ export const determineInstructionsConstants = config => {
     referenceLinks
   } = level;
 
-  let {longInstructions, shortInstructions} = level;
+  let {longInstructions, shortInstructions, dynamicInstructions} = level;
 
   let shortInstructions2;
 
@@ -401,6 +410,7 @@ export const determineInstructionsConstants = config => {
     shortInstructions,
     shortInstructions2,
     longInstructions,
+    dynamicInstructions,
     teacherMarkdown,
     hasContainedLevels,
     levelVideos,
@@ -408,3 +418,7 @@ export const determineInstructionsConstants = config => {
     referenceLinks
   };
 };
+
+export function getDynamicInstructions(state) {
+  return {...state.dynamicInstructionsDefaults, ...state.dynamicInstructions};
+}

@@ -17,7 +17,8 @@ import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
-  setAllowInstructionsResize
+  setAllowInstructionsResize,
+  getDynamicInstructions
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -32,7 +33,6 @@ import InstructionsCSF from './InstructionsCSF';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {hasInstructions} from './utils';
-
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -162,8 +162,8 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
-    customInstructions: PropTypes.string,
-    customInstructionsSet: PropTypes.object,
+    dynamicInstructions: PropTypes.object,
+    dynamicInstructionsKey: PropTypes.string,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -222,7 +222,7 @@ class TopInstructions extends Component {
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    if (!this.props.customInstructionsSet) {
+    if (!this.props.dynamicInstructions) {
       const maxNeededHeight = this.adjustMaxNeededHeight();
 
       // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
@@ -757,8 +757,8 @@ class TopInstructions extends Component {
                         }
                       }}
                       longInstructions={this.props.longInstructions}
-                      customInstructions={this.props.customInstructions}
-                      customInstructionsSet={this.props.customInstructionsSet}
+                      dynamicInstructions={this.props.dynamicInstructions}
+                      dynamicInstructionsKey={this.props.dynamicInstructionsKey}
                       onResize={this.adjustMaxNeededHeight}
                       setInstructionsRenderedHeight={height => {
                         this.props.setInstructionsRenderedHeight(height);
@@ -852,8 +852,8 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode,
-    customInstructions: state.instructions.customInstructions,
-    customInstructionsSet: state.instructions.customInstructionsSet
+    dynamicInstructions: getDynamicInstructions(state.instructions), //state.instructions.dynamicInstructionsDefaults,
+    dynamicInstructionsKey: state.instructions.dynamicInstructionsKey
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
