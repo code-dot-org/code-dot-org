@@ -19,6 +19,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Announcements from '../../code-studio/components/progress/Announcements';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 
 const styles = {
   frontPage: {
@@ -69,11 +70,6 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
-  linkWithQueryParams = link => {
-    const queryParams = window.location.search || '';
-    return link + queryParams;
-  };
-
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
@@ -81,7 +77,7 @@ class LessonOverview extends Component {
         <div className="lesson-overview-header">
           <div style={styles.header}>
             <a
-              href={this.linkWithQueryParams(lesson.unit.link)}
+              href={linkWithQueryParams(lesson.unit.link)}
               style={styles.navLink}
             >
               {`< ${lesson.unit.displayName}`}
