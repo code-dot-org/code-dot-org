@@ -305,8 +305,10 @@ mk:
               display_name: Лупови
         coursef-2021:
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: Променливи
+            lessonGroup-9:
+              display_name: отстрани
         express-2021:
           lesson_groups:
             csf_loops:
@@ -320,6 +322,8 @@ mk:
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
+              display_name: Променливи
+            variables:
               display_name: Променливи
         k5-onlinepd-2021:
           lessons:
