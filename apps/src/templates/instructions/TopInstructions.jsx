@@ -793,7 +793,9 @@ class TopInstructions extends Component {
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
                       isBlockly={this.props.isBlockly}
-                      collapsible={this.props.collapsible}
+                      noInstructionsWhenCollapsed={
+                        this.props.noInstructionsWhenCollapsed
+                      }
                     />
                   </div>
                 )}

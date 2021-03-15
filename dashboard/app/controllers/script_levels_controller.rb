@@ -488,7 +488,8 @@ class ScriptLevelsController < ApplicationController
       is_bonus_level: @script_level.bonus,
       useGoogleBlockly: params[:blocklyVersion] == "Google",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      authenticity_token: form_authenticity_token
+      authenticity_token: form_authenticity_token,
+      disallowed_html_tags: disallowed_html_tags
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

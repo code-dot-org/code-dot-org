@@ -621,7 +621,7 @@ class InstructionsCSF extends React.Component {
                 imgURL={this.props.aniGifURL}
                 inTopPane
                 isBlockly={this.props.isBlockly}
-                collapsible={this.props.collapsible}
+                noInstructionsWhenCollapsed={false}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">

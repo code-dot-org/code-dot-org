@@ -26,7 +26,7 @@ const styles = {
 class MarkdownInstructions extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
-    collapsible: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool,
     onResize: PropTypes.func,
     inTopPane: PropTypes.bool,
     isBlockly: PropTypes.bool,
@@ -34,7 +34,7 @@ class MarkdownInstructions extends React.Component {
   };
 
   static defaultProps = {
-    collapsible: false
+    noInstructionsWhenCollapsed: false
   };
 
   componentDidMount() {
@@ -95,13 +95,14 @@ class MarkdownInstructions extends React.Component {
   render() {
     const {inTopPane, markdown} = this.props;
 
+    const canCollapse = !this.props.noInstructionsWhenCollapsed;
     return (
       <div
         className="instructions-markdown"
         style={[
           styles.standard,
           inTopPane && styles.inTopPane,
-          inTopPane && this.props.collapsible && styles.inTopPaneCanCollapse
+          inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
       >
         <EnhancedSafeMarkdown markdown={markdown} expandableImages />

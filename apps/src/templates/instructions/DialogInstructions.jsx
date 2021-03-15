@@ -42,7 +42,7 @@ class DialogInstructions extends React.Component {
         }
         imgURL={showImg ? this.props.imgURL : undefined}
         isBlockly={this.props.isBlockly}
-        collapsible={this.props.noInstructionsWhenCollapsed}
+        noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
       />
     );
   }
