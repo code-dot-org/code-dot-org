@@ -10,8 +10,7 @@ import $ from 'jquery';
 
 import {
   setCustomInstructions,
-  setAllowInstructionsResize,
-  setInstructionsRenderedHeight
+  setCustomInstructionsSet
 } from '../redux/instructions';
 
 /**
@@ -23,6 +22,22 @@ import {
  * properly fit on the mobile device for that viewport.
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
+
+function getInstructionsSet() {
+  var instructions = {
+    selectDataset: 'Select the data set you would like to use.',
+    dataDisplayLabel:
+      'Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict.',
+    dataDisplayFeatures:
+      'Choose one or more columns that will do the predicting.',
+    selectTrainer: 'Set up the training.',
+    trainModel: 'Train the model.',
+    results: 'Review the results.',
+    saveModel: 'Save the trained model for use in App Lab.'
+  };
+
+  return instructions;
+}
 
 /**
  * An instantiable Ailab class
@@ -102,6 +117,8 @@ Ailab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
+  getStore().dispatch(setCustomInstructionsSet(getInstructionsSet()));
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
@@ -128,10 +145,8 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructions = function(instructions) {
-  getStore().dispatch(setCustomInstructions(instructions));
-  getStore().dispatch(setInstructionsRenderedHeight(80));
-  getStore().dispatch(setAllowInstructionsResize(false));
+Ailab.prototype.setInstructions = function(instructionsKey) {
+  getStore().dispatch(setCustomInstructions(instructionsKey));
 };
 
 Ailab.prototype.initMLActivities = function() {

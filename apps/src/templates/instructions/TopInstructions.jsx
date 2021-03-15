@@ -16,7 +16,8 @@ import HelpTabContents from './HelpTabContents';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
-  setInstructionsRenderedHeight
+  setInstructionsRenderedHeight,
+  setAllowInstructionsResize
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -162,6 +163,7 @@ class TopInstructions extends Component {
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     customInstructions: PropTypes.string,
+    customInstructionsSet: PropTypes.object,
     collapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func.isRequired,
@@ -182,7 +184,8 @@ class TopInstructions extends Component {
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
+    setAllowInstructionsResize: PropTypes.func
   };
 
   constructor(props) {
@@ -219,11 +222,13 @@ class TopInstructions extends Component {
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    const maxNeededHeight = this.adjustMaxNeededHeight();
+    if (!this.props.customInstructionsSet) {
+      const maxNeededHeight = this.adjustMaxNeededHeight();
 
-    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-    // adjusts max height.
-    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+      // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
+      // adjusts max height.
+      this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+    }
 
     const promises = [];
 
@@ -680,7 +685,8 @@ class TopInstructions extends Component {
             </div>
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
             {!this.props.isEmbedView &&
-              (isCSDorCSP || this.props.hasContainedLevels) && (
+              (isCSDorCSP || this.props.hasContainedLevels) &&
+              false && (
                 <CollapserIcon
                   collapsed={this.props.collapsed}
                   onClick={this.handleClickCollapser}
@@ -752,7 +758,12 @@ class TopInstructions extends Component {
                       }}
                       longInstructions={this.props.longInstructions}
                       customInstructions={this.props.customInstructions}
+                      customInstructionsSet={this.props.customInstructionsSet}
                       onResize={this.adjustMaxNeededHeight}
+                      setInstructionsRenderedHeight={height => {
+                        this.props.setInstructionsRenderedHeight(height);
+                        this.props.setAllowInstructionsResize(false);
+                      }}
                       inTopPane
                     />
                   </div>
@@ -841,7 +852,8 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     widgetMode: state.pageConstants.widgetMode,
-    customInstructions: state.instructions.customInstructions
+    customInstructions: state.instructions.customInstructions,
+    customInstructionsSet: state.instructions.customInstructionsSet
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
@@ -852,6 +864,9 @@ export default connect(
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(setInstructionsMaxHeightNeeded(height));
+    },
+    setAllowInstructionsResize(allowResize) {
+      dispatch(setAllowInstructionsResize(allowResize));
     }
   }),
   null,
