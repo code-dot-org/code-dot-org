@@ -145,8 +145,7 @@ const makerBlocks = [
   {
     func: 'createLed',
     ...createLedProps,
-    type: 'either',
-    docFunc: 'createLedNoAssign'
+    type: 'either'
   },
   {
     func: 'var myLed = createLed',
@@ -158,8 +157,7 @@ const makerBlocks = [
   {
     func: 'createButton',
     ...createButtonProps,
-    type: 'either',
-    docFunc: 'createButtonNoAssign'
+    type: 'either'
   },
   {
     func: 'var myButton = createButton',
@@ -425,8 +423,7 @@ const microBitBlocks = [
   {
     func: 'createCapacitiveTouchSensor',
     ...createCapacitiveTouchSensorProps,
-    type: 'either',
-    docFunc: 'createCapacitiveTouchSensorNoAssign'
+    type: 'either'
   },
   {
     func: 'var mySensor = createCapacitiveTouchSensor',
