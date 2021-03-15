@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
+import styleConstants from '../../styleConstants';
+
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const styles = {
   inTopPane: {
@@ -13,7 +18,8 @@ const styles = {
   },
   notInTopPane: {
     overflow: 'auto'
-  }
+  },
+  customInstructions: {}
 };
 
 /**
@@ -30,12 +36,24 @@ class Instructions extends React.Component {
     instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
     customInstructions: PropTypes.string,
+    customInstructionsSet: PropTypes.object,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
-    onResize: PropTypes.func
+    onResize: PropTypes.func,
+    setInstructionsRenderedHeight: PropTypes.func
   };
+
+  state = {
+    customInstructionsHeight: null
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.customInstructionsRefs = {};
+  }
 
   /**
    * Body logic is as follows:
@@ -71,11 +89,38 @@ class Instructions extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let largestHeight = 0;
+
+    // Find the tallest of our custom instructions.
+    if (this.props.customInstructionsSet) {
+      Object.keys(this.props.customInstructionsSet).forEach(key => {
+        const height = $(
+          ReactDOM.findDOMNode(this.customInstructionsRefs[key])
+        ).outerHeight(true);
+        if (height > largestHeight) {
+          largestHeight = height;
+        }
+      });
+    }
+
+    // Resize the parent div to be the height of the largest custom instruction.
+    if (this.props.setInstructionsRenderedHeight) {
+      this.props.setInstructionsRenderedHeight(
+        largestHeight + HEADER_HEIGHT + RESIZER_HEIGHT + 20
+      );
+    }
+  }
+
   render() {
+    const parentStyle = this.props.customInstructionsSet
+      ? styles.customInstructions
+      : this.props.inTopPane
+      ? styles.inTopPane
+      : styles.notInTopPane;
+
     return (
-      <div
-        style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
-      >
+      <div style={parentStyle}>
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
           text={
@@ -84,11 +129,34 @@ class Instructions extends React.Component {
             this.props.shortInstructions
           }
         />
-        {this.props.customInstructions && (
-          <div style={{marginTop: 10}}>{this.props.customInstructions}</div>
+        {this.props.customInstructionsSet && (
+          <div
+            style={{
+              marginTop: 10,
+              position: 'relative',
+              height: this.state.customInstructionsHeight
+            }}
+          >
+            {Object.keys(this.props.customInstructionsSet).map(key => {
+              return (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    opacity: key === this.props.customInstructions ? 1 : 0
+                  }}
+                  key={key}
+                  ref={ref => (this.customInstructionsRefs[key] = ref)}
+                >
+                  <div>{this.props.customInstructionsSet[key]}</div>
+                  <div style={{clear: 'both'}} />
+                </div>
+              );
+            })}
+          </div>
         )}
 
-        {!this.props.customInstructions && (
+        {!this.props.customInstructionsSet && (
           <div>
             {this.renderMainBody()}
 

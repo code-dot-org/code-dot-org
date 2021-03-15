@@ -22,7 +22,7 @@ const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 const SET_CUSTOM_INSTRUCTIONS = 'instructions/SET_CUSTOM_INSTRUCTIONS';
-
+const SET_CUSTOM_INSTRUCTIONS_SET = 'instructions/SET_CUSTOM_INSTRUCTIONS_SET';
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
 /**
@@ -41,6 +41,7 @@ const instructionsInitialState = {
   shortInstructions2: undefined,
   longInstructions: undefined,
   customInstructions: undefined,
+  customInstructionsSet: [],
   teacherMarkdown: undefined,
   hasContainedLevels: false,
   collapsed: false,
@@ -169,6 +170,11 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
+  if (action.type === SET_CUSTOM_INSTRUCTIONS_SET) {
+    return Object.assign({}, state, {
+      customInstructionsSet: action.customInstructionsSet
+    });
+  }
   return state;
 }
 
@@ -250,6 +256,11 @@ export const hideOverlay = () => ({
 export const setCustomInstructions = customInstructions => ({
   type: SET_CUSTOM_INSTRUCTIONS,
   customInstructions: customInstructions
+});
+
+export const setCustomInstructionsSet = customInstructionsSet => ({
+  type: SET_CUSTOM_INSTRUCTIONS_SET,
+  customInstructionsSet: customInstructionsSet
 });
 
 // HELPERS
