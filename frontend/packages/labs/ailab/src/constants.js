@@ -21,6 +21,8 @@ export const TestDataLocations = {
   RANDOM: "random"
 };
 
+export const ModelNameMaxLength = 150;
+
 export const saveMessages = {
   success: "Your model was saved!",
   failure: "There was an error. Your model did not save.",

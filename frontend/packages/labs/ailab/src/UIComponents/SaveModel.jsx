@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
-import { styles, saveMessages } from "../constants";
+import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -88,6 +88,7 @@ class SaveModel extends Component {
                         onChange={event =>
                           this.handleChange(event, field.id, field.isColumn)
                         }
+                        maxLength={field.id === "name" ? ModelNameMaxLength : ""}
                         placeholder={field.placeholder}
                       />
                     </div>
