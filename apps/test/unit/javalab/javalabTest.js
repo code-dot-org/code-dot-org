@@ -37,14 +37,4 @@ describe('Javalab', () => {
       project.hasOwnerChangedProject.restore();
     });
   });
-
-  describe('autosave', () => {
-    // things to test here:
-    // writes to files and projects if there are changes
-    // rename triggers save but not an additional file write
-  });
-
-  // other tests?
-  // rename won't trigger until after save is clicked, even if autosave called
-  //
 });
