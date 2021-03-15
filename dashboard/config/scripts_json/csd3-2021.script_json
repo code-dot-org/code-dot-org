@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:52 UTC",
+    "serialized_at": "2021-03-15 12:48:46 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -2808,7 +2808,7 @@
       "key": "ccd1c562-1214-4b3a-9385-da4c1ca21955",
       "position": 4,
       "properties": {
-        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter]s, and today we're going to be learning more about how to use them.",
+        "description": "If we want our blocks to draw shapes in different ways they'll need more inputs that let us tell them how to draw. The inputs or openings in our blocks have a formal name, [v parameter/csd/2021]s, and today we're going to be learning more about how to use them.",
         "remarks": true
       },
       "seeding_key": {
@@ -17470,16 +17470,6 @@
       }
     },
     {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
       "key": "property",
       "word": "Property",
       "definition": "A label for a characteristic of a sprite, such as its location and appearance",
@@ -17500,6 +17490,16 @@
       }
     },
     {
+      "key": "dot_notation",
+      "word": "Dot notation",
+      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
       "key": "property",
       "word": "Property",
       "definition": "A label for a characteristic of a sprite, such as its location and appearance",
@@ -17507,16 +17507,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "boolean_expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean_expression"
       }
     },
     {
@@ -17537,6 +17527,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
       }
     },
     {
@@ -17614,12 +17614,6 @@
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
         "vocabulary.key": "property"
       }
     },
@@ -17631,14 +17625,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
+        "lesson.key": "Sprites",
+        "vocabulary.key": "dot_notation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "boolean_expression"
+        "lesson.key": "Sprite Properties",
+        "vocabulary.key": "property"
       }
     },
     {
@@ -17651,6 +17645,12 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "boolean_expression"
       }
     },
     {
@@ -17675,6 +17675,284 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "vocabulary.key": "function"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "fill"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "background"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "programming_expression.key": "randomNumber"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_expression.key": "createSprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "rotation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "y"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "scale"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_expression.key": "World.frameRate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_expression.key": "draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "greaterThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "inequalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "lessThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "programming_expression.key": "keyDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "keyWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "visible"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "keyWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "velocityY"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "velocityX"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "rotationSpeed"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_expression.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_expression.key": "isTouching"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "setCollider"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounceOff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounce"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "programming_expression.key": "functionParams_none"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "programming_expression.key": "callMyFunction"
       }
     }
   ],
