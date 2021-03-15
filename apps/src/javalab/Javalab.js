@@ -65,6 +65,7 @@ Javalab.prototype.init = function(config) {
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
   const onContinue = this.onContinue.bind(this);
+  const onCommitCode = this.onCommitCode.bind(this);
 
   // if a version is provided in the url, use that version for files.
   const suppliedFilesVersionId = queryParams('version');
@@ -162,8 +163,8 @@ Javalab.prototype.getCurrentFilesVersionId = function() {
   return project.filesVersionId;
 };
 
-function onCommitCode() {
+Javalab.prototype.onCommitCode = function() {
   project.autosave();
-}
+};
 
 export default Javalab;
