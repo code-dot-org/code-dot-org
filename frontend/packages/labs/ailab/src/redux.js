@@ -62,7 +62,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
-const SET_INSTRUCTIONS_CALLBACK = "SET_INSTRUCTIONS_CALLBACK";
+const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 
 // Action creators
@@ -195,8 +195,8 @@ export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
 
-export function setInstructionsCallback(instructionsCallback) {
-  return { type: SET_INSTRUCTIONS_CALLBACK, instructionsCallback };
+export function setInstructionsKeyCallback(instructionsKeyCallback) {
+  return { type: SET_INSTRUCTIONS_KEY_CALLBACK, instructionsKeyCallback };
 }
 
 export function setCurrentPanel(currentPanel) {
@@ -410,6 +410,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...initialState,
       selectedTrainer: state.mode && state.mode.hideSelectTrainer,
+      instructionsKeyCallback: state.instructionsKeyCallback,
       mode: state.mode
     };
   }
@@ -460,12 +461,15 @@ export default function rootReducer(state = initialState, action) {
       ...trainedModelDetails
     };
   }
-  if (action.type === SET_INSTRUCTIONS_CALLBACK) {
-    state.instructionsCallback = action.instructionsCallback;
+  if (action.type === SET_INSTRUCTIONS_KEY_CALLBACK) {
+    return {
+      ...state,
+      instructionsKeyCallback: action.instructionsKeyCallback
+    };
   }
   if (action.type === SET_CURRENT_PANEL) {
-    if (state.instructionsCallback) {
-      state.instructionsCallback(action.currentPanel);
+    if (state.instructionsKeyCallback) {
+      state.instructionsKeyCallback(action.currentPanel);
     }
 
     return {

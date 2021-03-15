@@ -72,8 +72,8 @@ function saveTrainedModelStub(data, response) {
   response({ id: 303, status: "success" });
 }
 
-function setInstructionsStub(instructions) {
-  document.getElementById("instructions").innerText = instructions;
+function setInstructionsKeyStub(instructionsKey) {
+  document.getElementById("instructions").innerText = instructionsKey;
 }
 
 // Initialize the app.
@@ -81,5 +81,5 @@ initAll({
   mode: mode,
   onContinue: onContinueStub,
   saveTrainedModel: saveTrainedModelStub,
-  setInstructions: setInstructionsStub
+  setInstructionsKey: setInstructionsKeyStub
 });

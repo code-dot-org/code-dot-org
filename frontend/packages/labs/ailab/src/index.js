@@ -9,7 +9,7 @@ import rootReducer, {
   setSelectedCSV,
   setSelectedJSON,
   setSelectedTrainer,
-  setInstructionsCallback,
+  setInstructionsKeyCallback,
   setSaveStatus
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
@@ -26,7 +26,9 @@ export const initAll = function(options) {
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
   saveTrainedModel = options && options.saveTrainedModel;
-  store.dispatch(setInstructionsCallback(options && options.setInstructions));
+  store.dispatch(
+    setInstructionsKeyCallback(options && options.setInstructionsKey)
+  );
   store.dispatch(setMode(mode));
   processMode(mode);
 
