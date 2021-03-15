@@ -445,9 +445,10 @@ class InstructionsCSF extends React.Component {
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (
-      this.props.hints.length ||
-      this.shouldDisplayHintPrompt() ||
-      this.props.feedback
+      this.props.hints &&
+      (this.props.hints.length ||
+        this.shouldDisplayHintPrompt() ||
+        this.props.feedback)
     ) {
       return true;
     }

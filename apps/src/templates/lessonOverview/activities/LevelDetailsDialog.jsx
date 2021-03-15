@@ -89,8 +89,7 @@ class LevelDetailsDialog extends Component {
       const containerStyle = isCSF
         ? {
             overflowX: 'hidden',
-            overflowY: 'scroll',
-            height: this.state.height - HEADER_HEIGHT
+            overflowY: 'scroll'
           }
         : {overflowY: 'scroll', height: this.state.height - HEADER_HEIGHT};
       // TODO: calculate more of these parameters based on the level and pages
@@ -115,6 +114,7 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
+          resizable={false}
           mainStyle={{paddingBottom: 5}}
           containerStyle={containerStyle}
           setInstructionsRenderedHeight={height =>

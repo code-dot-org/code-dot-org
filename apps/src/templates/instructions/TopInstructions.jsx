@@ -795,7 +795,7 @@ class TopInstructions extends Component {
                     isMinecraft={this.props.isMinecraft}
                     isBlockly={this.props.isBlockly}
                     isRtl={this.props.isRtl}
-                    isCollapsed={this.props.isCollapsed}
+                    collapsed={this.props.isCollapsed}
                     longInstructions={this.props.longInstructions}
                     shortInstructions={this.props.shortInstructions}
                     shortInstructions2={this.props.shortInstructions2}
