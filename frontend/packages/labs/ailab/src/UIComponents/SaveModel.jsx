@@ -87,7 +87,7 @@ class SaveModel extends Component {
                   onChange={event =>
                     this.handleChange(event, nameField.id, nameField.isColumn)
                   }
-                  maxLength={field.id === "name" ? ModelNameMaxLength : ""}
+                  maxLength={ModelNameMaxLength}
                 />
               </div>
             </div>
