@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-15 18:33:20 UTC",
+    "serialized_at": "2021-03-15 22:17:15 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -191,8 +191,8 @@
       "properties": {
         "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
-        "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. _Debugging_ is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class. \r\n - Make sure every student has a [r think-spot-journal].",
+        "purpose": "Students in your class might become frustrated with this lesson because of the essence of **debugging**. **Debugging** is a concept that is very important to computer programming. Computer scientists have to get really good at finding the **bugs** in their own programs. **Debugging** forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a ***Think Spot - Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -309,9 +309,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using Anna and Elsa's excellent ice-skating skills!",
-        "student_overview": "Anna and Elsa have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
-        "purpose": "In this series, students will get practice nesting loops while creating images that they will be excited to share. \r\n\r\nBeginning with a handful of instructions, students will make their own decisions when it comes to creating designs for repetition.  They will then spin those around a variety of ways to end up with a work of art that is truly unique.",
+        "overview": "Now that students know how to layer their **loops**, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!",
+        "student_overview": "_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
+        "purpose": "In this series, students will get practice nesting **loops** while creating images that they will be excited to share. \n\nBeginning with a handful of instructions, students will make their own decisions when it comes to creating designs for repetition.  They will then spin those around a variety of ways to end up with a work of art that is truly unique.",
         "preparation": " - Play through the lesson to find and potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -429,10 +429,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.",
-        "student_overview": "It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.",
-        "purpose": "Practicing the use of conditionals in different scenarios helps to develop a student's understanding of what conditionals can do. In the previous lesson, students only used conditionals to move around a maze. In this lesson, students will use conditionals to help the farmer know when to harvest crops. New patterns will emerge and students will use creativity and logical thinking to determine the conditions where code should be run and repeated.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure every student has a [r think-spot-journal].",
+        "overview": "Students will practice `while` **loops**, `until` **loops**, and `if / else` statements. All of these blocks use **conditionals**. By practicing all three, students will learn to write complex and flexible code.",
+        "student_overview": "It's not always clear when to use each **conditional**.  This lesson will help you get practice deciding what to do.",
+        "purpose": "Practicing the use of **conditionals** in different scenarios helps to develop a student's understanding of what **conditionals** can do. In the previous lesson, students only used **conditionals** to move around a maze. In this lesson, students will use **conditionals** to help the farmer know when to harvest crops. New patterns will emerge and students will use creativity and logical thinking to determine the **conditions** where code should be run and **repeated**.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - Make sure every student has a ***Think Spot - Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -549,9 +549,9 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
-        "overview": "In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a freeplay level to show what they have learned and create their own designs.",
-        "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
-        "purpose": "Variables are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of variables, using the most basic capabilities of setting and using them.",
+        "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
+        "student_overview": "In this lesson, you'll make drawings using **variables** that change as the program runs.",
+        "purpose": "**Variables** are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of **variables**, using the most basic capabilities of setting and using them.",
         "preparation": "- Play through the lesson to find any potential problem areas for your class.\r\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -868,8 +868,6 @@
       "key": "511e4acd-f0a4-4b96-9444-5358ce403b86",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "511e4acd-f0a4-4b96-9444-5358ce403b86",
@@ -882,8 +880,8 @@
       "key": "a26761fc-1bdc-4474-a043-307dbef1453a",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 5
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a",
@@ -896,8 +894,8 @@
       "key": "4a54982d-83d3-4040-b499-46d8dc535774",
       "position": 4,
       "properties": {
-        "name": "Extended Learning",
-        "duration": 0
+        "name": "Wrap Up",
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "4a54982d-83d3-4040-b499-46d8dc535774",
@@ -910,7 +908,7 @@
       "key": "4cdf3492-9941-452b-8da8-f2aa6f10df90",
       "position": 5,
       "properties": {
-        "name": "Levels"
+        "name": "Extended Learning"
       },
       "seeding_key": {
         "lesson_activity.key": "4cdf3492-9941-452b-8da8-f2aa6f10df90",
@@ -1252,19 +1250,6 @@
       }
     },
     {
-      "key": "b2724f07-b12e-4b12-8a80-e0a738556388",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b2724f07-b12e-4b12-8a80-e0a738556388",
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "lesson_group.key": "csf_loops",
-        "script.name": "express-2021"
-      }
-    },
-    {
       "key": "46092127-2648-4c2c-ada8-f13deb240e11",
       "position": 1,
       "properties": {
@@ -1577,19 +1562,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "318a7a4f-83f0-4b32-a712-d74801897a6e",
-        "lesson.key": "Harvesting with Conditionals",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "express-2021"
-      }
-    },
-    {
-      "key": "e4f87a51-bd78-4791-9c2f-e582753ac398",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e4f87a51-bd78-4791-9c2f-e582753ac398",
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021"
@@ -1915,19 +1887,6 @@
       }
     },
     {
-      "key": "7215fcaa-e87c-42ac-ae9c-dd3783cece03",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7215fcaa-e87c-42ac-ae9c-dd3783cece03",
-        "lesson.key": "Changing Variables with Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "express-2021"
-      }
-    },
-    {
       "key": "414b4e57-110f-441f-a5ca-cbdc9f741a4c",
       "position": 1,
       "properties": {
@@ -2020,19 +1979,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799",
-        "lesson.key": "For Loops with Artist",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021"
-      }
-    },
-    {
-      "key": "c2fa0226-f59c-4037-85af-3dbad17f3d9d",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c2fa0226-f59c-4037-85af-3dbad17f3d9d",
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021"
@@ -2719,7 +2665,7 @@
       "key": "defc5a97-b60a-4a6b-8617-e05be08dab35",
       "position": 1,
       "properties": {
-        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - How do you fix something that isn't working?\n - Do you follow a specific series of steps?\n - The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)\n - We call the problems in these programs \"bugs,\" and it will be your job to \"debug\" them.",
+        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - How do you fix something that isn't working?\n - Do you follow a specific series of steps?\n - The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)\n - We call the problems in these programs \"**bugs**,\" and it will be your job to \"**debug**\" them.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2731,7 +2677,7 @@
       "key": "a03b28fc-fd86-4f3a-ba44-ade5b7437f24",
       "position": 2,
       "properties": {
-        "description": "This lesson has three new and important vocabulary words:\n\n - ***Bug*** - Say it with me - Buhh-g.\nSomething that is going wrong. An error.\n\n - ***Debugging*** - Say it with me: Dee-bug-ing.\nTo find and fix errors.\n\n - ***Persistence*** - Say it with me: Purr-siss-tense.\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n#### Say:\n\nDebugging is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, Scrat from Ice Age. If students aren't familiar with Scrat, show some clips of the quirky squirrel running into trouble.",
+        "description": "This lesson has three new and important vocabulary words:\n\n - **Bug** - _Say it with me - Buhh-g._\n\nSomething that is going wrong. An error.\n\n - **Debugging** - _Say it with me: Dee-bug-ing._\n\nTo find and fix errors.\n\n - **Persistence** - _Say it with me: Purr-siss-tense._\n\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** _**Debugging** is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a **bug**. Once you've discovered your **bug**, you can work to fix (or \"**debug**\") it!_\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, _Scrat_ from _Ice Age_. If students aren't familiar with _Scrat_, show some clips of the quirky squirrel running into trouble.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2740,47 +2686,102 @@
       }
     },
     {
-      "key": "c0214427-bcd3-4fb4-a1cc-82e1887534c3",
+      "key": "043a7361-a35c-4dc0-9ca5-98a06ef1563b",
       "position": 1,
       "properties": {
-        "description": "Before letting the students start on the computer, remind them of the advantages of [r pair-programming-vid] and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher.\r\n\r\nAs mentioned in the purpose of this lesson, make sure the students are aware that they will face frustrating puzzles. Tell them it is okay to feel frustrated, but it is important to work through the problem and ask for help. As the students work through the puzzles, walk around to make sure no student is feeling so stuck that they aren't willing to continue anymore.",
-        "name": "Online Puzzles\r"
       },
       "seeding_key": {
-        "activity_section.key": "c0214427-bcd3-4fb4-a1cc-82e1887534c3",
+        "activity_section.key": "043a7361-a35c-4dc0-9ca5-98a06ef1563b",
         "lesson_activity.key": "511e4acd-f0a4-4b96-9444-5358ce403b86"
       }
     },
     {
-      "key": "b5bec2af-416e-4529-9c7e-c16dbba75566",
+      "key": "a253c018-c2ce-4147-a5a4-24db47788f78",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - What kind of bugs did you find today?\r\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
-        "name": "Journaling\r"
+        "name": "Debugging with Scrat",
+        "description": "Before letting the students start on the computer, remind them of the advantages of ***Pair-Programming**-video and asking their peers for help. Sit students in pairs and recommend they ask at least two peers for help before they come to a teacher.\n\nAs mentioned in the purpose of this lesson, make sure the students are aware that they will face frustrating puzzles. Tell them it is okay to feel frustrated, but it is important to work through the problem and ask for help. As the students work through the puzzles, walk around to make sure no student is feeling so stuck that they aren't willing to continue anymore."
       },
       "seeding_key": {
-        "activity_section.key": "b5bec2af-416e-4529-9c7e-c16dbba75566",
+        "activity_section.key": "a253c018-c2ce-4147-a5a4-24db47788f78",
         "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
       }
     },
     {
-      "key": "33ab2e63-ead8-448c-84a2-c7246509d058",
+      "key": "33b2c6a8-031f-4fc3-b4aa-d3712abcf111",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Debugging with Scrat "
+      },
+      "seeding_key": {
+        "activity_section.key": "33b2c6a8-031f-4fc3-b4aa-d3712abcf111",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511",
+      "position": 4,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "142926ac-9a7f-484f-975c-c0eceba04aa9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "142926ac-9a7f-484f-975c-c0eceba04aa9",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "509f1df0-4e9b-454e-ae25-a6380f29ab57",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "509f1df0-4e9b-454e-ae25-a6380f29ab57",
+        "lesson_activity.key": "a26761fc-1bdc-4474-a043-307dbef1453a"
+      }
+    },
+    {
+      "key": "0406b536-ef27-4e66-aebd-6163d05bcc36",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?"
+      },
+      "seeding_key": {
+        "activity_section.key": "0406b536-ef27-4e66-aebd-6163d05bcc36",
+        "lesson_activity.key": "4a54982d-83d3-4040-b499-46d8dc535774"
+      }
+    },
+    {
+      "key": "52871970-e896-42ac-905c-d5968ce5e009",
       "position": 1,
       "properties": {
         "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Planting bugs**\r\n\r\nHave students go back through previous levels, purposefully adding bugs to their solutions. They can then ask other students to debug their work. This can also be done with paper puzzles.\r\n\r\nWhen other students are debugging, make sure that the criticisms are constructive. If this could be a problem for your class, go over respectful debugging before this activity by role playing with another student."
       },
       "seeding_key": {
-        "activity_section.key": "33ab2e63-ead8-448c-84a2-c7246509d058",
-        "lesson_activity.key": "4a54982d-83d3-4040-b499-46d8dc535774"
-      }
-    },
-    {
-      "key": "3a399a92-b034-429b-9a2c-a3532d45f371",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371",
+        "activity_section.key": "52871970-e896-42ac-905c-d5968ce5e009",
         "lesson_activity.key": "4cdf3492-9941-452b-8da8-f2aa6f10df90"
       }
     },
@@ -3446,7 +3447,7 @@
       "key": "219bed13-d21f-4886-ac11-47ae6eb56005",
       "position": 1,
       "properties": {
-        "description": "Ask the class to discuss the last set of puzzles.\r\n\r\n - What did they like/dislike?\r\n - Which puzzles were hard? Why?\r\n - Which puzzles were easy? Why?\r\n - If you were to teach nested loops to a friend, what would you say to help them understand?\r\n\r\nIf there's time, give an introduction to the main characters of today's puzzles, Anna and Elsa from Frozen. Give the class the sister's back story if the class doesn't already know. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with Anna and Elsa's ice skates!",
+        "description": "Ask the class to discuss the last set of puzzles.\n\n - What did they like/dislike?\n - Which puzzles were hard? Why?\n - Which puzzles were easy? Why?\n - If you were to teach nested loops to a friend, what would you say to help them understand?\n\nIf there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _Frozen_. Give the class the sisters' back story if the class doesn't already know. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3455,14 +3456,26 @@
       }
     },
     {
-      "key": "a28c44c3-5b6d-437d-a23c-9a9716d4258f",
+      "key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc",
       "position": 1,
       "properties": {
-        "description": "This set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written.",
-        "name": "Online Puzzes\r"
+        "progression_name": "Skill Building",
+        "name": "Snowflakes with Anna and Elsa",
+        "description": "This set of puzzles is set up as a progression. This means every puzzle builds a foundation for the next puzzle. Students will enjoy making more and more interesting designs by making small and simple changes to code they have already written."
       },
       "seeding_key": {
-        "activity_section.key": "a28c44c3-5b6d-437d-a23c-9a9716d4258f",
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc",
+        "lesson_activity.key": "08d1726a-8015-44e3-85de-32f581681241"
+      }
+    },
+    {
+      "key": "777ee476-c14c-4005-8226-8b5d93d34181",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "777ee476-c14c-4005-8226-8b5d93d34181",
         "lesson_activity.key": "08d1726a-8015-44e3-85de-32f581681241"
       }
     },
@@ -3470,22 +3483,12 @@
       "key": "d1f0e984-22d3-4086-978b-0e830c9cc6c9",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - When do you use a loop? When do you use a nested loop?\r\n - Thought exercise: Can you make everything a nested loop can with just a normal loop? Can you draw out an example?\r\n    - Answer: Yes, you can, but it is a lot more difficult. Nested loops make programs simpler.",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - When do you use a loop? When do you use a nested loop?\n - How would the code for your snowflake look different if you only used one loop? No loops? Can you draw out an example?\n ",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "d1f0e984-22d3-4086-978b-0e830c9cc6c9",
         "lesson_activity.key": "d682de82-34c6-4a16-bff5-b40e2abf88c1"
-      }
-    },
-    {
-      "key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2",
-        "lesson_activity.key": "b2724f07-b12e-4b12-8a80-e0a738556388"
       }
     },
     {
@@ -4096,7 +4099,8 @@
       "position": 1,
       "properties": {
         "description": "Students will continue to work with `if / else` statements, `while` loops, and `until` loops.  These puzzles are a bit more challenging, though, so encourage students to stick with them until they can describe what needs to happen for each program.",
-        "name": "Online Puzzles\r"
+        "name": "Harvesting with Conditionals",
+        "progression_name": "Video: Harvesting with Conditionals"
       },
       "seeding_key": {
         "activity_section.key": "26679730-3364-4598-abd8-b07e9d9f9ad9",
@@ -4104,25 +4108,81 @@
       }
     },
     {
+      "key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
+      "key": "5af3711a-0ea0-4c82-b622-a250349a8389",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "5af3711a-0ea0-4c82-b622-a250349a8389",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
+      "key": "f6fcf627-61b6-45f8-ac6b-602a11fb434a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6fcf627-61b6-45f8-ac6b-602a11fb434a",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
+      "key": "ae63d880-c229-44c2-a344-3e56b4ccb81b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae63d880-c229-44c2-a344-3e56b4ccb81b",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
+      "key": "3ac7aafb-d468-4d50-8cf5-9bb49dfaca99",
+      "position": 6,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ac7aafb-d468-4d50-8cf5-9bb49dfaca99",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
+      "key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4",
+        "lesson_activity.key": "1b28c789-cdfc-4565-bf6e-9b522f835bee"
+      }
+    },
+    {
       "key": "294fb9eb-4bd1-497a-8326-562ddd2671bf",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - How can you see conditionals being useful in programs?\r\n - What if people only spoke in if/else statements? What would be some advantages and disadvantages of this?",
-        "name": "Journaling\r"
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How can you see conditionals being useful in programs?\n - What if people only spoke in `if/else` statements? What would be some advantages and disadvantages of this?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "294fb9eb-4bd1-497a-8326-562ddd2671bf",
         "lesson_activity.key": "318a7a4f-83f0-4b32-a712-d74801897a6e"
-      }
-    },
-    {
-      "key": "4b935f01-f83d-4318-9eed-1d6578619348",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348",
-        "lesson_activity.key": "e4f87a51-bd78-4791-9c2f-e582753ac398"
       }
     },
     {
@@ -4612,7 +4672,7 @@
       "key": "beb275b1-d235-4fb3-8910-bcfe9c6ae05a",
       "position": 1,
       "properties": {
-        "description": "It might be helpful to remind students of \"Variables that Change in Bee,\" since variables will be used in a similar way here.\r\n\r\n- How can we change the value of a variable inside of a loop?\r\n- Do we have to change the value of a variable only by one each time?",
+        "description": "It might be helpful to remind students of \"Variables that Change in Bee,\" since **variables** will be used in a similar way here.\n\n- How can we change the value of a **variable** inside of a loop?\n- Do we have to change the value of a **variable** only by one each time?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4621,11 +4681,23 @@
       }
     },
     {
-      "key": "12beb455-6d8a-4b77-bbf5-6867a1d943cd",
+      "key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e",
       "position": 1,
       "properties": {
-        "description": "The latter half of this series is made up of freeplay puzzles.  Students will have the opportunity to play with variables, shape, and color to create something unique.",
-        "name": "Online Puzzles\r"
+        "name": "Changing Variables with Artist",
+        "description": "The latter half of this series is made up of free play puzzles.  Students will have the opportunity to play with **variables**, shape, and color to create something unique.",
+        "progression_name": "Skill building"
+      },
+      "seeding_key": {
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e",
+        "lesson_activity.key": "7d34e760-234b-4f71-ad15-63d995b1514f"
+      }
+    },
+    {
+      "key": "12beb455-6d8a-4b77-bbf5-6867a1d943cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "12beb455-6d8a-4b77-bbf5-6867a1d943cd",
@@ -4633,25 +4705,26 @@
       }
     },
     {
+      "key": "5e268860-8430-45b1-939b-4fa0755cbc09",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "5e268860-8430-45b1-939b-4fa0755cbc09",
+        "lesson_activity.key": "7d34e760-234b-4f71-ad15-63d995b1514f"
+      }
+    },
+    {
       "key": "f8c8e0ab-6df9-44f2-ad51-0949843af969",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Have you tried mixing multiple variables into one program?  What might that look like? When would it be helpful?",
-        "name": "Journaling\r"
+        "description": "####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n####Journal Prompts:\n\nWhat was today’s lesson about?\n\nHow did you feel during today’s lesson?\n\nHave you tried mixing multiple variables into one program? What might that look like? When would it be helpful?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "f8c8e0ab-6df9-44f2-ad51-0949843af969",
         "lesson_activity.key": "aa7ca45e-43b8-4e3b-b370-2a58424a0c42"
-      }
-    },
-    {
-      "key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31",
-        "lesson_activity.key": "7215fcaa-e87c-42ac-ae9c-dd3783cece03"
       }
     },
     {
@@ -4806,7 +4879,7 @@
       "key": "48c60679-9f25-4ade-9a34-7a52627fc8f2",
       "position": 1,
       "properties": {
-        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final projects from the lesson. We recommend one of the following:\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\r\n\r\nAsk the class how a computer might draw the drawing you displayed.\r\n\r\nAfter a few predictions have been said, reply with `for` loops of course!\r\n\r\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
+        "description": "On a board displayed to the entire class, draw (or display via projector) one of the final projects from the lesson. We recommend one of the following:\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\nAsk the class how a computer might draw the drawing you displayed.\n\nAfter a few predictions have been said, reply, _with `for` loops of course!_\n\nTell the students they will soon be learning how to create these fine drawings using `for` loops and variables.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4818,8 +4891,7 @@
       "key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
       "position": 1,
       "properties": {
-        "description": "These puzzles are super fun, but it may be helpful for students to have protractors and scratch paper to see these designs made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers.",
-        "name": "Online Puzzles\r"
+        "progression_name": "Video: For Loops with Artist"
       },
       "seeding_key": {
         "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
@@ -4827,25 +4899,61 @@
       }
     },
     {
+      "key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+      "position": 2,
+      "properties": {
+        "name": "For Loops with Artist",
+        "description": "These puzzles are super fun, but it may be helpful for students to have protractors and scratch paper to see these designs made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers.",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed",
+      "position": 3,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "1582774d-bc37-4642-8f63-dccb08adea1c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
+      "key": "ad447053-20d4-49cb-a771-7fd893973f54",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54",
+        "lesson_activity.key": "cfadb05d-8467-41a8-9b69-9ce179c53375"
+      }
+    },
+    {
       "key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - Draw one of the designs you made today. What was the code needed to create it?\r\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "4622563b-bc99-49ea-b1fb-b7a9916cf957",
         "lesson_activity.key": "8ea04c5a-f6d5-45de-b07c-e39b2b94b799"
-      }
-    },
-    {
-      "key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d",
-        "lesson_activity.key": "c2fa0226-f59c-4037-85af-3dbad17f3d9d"
       }
     },
     {
@@ -6165,11 +6273,9 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_video_debugging_2021"
-        ]
+        "progression": "Video: Debugging with Scrat "
       },
       "named_level": null,
       "bonus": null,
@@ -6180,7 +6286,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "33b2c6a8-031f-4fc3-b4aa-d3712abcf111"
       },
       "level_keys": [
         "courseC_video_debugging_2021"
@@ -6189,12 +6295,10 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging1_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6205,7 +6309,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging1_2021"
@@ -6214,12 +6318,10 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging2_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6230,7 +6332,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging2_2021"
@@ -6239,12 +6341,10 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging3_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6255,7 +6355,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging3_2021"
@@ -6264,12 +6364,10 @@
     {
       "chapter": 34,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging4_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6280,7 +6378,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging4_2021"
@@ -6289,12 +6387,10 @@
     {
       "chapter": 35,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging5_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6305,7 +6401,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging5_2021"
@@ -6314,12 +6410,10 @@
     {
       "chapter": 36,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging6_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6330,7 +6424,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging6_2021"
@@ -6339,13 +6433,11 @@
     {
       "chapter": 37,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseC_maze_debugging7_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6356,7 +6448,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       },
       "level_keys": [
         "courseC_maze_debugging7_2021"
@@ -6365,12 +6457,10 @@
     {
       "chapter": 38,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging8_predict1_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -6381,7 +6471,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511"
       },
       "level_keys": [
         "courseC_maze_debugging8_predict1_2021"
@@ -6390,12 +6480,10 @@
     {
       "chapter": 39,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "express_maze_debugging9_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -6406,7 +6494,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "142926ac-9a7f-484f-975c-c0eceba04aa9"
       },
       "level_keys": [
         "express_maze_debugging9_2021"
@@ -6415,12 +6503,10 @@
     {
       "chapter": 40,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -6431,7 +6517,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "509f1df0-4e9b-454e-ae25-a6380f29ab57"
       },
       "level_keys": [
         "courseC_maze_debugging_challenge1_2021"
@@ -6440,12 +6526,10 @@
     {
       "chapter": 41,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_maze_debugging_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -6456,7 +6540,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "509f1df0-4e9b-454e-ae25-a6380f29ab57"
       },
       "level_keys": [
         "courseC_maze_debugging_challenge2_2021"
@@ -8212,11 +8296,9 @@
       "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -8227,7 +8309,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       },
       "level_keys": [
         "courseD_artist_1_2021"
@@ -8237,11 +8319,9 @@
       "chapter": 110,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -8252,7 +8332,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       },
       "level_keys": [
         "courseD_artist_2_2021"
@@ -8262,11 +8342,9 @@
       "chapter": 111,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -8277,7 +8355,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       },
       "level_keys": [
         "courseD_artist_3_2021"
@@ -8287,11 +8365,9 @@
       "chapter": 112,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -8302,7 +8378,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       },
       "level_keys": [
         "courseD_artist_4_2021"
@@ -8311,12 +8387,10 @@
     {
       "chapter": 113,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_5_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -8327,7 +8401,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "777ee476-c14c-4005-8226-8b5d93d34181"
       },
       "level_keys": [
         "courseD_artist_5_2021"
@@ -8336,12 +8410,10 @@
     {
       "chapter": 114,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_6_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -8352,7 +8424,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "777ee476-c14c-4005-8226-8b5d93d34181"
       },
       "level_keys": [
         "courseD_artist_6_2021"
@@ -10035,11 +10107,9 @@
       "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "harvester_skinOverview_video_2021"
-        ]
+        "progression": "Video: Harvesting with Conditionals"
       },
       "named_level": null,
       "bonus": null,
@@ -10050,7 +10120,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "26679730-3364-4598-abd8-b07e9d9f9ad9"
       },
       "level_keys": [
         "harvester_skinOverview_video_2021"
@@ -10059,12 +10129,10 @@
     {
       "chapter": 181,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -10075,7 +10143,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       },
       "level_keys": [
         "courseD_farmer_condLoops1_2021"
@@ -10084,12 +10152,10 @@
     {
       "chapter": 182,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -10100,7 +10166,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       },
       "level_keys": [
         "courseD_farmer_condLoops2_2021"
@@ -10109,12 +10175,10 @@
     {
       "chapter": 183,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -10125,7 +10189,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       },
       "level_keys": [
         "courseD_farmer_condLoops3_2021"
@@ -10134,12 +10198,10 @@
     {
       "chapter": 184,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -10150,7 +10212,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       },
       "level_keys": [
         "courseD_farmer_condLoops4_2021"
@@ -10159,12 +10221,10 @@
     {
       "chapter": 185,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops5_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -10175,7 +10235,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "5af3711a-0ea0-4c82-b622-a250349a8389"
       },
       "level_keys": [
         "courseD_farmer_condLoops5_2021"
@@ -10184,12 +10244,10 @@
     {
       "chapter": 186,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops6_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -10200,7 +10258,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "5af3711a-0ea0-4c82-b622-a250349a8389"
       },
       "level_keys": [
         "courseD_farmer_condLoops6_2021"
@@ -10209,13 +10267,11 @@
     {
       "chapter": 187,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "challenge": true,
-        "level_keys": [
-          "courseD_farmer_condLoops7_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": null,
@@ -10226,7 +10282,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "f6fcf627-61b6-45f8-ac6b-602a11fb434a"
       },
       "level_keys": [
         "courseD_farmer_condLoops7_2021"
@@ -10235,12 +10291,10 @@
     {
       "chapter": 188,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops8_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -10251,7 +10305,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "ae63d880-c229-44c2-a344-3e56b4ccb81b"
       },
       "level_keys": [
         "courseD_farmer_condLoops8_2021"
@@ -10260,12 +10314,10 @@
     {
       "chapter": 189,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops9_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -10276,7 +10328,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "ae63d880-c229-44c2-a344-3e56b4ccb81b"
       },
       "level_keys": [
         "courseD_farmer_condLoops9_2021"
@@ -10285,12 +10337,10 @@
     {
       "chapter": 190,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops9_predict1_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -10301,7 +10351,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "3ac7aafb-d468-4d50-8cf5-9bb49dfaca99"
       },
       "level_keys": [
         "courseD_farmer_condLoops9_predict1_2021"
@@ -10310,12 +10360,10 @@
     {
       "chapter": 191,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -10326,7 +10374,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge1_2021"
@@ -10335,12 +10383,10 @@
     {
       "chapter": 192,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_condLoops_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -10351,7 +10397,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge2_2021"
@@ -11783,11 +11829,9 @@
       "chapter": 248,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables7_2021"
-        ]
+        "progression": "Skill building"
       },
       "named_level": null,
       "bonus": null,
@@ -11798,7 +11842,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       },
       "level_keys": [
         "courseF_artist_variables7_2021"
@@ -11808,11 +11852,9 @@
       "chapter": 249,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables8_2021"
-        ]
+        "progression": "Skill building"
       },
       "named_level": null,
       "bonus": null,
@@ -11823,7 +11865,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       },
       "level_keys": [
         "courseF_artist_variables8_2021"
@@ -11833,11 +11875,9 @@
       "chapter": 250,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables9_2021"
-        ]
+        "progression": "Skill building"
       },
       "named_level": null,
       "bonus": null,
@@ -11848,7 +11888,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       },
       "level_keys": [
         "courseF_artist_variables9_2021"
@@ -11858,11 +11898,9 @@
       "chapter": 251,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables10_2021"
-        ]
+        "progression": "Skill building"
       },
       "named_level": null,
       "bonus": null,
@@ -11873,7 +11911,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       },
       "level_keys": [
         "courseF_artist_variables10_2021"
@@ -11883,36 +11921,9 @@
       "chapter": 252,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variablesFP_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_variablesFP_2021"
-        ],
-        "lesson.key": "Changing Variables with Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
-      },
-      "level_keys": [
-        "courseF_artist_variablesFP_2021"
-      ]
-    },
-    {
-      "chapter": 253,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseF_markdown_variables_end_2021"
-        ]
+        "progression": "Skill building"
       },
       "named_level": null,
       "bonus": null,
@@ -11923,21 +11934,42 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       },
       "level_keys": [
         "courseF_markdown_variables_end_2021"
       ]
     },
     {
+      "chapter": 253,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_artist_variablesFP_2021"
+        ],
+        "lesson.key": "Changing Variables with Artist",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "12beb455-6d8a-4b77-bbf5-6867a1d943cd"
+      },
+      "level_keys": [
+        "courseF_artist_variablesFP_2021"
+      ]
+    },
+    {
       "chapter": 254,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -11948,7 +11980,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "5e268860-8430-45b1-939b-4fa0755cbc09"
       },
       "level_keys": [
         "courseF_artist_variables_challenge1_2021"
@@ -11957,12 +11989,10 @@
     {
       "chapter": 255,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_variables_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -11973,7 +12003,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "5e268860-8430-45b1-939b-4fa0755cbc09"
       },
       "level_keys": [
         "courseF_artist_variables_challenge2_2021"
@@ -12236,11 +12266,9 @@
       "chapter": 267,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_video_forArtist_2021"
-        ]
+        "progression": "Video: For Loops with Artist"
       },
       "named_level": null,
       "bonus": null,
@@ -12251,7 +12279,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
       },
       "level_keys": [
         "courseF_video_forArtist_2021"
@@ -12260,12 +12288,10 @@
     {
       "chapter": 268,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12276,7 +12302,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for1_2021"
@@ -12285,12 +12311,10 @@
     {
       "chapter": 269,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12301,7 +12325,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for2_2021"
@@ -12310,12 +12334,10 @@
     {
       "chapter": 270,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12326,7 +12348,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for3_2021"
@@ -12335,12 +12357,10 @@
     {
       "chapter": 271,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12351,7 +12371,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for4_2021"
@@ -12360,12 +12380,10 @@
     {
       "chapter": 272,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12376,7 +12394,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for5_2021"
@@ -12385,12 +12403,10 @@
     {
       "chapter": 273,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12401,7 +12417,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for6_2021"
@@ -12410,12 +12426,10 @@
     {
       "chapter": 274,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12426,7 +12440,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for7_2021"
@@ -12435,12 +12449,10 @@
     {
       "chapter": 275,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for8_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12451,7 +12463,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for8_2021"
@@ -12460,12 +12472,10 @@
     {
       "chapter": 276,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for9_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -12476,7 +12486,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       },
       "level_keys": [
         "courseF_artist_for9_2021"
@@ -12485,12 +12495,10 @@
     {
       "chapter": 277,
       "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -12501,7 +12509,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed"
       },
       "level_keys": [
         "courseF_artist_for10_predict1_2021"
@@ -12510,12 +12518,10 @@
     {
       "chapter": 278,
       "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for10_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12526,7 +12532,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
       },
       "level_keys": [
         "courseF_artist_for10_2021"
@@ -12535,12 +12541,10 @@
     {
       "chapter": 279,
       "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for_challenge1_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -12551,7 +12555,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
       },
       "level_keys": [
         "courseF_artist_for_challenge1_2021"
@@ -12560,12 +12564,10 @@
     {
       "chapter": 280,
       "position": 14,
-      "activity_section_position": 14,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_artist_for_challenge2_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -12576,7 +12578,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
       },
       "level_keys": [
         "courseF_artist_for_challenge2_2021"
@@ -13839,7 +13841,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "33b2c6a8-031f-4fc3-b4aa-d3712abcf111"
       }
     },
     {
@@ -13851,7 +13853,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13863,7 +13865,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13875,7 +13877,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13887,7 +13889,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13899,7 +13901,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13911,7 +13913,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13923,7 +13925,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94"
       }
     },
     {
@@ -13935,7 +13937,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "73d03eeb-a7b1-4ee8-ad5b-85638d568511"
       }
     },
     {
@@ -13947,7 +13949,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "142926ac-9a7f-484f-975c-c0eceba04aa9"
       }
     },
     {
@@ -13959,7 +13961,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "509f1df0-4e9b-454e-ae25-a6380f29ab57"
       }
     },
     {
@@ -13971,7 +13973,7 @@
         "lesson.key": "Debugging with Scrat",
         "lesson_group.key": "csf_sequencing",
         "script.name": "express-2021",
-        "activity_section.key": "3a399a92-b034-429b-9a2c-a3532d45f371"
+        "activity_section.key": "509f1df0-4e9b-454e-ae25-a6380f29ab57"
       }
     },
     {
@@ -14787,7 +14789,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       }
     },
     {
@@ -14799,7 +14801,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       }
     },
     {
@@ -14811,7 +14813,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       }
     },
     {
@@ -14823,7 +14825,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "89a3d9b1-6f7c-4581-8abc-9d6501a009cc"
       }
     },
     {
@@ -14835,7 +14837,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "777ee476-c14c-4005-8226-8b5d93d34181"
       }
     },
     {
@@ -14847,7 +14849,7 @@
         "lesson.key": "Snowflakes with Anna and Elsa",
         "lesson_group.key": "csf_loops",
         "script.name": "express-2021",
-        "activity_section.key": "cdf067c8-bb20-4fbe-8d8a-a4a2a75d27c2"
+        "activity_section.key": "777ee476-c14c-4005-8226-8b5d93d34181"
       }
     },
     {
@@ -15639,7 +15641,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "26679730-3364-4598-abd8-b07e9d9f9ad9"
       }
     },
     {
@@ -15651,7 +15653,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       }
     },
     {
@@ -15663,7 +15665,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       }
     },
     {
@@ -15675,7 +15677,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       }
     },
     {
@@ -15687,7 +15689,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "38760d27-fbe5-48c9-bd46-2b7eeac81ca2"
       }
     },
     {
@@ -15699,7 +15701,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "5af3711a-0ea0-4c82-b622-a250349a8389"
       }
     },
     {
@@ -15711,7 +15713,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "5af3711a-0ea0-4c82-b622-a250349a8389"
       }
     },
     {
@@ -15723,7 +15725,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "f6fcf627-61b6-45f8-ac6b-602a11fb434a"
       }
     },
     {
@@ -15735,7 +15737,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "ae63d880-c229-44c2-a344-3e56b4ccb81b"
       }
     },
     {
@@ -15747,7 +15749,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "ae63d880-c229-44c2-a344-3e56b4ccb81b"
       }
     },
     {
@@ -15759,7 +15761,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "3ac7aafb-d468-4d50-8cf5-9bb49dfaca99"
       }
     },
     {
@@ -15771,7 +15773,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4"
       }
     },
     {
@@ -15783,7 +15785,7 @@
         "lesson.key": "Harvesting with Conditionals",
         "lesson_group.key": "csf_conditionals",
         "script.name": "express-2021",
-        "activity_section.key": "4b935f01-f83d-4318-9eed-1d6578619348"
+        "activity_section.key": "23df685c-9dd8-48af-9f9a-732ffa1de9c4"
       }
     },
     {
@@ -16455,7 +16457,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       }
     },
     {
@@ -16467,7 +16469,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       }
     },
     {
@@ -16479,7 +16481,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       }
     },
     {
@@ -16491,19 +16493,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_variablesFP_2021",
-        "script_level.level_keys": [
-          "courseF_artist_variablesFP_2021"
-        ],
-        "lesson.key": "Changing Variables with Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
       }
     },
     {
@@ -16515,7 +16505,19 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "88cf8ed1-e28f-48b3-82d4-6590d9ff3b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_artist_variablesFP_2021",
+        "script_level.level_keys": [
+          "courseF_artist_variablesFP_2021"
+        ],
+        "lesson.key": "Changing Variables with Artist",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2021",
+        "activity_section.key": "12beb455-6d8a-4b77-bbf5-6867a1d943cd"
       }
     },
     {
@@ -16527,7 +16529,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "5e268860-8430-45b1-939b-4fa0755cbc09"
       }
     },
     {
@@ -16539,7 +16541,7 @@
         "lesson.key": "Changing Variables with Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2021",
-        "activity_section.key": "a19ab0b2-02aa-40dd-a1b6-9b60ffa33c31"
+        "activity_section.key": "5e268860-8430-45b1-939b-4fa0755cbc09"
       }
     },
     {
@@ -16683,7 +16685,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5defab8f-984c-4baa-89a5-d0a37e70bf26"
       }
     },
     {
@@ -16695,7 +16697,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16707,7 +16709,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16719,7 +16721,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16731,7 +16733,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16743,7 +16745,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16755,7 +16757,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16767,7 +16769,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16779,7 +16781,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16791,7 +16793,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "5cb283f5-dd23-4694-a205-a97ffd80c3cc"
       }
     },
     {
@@ -16803,7 +16805,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "8e6dc903-5ea6-4544-8531-c6e5d38c76ed"
       }
     },
     {
@@ -16815,7 +16817,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "1582774d-bc37-4642-8f63-dccb08adea1c"
       }
     },
     {
@@ -16827,7 +16829,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
       }
     },
     {
@@ -16839,7 +16841,7 @@
         "lesson.key": "For Loops with Artist",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "f140a9b6-c61c-4ebb-884c-9d5cf43d959d"
+        "activity_section.key": "ad447053-20d4-49cb-a771-7fd893973f54"
       }
     },
     {
@@ -17349,7 +17351,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17433,7 +17435,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17442,6 +17444,18 @@
       },
       "seeding_key": {
         "resource.key": "think-spot-journal"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
       }
     },
     {
@@ -17515,7 +17529,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17561,7 +17575,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17619,7 +17633,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17655,7 +17669,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17678,7 +17692,7 @@
       }
     },
     {
-      "name": "Think Spot Journal",
+      "name": "Think Spot - Reflection Journal",
       "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
       "key": "think-spot-journal",
       "properties": {
@@ -17786,6 +17800,12 @@
       "seeding_key": {
         "lesson.key": "Debugging with Scrat",
         "resource.key": "think-spot-journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "resource.key": "pair_programming"
       }
     },
     {
