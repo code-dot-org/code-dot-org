@@ -24,7 +24,7 @@ class HooksUtils
   def self.prohibited?(filename)
     return true if ['.mp4', '.mov'].include? File.extname(filename)
     return true if File.extname(filename) != File.extname(filename).downcase
-    return true if filename.include?(' ')
+    return true if filename.match?(/\s/)
     return true if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
     false
   end
