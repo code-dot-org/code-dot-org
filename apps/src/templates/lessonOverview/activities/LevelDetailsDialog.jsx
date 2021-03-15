@@ -103,7 +103,7 @@ class LevelDetailsDialog extends Component {
           isRtl={this.props.isRtl}
           longInstructions={level.longInstructions || level.long_instructions}
           shortInstructions={level.shortInstructions}
-          noInstructionsWhenCollapsed={true}
+          noInstructionsWhenCollapsed={!isCSF}
           levelVideos={level.videos}
           mapReference={level.mapReference}
           referenceLinks={level.referenceLinks}
@@ -115,7 +115,6 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
-          isCSF={isCSF}
           mainStyle={{paddingBottom: 5}}
           containerStyle={containerStyle}
           setInstructionsRenderedHeight={height =>

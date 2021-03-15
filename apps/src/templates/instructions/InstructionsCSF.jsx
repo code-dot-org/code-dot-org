@@ -152,7 +152,6 @@ class InstructionsCSF extends React.Component {
     hasAuthoredHints: PropTypes.bool,
 
     collapsed: PropTypes.bool.isRequired,
-    collapsible: PropTypes.bool.isRequired,
 
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
@@ -169,6 +168,7 @@ class InstructionsCSF extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -442,10 +442,6 @@ class InstructionsCSF extends React.Component {
   }
 
   shouldDisplayCollapserButton() {
-    if (!this.props.collapsible) {
-      return false;
-    }
-
     // if we have "extra" (non-instruction) content, we should always
     // give the option of collapsing it
     if (
@@ -494,7 +490,6 @@ class InstructionsCSF extends React.Component {
   }
 
   getAvatar() {
-    console.log(this.props);
     // Show the "sad" avatar if there is failure feedback. Otherwise,
     // show the default avatar.
     return this.props.feedback && this.props.feedback.isFailure
@@ -605,7 +600,7 @@ class InstructionsCSF extends React.Component {
           >
             <ChatBubble
               ttsUrl={ttsUrl}
-              textToSpeechEnabled={!!ttsUrl}
+              textToSpeechEnabled={this.props.textToSpeechEnabled}
               isMinecraft={this.props.isMinecraft}
               skinId={this.props.skinId}
             >
@@ -668,6 +663,7 @@ class InstructionsCSF extends React.Component {
                 message={this.props.feedback.message}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
             {this.shouldDisplayHintPrompt() && (
@@ -677,6 +673,7 @@ class InstructionsCSF extends React.Component {
                 onDismiss={this.dismissHintPrompt}
                 isMinecraft={this.props.isMinecraft}
                 skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
           </div>
@@ -692,8 +689,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
-              isRtl={this.props.isRtl}
               isMinecraft={this.props.isMinecraft}
+              isRtl={this.props.isRtl}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -706,7 +703,6 @@ class InstructionsCSF extends React.Component {
                       ? craftStyles.scrollButtonsRtl
                       : craftStyles.scrollButtons)
                 ]}
-                isMinecraft={this.props.isMinecraft}
                 ref={c => {
                   this.scrollButtons = c;
                 }}
@@ -718,6 +714,7 @@ class InstructionsCSF extends React.Component {
                   RESIZER_HEIGHT -
                   styles.scrollButtons.top
                 }
+                isMinecraft={this.props.isMinecraft}
               />
             )}
           </div>
