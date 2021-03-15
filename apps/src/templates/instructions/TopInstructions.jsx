@@ -22,7 +22,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
-import CollapserIcon from './CollapserIcon';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -118,6 +118,32 @@ const styles = {
     float: 'right',
     paddingTop: 6,
     paddingRight: 30
+  },
+  collapserIcon: {
+    showHideButton: {
+      position: 'absolute',
+      top: 0,
+      margin: 0,
+      lineHeight: styleConstants['workspace-headers-height'] + 'px',
+      fontSize: 18,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.white
+      }
+    },
+    showHideButtonLtr: {
+      left: 8
+    },
+    showHideButtonRtl: {
+      right: 8
+    },
+    teacherOnlyColor: {
+      color: color.lightest_cyan,
+      ':hover': {
+        cursor: 'pointer',
+        color: color.default_text
+      }
+    }
   }
 };
 
@@ -163,8 +189,7 @@ class TopInstructions extends Component {
     longInstructions: PropTypes.string,
     shortInstructions: PropTypes.string,
     shortInstructions2: PropTypes.string,
-    collapsible: PropTypes.bool,
-    collapsed: PropTypes.bool,
+    isCollapsed: PropTypes.bool,
     noVisualization: PropTypes.bool.isRequired,
     toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
@@ -195,8 +220,7 @@ class TopInstructions extends Component {
   };
 
   static defaultProps = {
-    resizable: true,
-    collapsible: true
+    resizable: true
   };
 
   constructor(props) {
@@ -313,7 +337,7 @@ class TopInstructions extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (
-      !nextProps.collapsed &&
+      !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
       nextProps.height < nextProps.maxHeight &&
       !(
@@ -418,7 +442,7 @@ class TopInstructions extends Component {
    * updating our rendered height.
    */
   handleClickCollapser = () => {
-    if (this.props.collapsed) {
+    if (this.props.isCollapsed) {
       firehoseClient.putRecord({
         study: 'top-instructions',
         event: 'expand-instructions',
@@ -436,11 +460,11 @@ class TopInstructions extends Component {
       });
     }
 
-    const collapsed = !this.props.collapsed;
+    const isCollapsed = !this.props.isCollapsed;
     this.props.toggleInstructionsCollapsed();
 
     // adjust rendered height based on next collapsed state
-    if (collapsed && this.props.noInstructionsWhenCollapsed) {
+    if (isCollapsed && this.props.noInstructionsWhenCollapsed) {
       this.props.setInstructionsRenderedHeight(HEADER_HEIGHT);
     } else {
       this.props.setInstructionsRenderedHeight(this.props.expandedHeight);
@@ -542,7 +566,7 @@ class TopInstructions extends Component {
       hasContainedLevels
     } = this.props;
 
-    const isCSF = this.props.isCSF || !this.props.noInstructionsWhenCollapsed;
+    const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
@@ -612,6 +636,14 @@ class TopInstructions extends Component {
 
     const showContainedLevelAnswer =
       this.props.hasContainedLevels && $('#containedLevelAnswer0').length > 0;
+
+    const collapserIconStyles = {
+      ...styles.collapserIcon.showHideButton,
+      ...(this.props.isRtl
+        ? styles.collapserIcon.showHideButtonRtl
+        : styles.collapserIcon.showHideButtonLtr),
+      ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    };
 
     const InstructionsCSFComponent = this.props.preview
       ? UnconnectedInstructionsCSF
@@ -700,12 +732,12 @@ class TopInstructions extends Component {
                 )}
             </div>
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-            {this.props.collapsible &&
-              !this.props.isEmbedView &&
+            {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) && (
                 <CollapserIcon
-                  collapsed={this.props.collapsed}
+                  isCollapsed={this.props.isCollapsed}
                   onClick={this.handleClickCollapser}
+                  style={collapserIconStyles}
                   teacherOnly={teacherOnly}
                   isRtl={this.props.isRtl}
                 />
@@ -713,7 +745,7 @@ class TopInstructions extends Component {
           </div>
         </PaneHeader>
         <div
-          style={[this.props.collapsed && isCSDorCSP && commonStyles.hidden]}
+          style={[this.props.isCollapsed && isCSDorCSP && commonStyles.hidden]}
         >
           <div
             style={[
@@ -763,7 +795,7 @@ class TopInstructions extends Component {
                     isMinecraft={this.props.isMinecraft}
                     isBlockly={this.props.isBlockly}
                     isRtl={this.props.isRtl}
-                    collapsed={this.props.collapsed}
+                    isCollapsed={this.props.isCollapsed}
                     longInstructions={this.props.longInstructions}
                     shortInstructions={this.props.shortInstructions}
                     shortInstructions2={this.props.shortInstructions2}
@@ -776,7 +808,6 @@ class TopInstructions extends Component {
                       this.props.setInstructionsRenderedHeight
                     }
                     skinId={this.props.skinId}
-                    collapsible={this.props.collapsible}
                   />
                 )}
               {!this.props.hasContainedLevels &&
@@ -868,7 +899,7 @@ export default connect(
     ),
     longInstructions: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
-    collapsed: state.instructions.collapsed,
+    isCollapsed: state.instructions.isCollapsed,
     documentationUrl: state.pageConstants.documentationUrl,
     ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
     ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
