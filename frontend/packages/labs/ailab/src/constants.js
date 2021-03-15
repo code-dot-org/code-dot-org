@@ -363,5 +363,9 @@ export const styles = {
   floatLeft: {
     float: "left",
     margin: 20
+  },
+
+  ninetyFiveWidth: {
+    width: "95%"
   }
 };

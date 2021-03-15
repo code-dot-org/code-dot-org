@@ -132,6 +132,7 @@ class SaveModel extends Component {
                             this.handleChange(event, field.id, field.isColumn)
                           }
                           placeholder={field.placeholder}
+                          style={styles.ninetyFiveWidth}
                         />
                       </div>
                     )}
