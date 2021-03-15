@@ -15,6 +15,18 @@ class SaveModel extends Component {
     saveStatus: PropTypes.string
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showColumnDescriptions: false
+    };
+  }
+
+  toggleColumnDescriptions = () => {
+    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions})
+  };
+
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
@@ -56,6 +68,9 @@ class SaveModel extends Component {
       text: "What will you name the model? (required)"
     };
 
+    const arrowIcon = this.state.showColumnDescriptions
+      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+
     return (
       <div style={styles.panel}>
         <div style={styles.largeText}>Model Details</div>
@@ -72,49 +87,61 @@ class SaveModel extends Component {
                 />
               </div>
             </div>
-            {this.getColumnFields().map(field => {
-              return (
-                <div key={field.id} style={styles.cardRow}>
-                  <label>{field.text}</label>
-                  {!field.answer && (
-                    <div>
-                      <textarea
-                        rows="1"
-                        onChange={event =>
-                          this.handleChange(event, field.id, field.isColumn)
-                        }
-                        placeholder={field.placeholder}
-                      />
-                    </div>
-                  )}
-                  {field.answer && (
-                    <div>{field.answer}</div>
-                  )}
+            <div>
+              <span onClick={this.toggleColumnDescriptions}>
+                <i className={arrowIcon}/>
+                <span> Column Descriptions </span>
+              </span>
+              {this.state.showColumnDescriptions && (
+                <div>
+                  {this.getColumnFields().map(field => {
+                    return (
+                      <div key={field.id} style={styles.cardRow}>
+                        <label>{field.text}</label>
+                        {!field.answer && (
+                          <div>
+                            <textarea
+                              rows="1"
+                              onChange={event =>
+                                this.handleChange(event, field.id, field.isColumn)
+                              }
+                              placeholder={field.placeholder}
+                            />
+                          </div>
+                        )}
+                        {field.answer && (
+                          <div>{field.answer}</div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-            {this.getUsesFields().map(field => {
-              return (
-                <div key={field.id} style={styles.cardRow}>
-                  <label>{field.text}</label>
-                  <div>{field.description}</div>
-                  {!field.answer && (
-                    <div>
-                      <textarea
-                        rows="4"
-                        onChange={event =>
-                          this.handleChange(event, field.id, field.isColumn)
-                        }
-                        placeholder={field.placeholder}
-                      />
-                    </div>
-                  )}
-                  {field.answer && (
-                    <div>{field.answer}</div>
-                  )}
-                </div>
-              );
-            })}
+              )}
+            </div>
+            <div>
+              {this.getUsesFields().map(field => {
+                return (
+                  <div key={field.id} style={styles.cardRow}>
+                    <label>{field.text}</label>
+                    <div>{field.description}</div>
+                    {!field.answer && (
+                      <div>
+                        <textarea
+                          rows="4"
+                          onChange={event =>
+                            this.handleChange(event, field.id, field.isColumn)
+                          }
+                          placeholder={field.placeholder}
+                        />
+                      </div>
+                    )}
+                    {field.answer && (
+                      <div>{field.answer}</div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div>
