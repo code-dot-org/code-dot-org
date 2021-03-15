@@ -1239,6 +1239,8 @@ es:
               name: Niveles contenidos
             ML Fish:
               name: Pez ML
+            Java Lab:
+              name: Laboratorio Java
           student_description: Todos los tipos de niveles para las pruebas de la Interfaz
             de Usuario
         algebraPD2b:
