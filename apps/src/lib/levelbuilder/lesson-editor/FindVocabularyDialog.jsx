@@ -19,9 +19,7 @@ export default class FindVocabularyDialog extends Component {
     super(props);
     this.state = {
       selectedVocabularyKey:
-        this.props.vocabularies.length > 0
-          ? this.props.vocabularies[0].markdownKey
-          : ''
+        this.props.vocabularies.length > 0 ? this.props.vocabularies[0].key : ''
     };
   }
 
@@ -43,18 +41,12 @@ export default class FindVocabularyDialog extends Component {
             value={this.state.selectedVocabularyKey}
           >
             {this.props.vocabularies.map(vocabulary => (
-              <option key={vocabulary.key} value={vocabulary.markdownKey}>
+              <option key={vocabulary.key} value={vocabulary.key}>
                 {vocabulary.key}
               </option>
             ))}
           </select>
         </label>
-        <p>
-          <strong>Note:</strong> Vocabulary Definitions render as raw syntax
-          (ie, <code>[v vocab-key/course_offering_key/course_version_key]</code>
-          ) in the markdown preview here in the editor, but will render as
-          definition-enabled, underlined spans in the actual lesson view.
-        </p>
         <DialogFooter rightAlign>
           <Button
             text={'Close and Add'}
