@@ -391,7 +391,8 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_TEST_DATA) {
     return {
       ...state,
-      testData: action.testData
+      testData: action.testData,
+      prediction: {}
     };
   }
   if (action.type === SET_PREDICTION) {
