@@ -104,13 +104,14 @@ class JavalabEditor extends React.Component {
         <form style={style.renameForm} onSubmit={this.renameFileComplete}>
           <div style={style.tab}>
             <input
+              className="rename-file-input"
               type="text"
               value={this.state.newFilename}
               onChange={e => this.setState({newFilename: e.target.value})}
             />
           </div>
           <input
-            className="btn btn-default btn-sm"
+            className="btn btn-default btn-sm save-rename-button"
             style={style.button}
             type="submit"
             value="Save"
@@ -127,7 +128,7 @@ class JavalabEditor extends React.Component {
         <button
           type="button"
           onClick={this.activateRenameFile}
-          className="btn btn-default btn-sm"
+          className="btn btn-default btn-sm active-rename-button"
           style={style.button}
         >
           Rename
