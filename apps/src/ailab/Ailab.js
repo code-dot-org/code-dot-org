@@ -9,8 +9,8 @@ import ailabMsg from './locale';
 import $ from 'jquery';
 
 import {
-  setCustomInstructions,
-  setCustomInstructionsSet
+  setDynamicInstructionsDefaults,
+  setDynamicInstructionsKey
 } from '../redux/instructions';
 
 /**
@@ -23,7 +23,7 @@ import {
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
 
-function getInstructionsSet() {
+function getInstructionsDefaults() {
   var instructions = {
     selectDataset: 'Select the data set you would like to use.',
     dataDisplayLabel:
@@ -117,7 +117,9 @@ Ailab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
-  getStore().dispatch(setCustomInstructionsSet(getInstructionsSet()));
+  getStore().dispatch(
+    setDynamicInstructionsDefaults(getInstructionsDefaults())
+  );
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -145,14 +147,14 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
-Ailab.prototype.setInstructions = function(instructionsKey) {
-  getStore().dispatch(setCustomInstructions(instructionsKey));
+Ailab.prototype.setInstructionsKey = function(instructionsKey) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey));
 };
 
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
-  const setInstructions = this.setInstructions.bind(this);
+  const setInstructionsKey = this.setInstructionsKey.bind(this);
   const saveTrainedModel = (dataToSave, callback) => {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -181,7 +183,7 @@ Ailab.prototype.initMLActivities = function() {
   initAll({
     mode,
     onContinue,
-    setInstructions,
+    setInstructionsKey,
     i18n: ailabMsg,
     saveTrainedModel
   });

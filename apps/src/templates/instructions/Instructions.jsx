@@ -19,7 +19,7 @@ const styles = {
   notInTopPane: {
     overflow: 'auto'
   },
-  customInstructions: {}
+  dynamicInstructions: {}
 };
 
 /**
@@ -35,8 +35,8 @@ class Instructions extends React.Component {
     shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
-    customInstructions: PropTypes.string,
-    customInstructionsSet: PropTypes.object,
+    dynamicInstructions: PropTypes.object,
+    dynamicInstructionsKey: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
@@ -46,13 +46,13 @@ class Instructions extends React.Component {
   };
 
   state = {
-    customInstructionsHeight: null
+    dynamicInstructionsHeight: null
   };
 
   constructor(props) {
     super(props);
 
-    this.customInstructionsRefs = {};
+    this.dynamicInstructionsRefs = {};
   }
 
   /**
@@ -92,11 +92,11 @@ class Instructions extends React.Component {
   componentDidMount() {
     let largestHeight = 0;
 
-    // Find the tallest of our custom instructions.
-    if (this.props.customInstructionsSet) {
-      Object.keys(this.props.customInstructionsSet).forEach(key => {
+    // Find the tallest of our dynamic instructions.
+    if (this.props.dynamicInstructions) {
+      Object.keys(this.props.dynamicInstructions).forEach(key => {
         const height = $(
-          ReactDOM.findDOMNode(this.customInstructionsRefs[key])
+          ReactDOM.findDOMNode(this.dynamicInstructionsRefs[key])
         ).outerHeight(true);
         if (height > largestHeight) {
           largestHeight = height;
@@ -104,7 +104,7 @@ class Instructions extends React.Component {
       });
     }
 
-    // Resize the parent div to be the height of the largest custom instruction.
+    // Resize the parent div to be the height of the largest dynamic instruction.
     if (this.props.setInstructionsRenderedHeight) {
       this.props.setInstructionsRenderedHeight(
         largestHeight + HEADER_HEIGHT + RESIZER_HEIGHT + 20
@@ -113,8 +113,8 @@ class Instructions extends React.Component {
   }
 
   render() {
-    const parentStyle = this.props.customInstructionsSet
-      ? styles.customInstructions
+    const parentStyle = this.props.dynamicInstructions
+      ? styles.dynamicInstructions
       : this.props.inTopPane
       ? styles.inTopPane
       : styles.notInTopPane;
@@ -124,31 +124,31 @@ class Instructions extends React.Component {
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
           text={
-            this.props.customInstructions ||
+            this.props.dynamicInstructions[this.props.dynamicInstructionsKey] ||
             this.props.longInstructions ||
             this.props.shortInstructions
           }
         />
-        {this.props.customInstructionsSet && (
+        {this.props.dynamicInstructions && (
           <div
             style={{
               marginTop: 10,
               position: 'relative',
-              height: this.state.customInstructionsHeight
+              height: this.state.dynamicInstructionsHeight
             }}
           >
-            {Object.keys(this.props.customInstructionsSet).map(key => {
+            {Object.keys(this.props.dynamicInstructions).map(key => {
               return (
                 <div
                   style={{
                     position: 'absolute',
                     top: 0,
-                    opacity: key === this.props.customInstructions ? 1 : 0
+                    opacity: key === this.props.dynamicInstructionsKey ? 1 : 0
                   }}
                   key={key}
-                  ref={ref => (this.customInstructionsRefs[key] = ref)}
+                  ref={ref => (this.dynamicInstructionsRefs[key] = ref)}
                 >
-                  <div>{this.props.customInstructionsSet[key]}</div>
+                  <div>{this.props.dynamicInstructions[key]}</div>
                   <div style={{clear: 'both'}} />
                 </div>
               );
@@ -156,7 +156,7 @@ class Instructions extends React.Component {
           </div>
         )}
 
-        {!this.props.customInstructionsSet && (
+        {!this.props.dynamicInstructions && (
           <div>
             {this.renderMainBody()}
 
