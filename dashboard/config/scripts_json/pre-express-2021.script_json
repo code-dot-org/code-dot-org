@@ -27,6 +27,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
+    "serialized_at": "2021-03-15 13:06:01 UTC",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }
@@ -7451,22 +7452,18 @@
       "key": "click",
       "word": "Click",
       "definition": "Press the mouse button",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "click"
-      }
-    },
-    {
-      "key": "double_click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
-      "seeding_key": {
-        "vocabulary.key": "double_click"
       }
     },
     {
       "key": "drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "drag"
       }
@@ -7475,14 +7472,28 @@
       "key": "drop",
       "word": "Drop",
       "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "drop"
       }
     },
     {
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
+      }
+    },
+    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7491,6 +7502,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -7499,6 +7512,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7507,6 +7522,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7515,6 +7532,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -7523,6 +7542,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7531,6 +7552,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -7539,6 +7562,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7547,6 +7572,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7555,6 +7582,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -7563,6 +7592,8 @@
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "algorithm"
       }
@@ -7571,6 +7602,8 @@
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "bug"
       }
@@ -7579,6 +7612,8 @@
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "debugging"
       }
@@ -7587,6 +7622,8 @@
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "program"
       }
@@ -7595,6 +7632,8 @@
       "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "programming"
       }
@@ -7603,6 +7642,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7611,6 +7652,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7619,6 +7662,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7627,6 +7672,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7635,6 +7682,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7643,6 +7692,8 @@
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "repeat"
       }
@@ -7651,6 +7702,8 @@
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "loop"
       }
@@ -7659,6 +7712,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
@@ -7667,6 +7722,8 @@
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
         "vocabulary.key": "event"
       }
@@ -7682,12 +7739,6 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "drag"
       }
     },
@@ -7695,6 +7746,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7841,6 +7898,9 @@
         "vocabulary.key": "event"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {
