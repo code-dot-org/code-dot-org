@@ -1,0 +1,17 @@
+{
+  "func": "setAlpha",
+  "category": "Canvas",
+  "paletteParams": [
+    "imgData",
+    "x",
+    "y",
+    "a"
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0",
+    "255"
+  ],
+  "dontMarshal": true
+}

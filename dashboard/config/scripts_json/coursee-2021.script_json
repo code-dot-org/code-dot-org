@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-08 20:03:52 UTC",
+    "serialized_at": "2021-03-15 17:52:24 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -2969,7 +2969,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Function blocks:\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/E.7-lesson-hint.png)\r\n\r\nThe block to the left is a function declaration, a block that students will name and use to fill in the function. The block to the right is a function call, a block that makes the function code run. Students will need multiple of the function call blocks.\r\n"
+            "markdown": "Function blocks:\n\n![](https://images.code.org/88901576439e1a7b660a87952d4bf7de-E.7-lesson-hint.png)\n\nThe block to the left is a function declaration, a block that students will name and use to fill in the function. The block to the right is a function call, a block that makes the function code run. Students will need multiple of the function call blocks.\n"
           }
         ],
         "name": "Unplugged Activity Using Some Blockly",
@@ -4080,7 +4080,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4103,7 +4106,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4126,7 +4132,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_farmer_while3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -4462,10 +4471,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
         "level_keys": [
           "courseE_farmer_while1_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4512,7 +4521,7 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introducing Sprite Lab",
         "level_keys": [
@@ -4538,7 +4547,7 @@
       "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4564,7 +4573,7 @@
       "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4590,7 +4599,7 @@
       "chapter": 45,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4616,7 +4625,7 @@
       "chapter": 46,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -4642,7 +4651,7 @@
       "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "How to Make a Sprite",
         "level_keys": [
@@ -4668,7 +4677,7 @@
       "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4694,7 +4703,7 @@
       "chapter": 49,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -4720,7 +4729,7 @@
       "chapter": 50,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4746,7 +4755,7 @@
       "chapter": 51,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5890,7 +5899,7 @@
       "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5916,7 +5925,7 @@
       "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5942,7 +5951,7 @@
       "chapter": 97,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5968,7 +5977,7 @@
       "chapter": 98,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5994,7 +6003,7 @@
       "chapter": 99,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6020,7 +6029,7 @@
       "chapter": 100,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6046,7 +6055,7 @@
       "chapter": 101,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6072,7 +6081,7 @@
       "chapter": 102,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6098,7 +6107,7 @@
       "chapter": 103,
       "position": 9,
       "activity_section_position": 9,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6124,7 +6133,7 @@
       "chapter": 104,
       "position": 10,
       "activity_section_position": 10,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6150,7 +6159,7 @@
       "chapter": 105,
       "position": 11,
       "activity_section_position": 11,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6176,7 +6185,7 @@
       "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -9133,233 +9142,233 @@
   ],
   "vocabularies": [
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "While Loop",
+      "key": "while_loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
-      "key": "Behavior",
+      "key": "behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
-      "key": "Sprite",
+      "key": "sprite",
       "word": "Sprite",
       "definition": "A graphic on the screen with a location, size, and appearance.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Copyright",
+      "key": "copyright",
       "word": "Copyright",
       "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
-      "key": "Define",
+      "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
-      "key": "Prepare",
+      "key": "prepare",
       "word": "Prepare",
       "definition": "Research, plan, and acquire materials for the activity you are about to do",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
-      "key": "Reflect",
+      "key": "reflect",
       "word": "Reflect",
       "definition": "Carefully think back on something with the intention of improving the outcome in the future",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
-      "key": "Try",
+      "key": "try",
       "word": "Try",
       "definition": "Attempt to do something",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
   ],
@@ -9367,141 +9376,144 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming and Loops with the Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming and Loops with the Artist",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "Behavior"
+        "vocabulary.key": "behavior"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Learning Sprites with Sprite Lab",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Alien Dance Party with Sprite Lab",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Digital Sharing",
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Artist",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Frozen",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Frozen",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions: Songwriting",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Harvester",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Artist",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Define"
+        "vocabulary.key": "define"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Prepare"
+        "vocabulary.key": "prepare"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Reflect"
+        "vocabulary.key": "reflect"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "vocabulary.key": "Try"
+        "vocabulary.key": "try"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

@@ -304,6 +304,30 @@ class FilesApi < Sinatra::Base
     headers[CONTENT_TYPE] && headers[CONTENT_TYPE].include?(TEXT_HTML)
   end
 
+  def html_file?(filename)
+    File.extname(filename&.downcase) == '.html'
+  end
+
+  # Determine whether or not a file is a valid HTML file.
+  # Returns true if:
+  #   1. It does not belong to a WebLab project.
+  #   2. It belongs to a WebLab project and does not contain disallowed HTML tags.
+  # Returns false if the file is not an HTML file, does not belong to a project, or
+  # is a WebLab HTML file that contains disallowed HTML tags.
+  def valid_html_file?(encrypted_channel_id, filename, body)
+    return false unless html_file?(filename)
+
+    # Only validate WebLab HTML files. We need to get the project from the database
+    # in order to check whether or not the file belongs to a WebLab project.
+    project = StorageApps.new(get_storage_id).get(encrypted_channel_id)
+    return false unless project
+    return true unless project[:projectType]&.downcase == 'weblab'
+
+    # Nokogiri element selector tags must start with //
+    disallowed_tag_selectors = DCDO.get('disallowed_html_tags', ['script']).map {|tag| '//' + tag}
+    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+  end
+
   #
   # Set appropriate cache headers for making the retrieved object cached
   # for the given number of seconds
@@ -616,6 +640,7 @@ class FilesApi < Sinatra::Base
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
+    bad_request if html_file?(unescaped_filename) && !valid_html_file?(encrypted_channel_id, unescaped_filename, body)
 
     bucket = FileBucket.new
     manifest = get_manifest(bucket, encrypted_channel_id)

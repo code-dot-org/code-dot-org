@@ -141,6 +141,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
     end
   end
 
+  test "enforces key format" do
+    course_offering = build :course_offering, key: 'invalid key'
+    refute course_offering.valid?
+    course_offering.key = 'abcdefghijklmnopqrstuvwxyz-'
+    assert course_offering.valid?
+  end
+
   def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering

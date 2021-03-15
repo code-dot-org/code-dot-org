@@ -1,0 +1,16 @@
+{
+  "func": "buzzer.frequency",
+  "category": "Circuit",
+  "paletteParams": [
+    "frequency",
+    "duration"
+  ],
+  "params": [
+    "500",
+    "100"
+  ],
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 2
+  }
+}

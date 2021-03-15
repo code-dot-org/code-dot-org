@@ -11,6 +11,9 @@ level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
 
+lesson 'superunsuper', display_name: 'Unsupervised and Supervised', has_lesson_plan: false
+level 'ml-L2 unsupervised - 1', progression: 'Unsupervised'
+
 lesson 'intro-categorical', display_name: 'Introduction to AI Lab', has_lesson_plan: false
 
 lesson 'oceans', display_name: 'Machine Learning with AI for Oceans', has_lesson_plan: false

@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:55 UTC",
+    "serialized_at": "2021-03-15 12:49:31 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -8391,63 +8391,63 @@
   ],
   "vocabularies": [
     {
-      "key": "Empathy",
+      "key": "empathy",
       "word": "Empathy",
       "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
-      "key": "User",
+      "key": "user",
       "word": "User",
       "definition": "Someone who uses an object, including software and hardware.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
-      "key": "Usability",
+      "key": "usability",
       "word": "Usability",
       "definition": "How easy, efficient, and satisfying it is to use a human-made object or device (including software).",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
-      "key": "User Interface",
+      "key": "user_interface",
       "word": "User Interface",
       "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     }
   ],
@@ -8455,37 +8455,57 @@
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Understanding Your User",
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "console.log"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "onEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "setScreen"
       }
     }
   ],

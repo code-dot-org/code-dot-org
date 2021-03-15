@@ -1,0 +1,12 @@
+{
+  "func": "button",
+  "category": "UI controls",
+  "paletteParams": [
+    "id",
+    "text"
+  ],
+  "params": [
+    "\"id\"",
+    "\"text\""
+  ]
+}

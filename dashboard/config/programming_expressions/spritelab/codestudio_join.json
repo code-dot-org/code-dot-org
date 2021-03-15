@@ -1,0 +1,7 @@
+{
+  "category": "Text",
+  "config": {
+    "docFunc": "codestudio_join",
+    "func": "text_join"
+  }
+}

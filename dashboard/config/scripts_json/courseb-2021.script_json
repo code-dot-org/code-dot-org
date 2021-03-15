@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-09 21:01:45 UTC",
+    "serialized_at": "2021-03-15 13:01:13 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -7371,223 +7371,223 @@
   ],
   "vocabularies": [
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Click",
+      "key": "click",
       "word": "Click",
       "definition": "Press the mouse button",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Click"
+        "vocabulary.key": "click"
       }
     },
     {
-      "key": "Double-Click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Double-Click"
-      }
-    },
-    {
-      "key": "Drag",
+      "key": "drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Drag"
+        "vocabulary.key": "drag"
       }
     },
     {
-      "key": "Drop",
+      "key": "drop",
       "word": "Drop",
       "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Drop"
+        "vocabulary.key": "drop"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
+      }
+    },
+    {
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Persistence",
+      "key": "persistence",
       "word": "Persistence",
       "definition": "Trying again and again, even when something is very hard.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
   ],
@@ -7595,135 +7595,138 @@
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Click"
+        "vocabulary.key": "click"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Double-Click"
+        "vocabulary.key": "drag"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Drag"
+        "vocabulary.key": "drop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Drop"
+        "vocabulary.key": "double_click"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Collector",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Collector",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

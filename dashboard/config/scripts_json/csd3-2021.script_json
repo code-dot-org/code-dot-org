@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:52 UTC",
+    "serialized_at": "2021-03-15 12:48:46 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -17420,163 +17420,163 @@
   ],
   "vocabularies": [
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Parameter",
+      "key": "parameter",
       "word": "Parameter",
       "definition": "An extra piece of information passed to a function to customize it for a specific need",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Parameter"
+        "vocabulary.key": "parameter"
       }
     },
     {
-      "key": "Variable",
+      "key": "variable",
       "word": "Variable",
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
-      "key": "Dot notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Dot notation"
-      }
-    },
-    {
-      "key": "Property",
+      "key": "property",
       "word": "Property",
       "definition": "A label for a characteristic of a sprite, such as its location and appearance",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Property"
+        "vocabulary.key": "property"
       }
     },
     {
-      "key": "Sprite",
+      "key": "sprite",
       "word": "Sprite",
       "definition": "A character on the screen with properties that describe its location, movement, and look.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "sprite"
       }
     },
     {
-      "key": "Property",
+      "key": "dot_notation",
+      "word": "Dot notation",
+      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_notation"
+      }
+    },
+    {
+      "key": "property",
       "word": "Property",
       "definition": "A label for a characteristic of a sprite, such as its location and appearance",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Property"
+        "vocabulary.key": "property"
       }
     },
     {
-      "key": "Boolean Expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "Boolean Expression"
-      }
-    },
-    {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see whether it is true before deciding to take an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run when certain conditions are true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run when certain conditions are true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Abstraction",
+      "key": "abstraction",
       "word": "Abstraction",
       "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Abstraction"
+        "vocabulary.key": "abstraction"
       }
     },
     {
-      "key": "Abstraction",
+      "key": "abstraction",
       "word": "Abstraction",
       "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Abstraction"
+        "vocabulary.key": "abstraction"
       }
     },
     {
-      "key": "Function",
+      "key": "function",
       "word": "Function",
       "definition": "A named bit of programming instructions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
       }
     }
   ],
@@ -17584,97 +17584,375 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
-        "vocabulary.key": "Parameter"
+        "vocabulary.key": "parameter"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "vocabulary.key": "Variable"
+        "vocabulary.key": "variable"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "vocabulary.key": "Dot notation"
+        "vocabulary.key": "property"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "vocabulary.key": "Property"
+        "vocabulary.key": "sprite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "vocabulary.key": "Sprite"
+        "vocabulary.key": "dot_notation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprite Properties",
-        "vocabulary.key": "Property"
+        "vocabulary.key": "property"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "Boolean Expression"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "boolean_expression"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mouse Input",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
-        "vocabulary.key": "Abstraction"
+        "vocabulary.key": "abstraction"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collisions",
-        "vocabulary.key": "Abstraction"
+        "vocabulary.key": "abstraction"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions",
-        "vocabulary.key": "Function"
+        "vocabulary.key": "function"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_expression.key": "fill"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "background"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "programming_expression.key": "randomNumber"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_expression.key": "createSprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "rotation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "y"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "scale"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_expression.key": "x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_expression.key": "World.frameRate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_expression.key": "draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "greaterThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "inequalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_expression.key": "lessThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "programming_expression.key": "keyDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "keyWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "visible"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "keyWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_expression.key": "mouseWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "velocityY"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "velocityX"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_expression.key": "rotationSpeed"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_expression.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_expression.key": "isTouching"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "setCollider"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounceOff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "bounce"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "programming_expression.key": "functionParams_none"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "programming_expression.key": "callMyFunction"
       }
     }
   ],

@@ -18811,6 +18811,8 @@ en:
               name: Model Cards Playground
             bug-bash:
               name: Bug Bash Playground
+            superunsuper:
+              name: Unsupervised and Supervised
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -20975,13 +20977,13 @@ en:
             Loops with the Artist:
               key: Loops with the Artist
               name: Drawing with Loops
-              description_student: In this lesson, **loops** make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: 'This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to get creative with "The Artist".  '
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
               name: Nested Loops in Maze
-              description_student: "**Loops** inside **loops** inside **loops**. What does this mean? This lesson will teach you what happens when you place a **loop** inside another **loop**."
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
+              description_student: This lesson will teach you what happens when you place a **loop** inside another **loop**.
+              description_teacher: In this online activity, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
               key: The Power of Words
               name: The Power of Words
@@ -21004,7 +21006,7 @@ en:
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Variables that Change in Bee:
               key: Variables that Change in Bee
-              name: Changing Variables with Bee
+              name: Variables with Bee
               description_student: This bee loves **variables**!
               description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Variables that Change in Artist:
@@ -21020,11 +21022,8 @@ en:
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
-              description_student: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-              description_teacher: |
-                Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-
-                This lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
             Internet:
               key: Internet
               name: The Internet
@@ -21052,8 +21051,8 @@ en:
               description_teacher: Here, students will use Sprite Lab to create their own customized behaviors.
             Virtual Pet:
               key: Virtual Pet
-              name: Virtual Pet with Sprite Lab
-              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
               description_teacher: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
             End of Course Project:
               key: End of Course Project
@@ -21066,31 +21065,47 @@ en:
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
             lesson-6:
               name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.
             lesson-7:
               name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write **programs**, and learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. '
             lesson-8:
               name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed **events** and user input. '
             lesson-9:
               name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this activity, students will use fill-in-the-blank stories (similar to Mad Libs) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
             lesson-10:
               name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: Students will get practice with **variables** in Sprite Lab. Students will work with user input to set the values of their **variables**, then print those values alongside other text.
+            lesson-5:
+              name: Outbreak
           lesson_groups:
             ramp_up:
-              display_name: Ramp Up
+              display_name: Sprites
             csf_digcit:
               display_name: Digital Citizenship
             csf_variables:
-              display_name: Variables
+              display_name: For Loops
             csf_data:
-              display_name: Data
+              display_name: Data and Simulations
             csf_for_loops:
               display_name: For Loops
             csf_sprites:
-              display_name: Sprites
+              display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
             lessonGroup-8:
-              display_name: Impacts of Computing
+              display_name: Variables
+            lessonGroup-9:
+              display_name: remove
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
@@ -21118,7 +21133,7 @@ en:
               key: Collecting Treasure with Laurel
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
             Creating Art with Code:
               key: Creating Art with Code
               name: Creating Art with Code
@@ -21147,8 +21162,8 @@ en:
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
@@ -21158,7 +21173,7 @@ en:
               key: While Loops with the Farmer
               name: While Loops with the Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \r\n\r\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
@@ -21188,17 +21203,17 @@ en:
               key: Functions with Artist
               name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be introduced to using functions on Code.org. Magnificent images will be created and modified with functions in Artist. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
+              description_teacher: Students will be introduced to using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
             Variables with Artist:
               key: Variables with Artist
               name: Variables with Artist
-              description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read, even when the values don't change at runtime.
+              description_student: Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.
+              description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Changing Variables with Bee:
               key: Changing Variables with Bee
               name: Changing Variables with Bee
-              description_student: This bee loves variables!
-              description_teacher: 'This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. '
+              description_student: This bee loves **variables**!
+              description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Changing Variables with Artist:
               key: Changing Variables with Artist
               name: Changing Variables with Artist
@@ -21218,12 +21233,12 @@ en:
               key: Swimming Fish in Sprite Lab
               name: Swimming Fish in Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.'
             Alien Dance Party:
               key: Alien Dance Party
               name: Alien Dance Party
-              description_student: Practice making games to share with your friends and family.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own alien dance party with interactions between characters and user input. Students will work with events to create game controls. '
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".  '
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -21704,7 +21719,7 @@ en:
             lesson1:
               name: Introduction to Machine Learning A
             lesson2:
-              name: How Computers Learn (Unplugged)
+              name: How Computers Learn
             lesson3:
               name: AI for Social Good (Unplugged)
             lesson4:

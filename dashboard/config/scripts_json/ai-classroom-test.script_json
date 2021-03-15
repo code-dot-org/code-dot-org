@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-05 14:03:44 UTC",
+    "serialized_at": "2021-03-11 23:52:58 UTC",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -96,31 +96,6 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Importing into App Lab",
-        "level_keys": [
-          "ml-class test-app lab 1"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-class test-app lab 1"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      },
-      "level_keys": [
-        "ml-class test-app lab 1"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
         "progression": "Explore AI Lab 2: More Datasets!",
         "level_keys": [
           "ml-class test-ai lab 2"
@@ -141,33 +116,33 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Explore AI Lab 2: More Datasets!",
+        "progression": "Importing into App Lab",
         "level_keys": [
-          "ml-class test-app lab 2"
+          "ml-class test-app lab 1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-class test-app lab 2"
+          "ml-class test-app lab 1"
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
         "script.name": "ai-classroom-test"
       },
       "level_keys": [
-        "ml-class test-app lab 2"
+        "ml-class test-app lab 1"
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -191,7 +166,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -216,7 +191,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -241,7 +216,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -266,7 +241,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -289,6 +264,31 @@
       "level_keys": [
         "ml-models-shoes points"
       ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Explore AI Lab 2: More Datasets!",
+        "level_keys": [
+          "ml-class test-app lab 2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-class test-app lab 2"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-class test-app lab 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -297,17 +297,6 @@
         "level.key": "ml-class test-ai lab 1",
         "script_level.level_keys": [
           "ml-class test-ai lab 1"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-class test-app lab 1",
-        "script_level.level_keys": [
-          "ml-class test-app lab 1"
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
@@ -327,9 +316,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ml-class test-app lab 2",
+        "level.key": "ml-class test-app lab 1",
         "script_level.level_keys": [
-          "ml-class test-app lab 2"
+          "ml-class test-app lab 1"
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",
@@ -385,6 +374,17 @@
         "level.key": "ml-models-shoes points",
         "script_level.level_keys": [
           "ml-models-shoes points"
+        ],
+        "lesson.key": "introai",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-class test-app lab 2",
+        "script_level.level_keys": [
+          "ml-class test-app lab 2"
         ],
         "lesson.key": "introai",
         "lesson_group.key": "",

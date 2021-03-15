@@ -131,6 +131,7 @@ class InstructionsCSF extends React.Component {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
+    isBlockly: PropTypes.bool.isRequired,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
     hideOverlay: PropTypes.func.isRequired,
@@ -167,6 +168,7 @@ class InstructionsCSF extends React.Component {
 
     ttsShortInstructionsUrl: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
+    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -323,9 +325,7 @@ class InstructionsCSF extends React.Component {
   getMinHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = Math.min(
@@ -362,9 +362,7 @@ class InstructionsCSF extends React.Component {
   getMaxHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
-      !collapsed && this.scrollButtons
-        ? this.scrollButtons.getWrappedInstance().getMinHeight()
-        : 0;
+      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
 
     const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
     const instructionsHeight = getOuterHeight(this.instructions, true);
@@ -597,7 +595,12 @@ class InstructionsCSF extends React.Component {
                   : styles.instructionsWithTips)
             ]}
           >
-            <ChatBubble ttsUrl={ttsUrl}>
+            <ChatBubble
+              ttsUrl={ttsUrl}
+              textToSpeechEnabled={this.props.textToSpeechEnabled}
+              isMinecraft={this.props.isMinecraft}
+              skinId={this.props.skinId}
+            >
               <Instructions
                 ref={c => {
                   this.instructions = c;
@@ -609,6 +612,8 @@ class InstructionsCSF extends React.Component {
                 }
                 imgURL={this.props.aniGifURL}
                 inTopPane
+                isBlockly={this.props.isBlockly}
+                noInstructionsWhenCollapsed={false}
               />
               {this.props.shortInstructions2 && (
                 <div className="secondary-instructions">
@@ -653,6 +658,9 @@ class InstructionsCSF extends React.Component {
                   this.props.isMinecraft ? color.white : color.charcoal
                 }
                 message={this.props.feedback.message}
+                isMinecraft={this.props.isMinecraft}
+                skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
             {this.shouldDisplayHintPrompt() && (
@@ -660,6 +668,9 @@ class InstructionsCSF extends React.Component {
                 borderColor={color.yellow}
                 onConfirm={this.showHint}
                 onDismiss={this.dismissHintPrompt}
+                isMinecraft={this.props.isMinecraft}
+                skinId={this.props.skinId}
+                textToSpeechEnabled={this.props.textToSpeechEnabled}
               />
             )}
           </div>
@@ -675,6 +686,8 @@ class InstructionsCSF extends React.Component {
               ]}
               collapsed={this.props.collapsed}
               onClick={this.props.handleClickCollapser}
+              isMinecraft={this.props.isMinecraft}
+              isRtl={this.props.isRtl}
             />
             {!this.props.collapsed && (
               <ScrollButtons
@@ -698,6 +711,7 @@ class InstructionsCSF extends React.Component {
                   RESIZER_HEIGHT -
                   styles.scrollButtons.top
                 }
+                isMinecraft={this.props.isMinecraft}
               />
             )}
           </div>
@@ -713,12 +727,13 @@ export default connect(
       overlayVisible: state.instructions.overlayVisible,
       skinId: state.pageConstants.skinId,
       isMinecraft: !!state.pageConstants.isMinecraft,
+      isBlockly: !!state.pageConstants.isBlockly,
       aniGifURL: state.pageConstants.aniGifURL,
       inputOutputTable: state.pageConstants.inputOutputTable,
       isRtl: state.isRtl,
       noVisualization: state.pageConstants.noVisualization,
       feedback: state.instructions.feedback,
-      collapsed: state.instructions.collapsed,
+      collapsed: state.instructions.isCollapsed,
       hints: state.authoredHints.seenHints,
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
@@ -730,6 +745,8 @@ export default connect(
       ),
       ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
+      textToSpeechEnabled:
+        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
       longInstructions: state.instructions.longInstructions,
