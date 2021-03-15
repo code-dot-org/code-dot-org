@@ -166,6 +166,7 @@ standardConfig.blocks = [
   {func: 'notOperator', block: '!__', category: 'Math'},
   // randomNumber_max has been deprecated
   // {func: 'randomNumber_max', block: 'randomNumber(__)', category: 'Math' },
+  // Note: We use randomNumber as our base docFunc here so that we get the benefits of param descriptions
   {
     func: 'randomNumber_min_max',
     block: 'randomNumber(1, 10)',
