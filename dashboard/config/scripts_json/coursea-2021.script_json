@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-09 20:51:36 UTC",
+    "serialized_at": "2021-03-15 13:00:20 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -7711,16 +7711,6 @@
       }
     },
     {
-      "key": "double_click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
       "key": "drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
@@ -7738,6 +7728,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "drop"
+      }
+    },
+    {
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7969,12 +7969,6 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "drag"
       }
     },
@@ -7982,6 +7976,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing with Scrat",
         "vocabulary.key": "drop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -8104,6 +8104,9 @@
         "vocabulary.key": "event"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {
