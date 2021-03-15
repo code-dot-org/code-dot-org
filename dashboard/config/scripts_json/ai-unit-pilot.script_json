@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 17:54:12 UTC",
+    "serialized_at": "2021-03-12 03:14:12 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -60,7 +60,7 @@
     },
     {
       "key": "lesson2",
-      "name": "How Computers Learn (Unplugged)",
+      "name": "How Computers Learn",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -398,52 +398,52 @@
     },
     {
       "chapter": 4,
-      "position": 4,
+      "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "(Teacher Only) Creatures V Trash",
+        "progression": "Looking for Patterns",
         "level_keys": [
-          "Oceans_CreaturesVTrashDemo"
+          "ml-L2 unsupervised - 1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "Oceans_CreaturesVTrashDemo"
+          "ml-L2 unsupervised - 1"
         ],
-        "lesson.key": "lesson1",
+        "lesson.key": "lesson2",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "Oceans_CreaturesVTrashDemo"
+        "ml-L2 unsupervised - 1"
       ]
     },
     {
       "chapter": 5,
-      "position": 5,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "(Slides) Intro to AI Video",
+        "progression": "Supervised Learning",
         "level_keys": [
-          "Oceans_Video_Machine_Learning"
+          "ml-L2 supervised - 1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning"
+          "ml-L2 supervised - 1"
         ],
-        "lesson.key": "lesson1",
+        "lesson.key": "lesson2",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       },
       "level_keys": [
-        "Oceans_Video_Machine_Learning"
+        "ml-L2 supervised - 1"
       ]
     },
     {
@@ -1633,22 +1633,22 @@
     },
     {
       "seeding_key": {
-        "level.key": "Oceans_CreaturesVTrashDemo",
+        "level.key": "ml-L2 unsupervised - 1",
         "script_level.level_keys": [
-          "Oceans_CreaturesVTrashDemo"
+          "ml-L2 unsupervised - 1"
         ],
-        "lesson.key": "lesson1",
+        "lesson.key": "lesson2",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
     },
     {
       "seeding_key": {
-        "level.key": "Oceans_Video_Machine_Learning",
+        "level.key": "ml-L2 supervised - 1",
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning"
+          "ml-L2 supervised - 1"
         ],
-        "lesson.key": "lesson1",
+        "lesson.key": "lesson2",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
