@@ -254,7 +254,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
                 fileData,
                 (err, versionId) => {
                   if (err) {
-                    callback();
+                    callback(err);
                   } else {
                     _lastSyncedVersionId = versionId;
                     handleLocalChange(i + 1, callback);
