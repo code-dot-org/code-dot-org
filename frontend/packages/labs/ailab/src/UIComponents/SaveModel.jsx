@@ -71,6 +71,8 @@ class SaveModel extends Component {
     const arrowIcon = this.state.showColumnDescriptions
       ? 'fa fa-caret-up' : 'fa fa-caret-down';
 
+    const columnCount = this.getColumnFields().length;
+
     return (
       <div style={styles.panel}>
         <div style={styles.largeText}>Model Details</div>
@@ -90,7 +92,7 @@ class SaveModel extends Component {
             <div>
               <span onClick={this.toggleColumnDescriptions}>
                 <i className={arrowIcon}/>
-                <span> Column Descriptions </span>
+                <span> Column Descriptions ({columnCount})</span>
               </span>
               {this.state.showColumnDescriptions && (
                 <div>
