@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:31 UTC",
+    "serialized_at": "2021-03-12 19:07:47 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -1327,7 +1327,7 @@
       "key": "ad03dcc6-515c-4a86-bf14-d0bb13c89769",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\r\n\r\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org TeacherCon during the summer, you should already have this access.\r\n\r\nTo check whether you have access:\r\n\r\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\r\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\r\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\r\n\r\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\r\n\r\n\r\n#### Create a class section on Code Studio.\r\n\r\nTo create a section:\r\n\r\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\r\n2. Click 'New section' under 'Classroom Sections'\r\n3. Choose 'Email Logins' \r\n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\r\n5. Once the section is created, click the name of the section\r\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \r\n\r\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [r how-to-videos]",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org TeacherCon during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2021)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [r how-to-videos]",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -6716,43 +6716,43 @@
   ],
   "vocabularies": [
     {
-      "key": "Computer",
+      "key": "computer",
       "word": "Computer",
       "definition": "A machine that works with information.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Computer"
+        "vocabulary.key": "computer"
       }
     },
     {
-      "key": "Input",
+      "key": "input",
       "word": "Input",
       "definition": "the information computers get from users, devices, or other computers",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Input"
+        "vocabulary.key": "input"
       }
     },
     {
-      "key": "Output",
+      "key": "output",
       "word": "Output",
       "definition": "the information computers give to users, devices, or other computers",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Output"
+        "vocabulary.key": "output"
       }
     },
     {
-      "key": "Processing",
+      "key": "processing",
       "word": "Processing",
       "definition": "The thinking work computers do to turn input into output.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Processing"
+        "vocabulary.key": "processing"
       }
     },
     {
@@ -6770,25 +6770,25 @@
     {
       "seeding_key": {
         "lesson.key": "What is a Computer?",
-        "vocabulary.key": "Computer"
+        "vocabulary.key": "computer"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "vocabulary.key": "Input"
+        "vocabulary.key": "input"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Input and Output",
-        "vocabulary.key": "Output"
+        "vocabulary.key": "output"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Processing",
-        "vocabulary.key": "Processing"
+        "vocabulary.key": "processing"
       }
     },
     {

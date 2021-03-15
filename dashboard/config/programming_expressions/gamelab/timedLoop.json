@@ -1,0 +1,15 @@
+{
+  "func": "timedLoop",
+  "category": "Control",
+  "paletteParams": [
+    "ms",
+    "callback"
+  ],
+  "params": [
+    "1000",
+    "function() {\n  \n}"
+  ],
+  "allowFunctionDrop": {
+    "1": true
+  }
+}

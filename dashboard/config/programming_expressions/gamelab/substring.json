@@ -1,0 +1,14 @@
+{
+  "func": "substring",
+  "category": "Variables",
+  "paletteParams": [
+    "start",
+    "end"
+  ],
+  "params": [
+    "6",
+    "11"
+  ],
+  "modeOptionName": "*.substring",
+  "type": "value"
+}

@@ -6,6 +6,11 @@ pilot_experiment 'csf-2021-pilot'
 
 lesson_group 'Sprites', display_name: 'Sprites'
 lesson_group_description 'Learn the basics of coding with sprites!'
+lesson 'introducing-spritelab', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
+level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
+level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
+level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
+
 lesson 'Making Sprites', display_name: 'Making Sprites', has_lesson_plan: false
 level 'courseF_sprites_predict', progression: 'Predict'
 level 'CourseEF_video_MakeSprite_2020', progression: 'Video: How to Make a Sprite'
@@ -16,11 +21,6 @@ level 'courseF_sprites_properties', progression: 'Skill Building'
 level 'courseF_sprites_behaviors', progression: 'Skill Building'
 level 'courseF_sprites_practice', progression: 'Practice'
 level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
-
-lesson 'introducing-spritelab', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
-level 'CourseEF_video_IntroSpriteLab_2020', progression: 'Video: Introducing Sprite Lab'
-level 'courseF_intro_apps', progression: 'Exploration: Sample Apps'
-level 'courseF_intro_birds_puzzle', progression: 'Exploration: Writing Code'
 
 lesson 'Sprites in Action', display_name: 'Sprites in Action', has_lesson_plan: false
 level 'courseF_events_predict', progression: 'Predict'
