@@ -11,11 +11,11 @@ is_migrated true
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
 lesson 'Digital Trails', display_name: 'Digital Trails', has_lesson_plan: true, unplugged: true
-level 'csf_digital_trails_2021'
+level 'csf_digital_trails_2021', progression: 'Video: Follow The Digital Trail'
 
 lesson_group 'csf_sequencing', display_name: 'Sequencing'
 lesson 'Move It, Move It', display_name: 'Move It, Move It', has_lesson_plan: true, unplugged: true
-level 'MoveItMoveIt-Unplugged_2021', progression: 'Unplugged Move It Move it Video'
+level 'MoveItMoveIt-Unplugged_2021', progression: 'Move It Move it Video  - Unplugged Activity'
 
 lesson 'Sequencing in Maze', display_name: 'Sequencing with Angry Birds', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2021', progression: 'Video - Maze Intro: Programming with Blocks'
@@ -90,8 +90,8 @@ level 'courseB_collector_loops8_2021', progression: 'Challenge', challenge: true
 level 'courseB_collector_loops9_2021', progression: 'Practice'
 level 'courseB_collector_loops10_2021', progression: 'Practice'
 level 'courseB_collector_loops11_2021', progression: 'Practice'
-bonus 'courseB_collector_loops_challenge1_2021'
-bonus 'courseB_collector_loops_challenge2a_2021'
+bonus 'courseB_collector_loops_challenge1_2021', progression: 'Challenge'
+bonus 'courseB_collector_loops_challenge2a_2021', progression: 'Challenge'
 
 lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2021', progression: 'The Artist in Code Studio'
@@ -106,16 +106,16 @@ level 'courseB_artist_loops7_2021', progression: 'Challenge', challenge: true
 level 'courseB_artist_loops8_2021', progression: 'Practice'
 level 'courseB_artist_loops9_2021', progression: 'Practice'
 level 'courseB_artist_loops10_2021', progression: 'Free Play'
-bonus 'courseB_artist_loops_challenge1_2021'
-bonus 'courseB_artist_loops_challenge2_2021'
+bonus 'courseB_artist_loops_challenge1_2021', progression: 'Challenge'
+bonus 'courseB_artist_loops_challenge2_2021', progression: 'Challenge'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
 lesson 'The Right App', display_name: 'The Right App', has_lesson_plan: true, unplugged: true
-level 'TheRightAppMarkdownLevel_2021'
+level 'TheRightAppMarkdownLevel_2021', progression: 'The Right App - Unplugged Activity'
 
 lesson_group 'csf_events', display_name: 'Events'
 lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
-level 'BigEvent-Unplugged_2021'
+level 'BigEvent-Unplugged_2021', progression: 'The Big Event - Unplugged Activity'
 
 lesson 'Events in Play Lab', display_name: 'A Royal Battle with Events', has_lesson_plan: true
 level 'courseA_video_events_2021', progression: 'Create a Story'
@@ -127,6 +127,6 @@ level 'courseB_playlab_events5_2021', progression: 'Mini-Project: Royal Battle'
 level 'courseB_playlab_events6_2021', progression: 'Mini-Project: Royal Battle'
 level 'courseB_playlab_events7_2021', progression: 'Mini-Project: Royal Battle'
 level 'courseB_playlab_eventsFP_2021', progression: 'Free Play'
-bonus 'courseB_playlab_events_challenge1_2021'
-bonus 'courseB_playlab_events_challenge2_2021'
+bonus 'courseB_playlab_events_challenge1_2021', progression: 'Challenge'
+bonus 'courseB_playlab_events_challenge2_2021', progression: 'Challenge'
 

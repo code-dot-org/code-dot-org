@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:49:55 UTC",
+    "serialized_at": "2021-03-15 12:49:31 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -8486,6 +8486,26 @@
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
         "vocabulary.key": "prototype"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "console.log"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "onEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "setScreen"
       }
     }
   ],
