@@ -22,9 +22,6 @@ import {getCurrentId} from '../code-studio/initApp/project';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 
-// HTML tags that are disallowed in WebLab. These tags will be removed from users' projects.
-const DISALLOWED_HTML_TAGS = ['script'];
-
 /**
  * An instantiable WebLab class
  */
@@ -84,7 +81,7 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
-  this.disallowedHtmlTags = DISALLOWED_HTML_TAGS;
+  this.disallowedHtmlTags = config.disallowedHtmlTags;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
@@ -370,8 +367,12 @@ WebLab.prototype.getCodeAsync = function() {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
       this.brambleHost.syncFiles(err => {
-        // store our filesVersionId as the "sources"
-        resolve(this.getCurrentFilesVersionId() || '');
+        if (err) {
+          reject(err);
+        } else {
+          // store our filesVersionId as the "sources"
+          resolve(this.getCurrentFilesVersionId() || '');
+        }
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -443,7 +444,7 @@ WebLab.prototype.changeProjectFile = function(
       callback(null, project.filesVersionId);
     },
     xhr => {
-      console.warn(`WebLab: error file ${filename} not renamed`);
+      console.warn(`WebLab: error file ${filename} not saved`);
       callback(new Error(xhr.status));
     },
     skipPreWriteHook

@@ -1,0 +1,16 @@
+{
+  "func": "getPrediction",
+  "category": "Data",
+  "paletteParams": [
+    "model_name",
+    "model_id",
+    "testValues",
+    "callback"
+  ],
+  "params": [
+    "\"myModel\"",
+    "\"modelId\"",
+    "testValues",
+    "function (value) {\n \n}"
+  ]
+}
