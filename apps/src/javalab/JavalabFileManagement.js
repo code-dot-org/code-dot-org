@@ -36,11 +36,11 @@ function onSave(success, failure) {
       filename,
       editorText,
       /* success */
-      () => {
+      (xhr, filesVersionId) => {
         // reset files changed to false on success
         getStore().dispatch(setFilesChanged(false));
         if (success) {
-          success();
+          success(xhr, filesVersionId);
         }
       },
       failure
