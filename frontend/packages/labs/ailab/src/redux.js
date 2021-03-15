@@ -465,7 +465,7 @@ export default function rootReducer(state = initialState, action) {
   }
   if (action.type === SET_CURRENT_PANEL) {
     if (state.instructionsCallback) {
-      state.instructionsCallback(getInstructionsForPanel(action.currentPanel));
+      state.instructionsCallback(action.currentPanel);
     }
 
     return {
@@ -1272,18 +1272,4 @@ function areArraysEqual(array1, array2) {
       return value === array2[index];
     })
   );
-}
-
-function getInstructionsForPanel(panel) {
-  var panelInstructions = {
-    selectDataset: "Select the data set you would like to use.",
-    dataDisplayLabel: "Choose one column to predict.",
-    dataDisplayFeatures: "Choose one or more columns that will do the predicting.",
-    selectTrainer: "Set up the training.",
-    trainModel: "Train the model.",
-    results: "Review the results.",
-    saveModel: "Save the trained model for use in App Lab."
-  };
-
-  return panelInstructions[panel];
 }

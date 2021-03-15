@@ -9,7 +9,7 @@ import rootReducer, {
   setSelectedCSV,
   setSelectedJSON,
   setSelectedTrainer,
-  setInstructionsCallback
+  setInstructionsCallback,
   setSaveStatus
 } from "./redux";
 import { allDatasets } from "./datasetManifest";
