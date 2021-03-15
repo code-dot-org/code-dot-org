@@ -20,7 +20,9 @@ class FindResourceDialog extends Component {
     super(props);
     this.state = {
       selectedResourceKey:
-        this.props.resources.length > 0 ? this.props.resources[0].key : ''
+        this.props.resources.length > 0
+          ? this.props.resources[0].markdownKey
+          : ''
     };
   }
 
@@ -50,7 +52,7 @@ class FindResourceDialog extends Component {
             value={this.state.selectedResourceKey}
           >
             {this.props.resources.map(resource => (
-              <option key={resource.key} value={resource.key}>
+              <option key={resource.key} value={resource.markdownKey}>
                 {this.formatResourceName(resource)}
               </option>
             ))}
@@ -58,9 +60,9 @@ class FindResourceDialog extends Component {
         </label>
         <p>
           <strong>Note:</strong> Resource Links render as raw syntax (ie,{' '}
-          <code>[r resource-key]</code>) in the markdown preview here in the
-          editor, but will render as fully-realized links in the actual lesson
-          view.
+          <code>[r resource-key/course_offering_key/course_version_key]</code>)
+          in the markdown preview here in the editor, but will render as
+          fully-realized links in the actual lesson view.
         </p>
         <DialogFooter rightAlign>
           <Button
