@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-12 19:05:33 UTC",
+    "serialized_at": "2021-03-15 12:47:19 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -10963,6 +10963,140 @@
       "seeding_key": {
         "lesson.key": "CSS Classes",
         "vocabulary.key": "css_class"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_expression.key": "html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_expression.key": "doctype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_expression.key": "body"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_expression.key": "head"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_expression.key": "P"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "programming_expression.key": "h"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_expression.key": "font-family"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_expression.key": "font-size"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_expression.key": "color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_expression.key": "Text-Dec"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_expression.key": "text-align"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "programming_expression.key": "img"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "border-width"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "background-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "margin"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "float"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "height"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "width"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "border-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "border-style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_expression.key": "border-radius"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "programming_expression.key": "A"
       }
     }
   ],
