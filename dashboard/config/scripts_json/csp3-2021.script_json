@@ -108,7 +108,7 @@
         "overview": "This is the first in a series of lessons where students will make progress on building their own functional app. In this lesson, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab. ",
         "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
         "purpose": "This lesson kicks off a project that students will complete throughout the unit. The framing of this project is also important for how programming is presented overall. Students are encouraged to collaboratively design their projects, choose topics of personal interest, and build an app to meet the needs of other people. All of this is important as part of framing programming as a collaborative, creative, and socially situated pursuit.",
-        "preparation": "* Read over the [r app_development_planning_guide/csp/2021]",
+        "preparation": "* Read over the [r app_development_planning_guide]",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -995,7 +995,7 @@
       "key": "f8496c85-e709-44b6-8919-23c7d7839f51",
       "position": 7,
       "properties": {
-        "description": "[slide] **Display:** How Computers Work [r how_computers_work_-_what_makes_a_computer_a_computer/csp/2021]",
+        "description": "[slide] **Display:** How Computers Work [r how_computers_work_-_what_makes_a_computer_a_computer]",
         "name": "Input & Output"
       },
       "seeding_key": {
@@ -1258,7 +1258,7 @@
       "key": "e0e7e291-2820-4bb2-b24f-9ab9faee38af",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** [r app_development_planning_guide/csp/2021]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n[slide] **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n[slide] **Group:** Organize students into pairs."
+        "description": "[slide] **Distribute:** [r app_development_planning_guide]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n[slide] **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n[slide] **Group:** Organize students into pairs."
       },
       "seeding_key": {
         "activity_section.key": "e0e7e291-2820-4bb2-b24f-9ab9faee38af",
@@ -1493,7 +1493,7 @@
       "key": "97d67aa6-8667-4f51-8d13-e412f4a4a798",
       "position": 3,
       "properties": {
-        "description": "This is a good opportunity to look over student's work in the [r app_development_planning_guide/csp/2021] as a formative assessment.",
+        "description": "This is a good opportunity to look over student's work in the [r app_development_planning_guide] as a formative assessment.",
         "name": "Assessment: Planning Guide"
       },
       "seeding_key": {
@@ -2016,7 +2016,7 @@
       "key": "f400d836-3586-44b0-94ba-53164c90b275",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021]\r\n\r\n[slide] **Step 5:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\r\n\r\n\r\n\r\n[slide] **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design/csp/2021] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
+        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide]\r\n\r\n[slide] **Step 5:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\r\n\r\n\r\n\r\n[slide] **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "f400d836-3586-44b0-94ba-53164c90b275",
@@ -2160,7 +2160,7 @@
       "key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1",
       "position": 4,
       "properties": {
-        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021].\n\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
+        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide].\n\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
         "name": "Testing and Feedback - 10 mins\r",
         "progression_name": "Add More Code"
       },
@@ -2226,7 +2226,7 @@
       "key": "25cd2d3b-a4c4-435f-b13b-ee1d42b18441",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students back in pairs with their project partner.\r\n\r\n[slide]  **Distribute:** Make sure students have access to the [r app_development_planning_guide/csp/2021]"
+        "description": "**Group:** Place students back in pairs with their project partner.\r\n\r\n[slide]  **Distribute:** Make sure students have access to the [r app_development_planning_guide]"
       },
       "seeding_key": {
         "activity_section.key": "25cd2d3b-a4c4-435f-b13b-ee1d42b18441",
@@ -2273,7 +2273,7 @@
       "key": "239b6d98-edc4-4a2c-b18d-ef16e4df533d",
       "position": 2,
       "properties": {
-        "description": "Use the rubric to assess student projects. The rubric can be found on the last page of the [r app_development_planning_guide/csp/2021].",
+        "description": "Use the rubric to assess student projects. The rubric can be found on the last page of the [r app_development_planning_guide].",
         "name": "Assessment: Project\r",
         "progression_name": "Submit Your App"
       },

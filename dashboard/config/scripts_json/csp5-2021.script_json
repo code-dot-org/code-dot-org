@@ -3198,7 +3198,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp_u5_written_response/csp/2021] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
+            "markdown": "**Forming Groups:** You may opt to form the groups yourself, randomly place students in groups, or let students select their partners based on the dataset they want to work with. \r\n\r\n**Previewing the Written Responses:** You may opt to share the [r csp_u5_written_response] with students early just so they know what they'll be expected to write at the end of the 5-day project.\r\n\r\n"
           }
         ],
         "name": "Hackathon Prep\r"
@@ -3527,7 +3527,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp-u5-hackathon-submission-on-ap-classroom/csp/2021] for instructions on how to set up an assessment on AP Classroom.\n"
+            "markdown": "The Written Response portion of this project is a modified, short version of the Create Performance Task students will turn in to the College Board for the AP Exam. To have your students practice submitting this project using a similar interface to the Create Performance Task, see the [r csp-u5-hackathon-submission-on-ap-classroom] for instructions on how to set up an assessment on AP Classroom.\n"
           }
         ],
         "name": "Written Response"
