@@ -365,7 +365,7 @@ export const styles = {
     margin: 20
   },
 
-  ninetyFiveWidth: {
+  saveInputsWidth: {
     width: "95%"
   }
 };

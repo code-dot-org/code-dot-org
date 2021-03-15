@@ -40,8 +40,8 @@ class SaveModel extends Component {
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: "Description for: " + columnDescription.id + ` (${columnType})`,
-        answer: columnDescription.description,
+        text: `Description for: ${columnDescription.id} (${columnType})`,
+        answer: columnDescription.description
       });
     }
     return fields;
@@ -83,8 +83,7 @@ class SaveModel extends Component {
             <div key={nameField.id} style={styles.cardRow}>
               <label>{nameField.text}</label>
               <div>
-                <textarea
-                  rows="1"
+                <input
                   onChange={event =>
                     this.handleChange(event, nameField.id, nameField.isColumn)
                   }
@@ -136,7 +135,7 @@ class SaveModel extends Component {
                             this.handleChange(event, field.id, field.isColumn)
                           }
                           placeholder={field.placeholder}
-                          style={styles.ninetyFiveWidth}
+                          style={styles.saveInputsWidth}
                         />
                       </div>
                     )}
