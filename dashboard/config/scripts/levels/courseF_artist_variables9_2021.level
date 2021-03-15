@@ -44,6 +44,7 @@
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/b4c3223823ee4d7c812dea31b19e556c=levelbuilder/108345.png",
     "preload_asset_list": null
   },
   "user_id": 1,
@@ -52,7 +53,7 @@
   "level_num": "custom",
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 16:09:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-02-28 19:08:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-05 00:10:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-30 13:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-08-30 13:59:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"auto_run\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 19:40:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 19:43:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:09:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2018-02-28 19:08:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-06-05 00:10:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-30 13:55:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-08-30 13:59:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"auto_run\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 19:40:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 19:43:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-12 22:06:17 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -195,7 +196,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="variables_set" inline="false">
+            <block type="variables_set">
               <title name="VAR">length</title>
               <value name="VALUE">
                 <block type="math_number">
@@ -203,14 +204,14 @@
                 </block>
               </value>
               <next>
-                <block type="controls_repeat_ext" inline="true">
+                <block type="controls_repeat_ext">
                   <value name="TIMES">
                     <block type="math_number">
                       <title name="NUM">30</title>
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="draw_move" inline="true">
+                    <block type="draw_move">
                       <title name="DIR">moveForward</title>
                       <value name="VALUE">
                         <block type="variables_get">
@@ -218,7 +219,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="draw_turn" inline="true">
+                        <block type="draw_turn">
                           <title name="DIR">turnLeft</title>
                           <value name="VALUE">
                             <block type="math_number">
@@ -226,21 +227,11 @@
                             </block>
                           </value>
                           <next>
-                            <block type="variables_set" inline="false">
+                            <block type="math_change">
                               <title name="VAR">length</title>
-                              <value name="VALUE">
-                                <block type="math_arithmetic" inline="true">
-                                  <title name="OP">ADD</title>
-                                  <value name="A">
-                                    <block type="variables_get">
-                                      <title name="VAR">length</title>
-                                    </block>
-                                  </value>
-                                  <value name="B">
-                                    <block type="math_number">
-                                      <title name="NUM">10</title>
-                                    </block>
-                                  </value>
+                              <value name="DELTA">
+                                <block type="math_number">
+                                  <title name="NUM">10</title>
                                 </block>
                               </value>
                             </block>
