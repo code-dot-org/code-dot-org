@@ -17,7 +17,7 @@ class ResultsTable extends Component {
     accuracyCheckExamples: PropTypes.array,
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
-    acccuracyGrades: PropTypes.array,
+    accuracyGrades: PropTypes.array,
     isRegression: PropTypes.bool
   };
 
@@ -33,7 +33,7 @@ class ResultsTable extends Component {
                 Features
               </th>
               <th>
-                <span style={styles.largeText}>{"A.I. Bot's Guess"}</span>
+                <span style={styles.largeText}>{"A.I. Prediction"}</span>
               </th>
               <th>
                 <span style={styles.largeText}>{"Actual"}</span>
@@ -67,11 +67,11 @@ class ResultsTable extends Component {
                   })}
                   <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
                   <td>{this.props.accuracyCheckLabels[index]}</td>
-                  {this.props.acccuracyGrades[index] ===
+                  {this.props.accuracyGrades[index] ===
                     ResultsGrades.CORRECT && (
                     <td style={styles.ready}>&#x2713;</td>
                   )}
-                  {this.props.acccuracyGrades[index] ===
+                  {this.props.accuracyGrades[index] ===
                     ResultsGrades.INCORRECT && (
                     <td style={styles.error}>&#10006;</td>
                   )}
@@ -94,6 +94,6 @@ export default connect(state => ({
     state,
     state.accuracyCheckPredictedLabels
   ),
-  acccuracyGrades: getAccuracyGrades(state),
+  accuracyGrades: getAccuracyGrades(state),
   isRegression: isRegression(state)
 }))(ResultsTable);

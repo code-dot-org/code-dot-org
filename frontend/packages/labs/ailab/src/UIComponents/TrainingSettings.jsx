@@ -5,12 +5,14 @@ import PercentReserveSlider from "./PercentReserveSlider";
 import ColumnTypeSelector from "./ColumnTypeSelector";
 import { connect } from "react-redux";
 import { styles } from "../constants";
+import { getShowChooseReserve } from "../redux";
 
 class TrainingSettings extends Component {
   static propTypes = {
     selectedFeatures: PropTypes.array,
     labelColumn: PropTypes.string,
-    hideSpecifyColumns: PropTypes.bool
+    hideSpecifyColumns: PropTypes.bool,
+    showChooseReserve: PropTypes.bool
   };
 
   render() {
@@ -22,7 +24,7 @@ class TrainingSettings extends Component {
             A.I. Bot will predict {this.props.labelColumn} based on{" "}
             {this.props.selectedFeatures.join(", ")}.
           </div>
-          <PercentReserveSlider />
+          {this.showChooseReserve && <PercentReserveSlider />}
           {!this.props.hideSpecifyColumns && <ColumnTypeSelector />}
         </div>
       </div>
@@ -33,5 +35,6 @@ class TrainingSettings extends Component {
 export default connect(state => ({
   labelColumn: state.labelColumn,
   selectedFeatures: state.selectedFeatures,
-  hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
+  hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
+  showChooseReserve: getShowChooseReserve(state)
 }))(TrainingSettings);

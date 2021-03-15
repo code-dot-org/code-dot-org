@@ -94,7 +94,7 @@ class ColumnInspector extends Component {
       barData.datasets[0].label = currentColumnData.id;
     }
 
-    const maxLabelsInHistogram = 4;
+    const maxLabelsInHistogram = 5;
 
     return (
       currentColumnData && (
@@ -107,6 +107,7 @@ class ColumnInspector extends Component {
             <div>
               <label>
                 <div>{currentColumnData.id}</div>
+                <div>Data Type:</div>
                 {this.props.hideSpecifyColumns && (
                   <div> {currentColumnData.dataType} </div>
                 )}

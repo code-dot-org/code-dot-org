@@ -1,0 +1,68 @@
+{
+  "card": {
+    "description": "Survey of customers in a diner on whether or not they like certain poutine combinations",
+    "source": "Code.org",
+    "lastUpdated": "2021",
+    "context": {
+      "createdBy": "Code.org",
+      "preparation": true,
+      "subgroupIdentifiers": false,
+      "representative": false,
+      "potentialUses": "Help make recommendations for what kind of poutine a new customer should order",
+      "potentialMisuses": "Anything other than recommendations"
+    }
+  },
+  "fields": [
+    {
+      "id": "mushrooms",
+      "type": "categorical",
+      "description": "Does the poutine include mushrooms toppings?"
+    },
+    {
+      "id": "lobster",
+      "type": "categorical",
+      "description": "Does the poutine include lobster toppings?"
+    },
+    {
+      "id": "pork",
+      "type": "categorical",
+      "description": "Does the poutine include pork toppings?"
+    },
+    {
+      "id": "bacon",
+      "type": "categorical",
+      "description": "Does the poutine include bacon toppings?"
+    },
+    {
+      "id": "cheese",
+      "type": "categorical",
+      "description": "Does the poutine include cheese toppings?"
+    },
+    {
+      "id": "gravy",
+      "type": "categorical",
+      "description": "Does the poutine include gravy toppings?"
+    },
+    {
+      "id": "scallions",
+      "type": "categorical",
+      "description": "Does the poutine include scallions toppings?"
+    },
+    {
+      "id": "meat",
+      "type": "categorical",
+      "description": "Does the poutine include meat toppings?"
+    },
+    {
+      "id": "bell peppers",
+      "type": "categorical",
+      "description": "Does the poutine include bell peppers toppings?"
+    },
+    {
+      "id": "preference",
+      "type": "categorical",
+      "description": "Do you like or dislike the poutine?"
+    }
+  ],
+  "defaultLabelColumn": "preference"
+}

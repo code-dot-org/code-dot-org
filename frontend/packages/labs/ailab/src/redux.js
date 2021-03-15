@@ -694,12 +694,11 @@ function isEmpty(object) {
 }
 
 export function getConvertedValue(state, rawValue, column) {
-  if (!isEmpty(state.featureNumberKey)) {
-    const convertedValue = getCategoricalColumns(state).includes(column)
-      ? getKeyByValue(state.featureNumberKey[column], rawValue)
-      : rawValue;
-    return convertedValue;
-  }
+  const convertedValue = getCategoricalColumns(state).includes(column) &&
+    !isEmpty(state.featureNumberKey)
+    ? getKeyByValue(state.featureNumberKey[column], rawValue)
+    : rawValue;
+  return convertedValue;
 }
 
 export function getConvertedAccuracyCheckExamples(state) {
@@ -718,13 +717,8 @@ export function getConvertedAccuracyCheckExamples(state) {
 }
 
 export function getConvertedLabel(state, rawLabel) {
-  if (state.labelColumn && !isEmpty(state.featureNumberKey)) {
-    const convertedLabel = getCategoricalColumns(state).includes(
-      state.labelColumn
-    )
-      ? getKeyByValue(state.featureNumberKey[state.labelColumn], rawLabel)
-      : rawLabel;
-    return convertedLabel;
+  if (state.labelColumn) {
+    return getConvertedValue(state, rawLabel, state.labelColumn);
   }
 }
 
@@ -752,7 +746,7 @@ export function getCompatibleTrainers(state) {
 }
 
 export function isRegression(state) {
-  const mlType = getMLType(state.selectedTrainer);
+  const mlType = getMLType(getSelectedTrainer(state));
   return mlType === MLTypes.REGRESSION;
 }
 
@@ -922,9 +916,14 @@ export function getTrainedModelDataToSave(state) {
 
   dataToSave.name = state.trainedModelDetails.name;
 
-  // If we have column descriptions in metadata, use that, otherwise
-  // use what the user has manually entered.
-  if (state.metadata && state.metadata.fields) {
+  // If the first column has a description, assume descriptions are in the
+  // metadata for that dataset and use them; otherwise, use manually entered
+  // column desscriptions.
+  if (
+    state.metadata &&
+    state.metadata.fields &&
+    state.metadata.fields[0].description
+  ) {
     dataToSave.columns = [];
     for (const columnDescription of getSelectedColumnDescriptions(state)) {
       dataToSave.columns.push({
@@ -1093,12 +1092,12 @@ export function getPanelButtons(state) {
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "trainModel")
-      ? { panel: "trainModel", text: "Train A.I." }
+      ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
@@ -1108,12 +1107,12 @@ export function getPanelButtons(state) {
   } else if (state.currentPanel === "results") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelEnabled(state, "saveModel")
-      ? { panel: "saveModel", text: "Continue" }
+      ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelEnabled(state, "save")
-      ? { panel: "save", text: "Save" }
+      ? { panel: "save", text: "Finish" }
       : null;
   }
 

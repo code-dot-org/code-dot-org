@@ -24,7 +24,7 @@ class DataCard extends Component {
 
     return dataLength !== 0 && (
       <div id="data-card" style={{...styles.panel, ...styles.rightPanel}}>
-        <div style={styles.largeText}>Data Information</div>
+        <div style={styles.largeText}>Details</div>
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <span style={styles.bold}>Name:</span>

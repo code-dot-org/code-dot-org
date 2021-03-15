@@ -22,7 +22,7 @@ class PercentReserveSlider extends Component {
         <div>How much of the data would you like to reserve for testing?</div>
         <form>
           <label>
-            Percent of dataset to reserve:{" "}
+            Data to Reserve for Testing:{" "}
             <input
               type="range"
               min="1"
