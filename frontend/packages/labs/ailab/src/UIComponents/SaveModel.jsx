@@ -86,7 +86,7 @@ class SaveModel extends Component {
                 <textarea
                   rows="1"
                   onChange={event =>
-                    this.handleChange(event, field.id, field.isColumn)
+                    this.handleChange(event, nameField.id, nameField.isColumn)
                   }
                 />
               </div>
