@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 require_relative 'only_one'
+require_relative '../../tools/hooks/hooks_utils.rb'
+
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 # This syncs content changes from the shared dropbox folder to our github repo
@@ -45,15 +47,20 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
     command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod -log -logfile /home/ubuntu/unison.log"
     stdout, stderr, _ = Open3.capture3(command)
-    next if stdout == "" && stderr == ""
-    error_message = <<~ERROR_MSG
-                      <!here> Error syncing Dropbox and staging
-                      Dropbox directory: #{key}
-                      pegasus directory: #{value}
-                      stdout: #{stdout}
-                      stderr: #{stderr}
-                    ERROR_MSG
-    logger.record error_message
+    if stdout == "" && stderr == ""
+      HooksUtils.get_unstaged_files.each do |filename|
+        raise "INVALID FILENAME: #{filename}" if HooksUtils.prohibited?(filename)
+      end
+    else
+      error_message = <<~ERROR_MSG
+                        <!here> Error syncing Dropbox and staging
+                        Dropbox directory: #{key}
+                        pegasus directory: #{value}
+                        stdout: #{stdout}
+                        stderr: #{stderr}
+                      ERROR_MSG
+      logger.record error_message
+    end
   end
   current_time = Time.now
   logger.save
