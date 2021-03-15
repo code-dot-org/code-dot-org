@@ -13,7 +13,6 @@ export const allDatasets = [
     metadataPath: "datasets/titanic.json",
     imagePath: "datasets/titanic.jpg"
   },
-
   {
     id: "foods",
     name: "Foods",
@@ -257,49 +256,42 @@ export const allDatasets = [
     metadataPath: "datasets/nutrition.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
+  {
     id: "student_survey",
     name: "Student Lifestyle Survey",
     path: "datasets/student_survey.csv",
     metadataPath: "datasets/student_survey.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
+  {
     id: "abalone",
     name: "Abalone",
     path: "datasets/abalone.csv",
     metadataPath: "datasets/abalone.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
+  {
     id: "auto-mpg",
     name: "Car MPG",
     path: "datasets/auto-mpg.csv",
     metadataPath: "datasets/auto-mpg.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
-    id: "IRIS",
-    name: "Iris",
-    path: "datasets/IRIS.csv",
-    metadataPath: "datasets/IRIS.json",
-    imagePath: "datasets/temp.jpg"
-  },
-   {
+  {
     id: "movies",
     name: "Movie Stats",
     path: "datasets/movies.csv",
     metadataPath: "datasets/movies.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
+  {
     id: "mushrooms",
     name: "Poisonous Mushrooms",
     path: "datasets/mushrooms.csv",
     metadataPath: "datasets/mushrooms.json",
     imagePath: "datasets/temp.jpg"
   },
-   {
+  {
     id: "car_evaluation",
     name: "Car Evaluation",
     path: "datasets/car_evaluation.csv",
