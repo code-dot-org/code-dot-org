@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "getProp",
+    "docFunc": "gamelab_getProp",
     "blockText": "{SPRITE} {PROPERTY}",
     "returnType": "None",
     "color": [

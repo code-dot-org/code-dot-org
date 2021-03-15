@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_190316) do
+ActiveRecord::Schema.define(version: 2021_03_13_061652) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1282,6 +1282,8 @@ ActiveRecord::Schema.define(version: 2021_03_08_190316) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "key", null: false
+    t.index ["name", "category"], name: "index_programming_expressions_on_name_and_category", type: :fulltext
+    t.index ["programming_environment_id", "key"], name: "programming_environment_key", unique: true
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
 
@@ -1481,6 +1483,13 @@ ActiveRecord::Schema.define(version: 2021_03_08_190316) do
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
+  create_table "scripts_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "script_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "script_id"], name: "index_scripts_resources_on_resource_id_and_script_id"
+    t.index ["script_id", "resource_id"], name: "index_scripts_resources_on_script_id_and_resource_id", unique: true
+  end
+
   create_table "secret_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "path", null: false
@@ -1599,8 +1608,8 @@ ActiveRecord::Schema.define(version: 2021_03_08_190316) do
   end
 
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "organization", null: false
-    t.string "organization_id", null: false
+    t.string "organization"
+    t.string "organization_id"
     t.text "description"
     t.text "concept"
     t.bigint "category_id"
@@ -1708,6 +1717,13 @@ ActiveRecord::Schema.define(version: 2021_03_08_190316) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_unit_groups_on_name"
+  end
+
+  create_table "unit_groups_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "unit_group_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
+    t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
   create_table "user_geos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

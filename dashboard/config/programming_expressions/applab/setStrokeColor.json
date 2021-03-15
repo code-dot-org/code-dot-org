@@ -1,0 +1,18 @@
+{
+  "func": "setStrokeColor",
+  "category": "Canvas",
+  "paletteParams": [
+    "color"
+  ],
+  "params": [
+    "\"red\""
+  ],
+  "dropdown": {
+    "0": [
+      "\"red\"",
+      "rgb(255,0,0)",
+      "rgb(255,0,0,0.5)",
+      "\"#FF0000\""
+    ]
+  }
+}
