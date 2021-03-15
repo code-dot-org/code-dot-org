@@ -9,8 +9,7 @@ import {
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
-  getPredictAvailable,
-  setPrediction
+  getPredictAvailable
 } from "../redux";
 import { styles } from "../constants";
 
@@ -24,15 +23,13 @@ class Predict extends Component {
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     confidence: PropTypes.number,
-    getPredictAvailable: PropTypes.bool,
-    setPrediction: PropTypes.func
+    getPredictAvailable: PropTypes.bool
   };
 
   handleChange = (event, feature) => {
     const testData = this.props.testData;
     testData[feature] = event.target.value;
     this.props.setTestData(testData);
-    this.props.setPrediction({});
   };
 
   onClickPredict = () => {
@@ -130,9 +127,6 @@ export default connect(
   dispatch => ({
     setTestData(testData) {
       dispatch(setTestData(testData));
-    },
-    setPrediction(prediction) {
-      dispatch(setPrediction(prediction));
     }
   })
 )(Predict);
