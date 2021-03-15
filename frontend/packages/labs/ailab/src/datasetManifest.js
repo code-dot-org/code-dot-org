@@ -100,9 +100,9 @@ export const allDatasets = [
   },
   {
     id: "spotify",
-    name: "Spotify (1991-2020)",
-    path: "datasets/spotify_1991_to_2020.csv",
-    metadataPath: "datasets/spotify_1991_to_2020.json",
+    name: "Spotify (2005-2020)",
+    path: "datasets/spotify_2005_to_2020.csv",
+    metadataPath: "datasets/spotify_2005_to_2020.json",
     imagePath: "datasets/temp.jpg"
   },
   {
@@ -134,9 +134,7 @@ export const allDatasets = [
     imagePath: "datasets/temp.jpg"
   },
   {
-    id: "zoo",
-    name: "Zoo",
-    path: "datasets/zoo.csv",
+    id: "zoo", name: "Zoo", path: "datasets/zoo.csv",
     metadataPath: "datasets/zoo.json",
     imagePath: "datasets/temp.jpg"
   },
@@ -251,7 +249,78 @@ export const allDatasets = [
     path: "datasets/medical_priority.csv",
     metadataPath: "datasets/medical_priority.json",
     imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "nutrition",
+    name: "Nutrition",
+    path: "datasets/nutrition.csv",
+    metadataPath: "datasets/nutrition.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "student_survey",
+    name: "Student Lifestyle Survey",
+    path: "datasets/student_survey.csv",
+    metadataPath: "datasets/student_survey.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "abalone",
+    name: "Abalone",
+    path: "datasets/abalone.csv",
+    metadataPath: "datasets/abalone.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "auto-mpg",
+    name: "Car MPG",
+    path: "datasets/auto-mpg.csv",
+    metadataPath: "datasets/auto-mpg.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "IRIS",
+    name: "Iris",
+    path: "datasets/IRIS.csv",
+    metadataPath: "datasets/IRIS.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "movies",
+    name: "Movie Stats",
+    path: "datasets/movies.csv",
+    metadataPath: "datasets/movies.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "mushrooms",
+    name: "Poisonous Mushrooms",
+    path: "datasets/mushrooms.csv",
+    metadataPath: "datasets/mushrooms.json",
+    imagePath: "datasets/temp.jpg"
+  },
+   {
+    id: "car_evaluation",
+    name: "Car Evaluation",
+    path: "datasets/car_evaluation.csv",
+    metadataPath: "datasets/car_evaluation.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "school_scores",
+    name: "SAT Scores",
+    path: "datasets/school_scores.csv",
+    metadataPath: "datasets/school_scores.json",
+    imagePath: "datasets/temp.jpg"
+  },
+  {
+    id: "house-votes-84",
+    name: "1984 US House Votes",
+    path: "datasets/house-votes-84.csv",
+    metadataPath: "datasets/house-votes-84.json",
+    imagePath: "datasets/temp.jpg"
   }
+
 ];
 
 export function getAvailableDatasets(specificDatasets) {
