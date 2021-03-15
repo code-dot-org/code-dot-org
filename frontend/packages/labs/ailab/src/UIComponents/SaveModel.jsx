@@ -35,11 +35,13 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
+      const columnType = columnDescription.id === this.props.labelColumn
+        ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: "Description for: " + columnDescription.id,
-        answer: columnDescription.description
+        text: "Description for: " + columnDescription.id + ` (${columnType})`,
+        answer: columnDescription.description,
       });
     }
     return fields;
@@ -163,6 +165,7 @@ export default connect(
   state => ({
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
+    labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
     saveStatus: state.saveStatus
   }),
