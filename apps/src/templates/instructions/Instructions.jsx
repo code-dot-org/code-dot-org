@@ -35,7 +35,7 @@ class Instructions extends React.Component {
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
     isBlockly: PropTypes.bool,
-    collapsible: PropTypes.bool
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   /**
@@ -58,7 +58,7 @@ class Instructions extends React.Component {
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
           isBlockly={this.props.isBlockly}
-          collapsible={this.props.collapsible}
+          noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
         />
       );
     } else {
