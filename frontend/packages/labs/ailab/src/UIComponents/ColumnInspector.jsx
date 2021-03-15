@@ -94,7 +94,7 @@ class ColumnInspector extends Component {
       barData.datasets[0].label = currentColumnData.id;
     }
 
-    const maxLabelsInHistogram = 4;
+    const maxLabelsInHistogram = 5;
 
     return (
       currentColumnData && (
