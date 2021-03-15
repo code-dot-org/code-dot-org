@@ -1954,7 +1954,7 @@
       "key": "65b2eb73-b2f8-4ee7-ba1d-0d7e78e7f62a",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out Circuit Playgrounds.\r\n\r\n**Transition:** Send students to Code Studio. Let them know that today they will be experimenting with some sensors that detect [v analog] signals and convert them to [v digital] values that can be used by the computer.",
+        "description": "**Distribute:** Pass out Circuit Playgrounds.\r\n\r\n**Transition:** Send students to Code Studio. Let them know that today they will be experimenting with some sensors that detect [v analog/csd/2021] signals and convert them to [v digital/csd/2021] values that can be used by the computer.",
         "name": "Analog Inputs\r"
       },
       "seeding_key": {
@@ -3038,7 +3038,7 @@
       "key": "463c4da0-d013-4378-be2d-fa41c520ea5e",
       "position": 5,
       "properties": {
-        "description": "The elements of our Circuit Playground are all made up of circuits so small that we can't even see most of them, but you can create a simple [v circuit] on your own by attaching wires to the copper pads on the edge of the board.",
+        "description": "The elements of our Circuit Playground are all made up of circuits so small that we can't even see most of them, but you can create a simple [v circuit/csd/2021] on your own by attaching wires to the copper pads on the edge of the board.",
         "remarks": true
       },
       "seeding_key": {
