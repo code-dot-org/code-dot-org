@@ -17,7 +17,10 @@ import javalab from '@cdo/apps/javalab/javalabRedux';
 describe('Java Lab Editor Test', () => {
   let defaultProps, store;
 
-  before(() => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({javalab});
+    store = getStore();
     sinon.stub(filesApi, 'putFile');
     sinon.stub(filesApi, 'renameFile');
     defaultProps = {
@@ -25,14 +28,10 @@ describe('Java Lab Editor Test', () => {
     };
   });
 
-  beforeEach(() => {
-    stubRedux();
-    registerReducers({javalab});
-    store = getStore();
-  });
-
   afterEach(() => {
     restoreRedux();
+    filesApi.putFile.restore();
+    filesApi.renameFile.restore();
   });
 
   const createWrapper = overrideProps => {
