@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-11 22:47:14 UTC",
+    "serialized_at": "2021-03-15 12:54:12 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -7377,6 +7377,9 @@
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [

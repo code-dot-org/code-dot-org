@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-12 23:05:01 UTC",
+    "serialized_at": "2021-03-15 18:33:20 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -572,7 +572,7 @@
         "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
         "purpose": "Today's concept, `for` loops, are a very important topic in computer science. Not only are they widely used, the process of learning `for` loops enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each `for` loop. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -609,10 +609,10 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -629,10 +629,10 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "overview": "This lesson features Sprite Lab, a platform where students can create their own alien dance party with interactions between characters and user input. Students will work with events to create game controls. ",
-        "student_overview": "Practice making games to share with your friends and family.",
-        "purpose": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson offers a great introduction to events in programming and even gives a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
+        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
+        "student_overview": "Create an interactive project that can be shared with classmates.",
+        "purpose": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -652,7 +652,7 @@
         "overview": "Here, students will use Sprite Lab to create their own customized behaviors.",
         "student_overview": "Learn to program your own sprite behaviors!",
         "purpose": "Students will use events to make characters move around the screen, change size, and change colors based on user input. This lesson offers a great introduction to events in programming and even gives a chance to show creativity! ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1931,7 +1931,7 @@
       "key": "414b4e57-110f-441f-a5ca-cbdc9f741a4c",
       "position": 1,
       "properties": {
-        "name": "Bridging Activity - For Loops",
+        "name": "Warm Up",
         "duration": 15
       },
       "seeding_key": {
@@ -1945,8 +1945,8 @@
       "key": "28c042cd-71f4-4a58-991c-a0bc480dba54",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 30
+        "name": "Bridging Activity - Choose One",
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "28c042cd-71f4-4a58-991c-a0bc480dba54",
@@ -1959,8 +1959,8 @@
       "key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 15
+        "name": "Main Activity",
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e",
@@ -1970,13 +1970,14 @@
       }
     },
     {
-      "key": "de7993c9-c5c4-4883-bb50-ea2584ab8bff",
+      "key": "f43312b4-a6ca-47a5-be92-1e6f77b43ff8",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 15
       },
       "seeding_key": {
-        "lesson_activity.key": "de7993c9-c5c4-4883-bb50-ea2584ab8bff",
+        "lesson_activity.key": "f43312b4-a6ca-47a5-be92-1e6f77b43ff8",
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021"
@@ -2055,8 +2056,7 @@
       "key": "70f255cb-66f1-49de-a085-22c599ef7b4f",
       "position": 2,
       "properties": {
-        "name": "Main Activity",
-        "duration": 20
+        "name": "Bridging Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "70f255cb-66f1-49de-a085-22c599ef7b4f",
@@ -2066,27 +2066,28 @@
       }
     },
     {
-      "key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
+      "key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6",
       "position": 3,
       "properties": {
-        "name": "Wrap Up",
-        "duration": 15
+        "name": "Main Activity",
+        "duration": 20
       },
       "seeding_key": {
-        "lesson_activity.key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6",
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021"
       }
     },
     {
-      "key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6",
+      "key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Wrap Up",
+        "duration": 15
       },
       "seeding_key": {
-        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6",
+        "lesson_activity.key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021"
@@ -2125,23 +2126,10 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 15
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "8047aa36-d909-472e-acf1-5161ce40d297",
-        "lesson.key": "Alien Dance Party",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021"
-      }
-    },
-    {
-      "key": "864b3294-0e65-4032-80f2-a9d9e2d1c35e",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "864b3294-0e65-4032-80f2-a9d9e2d1c35e",
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021"
@@ -2190,13 +2178,13 @@
       }
     },
     {
-      "key": "6c574d9b-f83a-4fb8-b204-ea6b6c106400",
+      "key": "85626e42-b6c8-4893-8ac3-c968beb96d8d",
       "position": 4,
       "properties": {
-        "name": "Levels"
+        "name": "Cross-Curricular Opportunities"
       },
       "seeding_key": {
-        "lesson_activity.key": "6c574d9b-f83a-4fb8-b204-ea6b6c106400",
+        "lesson_activity.key": "85626e42-b6c8-4893-8ac3-c968beb96d8d",
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021"
@@ -4670,8 +4658,8 @@
       "key": "b3ac68a6-7600-49ad-bfb3-88d318e25658",
       "position": 1,
       "properties": {
-        "description": "Display a puzzle from the lesson. We recommend puzzle #5 because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line, mark the start and ending values of the given `for` loop (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.",
-        "name": "Previewing Online Puzzles as a Class"
+        "description": "Remind students of the work they did in \"For Loop Fun\". Open a discussion about what they learned, why they think it might be useful, and if they had any fun. Here are some discussion starters.\n\n - What did you learn in \"For Loop Fun\"?\n - What are the three main components of a `for` loop?\n    - starting value, step interval, ending value\n - Why do you think a `for` loop might be helpful in programming?\n    - Many students might not know an answer to this. Let them hypothesize, but don't dwell on this question for too long.\n - Did you have fun learning about `for` loops? Why or why not?\n - Are you excited to use `for` loops in online puzzles?",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b3ac68a6-7600-49ad-bfb3-88d318e25658",
@@ -4682,8 +4670,7 @@
       "key": "8b4eed0e-3fed-4e29-9b36-cae3dea4f725",
       "position": 1,
       "properties": {
-        "description": "Some students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
-        "name": "Online Puzzles\r"
+        "description": "These activities will help bring the unplugged concepts from \"For Loop Fun\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "8b4eed0e-3fed-4e29-9b36-cae3dea4f725",
@@ -4691,11 +4678,35 @@
       }
     },
     {
+      "key": "da6c6b05-1948-4963-8743-d9fbd014f8a8",
+      "position": 2,
+      "properties": {
+        "name": "Unplugged Activity Using Paper Blocks",
+        "description": "Split up the students of your class into pairs. Ideally have the pairs be the same from when your class did \"For Loop Fun\". Print out a `for` loop from [r course-cf-blockly-blocks] for each pair of students. Pass out one die to each pair. Have the partners take turns rolling the die to obtain the following values:\n\n - One roll for the starting value\n - Four rolls for the ending value\n - One roll for the step value\n\nHave each pair fill in the `for` loop with the appropriate values in the correct spot.\n\n![](https://images.code.org/bae4910eb528de1e7471cbf6083154e4-csf1.png)\n\nUsing a basic number line, like the one used in \"For Loop Fun\", have the students mark the beginning, ending, and middle values that this `for` loop will touch. When everyone is done, see who got the most points by totaling the starting, middle, and ending numbers of each pair.\n\n####-Or\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "da6c6b05-1948-4963-8743-d9fbd014f8a8",
+        "lesson_activity.key": "28c042cd-71f4-4a58-991c-a0bc480dba54"
+      }
+    },
+    {
+      "key": "cce91fd5-e858-428f-957e-6b81fb4095b5",
+      "position": 3,
+      "properties": {
+        "name": "Previewing Online Puzzles as a Class",
+        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line similar to the ones used in \"For Loop Fun\", mark the start and ending values of the given `for` loop (if you aren't using puzzle #4, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #4, ask the class what they think the answer is to the question, given what they found with the number line."
+      },
+      "seeding_key": {
+        "activity_section.key": "cce91fd5-e858-428f-957e-6b81fb4095b5",
+        "lesson_activity.key": "28c042cd-71f4-4a58-991c-a0bc480dba54"
+      }
+    },
+    {
       "key": "eac3c96a-98e8-4d3f-95de-b60f44c66df2",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today’s lesson about?\r\n - How did you feel during today’s lesson?\r\n - How is a `for` loop different from a `repeat` loop?\r\n - Why do you think `for` loops could be useful?",
-        "name": "Journaling\r"
+        "description": "\n####Online Puzzles\n\nSome students may have a hard time differentiating between `repeat` loops and `for` loops. We recommend having scratch paper out for students to make guesses on values like the start, stop, and step. Implementing pair programming amongst the class might also be helpful for your students.",
+        "name": "For Loops With Bees"
       },
       "seeding_key": {
         "activity_section.key": "eac3c96a-98e8-4d3f-95de-b60f44c66df2",
@@ -4703,13 +4714,92 @@
       }
     },
     {
-      "key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7",
-      "position": 1,
+      "key": "50cc68cf-605b-42e3-a882-bc77e7933f8b",
+      "position": 2,
       "properties": {
+        "progression_name": "Review"
       },
       "seeding_key": {
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7",
-        "lesson_activity.key": "de7993c9-c5c4-4883-bb50-ea2584ab8bff"
+        "activity_section.key": "50cc68cf-605b-42e3-a882-bc77e7933f8b",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "7d22dea9-9b88-47a4-a697-1c836bf6f2e5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Exploration: For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d22dea9-9b88-47a4-a697-1c836bf6f2e5",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "387d8104-557d-4700-bdef-2c8ea2855b07",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "387d8104-557d-4700-bdef-2c8ea2855b07",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "600fa08b-d08b-4e28-96a5-e1e2b6b5c908",
+      "position": 5,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "600fa08b-d08b-4e28-96a5-e1e2b6b5c908",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0",
+      "position": 8,
+      "properties": {
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0",
+        "lesson_activity.key": "1fe3f83f-c34b-4592-9bb6-d29c832a838e"
+      }
+    },
+    {
+      "key": "3dde779a-f373-47b8-b892-013f3898d438",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dde779a-f373-47b8-b892-013f3898d438",
+        "lesson_activity.key": "f43312b4-a6ca-47a5-be92-1e6f77b43ff8"
       }
     },
     {
@@ -4762,14 +4852,7 @@
       "key": "0d4256d9-a4f5-4fed-9958-f515dd431f6e",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with sprites in Sprite Lab.",
-        "tips": [
-          {
-            "key": "content",
-            "type": "contentCorner",
-            "markdown": "### Teaching this course as a class?\nOur grade-aligned CS Fundamentals courses use unplugged lessons to build community and introduce tricky computer science concepts, including **sprite behaviors**. Check out the lesson [Simon Says](https://curriculum.code.org/csf-19/coursee/5/) from [Course E](https://curriculum.code.org/csf-19/coursee/)!\n"
-          }
-        ],
+        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from \"Ice Age\" or one of the \"Angry Birds.\"\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -4778,21 +4861,10 @@
       }
     },
     {
-      "key": "cbdd8f39-bf73-46e2-903d-08b1ab76eea0",
-      "position": 2,
-      "properties": {
-        "description": "**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like Scrat from Ice Age or one of the Angry Birds.\n\n**Discuss:** Let the students know that this character on the screen is a \"sprite.\"  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own sprites to control.\n\n**Display:** Begin by showing first puzzle (level 2 on Code Studio) to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\nNow is a great time to introduce the lesson vocabulary."
-      },
-      "seeding_key": {
-        "activity_section.key": "cbdd8f39-bf73-46e2-903d-08b1ab76eea0",
-        "lesson_activity.key": "5f4d9aaa-d92d-45ad-858d-8b161ed4483a"
-      }
-    },
-    {
       "key": "7f70e7f5-505a-4748-827a-0cf4b342235e",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want."
+        "description": "This demonstration and discussion can help students make the connection from the previous unplugged lesson \"Follow the Algorithm\" into the new Sprite Lab environment."
       },
       "seeding_key": {
         "activity_section.key": "7f70e7f5-505a-4748-827a-0cf4b342235e",
@@ -4803,15 +4875,13 @@
       "key": "19247131-79b8-4bc1-89fa-e259816594d3",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "description": "\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
         "tips": [
           {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n\r\n\r\n"
+            "type": "contentCorner",
+            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. \n\nIf students bring up time, such as making a **behavior** happen for a set duration, it can be helpful to reframe things by asking \"*When should the behavior stop?\"* Programs like this will rely on events to make things start and stop as desired.\n"
           }
-        ],
-        "name": "Online Puzzles\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "19247131-79b8-4bc1-89fa-e259816594d3",
@@ -4822,7 +4892,7 @@
       "key": "b3ada179-2121-4015-bfe6-8abc2f0cf03a",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "b3ada179-2121-4015-bfe6-8abc2f0cf03a",
@@ -4830,11 +4900,117 @@
       }
     },
     {
+      "key": "34fa0257-d60c-41dd-b16e-fde95d6ca02c",
+      "position": 1,
+      "properties": {
+        "name": "Swimming Fish with Sprite Lab",
+        "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want."
+      },
+      "seeding_key": {
+        "activity_section.key": "34fa0257-d60c-41dd-b16e-fde95d6ca02c",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21",
+      "position": 2,
+      "properties": {
+        "description": "**Transition:** Move students to their computers. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \n\n- What is it supposed to do? \n- What does it do? \n- What does that tell you?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introducing Sprite Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "cc4cf469-32ea-4a00-9080-7726f48f08c6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4cf469-32ea-4a00-9080-7726f48f08c6",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "90de173c-642d-4906-a7fe-c3d9ad3123ec",
+      "position": 5,
+      "properties": {
+        "progression_name": "Mini-Project: Swimming Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb",
+      "position": 6,
+      "properties": {
+        "progression_name": "How to Make a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95",
+      "position": 7,
+      "properties": {
+        "progression_name": "Mini-Project: Swimming Fish (continued)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab",
+      "position": 8,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
+      "key": "ed3b436a-cfda-46c3-92b6-b17937d7d58b",
+      "position": 9,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed3b436a-cfda-46c3-92b6-b17937d7d58b",
+        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
+      }
+    },
+    {
       "key": "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n    \r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - How did it feel to make a scene that was more creative?\r\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to make a scene that was more creative?\n - Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2",
@@ -4842,20 +5018,10 @@
       }
     },
     {
-      "key": "1efab450-569e-4ece-a95b-7d9e577afc66",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66",
-        "lesson_activity.key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6"
-      }
-    },
-    {
       "key": "4db4f5ce-88ef-4fdf-9282-cb2315983481",
       "position": 1,
       "properties": {
-        "description": "Today students will visit _events_ in programming.\r\n\r\n**Demo:** Ask the students to raise their hands in the air.\r\n\r\nWhat you did was declare an event. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\r\n\r\nYou can also think of cities as declaring events. There are laws that say \"when there is a green light, cars move through the intersection\". \r\n\r\n**Discuss:** Ask the students why they think this is an event.\r\n\r\nToday, students will play in Play Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other.\r\n\r\n**Display:** Begin by showing Puzzle 1 to your students. \r\n\r\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
+        "description": "Today students will visit **events** in programming.\n\n**Demo:** Ask the students to raise their hands in the air.\n\nWhat you did was declare an **event**. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\n\nYou can also think of cities as declaring **events**. There are laws that say \"when there is a green light, cars move through the intersection\". \n\n**Discuss:** Ask the students why they think this is an **event**.\n\nToday, students will play in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4867,7 +5033,14 @@
       "key": "88d3b0f5-9351-4573-a499-88354556fc44",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated."
+        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an **event** is initiated.",
+        "name": "Alien Dance Party with Sprite Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \n\n- What is it supposed to do? \n- What does it do? \n- What does that tell you?\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "88d3b0f5-9351-4573-a499-88354556fc44",
@@ -4878,15 +5051,7 @@
       "key": "096b9d70-b20f-4183-89f4-36726387402a",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n\r\n"
-          }
-        ],
-        "name": "Online Puzzles \r"
+        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort."
       },
       "seeding_key": {
         "activity_section.key": "096b9d70-b20f-4183-89f4-36726387402a",
@@ -4897,7 +5062,7 @@
       "key": "74d3a54b-cea5-4a0d-bb9b-2d15da24f9a2",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "progression_name": "Prediction"
       },
       "seeding_key": {
         "activity_section.key": "74d3a54b-cea5-4a0d-bb9b-2d15da24f9a2",
@@ -4905,11 +5070,44 @@
       }
     },
     {
+      "key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sprites in Action"
+      },
+      "seeding_key": {
+        "activity_section.key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4",
+        "lesson_activity.key": "9f31e868-caea-4b12-8a57-8ae8510c3479"
+      }
+    },
+    {
+      "key": "6d6fb52a-5fa2-494f-9354-bc164c74577b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Mini-Project: Alien Dance Moves"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b",
+        "lesson_activity.key": "9f31e868-caea-4b12-8a57-8ae8510c3479"
+      }
+    },
+    {
+      "key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Mini-Project: Alien Dance Party"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c",
+        "lesson_activity.key": "9f31e868-caea-4b12-8a57-8ae8510c3479"
+      }
+    },
+    {
       "key": "9ca65456-ea00-4214-9869-6ecf4fd81480",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n    \r\n    \r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - How did it feel to have control over what your characters were able to do?\r\n - Did you change the program in any way to make it feel more like your own?",
-        "name": "Journaling\r"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - How did it feel to have control over what your characters were able to do?\n - Did you change the program in any way to make it feel more like your own?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9ca65456-ea00-4214-9869-6ecf4fd81480",
@@ -4917,20 +5115,10 @@
       }
     },
     {
-      "key": "4344b723-987d-476e-b41a-a4929c930a3b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b",
-        "lesson_activity.key": "864b3294-0e65-4032-80f2-a9d9e2d1c35e"
-      }
-    },
-    {
       "key": "e7d9b6ac-cdac-4e13-b9ab-d4ccbd74ac57",
       "position": 1,
       "properties": {
-        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\r\n\r\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \r\n\r\n- What are some of the behaviors we can assign to our sprites?\r\n- What do you imagine the code *inside* a behavior might look like?\r\n\r\n**Display:** Begin by showing Puzzle 1 to your students. \r\n\r\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\r\n\r\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\r\n\r\n- What would happen if you change the -1 to another number? -5? Positive 1? 0?\r\n- What other properties might we be able to change about a sprite besides its size?",
+        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\n\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \n\n- What are some of the behaviors we can assign to our sprites?\n- What do you imagine the code *inside* a behavior might look like?\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\n\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\n\n- What would happen if you change the -1 to another number? -5? Positive 1? 0?\n- What other properties might we be able to change about a sprite besides its size?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4942,7 +5130,8 @@
       "key": "46cc5b16-5dd7-4680-9322-21be5620bd02",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be editing and creating their own behaviors! They’ll begin by making small changes to some familiar but new behaviors and gradually move towards writing their own behaviors from scratch."
+        "description": "**Goal:** Today, students will be editing and creating their own behaviors! They’ll begin by making small changes to some familiar but new behaviors and gradually move towards writing their own behaviors from scratch.",
+        "name": "Behaviors in Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "46cc5b16-5dd7-4680-9322-21be5620bd02",
@@ -4953,15 +5142,13 @@
       "key": "e6cb0887-9b9d-46d8-8951-16f559704158",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
+        "description": "####Online Puzzles\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \r\n\r\n- What is it supposed to do? \r\n- What does it do? \r\n- What does that tell you?\r\n\r\n"
+            "markdown": "Encourage students with questions/challenges to start by asking their partner. Unanswered questions can be escalated to a nearby group, who might already know the solution. Have students describe the problem that they’re seeing:  \n\n- What is it supposed to do? \n- What does it do? \n- What does that tell you?\n"
           }
-        ],
-        "name": "Online Puzzles\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e6cb0887-9b9d-46d8-8951-16f559704158",
@@ -4980,11 +5167,55 @@
       }
     },
     {
+      "key": "d5958e25-0a14-4706-baf8-163ab6c6da95",
+      "position": 4,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5958e25-0a14-4706-baf8-163ab6c6da95",
+        "lesson_activity.key": "21d10140-ee2f-4717-8756-f01af9a71531"
+      }
+    },
+    {
+      "key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3",
+        "lesson_activity.key": "21d10140-ee2f-4717-8756-f01af9a71531"
+      }
+    },
+    {
+      "key": "5457c7f0-4db9-40f7-8acd-6855d9bf5725",
+      "position": 6,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "5457c7f0-4db9-40f7-8acd-6855d9bf5725",
+        "lesson_activity.key": "21d10140-ee2f-4717-8756-f01af9a71531"
+      }
+    },
+    {
+      "key": "451c6745-dc3b-4edf-8b36-a01210ca6e77",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "451c6745-dc3b-4edf-8b36-a01210ca6e77",
+        "lesson_activity.key": "21d10140-ee2f-4717-8756-f01af9a71531"
+      }
+    },
+    {
       "key": "9f934839-a67b-4f65-b983-d528415d4968",
       "position": 1,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
-        "name": "Journaling"
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other behaviors would you like to give your sprites if you knew how?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9f934839-a67b-4f65-b983-d528415d4968",
@@ -4992,13 +5223,14 @@
       }
     },
     {
-      "key": "813c09d3-19da-401d-ae78-0b8ee7b8217f",
+      "key": "bd017969-b18d-4e3f-a533-10c2ea7e0fe4",
       "position": 1,
       "properties": {
+        "description": "###Cosmic Events (30-45 minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Cosmic Events](https://docs.google.com/document/d/1bbccw0T-Nnav3L0kqtK2gnYKSSfk-3ytW0yyClNkMUI/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. This activity is out of this world as students learn how to program sprites to move in a way which emulates the gravitational force exerted by the Earth.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.SL.5.1.B:** Follow agreed-upon rules for discussions and carry out assigned roles.\n\n- **CCSS.MATH.CONTENT.5.G.A.1:** Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates. Understand that the first number indicates how far to travel from the origin in the direction of one axis, and the second number indicates how far to travel in the direction of the second axis, with the convention that the names of the two axes and the coordinates correspond (e.g., x-axis and x-coordinate, y-axis and y-coordinate).\n\n- **NGSS.5-PS2-1:** Support an argument that the gravitational force exerted by Earth on objects is directed down. "
       },
       "seeding_key": {
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f",
-        "lesson_activity.key": "6c574d9b-f83a-4fb8-b204-ea6b6c106400"
+        "activity_section.key": "bd017969-b18d-4e3f-a533-10c2ea7e0fe4",
+        "lesson_activity.key": "85626e42-b6c8-4893-8ac3-c968beb96d8d"
       }
     },
     {
@@ -9243,6 +9475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9265,6 +9500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9287,6 +9525,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9309,6 +9550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9331,6 +9575,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9353,6 +9600,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9375,6 +9625,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_7a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9397,6 +9650,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9419,6 +9675,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_9b_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9441,6 +9700,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9463,6 +9725,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_HOC 2018 Level_11_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9485,7 +9750,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9508,7 +9776,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Repeat Until Statements"
+        "progression": "Repeat Until Statements",
+        "level_keys": [
+          "courseD_video_repeatUntil_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9531,7 +9802,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseD_maze_until2_predict1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9554,7 +9828,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9577,7 +9854,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9600,7 +9880,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9623,7 +9906,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9646,7 +9932,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9670,7 +9959,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseD_maze_until9_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9693,7 +9985,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseD_maze_until10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -9716,7 +10011,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseD_maze_until10_predict2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10340,7 +10638,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10363,7 +10664,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Harvester"
+        "progression": "The Harvester",
+        "level_keys": [
+          "harvester_skinOverview_video_2021-2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -10386,7 +10690,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10409,7 +10716,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions1a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10432,7 +10742,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions2b_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10455,7 +10768,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions2ba_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10478,7 +10794,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions3c_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10501,7 +10820,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions3c1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10524,7 +10846,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How to Create a Simple Function"
+        "progression": "How to Create a Simple Function",
+        "level_keys": [
+          "courseE_video_createFunctions2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10547,7 +10872,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions7a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10570,7 +10898,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions8a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10593,7 +10924,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions9a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10617,7 +10951,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseE_farmer_functions10a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10640,7 +10977,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_farmer_functions13_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10663,7 +11003,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseE_farmer_functions11_predict_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10686,7 +11029,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseE_artist_functions_predict1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10709,7 +11055,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10732,7 +11081,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10755,7 +11107,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10778,7 +11133,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10801,7 +11159,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions8a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10824,7 +11185,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions8b_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10847,7 +11211,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions8c_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10870,7 +11237,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10894,7 +11264,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseE_artist_functions9_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10917,7 +11290,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functions10_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10940,7 +11316,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseE_artist_functions_predict2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10963,7 +11342,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functionsProj_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10986,7 +11368,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseE_artist_functions_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -11009,7 +11394,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseE_artist_functions_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -11032,7 +11420,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "grade5_artist_variables_triangles1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11055,7 +11446,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11078,7 +11472,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11101,7 +11498,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11124,7 +11524,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11147,7 +11550,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11170,7 +11576,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_artist_variables6a_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11193,7 +11602,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11216,7 +11628,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11239,7 +11654,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11262,7 +11680,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11285,7 +11706,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11309,7 +11733,10 @@
       "assessment": false,
       "properties": {
         "challenge": true,
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseF_bee_variables_6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11332,7 +11759,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_variables_7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -11553,11 +11983,9 @@
       "chapter": 256,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for1_2021"
-        ]
+        "progression": "Review"
       },
       "named_level": null,
       "bonus": null,
@@ -11568,7 +11996,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "50cc68cf-605b-42e3-a882-bc77e7933f8b"
       },
       "level_keys": [
         "courseF_bee_for1_2021"
@@ -11578,11 +12006,9 @@
       "chapter": 257,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for2_2021"
-        ]
+        "progression": "Review"
       },
       "named_level": null,
       "bonus": null,
@@ -11593,7 +12019,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "50cc68cf-605b-42e3-a882-bc77e7933f8b"
       },
       "level_keys": [
         "courseF_bee_for2_2021"
@@ -11602,37 +12028,33 @@
     {
       "chapter": 258,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_markdown_forloops_intro_2021"
-        ]
+        "progression": "Exploration: For Loops"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_markdown_forloops_intro_2021"
+          "courseF_bee_for2a_2021"
         ],
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "7d22dea9-9b88-47a4-a697-1c836bf6f2e5"
       },
       "level_keys": [
-        "courseF_markdown_forloops_intro_2021"
+        "courseF_bee_for2a_2021"
       ]
     },
     {
       "chapter": 259,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_video_forBee_2021"
-        ]
+        "progression": "Video: For Loops"
       },
       "named_level": null,
       "bonus": null,
@@ -11643,7 +12065,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "387d8104-557d-4700-bdef-2c8ea2855b07"
       },
       "level_keys": [
         "courseF_video_forBee_2021"
@@ -11652,12 +12074,10 @@
     {
       "chapter": 260,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for3_predict1_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -11668,7 +12088,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "600fa08b-d08b-4e28-96a5-e1e2b6b5c908"
       },
       "level_keys": [
         "courseF_bee_for3_predict1_2021"
@@ -11677,12 +12097,10 @@
     {
       "chapter": 261,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -11693,7 +12111,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       },
       "level_keys": [
         "courseF_bee_for4_2021"
@@ -11702,12 +12120,10 @@
     {
       "chapter": 262,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -11718,7 +12134,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       },
       "level_keys": [
         "courseF_bee_for6_2021"
@@ -11727,12 +12143,10 @@
     {
       "chapter": 263,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for7_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -11743,7 +12157,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       },
       "level_keys": [
         "courseF_bee_for7_2021"
@@ -11752,163 +12166,33 @@
     {
       "chapter": 264,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for8_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_for8_2021"
+          "courseF_beeFor_practice"
         ],
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e"
       },
       "level_keys": [
-        "courseF_bee_for8_2021"
+        "courseF_beeFor_practice"
       ]
     },
     {
       "chapter": 265,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for5_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      },
-      "level_keys": [
-        "courseF_bee_for5_2021"
-      ]
-    },
-    {
-      "chapter": 266,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseF_bee_for9_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for9_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      },
-      "level_keys": [
-        "courseF_bee_for9_2021"
-      ]
-    },
-    {
-      "chapter": 267,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": null,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseF_bee_for10_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for10_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      },
-      "level_keys": [
-        "courseF_bee_for10_2021"
-      ]
-    },
-    {
-      "chapter": 268,
-      "position": 13,
-      "activity_section_position": 13,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseF_bee_for11_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for11_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      },
-      "level_keys": [
-        "courseF_bee_for11_2021"
-      ]
-    },
-    {
-      "chapter": 269,
-      "position": 14,
-      "activity_section_position": 14,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseF_markdown_forloops_end_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_markdown_forloops_end_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      },
-      "level_keys": [
-        "courseF_markdown_forloops_end_2021"
-      ]
-    },
-    {
-      "chapter": 270,
-      "position": 15,
-      "activity_section_position": 15,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "courseF_bee_for_challenge1_2021"
-        ]
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -11919,21 +12203,19 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0"
       },
       "level_keys": [
         "courseF_bee_for_challenge1_2021"
       ]
     },
     {
-      "chapter": 271,
-      "position": 16,
-      "activity_section_position": 16,
-      "assessment": null,
+      "chapter": 266,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_bee_for_challenge2_2021"
-        ]
+        "progression": "Lesson Extras"
       },
       "named_level": null,
       "bonus": true,
@@ -11944,14 +12226,14 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0"
       },
       "level_keys": [
         "courseF_bee_for_challenge2_2021"
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 267,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -11976,7 +12258,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 268,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -12001,7 +12283,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 269,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -12026,7 +12308,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 270,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -12051,7 +12333,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 271,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -12076,7 +12358,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 272,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -12101,7 +12383,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 273,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -12126,7 +12408,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 274,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -12151,7 +12433,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 275,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -12176,7 +12458,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 276,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -12201,7 +12483,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 277,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -12226,7 +12508,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 278,
       "position": 12,
       "activity_section_position": 12,
       "assessment": null,
@@ -12251,7 +12533,7 @@
       ]
     },
     {
-      "chapter": 284,
+      "chapter": 279,
       "position": 13,
       "activity_section_position": 13,
       "assessment": null,
@@ -12276,7 +12558,7 @@
       ]
     },
     {
-      "chapter": 285,
+      "chapter": 280,
       "position": 14,
       "activity_section_position": 14,
       "assessment": null,
@@ -12301,14 +12583,12 @@
       ]
     },
     {
-      "chapter": 286,
+      "chapter": 281,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseEF_video_IntroSpriteLab_2021"
-        ]
+        "progression": "Introducing Sprite Lab"
       },
       "named_level": null,
       "bonus": null,
@@ -12319,21 +12599,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656"
       },
       "level_keys": [
         "CourseEF_video_IntroSpriteLab_2021"
       ]
     },
     {
-      "chapter": 287,
+      "chapter": 282,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 1-validated_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -12344,21 +12622,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "cc4cf469-32ea-4a00-9080-7726f48f08c6"
       },
       "level_keys": [
         "Fish Tank 1-validated_2021"
       ]
     },
     {
-      "chapter": 288,
+      "chapter": 283,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 2-validated_2021"
-        ]
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": null,
@@ -12369,21 +12645,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       },
       "level_keys": [
         "Fish Tank 2-validated_2021"
       ]
     },
     {
-      "chapter": 289,
+      "chapter": 284,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 3-validated_2021"
-        ]
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": null,
@@ -12394,21 +12668,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       },
       "level_keys": [
         "Fish Tank 3-validated_2021"
       ]
     },
     {
-      "chapter": 290,
+      "chapter": 285,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 4-validated_2021"
-        ]
+        "progression": "Mini-Project: Swimming Fish"
       },
       "named_level": null,
       "bonus": null,
@@ -12419,21 +12691,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       },
       "level_keys": [
         "Fish Tank 4-validated_2021"
       ]
     },
     {
-      "chapter": 291,
+      "chapter": 286,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseEF_video_MakeSprite_2021"
-        ]
+        "progression": "How to Make a Sprite"
       },
       "named_level": null,
       "bonus": null,
@@ -12444,21 +12714,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb"
       },
       "level_keys": [
         "CourseEF_video_MakeSprite_2021"
       ]
     },
     {
-      "chapter": 292,
+      "chapter": 287,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 5-validated_2021"
-        ]
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "named_level": null,
       "bonus": null,
@@ -12469,21 +12737,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95"
       },
       "level_keys": [
         "Fish Tank 5-validated_2021"
       ]
     },
     {
-      "chapter": 293,
+      "chapter": 288,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 6-validated_2021"
-        ]
+        "progression": "Mini-Project: Swimming Fish (continued)"
       },
       "named_level": null,
       "bonus": null,
@@ -12494,21 +12760,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95"
       },
       "level_keys": [
         "Fish Tank 6-validated_2021"
       ]
     },
     {
-      "chapter": 294,
+      "chapter": 289,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Fish Tank 7-validated_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -12519,21 +12783,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab"
       },
       "level_keys": [
         "Fish Tank 7-validated_2021"
       ]
     },
     {
-      "chapter": 295,
+      "chapter": 290,
       "position": 10,
-      "activity_section_position": 10,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "spritelab_extras_repeat_2021"
-        ]
+        "progression": "Challenge"
       },
       "named_level": null,
       "bonus": true,
@@ -12544,21 +12806,19 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "ed3b436a-cfda-46c3-92b6-b17937d7d58b"
       },
       "level_keys": [
         "spritelab_extras_repeat_2021"
       ]
     },
     {
-      "chapter": 296,
+      "chapter": 291,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 1-validated_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -12569,21 +12829,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "74d3a54b-cea5-4a0d-bb9b-2d15da24f9a2"
       },
       "level_keys": [
         "Dance Party 1-validated_2021"
       ]
     },
     {
-      "chapter": 297,
+      "chapter": 292,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CDEF_video_SpritesInAction_2021"
-        ]
+        "progression": "Sprites in Action"
       },
       "named_level": null,
       "bonus": null,
@@ -12594,21 +12852,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4"
       },
       "level_keys": [
         "CDEF_video_SpritesInAction_2021"
       ]
     },
     {
-      "chapter": 298,
+      "chapter": 293,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 2_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": null,
@@ -12619,21 +12875,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       },
       "level_keys": [
         "Dance Party 2_2021"
       ]
     },
     {
-      "chapter": 299,
+      "chapter": 294,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 3_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": null,
@@ -12644,21 +12898,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       },
       "level_keys": [
         "Dance Party 3_2021"
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 295,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 4_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": null,
@@ -12669,21 +12921,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       },
       "level_keys": [
         "Dance Party 4_2021"
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 296,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 5_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Moves"
       },
       "named_level": null,
       "bonus": null,
@@ -12694,21 +12944,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       },
       "level_keys": [
         "Dance Party 5_2021"
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 297,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 6_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": null,
@@ -12719,21 +12967,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       },
       "level_keys": [
         "Dance Party 6_2021"
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 298,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party 7_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": null,
@@ -12744,21 +12990,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       },
       "level_keys": [
         "Dance Party 7_2021"
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 299,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance Party Freeplay_2021"
-        ]
+        "progression": "Mini-Project: Alien Dance Party"
       },
       "named_level": null,
       "bonus": null,
@@ -12769,21 +13013,19 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       },
       "level_keys": [
         "Dance Party Freeplay_2021"
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 300,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 1_2021"
-        ]
+        "progression": "Prediction"
       },
       "named_level": null,
       "bonus": null,
@@ -12794,21 +13036,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "d5958e25-0a14-4706-baf8-163ab6c6da95"
       },
       "level_keys": [
         "behaviors 1_2021"
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 301,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 2_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12819,21 +13059,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       },
       "level_keys": [
         "behaviors 2_2021"
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 302,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 3_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12844,21 +13082,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       },
       "level_keys": [
         "behaviors 3_2021"
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 303,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 3a_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12869,21 +13105,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       },
       "level_keys": [
         "behaviors 3a_2021"
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 304,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 4_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12894,21 +13128,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       },
       "level_keys": [
         "behaviors 4_2021"
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 305,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 5_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -12919,21 +13151,19 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       },
       "level_keys": [
         "behaviors 5_2021"
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 306,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors free play_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -12944,24 +13174,23 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "5457c7f0-4db9-40f7-8acd-6855d9bf5725"
       },
       "level_keys": [
         "behaviors free play_2021"
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 307,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 6_2021"
-        ]
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 6_2021"
@@ -12969,24 +13198,23 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "451c6745-dc3b-4edf-8b36-a01210ca6e77"
       },
       "level_keys": [
         "behaviors 6_2021"
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 308,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "behaviors 7_2021"
-        ]
+        "challenge": true,
+        "progression": "Challenge"
       },
       "named_level": null,
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "behaviors 7_2021"
@@ -12994,14 +13222,14 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "451c6745-dc3b-4edf-8b36-a01210ca6e77"
       },
       "level_keys": [
         "behaviors 7_2021"
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 309,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -13026,7 +13254,7 @@
       ]
     },
     {
-      "chapter": 315,
+      "chapter": 310,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -13051,7 +13279,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 311,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -13076,7 +13304,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 312,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -13101,7 +13329,7 @@
       ]
     },
     {
-      "chapter": 318,
+      "chapter": 313,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -13126,7 +13354,7 @@
       ]
     },
     {
-      "chapter": 319,
+      "chapter": 314,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -13151,7 +13379,7 @@
       ]
     },
     {
-      "chapter": 320,
+      "chapter": 315,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -13176,7 +13404,7 @@
       ]
     },
     {
-      "chapter": 321,
+      "chapter": 316,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -13201,7 +13429,7 @@
       ]
     },
     {
-      "chapter": 322,
+      "chapter": 317,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -13227,7 +13455,7 @@
       ]
     },
     {
-      "chapter": 323,
+      "chapter": 318,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -16323,7 +16551,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "50cc68cf-605b-42e3-a882-bc77e7933f8b"
       }
     },
     {
@@ -16335,19 +16563,19 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "50cc68cf-605b-42e3-a882-bc77e7933f8b"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseF_markdown_forloops_intro_2021",
+        "level.key": "courseF_bee_for2a_2021",
         "script_level.level_keys": [
-          "courseF_markdown_forloops_intro_2021"
+          "courseF_bee_for2a_2021"
         ],
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "7d22dea9-9b88-47a4-a697-1c836bf6f2e5"
       }
     },
     {
@@ -16359,7 +16587,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "387d8104-557d-4700-bdef-2c8ea2855b07"
       }
     },
     {
@@ -16371,7 +16599,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "600fa08b-d08b-4e28-96a5-e1e2b6b5c908"
       }
     },
     {
@@ -16383,7 +16611,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       }
     },
     {
@@ -16395,7 +16623,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       }
     },
     {
@@ -16407,79 +16635,19 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_for8_2021",
+        "level.key": "courseF_beeFor_practice",
         "script_level.level_keys": [
-          "courseF_bee_for8_2021"
+          "courseF_beeFor_practice"
         ],
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for5_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for5_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for9_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for9_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for10_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for10_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for11_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for11_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_markdown_forloops_end_2021",
-        "script_level.level_keys": [
-          "courseF_markdown_forloops_end_2021"
-        ],
-        "lesson.key": "For Loops with Bee",
-        "lesson_group.key": "csf_for_loops",
-        "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "6ac3cc21-4cce-40dd-8698-d9bc4b8c9e6e"
       }
     },
     {
@@ -16491,7 +16659,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0"
       }
     },
     {
@@ -16503,7 +16671,7 @@
         "lesson.key": "For Loops with Bee",
         "lesson_group.key": "csf_for_loops",
         "script.name": "express-2021",
-        "activity_section.key": "d3e83f54-9bfc-4130-b2f7-c9d1600682a7"
+        "activity_section.key": "776538d2-aa5d-4210-9c54-cfd0f01db4b0"
       }
     },
     {
@@ -16683,7 +16851,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656"
       }
     },
     {
@@ -16695,7 +16863,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "cc4cf469-32ea-4a00-9080-7726f48f08c6"
       }
     },
     {
@@ -16707,7 +16875,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       }
     },
     {
@@ -16719,7 +16887,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       }
     },
     {
@@ -16731,7 +16899,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "90de173c-642d-4906-a7fe-c3d9ad3123ec"
       }
     },
     {
@@ -16743,7 +16911,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb"
       }
     },
     {
@@ -16755,7 +16923,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95"
       }
     },
     {
@@ -16767,7 +16935,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "a8372901-5a6f-40c1-88ec-bf6c62c79c95"
       }
     },
     {
@@ -16779,7 +16947,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab"
       }
     },
     {
@@ -16791,7 +16959,7 @@
         "lesson.key": "Swimming Fish in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "1efab450-569e-4ece-a95b-7d9e577afc66"
+        "activity_section.key": "ed3b436a-cfda-46c3-92b6-b17937d7d58b"
       }
     },
     {
@@ -16803,7 +16971,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "74d3a54b-cea5-4a0d-bb9b-2d15da24f9a2"
       }
     },
     {
@@ -16815,7 +16983,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4"
       }
     },
     {
@@ -16827,7 +16995,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       }
     },
     {
@@ -16839,7 +17007,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       }
     },
     {
@@ -16851,7 +17019,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       }
     },
     {
@@ -16863,7 +17031,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "6d6fb52a-5fa2-494f-9354-bc164c74577b"
       }
     },
     {
@@ -16875,7 +17043,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       }
     },
     {
@@ -16887,7 +17055,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       }
     },
     {
@@ -16899,7 +17067,7 @@
         "lesson.key": "Alien Dance Party",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "4344b723-987d-476e-b41a-a4929c930a3b"
+        "activity_section.key": "f0a1ba0a-8eaf-46ce-8613-1880b0baa85c"
       }
     },
     {
@@ -16911,7 +17079,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "d5958e25-0a14-4706-baf8-163ab6c6da95"
       }
     },
     {
@@ -16923,7 +17091,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       }
     },
     {
@@ -16935,7 +17103,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       }
     },
     {
@@ -16947,7 +17115,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       }
     },
     {
@@ -16959,7 +17127,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       }
     },
     {
@@ -16971,7 +17139,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "7bb1d2b6-3f7b-40c5-8212-b539687dd2b3"
       }
     },
     {
@@ -16983,7 +17151,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "5457c7f0-4db9-40f7-8acd-6855d9bf5725"
       }
     },
     {
@@ -16995,7 +17163,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "451c6745-dc3b-4edf-8b36-a01210ca6e77"
       }
     },
     {
@@ -17007,7 +17175,7 @@
         "lesson.key": "Behaviors in Sprite Lab",
         "lesson_group.key": "csf_sprites",
         "script.name": "express-2021",
-        "activity_section.key": "813c09d3-19da-401d-ae78-0b8ee7b8217f"
+        "activity_section.key": "451c6745-dc3b-4edf-8b36-a01210ca6e77"
       }
     },
     {
@@ -17429,14 +17597,14 @@
     {
       "name": "Variables",
       "url": "https://youtu.be/DI7DprN4FtE",
-      "key": "variablesVideo",
+      "key": "variables_video",
       "properties": {
         "type": "Student Video",
         "audience": "Student",
         "download_url": "http://videos.code.org/2015/course4/C4-Variables-in-envelopes-JIE-2015_720.mp4"
       },
       "seeding_key": {
-        "resource.key": "variablesVideo"
+        "resource.key": "variables_video"
       }
     },
     {
@@ -17476,15 +17644,14 @@
       }
     },
     {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
+      "name": "Unplugged Blocks (Courses C-F)",
+      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
+      "key": "unplugged_blocks_courses_c-f_",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "think-spot-journal"
+        "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
@@ -17500,39 +17667,14 @@
       }
     },
     {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
+      "name": "Swimming Fish Teacher Sandbox",
+      "url": "https://studio.code.org/levels/18623",
+      "key": "swimming_fish_teacher_sandbox",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
+        "resource.key": "swimming_fish_teacher_sandbox"
       }
     },
     {
@@ -17727,7 +17869,7 @@
     {
       "seeding_key": {
         "lesson.key": "Variables with Artist",
-        "resource.key": "variablesVideo"
+        "resource.key": "variables_video"
       }
     },
     {
@@ -17751,7 +17893,7 @@
     {
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
-        "resource.key": "think-spot-journal"
+        "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
@@ -17763,19 +17905,7 @@
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Behaviors in Sprite Lab",
-        "resource.key": "think-spot-journal"
+        "resource.key": "swimming_fish_teacher_sandbox"
       }
     },
     {
@@ -18681,6 +18811,9 @@
       }
     }
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
     {
       "key": "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09",
@@ -19215,7 +19348,7 @@
     {
       "key": "09281dd0-4b33-4537-9543-a2377bc2f923",
       "properties": {
-        "description": "Create a new sprite and choose its appearance."
+        "description": "Create new sprites and assign them costumes and behaviors."
       },
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",

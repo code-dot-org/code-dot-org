@@ -20981,7 +20981,7 @@ en:
               description_teacher: 'This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to get creative with "The Artist".  '
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
-              name: Programming with the Bee
+              name: Nested Loops in Maze
               description_student: This lesson will teach you what happens when you place a **loop** inside another **loop**.
               description_teacher: In this online activity, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
@@ -21006,12 +21006,12 @@ en:
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Variables that Change in Bee:
               key: Variables that Change in Bee
-              name: Changing Variables with Bee
+              name: Variables with Bee
               description_student: This bee loves **variables**!
               description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Variables that Change in Artist:
               key: Variables that Change in Artist
-              name: Using Variables with the Artist
+              name: Changing Variables with Artist
               description_student: In this lesson, you'll make drawings using variables that change as the program runs.
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
             Simulating Experiments:
@@ -21022,11 +21022,8 @@ en:
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
-              description_student: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-              description_teacher: |
-                Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-
-                This lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
             Internet:
               key: Internet
               name: The Internet
@@ -21086,6 +21083,8 @@ en:
               description_teacher: 'In this activity, students will use fill-in-the-blank stories (similar to Mad Libs) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
             lesson-10:
               name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: Students will get practice with **variables** in Sprite Lab. Students will work with user input to set the values of their **variables**, then print those values alongside other text.
             lesson-5:
               name: Outbreak
           lesson_groups:
@@ -21234,12 +21233,12 @@ en:
               key: Swimming Fish in Sprite Lab
               name: Swimming Fish in Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.'
             Alien Dance Party:
               key: Alien Dance Party
               name: Alien Dance Party
-              description_student: Practice making games to share with your friends and family.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own alien dance party with interactions between characters and user input. Students will work with events to create game controls. '
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".  '
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab

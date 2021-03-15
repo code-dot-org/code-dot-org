@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 02:50:04 UTC",
+    "serialized_at": "2021-03-15 12:50:13 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -7481,6 +7481,9 @@
         "vocabulary.key": "encrypt"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

@@ -53,7 +53,7 @@ level_concept_difficulty '{"sequencing":1}'
 level 'blockly:Jigsaw:12', progression: 'Practice'
 
 lesson 'Programming: Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
-level 'HappyMaps-Unplugged_2021', progression: 'Video: Unplugged - Happy Maps'
+level 'HappyMaps-Unplugged_2021', progression: 'Happy Maps Video - Unplugged Activity'
 
 lesson 'Sequencing with Scrat', display_name: 'Sequencing with Scrat', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2021', progression: 'Video: Programming with Blocks'
@@ -96,7 +96,7 @@ level 'courseB_starWars_prog11_2021', progression: 'Practice'
 
 lesson_group 'csf_loops', display_name: 'Loops'
 lesson 'Loops: Happy Loops', display_name: 'Happy Loops', has_lesson_plan: true, unplugged: true
-level 'HappyLoops-Unplugged_2021', progression: 'Happy Loops Unplugged'
+level 'HappyLoops-Unplugged_2021', progression: 'Happy Loops Unplugged Activity'
 
 lesson 'Loops in Ice Age', display_name: 'Loops with Scrat', has_lesson_plan: true
 level 'courseB_iceage_loops1_2021', progression: 'Practice'

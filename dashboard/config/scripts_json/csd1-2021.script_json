@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-12 19:07:47 UTC",
+    "serialized_at": "2021-03-15 12:46:13 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -6797,6 +6797,9 @@
         "vocabulary.key": "storage"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

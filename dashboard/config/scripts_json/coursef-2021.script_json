@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-12 23:04:37 UTC",
+    "serialized_at": "2021-03-15 18:54:14 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -226,6 +226,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "Students will get practice with **variables** in Sprite Lab. Students will work with user input to set the values of their **variables**, then print those values alongside other text.",
+        "purpose": "**Variables** will be used in this course to store and modify data. At this point, students will simply be storing and retrieving values without changing them. In later lessons, students will store numerical values and modify them over time to keep track of things like a player’s score in a game.",
+        "preparation": "Play through the levels and review the lesson slides.",
+        "student_overview": "In this lesson you will practice with variables in Sprite Lab."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -295,7 +299,7 @@
     },
     {
       "key": "Variables that Change in Bee",
-      "name": "Changing Variables with Bee",
+      "name": "Variables with Bee",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -303,7 +307,7 @@
       "properties": {
         "overview": "This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. ",
         "student_overview": "This bee loves **variables**!",
-        "purpose": "You don't always know what a value is going to be before you begin your program.  Sometimes, values change while your code is running.  This lesson will illustrate how code with changing values can be helpful.",
+        "purpose": "This lesson will illustrate how code with changing values can be helpful and prepare students to understand how \"for loops\" work in upcoming lessons.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -417,10 +421,10 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "Students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\n\nThis lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\n",
-        "student_overview": "Students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "purpose": "This lesson is designed to quickly introduce students to **machine learning**, a type of artificial intelligence. Students will explore how training data is used to enable a **machine learning** model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. ",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
+        "overview": "Students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "student_overview": "Classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "purpose": "This lesson is designed to quickly introduce students to **machine learning**, a type of artificial intelligence. Students will explore how training data is used to enable a **machine learning** model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. "
       },
       "seeding_key": {
         "lesson.key": "AI for Oceans",
@@ -843,6 +847,48 @@
       "seeding_key": {
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "5750d053-1daa-409c-9b83-bc4306ba4aef",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5750d053-1daa-409c-9b83-bc4306ba4aef",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021"
       }
@@ -2490,6 +2536,106 @@
       }
     },
     {
+      "key": "d2b97c32-0187-432e-9fa2-979e9f34280a",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "description": "\n**Do This:** Remind students what they did last class or ask them to share. \n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  "
+      },
+      "seeding_key": {
+        "activity_section.key": "d2b97c32-0187-432e-9fa2-979e9f34280a",
+        "lesson_activity.key": "5750d053-1daa-409c-9b83-bc4306ba4aef"
+      }
+    },
+    {
+      "key": "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "At the end of the last lesson we were looking at the similarities between blank space stories and apps that ask a user for input. When a message on the computer screen is waiting for your input we call that a **prompt**. Today we are going to learn the code to create a **prompt** in Sprite Lab."
+      },
+      "seeding_key": {
+        "activity_section.key": "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d",
+        "lesson_activity.key": "5750d053-1daa-409c-9b83-bc4306ba4aef"
+      }
+    },
+    {
+      "key": "05818b32-90cc-466a-b952-8fcf048e4e5c",
+      "position": 1,
+      "properties": {
+        "name": "Text and Prompts",
+        "description": "####Prediction (5 mins)\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them."
+      },
+      "seeding_key": {
+        "activity_section.key": "05818b32-90cc-466a-b952-8fcf048e4e5c",
+        "lesson_activity.key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747"
+      }
+    },
+    {
+      "key": "aae21e24-4a0c-4d8c-aec0-67554766b38f",
+      "position": 2,
+      "properties": {
+        "description": "####Video (5 minutes)\n\nDisplay the video to the whole class. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "aae21e24-4a0c-4d8c-aec0-67554766b38f",
+        "lesson_activity.key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747"
+      }
+    },
+    {
+      "key": "e64a2440-c243-4f49-8181-171a72e38c5c",
+      "position": 3,
+      "properties": {
+        "description": "####Skill Building and Practice (20 mins)\n\n**Transition:** Have students move to their computer and sign in. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson has more skill building and practice levels than previous lessons, because students are learning a few new skills all at once. As such, there is not a dedicated “free play” level. However, students who are feeling confident with their new skills can choose the last practice option to start from scratch with a blank project. In the next lesson, students will also be working exclusively on their own project that they plan and design ahead of time."
+          }
+        ],
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c",
+        "lesson_activity.key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747"
+      }
+    },
+    {
+      "key": "472a5254-b0e4-4069-a6f4-940ed9fda07a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "472a5254-b0e4-4069-a6f4-940ed9fda07a",
+        "lesson_activity.key": "0a159287-c2ef-4cfc-b1a3-f9147a79e747"
+      }
+    },
+    {
+      "key": "7e572ce4-4195-4194-a0e0-eee27103f91d",
+      "position": 1,
+      "properties": {
+        "name": "Reflection",
+        "remarks": true,
+        "description": "Today you learned to add text and prompts to your programs. "
+      },
+      "seeding_key": {
+        "activity_section.key": "7e572ce4-4195-4194-a0e0-eee27103f91d",
+        "lesson_activity.key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81"
+      }
+    },
+    {
+      "key": "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Review the vocabulary for this lesson (**prompts** and **variables**). Be sure that students can recall from the lesson where they saw each of these concepts. Pick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n\n####Reflection Prompts: \n- How is a variable like a box? How is it different?\n\n- Why do programmers need variables?\n\nVariables are like boxes because they can be used to store something that you might need later. They are different from boxes because what they store is information, and they can only store one value at a time. Programmers need variables to keep track of information that will come from their users.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9",
+        "lesson_activity.key": "6d9977ca-4924-456e-bb2e-ec1ea79a1d81"
+      }
+    },
+    {
       "key": "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3",
       "position": 1,
       "properties": {
@@ -2726,14 +2872,8 @@
       "key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n\n",
-        "name": "Introduction",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Eventually, students will want to get to the place where they initialize a variable to the original value, then change it each time through the loop so that it's ready for the next time."
-          }
-        ]
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  What patterns do you notice in this puzzle? What are the differences between the flower honeycomb patches at the beginning, middle, and end of the bee's path?\n\n**Share:** Let students share their ideas.\n\n**Discuss:**\nWhat are the ways we could program a solution to this puzzle?  How could we use a variable to have a loop do this for us?\n\n",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "3d33fa77-1fa9-4e46-921f-fd661884b23f",
@@ -2744,9 +2884,9 @@
       "key": "aa24a7a8-7cec-408b-b980-89e9c457605a",
       "position": 1,
       "properties": {
-        "name": "Changing Variables with Bee",
-        "progression_name": "Practice",
-        "description": "####Online Puzzles\n\nThis set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- What would it look like without the functions?\n- Now how can you use a variable to get the quantities the way you want them?\n- Now can you build it back up to use a function?\n\n**Hint:** Puzzle 7 becomes much easier if students utilize the `while path ahead` loop instead of a variable."
+        "name": "Online Puzzles",
+        "progression_name": "Skill Building",
+        "description": "This set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- Now how can you use a variable to get the quantities the way you want them?"
       },
       "seeding_key": {
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a",
@@ -2754,19 +2894,8 @@
       }
     },
     {
-      "key": "26d46928-c84e-4f97-8482-2575692c9ecb",
-      "position": 2,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "26d46928-c84e-4f97-8482-2575692c9ecb",
-        "lesson_activity.key": "8c27f2d2-6cbf-44b8-9696-c81310ee4338"
-      }
-    },
-    {
       "key": "94f3b6b8-77fa-42ef-bee6-80a47bdd050e",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2779,7 +2908,7 @@
       "key": "a3b35da9-5d20-4f58-998a-e5395fc7e23f",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are some ways you have used variables so far?\n - What else do you think you can do with variables?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are some ways you have used variables so far?\n - What else do you think you can do with variables?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2984,7 +3113,7 @@
       "key": "f636ac37-29ac-45d0-8b65-8bad3da1ab56",
       "position": 2,
       "properties": {
-        "description": "Split up the students of your class into pairs. Ideally have the pairs be the same from when your class did \"For Loop Fun\". Print out a `for` loop from [r course-cf-blockly-blocks] for each pair of students. Pass out one die to each pair. Have the partners take turns rolling the die to obtain the following values:\n\n - One roll for the starting value\n - Four rolls for the ending value\n - One roll for the step value\n\nHave each pair fill in the `for` loop with the appropriate values in the correct spot.\n\n![](https://curriculum.code.org/media/uploads/image_zA5XUL7.png)\n\nUsing a basic number line, like the one used in \"For Loop Fun\", have the students mark the beginning, ending, and middle values that this `for` loop will touch. When everyone is done, see who got the most points by totaling the starting, middle, and ending numbers of each pair.\n\n####-Or",
+        "description": "Split up the students of your class into pairs. Ideally have the pairs be the same from when your class did \"For Loop Fun\". Print out a `for` loop from [r course-cf-blockly-blocks] for each pair of students. Pass out one die to each pair. Have the partners take turns rolling the die to obtain the following values:\n\n - One roll for the starting value\n - Four rolls for the ending value\n - One roll for the step value\n\nHave each pair fill in the `for` loop with the appropriate values in the correct spot.\n\n![](https://images.code.org/bae4910eb528de1e7471cbf6083154e4-csf1.png)\n\nUsing a basic number line, like the one used in \"For Loop Fun\", have the students mark the beginning, ending, and middle values that this `for` loop will touch. When everyone is done, see who got the most points by totaling the starting, middle, and ending numbers of each pair.\n\n####-Or",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -2996,7 +3125,7 @@
       "key": "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b",
       "position": 3,
       "properties": {
-        "description": "Display a puzzle from the lesson. We recommend puzzle #4 because it displays a potential solution and asks the user to evaluate it.\r\n\r\nUsing a number line similar to the ones used in \"For Loop Fun\", mark the start and ending values of the given `for` loop (if you aren't using puzzle #4, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #4, ask the class what they think the answer is to the question, given what they found with the number line.",
+        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line similar to the ones used in \"For Loop Fun\", mark the start and ending values of the given `for` loop (if you aren't using puzzle #4, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #4, ask the class what they think the answer is to the question, given what they found with the number line.",
         "name": "Previewing Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -3020,7 +3149,7 @@
       "key": "1668a313-16da-49db-9713-13d7ad33889e",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Review"
       },
       "seeding_key": {
         "activity_section.key": "1668a313-16da-49db-9713-13d7ad33889e",
@@ -3028,10 +3157,21 @@
       }
     },
     {
-      "key": "671c8e13-e78c-49f3-867b-45e7643d0026",
+      "key": "aec92f2d-9b44-43b4-a418-3aebaf5af709",
       "position": 3,
       "properties": {
-        "progression_name": "For Loops and Repeat Blocks"
+        "progression_name": "Exploration: For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "aec92f2d-9b44-43b4-a418-3aebaf5af709",
+        "lesson_activity.key": "17982c9a-0fc7-457e-95a7-e0852d5f861e"
+      }
+    },
+    {
+      "key": "671c8e13-e78c-49f3-867b-45e7643d0026",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: For Loops"
       },
       "seeding_key": {
         "activity_section.key": "671c8e13-e78c-49f3-867b-45e7643d0026",
@@ -3040,7 +3180,7 @@
     },
     {
       "key": "297e5651-8422-476e-b1db-3d893b7e0bc8",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Prediction"
       },
@@ -3051,9 +3191,9 @@
     },
     {
       "key": "b500137c-9df8-40c5-8b4d-e4f364f8255e",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e",
@@ -3062,9 +3202,9 @@
     },
     {
       "key": "729a9e74-6bd2-4833-8b46-12f83a6a83b7",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "729a9e74-6bd2-4833-8b46-12f83a6a83b7",
@@ -3072,21 +3212,10 @@
       }
     },
     {
-      "key": "1d230f35-347e-4faf-a24e-07f70742931e",
-      "position": 7,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "1d230f35-347e-4faf-a24e-07f70742931e",
-        "lesson_activity.key": "17982c9a-0fc7-457e-95a7-e0852d5f861e"
-      }
-    },
-    {
       "key": "7a256684-5f37-4780-b2d7-a75a079dfc95",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "7a256684-5f37-4780-b2d7-a75a079dfc95",
@@ -3097,7 +3226,7 @@
       "key": "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How is a `for` loop different from a `repeat` loop?\n - Why do you think `for` loops could be useful?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3122,8 +3251,7 @@
       "position": 1,
       "properties": {
         "name": "For Loops with Artist",
-        "progression_name": "Intro to For Loops",
-        "description": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
+        "progression_name": "Video: For Loops"
       },
       "seeding_key": {
         "activity_section.key": "b838a926-533f-414b-86f6-17f8ea078fad",
@@ -3134,7 +3262,7 @@
       "key": "5a79bfa7-16f2-41b1-8ebf-88fadad29acb",
       "position": 2,
       "properties": {
-        "progression_name": "Free Play"
+        "progression_name": "Exploration"
       },
       "seeding_key": {
         "activity_section.key": "5a79bfa7-16f2-41b1-8ebf-88fadad29acb",
@@ -3145,7 +3273,7 @@
       "key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6",
@@ -3153,30 +3281,8 @@
       }
     },
     {
-      "key": "8bcd37d6-c773-4388-a38a-8be57282b59a",
-      "position": 4,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "8bcd37d6-c773-4388-a38a-8be57282b59a",
-        "lesson_activity.key": "1360b113-804c-4697-8c6d-a184de310850"
-      }
-    },
-    {
-      "key": "47940214-b1b7-4be8-95f2-fb725fb9c61c",
-      "position": 5,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "47940214-b1b7-4be8-95f2-fb725fb9c61c",
-        "lesson_activity.key": "1360b113-804c-4697-8c6d-a184de310850"
-      }
-    },
-    {
       "key": "2faabfda-d8cb-4b9d-b49c-2e79c30f7507",
-      "position": 6,
+      "position": 4,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -3187,9 +3293,9 @@
     },
     {
       "key": "6ea6e198-fa99-46cb-a234-0f2b60eaff4d",
-      "position": 7,
+      "position": 5,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "6ea6e198-fa99-46cb-a234-0f2b60eaff4d",
@@ -3197,10 +3303,26 @@
       }
     },
     {
+      "key": "936c3852-feab-48df-824d-8b67ae8e9f90",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These puzzles are super fun, but it may be helpful for students to have protractors, pencils and scratch paper to see how these designs were made in the physical form. If that isn't an option in your class, try to get the students to trace on the computer screen with their fingers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "936c3852-feab-48df-824d-8b67ae8e9f90",
+        "lesson_activity.key": "1360b113-804c-4697-8c6d-a184de310850"
+      }
+    },
+    {
       "key": "266afcf9-1e97-47f3-bb0e-f8fe82181332",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw one of the designs you made today. What was the code needed to create it?\n - What are some designs you would like to create? How do you think `for` loops or variables could help create those?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3313,11 +3435,12 @@
       "position": 1,
       "properties": {
         "name": "AI For Oceans",
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n\n###Level 1 - [Machine Learning](https://studio.code.org/s/oceans/stage/1/puzzle/1)\n\n###[AI- Machine Learning Video](https://www.youtube.com/watch?v=OeU5m6vRyCk)",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n",
+        "progression_name": "Video: AI: What is Machine Learning?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)\n"
+            "markdown": "This lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, students can share their findings with you or a classmate."
           }
         ]
       },
@@ -3330,13 +3453,14 @@
       "key": "fa4c81ae-8830-49d8-9de9-e5f80a38dac8",
       "position": 2,
       "properties": {
-        "description": "####Levels 2-4 - [Train AI to Clean the Ocean](https://studio.code.org/s/oceans/stage/1/puzzle/2)\n\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "### Training AI\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
         "tips": [
           {
             "type": "contentCorner",
             "markdown": "Every image in this part of the lesson is fed into a neural network that has been pre-trained on a huge set of data called [ImageNet](http://www.image-net.org/). The database contains over 14 million hand-annotated images. ImageNet contains more than 20,000 categories with a typical category, such as \"balloon\" or \"strawberry\", consisting of several hundred images. When A.I. is scanning new images and making its own predictions in the lesson, it is actually comparing the possible categories for the new image with the patterns it found in the training dataset. "
           }
-        ]
+        ],
+        "progression_name": "Train AI to Clean the Ocean"
       },
       "seeding_key": {
         "activity_section.key": "fa4c81ae-8830-49d8-9de9-e5f80a38dac8",
@@ -3347,7 +3471,8 @@
       "key": "d717b4b4-f900-425a-9d8d-d2d5866b3470",
       "position": 3,
       "properties": {
-        "description": "###Level 5 - [Training Data & Bias](https://studio.code.org/s/oceans/stage/1/puzzle/5)\n\n**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n###[AI-Training Video](https://youtu.be/x2mRoFNm22g)\n**Prompt:** _How do you think your training data influence the results that A.I. produced?_\n\n**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n"
+        "description": "**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n### Using Training Data\n\n\n**Do this:** Show the Training Data & Bias video.\n\n**Prompt:** _How do you think your training data influence the results that A.I. produced?_\n\n**Discuss:** In small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n",
+        "progression_name": "Video: Training Data & Bias"
       },
       "seeding_key": {
         "activity_section.key": "d717b4b4-f900-425a-9d8d-d2d5866b3470",
@@ -3358,13 +3483,14 @@
       "key": "86495854-e877-4aea-b9d6-2669b1d2d43b",
       "position": 4,
       "properties": {
-        "description": "###Level 6 - [Using Training Data](https://studio.code.org/s/oceans/stage/1/puzzle/6)\n\nIn the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!",
+        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!",
         "tips": [
           {
             "type": "contentCorner",
             "markdown": "The fish in this tutorial are randomly generated based on some pre-defined components, including mouths, tails, eyes, scales, and fins, with a randomly chosen body color, shape, and size. Rather than looking at the actual image data, A.I. is now looking for patterns in these components based on how the student classifies each fish. It will be more likely to label a fish the same way the student would have if it has matching traits."
           }
-        ]
+        ],
+        "progression_name": "Using Training Data"
       },
       "seeding_key": {
         "activity_section.key": "86495854-e877-4aea-b9d6-2669b1d2d43b",
@@ -3375,7 +3501,8 @@
       "key": "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3",
       "position": 5,
       "properties": {
-        "description": "###Level 7 - [Impacts on Society](https://studio.code.org/s/oceans/stage/1/puzzle/7)\n\n###[AI - Impact on Society Video](https://youtu.be/ng4c1g3COfs)\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** *Could training data actually create problems? How?*\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n"
+        "description": "### Impacts on Society\n\n*Do this:* Show the Impacts on Society video.\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n**Say:** *Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n**Prompt:** *Could training data actually create problems? How?*\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n",
+        "progression_name": "Video: Impacts on Society"
       },
       "seeding_key": {
         "activity_section.key": "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3",
@@ -3386,7 +3513,8 @@
       "key": "833ae7ce-6703-495b-b010-224f0d32134f",
       "position": 6,
       "properties": {
-        "description": "###Level 8 - [Teach A.I. a new word](https://studio.code.org/s/oceans/stage/1/puzzle/8)\n\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
+        "description": "### Teach A.I. a new word\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.",
+        "progression_name": "Teach A.I. a new word"
       },
       "seeding_key": {
         "activity_section.key": "833ae7ce-6703-495b-b010-224f0d32134f",
@@ -3463,6 +3591,18 @@
       },
       "seeding_key": {
         "activity_section.key": "74a7f7a2-b95f-4879-96b2-b04fe09825d6",
+        "lesson_activity.key": "5e959966-cfc9-4300-a563-9427222987c8"
+      }
+    },
+    {
+      "key": "3218da5f-4f6d-4679-bc7a-178c91cb9bb6",
+      "position": 2,
+      "properties": {
+        "name": "A.I. in Current Events",
+        "description": "You can share these stories with your class to help them see how AI will impact the future.\n\n* [Food Waste Is a Serious Problem. AI Is Trying to Solve It](https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/)\n* [AI tech can identify genetic disorders from a person's face](https://mashable.com/video/ai-identify-genetic-disorders-photo/?)\n* [How an AI Startup Designed a Drug Candidate in Just 46 Days](https://singularityhub.com/2019/09/09/how-an-ai-startup-designed-a-drug-candidate-in-just-46-days/)\n* [MIT AI tool can predict breast cancer up to 5 years early](https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/)\n* [The Army steps up its pace on self-driving cars](https://www.axios.com/us-army-military-casualties-autonomous-vehicles-1ff51e01-3b16-4a1c-9587-ce55dee74788.html?)\n* [San Francisco says it will use AI to reduce bias when charging people with crimes](https://www.theverge.com/2019/6/12/18663093/ai-sf-district-attorney-police-bias-race-charge-crime)\n* [AI is helping scholars restore ancient Greek texts on stone tablets](https://techcrunch.com/2019/10/18/ai-is-helping-scholars-restore-ancient-greek-texts-on-stone-tablets/)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3218da5f-4f6d-4679-bc7a-178c91cb9bb6",
         "lesson_activity.key": "5e959966-cfc9-4300-a563-9427222987c8"
       }
     },
@@ -4015,7 +4155,7 @@
       "key": "997b7762-3be1-47ed-a4c1-a9d4055a1428",
       "position": 1,
       "properties": {
-        "description": "###Cosmic Events (30-45 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Cosmic Events](https://docs.google.com/document/d/1bbccw0T-Nnav3L0kqtK2gnYKSSfk-3ytW0yyClNkMUI/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. This activity is out of this world as students learn how to program sprites to move in a way which emulates the gravitational force exerted by the Earth.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.SL.5.1.B:** Follow agreed-upon rules for discussions and carry out assigned roles.\n\n- **CCSS.MATH.CONTENT.5.G.A.1:** Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates. Understand that the first number indicates how far to travel from the origin in the direction of one axis, and the second number indicates how far to travel in the direction of the second axis, with the convention that the names of the two axes and the coordinates correspond (e.g., x-axis and x-coordinate, y-axis and y-coordinate).\n\n- **NGSS.5-PS2-1:** Support an argument that the gravitational force exerted by Earth on objects is directed down. "
+        "description": "###Cosmic Events (30-45 minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Cosmic Events](https://docs.google.com/document/d/1bbccw0T-Nnav3L0kqtK2gnYKSSfk-3ytW0yyClNkMUI/edit#heading=h.vowrbq6ykmt2) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. This activity is out of this world as students learn how to program sprites to move in a way which emulates the gravitational force exerted by the Earth.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.SL.5.1.B:** Follow agreed-upon rules for discussions and carry out assigned roles.\n\n- **CCSS.MATH.CONTENT.5.G.A.1:** Use a pair of perpendicular number lines, called axes, to define a coordinate system, with the intersection of the lines (the origin) arranged to coincide with the 0 on each line and a given point in the plane located by using an ordered pair of numbers, called its coordinates. Understand that the first number indicates how far to travel from the origin in the direction of one axis, and the second number indicates how far to travel in the direction of the second axis, with the convention that the names of the two axes and the coordinates correspond (e.g., x-axis and x-coordinate, y-axis and y-coordinate).\n\n- **NGSS.5-PS2-1:** Support an argument that the gravitational force exerted by Earth on objects is directed down. "
       },
       "seeding_key": {
         "activity_section.key": "997b7762-3be1-47ed-a4c1-a9d4055a1428",
@@ -5211,6 +5351,238 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_predict"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "05818b32-90cc-466a-b952-8fcf048e4e5c"
+      },
+      "level_keys": [
+        "courseF_variables_predict"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aae21e24-4a0c-4d8c-aec0-67554766b38f"
+      },
+      "level_keys": [
+        "courseF_pilotVideo_prompts"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_review"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_review"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_text_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "472a5254-b0e4-4069-a6f4-940ed9fda07a"
+      },
+      "level_keys": [
+        "courseF_text_practice"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": null,
       "properties": {
         "progression": "Video: Artist Intro with JR Hildebrande",
@@ -5234,7 +5606,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5260,7 +5632,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": null,
@@ -5286,7 +5658,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": null,
@@ -5312,7 +5684,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 1,
       "assessment": null,
@@ -5338,7 +5710,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 2,
       "assessment": null,
@@ -5364,7 +5736,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -5390,7 +5762,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5416,7 +5788,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5442,7 +5814,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5468,7 +5840,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5494,7 +5866,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5520,7 +5892,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5546,7 +5918,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5572,7 +5944,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5598,12 +5970,15 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_bee2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5621,12 +5996,15 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_bee1"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5644,7 +6022,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5670,12 +6048,15 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_bee_practice"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5693,21 +6074,18 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_variables_1_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_1_2021"
+          "courseF_bee_variables_0a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5715,25 +6093,25 @@
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_1_2021"
+        "courseF_bee_variables_0a_2021"
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
-          "courseF_bee_variables_2_2021"
+          "courseF_bee_variables_1a_2021"
         ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_2_2021"
+          "courseF_bee_variables_1a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5741,25 +6119,22 @@
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_2_2021"
+        "courseF_bee_variables_1a_2021"
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_variables_3_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_3_2021"
+          "courseF_bee_variables_2a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5767,25 +6142,22 @@
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_3_2021"
+        "courseF_bee_variables_2a_2021"
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_variables_4_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_4_2021"
+          "courseF_bee_variables_3aa_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5793,25 +6165,22 @@
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_4_2021"
+        "courseF_bee_variables_3aa_2021"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_variables_5_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_5_2021"
+          "courseF_bee_variables_3a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5819,52 +6188,68 @@
         "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_5_2021"
+        "courseF_bee_variables_3a_2021"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 61,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
-        "level_keys": [
-          "courseF_bee_variables_6_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_6_2021"
+          "courseF_bee_variables_4a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
-        "activity_section.key": "26d46928-c84e-4f97-8482-2575692c9ecb"
+        "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       },
       "level_keys": [
-        "courseF_bee_variables_6_2021"
+        "courseF_bee_variables_4a_2021"
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 62,
       "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_variables_5a_2021"
+        ],
+        "lesson.key": "Variables that Change in Bee",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
+      },
+      "level_keys": [
+        "courseF_bee_variables_5a_2021"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_variables_7_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_variables_7_2021"
+          "courseF_beeVar_practice"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -5872,11 +6257,11 @@
         "activity_section.key": "94f3b6b8-77fa-42ef-bee6-80a47bdd050e"
       },
       "level_keys": [
-        "courseF_bee_variables_7_2021"
+        "courseF_beeVar_practice"
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5902,12 +6287,12 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Review",
         "level_keys": [
           "courseF_bee_for1_2021"
         ]
@@ -5928,12 +6313,12 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Review",
         "level_keys": [
           "courseF_bee_for2_2021"
         ]
@@ -5954,12 +6339,35 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "For Loops and Repeat Blocks",
+        "progression": "Exploration: For Loops"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_bee_for2a_2021"
+        ],
+        "lesson.key": "For Loops in Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aec92f2d-9b44-43b4-a418-3aebaf5af709"
+      },
+      "level_keys": [
+        "courseF_bee_for2a_2021"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: For Loops",
         "level_keys": [
           "courseF_video_forBee_2021"
         ]
@@ -5980,10 +6388,10 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 4,
+      "chapter": 69,
+      "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6006,12 +6414,12 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 5,
+      "chapter": 70,
+      "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_bee_for4_2021"
         ]
@@ -6032,12 +6440,12 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 6,
+      "chapter": 71,
+      "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_bee_for6_2021"
         ]
@@ -6058,12 +6466,12 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 7,
+      "chapter": 72,
+      "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_bee_for7_2021"
         ]
@@ -6084,100 +6492,18 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_for8_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for8_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      },
-      "level_keys": [
-        "courseF_bee_for8_2021"
-      ]
-    },
-    {
-      "chapter": 63,
+      "chapter": 73,
       "position": 9,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_for5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for5_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      },
-      "level_keys": [
-        "courseF_bee_for5_2021"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 10,
-      "activity_section_position": 6,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_for9_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for9_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      },
-      "level_keys": [
-        "courseF_bee_for9_2021"
-      ]
-    },
-    {
-      "chapter": 65,
-      "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
-        "challenge": true,
-        "level_keys": [
-          "courseF_bee_for10_2021"
-        ]
+        "progression": "Practice"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_bee_for10_2021"
+          "courseF_beeFor_practice"
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "csf_variables",
@@ -6185,42 +6511,16 @@
         "activity_section.key": "729a9e74-6bd2-4833-8b46-12f83a6a83b7"
       },
       "level_keys": [
-        "courseF_bee_for10_2021"
+        "courseF_beeFor_practice"
       ]
     },
     {
-      "chapter": 66,
-      "position": 12,
+      "chapter": 74,
+      "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_bee_for11_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_bee_for11_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "1d230f35-347e-4faf-a24e-07f70742931e"
-      },
-      "level_keys": [
-        "courseF_bee_for11_2021"
-      ]
-    },
-    {
-      "chapter": 67,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Challenge",
+        "progression": "Lesson Extras",
         "level_keys": [
           "courseF_bee_for_challenge1_2021"
         ]
@@ -6241,12 +6541,12 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 14,
+      "chapter": 75,
+      "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
+        "progression": "Lesson Extras",
         "level_keys": [
           "courseF_bee_for_challenge2_2021"
         ]
@@ -6267,12 +6567,12 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Intro to For Loops",
+        "progression": "Video: For Loops",
         "level_keys": [
           "courseF_video_forArtist_2021"
         ]
@@ -6293,12 +6593,12 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
+        "progression": "Exploration",
         "level_keys": [
           "courseF_artist_for1_2021"
         ]
@@ -6319,21 +6619,18 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_artist_for2_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_artist_for2_2021"
+          "courseF_artist_for5a_2021"
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "csf_variables",
@@ -6341,94 +6638,16 @@
         "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
       },
       "level_keys": [
-        "courseF_artist_for2_2021"
+        "courseF_artist_for5a_2021"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_artist_for3_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for3_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      },
-      "level_keys": [
-        "courseF_artist_for3_2021"
-      ]
-    },
-    {
-      "chapter": 73,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_artist_for4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for4_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      },
-      "level_keys": [
-        "courseF_artist_for4_2021"
-      ]
-    },
-    {
-      "chapter": 74,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "courseF_artist_for5_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for5_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      },
-      "level_keys": [
-        "courseF_artist_for5_2021"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": null,
-      "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_artist_for6_2021"
         ]
@@ -6449,12 +6668,12 @@
       ]
     },
     {
-      "chapter": 76,
-      "position": 8,
-      "activity_section_position": 6,
-      "assessment": null,
+      "chapter": 80,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_artist_for7_2021"
         ]
@@ -6475,12 +6694,12 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 9,
-      "activity_section_position": 7,
-      "assessment": null,
+      "chapter": 81,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseF_artist_for8_2021"
         ]
@@ -6501,15 +6720,12 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": null,
+      "chapter": 82,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
-        "progression": "Free Play",
-        "level_keys": [
-          "courseF_artist_for9_2021"
-        ]
+        "progression": "Skill Building"
       },
       "named_level": null,
       "bonus": null,
@@ -6520,43 +6736,17 @@
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021",
-        "activity_section.key": "8bcd37d6-c773-4388-a38a-8be57282b59a"
+        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
       },
       "level_keys": [
         "courseF_artist_for9_2021"
       ]
     },
     {
-      "chapter": 79,
-      "position": 11,
+      "chapter": 83,
+      "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
-      "properties": {
-        "progression": "Prediction",
-        "level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "47940214-b1b7-4be8-95f2-fb725fb9c61c"
-      },
-      "level_keys": [
-        "courseF_artist_for10_predict1_2021"
-      ]
-    },
-    {
-      "chapter": 80,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6579,12 +6769,12 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 13,
+      "chapter": 84,
+      "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
+        "progression": "Lesson Extras",
         "level_keys": [
           "courseF_artist_for_challenge1_2021"
         ]
@@ -6605,12 +6795,12 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 14,
+      "chapter": 85,
+      "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Challenge",
+        "progression": "Lesson Extras",
         "level_keys": [
           "courseF_artist_for_challenge2_2021"
         ]
@@ -6631,7 +6821,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6657,7 +6847,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -6683,7 +6873,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -6708,14 +6898,15 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Machine_Learning_2021"
-        ]
+        ],
+        "progression": "Video: AI: What is Machine Learning?"
       },
       "named_level": null,
       "bonus": null,
@@ -6733,14 +6924,15 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_FishVTrash_2021"
-        ]
+        ],
+        "progression": "Train AI to Clean the Ocean"
       },
       "named_level": null,
       "bonus": null,
@@ -6758,14 +6950,15 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrashDemo_2021"
-        ]
+        ],
+        "progression": "Train AI to Clean the Ocean"
       },
       "named_level": null,
       "bonus": null,
@@ -6783,14 +6976,15 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_CreaturesVTrash_2021"
-        ]
+        ],
+        "progression": "Train AI to Clean the Ocean"
       },
       "named_level": null,
       "bonus": null,
@@ -6808,14 +7002,15 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Training_Data_2021"
-        ]
+        ],
+        "progression": "Video: Training Data & Bias"
       },
       "named_level": null,
       "bonus": null,
@@ -6833,14 +7028,15 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Short_2021"
-        ]
+        ],
+        "progression": "Using Training Data"
       },
       "named_level": null,
       "bonus": null,
@@ -6858,14 +7054,15 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Video_Societal_Implications_2021"
-        ]
+        ],
+        "progression": "Video: Impacts on Society"
       },
       "named_level": null,
       "bonus": null,
@@ -6883,14 +7080,15 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "CourseF_Oceans_Long_2021"
-        ]
+        ],
+        "progression": "Teach A.I. a new word"
       },
       "named_level": null,
       "bonus": null,
@@ -6908,7 +7106,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6934,7 +7132,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6960,7 +7158,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -6986,7 +7184,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7012,10 +7210,10 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7038,10 +7236,10 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7064,10 +7262,10 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7090,10 +7288,10 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7116,10 +7314,10 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7142,10 +7340,10 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7168,10 +7366,10 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7194,10 +7392,10 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7221,10 +7419,10 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7248,7 +7446,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7274,7 +7472,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7300,7 +7498,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -7326,7 +7524,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 3,
       "assessment": null,
@@ -7352,7 +7550,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 4,
       "assessment": null,
@@ -7378,7 +7576,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 5,
       "assessment": null,
@@ -7404,7 +7602,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 6,
       "assessment": null,
@@ -7430,7 +7628,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 7,
       "assessment": null,
@@ -7456,7 +7654,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 8,
       "assessment": null,
@@ -7482,7 +7680,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 9,
       "activity_section_position": 9,
       "assessment": null,
@@ -7508,7 +7706,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 10,
       "activity_section_position": 10,
       "assessment": null,
@@ -7534,7 +7732,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 11,
       "activity_section_position": 11,
       "assessment": null,
@@ -7560,7 +7758,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 12,
       "activity_section_position": 1,
       "assessment": null,
@@ -7586,7 +7784,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7612,7 +7810,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7638,7 +7836,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -7664,7 +7862,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -7690,7 +7888,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -7716,7 +7914,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
       "assessment": null,
@@ -7742,7 +7940,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -7768,7 +7966,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 130,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -7794,7 +7992,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 131,
       "position": 9,
       "activity_section_position": 1,
       "assessment": null,
@@ -7820,7 +8018,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 132,
       "position": 10,
       "activity_section_position": 1,
       "assessment": null,
@@ -7846,7 +8044,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -7872,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -7898,7 +8096,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 1,
       "assessment": null,
@@ -7924,7 +8122,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 2,
       "assessment": null,
@@ -7950,7 +8148,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 3,
       "assessment": null,
@@ -7976,7 +8174,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 4,
       "assessment": null,
@@ -8002,7 +8200,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 1,
       "assessment": null,
@@ -8028,7 +8226,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 140,
       "position": 8,
       "activity_section_position": 2,
       "assessment": null,
@@ -8054,7 +8252,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 141,
       "position": 9,
       "activity_section_position": 3,
       "assessment": null,
@@ -8080,7 +8278,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 142,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8106,7 +8304,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 143,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8132,7 +8330,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 144,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8158,7 +8356,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 145,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8184,7 +8382,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 146,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8210,7 +8408,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 147,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -8236,7 +8434,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 148,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -8589,6 +8787,114 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_variables_predict",
+        "script_level.level_keys": [
+          "courseF_variables_predict"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "05818b32-90cc-466a-b952-8fcf048e4e5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_pilotVideo_prompts",
+        "script_level.level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aae21e24-4a0c-4d8c-aec0-67554766b38f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_review",
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "e64a2440-c243-4f49-8181-171a72e38c5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_practice",
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "ramp_up",
+        "script.name": "coursef-2021",
+        "activity_section.key": "472a5254-b0e4-4069-a6f4-940ed9fda07a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseC_video_artist_2021",
         "script_level.level_keys": [
           "courseC_video_artist_2021"
@@ -8817,9 +9123,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_1_2021",
+        "level.key": "courseF_bee_variables_0a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_1_2021"
+          "courseF_bee_variables_0a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8829,9 +9135,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_2_2021",
+        "level.key": "courseF_bee_variables_1a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_2_2021"
+          "courseF_bee_variables_1a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8841,9 +9147,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_3_2021",
+        "level.key": "courseF_bee_variables_2a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_3_2021"
+          "courseF_bee_variables_2a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8853,9 +9159,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_4_2021",
+        "level.key": "courseF_bee_variables_3aa_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_4_2021"
+          "courseF_bee_variables_3aa_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8865,9 +9171,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_5_2021",
+        "level.key": "courseF_bee_variables_3a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_5_2021"
+          "courseF_bee_variables_3a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8877,21 +9183,33 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_6_2021",
+        "level.key": "courseF_bee_variables_4a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_6_2021"
+          "courseF_bee_variables_4a_2021"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021",
-        "activity_section.key": "26d46928-c84e-4f97-8482-2575692c9ecb"
+        "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_variables_7_2021",
+        "level.key": "courseF_bee_variables_5a_2021",
         "script_level.level_keys": [
-          "courseF_bee_variables_7_2021"
+          "courseF_bee_variables_5a_2021"
+        ],
+        "lesson.key": "Variables that Change in Bee",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aa24a7a8-7cec-408b-b980-89e9c457605a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_beeVar_practice",
+        "script_level.level_keys": [
+          "courseF_beeVar_practice"
         ],
         "lesson.key": "Variables that Change in Bee",
         "lesson_group.key": "lessonGroup-8",
@@ -8933,6 +9251,18 @@
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021",
         "activity_section.key": "1668a313-16da-49db-9713-13d7ad33889e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_bee_for2a_2021",
+        "script_level.level_keys": [
+          "courseF_bee_for2a_2021"
+        ],
+        "lesson.key": "For Loops in Bee",
+        "lesson_group.key": "csf_variables",
+        "script.name": "coursef-2021",
+        "activity_section.key": "aec92f2d-9b44-43b4-a418-3aebaf5af709"
       }
     },
     {
@@ -8997,62 +9327,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_bee_for8_2021",
+        "level.key": "courseF_beeFor_practice",
         "script_level.level_keys": [
-          "courseF_bee_for8_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for5_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for5_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for9_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for9_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "b500137c-9df8-40c5-8b4d-e4f364f8255e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for10_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for10_2021"
+          "courseF_beeFor_practice"
         ],
         "lesson.key": "For Loops in Bee",
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021",
         "activity_section.key": "729a9e74-6bd2-4833-8b46-12f83a6a83b7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_bee_for11_2021",
-        "script_level.level_keys": [
-          "courseF_bee_for11_2021"
-        ],
-        "lesson.key": "For Loops in Bee",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "1d230f35-347e-4faf-a24e-07f70742931e"
       }
     },
     {
@@ -9105,45 +9387,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_artist_for2_2021",
+        "level.key": "courseF_artist_for5a_2021",
         "script_level.level_keys": [
-          "courseF_artist_for2_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for3_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for3_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for4_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for4_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for5_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for5_2021"
+          "courseF_artist_for5a_2021"
         ],
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "csf_variables",
@@ -9196,19 +9442,7 @@
         "lesson.key": "For Loops in Artist",
         "lesson_group.key": "csf_variables",
         "script.name": "coursef-2021",
-        "activity_section.key": "8bcd37d6-c773-4388-a38a-8be57282b59a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_artist_for10_predict1_2021",
-        "script_level.level_keys": [
-          "courseF_artist_for10_predict1_2021"
-        ],
-        "lesson.key": "For Loops in Artist",
-        "lesson_group.key": "csf_variables",
-        "script.name": "coursef-2021",
-        "activity_section.key": "47940214-b1b7-4be8-95f2-fb725fb9c61c"
+        "activity_section.key": "0fddd8bc-8ad0-4604-9ee1-aff82562c1c6"
       }
     },
     {
@@ -10113,6 +10347,18 @@
       }
     },
     {
+      "name": "Text and Prompts",
+      "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/edit?usp=sharing",
+      "key": "text_and_prompts",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "text_and_prompts"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -10563,6 +10809,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "text_and_prompts"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables that Change in Artist",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -10837,6 +11089,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "A message on the computer screen that waits for input from the user.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
       }
     },
     {
@@ -11207,6 +11479,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops with the Artist",
         "vocabulary.key": "loop"
       }
@@ -11392,6 +11676,9 @@
       }
     }
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
     {
       "key": "5b8eb232-7326-4c4d-8507-0c2da9642581",
@@ -11521,6 +11808,26 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "55e42aa4-7f88-4f0f-9d90-97716ef3ab75"
+      }
+    },
+    {
+      "key": "28d3cc79-4aea-431d-a445-745e75e747d8",
+      "properties": {
+        "description": "Use variables to hold words and phrases."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "28d3cc79-4aea-431d-a445-745e75e747d8"
+      }
+    },
+    {
+      "key": "66e1fe88-3957-437f-a065-66909844fcd1",
+      "properties": {
+        "description": "Use variables in conjunction with prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "66e1fe88-3957-437f-a065-66909844fcd1"
       }
     },
     {
