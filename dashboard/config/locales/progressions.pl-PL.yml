@@ -62,7 +62,7 @@ pl:
       Finish the Prototype: Ukończ Prototyp
       Finishing Functions: Kończąc funkcje
       Finishing Touches: Końcowe poprawki
-      Flyer Game: Flyer
+      Flyer Game: Gra Flyer
       Follow the Mouse: Podążaj za Myszą
       Fonts and Style: Fonty i Styl
       For Loops: Pętle dla (for)
@@ -73,12 +73,12 @@ pl:
       Functions with Parameters: Funkcje z parametrami
       Getting Properties: Właściwości getterów
       Headings: Nagłówki
-      How to Create a Simple Function: Jak stworzyć prostą funkcję
+      How to Create a Simple Function: Jak utworzyć prostą funkcję
       How to Make a Sprite: Jak zrobić Duszka
       Ice Age Loops: Pętle z Epoką Lodowcową
       Images and Sounds: Obrazki i Dźwięki
       Input Examples: Przykłady Wejść
-      Input with If-Else: Dane wejściowe z jeśli/w przeciwnym przypadku
+      Input with If-Else: Dane wejściowe z jeśli/w przeciwnym razie
       Intro to For Loops: Wprowadzenie do Pętli "dla"
       Intro to Sprites: Wprowadzenie do Duszków
       Intro to Variables: Wprowadzenie do Zmiennych
@@ -96,11 +96,11 @@ pl:
       Linking Screens: Łączenie ekranów
       Lists: Listy
       Loops with the Artist: Pętle z Artystą
-      Make it Interactive: Nadanie interaktywnego charakteru
+      Make it Interactive: Uczyń to interaktywnym
       Making Scenes: Tworzenie Scen
       Making Songs: Tworzenie Piosenek
       Making Sounds: Tworzenie Dźwięków
-      'Maze Intro: Programming with Blocks': 'Labirynt wprowadzenie: Programowanie
+      'Maze Intro: Programming with Blocks': 'Labirynt, wprowadzenie: Programowanie
         z blokami'
       Measures: Takty
       'Mini-Project: Alien Dance Moves': 'Mini-projekt: Taneczne ruchy kosmitów'
@@ -112,8 +112,8 @@ pl:
       'Mini-Project: Swimming Fish (continued)': 'Mini-projekt: Pływająca ryba (ciąg
         dalszy)'
       'Mini-Project: Virtual Pet': 'Mini-projekt: Wirtualny zwierzak'
-      'Mini-project: Chase Game': 'Mini-projekt: wyścig'
-      'Mini-project: Flappy Game': 'Mini-projekt: Gra Flappy Birds'
+      'Mini-project: Chase Game': 'Mini-projekt: Wyścig'
+      'Mini-project: Flappy Game': 'Mini-projekt: Gra z Flappym'
       'Mini-project: Interactive Poster': 'Mini-projekt: Interaktywny plakat'
       'Mini-project: Jorge the Dog': 'Mini-projekt: Pies Jorge'
       'Mini-project: Sticker Design': 'Mini-projekt: Projekt naklejki'
@@ -133,7 +133,7 @@ pl:
       Platform Jumper - Items: Skoczek - elementy
       Platform Jumper - Platforms: Skoczek - platformy
       Platform Jumper - Player: Skoczek - gracz
-      Playing Notes: Granie nut
+      Playing Notes: Granie z nut
       Playing with Notes: Zabawa z nutami
       Post-Course Survey Instructions: Instrukcje do ankiety końcowej
       Practice: Ćwiczenia
@@ -168,21 +168,21 @@ pl:
       Side Scroller: Suwak boczny
       Simple Circuits: Proste układy
       Sliders: Suwaki
-      Smart Bike - Blinkers: Mądre rowery - migacze
+      Smart Bike - Blinkers: Mądry rower - migacze
       Sprite Lab Project: Projekt Sprite Lab
       Sprites and the Draw Loop: Duszki i pętla rysowania
       Star Chaser: Łowca Gwiazd
       Stopping the Outbreak with Masks: Powstrzymanie epidemii za pomocą masek
       Styling Text: Stylowanie Tekstu
-      Styling with Classes: Stylowanie z klasami
-      Styling your Website: Stylowanie Twojej strony internetowej
+      Styling with Classes: Stylizacja z klasami
+      Styling your Website: Stylizacja Twojej strony internetowej
       The Artist in Code Studio: Artysta w Code Studio
       The Buzzer: Brzęczyk
       The Collector: Zbieracz
       The Harvester: Kombajn
-      UI Element Properties: Właściwości elementu interface'u graficznego
+      UI Element Properties: Właściwości elementów interfejsu graficznego
       User Interface: Interfejs użytkownika
-      Using Getters and Setters: Używanie getterów i setterów
+      Using Getters and Setters: Używanie pobieraczy i ustawiaczy
       Using HTML Tags: Stosując Tagi HTML
       Using Random Numbers: Stosując Losowe Liczby
       Using the LED: Stosując LED
