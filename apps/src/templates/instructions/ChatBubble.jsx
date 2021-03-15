@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubbleTip from './ChatBubbleTip';
@@ -98,11 +97,4 @@ ChatBubble.propTypes = {
   textToSpeechEnabled: PropTypes.bool
 };
 
-export default connect(state => {
-  return {
-    skinId: state.pageConstants.skinId,
-    isMinecraft: !!state.pageConstants.isMinecraft,
-    textToSpeechEnabled:
-      state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
-  };
-})(Radium(ChatBubble));
+export default Radium(ChatBubble);
