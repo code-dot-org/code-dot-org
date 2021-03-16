@@ -528,8 +528,80 @@ es-ES:
         title: Laberinto - Opción múltiple
       Begin planning your project:
         content1: descripción aquí
+        markdown: "# El proceso de diseño\nDiseñar software significa resolver un
+          montón de pequeños problemas, todo el tiempo. El principal problema en el
+          diseño de software es qué crear en primer lugar.\n\nEste proceso es útil
+          para todo tipo de cosas, pero nos vamos a centrar en usarlo para el diseño
+          de aplicaciones.\n\n<!-- Traducir los términos \"Definir\", \"Preparar\",
+          \"Probar\", \"Reflejar\" y cambiar el tamaño y el posicionamiento de la
+          fuente según sea necesario, >\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Proceso de diseño\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **Definir**\n  * ¿Qué tipo de aplicación te gustaría crear?\n  * ¿Cuáles
+          son sus limitaciones?\n  * ¿Cómo es el éxito?\n* **Preparar**\n  * Lluvia
+          de ideas / investigar posibles elementos\n  * Comparar pros y contras\n
+          \ * Hacer un plan\n* **Pruébalo**\n  * Pon tu plan en acción\n* **Reflexionar**\n
+          \ * ¿Cómo se comparan tus resultados con los objetivos que estableces al
+          definir la aplicación?\n  * ¿Qué puedes aprender de esto o hacerlo mejor
+          la próxima vez?\n  * ¿Qué nuevos problemas has descubierto?\n\n# Cómo se
+          ve\nEn el transcurso de las próximas semanas, tendrás la oportunidad de
+          experimentar con algunos juegos existentes y diseñar tu propio juego basado
+          en lo que has aprendido.  Después de crear tu juego, tendrás la oportunidad
+          de presentarlo a los demás y recibir comentarios.  Todos estos pasos son
+          de vital importancia en la industria del software, y la práctica con los
+          elementos del proceso de diseño te ayudará a crear mejores productos de
+          manera más eficiente.  \n\nEsto es lo que tendrán las próximas semanas a
+          medida que aprendamos más sobre el proceso de diseño:\n\n1. **Definir &
+          Preparar**\n   * Juega con juegos existentes para obtener ideas y entender
+          las limitaciones\n   * Lluvia de ideas para planificar tu nueva o modificada
+          aplicación\n1. **Pruébalo**\n   * Sigue tu plan para crear una aplicación\n1.
+          **Reflejar & Editar**\n   * Intercambiar aplicaciones con otro grupo para
+          ayudar a mejorar sus proyectos\n1. **Presentación**\n   * ¡Muestra tu producto
+          final!"
       Begin planning your project_2018:
         content1: descripción aquí
+        markdown: "# El proceso de diseño\nDiseñar software significa resolver un
+          montón de pequeños problemas, todo el tiempo. El principal problema en el
+          diseño de software es qué crear en primer lugar.\n\nEste proceso es útil
+          para todo tipo de cosas, pero nos vamos a centrar en usarlo para el diseño
+          de aplicaciones.\n\n<!-- Traducir los términos \"Definir\", \"Preparar\",
+          \"Probar\", \"Reflejar\" y cambiar el tamaño y el posicionamiento de la
+          fuente según sea necesario, >\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Proceso de diseño\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **Definir**\n  * ¿Qué tipo de aplicación te gustaría crear?\n  * ¿Cuáles
+          son sus limitaciones?\n  * ¿Cómo es el éxito?\n* **Preparar**\n  * Lluvia
+          de ideas / investigar posibles elementos\n  * Comparar pros y contras\n
+          \ * Hacer un plan\n* **Pruébalo**\n  * Pon tu plan en acción\n* **Reflexionar**\n
+          \ * ¿Cómo se comparan tus resultados con los objetivos que estableces al
+          definir la aplicación?\n  * ¿Qué puedes aprender de esto o hacerlo mejor
+          la próxima vez?\n  * ¿Qué nuevos problemas has descubierto?\n\n# Cómo se
+          ve\nEn el transcurso de las próximas semanas, tendrás la oportunidad de
+          experimentar con algunos juegos existentes y diseñar tu propio juego basado
+          en lo que has aprendido.  Después de crear tu juego, tendrás la oportunidad
+          de presentarlo a los demás y recibir comentarios.  Todos estos pasos son
+          de vital importancia en la industria del software, y la práctica con los
+          elementos del proceso de diseño te ayudará a crear mejores productos de
+          manera más eficiente.  \n\nEsto es lo que tendrán las próximas semanas a
+          medida que aprendamos más sobre el proceso de diseño:\n\n1. **Definir &
+          Preparar**\n   * Juega con juegos existentes para obtener ideas y entender
+          las limitaciones\n   * Lluvia de ideas para planificar tu nueva o modificada
+          aplicación\n1. **Pruébalo**\n   * Sigue tu plan para crear una aplicación\n1.
+          **Reflejar & Editar**\n   * Intercambiar aplicaciones con otro grupo para
+          ayudar a mejorar sus proyectos\n1. **Presentación**\n   * ¡Muestra tu producto
+          final!"
       Begin planning your project_2018_2019:
         content1: descripción aquí
       Begin planning your project_2018_2019_2020:
@@ -871,6 +943,7 @@ es-ES:
 
           * [When Does Your Privacy Matter? - Activity Guide](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
           * [Social Sleuth - Activity Guide](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: "¿Cuándo importa tu privacidad?"
       CSD U2 L6 Overview:
         content1: descripción aquí
         markdown: |+
@@ -1217,6 +1290,10 @@ es-ES:
           que programan (Como en, la gente que se dedican a esto), es un recurso excelente
           para ver las maneras varias que los aficionados hacen entretenmiento con
           código.\n\n### Campos Relevantes\n\n* Todo"
+        markdown: |-
+          # Inicio de tu búsqueda
+
+          Para obtener más información sobre cómo las ciencias de la computación y la programación juegan un papel en el entretenimiento, tendrá que hacer algunas investigaciones. Trate de buscar "Ciencias de la computación y &#95;&#95;&#95;&#95;&#95;&#95;" y probar diferentes tipos de entretenimiento como cine, televisión, música, juegos, animación, moda, etc.
       CSD U3 Functions Prediction define first:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
@@ -1406,6 +1483,9 @@ es-ES:
           * [Interactive Card - Project Guide](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
           * [Interactive Card - Rubric](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [Interactive Card - Peer Review](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |-
+          * [Tarjeta interactiva] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Ejemplo de guía de proyecto([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Tarjeta interactiva] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Ejemplo de revisión por pares ([PDF] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
       CSD U3 Lesson Overview 2:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -1428,6 +1508,10 @@ es-ES:
 
 
 
+        teacher_markdown: |
+          [clave]
+
+          * [Formas de dibujo] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Ejemplar ([PDF] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
       CSD U3 Lesson Overview 3:
         markdown: |+
           # Resumen
@@ -1501,6 +1585,9 @@ es-ES:
           ## Recursos
 
           * [Sprite Scene Planning - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+        teacher_markdown: "* [Planificación de escenas sprite](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/editar)
+          - Ejemplo de guía de actividad ([PDF] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))"
       CSD U3 Lesson Overview 7:
         markdown: |+
           # Resumen
@@ -1535,6 +1622,9 @@ es-ES:
 
           * [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
           * [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+        teacher_markdown: "* [Variables desenchufadas](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
+          - Tecla guía de actividad ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))"
       CSD U3 Lesson Overview 9:
         markdown: |+
           # Resumen
@@ -1564,6 +1654,9 @@ es-ES:
           * [Make Your Own Game - Project Guide](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
           * [Make Your Own Game - Rubric](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
           * [Make Your Own Game - Peer Review](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |-
+          * [Hacer su propio juego] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Guía del proyecto Exe ([PDF] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+          * [Hacer su propio juego] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Ejemplo de revisión por pares ([PDF] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
       CSD U3 SFLP Velocity:
         markdown: |
           # Resumen
@@ -1661,6 +1754,9 @@ es-ES:
           ## Recursos
 
           * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Planificación de su juego de plataforma] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Guía del proyecto ([PDF] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))"
       CSD U3 combining rep:
         content1: descripción aquí
         markdown: |+
@@ -1955,6 +2051,7 @@ es-ES:
 
           * [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide
           * [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource
+        teacher_markdown: "* Interpretación de datos - Ejemplo ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: descripción aquí
       CSD U5 crosstab warmup_2018:
@@ -2088,6 +2185,9 @@ es-ES:
           ## Recursos
 
           * [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
       CSD-U5-SFLP Automating Data Decisions:
         markdown: |
           # Resumen
@@ -2098,6 +2198,7 @@ es-ES:
 
           * [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
           * [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* Automatización de decisiones de datos - Ejemplo ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
       CSD-U5-SFLP Combining Representations:
         markdown: |
           # Resumen
@@ -2109,6 +2210,8 @@ es-ES:
 
           * [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
           * [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Registros de mascotas] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWwmEmwfN8/)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWmEmwfN8/export?format=pdf))"
       CSD-U5-SFLP Create a Representation:
         markdown: |
           # Resumen
@@ -2118,6 +2221,9 @@ es-ES:
           ## Recursos
 
           * [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* Crear una representación - Guía del proyecto ([Google
+          Doc] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))"
       CSD-U5-SFLP Interpreting Data:
         markdown: |
           # Resumen
@@ -2127,6 +2233,7 @@ es-ES:
           ## Recursos
 
           * [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Estructuración de datos - Ejemplo ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
       CSD-U5-SFLP Making Decisions with Data:
         markdown: |
           # Resumen
@@ -2136,6 +2243,9 @@ es-ES:
           ## Recursos
 
           * [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide
+        teacher_markdown: "* [Toma de decisiones con datos] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # Resumen
@@ -2151,6 +2261,9 @@ es-ES:
           ## Recursos
 
           * [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |-
+          * [Representación de información](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Ejemplo 1 ([PDF] (https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [Representación de información](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Ejemplo 2 ([PDF] (https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
           # Resumen
@@ -2160,6 +2273,7 @@ es-ES:
           ## Recursos
 
           * [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Resolución de problemas con datos - Ejemplo ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # Resumen
@@ -2192,6 +2306,10 @@ es-ES:
 
 
 
+        teacher_markdown: |-
+          * [Datos de comidas] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Recurso ([PDF] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/tecla]
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # Resumen
@@ -2212,6 +2330,12 @@ es-ES:
           ## Recursos
           * [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
           * [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [clave]
+
+          * Representación de números - Ejemplo ([Google Doc] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/tecla]
       CSD-U5-SFLP Representing Numbers Part 2:
         markdown: |
           # Resumen
@@ -2222,6 +2346,7 @@ es-ES:
           ## Recursos
 
           * [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* Mantener Secreto de Datos - Ejemplo ([PDF] (https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))"
       CSD-U5-SFLP Solve a Data Problem:
         markdown: |
           # Resumen
@@ -2232,6 +2357,9 @@ es-ES:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+        teacher_markdown: |-
+          * Hacer una recomendación - Ejemplo de guía de proyecto ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * Hacer una recomendación - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
       'CSD: getText vs getNumber':
         markdown: |-
           # obtenerTexto vs obtenerNúmero
@@ -4615,6 +4743,10 @@ es-ES:
           </div>
       Prepare for your presentation:
         content1: descripción aquí
+        markdown: |-
+          # Presentaciones del proyecto
+
+          ¡Es hora de presentar sus proyectos! Su maestro le proporcionará más detalles sobre cómo presentará su trabajo a sus compañeros de clase.
       Responding to User Input:
         markdown: |+
           # Responder a la entrada del usuario
@@ -6495,16 +6627,78 @@ es-ES:
           dentro del programa.</h3>\n\n"
       courseF_markdown_algorithms_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **Acabas de aprender \"algoritmos\"!**  \n\n\n\n### **Un algoritmo
+          es sólo una lista de pasos para terminar una tarea**. Lo divertido de los
+          algoritmos es que puedes decidir qué pasa, paso a paso.  \n\n### Cuando
+          escribe un algoritmo para una máquina, esto se denomina **programa**.  \n\n---\n\n##
+          **Vocabulario para Saber**\n\n* ### **Algoritmo** - Una lista de pasos para
+          terminar una tarea\n\n* ### **Programa** - Un algoritmo que ha sido codificado
+          en algo que puede ser ejecutado por una máquina"
       courseF_markdown_algorithms_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          # **En esta lección...**
+
+          ### ¿Alguna vez has querido decirle a alguien exactamente qué hacer? ¿Siempre te escuchan?
+
+          ### Hoy, le dirás a una máquina qué hacer, paso a paso, ¡y escuchará!
+
+          ---
+
+          ## **Bloques para saber**
+
+          ! [](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ! [](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ! [](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **Acabas de aprender \"condicionales\"!**\n\n### Los condicionales
+          son muy útiles en ciencias de la computación. Imagina iniciar sesión en
+          tu sitio web favorito y escribir tu contraseña. El sitio web tiene que usar
+          condicionales para comprobar *si* la contraseña que ha introducido coincide
+          con la contraseña que ha guardado para su nombre de usuario. \n\n### 'Si'
+          coincide, ¡inicia sesión! \n\n### 'De otro modo', asigne al usuario un error.
+          \ \n\n---\n\n## **Vocabulario para saber**\n\n* ### **Condición** - Algo
+          que un programa comprueba antes de permitir una acción\n\n* ### **Condicionales**
+          - Instrucciones que solo se ejecutan bajo ciertas condiciones"
       courseF_markdown_conditionals_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **En esta lección...**\n\n### **Condiciones** son cosas que pueden
+          ser verdaderas o falsas. \n\n### Aprenderás a usar las condiciones en un
+          programa para hacer que las cosas sucedan 'mientras', 'hasta', o 'si' algo
+          es verdad!\n---\n\n## **Bloques para saber**\n\n! [](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n!
+          [](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n!
+          [](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)"
       courseF_markdown_debugging_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          # **Acabas de aprender "depuración"!**
+
+          ### **Un error es algo que sale mal.** Es un error en un programa. Cuando encuentra y corrige esos errores, usted está **depurando** un problema.
+
+          ### Tienes que practicar **Persistencia**, otra palabra para no rendirte, con el fin de encontrar y corregir todos los errores.
+
+          ---
+
+          ## **Vocabulario para Saber**
+
+          * ### **Error** - Parte de un programa que no funciona correctamente
+
+          * ### **Depuración** - Encontrar y solucionar problemas en un algoritmo o programa
+
+          * ### **Persistencia** - No rendirse
       courseF_markdown_debugging_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# En esta lección...\n\n### ¿En qué piensas cuando piensas en errores?
+          \n\n### Cuando la mayoría de la gente piensa en errores, piensan en cosas
+          espeluznantes arrastrándose. En ciencias de la computación, los insectos
+          no están vivos, pero todavía pueden ser complicados.\n\n### ¡Los rompecabezas
+          de esta lección ya han sido resueltos para ti! Pero no tan rápido, no parecen
+          estar trabajando todavía. ¿Hay errores detrás de todo esto? \n\n---\n\n##
+          Bloques para saber\n\n! [](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n!
+          [](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)"
       courseF_markdown_forloops_end:
         content1: Prueba de reducción de la página del libro de texto
         markdown: |-
@@ -6561,12 +6755,38 @@ es-ES:
           *¡Este nuevo bucle hará que resolver puzles como estos sera muy fácil!
       courseF_markdown_loops_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **Acabas de aprender \"bucles\"!**  \n\n### **Un bucle es la
+          acción de hacer algo una y otra vez.** Otra palabra para hacer algo de nuevo
+          se repite.\n\n###  Los bucles son realmente útiles para repetir patrones.
+          Puede ser útil escribir tu programa sin ningún bucle primero, después intenta
+          encontrar un patrón. \n\n### Cuando veas uno, ¡pega ese patrón en un bloque
+          de \"repetición\"!\n\n---\n\n## **Vocabulario para Saber**\n\n* ### **Bucle**
+          - La acción de hacer algo una y otra vez\n\n* ### **Repetir** - Hacer algo
+          de nuevo"
       courseF_markdown_loops_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# En esta lección...\n\n### Imagina que quieres que tu personaje
+          avance **5** veces. Esto sería bastante fácil, sólo arrastre hacia afuera
+          **5 ** bloques  mover hacia adelante. ¡Ahora, imagina que quieres que tu
+          personaje avance **5.000** veces! \n\n### ¿Cuánto tiempo te llevaría arrastrar
+          \ **5.000*** bloques? \n\n### ¿Deseas que haya una manera fácil de hacer
+          esto? ¡La hay!\n\n---\n\n## Bloques para saber\n\n! [](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
       courseF_markdown_nestedloops_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **¡Acabas de aprender \"bucles anidados\"!**\n\n### **Un bucle
+          anidado es un bucle dentro de otro bucle.** Piénsalo como un bucle externo,
+          con otro bucle que se puso cómodo y acogedor y anidado dentro del bucle
+          externo. \n\n### Los bucles anidados  son ideales para repetir patrones
+          de patrones. ¡Pueden ser muy potentes si se usan correctamente!\n\n---\n\n##
+          **Vocabulario para Saber**\n\n### __Bucles anidados__ - Un bucle dentro
+          de otro bucle"
       courseF_markdown_nestedloops_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **En esta lección...**\n\n### ¿Alguna vez te has preguntado qué
+          pasaría si pones un bucle *dentro de otro bucle*? \n\n### ¡Podría hacerte
+          volver loco!\n\n### Si un bucle normal es bueno repitiendo patrones, ¿en
+          qué crees que sería bueno un bucle dentro de otro bucle? ¡Averigüemos!\n\n---\n\n##
+          **Bloques para saber**\n\n! [](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)"
       courseF_markdown_variables_end:
         content1: Prueba de reducción de la página del libro de texto
         markdown: |-
@@ -7132,6 +7352,17 @@ es-ES:
 
 
 
+        teacher_markdown: |-
+          **¡¡¡Por favor, pida a sus estudiantes que completen esta encuesta!!! **
+
+          * Puede ver los resultados anónimos de la encuesta en el panel de su maestro
+          * Los resultados son vitales para nosotros (code.org) para mantener nuestros cursos y hacer mejoras.
+          * También habrá una encuesta de profesores, donde puede proporcionar su propia opinión, que se le notificará por correo electrónico.
+
+          **Nota:**
+
+          * El botón de esta página redirige a [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Si lo prefiere, puede establecer "Encuesta de post-curso de estudiante" como la unidad actual para su sección en el menú desplegable en el panel del profesor.
       CSD U1 Test:
         title: Ordenadores y resolución de problemas post-proyecto prueba.
       Unit 1 Lesson 1 Overview:
@@ -7171,3 +7402,87 @@ es-ES:
           En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
       outbreak_freeplay_choice:
         display_name: Juego libre
+      CSD U3 Entertainment:
+        teacher_markdown: |-
+          Estos son algunos sitios para que los estudiantes empiecen.  Estos sitios son generalmente apropiados para la escuela, pero el contenido con ellos cambia con frecuencia, por lo que **le sugerimos encarecidamente que revise cada sitio en busca de contenido inapropiado antes de compartirlo con los estudiantes**.
+
+          ## Dentro de la magia - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visión general
+
+          Este sitio se centra en las noticias sobre Disney, pero usted podría sorprenderse por el gran papel que CS juega en todas sus diferentes formas de entretenimiento. Dado que este no es un sitio centrado en CS, deberá usar la función de búsqueda para encontrar artículos relevantes.
+
+          ### Campos relevantes
+
+          * Cine / TV
+          * Animación
+          * Robótica/Animatronics
+          * Juegos
+
+          ## Videos de ruta crítica - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Visión general
+
+          Vídeos con una amplia gama de personas trabajando en diversas áreas de la industria del juego, hablando de lo que hacen.
+
+          ### Campos relevantes
+
+          * Juegos
+          * Animación
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Visión general
+
+          Music Think Tank es un blog dirigido a personas que trabajan en la industria de la música. No es un sitio específico de CS, pero la búsqueda de "ciencias de la computación" o "programación" revelará algunos artículos interesantes.
+
+          ### Campos relevantes
+
+          * Música
+
+          ## Podcast de codificación creativa - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Visión general
+
+          Si bien este podcast no cuenta mucho en el camino de la programación profesional formal (como en, las personas que hacen esto para ganarse la vida), es un gran recurso para ver las variadas maneras en que los aficionados están haciendo entretenimiento con código.
+
+          ### Campos relevantes
+
+          * Todo
+        markdown: |-
+          # Inicio de tu búsqueda
+
+          Para obtener más información sobre cómo las ciencias de la computación y la programación juegan un papel en el entretenimiento, tendrá que hacer algunas investigaciones. Trate de buscar "Ciencias de la computación y &#95;&#95;&#95;&#95;&#95;&#95;" y probar diferentes tipos de entretenimiento como cine, televisión, música, juegos, animación, moda, etc.
+      CSD U5 test:
+        title: Prueba postproyecto de datos y sociedad
+      Prepare for your presentation_2018:
+        markdown: |-
+          # Presentaciones del proyecto
+
+          ¡Es hora de presentar sus proyectos! Su maestro le proporcionará más detalles sobre cómo presentará su trabajo a sus compañeros de clase.
+      CSD U3 Lesson Overview 1:
+        markdown: |-
+          # Visión general
+
+          Se pide a la clase que considere los "problemas" del aburrimiento y la autoexpresión, y que reflexione sobre cómo abordan esos problemas en sus propias vidas. A partir de ahí, explorarán cómo la informática en general, y la programación específicamente, juega un papel en una forma específica de entretenimiento o como un vehículo para la autoexpresión.
+
+
+          ## Recursos
+
+          * [CS in Entertainment - Guía de actividades] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: "* [CS in Entertainment] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))"
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Prueba posterior al proyecto de Animaciones Interactivas y Juegos
+      csd-post-survey-intro-2019:
+        markdown: |-
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          ** ¡Tu opinión y comentarios son importantes para nosotros! ** Los usamos para:
+
+          * entender tu experiencia
+          * realizar mejoras en el curso
+
+          ¡Gracias por dedicarnos tu tiempo para ayudar a que Descubrimientos de CS sea aún mejor!

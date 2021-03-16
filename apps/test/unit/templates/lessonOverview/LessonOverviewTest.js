@@ -160,7 +160,7 @@ describe('LessonOverview', () => {
   it('displays the resources', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ul').length, 2);
+    assert.equal(resourceSection.find('ResourceList').length, 2);
   });
 
   it('displays the introduced code', () => {

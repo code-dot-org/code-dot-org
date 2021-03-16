@@ -978,6 +978,7 @@ ko:
             '"x"': x 좌표
             '"y"': y 좌표
             '"direction"': 움직임 방향
+            '"speed"': 스피드
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} 접촉 {SPRITE2}"
         options:

@@ -928,6 +928,7 @@ nn:
             '"x"': x-posisjon
             '"y"': y-posisjon
             '"direction"': retninga til rørsla
+            '"speed"': fart
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} tar i {SPRITE2}"
         options:
