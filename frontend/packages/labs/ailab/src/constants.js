@@ -194,7 +194,7 @@ export const styles = {
     width: "20%"
   },
 
-  dataDisplayTable: {
+  displayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,
     width: "100%"
@@ -209,7 +209,7 @@ export const styles = {
     backgroundColor: "white"
   },
 
-  dataDisplayHeader: {
+  tableHeader: {
     paddingLeft: 20,
     textAlign: "right",
     position: "sticky",
@@ -240,7 +240,7 @@ export const styles = {
     color: "white"
   },
 
-  dataDisplayCell: {
+  tableCell: {
     paddingLeft: 20,
     textAlign: "right"
   },

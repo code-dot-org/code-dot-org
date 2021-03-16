@@ -27,14 +27,14 @@ class ResultsTable extends Component {
     return (
       <div style={styles.panel}>
         <div style={styles.tableParent}>
-          <table style={styles.dataDisplayTable}>
+          <table style={styles.displayTable}>
             <thead>
               <tr>
                 <th
                   colSpan={featureCount}
                   style={{
                     ...styles.largeText,
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader,
                   }}
                 >
@@ -42,7 +42,7 @@ class ResultsTable extends Component {
                 </th>
                 <th
                   style={{
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader,
                   }}
                 >
@@ -50,7 +50,7 @@ class ResultsTable extends Component {
                 </th>
                 <th
                   style={{
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader,
                   }}
                 >
@@ -63,7 +63,7 @@ class ResultsTable extends Component {
                   colSpan={featureCount}
                   style={{
                     ...styles.largeText,
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader,
                   }}
                 />
@@ -73,7 +73,7 @@ class ResultsTable extends Component {
                   return (
                     <th
                       style={{
-                        ...styles.dataDisplayHeader,
+                        ...styles.tableHeader,
                         backgroundColor: colors.feature,
                         ...styles.resultsTableSecondHeader,
                       }}
@@ -85,7 +85,7 @@ class ResultsTable extends Component {
                 })}
                 <th
                   style={{
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     backgroundColor: colors.label,
                     ...styles.resultsTableSecondHeader,
                   }}
@@ -94,7 +94,7 @@ class ResultsTable extends Component {
                 </th>
                 <th
                   style={{
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     backgroundColor: colors.label,
                     ...styles.resultsTableSecondHeader,
                   }}
@@ -103,7 +103,7 @@ class ResultsTable extends Component {
                 </th>
                 <th
                   style={{
-                    ...styles.dataDisplayHeader,
+                    ...styles.tableHeader,
                     backgroundColor: colors.label,
                     ...styles.resultsTableSecondHeader,
                   }}
@@ -116,30 +116,26 @@ class ResultsTable extends Component {
                   <tr key={index}>
                     {examples.map((example, i) => {
                       return (
-                        <td style={styles.dataDisplayCell} key={i}>
+                        <td style={styles.tableCell} key={i}>
                           {example}
                         </td>
                       );
                     })}
-                    <td style={styles.dataDisplayCell}>
+                    <td style={styles.tableCell}>
                       {this.props.accuracyCheckPredictedLabels[index]}
                     </td>
-                    <td style={styles.dataDisplayCell}>
+                    <td style={styles.tableCell}>
                       {this.props.accuracyCheckLabels[index]}
                     </td>
                     {this.props.accuracyGrades[index] ===
                       ResultsGrades.CORRECT && (
-                      <td
-                        style={{ ...styles.ready, ...styles.dataDisplayCell }}
-                      >
+                      <td style={{ ...styles.ready, ...styles.tableCell }}>
                         &#x2713;
                       </td>
                     )}
                     {this.props.accuracyGrades[index] ===
                       ResultsGrades.INCORRECT && (
-                      <td
-                        style={{ ...styles.error, ...styles.dataDisplayCell }}
-                      >
+                      <td style={{ ...styles.error, ...styles.tableCell }}>
                         &#10006;
                       </td>
                     )}
