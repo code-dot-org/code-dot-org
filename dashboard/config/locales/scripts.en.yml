@@ -21171,7 +21171,7 @@ en:
               key: If/Else with Bee
               name: If/Else with Bee
               description_student: 'Now that you understand conditionals, it''s time to program Bee to use them when collecting honey and nectar. '
-              description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.
+              description_teacher: Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with **conditionals**, allowing them to write code that functions differently depending on the specific conditions the program encounters.
             While Loops with the Farmer:
               key: While Loops with the Farmer
               name: While Loops with the Farmer
@@ -21180,13 +21180,13 @@ en:
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
-              description_student: Here you will learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_student: Here you will use conditionals in the world of Minecraft.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point!
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
               description_student: You can do some amazing things when you use `until` loops!
-              description_teacher: In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.
+              description_teacher: In this lesson, students will learn about `until` **loops**. Students will build programs that have the main character **repeat** actions `until` they reach their desired stopping point.
             Harvesting with Conditionals:
               key: Harvesting with Conditionals
               name: Harvesting with Conditionals
@@ -21196,17 +21196,17 @@ en:
               key: Functions in Minecraft
               name: Functions in Minecraft
               description_student: Can you figure out how to use functions for the most efficient code?
-              description_teacher: Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!
+              description_teacher: Students will begin to understand how **functions** can be helpful in this fun and interactive _Minecraft_ adventure!
             Functions with Harvester:
               key: Functions with Harvester
               name: Functions with Harvester
               description_student: Functions will save you lots of work as you help the farmer with her harvest!
-              description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
+              description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use **functions** to harvest crops in Harvester. This lesson will push students to use **functions** in the new ways by combining them with `while` loops and `if / else` statements.
             Functions with Artist:
               key: Functions with Artist
               name: Functions with Artist
               description_student: Make complex drawings more easily with functions!
-              description_teacher: Students will be introduced to using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.
+              description_teacher: Students will be using **functions** with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting **functions** by calling one **function** from inside another.
             Variables with Artist:
               key: Variables with Artist
               name: Variables with Artist
@@ -21226,7 +21226,7 @@ en:
               key: For Loops with Bee
               name: For Loops with Bee
               description_student: Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!
-              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will walk through an introduction to `for` loops so they can more effectively solve complicated problems.
             For Loops with Artist:
               key: For Loops with Artist
               name: For Loops with Artist
