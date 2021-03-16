@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-10 21:57:31 UTC",
+    "serialized_at": "2021-03-16 19:27:29 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -334,9 +334,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
+        "overview": "In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
         "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.",
-        "purpose": "In this introduction to _nested loops_, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these _nested loops_. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces _nested loops_, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads to plenty of practice for students to solidify and build on their understanding of looping in programming.",
+        "purpose": "In this introduction to **nested loops**, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* **repeated** patterns to develop these **nested loops**. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and too complex to write out the long way. After a video introduces **nested loops**, students are shown an example and asked to predict what will happen when a **loop** is put inside of another **loop**. This progression leads to plenty of practice for students to solidify and build on their understanding of **looping** in programming.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -375,8 +375,8 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
-        "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.",
+        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
+        "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce **conditionals**. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a journal."
       },
@@ -2918,7 +2918,7 @@
       "key": "07ca6e20-a059-4b67-b099-6a90c6d7f4ab",
       "position": 1,
       "properties": {
-        "description": "Briefly review with the class what loops are and why we use them.\n\n - *What do loops do?*\n    - Loops repeat a set of commands. (see vocabulary on command if students don't recognize it)\n - *How do we use loops?*\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n*If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!*\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
+        "description": "Briefly review with the class what **loops** are and why we use them.\n\n - _What do **loops** do?_\n    - **Loops** **repeat** a set of **commands**.\n - _How do we use **loops**?_\n    - We use **loops** to create a pattern made of **repeated** actions.\n\nTell the class that they will now be doing something super cool: using **loops** inside **loops**. Ask the class to predict what kinds of things we would be using a **loop** inside of a **loop** for.\n\n_If a **loop** **repeats** a pattern, then **looping** a **loop** would **repeat** a pattern of patterns!_\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2953,7 +2953,7 @@
       "key": "77b85e56-dc72-45d6-8d17-cd2073e74560",
       "position": 3,
       "properties": {
-        "progression_name": "Nested Loops with the Bee"
+        "progression_name": "Video: Nested Loops with the Bee"
       },
       "seeding_key": {
         "activity_section.key": "77b85e56-dc72-45d6-8d17-cd2073e74560",
@@ -3175,7 +3175,7 @@
       "properties": {
         "progression_name": "Practice",
         "name": "Looking Ahead with Minecraft",
-        "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
+        "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663",
@@ -3205,22 +3205,11 @@
       }
     },
     {
-      "key": "9564d8f7-b499-4853-9dfa-d8ca85212455",
-      "position": 4,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
-      },
-      "seeding_key": {
-        "activity_section.key": "9564d8f7-b499-4853-9dfa-d8ca85212455",
-        "lesson_activity.key": "c351a38f-ac03-4bc3-b2f1-8b5f06903317"
-      }
-    },
-    {
       "key": "3cb11179-29ea-4362-b237-a509e3e0943f",
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "3cb11179-29ea-4362-b237-a509e3e0943f",
@@ -3231,7 +3220,7 @@
       "key": "e70f9030-b24c-4a28-ae86-29a3c9d0c24f",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the _Minecraft_ environment, [here are some links to other _Minecraft_ games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "e70f9030-b24c-4a28-ae86-29a3c9d0c24f",
@@ -5964,7 +5953,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Nested Loops with the Bee",
+        "progression": "Video: Nested Loops with the Bee",
         "level_keys": [
           "courseD_video_nestedLoops_2021"
         ]
@@ -11153,6 +11142,9 @@
         "vocabulary.key": "until"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {
