@@ -26,12 +26,11 @@ const MOBILE_PORTRAIT_WIDTH = 600;
 function getInstructionsDefaults() {
   var instructions = {
     selectDataset: 'Select the data set you would like to use.',
-    dataDisplayLabel:
-      'Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict. Choose one column to predict.',
+    dataDisplayLabel: 'Choose one column to predict.',
     dataDisplayFeatures:
-      'Choose one or more columns that will do the predicting.',
+      'Choose one or more columns as inputs to help make the prediction.',
     selectTrainer: 'Set up the training.',
-    trainModel: 'Train the model.',
+    trainModel: 'Your model is being trained.',
     results: 'Review the results.',
     saveModel: 'Save the trained model for use in App Lab.'
   };
