@@ -21,6 +21,7 @@ import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
+import DynamicInstructions from './DynamicInstructions';
 import HeightResizer from './HeightResizer';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
@@ -518,22 +519,30 @@ class TopInstructions extends Component {
         />
       );
     } else if (tabSelected === TabType.INSTRUCTIONS) {
-      return (
-        <Instructions
-          ref={ref => this.setInstructionsRef(ref)}
-          longInstructions={longInstructions}
-          dynamicInstructions={dynamicInstructions}
-          dynamicInstructionsKey={dynamicInstructionsKey}
-          onResize={this.adjustMaxNeededHeight}
-          inTopPane
-          isBlockly={isBlockly}
-          noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
-          setInstructionsRenderedHeight={height => {
-            this.props.setInstructionsRenderedHeight(height);
-            this.props.setAllowInstructionsResize(false);
-          }}
-        />
-      );
+      if (dynamicInstructions) {
+        return (
+          <DynamicInstructions
+            ref={ref => this.setInstructionsRef(ref)}
+            dynamicInstructions={dynamicInstructions}
+            dynamicInstructionsKey={dynamicInstructionsKey}
+            setInstructionsRenderedHeight={height => {
+              this.props.setInstructionsRenderedHeight(height);
+              this.props.setAllowInstructionsResize(false);
+            }}
+          />
+        );
+      } else {
+        return (
+          <Instructions
+            ref={ref => this.setInstructionsRef(ref)}
+            longInstructions={longInstructions}
+            onResize={this.adjustMaxNeededHeight}
+            inTopPane
+            isBlockly={isBlockly}
+            noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+          />
+        );
+      }
     }
   }
 
