@@ -1,9 +1,9 @@
-/* global appOptions */
 import PropTypes from 'prop-types';
 import React from 'react';
 
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+import GameButtons from '@cdo/apps/templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
+
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import SaveImageButton from './SaveImageButton';
 import msg from '@cdo/locale';
@@ -15,12 +15,13 @@ var styles = {
 };
 
 var ArtistVisualizationColumn = function(props) {
-  const showSaveImageButton = !!appOptions.level.enableDownloadImage;
   return (
     <span>
       <ProtectedVisualizationDiv />
       <GameButtons>
-        {showSaveImageButton && <SaveImageButton />}
+        {props.showSaveImageButton && (
+          <SaveImageButton displayCanvas={props.displayCanvas} />
+        )}
         <div id="slider-cell">
           <svg id="slider" version="1.1" width="150" height="50">
             {/* Slow icon. */}
@@ -73,6 +74,8 @@ var ArtistVisualizationColumn = function(props) {
 
 ArtistVisualizationColumn.propTypes = {
   showFinishButton: PropTypes.bool.isRequired,
+  showSaveImageButton: PropTypes.bool.isRequired,
+  displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired,
   iconPath: PropTypes.string.isRequired
 };
 

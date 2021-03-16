@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import * as imageUtils from '@cdo/apps/imageUtils';
 import color from '@cdo/apps/util/color';
 
@@ -27,20 +28,20 @@ const styles = {
 };
 
 class SaveImageButton extends React.Component {
+  static propTypes = {
+    displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired
+  };
+
   save = async () => {
-    const canvasEl = document.getElementById('display');
-    const blob = await imageUtils.canvasToBlob(canvasEl);
-    const download = document.createElement('a');
-    download.href = URL.createObjectURL(blob);
-    download.download = 'image.png';
-    download.click();
+    const blob = await imageUtils.canvasToBlob(this.props.displayCanvas);
+    imageUtils.downloadBlobAsPng(blob);
   };
 
   render() {
     return (
       <button type="button" style={styles.button} onClick={this.save}>
         <i style={styles.icon} className="fa fa-fw fa-camera" />
-        {msg.save()}
+        {i18n.save()}
       </button>
     );
   }
