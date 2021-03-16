@@ -37,8 +37,15 @@ const styles = {
     }
   },
   helpTabs: {
-    paddingTop: 6,
+    paddingTop: 6
+  },
+  helpTabsLtr: {
+    float: 'left',
     paddingLeft: 30
+  },
+  helpTabsRtl: {
+    float: 'right',
+    paddingRight: 30
   },
   collapserIcon: {
     showHideButton: {
@@ -135,7 +142,12 @@ function TopInstructionsHeader(props) {
             isMinecraft={isMinecraft}
           />
         )}
-        <div style={{...styles.helpTabs, float: isRtl ? 'right' : 'left'}}>
+        <div
+          style={{
+            ...styles.helpTabs,
+            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr)
+          }}
+        >
           <InstructionsTab
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
