@@ -17071,7 +17071,7 @@ id:
             Loops with the Artist:
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
-              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+              description_teacher: 'Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.'
             Nested Loops in the Maze:
               key: Nested Loop dalam Labirin
               name: Nested Loop dalam Labirin
@@ -17135,7 +17135,6 @@ id:
               description_student: Pelajari cara memprogram perilaku sprite Anda sendiri!
               description_teacher: Di sini, murid akan menggunakan Sprite Lab untuk membuat perilaku kustom mereka sendiri.
             Virtual Pet:
-              name: Piaraan Virtual
               description_student: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
               description_teacher: Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!
             End of Course Project:
@@ -17147,21 +17146,27 @@ id:
               name: Mendesain untuk Aksesibilitas
               description_student: 'Dalam pelajaran ini, murid akan belajar tentang aksesibilitas dan nilai empati melalui penggodokan (curah gugasan) dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
               description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang aksesibilitas dan nilai empati melalui penggodokan (curah gugasan) dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+            lesson-6:
+              name: Memperkenalkan Sprite Lab
+            lesson-8:
+              name: Sprite tengah Beraksi
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_variables:
-              display_name: variabel
+              display_name: For Loop
             csf_for_loops:
               display_name: For Loop
             csf_sprites:
-              display_name: Sprites
+              display_name: Dampak dari Komputasi
             end_of_course_project:
               display_name: Proyek Akhir Kursus
             lessonGroup-8:
-              display_name: Dampak dari Komputasi
+              display_name: variabel
+            lessonGroup-9:
+              display_name: Hapus
           student_description: Pelajari cara menggunakan berbagai jenis loop, event, function, dan conditional. Selidiki berbagai teknik pemecahan masalah dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di bagian kedua kursus ini, rancang dan buat proyek capstone yang Anda bagikan ke teman-teman dan keluarga.
         express-2021:
           title: Kursus Kilat (2020)
@@ -17177,7 +17182,7 @@ id:
             Programming with Angry Birds:
               key: Pemrograman dengan Angry Birds
               name: Pemrograman dengan Angry Birds
-              description_student: Pelajari tentang urutan dan algorithm dengan Angry Birds.
+              description_student: Buat program untuk membantu Angry Bird bergerak melintasi labirin.
               description_teacher: Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.
             Debugging with Scrat:
               key: Debugging dengan Scrat
@@ -17216,7 +17221,7 @@ id:
               description_teacher: Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!
             'Looking Ahead with Minecraft ':
               name: Melihat ke depan
-              description_student: Hindari lava! Di sini Anda akan belajar tentang conditional di dunia Minecraft.
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang conditional di dunia Minecraft.
               description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code, bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide yang sudah mereka pelajari sampai titik ini, sekaligus sedikit belajar tentang conditional!
             If/Else with Bee:
               key: If/Else dengan Lebah
@@ -17227,7 +17232,6 @@ id:
               key: While Loop dengan Petani
               name: While Loop dengan Petani
               description_student: 'Loop sangat membantu dalam coding. Pelajaran ini akan mengajari Anda tentang jenis loop baru: while loop!'
-              description_teacher: "Pada saat murid sampai di pelajaran ini, mereka mestinya sudah banyak berlatih menggunakan loop `repeat`, jadi sekarang saatnya mencampur materi pelajaran.  \\r\n\\r\n_While loops_ adalah loop yang terus mengulang-ulang perintah pada saat kondisi terpenuhi. `While` loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah perlu diulang, tetapi dia tahu kondisi apa yang harus benar agar loop bisa terus mengulang. Misalnya, murid akan bekerja mengisi lubang dan menggali kotoran di Petani. Mereka tidak mengetahui ukuran lubang atau ketinggian gunung kotoran, tetapi murid tahu mereka harus terus mengisi lubang dan menggali kotoran sepanjang tanah belum rata."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditional dalam Minecraft: Perjalanan Air'
               name: 'Conditional dalam Minecraft: Perjalanan Air'
@@ -17306,6 +17310,10 @@ id:
               key: Proyek Akhir Kursus
               name: Proyek Akhir Kursus
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+            lesson-1:
+              name: Pesta Tari
+              description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri.
+              description_teacher: Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -17390,6 +17398,8 @@ id:
               name: Memperkenalkan Sprite Lab
             Sprites in Action:
               name: Sprite tengah Beraksi
+            introducing-spritelab:
+              name: Memperkenalkan Sprite Lab
           lesson_groups:
             ramp_up:
               display_name: Pendahuluan
@@ -17399,6 +17409,8 @@ id:
               display_name: variabel
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: variabel
         csd4-preview-2021:
           description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab, dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan masukan dan mendorong pengulangan lebih lanjut.
           description_short: "  Pelajari cara merancang sebuah program yang memenuhi kebutuhan pengguna Anda."

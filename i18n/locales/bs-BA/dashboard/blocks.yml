@@ -829,6 +829,7 @@ bs:
             '"scale"': veličina
             '"rotation"': rotacija
             '"direction"': smijer kretanja
+            '"speed"': brzina
       gamelab_checkTouching:
         options:
           CONDITION:

@@ -993,6 +993,7 @@ zh-TW:
             '"x"': x 座標
             '"y"': y 座標
             '"direction"': 移動方向
+            '"speed"': 速度
       gamelab_checkTouching:
         text: 角色 {CONDITION} {SPRITE1} 碰到 {SPRITE2}
         options:

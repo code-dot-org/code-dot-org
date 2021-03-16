@@ -8350,7 +8350,7 @@ sk:
             Loops with the Artist:
               key: Cykly s umelcom
               name: Kreslenie s cyklami
-              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
+              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. '
             Nested Loops in the Maze:
               name: Vnorené cykly v bludisku
             The Power of Words:
@@ -8392,26 +8392,30 @@ sk:
               description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením na vytvorenie vlastnej kresby.
             Editing Behaviors:
               name: Správania v Sprite Labe
-            Virtual Pet:
-              name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
+            lesson-6:
+              name: Predstavenie Sprite Labu
+            lesson-8:
+              name: Postavy v akcii
           lesson_groups:
             ramp_up:
               display_name: Príprava
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_variables:
-              display_name: Premenné
+              display_name: Cykly "For"
             csf_for_loops:
               display_name: Cykly "For"
             csf_sprites:
-              display_name: Objekt "sprite"
+              display_name: Vplyv Informatiky
             end_of_course_project:
               display_name: Záverečný projekt
             lessonGroup-8:
-              display_name: Vplyv Informatiky
+              display_name: Premenné
+            lessonGroup-9:
+              display_name: odstráň
         express-2021:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
@@ -8514,6 +8518,8 @@ sk:
               key: Záverečný projekt
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt.
+            lesson-1:
+              name: Tanečná Párty
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -8593,6 +8599,8 @@ sk:
               name: Predstavenie Sprite Labu
             Sprites in Action:
               name: Postavy v akcii
+            introducing-spritelab:
+              name: Predstavenie Sprite Labu
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -8602,6 +8610,8 @@ sk:
               display_name: Premenné
             Sprites:
               display_name: Objekt "sprite"
+            variables:
+              display_name: Premenné
         csd4-preview-2021:
           lessons:
             Analysis of Design:

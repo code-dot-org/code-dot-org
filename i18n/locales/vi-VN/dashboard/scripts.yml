@@ -7232,9 +7232,13 @@ vi:
             csf_digcit:
               display_name: Công dân số
             csf_variables:
-              display_name: Các biến
+              display_name: Cho vòng lặp
             csf_for_loops:
               display_name: Cho vòng lặp
+            lessonGroup-8:
+              display_name: Các biến
+            lessonGroup-9:
+              display_name: xóa
         express-2021:
           lessons:
             Dance Party:
@@ -7245,6 +7249,8 @@ vi:
               name: Gỡ lỗi với Scrat
             'Looking Ahead with Minecraft ':
               name: Nhìn về phía trước
+            lesson-1:
+              name: Bữa Tiệc Khiêu Vũ
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7286,6 +7292,8 @@ vi:
             outbreak:
               display_name: Mô phỏng dịch bệnh bùng phát
             lessonGroup-3:
+              display_name: Các biến
+            variables:
               display_name: Các biến
         csd4-preview-2021:
           lessons:

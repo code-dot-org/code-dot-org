@@ -26,8 +26,10 @@ pl:
       buttonWidth: szerokość przycisku
       cat_score: wynik kota
       cats: koty
+      centerToPadLeft: środek do padu w lewo 
       choice: wybór
       circ: okrąg
+      codeName: kryptonim
       color: kolor
       controllerHeight: kontroler wysokości
       controllerWidth: kontroler szerokości
@@ -61,8 +63,10 @@ pl:
       name: nazwa
       nectar: nektar
       nectars: nektary
+      padYOffset: padYOffset
       player_score: wynik gracza
       points: punkty
+      punchLine: linia ciosów
       random: losowy
       red1: czerwony1
       red2: czerwony2
@@ -72,6 +76,7 @@ pl:
       score: wynik
       screenHeight: wysokość ekranu
       screenWidth: szerokość ekranu
+      set sides: ustaw boki
       shout: krzyczeć
       sides: boki
       size: rozmiar

@@ -3835,8 +3835,8 @@
           "courseC_artist_loopsPrePre1a_b": "Para avanzar 50 píxeles , utiliza este bloque :! \\[] (Https\\://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png)"
         },
         "courseC_artist_prog2": {
-          "courseC_artist_prog2_a": "Si utiliza el bloque para hacerme 'avanzar 100 píxeles', sacaré una línea automáticamente.",
-          "courseC_artist_prog2_b": "¿Tienes problemas girando la esquina? Usa el bloque `girar a la derecha 90 grados`."
+          "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",
+          "courseC_artist_prog2_b": "¿Tienes problemas para girar en la esquina? Utiliza el bloque <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml>."
         },
         "courseC_artist_prog2_2018": {
           "courseC_artist_prog2_a": "*\"Si utilizas el bloque <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml>, dibujaré una línea.\"*",

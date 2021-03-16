@@ -2707,9 +2707,13 @@ lt:
             csf_digcit:
               display_name: Virtuali pilietybė
             csf_variables:
-              display_name: Kintamieji
+              display_name: Kartojimas
             csf_for_loops:
               display_name: Kartojimas
+            lessonGroup-8:
+              display_name: Kintamieji
+            lessonGroup-9:
+              display_name: ištrink
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2733,6 +2737,8 @@ lt:
             ramp_up:
               display_name: Įvadas
             lessonGroup-3:
+              display_name: Kintamieji
+            variables:
               display_name: Kintamieji
         ai-unit-pilot:
           lessons:
