@@ -40,6 +40,7 @@ module Services
     # Returns the key which can be used to create the reference syntax for the
     # given Vocabulary object.
     def self.build_vocab_key(vocab)
+      return unless vocab&.course_version&.course_offering.present?
       [vocab.key, vocab.course_version.course_offering.key, vocab.course_version.key].join('/')
     end
 
@@ -72,6 +73,7 @@ module Services
     # Returns the key which can be used to create the reference syntax for the
     # given Resource object.
     def self.build_resource_key(resource)
+      return unless resource&.course_version&.course_offering.present?
       [resource.key, resource.course_version.course_offering.key, resource.course_version.key].join('/')
     end
 
