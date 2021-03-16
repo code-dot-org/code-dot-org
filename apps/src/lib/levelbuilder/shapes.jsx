@@ -75,6 +75,7 @@ export const activityShape = PropTypes.shape({
 
 export const resourceShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
@@ -87,6 +88,7 @@ export const resourceShape = PropTypes.shape({
 export const vocabularyShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   word: PropTypes.string.isRequired,
   definition: PropTypes.string.isRequired,
   commonSenseMedia: PropTypes.bool.isRequired
