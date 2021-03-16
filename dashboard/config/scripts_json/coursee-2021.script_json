@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-15 21:04:56 UTC",
+    "serialized_at": "2021-03-16 14:21:56 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -159,7 +159,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. ",
+        "overview": "Students will use events to make sprites move around the screen and change backgrounds based on user input. ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
         "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
@@ -3961,7 +3961,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "Dance Party Freeplay_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
