@@ -20728,7 +20728,7 @@ en:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             Conditionals with Cards:
               key: Conditionals with Cards
               name: Conditionals with Cards
@@ -20781,8 +20781,8 @@ en:
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
             lesson-6:
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             lesson-5:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
@@ -21156,7 +21156,7 @@ en:
               key: Nested Loops in Maze
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             Snowflakes with Anna and Elsa:
               key: Snowflakes with Anna and Elsa
               name: Snowflakes with Anna and Elsa
@@ -21165,8 +21165,8 @@ en:
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
