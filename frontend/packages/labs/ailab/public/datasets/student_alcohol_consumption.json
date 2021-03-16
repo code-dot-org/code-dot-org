@@ -11,7 +11,7 @@
       "description": "The student's sex (binary)."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "age",
       "description": "The student's age."
     },
@@ -61,17 +61,17 @@
       "description": "Student's guardian."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "traveltime",
       "description": "Student's travel time to school, in hours."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "studytime",
       "description": "Student's weekly study time, 1 to 10 hours."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "failures",
       "description": "Number of past class failures (0 to 4)."
     },
@@ -146,22 +146,22 @@
       "description": "Health status: 1 (very bad) to 5 (very good)"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "absences",
       "description": "Number of school absences."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "G1",
       "description": "Grade for the first semester."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "G2",
       "description": "Grade for the second semester."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "G3",
       "description": "Final grade"
     }

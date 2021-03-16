@@ -1,6 +1,6 @@
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
-  CONTINUOUS: "numerical"
+  NUMERICAL: "numerical"
 };
 
 export const MLTypes = {
@@ -20,6 +20,8 @@ export const TestDataLocations = {
   END: "end",
   RANDOM: "random"
 };
+
+export const ModelNameMaxLength = 150;
 
 export const saveMessages = {
   success: "Your model was saved!",
@@ -420,5 +422,9 @@ export const styles = {
     padding: 6,
   },
 
-  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" }
+  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
+
+  saveInputsWidth: {
+    width: "95%"
+  }
 };

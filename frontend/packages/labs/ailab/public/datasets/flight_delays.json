@@ -20,7 +20,7 @@
     },
     {
       "id": "DayofMonth",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Day of the month of the flight"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "id": "DepTime",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Departure time (in military time)"
     },
     {

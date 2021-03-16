@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
-import { styles, saveMessages } from "../constants";
+import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -15,24 +15,40 @@ class SaveModel extends Component {
     saveStatus: PropTypes.string
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showColumnDescriptions: false
+    };
+  }
+
+  toggleColumnDescriptions = () => {
+    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions})
+  };
+
   handleChange = (event, field, isColumn) => {
     this.props.setTrainedModelDetail(field, event.target.value, isColumn);
   };
 
-  getFields = () => {
+  getColumnFields = () => {
     var fields = [];
 
-    fields.push({ id: "name", text: "What will you name the model?" });
-
     for (const columnDescription of this.props.columnDescriptions) {
+      const columnType = columnDescription.id === this.props.labelColumn
+        ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
-        text: "Description for: " + columnDescription.id,
+        text: `Description for: ${columnDescription.id} (${columnType})`,
         answer: columnDescription.description
       });
     }
+    return fields;
+  }
 
+  getUsesFields = () => {
+    var fields = [];
     fields.push({
       id: "potentialUses",
       text: "How can this model be used?",
@@ -41,64 +57,96 @@ class SaveModel extends Component {
     fields.push({
       id: "potentialMisuses",
       text: "How can this model be potentially misused?",
+      description: "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
       placeholder: "Write a brief description."
-    });
-    fields.push({
-      id: "identifySubgroup",
-      type: "checkbox",
-      text: "Has this model been trained on data that can identify a subgroup?"
-    });
-    fields.push({
-      id: "representSubgroup",
-      type: "checkbox",
-      text: "Have we ensured the data has adequate representation of subgroups?"
-    });
-    fields.push({
-      id: "decisionsLife",
-      type: "checkbox",
-      text:
-        "Could this model be used to inform decisions central to human life?"
     });
 
     return fields;
   };
 
   render() {
+    const nameField = {
+      id: "name",
+      text: "What will you name the model? (required)"
+    };
+
+    const arrowIcon = this.state.showColumnDescriptions
+      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+
+    const columnCount = this.getColumnFields().length;
+
     return (
       <div style={styles.panel}>
         <div style={styles.largeText}>Model Details</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
-            {this.getFields().map(field => {
-              return (
-                <div key={field.id} style={styles.cardRow}>
-                  {field.type === "checkbox" && (
-                    <input
-                      type="checkbox"
-                      onChange={event => this.handleChange(event, field.id)}
-                    />
-                  )}
-
-                  <label>{field.text}</label>
-
-                  {field.type !== "checkbox" && !field.answer && (
-                    <div>
-                      <textarea
-                        rows="2"
-                        onChange={event =>
-                          this.handleChange(event, field.id, field.isColumn)
-                        }
-                        placeholder={field.placeholder}
-                      />
-                    </div>
-                  )}
-
-                  {field.type !== "checkbox" && field.answer && (
-                    <div>{field.answer}</div>
-                  )}
+            <div key={nameField.id} style={styles.cardRow}>
+              <label>{nameField.text}</label>
+              <div>
+                <input
+                  onChange={event =>
+                    this.handleChange(event, nameField.id, nameField.isColumn)
+                  }
+                  maxLength={ModelNameMaxLength}
+                />
+              </div>
+            </div>
+            <div>
+              <span onClick={this.toggleColumnDescriptions}>
+                <i className={arrowIcon}/>
+                <span> Column Descriptions ({columnCount})</span>
+              </span>
+              {this.state.showColumnDescriptions && (
+                <div>
+                  {this.getColumnFields().map(field => {
+                    return (
+                      <div key={field.id} style={styles.cardRow}>
+                        <label>{field.text}</label>
+                        {!field.answer && (
+                          <div>
+                            <textarea
+                              rows="1"
+                              onChange={event =>
+                                this.handleChange(event, field.id, field.isColumn)
+                              }
+                              placeholder={field.placeholder}
+                            />
+                          </div>
+                        )}
+                        {field.answer && (
+                          <div>{field.answer}</div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+              )}
+            </div>
+            <div>
+              {this.getUsesFields().map(field => {
+                return (
+                  <div key={field.id} style={styles.cardRow}>
+                    <label>{field.text}</label>
+                    <div>{field.description}</div>
+                    {!field.answer && (
+                      <div>
+                        <textarea
+                          rows="4"
+                          onChange={event =>
+                            this.handleChange(event, field.id, field.isColumn)
+                          }
+                          placeholder={field.placeholder}
+                          style={styles.saveInputsWidth}
+                        />
+                      </div>
+                    )}
+                    {field.answer && (
+                      <div>{field.answer}</div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div>
@@ -117,6 +165,7 @@ export default connect(
   state => ({
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
+    labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
     saveStatus: state.saveStatus
   }),

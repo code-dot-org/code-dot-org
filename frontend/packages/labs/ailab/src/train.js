@@ -24,7 +24,7 @@ export const availableTrainers = {
       "Uses the Support Vector Machine algorithm to classify an example as one of two options.",
     mlType: MLTypes.CLASSIFICATION,
     binary: true,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
     labelType: ColumnTypes.CATEGORICAL
   },
   knnClassify: {
@@ -33,7 +33,7 @@ export const availableTrainers = {
       "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
     mlType: MLTypes.CLASSIFICATION,
     binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
     labelType: ColumnTypes.CATEGORICAL
   },
   knnRegress: {
@@ -42,8 +42,8 @@ export const availableTrainers = {
       "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
     mlType: MLTypes.REGRESSION,
     binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.CONTINUOUS],
-    labelType: ColumnTypes.CONTINUOUS
+    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
+    labelType: ColumnTypes.NUMERICAL
   }
 };
 
@@ -127,7 +127,7 @@ const buildOptionNumberKeysByFeature = state => {
 /* For feature columns that store categorical data, looks up the value
   associated with a row's specific option for a given feature; otherwise
   returns the option converted to an integer for feature columns that store
-  continuous data.
+  numerical data.
   @param {object} row, entry from the dataset
   {
     labelColumn: option,
