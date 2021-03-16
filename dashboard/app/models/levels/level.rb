@@ -79,7 +79,7 @@ class Level < ApplicationRecord
     hint_prompt_attempts_threshold
     short_instructions
     long_instructions
-    custom_instructions
+    dynamic_instructions
     rubric_key_concept
     rubric_performance_level_1
     rubric_performance_level_2
