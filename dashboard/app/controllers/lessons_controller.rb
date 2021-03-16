@@ -17,12 +17,13 @@ class LessonsController < ApplicationController
   # GET /s/script-name/lessons/1
   def show
     script = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless script.is_migrated && can?(:read, script)
+    return render :forbidden unless script.is_migrated
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
 
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
   end
@@ -30,12 +31,13 @@ class LessonsController < ApplicationController
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans && can?(:read, script)
+    return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
+    return render :forbidden unless can?(:read, @lesson)
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan
   end
