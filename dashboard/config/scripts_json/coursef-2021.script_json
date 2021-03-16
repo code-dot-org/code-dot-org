@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-15 20:33:44 UTC",
+    "serialized_at": "2021-03-16 00:48:45 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -2447,7 +2447,7 @@
       "key": "fcaf009c-58ce-43f6-bb24-dfdae991fdd2",
       "position": 1,
       "properties": {
-        "description": "###Providing Energy for your Virtual Pet (60-90 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Science**\n\n[Providing Energy for your Virtual Pet](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) is an optional activity aligned to Common Core ELA and Next Generation Science Standards, written by our teacher community. Students will create a scientific model that shows how their virtual pet will receive the energy it needs to survive. \n\n*Standards Addressed:*\n\n- **CCSS.ELA.RI.5.7:** Draw on information from multiple print or digital sources, demonstrating the ability to locate an answer to a question quickly or to solve a problem efficiently. \n\n- **CCSS.ELA.RI.5.9:** Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably. \n\n- **5- PS3-1:** Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun. \n\n- **5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment \n\n- **SL.5.5:** Include multimedia components (e.g., graphics, sound) and visual displays in presentations when appropriate to enhance the development of main ideas or themes. \n"
+        "description": "###Providing Energy for your Virtual Pet (60-90 minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Computer Science + English Language Arts + Science**\n\n[Providing Energy for your Virtual Pet](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) is an optional activity aligned to Common Core ELA and Next Generation Science Standards, written by our teacher community. Students will create a scientific model that shows how their virtual pet will receive the energy it needs to survive. \n\n*Standards Addressed:*\n\n- **CCSS.ELA.RI.5.7:** Draw on information from multiple print or digital sources, demonstrating the ability to locate an answer to a question quickly or to solve a problem efficiently. \n\n- **CCSS.ELA.RI.5.9:** Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably. \n\n- **5- PS3-1:** Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun. \n\n- **5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment \n\n- **SL.5.5:** Include multimedia components (e.g., graphics, sound) and visual displays in presentations when appropriate to enhance the development of main ideas or themes. \n"
       },
       "seeding_key": {
         "activity_section.key": "fcaf009c-58ce-43f6-bb24-dfdae991fdd2",
@@ -5218,7 +5218,7 @@
       "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration",
         "level_keys": [
@@ -5244,7 +5244,7 @@
       "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5270,7 +5270,7 @@
       "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5296,7 +5296,7 @@
       "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5322,7 +5322,7 @@
       "chapter": 24,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5348,7 +5348,7 @@
       "chapter": 25,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5374,7 +5374,7 @@
       "chapter": 26,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -5400,7 +5400,7 @@
       "chapter": 27,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
@@ -7013,7 +7013,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_story"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7036,7 +7039,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_setup"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7059,7 +7065,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_events"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7082,7 +7091,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_data"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7105,7 +7117,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_masks"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7128,7 +7143,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_chance"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7151,7 +7169,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_more chance"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7174,7 +7195,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_modify_chance"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7197,7 +7221,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Outbreak"
+        "progression": "Outbreak",
+        "level_keys": [
+          "contagion_vaccine"
+        ]
       },
       "named_level": null,
       "bonus": false,

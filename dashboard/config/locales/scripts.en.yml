@@ -20595,7 +20595,7 @@ en:
               key: Programming in Collector
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential **algorithms** to get _Laurel_ to pick up treasure as she walks along a path.
             Programming in Artist:
               key: Programming in Artist
               name: Creating Art with Code
@@ -20614,8 +20614,8 @@ en:
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
-              description_student: 'Help BB-8 through mazes using loops! '
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.
+              description_student: 'Help _BB-8_ through mazes using loops! '
+              description_teacher: Building on the concept of **repeating** instructions from "Getting Loopy," this stage will have students using **loops** to help _BB-8_ traverse a maze more efficiently than before.
             Loops in Harvester:
               key: Loops in Harvester
               name: Harvesting Crops with Loops
@@ -20860,7 +20860,7 @@ en:
               key: Alien Dance Party with Sprite Lab
               name: Alien Dance Party with Sprite Lab
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. '
+              description_teacher: 'Students will use events to make sprites move around the screen and change backgrounds based on user input. '
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
@@ -21125,8 +21125,8 @@ en:
             Programming with Angry Birds:
               key: Programming with Angry Birds
               name: Programming with Angry Birds
-              description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_student: Learn about sequences and algorithms with _Angry Birds_.
+              description_teacher: Using characters from the game _Angry Birds_, students will develop sequential **algorithms** to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear **sequence**, making them move straight, turn left, or turn right.
             Debugging with Scrat:
               key: Debugging with Scrat
               name: Debugging with Scrat
@@ -21136,7 +21136,7 @@ en:
               key: Collecting Treasure with Laurel
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
             Creating Art with Code:
               key: Creating Art with Code
               name: Creating Art with Code
@@ -21145,13 +21145,13 @@ en:
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
-              description_student: 'Help BB-8 through mazes using loops! '
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.
+              description_student: 'Help _BB-8_ through mazes using loops! '
+              description_teacher: This stage will have students using **loops** to help _BB-8_ traverse a maze efficiently.
             Sticker Art with Loops:
               key: Sticker Art with Loops
               name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             Nested Loops in Maze:
               key: Nested Loops in Maze
               name: Nested Loops in Maze
@@ -21231,7 +21231,7 @@ en:
               key: For Loops with Artist
               name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.
             Swimming Fish in Sprite Lab:
               key: Swimming Fish in Sprite Lab
               name: Swimming Fish in Sprite Lab
@@ -21250,7 +21250,7 @@ en:
             Virtual Pet with Sprite Lab:
               key: Virtual Pet with Sprite Lab
               name: Virtual Pet with Sprite Lab
-              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
               description_teacher: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
             End of Course Project:
               key: End of Course Project
