@@ -365,5 +365,9 @@ export const styles = {
   floatLeft: {
     float: "left",
     margin: 20
+  },
+
+  saveInputsWidth: {
+    width: "95%"
   }
 };
