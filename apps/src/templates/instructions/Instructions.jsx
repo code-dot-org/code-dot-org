@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
 import i18n from '@cdo/locale';
-import styleConstants from '../../styleConstants';
-
-const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
-const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
 const styles = {
   inTopPane: {
@@ -18,8 +13,7 @@ const styles = {
   },
   notInTopPane: {
     overflow: 'auto'
-  },
-  dynamicInstructions: {}
+  }
 };
 
 /**
@@ -35,8 +29,6 @@ class Instructions extends React.Component {
     shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
-    dynamicInstructions: PropTypes.object,
-    dynamicInstructionsKey: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
@@ -46,16 +38,6 @@ class Instructions extends React.Component {
     noInstructionsWhenCollapsed: PropTypes.bool,
     setInstructionsRenderedHeight: PropTypes.func
   };
-
-  state = {
-    dynamicInstructionsHeight: null
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.dynamicInstructionsRefs = {};
-  }
 
   /**
    * Body logic is as follows:
@@ -93,90 +75,31 @@ class Instructions extends React.Component {
     }
   }
 
-  componentDidMount() {
-    let largestHeight = 0;
-
-    // Find the tallest of our dynamic instructions.
-    if (this.props.dynamicInstructions) {
-      Object.keys(this.props.dynamicInstructions).forEach(key => {
-        const height = $(
-          ReactDOM.findDOMNode(this.dynamicInstructionsRefs[key])
-        ).outerHeight(true);
-        if (height > largestHeight) {
-          largestHeight = height;
-        }
-      });
-    }
-
-    // Resize the parent div to be the height of the largest dynamic instruction.
-    if (this.props.setInstructionsRenderedHeight) {
-      this.props.setInstructionsRenderedHeight(
-        largestHeight + HEADER_HEIGHT + RESIZER_HEIGHT + 20 + 10
-      );
-    }
-  }
-
   render() {
-    const parentStyle = this.props.dynamicInstructions
-      ? styles.dynamicInstructions
-      : this.props.inTopPane
+    const parentStyle = this.props.inTopPane
       ? styles.inTopPane
       : styles.notInTopPane;
-
-    const immersiveReaderText =
-      (this.props.dynamicInstructions &&
-        this.props.dynamicInstructions[this.props.dynamicInstructionsKey]) ||
-      this.props.longInstructions ||
-      this.props.shortInstructions;
 
     return (
       <div style={parentStyle}>
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
-          text={immersiveReaderText}
+          text={this.props.longInstructions || this.props.shortInstructions}
         />
-        {this.props.dynamicInstructions && (
-          <div
-            style={{
-              marginTop: 10,
-              position: 'relative',
-              height: this.state.dynamicInstructionsHeight
-            }}
-          >
-            {Object.keys(this.props.dynamicInstructions).map(key => {
-              return (
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    opacity: key === this.props.dynamicInstructionsKey ? 1 : 0
-                  }}
-                  key={key}
-                  ref={ref => (this.dynamicInstructionsRefs[key] = ref)}
-                >
-                  <div>{this.props.dynamicInstructions[key]}</div>
-                  <div style={{clear: 'both'}} />
-                </div>
-              );
-            })}
-          </div>
-        )}
 
-        {!this.props.dynamicInstructions && (
-          <div>
-            {this.renderMainBody()}
+        <div>
+          {this.renderMainBody()}
 
-            {this.props.inputOutputTable && (
-              <InputOutputTable data={this.props.inputOutputTable} />
-            )}
+          {this.props.inputOutputTable && (
+            <InputOutputTable data={this.props.inputOutputTable} />
+          )}
 
-            {this.props.imgURL && !this.props.inTopPane && (
-              <img className="aniGif example-image" src={this.props.imgURL} />
-            )}
-            {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
-            {this.props.authoredHints}
-          </div>
-        )}
+          {this.props.imgURL && !this.props.inTopPane && (
+            <img className="aniGif example-image" src={this.props.imgURL} />
+          )}
+          {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
+          {this.props.authoredHints}
+        </div>
       </div>
     );
   }
