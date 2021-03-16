@@ -21,7 +21,8 @@ module Services
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
       :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_expressions,
-      :lessons_programming_expressions, :objectives, :standards, :lessons_standards, keyword_init: true
+      :lessons_programming_expressions, :objectives, :frameworks, :standards,
+      :lessons_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -67,6 +68,7 @@ module Services
         programming_expressions: ProgrammingExpression.all,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives,
+        frameworks: Framework.all,
         standards: Standard.all,
         lessons_standards: lessons_standards
       )
@@ -205,6 +207,7 @@ module Services
         seed_context.programming_expressions = ProgrammingExpression.all
         seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
+        seed_context.frameworks = Framework.all
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
 
@@ -525,7 +528,10 @@ module Services
         lesson_id = seed_context.lessons.select {|l| l.key == ls_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        standard_id = seed_context.standards.select {|s| s.shortcode == ls_data['seeding_key']['standard.shortcode']}.first&.id
+        framework_id = seed_context.frameworks.select {|f| f.shortcode == ls_data['seeding_key']['framework.shortcode']}.first&.id
+        standard_id = seed_context.standards.select do |s|
+          s.framework_id == framework_id && s.shortcode == ls_data['seeding_key']['standard.shortcode']
+        end.first&.id
         raise 'No standard found' if standard_id.nil?
 
         LessonsStandard.new(

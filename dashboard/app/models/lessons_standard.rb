@@ -30,8 +30,10 @@ class LessonsStandard < ApplicationRecord
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.select {|l| l.id == stage_id}.first
     my_standard = seed_context.standards.select {|s| s.id == standard_id}.first
+    my_framework = seed_context.frameworks.select {|f| f.id == my_standard.framework_id}.first
     {
       'lesson.key' => my_lesson.key,
+      'framework.shortcode' => my_framework.shortcode,
       'standard.shortcode' => my_standard.shortcode
     }.stringify_keys
   end
