@@ -83,7 +83,6 @@ class Instructions extends React.Component {
           title={this.props.puzzleTitle || i18n.instructions()}
           text={this.props.longInstructions || this.props.shortInstructions}
         />
-
         {this.renderMainBody()}
 
         {this.props.inputOutputTable && (
