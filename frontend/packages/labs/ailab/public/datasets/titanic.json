@@ -23,7 +23,7 @@
   	},
   	{
   		"id": "Age",
-  		"type": "continuous",
+  		"type": "numerical",
   		"name": "Name"
   	},
   	{
@@ -38,7 +38,7 @@
   	},
   	{
   		"id": "Fare",
-  		"type": "continuous",
+  		"type": "numerical",
   		"name": "Name"
   	}
   ]

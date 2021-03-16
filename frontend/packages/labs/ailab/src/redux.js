@@ -16,7 +16,7 @@ import {
   oneLabelSelected,
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
-  continuousColumnsHaveOnlyNumbers,
+  numericalColumnsHaveOnlyNumbers,
   trainerSelected,
   compatibleLabelAndTrainer,
   namedModel
@@ -578,22 +578,22 @@ export function getSelectedCategoricalFeatures(state) {
   return intersection;
 }
 
-export function getSelectedContinuousColumns(state) {
-  let intersection = getContinuousColumns(state).filter(
+export function getSelectedNumericalColumns(state) {
+  let intersection = getNumericalColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
 
-export function getSelectedContinuousFeatures(state) {
-  let intersection = getContinuousColumns(state).filter(x =>
+export function getSelectedNumericalFeatures(state) {
+  let intersection = getNumericalColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
   );
   return intersection;
 }
 
-export function getContinuousColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.CONTINUOUS);
+export function getNumericalColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
 }
 
 export function getSelectableFeatures(state) {
@@ -641,7 +641,7 @@ export function getUniqueOptionsByColumn(state) {
 
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
-  getContinuousColumns(state).map(
+  getNumericalColumns(state).map(
     column => (rangesByColumn[column] = getRange(state, column))
   );
   return rangesByColumn;
@@ -681,7 +681,7 @@ function getKeyByValue(object, value) {
 
 export function getSelectedTrainer(state) {
   const trainerForLabel =
-    state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS
+    state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL
       ? defaultRegressionTrainer
       : defaultClassificationTrainer;
   const trainer = state.selectedTrainer
@@ -737,7 +737,7 @@ export function getCompatibleTrainers(state) {
     case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
       compatibleTrainers = getClassificationTrainers();
       break;
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS:
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL:
       compatibleTrainers = getRegressionTrainers();
       break;
     default:
@@ -865,15 +865,15 @@ export function validationMessages(state) {
     panel: "selectFeatures",
     readyToTrain: selectedColumnsHaveDatatype(state),
     errorString:
-      "Feature and label columns must contain only continuous or categorical data.",
+      "Feature and label columns must contain only numerical or categorical data.",
     successString:
-      "Selected features and label contain continuous or categorical data"
+      "Selected features and label contain numerical or categorical data"
   };
-  validationMessages["continuousNumbers"] = {
+  validationMessages["numericalNumbers"] = {
     panel: "selectFeatures",
-    readyToTrain: continuousColumnsHaveOnlyNumbers(state),
-    errorString: "Continuous columns should contain only numbers.",
-    successString: "Continuous columns contain only numbers."
+    readyToTrain: numericalColumnsHaveOnlyNumbers(state),
+    errorString: "Numerical columns should contain only numbers.",
+    successString: "Numerical columns contain only numbers."
   };
   validationMessages["training"] = {
     panel: "selectTrainer",
@@ -1231,8 +1231,8 @@ export function getScatterPlotData(state) {
   }
 
   if (
-    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CONTINUOUS ||
-    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CONTINUOUS
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.NUMERICAL ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.NUMERICAL
   ) {
     return null;
   }
