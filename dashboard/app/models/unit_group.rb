@@ -21,6 +21,7 @@ class UnitGroup < ApplicationRecord
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :resources, join_table: :unit_groups_resources
   has_one :course_version, as: :content_root
 
   after_save :write_serialization

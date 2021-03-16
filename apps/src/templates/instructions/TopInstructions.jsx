@@ -184,12 +184,12 @@ class TopInstructions extends Component {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     height: PropTypes.number.isRequired,
-    expandedHeight: PropTypes.number.isRequired,
+    expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
-    toggleInstructionsCollapsed: PropTypes.func.isRequired,
+    toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -206,8 +206,16 @@ class TopInstructions extends Component {
     hidden: PropTypes.bool.isRequired,
     shortInstructions: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
+    isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
+    mainStyle: PropTypes.object,
+    containerStyle: PropTypes.object,
+    resizable: PropTypes.bool
+  };
+
+  static defaultProps = {
+    resizable: true
   };
 
   constructor(props) {
@@ -554,11 +562,13 @@ class TopInstructions extends Component {
     } = this.props;
 
     const isCSF = !this.props.noInstructionsWhenCollapsed;
-    const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
+    const isCSDorCSP = !isCSF;
     const widgetWidth = WIDGET_WIDTH + 'px';
 
     const mainStyle = [
-      this.props.isRtl ? styles.mainRtl : styles.main,
+      !this.props.mainStyle &&
+        (this.props.isRtl ? styles.mainRtl : styles.main),
+      this.props.mainStyle,
       {
         height: this.props.height - RESIZER_HEIGHT
       },
@@ -732,7 +742,7 @@ class TopInstructions extends Component {
               !this.props.hasContainedLevels &&
               this.state.tabSelected === TabType.INSTRUCTIONS
                 ? styles.csfBody
-                : styles.body,
+                : this.props.containerStyle || styles.body,
               this.props.isMinecraft && craftStyles.instructionsBody
             ]}
             id="scroll-container"
@@ -786,6 +796,10 @@ class TopInstructions extends Component {
                       longInstructions={this.props.longInstructions}
                       onResize={this.adjustMaxNeededHeight}
                       inTopPane
+                      isBlockly={this.props.isBlockly}
+                      noInstructionsWhenCollapsed={
+                        this.props.noInstructionsWhenCollapsed
+                      }
                     />
                   </div>
                 )}
@@ -831,7 +845,7 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!this.props.isEmbedView && (
+          {!this.props.isEmbedView && this.props.resizable && (
             <HeightResizer
               resizeItemTop={this.getItemTop}
               position={this.props.height}
@@ -843,12 +857,13 @@ class TopInstructions extends Component {
     );
   }
 }
-export const UnconnectedTopInstructions = TopInstructions;
+export const UnconnectedTopInstructions = Radium(TopInstructions);
 export default connect(
   state => ({
     isEmbedView: state.pageConstants.isEmbedView,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     isMinecraft: !!state.pageConstants.isMinecraft,
+    isBlockly: !!state.pageConstants.isBlockly,
     height: state.instructions.renderedHeight,
     expandedHeight: state.instructions.expandedHeight,
     maxHeight: Math.min(
