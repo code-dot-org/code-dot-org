@@ -42,6 +42,7 @@ class ResultsTable extends Component {
                     <div style={styles.smallText}>{"+/- 3% of range"}</div>
                   )}
                 </th>
+                <th colSpan={featureCount} style={{...styles.largeText, ...styles.dataDisplayHeader, ...styles.resultsTableFirstHeader }} />
               </tr>
               <tr>
                 {this.props.selectedFeatures.map((feature, index) => {
@@ -57,6 +58,7 @@ class ResultsTable extends Component {
                 <th style={{ ...styles.dataDisplayHeader, backgroundColor: colors.label, ...styles.resultsTableSecondHeader }}>
                   {this.props.labelColumn}
                 </th>
+                <th style={{ ...styles.dataDisplayHeader, backgroundColor: colors.label, ...styles.resultsTableSecondHeader }} />
               </tr>
             </thead>
             <tbody>
@@ -70,11 +72,11 @@ class ResultsTable extends Component {
                     <td style={styles.dataDisplayCell}>{this.props.accuracyCheckLabels[index]}</td>
                     {this.props.accuracyGrades[index] ===
                       ResultsGrades.CORRECT && (
-                      <td style={styles.ready}>&#x2713;</td>
+                      <td style={{...styles.ready, ...styles.dataDisplayCell}}>&#x2713;</td>
                     )}
                     {this.props.accuracyGrades[index] ===
                       ResultsGrades.INCORRECT && (
-                      <td style={styles.error}>&#10006;</td>
+                      <td style={{...styles.error, ...styles.dataDisplayCell}}>&#10006;</td>
                     )}
                   </tr>
                 );

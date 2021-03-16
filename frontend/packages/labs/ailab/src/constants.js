@@ -201,7 +201,7 @@ export const styles = {
   },
 
   tableParent: {
-    overflow: "scroll",
+    overflowY: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
     boxSizing: "border-box",
