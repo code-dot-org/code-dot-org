@@ -262,7 +262,7 @@ ar:
       picture: 'كلمة مرور على شكل صورة'
       word: 'الكلمة السرية'
       email: 'البريد الإلكتروني'
-      google_classroom: 'قسم Google'
+      google_classroom: 'Google Classroom'
       clever: 'منصة Clever'
   follower:
     invite_sent: 'تم إرسال الدعوة'
@@ -315,7 +315,7 @@ ar:
       report_bug: "أبلغ عن وجود خلل"
       report_abuse: "الابلاغ عن سوء استخدام"
       teacher_community: "مجتمع المدرسين"
-      professional_learning: "Professional learning"
+      professional_learning: "التعلّم المهني"
       documentation: "الوثائق"
       tutorials: "البرامج التعليمية"
       app_lab_documentation: "توثيق معمل التطبيقات"
@@ -367,11 +367,11 @@ ar:
       team: 'فريق'
       driver: 'تم تسجيل الدخول'
       navigator: 'مستكشف'
-      create: 'أنشئ'
+      create: 'إنشاء'
       algebra_game: 'الجبر'
       applab: 'مختبر التطبيق'
       artist: 'الرسام'
-      artist_k1: 'الفنان (القارئ الأوّلي)'
+      artist_k1: 'الفنان (ما قبل القراءة)'
       basketball: 'كرة السلة'
       bounce: 'الارتداد'
       calc: 'الحساب'
@@ -390,7 +390,7 @@ ar:
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'بطل Minecraft'
       playlab: 'مختبر اللعب'
-      playlab_k1: 'Play Lab (القارئ الأوّلي)'
+      playlab_k1: 'Play Lab (ما قبل القراءة)'
       scratch: 'لغة سكراتش (برمجة)'
       sports: 'الأنشطة الرياضية'
       spritelab: 'مختبر النقوش المتحركة'

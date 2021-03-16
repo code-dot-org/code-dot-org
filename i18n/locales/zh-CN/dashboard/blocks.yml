@@ -981,6 +981,7 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+            '"speed"': 速度
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
         options:

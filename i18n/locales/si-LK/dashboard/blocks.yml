@@ -142,6 +142,7 @@ si:
         options:
           PROPERTY:
             '"scale"': විශාලත්වය
+            '"speed"': වේගය
       gamelab_checkTouching:
         options:
           CONDITION:
