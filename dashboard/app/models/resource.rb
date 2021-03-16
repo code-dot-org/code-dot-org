@@ -30,7 +30,13 @@
 class Resource < ApplicationRecord
   include SerializedProperties
 
+  KEY_CHAR_RE = /[a-z0-9\-\_]/
+  KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
+  validates_format_of :key, with: KEY_RE, message: "must contain only lowercase alphanumeric characters, dashes, and underscores; got \"%{value}\"."
+
   has_and_belongs_to_many :lessons, join_table: :lessons_resources
+  has_and_belongs_to_many :scripts, join_table: :scripts_resources
+  has_and_belongs_to_many :unit_groups, join_table: :unit_groups_resources
   belongs_to :course_version
 
   before_validation :generate_key, on: :create
@@ -93,7 +99,13 @@ class Resource < ApplicationRecord
   private
 
   def generate_key_from_name
-    key_prefix = name.strip.downcase.gsub(/[^a-z0-9\-\_\.]+/, '_')
+    # This is a litte silly, but we want to replace all characters in the
+    # string that DON'T match our formatting regex, so rather than doing
+    # something simple like gsub (which can only do positive matches) we have
+    # to do something manual.
+    key_prefix = name.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.gsub(/_+/, '_')
     potential_clashes = course_version_id ? Resource.where(course_version_id: course_version_id) : Resource.all
     potential_clashes = potential_clashes.where("resources.key like '#{key_prefix}%'").pluck(:key)
     return key_prefix unless potential_clashes.include?(key_prefix)

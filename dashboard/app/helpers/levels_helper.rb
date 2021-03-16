@@ -17,21 +17,7 @@ module LevelsHelper
   include AzureTextToSpeech
 
   def build_script_level_path(script_level, params = {})
-    if (['csp1-2020', 'csp2-2020', 'csp3-2020', 'csp4-2020', 'csp5-2020', 'csp6-2020', 'csp7-2020', 'csp9-2020', 'csp10-2020'].include? script_level.script.name) && (script_level.script.lessons.last.id == script_level.lesson.id)
-      if script_level.script.name == 'csp1-2020'
-        if params[:puzzle_page]
-          "/s/#{script_level.script.name}/stage/#{script_level.lesson.absolute_position - 1}/puzzle/#{script_level.position}/page/#{params[:puzzle_page]}"
-        else
-          "/s/#{script_level.script.name}/stage/#{script_level.lesson.absolute_position - 1}/puzzle/#{script_level.position}"
-        end
-      else
-        if params[:puzzle_page]
-          "/s/#{script_level.script.name}/stage/#{script_level.lesson.absolute_position}/puzzle/#{script_level.position}/page/#{params[:puzzle_page]}"
-        else
-          "/s/#{script_level.script.name}/stage/#{script_level.lesson.absolute_position}/puzzle/#{script_level.position}"
-        end
-      end
-    elsif script_level.script.name == Script::HOC_NAME
+    if script_level.script.name == Script::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
@@ -486,6 +472,10 @@ module LevelsHelper
   def azure_speech_service_options
     return {} unless @level.game.use_azure_speech_service?
     {voices: AzureTextToSpeech.get_voices || {}}
+  end
+
+  def disallowed_html_tags
+    DCDO.get('disallowed_html_tags', ['script'])
   end
 
   # Options hash for Blockly

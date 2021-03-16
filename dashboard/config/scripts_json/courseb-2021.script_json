@@ -31,6 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
+    "serialized_at": "2021-03-15 13:01:13 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -191,7 +192,7 @@
         "overview": "Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. ",
         "student_overview": "Help the Harvester collect vegetables along a path.",
         "purpose": "In this lesson, students will develop debugging skills and will continue developing their programming skills.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.\n - (Optional) Read ***Stevie and the Big Project** and ***Unspotted Bugs** storybooks with your class beforehand. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure each student has a journal.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1283,7 +1284,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For more on persistence and frustration, try reading ***Stevie and the Big Project** to your students. It will help them spot moments of frustration.  It will also help give them the tools to deal with it.\n\nIf you do not read the book, take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
+            "markdown": "Take a moment to cover tips on frustration and persistence as a class:\n\n##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
           }
         ]
       },
@@ -1867,7 +1868,7 @@
       "key": "f1742404-d822-4885-a44e-f05f9bc991f3",
       "position": 2,
       "properties": {
-        "description": "Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions repeat themselves a lot. This will be really useful when we go back to the computers and have to write lots of instructions in our programs.",
+        "description": "Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions **repeat** themselves a lot. This will be really useful when we go back to the computers and have to write lots of instructions in our programs.",
         "remarks": true
       },
       "seeding_key": {
@@ -1902,7 +1903,7 @@
       "key": "0d345591-6747-4a5e-aeb9-196c42f905cd",
       "position": 3,
       "properties": {
-        "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
+        "description": "**Say:** Introduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Getting Loopy - Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that **repeats**, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that **repeat**.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these **loops** on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
           {
             "type": "teachingTip",
@@ -1930,7 +1931,7 @@
       "key": "5d225181-2af4-4b13-a7ef-96c2af34a7b2",
       "position": 1,
       "properties": {
-        "description": "**Display:** Present the vocab for this lesson, [v loop] Ask the class to point out the main loop that was in the dance. Why do you think we call it a loop?",
+        "description": "**Display:** Present the vocab for this lesson, **loop** Ask the class to point out the main **loop** that was in the dance. Why do you think we call it a **loop**?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -6917,19 +6918,6 @@
       }
     },
     {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
-      }
-    },
-    {
       "name": "The Big Event",
       "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
       "key": "csf-the-big-event-assessment",
@@ -6968,6 +6956,19 @@
       }
     },
     {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "type": "Controller Image",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
       "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
       "key": "course-ab-blockly-blocks",
@@ -6993,19 +6994,6 @@
       }
     },
     {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "csf-the-big-event-activity-worksheet-AB",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
-      }
-    },
-    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
@@ -7015,6 +7003,19 @@
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
+      }
+    },
+    {
+      "name": "The Big Event (Courses A, B)",
+      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "key": "the_big_event_courses_a_b_",
+      "properties": {
+        "type": "Controller Image",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_courses_a_b_"
       }
     }
   ],
@@ -7322,12 +7323,6 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
         "resource.key": "csf-the-big-event-assessment"
       }
     },
@@ -7345,6 +7340,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_courses_a_b_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "course-ab-blockly-blocks"
       }
@@ -7358,191 +7359,235 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "csf-the-big-event-activity-worksheet-AB"
+        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "resource.key": "common-sense-media-pause-think"
+        "resource.key": "the_big_event_courses_a_b_"
       }
     }
   ],
   "vocabularies": [
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Click",
+      "key": "click",
       "word": "Click",
       "definition": "Press the mouse button",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Click"
+        "vocabulary.key": "click"
       }
     },
     {
-      "key": "Double-Click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
-      "seeding_key": {
-        "vocabulary.key": "Double-Click"
-      }
-    },
-    {
-      "key": "Drag",
+      "key": "drag",
       "word": "Drag",
       "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Drag"
+        "vocabulary.key": "drag"
       }
     },
     {
-      "key": "Drop",
+      "key": "drop",
       "word": "Drop",
       "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Drop"
+        "vocabulary.key": "drop"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
+      }
+    },
+    {
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Persistence",
+      "key": "persistence",
       "word": "Persistence",
       "definition": "Trying again and again, even when something is very hard.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
   ],
@@ -7550,135 +7595,138 @@
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Click"
+        "vocabulary.key": "click"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Double-Click"
+        "vocabulary.key": "drag"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Drag"
+        "vocabulary.key": "drop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "Drop"
+        "vocabulary.key": "double_click"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Collector",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Collector",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

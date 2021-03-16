@@ -26,11 +26,11 @@
       ],
       "is_course": true,
       "is_migrated": true,
-      "has_lesson_plan": true,
-      "peer_reviews_to_complete": 0
+      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "coursec",
+    "serialized_at": "2021-03-10 21:07:42 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -273,7 +273,7 @@
         "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
-        "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***image pack** per group of 4 students.",
+        "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -323,32 +323,12 @@
       }
     },
     {
-      "key": "Looking Ahead",
-      "name": "Looking Ahead with Minecraft",
+      "key": "Sticker Art with Loops",
+      "name": "Sticker Art with Loops",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
-      "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
-        "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
-        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
-      },
-      "seeding_key": {
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "Sticker Art with Loops",
-      "name": "Sticker Art with Loops",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
       "properties": {
         "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
@@ -365,10 +345,10 @@
     {
       "key": "Events: The Big Event",
       "name": "The Big Event",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.",
         "student_overview": "Play a fun game to learn about events. ",
@@ -385,10 +365,10 @@
     {
       "key": "Build a Flappy Game",
       "name": "Build a Flappy Game",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "overview": "In this special stage, students get to build their own Flappy Bird game by using event handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.",
         "student_overview": "Build you own Flappy Bird game however you like, then share it with your friends!",
@@ -405,10 +385,10 @@
     {
       "key": "Events in Play Lab",
       "name": "Chase Game with Events",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
         "student_overview": "It's time to get creative and make a game in Play Lab!",
@@ -425,10 +405,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 15,
       "properties": {
         "overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
         "student_overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
@@ -445,10 +425,10 @@
     {
       "key": "End of Course Project: Create a Play Lab Game",
       "name": "End of Course Project",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 16,
       "properties": {
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
@@ -1144,61 +1124,6 @@
       "seeding_key": {
         "lesson_activity.key": "c1cb23a9-85d1-4f19-ae36-9388baa9566c",
         "lesson.key": "Loops in Harvester",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "1c76121a-104a-4027-9759-228a6c92760b",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1c76121a-104a-4027-9759-228a6c92760b",
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity",
-        "duration": 30
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64",
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "d27fc3e1-78fd-45f8-b77a-510e724e19a0",
-      "position": 3,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d27fc3e1-78fd-45f8-b77a-510e724e19a0",
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
-      "position": 4,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ef15ef29-1668-40d1-aa90-b093d4fecce1",
-        "lesson.key": "Looking Ahead",
         "lesson_group.key": "csf_loops",
         "script.name": "coursec-2021"
       }
@@ -2271,7 +2196,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\n\n![](https://curriculum.code.org/media/uploads/hexagon2018.png)"
+            "markdown": "The eighth puzzle asks the students to draw a 6 sided polygon. This might be challenging for some students. We recommend getting the students to try a few times, ask a peer, then ask the teacher for help. Below is an image that might be helpful for the students.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
           }
         ]
       },
@@ -2340,7 +2265,7 @@
       "key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
       "position": 1,
       "properties": {
-        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n"
+        "description": "###Shapes & Landscapes (45-60 minutes)\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n\n[Shapes & Landscapes](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students are asked to design a dam to prevent future flooding. Using code, you will create a blueprint to show the local town council how your dam will look.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.8:** Recall information from experiences or gather information from provided sources to answer a question.\n\n- **CCSS.MATH.CONTENT.2.MD.A.3:** Estimate lengths using units of inches, feet, centimeters, and meters.\n- **NGSS.2-ESS2-1:** Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.\n"
       },
       "seeding_key": {
         "activity_section.key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
@@ -2885,87 +2810,6 @@
       }
     },
     {
-      "key": "e30365ff-a958-448b-bf72-f5862dede57b",
-      "position": 1,
-      "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using _conditionals_ during this lesson. Give the definition of:\n\n - **Condition:** *A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.*\n - **Conditionals:** *Statements that only run under certain conditions.*\n\nOpen up a discussion of when you might use a **conditional** in your code.",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "e30365ff-a958-448b-bf72-f5862dede57b",
-        "lesson_activity.key": "1c76121a-104a-4027-9759-228a6c92760b"
-      }
-    },
-    {
-      "key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
-      "position": 1,
-      "properties": {
-        "name": "Looking Ahead with Minecraft",
-        "progression_name": "Practice",
-        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
-      },
-      "seeding_key": {
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf",
-        "lesson_activity.key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64"
-      }
-    },
-    {
-      "key": "05fb6b2e-8946-4909-a662-a74aaa704845",
-      "position": 2,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845",
-        "lesson_activity.key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64"
-      }
-    },
-    {
-      "key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f",
-        "lesson_activity.key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64"
-      }
-    },
-    {
-      "key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
-      "position": 4,
-      "properties": {
-        "progression_name": "Free Play"
-      },
-      "seeding_key": {
-        "activity_section.key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba",
-        "lesson_activity.key": "2caba59e-2f8c-4ea8-a528-8d6813fb4b64"
-      }
-    },
-    {
-      "key": "5ec07b64-ad9d-4d89-9e29-ff1e0840bb13",
-      "position": 1,
-      "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "5ec07b64-ad9d-4d89-9e29-ff1e0840bb13",
-        "lesson_activity.key": "d27fc3e1-78fd-45f8-b77a-510e724e19a0"
-      }
-    },
-    {
-      "key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
-      "position": 1,
-      "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
-      },
-      "seeding_key": {
-        "activity_section.key": "839db598-cb23-4dc3-881d-e2bd447b6fa1",
-        "lesson_activity.key": "ef15ef29-1668-40d1-aa90-b093d4fecce1"
-      }
-    },
-    {
       "key": "aaae9aa4-7847-4f45-be5e-96f454d2e343",
       "position": 1,
       "properties": {
@@ -3045,7 +2889,7 @@
       "key": "757cf64e-7e90-497f-b26c-1fe874540d52",
       "position": 1,
       "properties": {
-        "description": "### Loopy Forms & Their Functions (45-60  minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n[**Loopy Forms & Their Functions**](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community.  Artist needs to help his friends design their house by drawing blueprints. It is important that students understands basic shapes and how each shape serves different functions in the house blueprints. They will then write opinion pieces, supply reasons and use linking words to justify their design choices.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.1:** Write opinion pieces in which they introduce the topic or book they are writing about, state an opinion, supply reasons that support the opinion, use linking words (e.g., because, and, also) to connect opinion and reasons, and provide a concluding statement or section.\n\n- **CCSS.MATH.CONTENT.2.G.A.1:** Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.\n\n - **NGSS.K-2-ETS1-2:** Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.\n"
+        "description": "### Loopy Forms & Their Functions (45-60  minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Computer Science + English Language Arts + Math + Science**\n\n[**Loopy Forms & Their Functions**](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community.  Artist needs to help his friends design their house by drawing blueprints. It is important that students understands basic shapes and how each shape serves different functions in the house blueprints. They will then write opinion pieces, supply reasons and use linking words to justify their design choices.\n\n*Standards Addressed:*\n\n- **CCSS.ELA-LITERACY.W.2.1:** Write opinion pieces in which they introduce the topic or book they are writing about, state an opinion, supply reasons that support the opinion, use linking words (e.g., because, and, also) to connect opinion and reasons, and provide a concluding statement or section.\n\n- **CCSS.MATH.CONTENT.2.G.A.1:** Recognize and draw shapes having specified attributes, such as a given number of angles or a given number of equal faces.1 Identify triangles, quadrilaterals, pentagons, hexagons, and cubes.\n\n - **NGSS.K-2-ETS1-2:** Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.\n"
       },
       "seeding_key": {
         "activity_section.key": "757cf64e-7e90-497f-b26c-1fe874540d52",
@@ -3415,7 +3259,7 @@
       "key": "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f",
       "position": 1,
       "properties": {
-        "description": "In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...",
+        "description": "*In a moment I am going to ask each of you to tell me your favorite favorite season. On the count of 3, everyone should answer the question and then we will try to see if we can figure out which is the most popular season with the students in this class. Are you thinking of your favorite season? 1, 2, 3...*",
         "remarks": true,
         "name": "The Need for Visualization\r"
       },
@@ -3439,7 +3283,7 @@
       "key": "b4d7372a-86cd-4d90-855d-0c241617237f",
       "position": 3,
       "properties": {
-        "description": "Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!",
+        "description": "*Tally marks like these help us to keep track of everyone's answers, which is great. It still takes time to count them to know which option was chosen by the most or fewest students. Imagine if someone showed us tally marks for the entire school. It would take some time to count them!*",
         "remarks": true
       },
       "seeding_key": {
@@ -3634,7 +3478,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "My Robotic Friends - Unplugged Activity",
         "level_keys": [
@@ -3660,7 +3504,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Maze Intro: Programming with Blocks Video",
         "level_keys": [
@@ -3686,7 +3530,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3712,7 +3556,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3738,7 +3582,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3764,7 +3608,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3790,7 +3634,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3816,7 +3660,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3842,7 +3686,7 @@
       "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3869,7 +3713,7 @@
       "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3895,7 +3739,7 @@
       "chapter": 12,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -3921,7 +3765,7 @@
       "chapter": 13,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3947,12 +3791,12 @@
       "chapter": 14,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_programming_challenge1_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -3973,12 +3817,12 @@
       "chapter": 15,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_programming_challenge2_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4262,10 +4106,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_debugging_challenge1_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4288,10 +4132,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_debugging_challenge2_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4312,7 +4156,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Collector",
         "level_keys": [
@@ -4338,7 +4182,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4364,7 +4208,7 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4390,7 +4234,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4416,7 +4260,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4442,7 +4286,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4468,7 +4312,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4494,7 +4338,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4521,7 +4365,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4547,7 +4391,7 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4573,7 +4417,7 @@
       "chapter": 38,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4599,7 +4443,7 @@
       "chapter": 39,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -4625,7 +4469,7 @@
       "chapter": 40,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4651,7 +4495,7 @@
       "chapter": 41,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4677,7 +4521,7 @@
       "chapter": 42,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4966,10 +4810,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_artist_prog_challenge1_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -4992,10 +4836,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_artist_prog_challenge2a_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5016,12 +4860,12 @@
       "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Binary Bracelets - Unplugged Activity",
         "level_keys": [
           "BinaryBracelets-Unplugged_2021"
-        ],
-        "progression": "Binary Bracelets - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5042,12 +4886,12 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "My Loopy Robotic Friends - Unplugged Activity",
         "level_keys": [
           "MyLoopyRoboticFriends-Unplugged_2021"
-        ],
-        "progression": "My Loopy Robotic Friends - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5068,7 +4912,7 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Programming with Rey and BB-8",
         "level_keys": [
@@ -5094,7 +4938,7 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5120,7 +4964,7 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -5146,7 +4990,7 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Repeat Blocks with BB-8",
         "level_keys": [
@@ -5172,7 +5016,7 @@
       "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5198,7 +5042,7 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5224,7 +5068,7 @@
       "chapter": 63,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5250,7 +5094,7 @@
       "chapter": 64,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5276,7 +5120,7 @@
       "chapter": 65,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5302,7 +5146,7 @@
       "chapter": 66,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5329,7 +5173,7 @@
       "chapter": 67,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5355,7 +5199,7 @@
       "chapter": 68,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5381,7 +5225,7 @@
       "chapter": 69,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -5407,7 +5251,7 @@
       "chapter": 70,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5433,12 +5277,12 @@
       "chapter": 71,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_maze_loops_challenge1a_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5459,12 +5303,12 @@
       "chapter": 72,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_collector_loops_challenge2_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5485,7 +5329,7 @@
       "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Harvester",
         "level_keys": [
@@ -5511,7 +5355,7 @@
       "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5537,7 +5381,7 @@
       "chapter": 75,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5563,7 +5407,7 @@
       "chapter": 76,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5589,7 +5433,7 @@
       "chapter": 77,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5615,7 +5459,7 @@
       "chapter": 78,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5641,7 +5485,7 @@
       "chapter": 79,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5667,7 +5511,7 @@
       "chapter": 80,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5693,7 +5537,7 @@
       "chapter": 81,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5720,7 +5564,7 @@
       "chapter": 82,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5746,7 +5590,7 @@
       "chapter": 83,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5772,7 +5616,7 @@
       "chapter": 84,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5798,7 +5642,7 @@
       "chapter": 85,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Predict",
         "level_keys": [
@@ -5824,12 +5668,12 @@
       "chapter": 86,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_harvester_loops_challenge1a_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5850,12 +5694,12 @@
       "chapter": 87,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_harvester_loops_challenge2_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -5874,372 +5718,6 @@
     },
     {
       "chapter": 88,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Move to Sheep_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Move to Sheep_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Move to Sheep_2021"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Chop Tree_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Chop Tree_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Chop Tree_2021"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Shear Sheep_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Shear Sheep_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Shear Sheep_2021"
-      ]
-    },
-    {
-      "chapter": 91,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Chop Trees_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Chop Trees_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Chop Trees_2021"
-      ]
-    },
-    {
-      "chapter": 92,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Place Wall_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Place Wall_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Place Wall_2021"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld House Frame Chosen_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld House Frame Chosen_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld House Frame Chosen_2021"
-      ]
-    },
-    {
-      "chapter": 94,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Plant Crops_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Plant Crops_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Plant Crops_2021"
-      ]
-    },
-    {
-      "chapter": 95,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Avoid Monsters_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Avoid Monsters_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Overworld Avoid Monsters_2021"
-      ]
-    },
-    {
-      "chapter": 96,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Underground Mining Coal_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Underground Mining Coal_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Underground Mining Coal_2021"
-      ]
-    },
-    {
-      "chapter": 97,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Underground Iron_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Underground Iron_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      },
-      "level_keys": [
-        "Underground Iron_2021"
-      ]
-    },
-    {
-      "chapter": 98,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge",
-        "challenge": true,
-        "level_keys": [
-          "Underground Avoiding Lava_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Underground Avoiding Lava_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845"
-      },
-      "level_keys": [
-        "Underground Avoiding Lava_2021"
-      ]
-    },
-    {
-      "chapter": 99,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge",
-        "challenge": true,
-        "level_keys": [
-          "Underground If Statements_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Underground If Statements_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845"
-      },
-      "level_keys": [
-        "Underground If Statements_2021"
-      ]
-    },
-    {
-      "chapter": 100,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Powered Minecart_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f"
-      },
-      "level_keys": [
-        "Overworld Powered Minecart_2021"
-      ]
-    },
-    {
-      "chapter": 101,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Free Play",
-        "level_keys": [
-          "Overworld Free Play 20x20_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Free Play 20x20_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba"
-      },
-      "level_keys": [
-        "Overworld Free Play 20x20_2021"
-      ]
-    },
-    {
-      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6265,7 +5743,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6291,7 +5769,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6317,7 +5795,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6343,7 +5821,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6369,7 +5847,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6395,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6421,7 +5899,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -6447,7 +5925,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6473,10 +5951,10 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
@@ -6499,10 +5977,10 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Code Your Own Flappy Game",
         "level_keys": [
@@ -6525,10 +6003,10 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6551,10 +6029,10 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6577,10 +6055,10 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 101,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6603,10 +6081,10 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 102,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6629,10 +6107,10 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 103,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6655,10 +6133,10 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 104,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6681,10 +6159,10 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 105,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6707,10 +6185,10 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 106,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6733,10 +6211,10 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 107,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6759,10 +6237,10 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 108,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6785,10 +6263,10 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 109,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6811,10 +6289,10 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 110,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6837,10 +6315,10 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 111,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6863,10 +6341,10 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 112,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6889,10 +6367,10 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 113,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6915,10 +6393,10 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 114,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6941,10 +6419,10 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 115,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6967,10 +6445,10 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 116,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6993,10 +6471,10 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 117,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7019,10 +6497,10 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 118,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7045,10 +6523,10 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 119,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -7071,10 +6549,10 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 120,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7097,15 +6575,15 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 121,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "courseC_PlayLab_events_challenge1_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": true,
@@ -7123,15 +6601,15 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Picturing Data - Unplugged Activity",
         "level_keys": [
           "PicturingData-Unplugged_2021"
-        ],
-        "progression": "Picturing Data - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7149,15 +6627,15 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
+        "progression": "Picturing Data - Unplugged Activity",
         "level_keys": [
           "courseC_data wizard_2021"
-        ],
-        "progression": "Picturing Data - Unplugged Activity"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7175,10 +6653,10 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7201,10 +6679,10 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7227,10 +6705,10 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7253,10 +6731,10 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7279,10 +6757,10 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7305,10 +6783,10 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7331,10 +6809,10 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -8404,174 +7882,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Overworld Move to Sheep_2021",
-        "script_level.level_keys": [
-          "Overworld Move to Sheep_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Chop Tree_2021",
-        "script_level.level_keys": [
-          "Overworld Chop Tree_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Shear Sheep_2021",
-        "script_level.level_keys": [
-          "Overworld Shear Sheep_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Chop Trees_2021",
-        "script_level.level_keys": [
-          "Overworld Chop Trees_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Place Wall_2021",
-        "script_level.level_keys": [
-          "Overworld Place Wall_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld House Frame Chosen_2021",
-        "script_level.level_keys": [
-          "Overworld House Frame Chosen_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Plant Crops_2021",
-        "script_level.level_keys": [
-          "Overworld Plant Crops_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Avoid Monsters_2021",
-        "script_level.level_keys": [
-          "Overworld Avoid Monsters_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Underground Mining Coal_2021",
-        "script_level.level_keys": [
-          "Underground Mining Coal_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Underground Iron_2021",
-        "script_level.level_keys": [
-          "Underground Iron_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "d0a6ed97-366f-493d-9dc2-89010ebbc3cf"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Underground Avoiding Lava_2021",
-        "script_level.level_keys": [
-          "Underground Avoiding Lava_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Underground If Statements_2021",
-        "script_level.level_keys": [
-          "Underground If Statements_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "05fb6b2e-8946-4909-a662-a74aaa704845"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Powered Minecart_2021",
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "3f248b6a-67d8-4160-9fa6-b4edb2ea628f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Overworld Free Play 20x20_2021",
-        "script_level.level_keys": [
-          "Overworld Free Play 20x20_2021"
-        ],
-        "lesson.key": "Looking Ahead",
-        "lesson_group.key": "csf_loops",
-        "script.name": "coursec-2021",
-        "activity_section.key": "53e8b0f2-6328-4403-9ec7-11cd53e02bba"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseC_artist_loops1a_2021",
         "script_level.level_keys": [
           "courseC_artist_loops1a_2021"
@@ -9218,8 +8528,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -9236,6 +8546,18 @@
       },
       "seeding_key": {
         "resource.key": "csf-lesson-recommend"
+      }
+    },
+    {
+      "name": "Debugging Guide",
+      "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
+      "key": "debugging_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_guide"
       }
     },
     {
@@ -9432,8 +8754,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -9465,19 +8787,6 @@
       }
     },
     {
-      "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "csf-the-big-event-activity-worksheet-CF",
-      "properties": {
-        "type": "Event Controller",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
-      }
-    },
-    {
       "name": "The Big Event",
       "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
       "key": "csf-the-big-event-assessment",
@@ -9504,6 +8813,19 @@
       }
     },
     {
+      "name": "The Big Event (Course C)",
+      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
+      "key": "the_big_event_course_c_",
+      "properties": {
+        "type": "Event Controller",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_course_c_"
+      }
+    },
+    {
       "name": " Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
@@ -9516,19 +8838,6 @@
       }
     },
     {
-      "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "csf-the-big-event-activity-worksheet-CF",
-      "properties": {
-        "type": "Event Controller",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
-      }
-    },
-    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
@@ -9538,6 +8847,19 @@
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "name": "The Big Event (Course C)",
+      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
+      "key": "the_big_event_course_c_",
+      "properties": {
+        "type": "Event Controller",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9678,6 +9000,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "resource.key": "debugging_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Programming in Collector",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9787,12 +9115,6 @@
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
         "resource.key": "csf-the-big-event-assessment"
       }
     },
@@ -9804,6 +9126,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "resource.key": "the_big_event_course_c_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Build a Flappy Game",
         "resource.key": "course-cf-blockly-blocks"
       }
@@ -9811,13 +9139,13 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "resource.key": "csf-the-big-event-activity-worksheet-CF"
+        "resource.key": "pause_and_think_online"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "resource.key": "pause_and_think_online"
+        "resource.key": "the_big_event_course_c_"
       }
     },
     {
@@ -9853,219 +9181,253 @@
   ],
   "vocabularies": [
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Sequencing",
+      "key": "sequencing",
       "word": "Sequencing",
       "definition": "Putting commands in correct order so computers can read the commands.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Sequencing"
+        "vocabulary.key": "sequencing"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Binary",
+      "key": "binary",
       "word": "Binary",
       "definition": "A way of representing information using only two options.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Binary"
+        "vocabulary.key": "binary"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see if it is true before allowing an action.",
-      "seeding_key": {
-        "vocabulary.key": "Condition"
-      }
-    },
-    {
-      "key": "Conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "seeding_key": {
-        "vocabulary.key": "Conditionals"
-      }
-    },
-    {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
   ],
@@ -10073,163 +9435,151 @@
     {
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Maze",
-        "vocabulary.key": "Sequencing"
+        "vocabulary.key": "sequencing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging in Maze",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging in Maze",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Collector",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Collector",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming in Collector",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
-        "vocabulary.key": "Binary"
+        "vocabulary.key": "binary"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "Repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Looking Ahead",
-        "vocabulary.key": "Condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Looking Ahead",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sticker Art with Loops",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Flappy Game",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     }
   ],
@@ -10482,26 +9832,6 @@
       "seeding_key": {
         "lesson.key": "Loops in Harvester",
         "objective.key": "94ed661c-bf8f-41fe-866d-86f09b4ef4ad"
-      }
-    },
-    {
-      "key": "384e6cd5-e1dd-4bff-869e-7ebc9249f048",
-      "properties": {
-        "description": "Define circumstances when certain parts of a program should run and when they shouldn't."
-      },
-      "seeding_key": {
-        "lesson.key": "Looking Ahead",
-        "objective.key": "384e6cd5-e1dd-4bff-869e-7ebc9249f048"
-      }
-    },
-    {
-      "key": "f939c0dd-bd61-4886-be3b-d1efc43aa4a5",
-      "properties": {
-        "description": "Determine whether a conditional is met based on criteria."
-      },
-      "seeding_key": {
-        "lesson.key": "Looking Ahead",
-        "objective.key": "f939c0dd-bd61-4886-be3b-d1efc43aa4a5"
       }
     },
     {

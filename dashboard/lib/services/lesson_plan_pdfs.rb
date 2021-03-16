@@ -75,8 +75,11 @@ module Services
       return false unless script_data['properties'].fetch('is_migrated', false)
       return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
 
+      script = Script.find_by(name: script_data['name'])
+      return false unless script.present?
+
       new_timestamp = script_data['serialized_at']
-      existing_timestamp = Script.find_by(name: script_data['name']).seeded_from
+      existing_timestamp = script.seeded_from
       !timestamps_equal(new_timestamp, existing_timestamp)
     end
 
@@ -109,12 +112,14 @@ module Services
     end
 
     def self.get_base_url
-      # Right now, this is obviously just using the raw S3 subdomain as the
-      # base url. This should work fine for now, but ideally we'd like to set
-      # the bucket up to be served from a code.org subdomain so we can have a
-      # button which downloads the asset (the HTML download attribute only
-      # works with same-origin urls).
-      "https://#{S3_BUCKET}.s3.amazonaws.com"
+      # For production, we have a full CloudFormation stack set up which serves
+      # the bucket from a subdomain via CloudFront. We do this so the
+      # user-facing button can work as a download button rather than just a
+      # link, which we can't do with a cross-origin URL.
+      #
+      # We don't have an equivalent set up for the debug bucket, so we just use
+      # the direct S3 link.
+      DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
     end
 
     # Build the full path of the lesson plan PDF for the given lesson. This

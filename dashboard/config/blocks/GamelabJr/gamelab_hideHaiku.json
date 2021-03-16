@@ -1,0 +1,15 @@
+{
+  "category": "World",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "hideHaiku",
+    "blockText": "hide haiku",
+    "args": [
+
+    ]
+  }
+}

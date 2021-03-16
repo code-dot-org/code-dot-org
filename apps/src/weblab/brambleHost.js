@@ -11,6 +11,7 @@ window.requirejs.config({baseUrl: BRAMBLE_BASE_URL});
 
 // This is needed to support jQuery binary downloads
 import '../assetManagement/download';
+import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
 // the main Bramble object -- used to access file system
 let bramble_ = null;
@@ -253,7 +254,7 @@ function syncFilesWithBramble(fileEntries, currentProjectVersion, callback) {
                 fileData,
                 (err, versionId) => {
                   if (err) {
-                    callback();
+                    callback(err);
                   } else {
                     _lastSyncedVersionId = versionId;
                     handleLocalChange(i + 1, callback);
@@ -415,8 +416,7 @@ function addFileHTML() {
     {
       basenamePrefix: 'new',
       ext: 'html',
-      contents:
-        '<!DOCTYPE html>\n<html>\n  <head>\n    \n  </head>\n  <body>\n    \n  </body>\n</html>'
+      contents: createHtmlDocument()
     },
     err => {
       if (err) {
@@ -650,6 +650,16 @@ function load(Bramble) {
       }
     }
 
+    function validateFileAndHandleChange(path) {
+      removeDisallowedHtmlContent(
+        bramble_.getFileSystem(),
+        brambleProxy_,
+        path,
+        webLab_.disallowedHtmlTags,
+        handleFileChange
+      );
+    }
+
     function handleFileDelete(path) {
       // Remove leading project root path
       var cleanedPath = path.replace(removeProjectRootRegex, '');
@@ -694,7 +704,7 @@ function load(Bramble) {
 
     bramble.disableJavaScript(); // Prevents JS from executing.
     bramble.on('inspectorChange', handleInspectorChange);
-    bramble.on('fileChange', handleFileChange);
+    bramble.on('fileChange', validateFileAndHandleChange);
     bramble.on('fileDelete', handleFileDelete);
     bramble.on('fileRename', handleFileRename);
     bramble.on('folderRename', handleFolderRename);

@@ -1,0 +1,30 @@
+name 'OPD-K5 LessonPlanning2'
+skip_dialog true
+markdown <<MARKDOWN
+# Lesson Planning Process
+**Total Suggested Time:**
+
+Use the Lesson Planning Guide in the Curriculum Guide Appendix as part of your lesson planning process.  The Lesson Planning Guide encourages you to consider the following:
+* What CS concept does the lesson introduce to students and how?  
+* What skill does the lesson help students practice and how?
+* What classroom routine/procedure is needed for the lesson?
+* When will any of the following CS teaching practices be used during the lesson?
+	* Debugging
+	* Lead Learner
+	* Discovery and Inquiry
+	* Classroom Community
+* How will students share their thinking and demonstrate what they learned?
+* How will the lesson be inclusive and equitable for students?
+
+You will learn more about CS teaching practices in the "CS Teaching and Student Practices" lesson in the course.
+
+**Task: Take a look at the Lesson Planning Guide**
+
+
+
+<img src="https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png" class="level-image">
+
+
+    
+
+MARKDOWN

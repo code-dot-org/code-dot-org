@@ -1,0 +1,7 @@
+{
+  "func": "life",
+  "category": "Sprites",
+  "modeOptionName": "*.life",
+  "type": "property",
+  "noAutocomplete": true
+}

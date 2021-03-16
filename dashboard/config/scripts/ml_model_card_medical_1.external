@@ -3,78 +3,11 @@ title 'Introduction to Machine Learning'
 description ''
 
 markdown <<MARKDOWN
+# Medical Priority Model Card #1
 
+<!--
+<img src="https://images.code.org/4bbe561d09189018d222a502ed501fae-image-1615478013084.png" width="45%" style="float:left; margin: 2px;">
 
-# Medical Data Model Card
-
-**Intended Use:** Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.
-
-**Summary:** Predict *priority* based on *age*, *gender*, *race*, *bleeding*, *shortness of breath*, *weight*, and *area of pain* with *86%* accuracy
-
-**Date:** February 2021
-
-## Label
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **priority** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | How quickly the patient received treatment | <ul><li>priority</li><li>normal</li><li>return later</li></ul> |
-:::
-
-## Features
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **age** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Age ranges of the patient | <ul><li>under 18</li><li>18-34</li><li>35-60</li><li>over 60</li></ul> |
-| **gender** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Gender of the patient | <ul><li>female</li><li>male</li></ul> |
-| **race** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Racial information about the patient | <ul><li>BAM</li><li>AIAN</li><li>W</li><li>A</li><li>NHPI</li></ul> |
-| **bleeding** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient was bleeding | <ul><li>yes</li><li>no</li></ul> |
-| **shortness of breath** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient had shortness of breath | <ul><li>yes</li><li>no</li></ul> |
-| **weight** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Weight ranges for the patient | <ul><li>Under 100 lbs</li><li>100-150 lbs</li><li>150-200 lbs</li><li>200-300 lbs</li><li>Over 300 lbs</li></ul> |
-| **area of pain** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Where the pain was located | <ul><li>head</li><li>chest</li><li>limb</li><li>stomach</li></ul> |
-
-:::
-
-## Training Information
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Model Accuracy:** 86%
-
-**Dataset Size:** 1000 rows
-
-**Testing Data:** 10%
-
-:::
-
-## Model Disclaimers
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Describe the dataset used to create this model:** Data from a month of ER visits at a local hospital. It shows information about each patient, the symptoms they had, and how quickly they received help.
-
-**Uses for this model that should be avoided** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
-
-**Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
-  - [x] Yes
-  - [ ] No
-
-**Have we ensured accurate representation of each subgroup within the data?**
-  - [ ] Yes
-  - [x] No
-
-**This model could be used to inform decisions central to human life:**
-  - [x] Yes
-  - [ ] No
-
-**The data has been cleaned & prepared before being used to train the model:**
-  - [x] Yes
-  - [ ] No
-
-:::
+<img src="https://images.code.org/1a75e28e6e8e34e335112d6f90457ce9-image-1615417977856.png" width="45%" style="float:right; margin: 2px">
+-->
 MARKDOWN

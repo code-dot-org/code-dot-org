@@ -1,0 +1,11 @@
+{
+  "func": "degrees",
+  "category": "Math",
+  "paletteParams": [
+    "radians"
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

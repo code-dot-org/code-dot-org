@@ -4,75 +4,8 @@ description ''
 
 markdown <<MARKDOWN
 
-
-# Medical Data Model Card #4
-
-**Intended Use:** Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.
-
-**Summary:** Predict *priority* based on *temperature*, *sports*, and *cause* with *95%* accuracy
-
-**Date:** February 2021
-
-## Label
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **priority** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | How quickly the patient received treatment | <ul><li>priority</li><li>normal</li><li>return later</li></ul> |
-:::
-
-## Features
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **temperature** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Current temperature outside | <ul><li>below -50</li><li>-50 to 0</li><li>0 to 50</li><li>above 50</li></ul> |
-| **sports** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether you're involved in any sports | <ul><li>skiing</li><li>snowboarding</li><li>ice skating</li><li>other</li><li>no sports</li></ul> |
-| **cause** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | How the injury was caused | <ul><li>frostbite</li><li>tree chopping accident</li><li>bear attack</li><li>snow blindness</li></ul> |
-
-:::
-
-## Training Information
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Model Accuracy:** 95%
-
-**Dataset Size:** 1000 rows
-
-**Testing Data:** 10%
-
-:::
-
-## Model Disclaimers
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Describe the dataset used to create this model:** Data from a month of ER visits in a remote hospital in Alaska during winter. It shows information about each patient, the symptoms they had, and how quickly they received help.
-
-**Uses for this model that should be avoided:** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
-
-**Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
-  - [ ] Yes
-  - [x] No
-
-**This model could be used to inform decisions central to human life:**
-  - [x] Yes
-  - [ ] No
-
-**The data has been cleaned & prepared before being used to train the model:**
-  - [x] Yes
-  - [ ] No
-
-:::
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-## Data Concerns
 
-The features of this dataset are very specific to the area it serves. Many of the questions are probably not relevant in other climates, or skew based on the area they are in (for example, in a desert climate, the temperature is almost always above 50 degrees). The Model Disclaimers section mentions that this data was collected in Alaska, which means it may be too specific to that area to be used elsewhere.
 MARKDOWN
