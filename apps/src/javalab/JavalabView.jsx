@@ -15,7 +15,7 @@ const style = {
   instructionsAndPreview: {
     width: '40%',
     position: 'relative',
-    margin: 15
+    marginRight: 15
   },
   editorAndConsole: {
     width: '60%',
