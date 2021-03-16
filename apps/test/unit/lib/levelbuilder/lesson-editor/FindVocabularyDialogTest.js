@@ -16,6 +16,7 @@ describe('FindVocabularyDialog', () => {
         {
           id: 1,
           key: 'key1',
+          markdownKey: 'key1/course/year',
           word: 'word1',
           definition: 'definition1',
           commonSenseMedia: true
@@ -23,6 +24,7 @@ describe('FindVocabularyDialog', () => {
         {
           id: 2,
           key: 'key2',
+          markdownKey: 'key2/course/year',
           word: 'word2',
           definition: 'definition2',
           commonSenseMedia: true
@@ -44,15 +46,15 @@ describe('FindVocabularyDialog', () => {
     const wrapper = shallow(<FindVocabularyDialog {...defaultProps} />);
     const closeAndAddButton = wrapper.find('Button').first();
     closeAndAddButton.simulate('click', {preventDefault: () => {}});
-    expect(handleConfirm).to.have.been.calledWith('key1');
+    expect(handleConfirm).to.have.been.calledWith('key1/course/year');
   });
 
   it('adds vocabulary key on confirm, dropdown change', () => {
     const wrapper = shallow(<FindVocabularyDialog {...defaultProps} />);
     const select = wrapper.find('select').first();
-    select.simulate('change', {target: {value: 'key2'}});
+    select.simulate('change', {target: {value: 'key2/course/year'}});
     const closeAndAddButton = wrapper.find('Button').first();
     closeAndAddButton.simulate('click', {preventDefault: () => {}});
-    expect(handleConfirm).to.have.been.calledWith('key2');
+    expect(handleConfirm).to.have.been.calledWith('key2/course/year');
   });
 });
