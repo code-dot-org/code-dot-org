@@ -410,7 +410,8 @@ export const styles = {
     fontSize: 24,
     marginTop: 10,
     padding: 6,
-    cursor: "pointer"
+    cursor: "pointer",
+    height: 43
   },
 
   phraseBuilderSelectReadonly: {

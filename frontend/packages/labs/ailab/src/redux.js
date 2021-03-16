@@ -333,7 +333,8 @@ export default function rootReducer(state = initialState, action) {
     if (!state.selectedFeatures.includes(action.selectedFeature)) {
       return {
         ...state,
-        selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
+        currentColumn: undefined
       };
     }
   }
@@ -350,7 +351,8 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn
+      labelColumn: action.labelColumn,
+      currentColumn: undefined
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {
@@ -495,11 +497,17 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         currentColumn: undefined
       };
+    } else if (
+      state.currentPanel !== "dataDisplayFeatures" ||
+      action.currentColumn !== state.labelColumn
+    ) {
+      // We don't do this if we are on the feature-selection panel
+      // and the user chose the column that is already the label.
+      return {
+        ...state,
+        currentColumn: action.currentColumn
+      };
     }
-    return {
-      ...state,
-      currentColumn: action.currentColumn
-    };
   }
   if (action.type === SET_RESULTS_PHASE) {
     return {

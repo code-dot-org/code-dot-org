@@ -1,4 +1,4 @@
-/* React component to handle setting datatype for selected columns. */
+/* React component for choosing label and features for prediction. */
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
@@ -57,55 +57,17 @@ class PhraseBuilder extends Component {
           ...styles.phraseBuilder
         }}
       >
-        <div style={styles.phraseBuilderHeader}>Predict...</div>
-        {currentPanel === "dataDisplayLabel" && (
-          <select
-            value={labelColumn === null ? "" : labelColumn}
-            onChange={this.handleChangeLabelSelect}
-            style={styles.phraseBuilderSelect}
-          >
-            <option>{""}</option>
-            {selectableLabels.map((feature, index) => {
-              return (
-                <option key={index} value={feature}>
-                  {feature}
-                </option>
-              );
-            })}
-          </select>
-        )}
-
-
-        {currentPanel === "dataDisplayFeatures" && (
-          <div>
-            <div style={styles.phraseBuilderSelectReadonly}>
-              {labelColumn}
-            </div>
-            <br />
-            <div>
-              <div style={styles.phraseBuilderHeader}>Based on...</div>
-              {selectedFeatures.map((feature, index) => {
-                return (
-                  <div key={index} style={styles.phraseBuilderFeature}>
-                    {feature}
-                    <div
-                      onClick={() => this.removeSelectedFeature(feature)}
-                      style={styles.phraseBuilderFeatureRemove}
-                    >
-                      <FontAwesomeIcon icon={faTimes} />
-                    </div>
-                  </div>
-                );
-              })}
+        <div style={styles.scrollableContents}>
+          <div style={styles.scrollingContents}>
+            <div style={styles.phraseBuilderHeader}>Predict...</div>
+            {currentPanel === "dataDisplayLabel" && (
               <select
-                value={""}
-                onChange={this.handleChangeFeatureSelect}
+                value={labelColumn === null ? "" : labelColumn}
+                onChange={this.handleChangeLabelSelect}
                 style={styles.phraseBuilderSelect}
               >
-                <option key="default" value="" disabled>
-                  + Add feature
-                </option>
-                {selectableFeatures.map((feature, index) => {
+                <option>{""}</option>
+                {selectableLabels.map((feature, index) => {
                   return (
                     <option key={index} value={feature}>
                       {feature}
@@ -113,9 +75,50 @@ class PhraseBuilder extends Component {
                   );
                 })}
               </select>
-            </div>
+            )}
+
+            {currentPanel === "dataDisplayFeatures" && (
+              <div>
+                <div style={styles.phraseBuilderSelectReadonly}>
+                  {labelColumn}
+                </div>
+                <br />
+                <div>
+                  <div style={styles.phraseBuilderHeader}>Based on...</div>
+                  {selectedFeatures.map((feature, index) => {
+                    return (
+                      <div key={index} style={styles.phraseBuilderFeature}>
+                        {feature}
+                        <div
+                          onClick={() => this.removeSelectedFeature(feature)}
+                          style={styles.phraseBuilderFeatureRemove}
+                        >
+                          <FontAwesomeIcon icon={faTimes} />
+                        </div>
+                      </div>
+                    );
+                  })}
+                  <select
+                    value={""}
+                    onChange={this.handleChangeFeatureSelect}
+                    style={styles.phraseBuilderSelect}
+                  >
+                    <option key="default" value="" disabled>
+                      + Add feature
+                    </option>
+                    {selectableFeatures.map((feature, index) => {
+                      return (
+                        <option key={index} value={feature}>
+                          {feature}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     );
   }

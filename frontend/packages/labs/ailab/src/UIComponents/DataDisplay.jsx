@@ -93,23 +93,6 @@ class DataDisplay extends Component {
 
     return (
       <div id="data-display" style={styles.panel}>
-        {/*<div style={styles.statement}>
-          Predict{" "}
-          <span style={styles.statementLabel}>
-            {this.props.labelColumn || "..."}
-          </span>
-          <span>
-            {" "}
-            based on{" "}
-            <span style={styles.statementFeature}>
-              {this.props.selectedFeatures.length > 0
-                ? this.props.selectedFeatures.join(", ")
-                : ".."}
-            </span>
-            {"."}
-          </span>
-        </div>*/}
-
         <div style={styles.largeText}>
           {currentPanel === "dataDisplayLabel" && (
             <div>Explore columns and choose a label:</div>
