@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import train from "../train";
 import {
   setTestData,
-  getSelectedContinuousFeatures,
+  getSelectedNumericalFeatures,
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
@@ -17,7 +17,7 @@ class Predict extends Component {
   static propTypes = {
     labelColumn: PropTypes.string,
     selectedCategoricalFeatures: PropTypes.array,
-    selectedContinuousFeatures: PropTypes.array,
+    selectedNumericalFeatures: PropTypes.array,
     uniqueOptionsByColumn: PropTypes.object,
     testData: PropTypes.object,
     setTestData: PropTypes.func.isRequired,
@@ -43,7 +43,7 @@ class Predict extends Component {
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
             <form>
-              {this.props.selectedContinuousFeatures.map((feature, index) => {
+              {this.props.selectedNumericalFeatures.map((feature, index) => {
                 return (
                   <div key={index}>
                     <label>
@@ -119,7 +119,7 @@ export default connect(
     predictedLabel: getConvertedPredictedLabel(state),
     confidence: state.prediction.confidence,
     labelColumn: state.labelColumn,
-    selectedContinuousFeatures: getSelectedContinuousFeatures(state),
+    selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
     getPredictAvailable: getPredictAvailable(state)

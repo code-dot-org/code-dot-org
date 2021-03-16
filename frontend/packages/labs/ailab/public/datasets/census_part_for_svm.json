@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "age",
       "description": "The person's age"
     },
@@ -11,7 +11,7 @@
       "description": "Type of employment: government, private, self"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "estimated number of people represented",
       "description": "The estimate for how many people in the US this person is representative of"
     },
@@ -46,17 +46,17 @@
       "description": "Gender (uses 1994 Census options, which are binary)"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "capital gains",
       "description": "Their reported capital gains for the year (these are monetary gains from things like selling stock instead of income from a job)"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "capital losses",
       "description": "Their reported capital losses (for example, if they sold a stock that lost them money)"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "hours of work per week",
       "description": "Hours they work a week"
     },

@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Overall rank",
       "description": "The rank of the country in terms of happiness score."
     },
@@ -11,37 +11,37 @@
       "description": "The country or region's name."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Score",
       "description": "The country's happiness score, created by adding up the total of the other features."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "GDP per capita",
       "description": "The country's GDP per capita in dollars."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Social support",
       "description": "This is the national average of a 0 (no) or 1 (yes) response to the question 'If you were in trouble, do you have relatives or firends you can count on to help you whenever you need them?'"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Healthy life expectancy",
       "description": "Healthy life expectancy at birth, based on data from the World Health Organization global Health Observatory."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Freedom to make life choices",
       "description": "The national average of a 0 (no) to 1 (yes) response to the question \"Are you satisfied or dissatisfied with your freedom to choose what you do with your life?\""
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Generosity",
       "description": "The national average of a response to the question \"Have you donated money to a charity in the past month?\""
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Perceptions of corruption",
       "description": "The national average of the response to two 0-1 questions: \"Is corruption widespread throughout the government or not\" and \"Is corrpution widespread within businesses or not\"?"
     }
