@@ -289,6 +289,24 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_1_response['readonly_answers']
   end
 
+  test "student was autolocked while in readonly state" do
+    # student_1 is autolocked during readonly
+    script, level, lesson = create_script_with_lockable_lesson
+    create :user_level, user: @student_1, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
+
+    student_1_response = get_student_response(script, level, lesson, 1)
+    assert_equal(
+      {
+        "user_id" => @student_1.id,
+        "level_id" => level.id,
+        "script_id" => script.id
+      },
+      student_1_response['user_level_data']
+    )
+    assert_equal true, student_1_response['locked']
+    assert_equal false, student_1_response['readonly_answers']
+  end
+
   test "student should show unlocked and readonly" do
     # student_2 is unlocked and can view answers
     script, level, lesson = create_script_with_lockable_lesson
@@ -361,10 +379,10 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, student_4_response['readonly_answers']
   end
 
-  test "student has been autolocked while viewing answers" do
-    # student_5 got autolocked while viewing answers
+  test "student is set at readonly answers without submitting" do
+    # student_5 is able to view answers though has not submitted
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_5, script: script, level: level, submitted: true, readonly_answers: true, unlocked_at: 2.days.ago
+    create :user_level, user: @student_5, script: script, level: level, submitted: false, readonly_answers: true, unlocked_at: 10.minutes.ago
 
     student_5_response = get_student_response(script, level, lesson, 5)
     assert_equal(
@@ -378,10 +396,25 @@ class ApiControllerTest < ActionController::TestCase
 
     user_level_data = student_5_response['user_level_data']
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, student_5_response['locked']
-    assert_equal false, student_5_response['readonly_answers']
+    assert_equal false, student_5_response['locked']
+    assert_equal true, student_5_response['readonly_answers']
+    assert_equal false, user_level.locked?
+    assert_equal false, user_level.submitted?
+    assert_equal true, user_level.readonly_answers?
+
+    # Now, assessment is locked and not readonly, but still not submitted
+    updates = [
+      {
+        user_level_data: user_level_data,
+        locked: true,
+        readonly_answers: false
+      }
+    ]
+
+    post :update_lockable_state, params: {updates: updates}
+    user_level = UserLevel.find_by(user_level_data)
     assert_equal true, user_level.locked?
-    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.submitted?
     assert_equal false, user_level.readonly_answers?
   end
 
@@ -477,7 +510,7 @@ class ApiControllerTest < ActionController::TestCase
 
     post :update_lockable_state, params: {updates: updates}
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal true, user_level.submitted?
+    assert_equal false, user_level.submitted?
     assert_equal true, user_level.readonly_answers?
     assert_not_nil user_level.unlocked_at
 
@@ -554,14 +587,14 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal false, user_level.locked?
       assert_equal true, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
 
       # update from readonly_answers to locked
-      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: true)
       expected_updated_at = user_level.updated_at
       Timecop.travel 1
       updates = [
@@ -574,14 +607,14 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal true, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_nil user_level.unlocked_at
       assert_equal expected_updated_at, user_level.updated_at
 
       # update from readonly_answers to editable
-      user_level.update!(submitted: true, unlocked_at: Time.now, readonly_answers: true)
+      user_level.update!(submitted: false, unlocked_at: Time.now, readonly_answers: true)
       expected_updated_at = user_level.updated_at
       Timecop.travel 1
       updates = [
@@ -594,7 +627,7 @@ class ApiControllerTest < ActionController::TestCase
 
       post :update_lockable_state, params: {updates: updates}
       user_level = UserLevel.find_by(user_level_data)
-      assert_equal true, user_level.submitted?
+      assert_equal false, user_level.submitted?
       assert_equal false, user_level.locked?
       assert_equal false, user_level.readonly_answers?
       assert_not_nil user_level.unlocked_at

@@ -36,8 +36,6 @@ class UserLevel < ApplicationRecord
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
 
-  validate :readonly_requires_submitted
-
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
   scope :attempted, -> {where.not(best_result: nil)}
@@ -47,12 +45,6 @@ class UserLevel < ApplicationRecord
   def self.by_stage(stage)
     levels = stage.script_levels.map(&:level_ids).flatten
     where(script: stage.script, level: levels)
-  end
-
-  def readonly_requires_submitted
-    if readonly_answers? && !submitted?
-      errors.add(:readonly_answers, 'readonly_answers only valid on submitted UserLevel')
-    end
   end
 
   def attempted?
@@ -162,7 +154,7 @@ class UserLevel < ApplicationRecord
   def show_as_locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
-    return false if readonly_answers && unlocked_at && unlocked_at > AUTOLOCK_PERIOD.ago
+    return false if readonly_answers && !locked?
     return locked? || submitted?
   end
 
@@ -183,10 +175,7 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    current_submit = user_level.submitted
-
     user_level.assign_attributes(
-      submitted: readonly_answers || current_submit,
       readonly_answers: !locked && readonly_answers,
       unlocked_at: locked ? nil : Time.now,
       # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
