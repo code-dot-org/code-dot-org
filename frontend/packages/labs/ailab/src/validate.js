@@ -2,7 +2,7 @@
 
 import { availableTrainers } from "./train.js";
 import { ColumnTypes } from "./constants.js";
-import { getSelectedContinuousColumns } from "./redux.js";
+import { getSelectedNumericalColumns } from "./redux.js";
 
 // Checks to see if there is any data.
 // @return {boolean}
@@ -88,7 +88,7 @@ export function uniqLabelFeaturesSelected(state) {
   );
 }
 
-// Check that each feature column and the label column contain continuous or
+// Check that each feature column and the label column contain numerical or
 // categorical data, not "Other".
 // @return {boolean}
 export function selectedColumnsHaveDatatype(state) {
@@ -105,10 +105,10 @@ export function selectedColumnsHaveDatatype(state) {
   return selectedColumns.length > 0 && columnTypesOk;
 }
 
-// Check that selected continuous columns only contain numbers.
+// Check that selected numerical columns only contain numbers.
 // @return {boolean}
-export function continuousColumnsHaveOnlyNumbers(state) {
-  const columns = getSelectedContinuousColumns(state);
+export function numericalColumnsHaveOnlyNumbers(state) {
+  const columns = getSelectedNumericalColumns(state);
   let allNumbers = true;
   state.data.forEach(function(row, i) {
     for (const column of columns) {
@@ -129,7 +129,7 @@ export function trainerSelected(state) {
 
 /* Checks that a training algorithm and the selected label datatype are
 compatible. Classification algorithms only work with categorical data, and
-regression algorithms only work with continuous data.
+regression algorithms only work with numerical data.
 @return {boolean}
  */
 export function compatibleLabelAndTrainer(state) {

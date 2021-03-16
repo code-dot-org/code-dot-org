@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "age",
       "description": "age of primary beneficiary"
     },
@@ -11,12 +11,12 @@
       "description": "insurance contractor gender, female, male"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "bmi",
       "description": "Body mass index"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "children",
       "description": "Number of children covered by health insurance"
     },
@@ -31,7 +31,7 @@
       "description": "the beneficiary's residential area in the US, northeast, southeast, southwest, northwest."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "charges",
       "description": "Individual medical costs billed by health insurance"
     }

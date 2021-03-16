@@ -1,6 +1,6 @@
 export const ColumnTypes = {
   CATEGORICAL: "categorical",
-  CONTINUOUS: "numerical"
+  NUMERICAL: "numerical"
 };
 
 export const MLTypes = {

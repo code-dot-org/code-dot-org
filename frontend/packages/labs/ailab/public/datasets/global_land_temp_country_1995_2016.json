@@ -1,12 +1,12 @@
 {
   "fields": [
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Year",
       "description": "The year the measurement was taken"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Day",
       "description": "The day the measurement was taken"
     },
@@ -16,12 +16,12 @@
       "description": "The month the measurement was taken"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "AverageTemperature",
       "description": "The average temperature from that day in Celsius"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "AverageTemperatureUncertainty",
       "description": "The average temperature uncertainty in Celsius"
     },

@@ -31,11 +31,11 @@
   	},
   	{
   		"id": "fruit_day",
-  		"type": "continuous"
+  		"type": "numerical"
   	},
   	{
   		"id": "veggies_day",
-  		"type": "continuous"
+  		"type": "numerical"
   	},
   	{
   		"id": "sports",

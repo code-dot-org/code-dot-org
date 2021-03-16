@@ -15,62 +15,62 @@
   "fields": [
     {
       "id": "lions",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of lions seen during a visit"
     },
     {
       "id": "temperature",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Temperature during a visit"
     },
     {
       "id": "people",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Amount of total people on safari during a visit"
     },
     {
       "id": "dayOfMonth",
-      "type": "continuous",
+      "type": "numerical",
       "description": "The day of the month (1-31) of a visit"
     },
     {
       "id": "ticketRevenue",
-      "type": "continuous",
+      "type": "numerical",
       "description": "The profit of the safari company on the day of a visit"
     },
     {
       "id": "antelope",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of antelope seen during a visit"
     },
     {
       "id": "rhino",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of rhinos seen during a visit"
     },
     {
       "id": "elephant",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of elephants seen during a visit"
     },
     {
       "id": "alligator",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of alligators seen during a visit"
     },
     {
       "id": "trees",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of overgrowth and trees providing shade seen during the visit"
     },
     {
       "id": "mosquitos",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Number of mosquitos seen during the visit"
     },
     {
       "id": "overgrowthPercent",
-      "type": "continuous",
+      "type": "numerical",
       "description": "Percent of the land that has grass and bushes and shrubbery during a visit"
     }
   ],

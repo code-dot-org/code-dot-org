@@ -156,13 +156,13 @@ class ColumnInspector extends Component {
                 </div>
               )}
 
-              {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
+              {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
                 <div>
                   {currentColumnData.range && (
                     <div>
                       {isNaN(rangesByColumn[currentColumnData.id].min) && (
                         <p style={styles.error}>
-                          Continuous columns should contain only numbers.
+                          Numerical columns should contain only numbers.
                         </p>
                       )}
                       {!isNaN(rangesByColumn[currentColumnData.id].min) && (
