@@ -21006,7 +21006,7 @@ en:
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Variables that Change in Bee:
               key: Variables that Change in Bee
-              name: Variables with Bee
+              name: Changing Variables with Bee
               description_student: This bee loves **variables**!
               description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Variables that Change in Artist:
