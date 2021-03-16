@@ -10,19 +10,19 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
-// TODO: use generic FoormEntityEditor component
-import FoormLibraryEditor from '../../../../../src/code-studio/pd/foorm/FoormLibraryEditor';
-// TODO: use generic FoormEditorRedux store
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormLibrarySaveBar, {
+  UnconnectedFoormLibrarySaveBar
+} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibrarySaveBar';
 import foorm, {
   setLibraryData,
   setLibraryQuestionData
-} from '../../../../../src/code-studio/pd/foorm/library_editor/foormLibraryEditorRedux';
+} from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
 import sinon from 'sinon';
 import _ from 'lodash';
-
 global.$ = require('jquery');
 
-describe('FoormEditor', () => {
+describe('FoormEntityEditor in Library editing mode', () => {
   let defaultProps, store, server, wrapper;
   beforeEach(() => {
     stubRedux();
@@ -39,15 +39,27 @@ describe('FoormEditor', () => {
 
     store = getStore();
 
+    const HeaderTitle = React.createElement('h1', null, 'A title');
+    const SaveBar = React.createElement(FoormLibrarySaveBar, {
+      resetCodeMirror: () => {},
+      libraryCategories: ['surveys/pd', 'surveys/teacher']
+    });
+
     defaultProps = {
       populateCodeMirror: () => {},
-      resetCodeMirror: () => {},
-      libraryCategories: ['surveys/pd']
+      preparePreview: () => {},
+      previewQuestions: {},
+      previewErrors: [],
+      forceRerenderKey: 0,
+      headerTitle: HeaderTitle,
+      validateURL: '/a/fake/url',
+      validateDataKey: 'a_string',
+      saveBar: SaveBar
     };
 
     wrapper = mount(
       <Provider store={store}>
-        <FoormLibraryEditor {...defaultProps} />
+        <FoormEntityEditor {...defaultProps} />
       </Provider>
     );
   });
@@ -99,7 +111,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleSaveResponseData)
     ]);
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -132,7 +144,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleNewResponseData)
     ]);
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -150,8 +162,7 @@ describe('FoormEditor', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    let availableLibraryQuestions = store.getState().foorm
-      .availableLibraryQuestionsForCurrentLibrary;
+    let availableLibraryQuestions = store.getState().foorm.availableSubEntities;
     assert(
       _.some(availableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
@@ -168,7 +179,7 @@ describe('FoormEditor', () => {
       JSON.stringify(sampleNewResponseData)
     ]);
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -187,9 +198,8 @@ describe('FoormEditor', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    let availableLibraryQuestions = store.getState().foorm
-      .availableLibraryQuestionsForCurrentLibrary;
-    let availableLibraries = store.getState().foorm.availableLibraries;
+    let availableLibraryQuestions = store.getState().foorm.availableSubEntities;
+    let availableLibraries = store.getState().foorm.availableEntities;
     assert(
       _.some(availableLibraries, ['id', 2]),
       'Newly saved library does not appear in list of available libraries'
@@ -215,7 +225,7 @@ describe('FoormEditor', () => {
       ]
     );
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -245,7 +255,7 @@ describe('FoormEditor', () => {
       'Save error'
     ]);
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
     expect(saveButton.contains('Save')).to.be.true;
@@ -274,7 +284,7 @@ describe('FoormEditor', () => {
   it('can cancel save new survey', () => {
     store.dispatch(setLibraryData(sampleExistingLibraryData));
 
-    const saveBar = wrapper.find('FoormLibrarySaveBar');
+    const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     // click save button
     const saveButton = saveBar.find('button').at(0);
