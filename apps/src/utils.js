@@ -744,6 +744,15 @@ export function stringifyQueryParams(params) {
 }
 
 /**
+ * Takes a link, looks for params already in the current URL
+ * and generates a new link with those params
+ */
+export function linkWithQueryParams(link) {
+  const queryParams = window.location.search || '';
+  return link + queryParams;
+}
+
+/**
  * Resets the animation of an aniGif by unsetting and setting the src
  * @param {Element} element the <img> element that needs to be reset
  */
