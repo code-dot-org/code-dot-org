@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-15 13:01:13 UTC",
+    "serialized_at": "2021-03-16 04:33:40 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -8037,6 +8037,246 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "objective.key": "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
       }
     }
   ]
