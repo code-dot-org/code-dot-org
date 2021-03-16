@@ -7,9 +7,6 @@ Parameters:
   GoogleDeveloperIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
-  GoogleDataAnalystIDs:
-    Type: AWS::SSM::Parameter::Value<List<String>>
-    Default: /IAM/GoogleDataAnalystIDs
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -215,14 +212,6 @@ Resources:
             Condition:
               StringEquals:
                 SAML:aud: https://signin.aws.amazon.com/saml
-          - Effect: Allow
-            Principal: {Federated: accounts.google.com}
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
-              ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref GoogleDataAnalystIDs
       ManagedPolicyArns: [!Ref DataAnalystPolicy]
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
