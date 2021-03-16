@@ -731,7 +731,7 @@ class TopInstructions extends Component {
             {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
             {!this.props.isEmbedView &&
               (isCSDorCSP || this.props.hasContainedLevels) &&
-              false && (
+              !this.props.dynamicInstructions && (
                 <CollapserIcon
                   isCollapsed={this.props.isCollapsed}
                   onClick={this.handleClickCollapser}

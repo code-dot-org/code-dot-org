@@ -111,7 +111,7 @@ class Instructions extends React.Component {
     // Resize the parent div to be the height of the largest dynamic instruction.
     if (this.props.setInstructionsRenderedHeight) {
       this.props.setInstructionsRenderedHeight(
-        largestHeight + HEADER_HEIGHT + RESIZER_HEIGHT + 20
+        largestHeight + HEADER_HEIGHT + RESIZER_HEIGHT + 20 + 10
       );
     }
   }
