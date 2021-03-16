@@ -974,6 +974,7 @@ ro:
             '"x"': poziţia x
             '"y"': poziţia y
             '"direction"': direcţie de mişcare
+            '"speed"': viteză
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} atinge {SPRITE2}"
         options:

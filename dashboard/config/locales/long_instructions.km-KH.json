@@ -206,7 +206,7 @@
         "ramp_artist_loops6_2018": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
         "ramp_artist_loops6_2019": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
         "ramp_artist_loops6_2020": "This staircase is much bigger,\nbut it takes the same amount of code as the last puzzle!\\\r\n\\\r\nFix this loop\nto complete the puzzle.",
-        "courseD_video_nestedLoopsArtist": "Use what you've learned to draw\nthis triangle.\\\r\n\\_\\_\\_\\\r\n\n##### The sides are each 100 pixels long. You will\n\nneed to turn 120 degrees at each corner.",
+        "courseD_video_nestedLoopsArtist": "អស្ចារ្យ! ឥឡូវប្រើ `repeat` loop ដើម្បីធ្វើជារាងការ៉េដោយប្រើសិល្បករ! ប្លុកសម្រាប់សិល្បករគឺខុសគ្នាបន្តិចបន្តួចពីpuzzlesផ្សេងទៀតប៉ុន្តែគំនិតគឺដូចគ្នា។\n\n* * *\n\nផ្នែកម្ខាងឭនៃរាងការ៉េមានប្រវែង ២០០ pixels, ហើយអ្នកនឹងត្រូវបង្វែរ ៩០ ដឺក្រេដើម្បីបង្កើតជាមុំនីមួយៗ។",
         "CSD Problem Solving Process Video": "## សំណួរត្រិះរិះ\n\n-   តើ​អ្នក​ធ្វើតាម​របៀប​ដោះស្រាយ​បញ្ហា​ក្នុង​មេរៀន​ចុងក្រោយ បាន​ដោយរបៀបណា?\n-   តើ​អ្នក​អាច​ប្រើ​របៀប​ដោះស្រាយ​នោះ​ចំពោះ​បញ្ហា​ក្នុង​ជីវិត​បាន​ដូចម្ដេច",
         "courseA_maze_seq1": "_\"សាកល្បងលេងល្បែងជាមួយប្លុកទាំងនេះ និងព្យាយាមនាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក\"_",
         "courseA_maze_seq1_2018": "_\"សាកល្បងលេងល្បែងជាមួយប្លុកទាំងនេះ និងព្យាយាមនាំតួអង្គបក្សីទៅរកតួអង្គជ្រូក\"_",

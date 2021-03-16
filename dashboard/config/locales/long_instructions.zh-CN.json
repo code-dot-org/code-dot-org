@@ -3975,7 +3975,10 @@
         "outbreak8": "# 分享你的信息！\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n_你可以与世界分享你的创作和你的信息！你从这个活动中学到了什么？你希望别人能学到什么？_\n\n</div>\n\n<xml><block type=\"gamelab_printText\"><value name=\"TEXT\"></value></block></xml>块将在模拟运行时在屏幕上显示文本。使用它来告诉用户你的模拟如何运行或分享信息。\n\n下面是一些例子：\n\n<xml><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">5</title></block></value><next><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\">Click the sprites to give them masks.</title></block></value></block></next></block></xml>\n\n<xml><block type=\"gamelab_atTime\"><title name=\"UNIT\">\"seconds\"</title><value name=\"N\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value><next><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\">Masks help slow the spread of viruses!</title></block></value></block></next></block></xml>",
         "CourseD_EOC_artist": "创作你自己的画！",
         "CourseD_EOC_bounce1": "创作你自己的篮球比赛！",
-        "CourseD_EOC_starwars": "创造你自己的星球大战游戏！"
+        "CourseD_EOC_starwars": "创造你自己的星球大战游戏！",
+        "CourseD_EOC_dance": "创作你自己的舞蹈！",
+        "outbreak_freeplay": "# 自由发挥\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*干得好！你帮了怪物镇所有居民一个大忙。我们希望你能和别人分享你所学到的。*\n\n</div>\n\n你完成了教程！只要你愿意可以对你的项目做任何你想做的改变或改进。按页面顶部的“共享”按钮，将你的项目发送给朋友和家人。工具箱已经大大扩展了。",
+        "outbreak_freeplay_basic": "# 自由发挥\n\n<div style=\"display:inline-block\">\n<img src=\"https://images.code.org/2d62fa7907c5e01d9e8cb5fadb84cc2f-image-1603199837041.png\" style=\"float:left; padding-right:10px\">\n\n*干得好！你帮了怪物镇所有居民一个大忙。我们希望你能和别人分享你所学到的*\n\n</div>\n\n你完成了教程！只要你愿意可以对你的项目做任何你想做的改变或改进。按页面顶部的“共享”按钮，将你的项目发送给朋友和家人。"
       }
     }
   }
