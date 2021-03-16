@@ -21,6 +21,7 @@ class LessonsStandardTest < ActiveSupport::TestCase
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a,
+      frameworks: [standard.framework],
       standards: [standard]
     )
     lessons_standard = lesson.lessons_standards.first
@@ -29,6 +30,7 @@ class LessonsStandardTest < ActiveSupport::TestCase
     assert_queries(0) do
       expected = {
         'lesson.key' => lesson.key,
+        'framework.shortcode' => standard.framework.shortcode,
         'standard.shortcode' => standard.shortcode
       }
       assert_equal expected, lessons_standard.seeding_key(seed_context)
