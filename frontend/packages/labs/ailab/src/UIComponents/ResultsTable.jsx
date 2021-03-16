@@ -25,61 +25,63 @@ class ResultsTable extends Component {
     const featureCount = this.props.selectedFeatures.length;
 
     return (
-      <div style={styles.scrollableContents}>
-        <table>
-          <thead>
-            <tr>
-              <th colSpan={featureCount} style={styles.largeText}>
-                Features
-              </th>
-              <th>
-                <span style={styles.largeText}>{"A.I. Prediction"}</span>
-              </th>
-              <th>
-                <span style={styles.largeText}>{"Actual"}</span>
-                {this.props.isRegression && (
-                  <div style={styles.smallText}>{"+/- 3% of range"}</div>
-                )}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              {this.props.selectedFeatures.map((feature, index) => {
+      <div style={styles.panel}>
+        <div style={styles.tableParent}>
+          <table style={styles.dataDisplayTable}>
+            <thead>
+              <tr>
+                <th colSpan={featureCount} style={{...styles.largeText, ...styles.dataDisplayHeader, ...styles.resultsTableFirstHeader }}>
+                  Features
+                </th>
+                <th style={{...styles.dataDisplayHeader, ...styles.resultsTableFirstHeader }}>
+                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
+                </th>
+                <th style={{...styles.dataDisplayHeader, ...styles.resultsTableFirstHeader }}>
+                  <span style={styles.largeText}>{"Actual"}</span>
+                  {this.props.isRegression && (
+                    <div style={styles.smallText}>{"+/- 3% of range"}</div>
+                  )}
+                </th>
+              </tr>
+              <tr>
+                {this.props.selectedFeatures.map((feature, index) => {
+                  return (
+                    <th style={{ ...styles.dataDisplayHeader, backgroundColor: colors.feature, ...styles.resultsTableSecondHeader }} key={index}>
+                      {feature}
+                    </th>
+                  );
+                })}
+                <th style={{ ...styles.dataDisplayHeader, backgroundColor: colors.label, ...styles.resultsTableSecondHeader }}>
+                  {this.props.labelColumn}
+                </th>
+                <th style={{ ...styles.dataDisplayHeader, backgroundColor: colors.label, ...styles.resultsTableSecondHeader }}>
+                  {this.props.labelColumn}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.props.accuracyCheckExamples.map((examples, index) => {
                 return (
-                  <td style={{ backgroundColor: colors.feature }} key={index}>
-                    {feature}
-                  </td>
+                  <tr key={index}>
+                    {examples.map((example, i) => {
+                      return <td style={styles.dataDisplayCell} key={i}>{example}</td>;
+                    })}
+                    <td style={styles.dataDisplayCell}>{this.props.accuracyCheckPredictedLabels[index]}</td>
+                    <td style={styles.dataDisplayCell}>{this.props.accuracyCheckLabels[index]}</td>
+                    {this.props.accuracyGrades[index] ===
+                      ResultsGrades.CORRECT && (
+                      <td style={styles.ready}>&#x2713;</td>
+                    )}
+                    {this.props.accuracyGrades[index] ===
+                      ResultsGrades.INCORRECT && (
+                      <td style={styles.error}>&#10006;</td>
+                    )}
+                  </tr>
                 );
               })}
-              <td style={{ backgroundColor: colors.label }}>
-                {this.props.labelColumn}
-              </td>
-              <td style={{ backgroundColor: colors.label }}>
-                {this.props.labelColumn}
-              </td>
-            </tr>
-            {this.props.accuracyCheckExamples.map((examples, index) => {
-              return (
-                <tr key={index}>
-                  {examples.map((example, i) => {
-                    return <td key={i}>{example}</td>;
-                  })}
-                  <td>{this.props.accuracyCheckPredictedLabels[index]}</td>
-                  <td>{this.props.accuracyCheckLabels[index]}</td>
-                  {this.props.accuracyGrades[index] ===
-                    ResultsGrades.CORRECT && (
-                    <td style={styles.ready}>&#x2713;</td>
-                  )}
-                  {this.props.accuracyGrades[index] ===
-                    ResultsGrades.INCORRECT && (
-                    <td style={styles.error}>&#10006;</td>
-                  )}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

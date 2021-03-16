@@ -282,6 +282,15 @@ export const styles = {
     backgroundColor: "rgba(255,100,100, 1)"
   },
 
+  resultsTableFirstHeader: {
+    top: 0,
+    backgroundColor: "white"
+  },
+
+  resultsTableSecondHeader: {
+    top: "30px"
+  },
+
   previousButton: {
     position: "fixed",
     left: 20,
