@@ -111,6 +111,7 @@ class SelectDataset extends Component {
                   <img
                     src={assetPath + dataset.imagePath}
                     style={styles.selectDatasetImage}
+                    draggable={false}
                   />
                   <div>{dataset.name}</div>
                 </div>

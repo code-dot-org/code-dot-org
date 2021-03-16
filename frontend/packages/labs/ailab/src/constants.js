@@ -113,6 +113,14 @@ export const styles = {
     flexDirection: "column"
   },
 
+  popupPanel: {
+    position: "absolute",
+    border: "1px solid",
+    top: 90,
+    height: "initial",
+    zIndex: 1
+  },
+
   scrollableContents: {
     overflow: "hidden"
   },
@@ -240,6 +248,11 @@ export const styles = {
     color: "white"
   },
 
+  dataDisplayHeaderHighlighted: {
+    backgroundColor: "#64fff16b",
+    color: "white"
+  },
+
   dataDisplayCell: {
     paddingLeft: 20,
     textAlign: "right"
@@ -263,6 +276,9 @@ export const styles = {
     backgroundColor: featureColor
   },
   dataDisplayCellUnselected: {},
+
+  dataDisplayCellHighlighted: { backgroundColor: "#64fff16b" },
+
   crossTabCell0: {
     backgroundColor: "rgba(255,100,100, 0)"
   },
@@ -366,6 +382,47 @@ export const styles = {
     float: "left",
     margin: 20
   },
+
+  phraseBuilder: {
+    fontSize: 24
+  },
+
+  phraseBuilderHeader: {
+    backgroundColor: "grey",
+    color: "white",
+    padding: 15
+  },
+
+  popupClose: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer"
+  },
+
+  phraseBuilderFeatureRemove: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    cursor: "pointer",
+    fontSize: 12
+  },
+
+  phraseBuilderSelect: {
+    fontSize: 24,
+    marginTop: 10,
+    padding: 6,
+    cursor: "pointer",
+    height: 43
+  },
+
+  phraseBuilderSelectReadonly: {
+    fontSize: 24,
+    marginTop: 10,
+    padding: 6,
+  },
+
+  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
 
   saveInputsWidth: {
     width: "95%"
