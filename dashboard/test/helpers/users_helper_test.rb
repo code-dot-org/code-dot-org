@@ -239,7 +239,7 @@ class UsersHelperTest < ActionView::TestCase
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
     assert_equal(
       {
-        level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil]},
+        level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, locked: true, pages_completed: [nil, nil]},
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
