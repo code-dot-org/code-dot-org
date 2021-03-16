@@ -15,7 +15,7 @@ import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   getSerializedLessonGroups,
@@ -313,7 +313,7 @@ class ScriptEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`${data.scriptPath}${window.location.search}`);
+          navigateToHref(linkWithQueryParams(data.scriptPath));
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
