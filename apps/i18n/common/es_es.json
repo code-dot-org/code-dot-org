@@ -992,7 +992,7 @@
   "level": "Nivel,",
   "levels": "Niveles",
   "levelDetails": "Detalles de nivel",
-  "levelGroupDetailsDialogText": "Este nivel es una evaluación o encuesta con múltiples preguntas. Para ver este nivel haga clic en \"{botón Texto}\".",
+  "levelGroupDetailsDialogText": "Este nivel es una evaluación o encuesta con múltiples preguntas. Para ver este nivel haga clic en \"{buttonText}\".",
   "levelHeader": "Nivel",
   "levelIncompleteError": "Estás utilizando todos los tipos necesarios de bloques pero no de la manera correcta.",
   "levelN": "NIVEL {levelNumber}",
