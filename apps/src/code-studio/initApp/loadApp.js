@@ -519,9 +519,10 @@ const sourceHandler = {
         source = appOptions.getCode();
         resolve(source);
       } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then(source => {
-          resolve(source);
-        });
+        appOptions
+          .getCodeAsync()
+          .then(source => resolve(source))
+          .catch(err => reject(err));
       }
     });
   },
