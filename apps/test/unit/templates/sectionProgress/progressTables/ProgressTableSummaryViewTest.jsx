@@ -8,13 +8,18 @@ import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
-import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableSummaryView, {
+  UnconnectedProgressTableSummaryView
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
+import ProgressTableContainer, {
+  UnconnectedProgressTableContainer
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import * as Sticky from 'reactabular-sticky';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
+import {ProgressTableTextCell} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import _ from 'lodash';
 import {
   fakeLevels,
@@ -23,6 +28,7 @@ import {
   fakeStudents,
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import sinon from 'sinon';
 
 const LESSON_1 = fakeLessonWithLevels({
   id: 1,
@@ -101,5 +107,46 @@ describe('ProgressTableSummaryView', () => {
       .find(ProgressTableStudentList)
       .find(Sticky.Header);
     expect(studentListHeaders).to.have.length(1);
+  });
+
+  it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
+    sinon.spy(
+      UnconnectedProgressTableSummaryView.prototype,
+      'timeSpentCellFormatter'
+    );
+    sinon.spy(
+      UnconnectedProgressTableSummaryView.prototype,
+      'lastUpdatedCellFormatter'
+    );
+    const container = setUp()
+      .find(UnconnectedProgressTableContainer)
+      .instance();
+    const rowData = container.state.rows[0];
+    container.onToggleRow(rowData);
+
+    // one call for each of the two lessons
+    expect(
+      UnconnectedProgressTableSummaryView.prototype.timeSpentCellFormatter
+        .callCount
+    ).to.equal(2);
+    expect(
+      UnconnectedProgressTableSummaryView.prototype.lastUpdatedCellFormatter
+        .callCount
+    ).to.equal(2);
+  });
+
+  it('renders ProgressTableTextCells for detail rows', () => {
+    const wrapper = setUp();
+    const container = wrapper
+      .find(UnconnectedProgressTableContainer)
+      .instance();
+    const rowData = container.state.rows[0];
+    container.onToggleRow(rowData);
+
+    // force re-render
+    wrapper.setProps({});
+
+    // 2 detail rows * 2 lessons = 4
+    expect(wrapper.find(ProgressTableTextCell)).to.have.length(4);
   });
 });

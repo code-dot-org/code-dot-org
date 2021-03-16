@@ -82,11 +82,7 @@ class ProgressTableContainer extends React.Component {
 
   componentDidMount() {
     // override the default initial number of rows to render
-    const maxRows = Math.ceil(
-      parseInt(progressTableStyles.MAX_BODY_HEIGHT) /
-        parseInt(progressTableStyles.ROW_HEIGHT)
-    );
-    const initialRows = Math.min(this.props.section.students.length, maxRows);
+    const initialRows = parseInt(progressTableStyles.MAX_ROWS);
     this.studentList &&
       this.studentList.bodyComponent.setState({
         amountOfRowsToRender: initialRows
@@ -107,9 +103,8 @@ class ProgressTableContainer extends React.Component {
   // account for the horizontal space used by the vertical scrollbar.
   needsContentHeaderGutter() {
     return (
-      this.props.section.students.length *
-        parseInt(progressTableStyles.ROW_HEIGHT) >
-      parseInt(progressTableStyles.MAX_BODY_HEIGHT)
+      this.props.section.students.length >
+      parseInt(progressTableStyles.MAX_ROWS)
     );
   }
 
