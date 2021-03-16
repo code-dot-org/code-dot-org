@@ -2,6 +2,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
+import {ProgressTableTextLabelCell} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 
@@ -15,19 +16,27 @@ const TEST_STUDENT_2 = {
   name: 'Jamie'
 };
 
+const STUDENT_ROWS = [
+  {id: '1.0', student: TEST_STUDENT_1, expansionIndex: 0},
+  {id: '2.0', student: TEST_STUDENT_2, expansionIndex: 0}
+];
+
+const DETAIL_ROWS = [
+  {id: '2.1', student: TEST_STUDENT_2, expansionIndex: 1},
+  {id: '2.2', student: TEST_STUDENT_2, expansionIndex: 2}
+];
+
 const DEFAULT_PROPS = {
-  section: {
-    id: 1,
-    students: [TEST_STUDENT_1, TEST_STUDENT_2]
-  },
+  sectionId: 1,
   scriptData: {
     id: 144,
     name: 'csd1'
   },
+  rows: STUDENT_ROWS,
+  onRow: () => {},
   headers: ['Lesson'],
   studentTimestamps: {3: 1610435096000, 4: 0},
-  localeCode: 'en-US',
-  needsGutter: false
+  onToggleRow: () => {}
 };
 
 const setUp = (overrideProps = {}) => {
@@ -52,9 +61,8 @@ describe('ProgressTableStudentList', () => {
     expect(studentRows.includes(TEST_STUDENT_2)).to.be.true;
   });
 
-  it('displays body with overflow scroll if needsGutter is true', () => {
-    const wrapper = setUp({needsGutter: true});
-    const virtualizedBodyComponent = wrapper.find(Virtualized.Body);
-    expect(virtualizedBodyComponent.props().style.overflowX).to.equal('scroll');
+  it('displays text cells if detail rows are passed in', () => {
+    const wrapper = setUp({rows: [...STUDENT_ROWS, ...DETAIL_ROWS]});
+    expect(wrapper.find(ProgressTableTextLabelCell)).to.have.lengthOf(2);
   });
 });

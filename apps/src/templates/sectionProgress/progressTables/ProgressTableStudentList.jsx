@@ -22,7 +22,6 @@ export default class ProgressTableStudentList extends React.Component {
     scriptData: scriptDataPropType.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     studentTimestamps: PropTypes.object,
-    localeCode: PropTypes.string,
     onToggleRow: PropTypes.func.isRequired
   };
 
@@ -53,7 +52,7 @@ export default class ProgressTableStudentList extends React.Component {
   }
 
   studentNameFormatter(rowData) {
-    const {sectionId, scriptData, studentTimestamps, localeCode} = this.props;
+    const {sectionId, scriptData, studentTimestamps} = this.props;
     const studentUrl = scriptUrlForStudent(
       sectionId,
       scriptData.name,
@@ -66,7 +65,6 @@ export default class ProgressTableStudentList extends React.Component {
         sectionId={sectionId}
         scriptId={scriptData.id}
         lastTimestamp={studentTimestamps[rowData.student.id]}
-        localeCode={localeCode}
         studentUrl={studentUrl}
         onExpandToggle={() => {
           this.props.onToggleRow(rowData);
