@@ -455,6 +455,8 @@ class FoormLibrarySaveBar extends Component {
   }
 }
 
+export const UnconnectedFoormLibrarySaveBar = FoormLibrarySaveBar;
+
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
