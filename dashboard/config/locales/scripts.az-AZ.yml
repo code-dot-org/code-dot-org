@@ -1816,12 +1816,16 @@ az:
               key: İnternet
               name: İnternet
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: dəyişənlər
+            lessonGroup-9:
+              display_name: sil
         express-2021:
           lessons:
             Dance Party:
               key: Rəqs şənliyi
+              name: Rəqs şənliyi
+            lesson-1:
               name: Rəqs şənliyi
           lesson_groups:
             csf_loops:
@@ -1843,6 +1847,8 @@ az:
             ramp_up:
               display_name: Giriş
             lessonGroup-3:
+              display_name: dəyişənlər
+            variables:
               display_name: dəyişənlər
         ai-unit-pilot:
           lessons:

@@ -6216,11 +6216,13 @@ he:
             ramp_up:
               display_name: העלה רמה
             csf_variables:
-              display_name: משתנים
+              display_name: בשביל לולאות
             csf_for_loops:
               display_name: בשביל לולאות
-            csf_sprites:
-              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+            lessonGroup-9:
+              display_name: הסר
         express-2021:
           lessons:
             Dance Party:
@@ -6238,6 +6240,8 @@ he:
             Until Loops in Maze:
               key: לולאות "עד" במבוך
               name: לולאות "עד" במבוך
+            lesson-1:
+              name: מסיבת ריקודים
           lesson_groups:
             csf_loops:
               display_name: חזרות
@@ -6298,6 +6302,8 @@ he:
               display_name: משתנים
             Sprites:
               display_name: דמויות
+            variables:
+              display_name: משתנים
         csd4-preview-2021:
           description_audience: ' '
           lessons:

@@ -2395,11 +2395,15 @@ eu:
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_variables:
-              display_name: Aldagaiak
+              display_name: For begiztak
             csf_data:
               display_name: Datu
             csf_for_loops:
               display_name: For begiztak
+            lessonGroup-8:
+              display_name: Aldagaiak
+            lessonGroup-9:
+              display_name: ezabatu
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2423,6 +2427,8 @@ eu:
             ramp_up:
               display_name: Sarrera
             lessonGroup-3:
+              display_name: Aldagaiak
+            variables:
               display_name: Aldagaiak
         k5-onlinepd-2021:
           lessons:

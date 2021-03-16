@@ -1,1 +1,15 @@
 es:
+  data:
+    shared_functions:
+      growing: creciente
+      jittering: nerviosismo
+      moving east: avanzando al este
+      moving north: avanzando hacia el norte
+      moving south: avanzando hacia el sur
+      moving west: avanzando hacia el oeste
+      patrolling: patrullando
+      shrinking: reducción
+      spinning left: girando a la izquierda
+      spinning right: girando a la derecha
+      swimming left and right: nadando a izquierda y derecha
+      wandering: vagando
