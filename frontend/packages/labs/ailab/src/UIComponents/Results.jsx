@@ -6,7 +6,7 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getSummaryStat,
-  setResultsPhase
+  setResultsPhase,
 } from "../redux";
 import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
@@ -23,7 +23,7 @@ class Results extends Component {
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
     resultsPhase: PropTypes.number,
-    setResultsPhase: PropTypes.func
+    setResultsPhase: PropTypes.func,
   };
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class Results extends Component {
               src={aiBotHead}
               style={{
                 ...styles.trainBotHead,
-                ...(false && styles.trainBotOpen)
+                ...(false && styles.trainBotOpen),
               }}
             />
             <img src={aiBotBody} style={styles.trainBotBody} />
@@ -65,13 +65,8 @@ class Results extends Component {
             </div>
           )}
 
-        {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
-          <div style={styles.scrollableContentsTinted}>
-            <div style={styles.scrollingContents}>
-              <ResultsTable />
-            </div>
-          </div>
-        )}
+        {this.props.resultsPhase >= 1 &&
+          !isNaN(this.props.summaryStat.stat) && <ResultsTable />}
 
         <div style={{ opacity: this.props.resultsPhase >= 2 ? 1 : 0 }}>
           {isNaN(this.props.summaryStat.stat) && (
@@ -83,9 +78,7 @@ class Results extends Component {
           <div>
             {!isNaN(this.props.summaryStat.stat) && (
               <div>
-                <div style={styles.mediumText}>
-                  Accuracy
-                </div>
+                <div style={styles.mediumText}>Accuracy</div>
                 <div style={styles.contents}>
                   {this.props.summaryStat.stat}%
                 </div>
@@ -99,7 +92,7 @@ class Results extends Component {
 }
 
 export default connect(
-  state => ({
+  (state) => ({
     selectedFeatures: state.selectedFeatures,
     labelColumn: state.labelColumn,
     summaryStat: getSummaryStat(state),
@@ -110,11 +103,11 @@ export default connect(
       state.accuracyCheckPredictedLabels
     ),
     percentDataToReserve: state.percentDataToReserve,
-    resultsPhase: state.resultsPhase
+    resultsPhase: state.resultsPhase,
   }),
-  dispatch => ({
+  (dispatch) => ({
     setResultsPhase(phase) {
       dispatch(setResultsPhase(phase));
-    }
+    },
   })
 )(Results);
