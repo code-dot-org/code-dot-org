@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {scriptDataPropType} from '../sectionProgressConstants';
-import {studentLevelProgressType} from '@cdo/apps/templates/progress/progressTypes';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {getCurrentScriptData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -42,9 +41,6 @@ class ProgressTableContainer extends React.Component {
     section: sectionDataPropType.isRequired,
     scriptData: scriptDataPropType.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
-    levelProgressByStudent: PropTypes.objectOf(
-      PropTypes.objectOf(studentLevelProgressType)
-    ).isRequired,
     studentTimestamps: PropTypes.object.isRequired,
     localeCode: PropTypes.string
   };
@@ -64,12 +60,14 @@ class ProgressTableContainer extends React.Component {
         parseInt(progressTableStyles.ROW_HEIGHT)
     );
     const initialRows = Math.min(this.props.section.students.length, maxRows);
-    this.studentList.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
-    });
-    this.contentView.bodyComponent.setState({
-      amountOfRowsToRender: initialRows
-    });
+    this.studentList &&
+      this.studentList.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
+    this.contentView &&
+      this.contentView.bodyComponent.setState({
+        amountOfRowsToRender: initialRows
+      });
   }
 
   onScroll(e) {
@@ -117,10 +115,6 @@ export default connect(state => ({
   section: state.sectionData.section,
   scriptData: getCurrentScriptData(state),
   lessonOfInterest: state.sectionProgress.lessonOfInterest,
-  levelProgressByStudent:
-    state.sectionProgress.studentLevelProgressByScript[
-      state.scriptSelection.scriptId
-    ],
   studentTimestamps:
     state.sectionProgress.studentLastUpdateByScript[
       state.scriptSelection.scriptId

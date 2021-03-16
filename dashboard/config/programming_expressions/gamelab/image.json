@@ -1,0 +1,27 @@
+{
+  "func": "image",
+  "category": "Drawing",
+  "paletteParams": [
+    "image",
+    "srcX",
+    "srcY",
+    "srcW",
+    "srcH",
+    "x",
+    "y",
+    "w",
+    "h"
+  ],
+  "params": [
+    "img",
+    "0",
+    "0",
+    "img.width",
+    "img.height",
+    "0",
+    "0",
+    "img.width",
+    "img.height"
+  ],
+  "noAutocomplete": true
+}

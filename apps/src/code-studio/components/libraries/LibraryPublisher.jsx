@@ -166,10 +166,7 @@ export default class LibraryPublisher extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
-        if (
-          error.message ===
-          'httpStatusCode: 413; status: error; error: Request Entity Too Large'
-        ) {
+        if (error.message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
         } else {
           this.setState({publishState: PublishState.ERROR_PUBLISH});

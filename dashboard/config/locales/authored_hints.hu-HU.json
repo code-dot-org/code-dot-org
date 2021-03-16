@@ -1431,16 +1431,25 @@
           "courseC_artist_prog2_b": "Baj van a bekanyarodással a sarkon? Használd a 'fordulj jobbra 90 fokot' blokkot!"
         },
         "courseC_artist_prog5": {
-          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
+          "courseC_artist_prog5_c": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
         },
         "courseC_artist_prog5_2018": {
-          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
         },
         "courseC_artist_prog5_2019": {
-          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
         },
         "courseC_artist_prog5_2020": {
-          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
         },
         "courseC_artist_prog7": {
           "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
@@ -1479,28 +1488,40 @@
           "courseC_collector_prog4_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         },
         "courseC_maze_debugging2": {
-          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging2_a": "Több értékes kód található a munkaterületen. Nézd át, és próbáld meg javítani a kódot, ahelyett, hogy egyből kitörölnéd az egészet!",
+          "courseC_maze_debugging2_b": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?"
         },
         "courseC_maze_debugging2_2018": {
-          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging2_a": "Több értékes kód található a munkaterületen. Nézd át, és próbáld meg javítani a kódot, ahelyett, hogy egyből kitörölnéd az egészet!",
+          "courseC_maze_debugging2_b": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?"
         },
         "courseC_maze_debugging2_2019": {
-          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging2_a": "Több értékes kód található a munkaterületen. Nézd át, és próbáld meg javítani a kódot, ahelyett, hogy egyből kitörölnéd az egészet!",
+          "courseC_maze_debugging2_b": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?"
         },
         "courseC_maze_debugging2_2020": {
-          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging2_c": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging2_a": "Több értékes kód található a munkaterületen. Nézd át, és próbáld meg javítani a kódot, ahelyett, hogy egyből kitörölnéd az egészet!",
+          "courseC_maze_debugging2_b": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?"
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging3_a": "Ahhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         },
         "courseC_maze_debugging3_2018": {
-          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging3_a": "Ahhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         },
         "courseC_maze_debugging3_2019": {
-          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging3_a": "Ahhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         },
         "courseC_maze_debugging3_2020": {
-          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik."
+          "courseC_maze_debugging3_b": "Nem tudsz rájönni, mi a gond? Próbáld futtatni a kódot néhányszor, hogy lásd, mi is történik.",
+          "courseC_maze_debugging3_a": "Ahhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el valamerre a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (eszköztár).\n\nVégül a félrehúzott blokkokat húzd vissza oda, ahová tartoznak.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
         },
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "Balra vagy jobbra? Tőled függ!",
@@ -1609,28 +1630,36 @@
           "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         },
         "courseD_maze_ramp1": {
-          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy minden blokkot megfelelően összekapcsoltál-e, aztán kattints a \"Futtatás\" gombra."
         },
         "courseD_maze_ramp1_2018": {
-          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy minden blokkot megfelelően összekapcsoltál-e, aztán kattints a \"Futtatás\" gombra."
         },
         "courseD_maze_ramp1_2019": {
-          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy minden blokkot megfelelően összekapcsoltál-e, aztán kattints a \"Futtatás\" gombra."
         },
         "courseD_maze_ramp1_2020": {
-          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming1_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming1_a": "Ha a madár nem ér el a malacig, ellenőrizd, hogy minden blokkot megfelelően összekapcsoltál-e, aztán kattints a \"Futtatás\" gombra."
         },
         "courseD_maze_ramp2": {
-          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz."
+          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindhárom blokkot megfelelően csatlakoztattad-e egymáshoz, és csatlakoztattad-e a \"Futtatáskor\" blokkhoz."
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz."
+          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindhárom blokkot megfelelően csatlakoztattad-e egymáshoz, és csatlakoztattad-e a \"Futtatáskor\" blokkhoz."
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz."
+          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindhárom blokkot megfelelően csatlakoztattad-e egymáshoz, és csatlakoztattad-e a \"Futtatáskor\" blokkhoz."
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz."
+          "courseC_maze_programming2_a": "A \"menj előre\" blokk használatához fogd és csatlakoztasd a munkaterületen a \"futtatáskor\" blokkhoz.",
+          "courseC_maze_programming2_b": "Ellenőrizd, hogy mindhárom blokkot megfelelően csatlakoztattad-e egymáshoz, és csatlakoztattad-e a \"Futtatáskor\" blokkhoz."
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz, hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben, és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott blokkokat húzd vissza oda, ahová tartoznak."
@@ -1646,27 +1675,33 @@
         },
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5_2018": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5_2019": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5_2020": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5a_2018": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5a_2019": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
@@ -1678,19 +1713,23 @@
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5b_2018": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5b_2019": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_maze_ramp5b_2020": {
           "courseC_maze_programming5_a": "Próbáld használni a \"lépés\" gombot, hogy a kódot lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?",
-          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_maze_programming5_c": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_maze_programming5_b": "Soha ne felejtsd el, hogy a madár szemszögéből kell gondolkodnod a fordulásoknál!"
         },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_a": "Ha a motkány nem ér el a makkig, ellenőrizd, hogy minden blokk a helyén van-e, és kattints újra a Futtatásra.",
@@ -2260,6 +2299,250 @@
         },
         "courseD_artist_project5_2020": {
           "courseD_artist_project4_a": "Vonalak 2 hatszögből és 4 háromszögből:\n\n<img src=\"https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png\" width=\"200px\" />"
+        },
+        "courseC_artist_prog3": {
+          "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
+          "courseC_artist_prog3_b": "Akarsz egy rövidebb kódot? Próbáld ki a ciklust ebben a feladatban!"
+        },
+        "courseC_artist_prog3_2018": {
+          "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
+          "courseC_artist_prog3_b": "Akarsz egy rövidebb kódot? Próbáld ki a ciklust ebben a feladatban!"
+        },
+        "courseC_artist_prog3_2019": {
+          "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
+          "courseC_artist_prog3_b": "Akarsz egy rövidebb kódot? Próbáld ki a ciklust ebben a feladatban!"
+        },
+        "courseC_artist_prog3_2020": {
+          "courseC_artist_prog3_a": "Hogy megrajzold az ablakot, rajzolj egy négyzetet, aminek minden oldala 100 képpont\n\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre\n-   fordulj\n-   menj előre",
+          "courseC_artist_prog3_b": "Akarsz egy rövidebb kódot? Próbáld ki a ciklust ebben a feladatban!"
+        },
+        "courseC_artist_prog4": {
+          "courseC_artist_prog4_a": "Hogy befejezd a rakétát, csak rajzolj egy háromszöget a tetejére!",
+          "courseC_artist_prog4_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog4_c": "Hogy egy háromszöget megrajzold, a következőt tedd:\n\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre"
+        },
+        "courseC_artist_prog4_2018": {
+          "courseC_artist_prog4_a": "Hogy befejezd a rakétát, csak rajzolj egy háromszöget a tetejére!",
+          "courseC_artist_prog4_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog4_c": "Hogy egy háromszöget megrajzold, a következőt tedd:\n\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre"
+        },
+        "courseC_artist_prog4_2019": {
+          "courseC_artist_prog4_a": "Hogy befejezd a rakétát, csak rajzolj egy háromszöget a tetejére!",
+          "courseC_artist_prog4_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog4_c": "Hogy egy háromszöget megrajzold, a következőt tedd:\n\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre"
+        },
+        "courseC_artist_prog4_2020": {
+          "courseC_artist_prog4_a": "Hogy befejezd a rakétát, csak rajzolj egy háromszöget a tetejére!",
+          "courseC_artist_prog4_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog4_c": "Hogy egy háromszöget megrajzold, a következőt tedd:\n\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre\n-   fordulj balra 120 fokot\n-   menj előre"
+        },
+        "courseC_artist_prog6": {
+          "courseC_artist_prog6_a": "A művész már a megfelelő irányban áll, hogy elkezdje megrajzolni az első vonalat.",
+          "courseC_artist_prog6_b": "A gyémánt valójában egy négyzet, ami az egyik sarkán áll.",
+          "courseC_artist_prog6_c": "Mivel a gyémánt is egy négyzet, a sarkoknál ugyancsak 90 fokot kell fordulni."
+        },
+        "courseC_artist_prog6_2018": {
+          "courseC_artist_prog6_a": "A művész már a megfelelő irányban áll, hogy elkezdje megrajzolni az első vonalat.",
+          "courseC_artist_prog6_b": "A gyémánt valójában egy négyzet, ami az egyik sarkán áll.",
+          "courseC_artist_prog6_c": "Mivel a gyémánt is egy négyzet, a sarkoknál ugyancsak 90 fokot kell fordulni."
+        },
+        "courseC_artist_prog6_2019": {
+          "courseC_artist_prog6_a": "A művész már a megfelelő irányban áll, hogy elkezdje megrajzolni az első vonalat.",
+          "courseC_artist_prog6_b": "A gyémánt valójában egy négyzet, ami az egyik sarkán áll.",
+          "courseC_artist_prog6_c": "Mivel a gyémánt is egy négyzet, a sarkoknál ugyancsak 90 fokot kell fordulni."
+        },
+        "courseC_artist_prog6_2020": {
+          "courseC_artist_prog6_a": "A művész már a megfelelő irányban áll, hogy elkezdje megrajzolni az első vonalat.",
+          "courseC_artist_prog6_b": "A gyémánt valójában egy négyzet, ami az egyik sarkán áll.",
+          "courseC_artist_prog6_c": "Mivel a gyémánt is egy négyzet, a sarkoknál ugyancsak 90 fokot kell fordulni."
+        },
+        "courseC_collector_prog5": {
+          "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
+          "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+        },
+        "courseC_collector_prog5_2018": {
+          "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
+          "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+        },
+        "courseC_collector_prog5_2019": {
+          "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
+          "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+        },
+        "courseC_collector_prog5_2020": {
+          "courseC_collector_prog5_a": "\"Működik az első lépés?\nÉs a második lépés? \nHol romlanak el a dolgok?\"",
+          "courseC_collector_prog5_b": "Ha egy hibát kijavítottál, és a program még mindig nem jó, használd a lépésenkénti ellenőrzést, hogy további hibákat találj!",
+          "courseC_collector_prog5_d": "Kövesd az ösvényt, hogy összegyűjtsd a kincseket."
+        },
+        "courseC_collector_prog6": {
+          "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
+          "courseC_collector_prog6_b": "Elakadtál? Próbáld ezt az ösvényt követni a kincsek összegyűjtéséhez."
+        },
+        "courseC_collector_prog6_2018": {
+          "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
+          "courseC_collector_prog6_b": "Elakadtál? Próbáld ezt az ösvényt követni a kincsek összegyűjtéséhez."
+        },
+        "courseC_collector_prog6_2019": {
+          "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
+          "courseC_collector_prog6_b": "Elakadtál? Próbáld ezt az ösvényt követni a kincsek összegyűjtéséhez."
+        },
+        "courseC_collector_prog6_2020": {
+          "courseC_collector_prog6_a": "Kitalálod, mi a hiba?\n\nHasználd a \"Lépés\" gombot, hogy megtaláld a hibákat a kód soronkénti futtatásával.",
+          "courseC_collector_prog6_b": "Elakadtál? Próbáld ezt az ösvényt követni a kincsek összegyűjtéséhez."
+        },
+        "courseC_collector_prog7": {
+          "courseC_collector_prog7_a": "Már több remek kód ott van a munkaterületen. Nem kell törölnöd őket, hogy megoldd a feladványt.",
+          "courseC_collector_prog7_b": "Nem látod azt a blokkot a munkaterületen, amire szükséged van ahhoz, hogy a kincskeresőnk a megfelelő irányba forduljon? Húzz ki egyet az eszköztárból!",
+          "courseC_collector_prog7_c": "Gondban vagy, hogy milyen úton indulj el a kincsekért? Próbáld ezt az utat!"
+        },
+        "courseC_collector_prog7_2018": {
+          "courseC_collector_prog7_a": "Már több remek kód ott van a munkaterületen. Nem kell törölnöd őket, hogy megoldd a feladványt.",
+          "courseC_collector_prog7_b": "Nem látod azt a blokkot a munkaterületen, amire szükséged van ahhoz, hogy a kincskeresőnk a megfelelő irányba forduljon? Húzz ki egyet az eszköztárból!",
+          "courseC_collector_prog7_c": "Gondban vagy, hogy milyen úton indulj el a kincsekért? Próbáld ezt az utat!"
+        },
+        "courseC_collector_prog7_2019": {
+          "courseC_collector_prog7_a": "Már több remek kód ott van a munkaterületen. Nem kell törölnöd őket, hogy megoldd a feladványt.",
+          "courseC_collector_prog7_b": "Nem látod azt a blokkot a munkaterületen, amire szükséged van ahhoz, hogy a kincskeresőnk a megfelelő irányba forduljon? Húzz ki egyet az eszköztárból!",
+          "courseC_collector_prog7_c": "Gondban vagy, hogy milyen úton indulj el a kincsekért? Próbáld ezt az utat!"
+        },
+        "courseC_collector_prog7_2020": {
+          "courseC_collector_prog7_a": "Már több remek kód ott van a munkaterületen. Nem kell törölnöd őket, hogy megoldd a feladványt.",
+          "courseC_collector_prog7_b": "Nem látod azt a blokkot a munkaterületen, amire szükséged van ahhoz, hogy a kincskeresőnk a megfelelő irányba forduljon? Húzz ki egyet az eszköztárból!",
+          "courseC_collector_prog7_c": "Gondban vagy, hogy milyen úton indulj el a kincsekért? Próbáld ezt az utat!"
+        },
+        "courseC_collector_prog_challenge1": {
+          "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
+        },
+        "courseC_collector_prog_challenge1_2018": {
+          "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
+        },
+        "courseC_collector_prog_challenge1_2019": {
+          "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
+        },
+        "courseC_collector_prog_challenge1_2020": {
+          "courseC_collector_prog_challenge1_a": "Használhatod többször is a `begyűjtés` parancsot, hogy extra kincseket gyűjts."
+        },
+        "courseC_collector_prog_challenge2": {
+          "courseC_collector_prog_challenge1_a": "Egynél több `begyűjtés` blokkot is használhatsz minden egyes helyen.",
+          "courseC_collector_prog_challenge1_b": "Elvesztél? Próbáld követni ezt az ösvényt, hogy megoldd a feladványt!"
+        },
+        "courseC_collector_prog_challenge2_2018": {
+          "courseC_collector_prog_challenge1_a": "Egynél több `begyűjtés` blokkot is használhatsz minden egyes helyen.",
+          "courseC_collector_prog_challenge1_b": "Elvesztél? Próbáld követni ezt az ösvényt, hogy megoldd a feladványt!"
+        },
+        "courseC_collector_prog_challenge2_2019": {
+          "courseC_collector_prog_challenge1_a": "Egynél több `begyűjtés` blokkot is használhatsz minden egyes helyen.",
+          "courseC_collector_prog_challenge1_b": "Elvesztél? Próbáld követni ezt az ösvényt, hogy megoldd a feladványt!"
+        },
+        "courseC_collector_prog_challenge2_2020": {
+          "courseC_collector_prog_challenge1_a": "Egynél több `begyűjtés` blokkot is használhatsz minden egyes helyen.",
+          "courseC_collector_prog_challenge1_b": "Elvesztél? Próbáld követni ezt az ösvényt, hogy megoldd a feladványt!"
+        },
+        "courseC_maze_debugging1": {
+          "courseC_maze_debugging1_a": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging1_b": "Egy blokkot hozzá kell adnod, hogy teljesítsd a feladatot."
+        },
+        "courseC_maze_debugging1_2018": {
+          "courseC_maze_debugging1_a": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging1_b": "Egy blokkot hozzá kell adnod, hogy teljesítsd a feladatot."
+        },
+        "courseC_maze_debugging1_2019": {
+          "courseC_maze_debugging1_a": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging1_b": "Egy blokkot hozzá kell adnod, hogy teljesítsd a feladatot."
+        },
+        "courseC_maze_debugging1_2020": {
+          "courseC_maze_debugging1_a": "-   Minden működik az első lépés után?\n-   Még a második után is működik?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging1_b": "Egy blokkot hozzá kell adnod, hogy teljesítsd a feladatot."
+        },
+        "courseC_maze_debugging4": {
+          "courseC_maze_debugging4_a": "Használd a \"Lépés\" gombot, hogy egyesével lefuttasd a parancsokat. Ez segít neked megtalálni a hibás sort?",
+          "courseC_maze_debugging4_b": "Az egyik elfordulás miatt a motkány rossz irányba fordul. Kitalálod, hogy melyik az?"
+        },
+        "courseC_maze_debugging4_2018": {
+          "courseC_maze_debugging4_a": "Használd a \"Lépés\" gombot, hogy egyesével lefuttasd a parancsokat. Ez segít neked megtalálni a hibás sort?",
+          "courseC_maze_debugging4_b": "Az egyik elfordulás miatt a motkány rossz irányba fordul. Kitalálod, hogy melyik az?"
+        },
+        "courseC_maze_debugging4_2019": {
+          "courseC_maze_debugging4_a": "Használd a \"Lépés\" gombot, hogy egyesével lefuttasd a parancsokat. Ez segít neked megtalálni a hibás sort?",
+          "courseC_maze_debugging4_b": "Az egyik elfordulás miatt a motkány rossz irányba fordul. Kitalálod, hogy melyik az?"
+        },
+        "courseC_maze_debugging4_2020": {
+          "courseC_maze_debugging4_a": "Használd a \"Lépés\" gombot, hogy egyesével lefuttasd a parancsokat. Ez segít neked megtalálni a hibás sort?",
+          "courseC_maze_debugging4_b": "Az egyik elfordulás miatt a motkány rossz irányba fordul. Kitalálod, hogy melyik az?"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_a": "Több hasznos kód már ott van a munkaterületen. Ne töröld ki mindet!\n\nHasználd a \"Lépés\" gombot, hogy végigmenj rajtuk, és rájöjj, hol romlik el a dolog!",
+          "courseC_maze_debugging5_b": "Mondd ki akár hangosan, hogy mit csináljon a motkány! Ez ugyanaz, mint amit a kódban látsz? Hol a hiba?"
+        },
+        "courseC_maze_debugging5_2018": {
+          "courseC_maze_debugging5_a": "Több hasznos kód már ott van a munkaterületen. Ne töröld ki mindet!\n\nHasználd a \"Lépés\" gombot, hogy végigmenj rajtuk, és rájöjj, hol romlik el a dolog!",
+          "courseC_maze_debugging5_c": "Megváltoztathatod az irányát az elfordulásnak, ha lenyitod a blokk menüjét.",
+          "courseC_maze_debugging5_b": "Mondd ki akár hangosan, hogy mit csináljon a motkány! Ez ugyanaz, mint amit a kódban látsz? Hol a hiba?"
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_a": "Több hasznos kód már ott van a munkaterületen. Ne töröld ki mindet!\n\nHasználd a \"Lépés\" gombot, hogy végigmenj rajtuk, és rájöjj, hol romlik el a dolog!",
+          "courseC_maze_debugging5_c": "Megváltoztathatod az irányát az elfordulásnak, ha lenyitod a blokk menüjét.",
+          "courseC_maze_debugging5_b": "Mondd ki akár hangosan, hogy mit csináljon a motkány! Ez ugyanaz, mint amit a kódban látsz? Hol a hiba?"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_a": "Több hasznos kód már ott van a munkaterületen. Ne töröld ki mindet!\n\nHasználd a \"Lépés\" gombot, hogy végigmenj rajtuk, és rájöjj, hol romlik el a dolog!",
+          "courseC_maze_debugging5_c": "Megváltoztathatod az irányát az elfordulásnak, ha lenyitod a blokk menüjét.",
+          "courseC_maze_debugging5_b": "Mondd ki akár hangosan, hogy mit csináljon a motkány! Ez ugyanaz, mint amit a kódban látsz? Hol a hiba?"
+        },
+        "courseC_maze_debugging6": {
+          "courseC_maze_debugging6_a": "-   Mit kellene tennie a motkánynak?\n-   Mit csinál a motkány?\n-   Mit mond mindez neked?",
+          "courseC_maze_debugging6_b": "Ha megtaláltad és kijavítottad az első hibát, menj végig a hibakeresési lépéseken újra, és találd meg a második hibát.\n\nIsmételd ezt addig, amíg a programod tökéletes lesz!"
+        },
+        "courseC_maze_debugging6_2018": {
+          "courseC_maze_debugging6_a": "-   Mit kellene tennie a motkánynak?\n-   Mit csinál a motkány?\n-   Mit mond mindez neked?",
+          "courseC_maze_debugging6_b": "Ha megtaláltad és kijavítottad az első hibát, menj végig a hibakeresési lépéseken újra, és találd meg a második hibát.\n\nIsmételd ezt addig, amíg a programod tökéletes lesz!"
+        },
+        "courseC_maze_debugging6_2019": {
+          "courseC_maze_debugging6_a": "-   Mit kellene tennie a motkánynak?\n-   Mit csinál a motkány?\n-   Mit mond mindez neked?",
+          "courseC_maze_debugging6_b": "Ha megtaláltad és kijavítottad az első hibát, menj végig a hibakeresési lépéseken újra, és találd meg a második hibát.\n\nIsmételd ezt addig, amíg a programod tökéletes lesz!"
+        },
+        "courseC_maze_debugging6_2020": {
+          "courseC_maze_debugging6_a": "-   Mit kellene tennie a motkánynak?\n-   Mit csinál a motkány?\n-   Mit mond mindez neked?",
+          "courseC_maze_debugging6_b": "Ha megtaláltad és kijavítottad az első hibát, menj végig a hibakeresési lépéseken újra, és találd meg a második hibát.\n\nIsmételd ezt addig, amíg a programod tökéletes lesz!"
+        },
+        "courseC_maze_debugging7": {
+          "courseC_maze_debugging7_a": "-   Minden működik az első lépésnél?\n-   Mi a helyzet a második után?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging7_b": "Ne feledkezz meg a \"Lépés\" gomb használatáról, így a programot soronként tudod lefuttatni!",
+          "courseC_maze_debugging7_c": "Miután megtaláltad és kijavítottad az első hibát, használd magabiztosan a hibakeresési lépéset, hogy megtaláld a következő hibát.\n\nIsmételd ezt addig, amíg a programod működni fog!"
+        },
+        "courseC_maze_debugging7_2018": {
+          "courseC_maze_debugging7_a": "-   Minden működik az első lépésnél?\n-   Mi a helyzet a második után?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging7_b": "Ne feledkezz meg a \"Lépés\" gomb használatáról, így a programot soronként tudod lefuttatni!",
+          "courseC_maze_debugging7_c": "Miután megtaláltad és kijavítottad az első hibát, használd magabiztosan a hibakeresési lépéset, hogy megtaláld a következő hibát.\n\nIsmételd ezt addig, amíg a programod működni fog!"
+        },
+        "courseC_maze_debugging7_2019": {
+          "courseC_maze_debugging7_a": "-   Minden működik az első lépésnél?\n-   Mi a helyzet a második után?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging7_b": "Ne feledkezz meg a \"Lépés\" gomb használatáról, így a programot soronként tudod lefuttatni!",
+          "courseC_maze_debugging7_c": "Miután megtaláltad és kijavítottad az első hibát, használd magabiztosan a hibakeresési lépéset, hogy megtaláld a következő hibát.\n\nIsmételd ezt addig, amíg a programod működni fog!"
+        },
+        "courseC_maze_debugging7_2020": {
+          "courseC_maze_debugging7_a": "-   Minden működik az első lépésnél?\n-   Mi a helyzet a második után?\n-   Hol romlik el a dolog?",
+          "courseC_maze_debugging7_b": "Ne feledkezz meg a \"Lépés\" gomb használatáról, így a programot soronként tudod lefuttatni!",
+          "courseC_maze_debugging7_c": "Miután megtaláltad és kijavítottad az első hibát, használd magabiztosan a hibakeresési lépéset, hogy megtaláld a következő hibát.\n\nIsmételd ezt addig, amíg a programod működni fog!"
+        },
+        "courseD_artist_ramp12": {
+          "courseD_artist_ramp12_c": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_a": "A madár szemszögéből fordulunk balra vagy jobbra. Ha jobbra nézel, akkor egy újabb jobbra fordulás után lefelé indulsz meg a madárral.",
+          "courseC_maze_programming4_b": "Hogy kövesd az ösvényt, menj előre, és fordulj el valamerre, aztán menj előre ismét, majd fordulj el a másik irányba. Végül lépj előre egyet, hogy elérj a malachoz."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_a": "A madár szemszögéből fordulunk balra vagy jobbra. Ha jobbra nézel, akkor egy újabb jobbra fordulás után lefelé indulsz meg a madárral.",
+          "courseC_maze_programming4_b": "Hogy kövesd az ösvényt, menj előre, és fordulj el valamerre, aztán menj előre ismét, majd fordulj el a másik irányba. Végül lépj előre egyet, hogy elérj a malachoz."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseD_artist_ramp12_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged."
+        },
+        "courseE_artist_ramp9": {
+          "courseD_artist_ramp12_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged."
         }
       }
     }

@@ -42,6 +42,8 @@ class Instructions extends React.Component {
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
+    isBlockly: PropTypes.bool,
+    noInstructionsWhenCollapsed: PropTypes.bool,
     setInstructionsRenderedHeight: PropTypes.func
   };
 
@@ -74,6 +76,8 @@ class Instructions extends React.Component {
           markdown={this.props.longInstructions}
           onResize={this.props.onResize}
           inTopPane={this.props.inTopPane}
+          isBlockly={this.props.isBlockly}
+          noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
         />
       );
     } else {
@@ -119,15 +123,17 @@ class Instructions extends React.Component {
       ? styles.inTopPane
       : styles.notInTopPane;
 
+    const immersiveReaderText =
+      (this.props.dynamicInstructions &&
+        this.props.dynamicInstructions[this.props.dynamicInstructionsKey]) ||
+      this.props.longInstructions ||
+      this.props.shortInstructions;
+
     return (
       <div style={parentStyle}>
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
-          text={
-            this.props.dynamicInstructions[this.props.dynamicInstructionsKey] ||
-            this.props.longInstructions ||
-            this.props.shortInstructions
-          }
+          text={immersiveReaderText}
         />
         {this.props.dynamicInstructions && (
           <div

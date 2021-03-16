@@ -1,0 +1,6 @@
+{
+  "func": "ledScreen",
+  "docFunc": "microbit-ledScreen",
+  "category": "micro:bit",
+  "type": "readonlyproperty"
+}

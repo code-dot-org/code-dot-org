@@ -40,6 +40,7 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
+  has_many :resources, join_table: :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -84,6 +85,7 @@ class Script < ApplicationRecord
             {lesson_activities: :activity_sections},
             :resources,
             :vocabularies,
+            :programming_expressions,
             :objectives
           ]
         },
@@ -857,16 +859,6 @@ class Script < ApplicationRecord
     name == Script::EDIT_CODE_NAME || ScriptConstants.script_in_category?(:csf2_draft, name)
   end
 
-  def get_script_level_by_absolute_position_and_puzzle_position(absolute_position, puzzle_position)
-    script_levels.find do |sl|
-      # make sure we are checking the native properties of the script level
-      # first, so we only have to load lesson if it's actually necessary.
-      sl.position == puzzle_position.to_i &&
-          !sl.bonus &&
-          sl.lesson.absolute_position == absolute_position.to_i
-    end
-  end
-
   def get_script_level_by_id(script_level_id)
     script_levels.find(id: script_level_id.to_i)
   end
@@ -1054,6 +1046,20 @@ class Script < ApplicationRecord
 
       script.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
+
+      # More all lessons into a temporary lesson group so that we do not delete
+      # the lesson entries unless the lesson has been entirely removed from the
+      # script
+      temp_lg = LessonGroup.create!(
+        key: 'temp-will-be-deleted',
+        script: script,
+        user_facing: false,
+        position: script.lesson_groups.length + 1
+      )
+      script.lessons.each do |l|
+        l.lesson_group = temp_lg
+        l.save!
+      end
 
       temp_lgs = LessonGroup.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
       script.reload
@@ -1489,11 +1495,11 @@ class Script < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(is_student = false)
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
 

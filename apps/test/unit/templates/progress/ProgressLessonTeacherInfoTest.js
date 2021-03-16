@@ -12,7 +12,8 @@ const MOCK_SECTION = {
   pairingAllowed: true,
   studentCount: 4,
   code: 'TQGSJR',
-  providerManaged: false
+  providerManaged: false,
+  ttsAutoplayEnabled: false
 };
 
 describe('ProgressLessonTeacherInfo', () => {
@@ -45,6 +46,43 @@ describe('ProgressLessonTeacherInfo', () => {
 
     assert.equal(wrapperWithoutPlan.find('Button').length, 0);
     assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
+  });
+
+  it('renders a purple Button if and only if we have a student lesson plan', () => {
+    const lessonWithoutPlan = {
+      ...fakeLesson('Maze', 1)
+    };
+    const lessonWithPlan = {
+      ...fakeLesson('Maze', 1),
+      student_lesson_plan_html_url: 'foo/bar/student'
+    };
+
+    const [wrapperWithoutPlan, wrapperWithPlan] = [
+      lessonWithoutPlan,
+      lessonWithPlan
+    ].map(lesson =>
+      shallow(
+        <ProgressLessonTeacherInfo
+          lesson={lesson}
+          section={MOCK_SECTION}
+          lessonUrl={'code.org'}
+          scriptAllowsHiddenStages={false}
+          hiddenStageState={Immutable.fromJS({
+            stagesBySection: {11: {}}
+          })}
+          scriptName="My Script"
+          hasNoSections={false}
+          toggleHiddenStage={() => {}}
+        />
+      )
+    );
+
+    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
+    assert.equal(wrapperWithPlan.find('Button').props().color, 'purple');
+    assert.equal(
+      wrapperWithPlan.find('Button').props().href,
+      'foo/bar/student'
+    );
   });
 
   it('renders our StageLock button when lesson is lockable', () => {

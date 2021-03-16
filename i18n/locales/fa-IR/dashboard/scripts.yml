@@ -2449,6 +2449,8 @@ fa:
               display_name: دو دویی
             csf_digcit:
               display_name: شهروندی دیجیتالی
+            lessonGroup-6:
+              display_name: شهروندی دیجیتالی
         coursee-2021:
           lessons:
             Conditionals:
@@ -2516,3 +2518,30 @@ fa:
               name: درس 14
             lesson15:
               name: درس 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: مقدمه
+            Loops:
+              key: حلقه‌ها
+              name: حلقه‌ها
+            Events:
+              key: رویدادها
+              name: رویدادها
+            Conditionals:
+              key: شرطی ها
+              name: شرطی ها
+            Functions:
+              key: توابع
+              name: توابع
+            Variables:
+              key: متغیرها
+              name: متغیرها
+            For Loops:
+              key: حلقه های "برای"
+              name: حلقه های "برای"
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: مقدمه
+            Introduction:
+              display_name: مقدمه

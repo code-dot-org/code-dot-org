@@ -19,11 +19,13 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-15 12:49:31 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -609,8 +611,7 @@
       "key": "64bb59be-55db-47e1-8b1c-01f2f165acbc",
       "position": 4,
       "properties": {
-        "name": "Extension Activites",
-        "duration": 0
+        "name": "Extension Activites"
       },
       "seeding_key": {
         "lesson_activity.key": "64bb59be-55db-47e1-8b1c-01f2f165acbc",
@@ -1610,7 +1611,7 @@
       "key": "02c742eb-e175-4fbb-869a-4f1a5a9d8085",
       "position": 1,
       "properties": {
-        "description": "**Display:** Put up the [r pspe-image] to introduce students to the User-Centered Design Process as an extension of the Problem Solving Process they used in the first three units. The primary difference to note is that we've added _Empathize_ to the background of the entire process.\r\n\r\n\r\n**Prompt:** What does it mean to empathize? How might the concept of empathizing in a problem solving process be different from in other places you've heard of empathy?",
+        "description": "**Display:** Put up the [r pspe-image] to introduce students to the User-Centered Design Process as an extension of the Problem Solving Process they used in the first three units. The primary difference to note is that we've added _Empathize_ to the background of the entire process.\n\n**Prompt:** What does it mean to empathize? How might the concept of empathizing in a problem solving process be different from in other places you've heard of empathy?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1625,7 +1626,6 @@
         "description": "**Discuss:** Students should discuss their ideas as a class. Eventually direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion can be fairly free-flowing and open ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit.\r\n"
           }
@@ -1655,7 +1655,6 @@
         "description": "**Distribute:** Hand out copies of the activity guide or have students take out their journals.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\nUnit 4 contains a lot of printed materials.  Classrooms with limited ability to print can choose one of the following options instead.\r\n\r\n**Option 1: Online Activity Guides**\r\n\r\nAll of our activity guides are available in editable Google Doc and Microsoft Doc formats.  Classrooms using Google or Microsoft products can distribute digital copies to students, who can complete most of the activity guides entirely online.\r\n\r\n**Option 2: Student Journals**\r\n\r\nMany of the activity guides can be converted into journal activities.  Teachers can project the instructions and prompts or allow students to view them online, then complete the activity itself in a journal.\r\n\r\nLook for teaching tips on relevant lessons to indicate when you may avoid printing by using one of these options.\r\n"
           }
@@ -1697,7 +1696,6 @@
         "description": "This second activity gives students an opportunity to specifically critique four of the teapots. The structure of this page reflects the general approach we will be using for critique, using the three statements:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "The first step towards creating a design that can be effectively used by many people is to understand that not everyone thinks the same, or looks at an object or design in the same way. This is the first exercise in the students thinking outside of themselves and at how others may perceive items in the world\r\n"
           }
@@ -1726,7 +1724,6 @@
         "description": "**Discuss:** Students should talk about their answers on the worksheet either in their small groups or as a class. Questions could include:",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain teapot.  You may want to challenge students to distinguish their own needs and preferences from those of the described users.\r\n\r\n"
           }
@@ -5984,7 +5981,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6010,7 +6007,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6036,7 +6033,7 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6062,7 +6059,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6088,7 +6085,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6114,7 +6111,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6140,7 +6137,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6166,7 +6163,7 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6192,7 +6189,7 @@
       "chapter": 10,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6218,7 +6215,7 @@
       "chapter": 11,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6244,7 +6241,7 @@
       "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish a Screen",
         "level_keys": [
@@ -6270,7 +6267,7 @@
       "chapter": 13,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish a Screen",
         "level_keys": [
@@ -6322,7 +6319,7 @@
       "chapter": 15,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Project: Screen Design",
         "level_keys": [
@@ -6374,7 +6371,7 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6400,7 +6397,7 @@
       "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6426,7 +6423,7 @@
       "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6452,7 +6449,7 @@
       "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6478,7 +6475,7 @@
       "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Linking Screens",
         "level_keys": [
@@ -6504,7 +6501,7 @@
       "chapter": 22,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Linking Screens",
         "level_keys": [
@@ -6556,7 +6553,7 @@
       "chapter": 24,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Projects",
         "level_keys": [
@@ -6608,7 +6605,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CSDU4 Project Bug Feature_2021"
@@ -8394,51 +8391,63 @@
   ],
   "vocabularies": [
     {
-      "key": "Empathy",
+      "key": "empathy",
       "word": "Empathy",
       "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
-      "key": "User",
+      "key": "user",
       "word": "User",
       "definition": "Someone who uses an object, including software and hardware.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
-      "key": "Usability",
+      "key": "usability",
       "word": "Usability",
       "definition": "How easy, efficient, and satisfying it is to use a human-made object or device (including software).",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
-      "key": "User Interface",
+      "key": "user_interface",
       "word": "User Interface",
       "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     }
   ],
@@ -8446,37 +8455,57 @@
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Understanding Your User",
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "console.log"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "onEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "setScreen"
       }
     }
   ],

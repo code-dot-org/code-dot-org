@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import {Provider} from 'react-redux';
-import weblabMsg from '@cdo/weblab/locale';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
@@ -82,6 +81,7 @@ WebLab.prototype.init = function(config) {
   this.level = config.level;
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
+  this.disallowedHtmlTags = config.disallowedHtmlTags;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;
@@ -297,11 +297,19 @@ WebLab.prototype.init = function(config) {
     document.getElementById(config.containerId)
   );
 
-  window.onbeforeunload = evt => {
-    if (project.hasOwnerChangedProject()) {
-      return weblabMsg.confirmExitWithUnsavedChanges();
-    }
-  };
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+WebLab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
 };
 
 WebLab.prototype.reportResult = function(submit, validated) {
@@ -359,8 +367,12 @@ WebLab.prototype.getCodeAsync = function() {
   return new Promise((resolve, reject) => {
     if (this.brambleHost !== null) {
       this.brambleHost.syncFiles(err => {
-        // store our filesVersionId as the "sources"
-        resolve(this.getCurrentFilesVersionId() || '');
+        if (err) {
+          reject(err);
+        } else {
+          // store our filesVersionId as the "sources"
+          resolve(this.getCurrentFilesVersionId() || '');
+        }
       });
     } else {
       // Bramble not installed yet - we have no code to return
@@ -432,7 +444,7 @@ WebLab.prototype.changeProjectFile = function(
       callback(null, project.filesVersionId);
     },
     xhr => {
-      console.warn(`WebLab: error file ${filename} not renamed`);
+      console.warn(`WebLab: error file ${filename} not saved`);
       callback(new Error(xhr.status));
     },
     skipPreWriteHook

@@ -281,4 +281,9 @@ level 'allthethings HOC ML Fish 1'
 
 lesson 'AI Lab', display_name: 'AI Lab', has_lesson_plan: false
 level 'allthethings AI Lab 1'
+level 'AppLab AI Enabled'
+
+lesson 'Java Lab', display_name: 'Java Lab', has_lesson_plan: false
+level 'Allthethings Java Lab 1'
+level 'Allthethings Java Lab 2'
 

@@ -52,7 +52,7 @@ describe('Check cookies and session storage appear on click', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
     var cookieSetStub = sinon.stub(cookies, 'set');
-    wrapper.find('.login-callout').simulate('click');
+    wrapper.find('.uitest-login-callout').simulate('click');
     expect(cookieSetStub).to.have.been.calledWith(
       'hide_signin_callout',
       'true',
@@ -64,7 +64,7 @@ describe('Check cookies and session storage appear on click', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
     var sessionSetStub = sinon.stub(sessionStorage, 'setItem');
-    wrapper.find('.login-callout').simulate('click');
+    wrapper.find('.uitest-login-callout').simulate('click');
     expect(sessionSetStub).to.have.been.calledWith(
       'hide_signin_callout',
       'true'
@@ -89,11 +89,19 @@ describe('Check cookies and session storage appear on click', () => {
     expect(wrapper.html()).to.be.null;
   });
 
-  it('shows prior to click, and dismisses after', () => {
+  it('shows prior to click, and dismisses after clicking backdrop', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
     expect(wrapper.html().includes('uitest-signincallout')).to.be.true;
-    wrapper.find('.login-callout').simulate('click');
+    wrapper.find('.modal-backdrop').simulate('click');
+    expect(wrapper.html()).to.be.null;
+  });
+
+  it('shows prior to click, and dismisses after clicking callout', () => {
+    const wrapper = mount(<SignInCalloutWrapper />);
+    wrapper.setState({hideCallout: false});
+    expect(wrapper.html().includes('uitest-signincallout')).to.be.true;
+    wrapper.find('.uitest-login-callout').simulate('click');
     expect(wrapper.html()).to.be.null;
   });
 });
