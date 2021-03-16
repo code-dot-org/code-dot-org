@@ -136,11 +136,14 @@ class UserLevel < ApplicationRecord
   end
 
   def locked=(val)
-    user_level.unlocked_at = if val
-                               nil
-                             else
-                               Time.now
-                             end
+    unlocked_at = if val
+                    nil
+                  else
+                    Time.now
+                  end
+    user_level.assign_attributes(
+      unlocked_at: unlocked_at
+    )
   end
 
   def locked?
