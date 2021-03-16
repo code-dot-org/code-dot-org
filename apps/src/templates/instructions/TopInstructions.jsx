@@ -516,7 +516,7 @@ class TopInstructions extends Component {
           onResize={this.adjustMaxNeededHeight}
           inTopPane
           isBlockly={isBlockly}
-          collapsible={noInstructionsWhenCollapsed}
+          noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
         />
       );
     }
