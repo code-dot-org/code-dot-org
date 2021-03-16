@@ -35,8 +35,7 @@ class Instructions extends React.Component {
     inTopPane: PropTypes.bool,
     onResize: PropTypes.func,
     isBlockly: PropTypes.bool,
-    noInstructionsWhenCollapsed: PropTypes.bool,
-    setInstructionsRenderedHeight: PropTypes.func
+    noInstructionsWhenCollapsed: PropTypes.bool
   };
 
   /**
@@ -76,30 +75,26 @@ class Instructions extends React.Component {
   }
 
   render() {
-    const parentStyle = this.props.inTopPane
-      ? styles.inTopPane
-      : styles.notInTopPane;
-
     return (
-      <div style={parentStyle}>
+      <div
+        style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
+      >
         <ImmersiveReaderButton
           title={this.props.puzzleTitle || i18n.instructions()}
           text={this.props.longInstructions || this.props.shortInstructions}
         />
 
-        <div>
-          {this.renderMainBody()}
+        {this.renderMainBody()}
 
-          {this.props.inputOutputTable && (
-            <InputOutputTable data={this.props.inputOutputTable} />
-          )}
+        {this.props.inputOutputTable && (
+          <InputOutputTable data={this.props.inputOutputTable} />
+        )}
 
-          {this.props.imgURL && !this.props.inTopPane && (
-            <img className="aniGif example-image" src={this.props.imgURL} />
-          )}
-          {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
-          {this.props.authoredHints}
-        </div>
+        {this.props.imgURL && !this.props.inTopPane && (
+          <img className="aniGif example-image" src={this.props.imgURL} />
+        )}
+        {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
+        {this.props.authoredHints}
       </div>
     );
   }
