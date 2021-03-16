@@ -11,8 +11,10 @@ import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 
 const styles = {
   header: {
@@ -40,44 +42,6 @@ class StudentLessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
-  linkWithQueryParams = link => {
-    const queryParams = window.location.search || '';
-    return link + queryParams;
-  };
-
-  normalizeUrl = url => {
-    const httpRegex = /https?:\/\//;
-    if (httpRegex.test(url)) {
-      return url;
-    } else {
-      return 'https://' + url;
-    }
-  };
-
-  createResourceListItem = resource => (
-    <li key={resource.key}>
-      <a
-        href={this.normalizeUrl(resource.url)}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {resource.name}
-      </a>
-      {resource.type && ` -  ${resource.type}`}
-      {resource.download_url && (
-        <span>
-          {' ('}
-          <a
-            href={this.normalizeUrl(resource.download_url)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >{`${i18n.download()}`}</a>
-          {')'}
-        </span>
-      )}
-    </li>
-  );
-
   render() {
     const {lesson, announcements, isSignedIn} = this.props;
     return (
@@ -85,7 +49,7 @@ class StudentLessonOverview extends Component {
         <div className="lesson-overview-header">
           <div style={styles.header}>
             <a
-              href={this.linkWithQueryParams(lesson.unit.link)}
+              href={linkWithQueryParams(lesson.unit.link)}
               style={styles.navLink}
             >
               {`< ${lesson.unit.displayName}`}
@@ -149,14 +113,8 @@ class StudentLessonOverview extends Component {
         )}
         {lesson.resources.length > 0 && (
           <div id="resource-section">
-            <h2>Resources</h2>
-            <div>
-              <ul>
-                {lesson.resources.map(resource =>
-                  this.createResourceListItem(resource)
-                )}
-              </ul>
-            </div>
+            <h2>{i18n.resources()}</h2>
+            <ResourceList resources={lesson.resources} />
           </div>
         )}
       </div>
