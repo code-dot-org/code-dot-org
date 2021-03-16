@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:56:45 UTC",
+    "serialized_at": "2021-03-16 04:30:14 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -4110,6 +4110,470 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Library Part 3",
         "objective.key": "efa4b437-61f3-4a0f-a7cf-6e1f3056af68"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
       }
     }
   ]

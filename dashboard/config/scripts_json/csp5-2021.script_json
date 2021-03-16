@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:54:57 UTC",
+    "serialized_at": "2021-03-16 04:30:10 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -7228,6 +7228,652 @@
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
         "objective.key": "6af46814-d6eb-4253-befb-d901de9ac632"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.N.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.D.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.N.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.N.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.K.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.2"
       }
     }
   ]
