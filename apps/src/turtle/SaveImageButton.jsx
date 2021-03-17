@@ -27,7 +27,7 @@ const styles = {
   }
 };
 
-class SaveImageButton extends React.Component {
+export default class SaveImageButton extends React.Component {
   static propTypes = {
     displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired
   };
@@ -46,5 +46,3 @@ class SaveImageButton extends React.Component {
     );
   }
 }
-
-export default SaveImageButton;
