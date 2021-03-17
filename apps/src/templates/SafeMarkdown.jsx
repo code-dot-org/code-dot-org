@@ -3,6 +3,10 @@ import React from 'react';
 
 import Parser from '@code-dot-org/redactable-markdown';
 
+// TODO: import other plugins from this package, too, rather
+// than including them in our main repo.
+import {visualCodeBlock} from '@code-dot-org/remark-plugins';
+
 import remarkRehype from 'remark-rehype';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
@@ -52,7 +56,7 @@ blocklyTags.forEach(tag => {
 const markdownToReact = Parser.create()
   .getParser()
   // include custom plugins
-  .use([xmlAsTopLevelBlock, expandableImages, details])
+  .use([expandableImages, visualCodeBlock, xmlAsTopLevelBlock, details])
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST

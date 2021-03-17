@@ -1639,6 +1639,11 @@
     remark-stringify "^6.0.0"
     unified "^7.0.0"
 
+"@code-dot-org/remark-plugins@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/remark-plugins/-/remark-plugins-1.0.0.tgz#1fd4fb730ea1fe20eac68b4314971336243eff3e"
+  integrity sha512-QZPrZzJg1t/Z+8SZMPIaV1mWAUDIZwAiKr5hjddJFaD+Aa7Z5ditUZ4RaExvqCcZilbnRvrGGSjYL22qRuqHEQ==
+
 "@codemirror/closebrackets@^0.17.0":
   version "0.17.2"
   resolved "https://registry.yarnpkg.com/@codemirror/closebrackets/-/closebrackets-0.17.2.tgz#f78c750c43da4655bf9026a937fd37324767193d"
