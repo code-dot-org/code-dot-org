@@ -9,7 +9,7 @@ import color from '@cdo/apps/util/color';
 
 const styles = {
   weekColumn: {
-    minWidth: 100,
+    width: 100,
     backgroundColor: color.purple,
     color: 'white',
     textAlign: 'center',
