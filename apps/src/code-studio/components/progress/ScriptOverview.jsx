@@ -26,6 +26,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/shapes';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
+import UnitCalendar from './UnitCalendar';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -151,6 +152,20 @@ class ScriptOverview extends React.Component {
               courseName={courseName}
               userId={userId}
             />
+            {showCalendar && viewAs === ViewType.Teacher && (
+              <div
+                className="unit-calendar-for-printing"
+                style={{
+                  height: 0,
+                  visibility: 'hidden'
+                }}
+              >
+                <UnitCalendar
+                  lessons={unitCalendarLessons}
+                  weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}
+                />
+              </div>
+            )}
             <ScriptOverviewTopRow
               sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
