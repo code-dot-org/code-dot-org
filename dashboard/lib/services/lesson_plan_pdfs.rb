@@ -136,12 +136,12 @@ module Services
       return Pathname.new(File.join(lesson.script.name, version_number, filename))
     end
 
-    # Build the full path of the lesson plan PDF for the given lesson. This
+    # Build the full path of the student lesson plan PDF for the given lesson. This
     # will be based on not only the lesson's script but also the current
     # version of the script in the environment.
     #
     # Expect this to look something like
-    # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
+    # <Pathname:csp1-2021/20210216001309/Welcome to CSP-Student.pdf>
     def self.get_student_pathname(lesson)
       return nil unless lesson&.script&.seeded_from
       version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
