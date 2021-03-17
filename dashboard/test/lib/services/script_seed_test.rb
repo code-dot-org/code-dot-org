@@ -717,7 +717,7 @@ module Services
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, LessonsStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
 
