@@ -77,33 +77,37 @@ class ProgressDetailToggle extends React.Component {
     const images =
       activeColor === color.purple ? imageSets.purple : imageSets.teal;
     return (
-      <ToggleGroup
-        selected={isSummaryView ? 'summary' : 'detail'}
-        activeColor={activeColor}
-        onChange={this.onChange}
-      >
-        <button
-          type="button"
-          value="summary"
-          style={whiteBorder ? styles.whiteBorder : undefined}
+      <div className="progress-detail-toggle">
+        <ToggleGroup
+          selected={isSummaryView ? 'summary' : 'detail'}
+          activeColor={activeColor}
+          onChange={this.onChange}
         >
-          <img
-            src={isSummaryView ? images.summaryActive : images.summaryInactive}
-            style={styles.icon}
-          />
-        </button>
-        <button
-          type="button"
-          value="detail"
-          style={whiteBorder ? styles.whiteBorder : undefined}
-          className="uitest-toggle-detail"
-        >
-          <img
-            src={isSummaryView ? images.detailInactive : images.detailActive}
-            style={styles.icon}
-          />
-        </button>
-      </ToggleGroup>
+          <button
+            type="button"
+            value="summary"
+            style={whiteBorder ? styles.whiteBorder : undefined}
+          >
+            <img
+              src={
+                isSummaryView ? images.summaryActive : images.summaryInactive
+              }
+              style={styles.icon}
+            />
+          </button>
+          <button
+            type="button"
+            value="detail"
+            style={whiteBorder ? styles.whiteBorder : undefined}
+            className="uitest-toggle-detail"
+          >
+            <img
+              src={isSummaryView ? images.detailInactive : images.detailActive}
+              style={styles.icon}
+            />
+          </button>
+        </ToggleGroup>
+      </div>
     );
   }
 }

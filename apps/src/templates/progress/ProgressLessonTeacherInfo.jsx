@@ -108,53 +108,55 @@ class ProgressLessonTeacherInfo extends React.Component {
     }
 
     return (
-      <TeacherInfoBox>
-        {lesson.lesson_plan_html_url && (
-          <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
-              href={lesson.lesson_plan_html_url}
-              text={i18n.viewLessonPlan()}
-              icon="file-text"
-              color="blue"
-              target="_blank"
-              style={styles.button}
+      <div className="lesson-teacher-info-box">
+        <TeacherInfoBox>
+          {lesson.lesson_plan_html_url && (
+            <div style={styles.buttonContainer}>
+              <Button
+                __useDeprecatedTag
+                href={lesson.lesson_plan_html_url}
+                text={i18n.viewLessonPlan()}
+                icon="file-text"
+                color="blue"
+                target="_blank"
+                style={styles.button}
+              />
+            </div>
+          )}
+          {lesson.student_lesson_plan_html_url && (
+            <div style={styles.buttonContainer}>
+              <Button
+                __useDeprecatedTag
+                href={lesson.student_lesson_plan_html_url}
+                text={i18n.studentResources()}
+                icon="file-text"
+                color="purple"
+                target="_blank"
+                style={styles.button}
+                onClick={this.props.onClickStudentLessonPlan}
+              />
+            </div>
+          )}
+          {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
+          {lessonUrl && (
+            <div style={styles.buttonContainer}>
+              <SendLesson
+                lessonUrl={loginRequiredLessonUrl}
+                lessonTitle={lesson.name}
+                courseid={courseId}
+                analyticsData={JSON.stringify(this.firehoseData())}
+                buttonStyle={styles.button}
+              />
+            </div>
+          )}
+          {showHiddenForSectionToggle && (
+            <HiddenForSectionToggle
+              hidden={!!isHidden}
+              onChange={this.onClickHiddenToggle}
             />
-          </div>
-        )}
-        {lesson.student_lesson_plan_html_url && (
-          <div style={styles.buttonContainer}>
-            <Button
-              __useDeprecatedTag
-              href={lesson.student_lesson_plan_html_url}
-              text={i18n.studentResources()}
-              icon="file-text"
-              color="purple"
-              target="_blank"
-              style={styles.button}
-              onClick={this.props.onClickStudentLessonPlan}
-            />
-          </div>
-        )}
-        {lesson.lockable && !hasNoSections && <StageLock lesson={lesson} />}
-        {lessonUrl && (
-          <div style={styles.buttonContainer}>
-            <SendLesson
-              lessonUrl={loginRequiredLessonUrl}
-              lessonTitle={lesson.name}
-              courseid={courseId}
-              analyticsData={JSON.stringify(this.firehoseData())}
-              buttonStyle={styles.button}
-            />
-          </div>
-        )}
-        {showHiddenForSectionToggle && (
-          <HiddenForSectionToggle
-            hidden={!!isHidden}
-            onChange={this.onClickHiddenToggle}
-          />
-        )}
-      </TeacherInfoBox>
+          )}
+        </TeacherInfoBox>
+      </div>
     );
   }
 }

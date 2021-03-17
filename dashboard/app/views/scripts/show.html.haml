@@ -1,3 +1,5 @@
+%link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+
 -# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
 - additional_script_data = {course_name: @script.unit_group&.name,
@@ -16,7 +18,6 @@
   -  scriptOverviewData[:plcBreadcrumb] = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
-
 
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
@@ -96,3 +97,6 @@
             = level.properties['project_template_level_name']
           .span3
             = level.properties['contained_level_names'].try {|names| names.join(", ")}
+
+  -if request.params.has_key? "emulate_print_media"
+    = javascript_include_tag 'emulate-print-media.js'
