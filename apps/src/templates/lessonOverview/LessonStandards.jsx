@@ -44,6 +44,7 @@ class Framework extends PureComponent {
     const {name, standards} = this.props;
     // Whether all standards in this framework have parent categories.
     const hasParentCategories = !!standards[0].parent_category_shortcode;
+    const CategoryClass = hasParentCategories ? ParentCategory : Category;
     const categoryKey = hasParentCategories
       ? 'parent_category_shortcode'
       : 'category_shortcode';
@@ -57,14 +58,8 @@ class Framework extends PureComponent {
         <ul>
           {Object.keys(standardsByCategory).map(categoryShortcode => {
             const standards = standardsByCategory[categoryShortcode];
-            return hasParentCategories ? (
-              <ParentCategory
-                key={categoryShortcode}
-                shortcode={categoryShortcode}
-                standards={standards}
-              />
-            ) : (
-              <Category
+            return (
+              <CategoryClass
                 key={categoryShortcode}
                 shortcode={categoryShortcode}
                 standards={standards}
