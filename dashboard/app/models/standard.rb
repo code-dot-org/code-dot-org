@@ -28,6 +28,16 @@ class Standard < ApplicationRecord
     }
   end
 
+  def summarize_for_lesson_show
+    {
+      framework_name: framework.name,
+      category_shortcode: category.shortcode,
+      category_description: category.description,
+      shortcode: shortcode,
+      description: description
+    }
+  end
+
   # Loads/merges the data from a CSV into the Standards table.
   # Can be used to overwrite the description and category of
   # existing Standards and to create new Standards.
