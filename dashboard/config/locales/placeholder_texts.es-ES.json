@@ -40,11 +40,14 @@
           "b92274a5b4513e80f4bd6a8136581578": "Esa es la sombra más extraña de",
           "f54929e86cc7510907895070d8b05979": "¡Yo alguna vez vi!",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "1df9f02f4866a1996ba55a14b80e4125": "¿De qué color es mi sombrero?"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "¡Ganaste!",
-          "498cd895eb5a102c5aeb977e2b928dee": "¡Gracias!"
+          "498cd895eb5a102c5aeb977e2b928dee": "¡Gracias!",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "Consigue monedas. ¡No te estrelles!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "Puntuación:"
         },
         "Find the Wizard": {
           "22b45b2cf2d4a2a3d7b3faa522013b26": "¡Cuenta hasta 3 y desapareceré! ¡Adivina un número entre 1 y 400 para encontrarme!",
@@ -72,7 +75,14 @@
           "24a124016e7eec7a8fef5bc228541533": "¡Ah, no te preocupes! Estoy seguro de que puedo encontrarlo",
           "710ba29e2eed73bc74a520631d0ab520": "¡Fin!",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "eb2a8486370211626bbcd04634b73593": "Hola, ¿Cómo te llamas?",
+          "09c9b4915a77a37699140b52b86e4cad": "Parece que perdí mi varita. ¿La has visto en alguna parte? 1. Sí, ...",
+          "ede6020b3ffeeff2339ffbccaa0969df": "¿No? Hmm, ¿Te gustaría ayudarme a encontrarla? 1. Sí, 2. No",
+          "90a2bd046bc816f7d42c33d2a3b347d3": "¡Excelente! ¿En qué dirección podría estar? 1. Derecha, 2. Izquierda",
+          "7222972741bf95c7d2bf97d1a104fbf0": "Parece que perdí mi varita. ¿La has visto en alguna parte? 1. Sí, 2. No",
+          "c499da20fd7c64b89860a41b61d2dd88": "¿No? Hmm, ¿Te gustaría ayudarme a encontrarla? 1. Sí, 2. No",
+          "5282c58be05cdecc1308241480b66276": "Juego terminado"
         },
         "FoodFight": {
           "62f1b3a41b5eef66a4b2382bb2ab24f4": "Puntuación",
@@ -88,7 +98,8 @@
           "5c95950acb6c51d88cc8869eb31f2bdf": "¡lo tienes!",
           "214e809e9d24f40cc42fa2f04f59a1cf": "¡Adivina cuántos años tengo antes de tragarme este pingüino!",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "919ba81fa27a3f187b7f51f1382c022f": "¿Cuántos años tengo?"
         },
         "courseF_playlab_variables1a": {
           "ea904c9d18bd602705f598372988aaa8": "¿Qué debería gritar?",
@@ -108,12 +119,15 @@
           "ecb2903fb054395baf72ea1da127be32": "Eres bastante alto para un",
           "ed4b32d6c8e019829b6f9f2ddb6b7dd2": "años,",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "16e30dcbd70ec5a152eedded32c69476": "¿Cómo se llama yer?",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "¿Cuántos años tienes?"
         },
         "courseF_playlab_variables4c_predictive1": {
           "d065635d5fffcb3739555ae93006081c": "Es un placer conocerte,",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "f6429fe0f1a76611670df7e1234af936": "¿Cómo te llamas?"
         },
         "courseF_playlab_variables8c": {
           "bec312aa7dbfb0c284d221d2aa8e9ffd": "Felicidades",
@@ -121,7 +135,9 @@
           "8460ae10541cf8ded22a4e899ddfc0bb": "¡Lo siento!",
           "8622f69e8cf70458a82fc22d8e46372f": ", no estaba pensando en el color",
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "105837607f006777512dc5b09322ea4f": "Por favor, introduzca su nombre en clave.",
+          "c216de13cd615c884ff2cc5894324e17": "Elige un color."
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
@@ -238,7 +254,8 @@
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "105837607f006777512dc5b09322ea4f": "Por favor, introduzca su nombre en clave."
         },
         "courseF_playlab_variables7b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
@@ -246,7 +263,9 @@
         },
         "courseF_playlab_variables7c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
-          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+          "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí",
+          "105837607f006777512dc5b09322ea4f": "Por favor, introduzca su nombre en clave.",
+          "c216de13cd615c884ff2cc5894324e17": "Elige un color."
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
@@ -255,6 +274,9 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "escribe el texto aquí",
           "30fcc1693fa8402931d13ac3a5f396fd": "escribe el título aquí"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "Puntuación:"
         }
       }
     }

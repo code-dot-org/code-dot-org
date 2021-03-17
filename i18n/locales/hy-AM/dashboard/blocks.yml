@@ -145,6 +145,7 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"speed"': արագություն
       gamelab_checkTouching:
         options:
           CONDITION:

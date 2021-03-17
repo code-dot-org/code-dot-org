@@ -265,6 +265,7 @@ zh-CN:
     invite_sent: 邀请已发送
     added_teacher: 添加%{name}为你的老师
     registered: 你已经注册了 %{section_name}。
+    captcha_required: 请填写验证码加入本小组。
     error:
       signed_in: 请在注销后继续下一步操作。
       username_not_found: 找不到用户名 %{用户名}
@@ -1118,6 +1119,7 @@ zh-CN:
       error_wrong_provider: 错误的提供方，请确认你使用的是Google登录
       error_invalid_user: 无效的用户ID，请重新登录。
       error_no_code: 请输入您的登录代码。
+      confirm_login: 选择“确认”以使用您的Google帐户登录。
   parent_email_banner:
     text: "**您是否是一位家长或监护人？**将您的电子邮箱地址关联到此帐户，以了解孩子的进度和项目的最新信息！"
     link_your_email: 关联您的电子邮箱
@@ -1125,3 +1127,4 @@ zh-CN:
   behaviors:
     this_sprite: 这个精灵
   unit_prefix: 单位%{n}
+  code_org_logo_alt: Code.org首页

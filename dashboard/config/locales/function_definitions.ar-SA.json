@@ -451,7 +451,7 @@
             "name": "دورية"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "Course 4 Play Lab Params 5": {
@@ -550,7 +550,7 @@
             "name": "ارسم مربع ٢٠"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw an octagon": {
             "name": "ارسم شكل ثماني",
@@ -561,7 +561,7 @@
         },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "Find the Wizard": {
@@ -569,7 +569,7 @@
             "name": "تحقق من تخمين"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "FoodFight": {
@@ -867,7 +867,7 @@
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a hexagon": {
             "name": "رسم شكل سداسي",
@@ -884,7 +884,7 @@
             }
           },
           "do something": {
-            "name": "القيام بشيء ما",
+            "name": "إفعل شيئاً",
             "parameters": {
               "length": "الطول"
             }
@@ -937,7 +937,7 @@
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "كرر"
+              "repeat": "تكرار"
             }
           },
           "draw a triangle": {
@@ -967,7 +967,7 @@
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a triangle": {
             "name": "رسم مثلث",
@@ -1044,7 +1044,7 @@
             }
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "NEW Course 4 Artist Params inspire": {
@@ -1173,7 +1173,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "course3_artist_functions_challenge2": {
@@ -1181,12 +1181,12 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "get 3 nectar or honey": {
             "name": "احصل على ٣ من الرحيق أو عسل"
@@ -1194,7 +1194,7 @@
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "move and collect": {
             "name": "تحرك واجمع"
@@ -1262,7 +1262,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "course4_artist_fwp_challenge1": {
@@ -1279,7 +1279,7 @@
             "name": "ارسم مربع ٢٠"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "course4_bee_for_challenge1": {
@@ -1394,12 +1394,12 @@
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseD_artist_binary1": {
@@ -1836,7 +1836,7 @@
         },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a hexagon": {
             "name": "رسم شكل سداسي"
@@ -1871,12 +1871,12 @@
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_concept_challenge2": {
@@ -1891,7 +1891,7 @@
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw hexagon": {
             "name": "ارسم شكل سداسي"
@@ -1902,7 +1902,7 @@
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw hexagon": {
             "name": "ارسم شكل سداسي"
@@ -1913,7 +1913,7 @@
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw hexagon": {
             "name": "ارسم شكل سداسي"
@@ -1924,7 +1924,7 @@
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw hexagon": {
             "name": "ارسم شكل سداسي"
@@ -2039,7 +2039,7 @@
         },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a line of squares": {
             "name": "ارسم خط من المربعات"
@@ -2050,7 +2050,7 @@
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a line of squares": {
             "name": "ارسم خط من المربعات"
@@ -2061,7 +2061,7 @@
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a line of squares": {
             "name": "ارسم خط من المربعات"
@@ -2072,7 +2072,7 @@
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw a line of squares": {
             "name": "ارسم خط من المربعات"
@@ -2086,7 +2086,7 @@
             "name": "رسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8a_2019": {
@@ -2094,7 +2094,7 @@
             "name": "رسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8a_2020": {
@@ -2102,7 +2102,7 @@
             "name": "رسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8b_2018": {
@@ -2113,7 +2113,7 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8b_2019": {
@@ -2124,7 +2124,7 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8b_2020": {
@@ -2135,7 +2135,7 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8c_2018": {
@@ -2146,7 +2146,7 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8c_2019": {
@@ -2157,7 +2157,7 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions8c_2020": {
@@ -2168,12 +2168,12 @@
             "name": "ارسم مربع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw triangle": {
             "name": "ارسم مثلث"
@@ -2184,7 +2184,7 @@
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw triangle": {
             "name": "ارسم مثلث"
@@ -2195,7 +2195,7 @@
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw triangle": {
             "name": "ارسم مثلث"
@@ -2206,7 +2206,7 @@
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw triangle": {
             "name": "ارسم مثلث"
@@ -2262,7 +2262,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
@@ -2270,7 +2270,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
@@ -2278,7 +2278,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
@@ -2294,7 +2294,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
@@ -2302,7 +2302,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
@@ -2310,7 +2310,7 @@
             "name": "تصميمي"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
@@ -2354,7 +2354,7 @@
             "name": "ارسم مضلع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_predict2_2018": {
@@ -2365,7 +2365,7 @@
             "name": "ارسم مضلع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_predict2_2019": {
@@ -2376,7 +2376,7 @@
             "name": "ارسم مضلع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_artist_functions_predict2_2020": {
@@ -2387,7 +2387,7 @@
             "name": "ارسم مضلع"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_bee_concept4": {
@@ -2397,7 +2397,7 @@
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_bee_functions10": {
@@ -2452,7 +2452,7 @@
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "get 3 nectar or honey": {
             "name": "احصل على ٣ من الرحيق أو عسل"
@@ -2460,7 +2460,7 @@
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "move and collect": {
             "name": "تحرك واجمع"
@@ -2468,12 +2468,12 @@
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "get pumpkin": {
             "name": "احصل على يقطين"
@@ -2486,7 +2486,7 @@
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_farmer_functions10a1_2018": {
@@ -2703,22 +2703,22 @@
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseF_artist_fwp1": {
@@ -2733,7 +2733,7 @@
             }
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "Make gingham": {
             "name": "إنشاء نسيج مخطط",
@@ -2763,7 +2763,7 @@
             }
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "Make gingham": {
             "name": "إنشاء نسيج مخطط",
@@ -2870,7 +2870,7 @@
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "كرر"
+              "repeat": "تكرار"
             }
           },
           "draw a triangle": {
@@ -2919,7 +2919,7 @@
             "name": "ارسم مربع ٢٠"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -2927,7 +2927,7 @@
             "name": "ارسم مربع ٢٠"
           },
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "draw an octagon": {
             "name": "ارسم شكل ثماني",
@@ -3007,7 +3007,7 @@
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "القيام بشيء ما"
+            "name": "إفعل شيئاً"
           },
           "get nectar make honey": {
             "name": "احصل على الرحيق اصنع العسل"
@@ -3289,7 +3289,7 @@
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "كرر"
+              "repeat": "تكرار"
             }
           },
           "draw a triangle": {

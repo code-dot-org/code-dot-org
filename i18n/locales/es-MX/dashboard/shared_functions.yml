@@ -1,6 +1,7 @@
 es-MX:
   data:
     shared_functions:
+      jittering: poniéndose nervioso
       moving north: moviéndose al norte
       moving south: moviéndose al sur
       moving west: moviéndose al oeste
