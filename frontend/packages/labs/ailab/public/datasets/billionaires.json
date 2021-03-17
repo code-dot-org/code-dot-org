@@ -6,7 +6,7 @@
       "description": "The billionaire's name. This shouldn't be used as a feature."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Rank",
       "description": "Their wealth rank for the year of this record."
     },
@@ -16,7 +16,7 @@
       "description": "The year of the rankings (1996, 2001, or 2014)."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Company Founding Year",
       "description": "The year their company was founded."
     },
@@ -41,7 +41,7 @@
       "description": "The type of company: whether it was new, a privatized company, or an acquired company."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Age",
       "description": "Their age."
     },
@@ -71,7 +71,7 @@
       "description": "Their type of wealth, e.g. : \"founder non-finance\", \"inherited\", \"self-made finance\""
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Net Worth In Billions",
       "description": "Their net worth in billions of dollars."
     },

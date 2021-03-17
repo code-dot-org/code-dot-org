@@ -1,12 +1,12 @@
 {
   "fields": [
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "index",
       "description": "The record's unique index or key. This shouldn't be used as a feature."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Date",
       "description": "The date the records were taken."
     },
@@ -46,37 +46,37 @@
       "description": "A description of the day's weather, ranging from a few clouds to light snow or rain."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Average Temperature (Celsius)",
       "description": "Average temperature in Celsius, normalized to a 0 to 1 scale where 0 = -8 degrees celsius and 1 equals 39 degrees celsius."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Average \"Feels Like\" Temperature",
       "description": "Average \"feels like\" temperature in Celsius, normalized to a 0 to 1 scale where 0 = -16 degrees celsius and 1 equals 50 degrees celsius."
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Humidity (0 - 1)",
       "description": "Humidity, normalized to 0 (0% humidity) to 1 (100% humidity)"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Wind Speed",
       "description": "Wind speed"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Number of Casual Users",
       "description": "Number of users without an account"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Number of Registered Users",
       "description": "Number of users with an account"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Total Users",
       "description": "Total number of users"
     }

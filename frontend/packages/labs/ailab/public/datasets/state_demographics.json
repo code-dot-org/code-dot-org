@@ -5,203 +5,203 @@
       "id": "State"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Age.Percent 65 and Older"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Age.Percent Under 18 Years"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Age.Percent Under 5 Years"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Education.Bachelor's Degree or Higher"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Education.High School or Higher"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Nonemployer Establishments"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Private Non-farm Employment"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Private Non-farm Employment Percent Change"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Private Non-farm Establishments"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.American Indian and Alaska Native Alone"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.Asian Alone"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.Black Alone"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.Hispanic or Latino"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.Native Hawaiian and Other Pacific Islander Alone"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.Two or More Races"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.White Alone"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Ethnicities.White Alone, not Hispanic or Latino"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Homeownership Rate"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Households"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Housing Units"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Median Value of Owner-Occupied Units"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Persons per Household"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Housing.Units in Multi-Unit Structures"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Income.Median Houseold Income"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Income.Per Capita Income"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Income.Persons Below Poverty Level"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Building Permits"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Foreign Born"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Land Area"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Language Other than English at Home"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Living in Same House +1 Years"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Manufacturers Shipments"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Mean Travel Time to Work"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Percent Female"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Miscellaneous.Veterans"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Population.2010 Population"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Population.2014 Population"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Population.Population Percent Change"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Population.Population per Square Mile"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Sales.Accommodation and Food Services Sales"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Sales.Merchant Wholesaler Sales"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Sales.Retail Sales"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Sales.Retail Sales per Capita"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.American Indian-Owned"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Asian-Owned"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Black-Owned"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Hispanic-Owned"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Native Hawaiian and Other Pacific Islander-Owned"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Total"
     },
     {
-      "type": "continuous",
+      "type": "numerical",
       "id": "Employment.Firms.Women-Owned"
     }
   ],

@@ -16,7 +16,7 @@ import {
   oneLabelSelected,
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
-  continuousColumnsHaveOnlyNumbers,
+  numericalColumnsHaveOnlyNumbers,
   trainerSelected,
   compatibleLabelAndTrainer,
   namedModel
@@ -61,8 +61,10 @@ const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
+const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
+const SET_COLUMN_REF = "SET_COLUMN_REF";
 
 // Action creators
 export function setMode(mode) {
@@ -202,12 +204,20 @@ export function setCurrentColumn(currentColumn) {
   return { type: SET_CURRENT_COLUMN, currentColumn };
 }
 
+export function setHighlightColumn(highlightColumn) {
+  return { type: SET_HIGHLIGHT_COLUMN, highlightColumn };
+}
+
 export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
 
 export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
+}
+
+export function setColumnRef(columnId, ref) {
+  return { type: SET_COLUMN_REF, columnId, ref };
 }
 
 const initialState = {
@@ -238,7 +248,8 @@ const initialState = {
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
-  saveStatus: undefined
+  saveStatus: undefined,
+  columnRefs: {}
 };
 
 // Reducer
@@ -319,10 +330,13 @@ export default function rootReducer(state = initialState, action) {
   }
 
   if (action.type === ADD_SELECTED_FEATURE) {
-    return {
-      ...state,
-      selectedFeatures: [...state.selectedFeatures, action.selectedFeature]
-    };
+    if (!state.selectedFeatures.includes(action.selectedFeature)) {
+      return {
+        ...state,
+        selectedFeatures: [...state.selectedFeatures, action.selectedFeature],
+        currentColumn: undefined
+      };
+    }
   }
 
   if (action.type === REMOVE_SELECTED_FEATURE) {
@@ -337,7 +351,8 @@ export default function rootReducer(state = initialState, action) {
   if (action.type === SET_LABEL_COLUMN) {
     return {
       ...state,
-      labelColumn: action.labelColumn
+      labelColumn: action.labelColumn,
+      currentColumn: undefined
     };
   }
   if (action.type === SET_FEATURE_NUMBER_KEY) {
@@ -456,48 +471,43 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_CURRENT_PANEL) {
+    if (action.currentPanel === "dataDisplayLabel") {
+      return {
+        ...state,
+        currentPanel: action.currentPanel,
+        currentColumn: undefined,
+        labelColumn: "",
+        selectedFeatures: []
+      };
+    }
     return {
       ...state,
       currentPanel: action.currentPanel,
       currentColumn: undefined
     };
   }
+  if (action.type === SET_HIGHLIGHT_COLUMN) {
+    return {
+      ...state,
+      highlightColumn: action.highlightColumn
+    };
+  }
   if (action.type === SET_CURRENT_COLUMN) {
-    if (state.currentPanel === "dataDisplayLabel") {
-      if (action.currentColumn === state.labelColumn) {
-        return state;
-        /*return {
-          ...state,
-          labelColumn: undefined,
-          currentColumn: undefined
-        };*/
-      } else if (!state.selectedFeatures.includes(action.currentColumn)) {
-        return {
-          ...state,
-          labelColumn: action.currentColumn,
-          currentColumn: action.currentColumn
-        };
-      } else {
-        return state;
-      }
-    } else if (state.currentPanel === "dataDisplayFeatures") {
-      if (state.selectedFeatures.includes(action.currentColumn)) {
-        return {
-          ...state,
-          selectedFeatures: state.selectedFeatures.filter(
-            item => item !== action.currentColumn
-          ),
-          currentColumn: undefined
-        };
-      } else if (action.currentColumn !== state.labelColumn) {
-        return {
-          ...state,
-          selectedFeatures: [...state.selectedFeatures, action.currentColumn],
-          currentColumn: action.currentColumn
-        };
-      } else {
-        return state;
-      }
+    if (state.currentColumn === action.currentColumn) {
+      return {
+        ...state,
+        currentColumn: undefined
+      };
+    } else if (
+      state.currentPanel !== "dataDisplayFeatures" ||
+      action.currentColumn !== state.labelColumn
+    ) {
+      // We don't do this if we are on the feature-selection panel
+      // and the user chose the column that is already the label.
+      return {
+        ...state,
+        currentColumn: action.currentColumn
+      };
     }
   }
   if (action.type === SET_RESULTS_PHASE) {
@@ -510,6 +520,16 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       saveStatus: action.status
+    };
+  }
+  if (action.type === SET_COLUMN_REF) {
+    return {
+      ...state,
+      columnRefs: {
+        ...state.columnRefs,
+        action: action.columnId,
+        ref: action.ref
+      }
     };
   }
   return state;
@@ -578,26 +598,29 @@ export function getSelectedCategoricalFeatures(state) {
   return intersection;
 }
 
-export function getSelectedContinuousColumns(state) {
-  let intersection = getContinuousColumns(state).filter(
+export function getSelectedNumericalColumns(state) {
+  let intersection = getNumericalColumns(state).filter(
     x => state.selectedFeatures.includes(x) || x === state.labelColumn
   );
   return intersection;
 }
 
-export function getSelectedContinuousFeatures(state) {
-  let intersection = getContinuousColumns(state).filter(x =>
+export function getSelectedNumericalFeatures(state) {
+  let intersection = getNumericalColumns(state).filter(x =>
     state.selectedFeatures.includes(x)
   );
   return intersection;
 }
 
-export function getContinuousColumns(state) {
-  return filterColumnsByType(state, ColumnTypes.CONTINUOUS);
+export function getNumericalColumns(state) {
+  return filterColumnsByType(state, ColumnTypes.NUMERICAL);
 }
 
 export function getSelectableFeatures(state) {
-  return getFeatures(state).filter(column => column !== state.labelColumn);
+  return getFeatures(state).filter(
+    column =>
+      column !== state.labelColumn && !state.selectedFeatures.includes(column)
+  );
 }
 
 export function getSelectableLabels(state) {
@@ -641,7 +664,7 @@ export function getUniqueOptionsByColumn(state) {
 
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
-  getContinuousColumns(state).map(
+  getNumericalColumns(state).map(
     column => (rangesByColumn[column] = getRange(state, column))
   );
   return rangesByColumn;
@@ -681,7 +704,7 @@ function getKeyByValue(object, value) {
 
 export function getSelectedTrainer(state) {
   const trainerForLabel =
-    state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS
+    state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL
       ? defaultRegressionTrainer
       : defaultClassificationTrainer;
   const trainer = state.selectedTrainer
@@ -695,10 +718,11 @@ function isEmpty(object) {
 }
 
 export function getConvertedValue(state, rawValue, column) {
-  const convertedValue = getCategoricalColumns(state).includes(column) &&
+  const convertedValue =
+    getCategoricalColumns(state).includes(column) &&
     !isEmpty(state.featureNumberKey)
-    ? getKeyByValue(state.featureNumberKey[column], rawValue)
-    : rawValue;
+      ? getKeyByValue(state.featureNumberKey[column], rawValue)
+      : rawValue;
   return convertedValue;
 }
 
@@ -737,7 +761,7 @@ export function getCompatibleTrainers(state) {
     case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
       compatibleTrainers = getClassificationTrainers();
       break;
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CONTINUOUS:
+    case state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL:
       compatibleTrainers = getRegressionTrainers();
       break;
     default:
@@ -865,15 +889,15 @@ export function validationMessages(state) {
     panel: "selectFeatures",
     readyToTrain: selectedColumnsHaveDatatype(state),
     errorString:
-      "Feature and label columns must contain only continuous or categorical data.",
+      "Feature and label columns must contain only numerical or categorical data.",
     successString:
-      "Selected features and label contain continuous or categorical data"
+      "Selected features and label contain numerical or categorical data"
   };
-  validationMessages["continuousNumbers"] = {
+  validationMessages["numericalNumbers"] = {
     panel: "selectFeatures",
-    readyToTrain: continuousColumnsHaveOnlyNumbers(state),
-    errorString: "Continuous columns should contain only numbers.",
-    successString: "Continuous columns contain only numbers."
+    readyToTrain: numericalColumnsHaveOnlyNumbers(state),
+    errorString: "Numerical columns should contain only numbers.",
+    successString: "Numerical columns contain only numbers."
   };
   validationMessages["training"] = {
     panel: "selectTrainer",
@@ -1016,7 +1040,7 @@ function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "dataDisplayFeatures") {
-    if (!state.labelColumn) {
+    if (!state.labelColumn || state.labelcolumn === "") {
       return false;
     }
   }
@@ -1106,7 +1130,7 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplayFeatures", text: "Back" };
+    prev = { panel: "dataDisplayLabel", text: "Back" };
     next = isPanelEnabled(state, "saveModel")
       ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };
@@ -1231,9 +1255,13 @@ export function getScatterPlotData(state) {
   }
 
   if (
-    state.columnsByDataType[state.labelColumn] !== ColumnTypes.CONTINUOUS ||
-    state.columnsByDataType[state.currentColumn] !== ColumnTypes.CONTINUOUS
+    state.columnsByDataType[state.labelColumn] !== ColumnTypes.NUMERICAL ||
+    state.columnsByDataType[state.currentColumn] !== ColumnTypes.NUMERICAL
   ) {
+    return null;
+  }
+
+  if (state.labelColumn === state.currentColumn) {
     return null;
   }
 

@@ -19,13 +19,34 @@ class CrossTab extends Component {
       ...styles.tableCell
     };
   };
+
   render() {
     const { crossTabData } = this.props;
 
+    // There are a few criteria that affect how big the table looks.  We'll not
+    // render it if any of them are exceeded.
+    // First, how many columns are there on the left side.
+    const maxFeaturesInTable = 5;
+    // Second, how many columns are there in the main table.
+    const maxUniqueLabelValues = 5;
+    // Third, how many rows are there.
+    const maxResults = 5;
+
+    const showTable =
+      crossTabData &&
+      crossTabData.featureNames.length <= maxFeaturesInTable &&
+      crossTabData.uniqueLabelValues.length <= maxUniqueLabelValues &&
+      crossTabData.results.length <= maxResults;
+
     return (
-      crossTabData && (
-        <div id="cross-tab" style={{ ...styles.panel, ...styles.rightPanel }}>
-          <div style={styles.largeText}>Correlation Information</div>
+      <div id="cross-tab">
+        {!showTable && (
+          <div>
+            The currently-selected data is too large to show in a table.
+          </div>
+        )}
+
+        {showTable && (
           <div style={styles.scrollableContents}>
             <div style={styles.scrollingContents}>
               <table>
@@ -82,8 +103,8 @@ class CrossTab extends Component {
               </table>
             </div>
           </div>
-        </div>
-      )
+        )}
+      </div>
     );
   }
 }

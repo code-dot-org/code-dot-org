@@ -13,6 +13,10 @@ import {
 } from "../redux";
 import { ColumnTypes, styles } from "../constants.js";
 import { Bar } from "react-chartjs-2";
+import ScatterPlot from "./ScatterPlot";
+import CrossTab from "./CrossTab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const barData = {
   labels: [],
@@ -52,7 +56,9 @@ class ColumnInspector extends Component {
     removeSelectedFeature: PropTypes.func.isRequired,
     rangesByColumn: PropTypes.object,
     setCurrentColumn: PropTypes.func,
-    hideSpecifyColumns: PropTypes.bool
+    hideSpecifyColumns: PropTypes.bool,
+    columnPositions: PropTypes.object,
+    currentPanel: PropTypes.string
   };
 
   handleChangeDataType = (event, feature) => {
@@ -81,7 +87,7 @@ class ColumnInspector extends Component {
   };
 
   render() {
-    const { currentColumnData, rangesByColumn } = this.props;
+    const { currentColumnData, rangesByColumn, currentPanel } = this.props;
 
     if (
       currentColumnData &&
@@ -96,12 +102,27 @@ class ColumnInspector extends Component {
 
     const maxLabelsInHistogram = 5;
 
+    let leftPosition = 0;
+
+    if (currentColumnData) {
+      if (this.props.columnPositions[currentColumnData.id]) {
+        leftPosition = this.props.columnPositions[currentColumnData.id];
+      }
+    }
+
     return (
       currentColumnData && (
         <div
           id="column-inspector"
-          style={{ ...styles.panel, ...styles.rightPanel }}
+          style={{
+            ...styles.panel,
+            ...styles.popupPanel,
+            left: leftPosition
+          }}
         >
+          <div onClick={this.onClose} style={styles.popupClose}>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
           <div style={styles.largeText}>Column Information</div>
           <form>
             <div>
@@ -136,33 +157,41 @@ class ColumnInspector extends Component {
                 )}
               </label>
 
-              {currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+              {currentPanel === "dataDisplayLabel" &&
+                currentColumnData.dataType === ColumnTypes.CATEGORICAL && (
+                  <div>
+                    {barData.labels.length <= maxLabelsInHistogram && (
+                      <Bar
+                        data={barData}
+                        width={100}
+                        height={150}
+                        options={chartOptions}
+                      />
+                    )}
+                    {barData.labels.length > maxLabelsInHistogram && (
+                      <div>
+                        {barData.labels.length} values were found in this
+                        column. A graph is only shown when there are{" "}
+                        {maxLabelsInHistogram} or fewer.
+                      </div>
+                    )}
+                  </div>
+                )}
+
+              {currentPanel === "dataDisplayFeatures" && (
                 <div>
-                  {barData.labels.length <= maxLabelsInHistogram && (
-                    <Bar
-                      data={barData}
-                      width={100}
-                      height={150}
-                      options={chartOptions}
-                    />
-                  )}
-                  {barData.labels.length > maxLabelsInHistogram && (
-                    <div>
-                      {barData.labels.length} values were found in this column.
-                      A graph is only shown when there are{" "}
-                      {maxLabelsInHistogram} or fewer.
-                    </div>
-                  )}
+                  <ScatterPlot />
+                  <CrossTab />
                 </div>
               )}
 
-              {currentColumnData.dataType === ColumnTypes.CONTINUOUS && (
+              {currentColumnData.dataType === ColumnTypes.NUMERICAL && (
                 <div>
                   {currentColumnData.range && (
                     <div>
                       {isNaN(rangesByColumn[currentColumnData.id].min) && (
                         <p style={styles.error}>
-                          Continuous columns should contain only numbers.
+                          Numerical columns should contain only numbers.
                         </p>
                       )}
                       {!isNaN(rangesByColumn[currentColumnData.id].min) && (
@@ -192,7 +221,8 @@ export default connect(
   state => ({
     currentColumnData: getCurrentColumnData(state),
     rangesByColumn: getRangesByColumn(state),
-    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns
+    hideSpecifyColumns: state.mode && state.mode.hideSpecifyColumns,
+    currentPanel: state.currentPanel
   }),
   dispatch => ({
     setColumnsByDataType(column, dataType) {
