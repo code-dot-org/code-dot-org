@@ -226,6 +226,12 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def student_lesson_plan_pdf_url
+    if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan && Services::LessonPlanPdfs.student_pdf_exists_for?(self)
+      Services::LessonPlanPdfs.get_student_url(self)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -390,7 +396,7 @@ class Lesson < ApplicationRecord
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      studentLessonPlanPdfUrl: Services::LessonPlanPdfs.get_student_url(self)
+      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
 
