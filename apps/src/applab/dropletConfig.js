@@ -362,8 +362,7 @@ export var blocks = [
     category: 'Canvas',
     paramButtons: {minArgs: 1, maxArgs: 3},
     paletteParams: ['id', 'width', 'height'],
-    params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT],
-    docFunc: 'createCanvasNoAssign'
+    params: ['"id"', DEFAULT_WIDTH, DEFAULT_HEIGHT]
   },
   {
     func: 'setActiveCanvas',

@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import $ from 'jquery';
@@ -11,10 +13,14 @@ import i18n from '@cdo/locale';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import _ from 'lodash';
+import styleConstants from '@cdo/apps/styleConstants';
+import {connect} from 'react-redux';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
 const VIDEO_MODAL_WIDTH = 700;
+const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
+const MAX_LEVEL_HEIGHT = 550;
 
 const styles = {
   sublevelCards: {
@@ -23,10 +29,12 @@ const styles = {
   }
 };
 
-export default class LevelDetailsDialog extends Component {
+class LevelDetailsDialog extends Component {
   static propTypes = {
     scriptLevel: PropTypes.object.isRequired,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -36,7 +44,9 @@ export default class LevelDetailsDialog extends Component {
     scriptLevel.highlighted = true;
     this.state = {
       selectedLevel,
-      scriptLevel
+      scriptLevel,
+      height: MAX_LEVEL_HEIGHT,
+      maxHeight: MAX_LEVEL_HEIGHT
     };
   }
 
@@ -74,7 +84,42 @@ export default class LevelDetailsDialog extends Component {
         </div>
       );
     } else {
-      return <div>Not implemented yet</div>;
+      // TODO: calculate more of these parameters based on the level and pages
+      return (
+        <UnconnectedTopInstructions
+          hasContainedLevels={false}
+          noVisualization={true}
+          isMinecraft={false}
+          isBlockly={false}
+          isRtl={this.props.isRtl}
+          longInstructions={level.longInstructions || level.long_instructions}
+          shortInstructions={level.shortInstructions}
+          noInstructionsWhenCollapsed={true}
+          levelVideos={level.videos}
+          mapReference={level.mapReference}
+          referenceLinks={level.referenceLinks}
+          teacherMarkdown={level.teacherMarkdown}
+          viewAs={this.props.viewAs}
+          height={this.state.height}
+          maxHeight={Math.min(this.state.maxHeight, MAX_LEVEL_HEIGHT)}
+          expandedHeight={this.state.height}
+          isCollapsed={false}
+          hidden={false}
+          isEmbedView={false}
+          mainStyle={{paddingBottom: 5}}
+          containerStyle={{
+            overflowY: 'scroll',
+            height: this.state.height - HEADER_HEIGHT
+          }}
+          setInstructionsRenderedHeight={height =>
+            this.setState({height: Math.min(height, MAX_LEVEL_HEIGHT)})
+          }
+          setInstructionsMaxHeightNeeded={maxHeight =>
+            this.setState({maxHeight})
+          }
+          resizable={false}
+        />
+      );
     }
   };
 
@@ -152,33 +197,45 @@ export default class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
+    const levelSpecificStyling =
+      level.type === 'StandaloneVideo'
+        ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
+        : {};
     return (
       <BaseDialog
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={
-          level.type === 'StandaloneVideo'
-            ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-            : {}
-        }
+        style={{padding: 15, ...levelSpecificStyling}}
+        useUpdatedStyles
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        {preview}
+        <div>{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
+            __useDeprecatedTag
+            style={{margin: 5}}
           />
           <Button
-            href={scriptLevel.url}
+            href={level.url || scriptLevel.url}
             text={i18n.seeFullLevel()}
             color={'orange'}
+            __useDeprecatedTag
+            style={{margin: 5}}
           />
         </DialogFooter>
       </BaseDialog>
     );
   }
 }
+
+export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
+
+export default connect(state => ({
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
+}))(LevelDetailsDialog);

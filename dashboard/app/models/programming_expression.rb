@@ -22,6 +22,7 @@ class ProgrammingExpression < ApplicationRecord
 
   belongs_to :programming_environment
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
+  has_many :lessons_programming_expressions
 
   validates_uniqueness_of :key, scope: :programming_environment_id
 
@@ -114,6 +115,10 @@ class ProgrammingExpression < ApplicationRecord
     record.assign_attributes(properties)
     record.save! if record.changed?
     record.name
+  end
+
+  def summarize_for_lesson_edit
+    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
   end
 
   def summarize_for_lesson_show

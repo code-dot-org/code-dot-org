@@ -7,7 +7,9 @@ level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
 level 'Oceans_Short', progression: 'Recognizing Fish Features'
 level 'Oceans_Long', progression: 'Recognizing Expressions'
 
-lesson 'lesson2', display_name: 'How Computers Learn (Unplugged)', has_lesson_plan: true
+lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
+level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
 
 lesson 'lesson3', display_name: 'AI for Social Good (Unplugged)', has_lesson_plan: true
 
@@ -41,8 +43,6 @@ level 'ml-model card-medical ai lab', progression: 'Medical Dataset Investigatio
 level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
-level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
-level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
 
 lesson 'lesson9', display_name: 'Numerical Data in AI Lab', has_lesson_plan: true
 level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
@@ -86,4 +86,6 @@ lesson 'lesson20', display_name: 'TEMP LEVELS - DELETE LATER', has_lesson_plan: 
 level 'ml-model cards-medical app', progression: 'Medical Priority App (external app)'
 level 'ml-import ai-pixar placeholder', progression: 'Which Pixar Character Are You?'
 level 'Oceans_CreaturesVTrash', progression: 'Recognizing Ocean Animals'
+level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
+level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
 

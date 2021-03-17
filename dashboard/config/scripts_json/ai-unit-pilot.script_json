@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-09 22:10:58 UTC",
+    "serialized_at": "2021-03-16 02:49:48 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -60,7 +60,7 @@
     },
     {
       "key": "lesson2",
-      "name": "How Computers Learn (Unplugged)",
+      "name": "How Computers Learn",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -402,6 +402,56 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Looking for Patterns",
+        "level_keys": [
+          "ml-L2 unsupervised - 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-L2 unsupervised - 1"
+        ],
+        "lesson.key": "lesson2",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-L2 unsupervised - 1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Supervised Learning",
+        "level_keys": [
+          "ml-L2 supervised - 1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-L2 supervised - 1"
+        ],
+        "lesson.key": "lesson2",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-L2 supervised - 1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Shoe Recommender",
         "level_keys": [
           "ml-models-shoes random"
@@ -422,7 +472,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -447,7 +497,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -472,7 +522,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -497,7 +547,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -522,7 +572,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -547,7 +597,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -572,7 +622,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -597,7 +647,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -622,7 +672,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -647,7 +697,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -672,7 +722,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -697,7 +747,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -722,7 +772,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -747,7 +797,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -772,7 +822,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -797,7 +847,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -822,7 +872,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -847,7 +897,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -872,7 +922,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -897,7 +947,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -919,56 +969,6 @@
       },
       "level_keys": [
         "ml-model card-medical-3"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Medical Dataset Model Cards",
-        "level_keys": [
-          "ml-model card-medical-4"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-model card-medical-4"
-        ],
-        "lesson.key": "lesson8",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-model card-medical-4"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "(Slides) Bias in Machine Learning Video",
-        "level_keys": [
-          "Oceans_Video_Training_Data"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Oceans_Video_Training_Data"
-        ],
-        "lesson.key": "lesson8",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "Oceans_Video_Training_Data"
       ]
     },
     {
@@ -1545,6 +1545,56 @@
       "level_keys": [
         "Oceans_CreaturesVTrash"
       ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "lesson20",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "ml-model card-medical-4"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "(Slides) Bias in Machine Learning Video",
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "lesson20",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Oceans_Video_Training_Data"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1577,6 +1627,28 @@
           "Oceans_Long"
         ],
         "lesson.key": "lesson1",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-L2 unsupervised - 1",
+        "script_level.level_keys": [
+          "ml-L2 unsupervised - 1"
+        ],
+        "lesson.key": "lesson2",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-L2 supervised - 1",
+        "script_level.level_keys": [
+          "ml-L2 supervised - 1"
+        ],
+        "lesson.key": "lesson2",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
@@ -1806,28 +1878,6 @@
         "level.key": "ml-model card-medical-3",
         "script_level.level_keys": [
           "ml-model card-medical-3"
-        ],
-        "lesson.key": "lesson8",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-model card-medical-4",
-        "script_level.level_keys": [
-          "ml-model card-medical-4"
-        ],
-        "lesson.key": "lesson8",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Oceans_Video_Training_Data",
-        "script_level.level_keys": [
-          "Oceans_Video_Training_Data"
         ],
         "lesson.key": "lesson8",
         "lesson_group.key": "",
@@ -2086,6 +2136,28 @@
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-model card-medical-4",
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "lesson20",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Oceans_Video_Training_Data",
+        "script_level.level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
+        "lesson.key": "lesson20",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
     }
   ],
   "resources": [
@@ -2098,6 +2170,9 @@
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [

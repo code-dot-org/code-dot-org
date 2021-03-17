@@ -339,6 +339,8 @@ Dashboard::Application.routes.draw do
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
   get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
+  get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
