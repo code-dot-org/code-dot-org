@@ -194,13 +194,15 @@ function TopInstructionsHeader(props) {
             )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-        {!isEmbedView && (isCSDorCSP || hasContainedLevels) && !dynamicInstructions && (
-          <CollapserIcon
-            isCollapsed={isCollapsed}
-            onClick={handleClickCollapser}
-            style={collapserIconStyles}
-          />
-        )}
+        {!isEmbedView &&
+          (isCSDorCSP || hasContainedLevels) &&
+          !dynamicInstructions && (
+            <CollapserIcon
+              isCollapsed={isCollapsed}
+              onClick={handleClickCollapser}
+              style={collapserIconStyles}
+            />
+          )}
       </div>
     </PaneHeader>
   );
@@ -222,6 +224,7 @@ TopInstructionsHeader.propTypes = {
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
+  dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,
   hasContainedLevels: PropTypes.bool,
   isRtl: PropTypes.bool.isRequired,
