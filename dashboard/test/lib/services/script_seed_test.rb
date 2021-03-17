@@ -17,6 +17,7 @@ module Services
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
       @programming_environment = create :programming_environment, name: 'new-lab'
+      @framework = create :framework, shortcode: 'test_framework'
     end
 
     # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
@@ -67,7 +68,7 @@ module Services
       #   4 queries to set up course offering and course version
       #   30 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     ProgrammingExpression, Resources, and Vocabulary.
+      #     Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
@@ -76,6 +77,8 @@ module Services
       #   16 queries, one for each LevelsScriptLevel.
       #   4 queries, one to remove LessonsResources from each Lesson.
       #   2 queries, one to remove LessonsVocabularies from each Lesson.
+      #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
+      #   2 queries, one to remove LessonsStandards from each Lesson.
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -83,7 +86,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(90) do
+      assert_queries(95) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -367,6 +370,32 @@ module Services
       assert_equal expected_keys, lesson.programming_expressions.map(&:key)
     end
 
+    test 'seed updates lesson standards' do
+      script = create_script_tree
+
+      # create the standard outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the standard for us.
+      new_standard = create :standard, description: 'New Standard'
+
+      expected_descriptions = [
+        script.lessons.first.standards.last.description,
+        new_standard.description
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.standards.first.destroy
+        lesson.standards.push(new_standard)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_descriptions, lesson.standards.map(&:description)
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -400,6 +429,7 @@ module Services
       expected_counts['LessonsVocabulary'] -= 4
       expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
+      expected_counts['LessonsStandard'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -433,6 +463,7 @@ module Services
       expected_counts['LessonsVocabulary'] -= 2
       expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
+      expected_counts['LessonsStandard'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -602,7 +633,7 @@ module Services
     # Programming Expressions are shared across all courses. We need to make sure all the
     # programming expressions we need for this script are created, but we should never remove
     # a programming expression because it might be in use by another script.
-    test 'seed deletes lessons programming expressions' do
+    test 'seed deletes lesson programming expressions' do
       script = create_script_tree
       original_counts = get_counts
 
@@ -627,6 +658,38 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       ScriptSeed.seed_from_json(json)
       @programming_environment.update!(name: 'not-new-lab')
+      assert_raises do
+        ScriptSeed.seed_from_json(json)
+      end
+    end
+
+    # Standards are shared across all scripts. We should never delete
+    # a standard because it might be in use by another script.
+    test 'seed deletes lessons_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.standards.count
+        lesson.standards.delete(lesson.standards.first)
+        assert_equal 1, lesson.standards.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsStandard'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed can only find standard if framework matches' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+      @framework.update!(shortcode: 'bogus')
       assert_raises do
         ScriptSeed.seed_from_json(json)
       end
@@ -665,7 +728,7 @@ module Services
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -703,6 +766,10 @@ module Services
         assert_objectives_equal(
           s1.lessons.map(&:objectives).flatten,
           s2.lessons.map(&:objectives).flatten
+        )
+        assert_standards_equal(
+          s1.lessons.map(&:standards).flatten,
+          s2.lessons.map(&:standards).flatten,
         )
       end
     end
@@ -771,6 +838,12 @@ module Services
       end
     end
 
+    def assert_standards_equal(standards1, standards2)
+      standards1.zip(standards2).each do |s1, s2|
+        assert_attributes_equal(s1, s2)
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
@@ -788,6 +861,7 @@ module Services
       num_vocabularies_per_lesson: 2,
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
+      num_standards_per_lesson: 2,
       with_unit_group: false
     )
       name_prefix ||= SecureRandom.uuid
@@ -876,6 +950,11 @@ module Services
 
         (1..num_objectives_per_lesson).each do |o|
           create :objective, key: "#{lesson.name}-objective-#{o}", lesson: lesson
+        end
+
+        (1..num_standards_per_lesson).each do |s|
+          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}"
+          LessonsStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
       end
 
