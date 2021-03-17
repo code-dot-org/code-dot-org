@@ -149,7 +149,7 @@ class ProgrammingExpressionsEditor extends Component {
   }
 
   constructProgrammingExpressionOption = programmingExpression => ({
-    value: programmingExpression.key,
+    value: programmingExpression.id,
     label: `${programmingExpression.name} - ${
       programmingExpression.programmingEnvironmentName
     } - ${programmingExpression.category}`,
@@ -158,7 +158,7 @@ class ProgrammingExpressionsEditor extends Component {
 
   constructSearchOptions = json => {
     const programmingExpressionKeysAdded = this.props.programmingExpressions.map(
-      programmingExpression => programmingExpression.key
+      programmingExpression => programmingExpression.id
     );
     const programmingExpressions = json
       .map(programmingExpression =>
@@ -182,22 +182,19 @@ class ProgrammingExpressionsEditor extends Component {
 
   handleRemoveProgrammingExpressionConfirm = () => {
     this.props.removeProgrammingExpression(
-      this.state.programmingExpressionForRemoval.key
+      this.state.programmingExpressionForRemoval.id
     );
     this.handleRemoveProgrammingExpressionDialogClose();
   };
 
   render() {
     const columns = this.getColumns();
-
-    console.log(this.state.programmingEnvironmentId);
-    console.log(this.props.programmingEnvironments);
     return (
       <div>
         {this.state.confirmRemovalDialogOpen && (
           <Dialog
             body={`Are you sure you want to remove the programming expression "${
-              this.state.programmingExpressionForRemoval.word
+              this.state.programmingExpressionForRemoval.name
             }" from this lesson?`}
             cancelText="Cancel"
             confirmText="Delete"
@@ -249,7 +246,7 @@ class ProgrammingExpressionsEditor extends Component {
         </div>
         <Table.Provider columns={columns} style={{width: '100%'}}>
           <Table.Header />
-          <Table.Body rows={this.props.programmingExpressions} rowKey="key" />
+          <Table.Body rows={this.props.programmingExpressions} rowKey="id" />
         </Table.Provider>
       </div>
     );
