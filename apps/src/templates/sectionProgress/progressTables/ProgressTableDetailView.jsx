@@ -100,6 +100,9 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 }
+
+export const UnconnectedProgressTableDetailView = ProgressTableDetailView;
+
 export default connect(
   state => ({
     section: state.sectionData.section,

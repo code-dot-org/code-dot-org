@@ -83,6 +83,8 @@ class ProgressTableSummaryView extends React.Component {
   }
 }
 
+export const UnconnectedProgressTableSummaryView = ProgressTableSummaryView;
+
 export default connect(
   state => ({
     scriptData: getCurrentScriptData(state),

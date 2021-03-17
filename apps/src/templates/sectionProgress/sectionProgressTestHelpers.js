@@ -14,6 +14,26 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 
+export function fakeRowsForStudents(students) {
+  const rows = [];
+  students.forEach(student => {
+    rows.push({
+      id: `${student.id}.0`,
+      student: student,
+      expansionIndex: 0,
+      isExpanded: false
+    });
+  });
+  return rows;
+}
+
+export function fakeDetailRowsForStudent(student) {
+  return [
+    {id: `${student.id}.1`, student: student, expansionIndex: 1},
+    {id: `${student.id}.2`, student: student, expansionIndex: 2}
+  ];
+}
+
 export function wrapTable(table) {
   return (
     <div

@@ -66,7 +66,7 @@ export default class ProgressTableStudentList extends React.Component {
         scriptId={scriptData.id}
         lastTimestamp={studentTimestamps[rowData.student.id]}
         studentUrl={studentUrl}
-        onExpandToggle={() => {
+        onToggleExpand={() => {
           this.props.onToggleRow(rowData);
         }}
         isExpanded={rowData.isExpanded}
