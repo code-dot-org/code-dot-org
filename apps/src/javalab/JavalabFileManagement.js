@@ -27,26 +27,24 @@ function renameProjectFile(filename, newFilename) {
 
 function onSave(success, failure) {
   // TODO: enable multi-file
-  const filesChanged = getStore().getState().javalab.filesChanged;
+  const javalabState = getStore().getState().javalab;
   // only save file if file content has changed.
-  if (filesChanged) {
-    const filename = getStore().getState().javalab.filename;
-    const editorText = getStore().getState().javalab.editorText;
+  if (javalabState.filesChanged) {
     filesApi.putFile(
-      filename,
-      editorText,
+      javalabState.filename,
+      javalabState.editorText,
       /* success */
       (xhr, filesVersionId) => {
         // reset files changed to false on success
         getStore().dispatch(setFilesChanged(false));
-        if (success) {
+        if (typeof success === 'function') {
           success(xhr, filesVersionId);
         }
       },
       failure
     );
   } else {
-    if (success) {
+    if (typeof success === 'function') {
       success(null, project.filesVersionId);
     }
   }

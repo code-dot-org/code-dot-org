@@ -88,8 +88,10 @@ class JavalabEditor extends React.Component {
 
   renameFileComplete(e) {
     e.preventDefault();
-    renameProjectFile(this.props.filename, this.state.newFilename);
-    this.props.setFilename(this.state.newFilename);
+    const {filename, setFilename} = this.props;
+    const {newFilename} = this.state;
+    renameProjectFile(filename, newFilename);
+    setFilename(newFilename);
     this.onProjectChanged();
     this.setState({renameFileActive: false});
   }
@@ -111,7 +113,7 @@ class JavalabEditor extends React.Component {
             />
           </div>
           <input
-            className="btn btn-default btn-sm save-rename-button"
+            className="btn btn-default btn-sm"
             style={style.button}
             type="submit"
             value="Save"
@@ -128,7 +130,7 @@ class JavalabEditor extends React.Component {
         <button
           type="button"
           onClick={this.activateRenameFile}
-          className="btn btn-default btn-sm active-rename-button"
+          className="btn btn-default btn-sm"
           style={style.button}
         >
           Rename

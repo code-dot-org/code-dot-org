@@ -8,9 +8,8 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import {setEditorText} from '../../../src/javalab/javalabRedux';
+import javalabRedux, {setEditorText} from '@cdo/apps/javalab/javalabRedux';
 var filesApi = require('@cdo/apps/clientApi').files;
-import javalabRedux from '@cdo/apps/javalab/javalabRedux';
 
 describe('Javalab', () => {
   let javalab;
@@ -77,7 +76,7 @@ describe('Javalab', () => {
       );
     });
 
-    it('does not triggers file put if there are no changes', () => {
+    it('does not trigger file put if there are no changes', () => {
       // getCodeAsync is called on autosave/save
       javalab.getCodeAsync(
         () => {
