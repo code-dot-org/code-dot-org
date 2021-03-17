@@ -11,33 +11,30 @@ sk:
   campaign_date_full: 5. až 11. december
   campaign_date_year: '2016'
   campaign_date_full_year: 7.-13. December 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: 1. október
+  latam_campaign_date_start_long: 1. október
+  latam_campaign_date_short: 1. október - 18. december
+  latam_campaign_date_full: 1. október - 18. december
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: 1. október 2020  - 18. december 2020
+  europe_campaign_date_start_short: 10. október
+  europe_campaign_date_start_long: 10. október
+  europe_campaign_date_short: 10. - 25. október
+  europe_campaign_date_full: 10. - 25. október
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 10. - 25. október 2020
+  africa_campaign_date_start_short: 1. október
+  africa_campaign_date_start_long: 1. október
+  africa_campaign_date_short: 1. - 31. október
+  africa_campaign_date_full: 1. - 31. október
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: October 1-31, 2020
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  africa_campaign_date_full_year: 1. - 31. október 2020
+  hoc2020_header: 'Uč sa už dnes a vytvor lepší zajtrajšok. '
+  hoc2020_header_with_line_break_markdown: "Uč sa už dnes\n\na vytvor lepší zajtrajšok. "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
-  social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
-    today, build a brighter tomorrow.'
+  social_hoc2020_hoc_is_about_csforgood: "#HodinaKódu predstavuje #ProgramovaniePreDobro.
+    Uč sa už dnes a vytvor lepší zajtrajšok. "
   social_hoc2020_global_movement: The Hour of Code is a global movement reaching tens
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
@@ -211,8 +208,9 @@ sk:
   codeorg_homepage_hoc2018_musician_before: Featuring
   codeorg_homepage_hoc2018_musician_after: and more!
   codeorg_homepage_hoc2018_video: Watch our video
-  hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
-    of Code event. One-hour tutorials in over 45 languages. No experience needed.
+  hourofcode_homepage_hoc2018_header_line1: Každý, kdekoľvek môže usporiadať podujatie
+    Hodina kódu. Hodinové výukové programy vo viac ako 45 jazykoch. Nie sú potrebné
+    žiadne skúsenosti.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
@@ -239,7 +237,7 @@ sk:
     svoju udalosť v rámci Hodiny kódu. K dispozícii sú jednohodinové výukové programy
     vo viac ako 45 jazykoch. Nie sú požadované žiadne predchádzajúce skúsenosti <strong>Aktivity
     sú určené pre vek od 4 do 104 rokov.</strong>
-  front_intro_default_2: A global movement in 180+ countries.
+  front_intro_default_2: Globálne hnutie vo viac ako 180 krajinách.
   front_watch_video: Pozrite si nové video
   front_watch_regular_video: Pozrite si video
   front_volunteers: Hľadáme technicky zdatných dobrovoľníkov
@@ -463,16 +461,17 @@ sk:
   front_join_us_learn_more: Viac info
   signup_closed: Registrácia pre Hour of Code je nateraz uzavretá. Skontrolujte prosím
     znova v Októbri možnosť prihlásenia sa do ďalšej Hour of Code.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
-  signup_registration_not_required_markdown: You don't need to register to participate!
-    The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url})
-    or read our [How-to guide](%{howto_guide_url}) to plan an event for your class.
-  signup_registration_closed: And every year in December, your class can join millions
-    of students around the world celebrating Computer Science Education Week with
-    the Hour of Code. We'll open registration for the annual celebration in October.
+  signup_registration_not_required: Pre účasť sa nemusíte registrovať! Aktivity Hodiny
+    kódu sú k dispozícii celoročne. <a href='%{hoc_activities_url}'>Vyskúšajte aktivitu</a>
+    alebo si prečítajte náš <a href='%{howto_guide_url}'>Návod ako na to</a> a zistite,
+    ako naplánovať udalosť pre svoju triedu.
+  signup_registration_not_required_markdown: Pre účasť sa nemusíte registrovať! Aktivity
+    Hodiny kódu sú k dispozícii celoročne. [Vyskúšajte aktivitu](%{hoc_activities_url})
+    alebo si prečítajte náš [Návod ako na to](%{howto_guide_url}) a zistite, ako naplánovať
+    udalosť pre svoju triedu.
+  signup_registration_closed: A každý rok v decembri sa vaša trieda môže pridať k
+    miliónom študentov po celom svete, ktorí oslavujú Týždeň výučby informatiky s
+    Hodinou kódu. Registráciu na výročnú oslavu otvoríme v októbri.
   signup_header: Zorganizujte Hodinu kódu počas %{campaign_date} a zaregistrujte sa
     tu.
   signup_name_label: Vaše meno
@@ -555,7 +554,7 @@ sk:
     all ages.
   map_title: Hodina kódu mapa
   map_header: "# Udalosti Hodiny kódu po celom svete"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} registrovaných udalostí v %{year}"
   see_all_events: Zobraziť všetky udalosti
   map_header_company: "# podľa názvu organizátora"
   map_header_country: "# v %{country}"
@@ -568,7 +567,10 @@ sk:
   map_warning: Hour of Code mapa zobrazuje len prvých 200000 zaevidovaných udalostí.
     Všetky zaevidované udalosti spolu s platnou adresou si môžete prezrieť tu <a href='%{events_url}'>the
     events page.</a>
-  map_warning_markdown: A full list of the events can be viewed on the [events page.](%{events_url})
+  map_warning_markdown: 'Všetky zaevidované udalosti si môžete prezrieť na tejto [stránke
+    udalostí](%{events_url})
+
+'
   meta_tag_og_title: Každé dieťa si zaslúži príležitosť
   meta_tag_og_description: Hodina kódu je globálne hnutie, ktoré má dosah až na desiatky
     miliónov študentov vo viac ako 180 krajinách a je vo viac ako 45 jazykoch. Pre

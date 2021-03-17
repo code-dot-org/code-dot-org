@@ -332,6 +332,9 @@ module Services
 
       levels_script_levels_to_import = levels_script_levels_data.map do |lsl_data|
         seeding_key = lsl_data['seeding_key']['level.key']
+        unless lsl_data['seeding_key']['script_level.level_keys'].include?(seeding_key)
+          raise "level.key not found in script_level.level_keys for #{lsl_data}"
+        end
         level = levels_by_seeding_key[seeding_key]
         unless level
           # TODO: we may want to get rid of this query since we make it for each new LevelsScriptLevel.

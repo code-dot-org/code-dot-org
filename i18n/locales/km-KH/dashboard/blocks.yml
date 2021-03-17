@@ -241,6 +241,7 @@ km:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+            '"speed"': ល្បឿន
       gamelab_checkTouching:
         options:
           CONDITION:

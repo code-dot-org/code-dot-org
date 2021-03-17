@@ -147,6 +147,7 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': brzina
       gamelab_checkTouching:
         options:
           CONDITION:

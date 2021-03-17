@@ -5372,16 +5372,20 @@ nl:
             csf_digcit:
               display_name: Digitaal Burgerschap
             csf_variables:
-              display_name: Variabelen
+              display_name: For-lussen
             csf_for_loops:
               display_name: For-lussen
-            csf_sprites:
-              display_name: Sprites
+            lessonGroup-8:
+              display_name: Variabelen
+            lessonGroup-9:
+              display_name: verwijder
         express-2021:
           description_audience: 'Leeftijden: 9-18'
           lessons:
             Dance Party:
               key: Dansfeest
+              name: Dansfeest
+            lesson-1:
               name: Dansfeest
           lesson_groups:
             csf_warmup:
@@ -5398,6 +5402,8 @@ nl:
               display_name: For-lussen
             csf_sprites:
               display_name: Sprites
+            lessonGroup-9:
+              display_name: Opwarmen
         pre-express-2021:
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
@@ -5418,6 +5424,8 @@ nl:
               display_name: Variabelen
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: Variabelen
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
