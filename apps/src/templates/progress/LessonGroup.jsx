@@ -15,6 +15,7 @@ import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoD
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
 const styles = {
   main: {
@@ -149,6 +150,18 @@ class LessonGroup extends React.Component {
               onClick={this.openLessonGroupInfoDialog}
             />
           )}
+          <div
+            className="lesson-group-info-for-printing"
+            style={{
+              height: 0,
+              visibility: 'hidden'
+            }}
+          >
+            <LessonGroupInfo
+              description={lessonGroup.description}
+              bigQuestions={lessonGroup.bigQuestions}
+            />
+          </div>
           <LessonGroupInfoDialog
             isOpen={this.state.lessonGroupInfoDialogOpen}
             displayName={lessonGroup.displayName}
