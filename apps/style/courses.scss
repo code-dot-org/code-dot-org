@@ -4,11 +4,14 @@
 @media print {
   /* we have many components that we never want to include in a print view */
   #environment_tag,
+  #uitest-version-selector,
   .announcement-notification,
+  .course-overview-top-row,
+  .course-script-teacher-info,
+  .uitest-go-to-unit-button,
   .extra-links,
   .footer,
   .header-wrapper,
-  .course-overview-header,
   .push {
     display: none;
   }
