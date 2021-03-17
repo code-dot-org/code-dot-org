@@ -680,6 +680,16 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed can only find standard if framework matches' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+      @framework.update!(shortcode: 'bogus')
+      assert_raises do
+        ScriptSeed.seed_from_json(json)
+      end
+    end
+
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true, hidden: true)
       assert script.seeded_from.nil?
