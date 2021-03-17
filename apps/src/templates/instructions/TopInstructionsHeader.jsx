@@ -194,7 +194,7 @@ function TopInstructionsHeader(props) {
             )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-        {!collapsible && !isEmbedView && (isCSDorCSP || hasContainedLevels) && (
+        {collapsible && !isEmbedView && (isCSDorCSP || hasContainedLevels) && (
           <CollapserIcon
             isCollapsed={isCollapsed}
             onClick={handleClickCollapser}
