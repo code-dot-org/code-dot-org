@@ -493,10 +493,10 @@ module Services
 
         programming_environment_id = seed_context.programming_environments.select {|pe| pe.name == lpe_data['seeding_key']['programming_environment.name']}.first&.id
         programming_expression_id = seed_context.programming_expressions.select do |pe|
-          pe.programming_environment_id = programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
+          pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
         end.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
-
+        g
         LessonsProgrammingExpression.new(
           lesson_id: lesson_id,
           programming_expression_id: programming_expression_id
