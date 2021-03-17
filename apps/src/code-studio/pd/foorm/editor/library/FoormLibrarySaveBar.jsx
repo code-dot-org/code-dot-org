@@ -1,5 +1,3 @@
-// Save bar that stays at bottom of the screen of the Foorm Editor.
-// Shows last saved time, any errors, and requires confirmation for published surveys.
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
@@ -66,6 +64,11 @@ const styles = {
 
 const saveConfirmationDialogName = 'save';
 
+/*
+ Save bar that stays at bottom of the screen when editing Foorm Libraries.
+ Also includes a modal that pops up to allow the user to specify a library name
+ and library question name if they are creating a new library and/or library question.
+*/
 class FoormLibrarySaveBar extends Component {
   static propTypes = {
     libraryCategories: PropTypes.array,
