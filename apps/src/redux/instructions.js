@@ -422,6 +422,6 @@ export const determineInstructionsConstants = config => {
 export function getDynamicInstructions(state) {
   return {
     ...state.dynamicInstructionsDefaults,
-    ...JSON.parse(state.dynamicInstructions)
+    ...(state.dynamicInstructions && JSON.parse(state.dynamicInstructions))
   };
 }
