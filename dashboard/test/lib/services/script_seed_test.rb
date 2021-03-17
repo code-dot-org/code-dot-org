@@ -345,8 +345,6 @@ module Services
 
     test 'seed updates lesson programming expressions' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
@@ -373,8 +371,6 @@ module Services
 
     test 'seed updates lesson standards' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       # create the standard outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the standard for us.
@@ -656,10 +652,8 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
-    # Standards are owned by the course version. We need to make sure all the
-    # standards we need for this script are created, but we should never remove
-    # a standard because it might be in use by another script in this course
-    # version.
+    # Standards are shared across all scripts. We should never delete
+    # a standard because it might be in use by another script.
     test 'seed deletes lessons_standards' do
       script = create_script_tree
       original_counts = get_counts
