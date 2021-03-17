@@ -4,6 +4,8 @@ import _ from 'lodash';
 
 const standardShape = PropTypes.shape({
   framework_name: PropTypes.string.isRequired,
+  parent_category_shortcode: PropTypes.string,
+  parent_category_description: PropTypes.string,
   category_shortcode: PropTypes.string.isRequired,
   category_description: PropTypes.string.isRequired,
   shortcode: PropTypes.string.isRequired,
@@ -40,13 +42,58 @@ LessonStandards.propTypes = {
 class Framework extends PureComponent {
   render() {
     const {name, standards} = this.props;
+    // Whether all standards in this framework have parent categories.
+    const hasParentCategories = !!standards[0].parent_category_shortcode;
+    const categoryKey = hasParentCategories
+      ? 'parent_category_shortcode'
+      : 'category_shortcode';
+    const standardsByCategory = _(standards)
+      .orderBy(categoryKey, 'shortcode')
+      .groupBy(categoryKey)
+      .value();
+    return (
+      <li key={name}>
+        {name}
+        <ul>
+          {Object.keys(standardsByCategory).map(categoryShortcode => {
+            const standards = standardsByCategory[categoryShortcode];
+            return hasParentCategories ? (
+              <ParentCategory
+                key={categoryShortcode}
+                shortcode={categoryShortcode}
+                standards={standards}
+              />
+            ) : (
+              <Category
+                key={categoryShortcode}
+                shortcode={categoryShortcode}
+                standards={standards}
+              />
+            );
+          })}
+        </ul>
+      </li>
+    );
+  }
+}
+Framework.propTypes = {
+  name: PropTypes.string.isRequired,
+  standards: PropTypes.arrayOf(standardShape).isRequired
+};
+
+class ParentCategory extends PureComponent {
+  render() {
+    const {shortcode, standards} = this.props;
+    const description = standards[0].parent_category_description;
     const standardsByCategory = _(standards)
       .orderBy('category_shortcode', 'shortcode')
       .groupBy('category_shortcode')
       .value();
     return (
-      <li key={name}>
-        {name}
+      <li key={shortcode}>
+        {shortcode}
+        {' - '}
+        {description}
         <ul>
           {Object.keys(standardsByCategory).map(categoryShortcode => {
             const standards = standardsByCategory[categoryShortcode];
@@ -63,8 +110,8 @@ class Framework extends PureComponent {
     );
   }
 }
-Framework.propTypes = {
-  name: PropTypes.string.isRequired,
+ParentCategory.propTypes = {
+  shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired
 };
 
