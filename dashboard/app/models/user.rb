@@ -1098,7 +1098,7 @@ class User < ApplicationRecord
     # will be redirected to /congrats.
     return nil if Policies::ScriptActivity.completed?(self, script)
 
-    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.show_as_locked?(self)}
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
 
     sl_level_ids = visible_sls.map(&:level_ids).flatten
 
@@ -1767,7 +1767,7 @@ class User < ApplicationRecord
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
       user_level.submitted = submitted
-      if submitted && user_level.level_group_level_id
+      if submitted && level_source_id
         user_level.locked = true
       end
       if level_source_id && !is_navigator
