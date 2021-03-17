@@ -43,7 +43,7 @@ describe('Java Lab Editor Test', () => {
   };
 
   describe('Rename', () => {
-    it('enables rename after Rename button clicked', () => {
+    it('Rename button changes to save button after it is clicked', () => {
       const editor = createWrapper();
 
       // find 'Rename' button and click it (enables rename)

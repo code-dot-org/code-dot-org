@@ -154,7 +154,7 @@ Javalab.prototype.getCodeAsync = function() {
       /* success */
       () => resolve(this.getCurrentFilesVersionId() || ''),
       /* failure - couldn't save files, don't try to overwrite any sources */
-      () => reject()
+      reject
     );
   });
 };

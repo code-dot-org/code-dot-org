@@ -1,4 +1,11 @@
-import {setFileName, setEditorText, setFilesChanged} from './javalabRedux';
+import {
+  setFileName,
+  setEditorText,
+  setFilesChanged,
+  getFilesChanged,
+  getFilename,
+  getEditorText
+} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 var filesApi = require('@cdo/apps/clientApi').files;
@@ -27,12 +34,12 @@ function renameProjectFile(filename, newFilename) {
 
 function onSave(success, failure) {
   // TODO: enable multi-file
-  const javalabState = getStore().getState().javalab;
+  const storeState = getStore().getState();
   // only save file if file content has changed.
-  if (javalabState.filesChanged) {
+  if (getFilesChanged(storeState)) {
     filesApi.putFile(
-      javalabState.filename,
-      javalabState.editorText,
+      getFilename(storeState),
+      getEditorText(storeState),
       /* success */
       (xhr, filesVersionId) => {
         // reset files changed to false on success
