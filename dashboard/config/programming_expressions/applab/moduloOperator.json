@@ -1,5 +1,5 @@
 {
-  "func": "%",
-  "category": "Math",
-  "docFunc": "moduloOperator"
+  "func": "moduloOperator",
+  "block": "__ % __",
+  "category": "Math"
 }
