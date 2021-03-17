@@ -19,9 +19,10 @@ const styles = {
     textAlign: 'center'
   },
   collapser: {
-    paddingRight: '10px',
+    paddingRight: '8px',
     fontSize: '20px',
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    width: '11px'
   }
 };
 class ProgressTableStudentName extends React.PureComponent {
@@ -92,7 +93,6 @@ class ProgressTableStudentName extends React.PureComponent {
 
     return (
       <div
-        className="progress-table-student-name"
         style={progressStyles.studentListContent}
         data-tip
         data-for={tooltipId}
