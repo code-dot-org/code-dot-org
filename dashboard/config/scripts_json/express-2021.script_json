@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-16 22:12:45 UTC",
+    "serialized_at": "2021-03-16 22:56:54 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -629,9 +629,9 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
+        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as **events** to create an \"alien dance party\".  ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
-        "purpose": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
+        "purpose": "Students will use **events** to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson reinforces **events** in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -671,7 +671,7 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a variable to store their pet's \"happiness\" as a number, which should help them understand how variables can be used in other applications. ",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a **variable** to store their pet's \"happiness\" as a number, which should help them understand how **variables** can be used in other applications. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -1887,21 +1887,8 @@
       }
     },
     {
-      "key": "70f255cb-66f1-49de-a085-22c599ef7b4f",
-      "position": 2,
-      "properties": {
-        "name": "Bridging Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "70f255cb-66f1-49de-a085-22c599ef7b4f",
-        "lesson.key": "Swimming Fish in Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021"
-      }
-    },
-    {
       "key": "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "name": "Main Activity",
         "duration": 20
@@ -1915,7 +1902,7 @@
     },
     {
       "key": "3ba524d7-98f9-4c54-a616-1ffb77d3f190",
-      "position": 4,
+      "position": 3,
       "properties": {
         "name": "Wrap Up",
         "duration": 15
@@ -4377,8 +4364,8 @@
       "position": 2,
       "properties": {
         "name": "Level by Level Support",
-        "description": "#### Level 1 - Video",
-        "progression_name": "Warm Up"
+        "description": "#### Warm Up",
+        "progression_name": "Video: Dance Party Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "3784bbbc-0c26-4337-9d77-805b9a2bb6ae",
@@ -4389,7 +4376,7 @@
       "key": "5283ba21-7c54-44c0-a4c2-00c1f5d240e6",
       "position": 3,
       "properties": {
-        "description": "#### Level 2\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
+        "description": "\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -4398,10 +4385,22 @@
       }
     },
     {
-      "key": "0200789e-428c-4393-84ee-6c7a48948c36",
+      "key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
       "position": 4,
       "properties": {
-        "description": "#### Level 3 - Video\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
+        "description": "#### Events",
+        "progression_name": "Video: Dance Party Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "0200789e-428c-4393-84ee-6c7a48948c36",
+      "position": 5,
+      "properties": {
+        "description": "\n####Events Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n####Events Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
         "progression_name": "Events"
       },
       "seeding_key": {
@@ -4410,10 +4409,22 @@
       }
     },
     {
-      "key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60",
-      "position": 5,
+      "key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
+      "position": 6,
       "properties": {
-        "description": "#### Level 6 - Video\n\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n",
+        "description": "#### Measures",
+        "progression_name": "Video: Dance Party Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60",
+      "position": 7,
+      "properties": {
+        "description": "\n\n####Measures Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Measures Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Measures Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n",
         "progression_name": "Measures"
       },
       "seeding_key": {
@@ -4422,11 +4433,29 @@
       }
     },
     {
-      "key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
-      "position": 6,
+      "key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
+      "position": 8,
       "properties": {
-        "description": "#### Level 10 - Video\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n",
-        "progression_name": "Properties"
+        "description": "#### Properties \n",
+        "progression_name": "Video: Dance Party Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
+        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
+      }
+    },
+    {
+      "key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
+      "position": 9,
+      "properties": {
+        "description": "\n\n#### Properties Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Properties Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Properties Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n",
+        "progression_name": "Properties",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
@@ -4434,26 +4463,11 @@
       }
     },
     {
-      "key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
-      "position": 7,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1a057037-bf26-4ab2-830f-80a5d94f87c7",
-        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
-      }
-    },
-    {
       "key": "97583afa-79d7-487a-a962-9366e1d17bba",
-      "position": 8,
+      "position": 10,
       "properties": {
-        "description": "#### Level 14 - Video"
+        "description": "#### Party On! ",
+        "progression_name": "Video: Dance Party Party On!"
       },
       "seeding_key": {
         "activity_section.key": "97583afa-79d7-487a-a962-9366e1d17bba",
@@ -4462,9 +4476,9 @@
     },
     {
       "key": "86741327-b7d6-4dfb-b703-f23be6b2a7dc",
-      "position": 9,
+      "position": 11,
       "properties": {
-        "description": "#### Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!",
+        "description": "#### Party On! Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -4474,33 +4488,13 @@
     },
     {
       "key": "436d2aa5-5369-462c-acdd-5ae81d6b0423",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "#### Lesson Extras",
         "progression_name": "Challenge"
       },
       "seeding_key": {
         "activity_section.key": "436d2aa5-5369-462c-acdd-5ae81d6b0423",
-        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
-      }
-    },
-    {
-      "key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5d59e7e4-25f4-4278-b777-878c7df2681b",
-        "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
-      }
-    },
-    {
-      "key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d",
         "lesson_activity.key": "21f7a935-c3ff-4593-a261-53d0d4c29e21"
       }
     },
@@ -4546,51 +4540,18 @@
       "key": "0d4256d9-a4f5-4fed-9958-f515dd431f6e",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from \"Ice Age\" or one of the \"Angry Birds.\"\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d4256d9-a4f5-4fed-9958-f515dd431f6e",
-        "lesson_activity.key": "5f4d9aaa-d92d-45ad-858d-8b161ed4483a"
-      }
-    },
-    {
-      "key": "7f70e7f5-505a-4748-827a-0cf4b342235e",
-      "position": 1,
-      "properties": {
-        "description": "This demonstration and discussion can help students make the connection from the previous unplugged lesson \"Follow the Algorithm\" into the new Sprite Lab environment."
-      },
-      "seeding_key": {
-        "activity_section.key": "7f70e7f5-505a-4748-827a-0cf4b342235e",
-        "lesson_activity.key": "70f255cb-66f1-49de-a085-22c599ef7b4f"
-      }
-    },
-    {
-      "key": "19247131-79b8-4bc1-89fa-e259816594d3",
-      "position": 2,
-      "properties": {
-        "description": "\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
+        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from *Ice Age* or one of the *Angry Birds.*\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.\n\nThis demonstration and discussion can help students move into the Sprite Lab environment.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.\n\n- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.",
+        "name": "Introduction",
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. \n\nIf students bring up time, such as making a **behavior** happen for a set duration, it can be helpful to reframe things by asking \"*When should the behavior stop?\"* Programs like this will rely on events to make things start and stop as desired.\n"
+            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. "
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "19247131-79b8-4bc1-89fa-e259816594d3",
-        "lesson_activity.key": "70f255cb-66f1-49de-a085-22c599ef7b4f"
-      }
-    },
-    {
-      "key": "b3ada179-2121-4015-bfe6-8abc2f0cf03a",
-      "position": 3,
-      "properties": {
-        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
-      },
-      "seeding_key": {
-        "activity_section.key": "b3ada179-2121-4015-bfe6-8abc2f0cf03a",
-        "lesson_activity.key": "70f255cb-66f1-49de-a085-22c599ef7b4f"
+        "activity_section.key": "0d4256d9-a4f5-4fed-9958-f515dd431f6e",
+        "lesson_activity.key": "5f4d9aaa-d92d-45ad-858d-8b161ed4483a"
       }
     },
     {
@@ -4626,7 +4587,7 @@
       "key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656",
       "position": 3,
       "properties": {
-        "progression_name": "Introducing Sprite Lab"
+        "progression_name": "Video: Introducing Sprite Lab"
       },
       "seeding_key": {
         "activity_section.key": "af6b778e-d5bf-4e72-bc11-ac8f839bf656",
@@ -4659,7 +4620,7 @@
       "key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb",
       "position": 6,
       "properties": {
-        "progression_name": "How to Make a Sprite"
+        "progression_name": "Video: How to Make a Sprite"
       },
       "seeding_key": {
         "activity_section.key": "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb",
@@ -4767,7 +4728,7 @@
       "key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4",
       "position": 4,
       "properties": {
-        "progression_name": "Sprites in Action"
+        "progression_name": "Video: Sprites in Action"
       },
       "seeding_key": {
         "activity_section.key": "78badf97-a73a-49fb-bc05-ed73f9dfcdf4",
@@ -4853,7 +4814,7 @@
       "key": "6c922272-82dc-4c7e-9f0e-bb03c04ba996",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** video."
       },
       "seeding_key": {
         "activity_section.key": "6c922272-82dc-4c7e-9f0e-bb03c04ba996",
@@ -4931,7 +4892,7 @@
       "key": "c536d74f-f3af-41d7-b4e4-475b9a3f45c8",
       "position": 1,
       "properties": {
-        "description": "Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n**Review:** Ask students questions about events and behaviors. \n\n- Do you remember what an event is?\n\n- Do you remember what a behavior is?\n- Can you remember some of the behaviors you have used ? What do they do?\n    - `patrolling`\n    - `jittering`\n    - `spinning right/left` \n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "Introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n**Review:** Ask students questions about events and behaviors. \n\n- Do you remember what an event is?\n\n- Do you remember what a behavior is?\n- Can you remember some of the behaviors you have used ? What do they do?\n    - `patrolling`\n    - `jittering`\n    - `spinning right/left` \n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4955,7 +4916,7 @@
       "key": "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997",
       "position": 2,
       "properties": {
-        "description": "\n####Online Puzzles\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab. ",
+        "description": "\n####Online Puzzles\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -4983,7 +4944,7 @@
       "key": "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85",
       "position": 4,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85",
@@ -5129,7 +5090,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Maze Intro - Programming with Blocks"
+        "progression": "Video: Maze Intro - Programming with Blocks",
+        "level_keys": [
+          "courseC_video_maze_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5152,7 +5116,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5175,7 +5142,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5198,7 +5168,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming3_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5221,7 +5194,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming4_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5244,7 +5220,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming5_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5267,7 +5246,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming6_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5290,7 +5272,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseC_maze_programming7_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5313,7 +5298,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming8_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5336,7 +5324,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prediction"
+        "progression": "Prediction",
+        "level_keys": [
+          "courseC_maze_programming8_predict1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5359,7 +5350,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseC_maze_programming9_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5382,7 +5376,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseC_maze_programming_challenge1_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5405,7 +5402,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Challenge"
+        "progression": "Challenge",
+        "level_keys": [
+          "courseC_maze_programming_challenge2_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -11905,7 +11905,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Warm Up",
+        "progression": "Video: Dance Party Warm Up",
         "level_keys": [
           "CourseD_Dance_2020_vid1_2021"
         ]
@@ -11957,7 +11957,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Events",
+        "progression": "Video: Dance Party Events",
         "level_keys": [
           "CourseD_Dance_2020_vid2_2021"
         ]
@@ -11971,7 +11971,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
+        "activity_section.key": "1a057037-bf26-4ab2-830f-80a5d94f87c7"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid2_2021"
@@ -11980,7 +11980,7 @@
     {
       "chapter": 266,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Events",
@@ -12006,7 +12006,7 @@
     {
       "chapter": 267,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Events",
@@ -12035,7 +12035,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Measures",
+        "progression": "Video: Dance Party Measures",
         "level_keys": [
           "CourseD_Dance_2020_vid3_2021"
         ]
@@ -12049,7 +12049,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
+        "activity_section.key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid3_2021"
@@ -12058,7 +12058,7 @@
     {
       "chapter": 269,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Measures",
@@ -12084,7 +12084,7 @@
     {
       "chapter": 270,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Measures",
@@ -12110,7 +12110,7 @@
     {
       "chapter": 271,
       "position": 9,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Measures",
@@ -12139,7 +12139,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Properties",
+        "progression": "Video: Dance Party Properties",
         "level_keys": [
           "CourseD_Dance_2020_vid4_2021"
         ]
@@ -12153,7 +12153,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
+        "activity_section.key": "5d59e7e4-25f4-4278-b777-878c7df2681b"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid4_2021"
@@ -12162,7 +12162,7 @@
     {
       "chapter": 273,
       "position": 11,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Properties",
@@ -12188,7 +12188,7 @@
     {
       "chapter": 274,
       "position": 12,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "Properties",
@@ -12214,7 +12214,7 @@
     {
       "chapter": 275,
       "position": 13,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Properties",
@@ -12245,7 +12245,8 @@
       "properties": {
         "level_keys": [
           "CourseD_Dance_2020_vid5_2021"
-        ]
+        ],
+        "progression": "Video: Dance Party Party On!"
       },
       "named_level": null,
       "bonus": null,
@@ -12344,9 +12345,9 @@
       "chapter": 280,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Introducing Sprite Lab",
+        "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
           "CourseEF_video_IntroSpriteLab_2021"
         ]
@@ -12370,7 +12371,7 @@
       "chapter": 281,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -12396,7 +12397,7 @@
       "chapter": 282,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -12422,7 +12423,7 @@
       "chapter": 283,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -12448,7 +12449,7 @@
       "chapter": 284,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish",
         "level_keys": [
@@ -12474,9 +12475,9 @@
       "chapter": 285,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "How to Make a Sprite",
+        "progression": "Video: How to Make a Sprite",
         "level_keys": [
           "CourseEF_video_MakeSprite_2021"
         ]
@@ -12500,7 +12501,7 @@
       "chapter": 286,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -12526,7 +12527,7 @@
       "chapter": 287,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Swimming Fish (continued)",
         "level_keys": [
@@ -12552,7 +12553,7 @@
       "chapter": 288,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -12578,7 +12579,7 @@
       "chapter": 289,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -12604,7 +12605,7 @@
       "chapter": 290,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -12630,9 +12631,9 @@
       "chapter": 291,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Sprites in Action",
+        "progression": "Video: Sprites in Action",
         "level_keys": [
           "CDEF_video_SpritesInAction_2021"
         ]
@@ -12656,7 +12657,7 @@
       "chapter": 292,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -12682,7 +12683,7 @@
       "chapter": 293,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -12708,7 +12709,7 @@
       "chapter": 294,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -12734,7 +12735,7 @@
       "chapter": 295,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Moves",
         "level_keys": [
@@ -12760,7 +12761,7 @@
       "chapter": 296,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -12786,7 +12787,7 @@
       "chapter": 297,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -12812,7 +12813,7 @@
       "chapter": 298,
       "position": 9,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: Alien Dance Party",
         "level_keys": [
@@ -12838,7 +12839,7 @@
       "chapter": 299,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -12864,7 +12865,7 @@
       "chapter": 300,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -12890,7 +12891,7 @@
       "chapter": 301,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -12916,7 +12917,7 @@
       "chapter": 302,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -12942,7 +12943,7 @@
       "chapter": 303,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -12968,7 +12969,7 @@
       "chapter": 304,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -12994,7 +12995,7 @@
       "chapter": 305,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -13020,7 +13021,7 @@
       "chapter": 306,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -13047,7 +13048,7 @@
       "chapter": 307,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -13076,7 +13077,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploration"
+        "progression": "Skill Building",
+        "level_keys": [
+          "Virtual Pet 1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13099,7 +13103,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13122,7 +13129,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13145,7 +13155,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13168,7 +13181,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13191,7 +13207,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13214,7 +13233,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 7_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -13237,7 +13259,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet"
+        "progression": "Create a Virtual Pet",
+        "level_keys": [
+          "Virtual Pet 8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -16485,7 +16510,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "0200789e-428c-4393-84ee-6c7a48948c36"
+        "activity_section.key": "1a057037-bf26-4ab2-830f-80a5d94f87c7"
       }
     },
     {
@@ -16521,7 +16546,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "1e1080ab-15de-4319-9e76-f6c99f8ebe60"
+        "activity_section.key": "ec1bf1ca-d9d0-41e3-8234-638ae029834d"
       }
     },
     {
@@ -16569,7 +16594,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "express-2021",
-        "activity_section.key": "7e0f9f67-19cb-455a-bd75-d771183b8773"
+        "activity_section.key": "5d59e7e4-25f4-4278-b777-878c7df2681b"
       }
     },
     {
@@ -17432,6 +17457,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
       "name": "CSF Express End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
       "key": "csf-express-end-of-course-project-planning-guide",
@@ -17612,6 +17649,12 @@
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
         "resource.key": "swimming_fish_teacher_sandbox"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "resource.key": "pause_and_think_online"
       }
     },
     {
