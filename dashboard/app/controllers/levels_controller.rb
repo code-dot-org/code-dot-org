@@ -37,6 +37,7 @@ class LevelsController < ApplicationController
     FrequencyAnalysis,
     Gamelab,
     GamelabJr,
+    Javalab,
     Karel,
     LevelGroup,
     Map,
@@ -341,6 +342,8 @@ class LevelsController < ApplicationController
         @game = Game.curriculum_reference
       elsif @type_class <= Ailab
         @game = Game.ailab
+      elsif @type_class == Javalab
+        @game = Game.javalab
       end
       @level = @type_class.new
       render :edit
