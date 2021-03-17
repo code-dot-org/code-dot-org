@@ -17222,6 +17222,7 @@ tr:
               description_teacher: "Bir sonraki dört ders öğrencilerin kodlama becerilerini bir bitirme projesinde kullanmalarına imkan sağlar. Bu proje kişilerin kodlamayla ilgili tecrübe kazanmalarına yardımcı olacak ve akranları ve sevdikleri ile paylaşmaları için bir örnek oluşturacaktır. Birden fazla derslik veya birden fazla haftalık bir deneyim olması planlanmıştır, öğrenciler beyin fırtınasını keşfederek, tasarım sürecini öğrenerek, bitirme çalışmalarını oluşturup sunarak vakit geçirecekler. \\r\n\\r\nKeşfetme aşamasında öğrenciler ilham almak için hem Sanatçı hem de Hareketli Nesne Laboratuvarında önceden hazırlanmış projelerin örnekleri ile oynayacak. Sonrasında öğrenciler tasarım sürecini ve bunu kendi projelerinde nasıl uygulayacaklarını öğrenecekler. Sonrasında kendi projelerini Sanatçı, Hareketli Nesne Laboratuvarı veya bildikleri başka bir arayüzde oluşturmak için öğrencilere alan verilecektir (bu muhtemelen projenin en uzun aşamasıdır). En sonunda öğrenciler bitmiş çalışmalarını akranlarına sunabilecekler."
             lesson-4:
               name: Süper Bir Dijital Vatandaş Olun
+              description_student: Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi öğrenin.
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -17261,7 +17262,7 @@ tr:
             Loops with the Artist:
               name: Döngüler ile çizim
               description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır.
-              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.
+              description_teacher: 'Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.'
             Nested Loops in the Maze:
               key: Labirentte İçiçe Döngüler
               name: Labirentte İçiçe Döngüler
@@ -17300,7 +17301,11 @@ tr:
               key: "Okyanuslar için Yapay Zeka\n"
               name: "Okyanuslar için Yapay Zeka\n"
               description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.'
-              description_teacher: "**Ders Özeti**: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.\\r\n\\r\n\\r\n**Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\\r"
+              description_teacher: |
+                **Ders Özeti**: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.\r
+                \r
+                \r
+                **Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\r
             Internet:
               key: İnternet
               name: İnternet
@@ -17327,7 +17332,6 @@ tr:
               description_student: Kendi hareketli nesne laboratuvarını programlamayı öğrenin!
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
-              name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
               description_student: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
               description_teacher: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
             End of Course Project:
@@ -17339,23 +17343,29 @@ tr:
               name: Erişilebilirlik için Tasarlama
               description_student: 'Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.'
               description_teacher: 'Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.'
+            lesson-6:
+              name: Hareketli Nesne Laboratuvarı Tanıtımı
+            lesson-8:
+              name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
             ramp_up:
               display_name: Arttır
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_variables:
-              display_name: Değişkenler
+              display_name: For Döngüleri
             csf_data:
               display_name: Veri
             csf_for_loops:
               display_name: For Döngüleri
             csf_sprites:
-              display_name: Hareketli Nesneler
+              display_name: Bilgisayarın Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
-              display_name: Bilgisayarın Etkileri
+              display_name: Değişkenler
+            lessonGroup-9:
+              display_name: kaldır
           student_description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin ikinci bölümünde, arkadaşlarınız ve ailenizle paylaşabileceğiniz bir kaptanlık projesi tasarlayınız ve oluşturunuz.
         express-2021:
           title: Hızlandırılmış Kurs (2020)
@@ -17371,8 +17381,8 @@ tr:
             Programming with Angry Birds:
               key: Labirentte Programlama
               name: Labirentte Programlama
-              description_student: Angry Birds ile sıraları ve algoritmaları öğrenin.
-              description_teacher: Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek, böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.
+              description_student: Angry Bird'ün labirentten ilerlemesine yardım etmek için programlar oluşturun.
+              description_teacher: Angry Birds oyununun karakterlerini kullanarak öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.
             Debugging with Scrat:
               key: Scrat ile Hata Ayıklama
               name: Scrat ile Hata Ayıklama
@@ -17411,7 +17421,7 @@ tr:
             'Looking Ahead with Minecraft ':
               key: 'Minecraft ile Geleceğe Bakma'
               name: Geleceğe bakış
-              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğreneceksiniz.
+              description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları öğrenmeye başlayacaksınız.
               description_teacher: Bu ders, aslında Minecraft takımında Kod Saati için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
             If/Else with Bee:
               key: Koşullar-Arı
@@ -17422,7 +17432,6 @@ tr:
               key: Çiftçi Döngüleri
               name: Çiftçi Döngüleri
               description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
-              description_teacher: "Öğrenciler bu dersi aldıklarında 'tekrarlama' döngülerini kullanarak çoktan pratiğe sahip olmalılar, bu yüzden şimdi işleri karıştırmanın zamanı geldi. \n\n_Döngüler_ şartlar karşılanırken komutları tekrarlamaya devam eden döngülerdir. Programcılar komutların kaç kez tekrar edilmesi gerektiğini tam olarak bilmediğinde döngüler kullanılırken, döngünün tekrarlamaya devam etmesi için hangi koşulun doğru olması gerektiğini bilir. Örneğin öğrenciler Çiftçinin deliklerini doldurmak ve kirleri kazmak için çalışacaklar. Deliklerin boyutlarını veya kir dağlarının yüksekliğini bilmeyeceklerdir, ancak öğrenciler zemini düz olmadığı sürece delikleri doldurmaya ve kiri kazmaya ihtiyaç duyacaklarını bilecektir."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft''ta Koşullar: Su Yolculuğu'
               name: 'Minecraft''ta Koşullar: Su Yolculuğu'
@@ -17502,6 +17511,10 @@ tr:
               name: Ders Projesinin Sonu
               description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi.
               description_teacher: 'Bu bitirme dersi, öğrencileri kendi projelerini tasarlama, geliştirme ve sergileme süreçlerinden geçirir.'
+            lesson-1:
+              name: Dans Partisi
+              description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız.
+              description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -17587,6 +17600,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            introducing-spritelab:
+              name: Hareketli Nesne Laboratuvarı Tanıtımı
           lesson_groups:
             ramp_up:
               display_name: Giriş
@@ -17596,6 +17611,8 @@ tr:
               display_name: Değişkenler
             Sprites:
               display_name: Hareketli Nesneler
+            variables:
+              display_name: Değişkenler
         csd4-preview-2021:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
           description_short: "  Kullanıcılarınızın gereksinimlerini karşılayan bir programı nasıl tasarlayacağını öğren."

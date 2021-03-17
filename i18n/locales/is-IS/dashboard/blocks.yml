@@ -975,6 +975,7 @@ is:
             '"x"': x staða
             '"y"': y staða
             '"direction"': stefna hreyfingar
+            '"speed"': hraða
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} snertir {SPRITE2}"
         options:

@@ -1006,6 +1006,7 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+            '"speed"': prędkość
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:

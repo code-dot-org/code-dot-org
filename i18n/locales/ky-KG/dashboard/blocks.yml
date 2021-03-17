@@ -241,6 +241,7 @@ ky:
             '"scale"': өлчөмү
             '"x"': x позиция
             '"y"': у позиция
+            '"speed"': ылдамдык
       gamelab_checkTouching:
         options:
           CONDITION:

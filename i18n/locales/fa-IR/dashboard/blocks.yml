@@ -180,6 +180,7 @@ fa:
         options:
           PROPERTY:
             '"scale"': اندازه
+            '"speed"': سرعت
       gamelab_checkTouching:
         options:
           CONDITION:
