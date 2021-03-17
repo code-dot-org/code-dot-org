@@ -40,6 +40,7 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
+  has_many :resources, join_table: :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -84,6 +85,7 @@ class Script < ApplicationRecord
             {lesson_activities: :activity_sections},
             :resources,
             :vocabularies,
+            :programming_expressions,
             :objectives
           ]
         },
@@ -1493,11 +1495,11 @@ class Script < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(is_student = false)
     {
       displayName: localized_title,
       link: link,
-      lessons: lessons.select(&:has_lesson_plan).map(&:summarize_for_lesson_dropdown)
+      lessons: lessons.select(&:has_lesson_plan).map {|lesson| lesson.summarize_for_lesson_dropdown(is_student)}
     }
   end
 

@@ -972,6 +972,7 @@ tr:
             '"x"': x konumu
             '"y"': y konumu
             '"direction"': hareket yönü
+            '"speed"': hız
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dokunuşlar {SPRITE2}"
         options:

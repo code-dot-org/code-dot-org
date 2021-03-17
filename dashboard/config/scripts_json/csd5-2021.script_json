@@ -19,12 +19,13 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 04:51:33 UTC",
+    "serialized_at": "2021-03-15 12:50:13 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -5111,7 +5112,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5137,7 +5138,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5163,7 +5164,7 @@
       "chapter": 3,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5189,7 +5190,7 @@
       "chapter": 4,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5215,7 +5216,7 @@
       "chapter": 5,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Representing Images",
         "level_keys": [
@@ -5241,7 +5242,7 @@
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5267,7 +5268,7 @@
       "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5293,7 +5294,7 @@
       "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5319,7 +5320,7 @@
       "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5345,7 +5346,7 @@
       "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5371,7 +5372,7 @@
       "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary Numbers",
         "level_keys": [
@@ -5397,7 +5398,7 @@
       "chapter": 12,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Binary and Data",
         "level_keys": [
@@ -5423,7 +5424,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5449,7 +5450,7 @@
       "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Representations",
         "level_keys": [
@@ -5475,7 +5476,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -5501,7 +5502,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -5553,7 +5554,7 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5579,7 +5580,7 @@
       "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5605,7 +5606,7 @@
       "chapter": 20,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Data Visualization",
         "level_keys": [
@@ -5631,7 +5632,7 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Cake Survey",
         "level_keys": [
@@ -5657,7 +5658,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -5683,7 +5684,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -5709,7 +5710,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Problem Solving",
         "level_keys": [
@@ -5735,7 +5736,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Sample App",
         "level_keys": [
@@ -7415,35 +7416,43 @@
   ],
   "vocabularies": [
     {
-      "key": "Decode",
+      "key": "decode",
       "word": "Decode",
       "definition": "to change how information is represented so that it can be read by a person",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
-      "key": "Encode",
+      "key": "encode",
       "word": "Encode",
       "definition": "to change how information is represented so that it can be read by a computer",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
-      "key": "Decrypt",
+      "key": "decrypt",
       "word": "Decrypt",
       "definition": "to change information so that its hidden meaning is shown",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
-      "key": "Encrypt",
+      "key": "encrypt",
       "word": "Encrypt",
       "definition": "to change information so that its meaning is hidden",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
   ],
@@ -7451,27 +7460,30 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Decode"
+        "vocabulary.key": "decode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "vocabulary.key": "Encode"
+        "vocabulary.key": "encode"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Decrypt"
+        "vocabulary.key": "decrypt"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
-        "vocabulary.key": "Encrypt"
+        "vocabulary.key": "encrypt"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {

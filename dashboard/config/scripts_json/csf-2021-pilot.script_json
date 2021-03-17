@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-01 19:03:36 UTC",
+    "serialized_at": "2021-03-15 20:10:44 UTC",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -45,7 +45,7 @@
       }
     },
     {
-      "key": "lessonGroup-3",
+      "key": "variables",
       "user_facing": true,
       "position": 2,
       "properties": {
@@ -53,14 +53,14 @@
         "description": "Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     }
   ],
   "lessons": [
     {
-      "key": "Course F Introduction",
+      "key": "introducing-spritelab",
       "name": "Introducing Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
@@ -69,7 +69,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Course F Introduction",
+        "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
@@ -105,7 +105,7 @@
       }
     },
     {
-      "key": "blank space stories",
+      "key": "blank-space-stories",
       "name": "Blank Space Stories",
       "absolute_position": 4,
       "lockable": false,
@@ -115,8 +115,8 @@
         "unplugged": true
       },
       "seeding_key": {
-        "lesson.key": "blank space stories",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson.key": "blank-space-stories",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -131,7 +131,22 @@
       },
       "seeding_key": {
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "key": "user-input-programs",
+      "name": "Mini-Project: User Input Programs",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     }
@@ -160,7 +175,7 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2020"
         ],
-        "lesson.key": "Course F Introduction",
+        "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       },
@@ -185,7 +200,7 @@
         "script_level.level_keys": [
           "courseF_intro_apps"
         ],
-        "lesson.key": "Course F Introduction",
+        "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       },
@@ -195,36 +210,11 @@
     },
     {
       "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Exploration: Writing Code",
-        "level_keys": [
-          "courseF_intro_birds_puzzle"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_intro_birds_puzzle"
-        ],
-        "lesson.key": "Course F Introduction",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      },
-      "level_keys": [
-        "courseF_intro_birds_puzzle"
-      ]
-    },
-    {
-      "chapter": 4,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
+        "progression": "Prediction",
         "level_keys": [
           "courseF_sprites_predict"
         ]
@@ -244,7 +234,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -269,7 +259,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -294,7 +284,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -319,7 +309,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -344,7 +334,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -369,7 +359,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -394,7 +384,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -419,7 +409,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -444,12 +434,12 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Predict",
+        "progression": "Prediction",
         "level_keys": [
           "courseF_events_predict"
         ]
@@ -469,7 +459,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -494,7 +484,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -519,7 +509,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -544,7 +534,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -569,7 +559,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -594,7 +584,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -619,7 +609,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -644,7 +634,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -660,8 +650,8 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "blank space stories",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson.key": "blank-space-stories",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -669,7 +659,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -686,7 +676,7 @@
           "courseF_variables_predict"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -694,7 +684,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -711,7 +701,7 @@
           "courseF_pilotVideo_prompts"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -719,7 +709,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -736,7 +726,7 @@
           "courseF_text_review"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -744,7 +734,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -761,7 +751,7 @@
           "courseF_text_print"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -769,7 +759,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -786,7 +776,7 @@
           "courseF_text_events"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -794,7 +784,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -811,7 +801,7 @@
           "courseF_text_prompts"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -819,7 +809,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -836,7 +826,7 @@
           "courseF_text_answer"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -844,7 +834,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -861,7 +851,7 @@
           "courseF_text_concat"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
@@ -869,7 +859,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -886,11 +876,86 @@
           "courseF_text_practice"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_practice"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Sample Programs",
+        "level_keys": [
+          "courseF_variables_samples"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_variables_samples"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prepare Your Plan",
+        "level_keys": [
+          "courseF_variables_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_variables_stop"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Application: Create Your Project",
+        "level_keys": [
+          "courseF_variables_projects"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      },
+      "level_keys": [
+        "courseF_variables_projects"
       ]
     }
   ],
@@ -901,7 +966,7 @@
         "script_level.level_keys": [
           "CourseEF_video_IntroSpriteLab_2020"
         ],
-        "lesson.key": "Course F Introduction",
+        "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
@@ -912,18 +977,7 @@
         "script_level.level_keys": [
           "courseF_intro_apps"
         ],
-        "lesson.key": "Course F Introduction",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_intro_birds_puzzle",
-        "script_level.level_keys": [
-          "courseF_intro_birds_puzzle"
-        ],
-        "lesson.key": "Course F Introduction",
+        "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
         "script.name": "csf-2021-pilot"
       }
@@ -1121,8 +1175,8 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "blank space stories",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson.key": "blank-space-stories",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1133,7 +1187,7 @@
           "courseF_variables_predict"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1144,7 +1198,7 @@
           "courseF_pilotVideo_prompts"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1155,7 +1209,7 @@
           "courseF_text_review"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1166,7 +1220,7 @@
           "courseF_text_print"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1177,7 +1231,7 @@
           "courseF_text_events"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1188,7 +1242,7 @@
           "courseF_text_prompts"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1199,7 +1253,7 @@
           "courseF_text_answer"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1210,7 +1264,7 @@
           "courseF_text_concat"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     },
@@ -1221,7 +1275,40 @@
           "courseF_text_practice"
         ],
         "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_samples",
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_stop",
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
+        "script.name": "csf-2021-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_projects",
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "user-input-programs",
+        "lesson_group.key": "variables",
         "script.name": "csf-2021-pilot"
       }
     }
@@ -1236,6 +1323,9 @@
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [

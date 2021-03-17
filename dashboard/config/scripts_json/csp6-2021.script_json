@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 17:44:20 UTC",
+    "serialized_at": "2021-03-15 12:55:47 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -1805,7 +1806,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Ticket Generator",
         "level_keys": [
@@ -1935,7 +1936,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman",
         "level_keys": [
@@ -1961,7 +1962,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Traveling Salesman - Random Nodes",
         "level_keys": [
@@ -2407,6 +2408,9 @@
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [

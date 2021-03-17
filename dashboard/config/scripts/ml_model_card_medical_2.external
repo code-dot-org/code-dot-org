@@ -3,76 +3,13 @@ title 'Introduction to Machine Learning'
 description ''
 
 markdown <<MARKDOWN
+# Medical Priority Model Card #2
 
+<img src="https://images.code.org/43688a0088b23f581a0ddb0c46acbeba-image-1615862850035.png" width="45%" style="float:left; margin: 2px;">
 
-# Medical Data Model Card #2
-
-**Intended Use:** Help determine the priority for people entering an Emergency Room so doctors and nurses can better help people with potentially serious injuries.
-
-**Summary:** Predict *priority* based on *bleeding*, *shortness of breath*, and *area of pain* with *33%* accuracy
-
-**Date:** February 2021
-
-## Label
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **priority** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | How quickly the patient received treatment | <ul><li>priority</li><li>normal</li><li>return later</li></ul> |
-:::
-
-## Features
-
-::: details [**Click to Expand**]
-| Name | Type | Description | Possible Values |
-|----------|-------------|--------------------------------------------|---------|
-| **bleeding** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient was bleeding | <ul><li>yes</li><li>no</li></ul> |
-| **shortness of breath** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Whether or not the patient had shortness of breath | <ul><li>yes</li><li>no</li></ul> |
-| **area of pain** | &nbsp;&nbsp;Categorical&nbsp;&nbsp; | Where the pain was located | <ul><li>head</li><li>chest</li><li>limb</li><li>stomach</li></ul> |
-
-:::
-
-## Training Information
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Model Accuracy:** 33%
-
-**Dataset Size:** 300 rows
-
-**Testing Data:** 10%
-
-:::
-
-## Model Disclaimers
-
-::: details [**Click to Expand**]
-
-<br />
-
-**Describe the dataset used to create this model:** Data from a month of ER visits at a local hospital. It shows information about each patient, the symptoms they had, and how quickly they received help.
-
-**What uses of this model should be avoided?** This model shouldn't be used in a way that could reduce the care for people entering an emergency room.
-
-**Has the model been trained on data that can be used to identify a subgroup of the population (ie: by age, gender, race, etc)**
-  - [ ] Yes
-  - [x] No
-
-**This model could be used to inform decisions central to human life:**
-  - [x] Yes
-  - [ ] No
-
-**The data has been cleaned & prepared before being used to train the model:**
-  - [x] Yes
-  - [ ] No
-
-:::
+<img src="https://images.code.org/18efaad15b6c045c952881cc1c38cd2c-image-1615862871698.png" width="45%" style="float:right; margin: 2px">
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
-## Data Concerns
 
-This dataset is only 33% accurate, which isn't great in general and especially isn't good when used to make decisions central to human life
 MARKDOWN

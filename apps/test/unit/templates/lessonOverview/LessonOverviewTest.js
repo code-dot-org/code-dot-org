@@ -9,6 +9,7 @@ import {
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
+import _ from 'lodash';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -68,6 +69,12 @@ describe('LessonOverview', () => {
             key: 'Algorithm',
             word: 'Algorithm',
             definition: 'A list of steps to finish a task.'
+          }
+        ],
+        programmingExpressions: [
+          {
+            name: 'playSound',
+            link: '/docs/applab/playSound'
           }
         ]
       },
@@ -153,6 +160,20 @@ describe('LessonOverview', () => {
   it('displays the resources', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ul').length, 2);
+    assert.equal(resourceSection.find('ResourceList').length, 2);
+  });
+
+  it('displays the introduced code', () => {
+    const wrapper = shallow(<LessonOverview {...defaultProps} />);
+    const codeSection = wrapper.find('#unit-test-introduced-code');
+    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+  });
+
+  it('does not display the introduced code if no code', () => {
+    const newDefaultProps = _.cloneDeep(defaultProps);
+    newDefaultProps.lesson.programmingExpressions = [];
+
+    const wrapper = shallow(<LessonOverview {...newDefaultProps} />);
+    assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
   });
 });

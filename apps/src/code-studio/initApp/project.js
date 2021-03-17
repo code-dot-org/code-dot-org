@@ -1227,22 +1227,25 @@ var projects = (module.exports = {
    */
   getUpdatedSourceAndHtml_(callback) {
     this.sourceHandler.getAnimationList(animations =>
-      this.sourceHandler.getLevelSource().then(source => {
-        const html = this.sourceHandler.getLevelHtml();
-        const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
-        const selectedSong = this.sourceHandler.getSelectedSong();
-        const generatedProperties = this.sourceHandler.getGeneratedProperties();
-        const libraries = this.sourceHandler.getLibrariesList();
-        callback({
-          source,
-          html,
-          animations,
-          makerAPIsEnabled,
-          selectedSong,
-          generatedProperties,
-          libraries
-        });
-      })
+      this.sourceHandler
+        .getLevelSource()
+        .then(source => {
+          const html = this.sourceHandler.getLevelHtml();
+          const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
+          const selectedSong = this.sourceHandler.getSelectedSong();
+          const generatedProperties = this.sourceHandler.getGeneratedProperties();
+          const libraries = this.sourceHandler.getLibrariesList();
+          callback({
+            source,
+            html,
+            animations,
+            makerAPIsEnabled,
+            selectedSong,
+            generatedProperties,
+            libraries
+          });
+        })
+        .catch(error => callback({error}))
     );
   },
 
@@ -1436,6 +1439,12 @@ var projects = (module.exports = {
     }
 
     this.getUpdatedSourceAndHtml_(newSources => {
+      if (newSources.error) {
+        header.showProjectSaveError();
+        callCallback();
+        return;
+      }
+
       if (JSON.stringify(currentSources) === JSON.stringify(newSources)) {
         hasProjectChanged = false;
         callCallback();

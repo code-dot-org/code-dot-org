@@ -13,11 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "is_migrated": true,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 17:35:08 UTC",
+    "serialized_at": "2021-03-15 12:59:03 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -1197,7 +1199,7 @@
       "key": "888e973b-48f4-480c-8573-2654a891a669",
       "position": 3,
       "properties": {
-        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
+        "description": "[slide] **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide/csp/2021]\r\n\r\n\r\n[slide] **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
         "name": "Innovation Simulation Project\r"
       },
       "seeding_key": {
@@ -1463,7 +1465,7 @@
       "key": "450ac09b-4189-43bb-af5b-105cd0124f99",
       "position": 4,
       "properties": {
-        "description": "**Group:** If students like they can work in pairs for today's activity when they will be reading the privacy policy. Each student, however, should be completing their own activity guide.\n\n**Distribute: ** Give each student a copy of [r data-policies-activity-guide]\n\n\n\n\n[slide] **Choose a Website and Find the Data Privacy Policy:** Have students pick a company / app to use. If students are having a hard time picking a specific website, many big technology companies have fairly robust data policy pages, like Facebook, Google, Twitter, Instagram, and so on.\n\n**What Is Their Data Policy?:** Students should spend 10-15 minutes reviewing the data policies and answering the questions there. \n\n**Share Findings:** Have groups meet with another group to share what they discovered."
+        "description": "**Group:** If students like they can work in pairs for today's activity when they will be reading the privacy policy. Each student, however, should be completing their own activity guide.\n\n**Distribute: ** Give each student a copy of [r data-policies-activity-guide/csp/2021]\n\n\n\n\n[slide] **Choose a Website and Find the Data Privacy Policy:** Have students pick a company / app to use. If students are having a hard time picking a specific website, many big technology companies have fairly robust data policy pages, like Facebook, Google, Twitter, Instagram, and so on.\n\n**What Is Their Data Policy?:** Students should spend 10-15 minutes reviewing the data policies and answering the questions there. \n\n**Share Findings:** Have groups meet with another group to share what they discovered."
       },
       "seeding_key": {
         "activity_section.key": "450ac09b-4189-43bb-af5b-105cd0124f99",
@@ -1535,7 +1537,7 @@
       "key": "c3e69cb7-9108-48b9-9758-db87f0bd38b2",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** As students walk in give them copies of their [r data-policies-activity-guide] which they began filling out in the previous lesson.\n    "
+        "description": "**Distribute:** As students walk in give them copies of their [r data-policies-activity-guide/csp/2021] which they began filling out in the previous lesson.\n    "
       },
       "seeding_key": {
         "activity_section.key": "c3e69cb7-9108-48b9-9758-db87f0bd38b2",
@@ -2088,7 +2090,7 @@
       "key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
+        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide/csp/2021] if they don't already have them on hand.\r\n\r\n\r\n[slide] **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
       },
       "seeding_key": {
         "activity_section.key": "6fe9b2ee-f1c2-4ee8-9c8d-053587d45387",
@@ -2795,7 +2797,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L01 CFU innovations_2021"
@@ -2821,7 +2823,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2_2021"
@@ -2847,7 +2849,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L3 CFU Why Collect PII_2021"
@@ -2865,7 +2867,7 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Keylogging",
         "level_keys": [
@@ -2873,7 +2875,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Keylogging_2021"
@@ -2891,14 +2893,14 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CSP 20-21 Phishing_2021"
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Phishing_2021"
@@ -2916,7 +2918,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Malware",
         "level_keys": [
@@ -2924,7 +2926,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Rogue Access Points_2021"
@@ -2950,7 +2952,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L07 CFU security risks_2021"
@@ -2976,7 +2978,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L08 CFU security risks_2021"
@@ -2994,7 +2996,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Encryption Widgets",
         "level_keys": [
@@ -3002,7 +3004,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2021"
@@ -3020,7 +3022,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Encryption Widgets",
         "level_keys": [
@@ -3028,7 +3030,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack Random Substitution_2021"
@@ -3054,7 +3056,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L9 CFU public key_2021"
@@ -3080,7 +3082,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L10 CFU MFA_2021"
@@ -3106,7 +3108,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Unit 10 Assessment_2021"
@@ -3954,6 +3956,9 @@
 
   ],
   "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
 
   ],
   "objectives": [

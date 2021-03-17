@@ -2,16 +2,14 @@ login_required true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 
-lesson 'lesson1', display_name: 'Lesson 1A: AI for Oceans', has_lesson_plan: true
-level 'Oceans_Video_Machine_Learning', progression: 'Data and Machine Learning'
-level 'Oceans_FishVTrash', progression: 'Data and Machine Learning'
-level 'Oceans_CreaturesVTrashDemo', progression: 'Data and Machine Learning'
-level 'Oceans_CreaturesVTrash', progression: 'Data and Machine Learning'
-level 'Oceans_Video_Training_Data', progression: 'Data and Machine Learning'
-level 'Oceans_Short', progression: 'Data and Machine Learning'
-level 'Oceans_Long', progression: 'Data and Machine Learning'
+lesson 'lesson1', display_name: 'Introduction to Machine Learning A', has_lesson_plan: true
+level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
+level 'Oceans_Short', progression: 'Recognizing Fish Features'
+level 'Oceans_Long', progression: 'Recognizing Expressions'
 
-lesson 'lesson2', display_name: 'How Computers Learn (Unplugged)', has_lesson_plan: true
+lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
+level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
 
 lesson 'lesson3', display_name: 'AI for Social Good (Unplugged)', has_lesson_plan: true
 
@@ -45,7 +43,6 @@ level 'ml-model card-medical ai lab', progression: 'Medical Dataset Investigatio
 level 'ml-model card-medical-1', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
-level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
 
 lesson 'lesson9', display_name: 'Numerical Data in AI Lab', has_lesson_plan: true
 level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
@@ -88,4 +85,7 @@ level 'ml-final project-app lab', progression: 'App with Real-World Data - App L
 lesson 'lesson20', display_name: 'TEMP LEVELS - DELETE LATER', has_lesson_plan: true
 level 'ml-model cards-medical app', progression: 'Medical Priority App (external app)'
 level 'ml-import ai-pixar placeholder', progression: 'Which Pixar Character Are You?'
+level 'Oceans_CreaturesVTrash', progression: 'Recognizing Ocean Animals'
+level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
+level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
 

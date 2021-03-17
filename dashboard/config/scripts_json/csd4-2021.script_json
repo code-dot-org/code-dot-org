@@ -19,12 +19,13 @@
       ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225,
+      "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-04 21:51:10 UTC",
+    "serialized_at": "2021-03-15 12:49:31 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -5980,7 +5981,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6006,7 +6007,7 @@
       "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6032,7 +6033,7 @@
       "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6058,7 +6059,7 @@
       "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6084,7 +6085,7 @@
       "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Demo Apps",
         "level_keys": [
@@ -6110,7 +6111,7 @@
       "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6136,7 +6137,7 @@
       "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6162,7 +6163,7 @@
       "chapter": 9,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6188,7 +6189,7 @@
       "chapter": 10,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6214,7 +6215,7 @@
       "chapter": 11,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Build a Screen",
         "level_keys": [
@@ -6240,7 +6241,7 @@
       "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish a Screen",
         "level_keys": [
@@ -6266,7 +6267,7 @@
       "chapter": 13,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Finish a Screen",
         "level_keys": [
@@ -6318,7 +6319,7 @@
       "chapter": 15,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "App Project: Screen Design",
         "level_keys": [
@@ -6370,7 +6371,7 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6396,7 +6397,7 @@
       "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6422,7 +6423,7 @@
       "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6448,7 +6449,7 @@
       "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Adding Screens",
         "level_keys": [
@@ -6474,7 +6475,7 @@
       "chapter": 21,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Linking Screens",
         "level_keys": [
@@ -6500,7 +6501,7 @@
       "chapter": 22,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Events and Linking Screens",
         "level_keys": [
@@ -6552,7 +6553,7 @@
       "chapter": 24,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Combining Projects",
         "level_keys": [
@@ -6604,7 +6605,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "level_keys": [
           "CSDU4 Project Bug Feature_2021"
@@ -8390,51 +8391,63 @@
   ],
   "vocabularies": [
     {
-      "key": "Empathy",
+      "key": "empathy",
       "word": "Empathy",
       "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
-      "key": "User",
+      "key": "user",
       "word": "User",
       "definition": "Someone who uses an object, including software and hardware.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
-      "key": "Usability",
+      "key": "usability",
       "word": "Usability",
       "definition": "How easy, efficient, and satisfying it is to use a human-made object or device (including software).",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
-      "key": "User Interface",
+      "key": "user_interface",
       "word": "User Interface",
       "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
-      "key": "Prototype",
+      "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     }
   ],
@@ -8442,37 +8455,57 @@
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "Empathy"
+        "vocabulary.key": "empathy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analysis of Design",
-        "vocabulary.key": "User"
+        "vocabulary.key": "user"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Understanding Your User",
-        "vocabulary.key": "Usability"
+        "vocabulary.key": "usability"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "vocabulary.key": "User Interface"
+        "vocabulary.key": "user_interface"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Paper Prototypes",
-        "vocabulary.key": "Prototype"
+        "vocabulary.key": "prototype"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "console.log"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "onEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "programming_expression.key": "setScreen"
       }
     }
   ],

@@ -7,17 +7,20 @@ pl:
         csd_2018_category_name: Odkrycia Informatyki ('18-'19)
         csd_2019_category_name: Odkrycia Informatyki ('19-'20)
         csd_2020_category_name: Odkrycia Informatyki ('20-'21)
+        csd_2021_category_name: Odkrycia Informatyki ('21-'22)
         csd_pilot_category_name: Pilotaż Odkryć Informatyki
         csf_category_name: Podstawy Informatyki
         csf_2018_category_name: Podstawy Informatyki ('18-'19)
         csf_2019_category_name: Podstawy Informatyki ('19-'20)
         csf_2020_category_name: Podstawy Informatyki ('20-'21)
+        csf_2021_category_name: Podstawy Informatyki ('21-'22)
         csf_international_category_name: Podstawy Informatyki, Mędzynarodowe 
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: Zasady Informatyki ('15-'16)
         csp_2018_category_name: Zasady Informatyki ('18-'19)
         csp_2019_category_name: Zasady Informatyki ('19-'20)
         csp_2020_category_name: Zasady Informatyki ('20-'21)
+        csp_2021_category_name: Zasady Informatyki ('21-'22)
         cspexams_category_name: Praktyczny Test Podstaw Informatyki
         csp17_category_name: Zasady Informatyki ('17-'18)
         full_course_category_name: Pełne Kursy
@@ -1066,6 +1069,7 @@ pl:
             Java Lab:
               name: Java Lab
           student_description: Wszystkie typy poziomów dla testowania UI
+          name: wszystkie rzeczy
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -4165,6 +4169,7 @@ pl:
               name: Uczenie się przez odkrywanie
             Measuring Student Learning:
               name: Pomiar osignięć ucznia
+          name: csp5-wsparcie
         csppostap-2017:
           title: CSP Pos-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
           description_short: Naucz się zbierać i korzystać z danych w aplikacjach App Lab.
@@ -15080,6 +15085,7 @@ pl:
               name: Moduł 8
             Module 7:
               name: Moduł 7
+          name: skrypt testu jess
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
           description: Nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji, jaką treść chcesz udostępniać światu, nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie, jak debugowanie i komentowanie. Pod koniec tej części będziesz mieć osobistą stronę internetową, którą możesz opublikować w Internecie.
@@ -15846,6 +15852,10 @@ pl:
               name: Lekcja 5
             model-cards:
               name: Plac zabaw dla modeli kart 
+            bug-bash:
+              name: Plac zabaw Bug Basha 
+            superunsuper:
+              name: Bez nadzoru i nadzorowane 
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
@@ -15959,6 +15969,8 @@ pl:
             The Problem Solving Process:
               key: Proces rozwiązywania problemów
               name: Proces rozwiązywania problemów
+              description_student: "**Pytanie dnia: Jakie są pewne wspólne kroki, które możemy stosować rozwiązując wiele problemów różnego rodzaju?**\\r\n\\r\nNa tej lekcji wprowadza się formalny proces rozwiązywania problemów, który klasa będzie stosować podczas rocznego kursu: Definiuj - Przygotowuj - Wypróbuj - Przemyśl. Klasa stosuje te kroki do problemu z poprzedniej lekcji, następnie do problemu, który potrafi dobrze rozwiązać, a także do problemu, którego rozwiązanie chcą poprawić. Pod koniec lekcji klasa tworzy listę przydatnych ogólnych strategii dla każdego kroku w procesie rozwiązywania problemów, aby umieścić ją na plakatach, które będą  przydatne w trakcie realizacji tej jednostki i w ciągu roku. "
+              description_teacher: "**Pytanie dnia: Jakie są pewne wspólne kroki, które możemy stosować rozwiązując wiele problemów różnego rodzaju?**\\r\n\\r\nNa tej lekcji wprowadza się formalny proces rozwiązywania problemów, który klasa będzie stosować podczas rocznego kursu: Definiuj - Przygotowuj - Wypróbuj - Przemyśl. Lekcja zaczyna się od poproszenia uczniów o odbycie burzy mózgów nad różnymi rodzajami problemów, z którymi borykają się w życiu codziennym. Następnie uczniom pokazuje się cztery kroki procesu rozwiązywania problemów i podejmują oni wspólną pracę, aby odnieść te abstrakcyjne kroki do swoich doświadczeń w rozwiązywaniu problemów. Najpierw uczniowie odnoszą te kroki do problemu z poprzedniej lekcji, następnie do problemu, który potrafią dobrze rozwiązać, a potem do problemu, którego rozwiązanie chcą poprawić. Pod koniec lekcji klasa tworzy listę przydatnych ogólnych strategii dla każdego kroku w procesie rozwiązywania problemów, aby umieścić ją na plakatach, które będą  przydatne w trakcie realizacji tej jednostki i w ciągu roku. "
             Exploring Problem Solving:
               key: Zgłębianie rozwiązywania problemów
               name: Zgłębianie rozwiązywania problemów
@@ -17426,6 +17438,7 @@ pl:
               description_teacher: "W ciągu czterech kolejnych lekcji uczniowie będą mieli możliwość wykorzystania swoich umiejętności kodowania w projekcie podsumowującym. Ten projekt pomoże osobom zdobyć doświadczenie w zakresie kodowania i budowania przykładu, który można udostępnić rówieśnikom i kochanym osobom.  Zgodnie z zamierzeniami doświadczenie zdobywane będzie w ramach wielu lekcji lub wielu tygodni, a uczniowie będą spędzać czas poznając zasady prowadzenia burzy mózgów, nauki procesu projektowania, budowania i przedstawiania swojej finałowej pracy. \\r\n\\r\nNa etapie eksploracji uczniowie będą bawić się zbudowanymi wcześniej przykładami projektów zarówno w Artist, jak i w Sprite Lab celem uzyskania inspiracji. Potem uczniowie będą poznawać proces projektowania i dowiadywać się jak wdrażać go we własnych projektach.  Następnie zostanie im udostępniona przestrzeń do stworzenia własnego projektu w Artist, Sprite Lab lub innym interfejsie, który poznali (najprawdopodobniej będzie to najdłuższy etap projektu) Na koniec uczniowie będą mogli zaprezentować ukończoną pracę rówieśnikom."
             lesson-4:
               name: Lekcja kontekstowa 
+              description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy jesteś świadkiem cybernękania.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -17470,7 +17483,7 @@ pl:
               key: Pętle z Artystą 
               name: Rysowanie przy pomocy pętli 
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
-              description_teacher: Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.
+              description_teacher: 'Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.'
             Nested Loops in the Maze:
               key: Zagnieżdżone pętle w labiryncie
               name: Zagnieżdżone pętle w labiryncie
@@ -17509,7 +17522,11 @@ pl:
               key: AI dla oceanów
               name: AI dla oceanów
               description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
-              description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\r\n\\r\n\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\\r"
+              description_teacher: |
+                **Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\r
+                \r
+                \r
+                **Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\r
             Internet:
               key: Internet
               name: Internet
@@ -17537,7 +17554,7 @@ pl:
               description_teacher: Teraz uczniowie będą używać Sprite Lab do tworzenia swoich zindywidualizowanych zachowań.
             Virtual Pet:
               key: Wirtualny zwierzak
-              name: Wirtualny zwierzak z Sprite Lab
+              name: 'Mini-projekt: Wirtualny zwierzak'
               description_student: Na tej lekcji uczniowie będą tworzyć interaktywne "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!
               description_teacher: Na tej lekcji uczniowie będą tworzyć interaktywne "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak, jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab "Kostiumy", aby zindywidualizować wygląd ich zwierzątka. Potem będą używać zdarzeń, zachowań oraz innych koncepcji, które poznali, aby nadać zwierzątku własnego życia!
             End of Course Project:
@@ -17549,21 +17566,42 @@ pl:
               name: Projektowanie pod kątem dostępności
               description_student: 'Na tej lekcji uczniowie będą się uczyć o dostępności i wartości empatii za pomocą burzy mózgów i projektowania dostępnych rozwiązań na aplikacje hipotetyczne. '
               description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności i wartości empatii za pomocą burzy mózgów i projektowania dostępnych rozwiązań na aplikacje hipotetyczne. '
+            lesson-6:
+              name: Wprowadzenie Sprite Lab
+              description_student: Omówisz rolę komputerów i technologii w Twoim życiu, koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom możliwość wyboru sposobu ich używania. 
+              description_teacher: Uczniowie omówią rolę komputerów i technologii w ich życiu, koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom możliwość wyboru sposobu ich używania. Uczniowie będą logować się na swoje konta Code.org i przeglądać przykładowe projekty podobne do tych, które będą tworzyć samodzielnie podczas kursu. 
+            lesson-7:
+              name: Tworzenie duszków
+              description_student: |2-
+                Na tej lekcji będziesz pisał programy i dowiesz się o duszkach i zachowaniach. 
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite Lab: **duszki** i **zachowania**. '
+            lesson-8:
+              name: Duszki w akcji
+              description_student: Będziesz pracować przez poziomy programowania i zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować, co tylko zechcesz. 
+              description_teacher: "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. \n"
+            lesson-9:
+              name: Historie pustej przestrzeni
+            lesson-10:
+              name: Przechowywanie i przetwarzanie tekstu
+            lesson-5:
+              name: Epidemia
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_variables:
-              display_name: Zmienne
+              display_name: Pętle dla (for)
             csf_for_loops:
               display_name: Pętle dla (for)
             csf_sprites:
-              display_name: Duszki
+              display_name: Wplywy informatyki
             end_of_course_project:
               display_name: Koniec projektu kursu
             lessonGroup-8:
-              display_name: Wplywy informatyki
+              display_name: Zmienne
+            lessonGroup-9:
+              display_name: usuń
           name: coursef-2021
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
         express-2021:
@@ -17580,8 +17618,8 @@ pl:
             Programming with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
-              description_student: Ucz się o sekwencjach i algorytmach z Angry Birds.
-              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym, przez co postaci poruszają się prosto, skręcają w lewo lub w prawo.
+              description_student: Twórz programy, aby pomóc Angry Bird przejść przez labirynt.
+              description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej strony labiryntu do świnki po drugiej stronie. W tym celu układają bloki kodu w porządku liniowym.
             Debugging with Scrat:
               key: Debugwanie ze Scratem
               name: Debugwanie ze Scratem
@@ -17620,7 +17658,7 @@ pl:
             'Looking Ahead with Minecraft ':
               key: 'Patrząc w przyszłość z Minecraftem'
               name: Patrząc w przyszłość z Minecraftem
-              description_student: Unikaj lawy! Teraz będziesz się uczyć o wyrażeniach warunkowych w świecie Minecrafta.
+              description_student: Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach warunkowych w świecie gry Minecraft.
               description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu, jak również zerknąć na instrukcje warunkowe!
             If/Else with Bee:
               key: '"jeśli/w przeciwnym razie" z Pszczółką'
@@ -17631,7 +17669,6 @@ pl:
               key: Pętle "dopóki" przy pomocy interfejsu Farmer
               name: Pętle "dopóki" przy pomocy interfejsu Farmer
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
-              description_teacher: "Do momentu, gdy uczniowie dojdą do tej lekcji, powinni już mieć dużą praktykę w używaniu pętli \"powtórz\", zatem nadszedł czas, aby połączyć ze sobą różne elementy. \\r\n\\r\n_Pętle \"dopóki\"_ są pętlami, które nieustannie powtarzają komendy, gdy spełniony jest warunek. Pętli \"dopóki\" używa się, gdy programista nie zna dokładnej liczby powtórzeń, które trzeba wykonać, ale wie, że warunek musi być spełniony, aby pętla wykonywała powtarzanie. Na przykład uczniowie będą zajmować zasypywaniem dziur i wykopywaniem błota w interfejsie Farmer. Nie będą znali wielkości dziur ani wysokości stert błota, ale będą wiedzieli, że muszą zasypywać dziury i kopać błoto tak długo, aż teren nie stanie się płaski."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
               name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
@@ -17712,6 +17749,10 @@ pl:
               name: Koniec projektu kursu
               description_student: Przygotuj ręce na ogromne kodowanie! Czas rozpocząć budowanie swojego projektu.
               description_teacher: 'W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów!'
+            lesson-1:
+              name: Potańcówka
+              description_student: Czas na świętowanie! Na tej lekcji będziesz programować swoją własną, interaktywną potańcówkę.
+              description_teacher: Na tej lekcji uczniowie będą programować swoją własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk, gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
           lesson_groups:
             csf_warmup:
               display_name: Rozgrzewka
@@ -17731,6 +17772,8 @@ pl:
               display_name: Duszki
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-9:
+              display_name: Rozgrzewka
           name: express-2021
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
         pre-express-2021:
@@ -17823,6 +17866,12 @@ pl:
               name: Historie pustej przestrzeni
             texts-and-prompts:
               name: Przechowywanie i przetwarzanie tekstu
+            introducing-spritelab:
+              name: Wprowadzenie Sprite Lab
+            blank-space-stories:
+              name: Historie pustej przestrzeni
+            user-input-programs:
+              name: 'Utwórz Chat-Bot'
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -17837,6 +17886,9 @@ pl:
             Sprites:
               display_name: Duszki
               description: Poznaj z duszkami podstawy kodowania!
+            variables:
+              display_name: Zmienne
+              description: Przechowuj wartości w zmiennych i wczytaj je później w programie. Modyfikuj wartości przechowywane w zmiennych, aby tworzyć ekscytujące interaktywne projekty!
           name: csf-2021-pilot
           title: Podstawy Informatyki 2021 Pilotaż
           description_audience: Ponadpodstawowy 
@@ -18129,7 +18181,7 @@ pl:
             intro:
               name: Lekcja 1
             lesson1:
-              name: 'Lekcja 1'
+              name: Lekcja 1
             lesson2:
               name: Lekcja 2
             lesson3:
@@ -18252,8 +18304,16 @@ pl:
               name: Pierwsze kroki
             What is Code.org:
               name: Rozumienie kursów Podstaw Informatyki
+            Addressing Implementation Approaches and Barriers:
+              name: Rozwiązywanie podejść do wdrażania i barier 
             Lesson Planning:
               name: Planowanie lekcji
+            CS Teaching and Learning Practices:
+              name: Praktyki nauczania i uczenia się informatyki
+            CS Teaching and Student Practices:
+              name: Nauczanie informatyki i praktyki uczniów
+            Implementation Approaches and Barriers:
+              name: Rozwiązywanie podejść do wdrażania i barier 
           lesson_groups:
             k5_getting_started_1:
               display_name: Wstęp
@@ -18265,6 +18325,8 @@ pl:
               display_name: Następne Kroki
             Introduction:
               display_name: Wstęp
+            Implementing and Teaching CS:
+              display_name: Wdrażanie i nauczanie informatyki
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -18274,8 +18336,12 @@ pl:
               name: Prototyp Haiku
             Haiku Bot:
               name: Bot Haiku
+            Poem Bot:
+              name: Bot Haiku
           lesson_groups:
             haiku bot:
+              display_name: Bot Haiku
+            poem bot:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku
@@ -18291,6 +18357,9 @@ pl:
               name: Druga lekcja
             lesson-3:
               name: Trzecia lekcja
+            lesson-4:
+              name: Dający się drukować 
+              description_teacher: Ta lekcja powinna zawierać przykłady wszystkich rodzajów treści, które chcielibyśmy móc wydrukować, aby potwierdzić, że wprowadzone w treści zmiany nie wyglądają dziwnie po wydrukowaniu. W szczególności takie rzeczy, jak elementy zwijane lub interaktywne, są dobrym kandydatem na tę stronę. 
           lesson_groups:
             lessonGroup-2:
               display_name: Grupa lekcji 1
@@ -18301,6 +18370,9 @@ pl:
               description: Grupa lekcji 1 opis
             lessonGroup-3:
               display_name: Grupa lekcji 2
+            lessonGroup-4:
+              display_name: Treść testu interfejsu użytkownika / oczu
+              description: Wszystkie lekcje sprawdzane za pomocą automatycznych testów interfejsu użytkownika lub oczu.
           name: wszystkie przeniesione rzeczy
           title: Wszystkie przeniesione rzeczy 
           description: Omówienie jednostki przez nauczyciela
@@ -18314,4 +18386,17 @@ pl:
               display_name: Zabawna geometria
           name: zabawna geometria - pilotaż
           title: Zabawna geometria
+          description_audience: Klasa 3, klasa 4 
+          description_short: "W tym module uczniowie będą badać różne geometryczne kształty, badając relacje między kątami, bokami i długościami. Porównają także różne przystępności używania różnych narzędzi do wykonania zadania artystycznego. "
           description: "**Przegląd**\nNarzędzie Artysty to szczególnie odkrywcza i kreatywna platforma do tworzenia i dekomponowania skomplikowanych wzorów geometrycznych. Standardy matematyczne czwartej klasy koncentrują się na rozwijaniu biegłości uczniów w geometrii, zachęcając ich do odkrywania zależności między kątami, bokami i długościami różnych kształtów. Z Artystą, nauczyciele mogą łatwo ożywić te geometryczne zależności. "
+        ai-classroom-test:
+          lessons:
+            introai:
+              name: Wprowadzenie do AI (sztucznej inteligencji )
+            ailab-explore:
+              name: Poznaj AI Lab 
+          name: test AI w klasie
+          title: Test AI Lab w klasie 
+          description_short: Przetestujmy narzędzia AI! 
+          description: Przetestujmy narzędzia AI! 
+          student_description: Przetestujmy narzędzia AI! 

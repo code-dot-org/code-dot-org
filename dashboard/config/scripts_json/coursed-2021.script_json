@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-08 19:38:08 UTC",
+    "serialized_at": "2021-03-16 19:27:29 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -334,9 +334,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
+        "overview": "In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
         "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.",
-        "purpose": "In this introduction to _nested loops_, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these _nested loops_. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces _nested loops_, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads to plenty of practice for students to solidify and build on their understanding of looping in programming.",
+        "purpose": "In this introduction to **nested loops**, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* **repeated** patterns to develop these **nested loops**. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and too complex to write out the long way. After a video introduces **nested loops**, students are shown an example and asked to predict what will happen when a **loop** is put inside of another **loop**. This progression leads to plenty of practice for students to solidify and build on their understanding of **looping** in programming.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -375,8 +375,8 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
-        "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.",
+        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
+        "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.",
         "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce **conditionals**. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a journal."
       },
@@ -2918,7 +2918,7 @@
       "key": "07ca6e20-a059-4b67-b099-6a90c6d7f4ab",
       "position": 1,
       "properties": {
-        "description": "Briefly review with the class what loops are and why we use them.\n\n - *What do loops do?*\n    - Loops repeat a set of commands. (see vocabulary on command if students don't recognize it)\n - *How do we use loops?*\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n*If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!*\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
+        "description": "Briefly review with the class what **loops** are and why we use them.\n\n - _What do **loops** do?_\n    - **Loops** **repeat** a set of **commands**.\n - _How do we use **loops**?_\n    - We use **loops** to create a pattern made of **repeated** actions.\n\nTell the class that they will now be doing something super cool: using **loops** inside **loops**. Ask the class to predict what kinds of things we would be using a **loop** inside of a **loop** for.\n\n_If a **loop** **repeats** a pattern, then **looping** a **loop** would **repeat** a pattern of patterns!_\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2953,7 +2953,7 @@
       "key": "77b85e56-dc72-45d6-8d17-cd2073e74560",
       "position": 3,
       "properties": {
-        "progression_name": "Nested Loops with the Bee"
+        "progression_name": "Video: Nested Loops with the Bee"
       },
       "seeding_key": {
         "activity_section.key": "77b85e56-dc72-45d6-8d17-cd2073e74560",
@@ -3175,7 +3175,7 @@
       "properties": {
         "progression_name": "Practice",
         "name": "Looking Ahead with Minecraft",
-        "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
+        "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
       "seeding_key": {
         "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663",
@@ -3205,22 +3205,11 @@
       }
     },
     {
-      "key": "9564d8f7-b499-4853-9dfa-d8ca85212455",
-      "position": 4,
-      "properties": {
-        "description": "\n####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
-      },
-      "seeding_key": {
-        "activity_section.key": "9564d8f7-b499-4853-9dfa-d8ca85212455",
-        "lesson_activity.key": "c351a38f-ac03-4bc3-b2f1-8b5f06903317"
-      }
-    },
-    {
       "key": "3cb11179-29ea-4362-b237-a509e3e0943f",
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this minecraft world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "3cb11179-29ea-4362-b237-a509e3e0943f",
@@ -3231,7 +3220,7 @@
       "key": "e70f9030-b24c-4a28-ae86-29a3c9d0c24f",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n#### More Minecraft\n\nIf you find that your class really enjoys the _Minecraft_ environment, [here are some links to other _Minecraft_ games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "e70f9030-b24c-4a28-ae86-29a3c9d0c24f",
@@ -3446,7 +3435,7 @@
       "key": "0266eaa6-e5a9-4d9a-8c7f-3e73f4b704b3",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a **while loop**. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the **while loop** with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the **while loop**. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/express17.png\" style=\"width: 30%;\">\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this **while loop** experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a **while loop**, you continue moving forward and do not return to the previous **loop** just because the conditions match again.\n\n####-Or-",
+        "description": "Print and cut out 2-3 `while / do` blocks and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" This time, instead of using the conditional in an `if / else` statement, they will be using it in a **while loop**. \n\nWhen the conditionals have been decided on as a class, fill in the blank part of the **while loop** with the various card groups that the kids came up with. Examples include \"Even Numbered\", \"Red card\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly inside the **while loop**. Line the blocks up sequentially so students can see how it runs as a program.\n\nBelow is an example.\n\n\n![](https://images.code.org/b290021fdaad9c750c91f80ca5d6dccc-express17.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it. To maintain authenticity for this **while loop** experience, make sure you hold up the selected card for a good long while to give students time to react over several beats.  Feel free to jump back to previous cards to get the point across that once you have left a **while loop**, you continue moving forward and do not return to the previous **loop** just because the conditions match again.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -5910,7 +5899,7 @@
       "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5936,7 +5925,7 @@
       "chapter": 83,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5962,9 +5951,9 @@
       "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Nested Loops with the Bee",
+        "progression": "Video: Nested Loops with the Bee",
         "level_keys": [
           "courseD_video_nestedLoops_2021"
         ]
@@ -5988,7 +5977,7 @@
       "chapter": 85,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6014,7 +6003,7 @@
       "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6040,7 +6029,7 @@
       "chapter": 87,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6066,7 +6055,7 @@
       "chapter": 88,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6092,7 +6081,7 @@
       "chapter": 89,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6118,7 +6107,7 @@
       "chapter": 90,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6144,7 +6133,7 @@
       "chapter": 91,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6171,7 +6160,7 @@
       "chapter": 92,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6197,7 +6186,7 @@
       "chapter": 93,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6223,7 +6212,7 @@
       "chapter": 94,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6249,7 +6238,7 @@
       "chapter": 95,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6275,7 +6264,7 @@
       "chapter": 96,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6537,7 +6526,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "Overworld Powered Minecart_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6690,7 +6682,7 @@
       "chapter": 112,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If Statements",
         "level_keys": [
@@ -6716,7 +6708,7 @@
       "chapter": 113,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6742,7 +6734,7 @@
       "chapter": 114,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6768,7 +6760,7 @@
       "chapter": 115,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6794,7 +6786,7 @@
       "chapter": 116,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6820,7 +6812,7 @@
       "chapter": 117,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6846,7 +6838,7 @@
       "chapter": 118,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6872,7 +6864,7 @@
       "chapter": 119,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: If and If/Else Statements",
         "level_keys": [
@@ -6898,7 +6890,7 @@
       "chapter": 120,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6924,7 +6916,7 @@
       "chapter": 121,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6950,7 +6942,7 @@
       "chapter": 122,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -6977,7 +6969,7 @@
       "chapter": 123,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7003,7 +6995,7 @@
       "chapter": 124,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7029,7 +7021,7 @@
       "chapter": 125,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7055,7 +7047,7 @@
       "chapter": 126,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7081,7 +7073,7 @@
       "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7107,7 +7099,7 @@
       "chapter": 128,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7133,7 +7125,7 @@
       "chapter": 129,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7159,7 +7151,7 @@
       "chapter": 130,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "While Loops with the Farmer",
         "level_keys": [
@@ -7185,7 +7177,7 @@
       "chapter": 131,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7211,7 +7203,7 @@
       "chapter": 132,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7237,7 +7229,7 @@
       "chapter": 133,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7263,7 +7255,7 @@
       "chapter": 134,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7289,7 +7281,7 @@
       "chapter": 135,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7315,7 +7307,7 @@
       "chapter": 136,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7342,7 +7334,7 @@
       "chapter": 137,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7368,7 +7360,7 @@
       "chapter": 138,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7394,7 +7386,7 @@
       "chapter": 139,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7420,7 +7412,7 @@
       "chapter": 140,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -10493,193 +10485,193 @@
   ],
   "vocabularies": [
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Programming",
+      "key": "programming",
       "word": "Programming",
       "definition": "The art of creating a program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
-      "key": "Algorithm",
+      "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Frustrated",
+      "key": "frustrated",
       "word": "Frustrated",
       "definition": "Feeling annoyed or angry because something is not the way you want it.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Frustrated"
+        "vocabulary.key": "frustrated"
       }
     },
     {
-      "key": "Persistence",
+      "key": "persistence",
       "word": "Persistence",
       "definition": "Trying again and again, even when something is very hard.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
-      "key": "Bug",
+      "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
-      "key": "Debugging",
+      "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "Program",
+      "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
-      "key": "Event",
+      "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
@@ -10693,83 +10685,83 @@
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Command",
+      "key": "command",
       "word": "Command",
       "definition": "An instruction for the computer. Many commands put together make up algorithms and computer programs. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Command"
+        "vocabulary.key": "command"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
@@ -10783,123 +10775,123 @@
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "While Loop",
+      "key": "while_loop",
       "word": "While Loop",
       "definition": "A loop that continues to repeat while a condition is true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
-      "key": "Loop",
+      "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
-      "key": "Repeat",
+      "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
-      "key": "Conditionals",
+      "key": "conditionals",
       "word": "Conditionals",
       "definition": "Statements that only run under certain conditions.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
-      "key": "Condition",
+      "key": "condition",
       "word": "Condition",
       "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
-      "key": "Until",
+      "key": "until",
       "word": "Until",
       "definition": "A command that tells you to do something only up to the point that something becomes true.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "Until"
+        "vocabulary.key": "until"
       }
     }
   ],
@@ -10907,115 +10899,115 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithms: Graph Paper Programming",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Algorithms: Graph Paper Programming",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "vocabulary.key": "Programming"
+        "vocabulary.key": "programming"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Algorithm"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Frustrated"
+        "vocabulary.key": "frustrated"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
-        "vocabulary.key": "Persistence"
+        "vocabulary.key": "persistence"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging in Collector",
-        "vocabulary.key": "Bug"
+        "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Debugging in Collector",
-        "vocabulary.key": "Debugging"
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "vocabulary.key": "Program"
+        "vocabulary.key": "program"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "vocabulary.key": "Event"
+        "vocabulary.key": "event"
       }
     },
     {
@@ -11027,49 +11019,49 @@
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Artist",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Bee",
-        "vocabulary.key": "Command"
+        "vocabulary.key": "command"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
@@ -11081,75 +11073,78 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Bee",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "vocabulary.key": "While Loop"
+        "vocabulary.key": "while_loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Loop"
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Repeat"
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Conditionals"
+        "vocabulary.key": "conditionals"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Condition"
+        "vocabulary.key": "condition"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "vocabulary.key": "Until"
+        "vocabulary.key": "until"
       }
     }
+  ],
+  "lessons_programming_expressions": [
+
   ],
   "objectives": [
     {
