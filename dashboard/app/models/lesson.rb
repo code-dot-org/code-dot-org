@@ -389,7 +389,8 @@ class Lesson < ApplicationRecord
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show)
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      studentLessonPlanPdfUrl: Services::LessonPlanPdfs.get_student_url(self)
     }
   end
 
