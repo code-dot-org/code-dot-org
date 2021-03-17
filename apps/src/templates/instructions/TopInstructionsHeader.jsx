@@ -98,7 +98,8 @@ function TopInstructionsHeader(props) {
     documentationUrl,
     teacherMarkdown,
     isEmbedView,
-    isCollapsed
+    isCollapsed,
+    collapsible
   } = props;
 
   const showContainedLevelAnswer =
@@ -193,7 +194,7 @@ function TopInstructionsHeader(props) {
             )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
-        {!isEmbedView && (isCSDorCSP || hasContainedLevels) && (
+        {!collapsible && !isEmbedView && (isCSDorCSP || hasContainedLevels) && (
           <CollapserIcon
             isCollapsed={isCollapsed}
             onClick={handleClickCollapser}
@@ -227,7 +228,8 @@ TopInstructionsHeader.propTypes = {
   documentationUrl: PropTypes.string,
   teacherMarkdown: PropTypes.string,
   isEmbedView: PropTypes.bool.isRequired,
-  isCollapsed: PropTypes.bool.isRequired
+  isCollapsed: PropTypes.bool.isRequired,
+  collapsible: PropTypes.bool.isRequired
 };
 
 export default TopInstructionsHeader;
