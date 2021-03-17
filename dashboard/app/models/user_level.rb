@@ -130,20 +130,13 @@ class UserLevel < ApplicationRecord
     end
   end
 
-  def has_autolocked?(stage)
-    return false unless stage.lockable?
-    unlocked_at && unlocked_at < AUTOLOCK_PERIOD.ago
-  end
-
   def locked=(val)
-    unlocked_at = if val
-                    nil
-                  else
-                    Time.now
-                  end
-    user_level.assign_attributes(
-      unlocked_at: unlocked_at
-    )
+    new_time = if val
+                 nil
+               else
+                 Time.now
+               end
+    self.unlocked_at = new_time
   end
 
   def locked?
@@ -177,6 +170,8 @@ class UserLevel < ApplicationRecord
 
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
+
+    ## TODO use the locked setter here
 
     user_level.assign_attributes(
       readonly_answers: !locked && readonly_answers,

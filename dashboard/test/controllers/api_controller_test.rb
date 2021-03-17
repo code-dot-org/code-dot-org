@@ -382,7 +382,7 @@ class ApiControllerTest < ActionController::TestCase
   test "student is set at readonly answers without submitting" do
     # student_5 is able to view answers though has not submitted
     script, level, lesson = create_script_with_lockable_lesson
-    create :user_level, user: @student_5, script: script, level: level, submitted: false, readonly_answers: true, unlocked_at: 10.minutes.ago
+    create :user_level, user: @student_5, script: script, level: level, submitted: false, readonly_answers: true, unlocked_at: 2.days.ago
 
     student_5_response = get_student_response(script, level, lesson, 5)
     assert_equal(
@@ -396,11 +396,11 @@ class ApiControllerTest < ActionController::TestCase
 
     user_level_data = student_5_response['user_level_data']
     user_level = UserLevel.find_by(user_level_data)
-    assert_equal false, student_5_response['locked']
-    assert_equal true, student_5_response['readonly_answers']
-    assert_equal false, user_level.locked?
+    assert_equal true, student_5_response['locked']
+    assert_equal false, student_5_response['readonly_answers']
+    assert_equal true, user_level.locked?
     assert_equal false, user_level.submitted?
-    assert_equal true, user_level.readonly_answers?
+    assert_equal false, user_level.readonly_answers?
 
     # Now, assessment is locked and not readonly, but still not submitted
     updates = [
