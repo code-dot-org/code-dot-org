@@ -1,85 +1,104 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import _ from 'lodash';
 
-export default class LessonStandards extends Component {
-  static propTypes = {
-    standards: PropTypes.arrayOf(
-      PropTypes.shape({
-        framework_name: PropTypes.string.isRequired,
-        category_shortcode: PropTypes.string.isRequired,
-        category_description: PropTypes.string.isRequired,
-        shortcode: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired
-      })
-    )
-  };
+const standardShape = PropTypes.shape({
+  framework_name: PropTypes.string.isRequired,
+  category_shortcode: PropTypes.string.isRequired,
+  category_description: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+});
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      // Standards ordered and grouped by framework and category. Since we do
-      // not expect standards to change, use initial state to avoid recomputing
-      // these on every render.
-      groupedStandards: this.groupStandardsByFramework(props.standards)
-    };
-  }
-
-  groupStandardsByFramework = standards =>
-    _(standards)
-      .values()
+export default class LessonStandards extends PureComponent {
+  render() {
+    const {standards} = this.props;
+    const standardsByFramework = _(standards)
       .orderBy('framework_name')
       .groupBy('framework_name')
-      .mapValues(this.groupStandardsByCategory)
       .value();
-
-  groupStandardsByCategory = standards =>
-    _(standards)
-      .values()
-      .orderBy('category_shortcode', 'shortcode')
-      .groupBy('category_shortcode')
-      .value();
-
-  render() {
     return (
       <ul>
-        {_.transform(
-          this.state.groupedStandards,
-          (elements, standardsByCategory, frameworkName) => {
-            elements.push(
-              <li key={frameworkName}>
-                {frameworkName}
-                <ul>
-                  {_.transform(
-                    standardsByCategory,
-                    (elements, standards, categoryShortcode) => {
-                      elements.push(
-                        <li key={categoryShortcode}>
-                          {categoryShortcode}
-                          {' - '}
-                          {standards[0].category_description}
-                          <ul>
-                            {standards.map(standard => (
-                              <li key={standard.shortcode}>
-                                {standard.shortcode}
-                                {' - '}
-                                {standard.description}
-                              </li>
-                            ))}
-                          </ul>
-                        </li>
-                      );
-                    },
-                    []
-                  )}
-                </ul>
-              </li>
-            );
-          },
-          []
-        )}
+        {Object.keys(standardsByFramework).map(frameworkName => {
+          const standards = standardsByFramework[frameworkName];
+          return (
+            <Framework
+              name={frameworkName}
+              key={frameworkName}
+              standards={standards}
+            />
+          );
+        })}
       </ul>
     );
   }
 }
+LessonStandards.propTypes = {
+  standards: PropTypes.arrayOf(standardShape).isRequired
+};
+
+class Framework extends PureComponent {
+  render() {
+    const {name, standards} = this.props;
+    const standardsByCategory = _(standards)
+      .orderBy('category_shortcode', 'shortcode')
+      .groupBy('category_shortcode')
+      .value();
+    return (
+      <li key={name}>
+        {name}
+        <ul>
+          {Object.keys(standardsByCategory).map(categoryShortcode => {
+            const standards = standardsByCategory[categoryShortcode];
+            return (
+              <Category
+                key={categoryShortcode}
+                shortcode={categoryShortcode}
+                standards={standards}
+              />
+            );
+          })}
+        </ul>
+      </li>
+    );
+  }
+}
+Framework.propTypes = {
+  name: PropTypes.string.isRequired,
+  standards: PropTypes.arrayOf(standardShape).isRequired
+};
+
+class Category extends PureComponent {
+  render() {
+    const {shortcode, standards} = this.props;
+    const description = standards[0].category_description;
+    return (
+      <li key={shortcode}>
+        {`${shortcode} - ${description}`}
+        <ul>
+          {standards.map(standard => (
+            <Standard key={standard.shortcode} standard={standard} />
+          ))}
+        </ul>
+      </li>
+    );
+  }
+}
+Category.propTypes = {
+  shortcode: PropTypes.string.isRequired,
+  standards: PropTypes.arrayOf(standardShape).isRequired
+};
+
+class Standard extends PureComponent {
+  render() {
+    const {standard} = this.props;
+    return (
+      <li key={standard.shortcode}>
+        {standard.shortcode}
+        {' - '}
+        {standard.description}
+      </li>
+    );
+  }
+}
+Standard.propTypes = {standard: standardShape.isRequired};
