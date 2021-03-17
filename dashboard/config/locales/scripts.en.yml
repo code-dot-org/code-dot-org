@@ -20844,8 +20844,8 @@ en:
             Conditionals:
               key: Conditionals
               name: Conditionals with the Farmer
-              description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
-              description_teacher: This lesson introduces students to **while loops** and `if / else` statements. **While loops** are loops that continue to repeat commands as long as a **condition** is true. **While loops** are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what **condition** needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
+              description_student: Help the farmer prepare her fields for planting crops and learn more about conditionals!
+              description_teacher: 'This lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. '
             Simon Says:
               key: Simon Says
               name: Follow the Algorithm
@@ -20873,7 +20873,7 @@ en:
                 It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
             About Me:
               key: About Me
-              name: About Me with Sprite Lab
+              name: 'Mini-Project: About Me'
               description_student: By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.
               description_teacher: "By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.\r\n"
             Digital Sharing:
@@ -20893,7 +20893,7 @@ en:
               description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.
             Nested Loops in Frozen:
               key: Nested Loops in Frozen
-              name: Nested Loops with Frozen
+              name: 'Mini-Project: Design a Snowflake'
               description_student: 'Anna and Elsa have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
               description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using Anna and Elsa's excellent ice-skating skills!
             'Functions: Songwriting':
@@ -20910,7 +20910,7 @@ en:
               key: Functions in Harvester
               name: Functions with Harvester
               description_student: Functions will save you lots of work as you help the farmer with her harvest!
-              description_teacher: Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
+              description_teacher: Students will use conditionals with functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.
             Functions in Artist:
               key: Functions in Artist
               name: Functions with Artist
@@ -21241,7 +21241,7 @@ en:
               key: Alien Dance Party
               name: Alien Dance Party
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".  '
+              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as **events** to create an "alien dance party".  '
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
