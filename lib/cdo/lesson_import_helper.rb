@@ -63,9 +63,6 @@ module LessonImportHelper
       if models_to_import.include?('ProgrammingExpression')
         lesson.programming_expressions = find_lesson_programming_expressions(cb_lesson_data['blocks'])
       end
-      if models_to_import.include?('Standard')
-        lesson.standards = find_lesson_standards(cb_lesson_data['standards'])
-      end
     end
   end
 
@@ -124,17 +121,6 @@ module LessonImportHelper
         key: cb_block['slug']
       )
       block
-    end
-  end
-
-  def self.find_lesson_standards(cb_standards)
-    return [] if cb_standards.blank?
-    cb_standards.map do |cb_standard|
-      raise unless cb_standard['framework'] && cb_standard['shortcode']
-      framework = Framework.find_by!(shortcode: cb_standard['framework'].downcase)
-      Standard.find_by!(framework: framework, shortcode: cb_standard['shortcode'])
-    rescue ActiveRecord::RecordNotFound
-      puts "Could not find Standard: #{cb_standard}"
     end
   end
 
