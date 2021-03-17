@@ -8839,3 +8839,63 @@ pt-BR:
           no seu projeto. Você pode optar por continuar trabalhando com os mesmos
           blocos ou experimentar a caixa de ferramentas ampliada.
         display_name: Atividade livre
+      OPD-K5 About_copy:
+        markdown: "# Bem vindo aos Fundamentos do ensino de Ciência da Computação\n\n<img
+          src=\"https://images.code.org/80a1fa04481359759d2b86ddca9b33a4-image-1433972662378.png\"
+          class=\"level-image\">\n\n## Para que serve este curso?\nEste curto online
+          tem a intenção de introduzir os fundamentos do ensino de ciência da computação
+          como currículo e fonte de conhecimento para professores. Através da leitura,
+          vídeos, quebra-cabeças iterativos e refletindo sobre seus aprendizados,
+          será desenvolvida a compreensão de como ensinar os Fundamentos de Ciência
+          da Computação nas suas aulas. \n\n## Para quem é este curso?\nEste curso
+          online foi feito para professores do ensino básico e fundamental que tenham
+          interesse em ensinar os fundamentos da Ciência da Computação para seus alunos.**.
+          Se aplica a professores de escolas, técnicos, bibliotecários e a todos com
+          este envolvimento.\n\nSe você é um professor do<a href=\"https://code.org/educate/csd\"
+          target=\"blank\">ensino fundamental</a> ou <a href=\"https://code.org/educate/csp\"
+          target=\"blank\">ensino médio</a> interessado em ensinar para ensino fundamental
+          ou médio, recomendamos que veja mais em <a href=\"https://code.org/educate/professional-learning/middle-high\"
+          target=\"blank\"> para oportunidades mais avançadas de desenvolvimento profissional
+          em andamento</a>.\n\n## Vou aprender Ciência da Computação com este curso?\nApesar
+          das oportunidades de aprender e praticar os conceitos de programação e observar
+          como são introduzidos nos currículos dos alunos, este curso não tem por
+          objetivo ser considerado um curso de Ciências da Computação para adultos.
+          Ao fim do curso, vamos fornecer material para te ajudar a se aprofundar
+          nos conceitos de Ciência da Computação.\n\n## Quais são os pré-requisitos
+          para este curso?\nNão é necessário ter experiência ou conhecimento prévio
+          em programação ou em ciência da computação para fazer o curso. \n\n## Quanto
+          tempo dura este curso? \nEste curso leva de 4 a 6 horas para ser completado..\n\n##Posso
+          trocar o tamanho da fonte nos textos do curso?\nSabemos que o texto nesta
+          plataforma pode aparecer pequeno! \n\nPara aumentar o tamanho da fonte\n-
+          No Mac, clique em \"Command\" e \"+\"\n- No Windows, clique em \"Control\"
+          e \"+\"\n\nPara reduzir o tamanho da fonte: \n- No Mac, clique em \"Command\"
+          e \"-\"\n- No Windows, clique em \"Control\" e \"-\"\n"
+      OPD-K5 Why teach CS_copy:
+        markdown: "# Por que ensinar Ciência da Computação?\n\n<img src=\"https://images.code.org/2d5f7097062637d95a723129689b4891-image-1571684813152.JPG\"
+          class=\"level-image\">\n\n### **Para desenvolver competências importantes**\nAs
+          pesquisas mostram que o aprendizado de Ciência da Computação ajuda a desenvolver
+          o pensamento crítico, a criatividade, a solução de problemas e outras formas
+          de engajamento em competências do nosso dia a dia. \n\n### **Para melhorar
+          seu desempenho em outras metérias**\nVocê não precisa ser um professor de
+          exatas para perceber os benefícios do ensino de Ciência da Computação na
+          sua sala de aula. Uma <a href=\"https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e\"
+          target=\"blank\">pesquisa recente</a> mostrou que turmas que têm aulas de
+          Fundamentos da Ciência da Computação têm melhores notas também em Inglês
+          (língua nativa da pesquisa), matemática e ciências.\n\n### **Para criar
+          confiança e desenvolver o interesse cedo**\nSe esperarmos até o ensino médio
+          ou faculdade para apresentar aos alunos a Ciência da Computação, alguns
+          já terão decidido que Ciências da Computação não é para eles ou irão achar
+          que já estão muito para trás quando comparados com alunos que estudaram
+          Ciência da Computação como atividade extra-classe.\n\nApresentar a Ciência
+          da Comutação para alunos no ensino básico permite que percebam como esta
+          disciplina é acessível e que eles também podem gostar\n\n### **É divertido!!**\nA
+          Ciência da Computação dá aos alunos a oportunidade de colaborarem, serem
+          criativos e de se expressarem! \n\n### **Precisa de mais alguma coisa para
+          se convencer?**\nCode.org tem vários recursos para te ajudar - assim como
+          aos alunos, pais, comunidade -  a entender porque é importante ensinar Ciência
+          da Computação . Dá uma olhada na nossa série de vídeos inspiracionais e
+          em algumas estatísticas  e evidências envolvendo a Ciência da Computação:\n\n>
+          <a href=\"http://code.org/educate/inspire\" target=\"blank\"><button class=\"default\">Explore
+          os vídeos inspiracionais >></button></a>\n\n> <a href=\"http://code.org/promote\"
+          target=\"blank\"><button class=\"default\"> Explore as pesquisas >></button></a>\n\n<img
+          src=\"https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg\">\n"

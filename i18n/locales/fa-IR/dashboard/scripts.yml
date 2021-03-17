@@ -2481,13 +2481,19 @@ fa:
             csf_digcit:
               display_name: شهروندی دیجیتالی
             csf_variables:
-              display_name: متغیرها
+              display_name: حلقه های "برای"
             csf_for_loops:
               display_name: حلقه های "برای"
+            lessonGroup-8:
+              display_name: متغیرها
+            lessonGroup-9:
+              display_name: حذف‌کن
         express-2021:
           lessons:
             Dance Party:
               key: جشن و رقص
+              name: جشن و رقص
+            lesson-1:
               name: جشن و رقص
           lesson_groups:
             csf_loops:
@@ -2511,6 +2517,8 @@ fa:
             ramp_up:
               display_name: مقدمه
             lessonGroup-3:
+              display_name: متغیرها
+            variables:
               display_name: متغیرها
         ai-unit-pilot:
           lessons:

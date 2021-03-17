@@ -767,8 +767,10 @@ ku:
             Internet:
               name: ئینتەرنێت
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: گۆڕاوەکان
+            lessonGroup-9:
+              display_name: لابردن
         express-2021:
           lesson_groups:
             csf_loops:
@@ -786,6 +788,8 @@ ku:
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
+              display_name: گۆڕاوەکان
+            variables:
               display_name: گۆڕاوەکان
         k5-onlinepd-2021:
           lessons:

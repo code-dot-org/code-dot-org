@@ -36,7 +36,9 @@ class XhrProxyController < ApplicationController
     api.football-data.org
     api.foursquare.com
     api.fungenerators.com
+    api.mojang.com
     api.nasa.gov
+    api.nookipedia.com
     api.opencagedata.com
     api.open-notify.org
     api.openweathermap.org
@@ -91,10 +93,12 @@ class XhrProxyController < ApplicationController
     rhcloud.com
     runescape.com
     samples.openweathermap.org
+    sessionserver.mojang.com
     sheets.googleapis.com
     spreadsheets.google.com
     stats.minecraftservers.org
     swapi.co
+    textures.minecraft.net
     thecatapi.com
     thedogapi.com
     theunitedstates.io

@@ -3,8 +3,8 @@
 # Table name: standards
 #
 #  id              :integer          not null, primary key
-#  organization    :string(255)      not null
-#  organization_id :string(255)      not null
+#  organization    :string(255)
+#  organization_id :string(255)
 #  description     :text(65535)
 #  concept         :text(65535)
 #  category_id     :bigint

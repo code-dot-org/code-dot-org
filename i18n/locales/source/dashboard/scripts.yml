@@ -8,17 +8,20 @@ en:
         csd_2018_category_name: CS Discoveries ('18-'19)
         csd_2019_category_name: CS Discoveries ('19-'20)
         csd_2020_category_name: CS Discoveries ('20-'21)
+        csd_2021_category_name: CS Discoveries ('21-'22)
         csd_pilot_category_name: CS Discoveries Pilot
         csf_category_name: CS Fundamentals
         csf_2018_category_name: CS Fundamentals ('18-'19)
         csf_2019_category_name: CS Fundamentals ('19-'20)
         csf_2020_category_name: CS Fundamentals ('20-'21)
+        csf_2021_category_name: CS Fundamentals ('21-'22)
         csf_international_category_name: CS Fundamentals International
         csf2_draft_category_name: 'Under Development: Courses A - F'
         csp_category_name: CS Principles ('15-'16)
         csp_2018_category_name: CS Principles ('18-'19)
         csp_2019_category_name: CS Principles ('19-'20)
         csp_2020_category_name: CS Principles ('20-'21)
+        csp_2021_category_name: CS Principles ('21-'22)
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         full_course_category_name: Full Courses
@@ -18808,6 +18811,8 @@ en:
               name: Model Cards Playground
             bug-bash:
               name: Bug Bash Playground
+            superunsuper:
+              name: Unsupervised and Supervised
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -20727,7 +20732,7 @@ en:
               key: Conditionals with Cards
               name: Conditionals with Cards
               description_student: It's time to play a game where you earn points only under certain conditions!
-              description_teacher: "This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.\r\n\r\n"
+              description_teacher: "This lesson demonstrates how **conditionals** can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where **conditionals** come in. **Conditionals** allow a computer to make a decision, based on the information that is true any time your code is run.\n\n"
             Conditionals in Bee:
               key: Conditionals in Bee
               name: If/Else with Bee
@@ -20737,7 +20742,7 @@ en:
               key: While Loops in Farmer
               name: While Loops in Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             Until Loops in Maze:
               key: Until Loops in Maze
               name: Until Loops in Maze
@@ -20776,7 +20781,7 @@ en:
             lesson-6:
               name: Looking Ahead with Minecraft
               description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             lesson-5:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
@@ -20839,7 +20844,7 @@ en:
               key: Conditionals
               name: Conditionals with the Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
-              description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
+              description_teacher: This lesson introduces students to **while loops** and `if / else` statements. **While loops** are loops that continue to repeat commands as long as a **condition** is true. **While loops** are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what **condition** needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Simon Says:
               key: Simon Says
               name: Follow the Algorithm
@@ -20922,6 +20927,13 @@ en:
               description_teacher: "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers."
             lesson-4:
               name: Be A Super Digital Citizen
+              description_student: Learn how you can be an upstander when you see cyberbullying.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
           lesson_groups:
             ramp_up:
               display_name: Loops
@@ -20965,8 +20977,8 @@ en:
             Loops with the Artist:
               key: Loops with the Artist
               name: Drawing with Loops
-              description_student: In this lesson, **loops** make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: 'This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to get creative with "The Artist".  '
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
               name: Nested Loops in Maze
@@ -21010,8 +21022,11 @@ en:
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
-              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
-              description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
+              description_student: Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: |
+                Students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+
+                This lesson will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.
             Internet:
               key: Internet
               name: The Internet
@@ -21039,8 +21054,8 @@ en:
               description_teacher: Here, students will use Sprite Lab to create their own customized behaviors.
             Virtual Pet:
               key: Virtual Pet
-              name: Virtual Pet with Sprite Lab
-              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
               description_teacher: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
             End of Course Project:
               key: End of Course Project
@@ -21051,23 +21066,45 @@ en:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
               description_teacher: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+            lesson-6:
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.
+            lesson-7:
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write **programs**, and learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. '
+            lesson-8:
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed **events** and user input. '
+            lesson-9:
+              name: Blank Space Stories
+            lesson-10:
+              name: Text and Prompts
+            lesson-5:
+              name: Outbreak
           lesson_groups:
             ramp_up:
-              display_name: Ramp Up
+              display_name: Sprites
             csf_digcit:
               display_name: Digital Citizenship
             csf_variables:
-              display_name: Variables
+              display_name: For Loops
             csf_data:
-              display_name: Data
+              display_name: Data and Simulations
             csf_for_loops:
               display_name: For Loops
             csf_sprites:
-              display_name: Sprites
+              display_name: Impacts of Computing
             end_of_course_project:
               display_name: End of Course Project
             lessonGroup-8:
-              display_name: Impacts of Computing
+              display_name: Variables
+            lessonGroup-9:
+              display_name: remove
           name: coursef-2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:
@@ -21084,8 +21121,8 @@ en:
             Programming with Angry Birds:
               key: Programming with Angry Birds
               name: Programming with Angry Birds
-              description_student: Learn about sequences and algorithms with Angry Birds.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_student: Create programs to help the Angry Bird move through the maze.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Debugging with Scrat:
               key: Debugging with Scrat
               name: Debugging with Scrat
@@ -21095,7 +21132,7 @@ en:
               key: Collecting Treasure with Laurel
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
             Creating Art with Code:
               key: Creating Art with Code
               name: Creating Art with Code
@@ -21124,8 +21161,8 @@ en:
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
@@ -21135,7 +21172,7 @@ en:
               key: While Loops with the Farmer
               name: While Loops with the Farmer
               description_student: 'Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!'
-              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \r\n\r\n_While loops_ are loops that continue to repeat commands while a condition is met. `While` loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
+              description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
@@ -21216,6 +21253,10 @@ en:
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
+            lesson-1:
+              name: Dance Party
+              description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
+              description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
@@ -21235,6 +21276,8 @@ en:
               display_name: Sprites
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-9:
+              display_name: Warm Up
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
         pre-express-2021:
@@ -21341,6 +21384,12 @@ en:
               name: Blank Space Stories
             texts-and-prompts:
               name: Text and Prompts
+            introducing-spritelab:
+              name: Introducing Sprite Lab
+            blank-space-stories:
+              name: Blank Space Stories
+            user-input-programs:
+              name: 'Mini-Project: User Input Programs'
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -21355,6 +21404,9 @@ en:
             Sprites:
               display_name: Sprites
               description: Learn the basics of coding with sprites!
+            variables:
+              display_name: Variables
+              description: Store values in variables and retrieve them later in your program. Modify the values stored in variables to create exciting interactive projects!
           name: csf-2021-pilot
           title: CS Fundamentals 2021 Pilot
           description_audience: Upper Elementary
@@ -21664,9 +21716,9 @@ en:
             intro:
               name: Lesson 1
             lesson1:
-              name: 'Lesson 1A: AI for Oceans'
+              name: Introduction to Machine Learning A
             lesson2:
-              name: How Computers Learn (Unplugged)
+              name: How Computers Learn
             lesson3:
               name: AI for Social Good (Unplugged)
             lesson4:
@@ -21881,11 +21933,15 @@ en:
             What is Code.org:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
-              name: Addressing Implementation Approaches and Barriers
+              name: Implementation Approaches and Barriers
             Lesson Planning:
               name: Lesson Planning
             CS Teaching and Learning Practices:
               name: CS Teaching and Learning Practices
+            CS Teaching and Student Practices:
+              name: CS Teaching and Student Practices
+            Implementation Approaches and Barriers:
+              name: Implementation Approaches and Barriers
           lesson_groups:
             k5_getting_started_1:
               display_name: Introduction
@@ -21908,11 +21964,15 @@ en:
               name: Haiku Prototype
             Haiku Bot:
               name: Haiku Bot
+            Poem Bot:
+              name: Poem Bot
           lesson_groups:
             haiku bot:
               display_name: Haiku Bot
+            poem bot:
+              display_name: Poem Bot
           name: haikubot-pilot
-          title: Haiku Bot
+          title: Poem Bot
           description_audience: Grade 4, Grade 5
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
           description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"

@@ -981,6 +981,7 @@ ar:
             '"x"': الموضع س
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
+            '"speed"': السرعة
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} اللمسات {SPRITE2}"
         options:
