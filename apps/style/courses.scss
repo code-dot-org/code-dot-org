@@ -7,13 +7,13 @@
   #uitest-version-selector,
   .announcement-notification,
   .course-overview-top-row,
-  .course-script-teacher-info,
+  .teacher-info-box,
   .uitest-go-to-unit-button,
   .extra-links,
   .footer,
   .header-wrapper,
   .push {
-    display: none;
+    display: none !important;
   }
 
   /* I'm not 100% sure that this is necessary, but including

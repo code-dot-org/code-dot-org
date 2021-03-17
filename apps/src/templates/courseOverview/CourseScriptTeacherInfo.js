@@ -20,26 +20,24 @@ export default class CourseScriptTeacherInfo extends Component {
     const tooltipId = _.uniqueId();
 
     return (
-      <div className="course-script-teacher-info">
-        <TeacherInfoBox>
-          <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
-            <HiddenForSectionToggle
-              hidden={isHidden}
-              disabled={disabled}
-              onChange={onToggleHiddenScript}
-            />
-          </div>
-          <ReactTooltip
-            id={tooltipId}
-            role="tooltip"
-            wrapper="span"
-            effect="solid"
-            disable={!disabled}
-          >
-            {i18n.hiddenScriptTooltip()}
-          </ReactTooltip>
-        </TeacherInfoBox>
-      </div>
+      <TeacherInfoBox>
+        <div data-tip data-for={tooltipId} aria-describedby={tooltipId}>
+          <HiddenForSectionToggle
+            hidden={isHidden}
+            disabled={disabled}
+            onChange={onToggleHiddenScript}
+          />
+        </div>
+        <ReactTooltip
+          id={tooltipId}
+          role="tooltip"
+          wrapper="span"
+          effect="solid"
+          disable={!disabled}
+        >
+          {i18n.hiddenScriptTooltip()}
+        </ReactTooltip>
+      </TeacherInfoBox>
     );
   }
 }
