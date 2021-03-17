@@ -79,6 +79,8 @@ class FoormEntityLoadButtons extends React.Component {
   }
 }
 
+export const UnconnectedFoormEntityLoadButtons = FoormEntityLoadButtons;
+
 export default connect(
   null,
   dispatch => ({

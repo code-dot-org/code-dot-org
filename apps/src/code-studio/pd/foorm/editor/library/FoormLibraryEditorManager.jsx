@@ -14,7 +14,6 @@ import {
 } from '../foormEditorRedux';
 import FoormLibrarySaveBar from './FoormLibrarySaveBar';
 
-// TODO: dedupe these styles
 const styles = {
   surveyTitle: {
     marginBottom: 0
@@ -296,6 +295,8 @@ class FoormLibraryEditorManager extends React.Component {
     );
   }
 }
+
+export const UnconnectedFoormLibraryEditorManager = FoormLibraryEditorManager;
 
 export default connect(
   state => ({
