@@ -53,7 +53,7 @@ class SectionAssigner extends Component {
     );
 
     return (
-      <div className="section-assigner">
+      <div>
         <div style={styles.label}>{i18n.currentSection()}</div>
         <div style={styles.content}>
           <TeacherSectionSelector
