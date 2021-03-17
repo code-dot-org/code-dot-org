@@ -47,7 +47,7 @@ class DataDisplay extends Component {
       }
     }
 
-    return { ...style, ...styles.dataDisplayHeader };
+    return { ...style, ...styles.tableHeader };
   };
 
   getColumnCellStyle = key => {
@@ -79,7 +79,7 @@ class DataDisplay extends Component {
       }
     }
 
-    return { ...style, ...styles.dataDisplayCell };
+    return { ...style, ...styles.tableCell };
   };
 
   render() {
@@ -101,12 +101,11 @@ class DataDisplay extends Component {
             <div>Explore pairs and choose features:</div>
           )}
         </div>
-
         <div
           style={styles.tableParent}
           onScroll={() => setCurrentColumn(undefined)}
         >
-          <table style={styles.dataDisplayTable}>
+          <table style={styles.displayTable}>
             <thead>
               <tr>
                 {data.length > 0 &&

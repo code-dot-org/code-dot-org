@@ -16,7 +16,7 @@ class CrossTab extends Component {
   getCellStyle = percent => {
     return {
       ...styles["crossTabCell" + Math.round(percent / 20)],
-      ...styles.dataDisplayCell
+      ...styles.tableCell
     };
   };
 
@@ -67,7 +67,7 @@ class CrossTab extends Component {
                     {crossTabData.uniqueLabelValues.map(
                       (uniqueLabelValue, index) => {
                         return (
-                          <td key={index} style={styles.dataDisplayCell}>
+                          <td key={index} style={styles.tableCell}>
                             {uniqueLabelValue}
                           </td>
                         );
