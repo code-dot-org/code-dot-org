@@ -22,7 +22,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
         student_overview: 'student overview'
       }
     )
-    standard = create :standard, :with_category, description: 'Standard Description'
+    standard = create :standard, description: 'Standard Description'
     @lesson.standards = [standard]
 
     @lesson2 = create(

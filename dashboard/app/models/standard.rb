@@ -31,8 +31,8 @@ class Standard < ApplicationRecord
   def summarize_for_lesson_show
     {
       framework_name: framework.name,
-      category_shortcode: category.shortcode,
-      category_description: category.description,
+      category_shortcode: category&.shortcode,
+      category_description: category&.description,
       shortcode: shortcode,
       description: description
     }
