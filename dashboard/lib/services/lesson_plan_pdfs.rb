@@ -91,6 +91,7 @@ module Services
       # Individual Lesson PDFs
       script.lessons.select(&:has_lesson_plan).each do |lesson|
         generate_lesson_pdf(lesson, pdf_dir)
+        generate_student_lesson_pdf(lesson, pdf_dir)
       end
 
       # TODO: Script Overview PDFs
@@ -135,8 +136,28 @@ module Services
       return Pathname.new(File.join(lesson.script.name, version_number, filename))
     end
 
+    # Build the full path of the lesson plan PDF for the given lesson. This
+    # will be based on not only the lesson's script but also the current
+    # version of the script in the environment.
+    #
+    # Expect this to look something like
+    # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
+    def self.get_student_pathname(lesson)
+      return nil unless lesson&.script&.seeded_from
+      version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
+      filename = ActiveStorage::Filename.new(lesson.key + "-Student" + ".pdf").sanitized
+      return Pathname.new(File.join(lesson.script.name, version_number, filename))
+    end
+
     def self.get_url(lesson)
       pathname = get_pathname(lesson)
+      return nil unless pathname.present?
+
+      File.join(get_base_url, pathname)
+    end
+
+    def self.get_student_url(lesson)
+      pathname = get_student_pathname(lesson)
       return nil unless pathname.present?
 
       File.join(get_base_url, pathname)
@@ -147,9 +168,24 @@ module Services
       AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
     end
 
+    def self.student_pdf_exists_for?(lesson)
+      pathname = get_student_pathname(lesson)
+      AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
+    end
+
     def self.generate_lesson_pdf(lesson, directory="/tmp/")
       url = Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
       pathname = get_pathname(lesson)
+
+      ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
+
+      FileUtils.mkdir_p(File.join(directory, pathname.dirname))
+      PDF.generate_from_url(url, File.join(directory, pathname))
+    end
+
+    def self.generate_student_lesson_pdf(lesson, directory="/tmp/")
+      url = Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson)
+      pathname = get_student_pathname(lesson)
 
       ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
 
