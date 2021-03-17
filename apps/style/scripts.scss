@@ -6,14 +6,14 @@
   #environment_tag,
   #script-breadcrumb,
   #teacher-panel-container,
-  .lesson-teacher-info-box,
+  .teacher-info-box,
   .script-overview-top-row,
   .announcement-notification,
   .extra-links,
   .footer,
   .header-wrapper,
   .push {
-    display: none;
+    display: none !important;
   }
 
   /* I'm not 100% sure that this is necessary, but including
