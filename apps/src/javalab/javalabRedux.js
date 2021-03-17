@@ -10,6 +10,7 @@ const initialState = {
   filesChanged: false
 };
 
+// Action Creators
 export const appendInputLog = input => ({
   type: APPEND_CONSOLE_LOG,
   log: {type: 'input', text: input}
@@ -35,6 +36,20 @@ export const setFilesChanged = filesChanged => ({
   filesChanged
 });
 
+// Selectors
+export const getFilesChanged = state => {
+  return state.javalab.filesChanged;
+};
+
+export const getFilename = state => {
+  return state.javalab.filename;
+};
+
+export const getEditorText = state => {
+  return state.javalab.editorText;
+};
+
+// Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {
     return {
