@@ -16715,12 +16715,7 @@ en:
             Safety in My Online Neighborhood:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
+              description_teacher: This lesson was originally created by Common Sense Education. The power of the internet allows students to experience and visit places they might not be able to see in person. But, just like traveling in the real world, it's important to be safe when traveling online. On this virtual field trip, kids can practice staying safe on online adventures.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2020:
           title: Course B (2020)
@@ -16790,12 +16785,7 @@ en:
             Digital Trails:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
+              description_teacher: This lesson was originally created by Common Sense Education.Does what you do online always stay online? Students learn that the information they share online leaves a digital footprint or "trail." Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2020:
           title: Course C (2020)
@@ -16893,21 +16883,11 @@ en:
             Putting a STOP to Online Meanness:
               name: Putting a STOP to Online Meanness
               description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
+              description_teacher: This lesson was originally created by Common Sense Education. The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
             Password Power-Up:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
+              description_teacher: This lesson was originally created by Common Sense Education. Stronger, more secure online passwords are a good idea for everyone. But how can we help kids create better passwords and actually remember them? Use the tips in this lesson to help kids make passwords that are both secure and memorable.
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2020:
           title: Course D (2020)
@@ -17011,12 +16991,7 @@ en:
             Be A Super Digital Citizen:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
+              description_teacher: This lesson was originally created by Common Sense Education. Online tools are empowering for kids, and they also come with big responsibilities. But do kids always know what to do when they encounter cyberbullying? Show your students appropriate ways to take action and resolve conflicts, from being upstanders to helping others in need.
           student_description: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
         coursee-2020:
           title: Course E (2020)
@@ -17070,12 +17045,7 @@ en:
             Private and Personal Information:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
+              description_teacher: This lesson was originally created by Common Sense Education. It's in our students' nature to share and connect with others. But sharing online comes with some risks. How can we help kids build strong, positive, and safe relationships online? Help your students learn the difference between what's personal and what's best left private.
             About Me:
               name: About Me with Sprite Lab
               description_student: By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.
@@ -17213,12 +17183,7 @@ en:
             The Power of Words:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+              description_teacher: This lesson was originally created by Common Sense Education. As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
@@ -17236,6 +17201,7 @@ en:
               description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
               description_teacher: "**Tutorial Summary:** First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.\r\n\r\n\r\n**Checking Correctness:** This tutorial will not tell students whether they completed the level correctly. It is possible to skip through the different parts of the activity quickly. Encourage students to watch the videos, read the instructions, and try different things along the way. At any time, they can share their findings with you or a classmate.\r\n"
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
+          name: coursef-2020
         express-2020:
           title: Express Course (2020)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -20594,7 +20560,7 @@ en:
               key: Programming in Collector
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential **algorithms** to get _Laurel_ to pick up treasure as she walks along a path.
             Programming in Artist:
               key: Programming in Artist
               name: Creating Art with Code
@@ -20613,8 +20579,8 @@ en:
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
-              description_student: 'Help BB-8 through mazes using loops! '
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.
+              description_student: 'Help _BB-8_ through mazes using loops! '
+              description_teacher: Building on the concept of **repeating** instructions from "Getting Loopy," this stage will have students using **loops** to help _BB-8_ traverse a maze more efficiently than before.
             Loops in Harvester:
               key: Loops in Harvester
               name: Harvesting Crops with Loops
@@ -20727,7 +20693,7 @@ en:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             Conditionals with Cards:
               key: Conditionals with Cards
               name: Conditionals with Cards
@@ -20780,8 +20746,8 @@ en:
               description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! '
             lesson-6:
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             lesson-5:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
@@ -20822,7 +20788,7 @@ en:
         coursee-2021:
           title: Course E (2021)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
-          description_short: Review concepts in Courses C & D, then go further by learning functions.
+          description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
           lessons:
             Sequencing in the Maze:
@@ -20833,8 +20799,8 @@ en:
             Programming and Loops with the Artist:
               key: Programming and Loops with the Artist
               name: Drawing with Loops
-              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_student: In this lesson, **loops** make it easy to make cool images with Artist!
+              description_teacher: 'This lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditionals in Minecraft: Voyage Aquatic'
               name: 'Conditionals in Minecraft: Voyage Aquatic'
@@ -20854,12 +20820,12 @@ en:
               key: Learning Sprites with Sprite Lab
               name: Swimming Fish with Sprite Lab
               description_student: Learn how to create and edit sprites.
-              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.'
+              description_teacher: In this lesson, students will be introduced to Sprite Lab by learning to program a simple animated underwater scene.
             Alien Dance Party with Sprite Lab:
               key: Alien Dance Party with Sprite Lab
               name: Alien Dance Party with Sprite Lab
               description_student: Create an interactive project that can be shared with classmates.
-              description_teacher: 'This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an "alien dance party".  '
+              description_teacher: 'Students will use events to make sprites move around the screen and change backgrounds based on user input. '
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
@@ -20978,10 +20944,10 @@ en:
               key: Loops with the Artist
               name: Drawing with Loops
               description_student: In this lesson, **loops** make it easy to make cool images with Artist!
-              description_teacher: 'This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to get creative with "The Artist".  '
+              description_teacher: 'This lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  '
             Nested Loops in the Maze:
               key: Nested Loops in the Maze
-              name: Nested Loops in Maze
+              name: Programming with the Bee
               description_student: This lesson will teach you what happens when you place a **loop** inside another **loop**.
               description_teacher: In this online activity, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             The Power of Words:
@@ -21006,12 +20972,12 @@ en:
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.
             Variables that Change in Bee:
               key: Variables that Change in Bee
-              name: Variables with Bee
+              name: Variables with the Bee
               description_student: This bee loves **variables**!
               description_teacher: 'This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. '
             Variables that Change in Artist:
               key: Variables that Change in Artist
-              name: Changing Variables with Artist
+              name: Using Variables with the Artist
               description_student: In this lesson, you'll make drawings using variables that change as the program runs.
               description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
             Simulating Experiments:
@@ -21087,6 +21053,8 @@ en:
               description_teacher: Students will get practice with **variables** in Sprite Lab. Students will work with user input to set the values of their **variables**, then print those values alongside other text.
             lesson-5:
               name: Outbreak
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'In this lesson, students will create an outbreak simulator using events. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow the contagion down. '
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -21122,8 +21090,8 @@ en:
             Programming with Angry Birds:
               key: Programming with Angry Birds
               name: Programming with Angry Birds
-              description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_student: Learn about sequences and algorithms with _Angry Birds_.
+              description_teacher: Using characters from the game _Angry Birds_, students will develop sequential **algorithms** to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear **sequence**, making them move straight, turn left, or turn right.
             Debugging with Scrat:
               key: Debugging with Scrat
               name: Debugging with Scrat
@@ -21133,7 +21101,7 @@ en:
               key: Collecting Treasure with Laurel
               name: Collecting Treasure with Laurel
               description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
-              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
             Creating Art with Code:
               key: Creating Art with Code
               name: Creating Art with Code
@@ -21142,28 +21110,28 @@ en:
             Loops with Rey and BB-8:
               key: Loops with Rey and BB-8
               name: Loops with Rey and BB-8
-              description_student: 'Help BB-8 through mazes using loops! '
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.
+              description_student: 'Help _BB-8_ through mazes using loops! '
+              description_teacher: This stage will have students using **loops** to help _BB-8_ traverse a maze efficiently.
             Sticker Art with Loops:
               key: Sticker Art with Loops
               name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             Nested Loops in Maze:
               key: Nested Loops in Maze
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
+              description_teacher: In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.
             Snowflakes with Anna and Elsa:
               key: Snowflakes with Anna and Elsa
               name: Snowflakes with Anna and Elsa
-              description_student: 'Anna and Elsa have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
-              description_teacher: Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using Anna and Elsa's excellent ice-skating skills!
+              description_student: '_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. '
+              description_teacher: Now that students know how to layer their **loops**, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!
             'Looking Ahead with Minecraft ':
               key: 'Looking Ahead with Minecraft '
               name: Looking Ahead with Minecraft
-              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
-              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!
             If/Else with Bee:
               key: If/Else with Bee
               name: If/Else with Bee
@@ -21187,8 +21155,8 @@ en:
             Harvesting with Conditionals:
               key: Harvesting with Conditionals
               name: Harvesting with Conditionals
-              description_student: It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.
-              description_teacher: Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.
+              description_student: It's not always clear when to use each **conditional**.  This lesson will help you get practice deciding what to do.
+              description_teacher: Students will practice `while` **loops**, `until` **loops**, and `if / else` statements. All of these blocks use **conditionals**. By practicing all three, students will learn to write complex and flexible code.
             Functions in Minecraft:
               key: Functions in Minecraft
               name: Functions in Minecraft
@@ -21217,8 +21185,8 @@ en:
             Changing Variables with Artist:
               key: Changing Variables with Artist
               name: Changing Variables with Artist
-              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
-              description_teacher: In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a freeplay level to show what they have learned and create their own designs.
+              description_student: In this lesson, you'll make drawings using **variables** that change as the program runs.
+              description_teacher: In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.
             For Loops with Bee:
               key: For Loops with Bee
               name: For Loops with Bee
@@ -21228,7 +21196,7 @@ en:
               key: For Loops with Artist
               name: For Loops with Artist
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
-              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.
             Swimming Fish in Sprite Lab:
               key: Swimming Fish in Sprite Lab
               name: Swimming Fish in Sprite Lab
@@ -21247,7 +21215,7 @@ en:
             Virtual Pet with Sprite Lab:
               key: Virtual Pet with Sprite Lab
               name: Virtual Pet with Sprite Lab
-              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
               description_teacher: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
             End of Course Project:
               key: End of Course Project
