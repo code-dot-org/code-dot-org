@@ -10,13 +10,13 @@ import { styles } from "../constants.js";
 
 class CrossTab extends Component {
   static propTypes = {
-    crossTabData: PropTypes.object,
+    crossTabData: PropTypes.object
   };
 
-  getCellStyle = (percent) => {
+  getCellStyle = percent => {
     return {
       ...styles["crossTabCell" + Math.round(percent / 20)],
-      ...styles.tableCell,
+      ...styles.tableCell
     };
   };
   render() {
@@ -88,6 +88,6 @@ class CrossTab extends Component {
   }
 }
 
-export default connect((state) => ({
-  crossTabData: getCrossTabData(state),
+export default connect(state => ({
+  crossTabData: getCrossTabData(state)
 }))(CrossTab);

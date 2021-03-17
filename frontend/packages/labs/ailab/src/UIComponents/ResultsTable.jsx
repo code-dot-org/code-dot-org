@@ -6,7 +6,7 @@ import {
   getConvertedAccuracyCheckExamples,
   getConvertedLabels,
   getAccuracyGrades,
-  isRegression,
+  isRegression
 } from "../redux";
 import { styles, colors, ResultsGrades } from "../constants";
 
@@ -18,7 +18,7 @@ class ResultsTable extends Component {
     accuracyCheckLabels: PropTypes.array,
     accuracyCheckPredictedLabels: PropTypes.array,
     accuracyGrades: PropTypes.array,
-    isRegression: PropTypes.bool,
+    isRegression: PropTypes.bool
   };
 
   render() {
@@ -35,7 +35,7 @@ class ResultsTable extends Component {
                   style={{
                     ...styles.largeText,
                     ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader,
+                    ...styles.resultsTableFirstHeader
                   }}
                 >
                   Features
@@ -43,7 +43,7 @@ class ResultsTable extends Component {
                 <th
                   style={{
                     ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader,
+                    ...styles.resultsTableFirstHeader
                   }}
                 >
                   <span style={styles.largeText}>{"A.I. Prediction"}</span>
@@ -51,7 +51,7 @@ class ResultsTable extends Component {
                 <th
                   style={{
                     ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader,
+                    ...styles.resultsTableFirstHeader
                   }}
                 >
                   <span style={styles.largeText}>{"Actual"}</span>
@@ -64,7 +64,7 @@ class ResultsTable extends Component {
                   style={{
                     ...styles.largeText,
                     ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader,
+                    ...styles.resultsTableFirstHeader
                   }}
                 />
               </tr>
@@ -75,7 +75,7 @@ class ResultsTable extends Component {
                       style={{
                         ...styles.tableHeader,
                         backgroundColor: colors.feature,
-                        ...styles.resultsTableSecondHeader,
+                        ...styles.resultsTableSecondHeader
                       }}
                       key={index}
                     >
@@ -87,7 +87,7 @@ class ResultsTable extends Component {
                   style={{
                     ...styles.tableHeader,
                     backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader,
+                    ...styles.resultsTableSecondHeader
                   }}
                 >
                   {this.props.labelColumn}
@@ -96,7 +96,7 @@ class ResultsTable extends Component {
                   style={{
                     ...styles.tableHeader,
                     backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader,
+                    ...styles.resultsTableSecondHeader
                   }}
                 >
                   {this.props.labelColumn}
@@ -105,7 +105,7 @@ class ResultsTable extends Component {
                   style={{
                     ...styles.tableHeader,
                     backgroundColor: colors.label,
-                    ...styles.resultsTableSecondHeader,
+                    ...styles.resultsTableSecondHeader
                   }}
                 />
               </tr>
@@ -150,7 +150,7 @@ class ResultsTable extends Component {
   }
 }
 
-export default connect((state) => ({
+export default connect(state => ({
   selectedFeatures: state.selectedFeatures,
   labelColumn: state.labelColumn,
   accuracyCheckExamples: getConvertedAccuracyCheckExamples(state),
@@ -160,5 +160,5 @@ export default connect((state) => ({
     state.accuracyCheckPredictedLabels
   ),
   accuracyGrades: getAccuracyGrades(state),
-  isRegression: isRegression(state),
+  isRegression: isRegression(state)
 }))(ResultsTable);

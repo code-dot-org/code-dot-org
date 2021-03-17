@@ -12,10 +12,10 @@ class DataDisplay extends Component {
     selectedFeatures: PropTypes.array,
     setCurrentColumn: PropTypes.func,
     currentColumn: PropTypes.string,
-    currentPanel: PropTypes.string,
+    currentPanel: PropTypes.string
   };
 
-  getColumnHeaderStyle = (key) => {
+  getColumnHeaderStyle = key => {
     let style;
 
     if (key === this.props.currentColumn) {
@@ -39,7 +39,7 @@ class DataDisplay extends Component {
     return { ...style, ...styles.tableHeader };
   };
 
-  getColumnCellStyle = (key) => {
+  getColumnCellStyle = key => {
     let style;
 
     if (key === this.props.currentColumn) {
@@ -91,7 +91,7 @@ class DataDisplay extends Component {
             <thead>
               <tr>
                 {data.length > 0 &&
-                  Object.keys(data[0]).map((key) => {
+                  Object.keys(data[0]).map(key => {
                     return (
                       <th
                         key={key}
@@ -110,7 +110,7 @@ class DataDisplay extends Component {
                   return (
                     <tr key={index}>
                       {data.length > 0 &&
-                        Object.keys(row).map((key) => {
+                        Object.keys(row).map(key => {
                           return (
                             <td
                               key={key}
@@ -136,16 +136,16 @@ class DataDisplay extends Component {
 }
 
 export default connect(
-  (state) => ({
+  state => ({
     data: state.data,
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
-    currentPanel: state.currentPanel,
+    currentPanel: state.currentPanel
   }),
-  (dispatch) => ({
+  dispatch => ({
     setCurrentColumn(column) {
       dispatch(setCurrentColumn(column));
-    },
+    }
   })
 )(DataDisplay);
