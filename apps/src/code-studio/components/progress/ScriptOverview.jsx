@@ -163,6 +163,7 @@ class ScriptOverview extends React.Component {
                 <UnitCalendar
                   lessons={unitCalendarLessons}
                   weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}
+                  width={550}
                 />
               </div>
             )}

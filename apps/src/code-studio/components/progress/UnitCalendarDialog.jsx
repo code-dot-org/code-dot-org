@@ -90,6 +90,7 @@ export default class UnitCalendarDialog extends Component {
         <UnitCalendar
           lessons={lessons}
           weeklyInstructionalMinutes={this.state.instructionalMinutes}
+          weekWidth={585}
         />
         <Button
           style={styles.button}

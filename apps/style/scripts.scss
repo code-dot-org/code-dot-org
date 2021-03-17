@@ -27,7 +27,7 @@
    * shrink it a bit. */
   .container {
     /* width value comes from https://stackoverflow.com/a/11084797/1810460 */
-    width: 670px;
+    width: 670px !important;
   }
 
   .lesson-group {
@@ -35,7 +35,6 @@
   }
 
   .unit-calendar-for-printing {
-    width: 700px;
     visibility: visible !important;
     height: auto !important;
     padding: 10px 0px 20px 0px;
