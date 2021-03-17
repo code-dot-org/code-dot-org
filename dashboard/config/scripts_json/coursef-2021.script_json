@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-17 18:23:44 UTC",
+    "serialized_at": "2021-03-17 19:02:22 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -848,6 +848,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "385b01c4-de16-401f-bc49-71e637e93ccc",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "385b01c4-de16-401f-bc49-71e637e93ccc",
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021"
@@ -2575,6 +2588,17 @@
       "seeding_key": {
         "activity_section.key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
+      "key": "c242beca-92da-4ddf-bbf3-42747e4d40ab",
+      "position": 1,
+      "properties": {
+        "description": "###Food Chain Variables (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[**Food Chain Variables**](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will identify various values for the variables found in food chains (Example: plants, animals, decomposer, etc.) as they document these values on notecards and show the movement of matter through an environment. Students will also learn about the 10% Rule and further describe energy flow with a writing prompt.\n\n*Standards Addressed:*\n * **CCSS.ELA-LITERACY.W.5.2.B:** Develop the topic with facts, definitions, concrete details, quotations, or other information and examples related to the topic.\n\n* **CCSS.MATH.CONTENT.5.NF.B.7.C:** Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem. \n\n* **NGSS.5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c242beca-92da-4ddf-bbf3-42747e4d40ab",
+        "lesson_activity.key": "385b01c4-de16-401f-bc49-71e637e93ccc"
       }
     },
     {

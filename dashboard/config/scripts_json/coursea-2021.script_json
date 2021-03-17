@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-15 13:00:20 UTC",
+    "serialized_at": "2021-03-17 20:41:47 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -118,7 +118,7 @@
         "overview": "This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
         "student_overview": "Click and drag to finish the puzzles.",
         "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
-        "preparation": "- Create your own class section on Code.org and make sure every student has a card with their **passcode** on it.\r\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\r\n- Have the school IT person add a quick link for your class section to the computer desktop.\r\n- Review the Common Sense Education website for more online safety content.",
+        "preparation": "- Watch the ***How to Make a Class Section** on Code.org - Teacher Video. Create your own class section on Code.org and make sure every student has a card with their passcode on it.\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\n- Have the school IT person add a quick link for your class section to the computer desktop.\n- Review the Common Sense Education website for more online safety content.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -137,7 +137,7 @@
       "properties": {
         "overview": "This unplugged lesson brings together teams with a simple task: get the \"flurb\" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.",
         "student_overview": "Write instructions to get the Flurb to the fruit.",
-        "purpose": "The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
+        "purpose": "The bridge from **algorithms** to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language.  This activity will help students gain experience reading and writing in shorthand code.",
         "preparation": " - Print one ***Happy Map Cards** and one ***Happy Map Game Pieces** per group of 2-3.\n - Make sure each student has a ***Think Spot Journal - Reflection Journal**.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
@@ -1356,7 +1356,7 @@
       "key": "d62f31be-e1c0-4384-a410-e8a8f1b84d7b",
       "position": 2,
       "properties": {
-        "description": "**Say:** Well done!  You just gave me a list of steps to finish a task.  In computer science, that's called an Algorithm!\n(Follow up with your typical method of introducing vocabulary: word wall, repeat-after-me, etc.)",
+        "description": "**Say:** _Well done!  You just gave me a list of steps to finish a task.  In computer science, that's called an **Algorithm**!_\n(Follow up with your typical method of introducing vocabulary: word wall, repeat-after-me, etc.)",
         "tips": [
           {
             "type": "teachingTip",
@@ -1373,7 +1373,7 @@
       "key": "7719a51a-42d9-41f0-bc30-c5475b18af7c",
       "position": 1,
       "properties": {
-        "progression_name": "Happy Maps Video - Unplugged Activity",
+        "progression_name": "Video: Happy Maps - Unplugged Activity",
         "name": "Happy Maps Programming"
       },
       "seeding_key": {
@@ -1385,7 +1385,7 @@
       "key": "7beae8bf-6b0e-41da-9397-06b0c9fb0b52",
       "position": 2,
       "properties": {
-        "description": "In this exercise, the class will get map cards that have a pre-defined start space (Flurb) and end space (fruit).  Students will need to get the Flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the Flurb to the fruit.\n\n**Think:**  This Flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their algorithm to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an algorithm into a \"program\" happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the algorithm that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time debugging as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!"
+        "description": "In this exercise, the class will get map cards that have a pre-defined start space (flurb) and end space (fruit).  Students will need to get the flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit.\n\n**Think:**  This flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their **algorithm** to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an **algorithm** into a **program** happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the **algorithm** that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time **debugging** as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!"
       },
       "seeding_key": {
         "activity_section.key": "7beae8bf-6b0e-41da-9397-06b0c9fb0b52",
@@ -1396,7 +1396,7 @@
       "key": "84f50800-a9f3-4ae6-b023-f63cc376e061",
       "position": 3,
       "properties": {
-        "description": "###Students' Turn\n\n**Group:** If your class is comfortable, place students into small groups of 2-3.  Otherwise, you can continue solving these problems as a class and having them think-pair-share to write programs. \n\n\n**Distribute:** Pass out one of the images from the **Happy Map Cards - Worksheet** to each group as needed.  \n*(Optional)* If you start noticing that students are ready for more, use the provided **Happy Map Game Pieces - Manipulatives** and let students choose their own start and finish destinations on the blank map.\n\nEncourage the students to follow these steps:\n\n- Discuss an algorithm to get the Flurb to the fruit.\n- Encode the algorithm into arrows in their journals.\n- Try their code to see if everything works as expected.\n- Debug any issues and fix their code until it works correctly.\n\n**Share:** When the lesson is done, offer to let groups share out the most difficult maps that they solved. If you have time, ask them to share their solutions as well."
+        "description": "###Students' Turn\n\n**Group:** If your class is comfortable, place students into small groups of 2-3.  Otherwise, you can continue solving these problems as a class and having them think-pair-share to write programs. \n\n\n**Distribute:** Pass out one of the images from the ***Happy Map Cards - Worksheet** to each group as needed.  \n*(Optional)* If you start noticing that students are ready for more, use the provided ***Happy Map Game Pieces - Manipulatives** and let students choose their own start and finish destinations on the blank map.\n\nEncourage the students to follow these steps:\n\n- Discuss an algorithm to get the flurb to the fruit.\n- Encode the algorithm into arrows in their journals.\n- Try their code to see if everything works as expected.\n- Debug any issues and fix their code until it works correctly.\n\n**Share:** When the lesson is done, offer to let groups share out the most difficult maps that they solved. If you have time, ask them to share their solutions as well."
       },
       "seeding_key": {
         "activity_section.key": "84f50800-a9f3-4ae6-b023-f63cc376e061",
@@ -1407,22 +1407,11 @@
       "key": "a6b03761-2c05-45cd-be08-78c966e2f444",
       "position": 1,
       "properties": {
-        "description": "####Flash Chat\n**Discuss:** When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (*code*) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- *Do you think that someone who speaks another language would be able to run your program?* \n- *Why or why not?*\n\n\n\n",
+        "description": "####Flash Chat\n**Discuss:** When it’s time to wind down, ask students if they can tell the difference between an algorithm and a program. Both are a list of steps, but a program (*code*) has been encoded in a way that can be run by a machine (or a kindergartener!)\n\n- *Do you think that someone who speaks another language would be able to run your program?* \n- *Why or why not?*\n\n####Journaling\n\nStudents should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image**\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?\n\n",
         "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a6b03761-2c05-45cd-be08-78c966e2f444",
-        "lesson_activity.key": "3290a55e-fedd-4672-8b81-dfac2115a13b"
-      }
-    },
-    {
-      "key": "59165939-4781-4c64-a90d-a18f29826646",
-      "position": 2,
-      "properties": {
-        "description": "\n####Journaling\n\nStudents should be encouraged to capture their thoughts in their journals after each activity (with text or images.) Choose a journal prompt that will help students remember the purpose of this exercise.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image**\n that shows how you felt about today's lesson in the corner of your journal page.\n - Can you draw your own flurb map?  \n - What would the code be to solve your map?"
-      },
-      "seeding_key": {
-        "activity_section.key": "59165939-4781-4c64-a90d-a18f29826646",
         "lesson_activity.key": "3290a55e-fedd-4672-8b81-dfac2115a13b"
       }
     },
@@ -3039,7 +3028,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Happy Maps Video - Unplugged Activity",
+        "progression": "Video: Happy Maps - Unplugged Activity",
         "level_keys": [
           "HappyMaps-Unplugged_2021"
         ]
@@ -6718,6 +6707,18 @@
       }
     },
     {
+      "name": "How to Make a Class Section on Code.org",
+      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "key": "how_to_make_a_class_section_on_code_org",
+      "properties": {
+        "type": "Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_make_a_class_section_on_code_org"
+      }
+    },
+    {
       "name": "Happy Maps",
       "url": "https://youtu.be/hrnhiKAQ1_k",
       "key": "unplugged-video-happy-maps",
@@ -7372,6 +7373,12 @@
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "resource.key": "feeling_faces_emotion"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "how_to_make_a_class_section_on_code_org"
       }
     },
     {

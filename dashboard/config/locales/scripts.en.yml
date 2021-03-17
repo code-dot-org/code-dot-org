@@ -20498,12 +20498,12 @@ en:
               key: Sequencing in Maze
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: Using characters from Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: Using characters from _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               key: Programming in Maze
               name: Programming with Angry Birds
               description_student: Create programs to help the Angry Bird move through the maze.
-              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential **algorithms** to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Harvester:
               key: Programming in Harvester
               name: Programming with Harvester
@@ -20513,22 +20513,22 @@ en:
               key: 'Loops: Getting Loopy'
               name: Getting Loopy
               description_student: In this lesson, we'll have a dance party using repeat loops!
-              description_teacher: As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
+              description_teacher: As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how **loops** can be used to more easily communicate instructions that have a lot of repetition by looking at the **repeated** patterns of movement in a dance.
             Loops in Harvester:
               key: Loops in Harvester
               name: Loops with Harvester
               description_student: Help the Harvester collect even more, using loops!
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
+              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using **loops** to pick corn more efficiently on Code.org.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
-              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
+              description_teacher: In this lesson, students continue learning the concept of **loops**. Here, Laurel the Adventurer uses **loops** to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Loops in Artist:
               key: Loops in Artist
               name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: Returning to **loops**, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, **loops** were used to traverse a maze and collect treasure. Here, students use **loops** to create patterns. At the end of this stage, students will be given the opportunity to create their own images using **loops**.
             The Right App:
               key: The Right App
               name: The Right App
@@ -20538,12 +20538,12 @@ en:
               key: 'Events: The Big Event'
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
-              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+              description_teacher: "**Events** are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what **events** are for."
             Events in Play Lab:
               key: Events in Play Lab
               name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+              description_teacher: In this online activity, students will have the opportunity to learn how to use **events** in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
