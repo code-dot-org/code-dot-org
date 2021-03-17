@@ -496,7 +496,7 @@ module Services
           pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
         end.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
-        g
+
         LessonsProgrammingExpression.new(
           lesson_id: lesson_id,
           programming_expression_id: programming_expression_id
