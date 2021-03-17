@@ -16,6 +16,7 @@ module Services
     setup do
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
+      @programming_environment = create :programming_environment, name: 'new-lab'
     end
 
     # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
@@ -82,7 +83,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(89) do
+      assert_queries(90) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -601,7 +602,7 @@ module Services
     # Programming Expressions are shared across all courses. We need to make sure all the
     # programming expressions we need for this script are created, but we should never remove
     # a programming expression because it might be in use by another script.
-    test 'seed deletes lessons_standards' do
+    test 'seed deletes lessons programming expressions' do
       script = create_script_tree
       original_counts = get_counts
 
@@ -619,6 +620,16 @@ module Services
       expected_counts = original_counts.clone
       expected_counts['LessonsProgrammingExpression'] -= 1
       assert_equal expected_counts, get_counts
+    end
+
+    test 'seed can only find programming expression if programming environment matches' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+      @programming_environment.update!(name: 'not-new-lab')
+      assert_raises do
+        ScriptSeed.seed_from_json(json)
+      end
     end
 
     test 'import_script sets seeded_from from serialized_at' do
@@ -859,7 +870,7 @@ module Services
         end
 
         (1..num_programming_expressions_per_lesson).each do |pe|
-          programming_expression = create :programming_expression, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          programming_expression = create :programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
