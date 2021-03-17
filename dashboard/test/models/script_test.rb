@@ -264,7 +264,8 @@ class ScriptTest < ActiveSupport::TestCase
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
-    create :maze, name: 'test_maze_level'
+    # use 'custom' level num to make level key match level name.
+    create :maze, name: 'test_maze_level', level_num: 'custom'
     script_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
     Script.setup([script_file])
 
