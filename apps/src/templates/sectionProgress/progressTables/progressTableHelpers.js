@@ -1,15 +1,16 @@
 import moment from 'moment';
 
 export function timeSpentFormatter(studentProgress) {
-  if (!studentProgress || !studentProgress.timeSpent) {
+  if (!studentProgress || studentProgress.timeSpent === 0) {
     return '-';
   }
-
-  return `${Math.round(studentProgress.timeSpent / 60)}`;
+  // time spent is recorded in ms
+  const minutes = studentProgress.timeSpent / (1000 * 60);
+  return `${Math.round(minutes)}`;
 }
 
 export function lastUpdatedFormatter(studentProgress) {
-  if (!studentProgress || !studentProgress.lastTimestamp) {
+  if (!studentProgress || studentProgress.lastTimestamp === 0) {
     return '-';
   }
 
