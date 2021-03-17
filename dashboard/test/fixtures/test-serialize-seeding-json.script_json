@@ -905,24 +905,28 @@
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_environment.name": "programming-environment-102",
         "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_environment.name": "programming-environment-103",
         "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_environment.name": "programming-environment-104",
         "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_environment.name": "programming-environment-105",
         "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-2"
       }
     }
