@@ -59,11 +59,16 @@ $content-view-width: $content-width - $student-list-width;
   }
   .student-list {
     table,
-    th {
+    th,
+    td {
       width: $student-list-width;
     }
-    .progress-table-student-name {
-      width: $student-list-width;
+    tbody {
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
     }
     .expanded-row {
       td {
