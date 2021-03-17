@@ -129,7 +129,7 @@ class LessonGroup extends React.Component {
     }
 
     return (
-      <div style={styles.main}>
+      <div style={styles.main} className="lesson-group">
         <div
           style={[
             styles.header,
