@@ -55,7 +55,7 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
           }
         ]
     }"
-    assert_equal [form], library_question.published_forms_appeared_in
+    assert_equal Set[form], library_question.published_forms_appeared_in
   end
 
   test 'published_forms_appeared_in returns empty for library question in unpublished form' do

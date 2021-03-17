@@ -2,29 +2,33 @@ require 'test_helper'
 
 module Foorm
   class LibraryQuestionsControllerTest < ActionController::TestCase
-    generate_library_question_id = proc do
+    generate_library_question = proc do
       library = create :foorm_library, :with_questions
-      library_question_id = library.library_questions.first.id
+      library_question = library.library_questions.first
 
-      {id: library_question_id}
+      # Question required as parameter to pass before_action on :update and :create actions
+      {
+        id: library_question.id,
+        question: library_question.question
+      }
     end
 
     test_user_gets_response_for :show,
       user: :student,
       method: :get,
-      params: generate_library_question_id,
+      params: generate_library_question,
       response: :forbidden
 
     test_user_gets_response_for :update,
       user: :student,
       method: :get,
-      params: generate_library_question_id,
+      params: generate_library_question,
       response: :forbidden
 
     test_user_gets_response_for :create,
       user: :student,
       method: :post,
-      params: generate_library_question_id,
+      params: generate_library_question,
       response: :forbidden
 
     test 'update succeeds on existing library' do
