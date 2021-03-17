@@ -162,7 +162,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    let availableLibraryQuestions = store.getState().foorm.availableSubEntities;
+    const availableLibraryQuestions = store.getState().foorm
+      .availableSubEntities;
     assert(
       _.some(availableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
@@ -198,8 +199,9 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    let availableLibraryQuestions = store.getState().foorm.availableSubEntities;
-    let availableLibraries = store.getState().foorm.availableEntities;
+    const availableLibraryQuestions = store.getState().foorm
+      .availableSubEntities;
+    const availableLibraries = store.getState().foorm.availableEntities;
     assert(
       _.some(availableLibraries, ['id', 2]),
       'Newly saved library does not appear in list of available libraries'

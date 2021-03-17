@@ -28,15 +28,14 @@ const JSONErrorMessage =
   'There is a parsing error in the JSON being edited. Errors are noted on the left side of the editor.';
 
 /*
-Parent component for editing Foorm Libraries --
-specifically, for editing individual Library Questions that are the
-atomic unit that underlie each Libraries.
-Library Questions can be reused across multiple Foorm Forms.
-Will initially show a choice between loading an existing library or an empty library.
-If an existing library is chosen, a user will then choose between editing an existing
-library question, or creating a new one.
-Finally, after these choices are made, we render FoormLibraryEditor with the chosen
-library question to allow editing that library question.
+  Parent component for editing Foorm Libraries --
+  specifically, for editing individual Library Questions that are the atomic unit that underlie each Library.
+  Library Questions can be reused across multiple Foorm Forms.
+  This component will initially show a choice between loading an existing library or an empty library.
+  If an existing library is chosen, a user will then choose between
+  editing an existing library question, or creating a new one.
+  Finally, after these choices are made, we render FoormLibraryEditor with the chosen
+  library question to allow editing that library question.
 */
 class FoormLibraryEditorManager extends React.Component {
   static propTypes = {
