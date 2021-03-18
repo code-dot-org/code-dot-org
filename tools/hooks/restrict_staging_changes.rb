@@ -9,7 +9,7 @@ def main
   exit(0) unless branch_name == 'staging'
 
   HooksUtils.get_staged_files.each do |filename|
-    raise "STAGING FILE BLOCKED: #{filename}" if HookUtils.prohibited?(filename)
+    raise "STAGING FILE BLOCKED: #{filename}" if HooksUtils.prohibited?(filename)
   end
 end
 
