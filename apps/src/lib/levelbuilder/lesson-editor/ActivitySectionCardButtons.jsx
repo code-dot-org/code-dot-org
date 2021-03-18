@@ -32,6 +32,25 @@ const styles = {
   }
 };
 
+const AddButton = function(props) {
+  return (
+    <button
+      onClick={props.handler}
+      className="btn"
+      style={styles.addButton}
+      type="button"
+    >
+      <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+      {props.displayText}
+    </button>
+  );
+};
+
+AddButton.propTypes = {
+  handler: PropTypes.func,
+  displayText: PropTypes.string.isRequired
+};
+
 class ActivitySectionCardButtons extends Component {
   static propTypes = {
     activitySection: activitySectionShape.isRequired,
@@ -164,66 +183,31 @@ class ActivitySectionCardButtons extends Component {
       <div>
         <div style={styles.bottomControls}>
           <span>
-            <button
-              onClick={this.handleOpenAddLevel}
-              className="btn uitest-open-add-level-button"
-              style={styles.addButton}
-              type="button"
-            >
-              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-              Level
-            </button>
+            <AddButton handler={this.handleOpenAddLevel} displayText="Level" />
             {this.props.hasLessonPlan && (
               <span>
-                <button
-                  onMouseDown={this.handleOpenAddTip}
-                  className="btn"
-                  style={styles.addButton}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Callout
-                </button>
-                <button
-                  onMouseDown={this.handleOpenAddResource}
-                  className="btn"
-                  style={styles.addButton}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Resource
-                </button>
+                <AddButton
+                  handler={this.handleOpenAddTip}
+                  displayText="Callout"
+                />
+                <AddButton
+                  handler={this.handleOpenAddResource}
+                  displayText="Resource"
+                />
                 {this.props.vocabularies.length > 0 && (
-                  <button
-                    onMouseDown={this.handleOpenAddVocabulary}
-                    className="btn"
-                    style={styles.addButton}
-                    type="button"
-                  >
-                    <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                    Vocab
-                  </button>
+                  <AddButton
+                    handler={this.handleOpenAddVocabulary}
+                    displayText="Vocab"
+                  />
                 )}
-
-                <button
-                  onMouseDown={this.handleAddSlide}
-                  className="btn"
-                  style={styles.addButton}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Slide
-                </button>
-
-                <button
-                  onMouseDown={this.handleOpenUploadImage}
-                  className="btn"
-                  style={styles.addButton}
-                  type="button"
-                >
-                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                  Image
-                </button>
+                <AddButton
+                  handler={this.handleOpenAddSlide}
+                  displayText="Slide"
+                />
+                <AddButton
+                  handler={this.handleOpenAddUploadImage}
+                  displayText="Image"
+                />
               </span>
             )}
           </span>
