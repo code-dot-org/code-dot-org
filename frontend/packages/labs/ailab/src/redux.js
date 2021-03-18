@@ -496,18 +496,23 @@ export default function rootReducer(state = initialState, action) {
   }
   if (action.type === SET_CURRENT_COLUMN) {
     if (!getShowColumnClicking(state)) {
-      // Do nothing.
+      // If no column clicking, do nothing.
+      return state;
+    }
+    if (
+      state.currentPanel === "dataDisplayFeatures" &&
+      action.currentColumn === state.labelColumn
+    ) {
+      // If doing feature selection, and the label column is clicked, do nothing.
+      return state;
     } else if (state.currentColumn === action.currentColumn) {
+      // If column is selected, then deselect.
       return {
         ...state,
         currentColumn: undefined
       };
-    } else if (
-      state.currentPanel !== "dataDisplayFeatures" ||
-      action.currentColumn !== state.labelColumn
-    ) {
-      // We don't do this if we are on the feature-selection panel
-      // and the user chose the column that is already the label.
+    } else {
+      // Select the column.
       return {
         ...state,
         currentColumn: action.currentColumn
