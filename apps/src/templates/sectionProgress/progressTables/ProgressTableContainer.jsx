@@ -149,9 +149,7 @@ class ProgressTableContainer extends React.Component {
     const rows = [...this.state.rows];
     rows[rowIndex].isExpanded = true;
     rows.splice(rowIndex + 1, 0, ...detailRows);
-    this.setState({
-      rows: rows
-    });
+    this.setState({rows});
   }
 
   collapseDetailRows(rowData, rowIndex) {
@@ -159,9 +157,7 @@ class ProgressTableContainer extends React.Component {
       return row.student.id !== rowData.student.id || row.expansionIndex === 0;
     });
     rows[rowIndex].isExpanded = false;
-    this.setState({
-      rows: rows
-    });
+    this.setState({rows});
   }
 
   onRow = row => {
@@ -201,12 +197,12 @@ class ProgressTableContainer extends React.Component {
             needsGutter={this.needsContentHeaderGutter()}
             onScroll={this.onScroll}
             scriptData={this.props.scriptData}
+            lessonOfInterest={this.props.lessonOfInterest}
             onClickLesson={this.props.onClickLesson}
             columnWidths={this.props.columnWidths}
             lessonCellFormatters={this.props.lessonCellFormatters}
             extraHeaderFormatters={this.props.extraHeaderFormatters}
             includeHeaderArrows={this.props.includeHeaderArrows}
-            {...this.props}
           />
         </div>
       </div>
