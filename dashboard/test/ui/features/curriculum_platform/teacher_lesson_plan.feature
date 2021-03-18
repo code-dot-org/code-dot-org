@@ -46,7 +46,7 @@ Feature: Teacher Lesson Plan
     And I wait until element "li:contains(Word - This is a definition of the word word)" is visible
 
     # Check for Code
-    And I wait until element "h2:contains(Code Introduced)" is visible
+    And I wait until element "h2:contains(Introduced Code)" is visible
     And I wait until element "li a:contains(playSound)" is visible
 
     # Check for Teaching Guide
