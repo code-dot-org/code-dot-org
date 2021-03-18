@@ -104,6 +104,7 @@ WebLab.prototype.init = function(config) {
     return new Promise((_, reject) => {
       // Delete everything from the service and restart the initial sync
       filesApi.deleteAll(
+        // you can stub this call
         xhr => {
           this.fileEntries = null;
           firehoseClient.putRecord(
