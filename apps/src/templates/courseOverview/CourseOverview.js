@@ -36,7 +36,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 
 const styles = {
   main: {
-    width: styleConstants['content-width']
+    width: '100%'
   },
   description: {
     marginBottom: 20
@@ -163,15 +163,6 @@ class CourseOverview extends Component {
       isSignedIn
     } = this.props;
 
-    // We currently set .container.main to have a width of 940 at a pretty high
-    // level and are not comfortable moving it to 970 across the board yet. The
-    // hack below makes it so that this component will be 970px and centered
-    // properly. It can be removed if/when we fix .container.main
-    const mainStyle = {
-      ...styles.main,
-      marginLeft:
-        ($('.container.main').width() - styleConstants['content-width']) / 2
-    };
     const showNotification =
       viewAs === ViewType.Teacher &&
       isTeacher &&
@@ -190,7 +181,7 @@ class CourseOverview extends Component {
     );
 
     return (
-      <div style={mainStyle}>
+      <div style={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
           <RedirectDialog
             isOpen={this.state.showRedirectDialog}

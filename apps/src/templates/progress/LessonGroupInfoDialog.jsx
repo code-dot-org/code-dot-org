@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
+import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 
 const styles = {
   description: {
@@ -48,28 +48,10 @@ export default class LessonGroupInfoDialog extends Component {
         style={styles.dialog}
       >
         <h2 style={styles.lessonGroupName}>{this.props.displayName}</h2>
-        {this.props.description && (
-          <div>
-            <h4 style={styles.subTitle}>{i18n.description()}</h4>
-            <div style={styles.description}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.description}
-              />
-            </div>
-          </div>
-        )}
-        {this.props.bigQuestions && (
-          <div>
-            <h4 style={styles.subTitle}>{i18n.bigQuestions()}</h4>
-            <div style={styles.description}>
-              <SafeMarkdown
-                openExternalLinksInNewTab={true}
-                markdown={this.props.bigQuestions}
-              />
-            </div>
-          </div>
-        )}
+        <LessonGroupInfo
+          description={this.props.description}
+          bigQuestions={this.props.bigQuestions}
+        />
         <DialogFooter rightAlign>
           <Button
             __useDeprecatedTag

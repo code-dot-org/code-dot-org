@@ -135,5 +135,11 @@
   "madlibPrintVariable": "It seems like the chatbot is responding, but it didn't print what you typed into the prompt. Make sure the right **variable** label is connected to your `print` block.",
   "madlibNoSprites": "Your prompt is working. If it is doing what you expected, you can start adding sprites to your project. What is your story or poem about?",
   "madlibNoBehavior": "Your prompt is working. If it is doing what you expected, you can give your sprites behaviors to bring your project to life. Try using different behaviors with events to make your project more interactive.",
-  "madlibExplore": "You've completed the requirements for the project, but keep going if you can. Ask the user additional questions or get creative with behaviors, backgrounds, and sounds. Click \"Keep Playing\" to make changes to your code and run it again. Press \"Continue\" to move on and finish your project."
+  "madlibExplore": "You've completed the requirements for the project, but keep going if you can. Ask the user additional questions or get creative with behaviors, backgrounds, and sounds. Click \"Keep Playing\" to make changes to your code and run it again. Press \"Continue\" to move on and finish your project.",
+  "cloudOnlyMovedY": "The cloud moved up and down but not left and right. Try a different behavior.",
+  "butterflyDidntMoveXY": "The butterfly didn't wander. Try a different behavior.",
+  "spritelabFeedbackUseFishCostume": "You need to use at least one fish costume.",
+  "spriteLabFeedbackGiveFishBehavior": "You need to give your fish a behavior.",
+  "spritelabFeedbackCreateTwoDifferentSprites": "You need two sprites with different costumes.",
+  "spritelabFeedbackGiveSecondSpriteBehavior": "Your second sprite needs a behavior."
 }
