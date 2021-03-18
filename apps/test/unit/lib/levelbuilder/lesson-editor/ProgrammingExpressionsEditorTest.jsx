@@ -15,15 +15,18 @@ describe('ProgrammingExpressionsEditor', () => {
           id: 1,
           key: '1',
           name: 'playSound',
+          category: 'UI controls',
           programmingEnvironmentName: 'applab'
         },
         {
           id: 2,
           key: '2',
           name: 'stopSound',
+          category: 'UI controls',
           programmingEnvironmentName: 'applab'
         }
       ],
+      programmingEnvironments: [],
       addProgrammingExpression,
       removeProgrammingExpression
     };
