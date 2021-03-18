@@ -5,10 +5,13 @@
   #script-breadcrumb,
   #teacher-panel-container,
   .__react_component_tooltip,
-  .teacher-info-box,
   .script-overview-top-row,
   .progress-legend,
   .google-classroom-attribution {
+    display: none;
+  }
+
+  .teacher-info-box{
     display: none !important;
   }
 
