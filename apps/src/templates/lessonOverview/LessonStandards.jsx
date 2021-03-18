@@ -20,7 +20,7 @@ export default class LessonStandards extends PureComponent {
       .groupBy('framework_name')
       .value();
     return (
-      <ul>
+      <div>
         {Object.keys(standardsByFramework).map(frameworkName => {
           const standards = standardsByFramework[frameworkName];
           return (
@@ -31,7 +31,7 @@ export default class LessonStandards extends PureComponent {
             />
           );
         })}
-      </ul>
+      </div>
     );
   }
 }
@@ -53,8 +53,8 @@ class Framework extends PureComponent {
       .groupBy(categoryKey)
       .value();
     return (
-      <li key={name}>
-        {name}
+      <details key={name}>
+        <summary>{name}</summary>
         <ul>
           {Object.keys(standardsByCategory).map(categoryShortcode => {
             const standards = standardsByCategory[categoryShortcode];
@@ -67,7 +67,7 @@ class Framework extends PureComponent {
             );
           })}
         </ul>
-      </li>
+      </details>
     );
   }
 }
