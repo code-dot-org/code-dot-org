@@ -30,7 +30,7 @@ class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
     assert_queries(0) do
       expected = {
         'lesson.key' => lesson.key,
-        'programming_environment.name' => programming_environment.name,
+        'programming_environment.name' => programming_expression.programming_environment.name,
         'programming_expression.key' => programming_expression.key
       }
       assert_equal expected, lessons_programming_expression.seeding_key(seed_context)
