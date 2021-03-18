@@ -41,7 +41,8 @@ export const colors = {
 export const styles = {
   app: {
     userSelect: "none",
-    height: "100%"
+    height: "100%",
+    fontFamily: '"Gotham 4r", sans-serif'
   },
 
   bold: {
@@ -57,7 +58,6 @@ export const styles = {
   },
 
   panelContainer: {
-    fontFamily: '"Gotham 4r", sans-serif',
     position: "relative",
     float: "left",
     width: "70%",

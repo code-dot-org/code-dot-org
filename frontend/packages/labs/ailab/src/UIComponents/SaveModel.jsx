@@ -77,7 +77,6 @@ class SaveModel extends Component {
 
     return (
       <div style={styles.panel}>
-        <div style={styles.largeText}>Model Details</div>
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>

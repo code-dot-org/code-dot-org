@@ -63,6 +63,7 @@ const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
+const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
 const SET_COLUMN_REF = "SET_COLUMN_REF";
 
@@ -196,6 +197,10 @@ export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
 
+export function setInstructionsKeyCallback(instructionsKeyCallback) {
+  return { type: SET_INSTRUCTIONS_KEY_CALLBACK, instructionsKeyCallback };
+}
+
 export function setCurrentPanel(currentPanel) {
   return { type: SET_CURRENT_PANEL, currentPanel };
 }
@@ -245,6 +250,7 @@ const initialState = {
   modelSize: undefined,
   trainedModel: undefined,
   trainedModelDetails: {},
+  instructionCallback: undefined,
   currentPanel: "selectDataset",
   currentColumn: undefined,
   resultsPhase: undefined,
@@ -420,6 +426,7 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...initialState,
       selectedTrainer: state.mode && state.mode.hideSelectTrainer,
+      instructionsKeyCallback: state.instructionsKeyCallback,
       mode: state.mode
     };
   }
@@ -470,7 +477,17 @@ export default function rootReducer(state = initialState, action) {
       ...trainedModelDetails
     };
   }
+  if (action.type === SET_INSTRUCTIONS_KEY_CALLBACK) {
+    return {
+      ...state,
+      instructionsKeyCallback: action.instructionsKeyCallback
+    };
+  }
   if (action.type === SET_CURRENT_PANEL) {
+    if (state.instructionsKeyCallback) {
+      state.instructionsKeyCallback(action.currentPanel);
+    }
+
     if (action.currentPanel === "dataDisplayLabel") {
       return {
         ...state,
@@ -480,6 +497,7 @@ export default function rootReducer(state = initialState, action) {
         selectedFeatures: []
       };
     }
+
     return {
       ...state,
       currentPanel: action.currentPanel,
