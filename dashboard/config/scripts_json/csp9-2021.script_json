@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:58:16 UTC",
+    "serialized_at": "2021-03-18 22:10:21 UTC",
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -1968,10 +1968,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Exploring Metadata",
         "level_keys": [
           "CSP U9L1 Metadata_2021"
-        ]
+        ],
+        "progression": "Exploring Metadata"
       },
       "named_level": null,
       "bonus": null,
@@ -2020,10 +2020,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Making Bar Charts and Histograms",
         "level_keys": [
           "CSP U9L2 Making Bar Charts and Histograms_2021"
-        ]
+        ],
+        "progression": "Making Bar Charts and Histograms"
       },
       "named_level": null,
       "bonus": null,
@@ -2072,10 +2072,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Cleaning Data",
         "level_keys": [
           "CSP U9L3 Data Cleaning_2021"
-        ]
+        ],
+        "progression": "Cleaning Data"
       },
       "named_level": null,
       "bonus": null,
@@ -2149,10 +2149,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Crosstab and Scatter Charts",
         "level_keys": [
           "CSP U9L4 Making Crosstabs and Scatter Plots_2021"
-        ]
+        ],
+        "progression": "Crosstab and Scatter Charts"
       },
       "named_level": null,
       "bonus": null,
@@ -2175,10 +2175,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "What Type of Chart?",
         "level_keys": [
           "Which Type of Chart_2021"
-        ]
+        ],
+        "progression": "What Type of Chart?"
       },
       "named_level": null,
       "bonus": null,
@@ -2227,10 +2227,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Video_Machine_Learning_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2253,10 +2253,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_FishVTrash_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2279,10 +2279,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_CreaturesVTrashDemo_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2305,10 +2305,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_CreaturesVTrash_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2331,10 +2331,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Video_Training_Data_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2357,10 +2357,10 @@
       "activity_section_position": 6,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Short_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2383,10 +2383,10 @@
       "activity_section_position": 7,
       "assessment": null,
       "properties": {
-        "progression": "AI for Oceans - Machine Learning",
         "level_keys": [
           "Oceans_Long_2021"
-        ]
+        ],
+        "progression": "AI for Oceans - Machine Learning"
       },
       "named_level": null,
       "bonus": null,
@@ -2435,10 +2435,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Data Story Workspace",
         "level_keys": [
           "CSP U9 Data Story Day 1_2021"
-        ]
+        ],
+        "progression": "Data Story Workspace"
       },
       "named_level": null,
       "bonus": null,
@@ -2461,10 +2461,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Data Story Workspace",
         "level_keys": [
           "CSP U9 Data Story Day 2_2021"
-        ]
+        ],
+        "progression": "Data Story Workspace"
       },
       "named_level": null,
       "bonus": null,
@@ -3310,5 +3310,8 @@
         "objective.key": "923cb922-4718-43ed-a135-f3bd078fd3db"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
