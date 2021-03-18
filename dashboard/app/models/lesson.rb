@@ -228,8 +228,8 @@ class Lesson < ApplicationRecord
   end
 
   def student_lesson_plan_pdf_url
-    if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan && Services::LessonPlanPdfs.student_pdf_exists_for?(self)
-      Services::LessonPlanPdfs.get_student_url(self)
+    if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
+      Services::LessonPlanPdfs.get_url(self, true)
     end
   end
 
