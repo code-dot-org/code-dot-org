@@ -14,8 +14,7 @@ class DataDisplay extends Component {
     setHighlightColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     highlightColumn: PropTypes.string,
-    setColumnRef: PropTypes.func,
-    currentPanel: PropTypes.string
+    setColumnRef: PropTypes.func
   };
 
   getColumnHeaderStyle = key => {
@@ -87,20 +86,11 @@ class DataDisplay extends Component {
       data,
       setCurrentColumn,
       setColumnRef,
-      setHighlightColumn,
-      currentPanel
+      setHighlightColumn
     } = this.props;
 
     return (
       <div id="data-display" style={styles.panel}>
-        <div style={styles.largeText}>
-          {currentPanel === "dataDisplayLabel" && (
-            <div>Explore columns and choose a label:</div>
-          )}
-          {currentPanel === "dataDisplayFeatures" && (
-            <div>Explore pairs and choose features:</div>
-          )}
-        </div>
         <div
           style={styles.tableParent}
           onScroll={() => setCurrentColumn(undefined)}
@@ -164,8 +154,7 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
-    highlightColumn: state.highlightColumn,
-    currentPanel: state.currentPanel
+    highlightColumn: state.highlightColumn
   }),
   dispatch => ({
     setCurrentColumn(column) {
