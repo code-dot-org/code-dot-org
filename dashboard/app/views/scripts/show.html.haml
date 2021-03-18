@@ -23,6 +23,7 @@
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'
+= render partial: 'shared/emulate_print_media'
 
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'
@@ -97,6 +98,3 @@
             = level.properties['project_template_level_name']
           .span3
             = level.properties['contained_level_names'].try {|names| names.join(", ")}
-
-  -if request.params.has_key? "emulate_print_media"
-    = javascript_include_tag 'emulate-print-media.js'

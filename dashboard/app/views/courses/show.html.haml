@@ -1,7 +1,6 @@
 %link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
 
--if request.params.has_key? "emulate_print_media"
-  = javascript_include_tag 'emulate-print-media.js'
+= render partial: 'shared/emulate_print_media'
 
 - unit_group = local_assigns[:unit_group]
 
