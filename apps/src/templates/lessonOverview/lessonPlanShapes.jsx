@@ -128,3 +128,13 @@ export const navigationLessonShape = PropTypes.shape({
     ).isRequired
   }).isRequired
 });
+
+export const standardShape = PropTypes.shape({
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+});
