@@ -10,7 +10,7 @@ import ProgressTableContainer, {
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
-import ProgressTableLevelIcon from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIcon';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {ProgressTableTextCellGroup} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
@@ -76,8 +76,10 @@ describe('ProgressTableDetailView', () => {
     const contentViewHeaders = wrapper
       .find(ProgressTableContentView)
       .find(Sticky.Header);
-    // one ProgressTableLevelIcon for each of the 2 lessons
-    expect(contentViewHeaders.find(ProgressTableLevelIcon)).to.have.length(2);
+    // one ProgressTableLevelIconSet for each of the 2 lessons
+    expect(contentViewHeaders.find(ProgressTableLevelIconSet)).to.have.length(
+      2
+    );
   });
 
   it('renders the ProgressLegend', () => {
