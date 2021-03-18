@@ -34,6 +34,11 @@
     #ai.in.collapse
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :ai_enabled, description: "Enable A.I. tools"}
 
+      = f.label :ai_model_id,'Pre-trained A.I. model id'
+      = f.text_area :ai_model_id, value: @level.ai_model_id, rows: 1
+      = f.label :ai_model_name,'Pre-trained A.I. model name'
+      = f.text_area :ai_model_name, value: @level.ai_model_name, rows: 1
+
 %h1.control-legend{data: {toggle: "collapse", target: "#starter-code"}}
   Starter Code
 

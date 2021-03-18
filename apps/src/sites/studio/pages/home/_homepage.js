@@ -86,7 +86,6 @@ function showHomepage() {
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
             donorBannerName={homepageData.donorBannerName}
-            donorName={homepageData.donorName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
