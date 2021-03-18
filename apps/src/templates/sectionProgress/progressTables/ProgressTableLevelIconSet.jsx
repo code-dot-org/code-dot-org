@@ -52,7 +52,7 @@ LevelIcon.propTypes = {
   isUnplugged: PropTypes.bool
 };
 
-export default function ProgressTableLevelIcon({levels}) {
+export default function ProgressTableLevelIconSet({levels}) {
   const items = levels.map(level => {
     const icon = (
       <LevelIcon
@@ -68,6 +68,6 @@ export default function ProgressTableLevelIcon({levels}) {
   });
   return <ProgressTableLevelSpacer items={items} />;
 }
-ProgressTableLevelIcon.propTypes = {
+ProgressTableLevelIconSet.propTypes = {
   levels: PropTypes.arrayOf(levelTypeWithoutStatus)
 };

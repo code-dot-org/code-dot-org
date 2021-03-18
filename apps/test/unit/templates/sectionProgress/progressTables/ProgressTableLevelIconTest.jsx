@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
-import ProgressTableLevelIcon from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIcon';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {LETTER_BUBBLE_CONTAINER_WIDTH} from '@cdo/apps/templates/progress/progressStyles';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
@@ -18,14 +18,14 @@ const DEFAULT_PROPS = {
   levels: [levelWithSublevels, ...otherLevels]
 };
 
-describe('ProgressTableLevelIcon', () => {
+describe('ProgressTableLevelIconSet', () => {
   it('renders icon for each level', () => {
-    const wrapper = mount(<ProgressTableLevelIcon {...DEFAULT_PROPS} />);
+    const wrapper = mount(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
     expect(wrapper.find(FontAwesome)).to.have.length(3);
   });
 
   it('renders extra space for sublevels', () => {
-    const wrapper = shallow(<ProgressTableLevelIcon {...DEFAULT_PROPS} />);
+    const wrapper = shallow(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
     const levelWithSublevels = wrapper.findWhere(
       node => node.key() === '123_1'
     );

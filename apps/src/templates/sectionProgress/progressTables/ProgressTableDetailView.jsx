@@ -11,14 +11,14 @@ import {
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
-import ProgressTableLevelIcon from './ProgressTableLevelIcon';
+import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
 import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 
 // This component displays progress bubbles for all levels in all lessons
 // for each student in the section. It combines detail-specific components such as
-// ProgressTableLevelIcon, ProgressTableDetailCell with shared progress view
+// ProgressTableLevelIconSet, ProgressTableDetailCell with shared progress view
 // components like ProgressTableContainer. An equivalent compact
 // ProgressTableSummaryView component also exists
 class ProgressTableDetailView extends React.Component {
@@ -42,7 +42,7 @@ class ProgressTableDetailView extends React.Component {
 
   levelIconHeaderFormatter(_, {columnIndex}) {
     return (
-      <ProgressTableLevelIcon
+      <ProgressTableLevelIconSet
         levels={this.props.scriptData.stages[columnIndex].levels}
       />
     );
