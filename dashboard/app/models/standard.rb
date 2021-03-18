@@ -37,7 +37,7 @@ class Standard < ApplicationRecord
       filename = "config/standards/#{framework.shortcode}_standards.csv"
       CSV.foreach(filename, {headers: true}) do |row|
         standard = Standard.find_or_initialize_by(framework: framework, shortcode: row['standard'])
-        standard.category = StandardCategory.find_by!(shortcode: row['category'])
+        standard.category = StandardCategory.find_by!(framework: framework, shortcode: row['category'])
         standard.description = row['description']
         standard.save! if standard.changed?
       end
