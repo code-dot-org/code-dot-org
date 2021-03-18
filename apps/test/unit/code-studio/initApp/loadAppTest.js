@@ -60,36 +60,6 @@ describe('loadApp.js', () => {
     window.appOptions = oldAppOptions;
   });
 
-  it('stores attempts for logged-out users against the server level id', () => {
-    setupApp(appOptions);
-    appOptions.onAttempt({program: 'program'});
-
-    expect(writtenLevelId).to.equal(SERVER_LEVEL_ID);
-  });
-
-  it('stores attempts for logged-out users against the server project level id for template backed level', () => {
-    appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
-    setupApp(appOptions);
-    appOptions.onAttempt({program: 'program'});
-
-    expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
-  });
-
-  it('stores completed attempts for logged-out users against the server level id', () => {
-    setupApp(appOptions);
-    appOptions.onComplete({});
-
-    expect(writtenLevelId).to.equal(SERVER_LEVEL_ID);
-  });
-
-  it('stores completed attempts for logged-out users against the server project level for template backed level', () => {
-    appOptions.serverProjectLevelId = SERVER_PROJECT_LEVEL_ID;
-    setupApp(appOptions);
-    appOptions.onComplete({});
-
-    expect(writtenLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
-  });
-
   it('loads attempt stored under server level id', done => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));

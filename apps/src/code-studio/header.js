@@ -12,8 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-import {useDbProgress} from './progressRedux';
-import clientState from './clientState';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -77,11 +75,6 @@ header.build = function(
   scriptNameData,
   isLessonExtras
 ) {
-  const store = getStore();
-  if (progressData) {
-    store.dispatch(useDbProgress());
-    clientState.clearProgress();
-  }
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
@@ -107,6 +100,7 @@ header.build = function(
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
+  const store = getStore();
   $(document).ready(function() {
     ReactDOM.render(
       <Provider store={store}>

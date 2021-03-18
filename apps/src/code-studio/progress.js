@@ -16,7 +16,7 @@ import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
-  mergeProgress,
+  overwriteProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
@@ -120,13 +120,22 @@ progress.generateStageProgress = function(
     currentPageNumber
   );
 
-  store.dispatch(
-    mergeProgress(
-      _.mapValues(progressData.progress, level =>
-        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-      )
-    )
-  );
+  // Set level progress data in redux. For signed-in users, the level progress
+  // data is sent in a script tag and passed in to this function. For signed-out
+  // users, we retrieve level progress from session storage.
+  if (signedIn) {
+    if (progressData.progress) {
+      store.dispatch(
+        overwriteProgress(
+          _.mapValues(progressData.progress, level =>
+            level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+          )
+        )
+      );
+    }
+  } else {
+    store.dispatch(overwriteProgress(clientState.levelProgress(name)));
+  }
 
   store.dispatch(setIsHocScript(isHocScript));
   if (signedIn) {
@@ -224,7 +233,8 @@ function initViewAs(store, scriptData) {
 
 /**
  * Query the server for user_progress data for this script, and update the store
- * as appropriate
+ * as appropriate. If the user is not signed in, level progress data is populated
+ * from session storage.
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const userId = clientState.queryParams('user_id');
@@ -234,9 +244,18 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       return;
     }
 
-    // Depend on the fact that even if we have no levelProgress, our progress
-    // data will have other keys
+    // Determine if the user is signed on based on whether the server response
+    // was empty. (Note: This is a bit hacky and should be replaced with a more
+    // robust check in the future.)
     const signedInUser = Object.keys(data).length > 0;
+
+    // If the user is not signed in, retrieve level progress from session storage.
+    if (!signedInUser) {
+      store.dispatch(
+        overwriteProgress(clientState.levelProgress(scriptData.name))
+      );
+    }
+
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
     if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
@@ -316,43 +335,12 @@ function initializeStoreWithProgress(
     store.dispatch(disablePostMilestone());
   }
 
-  // Determine if we are viewing student progress.
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
-
   if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
-
-  // The rest of these actions are only relevant if the current user is the
-  // owner of the code being viewed.
-  if (isViewingStudentAnswer) {
-    return;
-  }
-
-  // We should use client state XOR database state to track user progress
-  if (!store.getState().progress.usingDbProgress) {
-    store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-    );
-  }
-
-  let lastProgress;
-  store.subscribe(() => {
-    const progressState = store.getState().progress;
-    const nextProgress = progressState.levelProgress;
-    const usingDbProgress = progressState.usingDbProgress;
-
-    // We should use client state XOR database state to track user progress.
-    // We may not know until much later, when we load the app, that there
-    // is state available from the DB.
-    if (!usingDbProgress && nextProgress !== lastProgress) {
-      lastProgress = nextProgress;
-      clientState.batchTrackProgress(scriptData.name, nextProgress);
-    }
-  });
 }
 
 function initializeStoreWithSections(store, scriptData) {
