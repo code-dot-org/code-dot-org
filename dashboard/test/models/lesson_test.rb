@@ -112,16 +112,16 @@ class LessonTest < ActiveSupport::TestCase
 
   test "last_progression_script_level" do
     lesson = create :lesson
-    create :script_level, lesson: lesson
-    last_script_level = create :script_level, lesson: lesson
+    create :script_level, lesson: lesson, chapter: 1
+    last_script_level = create :script_level, lesson: lesson, chapter: 2
 
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
   test "last_progression_script_level with a bonus level" do
     lesson = create :lesson
-    last_script_level = create :script_level, lesson: lesson
-    create :script_level, lesson: lesson, bonus: true
+    last_script_level = create :script_level, lesson: lesson, chapter: 1
+    create :script_level, lesson: lesson, chapter: 2, bonus: true
 
     assert_equal last_script_level, lesson.last_progression_script_level
   end

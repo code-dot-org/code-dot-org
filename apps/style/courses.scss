@@ -1,0 +1,16 @@
+@import "markdown";
+@import "pdf_printing";
+
+@media print {
+  /* we have many components that we never want to include in a print view */
+  .announcement-notification,
+  .course-overview-top-row {
+    display: none;
+  }
+
+  #uitest-version-selector,
+  .teacher-info-box,
+  .uitest-go-to-unit-button {
+    display: none !important;
+  }
+}

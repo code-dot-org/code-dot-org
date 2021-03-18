@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-16 00:48:45 UTC",
+    "serialized_at": "2021-03-18 16:21:18 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -848,6 +848,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "385b01c4-de16-401f-bc49-71e637e93ccc",
+      "position": 5,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "385b01c4-de16-401f-bc49-71e637e93ccc",
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2021"
@@ -2424,7 +2437,7 @@
       "key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8",
       "position": 5,
       "properties": {
-        "progression_name": "Create a Virtual Pet"
+        "progression_name": "Application: Create a Virtual Pet"
       },
       "seeding_key": {
         "activity_section.key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8",
@@ -2432,10 +2445,21 @@
       }
     },
     {
+      "key": "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993",
+      "position": 6,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993",
+        "lesson_activity.key": "29053d1d-251c-4b6a-8212-fbb9ecedad6b"
+      }
+    },
+    {
       "key": "c2ac88a2-6e26-49e5-a893-c3915816141a",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2506,7 +2530,8 @@
       "properties": {
         "name": "Create Your Own Story (20 mins)",
         "remarks": true,
-        "description": "In today’s activity, you’ll work with a group to create your own blank space story. "
+        "description": "In today’s activity, you’ll work with a group to create your own blank space story. ",
+        "progression_name": "Video: Unplugged Variables in Envelopes"
       },
       "seeding_key": {
         "activity_section.key": "fefc9dd6-ed1d-411b-ae3e-75a95da347b9",
@@ -2574,6 +2599,17 @@
       "seeding_key": {
         "activity_section.key": "b764363d-61f2-4d3d-b352-d0a985e2076a",
         "lesson_activity.key": "c6c49adb-f68f-411c-a9ec-bd89e0134bbd"
+      }
+    },
+    {
+      "key": "c242beca-92da-4ddf-bbf3-42747e4d40ab",
+      "position": 1,
+      "properties": {
+        "description": "###Food Chain Variables (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[**Food Chain Variables**](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit) is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will identify various values for the variables found in food chains (Example: plants, animals, decomposer, etc.) as they document these values on notecards and show the movement of matter through an environment. Students will also learn about the 10% Rule and further describe energy flow with a writing prompt.\n\n*Standards Addressed:*\n * **CCSS.ELA-LITERACY.W.5.2.B:** Develop the topic with facts, definitions, concrete details, quotations, or other information and examples related to the topic.\n\n* **CCSS.MATH.CONTENT.5.NF.B.7.C:** Solve real world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem. \n\n* **NGSS.5-LS2-1:** Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c242beca-92da-4ddf-bbf3-42747e4d40ab",
+        "lesson_activity.key": "385b01c4-de16-401f-bc49-71e637e93ccc"
       }
     },
     {
@@ -5246,7 +5282,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
+        "progression": "Application: Create a Virtual Pet",
         "level_keys": [
           "Virtual Pet 2_2021"
         ]
@@ -5272,7 +5308,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
+        "progression": "Application: Create a Virtual Pet",
         "level_keys": [
           "Virtual Pet 3_2021"
         ]
@@ -5298,33 +5334,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
-        "level_keys": [
-          "Virtual Pet 4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursef-2021",
-        "activity_section.key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8"
-      },
-      "level_keys": [
-        "Virtual Pet 4_2021"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Create a Virtual Pet",
+        "progression": "Application: Create a Virtual Pet",
         "level_keys": [
           "Virtual Pet 5_2021"
         ]
@@ -5345,12 +5355,12 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
+        "progression": "Application: Create a Virtual Pet",
         "level_keys": [
           "Virtual Pet 6_2021"
         ]
@@ -5371,12 +5381,12 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
+        "progression": "Application: Create a Virtual Pet",
         "level_keys": [
           "Virtual Pet 7_2021"
         ]
@@ -5397,15 +5407,12 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Virtual Pet",
-        "level_keys": [
-          "Virtual Pet 8_2021"
-        ]
+        "progression": "Free Play"
       },
       "named_level": null,
       "bonus": null,
@@ -5416,10 +5423,36 @@
         "lesson.key": "Virtual Pet",
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021",
-        "activity_section.key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8"
+        "activity_section.key": "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993"
       },
       "level_keys": [
         "Virtual Pet 8_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Unplugged Variables in Envelopes",
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_2"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "fefc9dd6-ed1d-411b-ae3e-75a95da347b9"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021_2"
       ]
     },
     {
@@ -9071,18 +9104,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Virtual Pet 4_2021",
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet",
-        "lesson_group.key": "ramp_up",
-        "script.name": "coursef-2021",
-        "activity_section.key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Virtual Pet 5_2021",
         "script_level.level_keys": [
           "Virtual Pet 5_2021"
@@ -9126,7 +9147,19 @@
         "lesson.key": "Virtual Pet",
         "lesson_group.key": "ramp_up",
         "script.name": "coursef-2021",
-        "activity_section.key": "7a07175e-ed69-46f8-a2c0-3f479f3966f8"
+        "activity_section.key": "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "EnvelopeVariables-Unplugged_2021_2",
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2021",
+        "activity_section.key": "fefc9dd6-ed1d-411b-ae3e-75a95da347b9"
       }
     },
     {
@@ -12748,5 +12781,8 @@
         "objective.key": "83503b75-72b5-4e7d-95e4-25d0e9d36580"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
