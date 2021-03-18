@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 18:21:23 UTC",
+    "serialized_at": "2021-03-18 22:06:39 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -3610,10 +3610,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "CSP U4 My Pet Rock Example App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -3636,10 +3636,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Poetry App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -3662,10 +3662,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L01 Thermostat App_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -3688,10 +3688,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1 L02 CYU MC_2021"
-        ]
+        ],
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -3714,10 +3714,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -3740,10 +3740,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v1 Code_2021"
-        ]
+        ],
+        "progression": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -3766,10 +3766,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "level_keys": [
           "U4 L02 Thermostat App v2_2021"
-        ]
+        ],
+        "progression": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -3792,10 +3792,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -3818,10 +3818,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "level_keys": [
           "U4 L02 Thermostat App v3 pt2_2021"
-        ]
+        ],
+        "progression": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
       "named_level": null,
       "bonus": null,
@@ -3844,10 +3844,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L02 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": null,
@@ -3870,10 +3870,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 1_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": null,
@@ -3896,10 +3896,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Assigning Numbers and Strings",
         "level_keys": [
           "U4 L03 Variables numbers practice 4_2021"
-        ]
+        ],
+        "progression": "Assigning Numbers and Strings"
       },
       "named_level": null,
       "bonus": null,
@@ -3922,10 +3922,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 1_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -3948,10 +3948,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 3_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -3974,10 +3974,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 2_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4000,10 +4000,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 5_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4026,10 +4026,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Variables and Operators",
         "level_keys": [
           "U4 L03 Variables operator practice 6_2021"
-        ]
+        ],
+        "progression": "Variables and Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4052,10 +4052,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Variable Scope: Local vs. Global_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": null,
@@ -4078,10 +4078,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Debugging Scope Issues",
         "level_keys": [
           "U4 L03 Scope Issue_2021"
-        ]
+        ],
+        "progression": "Debugging Scope Issues"
       },
       "named_level": null,
       "bonus": null,
@@ -4104,10 +4104,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Putting it Together",
         "level_keys": [
           "U4 L03 Variables operator practice 4_2021"
-        ]
+        ],
+        "progression": "Putting it Together"
       },
       "named_level": null,
       "bonus": null,
@@ -4130,10 +4130,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4156,10 +4156,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding: AP Practice\r",
         "level_keys": [
           "U4L3 CFU Variables Randomness Psuedocode_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4182,10 +4182,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Try the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project_2021"
-        ]
+        ],
+        "progression": "Try the Photo Liker app"
       },
       "named_level": null,
       "bonus": null,
@@ -4208,10 +4208,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Photo Liker app",
         "level_keys": [
           "U4 L04 Variables Make Project Submit_2021"
-        ]
+        ],
+        "progression": "Make the Photo Liker app"
       },
       "named_level": null,
       "bonus": null,
@@ -4234,10 +4234,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
           "U4 L06 Introduction to Conditionals: Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Conditionals: Boolean Expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4260,10 +4260,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Assessment: Check For Understanding\r",
         "level_keys": [
           "U4 L05 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Assessment: Check For Understanding\r"
       },
       "named_level": null,
       "bonus": null,
@@ -4286,10 +4286,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v1 Code_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4312,10 +4312,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if Statements_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4338,10 +4338,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4364,10 +4364,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4L06 Introduction to Conditionals: if-else-if Statements_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4390,10 +4390,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "If-Else Statements",
         "level_keys": [
           "U4 L06 Lemon Hunter App v2 Code_2021"
-        ]
+        ],
+        "progression": "If-Else Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4416,10 +4416,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4L06 Introduction to Conditionals: Compound Boolean Expressions_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": null,
@@ -4442,10 +4442,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Logical Operators: AND OR",
         "level_keys": [
           "U4 L06 Lemon Hunter App v3 Code_2021"
-        ]
+        ],
+        "progression": "Logical Operators: AND OR"
       },
       "named_level": null,
       "bonus": null,
@@ -4468,10 +4468,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Patterns: If-else-if",
         "level_keys": [
           "U4 L06 CYU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Patterns: If-else-if"
       },
       "named_level": null,
       "bonus": null,
@@ -4494,10 +4494,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Check Your Understanding",
         "level_keys": [
           "Checking Multiple Conditions with If-elseif_2021"
-        ]
+        ],
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -4520,10 +4520,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 1_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4546,10 +4546,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 2_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4572,10 +4572,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Boolean expressions",
         "level_keys": [
           "U4 L07 Conditionals Practice 3_2021"
-        ]
+        ],
+        "progression": "Boolean expressions"
       },
       "named_level": null,
       "bonus": null,
@@ -4598,10 +4598,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 10_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4624,10 +4624,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 4_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4650,10 +4650,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 5_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4676,10 +4676,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice 6_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4702,10 +4702,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "If-Statements",
         "level_keys": [
           "U4 L07 Conditionals Practice equivalent expressions_2021"
-        ]
+        ],
+        "progression": "If-Statements"
       },
       "named_level": null,
       "bonus": null,
@@ -4728,10 +4728,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 7_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4754,10 +4754,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Logical Operators",
         "level_keys": [
           "U4 L07 Conditionals Practice 8_2021"
-        ]
+        ],
+        "progression": "Logical Operators"
       },
       "named_level": null,
       "bonus": null,
@@ -4780,10 +4780,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4806,10 +4806,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Conditionals Psuedocode 2_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -4832,10 +4832,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Try to the Museum Ticket Generator App",
         "level_keys": [
           "U4 L08 Conditionals Make Project Sample_2021"
-        ]
+        ],
+        "progression": "Try to the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": null,
@@ -4858,10 +4858,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Museum Ticket Generator App",
         "level_keys": [
           "U4L08 Museum Ticket Generator_2021"
-        ]
+        ],
+        "progression": "Make the Museum Ticket Generator App"
       },
       "named_level": null,
       "bonus": null,
@@ -4884,10 +4884,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Explore Functions",
         "level_keys": [
           "U4 L09 Functions Song_2021"
-        ]
+        ],
+        "progression": "Explore Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -4910,10 +4910,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4L09 Intro to Functions Video_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -4936,10 +4936,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Score Clicker Investigate_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -4962,10 +4962,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Declaring and Calling Functions",
         "level_keys": [
           "U4 L09 Thermostat App v7_2021"
-        ]
+        ],
+        "progression": "Declaring and Calling Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -4988,10 +4988,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Update Screen Pattern",
         "level_keys": [
           "updateScreen Pattern_2021"
-        ]
+        ],
+        "progression": "Update Screen Pattern"
       },
       "named_level": null,
       "bonus": null,
@@ -5014,10 +5014,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding",
         "level_keys": [
           "CSP U4 L09 CFU Exit Ticket_2021"
-        ]
+        ],
+        "progression": "Check Your Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -5040,10 +5040,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice Calling Functions 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5066,10 +5066,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 1_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5092,10 +5092,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5118,10 +5118,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Practice 3_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5144,10 +5144,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
-        "progression": "Declare and Call Functions",
         "level_keys": [
           "U4 L10 Functions Build Practice 2_2021"
-        ]
+        ],
+        "progression": "Declare and Call Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5170,10 +5170,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "Debugging Variable Scope and Functions_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": null,
@@ -5196,10 +5196,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Function Scope",
         "level_keys": [
           "U4 L10 Functions Scope Practice 1 v2_2021"
-        ]
+        ],
+        "progression": "Function Scope"
       },
       "named_level": null,
       "bonus": null,
@@ -5222,10 +5222,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "When to Make Functions Map_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5248,10 +5248,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "When to Declare Functions",
         "level_keys": [
           "U4 L10 Making Functions Practice_2021"
-        ]
+        ],
+        "progression": "When to Declare Functions"
       },
       "named_level": null,
       "bonus": null,
@@ -5274,10 +5274,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding: AP Practice",
         "level_keys": [
           "U4L10 CFU Functions Psuedocode_2021"
-        ]
+        ],
+        "progression": "Check For Understanding: AP Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -5300,10 +5300,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 1 2020_2021"
-        ]
+        ],
+        "progression": "Quote Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5326,10 +5326,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Make the Quote Maker App",
         "level_keys": [
           "U4 L11 Functions Make 2020_2021"
-        ]
+        ],
+        "progression": "Make the Quote Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5352,10 +5352,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -5378,10 +5378,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
-        "progression": "Sample Apps",
         "level_keys": [
           "U4 L12 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Sample Apps"
       },
       "named_level": null,
       "bonus": null,
@@ -5404,10 +5404,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Create the Screens",
         "level_keys": [
           "U4 L13 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Create the Screens"
       },
       "named_level": null,
       "bonus": null,
@@ -5430,10 +5430,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Create the Variables",
         "level_keys": [
           "U4 L13 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Create the Variables"
       },
       "named_level": null,
       "bonus": null,
@@ -5456,10 +5456,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Create the Function",
         "level_keys": [
           "U4 L13 Practice PT 3_2021"
-        ]
+        ],
+        "progression": "Create the Function"
       },
       "named_level": null,
       "bonus": null,
@@ -5482,10 +5482,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Add onEvents",
         "level_keys": [
           "U4 L13 Practice PT 4_2021"
-        ]
+        ],
+        "progression": "Add onEvents"
       },
       "named_level": null,
       "bonus": null,
@@ -5508,10 +5508,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Test Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 1_2021"
-        ]
+        ],
+        "progression": "Test Your Decision Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5534,10 +5534,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Submit Your Decision Maker App",
         "level_keys": [
           "U4 L14 Practice PT 2_2021"
-        ]
+        ],
+        "progression": "Submit Your Decision Maker App"
       },
       "named_level": null,
       "bonus": null,
@@ -5560,10 +5560,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Unit 4 Exam",
         "level_keys": [
           "CSP 20-21 Unit 4 Assessment_2021"
-        ]
+        ],
+        "progression": "Unit 4 Exam"
       },
       "named_level": null,
       "bonus": null,

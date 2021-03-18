@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:51:48 UTC",
+    "serialized_at": "2021-03-18 22:04:10 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -6095,6 +6095,19 @@
   ],
   "resources": [
     {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/1x54GqfL3UY",
+      "key": "innovation-video-1-1",
+      "properties": {
+        "type": "Video",
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
       "name": "Code Studio Teacher Dashboard Video Tutorial",
       "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4&feature=youtu.be",
       "key": "code-studio-teacher-dashboard-video-tutorial",
@@ -6116,19 +6129,6 @@
       },
       "seeding_key": {
         "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "name": "Computer Science is Changing Everything",
-      "url": "https://youtu.be/1x54GqfL3UY",
-      "key": "innovation-video-1-1",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "innovation-video-1-1"
       }
     },
     {
@@ -6541,6 +6541,12 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
+        "resource.key": "innovation-video-1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
         "resource.key": "code-studio-teacher-dashboard-video-tutorial"
       }
     },
@@ -6548,12 +6554,6 @@
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
         "resource.key": "personal-innovations-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "resource.key": "innovation-video-1-1"
       }
     },
     {
@@ -7055,5 +7055,8 @@
         "objective.key": "0682a50c-8324-42b4-91e8-6e75176fd3b0"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
