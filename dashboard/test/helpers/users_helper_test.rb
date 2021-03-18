@@ -234,7 +234,7 @@ class UsersHelperTest < ActionView::TestCase
       'level still shows as locked'
     )
 
-    # now unlock it
+    # now lock it
     user_level.delete
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
     assert_equal(
