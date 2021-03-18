@@ -13,8 +13,8 @@ import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
 import ProgressTableLevelIcon from './ProgressTableLevelIcon';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {ProgressTableTextCellGroup} from './ProgressTableTextCells';
 import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
+import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 
 // This component displays progress bubbles for all levels in all lessons
 // for each student in the section. It combines detail-specific components such as
@@ -65,22 +65,21 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
-  timeSpentCellFormatter(lesson, student) {
+  expandedCellFormatter(lesson, student, textFormatter) {
     const studentProgress = this.getStudentProgress(student);
-    const timeSpentTextData = lesson.levels.map(level => ({
-      text: timeSpentFormatter(studentProgress[level.id]),
+    const levelItems = lesson.levels.map(level => ({
+      node: textFormatter(studentProgress[level.id]),
       sublevelCount: level.sublevels && level.sublevels.length
     }));
-    return <ProgressTableTextCellGroup textDataList={timeSpentTextData} />;
+    return <ProgressTableLevelSpacer items={levelItems} />;
+  }
+
+  timeSpentCellFormatter(lesson, student) {
+    return this.expandedCellFormatter(lesson, student, timeSpentFormatter);
   }
 
   lastUpdatedCellFormatter(lesson, student) {
-    const studentProgress = this.getStudentProgress(student);
-    const lastUpdatedTextData = lesson.levels.map(level => ({
-      text: lastUpdatedFormatter(studentProgress[level.id]),
-      sublevelCount: level.sublevels && level.sublevels.length
-    }));
-    return <ProgressTableTextCellGroup textDataList={lastUpdatedTextData} />;
+    return this.expandedCellFormatter(lesson, student, lastUpdatedFormatter);
   }
 
   render() {
