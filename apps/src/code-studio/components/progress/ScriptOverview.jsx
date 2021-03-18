@@ -153,13 +153,7 @@ class ScriptOverview extends React.Component {
               userId={userId}
             />
             {showCalendar && viewAs === ViewType.Teacher && (
-              <div
-                className="unit-calendar-for-printing"
-                style={{
-                  height: 0,
-                  visibility: 'hidden'
-                }}
-              >
+              <div className="unit-calendar-for-printing print-only">
                 <UnitCalendar
                   lessons={unitCalendarLessons}
                   weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}

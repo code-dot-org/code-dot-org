@@ -150,13 +150,7 @@ class LessonGroup extends React.Component {
               onClick={this.openLessonGroupInfoDialog}
             />
           )}
-          <div
-            className="lesson-group-info-for-printing"
-            style={{
-              height: 0,
-              visibility: 'hidden'
-            }}
-          >
+          <div className="print-only">
             <LessonGroupInfo
               description={lessonGroup.description}
               bigQuestions={lessonGroup.bigQuestions}
