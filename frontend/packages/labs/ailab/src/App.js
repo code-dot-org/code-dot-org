@@ -193,7 +193,7 @@ class App extends Component {
 
         {currentPanel === "results" && (
           <BodyContainer>
-              <ContainerLeft>
+            <ContainerLeft>
               <Results />
             </ContainerLeft>
             {resultsPhase === 3 && (
