@@ -56,6 +56,7 @@ function generateCodeDesignElements(modelId, modelData) {
   designMode.updateProperty(predictButton, 'id', predictButtonId);
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
     ${inputFields.join('\n\t\t')}
+    setText("${predictionId}", '');
     getPrediction("${
       modelData.name
     }", "${modelId}", testValues, function(value) {
