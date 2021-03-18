@@ -19,7 +19,6 @@ import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progre
 import * as Sticky from 'reactabular-sticky';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
-import {ProgressTableTextCell} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import _ from 'lodash';
 import {
   fakeLevels,
@@ -133,20 +132,5 @@ describe('ProgressTableSummaryView', () => {
       UnconnectedProgressTableSummaryView.prototype.lastUpdatedCellFormatter
         .callCount
     ).to.equal(2);
-  });
-
-  it('renders ProgressTableTextCells for detail rows', () => {
-    const wrapper = setUp();
-    const container = wrapper
-      .find(UnconnectedProgressTableContainer)
-      .instance();
-    const rowData = container.state.rows[0];
-    container.onToggleRow(rowData);
-
-    // force re-render
-    wrapper.setProps({});
-
-    // 2 detail rows * 2 lessons = 4
-    expect(wrapper.find(ProgressTableTextCell)).to.have.length(4);
   });
 });

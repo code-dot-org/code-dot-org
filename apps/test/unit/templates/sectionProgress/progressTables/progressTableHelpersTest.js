@@ -16,7 +16,7 @@ describe('progressTableHelpers', () => {
     });
 
     it('returns timeSpent in minutes', () => {
-      const studentProgress = {timeSpent: 140}; // 140 seconds = 2 minutes
+      const studentProgress = {timeSpent: 140000}; // 140,000 ms = 2 minutes
       expect(timeSpentFormatter(studentProgress)).to.equal('2');
     });
   });

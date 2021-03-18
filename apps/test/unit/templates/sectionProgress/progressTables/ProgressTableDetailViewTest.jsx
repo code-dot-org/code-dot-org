@@ -12,7 +12,6 @@ import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progre
 import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {ProgressTableTextCellGroup} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
 import {createStore, combineReducers} from 'redux';
@@ -111,20 +110,5 @@ describe('ProgressTableDetailView', () => {
       UnconnectedProgressTableDetailView.prototype.lastUpdatedCellFormatter
         .callCount
     ).to.equal(2);
-  });
-
-  it('renders ProgressTableTextCellGroups for detail rows', () => {
-    const wrapper = setUp();
-    const container = wrapper
-      .find(UnconnectedProgressTableContainer)
-      .instance();
-    const rowData = container.state.rows[0];
-    container.onToggleRow(rowData);
-
-    // force re-render
-    wrapper.setProps({});
-
-    // 2 detail rows * 2 lessons = 4
-    expect(wrapper.find(ProgressTableTextCellGroup)).to.have.length(4);
   });
 });

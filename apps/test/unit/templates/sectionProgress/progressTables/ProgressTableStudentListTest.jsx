@@ -2,8 +2,8 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
+import i18n from '@cdo/locale';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
-import {ProgressTableTextLabelCell} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableTextCells';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
 import {
@@ -59,7 +59,7 @@ describe('ProgressTableStudentList', () => {
     expect(studentRows.includes(STUDENT_ROWS[1])).to.be.true;
   });
 
-  it('displays text cells if detail rows are passed in', () => {
+  it('displays detail labels if detail rows are passed in', () => {
     // ProgressTableStudentName is a connected component so we need to stub
     // the student name formatter to avoid setting up a store
     sinon
@@ -74,7 +74,8 @@ describe('ProgressTableStudentList', () => {
     const wrapper = mount(
       <ProgressTableStudentList {...DEFAULT_PROPS} rows={rows} />
     );
-    expect(wrapper.find(ProgressTableTextLabelCell)).to.have.lengthOf(2);
+    expect(wrapper.contains(i18n.timeSpentMins())).to.be.true;
+    expect(wrapper.contains(i18n.lastUpdatedTitle())).to.be.true;
 
     sinon.restore();
   });
