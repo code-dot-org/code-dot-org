@@ -11,8 +11,17 @@ import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {ProgressTableTextLabelCell} from './ProgressTableTextCells';
 import i18n from '@cdo/locale';
+
+const styles = {
+  detailText: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '100%',
+    paddingRight: '10px'
+  }
+};
 
 export default class ProgressTableStudentList extends React.Component {
   static propTypes = {
@@ -43,9 +52,9 @@ export default class ProgressTableStudentList extends React.Component {
       case 0:
         return this.studentNameFormatter(rowData);
       case 1:
-        return this.timeSpentFormatter();
+        return this.expandedCellFormatter(i18n.timeSpentMins());
       case 2:
-        return this.lastUpdatedFormatter();
+        return this.expandedCellFormatter(i18n.lastUpdatedTitle());
       default:
         return null;
     }
@@ -74,12 +83,8 @@ export default class ProgressTableStudentList extends React.Component {
     );
   }
 
-  timeSpentFormatter() {
-    return <ProgressTableTextLabelCell text={i18n.timeSpentMins()} />;
-  }
-
-  lastUpdatedFormatter() {
-    return <ProgressTableTextLabelCell text={i18n.lastUpdatedTitle()} />;
+  expandedCellFormatter(text) {
+    return <span style={styles.detailText}>{text}</span>;
   }
 
   render() {
