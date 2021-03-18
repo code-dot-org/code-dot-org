@@ -51,7 +51,7 @@ export default class ModelManagerDialog extends React.Component {
       url: '/api/v1/ml_models/names',
       method: 'GET'
     }).then(models => {
-      if (this.props.levelbuilderModel && this.props.levelbuilderModel.id) {
+      if (this.props.levelbuilderModel?.id) {
         models.unshift(this.props.levelbuilderModel);
       }
       this.setState({models});
