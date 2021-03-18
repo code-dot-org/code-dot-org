@@ -21,7 +21,7 @@ class UnitGroup < ApplicationRecord
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
-  has_many :resources, join_table: :unit_groups_resources
+  has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -89,9 +89,23 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
     unit_group.properties = hash['properties']
-    unit_group.save!
 
+    # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
+
+    if course_version && hash['resources']
+      resources_imported = hash['resources'].map do |resource_data|
+        resource_attrs = resource_data.except('seeding_key')
+        resource_attrs['course_version_id'] = course_version.id
+        resource = Resource.find_or_create_by(key: resource_attrs['key'])
+        resource.update!(resource_attrs)
+        resource
+      end
+      unit_group.resources = resources_imported
+    end
+
+    unit_group.save!
     unit_group
   rescue Exception => e
     # print filename for better debugging
@@ -117,7 +131,8 @@ class UnitGroup < ApplicationRecord
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_scripts: summarize_alternate_scripts,
-        properties: properties
+        properties: properties,
+        resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
       }.compact
     )
   end
