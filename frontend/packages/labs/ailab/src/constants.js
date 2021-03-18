@@ -84,7 +84,7 @@ export const styles = {
   bodyContainer: {
     height: "100%",
     boxSizing: "border-box",
-    paddingBottom: 100
+    paddingBottom: 50
   },
 
   largeText: {
@@ -202,14 +202,14 @@ export const styles = {
     width: "20%"
   },
 
-  dataDisplayTable: {
+  displayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,
     width: "100%"
   },
 
   tableParent: {
-    overflow: "scroll",
+    overflowY: "scroll",
     overflowWrap: "break-word",
     fontSize: 10,
     boxSizing: "border-box",
@@ -217,7 +217,7 @@ export const styles = {
     backgroundColor: "white"
   },
 
-  dataDisplayHeader: {
+  tableHeader: {
     paddingLeft: 20,
     textAlign: "right",
     position: "sticky",
@@ -247,13 +247,11 @@ export const styles = {
     backgroundColor: "black",
     color: "white"
   },
-
   dataDisplayHeaderHighlighted: {
     backgroundColor: "#64fff16b",
     color: "white"
   },
-
-  dataDisplayCell: {
+  tableCell: {
     paddingLeft: 20,
     textAlign: "right"
   },
@@ -298,12 +296,22 @@ export const styles = {
     backgroundColor: "rgba(255,100,100, 1)"
   },
 
+  resultsTableFirstHeader: {
+    top: 0,
+    backgroundColor: "white"
+  },
+
+  resultsTableSecondHeader: {
+    top: "30px"
+  },
+
   previousButton: {
     position: "fixed",
     left: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   nextButton: {
@@ -311,7 +319,8 @@ export const styles = {
     right: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   navButton: {

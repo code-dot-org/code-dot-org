@@ -63,13 +63,8 @@ class Results extends Component {
             </div>
           )}
 
-        {this.props.resultsPhase >= 1 && !isNaN(this.props.summaryStat.stat) && (
-          <div style={styles.scrollableContentsTinted}>
-            <div style={styles.scrollingContents}>
-              <ResultsTable />
-            </div>
-          </div>
-        )}
+        {this.props.resultsPhase >= 1 &&
+          !isNaN(this.props.summaryStat.stat) && <ResultsTable />}
 
         <div style={{ opacity: this.props.resultsPhase >= 2 ? 1 : 0 }}>
           {isNaN(this.props.summaryStat.stat) && (
@@ -81,9 +76,7 @@ class Results extends Component {
           <div>
             {!isNaN(this.props.summaryStat.stat) && (
               <div>
-                <div style={styles.mediumText}>
-                  Accuracy
-                </div>
+                <div style={styles.mediumText}>Accuracy</div>
                 <div style={styles.contents}>
                   {this.props.summaryStat.stat}%
                 </div>
