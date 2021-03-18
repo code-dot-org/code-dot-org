@@ -1132,6 +1132,7 @@ pl:
             Java Lab:
               name: Java Lab
           student_description: Wszystkie typy poziomów dla testowania UI
+          name: wszystkie rzeczy
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -5270,6 +5271,7 @@ pl:
               name: Uczenie się przez odkrywanie
             Measuring Student Learning:
               name: Pomiar osignięć ucznia
+          name: csp5-wsparcie
         csppostap-2017:
           title: CSP Pos-AP - Bazy danych i używanie danych w Twoich aplikacjach ('17-'18)
           description_short: Naucz się zbierać i korzystać z danych w aplikacjach
@@ -24378,6 +24380,7 @@ pl:
               name: Moduł 8
             Module 7:
               name: Moduł 7
+          name: skrypt testu jess
         csd2-virtual:
           title: Wprowadzenie do Web Lab we własnym tempie
           description: Nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych
@@ -25691,6 +25694,8 @@ pl:
               name: Lekcja 5
             model-cards:
               name: Plac zabaw dla modeli kart
+            bug-bash:
+              name: Plac zabaw Bug Basha
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25839,6 +25844,33 @@ pl:
             The Problem Solving Process:
               key: Proces rozwiązywania problemów
               name: Proces rozwiązywania problemów
+              description_student: "**Pytanie dnia: Jakie są pewne wspólne kroki,
+                które możemy stosować rozwiązując wiele problemów różnego rodzaju?**\r\n\r\nNa
+                tej lekcji wprowadza się formalny proces rozwiązywania problemów,
+                który klasa będzie stosować podczas rocznego kursu: Definiuj - Przygotowuj
+                - Wypróbuj - Przemyśl. Klasa stosuje te kroki do problemu z poprzedniej
+                lekcji, następnie do problemu, który potrafi dobrze rozwiązać, a także
+                do problemu, którego rozwiązanie chcą poprawić. Pod koniec lekcji
+                klasa tworzy listę przydatnych ogólnych strategii dla każdego kroku
+                w procesie rozwiązywania problemów, aby umieścić ją na plakatach,
+                które będą  przydatne w trakcie realizacji tej jednostki i w ciągu
+                roku. "
+              description_teacher: "**Pytanie dnia: Jakie są pewne wspólne kroki,
+                które możemy stosować rozwiązując wiele problemów różnego rodzaju?**\r\n\r\nNa
+                tej lekcji wprowadza się formalny proces rozwiązywania problemów,
+                który klasa będzie stosować podczas rocznego kursu: Definiuj - Przygotowuj
+                - Wypróbuj - Przemyśl. Lekcja zaczyna się od poproszenia uczniów o
+                odbycie burzy mózgów nad różnymi rodzajami problemów, z którymi borykają
+                się w życiu codziennym. Następnie uczniom pokazuje się cztery kroki
+                procesu rozwiązywania problemów i podejmują oni wspólną pracę, aby
+                odnieść te abstrakcyjne kroki do swoich doświadczeń w rozwiązywaniu
+                problemów. Najpierw uczniowie odnoszą te kroki do problemu z poprzedniej
+                lekcji, następnie do problemu, który potrafią dobrze rozwiązać, a
+                potem do problemu, którego rozwiązanie chcą poprawić. Pod koniec lekcji
+                klasa tworzy listę przydatnych ogólnych strategii dla każdego kroku
+                w procesie rozwiązywania problemów, aby umieścić ją na plakatach,
+                które będą  przydatne w trakcie realizacji tej jednostki i w ciągu
+                roku. "
             Exploring Problem Solving:
               key: Zgłębianie rozwiązywania problemów
               name: Zgłębianie rozwiązywania problemów
@@ -29884,8 +29916,12 @@ pl:
               name: Pierwsze kroki
             What is Code.org:
               name: Rozumienie kursów Podstaw Informatyki
+            Addressing Implementation Approaches and Barriers:
+              name: Rozwiązywanie podejść do wdrażania i barier
             Lesson Planning:
               name: Planowanie lekcji
+            CS Teaching and Learning Practices:
+              name: Praktyki nauczania i uczenia się informatyki
           lesson_groups:
             k5_getting_started_1:
               display_name: Wstęp
@@ -29897,6 +29933,8 @@ pl:
               display_name: Następne Kroki
             Introduction:
               display_name: Wstęp
+            Implementing and Teaching CS:
+              display_name: Wdrażanie i nauczanie informatyki
           name: k5-onlinepd-2021
         haikubot-pilot:
           lessons:
@@ -29925,6 +29963,13 @@ pl:
               name: Druga lekcja
             lesson-3:
               name: Trzecia lekcja
+            lesson-4:
+              name: Dający się drukować
+              description_teacher: Ta lekcja powinna zawierać przykłady wszystkich
+                rodzajów treści, które chcielibyśmy móc wydrukować, aby potwierdzić,
+                że wprowadzone w treści zmiany nie wyglądają dziwnie po wydrukowaniu.
+                W szczególności takie rzeczy, jak elementy zwijane lub interaktywne,
+                są dobrym kandydatem na tę stronę.
           lesson_groups:
             lessonGroup-2:
               display_name: Grupa lekcji 1
@@ -29935,6 +29980,10 @@ pl:
               description: Grupa lekcji 1 opis
             lessonGroup-3:
               display_name: Grupa lekcji 2
+            lessonGroup-4:
+              display_name: Treść testu interfejsu użytkownika / oczu
+              description: Wszystkie lekcje sprawdzane za pomocą automatycznych testów
+                interfejsu użytkownika lub oczu.
           name: wszystkie przeniesione rzeczy
           title: Wszystkie przeniesione rzeczy
           description: Omówienie jednostki przez nauczyciela
@@ -29948,9 +29997,25 @@ pl:
               display_name: Zabawna geometria
           name: zabawna geometria - pilotaż
           title: Zabawna geometria
+          description_audience: Klasa 3, klasa 4
+          description_short: 'W tym module uczniowie będą badać różne geometryczne
+            kształty, badając relacje między kątami, bokami i długościami. Porównają
+            także różne przystępności używania różnych narzędzi do wykonania zadania
+            artystycznego. '
           description: "**Przegląd**\nNarzędzie Artysty to szczególnie odkrywcza i
             kreatywna platforma do tworzenia i dekomponowania skomplikowanych wzorów
             geometrycznych. Standardy matematyczne czwartej klasy koncentrują się
             na rozwijaniu biegłości uczniów w geometrii, zachęcając ich do odkrywania
             zależności między kątami, bokami i długościami różnych kształtów. Z Artystą,
             nauczyciele mogą łatwo ożywić te geometryczne zależności. "
+        ai-classroom-test:
+          lessons:
+            introai:
+              name: Wprowadzenie do AI (sztucznej inteligencji )
+            ailab-explore:
+              name: Poznaj AI Lab
+          name: test AI w klasie
+          title: Test AI Lab w klasie
+          description_short: Przetestujmy narzędzia AI!
+          description: Przetestujmy narzędzia AI!
+          student_description: Przetestujmy narzędzia AI!

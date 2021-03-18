@@ -1439,29 +1439,48 @@
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
           "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
-          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra.",
+          "courseC_artist_prog5_c": "Használhatod a blokkok legördülő menüit, így megváltoztathatod a tulajdonságaikat."
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
           "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
-          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra.",
+          "courseC_artist_prog5_c": "Használhatod a blokkok legördülő menüit, így megváltoztathatod a tulajdonságaikat."
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
           "courseC_artist_prog5_a": "A csúszkával megválaszthatod a rajzolási sebességet. A teknőc felé lassabb, a nyúl irányában gyorsabb lesz a rajzolás folyamata. Ennek segítségével soronként végignézheted a kódot, hogy rájöjj, hol a hiba.",
-          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra."
+          "courseC_artist_prog5_d": "Minden esetben 90 fokot fordulj jobbra.",
+          "courseC_artist_prog5_c": "Használhatod a blokkok legördülő menüit, így megváltoztathatod a tulajdonságaikat."
         },
         "courseC_artist_prog7": {
-          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
+          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
+          "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!"
         },
         "courseC_artist_prog7_2018": {
-          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
+          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
+          "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!"
         },
         "courseC_artist_prog7_2019": {
-          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
+          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
+          "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!"
         },
         "courseC_artist_prog7_2020": {
-          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
+          "courseC_artist_prog7_e": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot.",
+          "courseC_artist_prog7_a": "A szögek 45 vagy 90 fokosak.",
+          "courseC_artist_prog7_b": "Működik az első lépésnél?\\\nMi a helyzet a másodikkal?\\\nHol romlik el a dolog?",
+          "courseC_artist_prog7_c": "Használhatod a legördülő menüt a fordulj blokkban, hogy lásd, melyik irányra is van szükséged.",
+          "courseC_artist_prog7_d": "Ezt csináld:\n\n-   menj előre\n-   fordul jobbra 45 fokot\n-   menj előre\n-   fordul jobbra 90 fokot\n-   menj előre\n-   fordulj jobbra 45 fokot\n\nIsmételd ezt az egészet kétszer!"
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
@@ -1584,16 +1603,24 @@
           "courseC_maze_programming8_b": "Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még nem oldottad meg teljesen a feladatot."
         },
         "courseC_starWars_loops1": {
-          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi."
+          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
+          "courseC_starWars_loops1_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod.",
+          "courseC_starWars_loops1_c": "Használd az `előrelépni` blokkot ötször, és teljesíted a feladatot."
         },
         "courseC_starWars_loops1_2018": {
-          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi."
+          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
+          "courseC_starWars_loops1_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod.",
+          "courseC_starWars_loops1_c": "Használd az `előrelépni` blokkot ötször, és teljesíted a feladatot."
         },
         "courseC_starWars_loops1_2019": {
-          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi."
+          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
+          "courseC_starWars_loops1_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod.",
+          "courseC_starWars_loops1_c": "Használd az `előrelépni` blokkot ötször, és teljesíted a feladatot."
         },
         "courseC_starWars_loops1_2020": {
-          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi."
+          "courseC_starWars_loops1_a": "Amikor BB-8 áthalad a fémdarabon, automatikusan felszedi.",
+          "courseC_starWars_loops1_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod.",
+          "courseC_starWars_loops1_c": "Használd az `előrelépni` blokkot ötször, és teljesíted a feladatot."
         },
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Próbáld meg az \"ugrás előre\" blokkot, hogy egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?"
@@ -2543,6 +2570,247 @@
         },
         "courseE_artist_ramp9": {
           "courseD_artist_ramp12_b": "Használhatod a legördülő menüt a 'fordulj' blokkban, hogy lásd, melyik irányra is van szükséged."
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_b": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Place Wall": {
+          "mc_5_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Underground Iron": {
+          "mc_10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Underground Iron_2019": {
+          "mc_10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "Underground Iron_2020": {
+          "mc_10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_artist_loopsPrePre1a_2018": {
+          "courseC_artist_loopsPrePre1a_a": "Az első blokk, amire szükséged lesz:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "Hogy előrelép 50 képpontot, használd ezt a blokkot:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2019": {
+          "courseC_artist_loopsPrePre1a_a": "Az első blokk, amire szükséged lesz:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "Hogy előrelép 50 képpontot, használd ezt a blokkot:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_loopsPrePre1a_2020": {
+          "courseC_artist_loopsPrePre1a_a": "Az első blokk, amire szükséged lesz:\n\n<xml>  <block type=\"jump_to_xy\" id=\"callMe\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block></xml>",
+          "courseC_artist_loopsPrePre1a_b": "Hogy előrelép 50 képpontot, használd ezt a blokkot:\n\n<xml><block type=\"draw_move_by_constant\">\n    <title name=\"DIR\">moveForward</title>\n    <title name=\"VALUE\">50</title>\n  </block></xml>"
+        },
+        "courseC_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Megrajzolhatod úgy, hogy egy téglalapot készítesz, aminek a közepére egy vonalat húzol, de rajzolhatsz két négyzetet is egymás mellé."
+        },
+        "courseC_artist_prog_challenge1_2018": {
+          "courseC_artist_prog_challenge1_a": "Megrajzolhatod úgy, hogy egy téglalapot készítesz, aminek a közepére egy vonalat húzol, de rajzolhatsz két négyzetet is egymás mellé."
+        },
+        "courseC_artist_prog_challenge1_2019": {
+          "courseC_artist_prog_challenge1_a": "Megrajzolhatod úgy, hogy egy téglalapot készítesz, aminek a közepére egy vonalat húzol, de rajzolhatsz két négyzetet is egymás mellé."
+        },
+        "courseC_artist_prog_challenge1_2020": {
+          "courseC_artist_prog_challenge1_a": "Megrajzolhatod úgy, hogy egy téglalapot készítesz, aminek a közepére egy vonalat húzol, de rajzolhatsz két négyzetet is egymás mellé."
+        },
+        "courseC_artist_prog_challenge2a": {
+          "courseC_artist_prog_challenge2_a": "Az első vonal után fordulj balra, utána jöhet a második vonal.",
+          "courseC_artist_prog_challenge2_b": "A második vonal után fordulj jobbra, és húzdf meg a harmadik vonalat."
+        },
+        "courseC_artist_prog_challenge2a_2018": {
+          "courseC_artist_prog_challenge2_a": "Az első vonal után fordulj balra, utána jöhet a második vonal.",
+          "courseC_artist_prog_challenge2_b": "A második vonal után fordulj jobbra, és húzdf meg a harmadik vonalat."
+        },
+        "courseC_artist_prog_challenge2a_2019": {
+          "courseC_artist_prog_challenge2_a": "Az első vonal után fordulj balra, utána jöhet a második vonal.",
+          "courseC_artist_prog_challenge2_b": "A második vonal után fordulj jobbra, és húzdf meg a harmadik vonalat."
+        },
+        "courseC_artist_prog_challenge2a_2020": {
+          "courseC_artist_prog_challenge2_a": "Az első vonal után fordulj balra, utána jöhet a második vonal.",
+          "courseC_artist_prog_challenge2_b": "A második vonal után fordulj jobbra, és húzdf meg a harmadik vonalat."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_a": "Nem úgy néz ki ez a minta, mint egy hatalmas lépcső? Látod, már használhatod is azokat, amiket az előző feladatok megoldása során tanultál!",
+          "courseC_starWars_loops10_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**.",
+          "courseC_starWars_loops10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_a": "Nem úgy néz ki ez a minta, mint egy hatalmas lépcső? Látod, már használhatod is azokat, amiket az előző feladatok megoldása során tanultál!",
+          "courseC_starWars_loops10_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**.",
+          "courseC_starWars_loops10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_a": "Nem úgy néz ki ez a minta, mint egy hatalmas lépcső? Látod, már használhatod is azokat, amiket az előző feladatok megoldása során tanultál!",
+          "courseC_starWars_loops10_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**.",
+          "courseC_starWars_loops10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_a": "Nem úgy néz ki ez a minta, mint egy hatalmas lépcső? Látod, már használhatod is azokat, amiket az előző feladatok megoldása során tanultál!",
+          "courseC_starWars_loops10_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**.",
+          "courseC_starWars_loops10_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2_a": "Hogy használd az ismétlést, húzd ki az eszköztárból az `ismételd` ciklust, aztán húzd bele azt a blokkot, amit ismételni akarsz."
+        },
+        "courseC_starWars_loops4": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops4_2018": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops4_2019": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops4_2020": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops4_copy": {
+          "courseC_starWars_loops4_c": "A fordulásnál a kis nyílra kattintva a \"balra\" irányt megváltoztathatod \"jobbra\" fordulássá.",
+          "courseC_starWars_loops4_a": "Használj két `ismételd` blokkot.",
+          "courseC_starWars_loops4_b": "Minden `ismétled` ciklusba csak egyetlen parancsot kell tenned: `előrelépni`."
+        },
+        "courseC_starWars_loops5": {
+          "courseC_starWars_loops5_b": "Hogy lefelé menj, el kell fordulnod, és utána előrelépni.",
+          "courseC_starWars_loops5_a": "A legjobb megoldáshoz el kell fordulni, aztán egyszerűen `előrelépni`, majd jön egy másik elfordulás, és egy ismétléssel ötöt lépj előre."
+        },
+        "courseC_starWars_loops5_2018": {
+          "courseC_starWars_loops5_a": "A legjobb megoldás egy egyszerű `előrelépni` blokkot használ, aztán elfordul és egy ismétléssel ötöt lép előre."
+        },
+        "courseC_starWars_loops5_2019": {
+          "courseC_starWars_loops5_a": "A legjobb megoldás egy egyszerű `előrelépni` blokkot használ, aztán elfordul és egy ismétléssel ötöt lép előre."
+        },
+        "courseC_starWars_loops5_2020": {
+          "courseC_starWars_loops5_a": "A legjobb megoldás egy egyszerű `előrelépni` blokkot használ, aztán elfordul és egy ismétléssel ötöt lép előre."
+        },
+        "courseC_starWars_loops5_copy": {
+          "courseC_starWars_loops5_b": "Hogy lefelé menj, el kell fordulnod, és utána előrelépni.",
+          "courseC_starWars_loops5_a": "A legjobb megoldáshoz el kell fordulni, aztán egyszerűen `előrelépni`, majd jön egy másik elfordulás, és egy ismétléssel ötöt lépj előre."
+        },
+        "courseC_starWars_loops6": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops6_2018": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops6_2019": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops6_2020": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops6_copy": {
+          "courseC_starWars_loops6_a": "Akár megpróbálhatod leírni a lépéseket egy papírra, és megtalálhatod, hogy mi az, ami ismétlődik benne.",
+          "courseC_starWars_loops6_b": "Ha rövidebb kódot akarsz, akkor egy `ismételd` blokkba rakj bele egy másikat!\\\nEzt úgy hívjuk, hogy **egymásba ágyazott ciklus**."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Ne aggód, hogy hibázol! Futtasd le a kódot, hogy lásd, mi történik - még akkor is, ha nem vagy biztos benne, hogy helyes a megoldásod."
+        },
+        "courseC_starWars_loops8": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2018": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2019": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_2020": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops8_copy": {
+          "course_starWars_loops8_a": "Próbálj kis részletekben gondolkodni! Ne kapkodj! Nem muszáj elsőre megoldanod a feladatot.",
+          "course_starWars_loops8_b": "Gondolj a feladat első felére úgy, mint egy lépcsős feladatra. Hogyan csináltad meg korábban az ilyen feladatot?",
+          "course_starWars_loops8_c": "Nézz rá erre az útvonalra!\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+        },
+        "courseC_starWars_loops9": {
+          "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
+          "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2018": {
+          "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
+          "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2019": {
+          "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
+          "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "courseC_starWars_loops9_2020": {
+          "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
+          "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         }
       }
     }

@@ -189,6 +189,7 @@ lt:
             '"scale"': dydis
             '"x"': x pozicija
             '"y"': y pozicija
+            '"speed"': greitis
       gamelab_checkTouching:
         options:
           CONDITION:

@@ -14,21 +14,14 @@ import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/Instruct
 const style = {
   instructionsAndPreview: {
     width: '40%',
-    display: 'block'
+    position: 'relative',
+    marginRight: 15
   },
   editorAndConsole: {
     width: '60%',
-    display: 'block'
-  },
-  instructions: {
-    height: '25%',
-    marginLeft: 15,
-    marginRight: 15,
-    backgroundColor: color.white,
-    color: color.black
+    position: 'relative'
   },
   preview: {
-    margin: 15,
     backgroundColor: color.light_gray,
     height: '200px'
   },
@@ -105,74 +98,65 @@ class JavalabView extends React.Component {
   renderJavalab() {
     return (
       <StudioAppWrapper>
-        <InstructionsWithWorkspace>
-          <div style={style.javalab}>
-            <div style={style.instructionsAndPreview}>
-              <div style={style.instructions}>
-                <PaneHeader hasFocus={true}>
-                  <PaneSection>Instructions</PaneSection>
-                </PaneHeader>
-                <ul>
-                  <li>Instruction 1</li>
-                  <li>Another Instruction</li>
-                </ul>
-              </div>
+        <div style={style.javalab}>
+          <div style={style.instructionsAndPreview}>
+            <InstructionsWithWorkspace>
               <div style={style.preview}>
                 <PaneHeader hasFocus={true}>
                   <PaneSection>Preview</PaneSection>
                 </PaneHeader>
               </div>
-            </div>
-            <div style={style.editorAndConsole}>
-              <JavalabEditor onCommitCode={this.props.onCommitCode} />
-              <div style={style.consoleAndButtons}>
-                <div style={style.buttons}>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={() => {}}
-                  >
-                    <FontAwesome icon="stop" className="fa-2x" />
-                    <br />
-                    Stop
-                  </button>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={this.props.onContinue}
-                  >
-                    <FontAwesome icon="check" className="fa-2x" />
-                    <br />
-                    Continue
-                  </button>
-                </div>
-                <div style={style.buttons}>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={this.compile}
-                  >
-                    <FontAwesome icon="cubes" className="fa-2x" />
-                    <br />
-                    Compile
-                  </button>
-                  <button
-                    type="button"
-                    style={style.singleButton}
-                    onClick={this.run}
-                  >
-                    <FontAwesome icon="play" className="fa-2x" />
-                    <br />
-                    Run
-                  </button>
-                </div>
-                <div style={style.consoleStyle}>
-                  <JavalabConsole />
-                </div>
+            </InstructionsWithWorkspace>
+          </div>
+          <div style={style.editorAndConsole}>
+            <JavalabEditor onCommitCode={this.props.onCommitCode} />
+            <div style={style.consoleAndButtons}>
+              <div style={style.buttons}>
+                <button
+                  type="button"
+                  style={style.singleButton}
+                  onClick={() => {}}
+                >
+                  <FontAwesome icon="stop" className="fa-2x" />
+                  <br />
+                  Stop
+                </button>
+                <button
+                  type="button"
+                  style={style.singleButton}
+                  onClick={this.props.onContinue}
+                >
+                  <FontAwesome icon="check" className="fa-2x" />
+                  <br />
+                  Continue
+                </button>
+              </div>
+              <div style={style.buttons}>
+                <button
+                  type="button"
+                  style={style.singleButton}
+                  onClick={this.compile}
+                >
+                  <FontAwesome icon="cubes" className="fa-2x" />
+                  <br />
+                  Compile
+                </button>
+                <button
+                  type="button"
+                  style={style.singleButton}
+                  onClick={this.run}
+                >
+                  <FontAwesome icon="play" className="fa-2x" />
+                  <br />
+                  Run
+                </button>
+              </div>
+              <div style={style.consoleStyle}>
+                <JavalabConsole />
               </div>
             </div>
           </div>
-        </InstructionsWithWorkspace>
+        </div>
       </StudioAppWrapper>
     );
   }
