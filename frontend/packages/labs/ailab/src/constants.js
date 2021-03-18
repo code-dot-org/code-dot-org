@@ -84,7 +84,7 @@ export const styles = {
   bodyContainer: {
     height: "100%",
     boxSizing: "border-box",
-    paddingBottom: 100
+    paddingBottom: 50
   },
 
   largeText: {
@@ -310,7 +310,8 @@ export const styles = {
     left: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   nextButton: {
@@ -318,7 +319,8 @@ export const styles = {
     right: 20,
     bottom: 40,
     fontSize: 30,
-    cursor: "pointer"
+    cursor: "pointer",
+    zIndex: 1001
   },
 
   navButton: {
