@@ -121,6 +121,9 @@ class LessonEditor extends Component {
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        programmingExpressions: JSON.stringify(
+          this.props.programmingExpressions.map(pe => pe.id)
+        ),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
