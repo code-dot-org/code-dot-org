@@ -14,8 +14,7 @@ class DataDisplay extends Component {
     setHighlightColumn: PropTypes.func,
     currentColumn: PropTypes.string,
     highlightColumn: PropTypes.string,
-    setColumnRef: PropTypes.func,
-    currentPanel: PropTypes.string
+    setColumnRef: PropTypes.func
   };
 
   getColumnHeaderStyle = key => {
@@ -87,8 +86,7 @@ class DataDisplay extends Component {
       data,
       setCurrentColumn,
       setColumnRef,
-      setHighlightColumn,
-      currentPanel
+      setHighlightColumn
     } = this.props;
 
     return (
@@ -156,8 +154,7 @@ export default connect(
     labelColumn: state.labelColumn,
     selectedFeatures: state.selectedFeatures,
     currentColumn: state.currentColumn,
-    highlightColumn: state.highlightColumn,
-    currentPanel: state.currentPanel
+    highlightColumn: state.highlightColumn
   }),
   dispatch => ({
     setCurrentColumn(column) {
