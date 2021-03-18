@@ -223,6 +223,7 @@ export const styles = {
     position: "sticky",
     top: 0
   },
+
   dataDisplayHeaderLabelSelected: {
     backgroundColor: labelColor,
     color: "yellow"
@@ -298,7 +299,8 @@ export const styles = {
 
   resultsTableFirstHeader: {
     top: 0,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    color: "rgb(30, 30, 30)"
   },
 
   resultsTableSecondHeader: {
