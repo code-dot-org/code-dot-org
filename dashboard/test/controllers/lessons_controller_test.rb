@@ -817,7 +817,7 @@ class LessonsControllerTest < ActionController::TestCase
     @lesson.programming_expressions = [expression_to_keep, expression_to_remove]
 
     sign_in @levelbuilder
-    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.key, expression_to_add.key].to_json})
+    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.id, expression_to_add.id].to_json})
     put :update, params: new_update_params
     @lesson.reload
 
