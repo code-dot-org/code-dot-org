@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-16 22:56:54 UTC",
+    "serialized_at": "2021-03-17 20:25:34 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -2216,7 +2216,7 @@
       "key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize Pair Programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their ***Thinkspot Journals* and take a moment to reflect on the experience for themselves."
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize Pair Programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their ***Thinkspot Journals** and take a moment to reflect on the experience for themselves."
       },
       "seeding_key": {
         "activity_section.key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
