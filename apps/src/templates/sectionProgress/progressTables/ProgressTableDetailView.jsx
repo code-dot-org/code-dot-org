@@ -67,18 +67,20 @@ class ProgressTableDetailView extends React.Component {
 
   timeSpentCellFormatter(lesson, student) {
     const studentProgress = this.getStudentProgress(student);
-    const progressTexts = lesson.levels.map(level =>
-      timeSpentFormatter(studentProgress[level.id])
-    );
-    return <ProgressTableTextCellGroup texts={progressTexts} />;
+    const timeSpentTextData = lesson.levels.map(level => ({
+      text: timeSpentFormatter(studentProgress[level.id]),
+      sublevelCount: level.sublevels && level.sublevels.length
+    }));
+    return <ProgressTableTextCellGroup textDataList={timeSpentTextData} />;
   }
 
   lastUpdatedCellFormatter(lesson, student) {
     const studentProgress = this.getStudentProgress(student);
-    const lastUpdatedTexts = lesson.levels.map(level =>
-      lastUpdatedFormatter(studentProgress[level.id])
-    );
-    return <ProgressTableTextCellGroup texts={lastUpdatedTexts} />;
+    const lastUpdatedTextData = lesson.levels.map(level => ({
+      text: lastUpdatedFormatter(studentProgress[level.id]),
+      sublevelCount: level.sublevels && level.sublevels.length
+    }));
+    return <ProgressTableTextCellGroup textDataList={lastUpdatedTextData} />;
   }
 
   render() {
