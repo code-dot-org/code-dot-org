@@ -33,7 +33,7 @@ Feature: Viewing and Printing Standards Progress
     And I select the "Course A (2019)" option in dropdown "uitest-course-dropdown"
 
     # Switch to Standards Part of Progress Tab
-    And I press the first "#uitest-standards-toggle" element
+    And I click selector "#uitest-standards-toggle" once I see it
 
     # Clear the intro dialog
     And I wait until element ".uitest-standards-intro-button" is visible

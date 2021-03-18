@@ -1357,49 +1357,5 @@
         "objective.key": "f31a2fd3-f77b-46e7-93ad-37aeaf2a156a"
       }
     }
-  ],
-  "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-14"
-      }
-    }
   ]
 }
