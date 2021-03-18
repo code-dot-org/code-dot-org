@@ -127,8 +127,10 @@ module Services
     # PDF for the given lesson. This will be based on not only the
     # lesson's script but also the current version of the script in the environment.
     #
-    # Expect this to look something like
+    # Expect this to look something like this for teacher lesson plans
     # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
+    # and this for student lesson plans
+    # <Pathname:csp1-2021/20210216001309/student/Welcome to CSP.pdf>
     def self.get_pathname(lesson, student_facing = false)
       return nil unless lesson&.script&.seeded_from
       version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
