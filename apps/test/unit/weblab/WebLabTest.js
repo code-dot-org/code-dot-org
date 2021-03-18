@@ -1,15 +1,92 @@
 import sinon from 'sinon';
+import ReactDOM from 'react-dom';
 import {expect} from '../../util/reconfiguredChai';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import reducers from '@cdo/apps/weblab/reducers';
+import {changeMaxProjectCapacity} from '@cdo/apps/weblab/actions';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp
+} from '@cdo/apps/StudioApp';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
+var filesApi = require('@cdo/apps/clientApi').files;
 
 describe('WebLab', () => {
   let weblab;
 
   beforeEach(() => {
     weblab = new WebLab();
+  });
+
+  describe('init', () => {
+    let config;
+    beforeEach(() => {
+      stubRedux();
+      stubStudioApp();
+      weblab.studioApp_ = studioApp();
+      registerReducers(commonReducers);
+      registerReducers(reducers);
+      config = {
+        skin: {},
+        level: {}
+      };
+      sinon.stub(ReactDOM, 'render');
+      sinon.stub(getStore(), 'dispatch');
+    });
+
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+      ReactDOM.render.restore();
+    });
+
+    it('throws an error if studio app doesnt exist', () => {
+      weblab.studioApp_ = null;
+      expect(weblab.init).to.throw(Error);
+    });
+
+    it('dispatches changeMaxProjectCapacity', () => {
+      weblab.init(config);
+      expect(getStore().dispatch).to.have.been.calledWith(
+        changeMaxProjectCapacity(20971520)
+      );
+      expect(ReactDOM.render).to.have.been.calledOnce;
+    });
+
+    it('does not set startSources if there are none', () => {
+      config.level.startSources = '';
+      weblab.init(config);
+      expect(weblab.startSources).to.be.undefined;
+    });
+
+    it('does not set startSources if it is given invalid JSON', () => {
+      config.level.startSources = '{:';
+      expect(() => weblab.init(config)).to.throw(Error);
+      expect(weblab.startSources).to.be.undefined;
+    });
+
+    it('sets startSources if given valid JSON', () => {
+      const validJSON = {value: 'test'};
+      config.level.startSources = JSON.stringify(validJSON);
+      weblab.init(config);
+      expect(weblab.startSources.value).to.equal('test');
+    });
+
+    it('calls the filesApi to get files', () => {
+      sinon.spy(filesApi, 'getFiles');
+      weblab.init(config);
+      expect(filesApi.getFiles).to.have.been.calledOnce;
+    });
   });
 
   describe('beforeUnload', () => {
@@ -124,4 +201,12 @@ describe('WebLab', () => {
       });
     });
   });
+  // test getCodeAsync
+  // test prepareForRemix
+  // test deleteProjectFile
+  // test renameProjectFile
+  // test changeProjectFile
+  // test registerBeforeFirstwriteHook
+  // test onProjectChanged
+  // test loadFileEntries
 });
