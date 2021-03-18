@@ -15,8 +15,6 @@ class ProgrammingEnvironment < ApplicationRecord
 
   has_many :programming_expressions
 
-  validates_uniqueness_of :name
-
   serialized_attrs %w(
     editor_type
   )
