@@ -155,7 +155,7 @@ module Services
     end
 
     def self.generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
-      url = Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
+      url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
       pathname = get_pathname(lesson, student_facing)
 
       ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
