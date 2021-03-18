@@ -31,7 +31,6 @@ const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
 const SET_SCRIPT_COMPLETED = 'progress/SET_SCRIPT_COMPLETED';
 const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
-const USE_DB_PROGRESS = 'progress/USE_DB_PROGRESS';
 const OVERWRITE_PROGRESS = 'progress/OVERWRITE_PROGRESS';
 
 const PEER_REVIEW_ID = -1;
@@ -66,11 +65,6 @@ const initialState = {
   isSummaryView: true,
   hasFullProgress: false,
   stageExtrasEnabled: false,
-  // Note: usingDbProgress === "user is logged in". However, it is
-  // possible that we can get the user progress back from the DB
-  // prior to having information about the user login state.
-  // TODO: Use sign in state to determine where to source user progress from
-  usingDbProgress: false,
   currentPageNumber: PUZZLE_PAGE_NONE
 };
 
@@ -103,13 +97,6 @@ export default function reducer(state = initialState, action) {
       hasFullProgress: action.isFullProgress,
       isLessonExtras: action.isLessonExtras,
       currentPageNumber: action.currentPageNumber
-    };
-  }
-
-  if (action.type === USE_DB_PROGRESS) {
-    return {
-      ...state,
-      usingDbProgress: true
     };
   }
 
@@ -413,10 +400,6 @@ export const initProgress = ({
 
 export const clearProgress = () => ({
   type: CLEAR_PROGRESS
-});
-
-export const useDbProgress = () => ({
-  type: USE_DB_PROGRESS
 });
 
 export const mergeProgress = levelProgress => ({
