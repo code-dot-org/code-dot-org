@@ -89,7 +89,7 @@ class ScriptOverviewTopRow extends React.Component {
     } = this.props;
 
     return (
-      <div style={styles.buttonRow}>
+      <div style={styles.buttonRow} className="script-overview-top-row">
         {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button

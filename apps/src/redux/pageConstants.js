@@ -73,7 +73,9 @@ var ALLOWED_KEYS = new Set([
   'widgetMode',
   'librariesEnabled',
   'validationEnabled',
-  'aiEnabled'
+  'aiEnabled',
+  'aiModelId',
+  'aiModelName'
 ]);
 
 const initialState = {

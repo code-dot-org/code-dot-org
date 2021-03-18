@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import msg from '@cdo/locale';
-import {svgToDataURI} from '@cdo/apps/imageUtils';
+import * as imageUtils from '@cdo/apps/imageUtils';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import PendingButton from '@cdo/apps/templates/PendingButton';
@@ -79,11 +79,13 @@ class Snapshot extends React.Component {
     if (!svg) {
       return;
     }
-    svgToDataURI(svg, 'image/png', {renderer: 'native'}).then(imageURI => {
-      if (this.isMounted_) {
-        this.setState({imageSrc: imageURI});
-      }
-    });
+    imageUtils
+      .svgToDataURI(svg, 'image/png', {renderer: 'native'})
+      .then(imageURI => {
+        if (this.isMounted_) {
+          this.setState({imageSrc: imageURI});
+        }
+      });
   };
 
   getPngBlob = async () => {
@@ -111,10 +113,7 @@ class Snapshot extends React.Component {
   save = async () => {
     this.setState({isSavePending: true});
     const pngBlob = await this.getPngBlob();
-    const download = document.createElement('a');
-    download.href = URL.createObjectURL(pngBlob);
-    download.download = 'image.png';
-    download.click();
+    imageUtils.downloadBlobAsPng(pngBlob);
     this.setState({isSavePending: false});
   };
 
