@@ -138,7 +138,7 @@ class SettingsCog extends Component {
   levelbuilderModel() {
     let model = {};
     let pageConstants = getStore().getState().pageConstants;
-    if (pageConstants && pageConstants.aiModelId && pageConstants.aiModelName) {
+    if (pageConstants?.aiModelId && pageConstants?.aiModelName) {
       model.id = pageConstants.aiModelId;
       model.name = pageConstants.aiModelName;
     }
