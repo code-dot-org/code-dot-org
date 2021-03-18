@@ -79,6 +79,8 @@ module Services
       #   2 queries, one to remove LessonsVocabularies from each Lesson.
       #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
       #   2 queries, one to remove LessonsStandards from each Lesson.
+      #   1 query to get all the programming environments
+      #   1 query to get all the standards frameworks
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
