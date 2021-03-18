@@ -1682,9 +1682,9 @@
     unified "^7.0.0"
 
 "@code-dot-org/remark-plugins@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/remark-plugins/-/remark-plugins-1.0.0.tgz#1fd4fb730ea1fe20eac68b4314971336243eff3e"
-  integrity sha512-QZPrZzJg1t/Z+8SZMPIaV1mWAUDIZwAiKr5hjddJFaD+Aa7Z5ditUZ4RaExvqCcZilbnRvrGGSjYL22qRuqHEQ==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/remark-plugins/-/remark-plugins-1.1.0.tgz#3b7b87137999a5858105485835f6c58fc0c3aebc"
+  integrity sha512-k0lX5WKihcLkIH6riAslNfTSMiDqJZ7psC7pg1cX5QhgvkfmAgsCzJpsGxyU0XSxqxiKWrPCV+WozuxQVO2+rg==
 
 "@codemirror/closebrackets@^0.17.0":
   version "0.17.2"
