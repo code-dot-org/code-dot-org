@@ -9,6 +9,7 @@ Feature: Viewing and Printing Standards Progress
     And I wait until element "#import-standards" is visible
     And I press "#import-standards" using jQuery
     And I wait until element "#alert-details" is visible
+    And element "#alert-details" contains text "Hooray!"
 
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
@@ -32,7 +33,7 @@ Feature: Viewing and Printing Standards Progress
     And I select the "Course A (2019)" option in dropdown "uitest-course-dropdown"
 
     # Switch to Standards Part of Progress Tab
-    And I press the first "#uitest-standards-toggle" element
+    And I click selector "#uitest-standards-toggle" once I see it
 
     # Clear the intro dialog
     And I wait until element ".uitest-standards-intro-button" is visible

@@ -177,3 +177,13 @@ export async function toImageData(input) {
     throw new Error('Unable to convert input to ImageData: ' + err);
   }
 }
+
+/**
+ * @param {Blob}
+ */
+export function downloadBlobAsPng(blob, filename = 'image.png') {
+  const download = document.createElement('a');
+  download.href = URL.createObjectURL(blob);
+  download.download = filename;
+  download.click();
+}
