@@ -21,7 +21,7 @@ class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a,
-      programming_envrionments: [programming_expression.programming_environment],
+      programming_environments: [programming_expression.programming_environment],
       programming_expressions: [programming_expression]
     )
     lessons_programming_expression = lesson.lessons_programming_expressions.first
