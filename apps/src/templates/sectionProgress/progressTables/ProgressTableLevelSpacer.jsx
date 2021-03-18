@@ -50,3 +50,7 @@ export default function ProgressTableLevelSpacer({items}) {
 ProgressTableLevelSpacer.propTypes = {
   items: PropTypes.arrayOf(levelSpacerItemShape).isRequired
 };
+
+export const unitTestExports = {
+  SublevelSpacer
+};

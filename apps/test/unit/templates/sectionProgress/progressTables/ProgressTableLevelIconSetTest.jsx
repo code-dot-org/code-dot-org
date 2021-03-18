@@ -1,7 +1,8 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
+import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
 import {LETTER_BUBBLE_CONTAINER_WIDTH} from '@cdo/apps/templates/progress/progressStyles';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
@@ -25,11 +26,9 @@ describe('ProgressTableLevelIconSet', () => {
   });
 
   it('renders extra space for sublevels', () => {
-    const wrapper = shallow(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
-    const levelWithSublevels = wrapper.findWhere(
-      node => node.key() === '123_1'
-    );
-    expect(levelWithSublevels.childAt(1).props().style.width).to.equal(
+    const wrapper = mount(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
+    const sublevelSpacer = wrapper.find(unitTestExports.SublevelSpacer);
+    expect(sublevelSpacer.childAt(0).props().style.width).to.equal(
       2 * LETTER_BUBBLE_CONTAINER_WIDTH
     );
   });
