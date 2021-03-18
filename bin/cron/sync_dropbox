@@ -13,6 +13,8 @@ SCRIPT_START = Time.now
 require_relative "../../deployment"
 require "cdo/slack"
 require "cdo/high_frequency_reporter"
+require 'cdo/chat_client'
+require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
@@ -49,7 +51,7 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     stdout, stderr, _ = Open3.capture3(command)
     if stdout == "" && stderr == ""
       HooksUtils.get_unstaged_files.each do |filename|
-        raise "INVALID FILENAME: #{filename}" if HooksUtils.prohibited?(filename)
+        ChatClient.log("<@#{DevelopersTopic.dotd}> INVALID FILENAME: #{filename}", color: 'red') if HooksUtils.prohibited?(filename)
       end
     else
       error_message = <<~ERROR_MSG
