@@ -38,7 +38,7 @@ def parse_options
 
         Usage: #{$0} [options]
 
-        Example: #{0} -u coursea-2021 -m LessonGroup,Lesson,Activity,Resource,Objective,Vocabulary,ProgrammingExpression
+        Example: #{0} -u coursea-2021 -m LessonGroup,Lesson,Activity,Resource,Objective,Vocabulary,ProgrammingExpression,Standard
         Example: #{0} -l -u csd1-2021 -m Activity,Resource,Objective
         Example: #{0} -l -u csp2-2021,csp3-2021,csp4-2021 -m Lesson
       BANNER
@@ -53,7 +53,7 @@ def parse_options
         options.unit_names = unit_names
       end
 
-      opts.on('-m', '--models Resource,Vocabulary,ProgrammingExpression', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, Objective, ProgrammingExpression or Vocabulary') do |models|
+      opts.on('-m', '--models Resource,Vocabulary,ProgrammingExpression', Array, 'Models to import: LessonGroup, Lesson, Activity, Resource, Objective, ProgrammingExpression, Standard or Vocabulary') do |models|
         options.models = models
       end
 
