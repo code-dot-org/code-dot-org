@@ -181,9 +181,9 @@ export async function toImageData(input) {
 /**
  * @param {Blob}
  */
-export function downloadBlobAsPng(blob) {
+export function downloadBlobAsPng(blob, filename = 'image.png') {
   const download = document.createElement('a');
   download.href = URL.createObjectURL(blob);
-  download.download = 'image.png';
+  download.download = filename;
   download.click();
 }
