@@ -93,14 +93,6 @@ class DataDisplay extends Component {
 
     return (
       <div id="data-display" style={styles.panel}>
-        <div style={styles.largeText}>
-          {currentPanel === "dataDisplayLabel" && (
-            <div>Explore columns and choose a label:</div>
-          )}
-          {currentPanel === "dataDisplayFeatures" && (
-            <div>Explore pairs and choose features:</div>
-          )}
-        </div>
         <div
           style={styles.tableParent}
           onScroll={() => setCurrentColumn(undefined)}
