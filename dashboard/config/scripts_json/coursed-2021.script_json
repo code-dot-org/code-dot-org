@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-16 19:27:29 UTC",
+    "serialized_at": "2021-03-17 18:57:27 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -3173,7 +3173,7 @@
       "key": "2f024770-481d-43dc-aa55-7133819f6663",
       "position": 1,
       "properties": {
-        "progression_name": "Practice",
+        "progression_name": "Skill Building",
         "name": "Looking Ahead with Minecraft",
         "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
@@ -3209,7 +3209,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "3cb11179-29ea-4362-b237-a509e3e0943f",
@@ -6318,7 +6318,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Move to Sheep_2021"
         ]
@@ -6344,7 +6344,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Chop Tree_2021"
         ]
@@ -6370,7 +6370,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Shear Sheep_2021"
         ]
@@ -6396,7 +6396,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Chop Trees_2021"
         ]
@@ -6422,7 +6422,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Place Wall_2021"
         ]
@@ -6448,7 +6448,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld House Frame Chosen_2021"
         ]
@@ -6474,7 +6474,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Plant Crops_2021"
         ]
@@ -6500,7 +6500,7 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Avoid Monsters_2021"
         ]
@@ -6526,33 +6526,7 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Powered Minecart_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2021",
-        "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663"
-      },
-      "level_keys": [
-        "Overworld Powered Minecart_2021"
-      ]
-    },
-    {
-      "chapter": 107,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Underground Mining Coal_2021"
         ]
@@ -6573,12 +6547,12 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 107,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Underground Iron_2021"
         ]
@@ -6599,8 +6573,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 12,
+      "chapter": 108,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6626,8 +6600,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 13,
+      "chapter": 109,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6650,6 +6624,29 @@
       },
       "level_keys": [
         "Underground If Statements_2021"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Powered Minecart_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2021",
+        "activity_section.key": "16432484-49b1-47dc-bbd9-60f67bacc790"
+      },
+      "level_keys": [
+        "Overworld Powered Minecart_2021"
       ]
     },
     {
@@ -9037,18 +9034,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Overworld Powered Minecart_2021",
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2021",
-        "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Underground Mining Coal_2021",
         "script_level.level_keys": [
           "Underground Mining Coal_2021"
@@ -9088,6 +9073,18 @@
         "level.key": "Underground If Statements_2021",
         "script_level.level_keys": [
           "Underground If Statements_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2021",
+        "activity_section.key": "16432484-49b1-47dc-bbd9-60f67bacc790"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Powered Minecart_2021",
+        "script_level.level_keys": [
+          "Overworld Powered Minecart_2021"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "csf_conditionals",
