@@ -22,6 +22,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const style = {
   root: {
@@ -121,6 +122,21 @@ class EditSectionForm extends Component {
       SectionLoginType.clever
     ].includes(loginType);
   }
+
+  recordAutoplayToggleEvent = ttsAutoplayEnabled => {
+    firehoseClient.putRecord(
+      {
+        study: 'section_setting',
+        study_group: 'tts_auto_play',
+        event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
+        script_id: this.props.section.scriptId,
+        data_json: JSON.stringify({
+          section_id: this.props.section.id
+        })
+      },
+      {useProgressScriptId: false, includeUserId: true}
+    );
+  };
 
   render() {
     const {
@@ -223,9 +239,10 @@ class EditSectionForm extends Component {
           {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
             <TtsAutoplayField
               value={section.ttsAutoplayEnabled}
-              onChange={ttsAutoplayEnabled =>
-                editSectionProperties({ttsAutoplayEnabled})
-              }
+              onChange={ttsAutoplayEnabled => {
+                editSectionProperties({ttsAutoplayEnabled});
+                this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
+              }}
               disabled={isSaveInProgress}
             />
           )}

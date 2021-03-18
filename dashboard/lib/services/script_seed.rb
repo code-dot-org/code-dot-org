@@ -20,8 +20,8 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_expressions,
-      :lessons_programming_expressions, :objectives, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_environments, :programming_expressions,
+      :lessons_programming_expressions, :objectives, :frameworks, :standards, :lessons_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -49,6 +49,7 @@ module Services
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
+      lessons_standards = script.lessons.map(&:lessons_standards).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -63,9 +64,13 @@ module Services
         lessons_resources: lessons_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
+        programming_environments: ProgrammingEnvironment.all,
         programming_expressions: ProgrammingExpression.all,
         lessons_programming_expressions: lessons_programming_expressions,
-        objectives: objectives
+        objectives: objectives,
+        frameworks: Framework.all,
+        standards: Standard.all,
+        lessons_standards: lessons_standards
       )
       scope = {seed_context: seed_context}
 
@@ -82,7 +87,8 @@ module Services
         vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
         lessons_programming_expressions: lessons_programming_expressions.map {|lpe| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lpe, scope: scope).as_json},
-        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json}
+        objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
+        lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
       }
       JSON.pretty_generate(data)
     end
@@ -160,6 +166,7 @@ module Services
       lessons_vocabularies_data = data['lessons_vocabularies']
       lessons_programming_expressions_data = data['lessons_programming_expressions']
       objectives_data = data['objectives']
+      lessons_standards_data = data['lessons_standards'] || []
       seed_context = SeedContext.new
 
       Script.transaction do
@@ -197,9 +204,13 @@ module Services
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
+        seed_context.programming_environments = ProgrammingEnvironment.all
         seed_context.programming_expressions = ProgrammingExpression.all
         seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
+        seed_context.frameworks = Framework.all
+        seed_context.standards = Standard.all
+        seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
 
         seed_context.script
       end
@@ -480,7 +491,10 @@ module Services
         lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == lpe_data['seeding_key']['programming_expression.key']}.first&.id
+        programming_environment_id = seed_context.programming_environments.select {|pe| pe.name == lpe_data['seeding_key']['programming_environment.name']}.first&.id
+        programming_expression_id = seed_context.programming_expressions.select do |pe|
+          pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
+        end.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
@@ -514,6 +528,34 @@ module Services
       existing_objectives = Objective.joins(:lesson).where('stages.script_id' => seed_context.script.id)
       Objective.import! objectives_to_import, on_duplicate_key_update: get_columns(Objective)
       destroy_outdated_objects(Objective, existing_objectives, objectives_to_import, seed_context)
+    end
+
+    def self.import_lessons_standards(lessons_standards_data, seed_context)
+      lessons_standards_to_import = lessons_standards_data.map do |ls_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == ls_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        framework_id = seed_context.frameworks.select {|f| f.shortcode == ls_data['seeding_key']['framework.shortcode']}.first&.id
+        standard_id = seed_context.standards.select do |s|
+          s.framework_id == framework_id && s.shortcode == ls_data['seeding_key']['standard.shortcode']
+        end.first&.id
+        raise 'No standard found' if standard_id.nil?
+
+        LessonsStandard.new(
+          stage_id: lesson_id,
+          standard_id: standard_id
+        )
+      end
+
+      # destroy_outdated_objects won't work on LessonsStandard objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all LessonsStandards using 1 query per lesson, and then re-importing all
+      # LessonsStandards in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the LessonsStandard model.
+      seed_context.lessons.each {|l| l.standards = []}
+
+      LessonsStandard.import! lessons_standards_to_import, on_duplicate_key_update: get_columns(LessonsStandard)
+      LessonsStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
@@ -697,6 +739,14 @@ module Services
 
     class ObjectiveSerializer < ActiveModel::Serializer
       attributes :key, :properties, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsStandardSerializer < ActiveModel::Serializer
+      attributes :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
