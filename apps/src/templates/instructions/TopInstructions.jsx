@@ -13,12 +13,15 @@ import HelpTabContents from './HelpTabContents';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
-  setInstructionsRenderedHeight
+  setInstructionsRenderedHeight,
+  setAllowInstructionsResize,
+  getDynamicInstructions
 } from '../../redux/instructions';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
+import DynamicInstructions from './DynamicInstructions';
 import HeightResizer from './HeightResizer';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
@@ -113,6 +116,8 @@ class TopInstructions extends Component {
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
     longInstructions: PropTypes.string,
+    dynamicInstructions: PropTypes.object,
+    dynamicInstructionsKey: PropTypes.string,
     ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
@@ -137,7 +142,8 @@ class TopInstructions extends Component {
     widgetMode: PropTypes.bool,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
-    resizable: PropTypes.bool
+    resizable: PropTypes.bool,
+    setAllowInstructionsResize: PropTypes.func
   };
 
   static defaultProps = {
@@ -186,11 +192,13 @@ class TopInstructions extends Component {
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
 
-    const maxNeededHeight = this.adjustMaxNeededHeight();
+    if (!this.props.dynamicInstructions) {
+      const maxNeededHeight = this.adjustMaxNeededHeight();
 
-    // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
-    // adjusts max height.
-    this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+      // Initially set to 300. This might be adjusted when InstructionsWithWorkspace
+      // adjusts max height.
+      this.props.setInstructionsRenderedHeight(Math.min(maxNeededHeight, 300));
+    }
 
     const promises = [];
 
@@ -482,6 +490,8 @@ class TopInstructions extends Component {
   renderInstructions(isCSF) {
     const {
       longInstructions,
+      dynamicInstructions,
+      dynamicInstructionsKey,
       hasContainedLevels,
       isEmbedView,
       isBlockly,
@@ -509,16 +519,30 @@ class TopInstructions extends Component {
         />
       );
     } else if (tabSelected === TabType.INSTRUCTIONS) {
-      return (
-        <Instructions
-          ref={ref => this.setInstructionsRef(ref)}
-          longInstructions={longInstructions}
-          onResize={this.adjustMaxNeededHeight}
-          inTopPane
-          isBlockly={isBlockly}
-          noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
-        />
-      );
+      if (dynamicInstructions) {
+        return (
+          <DynamicInstructions
+            ref={ref => this.setInstructionsRef(ref)}
+            dynamicInstructions={dynamicInstructions}
+            dynamicInstructionsKey={dynamicInstructionsKey}
+            setInstructionsRenderedHeight={height => {
+              this.props.setInstructionsRenderedHeight(height);
+              this.props.setAllowInstructionsResize(false);
+            }}
+          />
+        );
+      } else {
+        return (
+          <Instructions
+            ref={ref => this.setInstructionsRef(ref)}
+            longInstructions={longInstructions}
+            onResize={this.adjustMaxNeededHeight}
+            inTopPane
+            isBlockly={isBlockly}
+            noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+          />
+        );
+      }
     }
   }
 
@@ -527,6 +551,8 @@ class TopInstructions extends Component {
       hidden,
       shortInstructions,
       longInstructions,
+      dynamicInstructions,
+      dynamicInstructionsKey,
       hasContainedLevels,
       noInstructionsWhenCollapsed,
       noVisualization,
@@ -632,7 +658,9 @@ class TopInstructions extends Component {
       documentationUrl,
       teacherMarkdown,
       isEmbedView,
-      isCollapsed
+      isCollapsed,
+      dynamicInstructions,
+      dynamicInstructionsKey
     };
 
     return (
@@ -747,7 +775,9 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
-    widgetMode: state.pageConstants.widgetMode
+    widgetMode: state.pageConstants.widgetMode,
+    dynamicInstructions: getDynamicInstructions(state.instructions),
+    dynamicInstructionsKey: state.instructions.dynamicInstructionsKey
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
@@ -758,6 +788,9 @@ export default connect(
     },
     setInstructionsMaxHeightNeeded(height) {
       dispatch(setInstructionsMaxHeightNeeded(height));
+    },
+    setAllowInstructionsResize(allowResize) {
+      dispatch(setAllowInstructionsResize(allowResize));
     }
   }),
   null,

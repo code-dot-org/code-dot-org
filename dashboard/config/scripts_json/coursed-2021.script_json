@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-16 19:27:29 UTC",
+    "serialized_at": "2021-03-18 18:52:10 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -152,10 +152,10 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  ",
+        "overview": "By **\"programming\"** one another to draw pictures, students get an opportunity to experience some of the core concepts of **programming** in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  ",
         "student_overview": "In this lesson, you will program your classmate to draw pictures!",
-        "purpose": "The goal of this activity is to build critical thinking skills and excitement for the course, while introducing some of the fundamental programming concepts that will be used throughout the course. By introducing basic concepts like sequencing and algorithms to the class in an unplugged activity, students who are intimidated by computers can still build a foundation of understanding on these topics. In this lesson, students will learn how to develop an algorithm and encode it into a program. ",
-        "preparation": "- (Optional) Watch the Lesson in Action video.\r\n- Print out one worksheet and assessment for each student.\r\n- Make sure every student has a journal.\r\n",
+        "purpose": "The goal of this activity is to build critical thinking skills and excitement for the course, while introducing some of the fundamental **programming** concepts that will be used throughout the course. By introducing basic concepts like sequencing and **algorithms** to the class in an unplugged activity, students who are intimidated by computers can still build a foundation of understanding on these topics. In this lesson, students will learn how to develop an **algorithm** and encode it into a program. ",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***Graph Paper Programming** worksheet and assessment for each student.\n- Make sure every student has a journal.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -173,7 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.",
+        "overview": "In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and **debugging** skills in maze. From there, students will see new types of puzzles like _Collector, Artist,_ and _Harvester_ when they learn the very basics of **loops**.",
         "student_overview": "This lesson will give you practice in the skills you will need for this course.",
         "purpose": "We recognize that every classroom has a spectrum of understanding for every subject. Some students in your class may be computer wizards, while others haven't had much experience at all. In order to create an equal playing (and learning) field, we have developed this \"Ramp Up Stage\" for Course D. This can be used as either an introduction or a review of how to use Code.org and basic computer science concepts. This stage covers all prerequisites needed to start Course D.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
@@ -193,9 +193,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
+        "overview": "This activity will begin with a short lesson on **debugging** and **persistence**, then will quickly move to a race against the clock as students break into teams and work together to write a **program** one instruction at a time.",
         "student_overview": "Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!",
-        "purpose": "Teamwork is very important in computer science. Teams write and debug code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \r\n\r\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential frustration.",
+        "purpose": "Teamwork is very important in computer science. Teams write and **debug** code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \n\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential **frustration**.",
         "preparation": "- Watch the ***Relay Programming** - Teacher Video.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Relay Programming** - Activity Packet for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Relay Programming** - Worksheet for each student.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
@@ -1714,7 +1714,7 @@
       "position": 1,
       "properties": {
         "description": "In this activity, students will encode instructions to guide each other toward making drawings without letting the rest of their group see the original image. This warm-up frames the activity for the class.\r\n\r\n**Display:** Watch one of the videos below to give students context for the types of things that robots can do:\r\n\r\n - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\r\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\r\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)",
-        "name": "Introduction to Graph Paper Programming\r"
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "2a466981-732c-4b6b-82da-7a5552e04294",
@@ -1725,7 +1725,7 @@
       "key": "51c41ff9-2a4a-4197-b52e-02f69afab21b",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** *How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?*\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like Roombas, or even digital assistants like Amazon Alexa.\n"
+        "description": "**Discuss:** _How do you suppose that robots know how to do the things that they do? Do they have brains that work the same way that ours do?_\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their **programming**. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.\n"
       },
       "seeding_key": {
         "activity_section.key": "51c41ff9-2a4a-4197-b52e-02f69afab21b",
@@ -1759,7 +1759,7 @@
       "key": "3b2b2cce-a3b0-4e92-8175-9d2e950c1ccd",
       "position": 1,
       "properties": {
-        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n**Display:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from Algorithm to Program.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n**Say:** Today, we all get to program robots...and they're already here in the room!  It's you!  We're going to write programs using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone can get a turn.\n\n**Display:** Display both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time.  \n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
+        "description": "In this activity, students will act as both programmers and robots, coloring in squares according to programs that they have written for one another.\n\n**Distribute:** Students will use 4x4 grids (or sheets of graph paper with 4x4 boxes sectioned off). They will also need the image worksheet.\n\n**Display:** Project these commands, or write them on the board.  They won't persist long, but they will help students make the transition from **Algorithm** to **Program**.\n \n    Move one square right\n    Move one square left\n    Move one square up\n    Move one square down\n    Fill in square with color\n\n**Say:** Today, we all get to **program** robots...and they're already here in the room!  It's you!  We're going to write **programs** using symbols with special meanings to help each other recreate a picture. First, we'll practice together as if I am the robot and you are the programmers, then we can break up into groups so that everyone can get a turn.\n\n**Display:** Display both the image that you are going to have the students walk you through, and a blank grid that you will fill-in with your ARM. Make sure that the instructions, grid, and image remain visible at the same time.  \n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper1.png)"
       },
       "seeding_key": {
         "activity_section.key": "3b2b2cce-a3b0-4e92-8175-9d2e950c1ccd",
@@ -1770,7 +1770,7 @@
       "key": "9daec2a7-3d36-4707-906c-e78661bd2231",
       "position": 2,
       "properties": {
-        "description": "Here is an image.  Pretend that I am the robot with an Automatic Realization Machine (ARM).  These are the only instructions that I understand.  \r\n\r\nStarting at the upper left-hand corner, guide my ARM out loud with your words.",
+        "description": "_Here is an image.  Pretend that I am the robot with an Automatic Realization Machine (ARM).  These are the only instructions that I understand._\n\n_Starting at the upper left-hand corner, guide my ARM out loud with your words._",
         "remarks": true
       },
       "seeding_key": {
@@ -1782,7 +1782,7 @@
       "key": "4f8e096d-91ae-41a5-ab32-ef8a978d87b7",
       "position": 3,
       "properties": {
-        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** You just gave me a list of steps to finish a task. In programming, they call that an algorithm.  Algorithms are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the algorithm for a drawing like this?\n\n**Display:** Show the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n**Display:** Show the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
+        "description": "**Model:**  The class might give you instructions like these below.  As you hear an instruction that you intend to follow, make sure to repeat it out loud so that the students can keep track of what you are doing. \n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\nContinue with the activity until you have completed your sample square. \n\n\n**Capture:** Write each of the commands down so that students can see all of the steps that went into the one image.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Down\n    Fill In Square with Color\n\n\n**Say:** _You just gave me a list of steps to finish a task. In programming, they call that an **algorithm**.  **Algorithms** are great, because they are easy for you to understand as the programmer. BUT, what happens when we want to write down the **algorithm** for a drawing like this?\n\n**Display:** Show the students a more complicated image, like the one below.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper2.png)\n\nNext, begin writing down some of the instructions that it would take to replicate that image.  Hopefully, students will see that writing everything out longhand would quickly become a bit of a nightmare.\n\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Right\n    Move One Square Right\n    Fill In Square with Color\n    Move One Square Down\n    Move One Square Left\n    Fill In Square with Color\n    Move One Square Left\n    Move One Square Left\n    Fill In Square with Color\n    PLUS 12 MORE INSTRUCTIONS!\n\n\n**Display:** Show the students this list of symbols.\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper3.png)"
       },
       "seeding_key": {
         "activity_section.key": "4f8e096d-91ae-41a5-ab32-ef8a978d87b7",
@@ -1804,7 +1804,7 @@
       "key": "aba4bed8-7d8b-47e3-bc8d-4d50e26ad3f3",
       "position": 5,
       "properties": {
-        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\nThe goal for this discussion is to get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called \"programming.\" "
+        "description": "Draw out ideas that relate to transitioning from the verbal instructions to the symbols. Once the students get to that place, point out that this text:\n\n- “Move one square right, Move one square right, Fill-in square with color”\n\nwould now correspond to the program:\n\n![](https://levelbuilder.code.org/curriculum/course2/1/program.png)\n\nThe goal for this discussion is to get at the idea that students can use symbols to stand for entire phrases.  Once they understand that, share with them that making the switch from listing steps in detail to encoding them is called **\"programming.\"** "
       },
       "seeding_key": {
         "activity_section.key": "aba4bed8-7d8b-47e3-bc8d-4d50e26ad3f3",
@@ -1843,7 +1843,7 @@
       "key": "fafab5b4-97dc-4da6-99bf-b2742361d475",
       "position": 8,
       "properties": {
-        "description": "####The Students' Turn\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the algorithm to draw chosen image with partner(s).\n- Convert algorithm into a program using symbols.\n- Trade programs with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
+        "description": "####The Students' Turn\n\n**Group:** Divide students into pairs or small groups.  \n\n- Have each pair/group choose an image from the worksheet.\n- Discuss the **algorithm** to draw chosen image with partner(s).\n- Convert **algorithm** into a **program** using symbols.\n- Trade **programs** with another pair/group and draw one another's image.\n- Choose another image and go again!\n\n![](https://code.org/curriculum/docs/csf/c2_GraphPaper7.png)"
       },
       "seeding_key": {
         "activity_section.key": "fafab5b4-97dc-4da6-99bf-b2742361d475",
@@ -1962,7 +1962,7 @@
       "key": "c54ece34-6ca8-4a97-a431-8513386bf6a7",
       "position": 3,
       "properties": {
-        "progression_name": "Maze Intro: Programming with Blocks"
+        "progression_name": "Video: Maze Intro: Programming with Blocks"
       },
       "seeding_key": {
         "activity_section.key": "c54ece34-6ca8-4a97-a431-8513386bf6a7",
@@ -2029,7 +2029,7 @@
       "key": "67688952-e1da-43b1-a7d0-f2889dec7e48",
       "position": 2,
       "properties": {
-        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided ***Relay Programming - Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- Start at the star.\n- Follow the instructions step-by-step.\n- End when all of the right squares are filled in.\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at **debugging**!",
+        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix **bugs** in their own **programs**.  The easiest way to do that is to first present students with a **program** that contains **bugs** that are not their fault.  Once they've helped you fix \"your\" program, share with them how **frustrating** it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n**Display:** Show your students the provided ***Relay Programming - Teacher Debugging Image**.\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a **bug**, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express **frustration** when the picture doesn't turn out the way that you wanted it to.\n\n**Think:** *Can you figure out why my **program** doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the **program** is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at **debugging**!",
         "name": "Where did I go wrong?"
       },
       "seeding_key": {
@@ -2041,7 +2041,7 @@
       "key": "3b261cf8-73e3-4dd0-bef0-f55ba858297b",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
+        "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  When you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice **persistence**.  Keep trying over and over again.  After a few times, you will start to understand how to **debug** your problems!",
         "tips": [
           {
             "type": "contentCorner",
@@ -2201,7 +2201,7 @@
       "key": "a3c8ba66-a991-45a4-a743-59b4a41ebb24",
       "position": 2,
       "properties": {
-        "progression_name": "De-bugging with the Step Button"
+        "progression_name": "Video: De-bugging with the Step Button"
       },
       "seeding_key": {
         "activity_section.key": "a3c8ba66-a991-45a4-a743-59b4a41ebb24",
@@ -3173,7 +3173,7 @@
       "key": "2f024770-481d-43dc-aa55-7133819f6663",
       "position": 1,
       "properties": {
-        "progression_name": "Practice",
+        "progression_name": "Skill Building",
         "name": "Looking Ahead with Minecraft",
         "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming."
       },
@@ -3209,7 +3209,7 @@
       "position": 1,
       "properties": {
         "name": "Reflection",
-        "description": "\n####Journaling\n\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
+        "description": "**Prompts:**\n\n - Draw a feeling face to show how you felt during today’s lesson.\n - Draw something else you could have built in this _Minecraft_ world.\n - Can you draw a scene where someone is using a conditional?"
       },
       "seeding_key": {
         "activity_section.key": "3cb11179-29ea-4362-b237-a509e3e0943f",
@@ -3482,7 +3482,7 @@
       "key": "5b71ce88-2e79-4478-888a-796bed9dacb9",
       "position": 3,
       "properties": {
-        "progression_name": "While Loops with the Farmer"
+        "progression_name": "Video: While Loops with the Farmer"
       },
       "seeding_key": {
         "activity_section.key": "5b71ce88-2e79-4478-888a-796bed9dacb9",
@@ -3841,7 +3841,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Graph Paper Programming - Unplugged Activity",
         "level_keys": [
@@ -3867,9 +3867,9 @@
       "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Maze Intro: Programming with Blocks",
+        "progression": "Video: Maze Intro: Programming with Blocks",
         "level_keys": [
           "courseD_video_ramp1_2021"
         ]
@@ -3893,7 +3893,7 @@
       "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3919,7 +3919,7 @@
       "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3945,7 +3945,7 @@
       "chapter": 7,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3971,7 +3971,7 @@
       "chapter": 8,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3997,7 +3997,7 @@
       "chapter": 9,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4023,7 +4023,7 @@
       "chapter": 10,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4049,7 +4049,7 @@
       "chapter": 11,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4076,7 +4076,7 @@
       "chapter": 12,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4102,7 +4102,7 @@
       "chapter": 13,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4128,7 +4128,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Relay Programming - Unplugged Activity",
         "level_keys": [
@@ -4154,9 +4154,9 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "De-bugging with the Step Button",
+        "progression": "Video: De-bugging with the Step Button",
         "level_keys": [
           "courseD_video_debugging_2021"
         ]
@@ -4180,7 +4180,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4206,7 +4206,7 @@
       "chapter": 17,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4232,7 +4232,7 @@
       "chapter": 18,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4258,7 +4258,7 @@
       "chapter": 19,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4284,7 +4284,7 @@
       "chapter": 20,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4310,7 +4310,7 @@
       "chapter": 21,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4337,7 +4337,7 @@
       "chapter": 22,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4363,7 +4363,7 @@
       "chapter": 23,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6318,7 +6318,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Move to Sheep_2021"
         ]
@@ -6344,7 +6344,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Chop Tree_2021"
         ]
@@ -6370,7 +6370,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Shear Sheep_2021"
         ]
@@ -6396,7 +6396,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Chop Trees_2021"
         ]
@@ -6422,7 +6422,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Place Wall_2021"
         ]
@@ -6448,7 +6448,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld House Frame Chosen_2021"
         ]
@@ -6474,7 +6474,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Plant Crops_2021"
         ]
@@ -6500,7 +6500,7 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Overworld Avoid Monsters_2021"
         ]
@@ -6526,33 +6526,7 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
-        "level_keys": [
-          "Overworld Powered Minecart_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2021",
-        "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663"
-      },
-      "level_keys": [
-        "Overworld Powered Minecart_2021"
-      ]
-    },
-    {
-      "chapter": 107,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Underground Mining Coal_2021"
         ]
@@ -6573,12 +6547,12 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 107,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "Underground Iron_2021"
         ]
@@ -6599,8 +6573,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 12,
+      "chapter": 108,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6626,8 +6600,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 13,
+      "chapter": 109,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6650,6 +6624,32 @@
       },
       "level_keys": [
         "Underground If Statements_2021"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge",
+        "level_keys": [
+          "Overworld Powered Minecart_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Overworld Powered Minecart_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2021",
+        "activity_section.key": "16432484-49b1-47dc-bbd9-60f67bacc790"
+      },
+      "level_keys": [
+        "Overworld Powered Minecart_2021"
       ]
     },
     {
@@ -7153,7 +7153,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "While Loops with the Farmer",
+        "progression": "Video: While Loops with the Farmer",
         "level_keys": [
           "courseD_video_whileIntro_2021"
         ]
@@ -9037,18 +9037,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Overworld Powered Minecart_2021",
-        "script_level.level_keys": [
-          "Overworld Powered Minecart_2021"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2021",
-        "activity_section.key": "2f024770-481d-43dc-aa55-7133819f6663"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Underground Mining Coal_2021",
         "script_level.level_keys": [
           "Underground Mining Coal_2021"
@@ -9088,6 +9076,18 @@
         "level.key": "Underground If Statements_2021",
         "script_level.level_keys": [
           "Underground If Statements_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2021",
+        "activity_section.key": "16432484-49b1-47dc-bbd9-60f67bacc790"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Overworld Powered Minecart_2021",
+        "script_level.level_keys": [
+          "Overworld Powered Minecart_2021"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "csf_conditionals",
@@ -11585,5 +11585,8 @@
         "objective.key": "92ad0a98-e2e5-4104-8a9f-1dee9409f300"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
