@@ -30,11 +30,11 @@ class Standard < ApplicationRecord
 
   def summarize_for_lesson_show
     {
-      framework_name: framework.name,
-      parent_category_shortcode: category&.parent_category&.shortcode,
-      parent_category_description: category&.parent_category&.description,
-      category_shortcode: category&.shortcode,
-      category_description: category&.description,
+      frameworkName: framework.name,
+      parentCategoryShortcode: category&.parent_category&.shortcode,
+      parentCategoryDescription: category&.parent_category&.description,
+      categoryShortcode: category&.shortcode,
+      categoryDescription: category&.description,
       shortcode: shortcode,
       description: description
     }
