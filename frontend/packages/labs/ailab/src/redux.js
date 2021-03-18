@@ -487,13 +487,17 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_HIGHLIGHT_COLUMN) {
-    return {
-      ...state,
-      highlightColumn: action.highlightColumn
-    };
+    if (getShowColumnClicking(state)) {
+      return {
+        ...state,
+        highlightColumn: action.highlightColumn
+      };
+    }
   }
   if (action.type === SET_CURRENT_COLUMN) {
-    if (state.currentColumn === action.currentColumn) {
+    if (!getShowColumnClicking(state)) {
+      // Do nothing.
+    } else if (state.currentColumn === action.currentColumn) {
       return {
         ...state,
         currentColumn: undefined
@@ -986,6 +990,10 @@ export function getShowSelectLabels(state) {
 
 export function getSpecifiedDatasets(state) {
   return state.mode && state.mode.datasets;
+}
+
+export function getShowColumnClicking(state) {
+  return !(state.mode && state.mode.hideColumnClicking);
 }
 
 export function getShowChooseReserve(state) {
