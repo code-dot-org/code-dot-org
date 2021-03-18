@@ -8,6 +8,11 @@ import {TestResults} from '@cdo/apps/constants';
 import ailabMsg from './locale';
 import $ from 'jquery';
 
+import {
+  setDynamicInstructionsDefaults,
+  setDynamicInstructionsKey
+} from '../redux/instructions';
+
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
  * image telling the user to rotate their device to landscape mode.  Because
@@ -17,6 +22,21 @@ import $ from 'jquery';
  * properly fit on the mobile device for that viewport.
  */
 const MOBILE_PORTRAIT_WIDTH = 600;
+
+function getInstructionsDefaults() {
+  var instructions = {
+    selectDataset: 'Select the data set you would like to use.',
+    dataDisplayLabel: 'Choose one column to predict.',
+    dataDisplayFeatures:
+      'Choose one or more columns as inputs to help make the prediction.',
+    selectTrainer: 'Set up the training.',
+    trainModel: 'Your model is being trained.',
+    results: 'Review the results.',
+    saveModel: 'Save the trained model for use in App Lab.'
+  };
+
+  return instructions;
+}
 
 /**
  * An instantiable Ailab class
@@ -96,6 +116,10 @@ Ailab.prototype.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel
   });
 
+  getStore().dispatch(
+    setDynamicInstructionsDefaults(getInstructionsDefaults())
+  );
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
@@ -122,9 +146,14 @@ Ailab.prototype.onContinue = function() {
   });
 };
 
+Ailab.prototype.setInstructionsKey = function(instructionsKey) {
+  getStore().dispatch(setDynamicInstructionsKey(instructionsKey));
+};
+
 Ailab.prototype.initMLActivities = function() {
   const mode = this.level.mode ? JSON.parse(this.level.mode) : null;
   const onContinue = this.onContinue.bind(this);
+  const setInstructionsKey = this.setInstructionsKey.bind(this);
   const saveTrainedModel = (dataToSave, callback) => {
     return new Promise((resolve, reject) => {
       $.ajax({
@@ -153,6 +182,7 @@ Ailab.prototype.initMLActivities = function() {
   initAll({
     mode,
     onContinue,
+    setInstructionsKey,
     i18n: ailabMsg,
     saveTrainedModel
   });
