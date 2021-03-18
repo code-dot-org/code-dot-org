@@ -20,9 +20,8 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_expressions,
-      :lessons_programming_expressions, :objectives, :frameworks, :standards,
-      :lessons_standards, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_environments, :programming_expressions,
+      :lessons_programming_expressions, :objectives, :frameworks, :standards, :lessons_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -65,6 +64,7 @@ module Services
         lessons_resources: lessons_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
+        programming_environments: ProgrammingEnvironment.all,
         programming_expressions: ProgrammingExpression.all,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives,
@@ -204,6 +204,7 @@ module Services
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
+        seed_context.programming_environments = ProgrammingEnvironment.all
         seed_context.programming_expressions = ProgrammingExpression.all
         seed_context.lessons_programming_expressions = import_lessons_programming_expressions(lessons_programming_expressions_data, seed_context)
         seed_context.objectives = import_objectives(objectives_data, seed_context)
@@ -490,7 +491,10 @@ module Services
         lesson_id = seed_context.lessons.select {|l| l.key == lpe_data['seeding_key']['lesson.key']}.first&.id
         raise 'No lesson found' if lesson_id.nil?
 
-        programming_expression_id = seed_context.programming_expressions.select {|pe| pe.key == lpe_data['seeding_key']['programming_expression.key']}.first&.id
+        programming_environment_id = seed_context.programming_environments.select {|pe| pe.name == lpe_data['seeding_key']['programming_environment.name']}.first&.id
+        programming_expression_id = seed_context.programming_expressions.select do |pe|
+          pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
+        end.first&.id
         raise 'No programming expression found' if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
