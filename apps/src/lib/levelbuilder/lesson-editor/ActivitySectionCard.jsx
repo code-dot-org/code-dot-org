@@ -364,6 +364,10 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  appendProgrammingExpressionLink = (displayName, color, url) => {
+    this.appendMarkdownSyntax(`\n[\`${displayName}\`(${color})](${url})`);
+  };
+
   appendResourceLink = resourceKey => {
     this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
   };
@@ -542,6 +546,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
+          appendProgrammingExpressionLink={this.appendProgrammingExpressionLink}
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}

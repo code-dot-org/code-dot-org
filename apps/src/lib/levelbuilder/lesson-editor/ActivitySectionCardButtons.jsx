@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
+import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
@@ -60,6 +61,7 @@ class ActivitySectionCardButtons extends Component {
     uploadImage: PropTypes.func.isRequired,
     updateTip: PropTypes.func.isRequired,
     removeTip: PropTypes.func.isRequired,
+    appendProgrammingExpressionLink: PropTypes.func.isRequired,
     appendResourceLink: PropTypes.func.isRequired,
     appendVocabularyLink: PropTypes.func.isRequired,
     appendSlide: PropTypes.func.isRequired,
@@ -72,6 +74,7 @@ class ActivitySectionCardButtons extends Component {
 
     this.state = {
       editingExistingTip: false,
+      addProgrammingExpressionOpen: false,
       addResourceOpen: false,
       addVocabularyOpen: false,
       addLevelOpen: false,
@@ -144,6 +147,10 @@ class ActivitySectionCardButtons extends Component {
     this.setState({tipToEdit: null, editingExistingTip: false});
   };
 
+  handleOpenAddProgrammingExpression = () => {
+    this.setState({addProgrammingExpressionOpen: true});
+  };
+
   handleOpenAddResource = () => {
     this.setState({addResourceOpen: true});
   };
@@ -154,6 +161,13 @@ class ActivitySectionCardButtons extends Component {
 
   handleAddSlide = () => {
     this.props.appendSlide();
+  };
+
+  handleCloseAddProgrammingExpression = (displayName, color, url) => {
+    this.setState(
+      {addProgrammingExpressionOpen: false},
+      this.props.appendProgrammingExpressionLink(displayName, color, url)
+    );
   };
 
   handleCloseAddResource = resourceKey => {
@@ -189,6 +203,10 @@ class ActivitySectionCardButtons extends Component {
                 <AddButton
                   handler={this.handleOpenAddTip}
                   displayText="Callout"
+                />
+                <AddButton
+                  handler={this.handleOpenAddProgrammingExpression}
+                  displayText="Doc Link"
                 />
                 <AddButton
                   handler={this.handleOpenAddResource}
@@ -236,6 +254,13 @@ class ActivitySectionCardButtons extends Component {
               handleConfirm={this.handleCloseAddVocabulary}
               handleClose={() => this.setState({addVocabularyOpen: false})}
               vocabularies={this.props.vocabularies}
+            />
+            <FindProgrammingExpressionDialog
+              isOpen={this.state.addProgrammingExpressionOpen}
+              handleConfirm={this.handleCloseAddProgrammingExpression}
+              handleClose={() =>
+                this.setState({addProgrammingExpressionOpen: false})
+              }
             />
             {/* Prevent dialog from trying to render when there is no tip to edit*/}
             {this.state.tipToEdit && (
