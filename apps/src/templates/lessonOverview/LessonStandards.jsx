@@ -3,11 +3,11 @@ import React, {PureComponent} from 'react';
 import _ from 'lodash';
 
 const standardShape = PropTypes.shape({
-  framework_name: PropTypes.string.isRequired,
-  parent_category_shortcode: PropTypes.string,
-  parent_category_description: PropTypes.string,
-  category_shortcode: PropTypes.string.isRequired,
-  category_description: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
   shortcode: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 });
@@ -16,8 +16,8 @@ export default class LessonStandards extends PureComponent {
   render() {
     const {standards} = this.props;
     const standardsByFramework = _(standards)
-      .orderBy('framework_name')
-      .groupBy('framework_name')
+      .orderBy('frameworkName')
+      .groupBy('frameworkName')
       .value();
     return (
       <div>
@@ -43,11 +43,11 @@ class Framework extends PureComponent {
   render() {
     const {name, standards} = this.props;
     // Whether all standards in this framework have parent categories.
-    const hasParentCategories = !!standards[0].parent_category_shortcode;
+    const hasParentCategories = !!standards[0].parentCategoryShortcode;
     const CategoryClass = hasParentCategories ? ParentCategory : Category;
     const categoryKey = hasParentCategories
-      ? 'parent_category_shortcode'
-      : 'category_shortcode';
+      ? 'parentCategoryShortcode'
+      : 'categoryShortcode';
     const standardsByCategory = _(standards)
       .orderBy(categoryKey, 'shortcode')
       .groupBy(categoryKey)
@@ -79,10 +79,10 @@ Framework.propTypes = {
 class ParentCategory extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
-    const description = standards[0].parent_category_description;
+    const description = standards[0].parentCategoryDescription;
     const standardsByCategory = _(standards)
-      .orderBy('category_shortcode', 'shortcode')
-      .groupBy('category_shortcode')
+      .orderBy('categoryShortcode', 'shortcode')
+      .groupBy('categoryShortcode')
       .value();
     return (
       <li key={shortcode}>
@@ -117,7 +117,7 @@ ParentCategory.propTypes = {
 class Category extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
-    const description = standards[0].category_description;
+    const description = standards[0].categoryDescription;
     return (
       <li key={shortcode}>
         <details>
