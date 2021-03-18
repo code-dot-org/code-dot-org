@@ -31,6 +31,7 @@ class Ailab < Level
     is_project_level
     submittable
     mode
+    dynamic_instructions
   )
 
   def self.create_from_level_builder(params, level_params)
@@ -75,6 +76,7 @@ class Ailab < Level
   def self.json_object_attrs
     %w(
       mode
+      dynamic_instructions
     ).map {|x| x.camelize(:lower)}
   end
 end
