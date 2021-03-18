@@ -124,22 +124,22 @@ Scenario: Lock settings for students who never submit
   Then I verify progress for stage 31 level 3 is "not_tried"
   Then I verify progress for stage 31 level 4 is "not_tried"
 
-  # student does not submit assessment before teacher locks again
+  # student does not submit assessment before teacher switches to readonly 
 
   And I sign in as "Teacher_billy"
   And I am on "http://studio.code.org/s/allthethings"
   # Wait until detail view loads
   And I wait until element "span:contains(Lesson 1: Jigsaw)" is visible
   And I open the stage lock dialog
-  And I lock the stage for students
+  And I show stage answers for students
   And I wait until element ".modal-backdrop" is gone
 
-  # now locked/not submitted for student
+  # now unlocked/not submitted for student
 
   When I sign in as "billy"
   And I am on "http://studio.code.org/s/allthethings"
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
-  Then I verify progress for stage 31 level 1 is "not_started"
-  Then I verify progress for stage 31 level 2 is "not_started"
-  Then I verify progress for stage 31 level 3 is "not_started"
-  Then I verify progress for stage 31 level 4 is "not_started"
+  Then I verify progress for stage 31 level 1 is "not_tried"
+  Then I verify progress for stage 31 level 2 is "not_tried"
+  Then I verify progress for stage 31 level 3 is "not_tried"
+  Then I verify progress for stage 31 level 4 is "not_tried"
