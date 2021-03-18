@@ -42,8 +42,8 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
-  dynamicInstructions: {},
-  dynamicInstructionsDefaults: {},
+  dynamicInstructions: undefined,
+  dynamicInstructionsDefaults: undefined,
   dynamicInstructionsKey: undefined,
   teacherMarkdown: undefined,
   hasContainedLevels: false,
@@ -420,6 +420,10 @@ export const determineInstructionsConstants = config => {
 };
 
 export function getDynamicInstructions(state) {
+  if (!state.dynamicInstructionsDefaults && !state.dynamicInstructions) {
+    return undefined;
+  }
+
   return {
     ...state.dynamicInstructionsDefaults,
     ...(state.dynamicInstructions && JSON.parse(state.dynamicInstructions))
