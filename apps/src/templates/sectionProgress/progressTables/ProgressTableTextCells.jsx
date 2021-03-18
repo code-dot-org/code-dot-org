@@ -23,11 +23,12 @@ const styles = {
   }
 };
 
-export function ProgressTableTextCell({text}) {
-  return <div style={styles.text}>{text}</div>;
+export function ProgressTableTextCell({text, style}) {
+  return <div style={{...styles.text, ...style}}>{text}</div>;
 }
 ProgressTableTextCell.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  style: PropTypes.object
 };
 
 export function ProgressTableTextLabelCell({text}) {
@@ -37,15 +38,28 @@ ProgressTableTextLabelCell.propTypes = {
   text: PropTypes.string.isRequired
 };
 
-export function ProgressTableTextCellGroup({texts}) {
+export function ProgressTableTextCellGroup({textDataList}) {
+  const getSublevelPadding = sublevelCount =>
+    sublevelCount ? sublevelCount * 25.5 : 0;
+
   return (
     <div style={styles.group}>
-      {texts.map((text, i) => (
-        <ProgressTableTextCell text={text} key={`${text}-${i}`} />
-      ))}
+      {textDataList.map(({text, sublevelCount}, i) => {
+        return (
+          <ProgressTableTextCell
+            text={text}
+            key={`${text}-${i}`}
+            style={{paddingRight: `${getSublevelPadding(sublevelCount)}px`}}
+          />
+        );
+      })}
     </div>
   );
 }
+const textDataShape = PropTypes.shape({
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  sublevelCount: PropTypes.number
+});
 ProgressTableTextCellGroup.propTypes = {
-  texts: PropTypes.array.isRequired
+  textDataList: PropTypes.arrayOf(textDataShape).isRequired
 };
