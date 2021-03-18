@@ -130,28 +130,29 @@ class UserLevel < ApplicationRecord
     end
   end
 
+  # `locked` is a virtual attribute because it relies on `unlocked_at` to
+  # automatically return `true` after `AUTOLOCK_PERIOD`
+  def locked
+    unlocked_at.nil? || unlocked_at < AUTOLOCK_PERIOD.ago
+  end
+
   def locked=(val)
-    new_time = if val
-                 nil
-               else
-                 Time.now
-               end
-    self.unlocked_at = new_time
+    self.unlocked_at = val ? nil : Time.now
   end
 
-  def locked?
-    if unlocked_at.nil?
-      return true
-    else
-      return unlocked_at < AUTOLOCK_PERIOD.ago
-    end
-  end
-
+  # this is the "locked" value we return to the client. if the lesson isn't
+  # lockable or we are an authorized teacher, we always return `false`.
   def show_as_locked?(stage)
     return false unless stage.lockable?
     return false if user.authorized_teacher?
-    return false if readonly_answers && !locked?
-    return locked? || submitted?
+    locked
+  end
+
+  # `readonly` and `locked` are mutually exclusive on the client, so we use
+  # this helper to override the value of `readonly_answers` when we're supposed
+  # to show as locked.
+  def show_as_readonly?(stage)
+    readonly_answers? && !show_as_locked?(stage)
   end
 
   # First ScriptLevel in this Script containing this Level.
@@ -171,14 +172,18 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    ## TODO use the locked setter here
+    # we explicitly set `locked=false` if `readonly_answers=true` to start
+    # the autolock clock so that the mutually-exclusive `show_as_locked` and
+    # `show_as_readonly` will flip from `false/true` to `true/false`
+    # after AUTOLOCK_PERIOD has passed.
+    user_level.locked = readonly_answers ? false : locked
+    user_level.readonly_answers = readonly_answers
 
-    user_level.assign_attributes(
-      readonly_answers: !locked && readonly_answers,
-      unlocked_at: locked ? nil : Time.now,
-      # level_group, which is the only levels that we lock, always sets best_result to 100 when complete
-      best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
-    )
+    # level_group, which is the only type of level that we lock, always sets
+    # best_result to 100 when complete
+    if locked || readonly_answers
+      user_level.best_result = ActivityConstants::BEST_PASS_RESULT
+    end
 
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
