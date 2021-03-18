@@ -44,9 +44,13 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
   });
 
   it('remove programmingExpression', () => {
+    assert.deepEqual(initialState.map(r => r.key), [
+      'programmingExpression-1',
+      'programmingExpression-2'
+    ]);
     const nextState = programmingExpressionEditor(
       initialState,
-      removeProgrammingExpression('programmingExpression-1')
+      removeProgrammingExpression(1)
     );
     assert.deepEqual(nextState.map(r => r.key), ['programmingExpression-2']);
   });
