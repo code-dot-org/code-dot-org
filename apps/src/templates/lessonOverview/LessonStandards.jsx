@@ -55,7 +55,7 @@ class Framework extends PureComponent {
     return (
       <details key={name}>
         <summary>{name}</summary>
-        <ul>
+        <ul style={{listStyleType: 'none'}}>
           {Object.keys(standardsByCategory).map(categoryShortcode => {
             const standards = standardsByCategory[categoryShortcode];
             return (
@@ -86,21 +86,25 @@ class ParentCategory extends PureComponent {
       .value();
     return (
       <li key={shortcode}>
-        {shortcode}
-        {' - '}
-        {description}
-        <ul>
-          {Object.keys(standardsByCategory).map(categoryShortcode => {
-            const standards = standardsByCategory[categoryShortcode];
-            return (
-              <Category
-                key={categoryShortcode}
-                shortcode={categoryShortcode}
-                standards={standards}
-              />
-            );
-          })}
-        </ul>
+        <details>
+          <summary>
+            {shortcode}
+            {' - '}
+            {description}
+          </summary>
+          <ul style={{listStyleType: 'none'}}>
+            {Object.keys(standardsByCategory).map(categoryShortcode => {
+              const standards = standardsByCategory[categoryShortcode];
+              return (
+                <Category
+                  key={categoryShortcode}
+                  shortcode={categoryShortcode}
+                  standards={standards}
+                />
+              );
+            })}
+          </ul>
+        </details>
       </li>
     );
   }
@@ -116,12 +120,14 @@ class Category extends PureComponent {
     const description = standards[0].category_description;
     return (
       <li key={shortcode}>
-        {`${shortcode} - ${description}`}
-        <ul>
-          {standards.map(standard => (
-            <Standard key={standard.shortcode} standard={standard} />
-          ))}
-        </ul>
+        <details>
+          <summary>{`${shortcode} - ${description}`}</summary>
+          <ul>
+            {standards.map(standard => (
+              <Standard key={standard.shortcode} standard={standard} />
+            ))}
+          </ul>
+        </details>
       </li>
     );
   }
