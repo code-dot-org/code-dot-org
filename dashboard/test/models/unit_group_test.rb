@@ -74,6 +74,56 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert obj['properties']['is_stable']
   end
 
+  test "should serialize resources to json" do
+    course_version = create :course_version
+    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, course_version: course_version)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+
+    serialization = unit_group.serialize
+
+    obj = JSON.parse(serialization)
+    assert_equal 'my-unit-group', obj['name']
+    assert_equal ['script1', 'script2', 'script3'], obj['script_names']
+    assert obj['properties']['is_stable']
+    assert_equal 2, obj['resources'].length
+  end
+
+  test "should load_from_path" do
+    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+
+    serialization = unit_group.serialize
+    unit_group.destroy
+
+    seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
+    assert_equal 'my-unit-group', seeded_unit_group.name
+    assert_equal 3, seeded_unit_group.default_unit_group_units.length
+    assert_equal 3, seeded_unit_group.default_scripts.length
+  end
+
+  test "should load_from_path and create resources" do
+    course_version = create :course_version
+    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000', course_version: course_version)
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+
+    serialization = unit_group.serialize
+    unit_group.destroy
+
+    seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
+    assert_equal 'my-unit-group', seeded_unit_group.name
+    assert_equal 3, seeded_unit_group.default_unit_group_units.length
+    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 2, seeded_unit_group.resources.length
+  end
+
   test "stable?: true if unit_group has plc_course" do
     unit_group = UnitGroup.new(family_name: 'plc')
     unit_group.plc_course = Plc::Course.new(unit_group: unit_group)
