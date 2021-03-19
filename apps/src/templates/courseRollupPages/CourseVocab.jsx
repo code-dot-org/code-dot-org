@@ -18,7 +18,7 @@ export default class CourseVocab extends Component {
       <div style={styles.main}>
         Course Vocab
         {this.props.units.map(unit => (
-          <RollupUnitEntry unit={unit} />
+          <RollupUnitEntry unit={unit} key={unit.key} />
         ))}
       </div>
     );
