@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-18 21:41:34 UTC",
+    "serialized_at": "2021-03-19 17:07:57 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -189,7 +189,7 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a **variable** to store their pet's \"happiness\" as a number, which should help them understand how **variables** can be used in other applications. ",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -2415,7 +2415,7 @@
       "key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online Video**."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. "
       },
       "seeding_key": {
         "activity_section.key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
@@ -3396,7 +3396,7 @@
       "key": "2a282546-3943-4555-adae-45fe80b8207a",
       "position": 1,
       "properties": {
-        "name": "Run a simulation",
+        "name": "Simulation Experiments",
         "progression_name": "Run a simulation"
       },
       "seeding_key": {
@@ -3408,7 +3408,6 @@
       "key": "a9361037-3164-409e-a061-748c4929e168",
       "position": 2,
       "properties": {
-        "name": "Modify simulation variables",
         "progression_name": "Modify simulation variables"
       },
       "seeding_key": {
@@ -3420,6 +3419,7 @@
       "key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
       "position": 3,
       "properties": {
+        "progression_name": "Customize the simulation"
       },
       "seeding_key": {
         "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
@@ -3430,7 +3430,7 @@
       "key": "ebf10902-bbcc-4fc6-9304-f2d26ab61747",
       "position": 4,
       "properties": {
-        "description": "**Distribute**: Pass out the [r running-simulations] along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* Are the graphs the same or different? Why do you think that is?\n* Do you see any patterns?\n* What do you think you'd see if you ran this simulation 5 more times?\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
+        "description": "**Distribute**: Pass out the lesson worksheet along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* Are the graphs the same or different? Why do you think that is?\n* Do you see any patterns?\n* What do you think you'd see if you ran this simulation 5 more times?\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
         "name": "Simulating Experiments"
       },
       "seeding_key": {
@@ -3445,7 +3445,6 @@
         "description": "**Discuss**: Ask students to discuss how their modification and prediction came out, first with a neighbor and then as a whole class. Encourage students to consider _why_ they made the modifications they did and how that change connected to their predictions.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.\r\n"
           }
@@ -4129,7 +4128,7 @@
       "key": "fe7404a4-6d14-468e-8bed-2a2c1632e5c8",
       "position": 1,
       "properties": {
-        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\r\n\r\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \r\n\r\n- What are some of the behaviors we can assign to our sprites?\r\n- What do you imagine the code *inside* a behavior might look like?\r\n\r\n**Display:** Begin by showing Puzzle 1 to your students. \r\n\r\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\r\n\r\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\r\n\r\n- What would happen if you change the -1 to another number? -5? Positive 1? 0?\r\n- What other properties might we be able to change about a sprite besides its size?",
+        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\n\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \n\n- What are some of the behaviors we can assign to our sprites?\n- What do you imagine the code *inside* a behavior might look like?\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\n\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\n\n- _What would happen if you change the -1 to another number? -5? Positive 1? 0?_\n- _What other properties might we be able to change about a sprite besides its size?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4170,7 +4169,7 @@
       "key": "8b0b08e1-3238-4b0a-aae7-c6eb584fe40e",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online video**."
       },
       "seeding_key": {
         "activity_section.key": "8b0b08e1-3238-4b0a-aae7-c6eb584fe40e",
@@ -5383,7 +5382,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "Virtual Pet 8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6938,7 +6940,7 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Run a simulation",
         "level_keys": [
@@ -6964,7 +6966,7 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Modify simulation variables",
         "level_keys": [
@@ -6990,17 +6992,15 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_extras_sim_2021"
-        ]
+        "progression": "Customize the simulation"
       },
       "named_level": null,
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_extras_sim_2021"
+          "simcustom_2021"
         ],
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
@@ -7008,7 +7008,7 @@
         "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4"
       },
       "level_keys": [
-        "courseF_extras_sim_2021"
+        "simcustom_2021"
       ]
     },
     {
@@ -7561,7 +7561,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7587,7 +7587,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7613,7 +7613,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7639,7 +7639,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7665,7 +7665,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7691,7 +7691,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7717,7 +7717,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7743,7 +7743,7 @@
       "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7770,7 +7770,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -9855,9 +9855,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_extras_sim_2021",
+        "level.key": "simcustom_2021",
         "script_level.level_keys": [
-          "courseF_extras_sim_2021"
+          "simcustom_2021"
         ],
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
@@ -10768,18 +10768,6 @@
       }
     },
     {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "pause_and_think_online",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
       "name": "Variables: Blank Space Stories",
       "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/edit?usp=sharing",
       "key": "variables_blank_space_stories",
@@ -10828,7 +10816,7 @@
     },
     {
       "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
       "key": "pause_and_think_online",
       "properties": {
         "type": "Video",
@@ -11118,6 +11106,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
       "name": "Variables in Envelopes",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "unplugged-video-envelope-variables",
@@ -11243,12 +11243,6 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "sprites_in_action"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "resource.key": "pause_and_think_online"
       }
     },
     {
@@ -11415,6 +11409,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Editing Behaviors",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Envelope Variables",
         "resource.key": "unplugged-video-envelope-variables"
       }
@@ -11528,13 +11528,23 @@
       }
     },
     {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
       }
     },
     {
@@ -11660,7 +11670,7 @@
     {
       "key": "models_and_simulations",
       "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.\r\n\r\n",
+      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life",
       "properties": {
       },
       "seeding_key": {
@@ -11670,7 +11680,7 @@
     {
       "key": "models_and_simulations",
       "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.\r\n\r\n",
+      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life",
       "properties": {
       },
       "seeding_key": {
@@ -11934,7 +11944,13 @@
     {
       "seeding_key": {
         "lesson.key": "Virtual Pet",
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "vocabulary.key": "event"
       }
     },
     {
@@ -12225,7 +12241,7 @@
     {
       "key": "c3951ab5-ed99-4234-9f90-d82cfca63b70",
       "properties": {
-        "description": "Create an interactive virtual pet using events, behaviors, variables, and custom art."
+        "description": "Create an interactive virtual pet using events, behaviors, and custom art."
       },
       "seeding_key": {
         "lesson.key": "Virtual Pet",
@@ -12235,7 +12251,7 @@
     {
       "key": "cb9ec256-91d1-4dde-8cff-69bdb063aa0a",
       "properties": {
-        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it or monitoring its energy."
+        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it."
       },
       "seeding_key": {
         "lesson.key": "Virtual Pet",
