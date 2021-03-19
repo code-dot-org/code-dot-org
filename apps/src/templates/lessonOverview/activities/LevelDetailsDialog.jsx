@@ -81,6 +81,13 @@ class LevelDetailsDialog extends Component {
           ))}
         </div>
       );
+    } else if (level.type === 'Match' || level.type === 'Multi') {
+      return (
+        <div>
+          {level.question && <SafeMarkdown markdown={level.question} />}
+          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
+        </div>
+      );
     } else if (level.type === 'BubbleChoice') {
       return (
         <div style={styles.sublevelCards}>
