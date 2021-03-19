@@ -131,13 +131,14 @@ class UserLevel < ApplicationRecord
   end
 
   # `locked` is a virtual attribute because it relies on `unlocked_at` to
-  # automatically return `true` after `AUTOLOCK_PERIOD`
+  # automatically return `true` after `AUTOLOCK_PERIOD`, so the following
+  # are its getter and setter
   def locked
     unlocked_at.nil? || unlocked_at < AUTOLOCK_PERIOD.ago
   end
 
-  def locked=(val)
-    self.unlocked_at = val ? nil : Time.now
+  def locked=(is_locked)
+    self.unlocked_at = is_locked ? nil : Time.now
   end
 
   # this is the "locked" value we return to the client. if the lesson isn't
@@ -151,7 +152,8 @@ class UserLevel < ApplicationRecord
   # `readonly` and `locked` are mutually exclusive on the client, so we use
   # this helper to override the value of `readonly_answers` when we're supposed
   # to show as locked.
-  def show_as_readonly?(stage)
+  def show_as_readonly?(stage, is_locked)
+    self.locked = is_locked
     readonly_answers? && !show_as_locked?(stage)
   end
 
@@ -178,12 +180,6 @@ class UserLevel < ApplicationRecord
     # after AUTOLOCK_PERIOD has passed.
     user_level.locked = readonly_answers ? false : locked
     user_level.readonly_answers = readonly_answers
-
-    # level_group, which is the only type of level that we lock, always sets
-    # best_result to 100 when complete
-    if locked || readonly_answers
-      user_level.best_result = ActivityConstants::BEST_PASS_RESULT
-    end
 
     # preserve updated_at, which represents the user's submission timestamp.
     user_level.save!(touch: false)
