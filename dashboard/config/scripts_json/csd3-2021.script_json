@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 21:59:34 UTC",
+    "serialized_at": "2021-03-15 12:48:46 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -18443,8 +18443,5 @@
         "objective.key": "7f488fda-a480-4f40-814d-6a2810780b38"
       }
     }
-  ],
-  "lessons_standards": [
-
   ]
 }
