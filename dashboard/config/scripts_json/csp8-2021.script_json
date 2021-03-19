@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 22:09:38 UTC",
+    "serialized_at": "2021-03-15 12:57:32 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -802,10 +802,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Tech Setup and Tools for Create PT",
         "level_keys": [
           "csp-pt-tech-setup-and-tools_2021"
-        ],
-        "progression": "Tech Setup and Tools for Create PT"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -828,10 +828,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Create PT Coding Workspace",
         "level_keys": [
           "Create PT Workspace 2020_2021"
-        ],
-        "progression": "Create PT Coding Workspace"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1357,8 +1357,5 @@
         "objective.key": "f31a2fd3-f77b-46e7-93ad-37aeaf2a156a"
       }
     }
-  ],
-  "lessons_standards": [
-
   ]
 }

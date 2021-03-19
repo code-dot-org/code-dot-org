@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 22:08:48 UTC",
+    "serialized_at": "2021-03-15 12:56:45 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -2425,10 +2425,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App Investigation",
         "level_keys": [
           "U7 Param Return Investigate Rock_2021"
-        ],
-        "progression": "App Investigation"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2451,10 +2451,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "App Investigation",
         "level_keys": [
           "U7 Param Investigate Poetry App_2021"
-        ],
-        "progression": "App Investigation"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2503,10 +2503,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "console.log Practice",
         "level_keys": [
           "U7 Param Return Practice Part 1_2021"
-        ],
-        "progression": "console.log Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2529,10 +2529,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "console.log Practice",
         "level_keys": [
           "U7 Param Return Practice Part 2_2021"
-        ],
-        "progression": "console.log Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2555,10 +2555,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "console.log Practice",
         "level_keys": [
           "U7 Param Return Practice Part 4_2021"
-        ],
-        "progression": "console.log Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2581,10 +2581,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "console.log Practice",
         "level_keys": [
           "U7 Param Return Practice Part 3_2021"
-        ],
-        "progression": "console.log Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2607,10 +2607,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "progression": "console.log Practice",
         "level_keys": [
           "U7 Param Return Practice Part 5_2021"
-        ],
-        "progression": "console.log Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2633,10 +2633,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "App Practice",
         "level_keys": [
           "U7 Param Investigate Calculator App_2021"
-        ],
-        "progression": "App Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2659,10 +2659,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "App Practice",
         "level_keys": [
           "U7 Param Practice App 2_2021"
-        ],
-        "progression": "App Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2685,10 +2685,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "MOD Practice",
         "level_keys": [
           "U7 Param Return Practice MOD_2021"
-        ],
-        "progression": "MOD Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2737,10 +2737,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Try the Rock Paper Scissors App",
         "level_keys": [
           "U7 Param Return Make RPS App_2021"
-        ],
-        "progression": "Try the Rock Paper Scissors App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2763,10 +2763,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Make the Rock Paper Scissors App",
         "level_keys": [
           "U7 Param Return Make RPS App Project_2021"
-        ],
-        "progression": "Make the Rock Paper Scissors App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2815,10 +2815,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "States App",
         "level_keys": [
           "U7L6 States App Investigation_2021"
-        ],
-        "progression": "States App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2841,10 +2841,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Pigify App",
         "level_keys": [
           "U7L6 Pigify App Investigation_2021"
-        ],
-        "progression": "Pigify App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2893,10 +2893,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Using Libraries",
         "level_keys": [
           "U7 Libraries Practice 3_2021"
-        ],
-        "progression": "Using Libraries"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2919,10 +2919,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Using Libraries",
         "level_keys": [
           "U7 Libraries Practice 5_2021"
-        ],
-        "progression": "Using Libraries"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2945,10 +2945,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Testing Libraries",
         "level_keys": [
           "U7 Libraries Practice 2_2021"
-        ],
-        "progression": "Testing Libraries"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2971,10 +2971,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Testing Libraries",
         "level_keys": [
           "U7 Libraries Practice 1_2021"
-        ],
-        "progression": "Testing Libraries"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2997,10 +2997,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Testing Libraries",
         "level_keys": [
           "U7 Libraries Practice 4_2021"
-        ],
-        "progression": "Testing Libraries"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3049,10 +3049,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Build Your Library",
         "level_keys": [
           "U7 Libraries Project Part 1_2021"
-        ],
-        "progression": "Build Your Library"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3075,10 +3075,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Build Your Library",
         "level_keys": [
           "U7 Libraries Project Part 2_2021"
-        ],
-        "progression": "Build Your Library"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3101,10 +3101,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Test a Classmate's Library",
         "level_keys": [
           "U7 Libraries Project Test a Library_2021"
-        ],
-        "progression": "Test a Classmate's Library"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3127,10 +3127,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Build Your Library",
         "level_keys": [
           "U7 Libraries Project Part 3_2021"
-        ],
-        "progression": "Build Your Library"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4112,8 +4112,5 @@
         "objective.key": "efa4b437-61f3-4a0f-a7cf-6e1f3056af68"
       }
     }
-  ],
-  "lessons_standards": [
-
   ]
 }
