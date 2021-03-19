@@ -8,17 +8,22 @@ const styles = {
   }
 };
 
-export default class CourseVocab extends Component {
+export default class CourseRollup extends Component {
   static propTypes = {
+    objectToRollUp: PropTypes.string,
     units: PropTypes.array
   };
 
   render() {
     return (
       <div style={styles.main}>
-        Course Vocab
+        <h1>{`Course ${this.props.objectToRollUp}`}</h1>
         {this.props.units.map(unit => (
-          <RollupUnitEntry unit={unit} key={unit.key} />
+          <RollupUnitEntry
+            objectToRollUp={this.props.objectToRollUp}
+            unit={unit}
+            key={unit.key}
+          />
         ))}
       </div>
     );

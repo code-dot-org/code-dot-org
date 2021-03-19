@@ -11,6 +11,7 @@ const styles = {
 
 export default class RollupUnitEntry extends Component {
   static propTypes = {
+    objectToRollUp: PropTypes.string,
     unit: PropTypes.object
   };
 
@@ -19,7 +20,11 @@ export default class RollupUnitEntry extends Component {
       <div>
         <h1 style={styles.h1}>{this.props.unit.displayName}</h1>
         {this.props.unit.lessons.map(lesson => (
-          <RollupLessonEntry lesson={lesson} key={lesson.key} />
+          <RollupLessonEntry
+            objectToRollUp={this.props.objectToRollUp}
+            lesson={lesson}
+            key={lesson.key}
+          />
         ))}
       </div>
     );
