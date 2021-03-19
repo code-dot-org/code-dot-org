@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-17 20:25:34 UTC",
+    "serialized_at": "2021-03-19 14:04:58 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -671,7 +671,7 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a **variable** to store their pet's \"happiness\" as a number, which should help them understand how **variables** can be used in other applications. ",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -4966,7 +4966,7 @@
       "key": "8970ddea-49ba-429a-9607-6239c33e06be",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -13157,32 +13157,6 @@
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
-          "Virtual Pet 4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      },
-      "level_keys": [
-        "Virtual Pet 4_2021"
-      ]
-    },
-    {
-      "chapter": 312,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Create a Virtual Pet",
-        "level_keys": [
           "Virtual Pet 5_2021"
         ]
       },
@@ -13202,9 +13176,9 @@
       ]
     },
     {
-      "chapter": 313,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 312,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13228,9 +13202,9 @@
       ]
     },
     {
-      "chapter": 314,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 313,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13254,9 +13228,9 @@
       ]
     },
     {
-      "chapter": 315,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 314,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13280,7 +13254,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 315,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -13306,7 +13280,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 316,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -17055,18 +17029,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Virtual Pet 4_2021",
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Virtual Pet 5_2021",
         "script_level.level_keys": [
           "Virtual Pet 5_2021"
@@ -18198,13 +18160,23 @@
       }
     },
     {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "variable"
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -18564,7 +18536,13 @@
     {
       "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
-        "vocabulary.key": "variable"
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -19216,5 +19194,8 @@
         "objective.key": "db7a8439-bc00-43ef-a9a8-2067da8dbda6"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }
