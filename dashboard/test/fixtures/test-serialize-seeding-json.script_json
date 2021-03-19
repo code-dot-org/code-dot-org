@@ -833,6 +833,9 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "test_serialize_seeding_json_lg_l_vocab_",
