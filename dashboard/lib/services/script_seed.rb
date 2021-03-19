@@ -20,8 +20,9 @@ module Services
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
       :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_environments, :programming_expressions,
-      :lessons_programming_expressions, :objectives, :frameworks, :standards, :lessons_standards, keyword_init: true
+      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_environments,
+      :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
+      :standards, :lessons_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -495,7 +496,7 @@ module Services
         programming_expression_id = seed_context.programming_expressions.select do |pe|
           pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
         end.first&.id
-        raise 'No programming expression found' if programming_expression_id.nil?
+        raise "No programming expression with key #{lpe_data['seeding_key']['programming_expression.key']} found" if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
           lesson_id: lesson_id,
