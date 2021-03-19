@@ -10,6 +10,9 @@ AI Lab is a highly configurable environment providing a student experience for d
 - choosing which column to predict (the label)
 - choosing which column(s) to use for the prediction (the features)
 - handling both categorical and continuous (numerical) columns
+- viewing per-column graphs and metadata
+- viewing custom CrossTab tables for comparing categorical columns
+- viewing scatter plot graphs for comparing continuous columns
 - using SVM or KNN classification or KNN regression to train a model
 - choosing the subset of data to reserve for validation
 - measuring accuracy of the resulting trained model using reserved data
