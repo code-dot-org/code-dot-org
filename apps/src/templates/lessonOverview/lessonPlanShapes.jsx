@@ -113,7 +113,8 @@ export const studentLessonShape = PropTypes.shape({
   overview: PropTypes.string.isRequired,
   resources: PropTypes.arrayOf(PropTypes.object),
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  studentLessonPlanPdfUrl: PropTypes.string
 });
 
 export const navigationLessonShape = PropTypes.shape({
