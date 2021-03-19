@@ -427,6 +427,7 @@ module Services
 
     def self.import_scripts_resources(scripts_resources_data, seed_context)
       return [] unless seed_context.script.get_course_version
+      return [] unless scripts_resources_data
 
       scripts_resources_to_import = scripts_resources_data.map do |lr_data|
         resource_id = seed_context.resources.select {|r| r.key == lr_data['seeding_key']['resource.key']}.first&.id
