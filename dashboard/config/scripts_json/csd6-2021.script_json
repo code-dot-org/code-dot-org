@@ -10460,7 +10460,7 @@
       }
     }
   ],
-  g"lessons_programming_expressions": [
+  "lessons_programming_expressions": [
     {
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
