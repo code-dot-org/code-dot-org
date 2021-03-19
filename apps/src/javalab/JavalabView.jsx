@@ -43,7 +43,7 @@ const style = {
     flexDirection: 'column'
   },
   singleButton: {
-    // this matches the current ace editor theme we are using
+    // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
     backgroundColor: '#272822',
@@ -60,6 +60,7 @@ class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
+    onCommitCode: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
@@ -108,7 +109,7 @@ class JavalabView extends React.Component {
             </InstructionsWithWorkspace>
           </div>
           <div style={style.editorAndConsole}>
-            <JavalabEditor />
+            <JavalabEditor onCommitCode={this.props.onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
