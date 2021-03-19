@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 22:11:10 UTC",
+    "serialized_at": "2021-03-15 12:59:03 UTC",
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -2869,10 +2869,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Keylogging",
         "level_keys": [
           "CSP 20-21 Keylogging_2021"
-        ],
-        "progression": "Keylogging"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2920,10 +2920,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Malware",
         "level_keys": [
           "CSP 20-21 Rogue Access Points_2021"
-        ],
-        "progression": "Malware"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -2998,10 +2998,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Encryption Widgets",
         "level_keys": [
           "Crack a Caesar Cipher_2021"
-        ],
-        "progression": "Encryption Widgets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3024,10 +3024,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Encryption Widgets",
         "level_keys": [
           "Crack Random Substitution_2021"
-        ],
-        "progression": "Encryption Widgets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -3102,10 +3102,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Unit 10 Exam",
         "level_keys": [
           "CSP 20-21 Unit 10 Assessment_2021"
-        ],
-        "progression": "Unit 10 Exam"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4242,8 +4242,5 @@
         "objective.key": "a89f82c6-f7e9-493d-8b85-5a06e5ae7029"
       }
     }
-  ],
-  "lessons_standards": [
-
   ]
 }
