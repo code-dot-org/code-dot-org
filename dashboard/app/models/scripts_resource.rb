@@ -11,4 +11,6 @@
 #  index_scripts_resources_on_script_id_and_resource_id  (script_id,resource_id) UNIQUE
 #
 class ScriptsResource < ApplicationRecord
+  belongs_to :resource
+  belongs_to :script
 end
