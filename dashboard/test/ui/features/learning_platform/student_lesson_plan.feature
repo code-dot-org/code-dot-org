@@ -27,6 +27,10 @@ Feature: Student Lesson Plan
     And I wait until element "h2:contains(Vocabulary)" is visible
     And I wait until element "li:contains(Word - This is a definition of the word word)" is visible
 
+    # Check for Code
+    And I wait until element "h2:contains(Introduced Code)" is visible
+    And I wait until element "li a:contains(playSound)" is visible
+
     # Check for Announcements
     Then I wait until element ".announcement-notification:first" is visible
     And element ".announcement-notification:first" contains text matching "Information for Students"
