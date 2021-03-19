@@ -8,10 +8,11 @@
       %img.tutorial-tile-img{src: minecraft_img_url}
     .tutorial-info
       %span
-        %h3.tutorial-info-h= I18n.t(:minecraft_subtitle)
-        .smalltext= I18n.t(:minecraft_agent_description)
-      %span
-        %a{href: "/minecraft"}
-          %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-        .tutorial-info-guide
-          %a{href: "/hourofcode/mc"}= I18n.t(:hoc2018_mc_teacher_guide)
+        %h3.tutorial-info-h{dir: language_dir_class}= I18n.t(:minecraft_subtitle)
+        .smalltext{dir: language_dir_class}= I18n.t(:minecraft_agent_description)
+      %div{dir: language_dir_class}
+        %span
+          %a{href: "/minecraft"}
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+          .tutorial-info-guide
+            %a{href: "/hourofcode/mc"}= I18n.t(:hoc2018_mc_teacher_guide)

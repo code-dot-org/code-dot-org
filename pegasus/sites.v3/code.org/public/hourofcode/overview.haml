@@ -16,10 +16,10 @@ social:
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
-%h1= I18n.t(:hoc_overview_title)
-
-!= I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
-
+%div{dir: language_dir_class}
+  %h1= I18n.t(:hoc_overview_title)
+  != I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
+%div
 %br/
 
 .tile-container-responsive{style: "margin-top: 20px;"}
@@ -29,14 +29,15 @@ social:
         %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
       .tutorial-info
         %span
-          %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
-          .smalltext= I18n.t(:hoc_overview_dance_2019_subtitle)
-        %span
-          %a{href: "/dance"}
-            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-          .tutorial-info-guide
-            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8/")}
-              = I18n.t(:hoc_overview_view_teacher_guide)
+          %h3.tutorial-info-h{dir: language_dir_class}= I18n.t(:hoc_overview_dance_title)
+          .smalltext{dir: language_dir_class}= I18n.t(:hoc_overview_dance_2019_subtitle)
+        %div{dir: language_dir_class}
+          %span
+            %a{href: "/dance"}
+              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            .tutorial-info-guide
+              %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/8/")}
+                = I18n.t(:hoc_overview_view_teacher_guide)
 
   .col-50
     .tutorial-tile
@@ -44,11 +45,11 @@ social:
         %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/ai_2020_overview.png"}
       .tutorial-info
         %span
-          %h3.tutorial-info-h=hoc_s(:hoc2020_ai_header)
-          .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
+          %h3.tutorial-info-h{dir: language_dir_class}=hoc_s(:hoc2020_ai_header)
+          .smalltext{dir: language_dir_class}=hoc_s(:hoc_overview_oceans_tutorial_desc)
         %span
           %a{href: "/ai"}
-            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            %button.tutorial-info-start.tutorial-gray{dir: language_dir_class}= I18n.t(:go)
 
 .tile-container-responsive
   = view :top_hoc_tutorials
@@ -56,10 +57,10 @@ social:
 
 .full-resource-block
   %img.full-resource-image{src: "/images/hoc2020-banner.png"}
-  .activities-info
+  .activities-info{dir: language_dir_class}
     %span
-      %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
-      = I18n.t(:hoc_overview_partner_activities_body)
+      %h2.resource-title.white{dir: language_dir_class}= I18n.t(:hoc_overview_partner_activities_title)
+      %div{dir: language_dir_class}= I18n.t(:hoc_overview_partner_activities_body)
     %span
       %a{href: "https://hourofcode.com/learn"}
         %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
