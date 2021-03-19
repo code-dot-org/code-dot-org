@@ -20391,7 +20391,7 @@ en:
               key: Programming in Ice Age
               name: Programming with Scrat
               description_student: Write programs to help Scrat reach the acorn.
-              description_teacher: Using characters from _Ice Age_, students will develop sequential **algorithms** to move _Scrat_ from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: Using characters from _Ice Age_, students will develop sequential algorithms to move _Scrat_ from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Programming with Rey and BB-8:
               key: Programming with Rey and BB-8
               name: Programming with Rey and BB-8
@@ -20406,22 +20406,22 @@ en:
               key: Loops in Ice Age
               name: Loops with Scrat
               description_student: Help Scrat cover more ground using loops.
-              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using **loops** to get to the acorn more efficiently on Code.org.
+              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to get to the acorn more efficiently on Code.org.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Help Laurel the adventurer collect the treasure underground.
-              description_teacher: In this lesson, students continue learning the concept of **loops**. In the previous lesson, students were introduced to **loops** by moving through a maze and picking corn. Here, **loops** are used to collect treasure in open cave spaces.
+              description_teacher: In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
               name: Ocean Scene with Loops
               description_student: Use loops and patterns to finish the images.
-              description_teacher: Returning to **loops**, students learn to draw images by **looping** simple sequences of instructions. In the previous plugged lesson, **loops** were used to traverse a maze and collect treasure. Here, **loops** are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using **loops**.
+              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
-              description_teacher: "**Events** are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what **events** are for."
+              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
               key: Events in Play Lab
               name: On the Move with Events

@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-19 14:04:58 UTC",
+    "serialized_at": "2021-03-19 19:05:31 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -3953,7 +3953,7 @@
       "key": "b270733d-2d48-4470-a0e4-7a805255d765",
       "position": 1,
       "properties": {
-        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\n\nWatch out for puzzle #6. It is the first time that students will be expected to set a **variable** on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
+        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.",
         "name": "Variables with Artist"
       },
       "seeding_key": {
