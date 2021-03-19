@@ -712,7 +712,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
   end
