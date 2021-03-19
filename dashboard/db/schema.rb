@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_061652) do
+ActiveRecord::Schema.define(version: 2021_03_18_013815) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1272,6 +1272,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_programming_environments_on_name", unique: true
   end
 
   create_table "programming_expressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1608,16 +1609,12 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
   end
 
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "organization"
-    t.string "organization_id"
     t.text "description"
-    t.text "concept"
     t.bigint "category_id"
     t.integer "framework_id"
     t.string "shortcode"
     t.index ["category_id"], name: "index_standards_on_category_id"
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
-    t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true
   end
 
   create_table "state_cs_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
