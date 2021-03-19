@@ -7,6 +7,7 @@ import javalab from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {onSave} from './JavalabFileManagement';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -62,8 +63,9 @@ Javalab.prototype.init = function(config) {
 
   config.useFilesApi = true;
 
-  config.getCode = this.getCode.bind(this);
+  config.getCodeAsync = this.getCodeAsync.bind(this);
   const onContinue = this.onContinue.bind(this);
+  const onCommitCode = this.onCommitCode.bind(this);
 
   // if a version is provided in the url, use that version for files.
   const suppliedFilesVersionId = queryParams('version');
@@ -105,11 +107,27 @@ Javalab.prototype.init = function(config) {
       <JavalabView
         onMount={onMount}
         onContinue={onContinue}
+        onCommitCode={onCommitCode}
         suppliedFilesVersionId={suppliedFilesVersionId}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
+
+  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+// Ensure project is saved before exiting
+Javalab.prototype.beforeUnload = function(event) {
+  if (project.hasOwnerChangedProject()) {
+    // Manually trigger an autosave instead of waiting for the next autosave.
+    project.autosave();
+
+    event.preventDefault();
+    event.returnValue = '';
+  } else {
+    delete event.returnValue;
+  }
 };
 
 // Called by the Javalab app when it wants to go to the next level.
@@ -130,13 +148,23 @@ Javalab.prototype.onContinue = function() {
   });
 };
 
-Javalab.prototype.getCode = function() {
-  // store the file version as the source, as we do in WebLab
-  return this.getCurrentFilesVersionId();
+Javalab.prototype.getCodeAsync = function() {
+  return new Promise((resolve, reject) => {
+    onSave(
+      /* success */
+      () => resolve(this.getCurrentFilesVersionId() || ''),
+      /* failure - couldn't save files, don't try to overwrite any sources */
+      reject
+    );
+  });
 };
 
 Javalab.prototype.getCurrentFilesVersionId = function() {
-  return project.filesVersionId || this.initialFilesVersionId;
+  return project.filesVersionId;
+};
+
+Javalab.prototype.onCommitCode = function() {
+  project.autosave();
 };
 
 export default Javalab;

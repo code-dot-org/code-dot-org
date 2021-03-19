@@ -102,7 +102,7 @@ export default class ProgressLegend extends Component {
     const secondRowRowSpan = 2;
 
     return (
-      <table style={styles.table}>
+      <table style={styles.table} className="progress-legend">
         <thead>
           <tr style={styles.header}>
             <TD style={styles.headerCell}>{i18n.levelType()}</TD>
