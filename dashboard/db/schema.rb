@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_17_232304) do
+ActiveRecord::Schema.define(version: 2021_03_19_155140) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1483,7 +1483,7 @@ ActiveRecord::Schema.define(version: 2021_03_17_232304) do
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
-  create_table "scripts_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "scripts_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "script_id"
     t.integer "resource_id"
     t.index ["resource_id", "script_id"], name: "index_scripts_resources_on_resource_id_and_script_id"
