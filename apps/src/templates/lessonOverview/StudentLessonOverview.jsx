@@ -15,6 +15,7 @@ import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   header: {
@@ -54,7 +55,20 @@ class StudentLessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <LessonNavigationDropdown lesson={lesson} />
+            <div>
+              {lesson.studentLessonPlanPdfUrl && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.gray}
+                  download
+                  href={lesson.studentLessonPlanPdfUrl}
+                  style={{marginRight: 10}}
+                  target="_blank"
+                  text={i18n.print()}
+                />
+              )}
+              <LessonNavigationDropdown lesson={lesson} />
+            </div>
           </div>
         </div>
         {isSignedIn && (

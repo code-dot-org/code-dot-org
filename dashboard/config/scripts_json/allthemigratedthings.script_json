@@ -417,6 +417,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "programming_environment.name": "gamelab",
         "programming_expression.key": "playSound"
       }
     }
