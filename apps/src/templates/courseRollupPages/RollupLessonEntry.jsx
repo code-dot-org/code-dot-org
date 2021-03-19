@@ -11,16 +11,19 @@ const styles = {
   header: {
     backgroundColor: color.purple,
     color: color.white,
-    border: 'solid 1px' + color.charcoal
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px'
   },
   object: {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
-    border: 'solid 1px' + color.charcoal
+    border: 'solid 1px' + color.charcoal,
+    padding: '0px 10px'
   },
   entries: {
     color: color.charcoal,
-    border: 'solid 1px' + color.charcoal
+    border: 'solid 1px' + color.charcoal,
+    padding: 10
   }
 };
 
@@ -33,12 +36,16 @@ export default class RollupLessonEntry extends Component {
     return (
       <div style={styles.main}>
         <div style={styles.header}>
-          {i18n.lessonNumbered({
-            lessonNumber: this.props.lesson.position,
-            lessonName: this.props.lesson.displayName
-          })}
+          <h3>
+            {i18n.lessonNumbered({
+              lessonNumber: this.props.lesson.position,
+              lessonName: this.props.lesson.displayName
+            })}
+          </h3>
         </div>
-        <div style={styles.object}>Vocabulary</div>
+        <div style={styles.object}>
+          <h4>Vocabulary</h4>
+        </div>
         <div style={styles.entries}>
           {this.props.lesson.vocabularies.map(vocab => (
             <li key={vocab.key}>

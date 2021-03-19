@@ -19,7 +19,7 @@ export default class RollupUnitEntry extends Component {
       <div>
         <h1 style={styles.h1}>{this.props.unit.displayName}</h1>
         {this.props.unit.lessons.map(lesson => (
-          <RollupLessonEntry lesson={lesson} />
+          <RollupLessonEntry lesson={lesson} key={lesson.key} />
         ))}
       </div>
     );
