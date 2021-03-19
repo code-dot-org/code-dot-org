@@ -791,4 +791,13 @@ class Blockly < Level
       self.goal_override = JSON.parse(goal_override)
     end
   end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions,
+        shortInstructions: localized_short_instructions
+      }
+    )
+  end
 end
