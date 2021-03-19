@@ -44,7 +44,7 @@ module Services
 
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
-      resources = script.lessons.map(&:resources).flatten
+      resources = script.lessons.map(&:resources).flatten.concat(script.resources).uniq
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
@@ -735,6 +735,14 @@ module Services
     end
 
     class LessonsResourceSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class ScriptsResourceSerializer < ActiveModel::Serializer
       attributes :seeding_key
 
       def seeding_key
