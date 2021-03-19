@@ -67,3 +67,17 @@ yarn run build
 ```
 Then the local Code Studio apps build will pick up changes.
 Note that running `yarn start` will erase this build, and so for now it seems best to alternate between using `yarn start` for testing the standalone build, and using `yarn run build` to make a single build for consumption by the main repo.
+
+### Publishing a new version
+
+Once we want the official main repo build to get the latest updates from this repo, we need to publish the changes.
+In this repo, modify `package.json` with the incremented version number.
+Then produce a build:
+```npm run build```
+Then publish the build, skipping the option to adjust the build version:
+```yarn publish```
+Then commit the changed `package.json` for posterity.
+In the main repo, modify `package.json` to use the new version of `ml-playground`.
+Pick up the new version:
+`yarn`
+Then commit the changed `package.json` and `yarn.lock` files so that the official build pipeline uses the new version.
