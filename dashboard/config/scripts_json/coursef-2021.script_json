@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-18 16:21:18 UTC",
+    "serialized_at": "2021-03-19 17:07:57 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -130,7 +130,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give users choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.",
+        "overview": "Students will discuss the role of computers and technology in their lives with a focus on how apps and tools give **users** choices about how to use them. Students will login to their Code.org accounts and explore examples projects similar to those they will be creating themselves throughout the course.",
         "student_overview": "You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.",
         "purpose": "The first lesson is about getting students excited about the course and connecting their own personal interests to computer science. \n",
         "preparation": "- Determine how students will login to Code.org.\n- If needed, create Code.org accounts for students.\n- Assign Introducing Sprite Lab to students.\n- Print copies of ***Exploring Apps** worksheet (or post the digital version to your LMS)."
@@ -189,7 +189,7 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a variable to store their pet's \"happiness\" as a number, which should help them understand how variables can be used in other applications. ",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -2064,7 +2064,7 @@
       "key": "e9148961-d1ba-4ce8-b9f6-79d0603b3122",
       "position": 3,
       "properties": {
-        "description": "####Exploring Apps (15 mins)\n\nExplore at least 3 Sprite Lab programs on Code.org. For each program, you will list the sprites you see and describe the choices you made as the user.\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n\n**Extension:** If students finish the task ahead of others, they may proceed to level 3 where they can make a first try at writing code. This is a purely exploratory task with no right or wrong answers.\n",
+        "description": "####Exploring Apps (15 mins)\n\n_Explore at least 3 Sprite Lab programs on Code.org. For each program, you will list the **sprites** you see and describe the choices you made as the **user**._\n\n**Do this:** \n- Provide each individual (or group) with a physical or digital copy of the ***Exploring Apps** worksheet. \n- Direct students to level 2 on Code Studio (Exploration: Sample Apps). \n\n- Consider modeling one app with the class before having students complete the task independently.\n\n**Extension:** If students finish the task ahead of others, they may proceed to level 3 where they can make a first try at writing code. This is a purely exploratory task with no right or wrong answers.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2082,7 +2082,7 @@
       "key": "f321b39c-8051-4fc9-9e40-24f25216f88c",
       "position": 4,
       "properties": {
-        "description": "####Share Out (5 mins)\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. Creators "
+        "description": "####Share Out (5 mins)\n**Discuss:** What were the most interesting choices you were able to make with these apps? Was there ever a time you wished you could change something in the app but were not given the choice?\n\n**Goal:** Students should be able to name specific choices they made, but should also discuss why they think the creator gave us that choice. Choices to highlight include the words you type in (e.g. Chat Bot), the type of sprites that are used (e.g. Collector Game), or the way you interact with something. "
       },
       "seeding_key": {
         "activity_section.key": "f321b39c-8051-4fc9-9e40-24f25216f88c",
@@ -2415,7 +2415,7 @@
       "key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online Video**."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. "
       },
       "seeding_key": {
         "activity_section.key": "7a70ca98-817b-49cf-87dd-37c1e69d6d8c",
@@ -2888,20 +2888,11 @@
       }
     },
     {
-      "key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
+      "key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
       "position": 1,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3f6c9b0e-3d5e-4a26-932f-5df310c1c8b6",
-        "lesson_activity.key": "f77093dc-7c10-4fac-b5a3-510056ad6c61"
-      }
-    },
-    {
-      "key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "name": "Programming with the Bee"
       },
       "seeding_key": {
         "activity_section.key": "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20",
@@ -2910,7 +2901,7 @@
     },
     {
       "key": "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2921,7 +2912,7 @@
     },
     {
       "key": "6cef858a-437c-47a3-9c8a-1229f634948a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "tips": [
           {
@@ -2963,7 +2954,7 @@
       "key": "aa24a7a8-7cec-408b-b980-89e9c457605a",
       "position": 1,
       "properties": {
-        "name": "Online Puzzles",
+        "name": "Variables with the Bee",
         "progression_name": "Skill Building",
         "description": "This set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- Now how can you use a variable to get the quantities the way you want them?"
       },
@@ -3021,7 +3012,8 @@
       "key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
       "position": 1,
       "properties": {
-        "progression_name": "For Loop Fun - Unplugged Activity"
+        "progression_name": "For Loop Fun - Unplugged Activity",
+        "name": "For Loop Fun"
       },
       "seeding_key": {
         "activity_section.key": "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210",
@@ -3056,40 +3048,19 @@
       }
     },
     {
-      "key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
-      "position": 3,
-      "properties": {
-        "description": "\n\n###**Directions:**"
-      },
-      "seeding_key": {
-        "activity_section.key": "d2e77c7f-eeec-40fd-adc1-68818f2069c7",
-        "lesson_activity.key": "4d3c8aac-0044-4034-9468-8960fb9fca43"
-      }
-    },
-    {
       "key": "ee31c01d-2e03-4267-bbd4-6179df138e90",
-      "position": 4,
+      "position": 3,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "If any of the values rolled are outside the bounds of the game (like rolling a start value of 6 but \tthen rolling 2, 1, 2 for the end value), have the student re-roll everything.\r\n"
           }
-        ]
+        ],
+        "description": "###**Directions:**\n\nIt may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a ***\"for\" loop**.\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the ***\"for\" loop** that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins"
       },
       "seeding_key": {
         "activity_section.key": "ee31c01d-2e03-4267-bbd4-6179df138e90",
-        "lesson_activity.key": "4d3c8aac-0044-4034-9468-8960fb9fca43"
-      }
-    },
-    {
-      "key": "f015d285-cf66-41ed-9019-636e8fda2954",
-      "position": 5,
-      "properties": {
-        "description": "It may be difficult for young students to understand this written in pseudocode, but it may be helpful to have you explain out loud (and perhaps with a diagram) what they will be using as the content of a ***\"for\" loop**.\n\n- Divide students into pairs\n- To start the round, each student rolls three times:\n\t- One die to determine the starting value of X\n\t- Three dice to determine the stopping value for X\n\t- One die to determine the stepping value of X each time through\n- Use one of the provided number lines to trace the ***\"for\" loop** that they’ve made\n\t- Start at the starting value of X\n\t- Count down the number line, circling the numbers at the rolled interval\n\t- Stop when you get to the predetermined stopping value\n- Add all of the circled values to your score, then let the other player take a turn\n- Best 2 out of 3 wins"
-      },
-      "seeding_key": {
-        "activity_section.key": "f015d285-cf66-41ed-9019-636e8fda2954",
         "lesson_activity.key": "4d3c8aac-0044-4034-9468-8960fb9fca43"
       }
     },
@@ -3425,7 +3396,7 @@
       "key": "2a282546-3943-4555-adae-45fe80b8207a",
       "position": 1,
       "properties": {
-        "name": "Run a simulation",
+        "name": "Simulation Experiments",
         "progression_name": "Run a simulation"
       },
       "seeding_key": {
@@ -3437,7 +3408,6 @@
       "key": "a9361037-3164-409e-a061-748c4929e168",
       "position": 2,
       "properties": {
-        "name": "Modify simulation variables",
         "progression_name": "Modify simulation variables"
       },
       "seeding_key": {
@@ -3449,6 +3419,7 @@
       "key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
       "position": 3,
       "properties": {
+        "progression_name": "Customize the simulation"
       },
       "seeding_key": {
         "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
@@ -3459,7 +3430,7 @@
       "key": "ebf10902-bbcc-4fc6-9304-f2d26ab61747",
       "position": 4,
       "properties": {
-        "description": "**Distribute**: Pass out the [r running-simulations] along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* Are the graphs the same or different? Why do you think that is?\n* Do you see any patterns?\n* What do you think you'd see if you ran this simulation 5 more times?\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
+        "description": "**Distribute**: Pass out the lesson worksheet along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* Are the graphs the same or different? Why do you think that is?\n* Do you see any patterns?\n* What do you think you'd see if you ran this simulation 5 more times?\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
         "name": "Simulating Experiments"
       },
       "seeding_key": {
@@ -3474,7 +3445,6 @@
         "description": "**Discuss**: Ask students to discuss how their modification and prediction came out, first with a neighbor and then as a whole class. Encourage students to consider _why_ they made the modifications they did and how that change connected to their predictions.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.\r\n"
           }
@@ -3915,7 +3885,7 @@
       "position": 1,
       "properties": {
         "name": "Background and Motivation",
-        "description": "**Discuss**: Ask students to define the term \"app\" in their own words. What is an app? What kinds of apps are there? Where do we use apps? While discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\n**Say**: Ensure that all students are on the same page regarding this topic by introducing some key terms and concepts. \n\n- *In this course we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- **_App_** *is short for application. Usually, apps more specifically refer to applications running on small computers called* _**mobile devices**._\n- *Smartphones and tablets are examples of mobile devices.*\n\n**Discuss**: Apps are everywhere! Ask students why they think apps have become so popular. Here are some example explanations:\n\n- Many people can more easily access or afford a mobile device (e.g., smartphone) than a larger computer with a keyboard, mouse, and so forth. \n- Apps can address a variety of needs. For example, if I need a ride somewhere, I might try a ride sharing app and get there quickly. If I want to know what movies I should watch, there's probably an app that can help me decide. And of course, if I want to call or text someone on my phone, I use apps for those as well! \n\n**Say**: Introduce accessibility with the remarks below.\n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _**accessibility**._ In the world of computer science, accessibility is about creating technology for people with _**disabilities**._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might simply wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who, even though they have disabilities, are just like them."
+        "description": "**Discuss**: Ask students to define the term \"app\" in their own words.\n\n * _What is an app?_ \n * _What kinds of apps are there?_ \n * _Where do we use apps?_\n\n While discussing, show screenshots or examples of apps on your smartphone or tablet if possible.\n\n**Say**: (Ensure that all students are on the same page regarding this topic by introducing some key terms and concepts.) \n\n- *In this course we have been learning how to code. Code is used to create computer applications. Games, web browsers, media players... the list of applications goes on and on!*  \n- _App_ *is short for application. Usually, apps more specifically refer to applications running on small computers called* _mobile devices._\n- *Smartphones and tablets are examples of mobile devices.*\n\n**Discuss**: Apps are everywhere! Ask students why they think apps have become so popular. Here are some example explanations:\n\n- Many people can more easily access or afford a mobile device (e.g., smartphone) than a larger computer with a keyboard, mouse, and so forth. \n- Apps can address a variety of needs. For example, if I need a ride somewhere, I might try a ride sharing app and get there quickly. If I want to know what movies I should watch, there's probably an app that can help me decide. And of course, if I want to call or text someone on my phone, I use apps for those as well! \n\nIntroduce accessibility with the remarks below.\n\n**Say**: \n\n- *As apps become used by more and more people, app developers often come across issues that they had not considered, likely because they have never experienced those issues in their own lives.*\n- *Many of these issues are related to _accessibility._ In the world of computer science, accessibility is about creating technology for people with _disabilities._* \n- *Disabilities include physical, auditory, visual, and many others.*\n- *Disabilities are diverse and impact people in different ways. For example, someone who is slightly visually impaired might simply wear glasses. Someone who is severely visually impaired might be considered \"blind\" and will need more assistance.* \n\n**Transition**: Tell students you'd like to introduce them to a few kids who, even though they have disabilities, are just like them."
       },
       "seeding_key": {
         "activity_section.key": "70e56d16-cf16-4daf-b5da-24e780908414",
@@ -3938,7 +3908,7 @@
       "key": "b1504a1f-9cf8-40a2-b4af-34b5ffb408b0",
       "position": 1,
       "properties": {
-        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the **Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n[slides]\n\n#### Designing for Accessibility Scenarios\n\n*Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near to her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n*Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n* Here is a screenshot of the home screen. What do you think about it? How do you think this app works? \n\n*Slide 3: Wei’s Problem*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n*Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. Due to an accident a few years ago, Roger’s hand had to be “amputated” (surgically removed). \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand”, which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n*Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n* Here’s a screenshot of the game in action. Based on the interface, how do you think this game is played? \n\n*Slide 6: Roger’s Problem*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*Slide 7: I Wish...* \n\n* Neither of these apps were designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s make their wishes come true by redesigning these apps! \n\n[/slides]"
+        "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the ***Designing for Accessibility Slide Deck**. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n[slides]\n\n#### Designing for Accessibility Scenarios\n\n*Slide 1: Meet Wei*\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near to her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n*Slide 2: Introducing Grammaphone!*\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n* Here is a screenshot of the home screen. What do you think about it? How do you think this app works? \n\n*Slide 3: Wei’s Problem*\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n*Slide 4: Meet Roger*\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. Due to an accident a few years ago, Roger’s hand had to be “amputated” (surgically removed). \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand”, which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n*Slide 5: Introducing Football Frenzy!*\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n* Here’s a screenshot of the game in action. Based on the interface, how do you think this game is played? \n\n*Slide 6: Roger’s Problem*\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n*Slide 7: I Wish...* \n\n* Neither of these apps were designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s make their wishes come true by redesigning these apps! \n\n[/slides]"
       },
       "seeding_key": {
         "activity_section.key": "b1504a1f-9cf8-40a2-b4af-34b5ffb408b0",
@@ -4158,7 +4128,7 @@
       "key": "fe7404a4-6d14-468e-8bed-2a2c1632e5c8",
       "position": 1,
       "properties": {
-        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\r\n\r\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \r\n\r\n- What are some of the behaviors we can assign to our sprites?\r\n- What do you imagine the code *inside* a behavior might look like?\r\n\r\n**Display:** Begin by showing Puzzle 1 to your students. \r\n\r\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\r\n\r\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\r\n\r\n- What would happen if you change the -1 to another number? -5? Positive 1? 0?\r\n- What other properties might we be able to change about a sprite besides its size?",
+        "description": "Today students will revisit _sprite behaviors_, this time learning how to edit behaviors directly and even make new ones.\n\n**Review:** Ask students questions about the Swimming Fish and Alien Dance Party lessons.  \n\n- What are some of the behaviors we can assign to our sprites?\n- What do you imagine the code *inside* a behavior might look like?\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Be sure to open the behavior editor by clicking \"edit\" on the `mystery behavior` block. Run the code, and discuss the outcome.\n\n**Discuss** Ask students questions about how they might change this behavior's code to create a different effect.\n\n- _What would happen if you change the -1 to another number? -5? Positive 1? 0?_\n- _What other properties might we be able to change about a sprite besides its size?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4199,7 +4169,7 @@
       "key": "8b0b08e1-3238-4b0a-aae7-c6eb584fe40e",
       "position": 3,
       "properties": {
-        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class [r common-sense-media-pause-think]."
+        "description": "**Reminder:** If puzzles are sharable, remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online video**."
       },
       "seeding_key": {
         "activity_section.key": "8b0b08e1-3238-4b0a-aae7-c6eb584fe40e",
@@ -4760,7 +4730,7 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Introducing Sprite Lab",
         "level_keys": [
@@ -4786,7 +4756,7 @@
       "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Sample Apps",
         "level_keys": [
@@ -5412,7 +5382,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "Virtual Pet 8_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6057,7 +6030,7 @@
       "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6083,7 +6056,7 @@
       "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6109,7 +6082,7 @@
       "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6135,7 +6108,7 @@
       "chapter": 54,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6161,7 +6134,7 @@
       "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6187,7 +6160,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6213,7 +6186,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6239,7 +6212,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6265,7 +6238,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6291,7 +6264,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6317,7 +6290,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6343,7 +6316,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6369,7 +6342,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6395,7 +6368,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "For Loop Fun - Unplugged Activity",
         "level_keys": [
@@ -6421,7 +6394,7 @@
       "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review",
         "level_keys": [
@@ -6447,7 +6420,7 @@
       "chapter": 66,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Review",
         "level_keys": [
@@ -6473,7 +6446,7 @@
       "chapter": 67,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: For Loops",
         "level_keys": [
@@ -6499,7 +6472,7 @@
       "chapter": 68,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: For Loops",
         "level_keys": [
@@ -6525,7 +6498,7 @@
       "chapter": 69,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -6551,7 +6524,7 @@
       "chapter": 70,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6577,7 +6550,7 @@
       "chapter": 71,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6603,7 +6576,7 @@
       "chapter": 72,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6629,7 +6602,7 @@
       "chapter": 73,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6655,7 +6628,7 @@
       "chapter": 74,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -6681,7 +6654,7 @@
       "chapter": 75,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Lesson Extras",
         "level_keys": [
@@ -6967,7 +6940,7 @@
       "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Run a simulation",
         "level_keys": [
@@ -6993,7 +6966,7 @@
       "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Modify simulation variables",
         "level_keys": [
@@ -7019,17 +6992,15 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_extras_sim_2021"
-        ]
+        "progression": "Customize the simulation"
       },
       "named_level": null,
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_extras_sim_2021"
+          "simcustom_2021"
         ],
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
@@ -7037,7 +7008,7 @@
         "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4"
       },
       "level_keys": [
-        "courseF_extras_sim_2021"
+        "simcustom_2021"
       ]
     },
     {
@@ -7512,7 +7483,7 @@
       "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Designing for Accessibility - Unplugged Activity",
         "level_keys": [
@@ -7590,7 +7561,7 @@
       "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7616,7 +7587,7 @@
       "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7642,7 +7613,7 @@
       "chapter": 112,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7668,7 +7639,7 @@
       "chapter": 113,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7694,7 +7665,7 @@
       "chapter": 114,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7720,7 +7691,7 @@
       "chapter": 115,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7746,7 +7717,7 @@
       "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -7772,7 +7743,7 @@
       "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7799,7 +7770,7 @@
       "chapter": 118,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -9884,9 +9855,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_extras_sim_2021",
+        "level.key": "simcustom_2021",
         "script_level.level_keys": [
-          "courseF_extras_sim_2021"
+          "simcustom_2021"
         ],
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
@@ -10797,18 +10768,6 @@
       }
     },
     {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "pause_and_think_online",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
       "name": "Variables: Blank Space Stories",
       "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/edit?usp=sharing",
       "key": "variables_blank_space_stories",
@@ -10857,7 +10816,7 @@
     },
     {
       "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+      "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
       "key": "pause_and_think_online",
       "properties": {
         "type": "Video",
@@ -11147,6 +11106,18 @@
       }
     },
     {
+      "name": "Pause and Think Online",
+      "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+      "key": "pause_and_think_online",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
       "name": "Variables in Envelopes",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "unplugged-video-envelope-variables",
@@ -11272,12 +11243,6 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "sprites_in_action"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "resource.key": "pause_and_think_online"
       }
     },
     {
@@ -11444,6 +11409,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Editing Behaviors",
+        "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Envelope Variables",
         "resource.key": "unplugged-video-envelope-variables"
       }
@@ -11557,13 +11528,23 @@
       }
     },
     {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
       }
     },
     {
@@ -11689,7 +11670,7 @@
     {
       "key": "models_and_simulations",
       "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.\r\n\r\n",
+      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life",
       "properties": {
       },
       "seeding_key": {
@@ -11699,7 +11680,7 @@
     {
       "key": "models_and_simulations",
       "word": "Models and Simulations",
-      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life.\r\n\r\n",
+      "definition": "a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life",
       "properties": {
       },
       "seeding_key": {
@@ -11963,7 +11944,13 @@
     {
       "seeding_key": {
         "lesson.key": "Virtual Pet",
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "vocabulary.key": "event"
       }
     },
     {
@@ -12254,7 +12241,7 @@
     {
       "key": "c3951ab5-ed99-4234-9f90-d82cfca63b70",
       "properties": {
-        "description": "Create an interactive virtual pet using events, behaviors, variables, and custom art."
+        "description": "Create an interactive virtual pet using events, behaviors, and custom art."
       },
       "seeding_key": {
         "lesson.key": "Virtual Pet",
@@ -12264,7 +12251,7 @@
     {
       "key": "cb9ec256-91d1-4dde-8cff-69bdb063aa0a",
       "properties": {
-        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it or monitoring its energy."
+        "description": "Program solutions to problems that arise when designing a virtual pet, like feeding it."
       },
       "seeding_key": {
         "lesson.key": "Virtual Pet",
