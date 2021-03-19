@@ -201,12 +201,53 @@ describe('WebLab', () => {
       });
     });
   });
-  // test getCodeAsync
-  // test prepareForRemix
-  // test deleteProjectFile
-  // test renameProjectFile
-  // test changeProjectFile
-  // test registerBeforeFirstwriteHook
-  // test onProjectChanged
-  // test loadFileEntries
+
+  describe('getCodeAsync', () => {
+    it('resolves with empty string if brambleHost is null', () => {
+      weblab.brambleHost = null;
+      weblab.getCodeAsync().then(value => {
+        expect(value).to.equal('');
+      });
+    });
+    it('rejects with error if brambleHost syncFiles has an error', () => {
+      weblab.brambleHost = {
+        syncFiles: callback => {
+          callback('error');
+        }
+      };
+      weblab.getCodeAsync().catch(error => {
+        expect(error).to.equal('error');
+      });
+    });
+    it('resolves with files version id when brambleHost syncFiles has no error', () => {
+      weblab.brambleHost = {
+        syncFiles: callback => {
+          callback();
+        }
+      };
+      weblab.initialFilesVersionId = 'version-id';
+      weblab.getCodeAsync().then(val => {
+        expect(val).to.equal('version-id');
+      });
+    });
+  });
+
+  describe('onProjectChanged', () => {
+    beforeEach(() => {
+      sinon.stub(project, 'projectChanged');
+    });
+    afterEach(() => {
+      project.projectChanged.restore();
+    });
+    it('does not call projectChanged if it is readonly', () => {
+      weblab.readOnly = true;
+      weblab.onProjectChanged();
+      expect(project.projectChanged).to.have.not.been.called;
+    });
+    it('calls projectChanged if it is not readonly', () => {
+      weblab.readOnly = false;
+      weblab.onProjectChanged();
+      expect(project.projectChanged).to.have.been.calledOnce;
+    });
+  });
 });
