@@ -16,6 +16,7 @@ module Services
     setup do
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
+      @programming_environment = create :programming_environment, name: 'new-lab'
       @framework = create :framework, shortcode: 'test_framework'
     end
 
@@ -78,6 +79,8 @@ module Services
       #   2 queries, one to remove LessonsVocabularies from each Lesson.
       #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
       #   2 queries, one to remove LessonsStandards from each Lesson.
+      #   1 query to get all the programming environments
+      #   1 query to get all the standards frameworks
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -85,7 +88,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(94) do
+      assert_queries(95) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -260,8 +263,8 @@ module Services
       assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
       assert_equal(
-        ['Updated Section Name', 'My Activity Section', 'New Section Name'],
-        activity.activity_sections.map(&:name)
+        ['My Activity Section', 'New Section Name', 'Updated Section Name'],
+        activity.activity_sections.map(&:name).sort!
       )
     end
 
@@ -652,6 +655,16 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed can only find programming expression if programming environment matches' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+      @programming_environment.update!(name: 'not-new-lab')
+      assert_raises do
+        ScriptSeed.seed_from_json(json)
+      end
+    end
+
     # Standards are shared across all scripts. We should never delete
     # a standard because it might be in use by another script.
     test 'seed deletes lessons_standards' do
@@ -933,7 +946,7 @@ module Services
         end
 
         (1..num_programming_expressions_per_lesson).each do |pe|
-          programming_expression = create :programming_expression, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          programming_expression = create :programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 
