@@ -793,8 +793,6 @@ class Level < ApplicationRecord
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
     teacher_markdown = localized_teacher_markdown if can_view_teacher_markdown
-    markdown = properties['markdown'] if type == 'External'
-    long_instructions_for_display = type == 'Multi' ? get_question_text : long_instructions
     {
       name: name,
       id: id.to_s,
@@ -802,13 +800,13 @@ class Level < ApplicationRecord
       type: type,
       skin: try(:skin),
       isConceptLevel: concept_level?,
-      longInstructions: long_instructions_for_display,
+      longInstructions: long_instructions,
       shortInstructions: short_instructions,
+      markdown: properties['markdown'],
       videos: related_videos.map(&:summarize),
       mapReference: map_reference,
       referenceLinks: reference_links,
       teacherMarkdown: teacher_markdown,
-      markdown: markdown,
       authoredHints: authored_hints,
       videoOptions: specified_autoplay_video&.summarize(false),
       containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
