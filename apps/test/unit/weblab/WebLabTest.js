@@ -250,4 +250,31 @@ describe('WebLab', () => {
       expect(project.projectChanged).to.have.been.calledOnce;
     });
   });
+
+  describe('setBrambleHost', () => {
+    let brambleHost;
+    beforeEach(() => {
+      brambleHost = {
+        onBrambleMountable: callback => {},
+        onBrambleReady: callback => {}
+      };
+      sinon.stub(project, 'getCurrentId').returns('project-id');
+    });
+
+    afterEach(() => {
+      project.getCurrentId.restore();
+    });
+
+    it('returns the project id if there is no suppliedFilesVersionId', () => {
+      weblab.suppliedFilesVersionId = null;
+      expect(weblab.setBrambleHost(brambleHost)).to.equal('project-id');
+    });
+
+    it('returns the project id and suppliedFilesVersionId if there is a suppliedFilesVersionId', () => {
+      weblab.suppliedFilesVersionId = 'supplied-files-version-id';
+      expect(weblab.setBrambleHost(brambleHost)).to.equal(
+        'project-id-supplied-files-version-id'
+      );
+    });
+  });
 });
