@@ -11,7 +11,7 @@ AI Lab is a highly configurable environment providing a student experience for d
 - choosing which column(s) to use for the prediction (the features)
 - handling both categorical and continuous (numerical) columns
 - viewing per-column graphs and metadata
-- viewing custom CrossTab tables for comparing categorical columns
+- viewing custom [CrossTab](https://github.com/code-dot-org/ml-playground/pull/62) tables for comparing categorical columns
 - viewing scatter plot graphs for comparing continuous columns
 - using SVM or KNN classification or KNN regression to train a model
 - choosing the subset of data to reserve for validation
@@ -19,7 +19,7 @@ AI Lab is a highly configurable environment providing a student experience for d
 - using the trained model by doing predictions
 - saving the trained model to the server for use in App Lab
 
-It can be run standalone for more rapid development, though its ultimate destination is to appear in [Code Studio](https://studio.code.org/).  When run standalone, it does not have all of the styling of Code Studio.  It also calls stub functions for completion, saving a trained model, and indicating which Dynamic Instruction should be shown.  The standalone runtime does have a dropdown for selecting which set of level parameters are used, in lieu of a level providing these parameters, and it also shows the current Dynamic Instruction identifier.
+It can be run standalone for more rapid development, though its ultimate destination is to appear in [Code Studio](https://studio.code.org/).  When run standalone, it does not have all of the styling of Code Studio.  It also calls stub functions for completion, saving a trained model, and indicating which [Dynamic](https://github.com/code-dot-org/code-dot-org/pull/39384) [Instruction](https://github.com/code-dot-org/ml-playground/pull/97) should be shown.  The standalone runtime does have a dropdown for selecting which set of level parameters are used, in lieu of a level providing these parameters, and it also shows the current Dynamic Instruction identifier.
 
 ## Common operations
 
