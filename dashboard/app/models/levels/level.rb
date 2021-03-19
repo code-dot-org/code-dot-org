@@ -792,7 +792,7 @@ class Level < ApplicationRecord
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown)
-    teacher_markdown = localized_teacher_markdown if can_view_teacher_markdown
+    teacher_markdown_for_display = localized_teacher_markdown if can_view_teacher_markdown
     {
       name: name,
       id: id.to_s,
@@ -802,12 +802,10 @@ class Level < ApplicationRecord
       isConceptLevel: concept_level?,
       longInstructions: long_instructions,
       shortInstructions: short_instructions,
-      markdown: properties['markdown'],
       videos: related_videos.map(&:summarize),
       mapReference: map_reference,
       referenceLinks: reference_links,
-      teacherMarkdown: teacher_markdown,
-      authoredHints: authored_hints,
+      teacherMarkdown: teacher_markdown_for_display,
       videoOptions: specified_autoplay_video&.summarize(false),
       containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
       sublevels: try(:sublevels)&.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
