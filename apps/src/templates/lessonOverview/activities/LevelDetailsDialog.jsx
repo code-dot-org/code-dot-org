@@ -230,8 +230,7 @@ class LevelDetailsDialog extends Component {
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={{padding: 15, ...levelSpecificStyling}}
-        useUpdatedStyles
+        style={{...levelSpecificStyling}}
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
