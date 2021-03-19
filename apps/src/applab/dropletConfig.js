@@ -935,6 +935,12 @@ export var blocks = [
     params: ['list', '0'],
     dontMarshal: true
   },
+  {
+    func: 'declareAssign_object',
+    block: `var object = {"key", "value"};`,
+    category: 'Variables',
+    noAutocomplete: true
+  },
 
   {
     func: 'imageUploadButton',
