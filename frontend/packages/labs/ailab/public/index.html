@@ -21,6 +21,9 @@
         left: 20px;
         right: 20px;
       }
+      #mode-select {
+        position: absolute;
+      }
       #instructions {
         text-align: center;
         position: absolute;
@@ -30,7 +33,8 @@
     </style>
   </head>
   <body>
-    <select onchange="location = '?mode=' + this.options[this.selectedIndex].value">
+    <div id="instructions"></div>
+    <select id="mode-select" onchange="location = '?mode=' + this.options[this.selectedIndex].value">
       <option disabled selected value="/">Jump to mode...</option>
       <option value="">default</option>
       <option value="minimal">minimal</option>
@@ -43,7 +47,6 @@
       <option value="ml-mini-project-ailab">ml-mini-project-ailab</option>
       <option value="ml-final-project-ailab">ml-final-project-ailab</option>
     </select>
-    <div id="instructions"></div>
     <div id="root"></div>
     <script src="mainDev.js"></script>
   </body>

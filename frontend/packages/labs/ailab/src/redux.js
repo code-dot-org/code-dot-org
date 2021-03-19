@@ -1068,6 +1068,10 @@ function isPanelEnabled(state, panelId) {
     if (state.data.length === 0) {
       return false;
     }
+
+    if (mode && mode.hideSelectLabel) {
+      return false;
+    }
   }
 
   if (panelId === "dataDisplayFeatures") {
@@ -1161,7 +1165,11 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = { panel: "dataDisplayLabel", text: "Back" };
+    prev = isPanelEnabled(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Back" }
+      : isPanelEnabled(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Back" }
+      : null;
     next = isPanelEnabled(state, "saveModel")
       ? { panel: "saveModel", text: "Save" }
       : { panel: "continue", text: "Continue" };

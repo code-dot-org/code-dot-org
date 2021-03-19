@@ -62,7 +62,11 @@ const processMode = mode => {
       // Also retrieve model metadata and set column data types.
       parseJSON(assetPath + item.metadataPath);
 
-      store.dispatch(setCurrentPanel("dataDisplayLabel"));
+      if (mode.hideSelectLabel) {
+        store.dispatch(setCurrentPanel("dataDisplayFeatures"));
+      } else {
+        store.dispatch(setCurrentPanel("dataDisplayLabel"));
+      }
       panelSet = true;
     }
 

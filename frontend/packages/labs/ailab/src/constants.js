@@ -336,7 +336,12 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 36
+    fontSize: 36,
+    position: "absolute",
+    top: 20,
+    backgroundColor: "rgba(255,255,255,0.8)",
+    padding: 10,
+    borderRadius: 5
   },
 
   statementLabel: {
@@ -361,7 +366,7 @@ export const styles = {
 
   trainBot: {
     position: "relative",
-    width: "20%"
+    width: 300
   },
   trainBotHead: {
     transition: "transform 500ms",
@@ -424,7 +429,8 @@ export const styles = {
     marginTop: 10,
     padding: 6,
     cursor: "pointer",
-    height: 43
+    height: 43,
+    width: "100%"
   },
 
   phraseBuilderSelectReadonly: {
