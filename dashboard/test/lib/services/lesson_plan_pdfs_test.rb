@@ -107,6 +107,18 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     end
   end
 
+  test 'Student Lesson PDFs are generated into the given directory' do
+    script = create(:script, seeded_from: Time.now)
+    lesson = create(:lesson, script: script)
+    Dir.mktmpdir('lesson_plan_pdfs_test') do |tmpdir|
+      assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
+      url = Rails.application.routes.url_helpers.script_lesson_student_url(script, lesson)
+      filename = File.join(tmpdir, Services::LessonPlanPdfs.get_pathname(lesson, true))
+      PDF.expects(:generate_from_url).with(url, filename)
+      Services::LessonPlanPdfs.generate_lesson_pdf(lesson, tmpdir, true)
+    end
+  end
+
   test 'All PDFs in the given directory are uploaded to S3' do
     Dir.mktmpdir('lesson_plan_pdfs_test') do |tmpdir|
       FileUtils.touch(File.join(tmpdir, 'file.txt'))
