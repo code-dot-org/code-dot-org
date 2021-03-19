@@ -449,7 +449,7 @@ class Lesson < ApplicationRecord
       # if we don't have a user level, consider ourselves locked
       locked = user_level.nil? || user_level.show_as_locked?(self)
       # if we don't have a user level, we can't be readonly
-      readonly = !user_level.nil? && user_level.show_as_readonly?(self)
+      readonly = user_level.present? && user_level.show_as_readonly?(self, locked)
       {
         user_level_data: {
           user_id: student.id,

@@ -1768,7 +1768,9 @@ class User < ApplicationRecord
         new_result > user_level.best_result
 
       user_level.submitted = submitted
-      if submitted && level_source_id
+      # We only lock levels of type LevelGroup
+      is_level_group = user_level.level.type === 'LevelGroup'
+      if submitted && is_level_group
         user_level.locked = true
       end
       if level_source_id && !is_navigator
