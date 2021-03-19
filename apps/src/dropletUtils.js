@@ -169,8 +169,7 @@ standardConfig.blocks = [
   {
     func: 'randomNumber_min_max',
     block: 'randomNumber(1, 10)',
-    category: 'Math',
-    docFunc: 'randomNumber_min_max'
+    category: 'Math'
   },
   {func: 'mathRound', block: 'Math.round(__)', category: 'Math'},
   {func: 'mathAbs', block: 'Math.abs(__)', category: 'Math'},
