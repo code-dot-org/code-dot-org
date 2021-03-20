@@ -153,7 +153,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect first response checking whether library question appears in any published forms
     server.respond();
 
-    assert.isFalse(_.some(availableLibraryQuestions, ['id', 1]));
+    assert.isFalse(_.some(fetchableLibraryQuestions, ['id', 1]));
 
     // simulate save click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
@@ -162,10 +162,10 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const availableLibraryQuestions = store.getState().foorm
-      .availableSubEntities;
+    const fetchableLibraryQuestions = store.getState().foorm
+      .fetchableSubEntities;
     assert(
-      _.some(availableLibraryQuestions, ['id', 1]),
+      _.some(fetchableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
     );
   });
@@ -189,8 +189,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect first response checking whether library question appears in any published forms
     server.respond();
 
-    assert.isFalse(_.some(availableLibraries, ['id', 2]));
-    assert.isFalse(_.some(availableLibraryQuestions, ['id', 1]));
+    assert.isFalse(_.some(fetchableLibraries, ['id', 2]));
+    assert.isFalse(_.some(fetchableLibraryQuestions, ['id', 1]));
 
     // simulate save click. Cannot click on button itself because it is in the modal
     // which is outside the wrapper.
@@ -199,15 +199,15 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const availableLibraryQuestions = store.getState().foorm
-      .availableSubEntities;
-    const availableLibraries = store.getState().foorm.availableEntities;
+    const fetchableLibraryQuestions = store.getState().foorm
+      .fetchableSubEntities;
+    const fetchableLibraries = store.getState().foorm.fetchableEntities;
     assert(
-      _.some(availableLibraries, ['id', 2]),
-      'Newly saved library does not appear in list of available libraries'
+      _.some(fetchableLibraries, ['id', 2]),
+      'Newly saved library does not appear in list of fetchable libraries'
     );
     assert(
-      _.some(availableLibraryQuestions, ['id', 1]),
+      _.some(fetchableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
     );
   });

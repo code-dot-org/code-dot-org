@@ -3,10 +3,10 @@ const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
 const SET_LIBRARY_QUESTION_DATA = 'foormEditor/SET_LIBRARY_QUESTION_DATA';
 const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
-const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
-const SET_AVAILABLE_SUB_ENTITIES = 'foormEditor/SET_AVAILABLE_SUB_ENTITIES';
-const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
-const ADD_AVAILABLE_SUB_ENTITY = 'foormEditor/ADD_AVAILABLE_SUB_ENTITY';
+const SET_FETCHABLE_ENTITIES = 'foormEditor/SET_FETCHABLE_ENTITIES';
+const SET_FETCHABLE_SUB_ENTITIES = 'foormEditor/SET_FETCHABLE_SUB_ENTITIES';
+const ADD_FETCHABLE_ENTITY = 'foormEditor/ADD_FETCHABLE_ENTITY';
+const ADD_FETCHABLE_SUB_ENTITY = 'foormEditor/ADD_FETCHABLE_SUB_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
@@ -47,28 +47,30 @@ export const setHasJSONError = hasJSONError => ({
   hasJSONError
 });
 
-// "Entities" are the list of forms or libraries from which a user can select to edit
-// in the Foorm form and library editors, respectively.
-export const setAvailableEntities = entitiesMetadata => ({
-  type: SET_AVAILABLE_ENTITIES,
+// "Entities" represent metadata (ID, name, etc.) about the forms or libraries
+// that a user can select to edit in the Foorm form and library editors, respectively.
+// Once selected, an AJAX call fetches the actual form or library from our server,
+// containing the SurveyJS configuration that can be edited.
+export const setFetchableEntities = entitiesMetadata => ({
+  type: SET_FETCHABLE_ENTITIES,
   entitiesMetadata
 });
 
-export const addAvailableEntity = entityMetadata => ({
-  type: ADD_AVAILABLE_ENTITY,
+export const addFetchableEntity = entityMetadata => ({
+  type: ADD_FETCHABLE_ENTITY,
   entityMetadata
 });
 
-// "Sub-entities" are the list of library questions
-// in a selected library that a user can choose to edit.
+// "Sub-entities" are library question metadata (ID, name, etc.)
+// within a selected library that a user can choose to edit.
 // There is no equivalent "sub-entity" when editing forms currently.
-export const setAvailableSubEntities = subEntitiesMetadata => ({
-  type: SET_AVAILABLE_SUB_ENTITIES,
+export const setFetchableSubEntities = subEntitiesMetadata => ({
+  type: SET_FETCHABLE_SUB_ENTITIES,
   subEntitiesMetadata
 });
 
-export const addAvailableSubEntity = subEntityMetadata => ({
-  type: ADD_AVAILABLE_SUB_ENTITY,
+export const addFetchableSubEntity = subEntityMetadata => ({
+  type: ADD_FETCHABLE_SUB_ENTITY,
   subEntityMetadata
 });
 
@@ -91,7 +93,7 @@ const initialState = {
   // State relevant for both Form and Library editors
   questions: '',
   hasJSONError: false,
-  availableEntities: [],
+  fetchableEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
@@ -106,7 +108,7 @@ const initialState = {
   libraryVersion: null,
   libraryQuestionId: null,
   libraryQuestionName: null,
-  availableSubEntities: []
+  fetchableSubEntities: []
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -148,38 +150,38 @@ export default function foormEditorRedux(state = initialState, action) {
       libraryId: action.libraryData['id']
     };
   }
-  if (action.type === SET_AVAILABLE_ENTITIES) {
+  if (action.type === SET_FETCHABLE_ENTITIES) {
     return {
       ...state,
-      availableEntities: action.entitiesMetadata
+      fetchableEntities: action.entitiesMetadata
     };
   }
-  if (action.type === SET_AVAILABLE_SUB_ENTITIES) {
+  if (action.type === SET_FETCHABLE_SUB_ENTITIES) {
     return {
       ...state,
-      availableSubEntities: action.subEntitiesMetadata
+      fetchableSubEntities: action.subEntitiesMetadata
     };
   }
-  if (action.type === ADD_AVAILABLE_ENTITY) {
+  if (action.type === ADD_FETCHABLE_ENTITY) {
     let updatedEntities = mergeNewItem(
-      state.availableEntities,
+      state.fetchableEntities,
       action.entityMetadata
     );
 
     return {
       ...state,
-      availableEntities: updatedEntities
+      fetchableEntities: updatedEntities
     };
   }
-  if (action.type === ADD_AVAILABLE_SUB_ENTITY) {
+  if (action.type === ADD_FETCHABLE_SUB_ENTITY) {
     let updatedSubEntities = mergeNewItem(
-      state.availableSubEntities,
+      state.fetchableSubEntities,
       action.subEntityMetadata
     );
 
     return {
       ...state,
-      availableSubEntities: updatedSubEntities
+      fetchableSubEntities: updatedSubEntities
     };
   }
   if (action.type === SET_LAST_SAVED) {

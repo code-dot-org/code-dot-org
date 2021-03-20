@@ -39,7 +39,7 @@ class FoormFormEditorManager extends React.Component {
     // populated by redux
     questions: PropTypes.object,
     hasJSONError: PropTypes.bool,
-    availableForms: PropTypes.array,
+    fetchableForms: PropTypes.array,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
     isFormPublished: PropTypes.bool,
@@ -57,8 +57,9 @@ class FoormFormEditorManager extends React.Component {
     previewQuestions: null
   };
 
-  getAvailableForms() {
-    return this.props.availableForms.map(formNameAndVersion => {
+  // Callback for FoormLoadButtons
+  getFetchableForms() {
+    return this.props.fetchableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
 
@@ -220,7 +221,7 @@ class FoormFormEditorManager extends React.Component {
           resetSelectedData={() => this.resetSelectedData()}
           showCodeMirror={() => this.showCodeMirror()}
           onSelect={formMetadata => this.loadFormData(formMetadata)}
-          foormEntities={this.getAvailableForms()}
+          foormEntities={this.getFetchableForms()}
           foormEntityName="Form"
         />
         {this.state.hasLoadError && (
@@ -249,7 +250,7 @@ class FoormFormEditorManager extends React.Component {
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
-    availableForms: state.foorm.availableEntities || [],
+    fetchableForms: state.foorm.fetchableEntities || [],
     hasJSONError: state.foorm.hasJSONError,
     formName: state.foorm.formName,
     formVersion: state.foorm.formVersion,
