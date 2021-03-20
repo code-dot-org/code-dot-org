@@ -152,8 +152,7 @@ class UserLevel < ApplicationRecord
   # `readonly` and `locked` are mutually exclusive on the client, so we use
   # this helper to override the value of `readonly_answers` when we're supposed
   # to show as locked.
-  def show_as_readonly?(stage, is_locked)
-    self.locked = is_locked
+  def show_as_readonly?(stage)
     readonly_answers? && !show_as_locked?(stage)
   end
 
