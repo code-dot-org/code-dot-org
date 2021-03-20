@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import FoormEntityEditor from '../components/FoormEntityEditor';
 import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
-  setAvailableSubEntities,
+  setFetchableSubEntities,
   setLastSaved,
   setSaveError,
   setLibraryQuestionData,
@@ -47,11 +47,11 @@ class FoormLibraryEditorManager extends React.Component {
     questions: PropTypes.object,
     hasJSONError: PropTypes.bool,
     libraryId: PropTypes.number,
-    availableLibraries: PropTypes.array,
+    fetchableLibraries: PropTypes.array,
     libraryName: PropTypes.string,
     libraryQuestionName: PropTypes.string,
-    availableLibraryQuestionsForCurrentLibrary: PropTypes.array,
-    setAvailableLibraryQuestions: PropTypes.func,
+    fetchableLibraryQuestionsForCurrentLibrary: PropTypes.array,
+    setFetchableLibraryQuestions: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
@@ -68,7 +68,7 @@ class FoormLibraryEditorManager extends React.Component {
   };
 
   getLibraryChoices() {
-    return this.props.availableLibraries.map((libraryNameAndVersion, i) => {
+    return this.props.fetchableLibraries.map((libraryNameAndVersion, i) => {
       const libraryName = libraryNameAndVersion['name'];
       const libraryVersion = libraryNameAndVersion['version'];
 
@@ -80,7 +80,7 @@ class FoormLibraryEditorManager extends React.Component {
   }
 
   getLibraryQuestionChoices() {
-    return this.props.availableLibraryQuestionsForCurrentLibrary.map(
+    return this.props.fetchableLibraryQuestionsForCurrentLibrary.map(
       (libraryQuestionAndType, i) => {
         const libraryQuestionName = libraryQuestionAndType['name'];
         const libraryQuestionType = libraryQuestionAndType['type'];
@@ -104,7 +104,7 @@ class FoormLibraryEditorManager extends React.Component {
       type: 'get'
     })
       .done(result => {
-        this.props.setAvailableLibraryQuestions(result);
+        this.props.setFetchableLibraryQuestions(result);
         this.setState({
           hasLoadError: false
         });
@@ -156,7 +156,7 @@ class FoormLibraryEditorManager extends React.Component {
 
   // Callback for FoormEntityLoadButtons (for initializing new library)
   initializeNewLibrary() {
-    this.props.setAvailableLibraryQuestions([]);
+    this.props.setFetchableLibraryQuestions([]);
     this.props.setLibraryData({
       name: null,
       version: null,
@@ -197,10 +197,10 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.resetCodeMirror(libraryQuestionData['question']);
   }
 
-  areLibraryQuestionsAvailable() {
+  areLibraryQuestionsFetchable() {
     return !!(
       this.props.libraryId &&
-      this.props.availableLibraryQuestionsForCurrentLibrary
+      this.props.fetchableLibraryQuestionsForCurrentLibrary
     );
   }
 
@@ -266,7 +266,7 @@ class FoormLibraryEditorManager extends React.Component {
           }
           foormEntities={this.getLibraryQuestionChoices()}
           foormEntityName="Library Question"
-          isDisabled={!this.areLibraryQuestionsAvailable()}
+          isDisabled={!this.areLibraryQuestionsFetchable()}
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>
@@ -300,17 +300,17 @@ export const UnconnectedFoormLibraryEditorManager = FoormLibraryEditorManager;
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
-    availableLibraries: state.foorm.availableEntities || [],
-    availableLibraryQuestionsForCurrentLibrary:
-      state.foorm.availableSubEntities || [],
+    fetchableLibraries: state.foorm.fetchableEntities || [],
+    fetchableLibraryQuestionsForCurrentLibrary:
+      state.foorm.fetchableSubEntities || [],
     libraryId: state.foorm.libraryId,
     libraryName: state.foorm.libraryName,
     libraryQuestionName: state.foorm.libraryQuestionName,
     hasJSONError: state.foorm.hasJSONError
   }),
   dispatch => ({
-    setAvailableLibraryQuestions: libraryQuestionsMetadata =>
-      dispatch(setAvailableSubEntities(libraryQuestionsMetadata)),
+    setFetchableLibraryQuestions: libraryQuestionsMetadata =>
+      dispatch(setFetchableSubEntities(libraryQuestionsMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLibraryQuestionData: libraryQuestionData =>

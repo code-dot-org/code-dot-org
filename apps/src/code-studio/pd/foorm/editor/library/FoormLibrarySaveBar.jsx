@@ -18,8 +18,8 @@ import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setLibraryQuestionData,
   setLibraryData,
-  addAvailableEntity,
-  addAvailableSubEntity,
+  addFetchableEntity,
+  addFetchableSubEntity,
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
@@ -83,8 +83,8 @@ class FoormLibrarySaveBar extends Component {
     saveError: PropTypes.string,
     setLibraryData: PropTypes.func,
     setLibraryQuestionData: PropTypes.func,
-    addAvailableLibrary: PropTypes.func,
-    addAvailableLibraryQuestion: PropTypes.func,
+    addFetchableLibrary: PropTypes.func,
+    addFetchableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLastSavedLibraryQuestionQuestions: PropTypes.func
@@ -201,7 +201,7 @@ class FoormLibrarySaveBar extends Component {
 
         // Since library is new, add to list of options
         // and set as currently selected library.
-        this.props.addAvailableLibrary({
+        this.props.addFetchableLibrary({
           name: library.name,
           version: library.version,
           id: library.id
@@ -225,7 +225,7 @@ class FoormLibrarySaveBar extends Component {
     // reset code mirror with returned questions (may have added question name)
     this.props.resetCodeMirror(updatedQuestion);
     // update store with library question data.
-    this.props.addAvailableLibraryQuestion({
+    this.props.addFetchableLibraryQuestion({
       id: libraryQuestion['id'],
       name: libraryQuestion['question_name'],
       type: JSON.parse(libraryQuestion.question)['type']
@@ -473,10 +473,10 @@ export default connect(
     setLibraryQuestionData: libraryQuestionData =>
       dispatch(setLibraryQuestionData(libraryQuestionData)),
     setLibraryData: libraryData => dispatch(setLibraryData(libraryData)),
-    addAvailableLibrary: libraryMetadata =>
-      dispatch(addAvailableEntity(libraryMetadata)),
-    addAvailableLibraryQuestion: libraryQuestionMetadata =>
-      dispatch(addAvailableSubEntity(libraryQuestionMetadata)),
+    addFetchableLibrary: libraryMetadata =>
+      dispatch(addFetchableEntity(libraryMetadata)),
+    addFetchableLibraryQuestion: libraryQuestionMetadata =>
+      dispatch(addFetchableSubEntity(libraryQuestionMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedLibraryQuestionQuestions: libraryQuestionQuestions =>

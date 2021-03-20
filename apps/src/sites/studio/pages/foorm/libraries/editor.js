@@ -10,7 +10,7 @@ import {
 } from '../forms/editorHelpers.js';
 import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import foorm, {
-  setAvailableEntities
+  setFetchableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   const scriptData = getScriptData('props');
   const libraryNamesAndVersions = scriptData.libraryNamesAndVersions;
-  getStore().dispatch(setAvailableEntities(libraryNamesAndVersions));
+  getStore().dispatch(setFetchableEntities(libraryNamesAndVersions));
 
   ReactDOM.render(
     <Provider store={store}>
