@@ -5685,10 +5685,6 @@ ru:
             Relay Programming:
               key: Эстафетное программирование
               name: Эстафетное программирование
-              description_teacher: Это занятие начнется с небольшого урока по отладке
-                и настойчивости, а затем у нас быстро начнется гонка со временем,
-                когда учащиеся разделятся на команды и будут вместе писать программу
-                каждый по одной инструкции.
             Dance Party:
               key: Танцевальная вечеринка
               name: Танцевальная вечеринка
@@ -5815,17 +5811,23 @@ ru:
             For Loops in Artist:
               key: Цикл for в Художнике
               name: Цикл for в Художнике
+            lesson-6:
+              name: Представляем Лабораторию спрайтов
+            lesson-8:
+              name: Спрайты в действии
           lesson_groups:
             ramp_up:
               display_name: Продвинуться
             csf_digcit:
               display_name: Цифровое гражданство
             csf_variables:
-              display_name: Переменные
+              display_name: Циклы с параметром
             csf_for_loops:
               display_name: Циклы с параметром
-            csf_sprites:
-              display_name: Спрайты
+            lessonGroup-8:
+              display_name: Переменные
+            lessonGroup-9:
+              display_name: Удалить
         express-2021:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'
@@ -5848,6 +5850,8 @@ ru:
             For Loops with Artist:
               key: Цикл for в Художнике
               name: Цикл for в Художнике
+            lesson-1:
+              name: Танцевальная вечеринка
           lesson_groups:
             csf_sequencing:
               display_name: Последовательность действий
@@ -5902,6 +5906,8 @@ ru:
               name: Представляем Лабораторию спрайтов
             Sprites in Action:
               name: Спрайты в действии
+            introducing-spritelab:
+              name: Представляем Лабораторию спрайтов
           lesson_groups:
             ramp_up:
               display_name: Введение
@@ -5911,6 +5917,8 @@ ru:
               display_name: Переменные
             Sprites:
               display_name: Спрайты
+            variables:
+              display_name: Переменные
         csd4-preview-2021:
           lesson_groups:
             csd4_1:
