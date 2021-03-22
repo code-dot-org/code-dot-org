@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import FoormFormEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormEditorManager';
 import {
   populateCodeMirror,
   resetCodeMirror,
   confirmNoUnsavedChanges
-} from './editorHelpers.js';
+} from '../forms/editorHelpers.js';
+import FoormLibraryEditorManager from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import foorm, {
   setFetchableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
@@ -20,15 +20,15 @@ $(document).ready(function() {
   const store = getStore();
 
   const scriptData = getScriptData('props');
-  const formNamesAndVersions = scriptData.formNamesAndVersions;
-  getStore().dispatch(setFetchableEntities(formNamesAndVersions));
+  const libraryNamesAndVersions = scriptData.libraryNamesAndVersions;
+  getStore().dispatch(setFetchableEntities(libraryNamesAndVersions));
 
   ReactDOM.render(
     <Provider store={store}>
-      <FoormFormEditorManager
+      <FoormLibraryEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
-        categories={scriptData.formCategories}
+        categories={scriptData.libraryCategories}
       />
     </Provider>,
     document.getElementById('editor-container')
