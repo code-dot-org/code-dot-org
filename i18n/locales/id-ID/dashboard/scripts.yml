@@ -14428,10 +14428,7 @@ id:
             Private and Personal Information:
               name: Informasi Privat dan Pribadi
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
-              description_teacher: |-
-                Dikembangkan oleh Common Sense Education, pelajaran ini membahas perbedaan antara informasi yang aman dibagikan secara online dengan informasi yang tidak aman.\r
-                \r
-                Sewaktu murid mengunjungi situs-situs yang meminta informasi tentang identitas, mereka belajar menerapkan proses penyelidikan kritis yang membantu mereka melindungi diri sendiri dan keluarga dari pencurian identitas. Dalam pelajaran ini, murid belajar berpikir kritis tentang informasi pengguna yang diminta atau dituntut oleh beberapa situs web. Mereka mempelajari perbedaan antara informasi privat dengan informasi pribadi serta cara membedakan informasi yang aman atau tidak aman dibagikan secara online.
+              description_teacher: "Dikembangkan oleh Common Sense Education, pelajaran ini membahas perbedaan antara informasi yang aman dibagikan secara online dengan informasi yang tidak aman.\\r\n\\r\nSewaktu murid mengunjungi situs-situs yang meminta informasi tentang identitas, mereka belajar menerapkan proses penyelidikan kritis yang membantu mereka melindungi diri sendiri dan keluarga dari pencurian identitas. Dalam pelajaran ini, murid belajar berpikir kritis tentang informasi pengguna yang diminta atau dituntut oleh beberapa situs web. Mereka mempelajari perbedaan antara informasi privat dengan informasi pribadi serta cara membedakan informasi yang aman atau tidak aman dibagikan secara online."
             About Me:
               name: Tentang Saya dengan Sprite Lab
               description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
@@ -14567,10 +14564,7 @@ id:
             The Power of Words:
               name: Kekuatan kata-Kata
               description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
-              description_teacher: |-
-                Murid mempertimbangkan bahwa ketika mereka sedang menikmati situs web favorit, mereka mungkin mendapati pesan dari anak-anak lain yang bisa membuat mereka marah, terluka, sedih, atau takut. Mereka mengeksplorasi cara-cara mengatasi perundungan maya (cyberbullying) dan cara menghadapi bahasa yang membuat susah secara online.\r
-                \r
-                Murid mendiskusikan semua cara mereka menggunakan teknologi untuk komunikasi dan mengeksplorasi kemiripan serta perbedaan antara komunikasi langsung dengan komunikasi online. Murid kemudian menggodok cara-cara menanggapi perundungan maya (cyberbullying). 
+              description_teacher: "Murid mempertimbangkan bahwa ketika mereka sedang menikmati situs web favorit, mereka mungkin mendapati pesan dari anak-anak lain yang bisa membuat mereka marah, terluka, sedih, atau takut. Mereka mengeksplorasi cara-cara mengatasi perundungan maya (cyberbullying) dan cara menghadapi bahasa yang membuat susah secara online.\\r\n\\r\nMurid mendiskusikan semua cara mereka menggunakan teknologi untuk komunikasi dan mengeksplorasi kemiripan serta perbedaan antara komunikasi langsung dengan komunikasi online. Murid kemudian menggodok cara-cara menanggapi perundungan maya (cyberbullying). "
             Crowdsourcing:
               name: Sumber kerumunan
               description_student: Pelajaran ini akan mengajari Anda tentang crowdsourcing, proses membuat proyek bersama tim.
@@ -16611,7 +16605,7 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak dan teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Aktif bergerak dengan Event
@@ -16686,7 +16680,7 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak atau teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
+              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Pertempuran Besar dengan Event
@@ -16730,7 +16724,7 @@ id:
               key: Debugging dalam Labirin
               name: Debugging dalam Labirin
               description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
-              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
+              description_teacher: "Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
             Programming in Collector:
               key: Pemrograman dalam Kolektor
               name: Mengumpulkan Harta Karun bersama Laurel
@@ -16745,7 +16739,7 @@ id:
               key: Gelang biner
               name: Gelang biner
               description_student: Buat gelang binary Anda sendiri dan pelajari cara komputer mengingat informasi!
-              description_teacher: Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off.
+              description_teacher: "Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off."
             'Loops: My Loopy Robotic Friends':
               key: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
               name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
@@ -16828,7 +16822,6 @@ id:
               key: Pemrograman bergiliran
               name: Pemrograman bergiliran
               description_student: Ingat pada awal kursus ini ketika Anda menggambar dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim untuk melakukan sesuatu yang sangat mirip!
-              description_teacher: Aktivitas ini akan dimulai dengan pelajaran singkat tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama untuk membuat sebuah program, satu instruksi setiap saat.
             Debugging in Collector:
               key: Debugging dalam Kolektor
               name: Debugging dengan Laurel
@@ -16948,7 +16941,7 @@ id:
               key: Pemrograman dan Loop dengan Artis
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
-              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+              description_teacher: 'Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditional dalam Minecraft: Perjalanan Air'
               name: 'Conditional dalam Minecraft: Perjalanan Air'
@@ -16958,7 +16951,7 @@ id:
               key: Kondisi
               name: Conditional dengan Petani
               description_student: Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini.
-              description_teacher: Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.
+              description_teacher: 'Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.'
             Simon Says:
               key: Simon Mengatakan
               description_student: Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat.
@@ -17075,7 +17068,7 @@ id:
             Nested Loops in the Maze:
               key: Nested Loop dalam Labirin
               name: Nested Loop dalam Labirin
-              description_student: "Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain."
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             The Power of Words:
               key: Kekuatan kata-Kata
@@ -17295,7 +17288,7 @@ id:
             Alien Dance Party:
               key: Pesta Dansa Alien
               name: Pesta Dansa Alien
-              description_student: Berlatih membuat permainan untuk dibagikan kepada teman dan keluarga.
+              description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab

@@ -26824,10 +26824,6 @@ id:
               description_student: Ingat pada awal kursus ini ketika Anda menggambar
                 dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim
                 untuk melakukan sesuatu yang sangat mirip!
-              description_teacher: Aktivitas ini akan dimulai dengan pelajaran singkat
-                tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan
-                waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama
-                untuk membuat sebuah program, satu instruksi setiap saat.
             Debugging in Collector:
               key: Debugging dalam Kolektor
               name: Debugging dengan Laurel
@@ -27408,7 +27404,6 @@ id:
               description_teacher: Di sini, murid akan menggunakan Sprite Lab untuk
                 membuat perilaku kustom mereka sendiri.
             Virtual Pet:
-              name: Piaraan Virtual
               description_student: Dalam pelajaran ini, murid akan membuat Virtual
                 Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka.
                 Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan
@@ -27452,21 +27447,27 @@ id:
               description_teacher: 'Dalam pelajaran ini, murid akan belajar tentang
                 aksesibilitas dan nilai empati melalui penggodokan (curah gugasan)
                 dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
+            lesson-6:
+              name: Memperkenalkan Sprite Lab
+            lesson-8:
+              name: Sprite tengah Beraksi
           lesson_groups:
             ramp_up:
               display_name: Jalan-Naik
             csf_digcit:
               display_name: Kewarganegaraaan Digital
             csf_variables:
-              display_name: variabel
+              display_name: For Loop
             csf_for_loops:
               display_name: For Loop
             csf_sprites:
-              display_name: Sprites
+              display_name: Dampak dari Komputasi
             end_of_course_project:
               display_name: Proyek Akhir Kursus
             lessonGroup-8:
-              display_name: Dampak dari Komputasi
+              display_name: variabel
+            lessonGroup-9:
+              display_name: Hapus
           student_description: Pelajari cara menggunakan berbagai jenis loop, event,
             function, dan conditional. Selidiki berbagai teknik pemecahan masalah
             dan diskusikan dampak kemasyarakatan dari komputasi dan  internet. Di
@@ -27495,8 +27496,8 @@ id:
             Programming with Angry Birds:
               key: Pemrograman dengan Angry Birds
               name: Pemrograman dengan Angry Birds
-              description_student: Pelajari tentang urutan dan algorithm dengan Angry
-                Birds.
+              description_student: Buat program untuk membantu Angry Bird bergerak
+                melintasi labirin.
               description_teacher: Dengan menggunakan karakter dari permainan Angry
                 Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan
                 burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk
@@ -27576,7 +27577,7 @@ id:
                 es Anna dan Elsa yang luar biasa!
             'Looking Ahead with Minecraft ':
               name: Melihat ke depan
-              description_student: Hindari lava! Di sini Anda akan belajar tentang
+              description_student: Hindari lava! Di sini Anda mulai belajar tentang
                 conditional di dunia Minecraft.
               description_teacher: Pelajaran ini awalnya dibuat untuk Hour of Code,
                 bersama dengan tim Minecraft. Murid akan berkesempatan melatih ide-ide
@@ -27599,16 +27600,6 @@ id:
               name: While Loop dengan Petani
               description_student: 'Loop sangat membantu dalam coding. Pelajaran ini
                 akan mengajari Anda tentang jenis loop baru: while loop!'
-              description_teacher: "Pada saat murid sampai di pelajaran ini, mereka
-                mestinya sudah banyak berlatih menggunakan loop `repeat`, jadi sekarang
-                saatnya mencampur materi pelajaran.  \r\n\r\n_While loops_ adalah
-                loop yang terus mengulang-ulang perintah pada saat kondisi terpenuhi.
-                `While` loop digunakan ketika pemrogram tidak tahu persis berapa kali
-                perintah perlu diulang, tetapi dia tahu kondisi apa yang harus benar
-                agar loop bisa terus mengulang. Misalnya, murid akan bekerja mengisi
-                lubang dan menggali kotoran di Petani. Mereka tidak mengetahui ukuran
-                lubang atau ketinggian gunung kotoran, tetapi murid tahu mereka harus
-                terus mengisi lubang dan menggali kotoran sepanjang tanah belum rata."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditional dalam Minecraft: Perjalanan Air'
               name: 'Conditional dalam Minecraft: Perjalanan Air'
@@ -27728,8 +27719,8 @@ id:
             Alien Dance Party:
               key: Pesta Dansa Alien
               name: Pesta Dansa Alien
-              description_student: Berlatih membuat permainan untuk dibagikan kepada
-                teman dan keluarga.
+              description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman
+                sekelas.
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab
@@ -27756,6 +27747,13 @@ id:
               name: Proyek Akhir Kursus
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean!
                 Saatnya untuk mulai membangun proyek anda.
+            lesson-1:
+              name: Pesta Tari
+              description_student: Saatnya merayakan! Dalam pelajaran ini, Anda akan
+                memprogram pesta dansa interaktif Anda sendiri.
+              description_teacher: Dalam pelajaran ini, murid akan memprogram pesta
+                dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena
+                alatnya dibuat untuk menanggapi musik.
           lesson_groups:
             csf_sequencing:
               display_name: Urutan
@@ -27891,6 +27889,8 @@ id:
               name: Memperkenalkan Sprite Lab
             Sprites in Action:
               name: Sprite tengah Beraksi
+            introducing-spritelab:
+              name: Memperkenalkan Sprite Lab
           lesson_groups:
             ramp_up:
               display_name: Pendahuluan
@@ -27900,6 +27900,8 @@ id:
               display_name: variabel
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: variabel
         csd4-preview-2021:
           description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui
             serangkaian tantangan desain, Anda akan mempelajari cara memahami kebutuhan
