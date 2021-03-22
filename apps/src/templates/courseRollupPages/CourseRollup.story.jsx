@@ -141,6 +141,7 @@ const defaultResourceProps = {
           key: 'l1',
           position: 1,
           displayName: 'Lesson One',
+          preparation: '- One',
           resources: {
             Teacher: [
               {
@@ -165,6 +166,7 @@ const defaultResourceProps = {
           key: 'l2',
           position: 2,
           displayName: 'Lesson Two',
+          preparation: '- One',
           resources: {
             Teacher: [
               {
@@ -195,6 +197,7 @@ const defaultResourceProps = {
           key: 'l3',
           position: 3,
           displayName: 'Lesson Three',
+          preparation: '- One',
           resources: {
             Teacher: [
               {
@@ -219,6 +222,7 @@ const defaultResourceProps = {
           key: 'l4',
           position: 4,
           displayName: 'Lesson Four',
+          preparation: '- One',
           resources: {
             Teacher: [
               {
@@ -245,45 +249,48 @@ const defaultResourceProps = {
 };
 
 export default storybook => {
-  storybook.storiesOf('CourseRollup', module).addStoryTable([
-    {
-      name: 'Course Vocabulary',
-      story: () => <CourseRollup {...defaultVocabProps} />
-    },
-    {
-      name: 'Course Code',
-      story: () => <CourseRollup {...defaultCodeProps} />
-    },
-    {
-      name: 'Course Resources',
-      story: () => <CourseRollup {...defaultResourceProps} />
-    },
-    {
-      name: 'Unit Vocabulary',
-      story: () => (
-        <UnitRollup
-          unit={defaultVocabProps.units[0]}
-          objectToRollUp={defaultVocabProps.objectToRollUp}
-        />
-      )
-    },
-    {
-      name: 'Unit Code',
-      story: () => (
-        <UnitRollup
-          unit={defaultCodeProps.units[0]}
-          objectToRollUp={defaultCodeProps.objectToRollUp}
-        />
-      )
-    },
-    {
-      name: 'Unit Resources',
-      story: () => (
-        <UnitRollup
-          unit={defaultResourceProps.units[0]}
-          objectToRollUp={defaultResourceProps.objectToRollUp}
-        />
-      )
-    }
-  ]);
+  storybook
+    .storiesOf('CourseRollup', module)
+    .withReduxStore()
+    .addStoryTable([
+      {
+        name: 'Course Vocabulary',
+        story: () => <CourseRollup {...defaultVocabProps} />
+      },
+      {
+        name: 'Course Code',
+        story: () => <CourseRollup {...defaultCodeProps} />
+      },
+      {
+        name: 'Course Resources',
+        story: () => <CourseRollup {...defaultResourceProps} />
+      },
+      {
+        name: 'Unit Vocabulary',
+        story: () => (
+          <UnitRollup
+            unit={defaultVocabProps.units[0]}
+            objectToRollUp={defaultVocabProps.objectToRollUp}
+          />
+        )
+      },
+      {
+        name: 'Unit Code',
+        story: () => (
+          <UnitRollup
+            unit={defaultCodeProps.units[0]}
+            objectToRollUp={defaultCodeProps.objectToRollUp}
+          />
+        )
+      },
+      {
+        name: 'Unit Resources',
+        story: () => (
+          <UnitRollup
+            unit={defaultResourceProps.units[0]}
+            objectToRollUp={defaultResourceProps.objectToRollUp}
+          />
+        )
+      }
+    ]);
 };
