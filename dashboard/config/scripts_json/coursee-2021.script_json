@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-18 21:08:09 UTC",
+    "serialized_at": "2021-03-22 17:59:21 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -9551,6 +9551,16 @@
   ],
   "vocabularies": [
     {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
       "key": "algorithm",
       "word": "algorithm",
       "definition": "A list of steps to finish a task",
@@ -9802,6 +9812,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "vocabulary.key": "behavior"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Simon Says",
