@@ -2345,9 +2345,13 @@ hr:
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_variables:
-              display_name: Varijable
+              display_name: Petlja brojača
             csf_for_loops:
               display_name: Petlja brojača
+            lessonGroup-8:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: ukloni
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2371,6 +2375,8 @@ hr:
             ramp_up:
               display_name: Uvod
             lessonGroup-3:
+              display_name: Varijable
+            variables:
               display_name: Varijable
         k5-onlinepd-2021:
           lessons:
