@@ -708,12 +708,16 @@ ta:
             Internet:
               name: இணையம்
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: மாறிலிகள்
+            lessonGroup-9:
+              display_name: நீக்கு
         express-2021:
           lessons:
             Dance Party:
               key: நடன விருந்து
+              name: நடன விருந்து
+            lesson-1:
               name: நடன விருந்து
           lesson_groups:
             csf_loops:
@@ -736,6 +740,8 @@ ta:
             outbreak:
               display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
             lessonGroup-3:
+              display_name: மாறிலிகள்
+            variables:
               display_name: மாறிலிகள்
         contagion-pilot:
           description_short: வைரஸ் வெடிப்பிலிருந்து உருவகப்படுத்துதலை நிரல் செய்ய
