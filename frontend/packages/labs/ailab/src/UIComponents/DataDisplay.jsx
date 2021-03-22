@@ -10,13 +10,11 @@ class DataDisplay extends Component {
   static propTypes = {
     data: PropTypes.array,
     setCurrentColumn: PropTypes.func,
+    setColumnRef: PropTypes.func
   };
 
   render() {
-    const {
-      data,
-      setCurrentColumn
-    } = this.props;
+    const { data, setCurrentColumn, setColumnRef } = this.props;
 
     if (data.length === 0) {
       return null;
@@ -28,7 +26,7 @@ class DataDisplay extends Component {
           style={styles.tableParent}
           onScroll={() => setCurrentColumn(undefined)}
         >
-          <DataTable />
+          <DataTable setColumnRef={setColumnRef} />
         </div>
         <div style={styles.mediumText}>
           There are {this.props.data.length} rows of data.
