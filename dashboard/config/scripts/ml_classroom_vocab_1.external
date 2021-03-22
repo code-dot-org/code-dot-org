@@ -1,0 +1,15 @@
+name 'ml-classroom vocab-1'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+![](https://images.code.org/0bffdc20ebc7758ceace58f2dd3966a2-image-1616447463449.png)
+
+![](https://images.code.org/d732389fa24ff58a6a51d432a07c0da7-image-1616447490364.png)
+
+![](https://images.code.org/e85bed541bc287339de94bffe17bc76e-image-1616447503509.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
