@@ -91,7 +91,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 2, obj['resources'].length
   end
 
-  test "should load_from_path" do
+  test "can seed unit group from hash" do
     unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
@@ -106,7 +106,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 3, seeded_unit_group.default_scripts.length
   end
 
-  test "should load_from_path and create resources" do
+  test "can seed unit group and create resources from hash" do
     course_version = create :course_version
     unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000', course_version: course_version)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
