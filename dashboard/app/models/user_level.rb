@@ -163,6 +163,8 @@ class UserLevel < ApplicationRecord
     s.script_levels.detect {|sl| sl.level_ids.include? level_id}
   end
 
+  # This is called when a teacher updates the lock or readonly status for each student.
+  # As such, one of locked or readonly will be populated, and the other nil.
   def self.update_lockable_state(user_id, level_id, script_id, locked, readonly_answers)
     user_level = UserLevel.find_or_initialize_by(
       user_id: user_id,
@@ -173,10 +175,11 @@ class UserLevel < ApplicationRecord
     # no need to create a level if it's just going to be locked
     return if !user_level.persisted? && locked
 
-    # we explicitly set `locked=false` if `readonly_answers=true` to start
+    # Explicitly set `locked=false` if `readonly_answers=true` to start
     # the autolock clock so that the mutually-exclusive `show_as_locked` and
     # `show_as_readonly` will flip from `false/true` to `true/false`
     # after AUTOLOCK_PERIOD has passed.
+    # Otherwise, update according to new status given
     user_level.locked = readonly_answers ? false : locked
     user_level.readonly_answers = readonly_answers
 
