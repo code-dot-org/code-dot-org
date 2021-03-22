@@ -16,4 +16,10 @@ describe('ProgressionDetails', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
     expect(wrapper.find('ProgressLevelSet').length).to.equal(1);
   });
+
+  it('can show level details dialog after bubble click', () => {
+    const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
+    wrapper.instance().handleBubbleClick({id: 1});
+    expect(wrapper.find('Connect(LevelDetailsDialog)').length).to.equal(1);
+  });
 });
