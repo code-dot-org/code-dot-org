@@ -795,8 +795,9 @@ class Blockly < Level
   def summarize_for_lesson_show(can_view_teacher_markdown)
     super.merge(
       {
-        longInstructions: localized_long_instructions,
-        shortInstructions: localized_short_instructions
+        longInstructions: localized_long_instructions || long_instructions,
+        shortInstructions: localized_short_instructions || short_instructions,
+        skin: skin
       }
     )
   end

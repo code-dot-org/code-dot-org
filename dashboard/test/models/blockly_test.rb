@@ -619,4 +619,31 @@ XML
 
     refute level.uses_droplet?
   end
+
+  test 'summarize_for_lesson_show uses translated instructions' do
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          "TestLevel" => "translated short instructions"
+        },
+        "long_instructions" => {
+          "TestLevel" => "translated long instructions"
+        }
+      }
+    }
+    test_locale = :"te-ST"
+    I18n.locale = test_locale
+    level = create(
+      :level,
+      name: 'TestLevel',
+      type: 'Maze',
+      long_instructions: 'long instructions',
+      short_instructions: 'short instructions',
+      game_id: Game.by_name('Maze')
+    )
+    I18n.backend.store_translations test_locale, custom_i18n
+    summary = level.summarize_for_lesson_show(false)
+    assert_equal 'translated long instructions', summary[:longInstructions]
+    assert_equal 'translated short instructions', summary[:shortInstructions]
+  end
 end
