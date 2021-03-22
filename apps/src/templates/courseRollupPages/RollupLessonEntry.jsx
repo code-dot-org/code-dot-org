@@ -4,6 +4,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 
 const styles = {
   main: {
@@ -33,6 +34,8 @@ export default class RollupLessonEntry extends Component {
     objectToRollUp: PropTypes.string,
     lesson: PropTypes.object
   };
+
+  /* TO DO: Do something nice when there are no things in that lesson */
 
   render() {
     return (
@@ -69,6 +72,34 @@ export default class RollupLessonEntry extends Component {
                 </a>
               </li>
             ))}
+          {this.props.objectToRollUp === 'Resources' && (
+            <div>
+              {this.props.lesson.resources['Teacher'] && (
+                <div>
+                  <h5>{i18n.forTheTeachers()}</h5>
+                  <ResourceList
+                    resources={this.props.lesson.resources['Teacher']}
+                  />
+                </div>
+              )}
+              {this.props.lesson.resources['Student'] && (
+                <div>
+                  <h5>{i18n.forTheStudents()}</h5>
+                  <ResourceList
+                    resources={this.props.lesson.resources['Student']}
+                  />
+                </div>
+              )}
+              {this.props.lesson.resources['All'] && (
+                <div>
+                  <h5>{i18n.forAll()}</h5>
+                  <ResourceList
+                    resources={this.props.lesson.resources['All']}
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
     );
