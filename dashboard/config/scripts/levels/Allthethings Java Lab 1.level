@@ -12,6 +12,5 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-03-22 11:41:54 -0700\",\"changed\":[],\"changed_by_id\":6959,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>
