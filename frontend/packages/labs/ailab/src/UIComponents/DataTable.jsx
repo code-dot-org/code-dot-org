@@ -99,7 +99,11 @@ class DataTable extends Component {
 
   getRows = () => {
     if (this.props.singleRow !== undefined) {
-      return [this.props.data[this.props.singleRow]];
+      return [
+        this.props.data[
+          Math.min(this.props.singleRow, this.props.data.length - 1)
+        ]
+      ];
     } else if (this.props.startingRow !== undefined) {
       const subsetRowCount = 30;
       const actualStartingRow = Math.min(
