@@ -6,6 +6,7 @@ lesson 'lesson1', display_name: 'Introduction to Machine Learning A', has_lesson
 level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
 level 'Oceans_Short', progression: 'Recognizing Fish Features'
 level 'Oceans_Long', progression: 'Recognizing Expressions'
+level 'CSD AIL01 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 
 lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
 level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
@@ -50,18 +51,22 @@ level 'ml-numerical ai lab-safari 1', progression: 'Safari Planner'
 lesson 'lesson10', display_name: 'Regression Quest (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson11', display_name: 'Using Model Cards in App Lab', has_lesson_plan: true
-level 'ml-use model card-example1A', progression: 'Who Survived the Titanic?'
-level 'ml-use model card-example1B', progression: 'Who Survived the Titanic?'
-level 'ml-use model card-example1C', progression: 'Who Survived the Titanic?'
-level 'ml-use model card-example1D', progression: 'Who Survived the Titanic?'
-level 'ml-use model card-example1E', progression: 'Who Survived the Titanic?'
-level 'ml-use model card-example2A', progression: 'How Much Will Insurance Cost?'
-level 'ml-use model card-example2B', progression: 'How Much Will Insurance Cost?'
-level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?'
-level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
-level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example1A', progression: 'Pet Recommender'
+level 'ml-use model card-pet model card', progression: 'Pet Recommender'
+level 'ml-use model card-example1B', progression: 'Pet Recommender'
+level 'ml-use model card-example1C', progression: 'Pet Recommender'
+level 'ml-use model card-example1D', progression: 'Pet Recommender'
+level 'ml-use model card-example1E', progression: 'Pet Recommender'
+level 'ml-use model card-example3A', progression: 'Driver Alert System'
+level 'ml-use model card-example3B', progression: 'Driver Alert System'
+level 'ml-use model card-example3C', progression: 'Driver Alert System'
+level 'ml-use model card-example3D', progression: 'Driver Alert System'
+level 'ml-use model card-example3E', progression: 'Driver Alert System'
 
 lesson 'lesson12', display_name: 'Making Data Decisions', has_lesson_plan: true
+level 'ml-data decisions-zoo1', progression: 'Zoo Predictions'
+level 'ml-data decisions- import app', progression: 'Importing Your Model'
+level 'ml-data decisions- customize app', progression: 'Customizing Your App'
 
 lesson 'lesson13', display_name: 'Mini-Project: Make an App (2 Days)', has_lesson_plan: true
 level 'ml-mini project-ai lab', progression: 'Make An App - AI Lab'
@@ -88,4 +93,9 @@ level 'ml-import ai-pixar placeholder', progression: 'Which Pixar Character Are 
 level 'Oceans_CreaturesVTrash', progression: 'Recognizing Ocean Animals'
 level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
 level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
+level 'ml-use model card-example2A', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2B', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
 
