@@ -78,8 +78,8 @@ class TrainModel extends Component {
         style={{
           ...styles.panel,
           justifyContent: "center",
-          backgroundImage: "url(" + labBackground + ")",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
+          backgroundImage: "url(" + labBackground + ")"
         }}
       >
         <div style={styles.statement}>
@@ -99,8 +99,8 @@ class TrainModel extends Component {
           </span>
         </div>
 
-        <div style={{ overflow: "hidden", paddingTop: 20 }}>
-          <div style={{ width: "30%", overflow: "hidden", opacity: 0.3 }}>
+        <div style={styles.trainModelContainer}>
+          <div style={styles.trainModelDataTable}>
             <DataTable
               reducedColumns={true}
               startingRow={this.getAnimationStep()}
@@ -110,9 +110,9 @@ class TrainModel extends Component {
           <div
             style={{
               position: "absolute",
+              transformOrigin: "center center",
               top: translateY + "%",
               left: translateX + "%",
-              transformOrigin: "center center",
               transform: transform
             }}
           >
@@ -124,13 +124,7 @@ class TrainModel extends Component {
         </div>
 
         {this.props.readyToTrain && (
-          <div
-            style={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-25%)"
-            }}
-          >
+          <div style={styles.trainModelBotContainer}>
             <div style={{ ...styles.trainBot, margin: "0 auto" }}>
               <img
                 src={aiBotHead}

@@ -362,6 +362,19 @@ export const styles = {
     color: featureColor
   },
 
+  trainModelContainer: { overflow: "hidden", paddingTop: 20 },
+  trainModelDataTable: {
+    width: "30%",
+    overflow: "hidden",
+    opacity: 0.3,
+    paddingTop: 20
+  },
+  trainModelBotContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-25%)"
+  },
+
   trainBot: {
     position: "relative",
     width: 300
@@ -434,7 +447,7 @@ export const styles = {
   phraseBuilderSelectReadonly: {
     fontSize: 24,
     marginTop: 10,
-    padding: 6,
+    padding: 6
   },
 
   phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
