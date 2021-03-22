@@ -7394,19 +7394,29 @@ ro:
             For Loop Fun:
               key: Pentru distracția cu bucle
               name: Pentru distracția cu bucle
+            lesson-6:
+              name: Prezentând Laboratorul de Desen
+            lesson-8:
+              name: Spiriduși în acțiune
           lesson_groups:
             ramp_up:
               display_name: Avansare
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_variables:
-              display_name: Variabile
+              display_name: Bucle Pentru
             csf_for_loops:
               display_name: Bucle Pentru
+            lessonGroup-8:
+              display_name: Variabile
+            lessonGroup-9:
+              display_name: elimină
         express-2021:
           lessons:
             Dance Party:
               key: Petrecere dansantă
+              name: Petrecere dansantă
+            lesson-1:
               name: Petrecere dansantă
           lesson_groups:
             csf_loops:
@@ -7456,12 +7466,16 @@ ro:
               name: Prezentând Laboratorul de Desen
             Sprites in Action:
               name: Spiriduși în acțiune
+            introducing-spritelab:
+              name: Prezentând Laboratorul de Desen
           lesson_groups:
             ramp_up:
               display_name: Introducere
             outbreak:
               display_name: Simulare Epidemie
             lessonGroup-3:
+              display_name: Variabile
+            variables:
               display_name: Variabile
         csd4-preview-2021:
           description_audience: "[șir gol]"

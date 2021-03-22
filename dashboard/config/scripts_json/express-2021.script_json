@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-17 20:25:34 UTC",
+    "serialized_at": "2021-03-22 18:09:00 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -671,7 +671,7 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a **variable** to store their pet's \"happiness\" as a number, which should help them understand how **variables** can be used in other applications. ",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -3953,7 +3953,7 @@
       "key": "b270733d-2d48-4470-a0e4-7a805255d765",
       "position": 1,
       "properties": {
-        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\n\nWatch out for puzzle #6. It is the first time that students will be expected to set a **variable** on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
+        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.",
         "name": "Variables with Artist"
       },
       "seeding_key": {
@@ -4340,7 +4340,7 @@
       "key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
       "position": 3,
       "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist (all ages)** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
@@ -4352,7 +4352,7 @@
       "position": 1,
       "properties": {
         "name": "Code Your Own Dance Party",
-        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist (all ages).**. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list ***Spotify Playlist.** If you would like to use the filtered list with older students, you can share ***Spotify Playlist for Under 13** with your classroom."
+        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist.** We are using radio-safe versions of all songs. For students under 13, we limit the music to this filtered list. If you would like to use the filtered list with older students, you can share ***Spotify Playlist** with your classroom."
       },
       "seeding_key": {
         "activity_section.key": "88b00482-3c11-4079-9869-faaa51c340c2",
@@ -4966,7 +4966,7 @@
       "key": "8970ddea-49ba-429a-9607-6239c33e06be",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -13157,32 +13157,6 @@
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
-          "Virtual Pet 4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      },
-      "level_keys": [
-        "Virtual Pet 4_2021"
-      ]
-    },
-    {
-      "chapter": 312,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Create a Virtual Pet",
-        "level_keys": [
           "Virtual Pet 5_2021"
         ]
       },
@@ -13202,9 +13176,9 @@
       ]
     },
     {
-      "chapter": 313,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 312,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13228,9 +13202,9 @@
       ]
     },
     {
-      "chapter": 314,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 313,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13254,9 +13228,9 @@
       ]
     },
     {
-      "chapter": 315,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 314,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13280,7 +13254,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 315,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -13306,7 +13280,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 316,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -17055,18 +17029,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Virtual Pet 4_2021",
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Virtual Pet 5_2021",
         "script_level.level_keys": [
           "Virtual Pet 5_2021"
@@ -17422,18 +17384,6 @@
       }
     },
     {
-      "name": "Spotify Play List (Under 13)",
-      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
-      "key": "spotify_play_list_under_13_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "spotify_play_list_under_13_"
-      }
-    },
-    {
       "name": "Swimming Fish Teacher Sandbox",
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming_fish_teacher_sandbox",
@@ -17637,12 +17587,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "dance-party-playlist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "spotify_play_list_under_13_"
       }
     },
     {
@@ -18198,13 +18142,33 @@
       }
     },
     {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -18563,8 +18527,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
-        "vocabulary.key": "variable"
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -19216,5 +19192,8 @@
         "objective.key": "db7a8439-bc00-43ef-a9a8-2067da8dbda6"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }

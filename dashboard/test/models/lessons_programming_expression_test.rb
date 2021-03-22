@@ -21,6 +21,7 @@ class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
       script: script,
       lesson_groups: script.lesson_groups.to_a,
       lessons: script.lessons.to_a,
+      programming_environments: [programming_expression.programming_environment],
       programming_expressions: [programming_expression]
     )
     lessons_programming_expression = lesson.lessons_programming_expressions.first
@@ -29,6 +30,7 @@ class LessonsProgrammingExpressionTest < ActiveSupport::TestCase
     assert_queries(0) do
       expected = {
         'lesson.key' => lesson.key,
+        'programming_environment.name' => programming_expression.programming_environment.name,
         'programming_expression.key' => programming_expression.key
       }
       assert_equal expected, lessons_programming_expression.seeding_key(seed_context)
