@@ -22,7 +22,9 @@ const styles = {
   },
   entries: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'stretch',
+    alignContent: 'stretch'
   }
 };
 
