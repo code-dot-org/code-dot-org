@@ -23,7 +23,8 @@ class TrainModel extends Component {
 
   state = {
     frame: 0,
-    animationTimer: undefined
+    animationTimer: undefined,
+    headOpen: false
   };
 
   componentDidMount() {
@@ -43,6 +44,10 @@ class TrainModel extends Component {
   };
 
   updateAnimation = () => {
+    if (this.state.frame === 15) {
+      this.setState({headOpen: true});
+    }
+
     this.setState({ frame: this.state.frame + 1 });
   };
 
@@ -131,7 +136,7 @@ class TrainModel extends Component {
                 src={aiBotHead}
                 style={{
                   ...styles.trainBotHead,
-                  ...(true && styles.trainBotOpen)
+                  ...(this.state.headOpen && styles.trainBotOpen)
                 }}
               />
               <img src={aiBotBody} style={styles.trainBotBody} />
