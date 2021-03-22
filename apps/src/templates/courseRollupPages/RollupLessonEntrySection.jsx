@@ -10,7 +10,8 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 const styles = {
   main: {
     width: '100%',
-    height: '100%'
+    display: 'flex',
+    flexDirection: 'column'
   },
   object: {
     backgroundColor: color.lightest_gray,
@@ -21,7 +22,8 @@ const styles = {
   entries: {
     color: color.charcoal,
     border: 'solid 1px' + color.charcoal,
-    padding: 10
+    padding: 10,
+    height: '100%'
   }
 };
 
