@@ -116,7 +116,7 @@ header.build = function(
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && !signedIn) {
+    if (scriptData.is_csf && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')

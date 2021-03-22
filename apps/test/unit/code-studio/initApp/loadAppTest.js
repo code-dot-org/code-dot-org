@@ -29,17 +29,13 @@ describe('loadApp.js', () => {
         readLevelId = levelId;
         return OLD_CODE;
       });
-    sinon.stub($, 'ajax').callsFake(() => {
-      return {
-        done() {
-          return {
-            fail(callback) {
-              callback();
-            }
-          };
+    sinon.stub($, 'ajax').callsFake(() => ({
+      done: successCallback => ({
+        fail: failureCallback => {
+          successCallback({signedIn: false});
         }
-      };
-    });
+      })
+    }));
   });
   beforeEach(() => {
     writtenLevelId = undefined;

@@ -39,6 +39,15 @@ clientState.reset = function() {
 };
 
 /**
+ * Clear progress-related values from session storage.
+ */
+clientState.clearProgress = function() {
+  sessionStorage.removeItem('progress');
+  sessionStorage.removeItem('lines');
+  removeItemsWithPrefix(sessionStorage, 'source_');
+};
+
+/**
  * Returns the client-cached copy of the level source for the given script
  * level, if it's newer than the given timestamp.
  * @param {string} scriptName
@@ -250,4 +259,17 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
+}
+
+/**
+ * Removes all items from the given sessionStorage object that start with the
+ * given prefix.
+ *
+ * @param {Storage} sessionStorage
+ * @param {string} prefix
+ */
+function removeItemsWithPrefix(sessionStorage, prefix) {
+  Object.keys(sessionStorage)
+    .filter(key => key.startsWith(prefix))
+    .forEach(key => sessionStorage.removeItem(key));
 }

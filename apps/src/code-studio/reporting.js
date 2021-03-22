@@ -254,11 +254,10 @@ reporting.sendReport = function(report) {
     mergeProgress({[appOptions.serverLevelId]: report.testResult})
   );
 
-  // If the user is not signed in, save progress information to session storage.
-  // (Note: For users that are not signed in, we still send a milestone report
-  // to the server so we can get information from the response, but the progress
-  // report that is sent is not saved by the server.)
-  if (!appOptions.userId) {
+  // If progress is not being saved in the database, save it locally.
+  // (Note: Either way, we still send a milestone report to the server so we can
+  // get information from the response.)
+  if (!store.getState().progress.usingDbProgress) {
     saveReportLocally(report);
   }
 
