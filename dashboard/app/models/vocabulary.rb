@@ -118,7 +118,7 @@ class Vocabulary < ApplicationRecord
 
   def serialize_scripts
     if Rails.application.config.levelbuilder_mode
-      lessons.map(&:script).flatten.each(&:write_script_json)
+      lessons.map(&:script).each(&:write_script_json)
     end
   end
 
