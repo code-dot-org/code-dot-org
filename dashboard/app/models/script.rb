@@ -92,7 +92,8 @@ class Script < ApplicationRecord
           ]
         },
         :script_levels,
-        :levels
+        :levels,
+        :resources
       ]
     )
   end

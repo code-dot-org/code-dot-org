@@ -66,7 +66,7 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   30 queries - two for each model, + one extra query each for Lessons,
+      #   32 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -134,6 +134,7 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       script.lessons.each {|l| l.resources.destroy_all}
       script.lessons.each {|l| l.vocabularies.destroy_all}
+      script.resources.destroy_all
       script.freeze
       expected_counts = get_counts
 
@@ -756,6 +757,10 @@ module Services
         assert_resources_equal(
           s1.lessons.map(&:resources).flatten,
           s2.lessons.map(&:resources).flatten
+        )
+        assert_resources_equal(
+          s1.resources,
+          s2.resources
         )
         assert_vocabularies_equal(
           s1.lessons.map(&:vocabularies).flatten,
