@@ -557,7 +557,7 @@
         },
         "CourseD_Dance_Party_04": {
           "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois faire en sorte que l’effet de fond change à un moment avant la septième mesure de la chanson.\n\n_Ce niveau se termine après 9 mesures._",
-          "challenges": "\"**Optional Challenge**\n\nChange the background effect at different points during the song by connecting the new block under the <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> events.\"."
+          "challenges": "**Défis optionnels**\n\nChange l’effet de fond à différents moments de la chanson en connectant le nouveau bloc sous les événements <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"mesures\"</title></block></xml>."
         },
         "CourseD_Dance_Party_06": {
           "validation": "**Comment puis-je réussir ce niveau ?**\n\n-   Tu dois avoir au moins deux danseurs.\n\n_Ce niveau se termine après 5 mesures._",

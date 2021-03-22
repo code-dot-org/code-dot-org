@@ -26204,10 +26204,6 @@ uz:
               description_student: Kursni boshida kod bilan chizmalar chizganingizni
                 eslaysizmi? Bu darsda, xuddi shunga o‘xshash narsa qiish uchun biron
                 jamoa bilan ishlaysiz!
-              description_teacher: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik
-                bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga
-                bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat
-                qilishlari bilan tezda soat poygasiga o'tishadi.
             Debugging in Collector:
               key: Yig‘uvchi bilan debug qilish
               name: Debugging with Laurel
@@ -26590,6 +26586,9 @@ uz:
                 o‘zlarining loyihalarini yaratishi uchun joy beriladi (bu loyihaning
                 eng uzun bosqichi bo‘lishi kutiladi). Va nihoyat, talabalar tugatgan
                 ishlarini do‘stlari bilan ulasha oladi."
+            lesson-4:
+              description_student: Kiberhujumni ko‘rganingizda qanday qilib undan
+                himoyada bo‘lishingizni bilib oling.
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -26799,7 +26798,7 @@ uz:
                 own customized behaviors.
             Virtual Pet:
               key: Virtual hayvoncha do‘st
-              name: Virtual Pet with Sprite Lab
+              name: 'Mini-loyiha: Virtual Pet'
               description_student: In this lesson, students will create an interactive
                 Virtual Pet that looks and behaves how they wish. Students will use
                 Sprite Lab's "Costumes" tool to customize their pet's appearance.
@@ -26838,21 +26837,27 @@ uz:
               description_teacher: 'Miya hujumi (brainstorm) va faraziy ilovalar uchun
                 qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya
                 qiymati haqida bilib oling. '
+            lesson-6:
+              name: Sprite laboratoriyasi bilan tanishish
+            lesson-8:
+              name: Spraytlar amalda
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
             csf_digcit:
               display_name: Raqamli Fuqarolik
             csf_variables:
-              display_name: O‘zgaruvchilar
+              display_name: For sikllari
             csf_for_loops:
               display_name: For sikllari
             csf_sprites:
-              display_name: Spraytlar
+              display_name: Kompyuterlar ta'siri
             end_of_course_project:
               display_name: End of Course Project
             lessonGroup-8:
-              display_name: Kompyuterlar ta'siri
+              display_name: O‘zgaruvchilar
+            lessonGroup-9:
+              display_name: o‘chirish
           name: Kurs F 2021
           student_description: Learn to use different kinds of loops, events, functions,
             and conditionals. Investigate different problem-solving techniques and
@@ -26882,8 +26887,8 @@ uz:
             Programming with Angry Birds:
               key: Jahldor qushlar bilan dasturlash
               name: Jahldor qushlar bilan dasturlash
-              description_student: Angry Birds bilan ketma-ketlik va algoritmlar haqida
-                o‘rganing.
+              description_student: Create programs to help the Angry Bird move through
+                the maze.
               description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib,
                 talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga
                 qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar.
@@ -26964,7 +26969,7 @@ uz:
             'Looking Ahead with Minecraft ':
               name: Minecraft bilan oldinga qarab
               description_student: Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi
-                shartli boyonotlar haqida o‘rganasiz.
+                shartli bayonotlar haqida o‘rgana boshlaysiz.
               description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda
                 Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini
                 amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin
@@ -26986,17 +26991,6 @@ uz:
               name: While Loops with the Farmer
               description_student: 'Sikllar kod yozishda juda foydali. Bu dars sizga
                 siklning yangi turini o‘rgatadi: while sikllari!'
-              description_teacher: "Talabalar bu darsga yetib kelgunicha, ular 'takrorlanuvchi'
-                sikllardan foydalanishni amalyotda ko‘plab marotaba qilib ko‘rgan
-                bo‘ladi, shunday qilib, endi narsalarni aralashtirishning vaqti. \n\nWhile
-                sikli bu shart bajarulmagunicha buyruqlari takrorlanaveradigan sikl
-                hisoblanadi. `While` sikli dasturchi buyruqlar aynan necha marta qaytarilishi
-                kerakligini bilmagan, ammo sikl davom etishi uchun qanday shart tog‘ri
-                bo‘lishini bilgan holda ishlatiladi. Masalan, talabalar Fermer loyihasida,
-                chuqurlarni to‘ldirish va go‘ng qazish bilan ishlashadi. Ular chuqurning
-                qanchalik chuqurligini yoki go‘ng uyumi qanchalik balandligini bilishmaydi,
-                ammo talabalar yer tekis bo‘lmaguncha chuqurni to‘ldirish kerakligini
-                va go‘ngni qazish kerakligini bilishadi."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraftda shartli bayonotlar: Suv sayohati'
               name: 'Minecraftda shartli bayonotlar: Suv sayohati'
@@ -27109,8 +27103,8 @@ uz:
             Alien Dance Party:
               key: Alien Dance Party
               name: Alien Dance Party
-              description_student: Do‘stlaringiz va o‘rtoqlaringiz bilan o‘rtoqlashish
-                uchun o‘yinlar yaratishni mashq qilib ko‘ring.
+              description_student: Create an interactive project that can be shared
+                with classmates.
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -27138,6 +27132,13 @@ uz:
               description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining
                 loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan
                 o‘tadi!
+            lesson-1:
+              name: Dance Party
+              description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z
+                interaktiv raqs bazmingizni dasturlashtirasiz.
+              description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs
+                bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun
+                yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
           lesson_groups:
             csf_warmup:
               display_name: Qizdirish
@@ -27157,6 +27158,8 @@ uz:
               display_name: Spraytlar
             end_of_course_project:
               display_name: End of Course Project
+            lessonGroup-9:
+              display_name: Qizdirish
           name: Ekspress 2021
           student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda
             kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni
@@ -27287,6 +27290,10 @@ uz:
               name: Kollektor o‘yinini yaratish
             Sprites in Action:
               name: Spraytlar amalda
+            introducing-spritelab:
+              name: Sprite laboratoriyasi bilan tanishish
+            user-input-programs:
+              name: Chat-Bot yaratish
           lesson_groups:
             ramp_up:
               display_name: Kirish
@@ -27299,6 +27306,11 @@ uz:
                 o‘zgartiring, qiziqarli interaktiv loyihalarni yarating!
             Sprites:
               display_name: Spraytlar
+            variables:
+              display_name: O‘zgaruvchilar
+              description: O‘zgaruvchilarda qiymatlarni saqlang va keyinroq ularni
+                o‘zingizning dasturingizda oling. O‘zgaruvchanlarda saqlanadigan qiymatlarni
+                o‘zgartiring, qiziqarli interaktiv loyihalarni yarating!
           name: csf-2021-pilot
           title: Kompyuter fanlari asoslari 2019-2020 (Pilot)
           description: |-

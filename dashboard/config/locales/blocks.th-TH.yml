@@ -974,6 +974,7 @@ th:
             '"x"': อยู่ที่แกน X
             '"y"': อยู่ที่แกน Y
             '"direction"': ทิศทางการเคลื่อนไหว
+            '"speed"': ความเร็ว
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} สัมผัส {SPRITE2}"
         options:

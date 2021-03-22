@@ -22,6 +22,7 @@ tr:
       repeat: bu işlemleri
       right: sağ
       score: puan
+      sides: kenarlar
       size: boyut
       speed: hız
       variable: değişken

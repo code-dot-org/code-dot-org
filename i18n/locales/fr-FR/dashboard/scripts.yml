@@ -14157,8 +14157,7 @@ fr:
             Private and Personal Information:
               name: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
               description_student: Internet est amusant et excitant, mais il est également important de rester en sécurité. Cette leçon t'apprend la différence entre des informations qui peuvent être partagées,  en toute sécurité, et des informations privées.
-              description_teacher: |-
-                Développé par Common Sense Education, cette leçon porte sur la différence entre l'information qui peut être partagée en ligne en toute sécurité, et l'information qui ne l'est pas.\ R \ rTout en visitant des sites qui demandent des informations sur leur identité, les étudiants apprennent à adopter un processus d'enquête critique qui leur permet de se protéger eux-mêmes et leurs familles contre le vol d'identité. Dans cette leçon, les élèves apprennent à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Ils apprennent la différence entre les informations privées et les informations personnelles, ainsi que la façon de distinguer ce qui est sûr ou dangereux de partager en ligne.
+              description_teacher: Développé par Common Sense Education, cette leçon porte sur la différence entre l'information qui peut être partagée en ligne en toute sécurité, et l'information qui ne l'est pas.\ R \ rTout en visitant des sites qui demandent des informations sur leur identité, les étudiants apprennent à adopter un processus d'enquête critique qui leur permet de se protéger eux-mêmes et leurs familles contre le vol d'identité. Dans cette leçon, les élèves apprennent à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Ils apprennent la différence entre les informations privées et les informations personnelles, ainsi que la façon de distinguer ce qui est sûr ou dangereux de partager en ligne.
             About Me:
               name: À propos de Moi avec le Labo des Lutins
               description_student: En créant une affiche interactive avec le Labo des Lutins, les élèves appliqueront leur compréhension du partage d'informations personnelles et privées sur le Web.
@@ -14290,8 +14289,7 @@ fr:
             The Power of Words:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
-              description_teacher: |-
-                Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\r \ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. 
+              description_teacher: Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\r \ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. 
             Crowdsourcing:
               name: Production Participative
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
@@ -15952,7 +15950,7 @@ fr:
               key: 'Événements : Le Grand Événement'
               name: Le Grand Événement Jr.
               description_student: Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante.
-              description_teacher: Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.
+              description_teacher: "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements."
             Events in Play Lab:
               key: Événements dans le Labo du Jeu
               name: En Déplacement avec les Événements
@@ -16024,7 +16022,7 @@ fr:
               key: 'Événements : Le Grand Événement'
               name: Le Grand Événement Jr.
               description_student: Déplace-toi et crie lorsque ton professeur appuie sur les boutons d'une télécommande géante.
-              description_teacher: Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements.
+              description_teacher: "Les événements sont un excellent moyen d'ajouter de la variété à un algorithme pré-écrit. Parfois, tu veux que ton programme soit en mesure de répondre à l'utilisateur exactement au moment où il le souhaite. C'est à cela que servent les événements."
             Events in Play Lab:
               key: Événements dans le Labo du Jeu
               name: Une Bataille Royale avec des Événements
@@ -16061,7 +16059,7 @@ fr:
               key: Déboguer dans le Labyrinthe
               name: Déboguer dans le Labyrinthe
               description_student: Trouvez des problèmes dans les énigme et exerce tes compétences de débogage.
-              description_teacher: Le débogage est un élément essentiel de l'apprentissage de la programmation. Dans cette leçon, les élèves rencontreront des énigmes qui ont été résolues de manière incorrecte. Ils devront parcourir le code existant pour identifier les erreurs, y compris les boucles incorrectes, les blocs manquants, les blocs inutiles et les blocs qui ne fonctionnent pas.
+              description_teacher: "Le débogage est un élément essentiel de l'apprentissage de la programmation. Dans cette leçon, les élèves rencontreront des énigmes qui ont été résolues de manière incorrecte. Ils devront parcourir le code existant pour identifier les erreurs, y compris les boucles incorrectes, les blocs manquants, les blocs inutiles et les blocs qui ne fonctionnent pas."
             Programming in Collector:
               key: Programmation dans Collecteur
               name: Collecter le Trésor avec Laurel
@@ -16076,7 +16074,7 @@ fr:
               key: Les bracelets binaires
               name: Les bracelets binaires
               description_student: Crée ton propre bracelet binaire et apprends comment les ordinateurs se souviennent des informations !
-              description_teacher: Le binaire est extrêmement important dans le monde des ordinateurs. La majorité des ordinateurs stockent aujourd'hui toutes sortes d'informations sous forme binaire. Cette leçon aide à démontrer comment il est possible de prendre quelque chose de la vie réelle et de le traduire en une série de marche et arrêt.
+              description_teacher: "Le binaire est extrêmement important dans le monde des ordinateurs. La majorité des ordinateurs stockent aujourd'hui toutes sortes d'informations sous forme binaire. Cette leçon aide à démontrer comment il est possible de prendre quelque chose de la vie réelle et de le traduire en une série de marche et arrêt."
             'Loops: My Loopy Robotic Friends':
               key: 'Boucles : Mes Amis Robotiques qui Tournent en Rond'
               name: Mes Amis Robotiques Jr. qui Tournent en Rond
@@ -16155,7 +16153,6 @@ fr:
               key: Programmation de relais
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
-              description_teacher: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
             Debugging in Collector:
               key: Déboguer dans le Collecteur
               name: Déboguer avec Laurel
@@ -16266,7 +16263,7 @@ fr:
               key: La Programmation et les Boucles avec l'Artiste
               name: Dessiner avec des Boucles
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
-              description_teacher: Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.
+              description_teacher: 'Regardez les visages des étudiants s''illuminer alors qu''ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d''autocollants numériques ! Cette leçon s''appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d''être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -16276,7 +16273,7 @@ fr:
               key: Instructions conditionnelles
               name: Les Conditions avec la Fermière
               description_student: Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante.
-              description_teacher: Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.
+              description_teacher: 'Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu''une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.'
             Simon Says:
               key: Jacques A Dit
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le bon résultat.
@@ -16386,7 +16383,7 @@ fr:
             Nested Loops in the Maze:
               key: Les Boucles imbriquées dans le Labyrinthe
               name: Les Boucles Imbriquées dans le Labyrinthe
-              description_student: "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle."
+              description_student: Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle.
               description_teacher: Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur "Exécuter".
             The Power of Words:
               key: Le Pouvoir des Mots
@@ -16598,7 +16595,7 @@ fr:
             Alien Dance Party:
               key: Soirée Dansante des Extraterrestres
               name: Soirée Dansante des Extraterrestres
-              description_student: Entraîne-toi à créer des jeux à partager avec tes amis et ta famille.
+              description_student: Crée un projet interactif qui peut être partagé avec tes camarades de classe.
             Behaviors in Sprite Lab:
               key: Les Comportements dans le Labo des Lutins
               name: Les Comportements dans le Labo des Lutins
