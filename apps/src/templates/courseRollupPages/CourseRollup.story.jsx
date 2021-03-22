@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
+import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 
 const defaultVocabProps = {
   objectToRollUp: 'Vocabulary',
@@ -138,6 +139,24 @@ export default storybook => {
     {
       name: 'Course Code',
       story: () => <CourseRollup {...defaultCodeProps} />
+    },
+    {
+      name: 'Unit Vocabulary',
+      story: () => (
+        <UnitRollup
+          unit={defaultVocabProps.units[0]}
+          objectToRollUp={defaultVocabProps.objectToRollUp}
+        />
+      )
+    },
+    {
+      name: 'Unit Code',
+      story: () => (
+        <UnitRollup
+          unit={defaultCodeProps.units[0]}
+          objectToRollUp={defaultCodeProps.objectToRollUp}
+        />
+      )
     }
   ]);
 };
