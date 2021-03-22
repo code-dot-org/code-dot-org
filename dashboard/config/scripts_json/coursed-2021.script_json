@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-18 19:39:08 UTC",
+    "serialized_at": "2021-03-19 19:25:41 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -4624,7 +4624,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Star Wars Project"
+        "progression": "Video: Star Wars Project",
+        "level_keys": [
+          "courseE_video_StarWarsProject_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -4933,7 +4936,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Events"
+        "progression": "Video: Events",
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5008,7 +5014,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Measures"
+        "progression": "Video: Measures",
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5109,7 +5118,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Properties"
+        "progression": "Video: Properties",
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7738,7 +7750,7 @@
       "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
@@ -7763,8 +7775,31 @@
     {
       "chapter": 153,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Example projects"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseD_EOC_examples_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2021",
+        "activity_section.key": "44ff9770-a1eb-4ec3-922d-013bcadaef08"
+      },
+      "level_keys": [
+        "courseD_EOC_examples_2021"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -9605,6 +9640,18 @@
         "level.key": "courseD_project_exemplars_2021",
         "script_level.level_keys": [
           "courseD_project_exemplars_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2021",
+        "activity_section.key": "44ff9770-a1eb-4ec3-922d-013bcadaef08"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_EOC_examples_2021",
+        "script_level.level_keys": [
+          "courseD_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
