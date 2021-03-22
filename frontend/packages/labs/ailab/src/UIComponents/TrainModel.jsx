@@ -45,7 +45,7 @@ class TrainModel extends Component {
 
   updateAnimation = () => {
     if (this.state.frame === 15) {
-      this.setState({headOpen: true});
+      this.setState({ headOpen: true });
     }
 
     this.setState({ frame: this.state.frame + 1 });

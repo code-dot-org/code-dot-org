@@ -101,11 +101,20 @@ class DataTable extends Component {
     if (this.props.singleRow !== undefined) {
       return [this.props.data[this.props.singleRow]];
     } else if (this.props.startingRow !== undefined) {
-      return this.props.data.slice(this.props.startingRow, 100);
+      const subsetRowCount = 30;
+      const actualStartingRow = Math.min(
+        this.props.startingRow,
+        Math.max(this.props.data.length - subsetRowCount, 0)
+      );
+      const returnRows = this.props.data.slice(
+        actualStartingRow,
+        actualStartingRow + subsetRowCount
+      );
+      return returnRows;
     } else {
       return this.props.data;
     }
-  }
+  };
 
   render() {
     const {
