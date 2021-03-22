@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
+import RollupLessonEntrySection from './RollupLessonEntrySection';
 
 const styles = {
   main: {
@@ -23,9 +21,8 @@ const styles = {
     padding: '0px 10px'
   },
   entries: {
-    color: color.charcoal,
-    border: 'solid 1px' + color.charcoal,
-    padding: 10
+    display: 'flex',
+    flexDirection: 'row'
   }
 };
 
@@ -48,57 +45,16 @@ export default class RollupLessonEntry extends Component {
             })}
           </h3>
         </div>
-        <div style={styles.object}>
-          <h4>{this.props.objectToRollUp}</h4>
-        </div>
         <div style={styles.entries}>
-          {this.props.objectToRollUp === 'Vocabulary' &&
-            this.props.lesson.vocabularies.map(vocab => (
-              <li key={vocab.key}>
-                <InlineMarkdown
-                  markdown={`**${vocab.word}** - ${vocab.definition}`}
-                />
-              </li>
-            ))}
-          {this.props.objectToRollUp === 'Code' &&
-            this.props.lesson.programmingExpressions.map(expression => (
-              <li key={expression.name}>
-                <a
-                  href={studio(expression.link)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {expression.name}
-                </a>
-              </li>
-            ))}
+          <RollupLessonEntrySection
+            objectToRollUp={this.props.objectToRollUp}
+            lesson={this.props.lesson}
+          />
           {this.props.objectToRollUp === 'Resources' && (
-            <div>
-              {this.props.lesson.resources['Teacher'] && (
-                <div>
-                  <h5>{i18n.forTheTeachers()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['Teacher']}
-                  />
-                </div>
-              )}
-              {this.props.lesson.resources['Student'] && (
-                <div>
-                  <h5>{i18n.forTheStudents()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['Student']}
-                  />
-                </div>
-              )}
-              {this.props.lesson.resources['All'] && (
-                <div>
-                  <h5>{i18n.forAll()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['All']}
-                  />
-                </div>
-              )}
-            </div>
+            <RollupLessonEntrySection
+              objectToRollUp={'Prep'}
+              lesson={this.props.lesson}
+            />
           )}
         </div>
       </div>
