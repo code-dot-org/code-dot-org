@@ -22,7 +22,8 @@ import {
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setStageExtrasEnabled,
-  queryUserProgress as reduxQueryUserProgress
+  queryUserProgress as reduxQueryUserProgress,
+  useDbProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
@@ -101,8 +102,6 @@ progress.generateStageProgress = function(
 
   const {name, disablePostMilestone, isHocScript, age_13_required} = scriptData;
 
-  // Depend on the fact that signed in users have a bunch of progress related
-  // keys that signed out users do not
   initializeStoreWithProgress(
     store,
     {
@@ -120,34 +119,95 @@ progress.generateStageProgress = function(
     currentPageNumber
   );
 
-  // Set level progress data in redux. For signed-in users, the level progress
-  // data is sent in a script tag and passed in to this function. For signed-out
-  // users, we retrieve level progress from session storage.
-  if (signedIn) {
-    if (progressData.progress) {
-      store.dispatch(
-        overwriteProgress(
-          _.mapValues(progressData.progress, level =>
-            level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-          )
-        )
-      );
-    }
-  } else {
-    store.dispatch(overwriteProgress(clientState.levelProgress(name)));
-  }
-
   store.dispatch(setIsHocScript(isHocScript));
-  if (signedIn) {
-    progress.showDisabledBubblesAlert();
-  }
+
   if (stageExtrasEnabled) {
     store.dispatch(setStageExtrasEnabled(true));
   }
-  if (progressData.isVerifiedTeacher) {
-    store.dispatch(setVerified());
-  }
+
+  return getLevelProgress(signedIn, progressData, name).then(data => {
+    if (data.usingDbProgress) {
+      store.dispatch(useDbProgress());
+      clientState.clearProgress();
+    }
+
+    if (data.progress) {
+      store.dispatch(overwriteProgress(data.progress));
+    }
+
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
+
+    if (signedIn) {
+      progress.showDisabledBubblesAlert();
+    }
+  });
 };
+
+/**
+ * Returns a promise that, when resolved, returns an object with two properties:
+ * - usingDbProgress: indicates if level progress came from the database
+ * - progress: map from level id to result
+ * @param {boolean|null} signedIn true if the user is signed in, false if the
+ *    user is not signed in, null if we don't know
+ * @param {Object} progressData progress data if it is already known, only used
+ *    if signedIn === true
+ * @param {string} scriptName
+ * @returns {Promise}
+ */
+function getLevelProgress(signedIn, progressData, scriptName) {
+  switch (signedIn) {
+    case true:
+      // User is signed in, return a resolved promise with the given progress data
+      return Promise.resolve({
+        usingDbProgress: true,
+        progress: extractLevelResults(progressData)
+      });
+    case false:
+      // User is not signed in, return a resolved promise with progress data
+      // retrieved from session storage
+      return Promise.resolve({
+        usingDbProgress: false,
+        progress: clientState.levelProgress(scriptName)
+      });
+    case null:
+      // We do not know if user is signed in or not, send a request to the server
+      // to find out and retrieve progress information
+      return $.ajax(`/api/user_progress/${scriptName}`)
+        .then(data => {
+          if (data.signedIn) {
+            return {
+              usingDbProgress: true,
+              progress: extractLevelResults(data)
+            };
+          } else {
+            return {
+              usingDbProgress: false,
+              progress: clientState.levelProgress(scriptName)
+            };
+          }
+        })
+        .fail(() =>
+          // TODO: Show an error to the user here? (LP-1815)
+          console.error(
+            'Could not load user progress. User progress may not be saved.'
+          )
+        );
+  }
+}
+
+/**
+ * Extracts the level results from the response to /api/user_progress.
+ * @param {object} userProgressResponse parsed response object to a
+ *    /api/user_progress request
+ * @returns {Object<string, TestResults>} map from level id to level result
+ */
+function extractLevelResults(userProgressResponse) {
+  return _.mapValues(userProgressResponse.progress, level =>
+    level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+  );
+}
 
 /**
  * @param {object} scriptData
@@ -244,13 +304,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       return;
     }
 
-    // Determine if the user is signed on based on whether the server response
-    // was empty. (Note: This is a bit hacky and should be replaced with a more
-    // robust check in the future.)
-    const signedInUser = Object.keys(data).length > 0;
-
     // If the user is not signed in, retrieve level progress from session storage.
-    if (!signedInUser) {
+    // (If the user is signed in, level progress would have been set by the call
+    // to reduxQueryUserProgress above.)
+    if (!data.signedIn) {
       store.dispatch(
         overwriteProgress(clientState.levelProgress(scriptData.name))
       );
@@ -258,7 +315,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 

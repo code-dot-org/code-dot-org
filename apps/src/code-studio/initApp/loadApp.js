@@ -3,7 +3,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore} from '../redux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
   setAppLoadStarted,
   setAppLoaded
@@ -11,7 +10,6 @@ import {
 import {files} from '@cdo/apps/clientApi';
 var renderAbusive = require('./renderAbusive');
 var userAgentParser = require('./userAgentParser');
-var progress = require('../progress');
 var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
@@ -299,54 +297,43 @@ function loadAppAsync(appOptions) {
       appOptions.disableSocialShare = true;
     }
 
-    if (appOptions.userId) {
-      // User is signed in, send request to server to get user progress
-      $.ajax(
-        `/api/user_progress` +
-          `/${appOptions.scriptName}` +
-          `/${appOptions.stagePosition}` +
-          `/${appOptions.levelPosition}` +
-          `/${appOptions.serverLevelId}`
-      )
-        .done(data => {
-          appOptions.disableSocialShare = data.disableSocialShare;
+    $.ajax(
+      `/api/user_progress` +
+        `/${appOptions.scriptName}` +
+        `/${appOptions.stagePosition}` +
+        `/${appOptions.levelPosition}` +
+        `/${appOptions.serverLevelId}`
+    )
+      .done(data => {
+        appOptions.disableSocialShare = data.disableSocialShare;
 
-          // We do not need to process data.progress here because labs do not use
-          // the the level progress data directly. (The progress bubbles in the
-          // header of the level pages are rendered by header.build in header.js.)
+        // We do not need to process data.progress here because labs do not use
+        // the the level progress data directly. (The progress bubbles in the
+        // header of the level pages are rendered by header.build in header.js.)
 
-          if (data.lastAttempt) {
-            appOptions.level.lastAttempt = data.lastAttempt.source;
-          }
+        if (data.lastAttempt) {
+          appOptions.level.lastAttempt = data.lastAttempt.source;
+        } else if (!data.signedIn) {
+          // User is not signed in, load last attempt from session storage.
+          appOptions.level.lastAttempt = clientState.sourceForLevel(
+            appOptions.scriptName,
+            appOptions.serverProjectLevelId || appOptions.serverLevelId
+          );
+        }
 
-          if (data.pairingDriver) {
-            appOptions.level.pairingDriver = data.pairingDriver;
-            appOptions.level.pairingAttempt = data.pairingAttempt;
-            appOptions.level.pairingChannelId = data.pairingChannelId;
-          }
+        if (data.pairingDriver) {
+          appOptions.level.pairingDriver = data.pairingDriver;
+          appOptions.level.pairingAttempt = data.pairingAttempt;
+          appOptions.level.pairingChannelId = data.pairingChannelId;
+        }
 
-          if (data.isVerifiedTeacher) {
-            getStore().dispatch(setVerified());
-          }
-
-          // Check to see if we need to show disabled bubbles alert
-          progress.showDisabledBubblesAlert();
-
-          resolve(appOptions);
-        })
-        .fail(() => {
-          // TODO: Show an error to the user here? (LP-1815)
-          resolve(appOptions);
-        });
-    } else {
-      // User is not signed in, load last attempt from session storage.
-      appOptions.level.lastAttempt = clientState.sourceForLevel(
-        appOptions.scriptName,
-        appOptions.serverProjectLevelId || appOptions.serverLevelId
-      );
-
-      resolve(appOptions);
-    }
+        resolve(appOptions);
+      })
+      .fail(() => {
+        // TODO: Show an error to the user here? (LP-1815)
+        console.error('Could not load user progress.');
+        resolve(appOptions);
+      });
   });
 }
 
