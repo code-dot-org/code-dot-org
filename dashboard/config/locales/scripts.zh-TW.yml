@@ -17972,7 +17972,6 @@ zh-TW:
               key: 接力編程
               name: 接力編程
               description_student: 還記得課程開始時，你使用程式碼繪畫嗎？在本課堂中，你會與一個團隊合作，做一些類似的事情！
-              description_teacher: 這項活動首先會以簡短的課堂開始，內容關於除錯與堅持，然後會快速轉至倒數計時活動，學生會分為多個團隊，一起編寫程式，每次編寫一項指令。
             Debugging in Collector:
               key: 和收藏家學除錯（Debug）
               name: 和 Laurel 學除錯（Debug）
@@ -18287,7 +18286,7 @@ zh-TW:
               description_student: 學習設計程式，控制自己角色的行為！
               description_teacher: 學生將在這裡使用 Sprite Lab，製作角色的自訂行為。
             Virtual Pet:
-              name: 在 Sprite Lab 中製作虛擬寵物
+              name: '小專案: 虛擬寵物'
               description_student: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite
                 Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！
               description_teacher: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite
@@ -18303,23 +18302,29 @@ zh-TW:
               name: 以無障礙為目的設計程式
               description_student: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
               description_teacher: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
+            lesson-6:
+              name: Sprite Lab 簡介
+            lesson-8:
+              name: 運行中的角色
           lesson_groups:
             ramp_up:
               display_name: 提升
             csf_digcit:
               display_name: 數位公民
             csf_variables:
-              display_name: 變數
+              display_name: 計次迴圈（For Loops）
             csf_data:
               display_name: 數據
             csf_for_loops:
               display_name: 計次迴圈（For Loops）
             csf_sprites:
-              display_name: 角色
+              display_name: 運算的影響
             end_of_course_project:
               display_name: 課程結束專案
             lessonGroup-8:
-              display_name: 運算的影響
+              display_name: 變數
+            lessonGroup-9:
+              display_name: 移除
           student_description: 學習使用不同類型的迴圈（loop）、事件（event）、函式（function）與條件式（conditional）。研究不同的問題解決技巧，並討論電腦運算和網際網路的社會影響。在本課程的第
             2 部分，你會設計並製作一份總結專案，然後可把這個專案和好友與家人分享。
         express-2021:
@@ -18336,7 +18341,7 @@ zh-TW:
             Programming with Angry Birds:
               key: 與憤怒鳥一起編程
               name: 與憤怒鳥一起編程
-              description_student: 與憤怒鳥一起學習序列與演算法。
+              description_student: 製作程式，協助憤怒鳥完成迷宮。
               description_teacher: 學生會使用憤怒鳥遊戲中的角色開發序列演算法，讓憤怒鳥能夠從迷宮的一側移動到另一側的豬那裡。要完成這項操作，學生就需要順序疊起程式碼積木，讓憤怒鳥向前、向左或是向右移動。
             Debugging with Scrat:
               key: 與鼠奎特一起除錯
@@ -18379,7 +18384,7 @@ zh-TW:
               description_teacher: 學生已學懂怎樣把迴圈分層，現在他們可製作許多漂亮的東西。本課堂會把學生帶到一系列的練習中，協助他們運用安娜與艾莎的優秀滑冰技巧，製作適用於自己個人作品的圖像！
             'Looking Ahead with Minecraft ':
               name: 與 Minecraft 一起展望未來
-              description_student: 躲開岩漿！在 Minecraft 裡，你可以學會條件判斷。
+              description_student: 躲開岩漿！你會在 Minecraft 的世界裡開始學習條件式。
               description_teacher: 本課堂原本為一小時玩程式活動而和 Minecraft 團隊一起建立。學生將有機會練習到目前為止學到的構想，並搶先學習條件式（conditional）！
             If/Else with Bee:
               key: 與小蜜蜂一起嘗試 If/Else（如果/否則）
@@ -18390,8 +18395,6 @@ zh-TW:
               key: 與農夫一起嘗試 while（當）迴圈
               name: 與農夫一起嘗試 while（當）迴圈
               description_student: 迴圈（loop）在程式編寫中非用實用。本課堂會教你其中一種：while（當）迴圈！
-              description_teacher: "學生學習這個課堂時，應已經充分練習使用「repeat」（重複）迴圈。現在是時候把各種知識結合在一起了。\r\n\r\n_While（當）迴圈_用於在符合某項條件時繼續重複命令。程式設計師使用
-                while 迴圈的情況是：不知道確實需要重複多少次命令，但是知道哪些條件需要是 true，讓迴圈可以繼續重複。例如，學生將會在農夫遊戲中填滿坑洞與挖出土堆。他們不會知道坑洞的大小或土堆的高度，但是會知道只要地面不平坦，便需要一直填滿坑洞與挖出土堆。"
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft 中的條件式：水上巡航 '
               name: 'Minecraft 中的條件式：水上巡航 '
@@ -18456,7 +18459,7 @@ zh-TW:
             Alien Dance Party:
               key: 外星人舞蹈派對
               name: 外星人舞蹈派對
-              description_student: 練習製作遊戲，並與好友和家人分享。
+              description_student: 製作可與同學分享的互動專案。
             Behaviors in Sprite Lab:
               key: Sprite Lab 的行為（Behavior）
               name: Sprite Lab 的行為（Behavior）
@@ -18473,6 +18476,10 @@ zh-TW:
               key: 課程結束專案
               name: 課程結束專案
               description_student: 準備就緒，開始編寫大量程式！是時候開始製作你的專案了。
+            lesson-1:
+              name: 舞蹈派對
+              description_student: 現在是時候慶祝一下了！你會在本課堂中編寫程式，製作自己的互動舞蹈派對。
+              description_teacher: 在本課堂中，學生會編寫程式，製作自己的互動舞蹈派對。這項活動需要使用音效，音效工具用來對音樂做出反應。
           lesson_groups:
             csf_warmup:
               display_name: 熱身
@@ -18492,6 +18499,8 @@ zh-TW:
               display_name: 角色
             end_of_course_project:
               display_name: 課程結束專案
+            lessonGroup-9:
+              display_name: 熱身
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         pre-express-2021:
           title: 學前兒童的速學課程（2020）
@@ -18562,6 +18571,8 @@ zh-TW:
               name: Sprite Lab 簡介
             Sprites in Action:
               name: 運行中的角色
+            introducing-spritelab:
+              name: Sprite Lab 簡介
           lesson_groups:
             ramp_up:
               display_name: 介紹
@@ -18571,6 +18582,8 @@ zh-TW:
               display_name: 變數
             Sprites:
               display_name: 角色
+            variables:
+              display_name: 變數
         csd4-preview-2021:
           description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
             App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
