@@ -14352,10 +14352,7 @@ es-MX:
             Private and Personal Information:
               name: Información privada y personal
               description_student: Internet es divertida y emocionante, pero también es importante mantenerse seguro. Esta lección te enseña la diferencia entre información que es segura de compartir e información privada.
-              description_teacher: |-
-                Desarrollada por Common Sense Education, esta lección gira en torno a la diferencia entre información que es segura de compartir e información que no lo es.
-
-                Mientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es.
+              description_teacher: "Desarrollada por Common Sense Education, esta lección gira en torno a la diferencia entre información que es segura de compartir e información que no lo es.\n\nMientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es."
             About Me:
               name: Acerca de mí con Sprite Lab
               description_student: Al crear un cartel interactivo con el Laboratorio de sprites, los estudiantes aplicarán sus conocimientos sobre cómo compartir información personal y privada en la web.
@@ -14493,10 +14490,7 @@ es-MX:
             The Power of Words:
               name: El poder de las palabras
               description_student: El acoso nunca está bien. Esta lección te enseñará qué puedes decir y qué no cuando estás conectado.
-              description_teacher: |-
-                Los alumnos comprenden que, mientras están navegando sus sitios web favoritos, quizás encuentren mensajes de otros niños que pueden hacerlos sentir enojados, heridos, tristes o temerosos. En este curso, explorarán formas de manejar el ciberacoso y cómo responder ante el lenguaje perturbador en línea. 
-
-                Los alumnos debatirán las formas en que utilizan la tecnología para comunicarse, y explorarán las similitudes y diferencias entre la comunicación en persona y en línea. Luego, pensarán en maneras de responder al ciberacoso. 
+              description_teacher: "Los alumnos comprenden que, mientras están navegando sus sitios web favoritos, quizás encuentren mensajes de otros niños que pueden hacerlos sentir enojados, heridos, tristes o temerosos. En este curso, explorarán formas de manejar el ciberacoso y cómo responder ante el lenguaje perturbador en línea. \n\nLos alumnos debatirán las formas en que utilizan la tecnología para comunicarse, y explorarán las similitudes y diferencias entre la comunicación en persona y en línea. Luego, pensarán en maneras de responder al ciberacoso. "
             Crowdsourcing:
               name: Colaboración abierta
               description_student: Esta lección te enseñará sobre crowdsourcing, el proceso de creación de un proyecto con un equipo.
@@ -16256,7 +16250,7 @@ es-MX:
               key: 'Eventos: El Gran Evento'
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere."
             Events in Play Lab:
               key: Eventos en Play Lab
               name: En movimiento con eventos
@@ -16331,7 +16325,7 @@ es-MX:
               key: 'Eventos: El Gran Evento'
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere."
             Events in Play Lab:
               key: Eventos en Play Lab
               name: Una batalla real con eventos
@@ -16369,7 +16363,7 @@ es-MX:
               key: Depuración en el laberinto
               name: Depuración en el laberinto
               description_student: Encuentra problemas en los desafíos y practica tus habilidades de depuración.
-              description_teacher: La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan.
+              description_teacher: "La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan."
             Programming in Collector:
               key: Programación en Collector
               name: Recoger tesoros con Laurel
@@ -16384,7 +16378,7 @@ es-MX:
               key: Pulseras binarias
               name: Pulseras binarias
               description_student: '¡Crea tu propia pulsera binaria y aprende cómo las computadoras recuerdan la información!'
-              description_teacher: El sistema binario es muy importante en el mundo de las computadoras. La mayoría de ellas hoy almacena toda clase de información de forma binaria. Esta lección ayuda a demostrar cómo es posible tomar algo de la vida real y convertirlo en una serie de funciones de encendido y apagado.
+              description_teacher: "El sistema binario es muy importante en el mundo de las computadoras. La mayoría de ellas hoy almacena toda clase de información de forma binaria. Esta lección ayuda a demostrar cómo es posible tomar algo de la vida real y convertirlo en una serie de funciones de encendido y apagado."
             'Loops: My Loopy Robotic Friends':
               key: 'Bucles: Mis amigos robóticos y repetitivos'
               name: Mis amigos robóticos y repetitivos Jr.
@@ -16469,7 +16463,6 @@ es-MX:
               key: Programación de relevos
               name: Programación de relevos
               description_student: '¿Recuerdas al principio del curso cuando hiciste dibujos con código? ¡En esta lección trabajarás con un equipo para hacer algo muy similar!'
-              description_teacher: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
               key: Depuración en Recolector
               name: Depuración con Laurel
@@ -16595,7 +16588,7 @@ es-MX:
               key: Condicionales
               name: Condicionales con Granjera
               description_student: En esta divertida y desafiante serie podrás decirle a la computadora qué hacer bajo ciertas condiciones.
-              description_teacher: Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.
+              description_teacher: 'Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.'
             Simon Says:
               key: Simón dice
               description_student: Juega y piensa qué comandos son necesarios para obtener los resultados adecuados.
@@ -16710,7 +16703,7 @@ es-MX:
             Nested Loops in the Maze:
               key: Bucles anidados en el Laberinto
               name: Bucles anidados en Laberinto
-              description_student: "Loops dentro de loops dentro de loops. ¿Qué significa esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro de otro loop."
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro de otro loop.
               description_teacher: En esta actividad online, los/as estudiantes tendrán la oportunidad de llevar su comprensión de los loops a un nuevo nivel. Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán cómo programar un loop para que esté dentro de otro loop. También se les animará a que descifren cómo cambios pequeños en cualquier loop, afectarán su programa cuando hagan clic en Ejecutar.
             The Power of Words:
               key: El poder de las palabras
@@ -16928,7 +16921,7 @@ es-MX:
             Alien Dance Party:
               key: Fiesta de baile extraterrestre
               name: Fiesta de baile extraterrestre
-              description_student: Practica hacer juegos para compartir con tus amigos y familiares.
+              description_student: Crea un proyecto interactivo que puedes compartir con tus compañeros de clase.
             Behaviors in Sprite Lab:
               key: Editar comportamientos
               name: Editar comportamientos
