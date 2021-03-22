@@ -3943,7 +3943,6 @@ cs:
             Relay Programming:
               key: Štafetové programování
               name: Štafetové programování
-              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti, pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí do týmů a budou spolupracovat na napsání programu postupně po jednom pokynu. 
             Debugging in Collector:
               name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
