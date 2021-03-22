@@ -1219,6 +1219,7 @@
   "noClassroomsFound": "No classrooms found.",
   "noColumnsInTable": "We couldn't find any columns in \"{table}\". Make sure this table is imported in your project.",
   "noIconsFound": "No icons found",
+  "noLevelPreviewAvailable": "No preview is available for this level. To view this level click \"{buttonText}\".",
   "noLibraries": "You currently have no libraries.",
   "noLibrariesInProject": "You have no libraries in your project. Try adding one from your class list or from an ID.",
   "noLibrariesInClass": "No one in your class has published a library. Try adding one from an ID.",
