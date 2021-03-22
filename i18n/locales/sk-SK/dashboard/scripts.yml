@@ -1839,6 +1839,7 @@ sk:
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: 'V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.'
             Input and Output:
               name: Vstup a Výstup
             Processing:
@@ -4497,6 +4498,7 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
             Processing:
@@ -4505,6 +4507,8 @@ sk:
               name: Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+            Apps and Storage:
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -5355,10 +5359,13 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
             Processing:
               name: Spracovanie
+            Apps and Storage:
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
           student_description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
@@ -6190,10 +6197,13 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
             Processing:
               name: Spracovanie
+            Apps and Storage:
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
           student_description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
@@ -7196,10 +7206,7 @@ sk:
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné.
-              description_teacher: |-
-                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. 
-
-                Ako študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+              description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. \n\nAko študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete."
             About Me:
               name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
@@ -7755,6 +7762,7 @@ sk:
             Intro to Problem Solving:
               key: Úvod do riešenia problémov
               name: Úvod do riešenia problémov
+              description_student: "Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu."
             The Problem Solving Process:
               key: Proces riešenia problémov
               name: Proces riešenia problémov
@@ -8014,7 +8022,7 @@ sk:
             'Events: The Big Event':
               key: 'Udalosti: Veľká udalosť'
               name: Veľká udalosť Jr.
-              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
+              description_teacher: "Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti."
             Events in Play Lab:
               name: Udalosti v pohybe
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
@@ -8068,7 +8076,7 @@ sk:
             'Events: The Big Event':
               key: 'Udalosti: Veľká udalosť'
               name: Veľká udalosť Jr.
-              description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
+              description_teacher: "Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti."
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
           lesson_groups:
@@ -8169,7 +8177,6 @@ sk:
             Relay Programming:
               key: Štafetové programovanie
               name: Štafetové programovanie
-              description_teacher: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
             Debugging in Collector:
               key: Odstraňovanie chýb s Laurel
               name: Odstraňovanie chýb s Laurel
@@ -8255,7 +8262,7 @@ sk:
               description_teacher: "V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia code.org. Videá vám vysvetlia, ako funguje pracovné prostredie vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu, ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_ v bludisku. \\r\nHľadanie a odstraňovanie chýb je dôležitou súčasťou učenia. Študenti sa preto stretnú s úlohami, ktoré boli vyriešené _nesprávne_. V týchto úlohách si budú musieť preštudovať ponúknutý kód tak, aby identifikovali chyby vrátane nesprávnych cyklov, chýbajúcich blokov, blokov navyše, či v blokov umiestnených na nesprávnom mieste. "
             Programming and Loops with the Artist:
               name: Kreslenie s cyklami
-              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
+              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
@@ -8263,7 +8270,7 @@ sk:
             Conditionals:
               key: Podmienky
               name: Podmienky s Farmárkou
-              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.
+              description_teacher: 'Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.'
             Simon Says:
               key: Simon vraví
               description_teacher: 'V tejto lekcii si študenti zahrajú hru, ktorá im pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite Labu v nasledujúcej lekcii.'

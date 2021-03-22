@@ -16196,8 +16196,7 @@ de:
             Private and Personal Information:
               name: Private und persönliche Informationen
               description_student: Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind.
-              description_teacher: |-
-                Diese von Common Sense Education entwickelte Lektion befasst sich mit dem Unterschied zwischen Informationen, die sicher online geteilt werden können, und Daten, die man nicht veröffentlichen sollte. Beim Besuch von Websites, die Informationen über die Identität des Besuchers verlangen, lernen die SchülerInnen, einen kritischen Abfrageprozess anzuwenden, der sie in die Lage versetzt, sich selbst und ihre Familien vor Identitätsdiebstahl zu schützen. In dieser Lektion lernen die SchülerInnen, kritisch über die Benutzerdaten nachzudenken, die manche Websites anfordern oder verlangen. Sie lernen den Unterschied zwischen privaten und persönlichen Daten und wie sie unterscheiden können, was sicher oder unsicher ist, um es online weiterzugeben.
+              description_teacher: Diese von Common Sense Education entwickelte Lektion befasst sich mit dem Unterschied zwischen Informationen, die sicher online geteilt werden können, und Daten, die man nicht veröffentlichen sollte. Beim Besuch von Websites, die Informationen über die Identität des Besuchers verlangen, lernen die SchülerInnen, einen kritischen Abfrageprozess anzuwenden, der sie in die Lage versetzt, sich selbst und ihre Familien vor Identitätsdiebstahl zu schützen. In dieser Lektion lernen die SchülerInnen, kritisch über die Benutzerdaten nachzudenken, die manche Websites anfordern oder verlangen. Sie lernen den Unterschied zwischen privaten und persönlichen Daten und wie sie unterscheiden können, was sicher oder unsicher ist, um es online weiterzugeben.
             About Me:
               name: Über mich mit Sprite Lab
               description_student: Bei der Erstellung eines interaktiven Posters mit Sprite Lab können die SchülerInnen ihr Verständnis für den Austausch persönlicher und privater Informationen im Web einfließen lassen.
@@ -16335,10 +16334,7 @@ de:
             The Power of Words:
               name: Die Macht der Worte
               description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren Sie, was man im Internet sagen darf und was nicht.
-              description_teacher: |-
-                Die SchülerInnen sind der Meinung, dass sie beim Besuch ihrer Lieblingswebsites Spaß haben, dabei jedoch auch auf Nachrichten von anderen Kindern stoßen können, die sie wütend, verletzt, traurig oder ängstlich machen können. Sie untersuchen, wie sie mit Cybermobbing umgehen können und wie sie auf verstörende Aussagen im Internet reagieren können.\r
-                \r
-                Die SchülerInnen diskutieren alle Möglichkeiten, wie bei der Kommunikation Technologien verwenden können und untersuchen die Ähnlichkeiten und Unterschiede zwischen Kommunikation von Mensch zu Mensch und Kommunikation im Internet. Die SchülerInnen suchen dann im Rahmen eines Brainstorming Möglichkeiten, wie man auf Cybermobbing reagieren kann.
+              description_teacher: "Die SchülerInnen sind der Meinung, dass sie beim Besuch ihrer Lieblingswebsites Spaß haben, dabei jedoch auch auf Nachrichten von anderen Kindern stoßen können, die sie wütend, verletzt, traurig oder ängstlich machen können. Sie untersuchen, wie sie mit Cybermobbing umgehen können und wie sie auf verstörende Aussagen im Internet reagieren können.\\r\n\\r\nDie SchülerInnen diskutieren alle Möglichkeiten, wie bei der Kommunikation Technologien verwenden können und untersuchen die Ähnlichkeiten und Unterschiede zwischen Kommunikation von Mensch zu Mensch und Kommunikation im Internet. Die SchülerInnen suchen dann im Rahmen eines Brainstorming Möglichkeiten, wie man auf Cybermobbing reagieren kann."
             Crowdsourcing:
               name: Crowdsourcing
               description_student: In dieser Lektion lernen Sie etwas über Crowdsourcing, den Prozess des Aufbaus eines Projekts mit einem Team.
@@ -18604,7 +18600,7 @@ de:
               key: 'Ereignisse: Das große Ereignis'
               name: Das große Ereignis
               description_student: Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken.
-              description_teacher: Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.
+              description_teacher: "Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse."
             Events in Play Lab:
               key: Veranstaltungen im Play Lab
               name: Aktionen mit Ereignissen
@@ -18679,7 +18675,7 @@ de:
               key: 'Ereignisse: Das große Ereignis'
               name: Das große Ereignis
               description_student: Bewegen Sie sich oder schreien Sie, wenn Ihr Lehrer Tasten auf einer riesigen Fernbedienung drückt.
-              description_teacher: Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.
+              description_teacher: "Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse."
             Events in Play Lab:
               key: Veranstaltungen im Play Lab
               name: Royal Battle mit Ereignissen
@@ -18723,7 +18719,7 @@ de:
               key: Fehlersuche im Labyrinth
               name: Fehlersuche im Labyrinth
               description_student: Finden Sie Probleme in Aufgaben und üben Sie Ihre Fähigkeiten bei der Fehlersuche/beim Debugging.
-              description_teacher: Die Fehlerbehebung/das Debugging ist ein wesentliches Element beim Erlernen des Programmierens. Die SchülerInnen werden einige Aufgaben finden, die falsch gelöst wurden. Sie müssen sich schrittweise durch den vorhandenen Code arbeiten, um Fehler zu identifizieren, einschließlich falscher Schleifen, fehlender Bausteine, überschüssiger Bausteine und Bausteine, die nicht funktionieren.
+              description_teacher: "Die Fehlerbehebung/das Debugging ist ein wesentliches Element beim Erlernen des Programmierens. Die SchülerInnen werden einige Aufgaben finden, die falsch gelöst wurden. Sie müssen sich schrittweise durch den vorhandenen Code arbeiten, um Fehler zu identifizieren, einschließlich falscher Schleifen, fehlender Bausteine, überschüssiger Bausteine und Bausteine, die nicht funktionieren."
             Programming in Collector:
               key: Programmierung in Collector
               name: Den Schatz mit Laurel sammeln
@@ -18738,7 +18734,7 @@ de:
               key: Binäre Armbänder
               name: Binäre Armbänder
               description_student: Erstellen Sie Ihr eigenes binäres Armband und erfahren Sie, wie Computer sich Informationen merken!
-              description_teacher: Das binäre Zahlensystem ist in der Welt der Computer extrem wichtig. Die meisten Computer speichern heute alle möglichen Informationen in binärer Form. Diese Lektion zeigt, wie es möglich ist, etwas aus dem täglichen Leben zu nehmen und es in eine Reihe von „Ein“- und „Aus“-Schaltvorgänge zu übersetzen.
+              description_teacher: "Das binäre Zahlensystem ist in der Welt der Computer extrem wichtig. Die meisten Computer speichern heute alle möglichen Informationen in binärer Form. Diese Lektion zeigt, wie es möglich ist, etwas aus dem täglichen Leben zu nehmen und es in eine Reihe von „Ein“- und „Aus“-Schaltvorgänge zu übersetzen."
             'Loops: My Loopy Robotic Friends':
               key: 'Schleifen: Meine Schleifenroboter-Freunde'
               name: Meine schleifenden Freunde von Loopy Robotic Jr.
@@ -18823,7 +18819,6 @@ de:
               key: Relais-Programmierung
               name: Relais-Programmierung
               description_student: Erinnern Sie sich an den Beginn des Kurses, als Sie Zeichnungen mit Code erstellt haben? In dieser Lektion werden Sie mit einem Team zusammenarbeiten, um etwas sehr Ähnliches zu tun!
-              description_teacher: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
             Debugging in Collector:
               key: Fehlerbehebung in Collector
               name: Debuggen mit Laurel
@@ -18943,7 +18938,7 @@ de:
               key: Programmierung und Schleifen mit dem Künstler
               name: Zeichen mit Schleifen
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
-              description_teacher: Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.
+              description_teacher: 'Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Bedingungen in Minecraft: Voyage Aquatic'
               name: 'Bedingungen in Minecraft: Voyage Aquatic'
@@ -18953,7 +18948,7 @@ de:
               key: Bedingungen
               name: Bedingungen mit dem Farmer
               description_student: In dieser unterhaltsamen und herausfordernden Serie können Sie dem Computer sagen, was er unter bestimmten Bedingungen tun soll.
-              description_teacher: Diese Lektion führt die SchülerInnen in `Während`-Schleifen und `wenn/andere` Aussagen ein. _Während-Schleifen_ sind Schleifen, die Befehle so lange wiederholen, wie eine Bedingung zutrifft. Während-Schleifen werden verwendet, wenn der Programmierer nicht genau weiß, wie oft die Befehle wiederholt werden müssen, aber der Programmierer weiß, welche Bedingung erfüllt sein muss, damit die Schleife weiterläuft. `Wenn / Sonst'-Anweisungen bieten Flexibilität bei der Programmierung, indem ganze Codeabschnitte nur dann ausgeführt werden, wenn etwas zutrifft andernfalls wird etwas anderes ausgeführt.
+              description_teacher: 'Diese Lektion führt die SchülerInnen in `Während`-Schleifen und `wenn/andere` Aussagen ein. _Während-Schleifen_ sind Schleifen, die Befehle so lange wiederholen, wie eine Bedingung zutrifft. Während-Schleifen werden verwendet, wenn der Programmierer nicht genau weiß, wie oft die Befehle wiederholt werden müssen, aber der Programmierer weiß, welche Bedingung erfüllt sein muss, damit die Schleife weiterläuft. `Wenn / Sonst''-Anweisungen bieten Flexibilität bei der Programmierung, indem ganze Codeabschnitte nur dann ausgeführt werden, wenn etwas zutrifft andernfalls wird etwas anderes ausgeführt.'
             Simon Says:
               key: Simon sagt
               description_student: Spiele ein Spiel und denk darüber nach, welche Befehle benötigt werden, um das richtige Ergebnis zu erzielen.
@@ -19070,7 +19065,7 @@ de:
             Nested Loops in the Maze:
               key: Geschachtelte Schleifen im Labyrinth
               name: Eingebettete Schleifen im Labyrinth
-              description_student: "Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du eine Schleife in eine andere Schleife einfügst."
+              description_student: Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du eine Schleife in eine andere Schleife einfügst.
               description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, ihr Verständnis von Schleifen auf ein ganz neues Level zu bringen. Beim Spiel mit der Biene und bei Pflanzen gegen Zombies lernen die SchülerInnen, wie man eine Schleife so programmiert, dass sie in eine andere Schleife eingebettet ist. Sie werden auch dazu ermutigt, herauszufinden, wie kleine Änderungen an beiden Schleifen ihr Programm beeinflussen, wenn sie auf "Ausführen" klicken.
             The Power of Words:
               key: Die Macht der Worte
@@ -19292,7 +19287,7 @@ de:
             Alien Dance Party:
               key: Tanzparty für Aliens
               name: Tanzparty für Aliens
-              description_student: Üben Sie das Programmieren von Spielen, die Sie mit Ihren Freunden und Ihrer Familie teilen können.
+              description_student: Erstellen Sie ein interaktives Projekt, das Sie mit den KlassenkameradInnen teilen können.
             Behaviors in Sprite Lab:
               key: Behaviors im Sprite-Labor
               name: Behaviors im Sprite-Labor

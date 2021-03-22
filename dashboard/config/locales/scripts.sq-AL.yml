@@ -2836,11 +2836,15 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_variables:
-              display_name: variabla
+              display_name: Për Ciklet
             csf_data:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            lessonGroup-8:
+              display_name: variabla
+            lessonGroup-9:
+              display_name: Largo
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2864,6 +2868,8 @@ sq:
             ramp_up:
               display_name: Hyrja
             lessonGroup-3:
+              display_name: variabla
+            variables:
               display_name: variabla
         ai-unit-pilot:
           lessons:
