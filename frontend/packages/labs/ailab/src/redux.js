@@ -1148,7 +1148,9 @@ export function getPanelButtons(state) {
       ? { panel: "dataDisplayFeatures", text: "Continue" }
       : null;
   } else if (state.currentPanel === "dataDisplayFeatures") {
-    prev = { panel: "dataDisplayLabel", text: "Back" };
+    prev = isPanelEnabled(state, "dataDisplayLabel")
+      ? { panel: "dataDisplayLabel", text: "Back" }
+      : null;
     next = isPanelEnabled(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelEnabled(state, "trainModel")

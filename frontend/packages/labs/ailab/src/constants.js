@@ -337,8 +337,6 @@ export const styles = {
 
   statement: {
     fontSize: 36,
-    position: "absolute",
-    top: 20,
     backgroundColor: "rgba(255,255,255,0.8)",
     padding: 10,
     borderRadius: 5

@@ -5,14 +5,16 @@ import { connect } from "react-redux";
 import train from "../train";
 import { readyToTrain } from "../redux";
 import { styles } from "../constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import labBackground from "@public/images/lab-background-light.png";
+import DataTable from "./DataTable";
+
+const framesPerCycle = 40;
 
 class TrainModel extends Component {
   static propTypes = {
+    data: PropTypes.array,
     readyToTrain: PropTypes.bool,
     modelSize: PropTypes.number,
     labelColumn: PropTypes.string,
@@ -32,12 +34,12 @@ class TrainModel extends Component {
     train.init();
     train.onClickTrain();
 
-    const animationTimer = setInterval(this.updateAnimation.bind(this), 1000 / 30);
+    const animationTimer = setInterval(
+      this.updateAnimation.bind(this),
+      1000 / 30
+    );
 
-    this.setState({animationTimer});
-
-    //this.start = undefined;
-    //window.requestAnimationFrame(this.animationFrame);
+    this.setState({ animationTimer });
   };
 
   updateAnimation = () => {
@@ -47,20 +49,23 @@ class TrainModel extends Component {
   componentWillUnmount = () => {
     if (this.state.animationTimer) {
       clearInterval(this.state.animationTimer);
-      this.setState({animationTimer: undefined})
+      this.setState({ animationTimer: undefined });
     }
-  }
+  };
 
   getAnimationProgess = () => {
-    const framesPerCycle = 40;
     return (this.state.frame % framesPerCycle) / framesPerCycle;
   };
 
+  getAnimationStep = () => {
+    return Math.floor(this.state.frame / framesPerCycle);
+  };
+
   render() {
-    const translateX = this.getAnimationProgess() * 40;
+    const translateX = 15 + this.getAnimationProgess() * (50 - 15);
     const translateY = 50 - Math.sin(this.getAnimationProgess() * Math.PI) * 30;
     const rotateZ = this.getAnimationProgess() * 60;
-    const transform = `rotateZ(${rotateZ}deg)`;
+    const transform = `translateX(-50%) translateY(-50%) rotateZ(${rotateZ}deg)`;
 
     return (
       <div
@@ -72,7 +77,6 @@ class TrainModel extends Component {
           backgroundSize: "cover"
         }}
       >
-
         <div style={styles.statement}>
           Predict{" "}
           <span style={styles.statementLabel}>
@@ -90,7 +94,14 @@ class TrainModel extends Component {
           </span>
         </div>
 
-        <div style={{ width: "100%", height: "100%", position: "absolute" }}>
+        <div style={{ overflow: "hidden", paddingTop: 20 }}>
+          <div style={{ width: "30%", overflow: "hidden", opacity: 0.3 }}>
+            <DataTable
+              reducedColumns={true}
+              startingRow={this.getAnimationStep()}
+            />
+          </div>
+
           <div
             style={{
               position: "absolute",
@@ -100,29 +111,21 @@ class TrainModel extends Component {
               transform: transform
             }}
           >
-            <table
-              style={{
-                ...styles.displayTable,
-                width: "initial",
-                backgroundColor: "white"
-              }}
-            >
-              <tbody>
-                <tr>
-                  <td style={{...styles.tableCell, ...styles.selectLabelText}}>first</td>
-                  <td style={styles.tableCell}>second</td>
-                  <td style={{...styles.tableCell, ...styles.selectFeaturesText}}>third</td>
-                </tr>
-              </tbody>
-            </table>
+            <DataTable
+              reducedColumns={true}
+              singleRow={this.getAnimationStep()}
+            />
           </div>
         </div>
 
         {this.props.readyToTrain && (
-          <div>
-            {false && !this.props.modelSize && (
-              <FontAwesomeIcon icon={faSpinner} />
-            )}
+          <div
+            style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-25%)"
+            }}
+          >
             <div style={{ ...styles.trainBot, margin: "0 auto" }}>
               <img
                 src={aiBotHead}
@@ -144,5 +147,5 @@ export default connect(state => ({
   readyToTrain: readyToTrain(state),
   modelSize: state.modelSize,
   labelColumn: state.labelColumn,
-  selectedFeatures: state.selectedFeatures,
+  selectedFeatures: state.selectedFeatures
 }))(TrainModel);
