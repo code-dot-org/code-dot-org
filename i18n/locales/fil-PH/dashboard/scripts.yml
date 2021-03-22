@@ -10321,10 +10321,7 @@ fil:
             Private and Personal Information:
               name: Pribado at Personal na Impormasyon
               description_student: Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado.
-              description_teacher: |-
-                Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.
-
-                Habang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online.
+              description_teacher: "Ginawa ng Common Sense Education, ang araling ito ay tungkol sa kaibahan sa pagitan ng impormasyon na ligtas na ibahagi online at sa impormasyon na hindi ligtas.\n\nHabang ang mga estudyante ay bibisita ng mga site na naghihingi ng mga impormasyon tungkol sa kanilang pagkakakilanlan, sila at matutong gumamit na kritikal na proseso sa pagsiyasat na magbibigay kapangyarihan sa kanila na maprotektahan ang kanilang mga sarili at ang kanilang pamilya mula sa pagnanakaw sa pagkakakilanlan. Sa araling ito, ang mga estudyante ay matututong kritikal na mag-isip tungkol sa mga impormasyon ng gumagamit na hinihiling o kinakailangan ng iilang mga website. Matutunan nila ang kaibahan ng pribadong impormasyon sa personal na impormasyon, pati na rin kung paano magtukoy kung ano ang ligtas o hindi ligtas ibahagai online."
             Nested Loops in Bee:
               name: Naka-nest na mga Loops sa Maze
             Nested Loops in Artist:
@@ -10385,10 +10382,7 @@ fil:
             The Power of Words:
               name: Ang Kapangyarihan ng mga Salita
               description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online.
-              description_teacher: |-
-                Ang mga estudyante ay magbigay pansin na habang sila ay nagsasaya sa kanilang mga paboritong mga website, maaari silang makakatagpo ng mga mensahe mula sa ibang mga bata na makakagawa sa kanilang makaramdam ng galit, sakit, lungkot, o pagkakatakot. Sila ay tutuklas sa mga pamamaraan para harapin ang pang-aapi online at kung paano sila tutugon sa harap ng hindi kaaaya-ayang mga lenggwahe online.
-
-                Ang mga estudyante ay tatalakay sa lahat ng mga pamamaraan na magagamit nilang ang teknolohiya para sa komunikasyon at magtuklas sa mga pagkakatulad at pagkakaiba ng harapan at online na pakikipag-usap. Ang mga estudyante ay mag-iisip ng mga pamamaraan para tumugon sa pang-aapi online. 
+              description_teacher: "Ang mga estudyante ay magbigay pansin na habang sila ay nagsasaya sa kanilang mga paboritong mga website, maaari silang makakatagpo ng mga mensahe mula sa ibang mga bata na makakagawa sa kanilang makaramdam ng galit, sakit, lungkot, o pagkakatakot. Sila ay tutuklas sa mga pamamaraan para harapin ang pang-aapi online at kung paano sila tutugon sa harap ng hindi kaaaya-ayang mga lenggwahe online.\n\nAng mga estudyante ay tatalakay sa lahat ng mga pamamaraan na magagamit nilang ang teknolohiya para sa komunikasyon at magtuklas sa mga pagkakatulad at pagkakaiba ng harapan at online na pakikipag-usap. Ang mga estudyante ay mag-iisip ng mga pamamaraan para tumugon sa pang-aapi online. "
             Crowdsourcing:
               name: Pag-crowdsourcing
               description_student: Ang araling ito ay nagtuturo sa iyo tungkol sa crowdsourcing, ang proseso sa pagbuo ng isang proyekto sa isang pangkat.
@@ -11281,7 +11275,7 @@ fil:
             Ocean Scene with Loops:
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
@@ -11311,7 +11305,7 @@ fil:
               key: Mga Loops sa Harvester
               name: Mga Loops sa Harvester
             'Events: The Big Event':
-              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
+              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -11447,7 +11441,7 @@ fil:
             Conditionals:
               key: Mga conditional
               description_student: Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito.
-              description_teacher: Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.
+              description_teacher: 'Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.'
             Private and Personal Information:
               key: Pribado at Personal na Impormasyon
               name: Pribado at Personal na Impormasyon
@@ -11600,8 +11594,6 @@ fil:
               name: Mga Loops sa Artist
               description_student: Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.
-            Alien Dance Party:
-              description_student: Magsanay sa paggawa ng mga laro para ibahagi sa iyong mga kaibigan at pamilya.
             End of Course Project:
               description_student: Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto.
             lesson-1:

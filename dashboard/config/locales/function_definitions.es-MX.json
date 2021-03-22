@@ -57,6 +57,9 @@
           },
           "draw cord": {
             "name": "dibujar una cuerda"
+          },
+          "draw R pad": {
+            "name": "dibuja la cuadrícula R"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -701,7 +704,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -719,7 +723,8 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Geometric Sun_2018": {
@@ -733,7 +738,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -751,7 +757,8 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Guess The Number": {
@@ -768,7 +775,8 @@
             "parameters": {
               "length": "longitud",
               "sides": "lados"
-            }
+            },
+            "description": "La forma cambia en función de cuántos lados tiene actualmente.  Se necesitan dos parámetros, longitud y lados. Longitud"
           },
           "draw a loop": {
             "name": "dibujar un bucle",
@@ -793,7 +801,8 @@
             }
           },
           "n-sided shape": {
-            "name": "forma de n lados"
+            "name": "forma de n lados",
+            "description": "La forma cambia en función de cuántos lados tiene actualmente.  Se necesitan dos parámetros, longitud y lados. Longitud"
           },
           "draw spiral circle": {
             "name": "dibujar un círculo en espiral",

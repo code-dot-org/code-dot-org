@@ -8173,19 +8173,25 @@ is:
                 rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
                 Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
                 að blása lífi í gæludýrið!
+            lesson-6:
+              name: Kynning á Kvikasmiðjunni
+            lesson-8:
+              name: Kvikar í verki
           lesson_groups:
             ramp_up:
               display_name: Efling
             csf_digcit:
               display_name: Stafrænn borgari
             csf_variables:
-              display_name: Breytur
+              display_name: Frá lykkjur
             csf_data:
               display_name: Gögn
             csf_for_loops:
               display_name: Frá lykkjur
-            csf_sprites:
-              display_name: Kvikar
+            lessonGroup-8:
+              display_name: Breytur
+            lessonGroup-9:
+              display_name: fjarlægja
         express-2021:
           description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
             Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
@@ -8206,6 +8212,8 @@ is:
                 rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
                 Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
                 að blása lífi í gæludýrið!
+            lesson-1:
+              name: Danspartý
           lesson_groups:
             csf_sequencing:
               display_name: Skipanaröð
@@ -8248,6 +8256,8 @@ is:
               name: Kynning á Kvikasmiðjunni
             Sprites in Action:
               name: Kvikar í verki
+            introducing-spritelab:
+              name: Kynning á Kvikasmiðjunni
           lesson_groups:
             ramp_up:
               display_name: Kynning
@@ -8255,6 +8265,8 @@ is:
               display_name: Breytur
             Sprites:
               display_name: Kvikar
+            variables:
+              display_name: Breytur
         csd4-preview-2021:
           lessons:
             Identifying User Needs:

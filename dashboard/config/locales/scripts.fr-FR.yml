@@ -23443,7 +23443,7 @@ fr:
                 façons dont ils utilisent la technologie pour la communication et
                 explorent les similitudes et les différences entre la communication
                 en personne et en ligne. Les élèves réfléchissent ensuite, en groupes,
-                aux moyens de réagir au cyberharcèlement. "
+                aux moyens de réagir au cyberharcèlement."
             Crowdsourcing:
               name: Production Participative
               description_student: Cette leçon t'initiera au crowdsourcing, le processus
@@ -26322,11 +26322,6 @@ fr:
               description_student: Te rappelles-tu, au début du cours, lorsque tu
                 as fait des dessins avec du code ? Dans cette leçon, tu vas travailler
                 avec une équipe pour faire quelque chose de très similaire !
-              description_teacher: Cette activité débutera par une brève leçon sur
-                le débogage et la persévérance, puis passera rapidement à une course
-                contre la montre, pendant laquelle les élèves formeront des équipes
-                et travailleront ensemble à la rédaction d'un programme, instruction
-                par instruction.
             Debugging in Collector:
               key: Déboguer dans le Collecteur
               name: Déboguer avec Laurel
@@ -26906,7 +26901,6 @@ fr:
               description_teacher: Ici, les étudiants utiliseront le Labo des Lutins
                 pour créer leurs propres comportements personnalisés.
             Virtual Pet:
-              name: Animal de compagnie virtuel avec le Labo des Lutins
               description_student: Dans cette leçon, les élèves créeront un Animal
                 de Compagnie Virtuel interactif dont l'apparence et le comportements
                 correspondront à leurs souhaits. Les élèves utiliseront l'outil «
@@ -26953,19 +26947,25 @@ fr:
                 sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges
                 et à la conception de solutions accessibles pour des applications
                 hypothétiques. '
+            lesson-6:
+              name: Introduction au Labo des Lutins
+            lesson-8:
+              name: Les Lutins en Action
           lesson_groups:
             ramp_up:
               display_name: Progression
             csf_digcit:
               display_name: Citoyenneté Numérique
             csf_variables:
-              display_name: variables
+              display_name: Boucles « Pour »
             csf_for_loops:
               display_name: Boucles « Pour »
             csf_sprites:
-              display_name: Les Lutins
-            lessonGroup-8:
               display_name: Les Impacts de l'Informatique
+            lessonGroup-8:
+              display_name: variables
+            lessonGroup-9:
+              display_name: supprimer
           student_description: Apprends à utiliser différents types de boucles, d'événements,
             de fonctions et de conditions. Étudie différentes techniques de résolution
             de problèmes et discute des impacts sociétaux de l'informatique et d'Internet.
@@ -26993,8 +26993,8 @@ fr:
             Programming with Angry Birds:
               key: Programmation avec Angry Birds
               name: Programmation avec Angry Birds
-              description_student: En savoir plus sur les séquences et les algorithmes
-                avec Angry Birds.
+              description_student: Crée des programmes pour aider l'Angry Bird à se
+                déplacer à travers le labyrinthe.
               description_teacher: En utilisant des personnages du jeu Angry Birds,
                 les élèves développeront des algorithmes séquentiels pour déplacer
                 un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour
@@ -27078,8 +27078,8 @@ fr:
                 les excellentes compétences d'Anna et Elsa en patinage sur glace !
             'Looking Ahead with Minecraft ':
               name: Regarder vers l'Avenir avec Minecraft
-              description_student: Évitee la lave ! Ici, tu découvriras les conditions
-                dans le monde de Minecraft.
+              description_student: Évite la lave! Ici, tu vas commencer à apprendre
+                dac que sont les conditions dans le monde de Minecraft.
               description_teacher: Cette leçon a été créée, à l'origine, pour Hour
                 of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la
                 chance de mettre en pratique des idées qu'ils ont apprises jusqu'à
@@ -27102,19 +27102,6 @@ fr:
               description_student: 'Les boucles sont si utiles dans le codage. Cette
                 leçon t''apprendra un nouveau type de boucle : les boucles tant que
                 !'
-              description_teacher: Au moment où les élèves atteignent cette leçon,
-                ils devraient déjà avoir beaucoup de pratique dans l'utilisation des
-                boucles `répéter`. Il est donc temps de tout mélanger. _Les boucles
-                tant que_ sont des boucles qui continuent de répéter des commandes
-                aussi longtemps qu'une condition est remplie. Les boucles tant que
-                sont utilisées lorsque le programmeur ne connaît pas le nombre exact
-                de fois où les commandes doivent être répétées, mais sait quelle condition
-                doit être vraie pour que la boucle continue de répéter. Par exemple,
-                les étudiants auront pour tâche de remplir des trous et de creuser
-                la saleté dans la Fermière. Ils ne connaîtront pas la taille des trous
-                ou la hauteur des montagnes de saleté, mais les étudiants sauront
-                qu'ils doivent continuer à remplir les trous et à creuser la saleté
-                tant que le sol ne sera pas plat.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -27234,8 +27221,8 @@ fr:
             Alien Dance Party:
               key: Soirée Dansante des Extraterrestres
               name: Soirée Dansante des Extraterrestres
-              description_student: Entraîne-toi à créer des jeux à partager avec tes
-                amis et ta famille.
+              description_student: Crée un projet interactif qui peut être partagé
+                avec tes camarades de classe.
             Behaviors in Sprite Lab:
               key: Les Comportements dans le Labo des Lutins
               name: Les Comportements dans le Labo des Lutins
@@ -27263,6 +27250,13 @@ fr:
             End of Course Project:
               description_student: Préparez ces mains pour beaucoup de codage ! Il
                 est temps de commencer à construire ton projet.
+            lesson-1:
+              name: Soirée Dansante
+              description_student: Il est temps de célébrer ! Dans cette leçon, tu
+                programmeras ta propre soirée dansante interactive.
+              description_teacher: Dans cette leçon, les élèves programmeront leur
+                propre soirée dansante interactive. Cette activité nécessite du son
+                car l'outil a été conçu pour répondre à la musique.
           lesson_groups:
             csf_sequencing:
               display_name: Séquençage
@@ -27394,6 +27388,8 @@ fr:
               name: Introduction au Labo des Lutins
             Sprites in Action:
               name: Les Lutins en Action
+            introducing-spritelab:
+              name: Introduction au Labo des Lutins
           lesson_groups:
             ramp_up:
               display_name: Introduction
@@ -27403,6 +27399,8 @@ fr:
               display_name: variables
             Sprites:
               display_name: Les Lutins
+            variables:
+              display_name: variables
         csd4-preview-2021:
           description: L'unité 4 présente les impacts sociaux plus larges de l'informatique.
             À travers une série de défis de conception, tu apprendras à mieux comprendre

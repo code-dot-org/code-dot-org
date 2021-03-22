@@ -265,7 +265,7 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
-      can :validate_form, :pd_foorm
+      can [:validate_form, :validate_library_question], :pd_foorm
     end
 
     if user.persisted?
