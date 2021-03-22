@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-19 19:05:31 UTC",
+    "serialized_at": "2021-03-22 18:09:00 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -4340,7 +4340,7 @@
       "key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
       "position": 3,
       "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist (all ages)** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
@@ -4352,7 +4352,7 @@
       "position": 1,
       "properties": {
         "name": "Code Your Own Dance Party",
-        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist (all ages).**. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list ***Spotify Playlist.** If you would like to use the filtered list with older students, you can share ***Spotify Playlist for Under 13** with your classroom."
+        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist.** We are using radio-safe versions of all songs. For students under 13, we limit the music to this filtered list. If you would like to use the filtered list with older students, you can share ***Spotify Playlist** with your classroom."
       },
       "seeding_key": {
         "activity_section.key": "88b00482-3c11-4079-9869-faaa51c340c2",
@@ -17384,18 +17384,6 @@
       }
     },
     {
-      "name": "Spotify Play List (Under 13)",
-      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
-      "key": "spotify_play_list_under_13_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "spotify_play_list_under_13_"
-      }
-    },
-    {
       "name": "Swimming Fish Teacher Sandbox",
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming_fish_teacher_sandbox",
@@ -17599,12 +17587,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "dance-party-playlist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "spotify_play_list_under_13_"
       }
     },
     {
@@ -18160,6 +18142,16 @@
       }
     },
     {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -18531,6 +18523,12 @@
       "seeding_key": {
         "lesson.key": "Alien Dance Party",
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "vocabulary.key": "behavior"
       }
     },
     {

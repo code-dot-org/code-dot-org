@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-19 22:14:51 UTC",
+    "serialized_at": "2021-03-19 23:17:49 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -179,7 +179,7 @@
         "overview": "Using characters from _Ice Age_, students will develop sequential algorithms to move _Scrat_ from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Write programs to help Scrat reach the acorn.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a Reflection Journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Make sure each student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -219,7 +219,7 @@
         "overview": "This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.",
         "student_overview": "Help the Flurb solve bigger problems using loops.",
         "purpose": "This lesson serves as an introduction to loops. Loops allow for students to simplify their code by grouping commands that need to be repeated. Students will develop critical thinking skills by noticing repetition in movements of their classmates and determining how many times to repeat commands. By seeing \"Happy Maps\" again, students will get the chance to relate old concepts such as sequencing to the new concept of repeat loops.",
-        "preparation": " - Print out a ***Worksheet** to display for the class\n - Per each group of 2-3, print one of each: ***Game pieces, *Worksheet, and  *Bonus Pack Manipulatives**.\n - Make sure each student has a Reflection Journal.",
+        "preparation": " - Print out a ***Worksheet** to display for the class\n - Per each group of 2-3, print one of each: ***Game pieces, *XL Worksheet, and  *Bonus Pack Manipulatives**.\n - Make sure each student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -260,7 +260,7 @@
         "overview": "In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.",
         "student_overview": "Help Laurel the adventurer collect the treasure underground.",
         "purpose": "This lesson gives students more practice with loops and introduces a new block, `get treasure`. The block works just like `pick corn` did in Harvester. These puzzles are more open, giving students more flexibility for their final solutions.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**\n - Make sure each student has a Reflection Journal",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**\n - Make sure each student has a reflection journal",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -280,7 +280,7 @@
         "overview": "Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.",
         "student_overview": "Use loops and patterns to finish the images.",
         "purpose": "This lesson gives a different perspective on how loops can create things in programming. Students can also reflect on the inefficiency of programming without loops here because of how many blocks the program would require without the help of  `repeat` loops.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a Journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure each student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -300,7 +300,7 @@
         "overview": "Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.",
         "student_overview": "Move and shout when your teachers presses buttons on a giant remote.",
         "purpose": "Today, students will learn to distinguish events from actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "preparation": "- Prepare to project ***The Controller Image**.\n- Print one ***Assessment** per student.\n- Make sure each student has a Reflection Journal.",
+        "preparation": "- Prepare to project ***The Controller Image**.\n- Print one ***Assessment** per student.\n- Make sure each student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -318,10 +318,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use **events** in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
+        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
         "student_overview": "Create your own game or story.",
-        "purpose": "Students will further develop their understanding of **events** using Play Lab today. **Events** are very common in most computer programs. In this activity, students will use **events** to make a character move around the screen, make noises, and change backgrounds based on user-initiated **events**.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a ***Think Spot Journal**.",
+        "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -2105,7 +2105,7 @@
       "key": "dacbc9c3-1382-49f8-856d-5bce1247ebb4",
       "position": 1,
       "properties": {
-        "description": "Quickly review the definition of a loop, the action of doing something over and over again.\n\n- _What are **loops**?_\n- _Why do we use them?_",
+        "description": "Quickly review the definition of a loop, the action of doing something over and over again.\n\n- _What are loops?_\n- _Why do we use them?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2524,7 +2524,7 @@
       "key": "cb6735d8-d986-408b-adef-61e9a52ad30f",
       "position": 1,
       "properties": {
-        "description": "Review \"The Big Event\" activity with students:\n\n - _What did we \"program\" the button **events** to do?_\n\n_Now we're going to add **events** to our code. Specifically, we're going to have an **event** for when two characters touch each other._\n\n - _When have you seen two characters touch each other as an **event** in games?_",
+        "description": "Review \"The Big Event\" activity with students:\n\n - _What did we \"program\" the button events to do?_\n\n_Now we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other._\n\n - _When have you seen two characters touch each other as an event in games?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2563,7 +2563,7 @@
       "key": "9126c997-86b1-4d78-9eaf-3d07e06c6355",
       "position": 3,
       "properties": {
-        "description": "\nUsing the remote from the ***The Big Event (Courses A, B) - Controller Image** and blocks from **Unplugged Blockly Blocks (Grades K-1)** - Manipulatives, gather your class to reprise the activity from the previous lesson. Ask the class _when the teal button is pushed, what do we do?_ then fill in one of the `when` **event** blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
+        "description": "\nUsing the remote from the ***Controller Image** and blocks from ***Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class _when the teal button is pushed, what do we do?_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -2575,7 +2575,7 @@
       "key": "b4da0866-a056-4d28-bbca-119bbd17fe04",
       "position": 4,
       "properties": {
-        "description": "\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7.  Call on different students to make a funny noise when you click on Jorge. Explain this is an **event** that they are reacting to and Jorge can be coded to make noise when you click on him.",
+        "description": "\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7.  Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -2654,7 +2654,7 @@
       "key": "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -6859,18 +6859,6 @@
       }
     },
     {
-      "name": "Think Spot Journal - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_-_reflection_journal",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_-_reflection_journal"
-      }
-    },
-    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
@@ -6944,18 +6932,6 @@
       },
       "seeding_key": {
         "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
-      "name": "Think Spot Journal - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_-_reflection_journal_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_-_reflection_journal_1"
       }
     },
     {
@@ -7084,18 +7060,6 @@
       }
     },
     {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_1"
-      }
-    },
-    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
@@ -7129,18 +7093,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_lesson_recommendations_1"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_2",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_2"
       }
     },
     {
@@ -7180,18 +7132,6 @@
       },
       "seeding_key": {
         "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_3",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_3"
       }
     },
     {
@@ -7265,18 +7205,6 @@
       },
       "seeding_key": {
         "resource.key": "feeling_faces_-_emotion_image_3"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal_4",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal_4"
       }
     },
     {
@@ -7434,12 +7362,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming in Ice Age",
-        "resource.key": "think_spot_journal_-_reflection_journal"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Programming with Rey and BB-8",
         "resource.key": "pair-programming-vid"
       }
@@ -7472,12 +7394,6 @@
       "seeding_key": {
         "lesson.key": "Loops: Happy Loops",
         "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Happy Loops",
-        "resource.key": "think_spot_journal_-_reflection_journal_1"
       }
     },
     {
@@ -7542,12 +7458,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "resource.key": "think_spot_journal_1"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Ocean Scene with Loops",
         "resource.key": "common-sense-media-pause-think"
       }
@@ -7566,12 +7476,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Ocean Scene with Loops",
-        "resource.key": "think_spot_journal_2"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Events: The Big Event",
         "resource.key": "unplugged-video-big-event"
       }
@@ -7586,12 +7490,6 @@
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
         "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "resource.key": "think_spot_journal_3"
       }
     },
     {
@@ -7628,12 +7526,6 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "resource.key": "feeling_faces_-_emotion_image_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "resource.key": "think_spot_journal_4"
       }
     },
     {
