@@ -16672,8 +16672,7 @@ in:
             Safety in My Online Neighborhood:
               name: crwdns2433776:0crwdne2433776:0
               description_student: crwdns2449802:0crwdne2449802:0
-              description_teacher: |-
-                crwdns2449804:0crwdne2449804:0
+              description_teacher: crwdns2449804:0crwdne2449804:0
           student_description: crwdns2478310:0crwdne2478310:0
         courseb-2020:
           title: crwdns2362322:0crwdne2362322:0
@@ -16743,8 +16742,7 @@ in:
             Digital Trails:
               name: crwdns2433800:0crwdne2433800:0
               description_student: 'crwdns2449810:0crwdne2449810:0'
-              description_teacher: |-
-                crwdns2449812:0crwdne2449812:0
+              description_teacher: crwdns2449812:0crwdne2449812:0
           student_description: crwdns2478312:0crwdne2478312:0
         coursec-2020:
           title: crwdns2362402:0crwdne2362402:0
@@ -16842,13 +16840,11 @@ in:
             Putting a STOP to Online Meanness:
               name: crwdns2433824:0crwdne2433824:0
               description_student: crwdns2449822:0crwdne2449822:0
-              description_teacher: |-
-                crwdns2449824:0crwdne2449824:0
+              description_teacher: crwdns2449824:0crwdne2449824:0
             Password Power-Up:
               name: crwdns2433826:0crwdne2433826:0
               description_student: crwdns2449826:0crwdne2449826:0
-              description_teacher: |-
-                crwdns2449828:0crwdne2449828:0
+              description_teacher: crwdns2449828:0crwdne2449828:0
           student_description: crwdns2478314:0crwdne2478314:0
         coursed-2020:
           title: crwdns2362518:0crwdne2362518:0
@@ -16952,8 +16948,7 @@ in:
             Be A Super Digital Citizen:
               name: crwdns2433894:0crwdne2433894:0
               description_student: crwdns2449842:0crwdne2449842:0
-              description_teacher: |-
-                crwdns2449844:0crwdne2449844:0
+              description_teacher: crwdns2449844:0crwdne2449844:0
           student_description: crwdns2478316:0crwdne2478316:0
         coursee-2020:
           title: crwdns2362638:0crwdne2362638:0
@@ -17007,8 +17002,7 @@ in:
             Private and Personal Information:
               name: crwdns2433912:0crwdne2433912:0
               description_student: crwdns2447434:0crwdne2447434:0
-              description_teacher: |-
-                crwdns2447436:0crwdne2447436:0
+              description_teacher: crwdns2447436:0crwdne2447436:0
             About Me:
               name: crwdns2433914:0crwdne2433914:0
               description_student: crwdns2447438:0crwdne2447438:0
@@ -17146,8 +17140,7 @@ in:
             The Power of Words:
               name: crwdns2433946:0crwdne2433946:0
               description_student: crwdns2447544:0crwdne2447544:0
-              description_teacher: |-
-                crwdns2447546:0crwdne2447546:0
+              description_teacher: crwdns2447546:0crwdne2447546:0
             Crowdsourcing:
               name: crwdns2447548:0crwdne2447548:0
               description_student: crwdns2447550:0crwdne2447550:0
@@ -17165,6 +17158,7 @@ in:
               description_student: 'crwdns2449866:0crwdne2449866:0'
               description_teacher: "crwdns2449868:0crwdne2449868:0"
           student_description: crwdns2478320:0crwdne2478320:0
+          name: crwdns2484900:0crwdne2484900:0
         express-2020:
           title: crwdns2362882:0crwdne2362882:0
           description: crwdns2362884:0crwdne2362884:0
@@ -20348,7 +20342,7 @@ in:
               key: 'crwdns2476536:0crwdne2476536:0'
               name: crwdns2476538:0crwdne2476538:0
               description_student: crwdns2482810:0crwdne2482810:0
-              description_teacher: crwdns2482812:0crwdne2482812:0
+              description_teacher: "crwdns2482812:0crwdne2482812:0"
             Events in Play Lab:
               key: crwdns2476540:0crwdne2476540:0
               name: crwdns2476542:0crwdne2476542:0
@@ -20426,7 +20420,7 @@ in:
               key: 'crwdns2476602:0crwdne2476602:0'
               name: crwdns2476604:0crwdne2476604:0
               description_student: crwdns2482858:0crwdne2482858:0
-              description_teacher: crwdns2482860:0crwdne2482860:0
+              description_teacher: "crwdns2482860:0crwdne2482860:0"
             Events in Play Lab:
               key: crwdns2476606:0crwdne2476606:0
               name: crwdns2476608:0crwdne2476608:0
@@ -20474,7 +20468,7 @@ in:
               key: crwdns2476646:0crwdne2476646:0
               name: crwdns2476648:0crwdne2476648:0
               description_student: crwdns2482878:0crwdne2482878:0
-              description_teacher: crwdns2482880:0crwdne2482880:0
+              description_teacher: "crwdns2482880:0crwdne2482880:0"
             Programming in Collector:
               key: crwdns2476650:0crwdne2476650:0
               name: crwdns2476652:0crwdne2476652:0
@@ -20489,7 +20483,7 @@ in:
               key: crwdns2476658:0crwdne2476658:0
               name: crwdns2476660:0crwdne2476660:0
               description_student: crwdns2482890:0crwdne2482890:0
-              description_teacher: crwdns2482892:0crwdne2482892:0
+              description_teacher: "crwdns2482892:0crwdne2482892:0"
             'Loops: My Loopy Robotic Friends':
               key: 'crwdns2476662:0crwdne2476662:0'
               name: crwdns2476664:0crwdne2476664:0
@@ -20707,7 +20701,7 @@ in:
               key: crwdns2476830:0crwdne2476830:0
               name: crwdns2476832:0crwdne2476832:0
               description_student: crwdns2483022:0crwdne2483022:0
-              description_teacher: crwdns2483024:0crwdne2483024:0
+              description_teacher: 'crwdns2483024:0crwdne2483024:0'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'crwdns2476834:0crwdne2476834:0'
               name: 'crwdns2476836:0crwdne2476836:0'
@@ -20717,7 +20711,7 @@ in:
               key: crwdns2476838:0crwdne2476838:0
               name: crwdns2476840:0crwdne2476840:0
               description_student: crwdns2483030:0crwdne2483030:0
-              description_teacher: crwdns2483032:0crwdne2483032:0
+              description_teacher: 'crwdns2483032:0crwdne2483032:0'
             Simon Says:
               key: crwdns2476842:0crwdne2476842:0
               name: crwdns2476844:0crwdne2476844:0
@@ -20727,7 +20721,7 @@ in:
               key: crwdns2476846:0crwdne2476846:0
               name: crwdns2476848:0crwdne2476848:0
               description_student: crwdns2483038:0crwdne2483038:0
-              description_teacher: 'crwdns2483040:0crwdne2483040:0'
+              description_teacher: crwdns2483040:0crwdne2483040:0
             Alien Dance Party with Sprite Lab:
               key: crwdns2476850:0crwdne2476850:0
               name: crwdns2476852:0crwdne2476852:0
@@ -20847,7 +20841,7 @@ in:
             Nested Loops in the Maze:
               key: crwdns2476942:0crwdne2476942:0
               name: crwdns2476944:0crwdne2476944:0
-              description_student: "crwdns2483110:0crwdne2483110:0"
+              description_student: crwdns2483110:0crwdne2483110:0
               description_teacher: crwdns2483112:0crwdne2483112:0
             The Power of Words:
               key: crwdns2476946:0crwdne2476946:0
@@ -20884,8 +20878,7 @@ in:
               key: crwdns2476970:0crwdne2476970:0
               name: crwdns2476972:0crwdne2476972:0
               description_student: crwdns2483138:0crwdne2483138:0
-              description_teacher: |
-                crwdns2483140:0crwdne2483140:0
+              description_teacher: crwdns2483140:0crwdne2483140:0
             Internet:
               key: crwdns2476974:0crwdne2476974:0
               name: crwdns2476976:0crwdne2476976:0
@@ -20940,10 +20933,16 @@ in:
               description_teacher: 'crwdns2484830:0crwdne2484830:0'
             lesson-9:
               name: crwdns2484832:0crwdne2484832:0
+              description_student: 'crwdns2484902:0crwdne2484902:0'
+              description_teacher: 'crwdns2484904:0crwdne2484904:0'
             lesson-10:
               name: crwdns2484834:0crwdne2484834:0
+              description_student: crwdns2484906:0crwdne2484906:0
+              description_teacher: crwdns2484908:0crwdne2484908:0
             lesson-5:
               name: crwdns2484836:0crwdne2484836:0
+              description_student: crwdns2484910:0crwdne2484910:0
+              description_teacher: 'crwdns2484912:0crwdne2484912:0'
           lesson_groups:
             ramp_up:
               display_name: crwdns2477002:0crwdne2477002:0

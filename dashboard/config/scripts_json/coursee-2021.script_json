@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-17 18:10:26 UTC",
+    "serialized_at": "2021-03-22 17:59:21 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -159,9 +159,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Students will use events to make sprites move around the screen and change backgrounds based on user input. ",
+        "overview": "Students will use **events** to make sprites move around the screen and change backgrounds based on user input. ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
-        "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
+        "purpose": "This lesson offers a great introduction to **events** in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -224,7 +224,7 @@
         "overview": "By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.\r\n",
         "student_overview": "By creating an interactive poster with SpriteLab, students will apply their understanding of sharing personal and private information on the web.",
         "purpose": "This lesson is meant to make the previous lesson on personal and private information personally relevant for students. With SAFE (personal) and UNSAFE (private) examples in mind, students practice safe self-expression on the web, using SpriteLab to fashion their own sprite costumes and generate text.",
-        "preparation": " - (Optional) Print copies of the planning guide for students, or distribute digital copies.\n - Consider making an example project yourself to share with the class. \n - Make sure every student has a journal.",
+        "preparation": " - (Optional) Print copies of the ***planning guide** for students, or distribute digital copies.\n - Consider making an example project yourself to share with the class. \n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -264,7 +264,7 @@
       "properties": {
         "overview": "This lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the course.  ",
         "student_overview": "In this lesson, **loops** make it easy to make cool images with Artist!",
-        "purpose": "Students will practice using loops, a concept that will be revisited throughout upcoming lessons.",
+        "purpose": "Students will practice using **loops**, a concept that will be revisited throughout upcoming lessons.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -282,9 +282,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more use of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.",
+        "overview": "Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested **loops** with new goals, students will see more use of **loops** in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the lesson.",
         "student_overview": "More nested loops! This time, you get to make some AMAZING drawing with nested loops.",
-        "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \r\n\r\nThe purpose of this activity is to utilize nested loops as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested loops!",
+        "purpose": "In this online activity, students will create designs in Artist that they can proudly share with their loved ones.  \n\nThe purpose of this activity is to utilize nested **loops** as a way to inspire students with artistic minds to see coding as another creative outlet. This set of puzzles was built to develop critical thinking skills, an understanding of elementary geometry, and creativity -- all within the scope of nested **loops**!",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.\r\n - Consider what supports your students might need with turns and angles. ",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -302,8 +302,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using Anna and Elsa's excellent ice-skating skills!",
-        "student_overview": "Anna and Elsa have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
+        "overview": "Now that students know how to layer their **loops**, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using _Anna_ and _Elsa's_ excellent ice-skating skills!",
+        "student_overview": "_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
         "purpose": "In this lesson, students will get apply their skills with nested loops to create images that they will be excited to share. ",
         "preparation": " - Play through the puzzles to find and potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
@@ -322,10 +322,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.",
+        "overview": "One of the most magnificent structures in the computer science world is the **function**. **Functions** (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into **functions** can be such a helpful practice.",
         "student_overview": "Even rockstars need programming skills. This lesson will teach you about functions using lyrics from songs.",
-        "purpose": "The use of functions helps simplify code and develop the student's ability to organize their program. Students will quickly recognize that writing functions can make their long programs easier to read and easier to debug if something goes wrong. ",
-        "preparation": "- (Optional) Watch the Lesson in Action Video.\r\n- Print several worksheets for each group.\r\n- Print one assessment for each student.\r\n- Secure access to songs and lyrics for activity.\r\n- Make sure every student has a journal.",
+        "purpose": "The use of **functions** helps simplify code and develop the student's ability to organize their program. Students will quickly recognize that writing **functions** can make their long programs easier to read and easier to debug if something goes wrong. ",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** Video.\n- Print several ***worksheets** for each group.\n- Print one ***assessment** for each student.\n- Secure access to songs and lyrics for activity.\n- Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "unplugged": true
       },
@@ -343,9 +343,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!",
+        "overview": "Students will begin to understand how **functions** can be helpful in this fun and interactive Minecraft adventure!",
         "student_overview": "Can you figure out how to use functions for the most efficient code?",
-        "purpose": "Students will discover the versatility of programming by practicing functions in different environments. Here, students will recognize reusable patterns and be able to incorporate named blocks to call pre-defined functions.",
+        "purpose": "Students will discover the versatility of programming by practicing **functions** in different environments. Here, students will recognize reusable patterns and be able to incorporate named blocks to call pre-defined **functions**.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -363,7 +363,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "Students will be introduced to using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.",
+        "overview": "Students will be introduced to using **functions** with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting **functions** by calling one **function** from inside another.",
         "student_overview": "Make complex drawings more easily with functions!",
         "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
@@ -383,9 +383,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
-        "student_overview": "Here you will learn about conditionals in the world of Minecraft.",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
+        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
+        "student_overview": "Here you will learn about conditionals in the world of _Minecraft_.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce **conditionals**. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -423,9 +423,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "Students will use conditionals with functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.",
+        "overview": "Students will use **conditionals** with **functions** to harvest crops in _Harvester_. This lesson will push students to use **functions** in the new ways by combining them with `while` loops and `if / else` statements.",
         "student_overview": "Functions will save you lots of work as you help the farmer with her harvest!",
-        "purpose": "This lesson is meant to further push students to use conditionals with functions. These puzzles are intended to increase problem solving and critical thinking skills.",
+        "purpose": "This lesson is meant to further push students to use **conditionals** with **functions**. These puzzles are intended to increase problem solving and critical thinking skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure ever student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -443,7 +443,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \r\n\r\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers.",
+        "overview": "The next four lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. Intended to be a multi-lesson or multi-week experience, students will spend time exploring brainstorming, learning about the design process, building, and presenting their final work. \n\nIn the explore stage, students will play with pre-built examples of projects in both Artist and Sprite Lab for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or another interface that they have become familiar with (this is likely the longest stage of the project). Finally, students will be able to present their finished work to their peers.",
         "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!",
         "purpose": "Students may be ready to jump straight into building their projects, but this lesson will help shape their ideas into plans. This structure will keep the dreamers grounded and illuminate a path for those feeling left in the dark. Provide students with ample time to build and revise their projects. The trial and error inevitably involved in this lesson will teach problem solving and persistence.",
         "preparation": " - Spend time making your own project with both the Artist and Sprite Lab. Familiarize yourself with the capabilities and limitations of each tool.\r\n - Modify the rubric to fit your class goals and print out a copy for each student.\r\n - Modify the project design worksheet to fit your class and print one packet for each student.",
@@ -1763,7 +1763,7 @@
       "key": "aad9aa38-56b3-42ef-b751-03065c308d0e",
       "position": 1,
       "properties": {
-        "description": "Today students will visit **events** in programming.\n\n####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.",
+        "description": "Today students will visit **events** in programming.\n\n####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word **\"event\"** today. Let's focus on **events** that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the **events** they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2027,14 +2027,14 @@
       "key": "5e38bf1e-5af2-48b6-bfc1-42da7ce1b926",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on \"Rikki\", a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
+        "description": "**Goal:** Today, students will be creating their own interactive posters with SpriteLab! They'll begin by working through a few examples centered on _\"Rikki\"_, a fictional girl who has already created  a poster to share. Then, after a quick introduction on creating custom sprite costumes, students will be free to create their posters to their liking.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Before beginning, be sure to review your classroom's policy on appropriate language and behavior. Students will be creating custom text and images for this lesson. This means they should be mindful of concepts covered in the personal and private information lesson, as well as general classroom etiquette. As students work, be sure to verify that their posters do not violate your classroom policies.\r\n"
           }
         ],
-        "name": "Interactive Poster"
+        "name": "Interactive Poster About Me"
       },
       "seeding_key": {
         "activity_section.key": "5e38bf1e-5af2-48b6-bfc1-42da7ce1b926",
@@ -2045,7 +2045,7 @@
       "key": "c2bf01fe-542b-45c4-b887-4f83404e93e2",
       "position": 2,
       "properties": {
-        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new `print` block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the planning guide. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class Pause and Think Online - Video."
+        "description": "**Model:** Show students the first two or three levels from today's online activity. Demonstrate how the new `print` block works, along with how they can use the Costumes tab to create and edit costumes. If you have already gone through the entire lesson yourself, you can show them your own finished poster for inspiration! \n\n**Distribute:** (Optional) pass out copies of the ***planning guide**. Students can use this sheet to brainstorm ideas to include in their projects, but the planning can also be completed on scratch paper.\n\n**Transition:** Move students to their computers. Encourage students to follow the instructions for each level. \n\n**Reminder:** Remind the students to only share their work with their close friends or family. For more information watch or show the class ***Pause and Think Online** - Video."
       },
       "seeding_key": {
         "activity_section.key": "c2bf01fe-542b-45c4-b887-4f83404e93e2",
@@ -2262,7 +2262,7 @@
       "position": 1,
       "properties": {
         "name": "Drawing with Loops",
-        "progression_name": "Artist Intro with JR Hildebrande",
+        "progression_name": "Video: Artist Intro with JR Hildebrande",
         "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online."
       },
       "seeding_key": {
@@ -2374,7 +2374,7 @@
       "key": "6d3af202-fd47-493f-93fa-081fec637b53",
       "position": 1,
       "properties": {
-        "description": "Review using nested loops in Maze. \r\n\r\nAsk the students how they felt about nested loops. \r\n\r\n - What did they like and dislike about them? \r\n - What are some advantages of using nested loops?\r\n\r\nTell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
+        "description": "Review using \"Nested Loops in Maze\" from Course D. \n\nAsk the students how they felt about nested loops. \n\n - What did they like and dislike about them? \n - What are some advantages of using nested loops?\n\nTell the students that they will be using nested **loops** again, but in Artist this time. They will be making amazing projects today!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2392,8 +2392,8 @@
             "markdown": "Students will have the opportunity to share their own work at the end of this stage. These pieces of artwork can be shared virtually or printed out. We recommend printing out the class' work and displaying it for the students' loved ones to see.\n"
           }
         ],
-        "name": "Online Puzzles",
-        "description": "Students might benefit from having a puzzle done as a class.\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns."
+        "name": "Fancy Shapes Using Nested Loops",
+        "description": "Students might benefit from having a puzzle done as a class.\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for **repeating** patterns."
       },
       "seeding_key": {
         "activity_section.key": "20367f69-608a-45ad-b6fc-7a17613a071f",
@@ -2493,7 +2493,7 @@
       "position": 1,
       "properties": {
         "description": "*What did you make today?*\n\nGet the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
-        "name": "Share Out"
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9ad07175-6454-4905-9366-61b189a9ab7e",
@@ -2504,8 +2504,7 @@
       "key": "cbdc3d01-eba8-41fa-9138-a5aa16a22788",
       "position": 2,
       "properties": {
-        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - Draw something you used nested loops to make.\n - How do nested loops help you code complex images?",
-        "name": "Reflection"
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel during today's lesson?\n - Draw something you used nested loops to make.\n - How do nested loops help you code complex images?"
       },
       "seeding_key": {
         "activity_section.key": "cbdc3d01-eba8-41fa-9138-a5aa16a22788",
@@ -2527,7 +2526,7 @@
       "key": "3fd1ff7f-942a-4316-9559-3d910ab63fc4",
       "position": 1,
       "properties": {
-        "description": "Ask the class to discuss the last set of puzzles.\n\n - What did they like/dislike?\n - Which puzzles were hard? Why?\n - Which puzzles were easy? Why?\n - If you were to teach nested loops to a friend, what would you say to help them understand?\n\nIf there's time, give an introduction to the main characters of today's puzzles, Anna and Elsa from Frozen. Give the class the sisters' back story if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with Anna and Elsa's ice skates!",
+        "description": "Ask the class to discuss the last set of puzzles.\n\n - What did they like/dislike?\n - Which puzzles were hard? Why?\n - Which puzzles were easy? Why?\n - If you were to teach nested loops to a friend, what would you say to help them understand?\n\nIf there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' back story if the class doesn't already know it. To build excitement, tell the class they will be using nested **loops** to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2539,7 +2538,7 @@
       "key": "5d0e32d6-0d8a-4783-92f2-1e20fb8e5ea9",
       "position": 1,
       "properties": {
-        "name": "Online Activity",
+        "name": "Nested Loops with Frozen",
         "progression_name": "Application: Snowflake #1",
         "description": "This lesson consists of two separate snowflake projects. In each project, code carries through levels with the student, allowing them to continuously make small and simple changes to code they have already written."
       },
@@ -2652,7 +2651,7 @@
       "key": "1e27bec3-22e5-4c3b-948d-116ff1a8c9cf",
       "position": 6,
       "properties": {
-        "description": "Now, imagine that this song is a computer program. Defining a title (like \"chorus\") for a little piece of code that you use over and over again is called creating a function. \r\n\r\nThis is helpful to computer scientists for some of the same reasons that it is helpful to songwriters. \r\n\r\n - It saves time not having to write all the code over and over in the program. \r\n - If you make a mistake, you only have to change it one place. \r\n - The program feels less complicated with the repeating pieces defined just once at the top.\r\n\r\nWe are going to play with songs a little more, to try to really understand how often this technique is used!"
+        "description": "Now, imagine that this song is a computer program. Defining a title (like \"chorus\") for a little piece of code that you use over and over again is called creating a **function**. \n\nThis is helpful to computer scientists for some of the same reasons that it is helpful to songwriters. \n\n - It saves time not having to write all the code over and over in the program. \n - If you make a mistake, you only have to change it one place. \n - The program feels less complicated with the repeating pieces defined just once at the top.\n\nWe are going to play with songs a little more, to try to really understand how often this technique is used!"
       },
       "seeding_key": {
         "activity_section.key": "1e27bec3-22e5-4c3b-948d-116ff1a8c9cf",
@@ -2664,7 +2663,7 @@
       "position": 1,
       "properties": {
         "name": "Songwriting",
-        "description": "A fantastic way to compare functions to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a \"chorus.\"",
+        "description": "A fantastic way to compare **functions** to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a \"chorus.\"",
         "progression_name": "Songwriting - Functions Unplugged Activity"
       },
       "seeding_key": {
@@ -2775,7 +2774,7 @@
       "key": "5051f377-1e03-4348-91f8-5ba36d7dd8c6",
       "position": 1,
       "properties": {
-        "description": "Help the class understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
+        "description": "Help the class understand that **functions** are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2816,7 +2815,7 @@
       "key": "9a7c045f-0a23-4523-91b7-b3d40bbb9852",
       "position": 3,
       "properties": {
-        "description": "Once every group or pair is done, ask the class where they put their functions and why. Did everyone make the same function? How often is the function repeated?\n\n####-Or-\n"
+        "description": "Once every group or pair is done, ask the class where they put their **functions** and why. Did everyone make the same **function**? How often is the **function** repeated?\n\n####-Or-\n"
       },
       "seeding_key": {
         "activity_section.key": "9a7c045f-0a23-4523-91b7-b3d40bbb9852",
@@ -2827,8 +2826,8 @@
       "key": "b249be1c-ef47-4ad8-87dd-2bcfb8d17530",
       "position": 4,
       "properties": {
-        "name": "Preview of Online Puzzles ",
-        "description": "\nPull up a puzzle from the lesson. We recommend puzzle 9. \nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops."
+        "name": "Preview of Online Puzzles",
+        "description": "\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \nAs a class, work through the puzzle without using **functions**. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. Why can you not just use a loop?\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a **function**. Off to the side, declare the **function** like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why **functions** could be useful in programming. Invite students to discuss the difference between **functions** and loops."
       },
       "seeding_key": {
         "activity_section.key": "b249be1c-ef47-4ad8-87dd-2bcfb8d17530",
@@ -2839,7 +2838,7 @@
       "key": "ad677781-a22b-4166-b8f8-6dad3630f9e3",
       "position": 1,
       "properties": {
-        "name": "Online Puzzles",
+        "name": "Functions in Minecraft",
         "tips": [
           {
             "type": "teachingTip",
@@ -2946,7 +2945,7 @@
       "key": "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d",
       "position": 1,
       "properties": {
-        "description": "Ask the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\r\n\r\nTell the class that there are two main components to using functions.\r\n\r\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\r\n\r\n2. **The Call**:\r\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\r\n    \r\nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\r\n\r\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles.",
+        "description": "Ask the class to think back to \"Functions Unplugged: Songwriting\" and recall what a **function** is. Open a discussion about when to use a **function** when writing a song.\n\nTell the class that there are two main components to using **functions**.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the **function** containing the lyrics to the chorus was named \"chorus\". When we first made this **function**, we circled the lyrics that would go in the **function.** Once we named the **function**, we could read through the lyrics and replace the repeated chorus lyrics with a **function** call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of **functions** being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3038,7 +3037,7 @@
       "key": "26475297-6a91-4f8c-a64d-ded841ff0cb9",
       "position": 1,
       "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a **conditional** in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3050,8 +3049,8 @@
       "key": "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf",
       "position": 1,
       "properties": {
-        "name": "Online Puzzles",
-        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\n\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class. Once all questions have been addressed, transition students to computers and let them start pair programming.",
+        "name": "Conditionals in Minecraft: Voyage Aquatic",
+        "description": "Students are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class. Once all questions have been addressed, transition students to computers and let them start pair programming.",
         "progression_name": "Video: Minecraft: Voyage Aquatic Introduction"
       },
       "seeding_key": {
@@ -3152,7 +3151,7 @@
       "key": "b080aea3-3609-4c59-bafa-176865508638",
       "position": 1,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### More Minecraft\n\nIf you find that your class really enjoys the Minecraft environment, [here are some links to other Minecraft games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n#### More Minecraft\n\nIf you find that your class really enjoys the _Minecraft_ environment, [here are some links to other _Minecraft_ games they can play online](https://code.org/minecraft). These games will also teach basic coding skills."
       },
       "seeding_key": {
         "activity_section.key": "b080aea3-3609-4c59-bafa-176865508638",
@@ -3176,7 +3175,7 @@
       "position": 1,
       "properties": {
         "progression_name": "Skill Building",
-        "name": "Online Puzzles",
+        "name": "Conditionals with the Farmer",
         "tips": [
           {
             "type": "teachingTip",
@@ -3304,7 +3303,7 @@
       "key": "990891b6-d051-4117-8dd5-fc3346d69dc5",
       "position": 1,
       "properties": {
-        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - When would you use a function?\n - Why does a function help to simplify your program?\n - Do you think functions make programming easier or harder? Why?",
+        "description": "At this point, your students should already be introduced to **functions**. Take this time to have them discuss the advantages and disadvantages of using **functions** in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either _Artist_ or _Bee_.\n\nAsk the class:\n\n - _When would you use a **function**?_\n - _Why does a **function** help to simplify your program?_\n - _Do you think **functions** make programming easier or harder? Why?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3318,7 +3317,7 @@
       "properties": {
         "name": "Online Puzzles",
         "progression_name": "Video: The Harvester",
-        "description": "Some puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions."
+        "description": "Some puzzles will have a **function** pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a **function** first, then determine where a **function** would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use **functions**, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions."
       },
       "seeding_key": {
         "activity_section.key": "24e49944-567b-4a1a-8f14-8e60585cb81f",
@@ -4332,7 +4331,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Artist Intro with JR Hildebrande",
+        "progression": "Video: Artist Intro with JR Hildebrande",
         "level_keys": [
           "courseC_video_artist_2021"
         ]
@@ -5295,7 +5294,7 @@
       "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Songwriting - Functions Unplugged Activity",
         "level_keys": [
@@ -5323,7 +5322,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft - The Agent"
+        "progression": "Video: Minecraft - The Agent",
+        "level_keys": [
+          "courseE_hero_vid1"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5346,7 +5348,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5369,7 +5374,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5392,7 +5400,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft - Repeat Loops"
+        "progression": "Video: Minecraft - Repeat Loops",
+        "level_keys": [
+          "courseE_hero_vid2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5545,7 +5556,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft - Functions"
+        "progression": "Video: Minecraft - Functions",
+        "level_keys": [
+          "courseE_hero_vid3"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5568,7 +5582,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "Function intro Ryan_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5591,7 +5608,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5614,7 +5634,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5637,7 +5660,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "MC_HOC_2017_Ali_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5660,7 +5686,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft - Congratulations"
+        "progression": "Video: Minecraft - Congratulations",
+        "level_keys": [
+          "courseE_hero_vid4"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -5996,7 +6025,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Practice",
+        "level_keys": [
+          "courseE_artist_functionsProj_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6071,7 +6103,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft: Voyage Aquatic Introduction"
+        "progression": "Video: Minecraft: Voyage Aquatic Introduction",
+        "level_keys": [
+          "courseE_aquatic_vid1"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6094,7 +6129,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6117,7 +6155,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6140,7 +6181,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_3_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6163,7 +6207,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft: Voyage Aquatic Repeat Until"
+        "progression": "Video: Minecraft: Voyage Aquatic Repeat Until",
+        "level_keys": [
+          "courseE_aquatic_vid2"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6186,7 +6233,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_4_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6209,7 +6259,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_5_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6232,7 +6285,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "CourseE_HOC 2018 Level_6_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6255,7 +6311,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft: Voyage Aquatic Conditionals"
+        "progression": "Video: Minecraft: Voyage Aquatic Conditionals",
+        "level_keys": [
+          "courseE_aquatic_vid3"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6408,7 +6467,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Minecraft: Voyage Aquatic Congratulations"
+        "progression": "Video: Minecraft: Voyage Aquatic Congratulations",
+        "level_keys": [
+          "courseE_aquatic_vid4"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6431,7 +6493,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "HOC 2018 Level_12_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -7053,7 +7118,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseE_farmer_functions7a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7076,7 +7144,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseE_farmer_functions8a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7099,7 +7170,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseE_farmer_functions9a1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7199,7 +7273,7 @@
       "chapter": 143,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example Projects",
         "level_keys": [
@@ -7225,7 +7299,7 @@
       "chapter": 144,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -9477,6 +9551,16 @@
   ],
   "vocabularies": [
     {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
       "key": "algorithm",
       "word": "algorithm",
       "definition": "A list of steps to finish a task",
@@ -9728,6 +9812,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "vocabulary.key": "behavior"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Simon Says",
@@ -10263,5 +10353,8 @@
         "objective.key": "2594052b-3b87-4d83-9038-56175058c1c2"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }

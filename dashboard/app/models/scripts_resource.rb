@@ -2,7 +2,6 @@
 #
 # Table name: scripts_resources
 #
-#  id          :bigint           not null, primary key
 #  script_id   :integer
 #  resource_id :integer
 #
