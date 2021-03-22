@@ -1,8 +1,12 @@
 const SET_QUESTIONS = 'foormEditor/SET_QUESTIONS';
 const SET_HAS_JSON_ERROR = 'foormEditor/SET_HAS_JSON_ERROR';
 const SET_FORM_DATA = 'foormEditor/SET_FORM_DATA';
-const SET_AVAILABLE_ENTITIES = 'foormEditor/SET_AVAILABLE_ENTITIES';
-const ADD_AVAILABLE_ENTITY = 'foormEditor/ADD_AVAILABLE_ENTITY';
+const SET_LIBRARY_QUESTION_DATA = 'foormEditor/SET_LIBRARY_QUESTION_DATA';
+const SET_LIBRARY_DATA = 'foormEditor/SET_LIBRARY_DATA';
+const SET_FETCHABLE_ENTITIES = 'foormEditor/SET_FETCHABLE_ENTITIES';
+const SET_FETCHABLE_SUB_ENTITIES = 'foormEditor/SET_FETCHABLE_SUB_ENTITIES';
+const ADD_FETCHABLE_ENTITY = 'foormEditor/ADD_FETCHABLE_ENTITY';
+const ADD_FETCHABLE_SUB_ENTITY = 'foormEditor/ADD_FETCHABLE_SUB_ENTITY';
 const SET_LAST_SAVED = 'foormEditor/SET_LAST_SAVED';
 const SET_SAVE_ERROR = 'foormEditor/SET_SAVE_ERROR';
 const SET_LAST_SAVED_QUESTIONS = 'foormEditor/SET_LAST_SAVED_QUESTIONS';
@@ -22,23 +26,52 @@ export const setFormData = formData => ({
   formData
 });
 
+// libraryQuestionData is an object in the format
+// {name: 'a_question_name', question: {...questions...}}
+// where questions is a valid survey element in surveyJS format.
+export const setLibraryQuestionData = libraryQuestionData => ({
+  type: SET_LIBRARY_QUESTION_DATA,
+  libraryQuestionData
+});
+
+// libraryData is an object that contains
+// metadata about the currently selected library
+// (name, version, ID)
+export const setLibraryData = libraryData => ({
+  type: SET_LIBRARY_DATA,
+  libraryData
+});
+
 export const setHasJSONError = hasJSONError => ({
   type: SET_HAS_JSON_ERROR,
   hasJSONError
 });
 
-// "Entities" are the list of forms or libraries from which a user can select to edit
-// in the Foorm form and library editors, respectively.
-export const setAvailableEntities = entitiesMetadata => ({
-  type: SET_AVAILABLE_ENTITIES,
+// "Entities" represent metadata (ID, name, etc.) about the forms or libraries
+// that a user can select to edit in the Foorm form and library editors, respectively.
+// Once selected, an AJAX call fetches the actual form or library from our server,
+// containing the SurveyJS configuration that can be edited.
+export const setFetchableEntities = entitiesMetadata => ({
+  type: SET_FETCHABLE_ENTITIES,
   entitiesMetadata
 });
 
-// An "entity" (form or library) is added to the list of forms or libraries that can be edited
-// after a new form or library is created.
-export const addAvailableEntity = entityMetadata => ({
-  type: ADD_AVAILABLE_ENTITY,
+export const addFetchableEntity = entityMetadata => ({
+  type: ADD_FETCHABLE_ENTITY,
   entityMetadata
+});
+
+// "Sub-entities" are library question metadata (ID, name, etc.)
+// within a selected library that a user can choose to edit.
+// There is no equivalent "sub-entity" when editing forms currently.
+export const setFetchableSubEntities = subEntitiesMetadata => ({
+  type: SET_FETCHABLE_SUB_ENTITIES,
+  subEntitiesMetadata
+});
+
+export const addFetchableSubEntity = subEntityMetadata => ({
+  type: ADD_FETCHABLE_SUB_ENTITY,
+  subEntityMetadata
 });
 
 export const setLastSaved = lastSaved => ({
@@ -57,17 +90,25 @@ export const setLastSavedQuestions = questions => ({
 });
 
 const initialState = {
+  // State relevant for both Form and Library editors
   questions: '',
   hasJSONError: false,
-  availableEntities: [],
+  fetchableEntities: [],
   saveError: null,
   lastSaved: null,
   lastSavedQuestions: '',
   // State specific to Foorm Form editor
-  isFormPublished: null,
+  formId: null,
   formName: null,
   formVersion: null,
-  formId: null
+  isFormPublished: null,
+  // State specific to Foorm Library editor
+  libraryId: null,
+  libraryName: null,
+  libraryVersion: null,
+  libraryQuestionId: null,
+  libraryQuestionName: null,
+  fetchableSubEntities: []
 };
 
 export default function foormEditorRedux(state = initialState, action) {
@@ -93,18 +134,54 @@ export default function foormEditorRedux(state = initialState, action) {
       formId: action.formData['id']
     };
   }
-  if (action.type === SET_AVAILABLE_ENTITIES) {
+  if (action.type === SET_LIBRARY_QUESTION_DATA) {
     return {
       ...state,
-      availableEntities: action.entitiesMetadata
+      questions: action.libraryQuestionData['question'],
+      libraryQuestionName: action.libraryQuestionData['name'],
+      libraryQuestionId: action.libraryQuestionData['id']
     };
   }
-  if (action.type === ADD_AVAILABLE_ENTITY) {
-    let newEntitiesList = [...state.availableEntities];
-    newEntitiesList.push(action.entityMetadata);
+  if (action.type === SET_LIBRARY_DATA) {
     return {
       ...state,
-      availableEntities: newEntitiesList
+      libraryName: action.libraryData['name'],
+      libraryVersion: action.libraryData['version'],
+      libraryId: action.libraryData['id']
+    };
+  }
+  if (action.type === SET_FETCHABLE_ENTITIES) {
+    return {
+      ...state,
+      fetchableEntities: action.entitiesMetadata
+    };
+  }
+  if (action.type === SET_FETCHABLE_SUB_ENTITIES) {
+    return {
+      ...state,
+      fetchableSubEntities: action.subEntitiesMetadata
+    };
+  }
+  if (action.type === ADD_FETCHABLE_ENTITY) {
+    let updatedEntities = mergeNewItem(
+      state.fetchableEntities,
+      action.entityMetadata
+    );
+
+    return {
+      ...state,
+      fetchableEntities: updatedEntities
+    };
+  }
+  if (action.type === ADD_FETCHABLE_SUB_ENTITY) {
+    let updatedSubEntities = mergeNewItem(
+      state.fetchableSubEntities,
+      action.subEntityMetadata
+    );
+
+    return {
+      ...state,
+      fetchableSubEntities: updatedSubEntities
     };
   }
   if (action.type === SET_LAST_SAVED) {
@@ -127,4 +204,10 @@ export default function foormEditorRedux(state = initialState, action) {
   }
 
   return state;
+}
+
+function mergeNewItem(oldItems, newItem) {
+  let unchangedItems = oldItems.filter(item => item['id'] !== newItem['id']);
+
+  return [...unchangedItems, newItem];
 }

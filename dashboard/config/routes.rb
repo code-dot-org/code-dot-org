@@ -532,6 +532,9 @@ Dashboard::Application.routes.draw do
           post :validate_form
           get ':id', action: :get_form_data
         end
+        namespace :library_questions do
+          post :validate_library_question
+        end
       end
     end
   end
@@ -806,6 +809,10 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [:show, :update]
+    resources :library_questions, only: [:create, :show, :update] do
+      member do
+        get :published_forms_appeared_in
+      end
+    end
   end
 end

@@ -34,10 +34,11 @@ module Foorm
       question_names = @library.library_questions.map do |library_question|
         {
           id: library_question.id,
-          question_name: library_question.question_name,
-          type: JSON.parse(library_question.question)[:type]
+          name: library_question.question_name,
+          type: JSON.parse(library_question.question)['type'] || 'unknown'
         }
       end
+      question_names.sort_by! {|library_question| [library_question[:type], library_question[:name]]}
 
       render json: question_names
     end
