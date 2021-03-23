@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-22 17:59:21 UTC",
+    "serialized_at": "2021-03-23 17:19:34 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -7275,16 +7275,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Example Projects",
-        "level_keys": [
-          "courseE_project_exemplars_2021"
-        ]
+        "progression": "Example Projects"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_project_exemplars_2021"
+          "courseE_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -7292,7 +7289,7 @@
         "activity_section.key": "bc3611fe-1160-47c2-a928-c7c666478ecf"
       },
       "level_keys": [
-        "courseE_project_exemplars_2021"
+        "courseE_EOC_examples_2021"
       ]
     },
     {
@@ -9029,9 +9026,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_project_exemplars_2021",
+        "level.key": "courseE_EOC_examples_2021",
         "script_level.level_keys": [
-          "courseE_project_exemplars_2021"
+          "courseE_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
