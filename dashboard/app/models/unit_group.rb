@@ -101,8 +101,9 @@ class UnitGroup < ApplicationRecord
       resources_imported = hash['resources'].map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version.id
-        resource = Resource.find_or_create_by(key: resource_attrs['key'])
-        resource.update!(resource_attrs)
+        resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
+        resource.assign_attributes(resource_attrs)
+        resource.save! if resource.changed?
         resource
       end
       unit_group.resources = resources_imported
@@ -112,7 +113,7 @@ class UnitGroup < ApplicationRecord
     unit_group
   rescue Exception => e
     # print filename for better debugging
-    new_e = Exception.new("in course: #{path}: #{e.message}")
+    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
     new_e.set_backtrace(e.backtrace)
     raise new_e
   end
