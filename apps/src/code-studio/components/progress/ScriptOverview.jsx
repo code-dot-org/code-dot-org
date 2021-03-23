@@ -13,7 +13,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
@@ -37,7 +36,7 @@ class ScriptOverview extends React.Component {
     courseId: PropTypes.number,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
@@ -50,6 +49,7 @@ class ScriptOverview extends React.Component {
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
+    isMigrated: PropTypes.bool,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -112,7 +112,8 @@ class ScriptOverview extends React.Component {
       minimal,
       showCalendar,
       weeklyInstructionalMinutes,
-      unitCalendarLessons
+      unitCalendarLessons,
+      isMigrated
     } = this.props;
 
     const displayRedirectDialog =
@@ -178,6 +179,7 @@ class ScriptOverview extends React.Component {
               showCalendar={showCalendar}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
               unitCalendarLessons={unitCalendarLessons}
+              isMigrated={isMigrated}
             />
           </div>
         )}
