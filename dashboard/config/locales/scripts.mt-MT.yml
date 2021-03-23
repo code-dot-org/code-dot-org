@@ -28,3 +28,7 @@ mt:
           lessons:
             'null':
               name: 'null'
+        coursef-2021:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Neħħi

@@ -135,5 +135,11 @@
   "madlibPrintVariable": "crwdns2484022:0crwdne2484022:0",
   "madlibNoSprites": "crwdns2484024:0crwdne2484024:0",
   "madlibNoBehavior": "crwdns2484026:0crwdne2484026:0",
-  "madlibExplore": "crwdns2484028:0crwdne2484028:0"
+  "madlibExplore": "crwdns2484028:0crwdne2484028:0",
+  "cloudOnlyMovedY": "crwdns2484914:0crwdne2484914:0",
+  "butterflyDidntMoveXY": "crwdns2484916:0crwdne2484916:0",
+  "spritelabFeedbackUseFishCostume": "crwdns2484918:0crwdne2484918:0",
+  "spriteLabFeedbackGiveFishBehavior": "crwdns2484920:0crwdne2484920:0",
+  "spritelabFeedbackCreateTwoDifferentSprites": "crwdns2484922:0crwdne2484922:0",
+  "spritelabFeedbackGiveSecondSpriteBehavior": "crwdns2484924:0crwdne2484924:0"
 }

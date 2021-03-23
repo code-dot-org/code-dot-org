@@ -1077,6 +1077,8 @@ ar:
               name: ضغط النص
             TextMatch:
               name: تطابق النص
+            Web Lab:
+              name: مختبر الويب
             Multi page assessment:
               name: تقييم متعدد الصفحات
             Single page assessment:
@@ -1101,6 +1103,8 @@ ar:
               name: المستويات المشمولة
             ML Fish:
               name: سمكة تعلم الآلة
+            Java Lab:
+              name: مختبر Java
         algebraPD2b:
           lessons:
             Best Practices for Teaching Computer Science:
@@ -1690,15 +1694,15 @@ ar:
           student_description: تعلم برمجة الانسان الالي، و اصنع لعبتك حرب النجوم في
             مجرة بعيدة، بعيدة جدا.
         mc:
-          title: ساعة البرمجة ماين كرافت
+          title: ساعة من البرمجة مع ماين كرافت
           description: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من خلال عالم
             ماين كرافت
           description_short: إكتشف عالم ماين كرافت من خلال البرمجة.
           lessons:
             Hour of Code 2015:
               name: ساعة من البرمجة 2015
-          student_description: استخدم القطع البرمجية لاخذ ستبف و ألكس في مغامرة من
-            خلال عالم ماين كرافت.
+          student_description: استخدم القطع البرمجية لأخذ ستيف و ألكس في مغامرة في
+            عالم ماين كرافت.
         oceans:
           title: الذكاء الاصطناعي للمحيطات
           description: تعرّف على كيفية استخدام الذكاء الاصطناعي والتعلم الآلي لمعالجة
@@ -8564,7 +8568,7 @@ ar:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'ماين كرافت/: رحلة البطل ساعة من البرمجة'
             Minecraft Hour of Code:
-              name: ساعة البرمجة ماين كرافت
+              name: ساعة من البرمجة مع ماين كرافت
           student_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
             رحلة عبر Minecraft مع البرمجة.
         applab-intro-staging:
@@ -10275,7 +10279,7 @@ ar:
             Conditionals with Cards:
               name: الشرطية مع بطاقات
             Minecraft Hour of Code:
-              name: ساعة البرمجة ماين كرافت
+              name: ساعة من البرمجة مع ماين كرافت
             Functions in Minecraft:
               name: الدوال في ماينكرافت
             Learning Sprites with Sprite Lab:
@@ -24141,9 +24145,6 @@ ar:
               description_student: هل تتذكر في بداية الدورة عندما قمت صممت رسومات
                 مستخدمًا تعليمات برمجية؟ في هذا الدرس، ستعمل مع فريق للقيام بشيء مشابه
                 جدًا!
-              description_teacher: سيبدأ هذا النشاط بدرس عن تصحيح الخطأ والإصرار،
-                ثم ينتقل بسرعة إلى سباق مع الزمن حينما ينقسم الطلاب إلى فرق ويعملون
-                معًا لكتابة برنامج تعليمة واحد بعد أخرى.
             Debugging in Collector:
               key: تصحيح الأخطاء في لعبة التجميع
               name: تصحيح الأخطاء مع لوريل
@@ -24919,7 +24920,7 @@ ar:
             Alien Dance Party:
               key: حفلة رقص الكائنات الفضائية
               name: حفلة رقص الكائنات الفضائية
-              description_student: تدرب على تصميم ألعاب لمشاركتها مع أصدقائك وعائلتك.
+              description_student: صمم مشروعًا تفاعليًا يمكنك مشاركته مع زملائك.
             Behaviors in Sprite Lab:
               key: السلوكيات في مختبر النقوش المتحركة
               name: السلوكيات في مختبر النقوش المتحركة
