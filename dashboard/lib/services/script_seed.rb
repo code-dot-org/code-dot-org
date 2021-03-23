@@ -441,7 +441,7 @@ module Services
 
       # destroy_outdated_objects won't work on ScriptsResource objects because
       # they do not have an id field. Work around this by inefficiently deleting
-      # all ScriptsResources using 1 query per lesson, and then re-importing all
+      # all ScriptsResources using 1 query, and then re-importing all
       # ScriptsResources in a single query. It may be possible to eliminate
       # these extra queries by adding an id column to the ScriptsResource model.
       seed_context.script.resources = []

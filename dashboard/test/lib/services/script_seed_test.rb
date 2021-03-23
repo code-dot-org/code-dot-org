@@ -314,6 +314,30 @@ module Services
       )
     end
 
+    test 'seed updates script resources' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        script.resources.first.update!(name: 'updated name')
+        script.resources.create(
+          name: 'New Resource Name',
+          url: "fake.url",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal(
+        ['updated name', 'New Resource Name'],
+        script.resources.map(&:name)
+      )
+    end
+
     test 'seed updates lesson vocabularies' do
       script = create_script_tree
       CourseOffering.add_course_offering(script)
@@ -569,6 +593,27 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    # Resources are owned by the course version. We need to make sure all the
+    # resources we need for this script are created, but we should never remove
+    # a resource because it might be in use by another script in this course
+    # version.
+    test 'seed deletes script_resources but not resources' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.resources = []
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['ScriptsResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     # Vocabulary is owned by the course version. We need to make sure all the
     # vocabulary we need for this script are created, but we should never remove
     # any vocabulary because it might be in use by another lesson in this course
@@ -730,7 +775,7 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
+        LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, Vocabulary, LessonsVocabulary,
         LessonsProgrammingExpression, Objective, Standard, LessonsStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
