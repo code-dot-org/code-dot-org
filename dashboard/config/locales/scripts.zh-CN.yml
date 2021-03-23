@@ -17624,7 +17624,6 @@ zh-CN:
               key: 编程接力
               name: 编程接力
               description_student: 记住，在课程开始时，你什么时候用代码画过画？在这堂课中，你会和团队一起合作，做出一些非常相似的东西！
-              description_teacher: 这次活动会从对"调试和坚持"的简短课程开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。
             Debugging in Collector:
               key: 在收集器中调试
               name: 在收集器中调试
@@ -17932,7 +17931,6 @@ zh-CN:
               description_student: 学习编写自己的精灵图行为！
               description_teacher: 在这里，学生们会使用精灵图实验室创造出自己的行为。
             Virtual Pet:
-              name: 虚拟宠物
               description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
               description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
@@ -17944,21 +17942,27 @@ zh-CN:
               name: 辅助功能设计
               description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
+            lesson-6:
+              name: 向你介绍精灵图实验室
+            lesson-8:
+              name: 动作精灵图
           lesson_groups:
             ramp_up:
               display_name: 热身
             csf_digcit:
               display_name: 数字公民
             csf_variables:
-              display_name: 变量
+              display_name: 计数循环
             csf_for_loops:
               display_name: 计数循环
             csf_sprites:
-              display_name: 精灵图
+              display_name: 计算的影响
             end_of_course_project:
               display_name: 课程结束项目
             lessonGroup-8:
-              display_name: 计算的影响
+              display_name: 变量
+            lessonGroup-9:
+              display_name: 移除
           student_description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
         express-2021:
           title: 速学课程 (2019)
@@ -17974,7 +17978,7 @@ zh-CN:
             Programming with Angry Birds:
               key: 迷宫编程
               name: 迷宫编程
-              description_student: 通过愤怒的小鸟学习序列和算法。
+              description_student: 编程来帮助《愤怒的小鸟》通过迷宫。
               description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Debugging with Scrat:
               key: 斯奎特和调试
@@ -18015,7 +18019,7 @@ zh-CN:
             'Looking Ahead with Minecraft ':
               key: '与《我的世界》往前看 '
               name: 与《我的世界》往前看
-              description_student: 躲开岩浆！在《我的世界》里，你会学习条件。
+              description_student: 躲开岩浆！在《我的世界》里学习条件。
               description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             If/Else with Bee:
               key: 蜜蜂里的条件
@@ -18026,7 +18030,6 @@ zh-CN:
               key: 当在农民循环中
               name: 当在农民循环中
               description_student: 循环在代码中非常有用。这一课会教你一种新的循环：当循环！
-              description_teacher: "当学生们来到这一课时，应该已经大量的练习了使用`重复`循环，所以现在可以组合它们了。\r\n\r\n_当循环_是一种当条件满足时重复执行命令的循环。`当`循环用于不确定重复的具体次数，但是能确定当某个条件满足时，就要执行程序。例如，学生们会在农场中填满洞或挖土。他们不知道洞的深度，也不知道土堆的高度，但知道如果地面不平，就应该不停的填洞或挖土。"
             'Conditionals in Minecraft: Voyage Aquatic':
               key: "《我的世界：水上航行》的条件"
               name: "《我的世界：水上航行》的条件"
@@ -18090,7 +18093,7 @@ zh-CN:
             Alien Dance Party:
               key: 外星人舞蹈派对
               name: 外星人舞蹈派对
-              description_student: 练习制作游戏来与朋友和亲人共享。
+              description_student: 创建能分享给同学的互动项目。
             Behaviors in Sprite Lab:
               key: 编辑行为
               name: 编辑行为
@@ -18105,6 +18108,10 @@ zh-CN:
               key: 课程结束项目
               name: 课程结束项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+            lesson-1:
+              name: 舞蹈派对
+              description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
+              description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -18190,6 +18197,8 @@ zh-CN:
               name: 向你介绍精灵图实验室
             Sprites in Action:
               name: 动作精灵图
+            introducing-spritelab:
+              name: 向你介绍精灵图实验室
           lesson_groups:
             ramp_up:
               display_name: 介绍
@@ -18199,6 +18208,8 @@ zh-CN:
               display_name: 变量
             Sprites:
               display_name: 精灵图
+            variables:
+              display_name: 变量
         csd4-preview-2021:
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
             在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.

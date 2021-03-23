@@ -148,15 +148,15 @@ it:
     il nostro piano di studi.
   hoc_live: L'Ora del Codice dal vivo
   hoc_live_sign_up_title: Iscriviti a l'Ora del Codice dal vivo
-  hoc_live_learn_title: Learn with Hour of Code Live
+  hoc_live_learn_title: Impara dal vivo con Hour of Code
   hoc_live_sign_up_message: Impara in tempo reale insieme a ospiti speciali! Gli studenti
     di tutte le età e abilità, compresi quelli senza computer, sono i benvenuti. Iscriviti
     alla nostra mailing list per ricevere le registrazioni degli episodi e le risorse
     per continuare ad imparare a casa.
-  hoc_live_learn_message: Learn basic concepts of computer science alongside special
-    guests! Students of all ages and abilities, including those without computers,
-    are welcome to our virtual workshop. Continue learning at home through our Hour
-    of Code Live episodes.
+  hoc_live_learn_message: 'Impara le basi dell’informatica insieme ad ospiti speciali!
+    Studenti di tutte le età e capacità, compresi quelli senza un computer, sono i
+    benvenuti al nostro workshop virtuale. Continua ad imparare da casa con gli episodi
+    live di Hour of Code. '
   hoc_live_join_us: Unisciti a noi
   hoc_live_learn_more: Scopri di più
   hoc_overview_oceans_tutorial_header: L'Intelligenza Artificiale per il mare
@@ -1044,7 +1044,7 @@ it:
   highlights_constant_athletes_short_heading: Dai il massimo
   footer_copyright_message: Copyright %{current_year} Code.org. Tutti i diritti riservati.
   footer_trademark_message: Hour of Code™ è un marchio registrato di Code.org.
-  footer_built_on_github: Built on GitHub from Microsoft
+  footer_built_on_github: Progettato su GitHub da Microsoft
   footer_menu_partners: Partner e Consulenti
   footer_menu_contact: Contattaci
   footer_menu_support: Supporto
@@ -1663,32 +1663,32 @@ it:
   tutorial_allcancodeapps_name: 'Piattaforma Allcancode: crea app web e mobili con
     Blockly'
   tutorial_n2y_name: Bitt Bott esplora la Terra
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Gioca, Disegna & Programma giochi arcade retro
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Scopri Python con Silent Teacher
-  tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
-  tutorial_vidcodedate_name: Climate Clock
-  tutorial_codemonkeyspace_name: 'Space Adventure: Write Code and Catch Bananas!'
-  tutorial_codespeakhappy_name: Code a Happy Place Meditation App
+  tutorial_codecombatozaria_name: 'Ozaria: il tuo viaggio inizia'
+  tutorial_vidcodedate_name: 'Orologio climatico '
+  tutorial_codemonkeyspace_name: 'Avventura spaziale: programma e afferra le banane!'
+  tutorial_codespeakhappy_name: Programma una App di meditazione in un luogo felice
   tutorial_grokimage_name: Image Magic with Python
-  tutorial_icomputelearn_name: Learn Coding with iCompute
+  tutorial_icomputelearn_name: Impara a programmare con iCompute
   tutorial_rpstress_name: Stress ball
-  tutorial_bsdcause_name: Support My Cause
+  tutorial_bsdcause_name: Supporta il mio progetto
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
-  tutorial_bsdinspire_name: People who Inspire Me
+  tutorial_bsdinspire_name: 'Persone che mi hanno ispirato '
   tutorial_tttractor_name: Tractor Traversal
   tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure with
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
-  tutorial_codespeakbreathe_name: Code a Meditation Breathing App
+  tutorial_codespeakbreathe_name: Programma un’App di respiro meditativo
   tutorial_vidcodeface_name: Facetracking
   tutorial_educodemaze_name: Design Your Own Maze!
-  tutorial_educoderace_name: Code your own racing game!
+  tutorial_educoderace_name: Programma il tuo gioco da corsa!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
   tutorial_gamefrootgames_name: 'Games Industry Activity: Code a Platformer game '
   tutorial_codespeakgrandparent_name: Code a Grandparent Card in Scratch
-  tutorial_educodekingdom_name: Defend the Kingdom!
+  tutorial_educodekingdom_name: Difendi il regno!
   tutorial_codehsdata_name: Coding with Data Visualizations
   tutorial_educodecake_name: Bake a Cake With HTML!
   tutorial_ttsecond_name: Second Team

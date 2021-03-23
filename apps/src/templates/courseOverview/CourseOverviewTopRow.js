@@ -27,7 +27,7 @@ export default class CourseOverviewTopRow extends Component {
     const {id, resources, showAssignButton, sectionsForDropdown} = this.props;
 
     return (
-      <div style={styles.main}>
+      <div style={styles.main} className="course-overview-top-row">
         {resources.length > 0 && (
           <TeacherResourcesDropdown resources={resources} unitGroupId={id} />
         )}

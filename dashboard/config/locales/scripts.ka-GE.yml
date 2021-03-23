@@ -8936,17 +8936,21 @@ ka:
             For Loops in Artist:
               key: For ციკლები მხატვარში
               name: For ციკლები მხატვარში
+            lesson-8:
+              name: სპრაიტები მოქმედებაში
           lesson_groups:
             ramp_up:
               display_name: გაუმჯობესება
             csf_digcit:
               display_name: ციფრული მოქალაქეობა
             csf_variables:
-              display_name: ცვლადები
+              display_name: '"მიზნისთვის" ციკლები'
             csf_for_loops:
               display_name: '"მიზნისთვის" ციკლები'
-            csf_sprites:
-              display_name: სპრაიტები
+            lessonGroup-8:
+              display_name: ცვლადები
+            lessonGroup-9:
+              display_name: მოცილება
         express-2021:
           description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების
             საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის
@@ -8979,9 +8983,6 @@ ka:
             Nested Loops in Maze:
               key: ჩადგმული ციკლები ლაბირინთში
               name: ჩადგმული ციკლები ლაბირინთში
-            'Looking Ahead with Minecraft ':
-              description_student: თავი აარიდეთ ლავას! აქ თქვენ შეისწავლით ყველაფერს
-                პირობითი წინადადებების შესახებ Minecraft-ის სამყაროში.
             If/Else with Bee:
               key: პირობითი ბრძანებები ფუტკარში
               name: პირობითი ბრძანებები ფუტკარში
@@ -9009,6 +9010,8 @@ ka:
             End of Course Project:
               description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ
                 თქვენი პროექტის აწყობა.
+            lesson-1:
+              name: ცეკვა
           lesson_groups:
             csf_loops:
               display_name: ციკლები
@@ -9086,6 +9089,8 @@ ka:
               display_name: ცვლადები
             Sprites:
               display_name: სპრაიტები
+            variables:
+              display_name: ცვლადები
         csd4-preview-2021:
           lessons:
             Analysis of Design:

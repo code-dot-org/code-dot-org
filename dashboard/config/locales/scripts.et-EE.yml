@@ -3216,13 +3216,19 @@ et:
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_variables:
-              display_name: Muutujad
+              display_name: For tsükkel
             csf_for_loops:
               display_name: For tsükkel
+            lessonGroup-8:
+              display_name: Muutujad
+            lessonGroup-9:
+              display_name: eemalda
         express-2021:
           lessons:
             Dance Party:
               key: Tantsuõhtu
+              name: Tantsuõhtu
+            lesson-1:
               name: Tantsuõhtu
           lesson_groups:
             csf_loops:
@@ -3246,6 +3252,8 @@ et:
             ramp_up:
               display_name: Sissejuhatus
             lessonGroup-3:
+              display_name: Muutujad
+            variables:
               display_name: Muutujad
         csd4-preview-2021:
           lesson_groups:
