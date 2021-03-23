@@ -165,9 +165,12 @@ progress.renderCourseProgress = function(scriptData) {
   initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
-  const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({type, link})
-  );
+  const teacherResources = scriptData.is_migrated
+    ? scriptData.teacher_resources
+    : (scriptData.teacher_resources || []).map(([type, link]) => ({
+        type,
+        link
+      }));
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
 
@@ -198,6 +201,7 @@ progress.renderCourseProgress = function(scriptData) {
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
+        isMigrated={scriptData.is_migrated}
       />
     </Provider>,
     mountPoint
