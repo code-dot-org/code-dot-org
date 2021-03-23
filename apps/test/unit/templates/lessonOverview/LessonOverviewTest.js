@@ -120,6 +120,8 @@ describe('LessonOverview', () => {
     );
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
+
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
   });
 
   it('renders correct number of activities', () => {
@@ -176,5 +178,29 @@ describe('LessonOverview', () => {
 
     const wrapper = shallow(<LessonOverview {...newDefaultProps} />);
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
+  });
+
+  it('renders standards header when standards are present', () => {
+    const standards = [
+      {
+        frameworkName: 'ngss',
+        parentCategoryShortcode: 'ESS',
+        parentCategoryDescription: 'Earth and Space Science',
+        categoryShortcode: 'ESS1',
+        categoryDescription: "Earth's Place in the Universe",
+        shortcode: '1-ESS1-1',
+        description:
+          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
+      }
+    ];
+    const lesson = {
+      ...defaultProps.lesson,
+      standards: standards
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
   });
 });
