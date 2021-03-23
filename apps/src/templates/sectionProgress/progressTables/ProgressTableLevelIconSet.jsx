@@ -19,6 +19,12 @@ const styles = {
   }
 };
 
+/**
+ * The width of our unplugged bubble depends on the localization of the text,
+ * so to allow that to be determined at render time, we don't set an explicit
+ * width for unplugged bubbles and instead render an invisible one behind the
+ * icon to determine its width.
+ */
 const placeholderUnpluggedBubble = (
   <div style={styles.unpluggedPlaceholderContainer}>
     <div>
@@ -32,11 +38,12 @@ const placeholderUnpluggedBubble = (
   </div>
 );
 
+/**
+ * A simple wrapper around the FontAwesome icon for a level, which handles the
+ * requiring the icon for an unplugged level to have an intrinsic content width
+ * based on the length of a localized string.
+ */
 function LevelIcon({icon, isUnplugged}) {
-  // The width of our unplugged bubble depends on the localization of the text,
-  // so to allow that to be determined at render time, we don't set an explicit
-  // width for unplugged bubbles and instead render an invisible one behind the
-  // icon to determine its width.
   if (!isUnplugged) {
     return <FontAwesome icon={icon} />;
   }
@@ -52,6 +59,11 @@ LevelIcon.propTypes = {
   isUnplugged: PropTypes.bool
 };
 
+/**
+ * A component for rendering the icons for a set of levels.
+ * Uses `ProgressTableLevelSpacer` to ensure alignment with the bubbles in a
+ * `ProgressTableDetailCell` for the same levels.
+ */
 export default function ProgressTableLevelIconSet({levels}) {
   const items = levels.map(level => {
     const icon = (
