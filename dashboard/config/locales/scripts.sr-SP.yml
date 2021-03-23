@@ -2216,9 +2216,13 @@ sr:
             csf_digcit:
               display_name: Дигитално држављанство
             csf_variables:
-              display_name: Променљиве
+              display_name: Бројачке петље
             csf_for_loops:
               display_name: Бројачке петље
+            lessonGroup-8:
+              display_name: Променљиве
+            lessonGroup-9:
+              display_name: уклони
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2240,6 +2244,8 @@ sr:
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
+              display_name: Променљиве
+            variables:
               display_name: Променљиве
         k5-onlinepd-2021:
           lessons:

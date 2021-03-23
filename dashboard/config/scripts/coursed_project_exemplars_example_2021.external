@@ -1,0 +1,25 @@
+name 'courseD_project_exemplars_example_2021'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# Project Examples
+
+You are about to start your final project. Before you begin, spend some time looking at the example projects.
+
+
+| Random Speed on Bounce (Basketball) | Multiplying Stormtroopers (Star Wars) |
+|---|---|
+| [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce \(Basketball\)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers \(Star Wars\)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+| The ball changes speed when it bounces! | Avoid the stormtroopers or they'll multiply! |
+
+
+| Panic! at the Disco (Dance Party) | Beach Scene (Artist) |
+|---|---|
+| [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern \(Artist\)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers \(Frozen\)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+| Your backup dancers keep switching up their moves! | Try adding more color and background to this scene! |
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

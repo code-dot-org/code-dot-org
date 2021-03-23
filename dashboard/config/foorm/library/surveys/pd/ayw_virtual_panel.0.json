@@ -1,121 +1,120 @@
 {
- "published": true,
- "pages": [
-  {
-   "name": "page_1",
-   "elements": [
+  "published": true,
+  "pages": [
     {
-     "type": "panel",
-     "name": "ayw_virtual_panel",
-     "elements": [
-      {
-       "type": "matrix",
-       "name": "async_activities",
-       "title": "As part of this workshop you engaged in asynchronous work (activities that weren't part of a video conference call). To what extent do you agree or disagree that the following asynchronous activities were useful for your personal learning and development?",
-       "columns": [
+      "elements": [
         {
-         "value": "1",
-         "text": "Strongly Disagree"
-        },
-        {
-         "value": "2",
-         "text": "Disagree"
-        },
-        {
-         "value": "3",
-         "text": "Slightly Disagree"
-        },
-        {
-         "value": "4",
-         "text": "Neutral"
-        },
-        {
-         "value": "5",
-         "text": "Slightly Agree"
-        },
-        {
-         "value": "6",
-         "text": "Agree"
-        },
-        {
-         "value": "7",
-         "text": "Strongly Agree"
-        }
-       ],
-       "rows": [
-        {
-         "value": "exploration_time",
-         "text": "Exploration of course materials and resources."
-        },
-        {
-         "value": "teaching_practice_reflection",
-         "text": "Reflection on your own teaching practice."
-        },
-        {
-         "value": "group_reflection",
-         "text": "The group reflection exercise."
-        }
-       ]
-      },
-      {
-       "type": "matrix",
-       "name": "logistics_virtual",
-       "title": "To what extent were the following true about participating in this virtual workshop?",
-       "columns": [
-        {
-         "value": "1",
-         "text": "Strongly Disagree"
-        },
-        {
-         "value": "2",
-         "text": "Disagree"
-        },
-        {
-         "value": "3",
-         "text": "Slightly Disagree"
-        },
-        {
-         "value": "4",
-         "text": "Neutral"
-        },
-        {
-         "value": "5",
-         "text": "Slightly Agree"
-        },
-        {
-         "value": "6",
-         "text": "Agree"
-        },
-        {
-         "value": "7",
-         "text": "Strongly Agree"
-        }
-       ],
-       "rows": [
-        {
-         "value": "clear_communication_how_virtually_attend",
-         "text": "I received clear communication about how to virtually attend the workshop."
-        },
-        {
-         "value": "tools_met_needs",
-         "text": "The virtual meeting tool(s) met my learning needs."
-        },
-        {
-         "value": "adequate_internet_tech",
-         "text": "My internet connection and technology were adequate to fully participate."
-        }
-       ]
-      },
-      {
-       "type": "comment",
-       "name": "virtual_feedback",
+          "type": "panel",
+          "name": "ayw_virtual_panel",
+          "elements": [
+            {
+              "type": "matrix",
+              "name": "async_activities",
+              "title": "As part of this workshop you engaged in asynchronous work (activities that weren't part of a video conference call). To what extent do you agree or disagree that the following asynchronous activities were useful for your personal learning and development?",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "exploration_time",
+                  "text": "Exploration of course materials and resources."
+                },
+                {
+                  "value": "teaching_practice_reflection",
+                  "text": "Reflection on your own teaching practice."
+                },
+                {
+                  "value": "group_reflection",
+                  "text": "The group reflection exercise."
+                }
+              ]
+            },
+            {
+              "type": "matrix",
+              "name": "logistics_virtual",
+              "title": "To what extent were the following true about participating in this virtual workshop?",
+              "columns": [
+                {
+                  "value": "1",
+                  "text": "Strongly Disagree"
+                },
+                {
+                  "value": "2",
+                  "text": "Disagree"
+                },
+                {
+                  "value": "3",
+                  "text": "Slightly Disagree"
+                },
+                {
+                  "value": "4",
+                  "text": "Neutral"
+                },
+                {
+                  "value": "5",
+                  "text": "Slightly Agree"
+                },
+                {
+                  "value": "6",
+                  "text": "Agree"
+                },
+                {
+                  "value": "7",
+                  "text": "Strongly Agree"
+                }
+              ],
+              "rows": [
+                {
+                  "value": "clear_communication_how_virtually_attend",
+                  "text": "I received clear communication about how to virtually attend the workshop."
+                },
+                {
+                  "value": "tools_met_needs",
+                  "text": "The virtual meeting tool(s) met my learning needs."
+                },
+                {
+                  "value": "adequate_internet_tech",
+                  "text": "My internet connection and technology were adequate to fully participate."
+                }
+              ]
+            },
+            {
+              "type": "comment",
+              "name": "virtual_feedback",
               "maxLength": 4000,
-       "title": "Do you have feedback about the virtual meeting tool or about how logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
-       "rows": 2
-      }
-     ]
+              "title": "Do you have feedback about the virtual meeting tool or about how logistics were run for this workshop? Please be specific and provide suggestions for improvement.",
+              "rows": 2
+            }
+          ]
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

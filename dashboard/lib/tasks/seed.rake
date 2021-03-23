@@ -295,7 +295,7 @@ namespace :seed do
   timed_task standards: :environment do
     Framework.seed_all
     StandardCategory.seed_all
-    Standard.seed
+    Standard.seed_all
   end
 
   timed_task programming_expressions: :environment do

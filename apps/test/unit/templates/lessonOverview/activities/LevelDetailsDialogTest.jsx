@@ -66,7 +66,7 @@ describe('LevelDetailsDialogTest', () => {
   });
 
   it('can display a LevelGroup', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <LevelDetailsDialog
         {...defaultProps}
         scriptLevel={{
@@ -75,15 +75,26 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(
-      wrapper.containsMatchingElement(
-        <div>
-          {
-            'This level is an assessment or survey with multiple questions. To view this level click "See Full Level".'
-          }
-        </div>
-      )
-    ).to.be.true;
+    const safeMarkdown = wrapper.find('SafeMarkdown').first();
+    expect(safeMarkdown.props().markdown).to.equal(
+      'This level is an assessment or survey with multiple questions. To view this level click "See Full Level".'
+    );
+  });
+
+  it('can gracefully handle no preview', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          url: 'level.url',
+          level: {type: 'Jigsaw'}
+        }}
+      />
+    );
+    const safeMarkdown = wrapper.find('SafeMarkdown').first();
+    expect(safeMarkdown.props().markdown).to.equal(
+      'No preview is available for this level. To view this level click "See Full Level".'
+    );
   });
 
   it('tries to load a video on a standalone video level', () => {
@@ -186,6 +197,31 @@ describe('LevelDetailsDialogTest', () => {
             type: 'Weblab',
             id: 'level',
             longInstructions: 'long instructions'
+          }
+        }}
+      />
+    );
+    expect(wrapper.find('TopInstructions').length).to.equal(1);
+  });
+
+  it('can display a contained level', () => {
+    const wrapper = shallow(
+      <LevelDetailsDialog
+        {...defaultProps}
+        scriptLevel={{
+          id: 'scriptlevel',
+          url: 'level.url',
+          status: 'not_tried',
+          level: {
+            type: 'Weblab',
+            id: 'level',
+            containedLevels: [
+              {
+                name: 'contained-level',
+                type: 'FreeResponse',
+                longInstructions: 'long instructions'
+              }
+            ]
           }
         }}
       />

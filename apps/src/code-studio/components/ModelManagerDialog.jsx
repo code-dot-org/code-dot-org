@@ -24,7 +24,9 @@ export default class ModelManagerDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
+    // Levelbuilders can pre-populate App Lab levels with a pre-trained model.
+    levelbuilderModel: PropTypes.object
   };
 
   state = {
@@ -49,6 +51,9 @@ export default class ModelManagerDialog extends React.Component {
       url: '/api/v1/ml_models/names',
       method: 'GET'
     }).then(models => {
+      if (this.props.levelbuilderModel?.id) {
+        models.unshift(this.props.levelbuilderModel);
+      }
       this.setState({models});
     });
   };
@@ -76,7 +81,7 @@ export default class ModelManagerDialog extends React.Component {
           handleClose={this.closeModelManager}
           useUpdatedStyles
         >
-          <h2>Machine Learning Models</h2>
+          <h2>AI Trained Models</h2>
           <div style={styles.left}>
             <select
               name="model"
@@ -89,7 +94,7 @@ export default class ModelManagerDialog extends React.Component {
                 </option>
               ))}
             </select>
-            {noModels && <div>You have not trained any AI models yet.</div>}
+            {noModels && <div>You have not trained any A.I. models yet.</div>}
             <br />
             <Button
               text={'Import'}

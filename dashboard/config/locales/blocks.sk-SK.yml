@@ -978,6 +978,7 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+            '"speed"': rýchlosť
       gamelab_checkTouching:
         text: "{CONDITION} sa {SPRITE1} dotýka {SPRITE2}"
         options:
@@ -1033,6 +1034,8 @@ sk:
           UNIT:
             '"seconds"': sekundy
             '"frames"': rámce
+      gamelab_hideHaiku:
+        text: ukry haiku
       gamelab_hideTitleScreen:
         text: schovať úvodnú obrazovku
       gamelab_ifVarEquals:
@@ -1178,6 +1181,9 @@ sk:
             '"East"': Východ
             '"South"': Juh
             '"West"': Západ
+      gamelab_printHaiku:
+        text: ukáž haiku {BREAK} názov básne{TITLE} autor básne {AUTHOR} riadok1 {LINE1}
+          riadok2 {LINE2} riadok3 {LINE3}
       gamelab_printText:
         text: tlačiť {TEXT}
       gamelab_randColor:

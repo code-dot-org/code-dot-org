@@ -7,6 +7,7 @@ import UnitCalendar from './UnitCalendar';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [45, 90, 135, 180, 225];
+export const WEEK_WIDTH = 585;
 
 const styles = {
   dialog: {
@@ -90,6 +91,7 @@ export default class UnitCalendarDialog extends Component {
         <UnitCalendar
           lessons={lessons}
           weeklyInstructionalMinutes={this.state.instructionalMinutes}
+          weekWidth={WEEK_WIDTH}
         />
         <Button
           style={styles.button}
