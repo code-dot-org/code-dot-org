@@ -97,6 +97,12 @@ class Resource < ApplicationRecord
     }
   end
 
+  def serialize_scripts
+    if Rails.application.config.levelbuilder_mode
+      lessons.map(&:script).uniq.each(&:write_script_json)
+    end
+  end
+
   private
 
   def generate_key_from_name
