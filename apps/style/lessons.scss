@@ -8,6 +8,11 @@
 }
 
 table {
+  thead {
+    th {
+      border: 1px solid $light_gray;
+    }
+  }
   tbody {
     /**
      * A pattern our curriculum authors often use is to include tables of
@@ -23,6 +28,10 @@ table {
      */
     img:only-child {
       border: 1px solid $black;
+    }
+    td {
+      padding: 10px;
+      border: 1px solid $light_gray;
     }
   }
 }
