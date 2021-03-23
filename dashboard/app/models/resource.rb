@@ -97,6 +97,16 @@ class Resource < ApplicationRecord
     }
   end
 
+  def summarize_for_script_unit_group_overview
+    {
+      id: id,
+      key: key,
+      name: name,
+      url: url,
+      type: type || ''
+    }
+  end
+
   def serialize_scripts
     if Rails.application.config.levelbuilder_mode
       lessons.map(&:script).uniq.each(&:write_script_json)
