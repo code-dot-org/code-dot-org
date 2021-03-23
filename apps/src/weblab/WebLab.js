@@ -615,4 +615,12 @@ WebLab.prototype.PageAction = makeEnum(
   logToCloud.PageAction.BrambleFilesystemResetFailed
 );
 
+WebLab.prototype.redux = function() {
+  return {
+    getStore,
+    reducers,
+    actions
+  };
+};
+
 export default WebLab;
