@@ -940,6 +940,7 @@ ms:
             '"scale"': saiz
             '"rotation"': putaran
             '"direction"': arah pergerakan
+            '"speed"': kelajuan
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2} 12321"
         options:

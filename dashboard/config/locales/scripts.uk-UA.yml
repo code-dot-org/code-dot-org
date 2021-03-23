@@ -5505,22 +5505,32 @@ uk:
             For Loop Fun:
               key: Ігри з циклами
               name: Ігри з циклами
+            Virtual Pet:
+              name: 'Міні-проект: Віртуальний вихованець'
+            lesson-6:
+              name: Представляємо Лабораторію спрайтів
+            lesson-8:
+              name: Спрайт в Дії
           lesson_groups:
             ramp_up:
               display_name: Просунутися
             csf_digcit:
               display_name: Цифрове громадянство
             csf_variables:
-              display_name: Змінні
+              display_name: Цикли For
             csf_for_loops:
               display_name: Цикли For
-            csf_sprites:
-              display_name: Спрайти
+            lessonGroup-8:
+              display_name: Змінні
+            lessonGroup-9:
+              display_name: видалити
         express-2021:
           description_audience: 'Вік: 9-18'
           lessons:
             Dance Party:
               key: Танцювальна вечірка
+              name: Танцювальна вечірка
+            lesson-1:
               name: Танцювальна вечірка
           lesson_groups:
             csf_warmup:
@@ -5539,6 +5549,8 @@ uk:
               display_name: Цикли For
             csf_sprites:
               display_name: Спрайти
+            lessonGroup-9:
+              display_name: Розминка
         pre-express-2021:
           description_audience: 'Вік: 4-8'
           lesson_groups:
@@ -5556,6 +5568,8 @@ uk:
               name: Представляємо Лабораторію спрайтів
             Sprites in Action:
               name: Спрайт в Дії
+            introducing-spritelab:
+              name: Представляємо Лабораторію спрайтів
           lesson_groups:
             ramp_up:
               display_name: Вступ
@@ -5565,6 +5579,8 @@ uk:
               display_name: Змінні
             Sprites:
               display_name: Спрайти
+            variables:
+              display_name: Змінні
         csd4-preview-2021:
           description_short: "  Дізнайтеся, як розробити програму, яка відповідає
             потребам користувачів."

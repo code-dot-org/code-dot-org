@@ -3140,19 +3140,27 @@ el:
             For Loop Fun:
               key: Διασκέδαση με το Βρόχο Για
               name: Διασκέδαση με το Βρόχο Για
+            lesson-8:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
+            ramp_up:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_variables:
-              display_name: Μεταβλητές
+              display_name: Βρόχοι Για
             csf_for_loops:
               display_name: Βρόχοι Για
-            csf_sprites:
-              display_name: Χαρακτήρας
+            lessonGroup-8:
+              display_name: Μεταβλητές
+            lessonGroup-9:
+              display_name: αφαίρεσε
         express-2021:
           lessons:
             Dance Party:
               key: Πάρτι Χορού
+              name: Πάρτι Χορού
+            lesson-1:
               name: Πάρτι Χορού
           lesson_groups:
             csf_loops:
@@ -3188,6 +3196,8 @@ el:
               display_name: Μεταβλητές
             Sprites:
               display_name: Χαρακτήρας
+            variables:
+              display_name: Μεταβλητές
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:

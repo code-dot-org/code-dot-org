@@ -3518,17 +3518,20 @@
             csf_digcit:
               display_name: Digitalt statsborgerskap
             csf_variables:
-              display_name: Variabler
+              display_name: For-løkker
             csf_for_loops:
               display_name: For-løkker
+            lessonGroup-8:
+              display_name: Variabler
+            lessonGroup-9:
+              display_name: fjern
         express-2021:
           lessons:
             Dance Party:
               key: Dansefest
               name: Dansefest
-            'Looking Ahead with Minecraft ':
-              description_student: Unngå lavaen! Her skal du lære om betingelser i
-                Minecraft-verdenen.
+            lesson-1:
+              name: Dansefest
           lesson_groups:
             csf_loops:
               display_name: Løkker
@@ -3551,6 +3554,8 @@
             ramp_up:
               display_name: Introduksjon
             lessonGroup-3:
+              display_name: Variabler
+            variables:
               display_name: Variabler
         csd4-preview-2021:
           lesson_groups:
