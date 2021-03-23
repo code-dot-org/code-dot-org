@@ -68,29 +68,29 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-09-26 21:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:06:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:07:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:11:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:14:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:38:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:42:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"remove_items_when_actor_collides\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:43:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:43:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-19 20:54:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-17 21:07:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-01-17 21:13:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2020-03-09 15:53:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 15:56:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:13:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:42:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:53:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:09:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:10:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-29 21:23:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"goal_override\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2021-03-22 18:10:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2021-03-22 18:36:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-22 22:16:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-26 21:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:06:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:07:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:11:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:14:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:38:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:40:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:42:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"remove_items_when_actor_collides\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:43:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-09-26 21:43:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-10-19 20:54:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-01-17 21:07:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-01-17 21:13:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2020-03-09 15:53:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 15:56:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:13:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:42:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 16:53:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:09:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:10:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-03-09 18:11:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"display_name\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-06-29 21:23:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"goal_override\",\"contained_level_names\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2021-03-22 18:10:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2021-03-22 18:36:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"display_name\",\"thumbnail_url\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-22 22:16:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-03-23 18:11:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false" editable="false">
+        <block type="when_run" deletable="true" movable="true" editable="true">
           <next>
-            <block type="studio_setBackground" deletable="false" movable="false" editable="false">
+            <block type="studio_setBackground" deletable="true" movable="true" editable="true">
               <title name="VALUE">"endor"</title>
               <next>
-                <block type="studio_setMap" deletable="false" movable="false" editable="false">
+                <block type="studio_setMap" deletable="true" movable="true" editable="true">
                   <title name="VALUE">"blobs"</title>
                   <next>
-                    <block type="studio_addCharacter" deletable="false" movable="false" editable="false">
+                    <block type="studio_addCharacter" deletable="true" movable="true" editable="true">
                       <title name="VALUE">"stormtrooper"</title>
                       <next>
-                        <block type="studio_addCharacter" deletable="false" movable="false" editable="false">
+                        <block type="studio_addCharacter" deletable="true" movable="true" editable="true">
                           <title name="VALUE">"stormtrooper"</title>
                           <next>
-                            <block type="studio_addCharacter" deletable="false" movable="false" editable="false">
+                            <block type="studio_addCharacter" deletable="true" movable="true" editable="true">
                               <title name="VALUE">"stormtrooper"</title>
                               <next>
-                                <block type="studio_setItemSpeed" deletable="false" movable="false" editable="false">
+                                <block type="studio_setItemSpeed" deletable="true" movable="true" editable="true">
                                   <title name="CLASS">"stormtrooper"</title>
                                   <title name="VALUE">"fast"</title>
                                 </block>
@@ -106,55 +106,55 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" editable="false">
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
           <title name="VALUE">up</title>
           <next>
-            <block type="studio_move" deletable="false" movable="false" editable="false">
+            <block type="studio_move" deletable="true" movable="true" editable="true">
               <title name="DIR">1</title>
               <next>
-                <block type="studio_addPoints" deletable="false" movable="false" editable="false">
+                <block type="studio_addPoints" deletable="true" movable="true" editable="true">
                   <title name="VALUE">10</title>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" editable="false">
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
           <title name="VALUE">down</title>
           <next>
-            <block type="studio_move" deletable="false" movable="false" editable="false">
+            <block type="studio_move" deletable="true" movable="true" editable="true">
               <title name="DIR">4</title>
               <next>
-                <block type="studio_addPoints" deletable="false" movable="false" editable="false">
+                <block type="studio_addPoints" deletable="true" movable="true" editable="true">
                   <title name="VALUE">10</title>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" editable="false">
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
           <title name="VALUE">left</title>
           <next>
-            <block type="studio_move" deletable="false" movable="false" editable="false">
+            <block type="studio_move" deletable="true" movable="true" editable="true">
               <title name="DIR">8</title>
               <next>
-                <block type="studio_addPoints" deletable="false" movable="false" editable="false">
+                <block type="studio_addPoints" deletable="true" movable="true" editable="true">
                   <title name="VALUE">10</title>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenGetCharacter" deletable="false" movable="false" editable="false">
+        <block type="studio_whenGetCharacter" deletable="true" movable="true" editable="true">
           <title name="VALUE">stormtrooper</title>
           <next>
-            <block type="studio_addCharacter" deletable="false" movable="false" editable="false">
+            <block type="studio_addCharacter" deletable="true" movable="true" editable="true">
               <title name="VALUE">"stormtrooper"</title>
               <next>
-                <block type="studio_addCharacter" deletable="false" movable="false" editable="false">
+                <block type="studio_addCharacter" deletable="true" movable="true" editable="true">
                   <title name="VALUE">"stormtrooper"</title>
                   <next>
-                    <block type="studio_removePoints" deletable="false" movable="false" editable="false">
+                    <block type="studio_removePoints" deletable="true" movable="true" editable="true">
                       <title name="VALUE">1000</title>
                     </block>
                   </next>
@@ -163,13 +163,13 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenArrow" deletable="false" movable="false" editable="false">
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
           <title name="VALUE">right</title>
           <next>
-            <block type="studio_move" deletable="false" movable="false" editable="false">
+            <block type="studio_move" deletable="true" movable="true" editable="true">
               <title name="DIR">2</title>
               <next>
-                <block type="studio_addPoints" deletable="false" movable="false" editable="false">
+                <block type="studio_addPoints" deletable="true" movable="true" editable="true">
                   <title name="VALUE">10</title>
                 </block>
               </next>

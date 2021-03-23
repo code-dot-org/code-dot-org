@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-22 21:12:59 UTC",
+    "serialized_at": "2021-03-23 18:16:14 UTC",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -71,7 +71,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Level 0",
+        "progression": "Introduction to AI Lab",
         "level_keys": [
           "ml-classroom vocab-1"
         ]
@@ -121,7 +121,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Explore AI Lab 2: More Datasets!",
+        "progression": "Explore AI Lab",
         "level_keys": [
           "ml-class test-ai lab 2"
         ]

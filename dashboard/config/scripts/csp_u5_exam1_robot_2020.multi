@@ -15,3 +15,22 @@ facing up.
 
 Which of the following programs will move the robot to the gray square following the path shown on the grid?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** See the animation below for a walkthrough of the program.
+
+<img src="https://images.code.org/97286f171a203bd325aa79b300ae02f2-image-1616480872581.gif"
+style="width:300px">
+
+Students walked through examples similar to this when they controlled the robot on the grid in [Lesson 5 - Loops Explore](https://curriculum.code.org/csp-20/unit5/5/) 
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-2.K: For iteration:
+
+a. Write iteration statements.
+
+b. Determine the result or side-effect of iteration statements.
+:::
+
+MARKDOWN
