@@ -108,18 +108,26 @@ class CoursesController < ApplicationController
   end
 
   def vocab
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    return render :forbidden unless unit_group.units[0].is_migrated
     puts "Vocab"
   end
 
   def resources
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    return render :forbidden unless unit_group.units[0].is_migrated
     puts "Resources"
   end
 
   def code
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    return render :forbidden unless unit_group.units[0].is_migrated
     puts "code"
   end
 
   def standards
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    return render :forbidden unless unit_group.units[0].is_migrated
     puts "standards"
   end
 

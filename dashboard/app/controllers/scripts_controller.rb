@@ -144,18 +144,26 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
+    unit = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless unit.is_migrated
     puts "Vocab"
   end
 
   def resources
+    unit = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless unit.is_migrated
     puts "Resources"
   end
 
   def code
+    unit = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless unit.is_migrated
     puts "code"
   end
 
   def standards
+    unit = Script.get_from_cache(params[:script_id])
+    return render :forbidden unless unit.is_migrated
     puts "standards"
   end
 
