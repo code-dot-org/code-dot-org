@@ -99,7 +99,7 @@ class Resource < ApplicationRecord
 
   def serialize_scripts
     if Rails.application.config.levelbuilder_mode
-      lessons.map(&:script).each(&:write_script_json)
+      lessons.map(&:script).uniq.each(&:write_script_json)
     end
   end
 
