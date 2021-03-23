@@ -28,7 +28,9 @@
   padding: 20px;
   margin-left: 234px;
 }
-
+div[dir='rtl'] .resource-text-box{
+  direction: rtl;
+ }
 .resource-title {
   font-size: 20px;
   color: white;

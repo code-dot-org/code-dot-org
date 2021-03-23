@@ -28,11 +28,17 @@
 .left-tutorial {
   right: 20px;
 }
-
+div[dir='rtl'] .left-tutorial{
+  left: 20px;
+  right: auto;
+}
 .right-tutorial {
   right: 270px;
 }
-
+div[dir='rtl'] .right-tutorial{
+  left: 270px;
+  right: auto;
+}
 .tutorial-promo-container .tutorial-box {
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
