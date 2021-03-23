@@ -338,7 +338,10 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 36
+    fontSize: 36,
+    backgroundColor: "rgba(255,255,255,0.8)",
+    padding: 10,
+    borderRadius: 5
   },
 
   statementLabel: {
@@ -361,9 +364,22 @@ export const styles = {
     color: featureColor
   },
 
+  trainModelContainer: { overflow: "hidden", paddingTop: 20 },
+  trainModelDataTable: {
+    width: "30%",
+    overflow: "hidden",
+    opacity: 0.3,
+    paddingTop: 20
+  },
+  trainModelBotContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-25%)"
+  },
+
   trainBot: {
     position: "relative",
-    width: "20%"
+    width: 300
   },
   trainBotHead: {
     transition: "transform 500ms",
@@ -426,13 +442,14 @@ export const styles = {
     marginTop: 10,
     padding: 6,
     cursor: "pointer",
-    height: 43
+    height: 43,
+    width: "100%"
   },
 
   phraseBuilderSelectReadonly: {
     fontSize: 16,
     marginTop: 10,
-    padding: 6,
+    padding: 6
   },
 
   phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
