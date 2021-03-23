@@ -247,7 +247,6 @@ class LevelDetailsDialog extends Component {
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            __useDeprecatedTag
             style={{margin: 5}}
           />
           <Button
