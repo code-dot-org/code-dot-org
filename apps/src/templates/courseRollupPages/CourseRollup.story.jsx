@@ -43,13 +43,7 @@ const defaultVocabProps = {
           key: 'l3',
           position: 3,
           displayName: 'Lesson Three',
-          vocabularies: [
-            {
-              key: 'key',
-              word: 'word',
-              definition: 'definition'
-            }
-          ]
+          vocabularies: []
         },
         {
           key: 'l4',
@@ -107,12 +101,7 @@ const defaultCodeProps = {
           key: 'l3',
           position: 3,
           displayName: 'Lesson Three',
-          programmingExpressions: [
-            {
-              name: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
-          ]
+          programmingExpressions: []
         },
         {
           key: 'l4',
@@ -197,7 +186,7 @@ const defaultResourceProps = {
           key: 'l3',
           position: 3,
           displayName: 'Lesson Three',
-          preparation: '- One',
+          preparation: null,
           resources: {
             Teacher: [
               {
@@ -223,25 +212,7 @@ const defaultResourceProps = {
           position: 4,
           displayName: 'Lesson Four',
           preparation: '- One',
-          resources: {
-            Teacher: [
-              {
-                key: 'teacher-resource',
-                name: 'Teacher Resource',
-                url: 'fake.url',
-                type: 'Slides'
-              }
-            ],
-            Student: [
-              {
-                key: 'student-resource',
-                name: 'Student Resource',
-                url: 'fake.url',
-                download_url: 'download.fake.url',
-                type: 'Activity Guide'
-              }
-            ]
-          }
+          resources: {}
         }
       ]
     }
