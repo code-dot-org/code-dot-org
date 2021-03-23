@@ -93,7 +93,7 @@ export const styles = {
   },
 
   mediumText: {
-    fontSize: 18,
+    fontSize: 13,
     marginBottom: 8
   },
 
@@ -221,7 +221,8 @@ export const styles = {
     paddingLeft: 20,
     textAlign: "right",
     position: "sticky",
-    top: 0
+    top: 0,
+    fontSize: 12
   },
 
   dataDisplayHeaderLabelSelected: {
@@ -254,7 +255,8 @@ export const styles = {
   },
   tableCell: {
     paddingLeft: 20,
-    textAlign: "right"
+    textAlign: "right",
+    fontSize: 12
   },
   dataDisplayCellLabelSelected: {
     backgroundColor: labelColorSemi,
@@ -395,7 +397,7 @@ export const styles = {
   },
 
   phraseBuilder: {
-    fontSize: 24
+    fontSize: 16
   },
 
   phraseBuilderHeader: {
@@ -420,7 +422,7 @@ export const styles = {
   },
 
   phraseBuilderSelect: {
-    fontSize: 24,
+    fontSize: 16,
     marginTop: 10,
     padding: 6,
     cursor: "pointer",
@@ -428,7 +430,7 @@ export const styles = {
   },
 
   phraseBuilderSelectReadonly: {
-    fontSize: 24,
+    fontSize: 16,
     marginTop: 10,
     padding: 6,
   },
