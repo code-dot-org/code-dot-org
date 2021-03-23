@@ -16,6 +16,7 @@ module Services
     setup do
       Game.game_cache = nil
       PDF.stubs(:generate_from_url)
+      @programming_environment = create :programming_environment, name: 'new-lab'
       @framework = create :framework, shortcode: 'test_framework'
     end
 
@@ -65,7 +66,7 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   30 queries - two for each model, + one extra query each for Lessons,
+      #   32 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -78,6 +79,8 @@ module Services
       #   2 queries, one to remove LessonsVocabularies from each Lesson.
       #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
       #   2 queries, one to remove LessonsStandards from each Lesson.
+      #   1 query to get all the programming environments
+      #   1 query to get all the standards frameworks
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
       #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
       # LevelsScriptLevels has queries which scale linearly with the number of rows.
@@ -85,7 +88,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(94) do
+      assert_queries(97) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -131,6 +134,7 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       script.lessons.each {|l| l.resources.destroy_all}
       script.lessons.each {|l| l.vocabularies.destroy_all}
+      script.resources.destroy_all
       script.freeze
       expected_counts = get_counts
 
@@ -260,8 +264,8 @@ module Services
       assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
       assert_equal(
-        ['Updated Section Name', 'My Activity Section', 'New Section Name'],
-        activity.activity_sections.map(&:name)
+        ['My Activity Section', 'New Section Name', 'Updated Section Name'],
+        activity.activity_sections.map(&:name).sort!
       )
     end
 
@@ -307,6 +311,30 @@ module Services
       assert_equal(
         ['Updated Resource Name', 'fake name', 'New Resource Name'],
         lesson.resources.map(&:name)
+      )
+    end
+
+    test 'seed updates script resources' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        script.resources.first.update!(name: 'updated name')
+        script.resources.create(
+          name: 'New Resource Name',
+          url: "fake.url",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal(
+        ['updated name', 'New Resource Name'],
+        script.resources.map(&:name)
       )
     end
 
@@ -565,6 +593,27 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    # Resources are owned by the course version. We need to make sure all the
+    # resources we need for this script are created, but we should never remove
+    # a resource because it might be in use by another script in this course
+    # version.
+    test 'seed deletes script_resources but not resources' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.resources = []
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['ScriptsResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     # Vocabulary is owned by the course version. We need to make sure all the
     # vocabulary we need for this script are created, but we should never remove
     # any vocabulary because it might be in use by another lesson in this course
@@ -652,6 +701,16 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    test 'seed can only find programming expression if programming environment matches' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+      @programming_environment.update!(name: 'not-new-lab')
+      assert_raises do
+        ScriptSeed.seed_from_json(json)
+      end
+    end
+
     # Standards are shared across all scripts. We should never delete
     # a standard because it might be in use by another script.
     test 'seed deletes lessons_standards' do
@@ -716,7 +775,7 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, Vocabulary, LessonsVocabulary,
+        LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, Vocabulary, LessonsVocabulary,
         LessonsProgrammingExpression, Objective, Standard, LessonsStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
@@ -743,6 +802,10 @@ module Services
         assert_resources_equal(
           s1.lessons.map(&:resources).flatten,
           s2.lessons.map(&:resources).flatten
+        )
+        assert_resources_equal(
+          s1.resources,
+          s2.resources
         )
         assert_vocabularies_equal(
           s1.lessons.map(&:vocabularies).flatten,
@@ -847,6 +910,7 @@ module Services
       num_sections_per_activity: 2,
       num_script_levels_per_section: 2,
       num_resources_per_lesson: 2,
+      num_resources_per_script: 1,
       num_vocabularies_per_lesson: 2,
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
@@ -894,6 +958,11 @@ module Services
         end
       end
 
+      (1..num_resources_per_script).each do |r|
+        resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
+        ScriptsResource.find_or_create_by!(resource: resource, script: script)
+      end
+
       sl_num = 1
       script.lessons.each do |lesson|
         (1..num_activities_per_lesson).each do |activity_pos|
@@ -933,7 +1002,7 @@ module Services
         end
 
         (1..num_programming_expressions_per_lesson).each do |pe|
-          programming_expression = create :programming_expression, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
+          programming_expression = create :programming_expression, programming_environment: @programming_environment, key: "#{lesson.name}-programming-expression-#{pe}", name: "#{lesson.name}-programming-expression-#{pe}"
           LessonsProgrammingExpression.find_or_create_by!(programming_expression: programming_expression, lesson: lesson)
         end
 

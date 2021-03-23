@@ -14,7 +14,7 @@ class InlineFeedback extends Component {
     styles: PropTypes.object,
     isMinecraft: PropTypes.bool,
     skinId: PropTypes.string,
-    textToSpeechEnabled: PropTypes.string
+    textToSpeechEnabled: PropTypes.bool
   };
 
   /**

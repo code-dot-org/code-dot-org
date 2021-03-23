@@ -10,7 +10,7 @@ import {
   confirmNoUnsavedChanges
 } from './editorHelpers.js';
 import foorm, {
-  setAvailableEntities
+  setFetchableEntities
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 
 import 'survey-react/survey.css';
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   const scriptData = getScriptData('props');
   const formNamesAndVersions = scriptData.formNamesAndVersions;
-  getStore().dispatch(setAvailableEntities(formNamesAndVersions));
+  getStore().dispatch(setFetchableEntities(formNamesAndVersions));
 
   ReactDOM.render(
     <Provider store={store}>

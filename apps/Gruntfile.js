@@ -334,6 +334,8 @@ describe('entry tests', () => {
             'build/package/css/code-studio.css',
             'style/code-studio/code-studio.scss'
           ],
+          ['build/package/css/courses.css', 'style/courses.scss'],
+          ['build/package/css/scripts.css', 'style/scripts.scss'],
           ['build/package/css/lessons.css', 'style/lessons.scss'],
           [
             'build/package/css/levelbuilder.css',
@@ -717,6 +719,8 @@ describe('entry tests', () => {
     'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
     'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
     'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
+    'foorm/libraries/editor':
+      './src/sites/studio/pages/foorm/libraries/editor.js',
     'foorm/misc_survey/new': './src/sites/studio/pages/foorm/misc_survey/new.js'
   };
 

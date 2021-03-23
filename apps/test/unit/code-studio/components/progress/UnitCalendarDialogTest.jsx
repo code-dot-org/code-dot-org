@@ -1,7 +1,9 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import UnitCalendarDialog from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
+import UnitCalendarDialog, {
+  WEEK_WIDTH
+} from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import {testLessons} from './unitCalendarTestData';
 
@@ -17,7 +19,11 @@ describe('UnitCalendarDialog', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={90} />
+        <UnitCalendar
+          lessons={testLessons}
+          weeklyInstructionalMinutes={90}
+          weekWidth={WEEK_WIDTH}
+        />
       )
     ).to.be.true;
   });
@@ -41,7 +47,11 @@ describe('UnitCalendarDialog', () => {
     ).to.be.true;
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={45} />
+        <UnitCalendar
+          lessons={testLessons}
+          weeklyInstructionalMinutes={45}
+          weekWidth={WEEK_WIDTH}
+        />
       )
     ).to.be.true;
   });
@@ -65,7 +75,11 @@ describe('UnitCalendarDialog', () => {
     ).to.be.true;
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={20} />
+        <UnitCalendar
+          lessons={testLessons}
+          weeklyInstructionalMinutes={20}
+          weekWidth={WEEK_WIDTH}
+        />
       )
     ).to.be.true;
   });
@@ -84,7 +98,11 @@ describe('UnitCalendarDialog', () => {
     expect(wrapper.state('instructionalMinutes')).to.equal(90);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar lessons={testLessons} weeklyInstructionalMinutes={90} />
+        <UnitCalendar
+          lessons={testLessons}
+          weeklyInstructionalMinutes={90}
+          weekWidth={WEEK_WIDTH}
+        />
       )
     ).to.be.true;
   });

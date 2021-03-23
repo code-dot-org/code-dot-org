@@ -88,9 +88,10 @@ module Services
 
       pdf_dir = Dir.mktmpdir("pdf_generation")
 
-      # Individual Lesson PDFs
+      # Individual Lesson Plan and Student Lesson Plan PDFs
       script.lessons.select(&:has_lesson_plan).each do |lesson|
         generate_lesson_pdf(lesson, pdf_dir)
+        generate_lesson_pdf(lesson, pdf_dir, true) if script.include_student_lesson_plans
       end
 
       # TODO: Script Overview PDFs
@@ -122,34 +123,40 @@ module Services
       DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
     end
 
-    # Build the full path of the lesson plan PDF for the given lesson. This
-    # will be based on not only the lesson's script but also the current
-    # version of the script in the environment.
+    # Build the full path of the lesson plan or student lesson plan
+    # PDF for the given lesson. This will be based on not only the
+    # lesson's script but also the current version of the script in the environment.
     #
-    # Expect this to look something like
+    # Expect this to look something like this for teacher lesson plans
     # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
-    def self.get_pathname(lesson)
+    # and this for student lesson plans
+    # <Pathname:csp1-2021/20210216001309/student/Welcome to CSP.pdf>
+    def self.get_pathname(lesson, student_facing = false)
       return nil unless lesson&.script&.seeded_from
       version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
       filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
-      return Pathname.new(File.join(lesson.script.name, version_number, filename))
+      if student_facing
+        return Pathname.new(File.join(lesson.script.name, version_number, 'student', filename))
+      else
+        return Pathname.new(File.join(lesson.script.name, version_number, filename))
+      end
     end
 
-    def self.get_url(lesson)
-      pathname = get_pathname(lesson)
+    def self.get_url(lesson, student_facing=false)
+      pathname = get_pathname(lesson, student_facing)
       return nil unless pathname.present?
 
       File.join(get_base_url, pathname)
     end
 
-    def self.pdf_exists_for?(lesson)
-      pathname = get_pathname(lesson)
+    def self.pdf_exists_for?(lesson, student_facing=false)
+      pathname = get_pathname(lesson, student_facing)
       AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
     end
 
-    def self.generate_lesson_pdf(lesson, directory="/tmp/")
-      url = Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
-      pathname = get_pathname(lesson)
+    def self.generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
+      url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
+      pathname = get_pathname(lesson, student_facing)
 
       ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
 
