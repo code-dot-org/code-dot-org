@@ -145,22 +145,22 @@ class ScriptsController < ApplicationController
 
   def vocab
     unit = Script.get_from_cache(params[:script_id])
-    render 'vocab', locals: {unit: unit}
+    render 'vocab', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def resources
     unit = Script.get_from_cache(params[:script_id])
-    render 'resources', locals: {unit: unit}
+    render 'resources', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def code
     unit = Script.get_from_cache(params[:script_id])
-    render 'code', locals: {unit: unit}
+    render 'code', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def standards
     unit = Script.get_from_cache(params[:script_id])
-    render 'standards', locals: {unit: unit}
+    render 'standards', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   private
