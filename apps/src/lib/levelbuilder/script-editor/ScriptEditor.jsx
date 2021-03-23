@@ -3,6 +3,7 @@ import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
@@ -11,9 +12,7 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonE
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -71,7 +70,7 @@ class ScriptEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
@@ -96,10 +95,12 @@ class ScriptEditor extends React.Component {
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
+    initialCourseVersionId: PropTypes.number,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
+    resources: PropTypes.arrayOf(PropTypes.object).isRequired,
     init: PropTypes.func.isRequired
   };
 
@@ -107,9 +108,12 @@ class ScriptEditor extends React.Component {
     super(props);
 
     const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+
+    if (props.isMigrated) {
+      // add empty entries to get to max
+      while (resources.length < Object.keys(ResourceType).length) {
+        resources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -296,6 +300,7 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
+      resourceIds: this.props.resources.map(resource => resource.id),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
@@ -821,13 +826,21 @@ class ScriptEditor extends React.Component {
               Select the Teacher Resources buttons you'd like to have show up on
               the top of the script overview page
             </div>
-            <ResourcesEditor
-              inputStyle={styles.input}
-              resources={this.state.teacherResources}
-              updateTeacherResources={teacherResources =>
-                this.setState({teacherResources})
-              }
-            />
+            {!this.props.isMigrated && (
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={this.state.teacherResources}
+                updateTeacherResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+              />
+            )}
+
+            {this.props.isMigrated && (
+              <MigratedResourcesEditor
+                courseVersionId={this.props.initialCourseVersionId}
+              />
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
@@ -939,7 +952,8 @@ export const UnconnectedScriptEditor = ScriptEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList
+    levelKeyList: state.levelKeyList,
+    resources: state.resources
   }),
   {
     init

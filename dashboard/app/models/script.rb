@@ -40,7 +40,7 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_many :resources, join_table: :scripts_resources
+  has_and_belongs_to_many :resources, join_table: :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -1257,7 +1257,8 @@ class Script < ApplicationRecord
       errors.add(:base, e.to_s)
       return false
     end
-    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
+    update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
     begin
       if Rails.application.config.levelbuilder_mode
         script = Script.find_by_name(script_name)
@@ -1265,7 +1266,7 @@ class Script < ApplicationRecord
         # across environments. The CPlat team is working on replacing it a new JSON-based approach.
         script.write_script_dsl
 
-        # Also save in JSON format for "new seeding". This has not been launched yet, but as part of
+        # Also save in JSON format for "new seeding". This has not been launched yet for most scripts, but as part of
         # pre-launch testing, we'll start generating these files in addition to the old .script files.
         script.write_script_json
       end
@@ -1298,6 +1299,16 @@ class Script < ApplicationRecord
         skip_name_format_validation: true
       }
     )
+  end
+
+  def update_migrated_teacher_resources(resource_ids)
+    teacher_resources = resource_ids.map {|id| Resource.find(id)}
+    self.resources = teacher_resources
+  end
+
+  def get_teacher_resources
+    return resources.map(&:summarize_for_script_unit_group_overview) if is_migrated?
+    return teacher_resources
   end
 
   def self.rake
@@ -1420,7 +1431,7 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      teacher_resources: teacher_resources,
+      teacher_resources: get_teacher_resources,
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
@@ -1447,7 +1458,8 @@ class Script < ApplicationRecord
       scriptPath: script_path(self),
       showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated scripts for now
       weeklyInstructionalMinutes: weekly_instructional_minutes,
-      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false
+      includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
+      courseVersionId: get_course_version&.id
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
