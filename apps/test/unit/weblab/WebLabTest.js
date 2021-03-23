@@ -19,7 +19,6 @@ import WebLab from '@cdo/apps/weblab/WebLab';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
-var filesApi = require('@cdo/apps/clientApi').files;
 
 describe('WebLab', () => {
   let weblab;
@@ -60,7 +59,6 @@ describe('WebLab', () => {
       expect(getStore().dispatch).to.have.been.calledWith(
         changeMaxProjectCapacity(20971520)
       );
-      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('does not set startSources if there are none', () => {
@@ -79,13 +77,7 @@ describe('WebLab', () => {
       const validJSON = {value: 'test'};
       config.level.startSources = JSON.stringify(validJSON);
       weblab.init(config);
-      expect(weblab.startSources.value).to.equal('test');
-    });
-
-    it('calls the filesApi to get files', () => {
-      sinon.spy(filesApi, 'getFiles');
-      weblab.init(config);
-      expect(filesApi.getFiles).to.have.been.calledOnce;
+      expect(weblab.startSources).to.deep.equal({value: 'test'});
     });
   });
 
@@ -209,21 +201,19 @@ describe('WebLab', () => {
         expect(value).to.equal('');
       });
     });
+
     it('rejects with error if brambleHost syncFiles has an error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => {
-          callback('error');
-        }
+        syncFiles: callback => callback('error')
       };
       weblab.getCodeAsync().catch(error => {
         expect(error).to.equal('error');
       });
     });
+
     it('resolves with files version id when brambleHost syncFiles has no error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => {
-          callback();
-        }
+        syncFiles: callback => callback('error')
       };
       weblab.initialFilesVersionId = 'version-id';
       weblab.getCodeAsync().then(val => {
