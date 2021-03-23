@@ -17,7 +17,7 @@ export default class UnitRollup extends Component {
   render() {
     return (
       <div style={styles.main}>
-        <h1>{`Unit ${this.props.objectToRollUp}`}</h1>
+        <h1>{this.props.unit.title + ' ' + this.props.objectToRollUp}</h1>
         <RollupUnitEntry
           objectToRollUp={this.props.objectToRollUp}
           unit={this.props.unit}

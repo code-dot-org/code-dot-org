@@ -1,4 +1,6 @@
 - data = {}
+- data[:course_summary] = local_assigns[:course_summary]
+
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/courses/standards.js'), data: {courses_rollup: data.to_json}}
 
