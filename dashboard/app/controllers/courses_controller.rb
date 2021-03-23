@@ -107,6 +107,22 @@ class CoursesController < ApplicationController
     render 'edit', locals: {unit_group: unit_group}
   end
 
+  def vocab
+    puts "Vocab"
+  end
+
+  def resources
+    puts "Resources"
+  end
+
+  def code
+    puts "code"
+  end
+
+  def standards
+    puts "standards"
+  end
+
   def i18n_params
     params.permit(
       :title,
