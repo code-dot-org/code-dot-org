@@ -49,9 +49,10 @@ class Predict extends Component {
                 return (
                   <div key={index}>
                     <label>
-                      {feature} [{this.props.rangesByColumn[feature].min},{" "}
-                      {this.props.rangesByColumn[feature].max}
-                      ]: &nbsp;
+                      {feature} (min:{" "}
+                      {+this.props.rangesByColumn[feature].min.toFixed(2)}, max:{" "}
+                      {+this.props.rangesByColumn[feature].max.toFixed(2)}
+                      ): &nbsp;
                       <input
                         type="number"
                         onChange={event => this.handleChange(event, feature)}
