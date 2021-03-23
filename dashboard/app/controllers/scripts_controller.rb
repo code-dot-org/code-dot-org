@@ -143,6 +143,22 @@ class ScriptsController < ApplicationController
     render 'levels/instructions', locals: {stages: script.lessons}
   end
 
+  def vocab
+    puts "Vocab"
+  end
+
+  def resources
+    puts "Resources"
+  end
+
+  def code
+    puts "code"
+  end
+
+  def standards
+    puts "standards"
+  end
+
   private
 
   def set_script_file
