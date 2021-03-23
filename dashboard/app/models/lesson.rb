@@ -385,6 +385,19 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_rollup(user)
+    {
+      key: key,
+      position: relative_position,
+      displayName: localized_name,
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+    }
+  end
+
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {

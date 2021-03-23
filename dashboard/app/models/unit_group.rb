@@ -326,6 +326,17 @@ class UnitGroup < ApplicationRecord
     }
   end
 
+  def summarize_for_rollup(user = nil)
+    {
+      title: localized_title,
+      version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
+      units: scripts_for_user(user).map do |script|
+        script.summarize_for_rollup(user)
+      end,
+      has_numbered_units: has_numbered_units?
+    }
+  end
+
   def link
     Rails.application.routes.url_helpers.course_path(self)
   end

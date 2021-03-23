@@ -144,19 +144,23 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    puts "Vocab"
+    unit = Script.get_from_cache(params[:script_id])
+    render 'vocab', locals: {unit: unit}
   end
 
   def resources
-    puts "Resources"
+    unit = Script.get_from_cache(params[:script_id])
+    render 'resources', locals: {unit: unit}
   end
 
   def code
-    puts "code"
+    unit = Script.get_from_cache(params[:script_id])
+    render 'code', locals: {unit: unit}
   end
 
   def standards
-    puts "standards"
+    unit = Script.get_from_cache(params[:script_id])
+    render 'standards', locals: {unit: unit}
   end
 
   private

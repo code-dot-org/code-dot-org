@@ -108,19 +108,23 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    puts "Vocab"
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    render 'vocab', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
   def resources
-    puts "Resources"
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    render 'resources', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
   def code
-    puts "code"
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    render 'code', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
   def standards
-    puts "standards"
+    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    render 'standards', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
   def i18n_params
