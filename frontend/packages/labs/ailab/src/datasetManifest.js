@@ -39,63 +39,63 @@ export const allDatasets = [
     name: "Bike Sharing",
     path: "datasets/bike_sharing.csv",
     metadataPath: "datasets/bike_sharing.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/bike_sharing.jpg"
   },
   {
     id: "billionaires",
     name: "Billionaires",
     path: "datasets/billionaires.csv",
     metadataPath: "datasets/billionaires.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/billionaires.jpg"
   },
   {
     id: "census_knn",
     name: "Full Census Data",
     path: "datasets/census_full_for_knn.csv",
     metadataPath: "datasets/census_full_for_knn.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/census.jpg"
   },
   {
     id: "census_svm",
     name: "Partial Census Data",
     path: "datasets/census_part_for_svm.csv",
     metadataPath: "datasets/census_part_for_svm.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/census.jpg"
   },
   {
     id: "happiness_contribution",
     name: "Global Happiness (contribution)",
     path: "datasets/global_happiness_contribution.csv",
     metadataPath: "datasets/global_happiness_contribution.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/global_happiness.jpg"
   },
   {
     id: "happiness_raw",
     name: "Global Happiness (raw)",
     path: "datasets/global_happiness_raw.csv",
     metadataPath: "datasets/global_happiness_raw.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/global_happiness.jpg"
   },
   {
     id: "land_temp",
     name: "Global Land Temperature",
     path: "datasets/global_land_temp_country_1995_2016.csv",
     metadataPath: "datasets/global_land_temp_country_1995_2016.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/global_land_temp_country_1995_2016.jpg"
   },
   {
     id: "housing",
     name: "Housing Prices",
     path: "datasets/housing_data.csv",
     metadataPath: "datasets/housing_data.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/housing_data.jpg"
   },
   {
     id: "insurance",
     name: "Insurance Data",
     path: "datasets/insurance_cost.csv",
     metadataPath: "datasets/insurance_cost.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/insurance_cost.jpg"
   },
   {
     id: "spotify",
@@ -109,21 +109,21 @@ export const allDatasets = [
     name: "State Demographics",
     path: "datasets/state_demographics.csv",
     metadataPath: "datasets/state_demographics.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/state_demographics.jpg"
   },
   {
     id: "student_alcohol_consumption",
     name: "Student Health Survey",
     path: "datasets/student_alcohol_consumption.csv",
     metadataPath: "datasets/student_alcohol_consumption.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/student_alcohol_consumption.jpg"
   },
   {
     id: "heart",
     name: "Heart Health",
     path: "datasets/heart.csv",
     metadataPath: "datasets/heart.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/heart.jpg"
   },
   {
     id: "pokemon",
@@ -133,9 +133,11 @@ export const allDatasets = [
     imagePath: "datasets/temp.jpg"
   },
   {
-    id: "zoo", name: "Zoo", path: "datasets/zoo.csv",
+    id: "zoo",
+    name: "Zoo",
+    path: "datasets/zoo.csv",
     metadataPath: "datasets/zoo.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/zoo.jpg"
   },
   {
     id: "tacos_toy",
@@ -254,21 +256,21 @@ export const allDatasets = [
     name: "Nutrition",
     path: "datasets/nutrition.csv",
     metadataPath: "datasets/nutrition.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/nutrition.jpg"
   },
   {
     id: "student_survey",
     name: "Student Lifestyle Survey",
     path: "datasets/student_survey.csv",
     metadataPath: "datasets/student_survey.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/student_survey.jpg"
   },
   {
     id: "abalone",
     name: "Abalone",
     path: "datasets/abalone.csv",
     metadataPath: "datasets/abalone.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/abalone.jpg"
   },
   {
     id: "auto-mpg",
@@ -289,30 +291,29 @@ export const allDatasets = [
     name: "Poisonous Mushrooms",
     path: "datasets/mushrooms.csv",
     metadataPath: "datasets/mushrooms.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/mushrooms.jpg"
   },
   {
     id: "car_evaluation",
     name: "Car Evaluation",
     path: "datasets/car_evaluation.csv",
     metadataPath: "datasets/car_evaluation.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/car_evaluation.jpg"
   },
   {
     id: "school_scores",
     name: "SAT Scores",
     path: "datasets/school_scores.csv",
     metadataPath: "datasets/school_scores.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/school_scores.jpg"
   },
   {
     id: "house-votes-84",
     name: "1984 US House Votes",
     path: "datasets/house-votes-84.csv",
     metadataPath: "datasets/house-votes-84.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/house-votes-84.jpg"
   }
-
 ];
 
 export function getAvailableDatasets(specificDatasets) {
