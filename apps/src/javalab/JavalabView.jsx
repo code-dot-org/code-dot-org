@@ -15,11 +15,13 @@ const style = {
   instructionsAndPreview: {
     width: '40%',
     position: 'relative',
-    marginRight: 15
+    marginRight: 15,
+    color: color.black
   },
   editorAndConsole: {
     width: '60%',
-    position: 'relative'
+    position: 'relative',
+    color: color.white
   },
   preview: {
     backgroundColor: color.light_gray,
