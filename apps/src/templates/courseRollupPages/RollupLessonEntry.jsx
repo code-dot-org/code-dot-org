@@ -34,8 +34,6 @@ export default class RollupLessonEntry extends Component {
     lesson: PropTypes.object
   };
 
-  /* TO DO: Do something nice when there are no things in that lesson */
-
   render() {
     return (
       <div style={styles.main}>

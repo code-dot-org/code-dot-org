@@ -43,6 +43,7 @@ export default class RollupLessonEntrySection extends Component {
         </div>
         <div style={styles.entries}>
           {this.props.objectToRollUp === 'Vocabulary' &&
+            this.props.lesson.vocabularies.length > 0 &&
             this.props.lesson.vocabularies.map(vocab => (
               <li key={vocab.key}>
                 <InlineMarkdown
@@ -50,7 +51,12 @@ export default class RollupLessonEntrySection extends Component {
                 />
               </li>
             ))}
+          {this.props.objectToRollUp === 'Vocabulary' &&
+            this.props.lesson.vocabularies.length <= 0 && (
+              <p>There is no vocabulary for this lesson.</p>
+            )}
           {this.props.objectToRollUp === 'Code' &&
+            this.props.lesson.programmingExpressions.length > 0 &&
             this.props.lesson.programmingExpressions.map(expression => (
               <li key={expression.name}>
                 <a
@@ -62,40 +68,58 @@ export default class RollupLessonEntrySection extends Component {
                 </a>
               </li>
             ))}
-          {this.props.objectToRollUp === 'Resources' && (
-            <div>
-              {this.props.lesson.resources['Teacher'] && (
-                <div>
-                  <h5>{i18n.forTheTeachers()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['Teacher']}
-                  />
-                </div>
-              )}
-              {this.props.lesson.resources['Student'] && (
-                <div>
-                  <h5>{i18n.forTheStudents()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['Student']}
-                  />
-                </div>
-              )}
-              {this.props.lesson.resources['All'] && (
-                <div>
-                  <h5>{i18n.forAll()}</h5>
-                  <ResourceList
-                    resources={this.props.lesson.resources['All']}
-                  />
-                </div>
-              )}
-            </div>
-          )}
-          {this.props.objectToRollUp === 'Prep' && (
-            <EnhancedSafeMarkdown
-              markdown={this.props.lesson.preparation}
-              expandableImages
-            />
-          )}
+          {this.props.objectToRollUp === 'Code' &&
+            this.props.lesson.programmingExpressions.length <= 0 && (
+              <p>There is no introduced code for this lesson.</p>
+            )}
+          {this.props.objectToRollUp === 'Resources' &&
+            (this.props.lesson.resources['Teacher'] ||
+              this.props.lesson.resources['Student'] ||
+              this.props.lesson.resources['All']) && (
+              <div>
+                {this.props.lesson.resources['Teacher'] && (
+                  <div>
+                    <h5>{i18n.forTheTeachers()}</h5>
+                    <ResourceList
+                      resources={this.props.lesson.resources['Teacher']}
+                    />
+                  </div>
+                )}
+                {this.props.lesson.resources['Student'] && (
+                  <div>
+                    <h5>{i18n.forTheStudents()}</h5>
+                    <ResourceList
+                      resources={this.props.lesson.resources['Student']}
+                    />
+                  </div>
+                )}
+                {this.props.lesson.resources['All'] && (
+                  <div>
+                    <h5>{i18n.forAll()}</h5>
+                    <ResourceList
+                      resources={this.props.lesson.resources['All']}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          {this.props.objectToRollUp === 'Resources' &&
+            !(
+              this.props.lesson.resources['Teacher'] ||
+              this.props.lesson.resources['Student'] ||
+              this.props.lesson.resources['All']
+            ) && <p>There are no resources for this lesson.</p>}
+          {this.props.objectToRollUp === 'Prep' &&
+            this.props.lesson.preparation && (
+              <EnhancedSafeMarkdown
+                markdown={this.props.lesson.preparation}
+                expandableImages
+              />
+            )}
+          {this.props.objectToRollUp === 'Prep' &&
+            !this.props.lesson.preparation && (
+              <p>There is no prep for this lesson.</p>
+            )}
         </div>
       </div>
     );
