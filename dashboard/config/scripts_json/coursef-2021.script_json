@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-22 22:17:55 UTC",
+    "serialized_at": "2021-03-23 20:05:03 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -7512,18 +7512,15 @@
       "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Example projects",
-        "level_keys": [
-          "courseF_project_exemplars_2021"
-        ]
+        "progression": "Example projects"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_project_exemplars_2021"
+          "courseF_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -7531,14 +7528,14 @@
         "activity_section.key": "db7f26e9-547b-4801-8328-a93aefc4ce9e"
       },
       "level_keys": [
-        "courseF_project_exemplars_2021"
+        "courseF_EOC_examples_2021"
       ]
     },
     {
       "chapter": 109,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -10098,9 +10095,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_project_exemplars_2021",
+        "level.key": "courseF_EOC_examples_2021",
         "script_level.level_keys": [
-          "courseF_project_exemplars_2021"
+          "courseF_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
