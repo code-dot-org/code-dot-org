@@ -9,7 +9,10 @@
   width: 330px;
   padding: 20px 10px 10px;
 }
-
+.dance-party-container[dir='rtl'] .img-dance-stars{
+  left: auto;
+  right: 70px;
+} 
 .desktop-only, .tablet-only, .mobile-only {
   display: none;
 }
@@ -79,7 +82,10 @@ a.translate-link:hover {
   font-weight: bold;
   margin-left: 10px;
 }
-
+.dance-party-container[dir='rtl'] .img-container{
+  left: auto;
+  right: 70px;
+} 
 .dance-thumbnail-tile-img {
   width: 100%;
 }
@@ -275,7 +281,9 @@ a:hover {
   width: 460px;
   font-family: 'Gotham 5r', sans-serif;
 }
-
+/* div[dir='rtl'] .new-announcement{
+ right: 50%;
+} */
 .new-announcement .highlight-word {
   color: rgb(89, 202, 211);
 }
