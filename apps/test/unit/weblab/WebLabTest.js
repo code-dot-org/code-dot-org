@@ -8,7 +8,10 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import reducers from '@cdo/apps/weblab/reducers';
-import {changeMaxProjectCapacity} from '@cdo/apps/weblab/actions';
+import {
+  changeMaxProjectCapacity,
+  changeFullScreenPreviewOn
+} from '@cdo/apps/weblab/actions';
 import {
   singleton as studioApp,
   stubStudioApp,
@@ -62,7 +65,6 @@ describe('WebLab', () => {
       expect(getStore().dispatch).to.have.been.calledWith(
         changeMaxProjectCapacity(20971520)
       );
-      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('does not set startSources if there are none', () => {
@@ -81,13 +83,7 @@ describe('WebLab', () => {
       const validJSON = {value: 'test'};
       config.level.startSources = JSON.stringify(validJSON);
       weblab.init(config);
-      expect(weblab.startSources.value).to.equal('test');
-    });
-
-    it('calls the filesApi to get files', () => {
-      sinon.spy(filesApi, 'getFiles');
-      weblab.init(config);
-      expect(filesApi.getFiles).to.have.been.calledOnce;
+      expect(weblab.startSources).to.deep.equal({value: 'test'});
     });
   });
 
@@ -155,6 +151,65 @@ describe('WebLab', () => {
       expect(weblab.fileEntries).to.equal('entries');
       filesApi.deleteAll.restore();
       console.warn.restore();
+    });
+  });
+
+  describe('onToggleInspector', () => {
+    let brambleHost;
+    beforeEach(() => {
+      brambleHost = {
+        disableInspector: sinon.stub(),
+        enableInspector: sinon.stub()
+      };
+      weblab.brambleHost = brambleHost;
+      stubRedux();
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('disables inspector if inspectorOn', () => {
+      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      weblab.onToggleInspector();
+      expect(brambleHost.disableInspector).to.have.been.calledOnce;
+    });
+
+    it('enables inspector if inspectorOn false', () => {
+      sinon.stub(getStore(), 'getState').returns({inspectorOn: false});
+      weblab.onToggleInspector();
+      expect(brambleHost.enableInspector).to.have.been.calledOnce;
+    });
+  });
+
+  describe('onStartFullScreenPreview', () => {
+    let brambleHost;
+    beforeEach(() => {
+      brambleHost = {
+        enableFullscreenPreview: callback => callback(),
+        disableInspector: sinon.stub()
+      };
+      weblab.brambleHost = brambleHost;
+      stubRedux();
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('disables inspector if inspectorOn', () => {
+      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      weblab.onStartFullScreenPreview();
+      expect(brambleHost.disableInspector).to.have.been.calledOnce;
+    });
+
+    it('dispatches the changeFullScreenPreviewOn action', () => {
+      sinon.stub(getStore(), 'dispatch');
+      sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
+      weblab.onStartFullScreenPreview();
+      expect(getStore().dispatch).to.have.been.calledWith(
+        changeFullScreenPreviewOn(true)
+      );
     });
   });
 
@@ -278,21 +333,19 @@ describe('WebLab', () => {
         expect(value).to.equal('');
       });
     });
+
     it('rejects with error if brambleHost syncFiles has an error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => {
-          callback('error');
-        }
+        syncFiles: callback => callback('error')
       };
       weblab.getCodeAsync().catch(error => {
         expect(error).to.equal('error');
       });
     });
+
     it('resolves with files version id when brambleHost syncFiles has no error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => {
-          callback();
-        }
+        syncFiles: callback => callback('error')
       };
       weblab.initialFilesVersionId = 'version-id';
       weblab.getCodeAsync().then(val => {

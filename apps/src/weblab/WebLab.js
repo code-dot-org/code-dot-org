@@ -150,41 +150,7 @@ WebLab.prototype.init = function(config) {
 
   this.loadFileEntries();
 
-  const onMount = () => {
-    this.setupReduxSubscribers(getStore());
-
-    // TODO: understand if we need to call studioApp
-    // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
-    // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
-    // this.studioApp_.init(config);
-
-    this.studioApp_.setConfigValues_(config);
-
-    // NOTE: if we called studioApp_.init(), the code here would be executed
-    // automatically since pinWorkspaceToBottom is true...
-    var container = document.getElementById(config.containerId);
-    var bodyElement = document.body;
-    bodyElement.style.overflow = 'hidden';
-    bodyElement.className = bodyElement.className + ' pin_bottom';
-    container.className = container.className + ' pin_bottom';
-
-    // NOTE: if we called studioApp_.init(), these calls would not be needed...
-    this.studioApp_.initProjectTemplateWorkspaceIconCallout();
-    this.studioApp_.alertIfCompletedWhilePairing(config);
-    this.studioApp_.initVersionHistoryUI(config);
-    this.studioApp_.initTimeSpent();
-
-    let finishButton = document.getElementById('finishButton');
-    if (finishButton) {
-      dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
-    }
-
-    initializeSubmitHelper({
-      studioApp: this.studioApp_,
-      onPuzzleComplete: this.onFinish.bind(this),
-      unsubmitUrl: this.level.unsubmitUrl
-    });
-  };
+  const wrappedOnMount = () => this.onMount(config);
 
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
@@ -248,34 +214,11 @@ WebLab.prototype.init = function(config) {
     });
   }
 
-  function onStartFullScreenPreview() {
-    if (this.brambleHost) {
-      this.brambleHost.enableFullscreenPreview(() => {
-        // We always want to disable the inspector as we enter fullscreen preview,
-        // as it interferes with the preview display...
-        if (getStore().getState().inspectorOn) {
-          this.brambleHost.disableInspector();
-        }
-        getStore().dispatch(actions.changeFullScreenPreviewOn(true));
-      });
-    }
-  }
-
   function onEndFullScreenPreview() {
     if (this.brambleHost) {
       this.brambleHost.disableFullscreenPreview(() => {
         getStore().dispatch(actions.changeFullScreenPreviewOn(false));
       });
-    }
-  }
-
-  function onToggleInspector() {
-    if (this.brambleHost) {
-      if (getStore().getState().inspectorOn) {
-        this.brambleHost.disableInspector();
-      } else {
-        this.brambleHost.enableInspector();
-      }
     }
   }
 
@@ -288,16 +231,75 @@ WebLab.prototype.init = function(config) {
         onUndo={onUndo.bind(this)}
         onRedo={onRedo.bind(this)}
         onRefreshPreview={onRefreshPreview.bind(this)}
-        onStartFullScreenPreview={onStartFullScreenPreview.bind(this)}
+        onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
-        onToggleInspector={onToggleInspector.bind(this)}
-        onMount={onMount}
+        onToggleInspector={this.onToggleInspector.bind(this)}
+        onMount={wrappedOnMount}
       />
     </Provider>,
     document.getElementById(config.containerId)
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));
+};
+
+WebLab.prototype.onMount = function(config) {
+  this.setupReduxSubscribers(getStore());
+
+  // TODO: understand if we need to call studioApp
+  // Other apps call studioApp.init(). That sets up UI that is not present Web Lab (run, show code, etc) and blows up
+  // if we call it. It's not clear there's anything in there we need, although we may discover there is and need to refactor it
+  // this.studioApp_.init(config);
+
+  this.studioApp_.setConfigValues_(config);
+
+  // NOTE: if we called studioApp_.init(), the code here would be executed
+  // automatically since pinWorkspaceToBottom is true...
+  var container = document.getElementById(config.containerId);
+  var bodyElement = document.body;
+  bodyElement.style.overflow = 'hidden';
+  bodyElement.className = bodyElement.className + ' pin_bottom';
+  container.className = container.className + ' pin_bottom';
+
+  // NOTE: if we called studioApp_.init(), these calls would not be needed...
+  this.studioApp_.initProjectTemplateWorkspaceIconCallout();
+  this.studioApp_.alertIfCompletedWhilePairing(config);
+  this.studioApp_.initVersionHistoryUI(config);
+  this.studioApp_.initTimeSpent();
+
+  let finishButton = document.getElementById('finishButton');
+  if (finishButton) {
+    dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
+  }
+
+  initializeSubmitHelper({
+    studioApp: this.studioApp_,
+    onPuzzleComplete: this.onFinish.bind(this),
+    unsubmitUrl: this.level.unsubmitUrl
+  });
+};
+
+WebLab.prototype.onToggleInspector = function() {
+  if (this.brambleHost) {
+    if (getStore().getState().inspectorOn) {
+      this.brambleHost.disableInspector();
+    } else {
+      this.brambleHost.enableInspector();
+    }
+  }
+};
+
+WebLab.prototype.onStartFullScreenPreview = function() {
+  if (this.brambleHost) {
+    this.brambleHost.enableFullscreenPreview(() => {
+      // We always want to disable the inspector as we enter fullscreen preview,
+      // as it interferes with the preview display...
+      if (getStore().getState().inspectorOn) {
+        this.brambleHost.disableInspector();
+      }
+      getStore().dispatch(actions.changeFullScreenPreviewOn(true));
+    });
+  }
 };
 
 WebLab.prototype.beforeUnload = function(event) {
