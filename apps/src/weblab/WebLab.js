@@ -535,43 +535,45 @@ WebLab.prototype.setupReduxSubscribers = function(store) {
 
 WebLab.prototype.onIsRunningChange = function() {};
 
+WebLab.prototype.onFilesReady = function(files, filesVersionId) {
+  // Gather information when the weblab manifest is empty but should
+  // contain references to files (i.e. after changes have been made to the project)
+  if (filesVersionId && files && files.length === 0) {
+    firehoseClient.putRecord(
+      {
+        study: 'weblab_loading_investigation',
+        study_group: 'empty_manifest',
+        event: 'get_empty_manifest',
+        project_id: getCurrentId()
+      },
+      {includeUserId: true}
+    );
+  }
+  assetListStore.reset(files);
+  this.fileEntries = assetListStore.list().map(fileEntry => ({
+    name: fileEntry.filename,
+    url: filesApi.basePath(fileEntry.filename),
+    versionId: fileEntry.versionId
+  }));
+  this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
+
+  if (filesVersionId !== this.initialFilesVersionId) {
+    // After we've detected the first change to the version, we store this
+    // version id so that subsequent writes will continue to replace the
+    // current version (until the browser page reloads)
+    project.filesVersionId = filesVersionId;
+  }
+  if (this.brambleHost) {
+    // Refresh the file tree after files have been synced with Bramble.
+    this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
+  }
+};
+
 /**
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function() {
-  const onFilesReady = (files, filesVersionId) => {
-    // Gather information when the weblab manifest is empty but should
-    // contain references to files (i.e. after changes have been made to the project)
-    if (filesVersionId && files && files.length === 0) {
-      firehoseClient.putRecord(
-        {
-          study: 'weblab_loading_investigation',
-          study_group: 'empty_manifest',
-          event: 'get_empty_manifest',
-          project_id: getCurrentId()
-        },
-        {includeUserId: true}
-      );
-    }
-    assetListStore.reset(files);
-    this.fileEntries = assetListStore.list().map(fileEntry => ({
-      name: fileEntry.filename,
-      url: filesApi.basePath(fileEntry.filename),
-      versionId: fileEntry.versionId
-    }));
-    this.initialFilesVersionId = this.initialFilesVersionId || filesVersionId;
-
-    if (filesVersionId !== this.initialFilesVersionId) {
-      // After we've detected the first change to the version, we store this
-      // version id so that subsequent writes will continue to replace the
-      // current version (until the browser page reloads)
-      project.filesVersionId = filesVersionId;
-    }
-    if (this.brambleHost) {
-      // Refresh the file tree after files have been synced with Bramble.
-      this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
-    }
-  };
+  const onFilesReady = this.onFilesReady.bind(this);
 
   filesApi.getFiles(
     result => onFilesReady(result.files, result.filesVersionId),

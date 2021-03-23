@@ -19,7 +19,9 @@ import WebLab from '@cdo/apps/weblab/WebLab';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
+import * as utils from '@cdo/apps/utils';
 var filesApi = require('@cdo/apps/clientApi').files;
+var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
 
 describe('WebLab', () => {
   let weblab;
@@ -86,6 +88,73 @@ describe('WebLab', () => {
       sinon.spy(filesApi, 'getFiles');
       weblab.init(config);
       expect(filesApi.getFiles).to.have.been.calledOnce;
+    });
+  });
+
+  describe('afterClearPuzzle', () => {
+    let config;
+    beforeEach(() => {
+      stubRedux();
+      stubStudioApp();
+      weblab.studioApp_ = studioApp();
+      registerReducers(commonReducers);
+      registerReducers(reducers);
+      config = {
+        skin: {},
+        level: {}
+      };
+      sinon.stub(ReactDOM, 'render');
+      sinon.stub(getStore(), 'dispatch');
+      sinon.stub(utils, 'reload');
+      weblab.init(config);
+    });
+
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+      ReactDOM.render.restore();
+      utils.reload.restore();
+    });
+
+    it('throws error showing deleteAll succeeded when filesApi deleteAll succeeds', async () => {
+      sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
+        success({responseText: 'yay'});
+      });
+      weblab.fileEntries = 'entries';
+      let didCatch = false;
+      try {
+        await config.afterClearPuzzle();
+      } catch (error) {
+        didCatch = true;
+        expect(error.message).to.equal(
+          'deleteAll succeeded, weblab handling reload to avoid saving'
+        );
+      }
+      expect(didCatch).to.equal(true);
+      expect(weblab.fileEntries).to.equal(null);
+      filesApi.deleteAll.restore();
+    });
+
+    it('throws error showing deleteAll failed when filesApi deleteAll fails', async () => {
+      sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
+        error({status: 'status'});
+      });
+      sinon.stub(console, 'warn');
+      weblab.fileEntries = 'entries';
+      let didCatch = false;
+      try {
+        await config.afterClearPuzzle();
+      } catch (error) {
+        expect(console.warn).to.have.been.calledOnceWith(
+          'WebLab: error deleteAll failed: status'
+        );
+        didCatch = true;
+        expect(error.message).to.equal('status');
+      }
+      expect(didCatch).to.equal(true);
+      expect(weblab.fileEntries).to.equal('entries');
+      filesApi.deleteAll.restore();
+      console.warn.restore();
     });
   });
 
@@ -275,6 +344,55 @@ describe('WebLab', () => {
       expect(weblab.setBrambleHost(brambleHost)).to.equal(
         'project-id-supplied-files-version-id'
       );
+    });
+  });
+  describe('onFilesReady', () => {
+    let files;
+    beforeEach(() => {
+      sinon.stub(assetListStore, 'reset');
+      files = [
+        {
+          filename: 'file1.html',
+          versionId: '2'
+        },
+        {
+          filename: 'file2.html',
+          versionId: '2'
+        }
+      ];
+      sinon.stub(assetListStore, 'list').returns(files);
+      sinon.stub(filesApi, 'basePath').returns('stubbedpath');
+    });
+    afterEach(() => {
+      assetListStore.reset.restore();
+      assetListStore.list.restore();
+      filesApi.basePath.restore();
+    });
+    it('updates fileEntries and initialFilesVersionId', () => {
+      weblab.fileEntries = [];
+      weblab.initialFilesVersionId = '1';
+      project.filesVersionId = '1';
+      const newFilesVersionId = '2';
+      weblab.brambleHost = {
+        syncFiles: sinon.stub()
+      };
+      weblab.onFilesReady(files, newFilesVersionId);
+      expect(assetListStore.reset).to.have.been.calledOnceWith(files);
+      expect(weblab.fileEntries).to.deep.equal([
+        {
+          name: 'file1.html',
+          url: 'stubbedpath',
+          versionId: '2'
+        },
+        {
+          name: 'file2.html',
+          url: 'stubbedpath',
+          versionId: '2'
+        }
+      ]);
+      expect(weblab.initialFilesVersionId).to.equal('1');
+      expect(project.filesVersionId).to.equal('2');
+      expect(weblab.brambleHost.syncFiles).to.have.been.calledOnce;
     });
   });
 });
