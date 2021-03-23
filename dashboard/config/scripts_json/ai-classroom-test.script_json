@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-11 23:52:58 UTC",
+    "serialized_at": "2021-03-23 18:16:14 UTC",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -71,6 +71,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Introduction to AI Lab",
+        "level_keys": [
+          "ml-classroom vocab-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-classroom vocab-1"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      },
+      "level_keys": [
+        "ml-classroom vocab-1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Explore AI Lab",
         "level_keys": [
           "ml-class test-ai lab 1"
@@ -91,12 +116,12 @@
       ]
     },
     {
-      "chapter": 2,
-      "position": 2,
+      "chapter": 3,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Explore AI Lab 2: More Datasets!",
+        "progression": "Explore AI Lab",
         "level_keys": [
           "ml-class test-ai lab 2"
         ]
@@ -116,8 +141,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -141,8 +166,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -166,7 +191,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -191,7 +216,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -216,7 +241,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -241,7 +266,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -266,7 +291,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -292,6 +317,17 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-classroom vocab-1",
+        "script_level.level_keys": [
+          "ml-classroom vocab-1"
+        ],
+        "lesson.key": "ailab-explore",
+        "lesson_group.key": "",
+        "script.name": "ai-classroom-test"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "ml-class test-ai lab 1",
@@ -404,7 +440,13 @@
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
 
   ]
 }
