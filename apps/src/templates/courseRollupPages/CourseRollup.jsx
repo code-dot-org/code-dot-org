@@ -15,16 +15,17 @@ const styles = {
 export default class CourseRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    units: PropTypes.array
+    units: PropTypes.array,
+    title: PropTypes.string
   };
 
   render() {
     return (
       <div style={styles.main}>
-        <h1>{`Course ${this.props.objectToRollUp}`}</h1>
+        <h1>{this.props.title + ' ' + this.props.objectToRollUp}</h1>
         {this.props.units.map(unit => (
-          <div key={unit.key}>
-            <h1 style={styles.h1}>{unit.displayName}</h1>
+          <div key={unit.name}>
+            <h3 style={styles.h1}>{unit.title}</h3>
             <RollupUnitEntry
               objectToRollUp={this.props.objectToRollUp}
               unit={unit}
