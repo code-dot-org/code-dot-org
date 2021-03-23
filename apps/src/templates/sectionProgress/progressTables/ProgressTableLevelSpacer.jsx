@@ -33,6 +33,15 @@ SublevelSpacer.propTypes = {
   sublevelCount: PropTypes.number.isRequired
 };
 
+/**
+ * A component for laying out arbitrary nodes to align with the level bubbles
+ * in `ProgressTableDetailCell`. The primary purpose is to abstract the logic
+ * for getting a node to properly align with levels that contain sublevels,
+ * since in that case we want the node to align with the parent level and leave
+ * space for the sublevels. Example uses include laying out level icons in
+ * `ProgressTableLevelIconSet`, and laying out text in `ProgressTableContainer`
+ * expansion rows.
+ */
 export default function ProgressTableLevelSpacer({items}) {
   return (
     <span style={styles.container}>

@@ -36,6 +36,31 @@ function idForExpansionIndex(studentId, index) {
   return `${studentId}.${index}`;
 }
 
+/**
+ * This component displays progress data for a section of students, and
+ * abstracts all the functionality common to both our summary (lesson) table
+ * and our detail (level) table. The table consists of one fixed column listing
+ * student names, alongside a virtualized (potentially horizontally-scrolling
+ * to preserve a fixed width) set of columns, each containing the data for a
+ * single lesson. Consequently, the primary inputs for this component are
+ * formatting functions to render the table cells for each lesson.
+ *
+ * Since our detail table includes one more header row than our summary table,
+ * header labels and formatters are likewise provided through props.The whole
+ * table is virtualized vertically to account for any number of students while
+ * preserving a fixed height.
+ *
+ * We provide the ability to expand a row for a student to display additional
+ * rows with more detailed data. To support this, we manage the list of rows to
+ * render through this component's state. To expand a row, we insert additional
+ * "expansion" rows into the list following the row to be expanded. To collapse
+ * the row, we remove those "expansion" rows from the list.
+ *
+ * The number of expansion rows is determined by the number of lesson cell
+ * formatters provided. Each row is rendered by the formatter corresponding to
+ * `row.expansionIndex`, with `lessonCellFormatters[0]` being the primary
+ * formatter for collapsed student rows.
+ */
 class ProgressTableContainer extends React.Component {
   static propTypes = {
     onClickLesson: PropTypes.func.isRequired,
@@ -59,6 +84,12 @@ class ProgressTableContainer extends React.Component {
     this.onToggleRow = this.onToggleRow.bind(this);
     this.recordToggleRow = this.recordToggleRow.bind(this);
     this.numDetailRows = props.lessonCellFormatters.length - 1;
+
+    // the primary table rows are represented by the students in the section,
+    // but to support expanding those rows, we wrap each student in a
+    // `studentTableRowType` object to track their expanded state. these
+    // objects also include an `expansionIndex` to determine which lesson
+    // formatter to use to render the row.
     this.state = {
       rows: props.section.students.map((student, index) => {
         return {
