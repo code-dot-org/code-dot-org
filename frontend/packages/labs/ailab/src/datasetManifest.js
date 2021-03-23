@@ -133,7 +133,9 @@ export const allDatasets = [
     imagePath: "datasets/temp.jpg"
   },
   {
-    id: "zoo", name: "Zoo", path: "datasets/zoo.csv",
+    id: "zoo",
+    name: "Zoo",
+    path: "datasets/zoo.csv",
     metadataPath: "datasets/zoo.json",
     imagePath: "datasets/zoo.jpg"
   },
@@ -312,7 +314,6 @@ export const allDatasets = [
     metadataPath: "datasets/house-votes-84.json",
     imagePath: "datasets/house-votes-84.jpg"
   }
-
 ];
 
 export function getAvailableDatasets(specificDatasets) {
