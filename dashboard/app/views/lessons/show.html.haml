@@ -2,8 +2,7 @@
 %script{src: webpack_asset_path('js/lessons/show.js'),
         data: {lesson: @lesson_data.to_json}}
 
--if request.params.has_key? "emulate_print_media"
-  = javascript_include_tag 'emulate-print-media.js'
+= render partial: 'shared/emulate_print_media'
 
 #show-container
 

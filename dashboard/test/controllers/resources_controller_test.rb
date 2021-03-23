@@ -6,6 +6,8 @@ class ResourcesControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
+    # We don't want to write to the file system here
+    Resource.any_instance.stubs(:serialize_scripts)
   end
 
   test 'can create resource from params' do
@@ -24,6 +26,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
   test 'can update resource from params' do
     sign_in @levelbuilder
+    Resource.any_instance.expects(:serialize_scripts).once
     resource = create :resource, name: 'original name', type: 'Slides'
     post :update, params: {id: resource.id, name: 'new name', type: 'Slides'}
     assert_response :success
