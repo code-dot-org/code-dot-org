@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-19 19:25:41 UTC",
+    "serialized_at": "2021-03-22 20:03:49 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -7754,31 +7754,8 @@
       "properties": {
         "progression": "Example projects",
         "level_keys": [
-          "courseD_project_exemplars_2021"
+          "courseD_EOC_examples_2021"
         ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseD_project_exemplars_2021"
-        ],
-        "lesson.key": "End of Course Project",
-        "lesson_group.key": "end_of_course_project",
-        "script.name": "coursed-2021",
-        "activity_section.key": "44ff9770-a1eb-4ec3-922d-013bcadaef08"
-      },
-      "level_keys": [
-        "courseD_project_exemplars_2021"
-      ]
-    },
-    {
-      "chapter": 153,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Example projects"
       },
       "named_level": null,
       "bonus": false,
@@ -7796,8 +7773,8 @@
       ]
     },
     {
-      "chapter": 154,
-      "position": 3,
+      "chapter": 153,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -9633,18 +9610,6 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "coursed-2021",
         "activity_section.key": "6051c838-42fa-4792-be76-e752d35434dd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseD_project_exemplars_2021",
-        "script_level.level_keys": [
-          "courseD_project_exemplars_2021"
-        ],
-        "lesson.key": "End of Course Project",
-        "lesson_group.key": "end_of_course_project",
-        "script.name": "coursed-2021",
-        "activity_section.key": "44ff9770-a1eb-4ec3-922d-013bcadaef08"
       }
     },
     {

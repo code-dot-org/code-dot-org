@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-22 18:09:00 UTC",
+    "serialized_at": "2021-03-22 20:19:34 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -4123,7 +4123,7 @@
       "key": "b3ac68a6-7600-49ad-bfb3-88d318e25658",
       "position": 1,
       "properties": {
-        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line, mark the start and ending values of the given `for` loop (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.",
+        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line (example pictured below), mark the start and ending values of the given `for` loop (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- **\"for\" loops** give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">",
         "name": "Introduction"
       },
       "seeding_key": {
