@@ -2,7 +2,7 @@ import React from 'react';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 
-const defaultVocabProps = {
+const defaultProps = {
   objectToRollUp: 'Vocabulary',
   units: [
     {
@@ -19,117 +19,13 @@ const defaultVocabProps = {
               word: 'word',
               definition: 'definition'
             }
-          ]
-        },
-        {
-          key: 'l2',
-          position: 2,
-          displayName: 'Lesson Two',
-          vocabularies: [
-            {
-              key: 'key',
-              word: 'word',
-              definition: 'definition'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      key: 'unit-2',
-      displayName: 'Unit 2 - Unit Two',
-      lessons: [
-        {
-          key: 'l3',
-          position: 3,
-          displayName: 'Lesson Three',
-          vocabularies: []
-        },
-        {
-          key: 'l4',
-          position: 4,
-          displayName: 'Lesson Four',
-          vocabularies: [
-            {
-              key: 'key',
-              word: 'word',
-              definition: 'definition'
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
-
-const defaultCodeProps = {
-  objectToRollUp: 'Code',
-  units: [
-    {
-      key: 'unit-1',
-      displayName: 'Unit 1 - Unit One',
-      lessons: [
-        {
-          key: 'l1',
-          position: 1,
-          displayName: 'Lesson One',
+          ],
           programmingExpressions: [
             {
               name: 'playSound',
               link: 'studio.code.org/docs/applab/playSound'
             }
-          ]
-        },
-        {
-          key: 'l2',
-          position: 2,
-          displayName: 'Lesson Two',
-          programmingExpressions: [
-            {
-              name: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
-          ]
-        }
-      ]
-    },
-    {
-      key: 'unit-2',
-      displayName: 'Unit 2 - Unit Two',
-      lessons: [
-        {
-          key: 'l3',
-          position: 3,
-          displayName: 'Lesson Three',
-          programmingExpressions: []
-        },
-        {
-          key: 'l4',
-          position: 4,
-          displayName: 'Lesson Four',
-          programmingExpressions: [
-            {
-              name: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
-
-const defaultResourceProps = {
-  objectToRollUp: 'Resources',
-  units: [
-    {
-      key: 'unit-1',
-      displayName: 'Unit 1 - Unit One',
-      lessons: [
-        {
-          key: 'l1',
-          position: 1,
-          displayName: 'Lesson One',
+          ],
           preparation: '- One',
           resources: {
             Teacher: [
@@ -155,6 +51,19 @@ const defaultResourceProps = {
           key: 'l2',
           position: 2,
           displayName: 'Lesson Two',
+          vocabularies: [
+            {
+              key: 'key',
+              word: 'word',
+              definition: 'definition'
+            }
+          ],
+          programmingExpressions: [
+            {
+              name: 'playSound',
+              link: 'studio.code.org/docs/applab/playSound'
+            }
+          ],
           preparation: '- One',
           resources: {
             Teacher: [
@@ -186,7 +95,29 @@ const defaultResourceProps = {
           key: 'l3',
           position: 3,
           displayName: 'Lesson Three',
+          vocabularies: [],
+          programmingExpressions: [],
           preparation: null,
+          resources: {}
+        },
+        {
+          key: 'l4',
+          position: 4,
+          displayName: 'Lesson Four',
+          vocabularies: [
+            {
+              key: 'key',
+              word: 'word',
+              definition: 'definition'
+            }
+          ],
+          programmingExpressions: [
+            {
+              name: 'playSound',
+              link: 'studio.code.org/docs/applab/playSound'
+            }
+          ],
+          preparation: '- One',
           resources: {
             Teacher: [
               {
@@ -206,13 +137,6 @@ const defaultResourceProps = {
               }
             ]
           }
-        },
-        {
-          key: 'l4',
-          position: 4,
-          displayName: 'Lesson Four',
-          preparation: '- One',
-          resources: {}
         }
       ]
     }
@@ -226,40 +150,39 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Course Vocabulary',
-        story: () => <CourseRollup {...defaultVocabProps} />
+        story: () => <CourseRollup {...defaultProps} />
       },
       {
         name: 'Course Code',
-        story: () => <CourseRollup {...defaultCodeProps} />
+        story: () => <CourseRollup {...defaultProps} objectToRollUp={'Code'} />
       },
       {
         name: 'Course Resources',
-        story: () => <CourseRollup {...defaultResourceProps} />
+        story: () => (
+          <CourseRollup {...defaultProps} objectToRollUp={'Resources'} />
+        )
       },
       {
         name: 'Unit Vocabulary',
         story: () => (
           <UnitRollup
-            unit={defaultVocabProps.units[0]}
-            objectToRollUp={defaultVocabProps.objectToRollUp}
+            unit={defaultProps.units[0]}
+            objectToRollUp={defaultProps.objectToRollUp}
           />
         )
       },
       {
         name: 'Unit Code',
         story: () => (
-          <UnitRollup
-            unit={defaultCodeProps.units[0]}
-            objectToRollUp={defaultCodeProps.objectToRollUp}
-          />
+          <UnitRollup unit={defaultProps.units[0]} objectToRollUp={'Code'} />
         )
       },
       {
         name: 'Unit Resources',
         story: () => (
           <UnitRollup
-            unit={defaultResourceProps.units[0]}
-            objectToRollUp={defaultResourceProps.objectToRollUp}
+            unit={defaultProps.units[0]}
+            objectToRollUp={'Resources'}
           />
         )
       }
