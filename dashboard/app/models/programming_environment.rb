@@ -15,6 +15,8 @@
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
+  validates_uniqueness_of :name
+
   has_many :programming_expressions
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
