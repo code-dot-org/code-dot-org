@@ -34,10 +34,15 @@ const styles = {
 };
 
 const AddButton = function(props) {
+  let className = 'btn';
+  if (props.className) {
+    className += ' ' + props.className;
+  }
+
   return (
     <button
       onClick={props.handler}
-      className="btn"
+      className={className}
       style={styles.addButton}
       type="button"
     >
@@ -48,8 +53,9 @@ const AddButton = function(props) {
 };
 
 AddButton.propTypes = {
-  handler: PropTypes.func,
-  displayText: PropTypes.string.isRequired
+  className: PropTypes.string,
+  displayText: PropTypes.string.isRequired,
+  handler: PropTypes.func
 };
 
 class ActivitySectionCardButtons extends Component {
@@ -197,34 +203,38 @@ class ActivitySectionCardButtons extends Component {
       <div>
         <div style={styles.bottomControls}>
           <span>
-            <AddButton handler={this.handleOpenAddLevel} displayText="Level" />
+            <AddButton
+              className="uitest-open-add-level-button"
+              displayText="Level"
+              handler={this.handleOpenAddLevel}
+            />
             {this.props.hasLessonPlan && (
               <span>
                 <AddButton
-                  handler={this.handleOpenAddTip}
                   displayText="Callout"
+                  handler={this.handleOpenAddTip}
                 />
                 <AddButton
-                  handler={this.handleOpenAddProgrammingExpression}
                   displayText="Doc Link"
+                  handler={this.handleOpenAddProgrammingExpression}
                 />
                 <AddButton
-                  handler={this.handleOpenAddResource}
                   displayText="Resource"
+                  handler={this.handleOpenAddResource}
                 />
                 {this.props.vocabularies.length > 0 && (
                   <AddButton
-                    handler={this.handleOpenAddVocabulary}
                     displayText="Vocab"
+                    handler={this.handleOpenAddVocabulary}
                   />
                 )}
                 <AddButton
-                  handler={this.handleOpenAddSlide}
                   displayText="Slide"
+                  handler={this.handleOpenAddSlide}
                 />
                 <AddButton
-                  handler={this.handleOpenAddUploadImage}
                   displayText="Image"
+                  handler={this.handleOpenAddUploadImage}
                 />
               </span>
             )}
