@@ -9,6 +9,5 @@
     "id",
     "width",
     "height"
-  ],
-  "docFunc": "createCanvasNoAssign"
+  ]
 }
