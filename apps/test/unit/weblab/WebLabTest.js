@@ -29,33 +29,30 @@ import dom from '@cdo/apps/dom';
 
 describe('WebLab', () => {
   let weblab;
+  let config;
 
   beforeEach(() => {
     weblab = new WebLab();
+    stubRedux();
+    stubStudioApp();
+    weblab.studioApp_ = studioApp();
+    registerReducers(commonReducers);
+    registerReducers(reducers);
+    config = {
+      skin: {},
+      level: {}
+    };
+    sinon.stub(ReactDOM, 'render');
+    sinon.stub(getStore(), 'dispatch');
+  });
+
+  afterEach(() => {
+    restoreRedux();
+    restoreStudioApp();
+    ReactDOM.render.restore();
   });
 
   describe('init', () => {
-    let config;
-    beforeEach(() => {
-      stubRedux();
-      stubStudioApp();
-      weblab.studioApp_ = studioApp();
-      registerReducers(commonReducers);
-      registerReducers(reducers);
-      config = {
-        skin: {},
-        level: {}
-      };
-      sinon.stub(ReactDOM, 'render');
-      sinon.stub(getStore(), 'dispatch');
-    });
-
-    afterEach(() => {
-      restoreRedux();
-      restoreStudioApp();
-      ReactDOM.render.restore();
-    });
-
     it('throws an error if studio app doesnt exist', () => {
       weblab.studioApp_ = null;
       expect(weblab.init).to.throw(Error);
@@ -89,66 +86,37 @@ describe('WebLab', () => {
   });
 
   describe('afterClearPuzzle', () => {
-    let config;
     beforeEach(() => {
-      stubRedux();
-      stubStudioApp();
-      weblab.studioApp_ = studioApp();
-      registerReducers(commonReducers);
-      registerReducers(reducers);
-      config = {
-        skin: {},
-        level: {}
-      };
-      sinon.stub(ReactDOM, 'render');
-      sinon.stub(getStore(), 'dispatch');
-      sinon.stub(utils, 'reload');
       weblab.init(config);
+      sinon.stub(utils, 'reload');
     });
 
     afterEach(() => {
-      restoreRedux();
-      restoreStudioApp();
-      ReactDOM.render.restore();
       utils.reload.restore();
     });
 
-    it('throws error showing deleteAll succeeded when filesApi deleteAll succeeds', async () => {
+    it('rejects with error showing deleteAll succeeded when filesApi deleteAll succeeds', async () => {
       sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
         success({responseText: 'yay'});
       });
       weblab.fileEntries = 'entries';
-      let didCatch = false;
-      try {
-        await config.afterClearPuzzle();
-      } catch (error) {
-        didCatch = true;
-        expect(error.message).to.equal(
-          'deleteAll succeeded, weblab handling reload to avoid saving'
-        );
-      }
-      expect(didCatch).to.equal(true);
+      expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith(
+        'deleteAll succeeded, weblab handling reload to avoid saving'
+      );
       expect(weblab.fileEntries).to.equal(null);
       filesApi.deleteAll.restore();
     });
 
-    it('throws error showing deleteAll failed when filesApi deleteAll fails', async () => {
+    it('rejects with error showing deleteAll failed when filesApi deleteAll fails', async () => {
       sinon.stub(filesApi, 'deleteAll').callsFake((success, error) => {
         error({status: 'status'});
       });
       sinon.stub(console, 'warn');
       weblab.fileEntries = 'entries';
-      let didCatch = false;
-      try {
-        await config.afterClearPuzzle();
-      } catch (error) {
-        expect(console.warn).to.have.been.calledOnceWith(
-          'WebLab: error deleteAll failed: status'
-        );
-        didCatch = true;
-        expect(error.message).to.equal('status');
-      }
-      expect(didCatch).to.equal(true);
+      expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith('status');
+      expect(console.warn).to.have.been.calledOnceWith(
+        'WebLab: error deleteAll failed: status'
+      );
       expect(weblab.fileEntries).to.equal('entries');
       filesApi.deleteAll.restore();
       console.warn.restore();
@@ -163,31 +131,26 @@ describe('WebLab', () => {
         enableInspector: sinon.stub()
       };
       weblab.brambleHost = brambleHost;
-      stubRedux();
-    });
-
-    afterEach(() => {
-      restoreRedux();
     });
 
     it('disables inspector if inspectorOn', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onToggleInspector();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
+      getStore().getState.restore();
     });
 
     it('enables inspector if inspectorOn false', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: false});
       weblab.onToggleInspector();
       expect(brambleHost.enableInspector).to.have.been.calledOnce;
+      getStore().getState.restore();
     });
   });
 
   describe('onMount', () => {
     let config;
     beforeEach(() => {
-      stubStudioApp();
-      stubRedux();
       config = {
         containerId: 'container-id'
       };
@@ -202,8 +165,6 @@ describe('WebLab', () => {
     });
 
     afterEach(() => {
-      restoreStudioApp();
-      restoreRedux();
       dom.addClickTouchEvent.restore();
     });
 
@@ -235,26 +196,22 @@ describe('WebLab', () => {
         disableInspector: sinon.stub()
       };
       weblab.brambleHost = brambleHost;
-      stubRedux();
-    });
-
-    afterEach(() => {
-      restoreRedux();
     });
 
     it('disables inspector if inspectorOn', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(brambleHost.disableInspector).to.have.been.calledOnce;
+      getStore().getState.restore();
     });
 
     it('dispatches the changeFullScreenPreviewOn action', () => {
-      sinon.stub(getStore(), 'dispatch');
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onStartFullScreenPreview();
       expect(getStore().dispatch).to.have.been.calledWith(
         changeFullScreenPreviewOn(true)
       );
+      getStore().getState.restore();
     });
   });
 
@@ -403,14 +360,17 @@ describe('WebLab', () => {
     beforeEach(() => {
       sinon.stub(project, 'projectChanged');
     });
+
     afterEach(() => {
       project.projectChanged.restore();
     });
+
     it('does not call projectChanged if it is readonly', () => {
       weblab.readOnly = true;
       weblab.onProjectChanged();
       expect(project.projectChanged).to.have.not.been.called;
     });
+
     it('calls projectChanged if it is not readonly', () => {
       weblab.readOnly = false;
       weblab.onProjectChanged();
@@ -444,6 +404,7 @@ describe('WebLab', () => {
       );
     });
   });
+
   describe('onFilesReady', () => {
     let files;
     beforeEach(() => {
@@ -461,11 +422,13 @@ describe('WebLab', () => {
       sinon.stub(assetListStore, 'list').returns(files);
       sinon.stub(filesApi, 'basePath').returns('stubbedpath');
     });
+
     afterEach(() => {
       assetListStore.reset.restore();
       assetListStore.list.restore();
       filesApi.basePath.restore();
     });
+
     it('updates fileEntries and initialFilesVersionId', () => {
       weblab.fileEntries = [];
       weblab.initialFilesVersionId = '1';
