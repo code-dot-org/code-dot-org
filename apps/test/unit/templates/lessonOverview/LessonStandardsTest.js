@@ -2,19 +2,11 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import {cspStandards, cstaStandards} from './sampleStandardsData';
 
 describe('LessonStandards', () => {
   it('renders standard with parent category', () => {
-    const standard = {
-      frameworkName: 'Next Generation Science Standards',
-      parentCategoryShortcode: 'ESS',
-      parentCategoryDescription: 'Earth and Space Science',
-      categoryShortcode: 'ESS1',
-      categoryDescription: "Earth's Place in the Universe",
-      shortcode: '1-ESS1-1',
-      description:
-        'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
-    };
+    const standard = cspStandards[0];
     const wrapper = mount(<LessonStandards standards={[standard]} />);
     expect(wrapper.text()).to.contain(standard.frameworkName);
     expect(wrapper.text()).to.contain(standard.parentCategoryShortcode);
@@ -26,16 +18,7 @@ describe('LessonStandards', () => {
   });
 
   it('renders standard without parent category', () => {
-    const standard = {
-      frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
-      parentCategoryShortcode: null,
-      parentCategoryDescription: null,
-      categoryShortcode: 'AP',
-      categoryDescription: 'Algorithms & Programming',
-      shortcode: '1B-AP-09',
-      description:
-        'Create programs that use variables to store and modify data.'
-    };
+    const standard = cstaStandards[0];
     const wrapper = mount(<LessonStandards standards={[standard]} />);
     expect(wrapper.text()).to.contain(standard.frameworkName);
     expect(wrapper.text()).to.contain(standard.categoryShortcode);
