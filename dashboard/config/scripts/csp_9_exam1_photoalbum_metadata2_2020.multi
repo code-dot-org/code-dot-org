@@ -11,3 +11,18 @@ This question refers to the same collection of photos and their metadata describ
 Due to a computer error, the Time metadata for all of the photographs is accidentally set to the same time of day. The other pieces of metadata and the data itself are not affected by the error. Which of the following is MOST likely to be the result of this problem?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** With all of the metadata about the time the photographs were taken set the same time of day, it will be impossible for the photographer to tell which photos were taken at that time of day and when all the others were truly taken.
+
+[Lesson 1 - Learning From Data](https://curriculum.code.org/csp-20/unit9/1/) introduced students to metadata and what can be learned from it.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+
+* DAT-2.B: Describe what information can be extracted from metadata.
+
+:::
+
+MARKDOWN
