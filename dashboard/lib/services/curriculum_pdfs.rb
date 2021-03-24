@@ -1,6 +1,23 @@
 require 'cdo/chat_client'
 require 'dynamic_config/dcdo'
 
+# Overview of all Curriculum PDFs
+#
+# Current:
+# - teacher lesson plans (csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf)
+# - student lesson plans (csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf)
+# - script resources (csp1-2021/20210216001309/resources/CSP Unit 1 - Digital Information ('21-'22).pdf)
+# - script overview (csp1-2021/20210216001309/CSP Unit 1 - Digital Information ('21-'22).pdf)
+#
+# Future:
+# - student resources, based on Resource#audience
+# - unit calendar
+# - four rollup pages for unit, unit group, one for each of:
+#   - vocab
+#   - resouces
+#   - standards
+#   - programming expressions
+
 module Services
   # Contains all code related to the generation, storage, and
   # retrieval of Curriculum PDFs.
