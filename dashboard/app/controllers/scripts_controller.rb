@@ -5,7 +5,7 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
@@ -144,26 +144,22 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    unit = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless unit.is_migrated
+    return render :forbidden unless can? :read, @script
     render 'vocab', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def resources
-    unit = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless unit.is_migrated
+    return render :forbidden unless can? :read, @script
     render 'resources', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def code
-    unit = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless unit.is_migrated
+    return render :forbidden unless can? :read, @script
     render 'code', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
   def standards
-    unit = Script.get_from_cache(params[:script_id])
-    return render :forbidden unless unit.is_migrated
+    return render :forbidden unless can? :read, @script
     render 'standards', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
   end
 
