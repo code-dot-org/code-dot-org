@@ -19,3 +19,21 @@ wrong 'Users look for "Happiness Moments" to document in their everyday lives.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** This type of behavior which could be a result of the app design does not help achieve the goal of making the world a happier place overall. A small number of users may find this as a benefit, but most will not.
+
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.A - Explain how an effect of a computing innovation can be both beneficial and harmful.
+* IOC-1.A.3 - Not every effect of a computing innovation is anticipated in advance.
+* IOC-1.A.4 - A single effect can be viewed as both beneficial and harmful by different people, or even by the same person.
+
+
+:::
+
+
+MARKDOWN
