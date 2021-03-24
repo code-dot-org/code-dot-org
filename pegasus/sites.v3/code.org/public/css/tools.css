@@ -79,14 +79,14 @@ h3.tutorial-info-h {
   margin-top: 20px;
 }
 .tutorial-info-start[dir='rtl']{
-  float:right !important;
+  float:right;
 }
 .tutorial-info-guide {
   float: right;
   margin-top: 25px;
 }
 div[dir='rtl'] .tutorial-info-guide{
-  float:left !important;
+  float:left;
 }
 b.purple {
   font-size: 14px;
