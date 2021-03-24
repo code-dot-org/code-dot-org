@@ -101,7 +101,7 @@ class Services::LessonPlanPdfsTest < ActiveSupport::TestCase
     assert_equal Pathname.new("test-pathnames-script/19691231160000/teacher-lesson-plans/test-pathnames-lesson.pdf"),
       Services::LessonPlanPdfs.get_pathname(lesson)
     assert_equal Pathname.new("test-pathnames-script/19691231160000/student-lesson-plans/test-pathnames-lesson.pdf"),
-      Services::LessonPlanPdfs.get_pathname(lesson, student_facing=true)
+      Services::LessonPlanPdfs.get_pathname(lesson, true)
   end
 
   test 'Lesson PDFs are generated into the given directory' do
