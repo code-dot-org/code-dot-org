@@ -285,7 +285,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test "virtual attribute `locked` sets `unlocked_at`" do
     ul = UserLevel.create(user: @user, level: @level, locked: false)
-    assert_not_nil ul.unlocked_at
+    assert_not_nil ul.send(:unlocked_at)
   end
 
   test "authorized_teacher cant become locked" do

@@ -273,17 +273,8 @@ Scenario: Lock settings for retake after submit scenario
   And I unlock the stage for students
   And I wait until element ".modal-backdrop" is gone
 
-  # now editable, and student can resubmit
+  # now editable, and student can see unsubmit button
 
   When I sign in as "frank"
   When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
-  And I click selector ".submitButton" once I see it
-  And I wait to see a dialog titled "Submit your survey"
-  And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/stage/31/puzzle/1"
-
-  # now locked for student
-
-  When I am on "http://studio.code.org/s/allthethings"
-  And I wait until element "td:contains(Anonymous student survey 2)" is visible
-  Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
+  Then element ".unsubmitButton" is visible
