@@ -1,6 +1,5 @@
 require 'cdo/chat_client'
 require 'dynamic_config/dcdo'
-require 'pdf/conversion'
 
 module Services
   # Contains all code related to the generation, storage, and
@@ -8,20 +7,11 @@ module Services
   #
   # Also see curriculum_pdfs.rake for some associated logic
   module CurriculumPdfs
-    include Services::CurriculumPdfs::LessonPlans
+    include LessonPlans
+    include Utils
 
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
-
-    # Simple helper for comparing serialized_at and seeded_from values. Because
-    # these values sometimes come from json and sometimes come from the
-    # database, we want to do some normalization to make our inequality
-    # comparison more consistent.
-    def self.timestamps_equal(left, right)
-      left = Time.parse(left) if left.is_a? String
-      right = Time.parse(right) if right.is_a? String
-      return left.to_i == right.to_i
-    end
 
     # Whether or not we should generate PDFs. Specifically, this
     # encapsulates three concerns:
@@ -80,17 +70,6 @@ module Services
       upload_generated_pdfs_to_s3(pdf_dir)
 
       FileUtils.remove_entry_secure(pdf_dir) unless DEBUG
-    end
-
-    def self.get_base_url
-      # For production, we have a full CloudFormation stack set up which serves
-      # the bucket from a subdomain via CloudFront. We do this so the
-      # user-facing button can work as a download button rather than just a
-      # link, which we can't do with a cross-origin URL.
-      #
-      # We don't have an equivalent set up for the debug bucket, so we just use
-      # the direct S3 link.
-      DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
     end
 
     def self.upload_generated_pdfs_to_s3(directory)
