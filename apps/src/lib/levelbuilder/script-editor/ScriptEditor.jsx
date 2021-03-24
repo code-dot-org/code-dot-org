@@ -63,6 +63,7 @@ class ScriptEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialHidden: PropTypes.bool,
     initialIsStable: PropTypes.bool,
+    initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
@@ -265,6 +266,7 @@ class ScriptEditor extends React.Component {
       announcements: JSON.stringify(this.state.announcements),
       visible_to_teachers: !this.state.hidden,
       is_stable: this.state.isStable,
+      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -705,6 +707,22 @@ class ScriptEditor extends React.Component {
                   this.setState({pilotExperiment})
                 }
               />
+              <label>
+                Deprecated
+                <input
+                  type="checkbox"
+                  checked={this.state.deprecated}
+                  style={styles.checkbox}
+                  onChange={() => this.setState({deprecated: true})}
+                />
+                <HelpTip>
+                  <p>
+                    Used only for Deeper Learning Courses. Prevents Peer Review
+                    Levels from displaying on the Deeper Learning Dashboard. In
+                    the future will be used to Deprecate any course.
+                  </p>
+                </HelpTip>
+              </label>
             </div>
           )}
         </CollapsibleEditorSection>
