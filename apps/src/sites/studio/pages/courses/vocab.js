@@ -25,7 +25,3 @@ function initPage() {
     document.getElementById('roll_up')
   );
 }
-
-/*
-
-  */
