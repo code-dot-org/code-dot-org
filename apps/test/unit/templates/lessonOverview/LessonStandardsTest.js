@@ -26,4 +26,14 @@ describe('LessonStandards', () => {
     expect(wrapper.text()).to.contain(standard.shortcode);
     expect(wrapper.text()).to.contain(standard.description);
   });
+
+  it('renders many standards from different frameworks', () => {
+    const standards = cspStandards.concat(cstaStandards);
+    const wrapper = mount(<LessonStandards standards={standards} />);
+    const text = wrapper.text();
+    standards.forEach(standard => {
+      expect(text).to.contain(standard.shortcode);
+      expect(text).to.contain(standard.description);
+    });
+  });
 });
