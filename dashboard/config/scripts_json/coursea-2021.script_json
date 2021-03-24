@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-19 23:17:49 UTC",
+    "serialized_at": "2021-03-24 16:28:53 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -2094,7 +2094,7 @@
       "key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
       "position": 1,
       "properties": {
-        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1gEVKhBT8LJgQHGKrS-JwWOULvI47oibdxHQhPEAdvAg/edit#heading=h.gv7mjyc3j59j)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
+        "description": "###Help Your Sunflower Grow (90-120 minutes)###\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + English Language Arts + Math + Science**\n\n[Help Your Sunflower Grow](https://docs.google.com/document/d/1R2dh01_VVwP0lNnz45DTYDTbFYpwntJW0l53LLCGG4g/edit?usp=sharing)  is an optional activity aligned to Common Core ELA, Common Core Math and Next Generation Science Standards, written by our teacher community. Students will practice sequencing using tangible cards. \n\n*Standards Addressed:*\n\n- **NGSS K.LS.1** Use observations to describe patterns of what plants and animals (including humans) need to survive.\n\n- **CCSS.MATH.CONTENT.K.CC.B.4.A** When counting objects, say the number names in the standard order, pairing each object with one and only one number name and each number name with one and only one object.\n- **CCSS.MATH.CONTENT.K.G.A.1** Describe objects in the environment using names of shapes, and describe the relative positions of these objects using terms such as above, below, beside, in front of, behind, and next to.\n\n- **CCSS.ELA-LITERACY.L.K.4.A** Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on kindergarten reading and content.\n"
       },
       "seeding_key": {
         "activity_section.key": "2ad0c170-bdf8-4e67-8334-92bba6011a60",
@@ -6774,18 +6774,6 @@
       }
     },
     {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
       "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
       "key": "course-ab-blockly-blocks",
@@ -6822,18 +6810,6 @@
       }
     },
     {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
       "name": "Debugging With the Step Button",
       "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
       "key": "csf_debugging_k1_blocks",
@@ -6859,18 +6835,6 @@
       }
     },
     {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
       "name": "Feeling Faces - Emotion Image",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
       "key": "feeling_faces_-_emotion_image_1",
@@ -6880,32 +6844,6 @@
       },
       "seeding_key": {
         "resource.key": "feeling_faces_-_emotion_image_1"
-      }
-    },
-    {
-      "name": "Happy Map Cards",
-      "url": "https://drive.google.com/open?id=15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c",
-      "key": "happy-map-cards",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "name": "Happy Map Game Pieces",
-      "url": "https://drive.google.com/open?id=19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k",
-      "key": "happy-map-game-pieces",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-game-pieces"
       }
     },
     {
@@ -6947,57 +6885,6 @@
       }
     },
     {
-      "name": "Happy Map Cards",
-      "url": "https://drive.google.com/open?id=15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c",
-      "key": "happy-map-cards",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-cards"
-      }
-    },
-    {
-      "name": "Happy Map Game Pieces",
-      "url": "https://drive.google.com/open?id=19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k",
-      "key": "happy-map-game-pieces",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-game-pieces"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "Happy Map Game Pieces Bonus Pack",
-      "url": "https://drive.google.com/open?id=14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs",
-      "key": "happy-map-game-pieces-bonus-pack",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "happy-map-game-pieces-bonus-pack"
-      }
-    },
-    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
@@ -7021,18 +6908,6 @@
       },
       "seeding_key": {
         "resource.key": "pair-programming"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
       }
     },
     {
@@ -7160,30 +7035,6 @@
       }
     },
     {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "common-sense-media-pause-think",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "common-sense-media-pause-think"
-      }
-    },
-    {
       "name": "CS Fundamentals Main Activity Tips",
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf-lesson-recommend",
@@ -7217,19 +7068,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_lesson_recommendations_2"
-      }
-    },
-    {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "the_big_event_courses_a_b_",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_courses_a_b_"
       }
     }
   ],
@@ -7540,6 +7378,9 @@
         "resource.key": "the_big_event_courses_a_b_"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
     {
