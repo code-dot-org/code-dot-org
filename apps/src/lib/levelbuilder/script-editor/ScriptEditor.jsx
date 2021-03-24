@@ -109,7 +109,7 @@ class ScriptEditor extends React.Component {
 
     const resources = [...props.initialTeacherResources];
 
-    if (props.isMigrated) {
+    if (!props.isMigrated) {
       // add empty entries to get to max
       while (resources.length < Object.keys(ResourceType).length) {
         resources.push({type: '', link: ''});
