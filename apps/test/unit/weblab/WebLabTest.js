@@ -1,5 +1,20 @@
 import sinon from 'sinon';
+import ReactDOM from 'react-dom';
 import {expect} from '../../util/reconfiguredChai';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import reducers from '@cdo/apps/weblab/reducers';
+import {changeMaxProjectCapacity} from '@cdo/apps/weblab/actions';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp
+} from '@cdo/apps/StudioApp';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -10,6 +25,60 @@ describe('WebLab', () => {
 
   beforeEach(() => {
     weblab = new WebLab();
+  });
+
+  describe('init', () => {
+    let config;
+    beforeEach(() => {
+      stubRedux();
+      stubStudioApp();
+      weblab.studioApp_ = studioApp();
+      registerReducers(commonReducers);
+      registerReducers(reducers);
+      config = {
+        skin: {},
+        level: {}
+      };
+      sinon.stub(ReactDOM, 'render');
+      sinon.stub(getStore(), 'dispatch');
+    });
+
+    afterEach(() => {
+      restoreRedux();
+      restoreStudioApp();
+      ReactDOM.render.restore();
+    });
+
+    it('throws an error if studio app doesnt exist', () => {
+      weblab.studioApp_ = null;
+      expect(weblab.init).to.throw(Error);
+    });
+
+    it('dispatches changeMaxProjectCapacity', () => {
+      weblab.init(config);
+      expect(getStore().dispatch).to.have.been.calledWith(
+        changeMaxProjectCapacity(20971520)
+      );
+    });
+
+    it('does not set startSources if there are none', () => {
+      config.level.startSources = '';
+      weblab.init(config);
+      expect(weblab.startSources).to.be.undefined;
+    });
+
+    it('does not set startSources if it is given invalid JSON', () => {
+      config.level.startSources = '{:';
+      expect(() => weblab.init(config)).to.throw(Error);
+      expect(weblab.startSources).to.be.undefined;
+    });
+
+    it('sets startSources if given valid JSON', () => {
+      const validJSON = {value: 'test'};
+      config.level.startSources = JSON.stringify(validJSON);
+      weblab.init(config);
+      expect(weblab.startSources).to.deep.equal({value: 'test'});
+    });
   });
 
   describe('beforeUnload', () => {
@@ -122,6 +191,80 @@ describe('WebLab', () => {
           testResult: TestResults.FREE_PLAY_UNCHANGED_FAIL
         }
       });
+    });
+  });
+
+  describe('getCodeAsync', () => {
+    it('resolves with empty string if brambleHost is null', () => {
+      weblab.brambleHost = null;
+      weblab.getCodeAsync().then(value => {
+        expect(value).to.equal('');
+      });
+    });
+
+    it('rejects with error if brambleHost syncFiles has an error', () => {
+      weblab.brambleHost = {
+        syncFiles: callback => callback('error')
+      };
+      weblab.getCodeAsync().catch(error => {
+        expect(error).to.equal('error');
+      });
+    });
+
+    it('resolves with files version id when brambleHost syncFiles has no error', () => {
+      weblab.brambleHost = {
+        syncFiles: callback => callback('error')
+      };
+      weblab.initialFilesVersionId = 'version-id';
+      weblab.getCodeAsync().then(val => {
+        expect(val).to.equal('version-id');
+      });
+    });
+  });
+
+  describe('onProjectChanged', () => {
+    beforeEach(() => {
+      sinon.stub(project, 'projectChanged');
+    });
+    afterEach(() => {
+      project.projectChanged.restore();
+    });
+    it('does not call projectChanged if it is readonly', () => {
+      weblab.readOnly = true;
+      weblab.onProjectChanged();
+      expect(project.projectChanged).to.have.not.been.called;
+    });
+    it('calls projectChanged if it is not readonly', () => {
+      weblab.readOnly = false;
+      weblab.onProjectChanged();
+      expect(project.projectChanged).to.have.been.calledOnce;
+    });
+  });
+
+  describe('setBrambleHost', () => {
+    let brambleHost;
+    beforeEach(() => {
+      brambleHost = {
+        onBrambleMountable: callback => {},
+        onBrambleReady: callback => {}
+      };
+      sinon.stub(project, 'getCurrentId').returns('project-id');
+    });
+
+    afterEach(() => {
+      project.getCurrentId.restore();
+    });
+
+    it('returns the project id if there is no suppliedFilesVersionId', () => {
+      weblab.suppliedFilesVersionId = null;
+      expect(weblab.setBrambleHost(brambleHost)).to.equal('project-id');
+    });
+
+    it('returns the project id and suppliedFilesVersionId if there is a suppliedFilesVersionId', () => {
+      weblab.suppliedFilesVersionId = 'supplied-files-version-id';
+      expect(weblab.setBrambleHost(brambleHost)).to.equal(
+        'project-id-supplied-files-version-id'
+      );
     });
   });
 });
