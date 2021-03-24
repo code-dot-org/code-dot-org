@@ -573,15 +573,13 @@ WebLab.prototype.onFilesReady = function(files, filesVersionId) {
  * Load the file entry list and store it as this.fileEntries
  */
 WebLab.prototype.loadFileEntries = function() {
-  const onFilesReady = this.onFilesReady.bind(this);
-
   filesApi.getFiles(
-    result => onFilesReady(result.files, result.filesVersionId),
+    result => this.onFilesReady(result.files, result.filesVersionId),
     xhr => {
       if (xhr.status === 404) {
         // No files in this project yet, proceed with an empty file
         // list and no start version id
-        onFilesReady([], null);
+        this.onFilesReady([], null);
       } else {
         console.error('files API failed, status: ' + xhr.status);
         this.fileEntries = null;
