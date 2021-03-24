@@ -33,9 +33,12 @@ function showCourseOverview() {
   const isTeacher = scriptData.is_teacher;
   const userId = scriptData.user_id;
 
-  const teacherResources = (courseSummary.teacher_resources || []).map(
-    ([type, link]) => ({type, link})
-  );
+  const teacherResources = courseSummary.is_migrated
+    ? courseSummary.teacher_resources
+    : (courseSummary.teacher_resources || []).map(([type, link]) => ({
+        type,
+        link
+      }));
   const store = getStore();
 
   if (courseSummary.has_verified_resources) {
@@ -107,6 +110,7 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
+        useMigratedResources={courseSummary.is_migrated}
       />
     </Provider>,
     document.getElementById('course_overview')

@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
@@ -77,7 +76,7 @@ class CourseOverview extends Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
@@ -92,7 +91,8 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
+    useMigratedResources: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -160,7 +160,8 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn
+      isSignedIn,
+      useMigratedResources
     } = this.props;
 
     const showNotification =
@@ -246,6 +247,7 @@ class CourseOverview extends Component {
               title={title}
               resources={teacherResources}
               showAssignButton={showAssignButton}
+              useMigratedResources={useMigratedResources}
             />
           </div>
         )}
