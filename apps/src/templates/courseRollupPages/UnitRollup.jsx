@@ -2,10 +2,15 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import RollupUnitEntry from './RollupUnitEntry';
 import i18n from '@cdo/locale';
+import {linkWithQueryParams} from '@cdo/apps/utils';
+import color from '@cdo/apps/util/color';
 
 const styles = {
-  main: {
-    width: 700
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
   }
 };
 
@@ -37,7 +42,13 @@ export default class UnitRollup extends Component {
 
   render() {
     return (
-      <div style={styles.main}>
+      <div>
+        <a
+          href={linkWithQueryParams(this.props.unit.link)}
+          style={styles.navLink}
+        >
+          {`< ${this.props.unit.title}`}
+        </a>
         <h1>{this.getPageTitle()}</h1>
         <RollupUnitEntry
           objectToRollUp={this.props.objectToRollUp}

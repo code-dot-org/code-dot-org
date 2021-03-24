@@ -16,11 +16,7 @@ function initPage() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <CourseRollup
-        objectToRollUp={'Resources'}
-        units={courseSummary.units}
-        title={courseSummary.title}
-      />
+      <CourseRollup objectToRollUp={'Resources'} course={courseSummary} />
     </Provider>,
     document.getElementById('roll_up')
   );

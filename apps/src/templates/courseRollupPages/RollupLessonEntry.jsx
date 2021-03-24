@@ -25,6 +25,9 @@ const styles = {
     flexDirection: 'row',
     alignItems: 'stretch',
     alignContent: 'stretch'
+  },
+  link: {
+    color: color.white
   }
 };
 
@@ -38,12 +41,14 @@ export default class RollupLessonEntry extends Component {
     return (
       <div style={styles.main}>
         <div style={styles.header}>
-          <h3>
-            {i18n.lessonNumbered({
-              lessonNumber: this.props.lesson.position,
-              lessonName: this.props.lesson.displayName
-            })}
-          </h3>
+          <a href={this.props.lesson.link} style={styles.link}>
+            <h3>
+              {i18n.lessonNumbered({
+                lessonNumber: this.props.lesson.position,
+                lessonName: this.props.lesson.displayName
+              })}
+            </h3>
+          </a>
         </div>
         <div style={styles.entries}>
           <RollupLessonEntrySection

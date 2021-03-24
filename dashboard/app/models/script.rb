@@ -1468,7 +1468,8 @@ class Script < ApplicationRecord
   def summarize_for_rollup(user = nil)
     summary = {
       title: title_for_display,
-      name: name
+      name: name,
+      link: script_path(self)
     }
 
     # Filter out stages that have a visible_after date in the future

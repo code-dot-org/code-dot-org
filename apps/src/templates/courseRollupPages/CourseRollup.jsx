@@ -3,48 +3,57 @@ import React, {Component} from 'react';
 import RollupUnitEntry from './RollupUnitEntry';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import {linkWithQueryParams} from '@cdo/apps/utils';
 
 const styles = {
-  main: {
-    width: 700
-  },
   h1: {
     color: color.teal
+  },
+  navLink: {
+    fontSize: 14,
+    lineHeight: '22px',
+    color: color.purple,
+    margin: '10px 0px'
   }
 };
 
 export default class CourseRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    units: PropTypes.array,
-    title: PropTypes.string
+    course: PropTypes.object
   };
 
   getPageTitle() {
     if (this.props.objectToRollUp === 'Vocabulary') {
       return i18n.rollupTitleVocab({
-        title: this.props.title
+        title: this.props.course.title
       });
     } else if (this.props.objectToRollUp === 'Resources') {
       return i18n.rollupTitleResources({
-        title: this.props.title
+        title: this.props.course.title
       });
     } else if (this.props.objectToRollUp === 'Standards') {
       return i18n.rollupTitleStandards({
-        title: this.props.title
+        title: this.props.course.title
       });
     } else if (this.props.objectToRollUp === 'Code') {
       return i18n.rollupTitleStandards({
-        title: this.props.title
+        title: this.props.course.title
       });
     }
   }
 
   render() {
     return (
-      <div style={styles.main}>
+      <div>
+        <a
+          href={linkWithQueryParams(this.props.course.link)}
+          style={styles.navLink}
+        >
+          {`< ${this.props.course.title}`}
+        </a>
         <h1>{this.getPageTitle()}</h1>
-        {this.props.units.map(unit => (
+        {this.props.course.units.map(unit => (
           <div key={unit.name}>
             <h3 style={styles.h1}>{unit.title}</h3>
             <RollupUnitEntry
