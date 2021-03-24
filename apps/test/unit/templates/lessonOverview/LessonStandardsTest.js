@@ -8,23 +8,25 @@ describe('LessonStandards', () => {
   it('renders standard with parent category', () => {
     const standard = cspStandards[0];
     const wrapper = mount(<LessonStandards standards={[standard]} />);
-    expect(wrapper.text()).to.contain(standard.frameworkName);
-    expect(wrapper.text()).to.contain(standard.parentCategoryShortcode);
-    expect(wrapper.text()).to.contain(standard.parentCategoryDescription);
-    expect(wrapper.text()).to.contain(standard.categoryShortcode);
-    expect(wrapper.text()).to.contain(standard.categoryDescription);
-    expect(wrapper.text()).to.contain(standard.shortcode);
-    expect(wrapper.text()).to.contain(standard.description);
+    const text = wrapper.text();
+    expect(text).to.contain(standard.frameworkName);
+    expect(text).to.contain(standard.parentCategoryShortcode);
+    expect(text).to.contain(standard.parentCategoryDescription);
+    expect(text).to.contain(standard.categoryShortcode);
+    expect(text).to.contain(standard.categoryDescription);
+    expect(text).to.contain(standard.shortcode);
+    expect(text).to.contain(standard.description);
   });
 
   it('renders standard without parent category', () => {
     const standard = cstaStandards[0];
     const wrapper = mount(<LessonStandards standards={[standard]} />);
-    expect(wrapper.text()).to.contain(standard.frameworkName);
-    expect(wrapper.text()).to.contain(standard.categoryShortcode);
-    expect(wrapper.text()).to.contain(standard.categoryDescription);
-    expect(wrapper.text()).to.contain(standard.shortcode);
-    expect(wrapper.text()).to.contain(standard.description);
+    const text = wrapper.text();
+    expect(text).to.contain(standard.frameworkName);
+    expect(text).to.contain(standard.categoryShortcode);
+    expect(text).to.contain(standard.categoryDescription);
+    expect(text).to.contain(standard.shortcode);
+    expect(text).to.contain(standard.description);
   });
 
   it('renders many standards from different frameworks', () => {
