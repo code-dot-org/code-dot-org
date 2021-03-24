@@ -98,9 +98,9 @@ class Services::CurriculumPdfsTest < ActiveSupport::TestCase
   test 'pathnames are differentiated by audience' do
     script = create(:script, name: "test-pathnames-script", seeded_from: Time.at(0))
     lesson = create(:lesson, script: script, key: "test-pathnames-lesson")
-    assert_equal Pathname.new("test-pathnames-script/19691231160000/teacher-lesson-plans/test-pathnames-lesson.pdf"),
+    assert_equal Pathname.new("test-pathnames-script/19700101000000/teacher-lesson-plans/test-pathnames-lesson.pdf"),
       Services::CurriculumPdfs.get_lesson_plan_pathname(lesson)
-    assert_equal Pathname.new("test-pathnames-script/19691231160000/student-lesson-plans/test-pathnames-lesson.pdf"),
+    assert_equal Pathname.new("test-pathnames-script/19700101000000/student-lesson-plans/test-pathnames-lesson.pdf"),
       Services::CurriculumPdfs.get_lesson_plan_pathname(lesson, true)
   end
 
