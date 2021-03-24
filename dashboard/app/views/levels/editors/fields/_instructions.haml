@@ -2,6 +2,6 @@
   Instructions
 
 #instructions.in.collapse
-  = render partial: 'levels/editors/fields/short_instructions', locals: {f: f} unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(FrequencyAnalysis) || @level.is_a?(PublicKeyCryptography)|| @level.is_a?(Vigenere))
+  = render partial: 'levels/editors/fields/short_instructions', locals: {f: f} unless (@level.is_a?(Applab) || @level.instance_of?(Gamelab) || @level.is_a?(Weblab) || @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(FrequencyAnalysis) || @level.is_a?(PublicKeyCryptography)|| @level.is_a?(Vigenere) || @level.is_a?(Javalab))
   = render partial: 'levels/editors/fields/long_instructions', locals: {f: f}
   = render partial: 'levels/editors/fields/tts', locals: {f: f} unless @level.is_a?(ExternalLink) || @level.is_a?(FreeResponse) || @level.is_a?(Widget)

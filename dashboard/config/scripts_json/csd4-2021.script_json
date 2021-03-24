@@ -8493,18 +8493,21 @@
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "console.log"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "onEvent"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "setScreen"
       }
     }
