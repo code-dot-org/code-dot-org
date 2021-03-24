@@ -1,4 +1,4 @@
-namespace :lesson_plan_pdfs do
+namespace :curriculum_pdfs do
   def get_pdf_enabled_scripts
     Script.all.select do |script|
       script.is_migrated && script.seeded_from.present?
@@ -7,8 +7,8 @@ namespace :lesson_plan_pdfs do
 
   def get_pdfless_lessons(script)
     script.lessons.select(&:has_lesson_plan).select do |lesson|
-      !Services::CurriculumPdfs.pdf_exists_for?(lesson) ||
-        !Services::CurriculumPdfs.pdf_exists_for?(lesson, true)
+      !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson) ||
+        !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true)
     end
   end
 
