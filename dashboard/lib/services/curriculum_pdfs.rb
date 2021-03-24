@@ -7,7 +7,7 @@ module Services
   # retrieval of Lesson Plan PDFs.
   #
   # Also see lesson_plan_pdfs.rake for some associated logic
-  module LessonPlanPdfs
+  module CurriculumPdfs
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
 
@@ -35,9 +35,9 @@ module Services
         # method, and we want to make sure to generate PDFs _after_ the
         # transaction has been resolved.
         def seed_from_hash(data)
-          should_generate_pdfs = LessonPlanPdfs.generate_pdfs?(data['script'])
+          should_generate_pdfs = CurriculumPdfs.generate_pdfs?(data['script'])
           result = super
-          LessonPlanPdfs.generate_pdfs(result) if should_generate_pdfs
+          CurriculumPdfs.generate_pdfs(result) if should_generate_pdfs
           result
         end
       end
