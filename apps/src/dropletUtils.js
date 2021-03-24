@@ -155,6 +155,7 @@ standardConfig.blocks = [
   {func: 'subtractOperator', block: '__ - __', category: 'Math'},
   {func: 'multiplyOperator', block: '__ * __', category: 'Math'},
   {func: 'divideOperator', block: '__ / __', category: 'Math'},
+  {func: 'moduloOperator', block: '__ % __', category: 'Math'},
   {func: 'equalityOperator', block: '__ == __', category: 'Math'},
   {func: 'inequalityOperator', block: '__ != __', category: 'Math'},
   {func: 'greaterThanOperator', block: '__ > __', category: 'Math'},

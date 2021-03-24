@@ -20,7 +20,7 @@ import sinon from 'sinon';
 
 global.$ = require('jquery');
 
-describe('FoormEditor', () => {
+describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;
   beforeEach(() => {
     stubRedux();

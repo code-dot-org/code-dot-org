@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-03-18 18:52:10 UTC",
+    "serialized_at": "2021-03-22 20:03:49 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -234,9 +234,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
+        "overview": "In this online activity, students will learn what **events** are, and how computers use them in programs like video games. Students will work through puzzles making the program react to **events** (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!",
-        "purpose": "Events are very common in computer programs, especially in video games.  \r\n\r\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
+        "purpose": "**Events** are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of **events** by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
         "preparation": " - Make sure every student has a journal.\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***Events in Bounce - How Do They Happen?** slide deck (to be presented to students at end of class).",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -254,9 +254,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In this lesson, students will practice using events to build a game that they can share online. Featuring R2-D2 and other Star Wars characters, students will be guided through events, then given space to create their own game.",
+        "overview": "In this lesson, students will practice using events to build a game that they can share online. Featuring _R2-D2_ and other _Star Wars_ characters, students will be guided through **events**, then given space to create their own game.",
         "student_overview": "Feel the force as you build your own Star Wars game in this lesson.",
-        "purpose": "CS Fundamentals is not simply about teaching computer science, it is about making computer science fun and exciting. In this series, students will learn about events using popular characters from Star Wars. These puzzles blur the lines between \"learning\" and \"fun\". Also, students will learn to recognize regular programming practices in games so that when they play games at home, they can see common computer science principles being used.",
+        "purpose": "CS Fundamentals is not simply about teaching computer science, it is about making computer science fun and exciting. In this series, students will learn about **events** using popular characters from _Star Wars_. These puzzles blur the lines between \"learning\" and \"fun\". Also, students will learn to recognize regular programming practices in games so that when they play games at home, they can see common computer science principles being used.",
         "preparation": " - Play through the puzzles and find any potential problem areas.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -294,9 +294,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "As a quick update (or introduction) to using loops, this stage will have students using the `repeat` block to get Scrat to the acorn more efficiently.",
+        "overview": "As a quick update (or introduction) to using **loops**, this stage will have students using the `repeat` block to get _Scrat_ to the acorn more efficiently.",
         "student_overview": "In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.",
-        "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using _loops_ is an important skill in programming because manually repeating commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be repeated.",
+        "purpose": "In this lesson, students will be learning more about **loops** and how to implement them in Blockly code. Using **loops** is an important skill in programming because manually **repeating** commands is tedious and inefficient. With these Code.org puzzles, students will learn to add instructions to existing **loops**, gather **repeated** code into **loops**, and recognize patterns that need to be **repeated**.",
         "preparation": " - (Optional) Pick a couple of puzzles to do as a group with your class.\r\n - Make sure each student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -314,9 +314,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.",
+        "overview": "This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.",
         "student_overview": "In this lesson, loops make it easy to make cool images with the Artist!",
-        "purpose": "This series highlights the power of loops with an array of puzzles meant to get students thinking about why `repeat` loops are superior to longhand.",
+        "purpose": "This series highlights the power of **loops** with an array of puzzles meant to get students thinking about why `repeat` **loops** are superior to longhand.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -394,9 +394,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
+        "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with **conditionals**, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
         "student_overview": "Now that you understand conditionals, it's time to program Bee to use them when collecting honey and nectar. ",
-        "purpose": "After being introduced to conditionals in \"Conditionals with Cards,\" students will now practice using them in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar **if** there is a flower or make honey **if** there is a honeycomb. ",
+        "purpose": "After being introduced to **conditionals** in \"Conditionals with Cards,\" students will now practice using them in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar **if** there is a flower or make honey **if** there is a honeycomb. ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -434,9 +434,9 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.",
+        "overview": "In this lesson, students will learn about `until` loops. Students will build programs that have the main character **repeat** actions `until` they reach their desired stopping point.",
         "student_overview": "You can do some amazing things when you use `until` loops!",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops by adding the `until` conditional. By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of **loops** by adding the `until` **conditional.** By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -2257,7 +2257,7 @@
       "key": "9d0e1d83-61ee-4d81-8524-8423a2ddc53f",
       "position": 1,
       "properties": {
-        "description": "Ask the students to come sit down near you. Now tell them to all stand up!\r\n\r\nTell the students what you just did was declare an event and an action. When you say to sit down, it is an event. The action responding to this event is the class sitting down. This is the same when you ask the class to stand up. Events and actions are easily identifiable in our lives.\r\n\r\nSome other events and actions include:\r\n\r\n - Feeling hungry and eating food\r\n - Stubbing your toe and yelling \"Ouch!\"\r\n - Getting the basketball in the basket and scoring a point for your team!\r\n\r\nAsk the class to come up with a couple of more events. Tell them that they will be making a game where the program will have actions associated to events that they code!",
+        "description": "Ask the students to come sit down near you. Now tell them to all stand up!\n\nTell the students that what you just did was declare an **event** and an action. When you say \"sit down\", it is an **event**. The action responding to this **event** is the class sitting down. This is the same when you ask the class to stand up. **Events** and actions are easily identifiable in our lives.\n\nSome other **events** and actions include:\n\n - Feeling hungry and eating food\n - Stubbing your toe and yelling \"Ouch!\"\n - Getting the basketball in the basket and scoring a point for your team!\n\nAsk the class to come up with a couple of more **events**. Tell them that they will be making a game where the program will have actions associated to **events** that they code!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2306,10 +2306,22 @@
       }
     },
     {
-      "key": "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d",
+      "key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
       "position": 1,
       "properties": {
-        "description": "\n\n####\n\nPresent the ***Events in Bounce - How Do They Happen?** slide deck to students. Allow them to record the correct order of events on the second slide in their journals first. Call on a few students to share their answers before revealing the third slide. Discuss the correct sequence with the class.",
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What did you do to make your game super cool?\n - What kind of game do you want to code in the future?",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
+        "lesson_activity.key": "592a6eba-5e83-43f7-b622-1c58f47e3dea"
+      }
+    },
+    {
+      "key": "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d",
+      "position": 2,
+      "properties": {
+        "description": "\n\n####\n\nPresent the ***Events in Bounce - How Do They Happen?** slide deck to students. Allow them to record the correct order of **events** on the second slide in their journals first. Call on a few students to share their answers before revealing the third slide. Discuss the correct sequence with the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2320,18 +2332,6 @@
       },
       "seeding_key": {
         "activity_section.key": "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d",
-        "lesson_activity.key": "592a6eba-5e83-43f7-b622-1c58f47e3dea"
-      }
-    },
-    {
-      "key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
-      "position": 2,
-      "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What did you do to make your game super cool?\n - What kind of game do you want to code in the future?",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "15ed6573-547c-40be-a75f-e4d93a55e1b1",
         "lesson_activity.key": "592a6eba-5e83-43f7-b622-1c58f47e3dea"
       }
     },
@@ -2364,11 +2364,11 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you're not quite sure if a student's response describes an event, try to break down the response. Is there an action and a response?\r\n\r\nFor example:\r\n\r\n - Crossing the finish line and having on screen characters congratulate you\r\n - Finding a big pot of treasure (or other item) and watching your inventory grow\r\n - Buying new items from the game's store and having the item to use\r\n - Pressing the buttons on a game controller and having your character do something cool\r\n"
+            "markdown": "If you're not quite sure if a student's response describes an **event**, try to break down the response. Is there an action and a response?\n\nFor example:\n\n - Crossing the finish line and having on screen characters congratulate you\n - Finding a big pot of treasure (or other item) and watching your inventory grow\n - Buying new items from the game's store and having the item to use\n - Pressing the buttons on a game controller and having your character do something cool\n"
           }
         ],
         "name": "Introduction",
-        "description": "In a class discussion, ask the students what their favorite video game is (you might need to remind the students to only use games that are classroom appropriate). Ask the students what their favorite part of the game is.\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their fun, take a minute to relate it back to the definition of an event.\n\n - **Event**: An action that causes something to happen.\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair share and discuss the differences between their events and their partner's."
+        "description": "In a class discussion, ask the students what their favorite video game is (you might need to remind the students to only use games that are classroom appropriate). Ask the students what their favorite part of the game is.\n\nMost of the time, students will respond with some kind of **event**. When you recognize a student response that describes an **event**, ask the student to describe it further.\n\nOnce the student is done describing their fun, take a minute to relate it back to the definition of an **event**.\n\n - **Event**: An action that causes something to happen.\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as **events**. Have them pair-share and discuss the differences between their events and their partner's."
       },
       "seeding_key": {
         "activity_section.key": "a13f7ef9-20f5-4865-9117-3515b8cf7414",
@@ -2376,10 +2376,21 @@
       }
     },
     {
-      "key": "72b1888f-765e-42c0-bccc-0e32a5724f40",
+      "key": "3f3c741a-dfe0-4288-80b7-338162743216",
       "position": 1,
       "properties": {
         "name": "Build a Star Wars Game",
+        "progression_name": "Video: Star Wars Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f3c741a-dfe0-4288-80b7-338162743216",
+        "lesson_activity.key": "2ffe8a66-a950-4b74-91e5-5149b2808279"
+      }
+    },
+    {
+      "key": "72b1888f-765e-42c0-bccc-0e32a5724f40",
+      "position": 2,
+      "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2389,7 +2400,7 @@
     },
     {
       "key": "b5aadae6-511b-4e12-a551-68fbb8e7337b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -2400,7 +2411,7 @@
     },
     {
       "key": "2708da4e-dd8b-4b03-ad52-f16a0af26363",
-      "position": 3,
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -2416,9 +2427,9 @@
     },
     {
       "key": "2b47e6d0-7f0b-4fa2-9afb-5dff29739716",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "####Online Puzzles\n\nStudents will likely be very excited to make their own Star Wars game at the end of this set of puzzles. If there's time, ask them to plan out what they want the game to do. The  planning and preparation will help the students better recognize the key concepts this lesson is trying to teach. Encourage the students to share and remix each other's games at the end of this lesson."
+        "description": "####Online Puzzles\n\nStudents will likely be very excited to make their own _Star Wars_ game at the end of this set of puzzles. If there's time, ask them to plan out what they want the game to do. The  planning and preparation will help the students better recognize the key concepts this lesson is trying to teach. Encourage the students to share and remix each other's games at the end of this lesson."
       },
       "seeding_key": {
         "activity_section.key": "2b47e6d0-7f0b-4fa2-9afb-5dff29739716",
@@ -2504,9 +2515,9 @@
       "key": "07d81a89-c42f-4e92-90cf-a745cd0196d8",
       "position": 2,
       "properties": {
-        "progression_name": "Warm Up",
+        "progression_name": "Video: Warm Up",
         "name": "Level by Level Support",
-        "description": "#### Level 1 - Video"
+        "description": "#### Level 1"
       },
       "seeding_key": {
         "activity_section.key": "07d81a89-c42f-4e92-90cf-a745cd0196d8",
@@ -2526,11 +2537,23 @@
       }
     },
     {
-      "key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9",
+      "key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
       "position": 4,
       "properties": {
+        "description": "#### Level 3 ",
+        "progression_name": "Video: Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
+      "key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9",
+      "position": 5,
+      "properties": {
         "progression_name": "Events",
-        "description": "#### Level 3 - Video\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n"
+        "description": "\n\n#### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n#### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n"
       },
       "seeding_key": {
         "activity_section.key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9",
@@ -2538,11 +2561,23 @@
       }
     },
     {
+      "key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
+      "position": 6,
+      "properties": {
+        "description": "#### Level 6",
+        "progression_name": "Video: Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
       "key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14",
-      "position": 5,
+      "position": 7,
       "properties": {
         "progression_name": "Measures",
-        "description": "#### Level 6 - Video\n\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n"
+        "description": "\n#### Level 7\n\n* Levels 7-8 are about synchronizing the dance to the music. \n* The `after measures` event blocks also start a new sequence of code and should not be connected inside the `setup` block.\n* Connecting the purple `do forever` block under the green `after measures` event block should make the character perform a dance move after the number of measures you indicate.\n* The `do forever` block works differently from the `do once` blocks seen in the previous levels.\n\n#### Level 8\n\n* Make sure to bring out a second green event block.  You should have a `after 4 measures` block and a `after 6 measures` block in your workspace. Both should have purple block connected underneath.\n\n#### Level 9\n\n* Level 9 is about creating groups of dancers quickly.\n* Use the new block provided into the toolbox to create a set of smaller dancers.\n*You should also use the normal `make a new` block to create a larger “lead” dancer.\n* Many students will be familiar with the idea that you can make something seem to be further away by drawing it a smaller scale. In the next level you’ll be able to fine tune this effect.\n"
       },
       "seeding_key": {
         "activity_section.key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14",
@@ -2550,11 +2585,23 @@
       }
     },
     {
+      "key": "1790551e-be1b-4e39-8725-ab4ed96c2743",
+      "position": 8,
+      "properties": {
+        "description": "#### Level 10",
+        "progression_name": "Video: Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "1790551e-be1b-4e39-8725-ab4ed96c2743",
+        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
+      }
+    },
+    {
       "key": "d3f08051-43ee-48aa-9154-f8b1f21a486f",
-      "position": 6,
+      "position": 9,
       "properties": {
         "progression_name": "Properties",
-        "description": "#### Level 10 - Video\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n"
+        "description": "\n\n#### Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n"
       },
       "seeding_key": {
         "activity_section.key": "d3f08051-43ee-48aa-9154-f8b1f21a486f",
@@ -2563,7 +2610,7 @@
     },
     {
       "key": "c7bb438d-7dd6-483a-954a-0431f8ece258",
-      "position": 7,
+      "position": 10,
       "properties": {
         "tips": [
           {
@@ -2579,10 +2626,10 @@
     },
     {
       "key": "19a261df-276b-4f57-98db-a694c8dc0b40",
-      "position": 8,
+      "position": 11,
       "properties": {
-        "progression_name": "Wrap-up",
-        "description": "#### Level 14 - Video"
+        "progression_name": "Video: Wrap-up",
+        "description": "#### Level 14"
       },
       "seeding_key": {
         "activity_section.key": "19a261df-276b-4f57-98db-a694c8dc0b40",
@@ -2591,7 +2638,7 @@
     },
     {
       "key": "248f398f-18b7-4f09-a251-8d119f3c167d",
-      "position": 9,
+      "position": 12,
       "properties": {
         "progression_name": "Free Play",
         "description": "#### Level 15\n\n* This last level is very open-ended. The tutorial itself is designed to give students ample time to keep working on their own dance.\n* **Encourage Sharing:** If students have cell phones with a data plan they can quickly text a link to their projects to their own phone or a friend's. If your school policy allows it, encourage them to do so here.\n* **Encourage Creativity:** Creativity is important throughout this lesson, but this is true here more than anywhere else!"
@@ -2603,33 +2650,13 @@
     },
     {
       "key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
-      "position": 10,
+      "position": 13,
       "properties": {
         "progression_name": "Challenge",
         "description": "#### Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
-      "key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350",
-        "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
-      }
-    },
-    {
-      "key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3dbac671-c428-479f-8a2b-301d4a5578e5",
         "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7"
       }
     },
@@ -2676,7 +2703,7 @@
       "position": 1,
       "properties": {
         "description": "####Repeat After Me\n\n**Model:** Ask for a volunteer and have them stand.\n\n- Instruct your volunteer to walk around the table (or their chair, or a friend).\n- When they finish, instruct them to do it again, using the exact same words you did before.\n- When they finish, instruct again.\n- Then again.\n\n**Prompt:** *Would it have been easier for me to just ask you to go around the table four times?*\n\n**Think:** *What if I wanted you to do it ten times? How would you reword my instructions so that they were more efficient and I didn't have to repeat myself so much? Feel free to write your instructions down on a piece of scrap paper.*\n\n**Share:** Ask a few students to share their instructions with the class, pointing out how each approach has simplified the overall approach to giving instructions.\n\n\n**Say:**  *Today we're going to work on finding ways to make giving lots of instructions easier, especially when those instructions repeat themselves a lot.*",
-        "name": "The Unplugged Foundation"
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "d343f1b8-bbf5-455e-8d7d-e50907b2fc18",
@@ -2687,8 +2714,7 @@
       "key": "b1d1db9d-2443-4c23-92c4-71660ddc4305",
       "position": 1,
       "properties": {
-        "description": "####Preview Loops in Ice Age\n\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Puzzle 5.  Point out the \"Play Area\" with Scrat and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help Scrat get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that Scrat (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own.",
-        "name": "Online Foundation"
+        "description": "####Preview Loops in Ice Age\n\nTo finish the connection, preview an online puzzle (or two) as a class.\n\n**Model:** Reveal an entire online puzzle from the progression to come.  We recommend Puzzle 5.  Point out the \"Play Area\" with _Scrat_ and the acorn, as well as the \"Work Space\" with the Blockly code.  Explain that this Blockly code is now the language that the class will be using to help _Scrat_ get to the acorn.  Do students see any similarities to the exercise that they just did?  What are the big differences?\n\nWork with your class to drag code into the workspace in such a way that _Scrat_ (eventually) gets to the acorn. \n\n**Transition:** Students should now be ready to transition to computers to complete online puzzles on their own."
       },
       "seeding_key": {
         "activity_section.key": "b1d1db9d-2443-4c23-92c4-71660ddc4305",
@@ -2699,7 +2725,7 @@
       "key": "5959da7d-9d44-4fbd-8b75-25a422ccdfbb",
       "position": 1,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. without a loop.",
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a **loop** vs. without a **loop**.",
         "name": "Loops in Ice Age"
       },
       "seeding_key": {
@@ -2722,7 +2748,7 @@
       "key": "4c88ec45-b2cb-4b4d-88de-2d676d507722",
       "position": 3,
       "properties": {
-        "progression_name": "Using the Repeat Block"
+        "progression_name": "Video: Using the Repeat Block"
       },
       "seeding_key": {
         "activity_section.key": "4c88ec45-b2cb-4b4d-88de-2d676d507722",
@@ -2816,7 +2842,7 @@
       "key": "f34cb485-1f89-4670-bb09-f170b83be646",
       "position": 1,
       "properties": {
-        "description": "Students should have had an introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Reviewing a puzzle from the last lesson\n - Previewing a puzzle from this lesson\n\nAny of these should help prepare your class for fun with the online puzzles!",
+        "description": "Students should have had an introduction to **loops** at this point. Based on what you think your class could benefit from, we recommend:\n\n - Reviewing a puzzle from the last lesson\n - Previewing a puzzle from this lesson\n\nAny of these should help prepare your class for fun with the online puzzles!",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2829,7 +2855,7 @@
       "position": 1,
       "properties": {
         "name": "Drawing Shapes with Loops",
-        "progression_name": "Artist Intro with JR Hildebrand"
+        "progression_name": "Video: Artist Intro with JR Hildebrand"
       },
       "seeding_key": {
         "activity_section.key": "2517dd9e-f281-4db3-9cc8-07dc533add33",
@@ -2851,7 +2877,7 @@
       "key": "7555f521-9ab5-4e7c-901a-4386914f5ae1",
       "position": 3,
       "properties": {
-        "progression_name": "Loops with the Artist"
+        "progression_name": "Video: Loops with the Artist"
       },
       "seeding_key": {
         "activity_section.key": "7555f521-9ab5-4e7c-901a-4386914f5ae1",
@@ -2895,7 +2921,7 @@
       "key": "f3f79fbb-d2e7-410e-9258-ca61b0519fb3",
       "position": 7,
       "properties": {
-        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` **loops** by writing out the program without **loops** then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
       },
       "seeding_key": {
         "activity_section.key": "f3f79fbb-d2e7-410e-9258-ca61b0519fb3",
@@ -3116,8 +3142,7 @@
       "key": "95951ba3-d513-4635-a484-1d1819906049",
       "position": 3,
       "properties": {
-        "description": "Having students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\r\n\r\n#### Journal Prompts:\r\n\r\n - What was today's lesson about?\r\n - How do you feel about today's lesson?\r\n - What is a conditional? How did you use a conditional today?\r\n - What are some of the conditionals you used today? Can you come up with some more that you would use with a deck of cards?",
-        "name": "Journaling\r"
+        "description": "####Journaling:\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What is a conditional? How did you use a conditional today?\n - What are some of the conditionals you used today? Can you come up with some more that you would use with a deck of cards?"
       },
       "seeding_key": {
         "activity_section.key": "95951ba3-d513-4635-a484-1d1819906049",
@@ -3231,7 +3256,7 @@
       "key": "0e7cf944-a328-4388-afa7-8712fed768e0",
       "position": 1,
       "properties": {
-        "description": "Review the \"Conditionals with Cards\" activity with your students.\r\n\r\n- What is a conditional statement?\r\n- When is a conditional useful?\r\n- What are some of the conditions you used in the last activity?\r\n\r\nNow we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.",
+        "description": "Review the \"Conditionals with Cards\" activity with your students.\n\n- _What is a **conditional** statement?_\n- _When is a **conditional** useful?_\n- _What are some of the conditions you used in the last activity?_\n\nNow we're going to use **conditionals** with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use **conditionals** to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3254,7 +3279,7 @@
       "key": "e11af7aa-44d8-4cff-8c00-b83f57637592",
       "position": 2,
       "properties": {
-        "description": "Print and cut out 2-3 `if / else` and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of conditionals to use with the deck of cards like they did in \"Conditionals with Cards.\" When the conditionals have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.\n\n####-Or-",
+        "description": "Print and cut out 2-3 `if / else` and blank action blocks from ***Unplugged Blocks (Courses C-F)** and pull out a deck of cards. Ask the class to come up with a couple of **conditionals** to use with the deck of cards like they did in \"Conditionals with Cards.\" When the **conditionals** have been decided on as a class, fill in the blank part of the `if` block with the various card values that the kids came up with. Examples include \"King of Hearts\", \"Even Numbered\", or \"Diamonds\". Fill in the action blocks with the actions the students came up with. Make sure the students know the action blocks need to be directly under the `if` or `else` block. Click on the thumbnail below to see an example.\n\n![expandable](https://cdo-curriculum.s3.amazonaws.com/media/uploads/D.10-Lesson-hint.png)\n\nNow shuffle the deck of cards and play \"Conditionals with Cards\" again. Flip through the deck card-by-card, reacting to cards if a conditional has been made for it.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -3266,7 +3291,7 @@
       "key": "4ab967a8-0c20-460a-99f3-3c1004d65ed8",
       "position": 3,
       "properties": {
-        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \r\n\r\n - Ask the class what the bee should do when it gets to the cloud.\r\n    - The bee should use a conditional to check for a flower or a honeycomb.\r\n - Use the `if at flower / else` block. Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\r\n    - The bee should `get nectar` if there is a flower and `make honey` if there is a honeycomb.\r\n\r\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.",
+        "description": "Pull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a **conditional** to check for a flower or a honeycomb.\n - Use the `if at flower / else` block. Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should `get nectar` if there is a flower and `make honey` if there is a honeycomb.\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.",
         "name": "Preview of Online Puzzles \r"
       },
       "seeding_key": {
@@ -3290,7 +3315,7 @@
       "key": "ca607451-3bb5-4aea-bca0-efd3fed0c6be",
       "position": 2,
       "properties": {
-        "progression_name": "Conditionals: If Statements"
+        "progression_name": "Video: Conditionals: If Statements"
       },
       "seeding_key": {
         "activity_section.key": "ca607451-3bb5-4aea-bca0-efd3fed0c6be",
@@ -3323,7 +3348,7 @@
       "key": "e50811f9-8d07-4737-841d-ae3ebf402649",
       "position": 5,
       "properties": {
-        "progression_name": "Conditionals: If and If/Else Statements"
+        "progression_name": "Video: Conditionals: If and If/Else Statements"
       },
       "seeding_key": {
         "activity_section.key": "e50811f9-8d07-4737-841d-ae3ebf402649",
@@ -3571,7 +3596,7 @@
       "key": "6ecd9736-c038-433f-bd11-18b7ae703bcd",
       "position": 1,
       "properties": {
-        "description": "In this lesson, students will be creating loops that only run `until` a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some condition is true.  For example: Have students touch their nose `until` you tell them to stop.",
+        "description": "In this lesson, students will be creating loops that only run `until` a **condition** is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some **condition** is true.  For example: Have students touch their nose `until` you tell them to stop.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3583,7 +3608,7 @@
       "key": "21ce5499-3d29-40b9-8d79-184696838f2e",
       "position": 2,
       "properties": {
-        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should repeat to get to the pig.\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to repeat this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` loop and press `Run`. Discuss with the class why this worked."
+        "description": "\n####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should **repeat** to get to the pig.\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to **repeat** this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` **loop** and press `Run`. Discuss with the class why this worked."
       },
       "seeding_key": {
         "activity_section.key": "21ce5499-3d29-40b9-8d79-184696838f2e",
@@ -3606,7 +3631,7 @@
       "key": "b7917167-64a0-4090-b00a-1159a7235352",
       "position": 2,
       "properties": {
-        "progression_name": "Repeat Until Statements"
+        "progression_name": "Video: Repeat Until Statements"
       },
       "seeding_key": {
         "activity_section.key": "b7917167-64a0-4090-b00a-1159a7235352",
@@ -3672,7 +3697,7 @@
       "key": "97c5a8f2-f9e3-4ddf-bbb3-c90d4f18a327",
       "position": 8,
       "properties": {
-        "description": "\n####Online Puzzles\n\nBringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives."
+        "description": "\n####Online Puzzles\n\nBringing together concepts is not easy, but this set of lessons is meant to help students  see the endless possibilities of coding when using **conditions**. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives."
       },
       "seeding_key": {
         "activity_section.key": "97c5a8f2-f9e3-4ddf-bbb3-c90d4f18a327",
@@ -4389,7 +4414,7 @@
       "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4415,7 +4440,7 @@
       "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4441,7 +4466,7 @@
       "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4467,7 +4492,7 @@
       "chapter": 27,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4493,7 +4518,7 @@
       "chapter": 28,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4519,7 +4544,7 @@
       "chapter": 29,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4545,7 +4570,7 @@
       "chapter": 30,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4571,7 +4596,7 @@
       "chapter": 31,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4597,9 +4622,9 @@
       "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Video: Star Wars Project",
         "level_keys": [
           "courseE_video_StarWarsProject_2021"
         ]
@@ -4613,7 +4638,7 @@
         "lesson.key": "Build a Star Wars Game",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "72b1888f-765e-42c0-bccc-0e32a5724f40"
+        "activity_section.key": "3f3c741a-dfe0-4288-80b7-338162743216"
       },
       "level_keys": [
         "courseE_video_StarWarsProject_2021"
@@ -4622,8 +4647,8 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4648,8 +4673,8 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4674,8 +4699,8 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4700,8 +4725,8 @@
     {
       "chapter": 36,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4726,8 +4751,8 @@
     {
       "chapter": 37,
       "position": 6,
-      "activity_section_position": 6,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4752,8 +4777,8 @@
     {
       "chapter": 38,
       "position": 7,
-      "activity_section_position": 7,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4778,8 +4803,8 @@
     {
       "chapter": 39,
       "position": 8,
-      "activity_section_position": 8,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4804,8 +4829,8 @@
     {
       "chapter": 40,
       "position": 9,
-      "activity_section_position": 9,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4831,7 +4856,7 @@
       "chapter": 41,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4857,9 +4882,9 @@
       "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Warm Up",
+        "progression": "Video: Warm Up",
         "level_keys": [
           "CourseD_Dance_2020_vid1_2021"
         ]
@@ -4883,7 +4908,7 @@
       "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4909,9 +4934,9 @@
       "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Events",
+        "progression": "Video: Events",
         "level_keys": [
           "CourseD_Dance_2020_vid2_2021"
         ]
@@ -4925,7 +4950,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9"
+        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid2_2021"
@@ -4934,8 +4959,8 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4960,8 +4985,8 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "progression": "Events",
         "level_keys": [
@@ -4987,9 +5012,9 @@
       "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Measures",
+        "progression": "Video: Measures",
         "level_keys": [
           "CourseD_Dance_2020_vid3_2021"
         ]
@@ -5003,7 +5028,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14"
+        "activity_section.key": "3dbac671-c428-479f-8a2b-301d4a5578e5"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid3_2021"
@@ -5012,8 +5037,8 @@
     {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5038,8 +5063,8 @@
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5064,8 +5089,8 @@
     {
       "chapter": 50,
       "position": 9,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
         "progression": "Measures",
         "level_keys": [
@@ -5091,9 +5116,9 @@
       "chapter": 51,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Properties",
+        "progression": "Video: Properties",
         "level_keys": [
           "CourseD_Dance_2020_vid4_2021"
         ]
@@ -5107,7 +5132,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "d3f08051-43ee-48aa-9154-f8b1f21a486f"
+        "activity_section.key": "1790551e-be1b-4e39-8725-ab4ed96c2743"
       },
       "level_keys": [
         "CourseD_Dance_2020_vid4_2021"
@@ -5116,8 +5141,8 @@
     {
       "chapter": 52,
       "position": 11,
-      "activity_section_position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5142,8 +5167,8 @@
     {
       "chapter": 53,
       "position": 12,
-      "activity_section_position": 3,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5168,8 +5193,8 @@
     {
       "chapter": 54,
       "position": 13,
-      "activity_section_position": 4,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
         "progression": "Properties",
         "level_keys": [
@@ -5195,9 +5220,9 @@
       "chapter": 55,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Wrap-up",
+        "progression": "Video: Wrap-up",
         "level_keys": [
           "CourseD_Dance_2020_vid5_2021"
         ]
@@ -5221,7 +5246,7 @@
       "chapter": 56,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5247,7 +5272,7 @@
       "chapter": 57,
       "position": 16,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5273,7 +5298,7 @@
       "chapter": 58,
       "position": 17,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5299,7 +5324,7 @@
       "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5325,7 +5350,7 @@
       "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5351,9 +5376,9 @@
       "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Using the Repeat Block",
+        "progression": "Video: Using the Repeat Block",
         "level_keys": [
           "scrat_loops_C-F_video_2021"
         ]
@@ -5377,7 +5402,7 @@
       "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5403,7 +5428,7 @@
       "chapter": 63,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5429,7 +5454,7 @@
       "chapter": 64,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5455,7 +5480,7 @@
       "chapter": 65,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5481,7 +5506,7 @@
       "chapter": 66,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5507,7 +5532,7 @@
       "chapter": 67,
       "position": 9,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5533,7 +5558,7 @@
       "chapter": 68,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5560,7 +5585,7 @@
       "chapter": 69,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5586,7 +5611,7 @@
       "chapter": 70,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5612,9 +5637,9 @@
       "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Artist Intro with JR Hildebrand",
+        "progression": "Video: Artist Intro with JR Hildebrand",
         "level_keys": [
           "ramp_video_artistIntro_2021"
         ]
@@ -5638,7 +5663,7 @@
       "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5664,7 +5689,7 @@
       "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5690,9 +5715,9 @@
       "chapter": 74,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Loops with the Artist",
+        "progression": "Video: Loops with the Artist",
         "level_keys": [
           "ramp_video_loopsArtist_2021"
         ]
@@ -5716,7 +5741,7 @@
       "chapter": 75,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5742,7 +5767,7 @@
       "chapter": 76,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5768,7 +5793,7 @@
       "chapter": 77,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5794,7 +5819,7 @@
       "chapter": 78,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5820,7 +5845,7 @@
       "chapter": 79,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5846,7 +5871,7 @@
       "chapter": 80,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5873,7 +5898,7 @@
       "chapter": 81,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6684,7 +6709,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Conditionals: If Statements",
+        "progression": "Video: Conditionals: If Statements",
         "level_keys": [
           "courseD_bee_conditionalsVid1_2021"
         ]
@@ -6866,7 +6891,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Conditionals: If and If/Else Statements",
+        "progression": "Video: Conditionals: If and If/Else Statements",
         "level_keys": [
           "courseD_bee_conditionalsVidIfElse_2021"
         ]
@@ -7438,7 +7463,7 @@
       "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7464,9 +7489,9 @@
       "chapter": 142,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Repeat Until Statements",
+        "progression": "Video: Repeat Until Statements",
         "level_keys": [
           "courseD_video_repeatUntil_2021"
         ]
@@ -7490,7 +7515,7 @@
       "chapter": 143,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7516,7 +7541,7 @@
       "chapter": 144,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7542,7 +7567,7 @@
       "chapter": 145,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7568,7 +7593,7 @@
       "chapter": 146,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7594,7 +7619,7 @@
       "chapter": 147,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7620,7 +7645,7 @@
       "chapter": 148,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7646,7 +7671,7 @@
       "chapter": 149,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -7673,7 +7698,7 @@
       "chapter": 150,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7699,7 +7724,7 @@
       "chapter": 151,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -7725,18 +7750,18 @@
       "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example projects",
         "level_keys": [
-          "courseD_project_exemplars_2021"
+          "courseD_EOC_examples_2021"
         ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_project_exemplars_2021"
+          "courseD_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -7744,14 +7769,14 @@
         "activity_section.key": "44ff9770-a1eb-4ec3-922d-013bcadaef08"
       },
       "level_keys": [
-        "courseD_project_exemplars_2021"
+        "courseD_EOC_examples_2021"
       ]
     },
     {
       "chapter": 153,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -8156,7 +8181,7 @@
         "lesson.key": "Build a Star Wars Game",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "72b1888f-765e-42c0-bccc-0e32a5724f40"
+        "activity_section.key": "3f3c741a-dfe0-4288-80b7-338162743216"
       }
     },
     {
@@ -8300,7 +8325,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "da9ffffb-f192-44c2-86e8-1fe7d4de71c9"
+        "activity_section.key": "f88c59b4-e502-4301-9ec4-221b7a85b350"
       }
     },
     {
@@ -8336,7 +8361,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "41bca090-a4b2-4019-b05e-3b3b3b0cca14"
+        "activity_section.key": "3dbac671-c428-479f-8a2b-301d4a5578e5"
       }
     },
     {
@@ -8384,7 +8409,7 @@
         "lesson.key": "Dance Party",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2021",
-        "activity_section.key": "d3f08051-43ee-48aa-9154-f8b1f21a486f"
+        "activity_section.key": "1790551e-be1b-4e39-8725-ab4ed96c2743"
       }
     },
     {
@@ -9589,9 +9614,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_project_exemplars_2021",
+        "level.key": "courseD_EOC_examples_2021",
         "script_level.level_keys": [
-          "courseD_project_exemplars_2021"
+          "courseD_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",

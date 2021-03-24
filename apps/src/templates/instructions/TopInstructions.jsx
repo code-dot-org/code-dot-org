@@ -143,11 +143,13 @@ class TopInstructions extends Component {
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
-    setAllowInstructionsResize: PropTypes.func
+    setAllowInstructionsResize: PropTypes.func,
+    collapsible: PropTypes.bool
   };
 
   static defaultProps = {
-    resizable: true
+    resizable: true,
+    collapsible: true
   };
 
   constructor(props) {
@@ -683,6 +685,7 @@ class TopInstructions extends Component {
           handleHelpTabClick={this.handleHelpTabClick}
           handleCommentTabClick={this.handleCommentTabClick}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
+          collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
           {...passThroughHeaderProps}
         />
