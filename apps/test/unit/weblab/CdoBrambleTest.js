@@ -18,7 +18,7 @@ describe('CdoBramble', () => {
       })
     };
 
-    cdoBramble = new CdoBramble({}, mockStore, brambleUrl, projectPath, []);
+    cdoBramble = new CdoBramble({}, {}, mockStore, brambleUrl, projectPath, []);
   });
 
   describe('config', () => {
@@ -40,7 +40,7 @@ describe('CdoBramble', () => {
       fileChange = {
         operation: 'change',
         file: filename,
-        fileDataPath: filename
+        fileDataPath: projectPath + filename
       };
     });
 
@@ -86,8 +86,8 @@ describe('CdoBramble', () => {
   });
 
   describe('onFileRenamed', () => {
-    const oldPath = 'old.html';
-    const newPath = 'new.html';
+    const oldPath = projectPath + 'old.html';
+    const newPath = projectPath + 'new.html';
 
     it('updates fileDataPath for recent change if one exists', () => {
       cdoBramble.recentChanges = [
@@ -100,7 +100,7 @@ describe('CdoBramble', () => {
         {operation: 'change', fileDataPath: 'other.html'},
         {operation: 'change', fileDataPath: newPath},
         {operation: 'delete', fileDataPath: 'style.css'},
-        {operation: 'rename', file: oldPath, newFile: newPath}
+        {operation: 'rename', file: 'old.html', newFile: 'new.html'}
       ]);
     });
 
@@ -108,7 +108,7 @@ describe('CdoBramble', () => {
       expect(cdoBramble.recentChanges.length).to.equal(0);
       cdoBramble.onFileRenamed(oldPath, newPath);
       expect(cdoBramble.recentChanges).to.deep.equal([
-        {operation: 'rename', file: oldPath, newFile: newPath}
+        {operation: 'rename', file: 'old.html', newFile: 'new.html'}
       ]);
     });
 
