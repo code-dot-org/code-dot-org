@@ -267,8 +267,8 @@ export const levelProgressFromServer = serverProgress => {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
     paired: serverProgress.paired || false,
-    timeSpent: serverProgress.time_spent || 0,
-    lastTimestamp: serverProgress.last_progress_at || 0,
+    timeSpent: serverProgress.time_spent,
+    lastTimestamp: serverProgress.last_progress_at,
     // `pages` is used by multi-page assessments, and its presence
     // (or absence) is how we distinguish those from single-page assessments
     pages:
