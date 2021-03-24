@@ -6,7 +6,7 @@ module Services
   # Contains all code related to the generation, storage, and
   # retrieval of Lesson Plan PDFs.
   #
-  # Also see lesson_plan_pdfs.rake for some associated logic
+  # Also see curriculum_pdfs.rake for some associated logic
   module CurriculumPdfs
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
@@ -73,7 +73,7 @@ module Services
 
       return false unless rack_env?(:staging)
       return false unless script_data['properties'].fetch('is_migrated', false)
-      return false if DCDO.get('disable_lesson_plan_pdf_generation', false)
+      return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
       script = Script.find_by(name: script_data['name'])
       return false unless script.present?
@@ -131,7 +131,7 @@ module Services
     # <Pathname:csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf>
     # and this for student lesson plans
     # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
-    def self.get_pathname(lesson, student_facing = false)
+    def self.get_lesson_plan_pathname(lesson, student_facing = false)
       return nil unless lesson&.script&.seeded_from
       version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
       filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
@@ -139,21 +139,21 @@ module Services
       return Pathname.new(File.join(lesson.script.name, version_number, subdir, filename))
     end
 
-    def self.get_url(lesson, student_facing=false)
-      pathname = get_pathname(lesson, student_facing)
+    def self.get_lesson_plan_url(lesson, student_facing=false)
+      pathname = get_lesson_plan_pathname(lesson, student_facing)
       return nil unless pathname.present?
 
       File.join(get_base_url, pathname)
     end
 
-    def self.pdf_exists_for?(lesson, student_facing=false)
-      pathname = get_pathname(lesson, student_facing)
+    def self.lesson_plan_pdf_exists_for?(lesson, student_facing=false)
+      pathname = get_lesson_plan_pathname(lesson, student_facing)
       AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
     end
 
     def self.generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
       url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
-      pathname = get_pathname(lesson, student_facing)
+      pathname = get_lesson_plan_pathname(lesson, student_facing)
 
       ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
 
