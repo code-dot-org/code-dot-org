@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-19 17:07:57 UTC",
+    "serialized_at": "2021-03-22 22:17:55 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -6994,7 +6994,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Customize the simulation"
+        "progression": "Customize the simulation",
+        "level_keys": [
+          "simcustom_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
