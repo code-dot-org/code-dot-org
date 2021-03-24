@@ -22,20 +22,20 @@ export default class CourseRollup extends Component {
 
   getPageTitle() {
     if (this.props.objectToRollUp === 'Vocabulary') {
-      return i18n.courseRollupTitleVocab({
-        courseTitle: this.props.title
+      return i18n.rollupTitleVocab({
+        title: this.props.title
       });
     } else if (this.props.objectToRollUp === 'Resources') {
-      return i18n.courseRollupTitleResources({
-        courseTitle: this.props.title
+      return i18n.rollupTitleResources({
+        title: this.props.title
       });
     } else if (this.props.objectToRollUp === 'Standards') {
-      return i18n.courseRollupTitleStandards({
-        courseTitle: this.props.title
+      return i18n.rollupTitleStandards({
+        title: this.props.title
       });
     } else if (this.props.objectToRollUp === 'Code') {
-      return i18n.courseRollupTitleStandards({
-        courseTitle: this.props.title
+      return i18n.rollupTitleStandards({
+        title: this.props.title
       });
     }
   }
