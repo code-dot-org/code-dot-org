@@ -23,6 +23,9 @@ class ScriptsControllerTest < ActionController::TestCase
     @section_coursez_2017 = create :section, script: @coursez_2017
     @section_coursez_2017.add_student(@student_coursez_2017)
 
+    @migrated_script = create :script, is_migrated: true, hidden: true
+    @unmigrated_script = create :script
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -927,6 +930,18 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
     Timecop.return
   end
+
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{script_id: @migrated_script.name}}
+  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{script_id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{script_id: @migrated_script.name}}
+  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{script_id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{script_id: @migrated_script.name}}
+  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{script_id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{script_id: @migrated_script.name}}
+  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{script_id: @unmigrated_script.name}}
 
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
