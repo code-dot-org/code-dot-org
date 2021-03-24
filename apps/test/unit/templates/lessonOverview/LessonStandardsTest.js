@@ -6,7 +6,7 @@ import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards'
 describe('LessonStandards', () => {
   it('renders standard with parent category', () => {
     const standard = {
-      frameworkName: 'ngss',
+      frameworkName: 'Next Generation Science Standards',
       parentCategoryShortcode: 'ESS',
       parentCategoryDescription: 'Earth and Space Science',
       categoryShortcode: 'ESS1',
@@ -27,7 +27,7 @@ describe('LessonStandards', () => {
 
   it('renders standard without parent category', () => {
     const standard = {
-      frameworkName: 'csta',
+      frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
       parentCategoryShortcode: null,
       parentCategoryDescription: null,
       categoryShortcode: 'AP',
