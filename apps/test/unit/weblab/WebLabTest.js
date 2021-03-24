@@ -169,9 +169,10 @@ describe('WebLab', () => {
     });
 
     it('adds clickTouchEvent 3 times if there is a finishButton', () => {
-      sinon.stub(document, 'getElementById').returns({className: 'test'});
+      const finishButton = {className: 'test'};
+      sinon.stub(document, 'getElementById').returns(finishButton);
       weblab.onMount(config);
-      expect(dom.addClickTouchEvent).to.have.been.calledThrice;
+      expect(dom.addClickTouchEvent).to.have.been.calledWith(finishButton);
       document.getElementById.restore();
     });
 
