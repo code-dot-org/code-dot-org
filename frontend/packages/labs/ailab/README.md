@@ -62,15 +62,6 @@ yarn link @code-dot-org/ml-playground
 
 This will set up a symlink in main repo's `apps/node_modules/` to point at your local changes. 
 
-Run 
-
-```
-yarn run build
-```
-
-in this repo, and then the main repo's `apps` build should pick the changes up next time it builds.
-
-If you are running `yarn start` for continuous builds in the main repo, it will pick up the changes once the build in this repo has completed.
 
 ### Building changes for a local Code Studio
 In main repo:
@@ -91,7 +82,7 @@ In this repo:
 yarn run build
 ```
 
-Then the local Code Studio apps build will pick up changes.
+Then the main repo's `apps` build will pick up changes. 
 
 See ML-playground changes at  [http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1](http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1).
 
