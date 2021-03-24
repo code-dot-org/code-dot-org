@@ -396,6 +396,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
   end
