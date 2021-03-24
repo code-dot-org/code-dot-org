@@ -111,7 +111,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
     render 'vocab', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
@@ -119,7 +119,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
     render 'resources', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
@@ -127,7 +127,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
     render 'code', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
@@ -135,7 +135,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
     render 'standards', locals: {course_summary: unit_group.summarize_for_rollup(@current_user)}
   end
 
