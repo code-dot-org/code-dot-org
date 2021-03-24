@@ -56,7 +56,7 @@ export default class RollupLessonEntrySection extends Component {
             ))}
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length <= 0 && (
-              <p>{i18n.courseRollupNoVocab()}</p>
+              <p>{i18n.rollupNoVocab()}</p>
             )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length > 0 &&
@@ -73,7 +73,7 @@ export default class RollupLessonEntrySection extends Component {
             ))}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
-              <p>{i18n.courseRollupNoCode()}</p>
+              <p>{i18n.rollupNoCode()}</p>
             )}
           {this.props.objectToRollUp === 'Resources' && lessonHasResources && (
             <div>
@@ -104,7 +104,7 @@ export default class RollupLessonEntrySection extends Component {
             </div>
           )}
           {this.props.objectToRollUp === 'Resources' && !lessonHasResources && (
-            <p>{i18n.courseRollupNoResources()}</p>
+            <p>{i18n.rollupNoResources()}</p>
           )}
           {this.props.objectToRollUp === 'Prep' &&
             this.props.lesson.preparation && (
@@ -114,9 +114,7 @@ export default class RollupLessonEntrySection extends Component {
               />
             )}
           {this.props.objectToRollUp === 'Prep' &&
-            !this.props.lesson.preparation && (
-              <p>{i18n.courseRollupNoPrep()}</p>
-            )}
+            !this.props.lesson.preparation && <p>{i18n.rollupNoPrep()}</p>}
         </div>
       </div>
     );
