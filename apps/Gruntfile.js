@@ -505,6 +505,10 @@ describe('entry tests', () => {
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
     'courses/show': './src/sites/studio/pages/courses/show.js',
+    'courses/vocab': './src/sites/studio/pages/courses/vocab.js',
+    'courses/resources': './src/sites/studio/pages/courses/resources.js',
+    'courses/code': './src/sites/studio/pages/courses/code.js',
+    'courses/standards': './src/sites/studio/pages/courses/standards.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -560,6 +564,10 @@ describe('entry tests', () => {
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
+    'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
+    'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
+    'scripts/code': './src/sites/studio/pages/scripts/code.js',
+    'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
     'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
