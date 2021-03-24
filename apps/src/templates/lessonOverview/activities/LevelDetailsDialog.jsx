@@ -241,7 +241,7 @@ class LevelDetailsDialog extends Component {
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        <div>{preview}</div>
+        <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}

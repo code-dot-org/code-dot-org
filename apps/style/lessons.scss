@@ -38,3 +38,13 @@ table {
     z-index: 3000
   }
 }
+
+.modal .level-details {
+  a {
+    color: $link_color;
+    &:hover {
+      color: $link_color;
+      background: none;
+    }
+  }
+}
