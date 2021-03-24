@@ -1,7 +1,0 @@
-{
-  "func": "var group = new Group",
-  "category": "Groups",
-  "type": "either",
-  "docFunc": "Group",
-  "noAutocomplete": true
-}
