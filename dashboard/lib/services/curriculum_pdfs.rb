@@ -4,44 +4,14 @@ require 'pdf/conversion'
 
 module Services
   # Contains all code related to the generation, storage, and
-  # retrieval of Lesson Plan PDFs.
+  # retrieval of Curriculum PDFs.
   #
   # Also see curriculum_pdfs.rake for some associated logic
   module CurriculumPdfs
+    include Services::CurriculumPdfs::LessonPlans
+
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
-
-    # Module which should be prepended to the ScriptSeed Service Object to add
-    # automatic PDF generation to the script seeding process.
-    module ScriptSeed
-      def self.prepended(base)
-        class << base
-          prepend ClassMethods
-        end
-      end
-
-      module ClassMethods
-        # Wraps ScriptSeed.seed_from_hash with logic to (re-)generate a PDF for
-        # the specified script after seeding.
-        #
-        # We specifically _wrap_ the method rather than simply extending it;
-        # this is because we need to examine the state of the data prior to
-        # seeding to determine whether or not we're going to want to generate a
-        # PDF, but of course the generation itself should happen after seeding.
-        #
-        # We also are wrapping this specific method rather than one of the
-        # more-specific ones like import_script or import_lessons because all
-        # of those methods are called within a transaction created by this
-        # method, and we want to make sure to generate PDFs _after_ the
-        # transaction has been resolved.
-        def seed_from_hash(data)
-          should_generate_pdfs = CurriculumPdfs.generate_pdfs?(data['script'])
-          result = super
-          CurriculumPdfs.generate_pdfs(result) if should_generate_pdfs
-          result
-        end
-      end
-    end
 
     # Simple helper for comparing serialized_at and seeded_from values. Because
     # these values sometimes come from json and sometimes come from the
@@ -121,44 +91,6 @@ module Services
       # We don't have an equivalent set up for the debug bucket, so we just use
       # the direct S3 link.
       DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
-    end
-
-    # Build the full path of the lesson plan or student lesson plan
-    # PDF for the given lesson. This will be based on not only the
-    # lesson's script but also the current version of the script in the environment.
-    #
-    # Expect this to look something like this for teacher lesson plans
-    # <Pathname:csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf>
-    # and this for student lesson plans
-    # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
-    def self.get_lesson_plan_pathname(lesson, student_facing = false)
-      return nil unless lesson&.script&.seeded_from
-      version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
-      filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
-      subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
-      return Pathname.new(File.join(lesson.script.name, version_number, subdir, filename))
-    end
-
-    def self.get_lesson_plan_url(lesson, student_facing=false)
-      pathname = get_lesson_plan_pathname(lesson, student_facing)
-      return nil unless pathname.present?
-
-      File.join(get_base_url, pathname)
-    end
-
-    def self.lesson_plan_pdf_exists_for?(lesson, student_facing=false)
-      pathname = get_lesson_plan_pathname(lesson, student_facing)
-      AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
-    end
-
-    def self.generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
-      url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
-      pathname = get_lesson_plan_pathname(lesson, student_facing)
-
-      ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}"
-
-      FileUtils.mkdir_p(File.join(directory, pathname.dirname))
-      PDF.generate_from_url(url, File.join(directory, pathname))
     end
 
     def self.upload_generated_pdfs_to_s3(directory)
