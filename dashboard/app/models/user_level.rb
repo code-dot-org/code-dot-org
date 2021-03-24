@@ -193,4 +193,17 @@ class UserLevel < ApplicationRecord
   def self.count_passed_levels_for_users(users)
     joins(:user).merge(users).passing.group(:user_id).count
   end
+
+  # Making unlocked_at private ensures future updates will use the locked
+  # virtual attribute directly, avoiding the need to recalculate a value
+  # for locked based on the 'unlocked_at' field in the db.
+  private
+
+  def unlocked_at
+    self[:unlocked_at]
+  end
+
+  def unlocked_at=(val)
+    write_attribute :unlocked_at, val
+  end
 end
