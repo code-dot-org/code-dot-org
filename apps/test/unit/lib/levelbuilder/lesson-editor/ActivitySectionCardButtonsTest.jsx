@@ -12,6 +12,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel,
     uploadImage,
     removeTip,
+    appendProgrammingExpressionLink,
     appendResourceLink,
     appendVocabularyLink,
     appendSlide;
@@ -21,6 +22,7 @@ describe('ActivitySectionCardButtons', () => {
     addLevel = sinon.spy();
     uploadImage = sinon.spy();
     removeTip = sinon.spy();
+    appendProgrammingExpressionLink = sinon.spy();
     appendResourceLink = sinon.spy();
     appendVocabularyLink = sinon.spy();
     appendSlide = sinon.spy();
@@ -32,6 +34,7 @@ describe('ActivitySectionCardButtons', () => {
       addLevel,
       uploadImage,
       removeTip,
+      appendProgrammingExpressionLink,
       appendResourceLink,
       appendVocabularyLink,
       appendSlide,
