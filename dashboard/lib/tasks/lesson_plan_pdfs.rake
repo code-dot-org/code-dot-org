@@ -7,7 +7,8 @@ namespace :lesson_plan_pdfs do
 
   def get_pdfless_lessons(script)
     script.lessons.select(&:has_lesson_plan).select do |lesson|
-      !Services::LessonPlanPdfs.pdf_exists_for?(lesson)
+      !Services::LessonPlanPdfs.pdf_exists_for?(lesson) ||
+        !Services::LessonPlanPdfs.pdf_exists_for?(lesson, true)
     end
   end
 
@@ -36,6 +37,7 @@ namespace :lesson_plan_pdfs do
         get_pdfless_lessons(script).each do |lesson|
           puts "Generating missing PDF for #{lesson.key} (from #{script.name})"
           Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir)
+          Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir, true)
           any_pdf_generated = true
         end
       end
@@ -60,6 +62,7 @@ namespace :lesson_plan_pdfs do
       get_pdf_enabled_scripts.each do |script|
         script.lessons.select(&:has_lesson_plan).each do |lesson|
           Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir)
+          Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir, true)
         end
       end
       Services::LessonPlanPdfs.upload_generated_pdfs_to_s3(dir)
