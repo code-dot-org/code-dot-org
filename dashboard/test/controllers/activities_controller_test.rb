@@ -1117,7 +1117,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 403
 
     # explicity create a user_level that is unlocked
-    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, locked: false
 
     # should now succeed
     post :milestone, params: milestone_params
@@ -1133,7 +1133,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     user_level.delete
     # explicity create a user_level that is readonly_answers
-    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
+    create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
   end
