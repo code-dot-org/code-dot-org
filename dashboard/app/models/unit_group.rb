@@ -165,7 +165,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def get_teacher_resources
-    return resources if default_scripts[0]&.is_migrated
+    return resources if has_migrated_script?
     return teacher_resources
   end
 
@@ -342,7 +342,7 @@ class UnitGroup < ApplicationRecord
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: get_teacher_resources,
-      is_migrated: default_scripts[0].is_migrated?,
+      is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
@@ -663,4 +663,8 @@ class UnitGroup < ApplicationRecord
     return !!family_name && !!version_year
   end
   # rubocop:enable Naming/PredicateName
+
+  def has_migrated_script?
+    default_scripts[0]&.is_migrated?
+  end
 end
