@@ -150,8 +150,6 @@ WebLab.prototype.init = function(config) {
 
   this.loadFileEntries();
 
-  const wrappedOnMount = () => this.onMount(config);
-
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
@@ -234,7 +232,7 @@ WebLab.prototype.init = function(config) {
         onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={this.onToggleInspector.bind(this)}
-        onMount={wrappedOnMount.bind(this)}
+        onMount={() => this.onMount(config)}
       />
     </Provider>,
     document.getElementById(config.containerId)
