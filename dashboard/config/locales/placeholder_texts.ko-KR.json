@@ -57,7 +57,13 @@
           "22b45b2cf2d4a2a3d7b3faa522013b26": "셋 까지 세면 저는 사라집니다! 저를 찾기 위해 1부터 400까지 중 한 숫자를 추측하세요!",
           "0b895ef4c917e50663bc2a7327cbee3d": "나 여기 있어!",
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
-          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "74e3efe12b17fe00c01147733fad486d": "숫자를 맞춰서 나를 찾아봐!",
+          "0464d226582401370945003bc8850990": "음하하하하하!",
+          "765366ef0f68387ed2a6ca3a8d24182d": "너무 높습니다!",
+          "0ceb38a3de45bf070e96e6657474f47d": "너무 낮습니다!",
+          "3c5a6a6bfff469fd4c779912331f1049": "하!",
+          "cd4c7f8fdf063e832de1604e34dd4531": "히 히!"
         },
         "Choose Your Own Adventure": {
           "c332bf82ea63d21d1d1b701a07ab9afd": "도와주셔서 감사하지만 이제 가야 합니다.",
@@ -90,12 +96,14 @@
           "ecb2903fb054395baf72ea1da127be32": "상당히 키가 큽니다 ",
           "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " 세, ",
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
-          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "나이가 어떻게 되시나요?"
         },
         "courseF_playlab_variables4c_predictive1": {
           "d065635d5fffcb3739555ae93006081c": "만나서 반가워요, ",
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
-          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
         },
         "courseF_playlab_variables8c": {
           "bec312aa7dbfb0c284d221d2aa8e9ffd": "축하합니다, ",
@@ -178,7 +186,10 @@
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
-          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+          "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요",
+          "66ca156974a9909af6aea88ad5cb915b": "좀비들이 외계인에게 다가가지 못하도록 하세요, 좀비들은 외계인을 슬프게 합니다!",
+          "66363f1551b4fdb85c85222c629013b2": "외계인을 지키세요!",
+          "3b3d1f8225a16aac3f372c3062d8b194": "만약 그가 슬퍼한다면, 점수를 모아 그를 다시 행복하게 만드세요!"
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
@@ -299,6 +310,10 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "문장을 넣으세요.",
           "30fcc1693fa8402931d13ac3a5f396fd": "제목을 입력하세요"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "다시 시도하세요.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "게임 오버!"
         }
       }
     }

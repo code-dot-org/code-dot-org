@@ -998,6 +998,7 @@ in:
             '"x"': crwdns169026:0crwdne169026:0
             '"y"': crwdns169027:0crwdne169027:0
             '"direction"': crwdns169028:0crwdne169028:0
+            '"speed"': crwdns2484866:0crwdne2484866:0
       gamelab_checkTouching:
         text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
         options:
