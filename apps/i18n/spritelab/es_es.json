@@ -6,6 +6,7 @@
   "subject": "Asunto",
   "subjectSprite": "tema sprite",
   "object": "objeto",
+  "objectSprite": "objeto sprite",
   "errorLoadingAnimation": "Parece que tenemos problemas al cargar tu animación \"{animationName}\". Asegúrate de que tienes una buena conexión a Internet y vuelve a cargar la página. Si persiste el problema, es posible que la animación esté rota. En ese caso, deberías eliminar la animación para continuar.",
   "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para pasar al siguiente nivel.",
   "shareGame": "Comparte tu juego:",
@@ -29,5 +30,6 @@
   "spritelabFeedbackMoveUpNotDown": "Tu sprite debe moverse hacia arriba (norte) y no hacia abajo (sur).",
   "spritelabFeedbackRobotFasterThanRover": "El robot llegó al lado derecho de la pantalla antes que el explorador.",
   "spritelabFeedbackDifferentStarRotation": "Los sprites con disfraces de estrella deben girar en la misma medida.",
-  "spritelabFeedbackAstronautMoveToCorner": "El sprite de astronauta debe moverse a una de las cuatro esquinas."
+  "spritelabFeedbackAstronautMoveToCorner": "El sprite de astronauta debe moverse a una de las cuatro esquinas.",
+  "outbreakMakeHealthySprites": "Utiliza este bloque para crear tus sprites de monstruos sanos:\n <xml><block type=\"gamelab_makeNumSprites\"><title name=\"ANIMATION_NAME\">\"healthy\"</title><value name=\"NUM\"><block type=\"math_number\"><title name=\"NUM\">10</title></block></value></block></xml>"
 }

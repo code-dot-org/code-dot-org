@@ -977,6 +977,7 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+            '"speed"': rychlost
       gamelab_checkTouching:
         text: "{CONDITION} se {SPRITE1} dotkne {SPRITE2}"
         options:

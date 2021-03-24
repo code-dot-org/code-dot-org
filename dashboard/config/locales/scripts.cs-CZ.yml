@@ -4266,10 +4266,6 @@ cs:
             Relay Programming:
               key: Štafetové programování
               name: Štafetové programování
-              description_teacher: Tato aktivita začne krátkou lekcí o ladění a vytrvalosti,
-                pak se rychle přesuneme na závod s časem, kdy se studenti rozdělí
-                do týmů a budou spolupracovat na napsání programu postupně po jednom
-                pokynu.
             Debugging in Collector:
               name: Ladění s Laurel
               description_teacher: V této online aktivitě si studenti procvičí ladění
@@ -4453,14 +4449,18 @@ cs:
               key: For cyklus zábavy
               name: For cyklus zábavy
           lesson_groups:
+            ramp_up:
+              display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
             csf_variables:
-              display_name: Proměnné
+              display_name: Cykly "For"
             csf_for_loops:
               display_name: Cykly "For"
-            csf_sprites:
-              display_name: Postavy
+            lessonGroup-8:
+              display_name: Proměnné
+            lessonGroup-9:
+              display_name: odstranit
         express-2021:
           title: Rychlý kurz (2019)
           lessons:
@@ -4517,16 +4517,6 @@ cs:
             While Loops with the Farmer:
               key: Cykly pokud (while) s farmářkou
               name: Cykly pokud (while) s farmářkou
-              description_teacher: "Když se studenti dostanou k této lekci, měli by
-                už mít pořádně procvičené cykly `opakuj`, takže je na čase to trochu
-                ztížit. \r\n\r\n_Cykly pokud (while)_ jsou cykly, které opakují příkazy,
-                když je podmínka splněna. Cykly `pokud` se využívají, když programátor
-                neví, kolikrát se budou muset příkazy zopakovat, ale ví, jaké podmínky
-                musí platit, aby se cyklus dále opakoval. Například ve hře Farmářka
-                budou studenti pracovat na zasypání děr a vykopání hlíny. Nebudou
-                znát velikost děr nebo výšku hromady hlíny, ale budou vědět, že musí
-                pokračovat se zasypáváním děr nebo kopání hlíny tak dlouho, dokud
-                nebude země rovná."
             Until Loops in Maze:
               key: Cykly dokud (until) v bludišti
               name: Cykly dokud (until) v bludišti
@@ -4546,6 +4536,11 @@ cs:
             Functions with Harvester:
               key: Funkce s farmářkou
               name: Funkce s farmářkou
+            lesson-1:
+              name: Taneční večírek
+              description_teacher: V této lekci studenti naprogramují svůj vlastní
+                interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože
+                tento nástroj byl vytvořený tak, aby reagoval na hudbu.
           lesson_groups:
             csf_sequencing:
               display_name: Sekvence
@@ -4588,6 +4583,8 @@ cs:
               display_name: Proměnné
             Sprites:
               display_name: Postavy
+            variables:
+              display_name: Proměnné
         csd4-preview-2021:
           lesson_groups:
             csd4_2:

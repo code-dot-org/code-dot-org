@@ -8,6 +8,7 @@ es-MX:
       actor: actor
       armlength: Longitud de brazo
       binary: binario
+      birds: pájaros
       bodylength: Longitud de cuerpo
       cats: gatos
       color: color
@@ -27,6 +28,7 @@ es-MX:
       repeat: repetir
       right: derecha
       score: puntuación
+      shout: gritar
       sides: lados
       size: tamaño
       speed: velocidad

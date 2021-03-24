@@ -7081,10 +7081,7 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
-              description_teacher: |-
-                In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
-
-                Mentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online.
+              description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
@@ -7165,10 +7162,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
-              description_teacher: |-
-                Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.
-
-                Gli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. 
+              description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
             Crowdsourcing:
               name: Intelligenza collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
@@ -7813,7 +7807,7 @@ it:
             'Events: The Big Event':
               key: 'Il grande evento'
               name: Il grande evento (per i più piccoli)
-              description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
+              description_teacher: "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo."
             Events in Play Lab:
               key: 'Laboratorio: Eventi'
               name: In movimento con gli eventi
@@ -7864,7 +7858,7 @@ it:
             'Events: The Big Event':
               key: 'Il grande evento'
               name: Il grande evento (per i più piccoli)
-              description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
+              description_teacher: "Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo."
             Events in Play Lab:
               key: 'Laboratorio: Eventi'
               name: Una battaglia con gli eventi
@@ -7960,7 +7954,6 @@ it:
               key: Programmazione a staffetta
               name: Programmazione a staffetta
               description_student: Ricordi quando facevi i primi disegni con il coding all'inizio del corso? In questa lezione lavorerai in gruppo per fare qualcosa di molto simile!
-              description_teacher: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla perseveranza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
             Debugging in Collector:
               key: Debugging con la collezionista
               name: Debugging con la collezionista
@@ -8054,7 +8047,7 @@ it:
             Conditionals:
               key: Istruzioni condizionali
               name: Istruzioni condizionali con la contadina
-              description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
+              description_teacher: 'Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.'
             Simon Says:
               key: Simone Dice
             Alien Dance Party with Sprite Lab:
@@ -8123,7 +8116,7 @@ it:
               key: Cicli con l'Artista
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
-              description_student: "Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo."
+              description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             The Power of Words:
               key: Cittadinanza digitale - Il potere delle parole

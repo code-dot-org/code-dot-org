@@ -57,6 +57,9 @@
           },
           "draw cord": {
             "name": "dibujar una cuerda"
+          },
+          "draw R pad": {
+            "name": "dibuja la cuadrícula R"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -701,7 +704,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -719,7 +723,8 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Geometric Sun_2018": {
@@ -733,7 +738,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -751,7 +757,8 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Guess The Number": {
