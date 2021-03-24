@@ -932,16 +932,16 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
   test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
   test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
-  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]

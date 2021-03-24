@@ -111,28 +111,28 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
   end
 
   def resources
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
   end
 
   def code
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
   end
 
   def standards
     unit_group = UnitGroup.get_from_cache(params[:course_name])
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
+    return render :forbidden unless unit_group.default_scripts[0].is_migrated
   end
 
   def i18n_params
