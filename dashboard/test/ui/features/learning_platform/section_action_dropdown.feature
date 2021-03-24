@@ -1,3 +1,4 @@
+@no_mobile
 @single_session
 Feature: Using the SectionActionDropdown
 
