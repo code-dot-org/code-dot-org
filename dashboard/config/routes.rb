@@ -275,10 +275,12 @@ Dashboard::Application.routes.draw do
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
 
   resources :courses, param: 'course_name' do
-    get 'vocab', to: 'courses#vocab'
-    get 'resources', to: 'courses#resources'
-    get 'code', to: 'courses#code'
-    get 'standards', to: 'courses#standards'
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+    end
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -307,12 +309,13 @@ Dashboard::Application.routes.draw do
     get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    get 'instructions', to: 'scripts#instructions'
-
-    get 'vocab', to: 'scripts#vocab'
-    get 'resources', to: 'scripts#resources'
-    get 'code', to: 'scripts#code'
-    get 'standards', to: 'scripts#standards'
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+      get 'instructions'
+    end
 
     ## TODO: Once we move levels over to /lessons as well combine the routing rules
     resources :lessons, only: [:show], param: 'position' do
