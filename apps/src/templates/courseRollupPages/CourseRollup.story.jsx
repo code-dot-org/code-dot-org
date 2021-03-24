@@ -10,7 +10,8 @@ const defaultProps = {
     units: [
       {
         name: 'unit-1',
-        displayName: 'Unit 1 - Unit One',
+        link: '/s/unit-1',
+        title: 'Unit 1 - Unit One',
         lessons: [
           {
             key: 'l1',
@@ -94,7 +95,8 @@ const defaultProps = {
       },
       {
         name: 'unit-2',
-        displayName: 'Unit 2 - Unit Two',
+        link: '/s/unit-2',
+        title: 'Unit 2 - Unit Two',
         lessons: [
           {
             key: 'l3',
