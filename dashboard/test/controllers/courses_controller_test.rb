@@ -322,17 +322,17 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.is_stable?
   end
 
-  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
-  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_course_name: @unit_group_migrated.name}}
-  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_course_name: @unit_group_unmigrated.name}}
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   # tests for edit
 
