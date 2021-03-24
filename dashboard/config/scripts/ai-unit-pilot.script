@@ -10,7 +10,7 @@ level 'CSD AIL01 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 
 lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
 level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
-level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
+level 'ml-L2 supervised - green glass door', progression: 'Green Glass Door'
 
 lesson 'lesson3', display_name: 'AI for Social Good (Unplugged)', has_lesson_plan: true
 
@@ -98,4 +98,5 @@ level 'ml-use model card-example2B', progression: 'How Much Will Insurance Cost?
 level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?'
 level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
 level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
+level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
 
