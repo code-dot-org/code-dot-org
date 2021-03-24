@@ -6,6 +6,7 @@ import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
 
 const styles = {
   main: {
@@ -116,6 +117,14 @@ export default class RollupLessonEntrySection extends Component {
           {this.props.objectToRollUp === 'Prep' &&
             !this.props.lesson.preparation && (
               <p>{i18n.courseRollupNoPrep()}</p>
+            )}
+          {this.props.objectToRollUp === 'Standards' &&
+            this.props.lesson.standards > 0 && (
+              <LessonStandards standards={this.props.lesson.standards} />
+            )}
+          {this.props.objectToRollUp === 'Standards' &&
+            !this.props.lesson.standards <= 0 && (
+              <p>{i18n.courseRollupNoStandards()}</p>
             )}
         </div>
       </div>
