@@ -4,7 +4,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
 import {courseData} from './rollupTestData';
 
-describe('CourseRollup', () => {
+describe('UnitRollup', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
