@@ -26,7 +26,8 @@ const defaultProps = {
   viewAs: ViewType.Student,
   isRtl: false,
   resources: [],
-  showAssignButton: true
+  showAssignButton: true,
+  isMigrated: false
 };
 
 describe('ScriptOverviewTopRow', () => {
@@ -165,6 +166,48 @@ describe('ScriptOverviewTopRow', () => {
               link: 'https://example.com/b'
             }
           ]}
+          useMigratedResources={false}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('renders migrated resources for teacher on a migrated script', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+        isMigrated={true}
+        resources={[
+          {
+            id: 1,
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TeacherResourcesDropdown
+          resources={[
+            {
+              id: 1,
+              name: 'Curriculum',
+              url: 'https://example.com/a'
+            },
+            {
+              id: 2,
+              name: 'Vocabulary',
+              url: 'https://example.com/b'
+            }
+          ]}
+          useMigratedResources={true}
         />
       )
     ).to.be.true;

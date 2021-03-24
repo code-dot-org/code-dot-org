@@ -106,6 +106,7 @@ export default class ResourcesEditor extends Component {
           <div style={{marginBottom: 5}}>Preview:</div>
           <TeacherResourcesDropdown
             resources={resources.filter(x => !!x.type)}
+            useMigratedResources={false}
           />
         </div>
       </div>
