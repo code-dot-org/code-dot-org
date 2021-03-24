@@ -135,17 +135,11 @@ function randomProgress() {
         status: LevelStatus.passed,
         result: TestResults.TOO_MANY_BLOCKS_FAIL,
         paired: paired,
-        timeSpent: timeSpent,
+        timeSpent: undefined,
         lastTimestamp: Date.now()
       };
     default:
-      return {
-        status: LevelStatus.not_tried,
-        result: TestResults.NO_TESTS_RUN,
-        paired: false,
-        timeSpent: 0,
-        lastTimestamp: 0
-      };
+      return null;
   }
 }
 

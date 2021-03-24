@@ -80,7 +80,7 @@ export const levelType = PropTypes.shape({
  * @property {bool} paired
  * A boolean indicating if a student was paired on a level.
  * @property {number} timeSpent
- * The number of seconds a student spent on a level.
+ * The number of milliseconds a student spent on a level.
  * @property {number} lastTimestamp
  * A timestamp of the last time a student made progress on a level.
  * @property {array} pages
@@ -91,8 +91,8 @@ const studentLevelProgressShape = {
   status: PropTypes.string.isRequired,
   result: PropTypes.number.isRequired,
   paired: PropTypes.bool.isRequired,
-  timeSpent: PropTypes.number.isRequired,
-  lastTimestamp: PropTypes.number.isRequired
+  timeSpent: PropTypes.number,
+  lastTimestamp: PropTypes.number
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
