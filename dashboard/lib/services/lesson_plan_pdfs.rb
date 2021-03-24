@@ -128,18 +128,15 @@ module Services
     # lesson's script but also the current version of the script in the environment.
     #
     # Expect this to look something like this for teacher lesson plans
-    # <Pathname:csp1-2021/20210216001309/Welcome to CSP.pdf>
+    # <Pathname:csp1-2021/20210216001309/teacher-lesson-plans/Welcome to CSP.pdf>
     # and this for student lesson plans
-    # <Pathname:csp1-2021/20210216001309/student/Welcome to CSP.pdf>
+    # <Pathname:csp1-2021/20210216001309/student-lesson-plans/Welcome to CSP.pdf>
     def self.get_pathname(lesson, student_facing = false)
       return nil unless lesson&.script&.seeded_from
       version_number = Time.parse(lesson.script.seeded_from).to_s(:number)
       filename = ActiveStorage::Filename.new(lesson.key + ".pdf").sanitized
-      if student_facing
-        return Pathname.new(File.join(lesson.script.name, version_number, 'student', filename))
-      else
-        return Pathname.new(File.join(lesson.script.name, version_number, filename))
-      end
+      subdir = student_facing ? "student-lesson-plans" : "teacher-lesson-plans"
+      return Pathname.new(File.join(lesson.script.name, version_number, subdir, filename))
     end
 
     def self.get_url(lesson, student_facing=false)
