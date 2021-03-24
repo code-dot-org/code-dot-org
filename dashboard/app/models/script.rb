@@ -40,7 +40,8 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_many :resources, join_table: :scripts_resources
+  has_and_belongs_to_many :resources, join_table: :scripts_resources
+  has_many :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -91,7 +92,8 @@ class Script < ApplicationRecord
           ]
         },
         :script_levels,
-        :levels
+        :levels,
+        :resources
       ]
     )
   end
