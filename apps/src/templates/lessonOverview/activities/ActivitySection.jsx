@@ -57,7 +57,7 @@ export default class ActivitySection extends Component {
             </span>
           )}
         </h3>
-        <div>
+        <div className="activity-section-text">
           <div
             style={{
               ...styles.textAndProgression
