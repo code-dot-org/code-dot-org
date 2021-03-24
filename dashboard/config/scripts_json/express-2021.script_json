@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-23 22:17:30 UTC",
+    "serialized_at": "2021-03-24 13:35:07 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -153,7 +153,7 @@
         "overview": "Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
         "purpose": "In this lesson, students will develop programming skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -672,7 +672,7 @@
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
         "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -692,7 +692,7 @@
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
-        "preparation": " - Spend time making your own project with both the project tools available to students. Familiarize yourself with the capabilities and limitations of each tool.\r\n - Modify the rubric to fit your class goals and print one copy for each student or group.\r\n - Modify the project planning guide to fit your class and print one for each student or group.",
+        "preparation": " - Spend time making your own project with both the project tools available to students. Familiarize yourself with the capabilities and limitations of each tool.\n - Modify the ***rubric** to fit your class goals and print one copy for each student or group.\n - Modify the ***project planning guide** to fit your class and print one for each student or group.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -13269,7 +13269,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Example Projects"
+        "progression": "Example Projects",
+        "level_keys": [
+          "courseF_EOC_examples_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -17260,17 +17263,6 @@
       }
     },
     {
-      "name": "Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "unplugged_blocks_courses_c-f_",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
       "name": "Variables",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "variables",
@@ -17281,17 +17273,6 @@
       },
       "seeding_key": {
         "resource.key": "variables"
-      }
-    },
-    {
-      "name": "Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "unplugged_blocks_courses_c-f_",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
@@ -17327,18 +17308,6 @@
       },
       "seeding_key": {
         "resource.key": "swimming_fish_teacher_sandbox"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "pause_and_think_online",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pause_and_think_online"
       }
     },
     {
@@ -17518,6 +17487,9 @@
         "resource.key": "rubric-csf-final-projects"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
     {
