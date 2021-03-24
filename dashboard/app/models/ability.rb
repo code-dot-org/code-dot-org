@@ -191,8 +191,12 @@ class Ability
       end
     end
 
+    can [:vocab, :resources, :code, :standards], UnitGroup do
+      true
+    end
+
     # Override Script and ScriptLevel.
-    can :read, Script do |script|
+    can [:read, :vocab, :resources, :code, :standards], Script do |script|
       if script.pilot?
         script.has_pilot_access?(user)
       else

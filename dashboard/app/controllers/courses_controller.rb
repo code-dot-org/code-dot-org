@@ -1,8 +1,8 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:index, :show]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :set_redirect_override, only: [:show]
   authorize_resource class: 'UnitGroup', except: [:index]
 
@@ -108,27 +108,31 @@ class CoursesController < ApplicationController
   end
 
   def vocab
-    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    unit_group = UnitGroup.get_from_cache(params[:course_course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.units[0].is_migrated
+    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
   end
 
   def resources
-    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    unit_group = UnitGroup.get_from_cache(params[:course_course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.units[0].is_migrated
+    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
   end
 
   def code
-    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    unit_group = UnitGroup.get_from_cache(params[:course_course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.units[0].is_migrated
+    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
   end
 
   def standards
-    unit_group = UnitGroup.find_by_name!(params[:course_course_name])
+    unit_group = UnitGroup.get_from_cache(params[:course_course_name])
+    raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless unit_group.units[0].is_migrated
+    return render :forbidden unless unit_group.scripts_for_user(current_user)[0].is_migrated
   end
 
   def i18n_params
