@@ -25,6 +25,7 @@ import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import * as utils from '@cdo/apps/utils';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
+import dom from '@cdo/apps/dom';
 
 describe('WebLab', () => {
   let weblab;
@@ -179,6 +180,50 @@ describe('WebLab', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: false});
       weblab.onToggleInspector();
       expect(brambleHost.enableInspector).to.have.been.calledOnce;
+    });
+  });
+
+  describe('onMount', () => {
+    let config;
+    beforeEach(() => {
+      stubStudioApp();
+      stubRedux();
+      config = {
+        containerId: 'container-id'
+      };
+      weblab.studioApp_ = studioApp();
+      sinon.stub(studioApp(), 'setConfigValues_');
+      sinon.stub(studioApp(), 'initProjectTemplateWorkspaceIconCallout');
+      sinon.stub(studioApp(), 'alertIfCompletedWhilePairing');
+      sinon.stub(studioApp(), 'initVersionHistoryUI');
+      sinon.stub(studioApp(), 'initTimeSpent');
+      weblab.level = {unsubmitUrl: 'url'};
+      sinon.stub(dom, 'addClickTouchEvent');
+    });
+
+    afterEach(() => {
+      restoreStudioApp();
+      restoreRedux();
+      dom.addClickTouchEvent.restore();
+    });
+
+    it('adds clickTouchEvent 3 times if there is a finishButton', () => {
+      sinon.stub(document, 'getElementById').returns({className: 'test'});
+      weblab.onMount(config);
+      expect(dom.addClickTouchEvent).to.have.been.calledThrice;
+      document.getElementById.restore();
+    });
+
+    it('adds clickTouchEvent 2 times if there is no finishButton', () => {
+      sinon
+        .stub(document, 'getElementById')
+        .onCall(0)
+        .returns({className: 'test'})
+        .onCall(1)
+        .returns(null);
+      weblab.onMount(config);
+      expect(dom.addClickTouchEvent).to.not.have.been.called;
+      document.getElementById.restore();
     });
   });
 

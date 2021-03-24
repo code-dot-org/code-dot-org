@@ -234,7 +234,7 @@ WebLab.prototype.init = function(config) {
         onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
         onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
         onToggleInspector={this.onToggleInspector.bind(this)}
-        onMount={wrappedOnMount}
+        onMount={wrappedOnMount.bind(this)}
       />
     </Provider>,
     document.getElementById(config.containerId)
