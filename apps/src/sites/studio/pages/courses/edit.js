@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/code-studio/redux';
+import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(showCourseEditor);
 
@@ -10,15 +14,24 @@ function showCourseEditor() {
   const scriptData = document.querySelector('script[data-course-editor]');
   const courseEditorData = JSON.parse(scriptData.dataset.courseEditor);
 
-  const teacherResources = (
-    courseEditorData.course_summary.teacher_resources || []
-  ).map(([type, link]) => ({type, link}));
+  const teacherResources = courseEditorData.course_summary.is_migrated
+    ? courseEditorData.course_summary.teacher_resources
+    : (courseEditorData.course_summary.teacher_resources || []).map(
+        ([type, link]) => ({type, link})
+      );
+
+  registerReducers({resources: resourcesEditor});
+  const store = getStore();
+  const resourcesForRedux = courseEditorData.course_summary.is_migrated
+    ? courseEditorData.course_summary.teacher_resources
+    : [];
+  store.dispatch(initResources(resourcesForRedux || []));
 
   let announcements = courseEditorData.course_summary.announcements || [];
 
   // Eventually we want to do this all via redux
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <CourseEditor
         name={courseEditorData.course_summary.name}
         title={courseEditorData.course_summary.title}
@@ -49,6 +62,8 @@ function showCourseEditor() {
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}
+        useMigratedResources={courseEditorData.course_summary.is_migrated}
+        courseVersionId={courseEditorData.course_summary.course_version_id}
       />
     </Provider>,
     document.getElementById('course_editor')

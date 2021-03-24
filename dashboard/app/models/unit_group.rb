@@ -97,8 +97,8 @@ class UnitGroup < ApplicationRecord
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
 
-    if course_version && hash['resources']
-      resources_imported = hash['resources'].map do |resource_data|
+    if course_version
+      resources_imported = (hash['resources'] || []).map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version.id
         resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
@@ -162,6 +162,11 @@ class UnitGroup < ApplicationRecord
     UnitGroup.update_strings(name, course_strings)
     update_scripts(scripts, alternate_scripts) if scripts
     save!
+  end
+
+  def get_teacher_resources
+    return resources if default_scripts[0]&.is_migrated
+    return teacher_resources
   end
 
   # @param types [Array<string>]
@@ -336,12 +341,14 @@ class UnitGroup < ApplicationRecord
         include_lessons = false
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
-      teacher_resources: teacher_resources,
+      teacher_resources: get_teacher_resources,
+      is_migrated: default_scripts[0].is_migrated?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
-      announcements: announcements
+      announcements: announcements,
+      course_version_id: course_version.id
     }
   end
 

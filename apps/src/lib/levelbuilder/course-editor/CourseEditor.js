@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
+import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -9,9 +10,8 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourceType, {
-  resourceShape
-} from '@cdo/apps/templates/courseOverview/resourceType';
+import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
+import {connect} from 'react-redux';
 
 const styles = {
   input: {
@@ -36,7 +36,7 @@ const styles = {
   }
 };
 
-export default class CourseEditor extends Component {
+class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -51,21 +51,29 @@ export default class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired
+    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
+    useMigratedResources: PropTypes.bool.isRequired,
+    courseVersionId: PropTypes.number,
+
+    // Provided by redux
+    resourceIds: PropTypes.arrayOf(PropTypes.number)
   };
 
   constructor(props) {
     super(props);
 
     const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+
+    if (!props.useMigratedResources) {
+      // add empty entries to get to max
+      while (resources.length < Object.keys(ResourceType).length) {
+        resources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -267,13 +275,26 @@ export default class CourseEditor extends Component {
             Select the Teacher Resources buttons you'd like to have show up on
             the top of the course overview page
           </div>
-          <ResourcesEditor
-            inputStyle={styles.input}
-            resources={teacherResources}
-            updateTeacherResources={teacherResources =>
-              this.setState({teacherResources})
-            }
-          />
+          {this.props.resourceIds && (
+            <input
+              type="hidden"
+              name="resourceIds[]"
+              value={this.props.resourceIds}
+            />
+          )}
+          {this.props.useMigratedResources ? (
+            <MigratedResourcesEditor
+              courseVersionId={this.props.courseVersionId}
+            />
+          ) : (
+            <ResourcesEditor
+              inputStyle={styles.input}
+              resources={teacherResources}
+              updateTeacherResources={teacherResources =>
+                this.setState({teacherResources})
+              }
+            />
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
@@ -294,3 +315,9 @@ export default class CourseEditor extends Component {
     );
   }
 }
+
+export const UnconnectedCourseEditor = CourseEditor;
+
+export default connect(state => ({
+  resourceIds: state.resources.map(r => r.id)
+}))(CourseEditor);
