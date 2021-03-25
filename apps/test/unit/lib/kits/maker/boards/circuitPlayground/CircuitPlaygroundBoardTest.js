@@ -62,7 +62,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
         },
         addCustomMarshalObject: sinon.spy()
       };
-      // Opportunity to stub any needed to test a board
+      // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
         boardSpecificSetup(board);
       }
@@ -281,7 +281,7 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
 }
 
 describe('CircuitPlaygroundBoard', () => {
-  let board, playground, spy;
+  let board, playground, userAgentSpy;
 
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
@@ -335,11 +335,12 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   function circuitPlaygroundBoardSetup() {
-    spy = sinon.stub(navigator, 'userAgent').value('CrOS');
+    // 'CrOS' represents ChromeOS
+    userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
   }
 
   function circuitPlaygroundBoardTeardown() {
-    spy.restore();
+    userAgentSpy.restore();
   }
 
   // Test coverage for Maker Board Interface

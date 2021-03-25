@@ -28,7 +28,7 @@ export function itImplementsTheMakerBoardInterface(
 
     beforeEach(() => {
       board = new BoardClass();
-      // Opportunity to stub any needed to test a board
+      // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
         boardSpecificSetup(board);
       }
