@@ -20,9 +20,10 @@ import {
   J5_CONSTANTS
 } from './PlaygroundConstants';
 import Led from './Led';
+import {isNodeSerialAvailable} from '../../portScanning';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {serialPortType} from '../../util/browserChecks';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -352,7 +353,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       baudRate: SERIAL_BAUD
     });
 
-    if (!isChromeOS()) {
+    if (isNodeSerialAvailable()) {
       port.queue = [];
       let sendPending = false;
       const oldWrite = port.write;

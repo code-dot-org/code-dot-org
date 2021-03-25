@@ -1,5 +1,6 @@
 /** @file Some misc. browser check methods for maker */
 /* global SerialPort */ // Maybe provided by the Code.org Browser
+import {isNodeSerialAvailable} from '../portScanning';
 import ChromeSerialPort from 'chrome-serialport';
 
 export function gtChrome33() {
@@ -49,7 +50,7 @@ export function isLinux() {
     Parameter determines whether to return the factory of the SerialPort
  */
 export function serialPortType(getFactory = null) {
-  if (!isChromeOS()) {
+  if (isNodeSerialAvailable()) {
     return SerialPort;
   } else {
     if (getFactory) {
