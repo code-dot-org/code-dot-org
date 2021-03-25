@@ -13,11 +13,10 @@
       %img.tutorial-tile-img{src: CDO.code_org_url(image_url)}
     .tutorial-info
       %span
-        %h3.tutorial-info-h{dir: language_dir_class}= I18n.t(:applab_tile_title)
-        .smalltext{dir: language_dir_class}= I18n.t(:applab_tile_subtitle)
-      %div{dir: language_dir_class}
-        %span
-          %a{href: CDO.studio_url("/s/applab-intro/reset")}
-            %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
-          .tutorial-info-guide
-            %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/7/")}= I18n.t(:applab_tile_teacher_guide)
+        %h3.tutorial-info-h= I18n.t(:applab_tile_title)
+        .smalltext= I18n.t(:applab_tile_subtitle)
+      %span
+        %a{href: CDO.studio_url("/s/applab-intro/reset")}
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+        .tutorial-info-guide
+          %a{href: CDO.curriculum_url(I18n.locale, "/hoc/plugged/7/")}= I18n.t(:applab_tile_teacher_guide)
