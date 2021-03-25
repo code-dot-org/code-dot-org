@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import RollupLessonEntrySection from './RollupLessonEntrySection';
+import {lessonShape} from './rollupShapes';
 
 const styles = {
   main: {
@@ -34,7 +35,7 @@ const styles = {
 export default class RollupLessonEntry extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    lesson: PropTypes.object
+    lesson: lessonShape
   };
 
   render() {
