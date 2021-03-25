@@ -112,7 +112,7 @@ function buildSectionProgress(students, scriptData) {
 function randomProgress() {
   const rand = Math.floor(Math.random() * 4);
   const paired = Math.floor(Math.random() * 10) === 0;
-  const timeSpent = Math.random() * 1000 * 60 * 60;
+  const timeSpent = Math.random() * 60 * 60;
   switch (rand) {
     case 0:
       return {

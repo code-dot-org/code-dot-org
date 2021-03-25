@@ -6,28 +6,38 @@ import {
 
 describe('progressTableHelpers', () => {
   describe('timeSpentFormatter', () => {
-    it('returns "-" when progress is null', () => {
-      expect(timeSpentFormatter(null)).to.equal('-');
+    it('returns "" when progress is null', () => {
+      expect(timeSpentFormatter(null)).to.equal('');
     });
 
-    it('returns "-" when timeSpent is 0 (default value)', () => {
+    it('returns "" when timeSpent is 0', () => {
       const studentProgress = {timeSpent: 0};
+      expect(timeSpentFormatter(studentProgress)).to.equal('');
+    });
+
+    it('returns "-" when timeSpent is null (default value)', () => {
+      const studentProgress = {timeSpent: null};
       expect(timeSpentFormatter(studentProgress)).to.equal('-');
     });
 
     it('returns timeSpent in minutes', () => {
-      const studentProgress = {timeSpent: 140000}; // 140,000 ms = 2 minutes
+      const studentProgress = {timeSpent: 140}; // 140 seconds = 2 minutes
       expect(timeSpentFormatter(studentProgress)).to.equal('2');
     });
   });
 
   describe('lastUpdatedFormatter', () => {
-    it('returns "-" when progress is null', () => {
-      expect(lastUpdatedFormatter(null)).to.equal('-');
+    it('returns "" when progress is null', () => {
+      expect(lastUpdatedFormatter(null)).to.equal('');
     });
 
-    it('returns "-" when lastTimestamp is 0 (default)', () => {
+    it('returns "" when lastTimestamp is 0', () => {
       const studentProgress = {lastTimestamp: 0};
+      expect(lastUpdatedFormatter(studentProgress)).to.equal('');
+    });
+
+    it('returns "-" when lastTimestamp is null (default)', () => {
+      const studentProgress = {lastTimestamp: null};
       expect(lastUpdatedFormatter(studentProgress)).to.equal('-');
     });
 
