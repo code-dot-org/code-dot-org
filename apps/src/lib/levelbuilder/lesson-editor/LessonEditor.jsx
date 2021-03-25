@@ -124,8 +124,9 @@ class LessonEditor extends Component {
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
         programmingExpressions: JSON.stringify(
-          this.props.programmingExpressions.map(pe => pe.id)
+          this.props.programmingExpressions
         ),
+        standards: JSON.stringify(this.props.standards),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -443,7 +444,7 @@ class LessonEditor extends Component {
               collapsed={true}
               fullwidth={true}
             >
-              <StandardsEditor standards={this.props.standards} />
+              <StandardsEditor />
             </CollapsibleEditorSection>
           </div>
         )}
