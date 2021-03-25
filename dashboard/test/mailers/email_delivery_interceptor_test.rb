@@ -2,17 +2,21 @@ require 'test_helper'
 require 'testing/includes_metrics'
 
 class EmailDeliveryInterceptorTest < ActiveSupport::TestCase
-  test 'push a metric when an email is going to be sent' do
+  setup do
     ActionMailer::Base.register_interceptor EmailDeliveryInterceptor
+  end
 
-    Cdo::Metrics.expects(:push).once.with(
-      'ActionMailer', includes_metrics(EmailToSend: 1)
-    )
-
-    # TODO: remove this unrelated expectation
-    Cdo::Metrics.expects(:push).with(
-      'ActionMailer', includes_metrics(EmailSent: 1)
-    )
+  test 'push a metric when an email is going to be sent' do
+    expected_metric = [
+      {
+        metric_name: :EmailToSend,
+        dimensions: [
+          {name: "Environment", value: CDO.rack_env}
+        ],
+        value: 1
+      }
+    ]
+    Cdo::Metrics.expects(:push).with('ActionMailer', expected_metric)
 
     teacher = build :teacher, email: 'teacher@gmail.com'
     TeacherMailer.new_teacher_email(teacher).deliver_now
