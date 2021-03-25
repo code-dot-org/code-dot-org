@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-19 23:07:15 UTC",
+    "serialized_at": "2021-03-24 21:38:29 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -6424,19 +6424,6 @@
       }
     },
     {
-      "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
-      "key": "mimi-activity",
-      "properties": {
-        "type": "Map Activity",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "mimi-activity"
-      }
-    },
-    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
@@ -6521,43 +6508,6 @@
       }
     },
     {
-      "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
-      "key": "mimi-activity",
-      "properties": {
-        "type": "Map Activity",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "mimi-activity"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
       "name": "Happy Map Game Pieces",
       "url": "https://drive.google.com/open?id=19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k",
       "key": "happy-map-game-pieces",
@@ -6592,31 +6542,6 @@
       },
       "seeding_key": {
         "resource.key": "feeling_faces_-_emotion_image"
-      }
-    },
-    {
-      "name": "Feeling Faces",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-      "key": "feeling-faces-image",
-      "properties": {
-        "type": "Emotion Images",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "feeling-faces-image"
-      }
-    },
-    {
-      "name": "Stevie and the Big Project",
-      "url": "https://drive.google.com/open?id=0B-uvt08wYSQqTUFzaGxKSk45QkU",
-      "key": "stevie_and_the_big_project",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "stevie_and_the_big_project"
       }
     },
     {
@@ -6684,68 +6609,6 @@
       }
     },
     {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "CS Fundamentals Main Activity Tips",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf-lesson-recommend",
-      "properties": {
-        "type": "Lesson Recommendations",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "name": "CS Fundamentals Main Activity Tips",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf-lesson-recommend",
-      "properties": {
-        "type": "Lesson Recommendations",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
       "name": "CS Fundamentals Main Activity Tips",
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf-lesson-recommend",
@@ -6771,18 +6634,6 @@
       }
     },
     {
-      "name": "Feeling Faces Emotion Image",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion_image",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
       "name": "The Right App Scenarios",
       "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
       "key": "the-right-app-scenarios",
@@ -6792,19 +6643,6 @@
       },
       "seeding_key": {
         "resource.key": "the-right-app-scenarios"
-      }
-    },
-    {
-      "name": "Feeling Faces",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-      "key": "feeling-faces-image",
-      "properties": {
-        "type": "Emotion Images",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "feeling-faces-image"
       }
     },
     {
@@ -6844,56 +6682,6 @@
       },
       "seeding_key": {
         "resource.key": "assessment-answer-big-event"
-      }
-    },
-    {
-      "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
-      "key": "the_big_event_courses_a_b_",
-      "properties": {
-        "type": "Controller Image",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_courses_a_b_"
-      }
-    },
-    {
-      "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
-      "key": "course-ab-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-ab-blockly-blocks"
-      }
-    },
-    {
-      "name": "CS Fundamentals Main Activity Tips",
-      "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
-      "key": "csf-lesson-recommend",
-      "properties": {
-        "type": "Lesson Recommendations",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-lesson-recommend"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "common-sense-media-pause-think",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "common-sense-media-pause-think"
       }
     },
     {
@@ -7205,6 +6993,9 @@
         "resource.key": "the_big_event_courses_a_b_"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
     {
@@ -7878,6 +7669,243 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    }
   ]
 }
