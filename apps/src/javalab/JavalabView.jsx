@@ -85,7 +85,17 @@ class JavalabView extends React.Component {
       () => this.setState({loading: false, loadSuccess: false}),
       this.props.suppliedFilesVersionId
     );
+    this.getToken();
   }
+
+  getToken = () => {
+    $.ajax({
+      url: '/javabuilder/access_token',
+      type: 'get'
+    })
+      .done(result => console.log(result))
+      .fail(() => console.log('get token failed!'));
+  };
 
   run = () => {
     this.props.appendOutputLog('Running program...');
