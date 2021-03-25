@@ -14291,10 +14291,7 @@ zh-CN:
             Private and Personal Information:
               name: 私人和个人信息
               description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
-              description_teacher: |-
-                由常识教育开发，这堂课关于什么信息能够安全的在线共享，但什么不能共享。
-
-                当学生们参观网站时，会要求他们的个人信息，他们会学会采取批判性的思维来保护他们和家庭远离信息窃贼。在这堂课中，学生们会学会批判性的思考一些网站请求或强制要求的个人信息。他们会学会隐私信息和个人信息间的不同，也会区别能不能安全的共享的不同。
+              description_teacher: "由常识教育开发，这堂课关于什么信息能够安全的在线共享，但什么不能共享。\n\n当学生们参观网站时，会要求他们的个人信息，他们会学会采取批判性的思维来保护他们和家庭远离信息窃贼。在这堂课中，学生们会学会批判性的思考一些网站请求或强制要求的个人信息。他们会学会隐私信息和个人信息间的不同，也会区别能不能安全的共享的不同。"
             About Me:
               name: 关于我
               description_student: 通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。
@@ -14430,10 +14427,7 @@ zh-CN:
             The Power of Words:
               name: 语言的力量
               description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
-              description_teacher: |-
-                学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。
-
-                学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 
+              description_teacher: "学生们会考虑到，当他们沉浸在喜欢的网站上时，可能会由别的孩子的消息，让他们感到生气、受伤害、悲伤，或者害怕。他们会找到办法来处理网络霸凌，如何回应令人不安的在线语言。\n\n学生们讨论所有他们用来沟通的技术，并且探索面对面和在线沟通的相似和不同点。学生们然后会头脑风暴来回应网络霸凌。 "
             Crowdsourcing:
               name: 众包
               description_student: 这堂课会教你众包的概念，这是通过团队来完成一个项目的过程。
@@ -16317,7 +16311,7 @@ zh-CN:
               key: '事件: 大事件'
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动并喊出来。
-              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
+              description_teacher: "事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。"
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
@@ -16392,7 +16386,7 @@ zh-CN:
               key: '事件: 大事件'
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动或喊出来。
-              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
+              description_teacher: "事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。"
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
@@ -16433,7 +16427,7 @@ zh-CN:
               key: 迷宫里的调试
               name: 迷宫里的调试
               description_student: 找到难题中的问题，并练习调试技巧。
-              description_teacher: 调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。
+              description_teacher: "调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。"
             Programming in Collector:
               key: 在收集器中编程
               name: 在收集器中编程
@@ -16448,7 +16442,7 @@ zh-CN:
               key: 二进制的手镯
               name: 二进制的手镯
               description_student: 创作自己的二进制手链，学习计算机如何记住信息！
-              description_teacher: 二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。
+              description_teacher: "二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。"
             'Loops: My Loopy Robotic Friends':
               key: '循环: 我糊涂的机器人朋友'
               name: '循环: 我糊涂的机器人朋友'
@@ -16531,7 +16525,6 @@ zh-CN:
               key: 编程接力
               name: 编程接力
               description_student: 记住，在课程开始时，你什么时候用代码画过画？在这堂课中，你会和团队一起合作，做出一些非常相似的东西！
-              description_teacher: 这次活动会从对"调试和坚持"的简短课程开始，然后会很快进入钟表竞赛。学生们会被分队，并一起编一个一次只能执行一条指令的程序。
             Debugging in Collector:
               key: 在收集器中调试
               name: 在收集器中调试
@@ -16651,7 +16644,7 @@ zh-CN:
               key: 艺术家的编程和循环
               name: 艺术家的编程和循环
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
-              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
+              description_teacher: '当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: '《我的世界：水上航行》的条件'
               name: '《我的世界：水上航行》的条件'
@@ -16661,7 +16654,7 @@ zh-CN:
               key: 条件语句
               name: 农夫和条件
               description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
-              description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
+              description_teacher: '这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。'
             Simon Says:
               key: Simon 说
               description_student: 玩一下游戏，并思考用什么命令能得到正确的结果。
@@ -16670,7 +16663,7 @@ zh-CN:
               key: 在精灵图实验室学习精灵图
               name: 在精灵图实验室学习精灵图
               description_student: 学习如何创建并编辑精灵图。
-              description_teacher: '这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。'
+              description_teacher: 这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。
             Alien Dance Party with Sprite Lab:
               key: 精灵图实验室中的外星人舞蹈派对
               name: 精灵图实验室中的外星人舞蹈派对
@@ -16774,11 +16767,11 @@ zh-CN:
             Loops with the Artist:
               name: 艺术家的编程和循环
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
-              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
+              description_teacher: '当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。'
             Nested Loops in the Maze:
               key: 迷宫里的嵌套循环
               name: 迷宫里的嵌套循环
-              description_student: "在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。"
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。
               description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             The Power of Words:
               key: 语言的力量
@@ -16838,7 +16831,6 @@ zh-CN:
               description_student: 学习编写自己的精灵图行为！
               description_teacher: 在这里，学生们会使用精灵图实验室创造出自己的行为。
             Virtual Pet:
-              name: 虚拟宠物
               description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
               description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
@@ -16850,21 +16842,27 @@ zh-CN:
               name: 辅助功能设计
               description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
+            lesson-6:
+              name: 向你介绍精灵图实验室
+            lesson-8:
+              name: 动作精灵图
           lesson_groups:
             ramp_up:
               display_name: 热身
             csf_digcit:
               display_name: 数字公民
             csf_variables:
-              display_name: 变量
+              display_name: 计数循环
             csf_for_loops:
               display_name: 计数循环
             csf_sprites:
-              display_name: 精灵图
+              display_name: 计算的影响
             end_of_course_project:
               display_name: 课程结束项目
             lessonGroup-8:
-              display_name: 计算的影响
+              display_name: 变量
+            lessonGroup-9:
+              display_name: 移除
           student_description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
         express-2021:
           title: 速学课程 (2019)
@@ -16880,7 +16878,7 @@ zh-CN:
             Programming with Angry Birds:
               key: 迷宫编程
               name: 迷宫编程
-              description_student: 通过愤怒的小鸟学习序列和算法。
+              description_student: 编程来帮助《愤怒的小鸟》通过迷宫。
               description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Debugging with Scrat:
               key: 斯奎特和调试
@@ -16920,7 +16918,7 @@ zh-CN:
             'Looking Ahead with Minecraft ':
               key: '与《我的世界》往前看 '
               name: 与《我的世界》往前看
-              description_student: 躲开岩浆！在《我的世界》里，你会学习条件。
+              description_student: 躲开岩浆！在《我的世界》里学习条件。
               description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             If/Else with Bee:
               key: 蜜蜂里的条件
@@ -16931,7 +16929,6 @@ zh-CN:
               key: 当在农民循环中
               name: 当在农民循环中
               description_student: '循环在代码中非常有用。这一课会教你一种新的循环：当循环！'
-              description_teacher: "当学生们来到这一课时，应该已经大量的练习了使用`重复`循环，所以现在可以组合它们了。\\r\n\\r\n_当循环_是一种当条件满足时重复执行命令的循环。`当`循环用于不确定重复的具体次数，但是能确定当某个条件满足时，就要执行程序。例如，学生们会在农场中填满洞或挖土。他们不知道洞的深度，也不知道土堆的高度，但知道如果地面不平，就应该不停的填洞或挖土。"
             'Conditionals in Minecraft: Voyage Aquatic':
               key: '《我的世界：水上航行》的条件'
               name: '《我的世界：水上航行》的条件'
@@ -16995,7 +16992,7 @@ zh-CN:
             Alien Dance Party:
               key: 外星人舞蹈派对
               name: 外星人舞蹈派对
-              description_student: 练习制作游戏来与朋友和亲人共享。
+              description_student: 创建能分享给同学的互动项目。
             Behaviors in Sprite Lab:
               key: 编辑行为
               name: 编辑行为
@@ -17010,6 +17007,10 @@ zh-CN:
               key: 课程结束项目
               name: 课程结束项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+            lesson-1:
+              name: 舞蹈派对
+              description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
+              description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -17095,6 +17096,8 @@ zh-CN:
               name: 向你介绍精灵图实验室
             Sprites in Action:
               name: 动作精灵图
+            introducing-spritelab:
+              name: 向你介绍精灵图实验室
           lesson_groups:
             ramp_up:
               display_name: 介绍
@@ -17104,6 +17107,8 @@ zh-CN:
               display_name: 变量
             Sprites:
               display_name: 精灵图
+            variables:
+              display_name: 变量
         csd4-preview-2021:
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成, 在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
           description_short: "  学习如何设计一个能满足用户需要的程序。"

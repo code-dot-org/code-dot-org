@@ -6,6 +6,7 @@ ar:
       Green: أخضر
       Red: أحمر
       actor: الممثل
+      birds: عصافير
       cats: كل القطط
       color: لون
       counter: العداد
@@ -19,12 +20,12 @@ ar:
       nectar: رحيق
       points: نقاط
       random: عشوائي
-      repeat: كرر
+      repeat: تكرار
       right: اليمين
       score: النتيجة
       size: الحجم
       speed: السرعة
-      variable: متغيِّر
+      variable: متغير
       width: العرض
       wizard: ساحر
       x: x

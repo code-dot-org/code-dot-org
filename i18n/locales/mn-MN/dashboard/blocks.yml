@@ -968,6 +968,7 @@ mn:
             '"x"': х байрлал
             '"y"': у байрлал
             '"direction"': хөдөлгөөний чиглэл
+            '"speed"': хурд
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} нь {SPRITE2}-д хүрэх"
         options:

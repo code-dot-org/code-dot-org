@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:51:48 UTC",
+    "serialized_at": "2021-03-19 01:34:47 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -140,7 +140,7 @@
         "overview": "Students will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates.",
         "student_overview": "Develop a system for creating and ordering patterns of shapes.",
         "purpose": "Eventually, students will need to understand the binary number system which uses 1's and 0's rather than circles and squares. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced. In wrestling with the challenge of describing the rules of ordering patterns of circles and squares clearly, students will be primed to see how the binary number system solves many of these problems. Students may discover a system that is equivalent to the binary number system, which is a feat worth celebrating, but it is not expected that every student uncovers the rules for binary in this lesson.",
-        "preparation": "* Have scissors ready for groups to create [r ab-cutouts] or have these pre-cut and prepared before class\r\n",
+        "preparation": "* Have scissors ready for groups to create [r ab-cutouts/csp/2021] or have these pre-cut and prepared before class\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -169,7 +169,7 @@
         "overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "student_overview": "In this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
         "purpose": "This lesson is designed to give students as much time as possible using the Flippy Do to get comfortable with the relationship between binary and decimal numbers and the concept of place value.",
-        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
+        "preparation": "* Scissors (many pairs)\r\n* Printed copies of [r u1_l4_flippy_do/csp/2021]\t\r\n* [KEY U1L4 Flippy Do Pt 1](https://studio.code.org/s/csp1-2020/stage/4/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -256,7 +256,7 @@
         "overview": "Students explore how black and white images are represented.  Students use the black and white pixelation widget to represent each pixel of an image with black or white light.  They learn how to sample an analog image using small squares of uniform size (each represented with a black or white value) and reflect on the pros and cons of choosing a smaller or larger square size when sampling.",
         "student_overview": "Learn how computers represent black and white images using bits.",
         "purpose": "Throughout this unit, students gradually discover how to use bits to represent more complex data types. In this case, students work on representing images using sampling. Students quickly realize that very tiny sample squares are needed to approximate an image’s curves and small details. The smaller we make each sample, the more bits are needed. Students must also wrestle with deciding whether each square should be a 0 or 1, as many squares have both white and black in the same square. They will have more control over the representation of each bit in the next lesson.\r\n",
-        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
+        "preparation": "\r\n* Practice using the pixelation widget\r\n* Copies of [r u1l7_black_and_white_images/csp/2021] for each pair of students\r\n* [KEY U1L7 Black and White Images](https://studio.code.org/s/csp1-2020/stage/7/puzzle/1)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -285,7 +285,7 @@
         "overview": "This is a second opportunity for students to interact with the Pixelation Widget, but this time they will work with color pixels.  Students start off learning that each pixel uses red, green, and blue lights that can be turned on or off using bits. They will create more color variants using an increasing amount of bits per pixel, and apply their learning by approximating an analog color image using the widget.",
         "student_overview": "Learn how computers represent color images using bits.",
         "purpose": "This lesson continues the story of how bits are used to represent digital images.  Much like in the last lesson, students will use the Pixelation Widget to attempt to make digital approximations of analog images, this time in color.  These images are produced using layers of abstraction, with each layer relying on the other to perform its process.\r\n\r\nStudents will begin to realize that analog color images have values that change smoothly and subtly, while digital images do not.  The number of digital colors is also limited by the number of bits per pixel, whereas analog colors are unlimited.\r\n",
-        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information]\t\r\n",
+        "preparation": "\r\n* Practice using the color pixelation widget \r\n* Review slides from [r csp_unit_1_-_digital_information/csp/2021]\t\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -343,7 +343,7 @@
         "overview": "Students are introduced to lossy compression via the Lossy Text Compression widget. They apply this concept and their prior knowledge of sampling to create their own lossy compressions of image files using the Lossy Image Widget. Students then discuss several practical scenarios where they need to decide whether to use a lossy or lossless compression algorithm. The lesson ends with a discussion of the situations where lossless compression is important and the situations where lossy compression is important.",
         "student_overview": "Learn how information is represented using fewer bits when it's OK for some of the information or details to be lost.",
         "purpose": "After exploring lossless compression in yesterday’s lesson, students are introduced to lossy compression. A theme throughout the lesson is that lossy compression can greatly reduce the file size, but it can also greatly reduce the quality and it’s important to find that balance between quality and file size. The real challenge here is finding where that line is - how much can we compress but still keep it recognizable? In the final discussion, students compare lossy compression with lossless compression to see that each has value depending on the situation - lossy is useful when file size needs to be minimized, but lossless is important when its vital to be able to reconstruct the original image. ",
-        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information] ready for the discussion towards the end of the lesson\r\n",
+        "preparation": "* Explore each of the widgets for this lesson\r\n* Decide how you will let students share their lossy compressions with each other or the whole class\r\n* Have [r csp_unit_1_-_digital_information/csp/2021] ready for the discussion towards the end of the lesson\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -372,7 +372,7 @@
         "overview": "Students are asked to reflect on who owns their creative works from this class, such as their pixel images, before reading an article describing how ownership can become complicated as analog works become digital artifacts. After reading the article, students watch several videos explaining copyright and introducing them to the Creative Commons. Students then re-read the article answering three questions about the benefits, harms, and impacts of current copyright policy. Students use their new understanding of copyright to form an opinion about current copyright policies and create a small poster justifying their opinion with a quote from the article.",
         "student_overview": "Learn about how people can own digital information and the ways they can share access to their creative digital works.",
         "purpose": "Students have been examining how digital information is created and stored, but they have not closely examined the question of who owns their digital data and what rules govern how that information can be shared. This lesson introduces the concept of copyright by presenting students with an article that challenges their current understanding of digital ownership and makes them wrestle with some of the complexities of owning and sharing digital information. It’s important for students to talk through their ideas and hear the perspectives of their peers as they try to unpack how copyright law can impact society. Ultimately, students begin to form their own opinions about copyright focusing on how these policies impact the world around us and observing who benefits and who is harmed in particular copyright situations.\r\n\r\nThis lesson is also a scaffold to the larger project that begins after this lesson which includes several tasks that are also a part of this lesson such as, annotating an article, answering questions, and forming an opinion using the article as evidence. Students may need support with these processes during this lesson so they are able to complete the following lesson independently. It is especially important that students use marking the text strategies to help them comprehend and synthesize the information from their article, because they will need to do this in the next lesson as well. \r\n",
-        "preparation": "\r\n* Print out [r fortnite-article] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
+        "preparation": "\r\n* Print out [r fortnite-article/csp/2021] with highlighters ready to mark the text. If you are unable to print copies, see the Teaching Tip below.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "announcements": [
           {
@@ -920,19 +920,6 @@
       }
     },
     {
-      "key": "e97deede-29ca-446f-a069-d006fe9a2f02",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e97deede-29ca-446f-a069-d006fe9a2f02",
-        "lesson.key": "Lossless Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
       "key": "765499b3-f92c-4d33-83f1-62923da0df85",
       "position": 1,
       "properties": {
@@ -969,19 +956,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "21d2fd87-efb6-4415-b753-98e8d54489ad",
-        "lesson.key": "Lossy Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "60f9ba53-bc77-4a33-8036-4ded7cfc62d3",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "60f9ba53-bc77-4a33-8036-4ded7cfc62d3",
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -1219,7 +1193,7 @@
       "key": "c59591f1-d97f-40b3-8051-f163351f5eea",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/0989bbfe1f2ee63670754387f9e3b523-pre-survey-screencap.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
+        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n\n[pull-right]\n\n![](https://images.code.org/0989bbfe1f2ee63670754387f9e3b523-pre-survey-screencap.png)\n\n[/pull-right]\n\n* To check if you have access:\n\n\t1. Navigate to the [Unit 1 overview page](https://studio.code.org/s/csp1)\n\t2. Do you see the CS Principles Pre-course Survey at the top of the unit overview page?\n\t3. If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n[pull-right]\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n[/pull-right]\n\n* You can either...\n\n\t* Go to the [r how_to_videos_1/csp/2021] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
         "name": "Before your first class\r"
       },
       "seeding_key": {
@@ -1295,7 +1269,7 @@
       "key": "64fdbe78-9bea-4ac8-9069-abe1a54dedfb",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n<img src=\"https://curriculum.code.org/media/uploads/presurvey.png\" style=\"width:400px\">",
+        "description": "**Do This:** Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how-to-administer-a-locked-assessment/csp/2021] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n<img src=\"https://curriculum.code.org/media/uploads/presurvey.png\" style=\"width:400px\">",
         "name": "Important! Have your students take the CSP Pre-Course Survey!\r"
       },
       "seeding_key": {
@@ -1413,7 +1387,7 @@
       "key": "203520f1-fecd-4a71-8173-6376037fdbcb",
       "position": 2,
       "properties": {
-        "description": "People seem to say that technology is all around us, that it affects everything we do.  Is that true?  Technological [v innovation] is about recognizing a problem that needs to be solved, or recognizing something needs improving and then building a tool to solve it.\r\n\r\n**As a class we’re going to see how innovative we can be.  We’re going to do something called “rapid prototyping.”**  \r\n\r\n\"Prototype\" is a fancy word that means a simple sketch of an idea or model for something new.  It’s the original drawing from which something real might be built or created.",
+        "description": "People seem to say that technology is all around us, that it affects everything we do.  Is that true?  Technological [v innovation/csp/2021] is about recognizing a problem that needs to be solved, or recognizing something needs improving and then building a tool to solve it.\r\n\r\n**As a class we’re going to see how innovative we can be.  We’re going to do something called “rapid prototyping.”**  \r\n\r\n\"Prototype\" is a fancy word that means a simple sketch of an idea or model for something new.  It’s the original drawing from which something real might be built or created.",
         "remarks": true,
         "name": "Identify impacts and prototype an innovation\r"
       },
@@ -1519,7 +1493,7 @@
       "key": "3d68b771-e2d0-4d0d-aa0f-59e59adb3489",
       "position": 3,
       "properties": {
-        "description": "[slide] **Video:** Play [r innovation-video-1-1]\n\n- The video is available for students in Code Studio as well."
+        "description": "[slide] **Video:** Play [r innovation-video-1-1/csp/2021]\n\n- The video is available for students in Code Studio as well."
       },
       "seeding_key": {
         "activity_section.key": "3d68b771-e2d0-4d0d-aa0f-59e59adb3489",
@@ -1858,7 +1832,7 @@
       "key": "0fad0c8b-5ee3-4145-b674-10aeea839f52",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n[slide] **Distribute:**  [r ag-ab-pattern] - one for each group. Each group also gets the [r ab-cutouts] to use during the activity.\r\n\r\n\r\n\r\n[slide] **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
+        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n[slide] **Distribute:**  [r ag-ab-pattern/csp/2021] - one for each group. Each group also gets the [r ab-cutouts/csp/2021] to use during the activity.\r\n\r\n\r\n\r\n[slide] **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
         "name": "Circle Square Activity (25 minutes) \r"
       },
       "seeding_key": {
@@ -2185,7 +2159,7 @@
       "key": "a71aae55-6d99-498d-a6fa-4c729901e49e",
       "position": 8,
       "properties": {
-        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy_do_pro]",
+        "description": "Now that you have started thinking about place value and overflow, we are going to work on a different problem. What happens when there aren’t enough place values to represent a number? You will explore this with a new version of the Flippy Do, the Flippy Do Pro!\n[r flippy_do_pro/csp/2021]",
         "remarks": true,
         "name": "Flippy Do Pro"
       },
@@ -2521,7 +2495,7 @@
       "key": "e5a7cae0-b8fd-45db-85c2-78dbc598715c",
       "position": 12,
       "properties": {
-        "description": "[slide]  **Distribute:** Hand out copies of the [r ascii-reference-sheet] or project it. Quickly read the overview text at the beginning of the sheet."
+        "description": "[slide]  **Distribute:** Hand out copies of the [r ascii-reference-sheet/csp/2021] or project it. Quickly read the overview text at the beginning of the sheet."
       },
       "seeding_key": {
         "activity_section.key": "e5a7cae0-b8fd-45db-85c2-78dbc598715c",
@@ -2761,7 +2735,7 @@
       "key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
       "position": 6,
       "properties": {
-        "description": " **Distribute:**  [r u1l7_black_and_white_images]"
+        "description": " **Distribute:**  [r u1l7_black_and_white_images/csp/2021]"
       },
       "seeding_key": {
         "activity_section.key": "6a7f6a14-c3c7-4531-8526-59bfd13e0967",
@@ -3163,7 +3137,6 @@
         "description": "[slide]  **Prompt:** Why might we use abbreviations when sending messages? What are the advantages?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\r\n"
           }
@@ -3202,14 +3175,7 @@
       "key": "6386f186-dc49-44fc-b672-a31d5681e587",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Prompt:** How is this message the same as the first? What actually gets sent to my friend?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\r\n\r\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message.\r\n\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** How is this message the same as the first? What actually gets sent to my friend?"
       },
       "seeding_key": {
         "activity_section.key": "6386f186-dc49-44fc-b672-a31d5681e587",
@@ -3221,7 +3187,13 @@
       "position": 4,
       "properties": {
         "description": "Using abbreviations and symbols is a form of **compression**, where we try to represent the same information with fewer characters. The original message had 93 characters, but the new message and key, also called a dictionary, have a total of 56 characters. We’re essentially sending the same information, but with fewer characters. Our goal today will be to create our own text compressions using similar methods.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message.\n\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b58fd301-e04e-4b81-880c-afc181b02efc",
@@ -3232,8 +3204,9 @@
       "key": "bf8080e0-ec54-4adb-9060-ebac37f3bf0d",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** Have students log into Code Studio and open Level 2 of this lesson - the Text Compression Widget.",
-        "name": "Text Compression Widget (15 Minutes)\r"
+        "description": "[slide] **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
+        "name": "Text Compression Widget (15 Minutes)\r",
+        "progression_name": "Widget: Text Compression"
       },
       "seeding_key": {
         "activity_section.key": "bf8080e0-ec54-4adb-9060-ebac37f3bf0d",
@@ -3278,14 +3251,7 @@
       "key": "c1f735a3-8494-451d-adb1-80722aa6a34e",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** What strategies are you using to compress your sample text? Which ones seem most successful?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\r\n\r\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\r\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\r\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\r\n\r\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** What strategies are you using to compress your sample text? Which ones seem most successful?"
       },
       "seeding_key": {
         "activity_section.key": "c1f735a3-8494-451d-adb1-80722aa6a34e",
@@ -3296,7 +3262,8 @@
       "key": "79e7b1c0-5d3a-4b3d-9ab7-03848dee1997",
       "position": 10,
       "properties": {
-        "description": "[slide] **Video:** Show [r text-compression-widget-tutorial-1] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \r\n\r\n* The widget we are using is an example of **lossless compression**\r\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message."
+        "description": "[slide] **Video:** Show  (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n[r text-compression-widget-tutorial-1/csp/2021]",
+        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
       },
       "seeding_key": {
         "activity_section.key": "79e7b1c0-5d3a-4b3d-9ab7-03848dee1997",
@@ -3307,14 +3274,7 @@
       "key": "6d70fcbf-205d-4847-9316-5aa02f3823d9",
       "position": 11,
       "properties": {
-        "description": "[slide]  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Competitions:** You could incorporate a peer-to-peer competition (in small groups or as a full class) to get the ‘highest’ rating, but that can be isolating for students and suggests there is a single ‘best’ way to do this. An alternate strategy is: when students start for the second time, have them compete against themselves to beat their rating during the first 4 minutes. In this way, success is measured by personal growth and has a higher chance of letting every student feel successful.\r\n\r\n**Starting Over:** When solving computational problems, it can sometimes be helpful to restart completely from the beginning. This activity may be a good place to suggest this to students, especially those that feel particularly stuck or frustrated - sometimes restarting from the very beginning surfaces new ideas and strategies that we didn’t see before.\r\n"
-          }
-        ]
+        "description": "[slide]  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
       },
       "seeding_key": {
         "activity_section.key": "6d70fcbf-205d-4847-9316-5aa02f3823d9",
@@ -3337,7 +3297,17 @@
       "position": 13,
       "properties": {
         "description": "We’re starting to reach the ‘limit’ for how much we can compress this particular message. But not every message can be compressed with a high rating. We’re going to investigate what makes some messages more compressible than others.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Competitions:** You could incorporate a peer-to-peer competition (in small groups or as a full class) to get the ‘highest’ rating, but that can be isolating for students and suggests there is a single ‘best’ way to do this. An alternate strategy is: when students start for the second time, have them compete against themselves to beat their rating during the first 4 minutes. In this way, success is measured by personal growth and has a higher chance of letting every student feel successful.\n\n**Starting Over:** When solving computational problems, it can sometimes be helpful to restart completely from the beginning. This activity may be a good place to suggest this to students, especially those that feel particularly stuck or frustrated - sometimes restarting from the very beginning surfaces new ideas and strategies that we didn’t see before.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4adb6f5c-d6f0-49bf-a0b0-c5a7ccda2f7d",
@@ -3375,7 +3345,6 @@
         "description": "**Circulate:** Give students several minutes to complete their compressions. Emphasize that students should work in pairs using two different computers so both examples can be referenced during the wrap-up discussion.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**“aaaa...aaa”:** Many groups will probably attempt the last option, all A’s, as their ‘easy’ text - it’s possible to get a compression rating into the mid-80’s with this text. This is fine, since it still emphasizes one of the big takeaways from this activity: information with high repetition is easier to compress. However, it is also reasonable to ask groups to do a second ‘easy’ text once they’re satisfied with this one\r\n\r\n**Priorities:** It’s not necessary for all groups to pick the same texts, nor is it important to find the very ‘best’ compressions. Instead, students should focus on the qualities that they think make some texts ‘easier’ or more ‘difficult’ than others. You can emphasize this with the questions you ask as you circulate to groups: “What made you pick this for your ‘easy’ text? What made you pick this for your ‘difficult’ text?”\r\n"
           }
@@ -3393,7 +3362,6 @@
         "description": "[slide]  **Prompt:** What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal: **\r\n\r\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\r\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\r\n\r\n\r\n"
           }
@@ -3433,47 +3401,12 @@
       "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the most important quality of lossless compression?\r\n\r\n**Question:** An author is preparing to send their book to a publisher as an email attachment. The file on their computer is 1000 bytes. When they attach the file to their email, it shows as 750 bytes. The author gets very upset because they are concerned that part of their book has been deleted by the email address. If you could talk to this author, how would you explain what is happening to their book?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ec8e0c83-aa59-41f0-a61b-592f196207fb",
         "lesson_activity.key": "8fc918ce-ef3c-409f-a1ba-d3f404ad2320"
-      }
-    },
-    {
-      "key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b",
-      "position": 1,
-      "properties": {
-        "name": "Widget: Text Compression",
-        "progression_name": "Widget: Text Compression"
-      },
-      "seeding_key": {
-        "activity_section.key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b",
-        "lesson_activity.key": "e97deede-29ca-446f-a069-d006fe9a2f02"
-      }
-    },
-    {
-      "key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a",
-      "position": 2,
-      "properties": {
-        "name": "Video: Text Compression Widget with Aloe Blacc",
-        "progression_name": "Video: Text Compression Widget with Aloe Blacc"
-      },
-      "seeding_key": {
-        "activity_section.key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a",
-        "lesson_activity.key": "e97deede-29ca-446f-a069-d006fe9a2f02"
-      }
-    },
-    {
-      "key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b",
-        "lesson_activity.key": "e97deede-29ca-446f-a069-d006fe9a2f02"
       }
     },
     {
@@ -3506,7 +3439,6 @@
         "description": "**Prompt:** How is this widget similar to the widget we used yesterday? How is it different?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should identify that this widget is similar to yesterday’s text compression widget because it also shortens text, but it is different in that some of the information is permanently lost when it is shortened. You can emphasize this point by supplying some carefully-chosen sample text and seeing that the results can be ambiguous:\r\n\r\n* “there are three tiers of tires at the shop”\r\n\r\nStudents may debate whether or not this really fits the definition of compression we saw yesterday, which is a great bridge to the next part of the lesson.\r\n"
           }
@@ -3522,13 +3454,6 @@
       "position": 1,
       "properties": {
         "description": "Yesterday’s widget was an example of **lossless compression** because we could always reverse the process to recreate the original. This widget is an example of **lossy compression** because some information gets lost, making this process not reversible. In today’s lesson, we will investigate how lossy compression works with images.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\r\n\r\n\r\n"
-          }
-        ],
         "remarks": true
       },
       "seeding_key": {
@@ -3540,7 +3465,13 @@
       "key": "f427e035-b8dc-4196-8025-7cccccee5da7",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson."
+        "description": "[slide] **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Video:** Students should have seen these definitions in the video at the end of yesterday’s class. However, it could be worthwhile to replay part of the video here as well to reinforce that vocabulary - specifically, just the section where Aloe Bloc discusses lossy & lossless compression.\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f427e035-b8dc-4196-8025-7cccccee5da7",
@@ -3551,15 +3482,9 @@
       "key": "0b927407-1dc0-43f3-80cb-2ce2c1dab728",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 2:** Have students adjust the slider to see different lossy compressions.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "For the app to work, students need to click the \"Run\" button on the app before they can play with it. They may need to be reminded of this when starting. \r\n"
-          }
-        ],
-        "name": "Lossy Image v1 (5 minutes)\r"
+        "description": "[slide]  **Level 1:** Have students adjust the slider to see different lossy compressions.",
+        "name": "Lossy Image v1 (5 minutes)\r",
+        "progression_name": "Lossy Compression Widget"
       },
       "seeding_key": {
         "activity_section.key": "0b927407-1dc0-43f3-80cb-2ce2c1dab728",
@@ -3573,9 +3498,8 @@
         "description": "**Prompt:** What do you notice about the quality of the image when you compress it? What do you notice about the compressed file size?",
         "tips": [
           {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Guide the conversation towards these two observations:\r\n\r\n* The larger the sample size, the smaller the file size but the image looks worse\r\n* The smaller the sample size, the better the image looks but the file size is larger\r\n\r\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\r\n"
+            "type": "teachingTip",
+            "markdown": "For the app to work, students need to click the \"Run\" button on the app before they can play with it. They may need to be reminded of this when starting. \n"
           }
         ]
       },
@@ -3588,7 +3512,7 @@
       "key": "6a30ed94-5d08-4252-8013-83effcb99587",
       "position": 5,
       "properties": {
-        "description": "[slide] **Level 3:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
+        "description": "[slide] **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
         "name": "Lossy Image v2 (15 minutes)\r"
       },
       "seeding_key": {
@@ -3611,14 +3535,7 @@
       "key": "d11d7017-7138-41cf-b217-913ed89c3f44",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess the image.",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "This activity emphasizes that there is a balancing act between compressing an image while making sure it is still recognizable, and students are trying to find where this balance is for their particular image. Sharing results with the class is a way for students to see a wide variety of images and compressions before the next class discussion. There are many ways to structure this share-out, but here are a few options:\r\n\r\n**Gallery Walk:** Have students circulate around the room. On a post-it note, they should write down what they think the original image is and leave the note on each computer they visit\r\n\r\n**Screen Sharing:** If students have a way to share their screen with the rest of the class, students can volunteer to have their screen projected for the rest of the class.\r\n"
-          }
-        ]
+        "description": "[slide]  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess the image."
       },
       "seeding_key": {
         "activity_section.key": "d11d7017-7138-41cf-b217-913ed89c3f44",
@@ -3629,7 +3546,9 @@
       "key": "167b243f-f124-485f-a66c-ef66ebb34236",
       "position": 8,
       "properties": {
-        "description": "!!!say: \r\n\r\n\tWe’ve now seen that lossy compression can greatly reduce the file size of our images, but we lose some information along the way. Let’s explore what this looks like with some common image compressions we use on the internet."
+        "description": "We’ve now seen that lossy compression can greatly reduce the file size of our images, but we lose some information along the way. Let’s explore what this looks like with some common image compressions we use on the internet.",
+        "remarks": true,
+        "progression_name": "Lossy Compression Widget"
       },
       "seeding_key": {
         "activity_section.key": "167b243f-f124-485f-a66c-ef66ebb34236",
@@ -3637,17 +3556,30 @@
       }
     },
     {
-      "key": "45453258-72f0-418f-9845-92ab14577465",
+      "key": "07ec60a1-db76-4804-b382-c1599c6baf2f",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
         "tips": [
           {
-            "key": "tip",
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n"
+          },
+          {
             "type": "teachingTip",
-            "markdown": "Voting can be done by students holding up the number of fingers for the option they would select. \r\n\r\nAfter voting, briefly discuss each scenario and come to a classroom consensus on the best option. \r\n\r\nNote that there is not necessarily one \"correct answer\" to these scenarios the goal here is to weigh the pros and cons and make an informed decision. \r\n\r\n\r\n"
+            "markdown": "This activity emphasizes that there is a balancing act between compressing an image while making sure it is still recognizable, and students are trying to find where this balance is for their particular image. Sharing results with the class is a way for students to see a wide variety of images and compressions before the next class discussion. There are many ways to structure this share-out, but here are a few options:\n\n**Gallery Walk:** Have students circulate around the room. On a post-it note, they should write down what they think the original image is and leave the note on each computer they visit\n\n**Screen Sharing:** If students have a way to share their screen with the rest of the class, students can volunteer to have their screen projected for the rest of the class.\n"
           }
-        ],
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "07ec60a1-db76-4804-b382-c1599c6baf2f",
+        "lesson_activity.key": "335e3e7e-04c5-4a49-89b6-8fa31570b231"
+      }
+    },
+    {
+      "key": "45453258-72f0-418f-9845-92ab14577465",
+      "position": 10,
+      "properties": {
+        "description": "[slide]  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
         "name": "Compression Decisions (10 minutes)\r"
       },
       "seeding_key": {
@@ -3657,9 +3589,15 @@
     },
     {
       "key": "2fbebe1f-6f77-4e4a-8a10-adf5360273a0",
-      "position": 10,
+      "position": 11,
       "properties": {
-        "description": "* [slide] **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* [slide] **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* [slide] **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* [slide] **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* [slide] **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* [slide] **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition"
+        "description": "* [slide] **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* [slide] **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* [slide] **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* [slide] **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* [slide] **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* [slide] **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Voting can be done by students holding up the number of fingers for the option they would select. \n\nAfter voting, briefly discuss each scenario and come to a classroom consensus on the best option. \n\nNote that there is not necessarily one \"correct answer\" to these scenarios the goal here is to weigh the pros and cons and make an informed decision. \n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2fbebe1f-6f77-4e4a-8a10-adf5360273a0",
@@ -3670,14 +3608,7 @@
       "key": "f75b1330-f572-4c5a-82de-8cb90c8b8a84",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:**",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion should draw out two key points:\r\n\r\n* Lossless compression is useful when the accuracy of the original item is most important\r\n\t* Examples: Bank records, text files, some images\r\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \r\n\t* Examples: Multimedia - especially streaming media (images, video, audio)\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:**"
       },
       "seeding_key": {
         "activity_section.key": "f75b1330-f572-4c5a-82de-8cb90c8b8a84",
@@ -3711,7 +3642,13 @@
       "key": "2a6689df-ace8-42f6-8e05-0b27b687bdcd",
       "position": 4,
       "properties": {
-        "description": "[slide] **Journal:** Have students take out their journals and add the definition for lossy compression.\r\n\r\n---"
+        "description": "[slide] **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2a6689df-ace8-42f6-8e05-0b27b687bdcd",
@@ -3719,39 +3656,27 @@
       }
     },
     {
-      "key": "141382b4-d9b9-4456-8203-34fe806fcdeb",
+      "key": "58de57a3-27d7-489f-b885-7c7891630504",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Choose all that match this question: Which of the following describe lossy compression?\r\n\r\n**Question:** You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "141382b4-d9b9-4456-8203-34fe806fcdeb",
+        "activity_section.key": "58de57a3-27d7-489f-b885-7c7891630504",
         "lesson_activity.key": "21d2fd87-efb6-4415-b753-98e8d54489ad"
       }
     },
     {
-      "key": "c2a9f003-def9-4e57-bbe9-001230a13694",
-      "position": 1,
+      "key": "141382b4-d9b9-4456-8203-34fe806fcdeb",
+      "position": 6,
       "properties": {
-        "name": "Lossy Compression Widget",
-        "progression_name": "Lossy Compression Widget"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694",
-        "lesson_activity.key": "60f9ba53-bc77-4a33-8036-4ded7cfc62d3"
-      }
-    },
-    {
-      "key": "4ad16be2-78c3-4e07-b974-275ef24043eb",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Choose all that match this question: Which of the following describe lossy compression?\r\n\r\n**Question:** You’ve been given a new cell phone with a 2 gigabyte data plan. You plan to use your phone for text messages, images, video, and music. Which of these categories are best compressed using lossless compression? Which of these categories are best compressed using lossy compression? Why?",
+        "name": "Assessment: Check For Understanding\r",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
-        "activity_section.key": "4ad16be2-78c3-4e07-b974-275ef24043eb",
-        "lesson_activity.key": "60f9ba53-bc77-4a33-8036-4ded7cfc62d3"
+        "activity_section.key": "141382b4-d9b9-4456-8203-34fe806fcdeb",
+        "lesson_activity.key": "21d2fd87-efb6-4415-b753-98e8d54489ad"
       }
     },
     {
@@ -3788,7 +3713,7 @@
       "key": "17e3d3b0-3bd0-4148-96dc-9d0e357fdbc8",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Distribute:** [r fortnite-article].",
+        "description": "[slide]  **Distribute:** [r fortnite-article/csp/2021].",
         "tips": [
           {
             "key": "tip",
@@ -4098,7 +4023,7 @@
       "key": "4f127a1c-1c8b-48f3-a43f-5e706e32ba35",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Students pick one of the articles below.\n\n* [r the-ethics-of-computer-generated-actors]\n* [r dna-testing-kits-the-security-risks-in-digitized-dna]\n* [r athletes-dont-own-their-tattoos] \n\n[slide] **Display:** Instructions on lesson slides.\n\n* **Highlight/Underline:** Any information in this article that you want to learn more about. \n* **At The End:** Write a 10 word summary of the article. \n\n**Group:** Create groups of students who read the same article. You may need to have more than one group for a single article."
+        "description": "[slide] **Distribute:** Students pick one of the articles below.\n\n* [r the-ethics-of-computer-generated-actors/csp/2021]\n* [r dna-testing-kits-the-security-risks-in-digitized-dna/csp/2021]\n* [r athletes-dont-own-their-tattoos/csp/2021] \n\n[slide] **Display:** Instructions on lesson slides.\n\n* **Highlight/Underline:** Any information in this article that you want to learn more about. \n* **At The End:** Write a 10 word summary of the article. \n\n**Group:** Create groups of students who read the same article. You may need to have more than one group for a single article."
       },
       "seeding_key": {
         "activity_section.key": "4f127a1c-1c8b-48f3-a43f-5e706e32ba35",
@@ -5278,12 +5203,9 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Widget: Text Compression",
-        "level_keys": [
-          "U1L11 Widget: Text Compression_2021"
-        ]
+        "progression": "Widget: Text Compression"
       },
       "named_level": null,
       "bonus": null,
@@ -5294,7 +5216,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b"
+        "activity_section.key": "bf8080e0-ec54-4adb-9060-ebac37f3bf0d"
       },
       "level_keys": [
         "U1L11 Widget: Text Compression_2021"
@@ -5304,12 +5226,9 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Video: Text Compression Widget with Aloe Blacc",
-        "level_keys": [
-          "U1 L11 Text Compression Widget Aloe Blacc_2021"
-        ]
+        "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
       "named_level": null,
       "bonus": null,
@@ -5320,7 +5239,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a"
+        "activity_section.key": "79e7b1c0-5d3a-4b3d-9ab7-03848dee1997"
       },
       "level_keys": [
         "U1 L11 Text Compression Widget Aloe Blacc_2021"
@@ -5332,10 +5251,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L11 Multiple Choice lossless compression_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -5346,7 +5262,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b"
+        "activity_section.key": "ec8e0c83-aa59-41f0-a61b-592f196207fb"
       },
       "level_keys": [
         "U1L11 Multiple Choice lossless compression_2021"
@@ -5358,10 +5274,7 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L11 CFU Compression for Email_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -5372,7 +5285,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b"
+        "activity_section.key": "ec8e0c83-aa59-41f0-a61b-592f196207fb"
       },
       "level_keys": [
         "U1L11 CFU Compression for Email_2021"
@@ -5382,12 +5295,9 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget",
-        "level_keys": [
-          "U1 Lossy Compression Widget v1_2021"
-        ]
+        "progression": "Lossy Compression Widget"
       },
       "named_level": null,
       "bonus": null,
@@ -5398,7 +5308,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694"
+        "activity_section.key": "167b243f-f124-485f-a66c-ef66ebb34236"
       },
       "level_keys": [
         "U1 Lossy Compression Widget v1_2021"
@@ -5408,12 +5318,9 @@
       "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget",
-        "level_keys": [
-          "U1 Lossy Compression Widget v2_2021"
-        ]
+        "progression": "Lossy Compression Widget"
       },
       "named_level": null,
       "bonus": null,
@@ -5424,7 +5331,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694"
+        "activity_section.key": "167b243f-f124-485f-a66c-ef66ebb34236"
       },
       "level_keys": [
         "U1 Lossy Compression Widget v2_2021"
@@ -5436,10 +5343,7 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
-        "level_keys": [
-          "U1L11 CPS CFU Cell Phone_2021"
-        ]
+        "progression": "Check For Understanding"
       },
       "named_level": null,
       "bonus": null,
@@ -5450,7 +5354,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "4ad16be2-78c3-4e07-b974-275ef24043eb"
+        "activity_section.key": "141382b4-d9b9-4456-8203-34fe806fcdeb"
       },
       "level_keys": [
         "U1L11 CPS CFU Cell Phone_2021"
@@ -5957,7 +5861,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "7ef11c40-8ed8-4a42-9c5e-f6e20a956a0b"
+        "activity_section.key": "bf8080e0-ec54-4adb-9060-ebac37f3bf0d"
       }
     },
     {
@@ -5969,7 +5873,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "df5fa1f7-2056-4364-8095-e131cbf8ad4a"
+        "activity_section.key": "79e7b1c0-5d3a-4b3d-9ab7-03848dee1997"
       }
     },
     {
@@ -5981,7 +5885,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b"
+        "activity_section.key": "ec8e0c83-aa59-41f0-a61b-592f196207fb"
       }
     },
     {
@@ -5993,7 +5897,7 @@
         "lesson.key": "Lossless Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "f53adf77-9f3d-420e-88ec-0f83bfa1c86b"
+        "activity_section.key": "ec8e0c83-aa59-41f0-a61b-592f196207fb"
       }
     },
     {
@@ -6005,7 +5909,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694"
+        "activity_section.key": "167b243f-f124-485f-a66c-ef66ebb34236"
       }
     },
     {
@@ -6017,7 +5921,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c2a9f003-def9-4e57-bbe9-001230a13694"
+        "activity_section.key": "167b243f-f124-485f-a66c-ef66ebb34236"
       }
     },
     {
@@ -6029,7 +5933,7 @@
         "lesson.key": "Lossy Compression",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "4ad16be2-78c3-4e07-b974-275ef24043eb"
+        "activity_section.key": "141382b4-d9b9-4456-8203-34fe806fcdeb"
       }
     },
     {
@@ -7055,5 +6959,8 @@
         "objective.key": "0682a50c-8324-42b4-91e8-6e75176fd3b0"
       }
     }
+  ],
+  "lessons_standards": [
+
   ]
 }

@@ -62,6 +62,7 @@ class Vocabulary < ApplicationRecord
     {
       id: id,
       key: key,
+      markdownKey: Services::MarkdownPreprocessor.build_vocab_key(self),
       word: word,
       definition: definition,
       commonSenseMedia: !!common_sense_media
@@ -113,6 +114,12 @@ class Vocabulary < ApplicationRecord
     end
 
     new_key
+  end
+
+  def serialize_scripts
+    if Rails.application.config.levelbuilder_mode
+      lessons.map(&:script).uniq.each(&:write_script_json)
+    end
   end
 
   private

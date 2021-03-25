@@ -1134,6 +1134,8 @@ es:
               name: Niveles contenidos
             ML Fish:
               name: Pez ML
+            Java Lab:
+              name: Laboratorio Java
           student_description: Todos los tipos de niveles para las pruebas de la Interfaz de Usuario
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
@@ -14335,10 +14337,7 @@ es:
             Private and Personal Information:
               name: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
               description_student: Internet es divertida y emocionante, pero también es importante mantenerse seguro. Esta lección te enseña la diferencia entre información que es segura de compartir e información privada.
-              description_teacher: |-
-                Desarrollada por Common Sense Education, esta lección gira en torno a la diferencia entre información que es segura de compartir e información que no lo es.
-
-                Mientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es.
+              description_teacher: "Desarrollada por Common Sense Education, esta lección gira en torno a la diferencia entre información que es segura de compartir e información que no lo es.\n\nMientras los estudiantes visitan sitios que solicitan información sobre su identidad, aprenden a adoptar un proceso de critica que los faculta a protegerse a sí mismos y sus familias contra el robo de identidad. En esta lección, los estudiantes aprenden a pensar críticamente sobre la información que algunos sitios solicitan o requieren. Aprenden la diferencia entre información privada y personal, además de cómo distinguir entre lo que es seguro de compartir en línea y lo que no lo es."
             About Me:
               name: Acerca de mí con Sprite Lab
               description_student: Al crear un cartel interactivo con el Laboratorio de sprites, los estudiantes aplicarán sus conocimientos sobre cómo compartir información personal y privada en la web.
@@ -14476,10 +14475,7 @@ es:
             The Power of Words:
               name: El poder de las palabras
               description_student: El acoso nunca está bien. Esta lección te enseñará qué puedes decir y qué no cuando estás conectado.
-              description_teacher: |-
-                Los alumnos comprenden que, mientras están navegando sus sitios web favoritos, quizás encuentren mensajes de otros niños que pueden hacerlos sentir enojados, heridos, tristes o temerosos. En este curso, explorarán formas de manejar el ciberacoso y cómo responder ante el lenguaje perturbador en línea. 
-
-                Los alumnos debatirán las formas en que utilizan la tecnología para comunicarse, y explorarán las similitudes y diferencias entre la comunicación en persona y en línea. Luego, pensarán en maneras de responder al ciberacoso. 
+              description_teacher: "Los alumnos comprenden que, mientras están navegando sus sitios web favoritos, quizás encuentren mensajes de otros niños que pueden hacerlos sentir enojados, heridos, tristes o temerosos. En este curso, explorarán formas de manejar el ciberacoso y cómo responder ante el lenguaje perturbador en línea. \n\nLos alumnos debatirán las formas en que utilizan la tecnología para comunicarse, y explorarán las similitudes y diferencias entre la comunicación en persona y en línea. Luego, pensarán en maneras de responder al ciberacoso. "
             Crowdsourcing:
               name: Colaboración Abierta
               description_student: Esta lección te enseñará sobre crowdsourcing, el proceso de creación de un proyecto con un equipo.
@@ -16218,7 +16214,7 @@ es:
               key: 'Eventos: El Gran Evento'
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere."
             Events in Play Lab:
               key: Eventos en Play Lab
               name: En movimiento con eventos
@@ -16293,7 +16289,7 @@ es:
               key: 'Eventos: El Gran Evento'
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los botones de un control remoto gigante.
-              description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
+              description_teacher: "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere."
             Events in Play Lab:
               key: Eventos en Play Lab
               name: Una batalla real con eventos
@@ -16331,7 +16327,7 @@ es:
               key: Depuración en el laberinto
               name: Depuración en el laberinto
               description_student: Encuentra problemas en los desafíos y practica tus habilidades de depuración.
-              description_teacher: La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan.
+              description_teacher: "La depuración es un elemento esencial a la hora de aprender a programar. Los estudiantes encontrarán desafíos que no se resolvieron correctamente. Deberán revisar el código existente para identificar los errores, tales como bucles incorrectos, bloques que faltan, bloques de más y bloques que no funcionan."
             Programming in Collector:
               key: Programación en Collector
               name: Recoger tesoros con Laurel
@@ -16346,7 +16342,7 @@ es:
               key: Pulseras Binarias
               name: Pulseras Binarias
               description_student: '¡Crea tu propia pulsera binaria y aprende cómo las computadoras recuerdan la información!'
-              description_teacher: El sistema binario es muy importante en el mundo de las computadoras. La mayoría de ellas hoy almacena toda clase de información de forma binaria. Esta lección ayuda a demostrar cómo es posible tomar algo de la vida real y convertirlo en una serie de funciones de encendido y apagado.
+              description_teacher: "El sistema binario es muy importante en el mundo de las computadoras. La mayoría de ellas hoy almacena toda clase de información de forma binaria. Esta lección ayuda a demostrar cómo es posible tomar algo de la vida real y convertirlo en una serie de funciones de encendido y apagado."
             'Loops: My Loopy Robotic Friends':
               key: 'Bucles: Mis amigos robóticos y repetitivos'
               name: Mis amigos robóticos y repetitivos Jr.
@@ -16431,7 +16427,6 @@ es:
               key: Programación de Relevos
               name: Programación de Relevos
               description_student: '¿Recuerdas al principio del curso cuando hiciste dibujos con código? ¡En esta lección trabajarás con un equipo para hacer algo muy similar!'
-              description_teacher: Esta actividad comenzará con una breve lección sobre debugging y persistencia, luego pasará rápidamente a una carrera contrarreloj a medida que los estudiantes se dividen en equipos y trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
               key: Depuración en Recolector
               name: Depuración con Laurel
@@ -16557,7 +16552,7 @@ es:
               key: Condicionales
               name: Condicionales con Granjera
               description_student: En esta divertida y desafiante serie podrás decirle a la computadora qué hacer bajo ciertas condiciones.
-              description_teacher: Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.
+              description_teacher: 'Esta lección introduce a los estudiantes a los bucles `mientras` y las sentencias `si / si no`. _Bucles mientras_ son bucles que repiten comandos mientras una condición sea cierta. Los bucles `mientras` se utilizan cuando el programador no conoce el número exacto de veces que los comandos deben ser repetidos, pero sí sabe la condición que debe ser cierta para que el bucle continúe. Las sentencias `si / si no` ofrecen flexibilidad en la programación al ejecutar el código solo si algo es cierto; de lo contrario, ejecuta otra cosa.'
             Simon Says:
               key: Simón dice
               description_student: Juega y piensa qué comandos son necesarios para obtener los resultados adecuados.
@@ -16672,7 +16667,7 @@ es:
             Nested Loops in the Maze:
               key: Bucles anidados en el Laberinto
               name: Bucles anidados en Laberinto
-              description_student: "Loops dentro de loops dentro de loops. ¿Qué significa esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro de otro loop."
+              description_student: Loops dentro de loops dentro de loops. ¿Qué significa esto? Esta lección te enseñará qué sucede cuando colocas un loop dentro de otro loop.
               description_teacher: En esta actividad online, los/as estudiantes tendrán la oportunidad de llevar su comprensión de los loops a un nuevo nivel. Jugando con la Abeja y Plantas versus Zombis, los/as estudiantes aprenderán cómo programar un loop para que esté dentro de otro loop. También se les animará a que descifren cómo cambios pequeños en cualquier loop, afectarán su programa cuando hagan clic en Ejecutar.
             The Power of Words:
               key: El poder de las palabras
@@ -16728,7 +16723,6 @@ es:
               description_student: Aprende a programar tus propios comportamientos de sprites.
               description_teacher: Aquí, los estudiantes usarán el Laboratorio de sprites para crear tus propios comportamientos personalizados.
             Virtual Pet:
-              name: Mascota Virtual
               description_student: En esta lección, los estudiantes crearán una Mascota Virtual interactiva que luce y se comporta como ellos desean. Los estudiantes usarán la herramienta "Disfraces" del Laboratorio de sprites para personalizar la apariencia de sus mascotas. Luego usarán eventos, comportamientos y otros conceptos que han aprendido para darle vida a sus mascotas.
               description_teacher: En esta lección, los estudiantes crearán una Mascota Virtual interactiva que luce y se comporta como ellos desean. Los estudiantes usarán la herramienta "Disfraces" del Laboratorio de sprites para personalizar la apariencia de sus mascotas. Luego usarán eventos, comportamientos y otros conceptos que han aprendido para darle vida a sus mascotas.
             End of Course Project:
@@ -16740,23 +16734,29 @@ es:
               name: Diseñar con la accesibilidad en mente
               description_student: 'En esta lección, los estudiantes aprenderán sobre accesibilidad y sobre el valor de la empatía mediante la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
               description_teacher: 'En esta lección, los estudiantes aprenderán sobre accesibilidad y sobre el valor de la empatía mediante la reflexión y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
+            lesson-6:
+              name: Presentamos el Laboratorio de sprites
+            lesson-8:
+              name: Sprites en acción
           lesson_groups:
             ramp_up:
               display_name: Avanzar
             csf_digcit:
               display_name: Ciudadanía Digital
             csf_variables:
-              display_name: Variables
+              display_name: Bucles Para
             csf_data:
               display_name: Datos
             csf_for_loops:
               display_name: Bucles Para
             csf_sprites:
-              display_name: Sprites
+              display_name: Impactos de la computación
             end_of_course_project:
               display_name: Proyecto de fin de curso
             lessonGroup-8:
-              display_name: Impactos de la computación
+              display_name: Variables
+            lessonGroup-9:
+              display_name: Eliminar
           student_description: Aprende a usar diferentes tipos de bucles, eventos, funciones y condicionales. Investiga distintas técnicas de resolución de problemas y debate sobre el impacto de la computación y de Internet en la sociedad. En la segunda parte del curso, diseña y crea un proyecto final que puedes compartir con tus amigos y familiares.
         express-2021:
           title: Curso Express (2019)
@@ -16772,7 +16772,7 @@ es:
             Programming with Angry Birds:
               key: Programación con Angry Birds
               name: Programación con Angry Birds
-              description_student: Aprende acerca de las secuencias y los algoritmos con Angry Birds.
+              description_student: Crea programas para ayudar al Angry Bird a moverse a través del laberinto.
               description_teacher: A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.
             Debugging with Scrat:
               key: Depuración con Scrat
@@ -16811,7 +16811,7 @@ es:
               description_teacher: Ahora que los estudiantes saben cómo anidar sus bucles, pueden crear muchas cosas hermosas. Esta lección los guiará a través de una serie de ejercicios que los ayudarán a crear sus propias imágenes, listas para incluir en una carpeta, gracias a las excelentes habilidades de patinaje sobre hielo de Anna y Elsa.
             'Looking Ahead with Minecraft ':
               name: Mirando hacia el Futuro con Minecraft
-              description_student: '¡Evita la lava! Aquí aprenderás sobre condicionales en el mundo de Minecraft.'
+              description_student: '¡Evita la lava! Aquí empezarás a aprender sobre condicionales en el mundo de Minecraft.'
               description_teacher: Esta lección se creó originalmente para la Hora del Código, en colaboración con el equipo de Minecraft. Los estudiantes tendrán la oportunidad de practicar las ideas que han aprendido hasta este punto, ¡y también de echar un vistazo a los condicionales!
             If/Else with Bee:
               key: Condicionales con Abeja
@@ -16822,7 +16822,6 @@ es:
               key: Bucles 'mientras' en la Granjera
               name: Bucles 'mientras' en la Granjera
               description_student: 'Los loops son tan útiles en la codificación. Esta lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!'
-              description_teacher: "Para el momento en que los estudiantes lleguen a esta lección, ya deberían haber practicado lo suficiente con los bucles `repetir`. Ahora es tiempo de combinar todo. \\r\n\\r\nLos _bucles `mientras`_ son bucles que repiten comandos mientras se cumple alguna condición. Los bucles `mientras` se usan cuando el programador no conoce el número exacto de veces que se deben repetir los comandos, pero sí sabe qué condición debe existir para que el bucle se siga repitiendo. Por ejemplo, los estudiantes trabajarán para llenar hoyos y sacar tierra en la Granjera. No conocerán el tamaño de los hoyos ni la altura de las montañas de tierra, pero sabrán que necesitan seguir haciendo esas acciones mientras el suelo no esté plano."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Condicionales en Minecraft: Voyage Aquatic'
               name: 'Condicionales en Minecraft: Voyage Aquatic'
@@ -16886,7 +16885,7 @@ es:
             Alien Dance Party:
               key: Fiesta de baile extraterrestre
               name: Fiesta de baile extraterrestre
-              description_student: Practica hacer juegos para compartir con tus amigos y familiares.
+              description_student: Crea un proyecto interactivo que puedes compartir con tus compañeros de clase.
             Behaviors in Sprite Lab:
               key: Editar comportamientos
               name: Editar comportamientos
@@ -16901,6 +16900,10 @@ es:
               key: Proyecto de fin de curso
               name: Proyecto de fin de curso
               description_student: '¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto.'
+            lesson-1:
+              name: Fiesta de baile
+              description_student: '¡Es el momento de celebrar! En esta lección, programarás tu propia fiesta de baile interactiva.'
+              description_teacher: En esta lección, los estudiantes programarán su propia fiesta de baile interactiva. Esta actividad requiere el uso de sonido, ya que la herramienta responde a la música.
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -16983,6 +16986,8 @@ es:
               name: Presentamos el Laboratorio de sprites
             Sprites in Action:
               name: Sprites en acción
+            introducing-spritelab:
+              name: Presentamos el Laboratorio de sprites
           lesson_groups:
             ramp_up:
               display_name: Introducción
@@ -16990,6 +16995,8 @@ es:
               display_name: Variables
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: Variables
         csd4-preview-2021:
           description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
           description_short: "  Aprende a diseñar un programa que satisfaga las necesidades de tus usuarios."

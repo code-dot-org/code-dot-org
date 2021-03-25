@@ -1954,7 +1954,7 @@
       "key": "65b2eb73-b2f8-4ee7-ba1d-0d7e78e7f62a",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out Circuit Playgrounds.\r\n\r\n**Transition:** Send students to Code Studio. Let them know that today they will be experimenting with some sensors that detect [v analog] signals and convert them to [v digital] values that can be used by the computer.",
+        "description": "**Distribute:** Pass out Circuit Playgrounds.\r\n\r\n**Transition:** Send students to Code Studio. Let them know that today they will be experimenting with some sensors that detect [v analog/csd/2021] signals and convert them to [v digital/csd/2021] values that can be used by the computer.",
         "name": "Analog Inputs\r"
       },
       "seeding_key": {
@@ -3038,7 +3038,7 @@
       "key": "463c4da0-d013-4378-be2d-fa41c520ea5e",
       "position": 5,
       "properties": {
-        "description": "The elements of our Circuit Playground are all made up of circuits so small that we can't even see most of them, but you can create a simple [v circuit] on your own by attaching wires to the copper pads on the edge of the board.",
+        "description": "The elements of our Circuit Playground are all made up of circuits so small that we can't even see most of them, but you can create a simple [v circuit/csd/2021] on your own by attaching wires to the copper pads on the edge of the board.",
         "remarks": true
       },
       "seeding_key": {
@@ -10464,223 +10464,260 @@
     {
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
+        "programming_environment.name": "applab",
         "programming_expression.key": "setProperty"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
-        "programming_expression.key": "led.off"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Circuit Playground",
-        "programming_expression.key": "led.on"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.blink"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
-        "programming_expression.key": "led.toggle"
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.on"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.off"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.pulse"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Board Events",
-        "programming_expression.key": "isPressed"
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.toggle"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
-        "programming_expression.key": "toggleSwitch.isOpen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "toggleSwitch"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
-        "programming_expression.key": "buttons"
+        "programming_environment.name": "applab",
+        "programming_expression.key": "toggleSwitch.isOpen"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "onBoardEvent"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "isPressed"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "buttons"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Getting Properties",
+        "programming_environment.name": "applab",
         "programming_expression.key": "getProperty"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "programming_expression.key": "soundSensor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "tempSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "programming_expression.key": "lightSensor"
+        "programming_environment.name": "applab",
+        "programming_expression.key": "soundSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "soundSensor.value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "soundSensor.setScale"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
-        "programming_expression.key": "soundSensor.value"
+        "programming_environment.name": "applab",
+        "programming_expression.key": "lightSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
-        "programming_expression.key": "on"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "programming_expression.key": "accessListItem"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "programming_expression.key": "blink"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
-        "programming_expression.key": "color"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "colorLeds"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "accessListItem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "intensity"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Making Music",
-        "programming_expression.key": "declareAssign_list_abd"
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "on"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "blink"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
-        "programming_expression.key": "listLength"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "buzzer.note"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "listLength"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_list_abd"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "buzzerplaynotes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
-        "programming_expression.key": "functionParams_n"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
         "programming_expression.key": "forLoop_i_0_4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
         "programming_expression.key": "callMyFunction_n"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "functionParams_n"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Accelerometer",
+        "programming_environment.name": "applab",
         "programming_expression.key": "accelerometer.getOrientation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
-        "programming_expression.key": "functionParams_n"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Parameters",
+        "programming_environment.name": "applab",
         "programming_expression.key": "callMyFunction_n"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Circuits and Physical Prototypes",
-        "programming_expression.key": "digitalWrite"
+        "lesson.key": "Functions with Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "functionParams_n"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "createLed"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "createButton"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "pinMode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "digitalWrite"
       }
     }
   ],

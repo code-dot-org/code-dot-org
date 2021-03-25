@@ -977,6 +977,7 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+            '"speed"': vitesse
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touche {SPRITE2}"
         options:

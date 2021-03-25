@@ -4153,10 +4153,6 @@ ga:
             Relay Programming:
               key: Códáil Sealaíochta
               name: Códáil Sealaíochta
-              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr
-                ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an
-                chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun
-                ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Dance Party:
               key: Cóisir Dhamhsa
               name: Cóisir Dhamhsa
@@ -4235,19 +4231,21 @@ ga:
               name: Spraoi le Lúba
             Editing Behaviors:
               name: Iompair i Saotharlann na Sprideanna
-            Virtual Pet:
-              name: Peata Fíorúil i Saotharlann na Sprideanna
+            lesson-6:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+            lesson-8:
+              name: Sprideanna ar Obair
           lesson_groups:
             ramp_up:
               display_name: Réamhullmhúchán
             csf_digcit:
               display_name: Saoránacht Dhigiteach
             csf_variables:
-              display_name: Athróga
+              display_name: Lúba "Do Gach"
             csf_for_loops:
               display_name: Lúba "Do Gach"
-            csf_sprites:
-              display_name: Sprideanna
+            lessonGroup-8:
+              display_name: Athróga
         express-2021:
           lessons:
             Dance Party:
@@ -4265,6 +4263,8 @@ ga:
             Virtual Pet with Sprite Lab:
               key: Peata Fíorúil i Saotharlann na Sprideanna
               name: Peata Fíorúil i Saotharlann na Sprideanna
+            lesson-1:
+              name: Cóisir Dhamhsa
           lesson_groups:
             csf_sequencing:
               display_name: Seicheamhú
@@ -4299,6 +4299,8 @@ ga:
               name: Fáilte go dtí Saotharlann na Sprideanna
             Sprites in Action:
               name: Sprideanna ar Obair
+            introducing-spritelab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
           lesson_groups:
             ramp_up:
               display_name: Réamhrá
@@ -4306,6 +4308,8 @@ ga:
               display_name: Athróga
             Sprites:
               display_name: Sprideanna
+            variables:
+              display_name: Athróga
         csd4-preview-2021:
           lesson_groups:
             csd4_1:

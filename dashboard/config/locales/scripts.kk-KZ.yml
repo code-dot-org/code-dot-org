@@ -2647,9 +2647,13 @@ kk:
             csf_digcit:
               display_name: Сандық Азаматтық
             csf_variables:
-              display_name: Айнымалылар
+              display_name: For ілмектері
             csf_for_loops:
               display_name: For ілмектері
+            lessonGroup-8:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: жою
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2673,6 +2677,8 @@ kk:
             ramp_up:
               display_name: Кіріспе
             lessonGroup-3:
+              display_name: Айнымалылар
+            variables:
               display_name: Айнымалылар
         k5-onlinepd-2021:
           lessons:
