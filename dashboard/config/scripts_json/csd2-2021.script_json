@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:47:19 UTC",
+    "serialized_at": "2021-03-24 21:40:04 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -10174,19 +10174,6 @@
     },
     {
       "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1hOQsOiL7FyAXXWFZ0xnuOsKP3xRiPyYihHWau5PAj04",
-      "key": "website-for-a-purpose-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "name": "Website for a Purpose",
       "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
       "key": "website-for-a-purpose-1-2",
       "properties": {
@@ -10195,32 +10182,6 @@
       },
       "seeding_key": {
         "resource.key": "website-for-a-purpose-1-2"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1hOQsOiL7FyAXXWFZ0xnuOsKP3xRiPyYihHWau5PAj04",
-      "key": "website-for-a-purpose-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "website-for-a-purpose-1"
       }
     },
     {
@@ -10738,6 +10699,9 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "html",
@@ -10971,7 +10935,7 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "head"
+        "programming_expression.key": "html"
       }
     },
     {
@@ -10985,13 +10949,6 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "P"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
-        "programming_environment.name": "weblab",
         "programming_expression.key": "body"
       }
     },
@@ -10999,7 +10956,14 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "html"
+        "programming_expression.key": "head"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "P"
       }
     },
     {
@@ -11013,7 +10977,7 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "color"
+        "programming_expression.key": "font-family"
       }
     },
     {
@@ -11027,14 +10991,7 @@
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "font-family"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Text with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "text-align"
+        "programming_expression.key": "color"
       }
     },
     {
@@ -11042,6 +10999,13 @@
         "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
         "programming_expression.key": "Text-Dec"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "text-align"
       }
     },
     {
@@ -11055,28 +11019,7 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "width"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "height"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "margin"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "border-radius"
+        "programming_expression.key": "border-width"
       }
     },
     {
@@ -11090,6 +11033,13 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
+        "programming_expression.key": "margin"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
         "programming_expression.key": "float"
       }
     },
@@ -11097,7 +11047,14 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-style"
+        "programming_expression.key": "height"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "width"
       }
     },
     {
@@ -11111,7 +11068,14 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-width"
+        "programming_expression.key": "border-style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-radius"
       }
     },
     {
@@ -11471,6 +11435,491 @@
       "seeding_key": {
         "lesson.key": "Peer Review and Final Touches",
         "objective.key": "c2b66c71-919f-4bbb-bdc4-9fbb244e4991"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
       }
     }
   ]
