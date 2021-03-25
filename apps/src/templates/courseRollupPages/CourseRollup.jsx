@@ -37,7 +37,7 @@ export default class CourseRollup extends Component {
         title: this.props.course.title
       });
     } else if (this.props.objectToRollUp === 'Code') {
-      return i18n.rollupTitleStandards({
+      return i18n.rollupTitleCode({
         title: this.props.course.title
       });
     }
