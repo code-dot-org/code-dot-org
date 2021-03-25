@@ -1,67 +1,72 @@
 require 'active_support/concern'
 require 'cdo/google/drive'
+require 'open-uri'
 require 'pdf/collate'
 require 'pdf/conversion'
+require 'securerandom'
 
 module Services
   module CurriculumPdfs
-    module LessonPlans
+    module Resources
       extend ActiveSupport::Concern
       class_methods do
-        def google_drive_sesson
+        def google_drive_session
           @session ||= GoogleDrive::Session.from_service_account_key(
             StringIO.new(CDO.gdrive_export_secret.to_json)
           )
         end
 
         def generate_script_resources_pdf(script, directory="/tmp/")
-          tmpdir = Dir.mktmpdir(__method__.to_s)
           pdfs = []
           script.lessons.each do |lesson|
             title_page = "<h1>#{script.name}<h1><h2>#{lesson.name}</h2><h3>Resources</h3>"
-            title_page_filename = ActiveStorage::Filename.new("lesson.#{lesson.key}.title.pdf").sanitized
-            title_page_path = File.join(tmpdir, title_page_filename)
+            title_page_filename = ActiveStorage::Filename.new(
+              "lesson.#{lesson.key}.title.pdf"
+            ).sanitized
+            title_page_path = File.join(directory, title_page_filename)
             PDF.generate_from_html(title_page, title_page_path)
             pdfs << title_page_path
 
             lesson.resources.each do |resource|
-              file = google_drive_session.file_by_url(resource.url)
-              raise "could not find google doc for: #{resource.url.inspect}" unless file.present?
-              resource_filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
-              resource_path = File.join(tmpdir, resource_filename)
-              file.export_as_file(resource_path)
-              pdfs << resource_path
+              resource_path = fetch_resource_pdf(resource, directory)
+              pdfs << resource_path if resource_path
             end
           end
 
           filename = ActiveStorage::Filename.new(script.name + ".pdf").sanitized
           destination = File.join(directory, filename)
-          PDF.merge_pdfs(destination, *pdfs)
-          FileUtils.remove_entry_secure(tmpdir)
+          PDF.merge_local_pdfs(destination, *pdfs)
           return destination
         end
 
-        #def generate_rollup_pdf_for_lesson(lesson)
-        #  dir = Dir.mktmpdir("generate_rollup_pdf_for_lesson")
-        #  pdfs = []
-        #  lesson.resources.each do |resource|
-        #    file = google_drive_session.file_by_url(resource.url)
-        #    unless file.present?
-        #      puts "could not find google doc for: #{resource.url.inspect}"
-        #    else
-        #      title_page = "<h1>Unit X Lesson Y<h1><h2>#{lesson.name}</h2><h3>Resources</h3>"
-        #      title_pdf_name = File.join(dir, resource.key + ".title.pdf")
-        #      PDF.generate_from_html(title_page, title_pdf_name)
-        #      pdfs << title_pdf_name
+        def fetch_resource_pdf(resource, directory="/tmp/")
+          filename = ActiveStorage::Filename.new(
+            #"resource.#{resource.key}.#{SecureRandom.hex(8)}.pdf"
+            "resource.#{resource.key}.pdf"
+          ).sanitized
+          path = File.join(directory, filename)
+          return path if File.exist?(path)
 
-        #      resource_pdf_name = File.join(dir, resource.key + ".pdf")
-        #      file.export_as_file(resource_pdf_name)
-        #      pdfs << resource_pdf_name
-        #    end
-        #  end
-
-        #  PDF.merge_pdfs("/tmp/result.pdf", *pdfs)
-        #end
+          if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
+            begin
+              file = google_drive_session.file_by_url(resource.url)
+              file.export_as_file(path)
+              return path
+            rescue Google::Apis::ClientError
+              # TODO: what to do here?
+              return nil
+            rescue Google::Apis::ServerError
+              # TODO: what to do here?
+              return nil
+            rescue GoogleDrive::Error
+              # TODO: what to do here?
+              return nil
+            end
+          elsif resource.url.end_with?(".pdf")
+            IO.copy_stream(open(resource.url), path)
+            return path
+          end
+        end
       end
     end
   end
