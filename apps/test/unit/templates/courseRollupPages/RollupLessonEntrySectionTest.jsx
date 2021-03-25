@@ -4,7 +4,6 @@ import {expect} from '../../../util/reconfiguredChai';
 import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
 import {courseData} from './rollupTestData';
 import i18n from '@cdo/locale';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {Provider} from 'react-redux/src';
 import {getStore} from '@cdo/apps/redux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -106,19 +105,7 @@ describe('RollupLessonEntrySection', () => {
       <RollupLessonEntrySection {...defaultProps} objectToRollUp={'Code'} />
     );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <li key={defaultProps.lesson.programmingExpressions[0].name}>
-          <a
-            href={studio(defaultProps.lesson.programmingExpressions[0].link)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {defaultProps.lesson.programmingExpressions[0].name}
-          </a>
-        </li>
-      )
-    ).to.be.true;
+    expect(wrapper.find('StyledCodeBlock').length).to.equal(1);
   });
 
   it('renders no code message when no code', () => {

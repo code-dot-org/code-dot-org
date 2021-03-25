@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
 
 const styles = {
   main: {
@@ -62,13 +62,7 @@ export default class RollupLessonEntrySection extends Component {
             this.props.lesson.programmingExpressions.length > 0 &&
             this.props.lesson.programmingExpressions.map(expression => (
               <li key={expression.name}>
-                <a
-                  href={studio(expression.link)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {expression.name}
-                </a>
+                <StyledCodeBlock programmingExpression={expression} />
               </li>
             ))}
           {this.props.objectToRollUp === 'Code' &&
