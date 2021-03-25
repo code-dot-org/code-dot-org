@@ -10,12 +10,12 @@
       .course-container
         - if Script.beta? id
           .beta
-            %h3.betatitle{dir: language_dir_class}= block_data[:title]
-            %h3.betatext{dir: language_dir_class}= t('beta')
+            %h3.betatitle= block_data[:title]
+            %h3.betatext= t('beta')
         - else
-          %h3.heading{dir: language_dir_class}= block_data[:title]
+          %h3.heading= block_data[:title]
         - if block_data[:audience]
-          .text{dir: language_dir_class}= block_data[:audience]
-        .text.smalltext{dir: language_dir_class}= block_data[:body]
+          .text= block_data[:audience]
+        .text.smalltext= block_data[:body]
         - if show_teacher_guide && block_data[:teacher_guide]&.present?
           .teacher-guide= link_to t('view_teacher_guide'), block_data[:teacher_guide]
