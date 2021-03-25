@@ -38,6 +38,7 @@ export default function initPage(scriptEditorData) {
         i18nData={scriptEditorData.i18n}
         initialHidden={valueOr(scriptData.hidden, true)}
         initialIsStable={scriptData.is_stable}
+        initialDeprecated={scriptData.deprecated || false}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
         initialStudentDetailProgressView={
