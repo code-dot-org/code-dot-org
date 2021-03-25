@@ -4,6 +4,7 @@ import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/Activitie
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
@@ -87,6 +88,7 @@ class LessonEditor extends Component {
       preparation: this.props.initialLessonData.preparation || '',
       announcements: this.props.initialLessonData.announcements || [],
       objectives: this.props.initialObjectives,
+      standards: this.props.initialLessonData.standards || [],
       originalLessonData: this.props.initialLessonData
     };
   }
@@ -416,6 +418,13 @@ class LessonEditor extends Component {
                 objectives={this.state.objectives}
                 updateObjectives={this.handleUpdateObjectives}
               />
+            </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Standards"
+              collapsed={true}
+              fullwidth={true}
+            >
+              <StandardsEditor standards={this.state.standards} />
             </CollapsibleEditorSection>
           </div>
         )}
