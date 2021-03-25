@@ -49,11 +49,7 @@ export default class CdoBramble {
         // TODO: Handle initial project write with default files.
         callback();
       } else {
-        this.syncFiles(
-          this.api.getCurrentFileEntries(),
-          this.api.getCurrentFilesVersionId(),
-          callback
-        );
+        this.syncFiles(currentFiles, currentVersionId, callback);
       }
     });
   }
