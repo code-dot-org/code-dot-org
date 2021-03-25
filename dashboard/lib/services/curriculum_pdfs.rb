@@ -25,6 +25,7 @@ module Services
   # Also see curriculum_pdfs.rake for some associated logic
   module CurriculumPdfs
     include LessonPlans
+    include Resources
     include Utils
 
     DEBUG = false
