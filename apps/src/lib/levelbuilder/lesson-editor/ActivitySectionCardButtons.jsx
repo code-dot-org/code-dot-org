@@ -215,7 +215,7 @@ class ActivitySectionCardButtons extends Component {
                   handler={this.handleOpenAddTip}
                 />
                 <AddButton
-                  displayText="Doc Link"
+                  displayText="Code Doc"
                   handler={this.handleOpenAddProgrammingExpression}
                 />
                 <AddButton
