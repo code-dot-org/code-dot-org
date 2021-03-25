@@ -169,10 +169,10 @@ class ActivitySectionCardButtons extends Component {
     this.props.appendSlide();
   };
 
-  handleCloseAddProgrammingExpression = (displayName, color, url) => {
+  handleCloseAddProgrammingExpression = programmingExpression => {
     this.setState(
       {addProgrammingExpressionOpen: false},
-      this.props.appendProgrammingExpressionLink(displayName, color, url)
+      this.props.appendProgrammingExpressionLink(programmingExpression)
     );
   };
 
