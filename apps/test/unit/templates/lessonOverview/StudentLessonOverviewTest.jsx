@@ -7,6 +7,7 @@ import {
   fakeTeacherAndStudentAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
+import Button from '@cdo/apps/templates/Button';
 
 describe('StudentLessonOverview', () => {
   let defaultProps;
@@ -65,7 +66,9 @@ describe('StudentLessonOverview', () => {
             name: 'playSound',
             link: '/docs/applab/playSound'
           }
-        ]
+        ],
+        studentLessonPlanPdfUrl:
+          'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
       },
       activities: [],
       announcements: [],
@@ -96,6 +99,38 @@ describe('StudentLessonOverview', () => {
     );
   });
 
+  it('show print button if there is a pdf', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={
+            'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
+          }
+          text="Print"
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('hide print button if there is no pdf', () => {
+    let myProps = defaultProps;
+    myProps.lesson.studentLessonPlanPdfUrl = null;
+    const wrapper = shallow(<StudentLessonOverview {...myProps} />);
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={
+            'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
+          }
+          text="Print"
+        />
+      )
+    ).to.be.false;
+  });
+
   it('has no announcements if none provided', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
@@ -117,8 +152,7 @@ describe('StudentLessonOverview', () => {
   it('displays the student resources', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ul').length, 1);
-    assert.equal(resourceSection.find('li').length, 2);
+    assert.equal(resourceSection.find('ResourceList').length, 1);
   });
 
   it('does not display the resources section if there are no student resources', () => {

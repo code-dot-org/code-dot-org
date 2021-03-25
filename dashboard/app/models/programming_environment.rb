@@ -8,13 +8,18 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
 #
-# @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
+#  index_programming_environments_on_name  (name) UNIQUE
+#
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
+  validates_uniqueness_of :name
+
   has_many :programming_expressions
 
+  # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
   )

@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 
 const styles = {
   dropdown: {
@@ -44,14 +44,9 @@ export default class LessonNavigationDropdown extends Component {
     };
   }
 
-  linkWithQueryParams = link => {
-    const queryParams = window.location.search || '';
-    return link + queryParams;
-  };
-
   handleDropdownClick = listItem => {
     if (listItem.link) {
-      navigateToHref(this.linkWithQueryParams(listItem.link));
+      navigateToHref(linkWithQueryParams(listItem.link));
     } else {
       this.setState({currentSection: listItem.sectionNumber});
     }

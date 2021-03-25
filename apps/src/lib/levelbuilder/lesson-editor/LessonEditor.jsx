@@ -24,7 +24,7 @@ import {
   mapActivityDataForEditor,
   initActivities
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
@@ -132,15 +132,11 @@ class LessonEditor extends Component {
         if (shouldCloseAfterSave) {
           if (data.hasLessonPlan) {
             navigateToHref(
-              `${this.state.originalLessonData.lessonPath}${
-                window.location.search
-              }`
+              linkWithQueryParams(this.state.originalLessonData.lessonPath)
             );
           } else {
             navigateToHref(
-              `${this.state.originalLessonData.scriptPath}${
-                window.location.search
-              }`
+              linkWithQueryParams(this.state.originalLessonData.scriptPath)
             );
           }
         } else {
@@ -443,7 +439,12 @@ class LessonEditor extends Component {
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor hasLessonPlan={hasLessonPlan} />
+          <ActivitiesEditor
+            hasLessonPlan={hasLessonPlan}
+            programmingEnvironments={
+              this.props.initialLessonData.programmingEnvironments
+            }
+          />
         </CollapsibleEditorSection>
 
         <SaveBar

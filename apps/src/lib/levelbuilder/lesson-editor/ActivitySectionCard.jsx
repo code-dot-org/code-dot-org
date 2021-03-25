@@ -111,6 +111,7 @@ class ActivitySectionCard extends Component {
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
+    programmingEnvironments: PropTypes.array,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -364,6 +365,10 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  appendProgrammingExpressionLink = (displayName, color, url) => {
+    this.appendMarkdownSyntax(`\n[\`${displayName}\`(${color})](${url})`);
+  };
+
   appendResourceLink = resourceKey => {
     this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
   };
@@ -542,10 +547,12 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
+          appendProgrammingExpressionLink={this.appendProgrammingExpressionLink}
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
+          programmingEnvironments={this.props.programmingEnvironments}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

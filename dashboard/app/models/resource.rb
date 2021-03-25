@@ -86,6 +86,7 @@ class Resource < ApplicationRecord
     {
       id: id,
       key: key,
+      markdownKey: Services::MarkdownPreprocessor.build_resource_key(self),
       name: name,
       url: url,
       downloadUrl: download_url || '',
@@ -94,6 +95,12 @@ class Resource < ApplicationRecord
       assessment: assessment || false,
       includeInPdf: include_in_pdf || false
     }
+  end
+
+  def serialize_scripts
+    if Rails.application.config.levelbuilder_mode
+      lessons.map(&:script).uniq.each(&:write_script_json)
+    end
   end
 
   private

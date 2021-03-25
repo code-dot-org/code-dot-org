@@ -112,16 +112,16 @@ class LessonTest < ActiveSupport::TestCase
 
   test "last_progression_script_level" do
     lesson = create :lesson
-    create :script_level, lesson: lesson
-    last_script_level = create :script_level, lesson: lesson
+    create :script_level, lesson: lesson, chapter: 1
+    last_script_level = create :script_level, lesson: lesson, chapter: 2
 
     assert_equal last_script_level, lesson.last_progression_script_level
   end
 
   test "last_progression_script_level with a bonus level" do
     lesson = create :lesson
-    last_script_level = create :script_level, lesson: lesson
-    create :script_level, lesson: lesson, bonus: true
+    last_script_level = create :script_level, lesson: lesson, chapter: 1
+    create :script_level, lesson: lesson, chapter: 2, bonus: true
 
     assert_equal last_script_level, lesson.last_progression_script_level
   end
@@ -803,8 +803,29 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
     )
+  end
+
+  test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
+    script = create :script, is_migrated: true, hidden: true, include_student_lesson_plans: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
+
+    script.seeded_from = Time.now.to_s
+    assert_equal(
+      new_lesson.student_lesson_plan_pdf_url,
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
+    )
+  end
+
+  test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
+    script = create :script, include_student_lesson_plans: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
+
+    script.seeded_from = Time.now.to_s
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
   def create_swapped_lockable_lesson
