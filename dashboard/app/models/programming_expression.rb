@@ -122,6 +122,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {name: name, link: "/docs/#{programming_environment.name}/#{key}/"}
+    {name: name, color: color, link: "/docs/#{programming_environment.name}/#{key}/"}
   end
 end
