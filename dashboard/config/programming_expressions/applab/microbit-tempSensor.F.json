@@ -1,6 +1,0 @@
-{
-  "func": "tempSensor.F",
-  "docFunc": "microbit-tempSensor.F",
-  "category": "micro:bit",
-  "type": "readonlyproperty"
-}

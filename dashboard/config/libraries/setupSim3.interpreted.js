@@ -1,16 +1,20 @@
+//This is an experimental library by Mike that is intended to work with a full blockly version of the sim.
+
 // Setup sim
 function setupSim() {
   if(!World.animations){
     World.animations = getAnimationsInUse();
   }
-  World.sprite1score = getProp(({costume: World.animations[0]}), "score");
-  World.sprite2score = getProp(({costume: World.animations[1]}), "score");
+  if(!score1){score1=0;}
+  if(!score2){score2=0;}
+  World.sprite1score = score1;
+  World.sprite2score = score2;//getProp(({costume: World.animations[1]}), "score")
+
 
   if(!World.endTime){
       World.endTime=0;
   }
 
-console.log(getAnimationsInUse());
     //Draw the scoreboard
     push();
     var box1x=0;
