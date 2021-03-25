@@ -3,7 +3,6 @@
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
 import applabI18n from '@cdo/applab/locale';
-import {isChromeOS} from '@cdo/apps/lib/kits/maker/util/browserChecks';
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -59,7 +58,7 @@ export function findPortWithViableDevice() {
  * @returns {Promise} Resolves if installed, rejects if not.
  */
 export function ensureAppInstalled() {
-  if (!isChromeOS()) {
+  if (isNodeSerialAvailable()) {
     return Promise.resolve();
   }
 
@@ -75,19 +74,25 @@ export function ensureAppInstalled() {
  */
 function listSerialDevices() {
   let SerialPortType;
-  if (!isChromeOS()) {
+  if (isNodeSerialAvailable()) {
     SerialPortType = SerialPort;
     return SerialPortType.list();
   } else {
     SerialPortType = ChromeSerialPort;
-    console.log(ChromeSerialPort);
-    console.log(SerialPortType);
     return new Promise((resolve, reject) => {
       SerialPortType.list((error, list) =>
         error ? reject(error) : resolve(list)
       );
     });
   }
+}
+
+/**
+ * @returns {boolean} Whether node SerialPort is available on window, where it
+ * is provided if we're using the Code.org Browser.
+ */
+export function isNodeSerialAvailable() {
+  return typeof SerialPort === 'function';
 }
 
 /**
