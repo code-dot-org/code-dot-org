@@ -21740,6 +21740,10 @@ en:
           lessons:
             lesson-1:
               name: Lesson 1
+              description_student: In this lesson, you explore software engineering values and the ways that you practice these values in other aspects of your life. By the end of this lesson, you discover your own software engineering identity!
+              description_teacher: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
+            lesson-2:
+              name: Lesson 2
           lesson_groups: {}
           name: csa1-pilot
           title: ''
