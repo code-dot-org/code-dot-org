@@ -26,6 +26,18 @@ export const courseData = {
             }
           ],
           preparation: '- One',
+          standards: [
+            {
+              frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+              parentCategoryShortcode: null,
+              parentCategoryDescription: null,
+              categoryShortcode: 'AP',
+              categoryDescription: 'Algorithms & Programming',
+              shortcode: '1B-AP-09',
+              description:
+                'Create programs that use variables to store and modify data.'
+            }
+          ],
           resources: {
             Teacher: [
               {
@@ -65,6 +77,18 @@ export const courseData = {
             }
           ],
           preparation: '- One',
+          standards: [
+            {
+              frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+              parentCategoryShortcode: null,
+              parentCategoryDescription: null,
+              categoryShortcode: 'AP',
+              categoryDescription: 'Algorithms & Programming',
+              shortcode: '1B-AP-09',
+              description:
+                'Create programs that use variables to store and modify data.'
+            }
+          ],
           resources: {
             Teacher: [
               {
@@ -99,6 +123,7 @@ export const courseData = {
           displayName: 'Lesson One',
           vocabularies: [],
           programmingExpressions: [],
+          standards: [],
           preparation: null,
           resources: {}
         },
@@ -121,6 +146,18 @@ export const courseData = {
             }
           ],
           preparation: '- One',
+          standards: [
+            {
+              frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+              parentCategoryShortcode: null,
+              parentCategoryDescription: null,
+              categoryShortcode: 'AP',
+              categoryDescription: 'Algorithms & Programming',
+              shortcode: '1B-AP-09',
+              description:
+                'Create programs that use variables to store and modify data.'
+            }
+          ],
           resources: {
             Teacher: [
               {
