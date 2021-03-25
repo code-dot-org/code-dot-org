@@ -72,7 +72,8 @@ class ActivitySectionCardButtons extends Component {
     appendVocabularyLink: PropTypes.func.isRequired,
     appendSlide: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
-    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired
+    vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    programmingEnvironments: PropTypes.array
   };
 
   constructor(props) {
@@ -268,6 +269,7 @@ class ActivitySectionCardButtons extends Component {
               handleClose={() =>
                 this.setState({addProgrammingExpressionOpen: false})
               }
+              programmingEnvironments={this.props.programmingEnvironments}
             />
             {/* Prevent dialog from trying to render when there is no tip to edit*/}
             {this.state.tipToEdit && (

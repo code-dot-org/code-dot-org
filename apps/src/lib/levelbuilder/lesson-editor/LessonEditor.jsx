@@ -420,7 +420,12 @@ class LessonEditor extends Component {
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
-          <ActivitiesEditor hasLessonPlan={hasLessonPlan} />
+          <ActivitiesEditor
+            hasLessonPlan={hasLessonPlan}
+            programmingEnvironments={
+              this.props.initialLessonData.programmingEnvironments
+            }
+          />
         </CollapsibleEditorSection>
 
         <SaveBar
