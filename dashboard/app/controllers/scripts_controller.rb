@@ -145,22 +145,22 @@ class ScriptsController < ApplicationController
 
   def vocab
     return render :forbidden unless can? :read, @script
-    render 'vocab', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
+    render 'vocab', locals: {unit_summary: @script.summarize_for_rollup(@current_user)}
   end
 
   def resources
     return render :forbidden unless can? :read, @script
-    render 'resources', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
+    render 'resources', locals: {unit_summary: @script.summarize_for_rollup(@current_user)}
   end
 
   def code
     return render :forbidden unless can? :read, @script
-    render 'code', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
+    render 'code', locals: {unit_summary: @script.summarize_for_rollup(@current_user)}
   end
 
   def standards
     return render :forbidden unless can? :read, @script
-    render 'standards', locals: {unit_summary: unit.summarize_for_rollup(@current_user)}
+    render 'standards', locals: {unit_summary: @script.summarize_for_rollup(@current_user)}
   end
 
   private
