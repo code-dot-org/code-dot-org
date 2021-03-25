@@ -1,4 +1,4 @@
-namespace :lesson_plan_pdfs do
+namespace :curriculum_pdfs do
   def get_pdf_enabled_scripts
     Script.all.select do |script|
       script.is_migrated && script.seeded_from.present?
@@ -7,7 +7,8 @@ namespace :lesson_plan_pdfs do
 
   def get_pdfless_lessons(script)
     script.lessons.select(&:has_lesson_plan).select do |lesson|
-      !Services::LessonPlanPdfs.pdf_exists_for?(lesson)
+      !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson) ||
+        !Services::CurriculumPdfs.lesson_plan_pdf_exists_for?(lesson, true)
     end
   end
 
@@ -35,14 +36,15 @@ namespace :lesson_plan_pdfs do
       get_pdf_enabled_scripts.each do |script|
         get_pdfless_lessons(script).each do |lesson|
           puts "Generating missing PDF for #{lesson.key} (from #{script.name})"
-          Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir)
+          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
+          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
           any_pdf_generated = true
         end
       end
 
       if any_pdf_generated
         puts "Generated all missing PDFs, uploading results to S3"
-        Services::LessonPlanPdfs.upload_generated_pdfs_to_s3(dir)
+        Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
       else
         puts "No missing PDFs found to generate"
       end
@@ -59,10 +61,11 @@ namespace :lesson_plan_pdfs do
     Dir.mktmpdir("pdf_generation") do |dir|
       get_pdf_enabled_scripts.each do |script|
         script.lessons.select(&:has_lesson_plan).each do |lesson|
-          Services::LessonPlanPdfs.generate_lesson_pdf(lesson, dir)
+          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
+          Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir, true)
         end
       end
-      Services::LessonPlanPdfs.upload_generated_pdfs_to_s3(dir)
+      Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
     end
 
     puts "Generated all PDFs"
