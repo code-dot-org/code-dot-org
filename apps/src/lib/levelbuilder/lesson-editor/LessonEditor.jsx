@@ -5,6 +5,7 @@ import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesE
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
@@ -66,6 +67,7 @@ class LessonEditor extends Component {
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
+    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -436,6 +438,13 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Standards"
+              collapsed={true}
+              fullwidth={true}
+            >
+              <StandardsEditor standards={this.props.standards} />
+            </CollapsibleEditorSection>
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
@@ -460,7 +469,8 @@ export default connect(
     activities: state.activities,
     resources: state.resources,
     vocabularies: state.vocabularies,
-    programmingExpressions: state.programmingExpressions
+    programmingExpressions: state.programmingExpressions,
+    standards: state.standards
   }),
   {
     initActivities
