@@ -26,9 +26,13 @@ export default function initPage(scriptEditorData) {
   registerReducers({...reducers, resources: resourcesEditor, isRtl});
   const store = getStore();
   store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
-  const resourcesForRedux = scriptData.is_migrated
-    ? scriptData.teacher_resources
-    : [];
+  const teacherResources = scriptData.is_migrated
+    ? scriptData.teacher_resources || []
+    : (scriptData.teacher_resources || []).map(([type, link]) => ({
+        type,
+        link
+      }));
+  const resourcesForRedux = scriptData.is_migrated ? teacherResources : [];
   store.dispatch(initResources(resourcesForRedux || []));
 
   let announcements = scriptData.announcements || [];
@@ -53,7 +57,7 @@ export default function initPage(scriptEditorData) {
         initialWrapupVideo={scriptData.wrapupVideo || ''}
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
-        initialTeacherResources={scriptData.teacher_resources}
+        initialTeacherResources={teacherResources}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
