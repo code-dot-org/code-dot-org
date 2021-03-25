@@ -7,7 +7,6 @@ import i18n from '@cdo/locale';
 import {Provider} from 'react-redux/src';
 import {getStore} from '@cdo/apps/redux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 describe('RollupLessonEntrySection', () => {
   let defaultProps;
@@ -74,17 +73,8 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <li key={defaultProps.lesson.vocabularies[0].key}>
-          <InlineMarkdown
-            markdown={`**${defaultProps.lesson.vocabularies[0].word}** - ${
-              defaultProps.lesson.vocabularies[0].definition
-            }`}
-          />
-        </li>
-      )
-    ).to.be.true;
+    expect(wrapper.text()).to.include('word');
+    expect(wrapper.text()).to.include('definition');
   });
 
   it('renders no vocab message when no vocab', () => {
