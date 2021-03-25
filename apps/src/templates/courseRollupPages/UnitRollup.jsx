@@ -34,7 +34,7 @@ export default class UnitRollup extends Component {
         title: this.props.unit.title
       });
     } else if (this.props.objectToRollUp === 'Code') {
-      return i18n.rollupTitleStandards({
+      return i18n.rollupTitleCode({
         title: this.props.unit.title
       });
     }
