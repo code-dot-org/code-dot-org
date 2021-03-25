@@ -102,8 +102,7 @@ class Resource < ApplicationRecord
       id: id,
       key: key,
       name: name,
-      url: url,
-      type: type || ''
+      url: url
     }
   end
 

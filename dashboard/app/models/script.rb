@@ -1304,7 +1304,7 @@ class Script < ApplicationRecord
   end
 
   def update_migrated_teacher_resources(resource_ids)
-    teacher_resources = resource_ids.map {|id| Resource.find(id)}
+    teacher_resources = (resource_ids || []).map {|id| Resource.find(id)}
     self.resources = teacher_resources
   end
 
