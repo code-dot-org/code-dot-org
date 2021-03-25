@@ -6,6 +6,7 @@ import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
+import {lessonShape} from './rollupShapes';
 
 const styles = {
   main: {
@@ -30,7 +31,7 @@ const styles = {
 export default class RollupLessonEntrySection extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    lesson: PropTypes.object
+    lesson: lessonShape
   };
 
   render() {
