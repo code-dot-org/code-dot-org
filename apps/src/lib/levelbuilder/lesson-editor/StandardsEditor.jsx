@@ -162,6 +162,8 @@ class StandardsEditor extends Component {
   }
 }
 
+export const UnconnectedStandardsEditor = StandardsEditor;
+
 export default connect(
   state => ({
     standards: state.standards
