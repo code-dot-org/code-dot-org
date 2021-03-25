@@ -29,11 +29,7 @@ export default class StandardsEditor extends Component {
   actionsCellFormatter = (actions, {rowData}) => {
     return (
       <div style={styles.actionsColumn}>
-        <div
-          style={styles.remove}
-          className="unit-test-remove-resource"
-          // onMouseDown={() => this.handleRemoveResourceDialogOpen(rowData)}
-        >
+        <div style={styles.remove}>
           <i className="fa fa-trash" />
         </div>
       </div>
