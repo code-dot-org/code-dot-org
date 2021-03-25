@@ -348,7 +348,7 @@ class UnitGroup < ApplicationRecord
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
       announcements: announcements,
-      course_version_id: course_version.id
+      course_version_id: course_version&.id
     }
   end
 
