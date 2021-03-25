@@ -138,6 +138,18 @@ class CourseOverview extends Component {
     });
   };
 
+  getAnnouncementsWithAnalyticsData() {
+    return this.props.announcements.map(announcement => {
+      return {
+        ...announcement,
+        analyticsData: {
+          unit_group_id: this.props.id,
+          user_id: this.props.userId
+        }
+      };
+    });
+  }
+
   render() {
     const {
       name,
@@ -212,7 +224,7 @@ class CourseOverview extends Component {
         )}
         {isSignedIn && (
           <Announcements
-            announcements={this.props.announcements}
+            announcements={this.getAnnouncementsWithAnalyticsData()}
             width={styleConstants['content-width']}
             viewAs={viewAs}
           />

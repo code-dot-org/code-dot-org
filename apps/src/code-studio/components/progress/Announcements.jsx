@@ -49,6 +49,7 @@ export default class Announcements extends Component {
             buttonLink={announcement.link}
             dismissible={true}
             width={this.props.width}
+            analyticsData={announcement.analyticsData}
           />
         ))}
       </div>
