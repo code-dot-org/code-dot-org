@@ -1639,10 +1639,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.20.tgz#4c484043a5a6ccf7c8a2f5331af9c06971f4fac7"
-  integrity sha512-/qNi+gK/N3NjQhK6PB0bUHNQ2VpL2eeUoeqtHYBB74oTlOXp0lAA3osrmSFE3JQNMKwizUxKn0AhMEaLICxIhg==
+"@code-dot-org/ml-playground@0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.21.tgz#60771919904410735b4d89681b843417db592c29"
+  integrity sha512-QhWGIVuW5wHru/B0aICbzBAH8X5G9oSd8hpUME2l2TKS+Ujhdw0bo67y92vCavZg2GN0gnoFHWZ5cwnpXIX3Cw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"
@@ -1680,6 +1680,11 @@
     remark-parse "^6.0.0"
     remark-stringify "^6.0.0"
     unified "^7.0.0"
+
+"@code-dot-org/remark-plugins@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/remark-plugins/-/remark-plugins-1.1.0.tgz#3b7b87137999a5858105485835f6c58fc0c3aebc"
+  integrity sha512-k0lX5WKihcLkIH6riAslNfTSMiDqJZ7psC7pg1cX5QhgvkfmAgsCzJpsGxyU0XSxqxiKWrPCV+WozuxQVO2+rg==
 
 "@codemirror/closebrackets@^0.17.0":
   version "0.17.2"
