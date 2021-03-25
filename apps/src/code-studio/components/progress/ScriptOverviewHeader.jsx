@@ -119,6 +119,18 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
+  getAnnouncementsWithAnalyticsData() {
+    return this.props.announcements.map(announcement => {
+      return {
+        ...announcement,
+        analyticsData: {
+          script_id: this.props.scriptId,
+          user_id: this.props.userId
+        }
+      };
+    });
+  }
+
   render() {
     const {
       plcHeaderProps,
@@ -175,7 +187,7 @@ class ScriptOverviewHeader extends Component {
         )}
         {isSignedIn && (
           <Announcements
-            announcements={this.props.announcements}
+            announcements={this.getAnnouncementsWithAnalyticsData()}
             width={SCRIPT_OVERVIEW_WIDTH}
             viewAs={viewAs}
           />

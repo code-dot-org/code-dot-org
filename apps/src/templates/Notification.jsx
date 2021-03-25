@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from './Button';
 import trackEvent from '../util/trackEvent';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 export const NotificationType = {
   information: 'information',
@@ -145,9 +146,10 @@ class Notification extends Component {
     dismissible: PropTypes.bool.isRequired,
     onDismiss: PropTypes.func,
     newWindow: PropTypes.bool,
-    // analyticId is only posted when a primary button is provided.
+    // analyticId and analyticsData are only used when a primary button is provided.
     // It's not used by the array of buttons.
     analyticId: PropTypes.string,
+    analyticsData: PropTypes.object,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
     isRtl: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func,
@@ -185,8 +187,39 @@ class Notification extends Component {
   };
 
   onAnnouncementClick() {
-    if (this.props.analyticId) {
-      trackEvent('teacher_announcement', 'click', this.props.analyticId);
+    const {analyticsData, analyticId} = this.props;
+
+    // Log to Google Analytics
+    if (analyticId) {
+      trackEvent('teacher_announcement', 'click', analyticId);
+    }
+
+    // Log to Firehose
+    if (analyticsData) {
+      let record = {};
+
+      // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
+      // Here, we separate out those fields from any other analytics data provided in the analyticsData prop.
+      // We include these properties in the data_json object as well, in case that is easier for our product team to use.
+      ['user_id', 'script_id'].forEach(firehoseMetadataKey => {
+        if (firehoseMetadataKey in analyticsData) {
+          record[firehoseMetadataKey] = analyticsData[firehoseMetadataKey];
+        }
+      });
+
+      record = {
+        ...record,
+        study: 'notification_engagement',
+        event: 'notification_click',
+        data_json: JSON.stringify({
+          ...analyticsData,
+          notice: this.props.notice,
+          details: this.props.details,
+          buttonLink: this.props.buttonLink
+        })
+      };
+
+      firehoseClient.putRecord(record);
     }
     if (this.props.onButtonClick) {
       this.props.onButtonClick();
