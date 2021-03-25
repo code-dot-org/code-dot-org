@@ -355,6 +355,7 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: standards.map(&:summarize_for_lesson_edit),
