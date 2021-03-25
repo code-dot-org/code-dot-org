@@ -118,7 +118,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_edit
-    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
+    {id: id, key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
   end
 
   def summarize_for_lesson_show
