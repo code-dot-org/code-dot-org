@@ -56,9 +56,12 @@ class Dataset extends React.Component {
         this.setState({notice: 'Upload succeeded.', isError: false});
         onComplete();
       })
-      .fail((jqXHR, textStatus) =>
-        this.setState({notice: `Upload failed: ${textStatus}`, isError: true})
-      );
+      .fail((jqXHR, textStatus) => {
+        this.setState({
+          notice: `Upload failed - ${textStatus}`,
+          isError: true
+        });
+      });
   };
 
   deleteTable = () => {
