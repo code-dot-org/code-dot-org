@@ -1,3 +1,5 @@
+//This is an experimental library by Mike that is intended to work with a full blockly version of the sim.
+
 // Setup sim
 function setupSim() {
   if(!World.animations){
