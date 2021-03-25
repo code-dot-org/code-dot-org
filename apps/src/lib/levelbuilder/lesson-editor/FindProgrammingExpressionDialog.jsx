@@ -7,6 +7,16 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
+export const buildProgrammingExpressionMarkdown = function(
+  programmingExpression
+) {
+  let block = `\`${programmingExpression.name}\``;
+  if (programmingExpression.color) {
+    block += `(${programmingExpression.color})`;
+  }
+  return `[${block}](${programmingExpression.link})`;
+};
+
 const SearchForm = function(props) {
   return (
     <form className="form-search">
@@ -45,9 +55,6 @@ const ProgrammingExpressionTable = function(props) {
     return null;
   }
 
-  // TODO what should we actually do here?
-  const defaultColor = '#0094ca';
-
   // TODO implement pagination
   // As a temporary crutch until we have time to get pagination working, here's what we do:
   // Display a maximum of 10 results.
@@ -78,11 +85,9 @@ const ProgrammingExpressionTable = function(props) {
             </td>
             <td>
               <SafeMarkdown
-                markdown={`[\`${
-                  programmingExpression.name
-                }\`(${programmingExpression.color || defaultColor})](${
-                  programmingExpression.link
-                })`}
+                markdown={buildProgrammingExpressionMarkdown(
+                  programmingExpression
+                )}
               />
             </td>
             <td>{programmingExpression.programmingEnvironmentName}</td>
@@ -141,11 +146,7 @@ export default class FindProgrammingExpressionDialog extends Component {
   handleConfirm = e => {
     e.preventDefault(); // is this necessary?
     if (this.state.selectedProgrammingExpression) {
-      this.props.handleConfirm(
-        this.state.selectedProgrammingExpression.name,
-        this.state.selectedProgrammingExpression.color,
-        this.state.selectedProgrammingExpression.link
-      );
+      this.props.handleConfirm(this.state.selectedProgrammingExpression);
     }
   };
 
