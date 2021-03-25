@@ -4,6 +4,8 @@ import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
+import {connect} from 'react-redux';
+import {removeStandard} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 
 const styles = {
   actionsColumn: {
@@ -22,9 +24,11 @@ const styles = {
   }
 };
 
-export default class StandardsEditor extends Component {
+class StandardsEditor extends Component {
   static propTypes = {
-    standards: PropTypes.arrayOf(PropTypes.object).isRequired
+    // provided by redux
+    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
+    removeStandard: PropTypes.func.isRequired
   };
 
   state = {
@@ -127,8 +131,7 @@ export default class StandardsEditor extends Component {
 
   removeStandard = () => {
     const {frameworkShortcode, shortcode} = this.state.standardToRemove;
-    console.log('removeStandard', frameworkShortcode, shortcode);
-    // this.props.removeStandard(frameworkShortcode, shortcode);
+    this.props.removeStandard(frameworkShortcode, shortcode);
     this.handleRemoveStandardDialogClose();
   };
 
@@ -158,3 +161,12 @@ export default class StandardsEditor extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({
+    standards: state.standards
+  }),
+  {
+    removeStandard
+  }
+)(StandardsEditor);
