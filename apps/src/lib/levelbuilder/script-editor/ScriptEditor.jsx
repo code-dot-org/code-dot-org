@@ -156,7 +156,8 @@ class ScriptEditor extends React.Component {
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      deprecated: this.props.initialDeprecated
     };
   }
 
@@ -697,16 +698,6 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              <VisibleAndPilotExperiment
-                visible={!this.state.hidden}
-                updateVisible={() =>
-                  this.setState({hidden: !this.state.hidden})
-                }
-                pilotExperiment={this.state.pilotExperiment}
-                updatePilotExperiment={pilotExperiment =>
-                  this.setState({pilotExperiment})
-                }
-              />
               <label>
                 Deprecated
                 <input
@@ -723,6 +714,16 @@ class ScriptEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
+              <VisibleAndPilotExperiment
+                visible={!this.state.hidden}
+                updateVisible={() =>
+                  this.setState({hidden: !this.state.hidden})
+                }
+                pilotExperiment={this.state.pilotExperiment}
+                updatePilotExperiment={pilotExperiment =>
+                  this.setState({pilotExperiment})
+                }
+              />
             </div>
           )}
         </CollapsibleEditorSection>
