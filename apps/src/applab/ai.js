@@ -13,11 +13,11 @@ function generateCodeDesignElements(modelId, modelData) {
     var label = designMode.createElement('LABEL', x, y);
     var alphaNumFeature = stripSpaceAndSpecial(feature);
     let fieldId;
-    label.textContent = feature + ':';
     label.id = 'design_' + alphaNumFeature + '_label';
     label.style.width = '300px';
     y = y + SPACER_PIXELS;
     if (Object.keys(modelData.featureNumberKey).includes(feature)) {
+      label.textContent = feature + ':';
       fieldId = alphaNumFeature + '_dropdown';
       var select = designMode.createElement('DROPDOWN', x, y);
       select.id = 'design_' + fieldId;
@@ -31,6 +31,11 @@ function generateCodeDesignElements(modelId, modelData) {
       });
       y = y + SPACER_PIXELS;
     } else {
+      label.textContent = feature;
+      label.minMaxContent = `
+      (min: ${+modelData.rangesByColumn[feature].min.toFixed(
+        2
+      )} max: ${+modelData.rangesByColumn[feature].max.toFixed(2)}):`;
       var input = designMode.createElement('TEXT_INPUT', x, y);
       fieldId = alphaNumFeature + '_input';
       input.id = 'design_' + fieldId;
