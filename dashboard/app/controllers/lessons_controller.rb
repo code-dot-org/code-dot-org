@@ -76,13 +76,15 @@ class LessonsController < ApplicationController
       resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
       vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
     end
-    programming_expressions = []
-    programming_expressions = (lesson_params['programming_expressions'] || []).map {|id| ProgrammingExpression.find_by(id: id)}
+
+    standards = fetch_standards(lesson_params['standards'] || [])
+    programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
+      @lesson.standards = standards.compact
       @lesson.programming_expressions = programming_expressions.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :programming_expressions, :objectives, :original_lesson_data))
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :programming_expressions, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -139,12 +141,28 @@ class LessonsController < ApplicationController
       :resources,
       :vocabularies,
       :programming_expressions,
-      :objectives
+      :objectives,
+      :standards
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
+    lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
     lp
+  end
+
+  def fetch_standards(standards_data)
+    standards_data.map do |s|
+      framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
+      Standard.find_by!(framework: framework, shortcode: s['shortcode'])
+    end
+  end
+
+  def fetch_programming_expressions(expressions_data)
+    expressions_data.map do |e|
+      environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
+      ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])
+    end
   end
 end
