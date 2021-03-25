@@ -10,6 +10,9 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import standardsEditor, {
+  initStandards
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
@@ -29,13 +32,15 @@ $(document).ready(function() {
     ...reducers,
     instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
+    standards: standardsEditor
   });
   const store = getStore();
 
   store.dispatch(init(activities, searchOptions));
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(initStandards(lessonData.standards || []));
 
   ReactDOM.render(
     <Provider store={store}>
