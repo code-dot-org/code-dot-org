@@ -665,6 +665,6 @@ class UnitGroup < ApplicationRecord
   # rubocop:enable Naming/PredicateName
 
   def has_migrated_script?
-    default_scripts[0]&.is_migrated?
+    !!default_scripts[0]&.is_migrated?
   end
 end
