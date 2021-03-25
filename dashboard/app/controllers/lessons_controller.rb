@@ -133,11 +133,13 @@ class LessonsController < ApplicationController
       :announcements,
       :resources,
       :vocabularies,
+      :programming_expressions,
       :objectives
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
+    lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
     lp
   end
 end
