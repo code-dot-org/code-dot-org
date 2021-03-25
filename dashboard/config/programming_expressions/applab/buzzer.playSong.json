@@ -1,6 +1,5 @@
 {
   "func": "buzzer.playSong",
-  "docFunc": "buzzerplaysong",
   "category": "Circuit",
   "paletteParams": [
     "notes",
