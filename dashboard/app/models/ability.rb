@@ -55,7 +55,8 @@ class Ability
       :pd_foorm,
       Foorm::Form,
       Foorm::Library,
-      Foorm::LibraryQuestion
+      Foorm::LibraryQuestion,
+      :java_builder
     ]
     cannot :index, Level
 
@@ -276,6 +277,12 @@ class Ability
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
+      end
+    end
+
+    if user.persisted?
+      if Experiment.enabled?(user, nil, nil, 'csa-pilot')
+        can :get_access_token, :java_builder
       end
     end
 
