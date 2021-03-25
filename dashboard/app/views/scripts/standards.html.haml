@@ -1,5 +1,5 @@
 - data = {}
-- data[:unit_summary] = local_assigns[:unit_summary]
+- data[:unit_summary] = @unit_summary
 
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/standards.js'), data: {unit_rollup: data.to_json}}
