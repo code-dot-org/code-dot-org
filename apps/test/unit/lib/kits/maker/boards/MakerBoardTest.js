@@ -20,7 +20,8 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoar
  */
 export function itImplementsTheMakerBoardInterface(
   BoardClass,
-  boardSpecificSetup = null
+  boardSpecificSetup = null,
+  boardSpecificTeardown = null
 ) {
   describe('implements the MakerBoard interface', () => {
     let board;
@@ -30,6 +31,12 @@ export function itImplementsTheMakerBoardInterface(
       // Opportunity to stub any needed to test a board
       if (boardSpecificSetup) {
         boardSpecificSetup(board);
+      }
+    });
+
+    afterEach(() => {
+      if (boardSpecificTeardown) {
+        boardSpecificTeardown(board);
       }
     });
 
