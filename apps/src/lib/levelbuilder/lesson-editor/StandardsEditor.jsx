@@ -19,7 +19,7 @@ const styles = {
     background: color.dark_red,
     cursor: 'pointer',
     textAlign: 'center',
-    width: '50%',
+    width: 50,
     lineHeight: '30px'
   }
 };
@@ -89,7 +89,7 @@ class StandardsEditor extends Component {
         header: {
           label: 'Description',
           props: {
-            style: {width: '60%'}
+            style: {width: '63%'}
           }
         },
         cell: {
@@ -105,7 +105,7 @@ class StandardsEditor extends Component {
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
+            style: {width: '7%'}
           }
         },
         cell: {
