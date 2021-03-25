@@ -13,7 +13,6 @@ export default class StyledCodeBlock extends Component {
 
   render() {
     const {programmingExpression} = this.props;
-    console.log(programmingExpression);
 
     let blockMarkdown = programmingExpression.color
       ? `[\`${programmingExpression.name}\`(${programmingExpression.color})](${
