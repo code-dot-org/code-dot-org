@@ -509,8 +509,9 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it(?: to load a new (page|tab))?$/ do |selector, load|
+  wait_for_jquery
   wait_until do
-    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    @browser.execute_script(jquery_is_element_visible(selector))
   end
   page_load(load) do
     @browser.execute_script("$(\"#{selector}\")[0].click();")
