@@ -424,7 +424,7 @@ class LessonEditor extends Component {
               collapsed={true}
               fullwidth={true}
             >
-              <StandardsEditor standards={this.props.standards} />
+              <StandardsEditor />
             </CollapsibleEditorSection>
           </div>
         )}
