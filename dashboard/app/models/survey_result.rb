@@ -22,12 +22,12 @@ class SurveyResult < ApplicationRecord
 
   ETHNICITIES = {
     "white" => "White",
-    "black" => "Black or African American",
-    "hispanic" => "Hispanic or Latino",
+    "black" => "Black / African American",
+    "hispanic" => "Hispanic / Latino / Latina",
     "asian" => "Asian",
-    "native" => "Native Hawaiian or Other Pacific Islander",
-    "american_indian" => "American Indian or Alaska Native",
-    "other" => "Other/Unknown"
+    "hawaiian" => "Native Hawaiian / Pacific Islander",
+    "american_indian" => "Native American / Alaskan",
+    "tr" => "Two or more races"
   }.freeze
 
   DIVERSITY_ATTRS = (ETHNICITIES.keys.map {|key| "diversity_#{key}"} + ['diversity_farm']).freeze
@@ -40,10 +40,9 @@ class SurveyResult < ApplicationRecord
     diversity_black
     diversity_hispanic
     diversity_asian
-    diversity_asian
-    diversity_native
+    diversity_hawaiian
     diversity_american_indian
-    diversity_other
+    diversity_tr
     diversity_farm
     nps_value
   ).freeze
@@ -57,6 +56,7 @@ class SurveyResult < ApplicationRecord
     DIVERSITY_2017 = 'Diversity2017'.freeze,
     DIVERSITY_2018 = 'Diversity2018'.freeze,
     DIVERSITY_2019 = 'Diversity2019'.freeze,
+    DIVERSITY_2021 = 'Diversity2021'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
     NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze,
