@@ -61,8 +61,6 @@ class LessonsController < ApplicationController
       old_lesson_data['vocabularies']&.map! {|v| v['id']}
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
-      current_lesson_data[:programming_expressions]&.map! {|pe| pe[:id]}
-      old_lesson_data['programming_expressions']&.map! {|pe| pe['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
