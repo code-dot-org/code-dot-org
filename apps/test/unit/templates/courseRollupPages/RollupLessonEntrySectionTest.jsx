@@ -159,7 +159,7 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoCode()}</p>)).to.be
-      .true;
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoStandards()}</p>))
+      .to.be.true;
   });
 });
