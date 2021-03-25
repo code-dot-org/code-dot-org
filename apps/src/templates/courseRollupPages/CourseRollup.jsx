@@ -4,6 +4,7 @@ import RollupUnitEntry from './RollupUnitEntry';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import {courseShape} from './rollupShapes';
 
 const styles = {
   h1: {
@@ -20,7 +21,7 @@ const styles = {
 export default class CourseRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    course: PropTypes.object
+    course: courseShape
   };
 
   getPageTitle() {

@@ -4,11 +4,9 @@ import {expect} from '../../../util/reconfiguredChai';
 import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
 import {courseData} from './rollupTestData';
 import i18n from '@cdo/locale';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {Provider} from 'react-redux/src';
 import {getStore} from '@cdo/apps/redux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
 
 describe('RollupLessonEntrySection', () => {
@@ -76,17 +74,8 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <li key={defaultProps.lesson.vocabularies[0].key}>
-          <InlineMarkdown
-            markdown={`**${defaultProps.lesson.vocabularies[0].word}** - ${
-              defaultProps.lesson.vocabularies[0].definition
-            }`}
-          />
-        </li>
-      )
-    ).to.be.true;
+    expect(wrapper.text()).to.include('word');
+    expect(wrapper.text()).to.include('definition');
   });
 
   it('renders no vocab message when no vocab', () => {
@@ -107,19 +96,7 @@ describe('RollupLessonEntrySection', () => {
       <RollupLessonEntrySection {...defaultProps} objectToRollUp={'Code'} />
     );
 
-    expect(
-      wrapper.containsMatchingElement(
-        <li key={defaultProps.lesson.programmingExpressions[0].name}>
-          <a
-            href={studio(defaultProps.lesson.programmingExpressions[0].link)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {defaultProps.lesson.programmingExpressions[0].name}
-          </a>
-        </li>
-      )
-    ).to.be.true;
+    expect(wrapper.find('StyledCodeBlock').length).to.equal(1);
   });
 
   it('renders no code message when no code', () => {
