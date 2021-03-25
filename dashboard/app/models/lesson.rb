@@ -221,7 +221,7 @@ class Lesson < ApplicationRecord
 
   def lesson_plan_pdf_url
     if script.is_migrated && has_lesson_plan
-      Services::LessonPlanPdfs.get_url(self)
+      Services::CurriculumPdfs.get_lesson_plan_url(self)
     else
       "#{lesson_plan_base_url}/Teacher.pdf"
     end
@@ -229,7 +229,7 @@ class Lesson < ApplicationRecord
 
   def student_lesson_plan_pdf_url
     if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
-      Services::LessonPlanPdfs.get_url(self, true)
+      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
     end
   end
 
@@ -379,6 +379,7 @@ class Lesson < ApplicationRecord
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url

@@ -20,6 +20,7 @@ import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import LessonStandards from './LessonStandards';
 
 const styles = {
   frontPage: {
@@ -139,6 +140,12 @@ class LessonOverview extends Component {
                   markdown={lesson.assessmentOpportunities}
                   expandableImages
                 />
+              </div>
+            )}
+            {lesson.standards.length > 0 && (
+              <div>
+                <h2>{i18n.standards()}</h2>
+                <LessonStandards standards={lesson.standards} />
               </div>
             )}
             <h2>{i18n.agenda()}</h2>
