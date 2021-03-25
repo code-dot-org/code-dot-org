@@ -15,12 +15,19 @@ import {
   findPortWithViableDevice,
   getPreferredPort
 } from '@cdo/apps/lib/kits/maker/portScanning';
+import sinon from 'sinon';
 
 describe('maker/portScanning.js', function() {
+  let spy;
   describe(`findPortWithViableDevice()`, () => {
+    beforeEach(() => {
+      spy = sinon.stub(navigator, 'userAgent').value('CrOS');
+    });
+
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
       ChromeSerialPort.stub.reset();
+      spy.restore();
     });
 
     it('resolves with a port if a viable device is found', () => {
