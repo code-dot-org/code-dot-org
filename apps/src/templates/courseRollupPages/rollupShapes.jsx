@@ -7,7 +7,7 @@ export const lessonShape = PropTypes.shape({
   displayName: PropTypes.string.isRequired,
   vocabularies: PropTypes.array.isRequired,
   programmingExpressions: PropTypes.array.isRequired,
-  preparation: PropTypes.string.isRequired,
+  preparation: PropTypes.string,
   resources: PropTypes.object.isRequired
 });
 export const unitShape = PropTypes.shape({
