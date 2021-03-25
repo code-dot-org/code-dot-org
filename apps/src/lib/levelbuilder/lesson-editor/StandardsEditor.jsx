@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
 import color from '@cdo/apps/util/color';
+import Dialog from '@cdo/apps/templates/Dialog';
 
 const styles = {
   actionsColumn: {
@@ -26,10 +27,19 @@ export default class StandardsEditor extends Component {
     standards: PropTypes.arrayOf(PropTypes.object).isRequired
   };
 
+  state = {
+    standardToRemove: null,
+    confirmRemovalDialogOpen: false
+  };
+
   actionsCellFormatter = (actions, {rowData}) => {
     return (
       <div style={styles.actionsColumn}>
-        <div style={styles.remove}>
+        <div
+          style={styles.remove}
+          className="unit-test-remove-standard"
+          onMouseDown={() => this.handleRemoveStandardDialogOpen(rowData)}
+        >
           <i className="fa fa-trash" />
         </div>
       </div>
@@ -107,6 +117,21 @@ export default class StandardsEditor extends Component {
     return columns;
   }
 
+  handleRemoveStandardDialogOpen = standard => {
+    this.setState({standardToRemove: standard, confirmRemovalDialogOpen: true});
+  };
+
+  handleRemoveStandardDialogClose = () => {
+    this.setState({standardToRemove: null, confirmRemovalDialogOpen: false});
+  };
+
+  removeStandard = () => {
+    const {frameworkShortcode, shortcode} = this.state.standardToRemove;
+    console.log('removeStandard', frameworkShortcode, shortcode);
+    // this.props.removeStandard(frameworkShortcode, shortcode);
+    this.handleRemoveStandardDialogClose();
+  };
+
   render() {
     const columns = this.getColumns();
     return (
@@ -115,6 +140,20 @@ export default class StandardsEditor extends Component {
           <Table.Header />
           <Table.Body rows={this.props.standards} rowKey="shortcode" />
         </Table.Provider>
+        {this.state.confirmRemovalDialogOpen && (
+          <Dialog
+            body={`Are you sure you want to remove standard "${
+              this.state.standardToRemove.shortcode
+            }" from this lesson?`}
+            cancelText="Cancel"
+            confirmText="Delete"
+            confirmType="danger"
+            isOpen={this.state.confirmRemovalDialogOpen}
+            handleClose={this.handleRemoveStandardDialogClose}
+            onCancel={this.handleRemoveStandardDialogClose}
+            onConfirm={this.removeStandard}
+          />
+        )}
       </div>
     );
   }
