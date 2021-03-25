@@ -18,16 +18,17 @@ import {
 import sinon from 'sinon';
 
 describe('maker/portScanning.js', function() {
-  let spy;
+  let userAgentSpy;
   describe(`findPortWithViableDevice()`, () => {
     beforeEach(() => {
-      spy = sinon.stub(navigator, 'userAgent').value('CrOS');
+      // 'CrOS' represents ChromeOS
+      userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
     });
 
     // Testing against StubChromeSerialPort.js
     afterEach(() => {
       ChromeSerialPort.stub.reset();
-      spy.restore();
+      userAgentSpy.restore();
     });
 
     it('resolves with a port if a viable device is found', () => {
