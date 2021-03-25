@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
+import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -13,7 +14,8 @@ import {
   relatedLessonShape,
   activityShape,
   resourceShape,
-  vocabularyShape
+  vocabularyShape,
+  programmingExpressionShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -62,6 +64,8 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
+      .isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -117,6 +121,9 @@ class LessonEditor extends Component {
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        programmingExpressions: JSON.stringify(
+          this.props.programmingExpressions.map(pe => pe.id)
+        ),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -408,6 +415,18 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection
+              title="Code"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <ProgrammingExpressionsEditor
+                programmingEnvironments={
+                  this.props.initialLessonData.programmingEnvironments
+                }
+              />
+            </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
               title="Objectives"
               collapsed={true}
               fullWidth={true}
@@ -440,7 +459,8 @@ export default connect(
   state => ({
     activities: state.activities,
     resources: state.resources,
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
+    programmingExpressions: state.programmingExpressions
   }),
   {
     initActivities
