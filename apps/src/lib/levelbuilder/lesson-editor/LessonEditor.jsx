@@ -63,6 +63,7 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -88,7 +89,6 @@ class LessonEditor extends Component {
       preparation: this.props.initialLessonData.preparation || '',
       announcements: this.props.initialLessonData.announcements || [],
       objectives: this.props.initialObjectives,
-      standards: this.props.initialLessonData.standards || [],
       originalLessonData: this.props.initialLessonData
     };
   }
@@ -424,7 +424,7 @@ class LessonEditor extends Component {
               collapsed={true}
               fullwidth={true}
             >
-              <StandardsEditor standards={this.state.standards} />
+              <StandardsEditor standards={this.props.standards} />
             </CollapsibleEditorSection>
           </div>
         )}
@@ -449,7 +449,8 @@ export default connect(
   state => ({
     activities: state.activities,
     resources: state.resources,
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
+    standards: state.standards
   }),
   {
     initActivities
