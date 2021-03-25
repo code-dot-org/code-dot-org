@@ -4,6 +4,7 @@ import RollupUnitEntry from './RollupUnitEntry';
 import i18n from '@cdo/locale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
+import {unitShape} from './rollupShapes';
 
 const styles = {
   navLink: {
@@ -17,7 +18,7 @@ const styles = {
 export default class UnitRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    unit: PropTypes.object
+    unit: unitShape
   };
 
   getPageTitle() {
