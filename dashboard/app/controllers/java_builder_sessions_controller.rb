@@ -21,10 +21,4 @@ class JavaBuilderSessionsController < ApplicationController
     )
     render json: {token: payload}
   end
-
-  private
-
-  def configured?
-    SECRET.present?
-  end
 end
