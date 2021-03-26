@@ -38,7 +38,8 @@ class StandardsEditor extends Component {
 
   state = {
     standardToRemove: null,
-    confirmRemovalDialogOpen: false
+    confirmRemovalDialogOpen: false,
+    frameworkShortcode: null
   };
 
   actionsCellFormatter = (actions, {rowData}) => {
@@ -140,10 +141,29 @@ class StandardsEditor extends Component {
     this.handleRemoveStandardDialogClose();
   };
 
+  handleSelectFramework = e => {
+    const frameworkShortcode = e.target.value;
+    this.setState({frameworkShortcode});
+  };
+
   render() {
     const columns = this.getColumns();
     return (
       <div>
+        <div>Filter by framework</div>
+        <select onChange={this.handleSelectFramework}>
+          <option value="">(none)</option>
+          <option value="iste">ISTE Standards for Students</option>
+          <option value="ccela">
+            Common Core English Language Arts Standards
+          </option>
+          <option value="ccmath">Common Core Math Standards</option>
+          <option value="ngss">Next Generation Science Standards</option>
+          <option value="csta">
+            CSTA K-12 Computer Science Standards (2017)
+          </option>
+          <option value="csp2021">CSP Conceptual Framework</option>
+        </select>
         <Table.Provider columns={columns}>
           <Table.Header />
           <Table.Body rows={this.props.standards} rowKey="shortcode" />
