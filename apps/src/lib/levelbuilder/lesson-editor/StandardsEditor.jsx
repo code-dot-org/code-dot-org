@@ -10,6 +10,7 @@ import {
   removeStandard
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {standardShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
 const styles = {
   actionsColumn: {
@@ -146,6 +147,29 @@ class StandardsEditor extends Component {
     this.setState({frameworkShortcode});
   };
 
+  constructStandardOption = standard => ({
+    value: standard.shortcode,
+    label: `${standard.frameworkShortcode.toUpperCase()} - ${
+      standard.shortcode
+    } - ${standard.description}`,
+    standard: standard
+  });
+
+  constructSearchOptions = json => {
+    const existingShortcodes = this.props.standards.map(
+      standard => standard.shortcode
+    );
+    const standards = json
+      // Filter any that are already added to lesson
+      .filter(standard => !existingShortcodes.includes(standard.shortcode))
+      .map(standard => this.constructStandardOption(standard));
+    return {options: standards};
+  };
+
+  onSearchSelect = option => {
+    this.props.addStandard(option.standard);
+  };
+
   render() {
     const columns = this.getColumns();
     return (
@@ -164,6 +188,13 @@ class StandardsEditor extends Component {
           </option>
           <option value="csp2021">CSP Conceptual Framework</option>
         </select>
+        <div>Select a Standard to add</div>
+        <SearchBox
+          onSearchSelect={this.onSearchSelect}
+          searchUrl={'standards/search'}
+          constructOptions={this.constructSearchOptions}
+        />
+        <br />
         <Table.Provider columns={columns}>
           <Table.Header />
           <Table.Body rows={this.props.standards} rowKey="shortcode" />
