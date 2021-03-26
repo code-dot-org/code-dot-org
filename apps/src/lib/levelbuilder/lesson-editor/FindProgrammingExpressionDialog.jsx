@@ -6,6 +6,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
+import {connect} from 'react-redux';
 import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 const SearchForm = function(props) {
@@ -23,11 +24,11 @@ const SearchForm = function(props) {
         onChange={props.onFilter}
       >
         <option value="">filter</option>
-        {/* TODO: these should probably be sourced from somewhere, rather than hardcoded */}
-        <option value="applab">Applab</option>
-        <option value="gamelab">Gamelab</option>
-        <option value="spritelab">Spritelab</option>
-        <option value="weblab">Weblab</option>
+        {props.programmingEnvironments.map(environment => (
+          <option value={environment.name} key={environment.id}>
+            {environment.name}
+          </option>
+        ))}
       </select>
     </form>
   );
@@ -35,7 +36,8 @@ const SearchForm = function(props) {
 
 SearchForm.propTypes = {
   onSearch: PropTypes.func.isRequired,
-  onFilter: PropTypes.func.isRequired
+  onFilter: PropTypes.func.isRequired,
+  programmingEnvironments: PropTypes.array
 };
 
 const ProgrammingExpressionTable = function(props) {
@@ -112,11 +114,12 @@ ProgrammingExpressionTable.propTypes = {
   handleSelect: PropTypes.func.isRequired
 };
 
-export default class FindProgrammingExpressionDialog extends Component {
+class FindProgrammingExpressionDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
+    programmingEnvironments: PropTypes.array
   };
 
   constructor(props) {
@@ -189,7 +192,11 @@ export default class FindProgrammingExpressionDialog extends Component {
       >
         <h2>Add Programming Expression Documentation Link</h2>
 
-        <SearchForm onSearch={this.handleSearch} onFilter={this.handleFilter} />
+        <SearchForm
+          onSearch={this.handleSearch}
+          onFilter={this.handleFilter}
+          programmingEnvironments={this.props.programmingEnvironments}
+        />
 
         <ProgrammingExpressionTable
           programmingExpressions={this.state.programmingExpressions}
@@ -207,3 +214,7 @@ export default class FindProgrammingExpressionDialog extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  programmingEnvironments: state.programmingEnvironments
+}))(FindProgrammingExpressionDialog);
