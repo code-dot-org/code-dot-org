@@ -63,8 +63,6 @@ class LessonsController < ApplicationController
       old_lesson_data['vocabularies']&.map! {|v| v['id']}
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
-      current_lesson_data[:programming_expressions]&.map! {|pe| pe[:id]}
-      old_lesson_data['programming_expressions']&.map! {|pe| pe['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
         msg = "Could not update the lesson because the contents of the lesson has changed outside of this editor. Reload the page and try saving again."
         raise msg
@@ -78,6 +76,7 @@ class LessonsController < ApplicationController
       resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
       vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
     end
+
     standards = fetch_standards(lesson_params['standards'] || [])
     programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
     ActiveRecord::Base.transaction do
