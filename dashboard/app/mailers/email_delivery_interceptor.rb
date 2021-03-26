@@ -1,5 +1,9 @@
 require 'cdo/aws/metrics'
 
+#
+# Intercepting emails before they are handed off to the delivery agents.
+# https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-and-observing-emails
+#
 class EmailDeliveryInterceptor
   def self.delivering_email(message)
     metrics = [

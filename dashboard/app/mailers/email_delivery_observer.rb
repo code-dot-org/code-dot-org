@@ -1,3 +1,9 @@
+require 'cdo/aws/metrics'
+
+#
+# Observing emails after they have been sent.
+# https://guides.rubyonrails.org/action_mailer_basics.html#intercepting-and-observing-emails
+#
 class EmailDeliveryObserver
   def self.delivered_email(message)
     metrics = [
