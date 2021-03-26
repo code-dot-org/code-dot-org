@@ -7,16 +7,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
-
-export const buildProgrammingExpressionMarkdown = function(
-  programmingExpression
-) {
-  let block = `\`${programmingExpression.name}\``;
-  if (programmingExpression.color) {
-    block += `(${programmingExpression.color})`;
-  }
-  return `[${block}](${programmingExpression.link})`;
-};
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 const SearchForm = function(props) {
   return (
