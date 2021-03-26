@@ -14,19 +14,13 @@
       "lesson_extras_available": true,
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ]
-      ],
       "is_course": true,
       "is_migrated": true,
       "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-24 13:35:07 UTC",
+    "serialized_at": "2021-03-26 15:41:40 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -17346,6 +17340,17 @@
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -17489,7 +17494,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "express-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
