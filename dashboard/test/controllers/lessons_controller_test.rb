@@ -839,6 +839,21 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.vocabularies.include?(vocab_to_remove)
   end
 
+  test 'update lesson by removing and adding programming expressions' do
+    expression_to_keep = create :programming_expression
+    expression_to_remove = create :programming_expression
+    @lesson.programming_expressions = [expression_to_keep, expression_to_remove]
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.summarize_for_lesson_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 1, @lesson.programming_expressions.count
+    assert @lesson.programming_expressions.include?(expression_to_keep)
+    refute @lesson.programming_expressions.include?(expression_to_remove)
+  end
+
   test 'update lesson removing standards' do
     standard_to_keep = create :standard
     standard_to_remove = create :standard
