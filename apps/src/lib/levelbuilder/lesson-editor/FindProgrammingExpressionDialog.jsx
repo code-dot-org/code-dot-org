@@ -6,16 +6,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
-
-export const buildProgrammingExpressionMarkdown = function(
-  programmingExpression
-) {
-  let block = `\`${programmingExpression.name}\``;
-  if (programmingExpression.color) {
-    block += `(${programmingExpression.color})`;
-  }
-  return `[${block}](${programmingExpression.link})`;
-};
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/template/lessonOverview/StyledCodeBlock';
 
 const SearchForm = function(props) {
   return (
