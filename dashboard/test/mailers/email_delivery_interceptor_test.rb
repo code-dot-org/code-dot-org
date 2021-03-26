@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'testing/includes_metrics'
 
 class EmailDeliveryInterceptorTest < ActiveSupport::TestCase
   setup do
