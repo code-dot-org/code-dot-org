@@ -198,7 +198,6 @@ class ProgrammingExpressionsEditor extends Component {
           <Table.Body rows={this.props.programmingExpressions} rowKey="id" />
         </Table.Provider>
         <Button
-          type="button"
           text={'Add Introduced Code'}
           onClick={this.handleOpenAddProgrammingExpression}
           color={Button.ButtonColor.orange}
