@@ -1,16 +1,9 @@
 require 'securerandom' unless defined?(SecureRandom)
 
-class JavaBuilderSessionController < ApplicationController
-  before_action :authenticate_user!
-  before_action authorize_resource :java_builder
+class JavaBuilderSessionsController < ApplicationController
+  authorize_resource class: false
 
-  SECRET = CDO.java_builder_secret
-
-  private
-
-  def configured?
-    SECRET.present?
-  end
+  PRIVATE_KEY = CDO.java_builder_secret
 
   # GET /javabuilder/access_token
   def get_access_token
@@ -23,9 +16,15 @@ class JavaBuilderSessionController < ApplicationController
         iat: issued_at_time,
         exp: expiration_time
       },
-      SECRET,
-      'HS256'
+      PRIVATE_KEY,
+      'RS256'
     )
-    payload
+    render json: {token: payload}
+  end
+
+  private
+
+  def configured?
+    SECRET.present?
   end
 end
