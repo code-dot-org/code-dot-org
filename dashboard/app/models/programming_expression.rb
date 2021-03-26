@@ -117,11 +117,23 @@ class ProgrammingExpression < ApplicationRecord
     record.name
   end
 
+  def documentation_path
+    "/docs/#{programming_environment.name}/#{key}/"
+  end
+
   def summarize_for_lesson_edit
-    {key: key, name: name, category: category, programmingEnvironmentName: programming_environment.name}
+    {
+      category: category,
+      color: color,
+      key: key,
+      name: name,
+      link: documentation_path,
+      programmingEnvironmentName: programming_environment.name,
+      uniqueKey: [key, programming_environment.name].join('/')
+    }
   end
 
   def summarize_for_lesson_show
-    {name: name, color: color, link: "/docs/#{programming_environment.name}/#{key}/"}
+    {name: name, color: color, link: documentation_path}
   end
 end
