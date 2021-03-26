@@ -44,7 +44,7 @@ describe('LessonEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions));
+    store.dispatch(init(sampleActivities, searchOptions, []));
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));
@@ -69,8 +69,7 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false,
-        programmingEnvironments: []
+        scriptIsVisible: false
       }
     };
   });
