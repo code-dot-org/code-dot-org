@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:50:13 UTC",
+    "serialized_at": "2021-03-24 21:40:24 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -6261,18 +6261,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "Representing Information",
       "url": "https://docs.google.com/document/d/13uCoIIaBhxSzVqMk9xMBDJzQ0KBT-cBav3Bb3srftkk/view",
       "key": "representing-information-1",
@@ -6311,18 +6299,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "ASCII",
       "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
       "key": "ascii-exemplar-2019",
@@ -6358,30 +6334,6 @@
       },
       "seeding_key": {
         "resource.key": "ascii-challenges"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
       }
     },
     {
@@ -6445,18 +6397,6 @@
       },
       "seeding_key": {
         "resource.key": "number-cards"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
       }
     },
     {
@@ -6598,18 +6538,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "Problem Solving with Data",
       "url": "https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/edit",
       "key": "problem-solving-with-data-exemplar-2019",
@@ -6635,18 +6563,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "Structuring Data 2021",
       "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
       "key": "structuring-data-2021",
@@ -6669,18 +6585,6 @@
       },
       "seeding_key": {
         "resource.key": "structuring-data-exemplar-2019"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
       }
     },
     {
@@ -6722,18 +6626,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "Making Decisions With Data",
       "url": "https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit",
       "key": "making-decisions-with-data-exemplar-2019",
@@ -6772,18 +6664,6 @@
       }
     },
     {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
       "name": "Automating Data Decisions",
       "url": "https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/edit",
       "key": "automating-data-decisions-exemplar-2019",
@@ -6819,18 +6699,6 @@
       },
       "seeding_key": {
         "resource.key": "automating-data-decisions-1"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
       }
     },
     {
@@ -6895,31 +6763,6 @@
       },
       "seeding_key": {
         "resource.key": "data-in-the-real-world"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit-5-data-society",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-5-data-society"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
       }
     },
     {
@@ -7414,6 +7257,9 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
     {
       "key": "decode",
@@ -7854,6 +7700,176 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "objective.key": "b0342e84-056b-46d6-ac84-1d976155c38d"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Representation Matters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Patterns and Representation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ASCII and Binary Representation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Representations",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving and Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Structuring Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Automating Data Decisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
       }
     }
   ]

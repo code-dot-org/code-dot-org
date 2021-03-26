@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-19 01:34:47 UTC",
+    "serialized_at": "2021-03-24 21:40:35 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -5205,7 +5205,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Widget: Text Compression"
+        "progression": "Widget: Text Compression",
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5228,7 +5231,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
+        "progression": "Video: Text Compression Widget with Aloe Blacc",
+        "level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5251,7 +5257,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5274,7 +5283,10 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5297,7 +5309,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5320,7 +5335,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Lossy Compression Widget"
+        "progression": "Lossy Compression Widget",
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5343,7 +5361,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "progression": "Check For Understanding",
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6084,18 +6105,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "Circle Square Patterns",
       "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
       "key": "ag-ab-pattern",
@@ -6119,30 +6128,6 @@
       },
       "seeding_key": {
         "resource.key": "ab-cutouts"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6184,18 +6169,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "Flippy Do Pro",
       "url": "https://drive.google.com/a/code.org/file/d/1VpZH4E2c5fR-g2fBMggd4-pz8GNRxxwZ/view?usp=sharing",
       "key": "flippy_do_pro",
@@ -6220,18 +6193,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "B&W Pixelation Tutorial",
       "url": "https://youtu.be/rJOa5Q5a1WM",
       "key": "bw-pixelation-tutorial-1",
@@ -6242,18 +6203,6 @@
       },
       "seeding_key": {
         "resource.key": "bw-pixelation-tutorial-1"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6283,18 +6232,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "Text Compression widget (tutorial)",
       "url": "http://youtu.be/LCGkcn1f-ms",
       "key": "text-compression-widget-tutorial-1",
@@ -6308,30 +6245,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "Article - Fortnite Stealing Dance Moves",
       "url": "https://drive.google.com/file/d/1zs-d_4L53qgPCtdg1e9Gw00QMx8NQpt0/view?usp=sharing",
       "key": "fortnite-article",
@@ -6341,18 +6254,6 @@
       },
       "seeding_key": {
         "resource.key": "fortnite-article"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
       }
     },
     {
@@ -6392,30 +6293,6 @@
       }
     },
     {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
-      }
-    },
-    {
       "name": "CSP Unit 1 Project Rubric",
       "url": "https://docs.google.com/document/d/14rAnNQCTjhGgWCqnVo4XczoNEDFM-oYLNqhJvLW-88Q/edit?usp=sharing",
       "key": "csp_unit_1_project_rubric",
@@ -6426,18 +6303,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_unit_1_project_rubric"
-      }
-    },
-    {
-      "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/137WkLc4Lgld2cYrDrru-qAunb58S59GByTl4TpXWnrs/copy",
-      "key": "csp_unit_1_-_digital_information",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_1_-_digital_information"
       }
     }
   ],
@@ -6658,6 +6523,9 @@
         "resource.key": "csp_unit_1_-_digital_information"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
 
@@ -6961,6 +6829,404 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    }
   ]
 }
