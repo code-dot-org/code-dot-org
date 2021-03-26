@@ -44,7 +44,7 @@ describe('ActivitySectionCard', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions));
+    store.dispatch(init(sampleActivities, searchOptions, []));
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
 
