@@ -21,7 +21,10 @@ describe('RollupLessonEntrySection', () => {
   it('renders list of resources when there are resources', () => {
     const wrapper = mount(<RollupLessonEntrySection {...defaultProps} />);
 
-    expect(wrapper.find('ResourceList').length).to.equal(2);
+    expect(wrapper.text()).to.include('Teacher Resource');
+    expect(wrapper.text()).to.include('Slides');
+    expect(wrapper.text()).to.include('Student Resource');
+    expect(wrapper.text()).to.include('Activity Guide');
   });
 
   it('renders no resources message when no resources', () => {
@@ -96,7 +99,7 @@ describe('RollupLessonEntrySection', () => {
       <RollupLessonEntrySection {...defaultProps} objectToRollUp={'Code'} />
     );
 
-    expect(wrapper.find('StyledCodeBlock').length).to.equal(1);
+    expect(wrapper.text()).to.include('playSound');
   });
 
   it('renders no code message when no code', () => {
