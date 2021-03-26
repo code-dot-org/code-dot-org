@@ -4,6 +4,8 @@ class LessonsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
 
+  include LevelsHelper
+
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
@@ -25,7 +27,7 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
   end
 
   # GET /s/script-name/lessons/1/student
