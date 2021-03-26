@@ -69,7 +69,7 @@ Feature: Teacher Lesson Plan
 
     # Navigate between lesson plans
     Then I wait until element ".uitest-lesson-dropdown-nav" is visible
-    And I click element ".uitest-lesson-dropdown-nav"
+    And I click selector ".uitest-lesson-dropdown-nav"
     Then I wait until element "a.navigate:nth(1)" is visible
     And I click selector "a.navigate:nth(1)"
     Then I wait until I am on "http://studio.code.org/s/allthemigratedthings/lessons/2"
