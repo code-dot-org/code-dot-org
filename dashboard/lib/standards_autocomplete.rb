@@ -10,7 +10,7 @@ class StandardsAutocomplete < AutocompleteHelper
     return [] if query.length < MIN_WORD_LENGTH
 
     description_rows = rows.where(
-      'MATCH(shortcode,description) AGAINST(? in BOOLEAN MODE)',
+      'MATCH(description) AGAINST(? in BOOLEAN MODE)',
       format_query(query)
     )
     return description_rows.map(&:summarize_for_lesson_edit)
