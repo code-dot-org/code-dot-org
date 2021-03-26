@@ -355,6 +355,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
@@ -384,6 +386,21 @@ class Lesson < ApplicationRecord
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url
+    }
+  end
+
+  def summarize_for_rollup(user)
+    {
+      key: key,
+      position: relative_position,
+      displayName: localized_name,
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
+      link: script_lesson_path(script, self)
     }
   end
 
