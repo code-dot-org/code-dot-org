@@ -3,9 +3,11 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
+import {lessonShape} from './rollupShapes';
 
 const styles = {
   main: {
@@ -30,7 +32,7 @@ const styles = {
 export default class RollupLessonEntrySection extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    lesson: PropTypes.object
+    lesson: lessonShape
   };
 
   render() {
@@ -56,24 +58,18 @@ export default class RollupLessonEntrySection extends Component {
             ))}
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length <= 0 && (
-              <p>{i18n.courseRollupNoVocab()}</p>
+              <p>{i18n.rollupNoVocab()}</p>
             )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length > 0 &&
             this.props.lesson.programmingExpressions.map(expression => (
               <li key={expression.name}>
-                <a
-                  href={studio(expression.link)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {expression.name}
-                </a>
+                <StyledCodeBlock programmingExpression={expression} />
               </li>
             ))}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
-              <p>{i18n.courseRollupNoCode()}</p>
+              <p>{i18n.rollupNoCode()}</p>
             )}
           {this.props.objectToRollUp === 'Resources' && lessonHasResources && (
             <div>
@@ -104,7 +100,7 @@ export default class RollupLessonEntrySection extends Component {
             </div>
           )}
           {this.props.objectToRollUp === 'Resources' && !lessonHasResources && (
-            <p>{i18n.courseRollupNoResources()}</p>
+            <p>{i18n.rollupNoResources()}</p>
           )}
           {this.props.objectToRollUp === 'Prep' &&
             this.props.lesson.preparation && (
@@ -114,8 +110,14 @@ export default class RollupLessonEntrySection extends Component {
               />
             )}
           {this.props.objectToRollUp === 'Prep' &&
-            !this.props.lesson.preparation && (
-              <p>{i18n.courseRollupNoPrep()}</p>
+            !this.props.lesson.preparation && <p>{i18n.rollupNoPrep()}</p>}
+          {this.props.objectToRollUp === 'Standards' &&
+            this.props.lesson.standards.length > 0 && (
+              <LessonStandards standards={this.props.lesson.standards} />
+            )}
+          {this.props.objectToRollUp === 'Standards' &&
+            this.props.lesson.standards.length <= 0 && (
+              <p>{i18n.rollupNoStandards()}</p>
             )}
         </div>
       </div>
