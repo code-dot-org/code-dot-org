@@ -3,31 +3,34 @@ teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 
 lesson 'lesson1', display_name: 'Introduction to Machine Learning A', has_lesson_plan: true
+level 'CSD AIL01 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 level 'Oceans_FishVTrash', progression: 'Recognizing Fish'
 level 'Oceans_Short', progression: 'Recognizing Fish Features'
 level 'Oceans_Long', progression: 'Recognizing Expressions'
-level 'CSD AIL01 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 
 lesson 'lesson2', display_name: 'How Computers Learn', has_lesson_plan: true
+level 'CSD AIL02 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 level 'ml-L2 unsupervised - 1', progression: 'Looking for Patterns'
 level 'ml-L2 supervised - green glass door', progression: 'Green Glass Door'
 
 lesson 'lesson3', display_name: 'AI for Social Good (Unplugged)', has_lesson_plan: true
+level 'CSD AIL03 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 
 lesson 'lesson4', display_name: 'Patterns in Data', has_lesson_plan: true
+level 'CSD AIL04 autoSFLP_pilot-2021', progression: 'Lesson Overview'
 level 'ml-models-shoes random', progression: 'Shoe Recommender'
 level 'ml-models-shoes decision tree', progression: 'Improved Shoe Recommender'
 level 'ml-models-shoes data', progression: 'Ultimate Shoe Recommender'
 level 'ml-models-shoes points', progression: 'Ultimate Shoe Recommender'
 
-lesson 'lesson5', display_name: 'Introduction to AI Lab', has_lesson_plan: true
-level 'ml-intro ai lab-intro video', progression: 'Video: Introduction to AI Lab'
+lesson 'lesson5', display_name: 'Classification with Machine Learning', has_lesson_plan: true
+level 'CSD AIL05 autoSFLP_pilot-2021', progression: 'Lesson Overview'
+
+lesson 'lesson6', display_name: 'Introduction to AI Lab', has_lesson_plan: true
 level 'ml-intro categorical-tacos', progression: 'Dataset #1: Tacos'
 level 'ml-intro categorical-ice cream', progression: 'Dataset #2: Ice Cream'
 level 'ml-intro categorical-pizza', progression: 'Dataset #3: Pizza'
 level 'ml-intro categorical-food choices', progression: 'You Choose: Restaurant Recommendations'
-
-lesson 'lesson6', display_name: 'Classification on Planet Vapnik (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson7', display_name: 'Using Models in App Lab', has_lesson_plan: true
 level 'ml-models in applab-vacation example', progression: 'What is your Ideal Vacation?'
@@ -75,10 +78,6 @@ level 'ml-mini project-app lab', progression: 'Make an App - App Lab'
 lesson 'lesson15', display_name: 'AI Code of Ethics (Unplugged)', has_lesson_plan: true
 
 lesson 'lesson16', display_name: 'Goldilocks Principle: Making Models Just Right', has_lesson_plan: true
-level 'csd-unit-5-goldilocks-principle-app-lab-underfitted', progression: 'What Will Your Final Grade Be?'
-level 'csd-unit-5-goldilocks-principle-ai-lab-underfitted', progression: 'What Will Your Final Grade Be?'
-level 'csd-unit-5-goldilocks-principle-app-lab-overfitted', progression: 'What Is Your Net Worth?'
-level 'csd-unit-5-goldilocks-principle-ai-lab-overfitted', progression: 'What Is Your Net Worth?'
 
 lesson 'lesson18', display_name: 'Planning Your App', has_lesson_plan: true
 level 'ml-planning app-ai lab', progression: 'App with Real-World Data - AI Lab'
@@ -99,4 +98,5 @@ level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?
 level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
 level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
 level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
+level 'ml-intro ai lab-intro video', progression: 'Video: Introduction to AI Lab'
 

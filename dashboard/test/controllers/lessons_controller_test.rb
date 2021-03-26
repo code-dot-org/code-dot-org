@@ -839,6 +839,22 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.vocabularies.include?(vocab_to_remove)
   end
 
+  test 'update lesson removing standards' do
+    standard_to_keep = create :standard
+    standard_to_remove = create :standard
+
+    @lesson.standards << standard_to_keep
+    @lesson.standards << standard_to_remove
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({standards: [standard_to_keep.summarize_for_lesson_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 1, @lesson.standards.count
+    assert @lesson.standards.include?(standard_to_keep)
+    refute @lesson.standards.include?(standard_to_remove)
+  end
+
   test 'lesson is not partially updated if any data is bad' do
     resource = create :resource
 
