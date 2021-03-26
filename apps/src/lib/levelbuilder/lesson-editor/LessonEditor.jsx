@@ -4,6 +4,7 @@ import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/Activitie
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
@@ -62,6 +63,7 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -117,6 +119,7 @@ class LessonEditor extends Component {
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        standards: JSON.stringify(this.props.standards),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -417,6 +420,13 @@ class LessonEditor extends Component {
                 updateObjectives={this.handleUpdateObjectives}
               />
             </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Standards"
+              collapsed={true}
+              fullwidth={true}
+            >
+              <StandardsEditor />
+            </CollapsibleEditorSection>
           </div>
         )}
         <CollapsibleEditorSection title="Activities & Levels" fullWidth={true}>
@@ -445,7 +455,8 @@ export default connect(
   state => ({
     activities: state.activities,
     resources: state.resources,
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
+    standards: state.standards
   }),
   {
     initActivities

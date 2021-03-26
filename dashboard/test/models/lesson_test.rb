@@ -207,7 +207,7 @@ class LessonTest < ActiveSupport::TestCase
       }
     )
 
-    summary = lesson.summarize_for_lesson_show(@student)
+    summary = lesson.summarize_for_lesson_show(@student, false)
     assert_equal 'lesson-1', summary[:key]
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 'learning', summary[:purpose]
@@ -341,7 +341,7 @@ class LessonTest < ActiveSupport::TestCase
     Services::MarkdownPreprocessor.expects(:process).
       with(lesson.assessment_opportunities)
 
-    lesson.summarize_for_lesson_show(create(:user))
+    lesson.summarize_for_lesson_show(create(:user), false)
   end
 
   test 'can summarize lesson for lesson plan dropdown' do
