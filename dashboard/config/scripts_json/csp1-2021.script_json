@@ -12,19 +12,13 @@
       "has_verified_resources": true,
       "show_calendar": true,
       "is_migrated": true,
-      "teacher_resources": [
-        [
-          "curriculum",
-          "/link/to/curriculum"
-        ]
-      ],
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:35 UTC",
+    "serialized_at": "2021-03-26 16:08:35 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -6304,6 +6298,17 @@
       "seeding_key": {
         "resource.key": "csp_unit_1_project_rubric"
       }
+    },
+    {
+      "name": "Curriculum",
+      "url": "/link/to/curriculum",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
     }
   ],
   "lessons_resources": [
@@ -6525,7 +6530,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum",
+        "script.name": "csp1-2021"
+      }
+    }
   ],
   "vocabularies": [
 
