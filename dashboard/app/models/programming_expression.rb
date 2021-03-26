@@ -123,6 +123,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_lesson_edit
     {
+      id: id,
       category: category,
       color: color,
       key: key,

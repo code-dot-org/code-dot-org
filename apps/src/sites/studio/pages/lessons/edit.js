@@ -16,6 +16,9 @@ import standardsEditor, {
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
@@ -33,6 +36,7 @@ $(document).ready(function() {
     instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
     vocabularies: vocabulariesEditor,
+    programmingExpressions: programmingExpressionsEditor,
     standards: standardsEditor
   });
   const store = getStore();
@@ -42,6 +46,9 @@ $(document).ready(function() {
   );
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(
+    initProgrammingExpressions(lessonData.programmingExpressions || [])
+  );
   store.dispatch(initStandards(lessonData.standards || []));
 
   ReactDOM.render(
