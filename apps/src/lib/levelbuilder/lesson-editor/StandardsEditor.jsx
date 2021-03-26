@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {removeStandard} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import {standardShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   actionsColumn: {
@@ -27,7 +28,7 @@ const styles = {
 class StandardsEditor extends Component {
   static propTypes = {
     // provided by redux
-    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
     removeStandard: PropTypes.func.isRequired
   };
 
