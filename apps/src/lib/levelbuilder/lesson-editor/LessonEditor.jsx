@@ -14,7 +14,8 @@ import {
   relatedLessonShape,
   activityShape,
   resourceShape,
-  vocabularyShape
+  vocabularyShape,
+  standardShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -63,7 +64,7 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
-    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
