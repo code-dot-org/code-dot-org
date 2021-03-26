@@ -21,7 +21,7 @@ function generateCodeDesignElements(modelId, modelData) {
       fieldId = alphaNumFeature + '_dropdown';
       var select = designMode.createElement('DROPDOWN', x, y);
       select.id = 'design_' + fieldId;
-      // App Lab automatically addss "option 1" and "option 2", remove them.
+      // App Lab automatically adds "option 1" and "option 2", remove them.
       select.options.remove(0);
       select.options.remove(0);
       Object.keys(modelData.featureNumberKey[feature]).forEach(option => {
@@ -31,11 +31,13 @@ function generateCodeDesignElements(modelId, modelData) {
       });
       y = y + SPACER_PIXELS;
     } else {
+      var labelMinMax = designMode.createElement('LABEL', x, y);
+      var min = +modelData.rangesByColumn[feature].min.toFixed(2);
+      var max = +modelData.rangesByColumn[feature].max.toFixed(2);
+      labelMinMax.textContent = `(min: ${min}, max: ${max}):`;
+      labelMinMax.style.width = '300px';
+      y = y + SPACER_PIXELS;
       label.textContent = feature;
-      label.minMaxContent = `
-      (min: ${+modelData.rangesByColumn[feature].min.toFixed(
-        2
-      )} max: ${+modelData.rangesByColumn[feature].max.toFixed(2)}):`;
       var input = designMode.createElement('TEXT_INPUT', x, y);
       fieldId = alphaNumFeature + '_input';
       input.id = 'design_' + fieldId;
