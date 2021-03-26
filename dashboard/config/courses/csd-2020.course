@@ -24,5 +24,8 @@
     "version_year": "2020",
     "visible": true,
     "is_stable": true
-  }
+  },
+  "resources": [
+
+  ]
 }
