@@ -57,11 +57,9 @@ export default class ProgressTableSummaryCell extends React.Component {
       );
     }
 
-    const borderColor = studentLessonProgress.isStarted
-      ? isAssessmentLesson
-        ? color.level_submitted
-        : color.level_perfect
-      : color.light_gray;
+    const borderColor = isAssessmentLesson
+      ? color.level_submitted
+      : color.level_perfect;
 
     const incompleteStyle = {
       backgroundColor: color.level_not_tried,

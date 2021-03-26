@@ -42,9 +42,9 @@ class LessonActivity < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
-    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_show)
+    summary[:activitySections] = activity_sections.map {|as| as.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 

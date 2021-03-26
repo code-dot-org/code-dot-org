@@ -1,3 +1,5 @@
+//This is the original library for the setupSim block that prints "collected" messages. Not translatable.
+
 // Setup sim
 function setupSim(
   s1number,
