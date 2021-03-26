@@ -389,6 +389,21 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_rollup(user)
+    {
+      key: key,
+      position: relative_position,
+      displayName: localized_name,
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
+      link: script_lesson_path(script, self)
+    }
+  end
+
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {
@@ -474,8 +489,14 @@ class Lesson < ApplicationRecord
     end
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
-      # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
-      # don't yet have a user_level, and need to provide enough data to create one
+      # user_level_data is provided so that we can get back to our user_level
+      # when updating. in some cases we don't yet have a user_level, and need
+      # to provide enough data to create one
+
+      # if we don't have a user level, consider ourselves locked
+      locked = user_level.nil? || user_level.show_as_locked?(self)
+      # if we don't have a user level, we can't be readonly
+      readonly = user_level.present? && user_level.show_as_readonly?(self)
       {
         user_level_data: {
           user_id: student.id,
@@ -483,9 +504,8 @@ class Lesson < ApplicationRecord
           script_id: script_level.script.id
         },
         name: student.name,
-        # if we don't have a user level, consider ourselves locked
-        locked: user_level ? user_level.locked?(self) : true,
-        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
+        locked: locked,
+        readonly_answers: readonly
       }
     end
   end

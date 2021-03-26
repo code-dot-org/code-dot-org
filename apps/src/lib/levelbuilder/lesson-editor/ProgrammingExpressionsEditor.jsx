@@ -36,10 +36,9 @@ const styles = {
 
 class ProgrammingExpressionsEditor extends Component {
   static propTypes = {
+    // Provided by redux
     programmingEnvironments: PropTypes.arrayOf(programmingEnvironmentShape)
       .isRequired,
-
-    // Provided by redux
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
     removeProgrammingExpression: PropTypes.func.isRequired
@@ -187,7 +186,8 @@ export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEdi
 
 export default connect(
   state => ({
-    programmingExpressions: state.programmingExpressions
+    programmingExpressions: state.programmingExpressions,
+    programmingEnvironments: state.programmingEnvironments
   }),
   {
     removeProgrammingExpression
