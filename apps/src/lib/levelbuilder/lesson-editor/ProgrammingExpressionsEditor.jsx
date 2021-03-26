@@ -5,7 +5,6 @@ import {
   programmingEnvironmentShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
-import SearchBox from './SearchBox';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
@@ -14,6 +13,8 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
+import Button from '@cdo/apps/templates/Button';
+import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
 const styles = {
   search: {
@@ -53,7 +54,8 @@ class ProgrammingExpressionsEditor extends Component {
     super(props);
     this.state = {
       confirmRemovalDialogOpen: false,
-      programmingExpressionForRemoval: null
+      programmingExpressionForRemoval: null,
+      addProgrammingExpressionOpen: false
     };
   }
 
@@ -146,31 +148,6 @@ class ProgrammingExpressionsEditor extends Component {
     ];
   }
 
-  constructProgrammingExpressionOption = programmingExpression => ({
-    value: programmingExpression.id,
-    label: `${programmingExpression.name} - ${
-      programmingExpression.programmingEnvironmentName
-    } - ${programmingExpression.category}`,
-    programmingExpression
-  });
-
-  constructSearchOptions = json => {
-    const programmingExpressionKeysAdded = this.props.programmingExpressions.map(
-      programmingExpression => programmingExpression.id
-    );
-    const programmingExpressions = json
-      .map(programmingExpression =>
-        this.constructProgrammingExpressionOption(programmingExpression)
-      )
-      .filter(
-        programmingExpression =>
-          programmingExpressionKeysAdded.indexOf(
-            programmingExpression.value
-          ) === -1
-      );
-    return {options: programmingExpressions};
-  };
-
   handleRemoveProgrammingExpressionDialogClose = () => {
     this.setState({
       confirmRemovalDialogOpen: false,
@@ -183,6 +160,13 @@ class ProgrammingExpressionsEditor extends Component {
       this.state.programmingExpressionForRemoval.id
     );
     this.handleRemoveProgrammingExpressionDialogClose();
+  };
+
+  handleCloseAddProgrammingExpression = programmingExpression => {
+    this.setState(
+      {addProgrammingExpressionOpen: false},
+      this.props.addProgrammingExpression(programmingExpression)
+    );
   };
 
   render() {
@@ -203,49 +187,22 @@ class ProgrammingExpressionsEditor extends Component {
             onConfirm={this.handleRemoveProgrammingExpressionConfirm}
           />
         )}
-        <div style={styles.search}>
-          <label>
-            <strong>Select an IDE</strong>
-          </label>
-          <select
-            style={styles.dropdown}
-            value={this.state.programmingEnvironmentId}
-            onChange={e =>
-              this.setState({programmingEnvironmentId: e.target.value})
-            }
-          >
-            <option key={'empty-option'} value={0} />
-            {this.props.programmingEnvironments.map(environment => (
-              <option key={environment.id} value={environment.id}>
-                {environment.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div style={styles.search}>
-          <label>
-            <strong>Select a programming expression to add</strong>
-          </label>
-          <SearchBox
-            onSearchSelect={e =>
-              this.props.addProgrammingExpression(e.programmingExpression)
-            }
-            additionalQueryParams={
-              this.state.programmingEnvironmentId > 0
-                ? {
-                    programmingEnvironmentId: this.state
-                      .programmingEnvironmentId
-                  }
-                : {}
-            }
-            searchUrl={'programmingexpressionsearch'}
-            constructOptions={this.constructSearchOptions}
-          />
-        </div>
         <Table.Provider columns={columns} style={{width: '100%'}}>
           <Table.Header />
           <Table.Body rows={this.props.programmingExpressions} rowKey="id" />
         </Table.Provider>
+        <Button
+          text={'Add Introduced Code'}
+          onClick={() => this.setState({addProgrammingExpressionOpen: true})}
+          color={Button.ButtonColor.orange}
+        />
+        <FindProgrammingExpressionDialog
+          isOpen={this.state.addProgrammingExpressionOpen}
+          handleConfirm={this.handleCloseAddProgrammingExpression}
+          handleClose={() =>
+            this.setState({addProgrammingExpressionOpen: false})
+          }
+        />
       </div>
     );
   }
