@@ -49,8 +49,7 @@ class ProgrammingExpressionsEditor extends Component {
     super(props);
     this.state = {
       confirmRemovalDialogOpen: false,
-      programmingExpressionForRemoval: null,
-      programmingEnvironmentId: 0
+      programmingExpressionForRemoval: null
     };
   }
 
