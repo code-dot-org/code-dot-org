@@ -66,4 +66,11 @@ describe('ProgrammingExpressionsEditor', () => {
     cancelButton.simulate('click');
     expect(removeProgrammingExpression).not.to.have.been.called;
   });
+
+  it('clicking add a programming expression opens dialog', () => {
+    const wrapper = mount(<ProgrammingExpressionsEditor {...defaultProps} />);
+    const addProgrammingExpressionButton = wrapper.find('Button');
+    addProgrammingExpressionButton.simulate('click');
+    expect(wrapper.find('FindProgrammingExpressionDialog')).to.have.length(1);
+  });
 });
