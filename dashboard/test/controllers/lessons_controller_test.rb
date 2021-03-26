@@ -842,15 +842,17 @@ class LessonsControllerTest < ActionController::TestCase
   test 'update lesson by removing and adding programming expressions' do
     expression_to_keep = create :programming_expression
     expression_to_remove = create :programming_expression
+    expression_to_add = create :programming_expression
     @lesson.programming_expressions = [expression_to_keep, expression_to_remove]
 
     sign_in @levelbuilder
-    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.summarize_for_lesson_edit].to_json})
+    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.summarize_for_lesson_edit, expression_to_add.summarize_for_lesson_edit].to_json})
     put :update, params: new_update_params
     @lesson.reload
 
     assert_equal 1, @lesson.programming_expressions.count
     assert @lesson.programming_expressions.include?(expression_to_keep)
+    assert @lesson.programming_expressions.include?(expression_to_add)
     refute @lesson.programming_expressions.include?(expression_to_remove)
   end
 
