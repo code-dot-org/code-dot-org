@@ -107,6 +107,17 @@ export const programmingExpressionShape = PropTypes.shape({
   programmingEnvironmentName: PropTypes.string.isRequired
 });
 
+export const standardShape = PropTypes.shape({
+  frameworkShortcode: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+});
+
 export const levelShapeForScript = PropTypes.shape({
   position: PropTypes.number,
   activeId: PropTypes.string,

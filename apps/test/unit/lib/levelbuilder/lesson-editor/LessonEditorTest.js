@@ -106,7 +106,7 @@ describe('LessonEditor', () => {
     ).to.be.true;
     expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(5);
-    expect(wrapper.find('input').length).to.equal(22);
+    expect(wrapper.find('input').length).to.equal(23);
     expect(
       wrapper
         .find('input')
@@ -119,7 +119,7 @@ describe('LessonEditor', () => {
         .at(2)
         .props().disabled
     ).to.equal(false);
-    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').length).to.equal(2);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
