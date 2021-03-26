@@ -5,7 +5,10 @@ import {lessonEditorTableStyles} from './TableConstants';
 import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
-import {removeStandard} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import {
+  addStandard,
+  removeStandard
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {standardShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
@@ -29,6 +32,7 @@ class StandardsEditor extends Component {
   static propTypes = {
     // provided by redux
     standards: PropTypes.arrayOf(standardShape).isRequired,
+    addStandard: PropTypes.func.isRequired,
     removeStandard: PropTypes.func.isRequired
   };
 
@@ -170,6 +174,7 @@ export default connect(
     standards: state.standards
   }),
   {
+    addStandard,
     removeStandard
   }
 )(StandardsEditor);
