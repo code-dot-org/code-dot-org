@@ -1,11 +1,17 @@
 import _ from 'lodash';
 
 const INIT = 'standardsEditor/INIT';
+const ADD_STANDARD = 'standardsEditor/ADD_STANDARD';
 const REMOVE_STANDARD = 'standardsEditor/REMOVE_STANDARD';
 
 export const initStandards = standards => ({
   type: INIT,
   standards
+});
+
+export const addStandard = newStandard => ({
+  type: ADD_STANDARD,
+  newStandard
 });
 
 export const removeStandard = (frameworkShortcode, shortcode) => ({
@@ -20,6 +26,10 @@ export default function standards(state = [], action) {
   switch (action.type) {
     case INIT:
       return action.standards;
+    case ADD_STANDARD: {
+      newState = newState.concat([action.newStandard]);
+      break;
+    }
     case REMOVE_STANDARD: {
       const standardToRemove = newState.find(
         standard =>
