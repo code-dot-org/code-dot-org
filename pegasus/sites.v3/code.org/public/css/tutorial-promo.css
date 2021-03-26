@@ -24,18 +24,19 @@
   padding: 5px;
   top: 70px;
 }
+/* left-tutorial and right-tutorial are both usually aligned to the left side, different alignments are needed for dance and starwars */
 
-.left-tutorial {
+.left-tutorial  {
   right: 20px;
 }
-div[dir='rtl'] .left-tutorial{
+.left-tutorial.inverted{
   left: 20px;
   right: auto;
 }
 .right-tutorial {
   right: 270px;
 }
-div[dir='rtl'] .right-tutorial{
+.right-tutorial.inverted{
   left: 270px;
   right: auto;
 }
