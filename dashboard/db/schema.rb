@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_002952) do
+ActiveRecord::Schema.define(version: 2021_03_26_222616) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1592,6 +1592,7 @@ ActiveRecord::Schema.define(version: 2021_03_26_002952) do
     t.integer "standard_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "standard_type"
     t.index ["stage_id"], name: "index_stages_standards_on_stage_id"
     t.index ["standard_id"], name: "index_stages_standards_on_standard_id"
   end
