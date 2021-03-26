@@ -5,12 +5,14 @@ class StandardsAutocomplete < AutocompleteHelper
     rows = rows.where(framework_id: framework_id) if framework_id
 
     shortcode_rows = rows.where('shortcode like ?', "#{query}%").all
-    description_rows =
-      query.length > MIN_WORD_LENGTH ?
-        rows.where(
-          'MATCH(shortcode,description) AGAINST(? in BOOLEAN MODE)',
-          format_query(query)
-        ).all : []
-    return (shortcode_rows + description_rows).map(&:summarize_for_lesson_edit)
+    return shortcode_rows.map(&:summarize_for_lesson_edit) unless shortcode_rows.empty?
+
+    return [] if query.length < MIN_WORD_LENGTH
+
+    description_rows = rows.where(
+      'MATCH(shortcode,description) AGAINST(? in BOOLEAN MODE)',
+      format_query(query)
+    )
+    return description_rows.map(&:summarize_for_lesson_edit)
   end
 end
