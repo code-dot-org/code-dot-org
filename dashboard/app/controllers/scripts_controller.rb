@@ -145,18 +145,22 @@ class ScriptsController < ApplicationController
 
   def vocab
     return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def resources
     return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def code
     return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   def standards
     return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
   private
