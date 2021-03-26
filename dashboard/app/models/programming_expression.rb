@@ -124,11 +124,11 @@ class ProgrammingExpression < ApplicationRecord
   def summarize_for_lesson_edit
     {
       id: id,
+      category: category,
+      color: color,
       key: key,
       name: name,
-      category: category,
       link: documentation_path,
-      color: color,
       programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
     }
