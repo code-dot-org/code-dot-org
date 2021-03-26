@@ -26,6 +26,11 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
   beforeEach(() => (initialState = getInitialState()));
 
   it('add programmingExpression', () => {
+    assert.deepEqual(initialState.map(r => r.key), [
+      'programmingExpression-1',
+      'programmingExpression-2'
+    ]);
+
     const nextState = programmingExpressionEditor(
       initialState,
       addProgrammingExpression({
