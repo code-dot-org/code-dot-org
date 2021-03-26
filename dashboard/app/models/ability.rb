@@ -56,7 +56,7 @@ class Ability
       Foorm::Form,
       Foorm::Library,
       Foorm::LibraryQuestion,
-      :java_builder
+      :java_builder_session
     ]
     cannot :index, Level
 
@@ -261,7 +261,8 @@ class Ability
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
-        Foorm::LibraryQuestion
+        Foorm::LibraryQuestion,
+        :java_builder_session
       ]
 
       # Only custom levels are editable.
@@ -290,8 +291,8 @@ class Ability
     end
 
     if user.persisted?
-      if Experiment.enabled?(user, nil, nil, 'csa-pilot')
-        can :get_access_token, :java_builder
+      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+        can :get_access_token, :java_builder_session
       end
     end
 
