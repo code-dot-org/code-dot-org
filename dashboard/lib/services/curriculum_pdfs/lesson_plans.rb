@@ -1,4 +1,5 @@
 require 'active_support/concern'
+require 'cdo/chat_client'
 require 'pdf/conversion'
 
 module Services
