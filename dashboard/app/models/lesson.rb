@@ -355,6 +355,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
@@ -364,7 +366,7 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(user)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
       unit: script.summarize_for_lesson_show,
       position: relative_position,
@@ -375,7 +377,7 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: Services::MarkdownPreprocessor.process(purpose || ''),
       preparation: Services::MarkdownPreprocessor.process(preparation || ''),
-      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
