@@ -29,9 +29,19 @@ function scoreboard(){
       World.graphData={
         time:[World.frameCount],
         value1:[World.scoreboard.var1],
-        value2:[World.scoreboard.var2]
+        value2:[World.scoreboard.var2],
+        max:0,
+        state:0
       };
     }
+
+    if(mouseWentDown("left")){
+      World.graphData.state++;
+    }
+    if(World.graphData.state==4){
+      World.graphData.state=0;
+    }
+
     var length=World.graphData.time.length;
 
     if(World.scoreboard.var1!=World.graphData.value1[length-1]||
@@ -39,95 +49,172 @@ function scoreboard(){
       World.graphData.time.push(World.frameCount);
       World.graphData.value1.push(World.scoreboard.var1);
       World.graphData.value2.push(World.scoreboard.var2);
+      if(World.scoreboard.var1>World.graphData.max){
+        World.graphData.max=World.scoreboard.var1;
+      }
+      if(World.scoreboard.var2>World.graphData.max){
+        World.graphData.max=World.scoreboard.var2;
+      }
+      World.graphData.range=World.frameCount;
     }
-    console.log(World.graphData);
-
-    fill("rgba(0,0,0,0.5)");
-    rect(50,50,300,300);
-
-    for(var i=0;i<length-1;i++){
-      stroke("pink");
-      line(World.graphData.time[i],World.graphData.value1[i],World.graphData.time[i+1],World.graphData.value1[i+1]);
-      stroke("brown");
-      line(World.graphData.time[i],World.graphData.value1[i],World.graphData.time[i+1],World.graphData.value1[i+1]);
-    }
-  }
-
-
-    /*Draw the scoreboard
-    push();
-    var box1x=0;
-    var box1y=350;
-    var box2x=200;
-    var box2y=350;
-    var boxWidth=200;
-    var boxHeight=50;
+    //console.log(World.graphData);
     var scaler;
-    fill("rgba(0,0,0,0.5)");
-    rect(box1x,box1y,boxWidth,boxHeight);
-    rect(box2x,box2y,boxWidth,boxHeight);
-    var s1sprite = createSprite(box1x+(boxHeight/2), box1y+(boxHeight/2));
-    s1sprite.setAnimation(World.scoreboard.s1costume);
-    if(s1sprite.height>s1sprite.width){
-      scaler=s1sprite.width/s1sprite.height;
-      s1sprite.height=boxHeight*0.75;
-      s1sprite.width=s1sprite.height*scaler;
-    } else {
-      scaler=s1sprite.height/s1sprite.width;
-      s1sprite.width=boxHeight*0.75;
-      s1sprite.height=s1sprite.width*scaler;
+
+    //draw the table
+    if(World.graphData.state==1){
+      fill("rgba(0,0,0,0.5)");
+      rect(125,50,150,275);
+      push();
+      textAlign(CENTER, CENTER);
+      textSize(10);
+      fill("white");
+      var min=0;
+      if(length>25){
+        min=length-25;
+      }
+      text("frames",150,60);
+      text("score1",200,60);
+      text("score2",250,60);
+      line(125,70,275,70);
+      line(175,50,175,325);
+      line(225,50,225,325);
+      for(var j=min;j<length;j++){
+        text(World.graphData.time[j],150,80+(j-min)*10);
+        text(World.graphData.value1[j],200,80+(j-min)*10);
+        text(World.graphData.value2[j],250,80+(j-min)*10);
+      }
+      pop();
     }
-    drawSprite(s1sprite);
-    s1sprite.destroy();
-    var s2sprite = createSprite(box2x+(boxHeight/2), box2y+(boxHeight/2));
-    s2sprite.setAnimation(World.scoreboard.s2costume);
-    if(s2sprite.height>s2sprite.width){
-      scaler=s2sprite.width/s2sprite.height;
-      s2sprite.height=boxHeight*0.75;
-      s2sprite.width=s2sprite.height*scaler;
-    } else {
-      scaler=s2sprite.height/s2sprite.width;
-      s2sprite.width=boxHeight*0.75;
-      s2sprite.height=s2sprite.width*scaler;
+    //draw the graph
+    if(World.graphData.state===2){
+      fill("rgba(0,0,0,0.5)");
+      rect(50,50,300,300);
+
+      push();
+      for(var i=0;i<length-1;i++){
+        var x1=50+World.graphData.time[i]*300/World.graphData.range;
+        var y1=350-World.graphData.value1[i]*300/World.graphData.max;
+        var x2=50+World.graphData.time[i+1]*300/World.graphData.range;
+        var y2=350-World.graphData.value1[i+1]*300/World.graphData.max;
+        stroke("pink");
+        strokeWeight(5);
+        line(x1,y1,x2,y2);
+        y1=350-World.graphData.value2[i]*300/World.graphData.max;
+        y2=350-World.graphData.value2[i+1]*300/World.graphData.max;
+        stroke("brown");
+        line(x1,y1,x2,y2);
+      }
+      pop();
+      var spriteSize=25;
+      var s1sprite =createSprite(50+World.graphData.time[length-1]*300/World.graphData.range,
+                                 350-World.graphData.value1[length-1]*300/World.graphData.max);
+      s1sprite.setAnimation(World.scoreboard.s1costume);
+      if(s1sprite.height>s1sprite.width){
+        scaler=s1sprite.width/s1sprite.height;
+        s1sprite.height=spriteSize;
+        s1sprite.width=s1sprite.height*scaler;
+      } else {
+        scaler=s1sprite.height/s1sprite.width;
+        s1sprite.width=spriteSize;
+        s1sprite.height=s1sprite.width*scaler;
+      }
+      drawSprite(s1sprite);
+      s1sprite.destroy();  
+      var s2sprite =createSprite(50+World.graphData.time[length-1]*300/World.graphData.range,
+                                 350-World.graphData.value2[length-1]*300/World.graphData.max);
+      s2sprite.setAnimation(World.scoreboard.s2costume);
+      if(s2sprite.height>s2sprite.width){
+        scaler=s2sprite.width/s2sprite.height;
+        s2sprite.height=spriteSize;
+        s2sprite.width=s2sprite.height*scaler;
+      } else {
+        scaler=s2sprite.height/s2sprite.width;
+        s2sprite.width=spriteSize;
+        s2sprite.height=s2sprite.width*scaler;
+      }
+      drawSprite(s2sprite);
+      s2sprite.destroy();  
     }
-    drawSprite(s2sprite);
-    s2sprite.destroy();
-    var s3sprite = createSprite(box1x+(boxHeight*5/4), box1y+(boxHeight/2));
-    s3sprite.setAnimation(World.scoreboard.s3costume);
-    if(s3sprite.height>s3sprite.width){
-      scaler=s3sprite.width/s3sprite.height;
-      s3sprite.height=boxHeight*0.375;
-      s3sprite.width=s3sprite.height*scaler;
-    } else {
-      scaler=s3sprite.height/s3sprite.width;
-      s3sprite.width=boxHeight*0.375;
-      s3sprite.height=s3sprite.width*scaler;
+
+    if(World.graphData.state===0){
+      //Draw the scoreboard
+      push();
+
+      var box1x=0;
+      var box1y=350;
+      var box2x=200;
+      var box2y=350;
+      var boxWidth=200;
+      var boxHeight=50;
+
+
+
+      fill("rgba(0,0,0,0.5)");
+      rect(box1x,box1y,boxWidth,boxHeight);
+      rect(box2x,box2y,boxWidth,boxHeight);
+      var s1sprite2 = createSprite(box1x+(boxHeight/2), box1y+(boxHeight/2));
+      s1sprite2.setAnimation(World.scoreboard.s1costume);
+      if(s1sprite2.height>s1sprite2.width){
+        scaler=s1sprite2.width/s1sprite2.height;
+        s1sprite2.height=boxHeight*0.75;
+        s1sprite2.width=s1sprite2.height*scaler;
+      } else {
+        scaler=s1sprite2.height/s1sprite2.width;
+        s1sprite2.width=boxHeight*0.75;
+        s1sprite2.height=s1sprite2.width*scaler;
+      }
+      drawSprite(s1sprite2);
+      s1sprite2.destroy();
+      var s2sprite2 = createSprite(box2x+(boxHeight/2), box2y+(boxHeight/2));
+      s2sprite2.setAnimation(World.scoreboard.s2costume);
+      if(s2sprite2.height>s2sprite2.width){
+        scaler=s2sprite2.width/s2sprite2.height;
+        s2sprite2.height=boxHeight*0.75;
+        s2sprite2.width=s2sprite2.height*scaler;
+      } else {
+        scaler=s2sprite2.height/s2sprite2.width;
+        s2sprite2.width=boxHeight*0.75;
+        s2sprite2.height=s2sprite2.width*scaler;
+      }
+      drawSprite(s2sprite2);
+      s2sprite2.destroy();
+      var s3sprite = createSprite(box1x+(boxHeight*5/4), box1y+(boxHeight/2));
+      s3sprite.setAnimation(World.scoreboard.s3costume);
+      if(s3sprite.height>s3sprite.width){
+        scaler=s3sprite.width/s3sprite.height;
+        s3sprite.height=boxHeight*0.375;
+        s3sprite.width=s3sprite.height*scaler;
+      } else {
+        scaler=s3sprite.height/s3sprite.width;
+        s3sprite.width=boxHeight*0.375;
+        s3sprite.height=s3sprite.width*scaler;
+      }
+      drawSprite(s3sprite);
+      s3sprite.destroy();
+      var s3sprite2 = createSprite(box2x+(boxHeight*5/4), box2y+(boxHeight/2));
+      s3sprite2.setAnimation(World.scoreboard.s3costume);
+      if(s3sprite2.height>s3sprite2.width){
+        scaler=s3sprite2.width/s3sprite2.height;
+        s3sprite2.height=boxHeight*0.375;
+        s3sprite2.width=s3sprite2.height*scaler;
+      } else {
+        scaler=s3sprite2.height/s3sprite2.width;
+        s3sprite2.width=boxHeight*0.375;
+        s3sprite2.height=s3sprite2.width*scaler;
+      }
+      drawSprite(s3sprite2);
+      s3sprite2.destroy();
+      stroke("white");
+      fill("white");
+      textAlign(LEFT, CENTER);
+      textSize(boxHeight/2);
+      text(World.scoreboard.var1,box1x+(boxHeight*3/2), box1y+(boxHeight/2));
+      text(World.scoreboard.var2,box2x+(boxHeight*3/2), box2y+(boxHeight/2));
+      pop();
     }
-    drawSprite(s3sprite);
-    s3sprite.destroy();
-    var s3sprite2 = createSprite(box2x+(boxHeight*5/4), box2y+(boxHeight/2));
-    s3sprite2.setAnimation(World.scoreboard.s3costume);
-    if(s3sprite2.height>s3sprite2.width){
-      scaler=s3sprite2.width/s3sprite2.height;
-      s3sprite2.height=boxHeight*0.375;
-      s3sprite2.width=s3sprite2.height*scaler;
-    } else {
-      scaler=s3sprite2.height/s3sprite2.width;
-      s3sprite2.width=boxHeight*0.375;
-      s3sprite2.height=s3sprite2.width*scaler;
-    }
-    drawSprite(s3sprite2);
-    s3sprite2.destroy();
-    stroke("white");
-    fill("white");
-    textAlign(LEFT, CENTER);
-    textSize(boxHeight/2);
-    text(World.scoreboard.var1,box1x+(boxHeight*3/2), box1y+(boxHeight/2));
-    text(World.scoreboard.var2,box2x+(boxHeight*3/2), box2y+(boxHeight/2));
-    pop();
   }
-  */
-  //draw the timer
+
+  /*draw the timer
   var timerTime=0;
   if(World.endTime){
     timerTime=World.endTime;
@@ -160,6 +247,7 @@ function scoreboard(){
   textSize(25);
   text(timerTime,timerX-20,timerY);
   pop();
+  */
 
 }
 
