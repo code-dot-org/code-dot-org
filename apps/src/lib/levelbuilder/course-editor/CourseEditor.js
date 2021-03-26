@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -61,7 +62,7 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
 
     // Provided by redux
-    resourceIds: PropTypes.arrayOf(PropTypes.number)
+    resources: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
@@ -271,29 +272,39 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources">
-          <div>
-            Select the Teacher Resources buttons you'd like to have show up on
-            the top of the course overview page
-          </div>
-          {this.props.resourceIds && (
+          {this.props.resources && (
             <input
               type="hidden"
               name="resourceIds[]"
-              value={this.props.resourceIds}
+              value={this.props.resources.map(r => r.id)}
             />
           )}
           {this.props.useMigratedResources ? (
-            <MigratedResourcesEditor
-              courseVersionId={this.props.courseVersionId}
-            />
+            <div>
+              <MigratedResourcesEditor
+                courseVersionId={this.props.courseVersionId}
+              />
+              Preview
+              <TeacherResourcesDropdown
+                resources={this.props.resources}
+                useMigratedResources
+              />
+            </div>
           ) : (
-            <ResourcesEditor
-              inputStyle={styles.input}
-              resources={teacherResources}
-              updateTeacherResources={teacherResources =>
-                this.setState({teacherResources})
-              }
-            />
+            <div>
+              <div>
+                Select the Teacher Resources buttons you'd like to have show up
+                on the top of the course overview page
+              </div>
+
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={teacherResources}
+                updateTeacherResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+              />
+            </div>
           )}
         </CollapsibleEditorSection>
 
@@ -319,5 +330,5 @@ class CourseEditor extends Component {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  resourceIds: state.resources.map(r => r.id)
+  resources: state.resources
 }))(CourseEditor);
