@@ -48,8 +48,11 @@ class Lesson < ApplicationRecord
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
 
-  has_many :lessons_standards, foreign_key: 'stage_id'
+  has_many :lessons_standards, -> {where(standard_type: nil)}, foreign_key: 'stage_id'
   has_many :standards, through: :lessons_standards
+
+  has_many :opportunity_lessons_standards, -> {where(standard_type: 'opportunity')}, class_name: 'LessonsStandard', foreign_key: 'stage_id'
+  has_many :opportunity_standards, through: :opportunity_lessons_standards, source: :standard
 
   self.table_name = 'stages'
 
