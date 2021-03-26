@@ -47,8 +47,7 @@ describe('ActivityCard', () => {
       activitySectionMetrics: [],
       handleCollapse,
       collapsed: false,
-      hasLessonPlan: true,
-      programmingEnvironments: [{id: 1, name: 'applab'}]
+      hasLessonPlan: true
     };
   });
 

@@ -12,7 +12,6 @@ describe('ActivitiesEditor', () => {
     defaultProps = {
       activities: sampleActivities,
       hasLessonPlan: true,
-      programmingEnvironments: [{id: 1, name: 'applab'}],
       addActivity
     };
   });
