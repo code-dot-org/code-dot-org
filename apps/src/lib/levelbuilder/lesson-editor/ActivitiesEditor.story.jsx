@@ -50,7 +50,10 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
         <Provider store={createStoreWithLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={true} />
+          <ActivitiesEditor
+            hasLessonPlan={true}
+            programmingEnvironments={[{id: 1, name: 'applab'}]}
+          />
         </Provider>
       )
     },
@@ -58,7 +61,10 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson Without Lesson Plan',
       story: () => (
         <Provider store={createStoreWithoutLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={false} />
+          <ActivitiesEditor
+            hasLessonPlan={false}
+            programmingEnvironments={[{id: 1, name: 'applab'}]}
+          />
         </Provider>
       )
     }
