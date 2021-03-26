@@ -6,6 +6,7 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
+import {connect} from 'react-redux';
 
 export const buildProgrammingExpressionMarkdown = function(
   programmingExpression
@@ -122,7 +123,7 @@ ProgrammingExpressionTable.propTypes = {
   handleSelect: PropTypes.func.isRequired
 };
 
-export default class FindProgrammingExpressionDialog extends Component {
+class FindProgrammingExpressionDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
@@ -222,3 +223,7 @@ export default class FindProgrammingExpressionDialog extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  programmingEnvironments: state.programmingEnvironments
+}))(FindProgrammingExpressionDialog);
