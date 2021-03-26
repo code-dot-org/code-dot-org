@@ -80,4 +80,12 @@ class StandaloneVideo < Level
       smart: true
     )
   end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions
+      }
+    )
+  end
 end
