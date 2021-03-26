@@ -26,6 +26,9 @@ const styles = {
     textAlign: 'center',
     width: 50,
     lineHeight: '30px'
+  },
+  select: {
+    width: 400
   }
 };
 
@@ -174,8 +177,10 @@ class StandardsEditor extends Component {
     const columns = this.getColumns();
     return (
       <div>
-        <div>Filter by framework</div>
-        <select onChange={this.handleSelectFramework}>
+        <label>
+          <strong>Filter by framework</strong>
+        </label>
+        <select onChange={this.handleSelectFramework} style={styles.select}>
           <option value="">(none)</option>
           <option value="iste">ISTE Standards for Students</option>
           <option value="ccela">
@@ -188,7 +193,9 @@ class StandardsEditor extends Component {
           </option>
           <option value="csp2021">CSP Conceptual Framework</option>
         </select>
-        <div>Select a Standard to add</div>
+        <label>
+          <strong>Select a Standard to add</strong>
+        </label>
         <SearchBox
           // Specify a key in order to force this component to remount when
           // framework changes. Otherwise, it may return stale results when
