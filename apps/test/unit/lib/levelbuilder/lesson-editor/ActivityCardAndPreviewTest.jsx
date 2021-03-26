@@ -28,7 +28,8 @@ describe('ActivityCardAndPreview', () => {
       generateActivitySectionKey,
       targetActivitySectionPos: 1,
       activitySectionMetrics: [],
-      hasLessonPlan: true
+      hasLessonPlan: true,
+      programmingEnvironments: [{id: 1, name: 'applab'}]
     };
   });
 

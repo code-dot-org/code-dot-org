@@ -39,6 +39,7 @@ describe('ActivitySectionCardButtons', () => {
       appendVocabularyLink,
       appendSlide,
       hasLessonPlan: true,
+      programmingEnvironments: [{id: 1, name: 'applab'}],
       vocabularies: []
     };
   });
