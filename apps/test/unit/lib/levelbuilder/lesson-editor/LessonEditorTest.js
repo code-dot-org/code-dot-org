@@ -120,7 +120,7 @@ describe('LessonEditor', () => {
         .at(2)
         .props().disabled
     ).to.equal(false);
-    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').length).to.equal(2);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
     expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
