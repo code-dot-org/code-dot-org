@@ -70,7 +70,6 @@ describe('ActivitySectionCard', () => {
       setTargetActivitySection,
       targetActivitySectionPos: 1,
       hasLessonPlan: true,
-      programmingEnvironments: [{id: 1, name: 'applab'}],
 
       //redux
       moveActivitySection,

@@ -7,6 +7,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import {buildProgrammingExpressionMarkdown} from '@cdo/apps/template/lessonOverview/StyledCodeBlock';
+import {connect} from 'react-redux';
 
 const SearchForm = function(props) {
   return (
@@ -113,7 +114,7 @@ ProgrammingExpressionTable.propTypes = {
   handleSelect: PropTypes.func.isRequired
 };
 
-export default class FindProgrammingExpressionDialog extends Component {
+class FindProgrammingExpressionDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
@@ -213,3 +214,7 @@ export default class FindProgrammingExpressionDialog extends Component {
     );
   }
 }
+
+export default connect(state => ({
+  programmingEnvironments: state.programmingEnvironments
+}))(FindProgrammingExpressionDialog);

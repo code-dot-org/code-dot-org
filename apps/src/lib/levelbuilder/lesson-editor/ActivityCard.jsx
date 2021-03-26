@@ -87,7 +87,6 @@ class ActivityCard extends Component {
     handleCollapse: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
-    programmingEnvironments: PropTypes.array,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -209,7 +208,6 @@ class ActivityCard extends Component {
               targetActivitySectionPos={this.props.targetActivitySectionPos}
               updateActivitySectionMetrics={updateActivitySectionMetrics}
               hasLessonPlan={hasLessonPlan}
-              programmingEnvironments={this.props.programmingEnvironments}
             />
           ))}
           <button

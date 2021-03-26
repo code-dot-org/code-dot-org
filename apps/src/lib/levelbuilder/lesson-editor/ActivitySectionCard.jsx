@@ -114,7 +114,6 @@ class ActivitySectionCard extends Component {
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
-    programmingEnvironments: PropTypes.array,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -557,7 +556,6 @@ class ActivitySectionCard extends Component {
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
-          programmingEnvironments={this.props.programmingEnvironments}
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

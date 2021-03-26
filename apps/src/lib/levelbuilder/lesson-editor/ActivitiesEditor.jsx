@@ -32,7 +32,6 @@ const styles = {
 class ActivitiesEditor extends Component {
   static propTypes = {
     hasLessonPlan: PropTypes.bool.isRequired,
-    programmingEnvironments: PropTypes.array,
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
@@ -154,7 +153,6 @@ class ActivitiesEditor extends Component {
             activitySectionMetrics={this.sectionMetrics}
             updateActivitySectionMetrics={this.updateActivitySectionMetrics}
             hasLessonPlan={this.props.hasLessonPlan}
-            programmingEnvironments={this.props.programmingEnvironments}
           />
         ))}
         {this.props.hasLessonPlan && (
