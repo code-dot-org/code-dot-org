@@ -798,7 +798,7 @@ class Level < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     teacher_markdown_for_display = localized_teacher_markdown if can_view_teacher_markdown
     {
       name: name,
@@ -813,7 +813,7 @@ class Level < ApplicationRecord
       referenceLinks: reference_links,
       teacherMarkdown: teacher_markdown_for_display,
       videoOptions: specified_autoplay_video&.summarize(false),
-      containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
+      containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(user, can_view_teacher_markdown)},
       status: SharedConstants::LEVEL_STATUS.not_tried,
       thumbnailUrl: thumbnail_url
     }

@@ -642,7 +642,7 @@ XML
       game_id: Game.by_name('Maze')
     )
     I18n.backend.store_translations test_locale, custom_i18n
-    summary = level.summarize_for_lesson_show(false)
+    summary = level.summarize_for_lesson_show(nil, false)
     assert_equal 'translated long instructions', summary[:longInstructions]
     assert_equal 'translated short instructions', summary[:shortInstructions]
   end

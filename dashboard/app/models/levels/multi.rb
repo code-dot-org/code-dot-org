@@ -66,7 +66,7 @@ class Multi < Match
     return question_text
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     super.merge(
       {
         questionText: get_question_text

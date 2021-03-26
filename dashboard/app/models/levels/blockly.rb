@@ -792,7 +792,7 @@ class Blockly < Level
     end
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     super.merge(
       {
         longInstructions: localized_long_instructions || long_instructions,

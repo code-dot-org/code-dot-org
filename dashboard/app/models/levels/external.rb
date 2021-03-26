@@ -72,10 +72,10 @@ class External < DSLDefined
     %w(bounce flappy jigsaw maze studio turtle)
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     super.merge(
       {
-        markdown: localized_replaced_markdown
+        markdown: localized_replaced_markdown(user)
       }
     )
   end
