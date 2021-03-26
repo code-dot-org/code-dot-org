@@ -7,6 +7,7 @@ import i18n from '@cdo/locale';
 import {Provider} from 'react-redux/src';
 import {getStore} from '@cdo/apps/redux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
 
 describe('RollupLessonEntrySection', () => {
   let defaultProps;
@@ -112,5 +113,33 @@ describe('RollupLessonEntrySection', () => {
 
     expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoCode()}</p>)).to.be
       .true;
+  });
+
+  it('renders list of standards when there are standards', () => {
+    const wrapper = mount(
+      <RollupLessonEntrySection
+        {...defaultProps}
+        objectToRollUp={'Standards'}
+      />
+    );
+
+    expect(
+      wrapper.containsMatchingElement(
+        <LessonStandards standards={defaultProps.lesson.standards} />
+      )
+    ).to.be.true;
+  });
+
+  it('renders no standards message when no standards', () => {
+    const wrapper = mount(
+      <RollupLessonEntrySection
+        {...defaultProps}
+        objectToRollUp={'Standards'}
+        lesson={courseData.units[1].lessons[0]}
+      />
+    );
+
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoStandards()}</p>))
+      .to.be.true;
   });
 });

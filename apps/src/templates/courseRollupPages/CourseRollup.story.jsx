@@ -32,6 +32,18 @@ const defaultProps = {
               }
             ],
             preparation: '- One',
+            standards: [
+              {
+                frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+                parentCategoryShortcode: null,
+                parentCategoryDescription: null,
+                categoryShortcode: 'AP',
+                categoryDescription: 'Algorithms & Programming',
+                shortcode: '1B-AP-09',
+                description:
+                  'Create programs that use variables to store and modify data.'
+              }
+            ],
             resources: {
               Teacher: [
                 {
@@ -71,6 +83,18 @@ const defaultProps = {
               }
             ],
             preparation: '- One',
+            standards: [
+              {
+                frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+                parentCategoryShortcode: null,
+                parentCategoryDescription: null,
+                categoryShortcode: 'AP',
+                categoryDescription: 'Algorithms & Programming',
+                shortcode: '1B-AP-09',
+                description:
+                  'Create programs that use variables to store and modify data.'
+              }
+            ],
             resources: {
               Teacher: [
                 {
@@ -104,6 +128,7 @@ const defaultProps = {
             link: '/s/unit-2/lessons/1',
             displayName: 'Lesson One',
             vocabularies: [],
+            standards: [],
             programmingExpressions: [],
             preparation: null,
             resources: {}
@@ -127,6 +152,18 @@ const defaultProps = {
               }
             ],
             preparation: '- One',
+            standards: [
+              {
+                frameworkName: 'CSTA K-12 Computer Science Standards (2017)',
+                parentCategoryShortcode: null,
+                parentCategoryDescription: null,
+                categoryShortcode: 'AP',
+                categoryDescription: 'Algorithms & Programming',
+                shortcode: '1B-AP-09',
+                description:
+                  'Create programs that use variables to store and modify data.'
+              }
+            ],
             resources: {
               Teacher: [
                 {
@@ -173,6 +210,12 @@ export default storybook => {
         )
       },
       {
+        name: 'Course Standards',
+        story: () => (
+          <CourseRollup {...defaultProps} objectToRollUp={'Standards'} />
+        )
+      },
+      {
         name: 'Unit Vocabulary',
         story: () => (
           <UnitRollup
@@ -196,6 +239,15 @@ export default storybook => {
           <UnitRollup
             unit={defaultProps.course.units[0]}
             objectToRollUp={'Resources'}
+          />
+        )
+      },
+      {
+        name: 'Unit Standards',
+        story: () => (
+          <UnitRollup
+            unit={defaultProps.course.units[0]}
+            objectToRollUp={'Standards'}
           />
         )
       }

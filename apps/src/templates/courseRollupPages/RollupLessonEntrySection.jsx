@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
 import {lessonShape} from './rollupShapes';
 
@@ -110,6 +111,14 @@ export default class RollupLessonEntrySection extends Component {
             )}
           {this.props.objectToRollUp === 'Prep' &&
             !this.props.lesson.preparation && <p>{i18n.rollupNoPrep()}</p>}
+          {this.props.objectToRollUp === 'Standards' &&
+            this.props.lesson.standards.length > 0 && (
+              <LessonStandards standards={this.props.lesson.standards} />
+            )}
+          {this.props.objectToRollUp === 'Standards' &&
+            this.props.lesson.standards.length <= 0 && (
+              <p>{i18n.rollupNoStandards()}</p>
+            )}
         </div>
       </div>
     );
