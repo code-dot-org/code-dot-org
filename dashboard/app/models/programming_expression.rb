@@ -135,6 +135,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {name: name, link: documentation_path}
+    {name: name, color: color, link: documentation_path}
   end
 end
