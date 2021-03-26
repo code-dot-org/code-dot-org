@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-24 16:31:01 UTC",
+    "serialized_at": "2021-03-26 14:42:38 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -324,7 +324,7 @@
     },
     {
       "key": "Sticker Art with Loops",
-      "name": "Sticker Art with Loops",
+      "name": "Mini-Project: Sticker Art",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,

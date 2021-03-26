@@ -20,11 +20,12 @@
         ]
       ],
       "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "pilot_experiment": "ai-unit-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:09:47 UTC",
+    "serialized_at": "2021-03-26 13:22:35 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -802,31 +803,6 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Video: Importing Models to App Lab",
-        "level_keys": [
-          "ml-import ai-import video"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-import ai-import video"
-        ],
-        "lesson.key": "lesson7",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-import ai-import video"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
         "progression": "Import Your Model",
         "level_keys": [
           "ml-models in applab-import 1"
@@ -847,8 +823,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 4,
+      "chapter": 21,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -872,8 +848,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 5,
+      "chapter": 22,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -897,8 +873,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 6,
+      "chapter": 23,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -922,8 +898,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 7,
+      "chapter": 24,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -947,7 +923,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -972,7 +948,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -997,7 +973,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1022,7 +998,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1047,7 +1023,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1072,7 +1048,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1097,7 +1073,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1122,7 +1098,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1147,7 +1123,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1172,7 +1148,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1197,7 +1173,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1222,7 +1198,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1247,7 +1223,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1272,7 +1248,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1297,7 +1273,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1322,7 +1298,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1347,7 +1323,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1372,7 +1348,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1397,7 +1373,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1422,7 +1398,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1447,7 +1423,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1472,7 +1448,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1497,7 +1473,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1522,7 +1498,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1547,7 +1523,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1572,7 +1548,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1597,7 +1573,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1622,7 +1598,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1647,7 +1623,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1672,7 +1648,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1697,7 +1673,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1722,7 +1698,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1747,7 +1723,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1772,7 +1748,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1797,7 +1773,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1822,7 +1798,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1847,7 +1823,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 12,
       "activity_section_position": null,
       "assessment": null,
@@ -2076,17 +2052,6 @@
         "level.key": "ml-models in applab-vacation example",
         "script_level.level_keys": [
           "ml-models in applab-vacation example"
-        ],
-        "lesson.key": "lesson7",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-import ai-import video",
-        "script_level.level_keys": [
-          "ml-import ai-import video"
         ],
         "lesson.key": "lesson7",
         "lesson_group.key": "",
