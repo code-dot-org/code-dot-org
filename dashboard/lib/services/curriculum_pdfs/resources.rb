@@ -19,24 +19,42 @@ module Services
         def generate_script_resources_pdf(script, directory="/tmp/")
           pdfs = []
           script.lessons.each do |lesson|
-            title_page = "<h1>#{script.name}<h1><h2>#{lesson.name}</h2><h3>Resources</h3>"
-            title_page_filename = ActiveStorage::Filename.new(
-              "lesson.#{lesson.key}.title.pdf"
-            ).sanitized
-            title_page_path = File.join(directory, title_page_filename)
-            PDF.generate_from_html(title_page, title_page_path)
-            pdfs << title_page_path
+            lesson_pdfs = lesson.resources.map do |resource|
+              fetch_resource_pdf(resource, directory)
+            end.compact
 
-            lesson.resources.each do |resource|
-              resource_path = fetch_resource_pdf(resource, directory)
-              pdfs << resource_path if resource_path
-            end
+            next if lesson_pdfs.empty?
+
+            pdfs.push(generate_lesson_resources_title_page(lesson, directory))
+            pdfs.push(*lesson_pdfs)
           end
 
           filename = ActiveStorage::Filename.new(script.name + ".pdf").sanitized
           destination = File.join(directory, filename)
           PDF.merge_local_pdfs(destination, *pdfs)
           return destination
+        end
+
+        def generate_lesson_resources_title_page(lesson, directory="/tmp/")
+          @lesson_resources_title_page_template ||= File.read(
+            File.join(
+              File.dirname(__FILE__), 'lesson_resources_title_page.html.haml'
+            )
+          )
+
+          page_content = ApplicationController.render(
+            inline: @lesson_resources_title_page_template,
+            locals: {lesson: lesson},
+            type: :haml
+          )
+
+          filename = ActiveStorage::Filename.new(
+            "lesson.#{lesson.key}.title.pdf"
+          ).sanitized
+          path = File.join(directory, filename)
+
+          PDF.generate_from_html(page_content, path)
+          return path
         end
 
         def fetch_resource_pdf(resource, directory="/tmp/")
