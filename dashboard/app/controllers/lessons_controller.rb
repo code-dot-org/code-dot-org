@@ -4,6 +4,8 @@ class LessonsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show, :student_lesson_plan]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
 
+  include LevelsHelper
+
   # Script levels which are not in activity sections will not show up on the
   # lesson edit page, in which case saving the edit page would cause those
   # script levels to be lost. Prevent this by disallowing editing in this case.
@@ -25,7 +27,7 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user)
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
   end
 
   # GET /s/script-name/lessons/1/student
@@ -74,10 +76,12 @@ class LessonsController < ApplicationController
       resources = (lesson_params['resources'] || []).map {|key| Resource.find_by(course_version_id: course_version.id, key: key)}
       vocabularies = (lesson_params['vocabularies'] || []).map {|key| Vocabulary.find_by(course_version_id: course_version.id, key: key)}
     end
+    standards = fetch_standards(lesson_params['standards'] || [])
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :original_lesson_data))
+      @lesson.standards = standards.compact
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -133,11 +137,20 @@ class LessonsController < ApplicationController
       :announcements,
       :resources,
       :vocabularies,
-      :objectives
+      :objectives,
+      :standards
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
+    lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
     lp
+  end
+
+  def fetch_standards(standards_data)
+    standards_data.map do |s|
+      framework = Framework.find_by!(shortcode: s['frameworkShortcode'])
+      Standard.find_by!(framework: framework, shortcode: s['shortcode'])
+    end
   end
 end
