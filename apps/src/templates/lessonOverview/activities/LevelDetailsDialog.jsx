@@ -81,6 +81,13 @@ class LevelDetailsDialog extends Component {
           ))}
         </div>
       );
+    } else if (level.type === 'Match' || level.type === 'Multi') {
+      return (
+        <div>
+          {level.question && <SafeMarkdown markdown={level.question} />}
+          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
+        </div>
+      );
     } else if (level.type === 'BubbleChoice') {
       return (
         <div style={styles.sublevelCards}>
@@ -230,18 +237,16 @@ class LevelDetailsDialog extends Component {
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={{padding: 15, ...levelSpecificStyling}}
-        useUpdatedStyles
+        style={{...levelSpecificStyling}}
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        <div>{preview}</div>
+        <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            __useDeprecatedTag
             style={{margin: 5}}
           />
           <Button

@@ -30,10 +30,10 @@ class ProgrammingExpressionAutocompleteTest < ActiveSupport::TestCase
     assert_equal 1, matches.length
   end
 
-  test "restricts matches by programming environment id" do
+  test "restricts matches by programming environment" do
     # There's a blocks with Sound in them in two programming environments
     # We should only get the one we requested
-    matches = ProgrammingExpressionAutocomplete.get_search_matches('play', 3, ProgrammingEnvironment.find_by(name: 'gamelab').id)
+    matches = ProgrammingExpressionAutocomplete.get_search_matches('play', 3, ProgrammingEnvironment.find_by(name: 'gamelab'))
     assert_equal 1, matches.length
     assert_equal ProgrammingEnvironment.find_by(name: 'gamelab').id, ProgrammingExpression.find_by(key: matches[0][:key]).programming_environment_id
   end
