@@ -62,7 +62,7 @@ export default function programmingExpressions(state = [], action) {
         action.newProgrammingExpression,
         action.type
       );
-      newState = newState.concat([action.newProgrammingExpression]);
+      newState.push(action.newProgrammingExpression);
       break;
     }
     case REMOVE_PROGRAMMING_EXPRESSION: {
