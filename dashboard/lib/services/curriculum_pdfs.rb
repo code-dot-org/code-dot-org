@@ -26,6 +26,7 @@ module Services
   module CurriculumPdfs
     include LessonPlans
     include Resources
+    include ScriptOverview
     include Utils
 
     DEBUG = false
