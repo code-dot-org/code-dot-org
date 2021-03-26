@@ -850,7 +850,7 @@ class LessonsControllerTest < ActionController::TestCase
     put :update, params: new_update_params
     @lesson.reload
 
-    assert_equal 1, @lesson.programming_expressions.count
+    assert_equal 2, @lesson.programming_expressions.count
     assert @lesson.programming_expressions.include?(expression_to_keep)
     assert @lesson.programming_expressions.include?(expression_to_add)
     refute @lesson.programming_expressions.include?(expression_to_remove)
