@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:55:47 UTC",
+    "serialized_at": "2021-03-24 21:40:53 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -2287,18 +2287,6 @@
       }
     },
     {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp_unit_6_-_algorithms",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
       "name": "Unreasonable Time",
       "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
       "key": "unreasonable-time-activity-guide",
@@ -2309,54 +2297,6 @@
       },
       "seeding_key": {
         "resource.key": "unreasonable-time-activity-guide"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp_unit_6_-_algorithms",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp_unit_6_-_algorithms",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp_unit_6_-_algorithms",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Algorithms",
-      "url": "https://docs.google.com/presentation/d/1pIuUH3QAxdGkEUBmG0YOduf1Xb16UHKCTC7-EmVMJ2Y/copy",
-      "key": "csp_unit_6_-_algorithms",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_algorithms"
       }
     }
   ],
@@ -2403,6 +2343,9 @@
         "resource.key": "csp_unit_6_-_algorithms"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
 
@@ -2562,6 +2505,323 @@
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
         "objective.key": "f7f9b5d1-2c17-4b12-a466-ac644a2c3376"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.J.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.P.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-2.B.5"
       }
     }
   ]
