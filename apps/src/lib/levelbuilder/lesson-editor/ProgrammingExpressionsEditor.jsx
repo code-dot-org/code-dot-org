@@ -162,6 +162,12 @@ class ProgrammingExpressionsEditor extends Component {
     this.handleRemoveProgrammingExpressionDialogClose();
   };
 
+  handleOpenAddProgrammingExpression = event => {
+    // Prevents button from trigger save
+    event.preventDefault();
+    this.setState({addProgrammingExpressionOpen: true});
+  };
+
   handleCloseAddProgrammingExpression = programmingExpression => {
     this.setState(
       {addProgrammingExpressionOpen: false},
@@ -193,7 +199,7 @@ class ProgrammingExpressionsEditor extends Component {
         </Table.Provider>
         <Button
           text={'Add Introduced Code'}
-          onClick={() => this.setState({addProgrammingExpressionOpen: true})}
+          onClick={this.handleOpenAddProgrammingExpression}
           color={Button.ButtonColor.orange}
         />
         <FindProgrammingExpressionDialog
