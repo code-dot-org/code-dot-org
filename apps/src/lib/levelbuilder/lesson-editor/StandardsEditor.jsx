@@ -190,9 +190,16 @@ class StandardsEditor extends Component {
         </select>
         <div>Select a Standard to add</div>
         <SearchBox
+          // Specify a key in order to force this component to remount when
+          // framework changes. Otherwise, it may return stale results when
+          // a query is repeated after changing the framework.
+          key={this.state.frameworkShortcode}
           onSearchSelect={this.onSearchSelect}
           searchUrl={'standards/search'}
           constructOptions={this.constructSearchOptions}
+          additionalQueryParams={{
+            framework: this.state.frameworkShortcode
+          }}
         />
         <br />
         <Table.Provider columns={columns}>
