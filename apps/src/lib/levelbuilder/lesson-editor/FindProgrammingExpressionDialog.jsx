@@ -6,8 +6,8 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import LessonEditorDialog from './LessonEditorDialog';
-import {buildProgrammingExpressionMarkdown} from '@cdo/apps/template/lessonOverview/StyledCodeBlock';
 import {connect} from 'react-redux';
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 const SearchForm = function(props) {
   return (
