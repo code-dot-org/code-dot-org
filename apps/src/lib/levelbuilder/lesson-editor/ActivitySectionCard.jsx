@@ -20,7 +20,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 import ActivitySectionCardButtons from './ActivitySectionCardButtons';
-import {buildProgrammingExpressionMarkdown} from '@cdo/apps/template/lessonOverview/StyledCodeBlock';
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 // When dragging within this many pixels of the top or bottom of the screen,
 // start scrolling the page.
