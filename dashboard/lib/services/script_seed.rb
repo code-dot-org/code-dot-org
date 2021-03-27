@@ -22,7 +22,7 @@ module Services
       :script_levels, :levels_script_levels, :levels, :resources,
       :lessons_resources, :scripts_resources, :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
-      :standards, :lessons_standards, keyword_init: true
+      :standards, :lessons_standards, :lessons_opportunity_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -51,6 +51,7 @@ module Services
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
       lessons_standards = script.lessons.map(&:lessons_standards).flatten
+      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -72,7 +73,8 @@ module Services
         objectives: objectives,
         frameworks: Framework.all,
         standards: Standard.all,
-        lessons_standards: lessons_standards
+        lessons_standards: lessons_standards,
+        lessons_opportunity_standards: lessons_opportunity_standards
       )
       scope = {seed_context: seed_context}
 
@@ -92,6 +94,7 @@ module Services
         lessons_programming_expressions: lessons_programming_expressions.map {|lpe| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lpe, scope: scope).as_json},
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
+        lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
       }
       JSON.pretty_generate(data)
     end
@@ -784,6 +787,14 @@ module Services
     end
 
     class LessonsStandardSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsOpportunityStandardSerializer < ActiveModel::Serializer
       attributes :seeding_key
 
       def seeding_key
