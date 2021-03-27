@@ -12,4 +12,6 @@
 #  index_lessons_opportunity_standards_on_standard_id_and_lesson_id  (standard_id,lesson_id)
 #
 class LessonsOpportunityStandard < ApplicationRecord
+  belongs_to :lesson
+  belongs_to :standard
 end
