@@ -1020,5 +1020,8 @@
         "standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-standard-2"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
