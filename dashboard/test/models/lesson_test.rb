@@ -836,13 +836,13 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 1, lesson.opportunity_standards.length
   end
 
-  test 'removing opportunity standards destroys join model' do
+  test 'destroying lesson destroys opportunity_standards join model' do
     lesson = create :lesson
     standard = create :standard
     LessonsOpportunityStandard.destroy_all
     lesson.opportunity_standards << standard
     assert_equal 1, LessonsOpportunityStandard.count
-    lesson.opportunity_standards = []
+    lesson.destroy
     assert_equal 0, LessonsOpportunityStandard.count
   end
 

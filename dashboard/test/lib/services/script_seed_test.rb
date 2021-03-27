@@ -458,6 +458,7 @@ module Services
       expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
       expected_counts['LessonsStandard'] -= 4
+      expected_counts['LessonsOpportunityStandard'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -492,6 +493,7 @@ module Services
       expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
       expected_counts['LessonsStandard'] -= 2
+      expected_counts['LessonsOpportunityStandard'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -734,6 +736,28 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    # Standards are shared across all scripts. We should never delete
+    # a standard because it might be in use by another script.
+    test 'seed deletes lessons_opportunity_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.opportunity_standards.count
+        lesson.opportunity_standards.delete(lesson.opportunity_standards.first)
+        assert_equal 1, lesson.opportunity_standards.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsOpportunityStandard'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find standard if framework matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)
@@ -777,7 +801,7 @@ module Services
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
 
