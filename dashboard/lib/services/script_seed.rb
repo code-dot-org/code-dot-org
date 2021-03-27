@@ -174,6 +174,7 @@ module Services
       lessons_programming_expressions_data = data['lessons_programming_expressions']
       objectives_data = data['objectives']
       lessons_standards_data = data['lessons_standards'] || []
+      lessons_opportunity_standards_data = data['lessons_opportunity_standards'] || []
       seed_context = SeedContext.new
 
       Script.transaction do
@@ -219,6 +220,7 @@ module Services
         seed_context.frameworks = Framework.all
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
+        seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
         seed_context.script
       end
@@ -589,6 +591,28 @@ module Services
 
       LessonsStandard.import! lessons_standards_to_import, on_duplicate_key_update: get_columns(LessonsStandard)
       LessonsStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
+      lessons_opportunity_standards_to_import = lessons_opportunity_standards_data.map do |ls_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == ls_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        standard_id = seed_context.standards.select {|s| s.shortcode == ls_data['seeding_key']['opportunity_standard.shortcode']}.first&.id
+        raise 'No standard found' if standard_id.nil?
+
+        LessonsOpportunityStandard.new(
+          lesson_id: lesson_id,
+          standard_id: standard_id
+        )
+      end
+
+      # inefficiently delete all LessonsStandards using 1 query per lesson, and
+      # then re-import all LessonsStandards in a single query.
+      seed_context.lessons.each {|l| l.opportunity_standards = []}
+
+      LessonsOpportunityStandard.import! lessons_opportunity_standards_to_import, on_duplicate_key_update: get_columns(LessonsOpportunityStandard)
+      LessonsOpportunityStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
