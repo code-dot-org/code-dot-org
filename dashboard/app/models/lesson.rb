@@ -50,6 +50,9 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
   has_many :lessons_standards, foreign_key: 'stage_id' # join table. we need this association for seeding logic
 
+  has_many :lessons_opportunity_standards
+  has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
