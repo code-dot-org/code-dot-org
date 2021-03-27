@@ -89,7 +89,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(99) do
+      assert_queries(100) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -1014,6 +1014,11 @@ module Services
         (1..num_standards_per_lesson).each do |s|
           standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}"
           LessonsStandard.find_or_create_by!(standard: standard, lesson: lesson)
+        end
+
+        (1..num_standards_per_lesson).each do |s|
+          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
+          LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
       end
 

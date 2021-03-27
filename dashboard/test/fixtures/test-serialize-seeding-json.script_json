@@ -1022,6 +1022,33 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-opportunity-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-opportunity-standard-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-opportunity-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-opportunity-standard-2"
+      }
+    }
   ]
 }
