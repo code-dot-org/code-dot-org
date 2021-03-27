@@ -848,6 +848,10 @@ module Services
           s1.lessons.map(&:standards).flatten,
           s2.lessons.map(&:standards).flatten,
         )
+        assert_standards_equal(
+          s1.lessons.map(&:opportunity_standards).flatten,
+          s2.lessons.map(&:opportunity_standards).flatten,
+        )
       end
     end
 
