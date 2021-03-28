@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LessonsStandardTest < ActiveSupport::TestCase
+class LessonsOpportunityStandardTest < ActiveSupport::TestCase
   test 'seeding_key' do
     lesson_group = create :lesson_group
     script = lesson_group.script
