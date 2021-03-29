@@ -6299,7 +6299,7 @@
   "resources": [
     {
       "name": "Digital Trails: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4",
+      "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
       "key": "digital-trails-lesson-slides",
       "properties": {
         "type": "Slide Deck",
@@ -6324,7 +6324,7 @@
     },
     {
       "name": "Digital Trails: Digital Trail Squares",
-      "url": "https://drive.google.com/open?id=1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8",
+      "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
       "key": "digital-trails-digital-trail-squares",
       "properties": {
         "type": "Student Handout",
@@ -6350,7 +6350,7 @@
     },
     {
       "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg",
+      "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
       "key": "mimi-activity",
       "properties": {
         "type": "Map Activity",
@@ -6363,7 +6363,7 @@
     },
     {
       "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64",
+      "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
       "key": "mimi-debugging",
       "properties": {
         "type": "Worksheet",
@@ -6376,7 +6376,7 @@
     },
     {
       "name": "Move It, Move It",
-      "url": "https://drive.google.com/open?id=1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4",
+      "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
       "key": "mimi-teacher-puzzle",
       "properties": {
         "type": "Worksheet Answer Key",
@@ -6401,7 +6401,7 @@
     },
     {
       "name": "Stevie and the Big Project",
-      "url": "https://drive.google.com/open?id=0B-uvt08wYSQqTUFzaGxKSk45QkU",
+      "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
       "key": "stevie_and_the_big_project",
       "properties": {
         "type": "Resource",
@@ -6461,7 +6461,7 @@
     },
     {
       "name": "Unplugged Blockly Blocks (Grades K-1)",
-      "url": "https://drive.google.com/open?id=1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ",
+      "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
       "key": "course-ab-blockly-blocks",
       "properties": {
         "type": "Manipulatives",
@@ -6509,7 +6509,7 @@
     },
     {
       "name": "Happy Map Game Pieces",
-      "url": "https://drive.google.com/open?id=19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k",
+      "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
       "key": "happy-map-game-pieces",
       "properties": {
         "type": "Manipulatives",
@@ -6522,7 +6522,7 @@
     },
     {
       "name": "Compass Rose",
-      "url": "https://drive.google.com/open?id=1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE",
+      "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
       "key": "compass-rose",
       "properties": {
         "type": "Handout",
@@ -6571,7 +6571,7 @@
     },
     {
       "name": "Getting Loopy",
-      "url": "https://drive.google.com/open?id=1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ",
+      "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
       "key": "csf-getting-loopy-activity-worksheet",
       "properties": {
         "type": "Worksheet",
@@ -6584,7 +6584,7 @@
     },
     {
       "name": "Getting Loopy",
-      "url": "https://drive.google.com/open?id=1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8",
+      "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
       "key": "csf-getting-loopy-assessment",
       "properties": {
         "type": "Assessment",
@@ -6597,7 +6597,7 @@
     },
     {
       "name": "Getting Loopy",
-      "url": "https://drive.google.com/open?id=15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs",
+      "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
       "key": "assessment-answer-getting-loopy",
       "properties": {
         "type": "Assessment Answer Key",
@@ -6660,7 +6660,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
+      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
       "key": "csf-the-big-event-assessment",
       "properties": {
         "type": "Assessment",
@@ -6673,7 +6673,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8",
+      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
       "properties": {
         "type": "Assessment Answer Key",
@@ -6686,7 +6686,7 @@
     },
     {
       "name": "The Big Event (Courses A, B)",
-      "url": "https://drive.google.com/open?id=1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs",
+      "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
       "key": "the_big_event_courses_a_b_",
       "properties": {
         "type": "Controller Image",
