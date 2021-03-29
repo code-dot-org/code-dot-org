@@ -302,6 +302,12 @@ Dashboard::Application.routes.draw do
   get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
   get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
 
+  resources :standards, only: [] do
+    collection do
+      get :search
+    end
+  end
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'

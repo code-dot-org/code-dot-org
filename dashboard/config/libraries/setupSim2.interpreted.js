@@ -1,3 +1,5 @@
+//This is the new (2021) library that supports the setupSim block without any printing by drawing a scoreboard instead.
+
 // Setup sim
 function setupSim(
   s1number,

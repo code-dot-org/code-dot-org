@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-24 16:31:01 UTC",
+    "serialized_at": "2021-03-26 14:42:38 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -324,7 +324,7 @@
     },
     {
       "key": "Sticker Art with Loops",
-      "name": "Sticker Art with Loops",
+      "name": "Mini-Project: Sticker Art",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -8425,7 +8425,7 @@
   "resources": [
     {
       "name": "Putting a STOP to Online Meanness: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY",
+      "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
       "key": "putting-a-stop-to-online-meanness-lesson-slides",
       "properties": {
         "type": "Slide Deck",
@@ -8450,7 +8450,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4",
+      "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
       "key": "csf-mrf-cup-spacing",
       "properties": {
         "type": "Cup Spacing",
@@ -8463,7 +8463,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc",
+      "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
       "key": "csf-mrf-symbol-key",
       "properties": {
         "type": "Symbol Key",
@@ -8489,7 +8489,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM",
+      "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
       "key": "csf-mrf-cup-stacking-ideas",
       "properties": {
         "type": "Cup Stacking Ideas",
@@ -8502,7 +8502,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA",
+      "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
       "key": "csf-mrf-paper-trapezoid-template",
       "properties": {
         "type": "Paper Trapezoid Template",
@@ -8515,7 +8515,7 @@
     },
     {
       "name": "Maze Bridging Page",
-      "url": "https://drive.google.com/open?id=19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS",
+      "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view",
       "key": "c2-maze-bridge",
       "properties": {
         "audience": "Student"
@@ -8526,7 +8526,7 @@
     },
     {
       "name": "Unplugged Maze Blocks",
-      "url": "https://drive.google.com/open?id=1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48",
+      "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
       "key": "unplugged-maze-blocks",
       "properties": {
         "type": "Manipulatives",
@@ -8611,7 +8611,7 @@
     },
     {
       "name": "Turns & Angles",
-      "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+      "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "csf-turns-angles-doc",
       "properties": {
         "type": "Student Handout",
@@ -8661,7 +8661,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE",
+      "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
       "key": "csf-binary-bracelets-activity",
       "properties": {
         "type": "Worksheet",
@@ -8674,7 +8674,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU",
+      "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
       "key": "csf-binary-bracelets-assessment",
       "properties": {
         "type": "Assessment",
@@ -8687,7 +8687,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE",
+      "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
       "key": "assessment-answer-binary-bracelets",
       "properties": {
         "type": "Assessment Answer Key",
@@ -8725,7 +8725,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
+      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
       "key": "csf-the-big-event-assessment",
       "properties": {
         "type": "Assessment",
@@ -8738,7 +8738,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8",
+      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
       "properties": {
         "type": "Assessment Answer Key",
@@ -8751,7 +8751,7 @@
     },
     {
       "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
+      "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
       "key": "the_big_event_course_c_",
       "properties": {
         "type": "Event Controller",

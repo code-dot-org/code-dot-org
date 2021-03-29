@@ -112,6 +112,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
     return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
@@ -119,6 +120,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
     return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
@@ -126,6 +128,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
     return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
@@ -133,6 +136,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::RecordNotFound unless unit_group
     # Assumes if one unit in a unit group is migrated they all are
     return render :forbidden unless unit_group.default_scripts[0].is_migrated
+    @course_summary = unit_group.summarize_for_rollup(@current_user)
   end
 
   def i18n_params

@@ -3,3 +3,5 @@ is_migrated true
 
 lesson 'lesson-1', display_name: 'Lesson 1', has_lesson_plan: true
 
+lesson 'lesson-2', display_name: 'Lesson 2', has_lesson_plan: true
+
