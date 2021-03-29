@@ -21745,12 +21745,56 @@ en:
         csa1-pilot:
           lessons:
             lesson-1:
-              name: Lesson 1
+              name: Welcome to CSA
               description_student: In this lesson, you explore software engineering values and the ways that you practice these values in other aspects of your life. By the end of this lesson, you discover your own software engineering identity!
               description_teacher: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
             lesson-2:
-              name: Lesson 2
-          lesson_groups: {}
+              name: Classes and Objects
+              description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
+              description_teacher: 'Students access the Java Lab to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
+
+'
+            lesson-3:
+              name: Using Commands
+            lesson-4:
+              name: Conditionals and Debugging
+            lesson-5:
+              name: More with Objects
+            lesson-6:
+              name: While Loops and Practice
+            lesson-7:
+              name: More with Conditionals
+            lesson-8:
+              name: Introduction to Code Reviews
+            lesson-9:
+              name: Inheritance and Methods
+            lesson-10:
+              name: More Methods, More Features
+            lesson-11:
+              name: Painting Methods
+            lesson-12:
+              name: SprayPainter
+            lesson-13:
+              name: StampPainter
+            lesson-14:
+              name: Edge Cases
+            lesson-15:
+              name: Software Engineering Wrap Up
+            lesson-16:
+              name: 'Project: Personal Symbol - Day 1'
+            lesson-17:
+              name: 'Project: Personal Symbol - Day 2'
+            lesson-18:
+              name: 'Project: Personal Symbol - Day 3'
+            lesson-19:
+              name: FRQ Day
+            lesson-20:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa1-pilot
           title: ''
           description_audience: ''
