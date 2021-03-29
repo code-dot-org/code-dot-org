@@ -22,7 +22,7 @@ module Services
         end
 
         def generate_script_overview_pdf(script, directory="/tmp/")
-          ChatClient.log("Generating script overview PDF for #{script.name}")
+          ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
           pdfs = []
 
@@ -35,6 +35,7 @@ module Services
 
           # Include PDF for the lesson in our set of PDFs to merge.
           script.lessons.each do |lesson|
+            ChatClient.log("Finding/generating PDF for #{lesson.key.inspect}") if DEBUG
             # 1. If we already have a version of the PDF on the local
             #    filesystem, grab it from there.
             # 2. Otherwise, if we already have a version of the PDF on S3, grab
@@ -42,10 +43,13 @@ module Services
             # 3. If we don't already have a version anywhere, generate one.
             lesson_pathname = get_lesson_plan_pathname(lesson)
             if File.exist?(File.join(directory, lesson_pathname))
+              ChatClient.log("existing PDF found at #{File.join(directory, lesson_pathname).inspect}") if DEBUG
               pdfs << File.join(directory, lesson_pathname)
             elsif false && lesson_plan_pdf_exists_for?(lesson)
+              ChatClient.log("existing PDF found at #{get_lesson_plan_pathname(lesson).inspect}") if DEBUG
               # TODO: get pdf from s3
             else
+              ChatClient.log("no existing PDF found; generating one at #{File.join(directory, lesson_pathname).inspect}") if DEBUG
               generate_lesson_pdf(lesson, directory)
               pdfs << File.join(directory, lesson_pathname)
             end
