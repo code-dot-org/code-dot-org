@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_002952) do
+ActiveRecord::Schema.define(version: 2021_03_27_012046) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -572,6 +572,13 @@ ActiveRecord::Schema.define(version: 2021_03_26_002952) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lessons_opportunity_standards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "lesson_id", null: false
+    t.bigint "standard_id", null: false
+    t.index ["lesson_id", "standard_id"], name: "index_lessons_opportunity_standards_on_lesson_id_and_standard_id", unique: true
+    t.index ["standard_id", "lesson_id"], name: "index_lessons_opportunity_standards_on_standard_id_and_lesson_id"
   end
 
   create_table "lessons_programming_expressions", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
