@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 18:26:58 UTC",
+    "serialized_at": "2021-03-26 21:05:54 UTC",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
@@ -185,23 +185,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Video: Text and Prompts",
+        "progression": "Please pause",
         "level_keys": [
-          "courseF_pilotVideo_prompts"
+          "poembot_stop"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_pilotVideo_prompts"
+          "poembot_stop"
         ],
         "lesson.key": "Introducing Sprite Lab",
         "lesson_group.key": "rampup",
         "script.name": "haikubot-pilot"
       },
       "level_keys": [
-        "courseF_pilotVideo_prompts"
+        "poembot_stop"
       ]
     },
     {
@@ -452,9 +452,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_pilotVideo_prompts",
+        "level.key": "poembot_stop",
         "script_level.level_keys": [
-          "courseF_pilotVideo_prompts"
+          "poembot_stop"
         ],
         "lesson.key": "Introducing Sprite Lab",
         "lesson_group.key": "rampup",

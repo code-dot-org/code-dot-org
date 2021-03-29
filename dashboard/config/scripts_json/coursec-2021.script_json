@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-26 14:42:38 UTC",
+    "serialized_at": "2021-03-29 14:08:32 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -2909,25 +2909,26 @@
       }
     },
     {
-      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen."
+        "description": "**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
+        "name": "A Series of Events"
       },
       "seeding_key": {
-        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
     {
-      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
-        "remarks": true
+        "description": "This lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen.",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
