@@ -32,9 +32,9 @@ function generateCodeDesignElements(modelId, modelData) {
       y = y + SPACER_PIXELS;
     } else {
       var labelMinMax = designMode.createElement('LABEL', x, y);
-      var min = +modelData.rangesByColumn[feature].min.toFixed(2);
-      var max = +modelData.rangesByColumn[feature].max.toFixed(2);
-      labelMinMax.textContent = `(min: ${min}, max: ${max}):`;
+      var min = modelData.extremumsByColumn[feature].min.toFixed(2);
+      var max = modelData.extremumsByColumn[feature].max.toFixed(2);
+      labelMinMax.textContent = `(min: ${+min}, max: ${+max}):`;
       labelMinMax.style.width = '300px';
       y = y + SPACER_PIXELS;
       label.textContent = feature;
