@@ -31,7 +31,7 @@ module Services
 
           # Merge all gathered PDFs
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_pathname(script))
+          subdirectory = File.dirname(get_script_overview_pathname(script))
           destination = File.join(directory, subdirectory, filename)
           FileUtils.mkdir_p(File.dirname(destination))
           PDF.merge_local_pdfs(destination, *pdfs)
@@ -79,7 +79,7 @@ module Services
               return nil
             end
           elsif resource.url.end_with?(".pdf")
-            IO.copy_stream(open(resource.url), path)
+            IO.copy_stream(URI.open(resource.url), path)
             return path
           end
         end
