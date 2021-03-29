@@ -45,7 +45,6 @@ const ADD_SELECTED_FEATURE = "ADD_SELECTED_FEATURE";
 const REMOVE_SELECTED_FEATURE = "REMOVE_SELECTED_FEATURE";
 const SET_LABEL_COLUMN = "SET_LABEL_COLUMN";
 const SET_FEATURE_NUMBER_KEY = "SET_FEATURE_NUMBER_KEY";
-const SET_RANGES_BY_COLUMN = "SET_RANGES_BY_COLUMN";
 const SET_PERCENT_DATA_TO_RESERVE = "SET_PERCENT_DATA_TO_RESERVE";
 const SET_RESERVE_LOCATION = "SET_RESERVE_LOCATION";
 const SET_ACCURACY_CHECK_EXAMPLES = "SET_ACCURACY_CHECK_EXAMPLES";
@@ -140,10 +139,6 @@ export function setLabelColumn(labelColumn) {
 */
 export function setFeatureNumberKey(featureNumberKey) {
   return { type: SET_FEATURE_NUMBER_KEY, featureNumberKey };
-}
-
-export function setRangesByColumn(rangesByColumn) {
-  return { type: SET_RANGES_BY_COLUMN, rangesByColumn };
 }
 
 export function setPercentDataToReserve(percentDataToReserve) {
@@ -242,7 +237,6 @@ const initialState = {
   selectedFeatures: [],
   labelColumn: undefined,
   featureNumberKey: {},
-  rangesByColumn: {},
   trainingExamples: [],
   trainingLabels: [],
   percentDataToReserve: 10,
@@ -371,12 +365,6 @@ export default function rootReducer(state = initialState, action) {
     return {
       ...state,
       featureNumberKey: action.featureNumberKey
-    };
-  }
-  if (action.type === SET_RANGES_BY_COLUMN) {
-    return {
-      ...state,
-      rangesByColumn: action.rangesByColumn
     };
   }
   if (action.type === SET_TRAINING_EXAMPLES) {
@@ -701,6 +689,14 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
+export function getExtremumsByColumn(state) {
+  let extremumsByColumn = {};
+  getNumericalColumns(state).map(
+    column => (extremumsByColumn[column] = getRange(state, column, false))
+  );
+  return extremumsByColumn;
+}
+
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
   getNumericalColumns(state).map(
@@ -709,11 +705,15 @@ export function getRangesByColumn(state) {
   return rangesByColumn;
 }
 
-export function getRange(state, column) {
+export function getRange(state, column, shouldReturnRange = true) {
   let range = {};
   range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
   range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
-  range.range = range.max - range.min;
+
+  if (shouldReturnRange) {
+    range.range = range.max - range.min;
+  }
+
   return range;
 }
 
@@ -1009,7 +1009,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
-  dataToSave.rangesByColumn = getRangesByColumn(state);
+  dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
