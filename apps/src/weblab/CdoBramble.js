@@ -68,10 +68,6 @@ export default class CdoBramble {
     });
   }
 
-  uploadAllFilesToServer(callback) {
-    // TODO: get all files and upload to server.
-  }
-
   mount() {
     this.Bramble.mount(this.projectPath);
   }
@@ -130,7 +126,7 @@ export default class CdoBramble {
     const hasSyncedVersion = this.lastSyncedVersionId === projectVersion;
 
     // Send any new changes to the server.
-    if (hasSyncedVersion && this.recentChanges.length > 0) {
+    if (hasSyncedVersion) {
       const recentChanges = [...this.recentChanges];
       this.resetVersionAndChanges(projectVersion);
       this.recursivelySaveChangesToServer(recentChanges, 0, callback);
@@ -218,6 +214,49 @@ export default class CdoBramble {
   onProjectSizeChanged(bytes, _) {
     const {getStore, actions} = this.store;
     getStore().dispatch(actions.changeProjectSize(bytes));
+  }
+
+  uploadAllFilesToServer(callback) {
+    this.shell().ls(this.projectPath, (err, entries) => {
+      if (err) {
+        console.error(
+          `CdoBramble failed to receive file entries from Bramble. ${err}`
+        );
+        callback();
+      }
+
+      const uploadEntry = index => {
+        const next = (err, newVersionId) => {
+          if (err) {
+            callback(err);
+            return;
+          }
+
+          this.lastSyncedVersionId = newVersionId;
+          if (index >= entries.length - 1) {
+            callback(null, true /* preWriteHook was successful */);
+          } else {
+            uploadEntry(index + 1);
+          }
+        };
+
+        const filename = entries[index].path; // 'path' is relative, so it will be the filename.
+        this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
+          if (err) {
+            callback(err);
+          } else {
+            this.api.changeProjectFile(
+              filename,
+              fileData,
+              next,
+              true /* skipPreWriteHook because we are calling from the preWriteHook */
+            );
+          }
+        });
+      };
+
+      uploadEntry(0);
+    });
   }
 
   recursivelySaveChangesToServer(changes, currentIndex, finalCallback) {
