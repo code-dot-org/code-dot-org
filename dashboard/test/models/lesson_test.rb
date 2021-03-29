@@ -26,7 +26,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level with user_level for inactive level" do
     script, _, level2, lesson, _ = create_swapped_lockable_lesson
-    create :user_level, user: @student, script: script, level: level2, unlocked_at: Time.now
+    create :user_level, user: @student, script: script, level: level2, locked: false
 
     lockable_state = lesson.lockable_state [@student]
 
@@ -36,7 +36,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test "lockable_state with swapped level with user_level for active level" do
     script, level1, _, lesson, _ = create_swapped_lockable_lesson
-    create :user_level, user: @student, script: script, level: level1, unlocked_at: Time.now
+    create :user_level, user: @student, script: script, level: level1, locked: false
 
     lockable_state = lesson.lockable_state [@student]
 
@@ -207,7 +207,7 @@ class LessonTest < ActiveSupport::TestCase
       }
     )
 
-    summary = lesson.summarize_for_lesson_show(@student)
+    summary = lesson.summarize_for_lesson_show(@student, false)
     assert_equal 'lesson-1', summary[:key]
     assert_equal 'lesson overview', summary[:overview]
     assert_equal 'learning', summary[:purpose]
@@ -341,7 +341,7 @@ class LessonTest < ActiveSupport::TestCase
     Services::MarkdownPreprocessor.expects(:process).
       with(lesson.assessment_opportunities)
 
-    lesson.summarize_for_lesson_show(create(:user))
+    lesson.summarize_for_lesson_show(create(:user), false)
   end
 
   test 'can summarize lesson for lesson plan dropdown' do
@@ -803,8 +803,29 @@ class LessonTest < ActiveSupport::TestCase
     script.seeded_from = Time.now.to_s
     assert_equal(
       new_lesson.lesson_plan_pdf_url,
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/Some Verbose Lesson Name.pdf"
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/teacher-lesson-plans/Some Verbose Lesson Name.pdf"
     )
+  end
+
+  test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
+    script = create :script, is_migrated: true, hidden: true, include_student_lesson_plans: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
+
+    script.seeded_from = Time.now.to_s
+    assert_equal(
+      new_lesson.student_lesson_plan_pdf_url,
+      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some Verbose Lesson Name.pdf"
+    )
+  end
+
+  test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
+    script = create :script, include_student_lesson_plans: true
+    new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
+
+    script.seeded_from = Time.now.to_s
+    assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
   def create_swapped_lockable_lesson
