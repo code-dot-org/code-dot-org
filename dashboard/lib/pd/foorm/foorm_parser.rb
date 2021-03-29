@@ -51,7 +51,9 @@ module Pd::Foorm
       parsed_forms
     end
 
-    # Parse single form, and return a readable version of its questions.
+    # Parse the questions of a single form, and return a readable version.
+    # @param [String] form_questions Unparsed JSON string containing a Form's questions.
+    # @return [Hash] Hash with two keys (:general and :facilitator), containing a readable version of the questions asked in a Form.
     def self.parse_form_questions(form_questions)
       form_questions_parsed_from_json = JSON.parse(form_questions)
       parsed_form_questions = {general: {}, facilitator: {}}

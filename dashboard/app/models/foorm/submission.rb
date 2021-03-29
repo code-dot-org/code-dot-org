@@ -53,6 +53,9 @@ class Foorm::Submission < ApplicationRecord
   # For a given question_id-answer key-value pair from a submission's answers,
   # returns a hash with either a single key-value pair (for question types other than matrix) and a human readable response to a question,
   # or a hash with multiple values (for matrix questions) with a human readable response to each sub-question.
+  # @param [String] question_id
+  # @param [String] answer the stored value representing a user's answer to a question (either a key that can be paired with a human readable answer, or the answer itself)
+  # @return [Hash] a human readable version of the answer(s) associated with a given question ID
   def get_formatted_answer(question_id, answer)
     question_details = form.get_question_details(question_id)
 
