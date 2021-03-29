@@ -83,7 +83,8 @@ header.build = function(
   const linesOfCodeText = progressData.linesOfCodeText;
   let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  // Set up the store immediately.
+  // Set up the store immediately. Note that some progress values are populated
+  // asynchronously.
   progress.generateStageProgress(
     scriptData,
     lessonGroupData,

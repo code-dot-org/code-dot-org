@@ -308,8 +308,8 @@ function loadAppAsync(appOptions) {
         appOptions.disableSocialShare = data.disableSocialShare;
 
         // We do not need to process data.progress here because labs do not use
-        // the the level progress data directly. (The progress bubbles in the
-        // header of the level pages are rendered by header.build in header.js.)
+        // the level progress data directly. (The progress bubbles in the header
+        // of the level pages are rendered by header.build in header.js.)
 
         if (data.lastAttempt) {
           appOptions.level.lastAttempt = data.lastAttempt.source;
