@@ -254,11 +254,24 @@ class ScriptLevelsController < ApplicationController
       params[:stage_position].to_i
       )
     @script = @stage.script
+    script_bonus_levels_by_stage = @script.get_bonus_script_levels(@stage)
+
+    # get user progress for bonus levels
+    script_bonus_levels_by_stage.each do |stage|
+      stage[:levels].each do |level_summary|
+        user_level = UserLevel.find_by(
+          level_id: level_summary[:level_id], user_id: user.id, script: @script
+        )
+        level_summary[:perfect] = user_level ? true : false
+        level_summary[:display_name] ||= I18n.t('lesson_extras.bonus_level')
+      end
+    end
+
     @stage_extras = {
       next_stage_number: @stage.next_level_number_for_lesson_extras(user),
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_lesson_extras(user),
-      bonus_levels: @script.get_bonus_script_levels(@stage, user),
+      bonus_levels: script_bonus_levels_by_stage,
     }.camelize_keys
     @bonus_level_ids = @stage.script_levels.where(bonus: true).map(
       &:level_ids
