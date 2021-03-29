@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-12-04T22:00:59.000Z",
-  "level_num": "custom",
-  "user_id": 832,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -23,7 +19,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\n* Add the `onEvent` blocks listed in Step 5 in your Planning Guide\r\n* Begin adding programming statements to each `onEvent` block\r\n* Keep in mind the requirements for the app:\r\n\t* Uses at least three screens\r\n\t* Includes examples of images, audio, and text\r\n\t* A clear and easy to navigate user interface\r\n\t* Clearly communicates information about your topic\r\n\t* Code is cleanly written and free of errors\r\n",
+    "long_instructions": "# Do This\r\n\r\n* Add the `onEvent` blocks listed in Step 6 in your Planning Guide\r\n* Begin adding programming statements to each `onEvent` block\r\n* Keep in mind the requirements for the app:\r\n\t* Uses at least three screens\r\n\t* Includes examples of images, audio, and text\r\n\t* A clear and easy to navigate user interface\r\n\t* Clearly communicates information about your topic\r\n\t* Code is cleanly written and free of errors\r\n",
     "mini_rubric": "false",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
@@ -49,11 +45,20 @@
     "project_template_level_name": "CSP U3 App Development Project Template_2021",
     "widget_mode": "false",
     "name_suffix": "_2021",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "libraries_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2020-12-04T22:00:59.000Z",
+  "level_num": "custom",
+  "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-06-17 15:31:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-17 15:34:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-20 20:22:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"hide_design_mode\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-21 13:27:30 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"start_blocks\",\"design_mode_at_start\",\"hide_design_mode\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-03 13:33:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"design_mode_at_start\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-03 14:13:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-16 19:44:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-04 18:09:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-06-17 15:31:49 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-17 15:34:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-20 20:22:17 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"hide_design_mode\",\"hide_view_data_button\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-06-21 13:27:30 +0000\",\"changed\":[\"code_functions\",\"embed\",\"long_instructions\",\"start_blocks\",\"design_mode_at_start\",\"hide_design_mode\",\"start_html\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-03 13:33:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"design_mode_at_start\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-03 14:13:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-10-16 19:44:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-04 18:09:46 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-03-26 23:22:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
