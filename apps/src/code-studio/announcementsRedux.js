@@ -23,8 +23,7 @@ export const announcementShape = PropTypes.shape({
   details: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
-  visibility: PropTypes.oneOf(Object.values(VisibilityType)),
-  analyticsData: PropTypes.object
+  visibility: PropTypes.oneOf(Object.values(VisibilityType))
 });
 
 export default function announcements(state = [], action) {

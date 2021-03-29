@@ -31,11 +31,3 @@ export const fakeOldTeacherAnnouncement = {
   link: '/foo/bar/teacher',
   type: NotificationType.information
 };
-
-export const fakeTeacherAnnouncementWithAnalyticsData = {
-  ...fakeTeacherAnnouncement,
-  analyticsData: {
-    user_id: 1,
-    script_id: 2
-  }
-};

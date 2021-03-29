@@ -42,10 +42,9 @@ const announcement = {
   dismissible: false
 };
 
-const announcementWithAnalyticsData = {
-  ...announcement,
-  analyticId: 'sample_announcement',
-  analyticsData: {user_id: 1, important_data_point: 2}
+const firehoseAnalyticsData = {
+  user_id: 1,
+  important_data_point: 2
 };
 
 export default storybook => {
@@ -158,10 +157,11 @@ export default storybook => {
         story: () => (
           <Notification
             type="bullhorn"
-            {...announcementWithAnalyticsData}
+            {...announcement}
             buttonText="Learn more"
             buttonLink="/"
             newWindow={true}
+            firehoseAnalyticsData={firehoseAnalyticsData}
           />
         )
       },

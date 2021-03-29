@@ -119,21 +119,10 @@ class ScriptOverviewHeader extends Component {
     });
   };
 
-  getAnnouncementsWithAnalyticsData() {
-    return this.props.announcements.map(announcement => {
-      return {
-        ...announcement,
-        analyticsData: {
-          script_id: this.props.scriptId,
-          user_id: this.props.userId
-        }
-      };
-    });
-  }
-
   render() {
     const {
       plcHeaderProps,
+      scriptId,
       scriptName,
       scriptTitle,
       scriptDescription,
@@ -187,9 +176,13 @@ class ScriptOverviewHeader extends Component {
         )}
         {isSignedIn && (
           <Announcements
-            announcements={this.getAnnouncementsWithAnalyticsData()}
+            announcements={this.props.announcements}
             width={SCRIPT_OVERVIEW_WIDTH}
             viewAs={viewAs}
+            firehoseAnalyticsData={{
+              script_id: scriptId,
+              user_id: userId
+            }}
           />
         )}
         {userId && <StudentFeedbackNotification studentId={userId} />}
