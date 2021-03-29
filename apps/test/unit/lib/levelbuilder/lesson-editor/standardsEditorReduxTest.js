@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import standardsEditor, {
+import createStandardsEditor, {
   addStandard,
   removeStandard
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
@@ -27,13 +27,16 @@ const fakeStandards = [
 const getInitialState = () => _.cloneDeep(fakeStandards);
 
 describe('standardsEditorRedux reducer', () => {
-  let initialState;
-  beforeEach(() => (initialState = getInitialState()));
+  let initialState, standardsEditor;
+  beforeEach(() => {
+    standardsEditor = createStandardsEditor('standard');
+    initialState = getInitialState();
+  });
 
   it('add standard', () => {
     const nextState = standardsEditor(
       initialState,
-      addStandard({
+      addStandard('standard', {
         frameworkShortcode: 'framework-1',
         frameworkName: 'Framework One',
         categoryShortcode: 'CS',
@@ -52,7 +55,10 @@ describe('standardsEditorRedux reducer', () => {
   it('removes standard', () => {
     const nextState = standardsEditor(
       initialState,
-      removeStandard('framework-1', 'shortcode-1')
+      removeStandard('standard', {
+        frameworkShortcode: 'framework-1',
+        shortcode: 'shortcode-1'
+      })
     );
     assert.deepEqual(nextState.map(s => s.shortcode), ['shortcode-2']);
   });

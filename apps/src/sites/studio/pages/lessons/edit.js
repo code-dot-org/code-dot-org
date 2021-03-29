@@ -10,7 +10,7 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import standardsEditor, {
+import createStandardsReducer, {
   initStandards
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
@@ -37,7 +37,7 @@ $(document).ready(function() {
     resources: resourcesEditor,
     vocabularies: vocabulariesEditor,
     programmingExpressions: programmingExpressionsEditor,
-    standards: standardsEditor
+    standards: createStandardsReducer('standard')
   });
   const store = getStore();
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
   store.dispatch(
     initProgrammingExpressions(lessonData.programmingExpressions || [])
   );
-  store.dispatch(initStandards(lessonData.standards || []));
+  store.dispatch(initStandards('standard', lessonData.standards || []));
 
   ReactDOM.render(
     <Provider store={store}>
