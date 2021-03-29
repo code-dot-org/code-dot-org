@@ -178,7 +178,7 @@ module UsersHelper
             submitted = !!ul.try(:submitted) &&
               !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
             readonly_answers = !!ul.try(:readonly_answers)
-            locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
+            locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
             if completion_status == LEVEL_STATUS.not_tried
               # for now, we don't allow authorized teachers to be "locked"
               if locked && !user.authorized_teacher?
@@ -208,7 +208,7 @@ module UsersHelper
         submitted = !!ul.try(:submitted) &&
           !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
         readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:locked?, sl.lesson) || sl.lesson.lockable? && !ul
+        locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
 
         if completion_status == LEVEL_STATUS.not_tried
           # for now, we don't allow authorized teachers to be "locked"

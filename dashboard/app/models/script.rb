@@ -1477,6 +1477,22 @@ class Script < ApplicationRecord
     summary
   end
 
+  def summarize_for_rollup(user = nil)
+    summary = {
+      title: title_for_display,
+      name: name,
+      link: script_path(self)
+    }
+
+    # Filter out stages that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    # Only get lessons with lesson plans
+    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
+
+    summary
+  end
+
   def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)

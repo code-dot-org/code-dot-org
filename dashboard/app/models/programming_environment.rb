@@ -46,4 +46,8 @@ class ProgrammingEnvironment < ApplicationRecord
     environment.update! properties
     environment.name
   end
+
+  def summarize_for_lesson_edit
+    {id: id, name: name}
+  end
 end
