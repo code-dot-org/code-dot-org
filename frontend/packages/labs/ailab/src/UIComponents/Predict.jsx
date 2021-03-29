@@ -50,7 +50,7 @@ class Predict extends Component {
                 let max = this.props.rangesByColumn[feature].max.toFixed(2);
 
                 return (
-                  <div key={index}>
+                  <div style={styles.cardRow} key={index}>
                     <label>
                       {feature} {`(min: ${+min}, max: ${+max})`}
                       : &nbsp;
@@ -60,6 +60,7 @@ class Predict extends Component {
                         value={this.props.testData[feature]}
                       />
                     </label>
+
                   </div>
                 );
               })}
