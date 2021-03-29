@@ -1139,6 +1139,8 @@ export function getPanelButtons(state) {
     prev = null;
     next = isPanelEnabled(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
+      : isPanelEnabled(state, "dataDisplayFeatures")
+      ? { panel: "dataDisplayFeatures", text: "Continue" }
       : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev = isPanelEnabled(state, "selectDataset")
