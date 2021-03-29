@@ -46,13 +46,14 @@ class Predict extends Component {
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
+                let min = this.props.rangesByColumn[feature].min.toFixed(2);
+                let max = this.props.rangesByColumn[feature].max.toFixed(2);
+
                 return (
                   <div key={index}>
                     <label>
-                      {feature} (min:{" "}
-                      {+this.props.rangesByColumn[feature].min.toFixed(2)}, max:{" "}
-                      {+this.props.rangesByColumn[feature].max.toFixed(2)}
-                      ): &nbsp;
+                      {feature} {`(min: ${+min}, max: ${+max})`}
+                      : &nbsp;
                       <input
                         type="number"
                         onChange={event => this.handleChange(event, feature)}
