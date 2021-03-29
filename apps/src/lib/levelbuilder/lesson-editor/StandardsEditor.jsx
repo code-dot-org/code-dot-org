@@ -140,8 +140,7 @@ class StandardsEditor extends Component {
   };
 
   removeStandard = () => {
-    const {frameworkShortcode, shortcode} = this.state.standardToRemove;
-    this.props.removeStandard(frameworkShortcode, shortcode);
+    this.props.removeStandard('standard', this.state.standardToRemove);
     this.handleRemoveStandardDialogClose();
   };
 
@@ -170,7 +169,7 @@ class StandardsEditor extends Component {
   };
 
   onSearchSelect = option => {
-    this.props.addStandard(option.standard);
+    this.props.addStandard('standard', option.standard);
   };
 
   render() {
