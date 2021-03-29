@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
+import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
@@ -14,7 +15,9 @@ import {
   relatedLessonShape,
   activityShape,
   resourceShape,
-  vocabularyShape
+  vocabularyShape,
+  programmingExpressionShape,
+  standardShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -63,7 +66,9 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
-    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
+    programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
+      .isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -119,6 +124,9 @@ class LessonEditor extends Component {
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        programmingExpressions: JSON.stringify(
+          this.props.programmingExpressions
+        ),
         standards: JSON.stringify(this.props.standards),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
@@ -411,6 +419,14 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection
+              title="Code"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <ProgrammingExpressionsEditor />
+            </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
               title="Objectives"
               collapsed={true}
               fullWidth={true}
@@ -451,6 +467,7 @@ export default connect(
     activities: state.activities,
     resources: state.resources,
     vocabularies: state.vocabularies,
+    programmingExpressions: state.programmingExpressions,
     standards: state.standards
   }),
   {
