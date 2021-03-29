@@ -40,7 +40,8 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_many :resources, join_table: :scripts_resources
+  has_and_belongs_to_many :resources, join_table: :scripts_resources
+  has_many :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -86,11 +87,13 @@ class Script < ApplicationRecord
             :resources,
             :vocabularies,
             :programming_expressions,
-            :objectives
+            :objectives,
+            :standards
           ]
         },
         :script_levels,
-        :levels
+        :levels,
+        :resources
       ]
     )
   end
@@ -1458,6 +1461,22 @@ class Script < ApplicationRecord
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
+
+    summary
+  end
+
+  def summarize_for_rollup(user = nil)
+    summary = {
+      title: title_for_display,
+      name: name,
+      link: script_path(self)
+    }
+
+    # Filter out stages that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    # Only get lessons with lesson plans
+    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
 
     summary
   end

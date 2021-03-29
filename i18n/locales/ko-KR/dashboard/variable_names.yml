@@ -5,6 +5,7 @@ ko:
       Green: 녹색
       Red: 빨간색
       actor: 캐릭터
+      birds: 새들
       cats: 모든 고양이
       color: 색깔
       counter: counter
@@ -21,6 +22,7 @@ ko:
       repeat: 반복
       right: 오른쪽으로
       score: 점수
+      shout: 소리지름
       size: 크기
       speed: 스피드
       variable: 변수

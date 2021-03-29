@@ -2495,9 +2495,11 @@ ne:
             csf_digcit:
               display_name: Digital Citizenship
             csf_variables:
-              display_name: Variables
+              display_name: For Loops
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-8:
+              display_name: Variables
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2521,6 +2523,8 @@ ne:
             ramp_up:
               display_name: Introduction
             lessonGroup-3:
+              display_name: Variables
+            variables:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:

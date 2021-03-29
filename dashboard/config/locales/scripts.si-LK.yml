@@ -2683,11 +2683,15 @@ si:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_variables:
-              display_name: විචල්‍යන්
+              display_name: ලූපයන් සඳහා
             csf_data:
               display_name: දත්ත
             csf_for_loops:
               display_name: ලූපයන් සඳහා
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: ඉවත් කරන්න
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2711,6 +2715,8 @@ si:
             ramp_up:
               display_name: හැදින්වීම
             lessonGroup-3:
+              display_name: විචල්‍යන්
+            variables:
               display_name: විචල්‍යන්
         k5-onlinepd-2021:
           lessons:

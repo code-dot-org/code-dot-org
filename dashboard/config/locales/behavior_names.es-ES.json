@@ -175,7 +175,8 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "rolling": "rodar"
         },
         "behaviors 6_2020": {
           "running east": "corriendo hacia el este\n",
@@ -190,7 +191,8 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "rolling": "rodar"
         },
         "behaviors 7": {
           "running east": "corriendo hacia el este\n",
@@ -205,7 +207,8 @@
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
           "patrolling": "patrullando",
-          "moving east": "avanzando al este"
+          "moving east": "avanzando al este",
+          "rolling": "rodar"
         },
         "behaviors 7_2020": {
           "running east": "corriendo hacia el este\n",
@@ -220,7 +223,8 @@
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
           "patrolling": "patrullando",
-          "moving east": "avanzando al este"
+          "moving east": "avanzando al este",
+          "rolling": "rodar"
         },
         "behaviors free play": {
           "spinning and growing": "girando y creciendo"
@@ -938,7 +942,9 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "drive left": "conducir a la izquierda",
+          "drive right": "conducir a la derecha"
         },
         "courseE_aboutme_1": {
           "wandering": "vagando",
@@ -1098,13 +1104,16 @@
           "swimming left and right": "nadando a izquierda y derecha"
         },
         "outbreak1": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando"
         },
         "outbreak2": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando"
         },
         "outbreak3": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando"
         },
         "outbreak4": {
           "wandering": "vagando",
@@ -1118,13 +1127,17 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "recovering": "recuperando",
+          "moving with arrow keys": "moverse con las flechas del teclado"
         },
         "outbreak5": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando"
         },
         "outbreak6": {
-          "wandering": "vagando"
+          "wandering": "vagando",
+          "recovering": "recuperando"
         },
         "outbreak7": {
           "wandering": "vagando",
@@ -1137,7 +1150,10 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "recovering": "recuperando",
+          "moving with arrow keys": "moverse con las flechas del teclado",
+          "moving left and right": "moviéndose a la izquierda y a la derecha"
         },
         "outbreak8": {
           "wandering": "vagando",
@@ -1150,7 +1166,10 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "recovering": "recuperando",
+          "moving with arrow keys": "moverse con las flechas del teclado",
+          "moving left and right": "moviéndose a la izquierda y a la derecha"
         },
         "outbreak_freeplay": {
           "wandering": "vagando",
@@ -1163,7 +1182,10 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "recovering": "recuperando",
+          "moving with arrow keys": "moverse con las flechas del teclado",
+          "moving left and right": "moviéndose a la izquierda y a la derecha"
         },
         "outbreak_freeplay_basic": {
           "wandering": "vagando",
@@ -1176,7 +1198,10 @@
           "moving north": "avanzando hacia el norte",
           "jittering": "nerviosismo",
           "moving west": "avanzando hacia el oeste",
-          "patrolling": "patrullando"
+          "patrolling": "patrullando",
+          "recovering": "recuperando",
+          "moving with arrow keys": "moverse con las flechas del teclado",
+          "moving left and right": "moviéndose a la izquierda y a la derecha"
         }
       }
     }

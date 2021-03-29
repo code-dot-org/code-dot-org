@@ -144,6 +144,8 @@ te:
             Dance Party:
               key: డాన్స్ పార్టీ
               name: డాన్స్ పార్టీ
+            lesson-1:
+              name: డాన్స్ పార్టీ
         pre-express-2021:
           lesson_groups:
             csf_events:

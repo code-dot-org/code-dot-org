@@ -712,7 +712,7 @@ class Blockly < Level
   end
 
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
+    Rails.cache.fetch("shared_functions/#{I18n.locale}/#{type}", force: !Script.should_cache?) do
       SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
     end.join
   end
@@ -790,5 +790,15 @@ class Blockly < Level
     if goal_override&.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        longInstructions: localized_long_instructions || long_instructions,
+        shortInstructions: localized_short_instructions || short_instructions,
+        skin: skin
+      }
+    )
   end
 end

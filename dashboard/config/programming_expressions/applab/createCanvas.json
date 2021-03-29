@@ -1,0 +1,13 @@
+{
+  "func": "createCanvas",
+  "category": "Canvas",
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 3
+  },
+  "paletteParams": [
+    "id",
+    "width",
+    "height"
+  ]
+}

@@ -26,8 +26,10 @@ class LessonsProgrammingExpression < ApplicationRecord
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.select {|l| l.id == lesson_id}.first
     my_programming_expression = seed_context.programming_expressions.select {|pe| pe.id == programming_expression_id}.first
+    my_programming_environment = seed_context.programming_environments.select {|pe| pe.id == my_programming_expression.programming_environment_id}.first
     {
       'lesson.key' => my_lesson.key,
+      'programming_environment.name' => my_programming_environment.name,
       'programming_expression.key' => my_programming_expression.key
     }.stringify_keys
   end

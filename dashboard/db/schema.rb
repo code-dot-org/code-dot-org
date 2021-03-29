@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_13_061652) do
+ActiveRecord::Schema.define(version: 2021_03_26_002952) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1272,6 +1272,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_programming_environments_on_name", unique: true
   end
 
   create_table "programming_expressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1483,7 +1484,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
-  create_table "scripts_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "scripts_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "script_id"
     t.integer "resource_id"
     t.index ["resource_id", "script_id"], name: "index_scripts_resources_on_resource_id_and_script_id"
@@ -1608,16 +1609,14 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
   end
 
   create_table "standards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
-    t.string "organization"
-    t.string "organization_id"
     t.text "description"
-    t.text "concept"
     t.bigint "category_id"
     t.integer "framework_id"
     t.string "shortcode"
     t.index ["category_id"], name: "index_standards_on_category_id"
+    t.index ["description"], name: "index_standards_on_description", type: :fulltext
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
-    t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true
+    t.index ["shortcode", "description"], name: "index_standards_on_shortcode_and_description", type: :fulltext
   end
 
   create_table "state_cs_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1680,7 +1679,6 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.integer "student_visit_count"
     t.datetime "student_first_visited_at"
     t.datetime "student_last_visited_at"
-    t.integer "script_level_id"
     t.datetime "seen_on_feedback_page_at"
     t.integer "script_id", null: false
     t.integer "analytics_section_id"
@@ -1719,7 +1717,7 @@ ActiveRecord::Schema.define(version: 2021_03_13_061652) do
     t.index ["name"], name: "index_unit_groups_on_name"
   end
 
-  create_table "unit_groups_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "unit_groups_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "unit_group_id"
     t.integer "resource_id"
     t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
