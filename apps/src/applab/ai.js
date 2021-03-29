@@ -31,13 +31,13 @@ function generateCodeDesignElements(modelId, modelData) {
       });
       y = y + SPACER_PIXELS;
     } else {
+      label.textContent = feature;
       var labelMinMax = designMode.createElement('LABEL', x, y);
       var min = modelData.extremumsByColumn[feature].min.toFixed(2);
       var max = modelData.extremumsByColumn[feature].max.toFixed(2);
       labelMinMax.textContent = `(min: ${+min}, max: ${+max}):`;
       labelMinMax.style.width = '300px';
       y = y + SPACER_PIXELS;
-      label.textContent = feature;
       var input = designMode.createElement('TEXT_INPUT', x, y);
       fieldId = alphaNumFeature + '_input';
       input.id = 'design_' + fieldId;
