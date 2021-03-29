@@ -49,7 +49,7 @@ class DataTable extends Component {
       }
     }
 
-    return { ...style, ...styles.tableHeader };
+    return { ...styles.tableHeader, ...styles.dataDisplayHeaderUnselected, ...style };
   };
 
   getColumnCellStyle = key => {
@@ -81,7 +81,7 @@ class DataTable extends Component {
       }
     }
 
-    return { ...style, ...styles.tableCell };
+    return { ...styles.dataDisplayCell, ...style };
   };
 
   getColumns = () => {

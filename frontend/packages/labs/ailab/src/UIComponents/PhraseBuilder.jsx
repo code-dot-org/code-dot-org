@@ -66,7 +66,9 @@ class PhraseBuilder extends Component {
                 onChange={this.handleChangeLabelSelect}
                 style={styles.phraseBuilderSelect}
               >
-                <option>{""}</option>
+                <option key="default" value="" disabled>
+                  Choose Label
+                </option>
                 {selectableLabels.map((feature, index) => {
                   return (
                     <option key={index} value={feature}>

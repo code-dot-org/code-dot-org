@@ -205,7 +205,8 @@ export const styles = {
   displayTable: {
     whiteSpace: "nowrap",
     borderSpacing: 0,
-    width: "100%"
+    width: "100%",
+    borderCollapse: "collapse"
   },
 
   tableParent: {
@@ -225,6 +226,58 @@ export const styles = {
     fontSize: 12
   },
 
+  dataDisplayHeaderUnselected: {
+    backgroundColor: "white",
+    color: "#4d575f",
+    borderStyle: "solid solid solid solid",
+    borderWidth: 1,
+    borderColor: "white", // #c6cacd",
+    padding: 7,
+    fontSize: 14
+  },
+  dataDisplayHeaderHighlighted: {
+    backgroundColor: "#64fff16b",
+    color: "white",
+    borderStyle: "solid solid solid solid",
+    borderWidth: 1,
+    borderColor: "#00adbc #00adbc grey #00adbc",
+    padding: 7
+  },
+  dataDisplayHeaderSelected: {
+    color: "black",
+    backgroundColor: "white",
+    borderStyle: "solid solid solid solid",
+    borderWidth: 1,
+    borderColor: "#00adbc #00adbc #00adbc green",
+    padding: 7
+  },
+
+  dataDisplayCell: {
+    padding: 3,
+    paddingLeft: 20,
+    textAlign: "right",
+    fontSize: 12,
+    color: "#4d575f",
+    backgroundColor: "#f2f2f2",
+    borderStyle: "solid solid solid solid",
+    borderWidth: 1,
+    borderColor: "white" // "#c6cacd"
+  },
+  dataDisplayCellHighlighted: {
+    backgroundColor: "#d6f2fa", // #64fff16b",
+    borderStyle: "solid none",
+    borderWidth: 1,
+    borderColor: "#d6f2fa", // "#c6cacd" // "#c6cacd #00adbc #c6cacd #00adbc"
+    cursor: "pointer"
+  },
+  dataDisplayCellSelected: {
+    color: "black",
+    backgroundColor: "#d6f2fa",
+    borderStyle: "solid none",
+    borderWidth: 1,
+    borderColor: "#d6f2fa" // "#bae5f1" // "#c6cacd" // "#c6cacd #00adbc #c6cacd #00adbc"
+  },
+
   dataDisplayHeaderLabelSelected: {
     backgroundColor: labelColor,
     color: "yellow"
@@ -233,10 +286,7 @@ export const styles = {
     backgroundColor: featureColor,
     color: "yellow"
   },
-  dataDisplayHeaderSelected: {
-    color: "yellow",
-    backgroundColor: "black"
-  },
+
   dataDisplayHeaderLabelUnselected: {
     backgroundColor: labelColor,
     color: "white"
@@ -245,14 +295,7 @@ export const styles = {
     backgroundColor: featureColor,
     color: "white"
   },
-  dataDisplayHeaderUnselected: {
-    backgroundColor: "black",
-    color: "white"
-  },
-  dataDisplayHeaderHighlighted: {
-    backgroundColor: "#64fff16b",
-    color: "white"
-  },
+
   tableCell: {
     paddingLeft: 20,
     textAlign: "right",
@@ -266,10 +309,7 @@ export const styles = {
     backgroundColor: featureColor,
     color: "yellow"
   },
-  dataDisplayCellSelected: {
-    color: "yellow",
-    backgroundColor: "grey"
-  },
+
   dataDisplayCellLabelUnselected: {
     backgroundColor: labelColorSemi
   },
@@ -277,8 +317,6 @@ export const styles = {
     backgroundColor: featureColor
   },
   dataDisplayCellUnselected: {},
-
-  dataDisplayCellHighlighted: { backgroundColor: "#64fff16b" },
 
   crossTabCell0: {
     backgroundColor: "rgba(255,100,100, 0)"
