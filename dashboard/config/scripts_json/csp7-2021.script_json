@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:56:45 UTC",
+    "serialized_at": "2021-03-24 21:40:56 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -967,7 +967,7 @@
       "key": "0a9e16b9-e27e-4ef3-a1a4-ecbaba11b800",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg) | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg) | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg)| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg)| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg)| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg)| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg)| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg)|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg)| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg)| **Say:** Let's open the envelope and check out how this function works. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg)| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg)| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg)| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg)| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg)| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg)| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg)| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg)| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
+        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg) | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg) | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg)| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg)| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg)| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg)| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg)| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg)|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg)| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg)| **Say:** Let's open the envelope and check out how this function works. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg)| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg)| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg)| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg)| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg)| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg)| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg)| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg)| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
         "name": "Functions with Parameters and Return\r"
       },
       "seeding_key": {
@@ -3562,30 +3562,6 @@
       }
     },
     {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
       "name": "CSP Parameters and Return Make - Rock Paper Scissors App",
       "url": "https://docs.google.com/document/d/1SoiuvHw0tuSUZe9vL4hmRzyPrH_2IIOvD7LgkGtEph8/edit",
       "key": "parameters-and-return-make-activity-guide",
@@ -3599,54 +3575,6 @@
       }
     },
     {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
       "name": "Project Guide - Make a Library",
       "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
       "key": "project-make-a-library",
@@ -3657,80 +3585,6 @@
       },
       "seeding_key": {
         "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "Project Guide - Make a Library",
-      "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
-      "key": "project-make-a-library",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "Project Guide - Make a Library",
-      "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
-      "key": "project-make-a-library",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
   ],
@@ -3831,6 +3685,9 @@
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
 
@@ -4110,6 +3967,470 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Library Part 3",
         "objective.key": "efa4b437-61f3-4a0f-a7cf-6e1f3056af68"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
       }
     }
   ]

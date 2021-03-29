@@ -26261,10 +26261,6 @@ es:
               description_student: "¿Recuerdas al principio del curso cuando hiciste
                 dibujos con código? ¡En esta lección trabajarás con un equipo para
                 hacer algo muy similar!"
-              description_teacher: Esta actividad comenzará con una breve lección
-                sobre debugging y persistencia, luego pasará rápidamente a una carrera
-                contrarreloj a medida que los estudiantes se dividen en equipos y
-                trabajan juntos para escribir un programa a la vez.
             Debugging in Collector:
               key: Depuración en Recolector
               name: Depuración con Laurel
@@ -26832,7 +26828,6 @@ es:
               description_teacher: Aquí, los estudiantes usarán el Laboratorio de
                 sprites para crear tus propios comportamientos personalizados.
             Virtual Pet:
-              name: Mascota Virtual
               description_student: En esta lección, los estudiantes crearán una Mascota
                 Virtual interactiva que luce y se comporta como ellos desean. Los
                 estudiantes usarán la herramienta "Disfraces" del Laboratorio de sprites
@@ -26863,23 +26858,29 @@ es:
               description_teacher: 'En esta lección, los estudiantes aprenderán sobre
                 accesibilidad y sobre el valor de la empatía mediante la reflexión
                 y el diseño de soluciones accesibles para aplicaciones hipotéticas. '
+            lesson-6:
+              name: Presentamos el Laboratorio de sprites
+            lesson-8:
+              name: Sprites en acción
           lesson_groups:
             ramp_up:
               display_name: Avanzar
             csf_digcit:
               display_name: Ciudadanía Digital
             csf_variables:
-              display_name: Variables
+              display_name: Bucles Para
             csf_data:
               display_name: Datos
             csf_for_loops:
               display_name: Bucles Para
             csf_sprites:
-              display_name: Sprites
+              display_name: Impactos de la computación
             end_of_course_project:
               display_name: Proyecto de fin de curso
             lessonGroup-8:
-              display_name: Impactos de la computación
+              display_name: Variables
+            lessonGroup-9:
+              display_name: Eliminar
           student_description: Aprende a usar diferentes tipos de bucles, eventos,
             funciones y condicionales. Investiga distintas técnicas de resolución
             de problemas y debate sobre el impacto de la computación y de Internet
@@ -26907,8 +26908,8 @@ es:
             Programming with Angry Birds:
               key: Programación con Angry Birds
               name: Programación con Angry Birds
-              description_student: Aprende acerca de las secuencias y los algoritmos
-                con Angry Birds.
+              description_student: Crea programas para ayudar al Angry Bird a moverse
+                a través del laberinto.
               description_teacher: A partir de los personajes del juego Angry Birds,
                 los estudiantes desarrollarán algoritmos secuenciales que les permitirán
                 mover al pájaro desde un lado del laberinto hacia el cerdo que se
@@ -26989,8 +26990,8 @@ es:
                 habilidades de patinaje sobre hielo de Anna y Elsa.
             'Looking Ahead with Minecraft ':
               name: Mirando hacia el Futuro con Minecraft
-              description_student: "¡Evita la lava! Aquí aprenderás sobre condicionales
-                en el mundo de Minecraft."
+              description_student: "¡Evita la lava! Aquí empezarás a aprender sobre
+                condicionales en el mundo de Minecraft."
               description_teacher: Esta lección se creó originalmente para la Hora
                 del Código, en colaboración con el equipo de Minecraft. Los estudiantes
                 tendrán la oportunidad de practicar las ideas que han aprendido hasta
@@ -27011,17 +27012,6 @@ es:
               name: Bucles 'mientras' en la Granjera
               description_student: 'Los loops son tan útiles en la codificación. Esta
                 lección te enseñará sobre un nuevo tipo de loops: ¡loops mientras!'
-              description_teacher: "Para el momento en que los estudiantes lleguen
-                a esta lección, ya deberían haber practicado lo suficiente con los
-                bucles `repetir`. Ahora es tiempo de combinar todo. \r\n\r\nLos _bucles
-                `mientras`_ son bucles que repiten comandos mientras se cumple alguna
-                condición. Los bucles `mientras` se usan cuando el programador no
-                conoce el número exacto de veces que se deben repetir los comandos,
-                pero sí sabe qué condición debe existir para que el bucle se siga
-                repitiendo. Por ejemplo, los estudiantes trabajarán para llenar hoyos
-                y sacar tierra en la Granjera. No conocerán el tamaño de los hoyos
-                ni la altura de las montañas de tierra, pero sabrán que necesitan
-                seguir haciendo esas acciones mientras el suelo no esté plano."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Condicionales en Minecraft: Voyage Aquatic'
               name: 'Condicionales en Minecraft: Voyage Aquatic'
@@ -27136,8 +27126,8 @@ es:
             Alien Dance Party:
               key: Fiesta de baile extraterrestre
               name: Fiesta de baile extraterrestre
-              description_student: Practica hacer juegos para compartir con tus amigos
-                y familiares.
+              description_student: Crea un proyecto interactivo que puedes compartir
+                con tus compañeros de clase.
             Behaviors in Sprite Lab:
               key: Editar comportamientos
               name: Editar comportamientos
@@ -27165,6 +27155,13 @@ es:
               name: Proyecto de fin de curso
               description_student: "¡Prepara las manos para mucha programación! Llegó
                 el momento de comenzar a crear tu proyecto."
+            lesson-1:
+              name: Fiesta de baile
+              description_student: "¡Es el momento de celebrar! En esta lección, programarás
+                tu propia fiesta de baile interactiva."
+              description_teacher: En esta lección, los estudiantes programarán su
+                propia fiesta de baile interactiva. Esta actividad requiere el uso
+                de sonido, ya que la herramienta responde a la música.
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -27296,6 +27293,8 @@ es:
               name: Presentamos el Laboratorio de sprites
             Sprites in Action:
               name: Sprites en acción
+            introducing-spritelab:
+              name: Presentamos el Laboratorio de sprites
           lesson_groups:
             ramp_up:
               display_name: Introducción
@@ -27303,6 +27302,8 @@ es:
               display_name: Variables
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: Variables
         csd4-preview-2021:
           description: La Unidad 4 introduce los impactos sociales más amplios que
             tiene la computación. A través de una serie de desafíos de diseño, aprenderás

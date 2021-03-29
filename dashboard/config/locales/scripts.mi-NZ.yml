@@ -2378,13 +2378,17 @@ mi:
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
             csf_variables:
-              display_name: Ngā Taurangi
+              display_name: Mō Ngā Koromeke
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            lessonGroup-8:
+              display_name: Ngā Taurangi
         express-2021:
           lessons:
             Dance Party:
               key: Te Pāti Kanikani
+              name: Te Pāti Kanikani
+            lesson-1:
               name: Te Pāti Kanikani
           lesson_groups:
             csf_loops:
@@ -2408,6 +2412,8 @@ mi:
             ramp_up:
               display_name: Kupu Whakataki
             lessonGroup-3:
+              display_name: Ngā Taurangi
+            variables:
               display_name: Ngā Taurangi
         k5-onlinepd-2021:
           lessons:

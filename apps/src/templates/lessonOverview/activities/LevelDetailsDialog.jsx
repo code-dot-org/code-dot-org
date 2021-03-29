@@ -67,8 +67,25 @@ class LevelDetailsDialog extends Component {
       );
     } else if (level.type === 'LevelGroup') {
       return (
+        <SafeMarkdown
+          markdown={i18n.levelGroupDetailsDialogText({
+            buttonText: i18n.seeFullLevel()
+          })}
+        />
+      );
+    } else if (level.containedLevels && level.containedLevels.length > 0) {
+      return (
         <div>
-          {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
+          {level.containedLevels.map(l => (
+            <div key={l.name}>{this.getComponentContent(l)}</div>
+          ))}
+        </div>
+      );
+    } else if (level.type === 'Match' || level.type === 'Multi') {
+      return (
+        <div>
+          {level.question && <SafeMarkdown markdown={level.question} />}
+          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
         </div>
       );
     } else if (level.type === 'BubbleChoice') {
@@ -83,7 +100,11 @@ class LevelDetailsDialog extends Component {
           ))}
         </div>
       );
-    } else {
+    } else if (
+      level.longInstructions ||
+      level.long_instructions ||
+      level.shortInstructions
+    ) {
       // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
@@ -117,7 +138,17 @@ class LevelDetailsDialog extends Component {
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
+          collapsible={false}
           resizable={false}
+        />
+      );
+    } else {
+      return (
+        <SafeMarkdown
+          markdown={i18n.noLevelPreviewAvailable({
+            buttonText: i18n.seeFullLevel()
+          })}
+          openExternalLinksInNewTab
         />
       );
     }
@@ -206,18 +237,16 @@ class LevelDetailsDialog extends Component {
         isOpen={true}
         handleClose={this.props.handleClose}
         fullWidth={level.type !== 'StandaloneVideo'}
-        style={{padding: 15, ...levelSpecificStyling}}
-        useUpdatedStyles
+        style={{...levelSpecificStyling}}
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        <div>{preview}</div>
+        <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            __useDeprecatedTag
             style={{margin: 5}}
           />
           <Button

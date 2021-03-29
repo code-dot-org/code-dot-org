@@ -11,7 +11,9 @@
 # Indexes
 #
 #  index_standards_on_category_id                 (category_id)
+#  index_standards_on_description                 (description)
 #  index_standards_on_framework_id_and_shortcode  (framework_id,shortcode)
+#  index_standards_on_shortcode_and_description   (shortcode,description)
 #
 
 class Standard < ApplicationRecord
@@ -24,6 +26,31 @@ class Standard < ApplicationRecord
       id: id,
       shortcode: shortcode,
       category_description: category.description,
+      description: description
+    }
+  end
+
+  def summarize_for_lesson_show
+    {
+      frameworkName: framework.name,
+      parentCategoryShortcode: category&.parent_category&.shortcode,
+      parentCategoryDescription: category&.parent_category&.description,
+      categoryShortcode: category&.shortcode,
+      categoryDescription: category&.description,
+      shortcode: shortcode,
+      description: description
+    }
+  end
+
+  def summarize_for_lesson_edit
+    {
+      frameworkShortcode: framework.shortcode,
+      frameworkName: framework.name,
+      parentCategoryShortcode: category&.parent_category&.shortcode,
+      parentCategoryDescription: category&.parent_category&.description,
+      categoryShortcode: category&.shortcode,
+      categoryDescription: category&.description,
+      shortcode: shortcode,
       description: description
     }
   end

@@ -2198,8 +2198,10 @@ sl:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_variables:
+            lessonGroup-8:
               display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: odstrani
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2221,6 +2223,8 @@ sl:
             ramp_up:
               display_name: Uvod
             lessonGroup-3:
+              display_name: Spremenljivke
+            variables:
               display_name: Spremenljivke
         k5-onlinepd-2021:
           lessons:

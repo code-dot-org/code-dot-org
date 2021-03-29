@@ -3725,13 +3725,19 @@ pt:
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
-              display_name: Variáveis
+              display_name: Ciclos "for"
             csf_for_loops:
               display_name: Ciclos "for"
+            lessonGroup-8:
+              display_name: Variáveis
+            lessonGroup-9:
+              display_name: remover
         express-2021:
           lessons:
             Dance Party:
               key: Festa da Dança
+              name: Festa da Dança
+            lesson-1:
               name: Festa da Dança
           lesson_groups:
             csf_sequencing:
@@ -3759,6 +3765,8 @@ pt:
             ramp_up:
               display_name: Introdução
             lessonGroup-3:
+              display_name: Variáveis
+            variables:
               display_name: Variáveis
         csd4-preview-2021:
           lesson_groups:

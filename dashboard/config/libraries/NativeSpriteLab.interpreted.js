@@ -194,4 +194,3 @@ function xLocationOf(spriteId) {
 function yLocationOf(spriteId) {
   return getProp(spriteId, 'y');
 }
-

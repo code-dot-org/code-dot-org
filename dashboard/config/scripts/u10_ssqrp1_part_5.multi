@@ -13,3 +13,18 @@ right 'A user\'s location is always being tracked. '
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** The ability of the app to determine when someone enters a grocery store depends on the location of the phone always being tracked.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* IOC-2.A - Describe the risks to privacy from collecting and storing personal data on a computer system.
+* IOC-2.A.14 - Programs can collect your location and record where you have been, how you got there, and how long you were at a given location.
+
+
+:::
+
+
+MARKDOWN

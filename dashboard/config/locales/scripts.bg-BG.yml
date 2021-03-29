@@ -3891,16 +3891,16 @@ bg:
             csf_digcit:
               display_name: Цифрови граждани
             csf_variables:
-              display_name: Променливи
+              display_name: За циклите
             csf_data:
               display_name: Данни
             csf_for_loops:
               display_name: За циклите
+            lessonGroup-8:
+              display_name: Променливи
+            lessonGroup-9:
+              display_name: изтрива
         express-2021:
-          lessons:
-            'Looking Ahead with Minecraft ':
-              description_student: Избегни лавата! Тук ще научиш за условията в света
-                на Minecraft.
           lesson_groups:
             csf_loops:
               display_name: Повторения
@@ -3923,6 +3923,8 @@ bg:
             ramp_up:
               display_name: Въведение
             lessonGroup-3:
+              display_name: Променливи
+            variables:
               display_name: Променливи
         csd4-preview-2021:
           lesson_groups:

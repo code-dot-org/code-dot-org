@@ -29961,11 +29961,6 @@ de:
               description_student: Erinnern Sie sich an den Beginn des Kurses, als
                 Sie Zeichnungen mit Code erstellt haben? In dieser Lektion werden
                 Sie mit einem Team zusammenarbeiten, um etwas sehr Ähnliches zu tun!
-              description_teacher: Diese Aktivität beginnt mit einer kurzen Lektion
-                über Debugging und Beharrlichkeit. Anschließend kommt es zu einem
-                Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden
-                und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung
-                nach der anderen.
             Debugging in Collector:
               key: Fehlerbehebung in Collector
               name: Debuggen mit Laurel
@@ -30566,7 +30561,6 @@ de:
               description_teacher: Hier verwenden die SchülerInnen Sprite Lab, um
                 ihre eigenen Behaviors zu erstellen.
             Virtual Pet:
-              name: Virtuelles Haustier mit Sprite-Labor
               description_student: In dieser Lektion entwickeln die SchülerInnen ein
                 interaktives virtuelles Haustier, das so aussieht und sich so verhält,
                 wie sie es sich wünschen. Die SchülerInnen verwenden das "Costume"-Werkzeug
@@ -30614,23 +30608,29 @@ de:
                 über Barrierefreiheit und die Bedeutung von Empathie im Rahmen eines
                 Brainstorming und die Entwicklung barrierefreier Lösungen für hypothetische
                 Apps.
+            lesson-6:
+              name: Einführung Sprite Lab
+            lesson-8:
+              name: Sprites in Aktion
           lesson_groups:
             ramp_up:
               display_name: Hochfahren (Ramp-Up)
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
             csf_variables:
-              display_name: Variablen
+              display_name: '"Zähle mit"-Schleifen'
             csf_data:
               display_name: Daten
             csf_for_loops:
               display_name: '"Zähle mit"-Schleifen'
             csf_sprites:
-              display_name: Sprites
+              display_name: Auswirkungen der Datenverarbeitung
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
             lessonGroup-8:
-              display_name: Auswirkungen der Datenverarbeitung
+              display_name: Variablen
+            lessonGroup-9:
+              display_name: entfernen
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen,
             Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene
             Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen
@@ -30660,8 +30660,8 @@ de:
             Programming with Angry Birds:
               key: Programmieren mit Angry Birds
               name: Programmieren mit Angry Birds
-              description_student: Erfahren Sie mit Angry Birds mehr über Sequenzen
-                und Algorithmen.
+              description_student: Erstellen Sie Programme, die dem Angry Bird helfen,
+                sich durch das Labyrinth zu bewegen.
               description_teacher: Unter Verwendung von Figuren aus Angry Birds entwickeln
                 die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer
                 Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen.
@@ -30744,8 +30744,8 @@ de:
                 Eislaufkünsten zu erstellen!
             'Looking Ahead with Minecraft ':
               name: Ausblick auf Minecraft
-              description_student: Vermeiden Sie die Lava! Hier erfahren Sie mehr
-                über Bedingungen in der Welt von Minecraft.
+              description_student: Vermeiden Sie die Lava! Hier beginnen Sie, etwas
+                über Bedingungen in der Welt von Minecraft zu erfahren.
               description_teacher: Diese Lektion wurde ursprünglich für die Hour of
                 Code gemeinsam mit dem Team von Minecraft erstellt. Die SchülerInnen
                 erhalten die Gelegenheit, Ideen, die sie bis zu diesem Zeitpunkt gelernt
@@ -30768,18 +30768,6 @@ de:
               name: Während Schleifen mit dem Farmer
               description_student: Schleifen sind beim Codieren extrem nützlich. In
                 dieser Lektion lernen Sie eine neue Art von Schleifen kennen:die `während`-Schleifen!
-              description_teacher: "Wenn die SchülerInnen diese Lektion erreichen,
-                sollten sie bereits viel Übung im Umgang mit `wiederholen`-Schleifen
-                haben, also ist es jetzt an der Zeit, ihr Wissen zu kombinieren.\n
-                \n_während-Schleifen_ sind Schleifen, die Befehle weiterhin wiederholen,
-                wenn eine Bedingung erfüllt ist. Während-Schleifen werden verwendet,
-                wenn der Programmierer nicht genau weiß, wie oft Befehle wiederholt
-                werden müssen, aber weiß, welche Bedingung erfüllt sein muss, damit
-                die Schleife sich weiter wiederholt. Die SchülerInnen arbeiten zum
-                Beispiel daran, Löcher zu füllen und Erde in Farmer zu graben. Sie
-                kennen weder die Größe der Löcher noch die Höhe der Erdhaufen, aber
-                die SchülerInnen wissen, dass sie die Löcher immer wieder auffüllen
-                und die Erde ausgraben müssen, solange der Boden nicht eben ist."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Bedingungen in Minecraft: Voyage Aquatic'
               name: 'Bedingungen in Minecraft: Voyage Aquatic'
@@ -30904,8 +30892,8 @@ de:
             Alien Dance Party:
               key: Tanzparty für Aliens
               name: Tanzparty für Aliens
-              description_student: Üben Sie das Programmieren von Spielen, die Sie
-                mit Ihren Freunden und Ihrer Familie teilen können.
+              description_student: Erstellen Sie ein interaktives Projekt, das Sie
+                mit den KlassenkameradInnen teilen können.
             Behaviors in Sprite Lab:
               key: Behaviors im Sprite-Labor
               name: Behaviors im Sprite-Labor
@@ -30932,6 +30920,13 @@ de:
               name: Projekt am Ende des Kurses
               description_student: Freuen Sie sich auf eine ganze Menge Programmierung!
                 Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen.
+            lesson-1:
+              name: Tanzparty
+              description_student: Zeit zum Feiern! In dieser Lektion programmieren
+                Sie Ihre eigene interaktive Tanzparty.
+              description_teacher: In dieser Lektion programmieren die SchülerInnen
+                ihre eigene interaktive Tanzparty. Diese Aktivität erfordert Ton,
+                da das Werkzeug so gebaut wurde, dass es auf Musik reagiert.
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -31082,6 +31077,8 @@ de:
               name: Einführung Sprite Lab
             Sprites in Action:
               name: Sprites in Aktion
+            introducing-spritelab:
+              name: Einführung Sprite Lab
           lesson_groups:
             ramp_up:
               display_name: Einführung
@@ -31091,6 +31088,8 @@ de:
               display_name: Variablen
             Sprites:
               display_name: Sprites
+            variables:
+              display_name: Variablen
         csd4-preview-2021:
           description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
             der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,

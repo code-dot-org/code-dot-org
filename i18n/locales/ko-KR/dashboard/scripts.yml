@@ -1070,6 +1070,8 @@ ko:
               name: ML 피쉬
             AI Lab:
               name: AI 랩
+            Java Lab:
+              name: Java 연구소
           student_description: UI 테스트에 대한 모든 레벨의 종류
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
@@ -14019,12 +14021,7 @@ ko:
             Safety in My Online Neighborhood:
               name: 내 온라인 이웃에서 안전
               description_student: 온라인에서 안전하게 장소로 가는법을 배우세요.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                인터넷의 힘은 학생들에게 직접 가서 볼 수 없는 곳을 경험하고 방문할 수 있게 하는 것입니다. 하지만, 실제 세상을 여행하는 것과 마찬가지로 온라인 상에서 여행할 때도 안전이 중요합니다. 이 가상 소풍에서, 아동은 온라인 모험에서 안전을 유지하는 방법을 연습할 수 있습니다.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n인터넷의 힘은 학생들에게 직접 가서 볼 수 없는 곳을 경험하고 방문할 수 있게 하는 것입니다. 하지만, 실제 세상을 여행하는 것과 마찬가지로 온라인 상에서 여행할 때도 안전이 중요합니다. 이 가상 소풍에서, 아동은 온라인 모험에서 안전을 유지하는 방법을 연습할 수 있습니다."
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
         courseb-2020:
           title: 과정 B (2020)
@@ -14094,12 +14091,7 @@ ko:
             Digital Trails:
               name: 디지털 흔적
               description_student: '디지털 발자국과 웹사이트 방문 시 안전을 유지하는 방법에 관해 배웁니다. '
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                내가 온라인으로 한 일이 항상 온라인 상에 남아 있나요? 학생들은 그들이 온라인 상에서 공유한 정보가 디지털 발자국 또는 "흔적"으로 남는다는 점을 배웁니다. 어떻게 관리하는냐에 따라, 이 흔적은 크거나 또는 작고 또한 유해하거나 유용할 수 있습니다. 학생은 여러 흔적을 비교하고 어떤 종류의 정보를 뒤에 남기길 원하는지 비판적으로 사고합니다.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n내가 온라인으로 한 일이 항상 온라인 상에 남아 있나요? 학생들은 그들이 온라인 상에서 공유한 정보가 디지털 발자국 또는 \"흔적\"으로 남는다는 점을 배웁니다. 어떻게 관리하는냐에 따라, 이 흔적은 크거나 또는 작고 또한 유해하거나 유용할 수 있습니다. 학생은 여러 흔적을 비교하고 어떤 종류의 정보를 뒤에 남기길 원하는지 비판적으로 사고합니다."
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
         coursec-2020:
           title: 과정 C (2020)
@@ -14195,21 +14187,11 @@ ko:
             Putting a STOP to Online Meanness:
               name: 온라인 상에서 비열한 행동을 멈추게 함
               description_student: 이 레슨에서는 비열한 짓이 무엇인지 그리고 온라인 상에서 이런 일에 닥쳤을 때 할 일에 대해 배웁니다.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                인터넷은 온갖 종류의 흥미로운 사람들로 가득 차 있지만 종종 그들 중 일부는 서로에게 비열하게 굴 수 있습니다. 이 역할 놀이로, 학생들이 실제 대면할 때보다 온라인 상에서 더 쉽게 비열해 지는 이유가 무엇인지 또한 그런 일을 봤을 때 어떻게 처리해야 하는지 이해하도록 도와주세요.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n인터넷은 온갖 종류의 흥미로운 사람들로 가득 차 있지만 종종 그들 중 일부는 서로에게 비열하게 굴 수 있습니다. 이 역할 놀이로, 학생들이 실제 대면할 때보다 온라인 상에서 더 쉽게 비열해 지는 이유가 무엇인지 또한 그런 일을 봤을 때 어떻게 처리해야 하는지 이해하도록 도와주세요."
             Password Power-Up:
               name: 비밀번호 보안 강화
               description_student: 이 레슨에서는 비밀번호가 개인 정보를 보호하는 방식과 좋은 비밀번호를 만드는 법에 관해 배울 것입니다.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                더 강하고 더 안전한 온라인 비밀번호는 누구에게나 필요합니다. 하지만, 아동들이 더 나은 비밀번호를 만들고 실제로 그것을 기억하도록 어떻게 도와줄 수 있을까요? 이 레슨에서의 팁을 사용하여 아동이 안전하면서 기억할 수 있는 비밀번호를 만들도록 도와주세요.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n더 강하고 더 안전한 온라인 비밀번호는 누구에게나 필요합니다. 하지만, 아동들이 더 나은 비밀번호를 만들고 실제로 그것을 기억하도록 어떻게 도와줄 수 있을까요? 이 레슨에서의 팁을 사용하여 아동이 안전하면서 기억할 수 있는 비밀번호를 만들도록 도와주세요."
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
         coursed-2020:
           title: 과정 D (2020)
@@ -14313,12 +14295,7 @@ ko:
             Be A Super Digital Citizen:
               name: 슈퍼 디지털 시민 되기
               description_student: 사이버 폭력을 볼 때 나서서 행동하는 사람이 되는법을 배우세요.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                온라인 툴은 아동에게 큰 힘이 되어 주며 또한 큰 책임도 부여합니다. 하지만 아동은 사이버 폭력을 겪을 때 해야 할 일을 항상 알고 있을까요? 나서서 행동하는 사람이 되는 법부터 필요 시 도움을 구하는 방법까지, 학생들에게 조치를 취하고 분쟁을 해결하는 적절한 방법을 보여주세요.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n온라인 툴은 아동에게 큰 힘이 되어 주며 또한 큰 책임도 부여합니다. 하지만 아동은 사이버 폭력을 겪을 때 해야 할 일을 항상 알고 있을까요? 나서서 행동하는 사람이 되는 법부터 필요 시 도움을 구하는 방법까지, 학생들에게 조치를 취하고 분쟁을 해결하는 적절한 방법을 보여주세요."
           student_description: 학생들은 루프와 조건, 이벤트에 관한 그들의 이해를 더 심화합니다. 코딩을 너머 학생들은 디지털 시민의식에 대해 배웁니다.
         coursee-2020:
           title: 과정 E (2020)
@@ -14370,12 +14347,7 @@ ko:
             Private and Personal Information:
               name: 사생활 정보 및 개인 정보
               description_student: 인터넷은 재미 있고 흥미롭지만 안전을 유지하는 것 역시 중요합니다. 이 레슨은 공유해도 안전한 정보와 사적 정보의 차이를 가르쳐 줍니다.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                다른 이와 공유하고 서로 연결되어 있고 싶어 하는 것은 학생들의 자연스러운 성향입니다. 하지만 온라인 상의 공유는 위험이 함께 따라 올 수 있습니다. 아동이 온라인 상에서 강하고 긍정적이며 안전한 관계를 맺을 수 있게 어떻게 도와줘야 할까요? 학생들이 개인적인 정보와 비공개로 두는 것이 최상인 정보의 차이점을 배우도록 도와주세요.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n다른 이와 공유하고 서로 연결되어 있고 싶어 하는 것은 학생들의 자연스러운 성향입니다. 하지만 온라인 상의 공유는 위험이 함께 따라 올 수 있습니다. 아동이 온라인 상에서 강하고 긍정적이며 안전한 관계를 맺을 수 있게 어떻게 도와줘야 할까요? 학생들이 개인적인 정보와 비공개로 두는 것이 최상인 정보의 차이점을 배우도록 도와주세요."
             About Me:
               name: 스프라이트 랩으로 자기 소개
               description_student: 스트라이트 랩으로 인터랙티브 포스터를 만듦으로써 학생들은 웹 상에서 그들의 개인 정보와 사적 정보의 공유에 관한 그들의 이해력을 적용할 것입니다. 
@@ -14509,12 +14481,7 @@ ko:
             The Power of Words:
               name: 말의 힘
               description_student: 괴롭힘은 어떤 경우에도 괜찮지 않습니다. 이 레슨은 온라인에서 말해도 괜찮은 것과 그렇지 않은 것에 대해 말해 줍니다.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.
-
-                아동이 성장하면서, 그들은 자연스럽게 온라인으로 더 많이 소통하기 시작합니다. 하지만, 그들이 그 과정에서 보는 내용 중 일부가 마음을 아프게 또는 슬프게, 화나게 심지어 두렵게 만들 수 있습니다. 학생들이 타인과 공감하고 사이버 폭력을 마주하게 될 때 사용할 전략을 배울 수 있게 도와주세요.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n아동이 성장하면서, 그들은 자연스럽게 온라인으로 더 많이 소통하기 시작합니다. 하지만, 그들이 그 과정에서 보는 내용 중 일부가 마음을 아프게 또는 슬프게, 화나게 심지어 두렵게 만들 수 있습니다. 학생들이 타인과 공감하고 사이버 폭력을 마주하게 될 때 사용할 전략을 배울 수 있게 도와주세요."
             Crowdsourcing:
               name: 클라우드소싱
               description_student: 이 레슨은 팀과 함께 프로젝트를 만드는 프로세스인 크라우드소싱에 대해 가르칩니다.
@@ -16863,7 +16830,7 @@ ko:
               key: '이벤트: 빅 이벤트'
               name: 빅 이벤트 주니어
               description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
-              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+              description_teacher: "이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다."
             Events in Play Lab:
               key: 플레이 랩 내 이벤트 
               name: 이벤트로 이동
@@ -16939,7 +16906,7 @@ ko:
               key: '이벤트: 빅 이벤트'
               name: 빅 이벤트 주니어
               description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
-              description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
+              description_teacher: "이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다."
             Events in Play Lab:
               key: 플레이 랩 내 이벤트 
               name: 이벤트가 있는 왕가의 전투
@@ -16985,7 +16952,7 @@ ko:
               key: 미로 내 디버깅
               name: 미로 내 디버깅
               description_student: 퍼즐 안에서 문제를 찾아내고 디버깅 스킬을 연습하세요.
-              description_teacher: 디버깅은 프로그램 학습에서 필수 요소입니다. 학생들은 틀리게 푼 일부 퍼즐을 보게 될 것입니다. 그들은 기존 코드를 한 단계 한 단계 살피며 잘못된 루프와 누락된 블록, 과다한 블록, 순서가 맞지 않은 블록 등을 포함하여 오류를 식별할 것입니다
+              description_teacher: "디버깅은 프로그램 학습에서 필수 요소입니다. 학생들은 틀리게 푼 일부 퍼즐을 보게 될 것입니다. 그들은 기존 코드를 한 단계 한 단계 살피며 잘못된 루프와 누락된 블록, 과다한 블록, 순서가 맞지 않은 블록 등을 포함하여 오류를 식별할 것입니다"
             Programming in Collector:
               key: 수집가 내 프로그래밍
               name: 라우렐로 보물 모으기
@@ -17000,7 +16967,7 @@ ko:
               key: 2진 팔찌
               name: 2진 팔찌
               description_student: 바이너리 팔찌를 만들고 컴퓨터의 정보 기억 방법을 배우세요
-              description_teacher: 바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를 바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을 보여주는데 도움을 줍니다. 
+              description_teacher: "바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를 바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을 보여주는데 도움을 줍니다. "
             'Loops: My Loopy Robotic Friends':
               key: '루프: 내 루피 로봇 친구'
               name: 내 루피 로봇 친구 주니어
@@ -17085,7 +17052,6 @@ ko:
               key: 릴레이 프로그래밍
               name: 릴레이 프로그래밍
               description_student: 과정 초반에 코드로 그림을 그릴 때를 기억하세요? 이 레슨에서는 팀과 함께 이와 매우 유사할 일을 할 것입니다!
-              description_teacher: 이 활동은 디버깅과 끈기에 관한 짧은 레슨으로 시작하고 그 다음, 시계를 상대로한 레이스로 빠르게 이동하여 팀으로 나눠 한 번에 한 지침만 있는 프로그램을 작성합니다.
             Debugging in Collector:
               key: 수집가 내 디버깅
               name: 라우렐로 디버깅
@@ -17208,7 +17174,7 @@ ko:
               key: 아티스트로 프로그래밍 및 루프
               name: 루프로 그리기
               description_student: 이 레슨에서 루프는 아티스트로 심지어 더 멋진 이미지를 쉽게 만들어 줍니다.  
-              description_teacher: 학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들 얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이 될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다. 
+              description_teacher: '학생들이 적은 수의 블록과 디지털 스티커를 사용하여 멋진 디자인을 만들어 냈을 때 그들 얼굴에 퍼지는 밝은 빛을 보세요. 이 레슨은 이전 레슨에서 익힌 루프에 대한 이해 위에 수립되며 학생들에게 진정으로 창의적이 될 기회를 줍니다. 이 활동은 포트폴리오 또는 학부모/교사 컨퍼런스를 위한 작품 제작에 매우 적합합니다. '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: '마인크래프트 내 조건: 보야지 아쿠아틱'
               name: '마인크래프트 내 조건: 보야지 아쿠아틱'
@@ -17218,7 +17184,7 @@ ko:
               key: 조건
               name: 농부 조건문
               description_student: 이 재미있고 도전적인 시리즈에서 일정 조건 하에서 컴퓨터에게 해야 할 일을 말하게  될 것입니다.
-              description_teacher: 이 레슨은 학생들에게 `while` 루프와` if / else` 문을 소개합니다. _While 루프_ 는 조건이 참인 한 계속 명령을 반복하는 루프입니다. While 루프는 프로그램이 정확하게 명령을 몇 번 반복해야 하는지 모르지만 프로그래머는 루프가 계속 반복되게 하기 위해 어떤 조건이 참이어야 하는지 알 때 사용합니다. `If / Else` 문은 뭔가가 참일 때만 코드의 전체 섹션을 실행하고 그렇지 않을 때는 다른 것을 실행함으로써 프로그래밍에 유연성을 제공합니다. 
+              description_teacher: '이 레슨은 학생들에게 `while` 루프와` if / else` 문을 소개합니다. _While 루프_ 는 조건이 참인 한 계속 명령을 반복하는 루프입니다. While 루프는 프로그램이 정확하게 명령을 몇 번 반복해야 하는지 모르지만 프로그래머는 루프가 계속 반복되게 하기 위해 어떤 조건이 참이어야 하는지 알 때 사용합니다. `If / Else` 문은 뭔가가 참일 때만 코드의 전체 섹션을 실행하고 그렇지 않을 때는 다른 것을 실행함으로써 프로그래밍에 유연성을 제공합니다. '
             Simon Says:
               key: 사이몬 가라사대
               description_student: 게임을 하고 맞는 결과를 얻기 위해 어떤 명령어가 필요한지 생각해 보세요.
@@ -17227,7 +17193,7 @@ ko:
               key: 스프라이트 랩으로 스프라이트 배우기
               name: 헤엄치는 물고기와 스프라이트 랩 
               description_student: 스프라이트 만들기와 편집하기에 대해 배웁니다.
-              description_teacher: '이 레슨에서 학생들은 스프라이트 랩의 중심에 있는 두 가지 개념인 스프라이트와 행동에 관해 배울 것입니다. 스프라이트는 화면에 나오는 캐릭터 또는 객체이며 학생은 이것들을 이동 및 변경, 조작할 수 있습니다. 행동은 스파라이트가 계속 취하는 동작으로 멈쳐질 때까지 계속 합니다.'
+              description_teacher: 이 레슨에서 학생들은 스프라이트 랩의 중심에 있는 두 가지 개념인 스프라이트와 행동에 관해 배울 것입니다. 스프라이트는 화면에 나오는 캐릭터 또는 객체이며 학생은 이것들을 이동 및 변경, 조작할 수 있습니다. 행동은 스파라이트가 계속 취하는 동작으로 멈쳐질 때까지 계속 합니다.
             Alien Dance Party with Sprite Lab:
               key: 외계인 댄스 파티와 스프라이트 랩 
               name: 외계인 댄스 파티와 스프라이트 랩 
@@ -17337,7 +17303,7 @@ ko:
             Nested Loops in the Maze:
               key: 미로 내 중첩 루프
               name: 미로 내 중첩 루프
-              description_student: "루프 안의 루프 안의 루프. 무슨 의미일까요? 이 레슨은 루프를 또 다른 루프 안에 넣을 때 어떻게 되는지 알려드릴 거예요. "
+              description_student: 루프 안의 루프 안의 루프. 무슨 의미일까요? 이 레슨은 루프를 또 다른 루프 안에 넣을 때 어떻게 되는지 알려드릴 거예요. 
               description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를 가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다. 또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다. 
             The Power of Words:
               key: 말의 힘
@@ -17372,11 +17338,7 @@ ko:
               key: 바다를 위한 AI
               name: 바다를 위한 AI
               description_student: '튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기" 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.'
-              description_teacher: |
-                **튜토리얼 요약:** 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 "물고기" 또는 "물고기가 아님"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.\r
-                \r
-                \r
-                **정확성 확인:** 이 튜토리얼은 학생들에게 그들이 레벨을 맞게 완료했는지 말하지 않습니다. 활동 중 어려운 부분은 빠르게 건너 뛸 수 있습니다. 학생들에게 동영상을 시청하고 설명서를 읽으며 어려운 일은 시도해 보라고 장려합니다. 그들은 언제든 교사 또는 학급원과 그들이 발견한 내용을 공유할 수 있습니다.\r
+              description_teacher: "**튜토리얼 요약:** 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 \"물고기\" 또는 \"물고기가 아님\"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다.\\r\n\\r\n\\r\n**정확성 확인:** 이 튜토리얼은 학생들에게 그들이 레벨을 맞게 완료했는지 말하지 않습니다. 활동 중 어려운 부분은 빠르게 건너 뛸 수 있습니다. 학생들에게 동영상을 시청하고 설명서를 읽으며 어려운 일은 시도해 보라고 장려합니다. 그들은 언제든 교사 또는 학급원과 그들이 발견한 내용을 공유할 수 있습니다.\\r"
             Internet:
               key: 인터넷
               name: 인터넷
@@ -17571,7 +17533,7 @@ ko:
             Alien Dance Party:
               key: 외계인 댄스 파티
               name: 외계인 댄스 파티
-              description_student: 친구 및 가족과 공유할 게임 만드는 법을 연습하세요.
+              description_student: 학우들과 공유할 수 있는 인터랙티브 프로젝트를 만드세요.
             Behaviors in Sprite Lab:
               key: 스프라이트 랩 내 행동
               name: 스프라이트 랩 내 행동

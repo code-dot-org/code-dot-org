@@ -64,7 +64,7 @@ level 'GettingLoopy-Unplugged_2021', progression: 'Getting Loopy - Unplugged Vid
 lesson 'Loops in Harvester', display_name: 'Loops with Harvester', has_lesson_plan: true
 level 'courseA_harvester_loops1_2021', progression: 'Practice'
 level 'courseA_harvester_loops2_2021', progression: 'Practice'
-level 'courseA_harvester_loops_video_2021', progression: 'Repeat Blocks'
+level 'courseA_harvester_loops_video_2021', progression: 'Video: Repeat Blocks'
 level 'courseA_harvester_loops3_2021', progression: 'Practice'
 level 'courseA_harvester_loops4_2021', progression: 'Practice'
 level 'courseA_harvester_loops5_2021', progression: 'Practice'
@@ -77,10 +77,10 @@ level 'courseA_harvester_loops10_2021', progression: 'Practice'
 level 'courseA_harvester_loops11_2021', progression: 'Practice'
 
 lesson 'Loops in Collector', display_name: 'Loops with Laurel', has_lesson_plan: true
-level 'courseAB_video_collector_2021', progression: 'The Collector'
+level 'courseAB_video_collector_2021', progression: 'Video: The Collector'
 level 'courseB_collector_loops1_2021', progression: 'Practice'
 level 'courseB_collector_loops2_2021', progression: 'Practice'
-level 'courseA_video_Loops_2021', progression: 'Using the Repeat Block'
+level 'courseA_video_Loops_2021', progression: 'Video: Using the Repeat Block'
 level 'courseB_collector_loops3_2021', progression: 'Practice'
 level 'courseB_collector_loops4_2021', progression: 'Practice'
 level 'courseB_collector_loops5_2021', progression: 'Practice'
@@ -94,9 +94,9 @@ bonus 'courseB_collector_loops_challenge1_2021', progression: 'Challenge'
 bonus 'courseB_collector_loops_challenge2a_2021', progression: 'Challenge'
 
 lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops', has_lesson_plan: true
-level 'courseB_video_ArtistIntro_2021', progression: 'The Artist in Code Studio'
+level 'courseB_video_ArtistIntro_2021', progression: 'Video: The Artist in Code Studio'
 level 'courseB_artist_loops1_2021', progression: 'Practice'
-level 'courseB_video_artistLoops_2021', progression: 'Repeat Blocks with the Artist'
+level 'courseB_video_artistLoops_2021', progression: 'Video: Repeat Blocks with the Artist'
 level 'courseB_artist_loops2_2021', progression: 'Practice'
 level 'courseB_artist_loops3_2021', progression: 'Practice'
 level 'courseB_artist_loops4_2021', progression: 'Practice'
@@ -115,10 +115,10 @@ level 'TheRightAppMarkdownLevel_2021', progression: 'The Right App - Unplugged A
 
 lesson_group 'csf_events', display_name: 'Events'
 lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
-level 'BigEvent-Unplugged_2021', progression: 'The Big Event - Unplugged Activity'
+level 'BigEvent-Unplugged_2021', progression: 'Video: The Big Event - Unplugged Activity'
 
 lesson 'Events in Play Lab', display_name: 'A Royal Battle with Events', has_lesson_plan: true
-level 'courseA_video_events_2021', progression: 'Create a Story'
+level 'courseA_video_events_2021', progression: 'Video: Create a Story'
 level 'courseB_playLab_events1_2021', progression: 'Free Play'
 level 'courseB_playlab_events2_2021', progression: 'Mini-Project: Royal Battle'
 level 'courseB_playlab_events3_2021', progression: 'Mini-Project: Royal Battle'

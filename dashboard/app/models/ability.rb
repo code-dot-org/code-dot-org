@@ -191,14 +191,23 @@ class Ability
       end
     end
 
+    can [:vocab, :resources, :code, :standards], UnitGroup do
+      true
+    end
+
     # Override Script and ScriptLevel.
-    can :read, Script do |script|
+    can [:read], Script do |script|
       if script.pilot?
         script.has_pilot_access?(user)
       else
         user.persisted? || !script.login_required?
       end
     end
+
+    can [:vocab, :resources, :code, :standards], Script do |script|
+      !!script.is_migrated
+    end
+
     can [:read, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
       if script.pilot?
@@ -265,7 +274,7 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
-      can :validate_form, :pd_foorm
+      can [:validate_form, :validate_library_question], :pd_foorm
     end
 
     if user.persisted?
