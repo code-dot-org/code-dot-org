@@ -222,7 +222,7 @@ export default class CdoBramble {
         console.error(
           `CdoBramble failed to receive file entries from Bramble. ${err}`
         );
-        callback();
+        callback(err);
       }
 
       const uploadEntry = index => {
