@@ -77,7 +77,8 @@ describe('LessonOverview', () => {
             link: '/docs/applab/playSound'
           }
         ],
-        standards: []
+        standards: [],
+        opportunityStandards: []
       },
       activities: [],
       announcements: [],
