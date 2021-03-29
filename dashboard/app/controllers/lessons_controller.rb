@@ -153,10 +153,6 @@ class LessonsController < ApplicationController
     lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
     lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
     lp[:opportunity_standards] = JSON.parse(lp[:opportunity_standards]) if lp[:opportunity_standards]
-    # puts 'standards'
-    # puts lp[:standards].inspect
-    # puts 'opportunity_standards'
-    # puts lp[:opportunity_standards].inspect
     lp
   end
 
