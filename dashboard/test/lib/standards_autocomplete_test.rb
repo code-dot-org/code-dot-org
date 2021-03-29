@@ -19,7 +19,7 @@ class StandardsAutocompleteTest < ActiveSupport::TestCase
   test "finds standard with matching description from single framework" do
     matches = StandardsAutocomplete.get_search_matches('Plan ', 5, @iste.id)
     assert_equal 2, matches.length
-    assert_equal ['3.a', '4.b'], matches.map {|m| m[:shortcode]}
+    assert_equal ['3.a', '4.b'].sort, matches.map {|m| m[:shortcode]}.sort
   end
 
   test "finds standard with matching description from any framework" do
@@ -32,13 +32,13 @@ class StandardsAutocompleteTest < ActiveSupport::TestCase
   test "finds by words in middle of the description" do
     matches = StandardsAutocomplete.get_search_matches('evaluate', 5, @iste.id)
     assert_equal 2, matches.length
-    assert_equal ['3.b', '3.c'], matches.map {|m| m[:shortcode]}
+    assert_equal ['3.b', '3.c'].sort, matches.map {|m| m[:shortcode]}.sort
   end
 
   test "matches nonconsecutive words in description" do
     matches = StandardsAutocomplete.get_search_matches('computer security', 5, @csta.id)
     assert_equal 2, matches.length
-    assert_equal ['3A-NI-07', '3B-AP-18'], matches.map {|m| m[:shortcode]}
+    assert_equal ['3A-NI-07', '3B-AP-18'].sort, matches.map {|m| m[:shortcode]}.sort
   end
 
   test "finds a single standard by framework and shortcode" do
@@ -51,7 +51,7 @@ class StandardsAutocompleteTest < ActiveSupport::TestCase
   test "finds standards by framework and shortcode substring" do
     matches = StandardsAutocomplete.get_search_matches('6.', 5, @iste.id)
     assert_equal 4, matches.length
-    assert_equal ['6.a', '6.b', '6.c', '6.d'], matches.map {|m| m[:shortcode]}
+    assert_equal ['6.a', '6.b', '6.c', '6.d'].sort, matches.map {|m| m[:shortcode]}.sort
   end
 
   # important because fulltext search in boolean mode treats dashes specially.
