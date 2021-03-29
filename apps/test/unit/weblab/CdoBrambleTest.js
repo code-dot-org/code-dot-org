@@ -34,6 +34,14 @@ describe('CdoBramble', () => {
       projectPath,
       []
     );
+
+    sinon.stub(console, 'error');
+    sinon.stub(console, 'warn');
+  });
+
+  afterEach(() => {
+    console.error.restore();
+    console.warn.restore();
   });
 
   describe('initProject', () => {
@@ -108,11 +116,6 @@ describe('CdoBramble', () => {
         cdoBramble.lastSyncedVersionId = 'd4e5f6';
         cdoBramble.recentChanges = [{operation: 'change', file: 'index.html'}];
         sinon.stub(cdoBramble, 'overwriteProject');
-        sinon.stub(console, 'warn');
-      });
-
-      afterEach(() => {
-        console.warn.restore();
       });
 
       it('warns that changes will be overwritten if there are any', () => {
@@ -254,11 +257,6 @@ describe('CdoBramble', () => {
         .callsFake((filename, fileData, callback) =>
           callback(null, 'new-version-id')
         );
-      sinon.stub(console, 'error');
-    });
-
-    afterEach(() => {
-      console.error.restore();
     });
 
     it('uploads all files in Bramble file system to server', done => {
@@ -334,11 +332,6 @@ describe('CdoBramble', () => {
       sinon
         .stub(cdoBramble.api, 'changeProjectFile')
         .callsFake((filename, fileData, callback) => callback());
-      sinon.stub(console, 'error');
-    });
-
-    afterEach(() => {
-      console.error.restore();
     });
 
     it('saves each change to the server', done => {
@@ -437,11 +430,6 @@ describe('CdoBramble', () => {
       sinon
         .stub(cdoBramble, 'writeFileData')
         .callsFake((path, data, callback) => callback(null));
-      sinon.stub(console, 'error');
-    });
-
-    afterEach(() => {
-      console.error.restore();
     });
 
     it('downloads file data and writes it to bramble', done => {
@@ -521,11 +509,6 @@ describe('CdoBramble', () => {
       sinon
         .stub(cdoBramble, 'writeFileData')
         .callsFake((path, data, callback) => callback(null));
-      sinon.stub(console, 'error');
-    });
-
-    afterEach(() => {
-      console.error.restore();
     });
 
     it('invokes the callback if there are no source files', done => {
