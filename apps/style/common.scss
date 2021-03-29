@@ -243,6 +243,7 @@ button.arrow:disabled {
 #soft-buttons {
   display: inline-block;
   vertical-align: top;
+  margin-left: -9px;
   -webkit-touch-callout: none;
   &.soft-buttons-compact {
     margin: 0;
