@@ -311,7 +311,7 @@ class ScriptLevel < ApplicationRecord
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
-    user_level.nil? || user_level.locked?(lesson)
+    user_level.nil? || user_level.show_as_locked?(lesson)
   end
 
   def previous_level
@@ -451,17 +451,10 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown)
     summary = summarize
     summary[:id] = id.to_s
-    summary[:levels] = levels.map do |level|
-      {
-        name: level.name,
-        id: level.id.to_s,
-        icon: level.icon,
-        isConceptLevel: level.concept_level?
-      }
-    end
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 

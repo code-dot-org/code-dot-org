@@ -8,8 +8,12 @@ import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
-import ProgressTableSummaryView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableSummaryView, {
+  UnconnectedProgressTableSummaryView
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryView';
+import ProgressTableContainer, {
+  UnconnectedProgressTableContainer
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
 import ProgressTableSummaryCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import * as Sticky from 'reactabular-sticky';
@@ -23,6 +27,7 @@ import {
   fakeStudents,
   fakeProgressTableReduxInitialState
 } from '@cdo/apps/templates/progress/progressTestHelpers';
+import sinon from 'sinon';
 
 const LESSON_1 = fakeLessonWithLevels({
   id: 1,
@@ -101,5 +106,31 @@ describe('ProgressTableSummaryView', () => {
       .find(ProgressTableStudentList)
       .find(Sticky.Header);
     expect(studentListHeaders).to.have.length(1);
+  });
+
+  it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
+    sinon.spy(
+      UnconnectedProgressTableSummaryView.prototype,
+      'timeSpentCellFormatter'
+    );
+    sinon.spy(
+      UnconnectedProgressTableSummaryView.prototype,
+      'lastUpdatedCellFormatter'
+    );
+    const container = setUp()
+      .find(UnconnectedProgressTableContainer)
+      .instance();
+    const rowData = container.state.rows[0];
+    container.onToggleRow(rowData);
+
+    // one call for each of the two lessons
+    expect(
+      UnconnectedProgressTableSummaryView.prototype.timeSpentCellFormatter
+        .callCount
+    ).to.equal(2);
+    expect(
+      UnconnectedProgressTableSummaryView.prototype.lastUpdatedCellFormatter
+        .callCount
+    ).to.equal(2);
   });
 });
