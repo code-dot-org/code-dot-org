@@ -315,11 +315,16 @@ class Foorm::Form < ApplicationRecord
     csv_result
   end
 
-  # For a given question_id, gets metadata about the question (eg, type, choices).
+  # For a given question_id, gets information about the question (eg, type, choices, question text).
+  # @param [String] question_id
+  # @return [Hash]
   def get_question_details(question_id)
     parsed_questions(true)[question_id]
   end
 
+  # Returns a readable version of the questions asked in a Form.
+  # @param [Boolean] should_flatten
+  # @return [Hash] Hash with two keys (:general and :facilitator), or those two hashes merged if the should_flatten parameter is true.
   def parsed_questions(should_flatten = false)
     @parsed_questions ||= Pd::Foorm::FoormParser.parse_form_questions(questions)
 
