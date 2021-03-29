@@ -8,14 +8,18 @@ import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
   fakeTeacherAnnouncement,
-  fakeOldTeacherAnnouncement,
-  fakeTeacherAnnouncementWithAnalyticsData
+  fakeOldTeacherAnnouncement
 } from './FakeAnnouncementsTestData';
 
 const defaultProps = {
   announcements: [],
   viewAs: ViewType.Teacher,
   width: 1000
+};
+
+const firehoseAnalyticsData = {
+  user_id: 1,
+  script_id: 2
 };
 
 describe('Announcements', () => {
@@ -100,7 +104,8 @@ describe('Announcements', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
-        announcements={[fakeTeacherAnnouncementWithAnalyticsData]}
+        firehoseAnalyticsData={firehoseAnalyticsData}
+        announcements={[fakeTeacherAnnouncement]}
       />
     );
     assert.equal(wrapper.find(Notification).length, 1);

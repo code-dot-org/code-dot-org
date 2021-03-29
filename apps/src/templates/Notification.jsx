@@ -146,10 +146,10 @@ class Notification extends Component {
     dismissible: PropTypes.bool.isRequired,
     onDismiss: PropTypes.func,
     newWindow: PropTypes.bool,
-    // analyticId and analyticsData are only used when a primary button is provided.
+    // analyticId and firehoseAnalyticsData are only used when a primary button is provided.
     // It's not used by the array of buttons.
     analyticId: PropTypes.string,
-    analyticsData: PropTypes.object,
+    firehoseAnalyticsData: PropTypes.object,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
     isRtl: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func,
@@ -187,7 +187,7 @@ class Notification extends Component {
   };
 
   onAnnouncementClick() {
-    const {analyticsData, analyticId} = this.props;
+    const {firehoseAnalyticsData, analyticId} = this.props;
 
     // Log to Google Analytics
     if (analyticId) {
@@ -195,15 +195,16 @@ class Notification extends Component {
     }
 
     // Log to Firehose
-    if (analyticsData) {
+    if (firehoseAnalyticsData) {
       let record = {};
 
       // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
-      // Here, we separate out those fields from any other analytics data provided in the analyticsData prop.
+      // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
       // We include these properties in the data_json object as well, in case that is easier for our product team to use.
       ['user_id', 'script_id'].forEach(firehoseMetadataKey => {
-        if (firehoseMetadataKey in analyticsData) {
-          record[firehoseMetadataKey] = analyticsData[firehoseMetadataKey];
+        if (firehoseMetadataKey in firehoseAnalyticsData) {
+          record[firehoseMetadataKey] =
+            firehoseAnalyticsData[firehoseMetadataKey];
         }
       });
 
@@ -212,7 +213,7 @@ class Notification extends Component {
         study: 'notification_engagement',
         event: 'notification_click',
         data_json: JSON.stringify({
-          ...analyticsData,
+          ...firehoseAnalyticsData,
           notice: this.props.notice,
           details: this.props.details,
           buttonLink: this.props.buttonLink
