@@ -11,6 +11,8 @@
 #
 
 class Foorm::Submission < ApplicationRecord
+  include Pd::Foorm::Constants
+
   has_one :workshop_metadata, class_name: 'Pd::WorkshopSurveyFoormSubmission', foreign_key: :foorm_submission_id
   has_one :misc_survey, foreign_key: :foorm_submission_id
 
@@ -59,7 +61,7 @@ class Foorm::Submission < ApplicationRecord
     return {question_id => answer} if question_details.nil?
 
     case question_details[:type]
-    when 'matrix'
+    when ANSWER_MATRIX
       choices = question_details[:columns]
 
       pairs = {}
@@ -68,12 +70,12 @@ class Foorm::Submission < ApplicationRecord
         pairs[key] = choices[matrix_question_answer]
       end
       return pairs
-    when 'scale', 'text'
+    when ANSWER_SCALE, ANSWER_TEXT
       return {question_id => answer}
-    when 'singleSelect'
+    when ANSWER_SINGLE_SELECT
       choices = question_details[:choices]
       return {question_id => choices[answer]}
-    when 'multiSelect'
+    when ANSWER_MULTI_SELECT
       choices = question_details[:choices]
       return {question_id => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
     end

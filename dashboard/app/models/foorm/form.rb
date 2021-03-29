@@ -340,7 +340,7 @@ class Foorm::Form < ApplicationRecord
       next if questions_content.nil_or_empty?
 
       questions_content.each do |question_id, question_details|
-        if question_details[:type] == 'matrix'
+        if question_details[:type] == ANSWER_MATRIX
           matrix_questions = question_details[:rows]
           matrix_questions.each do |matrix_question_id, matrix_question_text|
             matrix_key = self.class.get_matrix_question_id(question_id, matrix_question_id)
