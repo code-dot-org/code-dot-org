@@ -85,6 +85,7 @@ progress.showDisabledBubblesAlert = function() {
  *   level and therefore are on lesson extras
  * @param {number} currentPageNumber The page we are on if this is a multi-
  *   page level.
+ * @returns {Promise<void>}
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -125,7 +126,21 @@ progress.generateStageProgress = function(
     store.dispatch(setStageExtrasEnabled(true));
   }
 
-  return getLevelProgress(signedIn, progressData, name).then(data => {
+  return populateProgress(store, signedIn, progressData, name);
+};
+
+/**
+ * Populates progress data in the given redux strore.
+ * @param {Store} store redux store
+ * @param {boolean|null} signedIn true if the user is signed in, false if the
+ *    user is not signed in, null if we don't know
+ * @param {Object} progressData progress data if it is already known, only used
+ *    if signedIn === true
+ * @param {string} scriptName
+ * @returns {Promise<void>}
+ */
+function populateProgress(store, signedIn, progressData, scriptName) {
+  return getLevelProgress(signedIn, progressData, scriptName).then(data => {
     if (data.usingDbProgress) {
       store.dispatch(useDbProgress());
       clientState.clearProgress();
@@ -143,12 +158,17 @@ progress.generateStageProgress = function(
       progress.showDisabledBubblesAlert();
     }
   });
-};
+}
 
 /**
  * Returns a promise that, when resolved, returns an object with two properties:
  * - usingDbProgress: indicates if level progress came from the database
  * - progress: map from level id to result
+ *
+ * This function contains logic that determines whether progress data should
+ * come from the data embedded in the html page (passed in as progressData),
+ * from session storage, or from an ajax request to the server.
+ *
  * @param {boolean|null} signedIn true if the user is signed in, false if the
  *    user is not signed in, null if we don't know
  * @param {Object} progressData progress data if it is already known, only used
@@ -173,7 +193,7 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       });
     case null:
       // We do not know if user is signed in or not, send a request to the server
-      // to find out and retrieve progress information
+      // to find out if the user is signed in and retrieve progress information
       return $.ajax(`/api/user_progress/${scriptName}`)
         .then(data => {
           if (data.signedIn) {
