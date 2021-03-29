@@ -182,7 +182,7 @@ class LessonEditor extends Component {
       preparation,
       announcements
     } = this.state;
-    const {relatedLessons} = this.props;
+    const {relatedLessons, standards} = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
@@ -441,7 +441,10 @@ class LessonEditor extends Component {
               collapsed={true}
               fullwidth={true}
             >
-              <StandardsEditor standardType={'standard'} />
+              <StandardsEditor
+                standardType={'standard'}
+                standards={standards}
+              />
             </CollapsibleEditorSection>
           </div>
         )}

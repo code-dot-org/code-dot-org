@@ -35,9 +35,9 @@ const styles = {
 class StandardsEditor extends Component {
   static propTypes = {
     standardType: PropTypes.string.isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
 
     // provided by redux
-    standards: PropTypes.arrayOf(standardShape).isRequired,
     addStandard: PropTypes.func.isRequired,
     removeStandard: PropTypes.func.isRequired
   };
@@ -239,9 +239,7 @@ class StandardsEditor extends Component {
 export const UnconnectedStandardsEditor = StandardsEditor;
 
 export default connect(
-  state => ({
-    standards: state.standards
-  }),
+  state => ({}),
   {
     addStandard,
     removeStandard
