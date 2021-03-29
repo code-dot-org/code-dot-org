@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 13:22:35 UTC",
+    "serialized_at": "2021-03-29 17:13:04 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -46,7 +46,7 @@
   "lessons": [
     {
       "key": "lesson1",
-      "name": "Introduction to Machine Learning A",
+      "name": "Introduction to Machine Learning",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -181,7 +181,7 @@
     },
     {
       "key": "lesson10",
-      "name": "Regression Quest (Unplugged)",
+      "name": "Regression With Machine Learning",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -295,21 +295,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson19",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "key": "lesson20",
-      "name": "TEMP LEVELS - DELETE LATER",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson20",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
@@ -678,6 +663,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL06 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL06 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL06 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Dataset #1: Tacos",
         "level_keys": [
           "ml-intro categorical-tacos"
@@ -698,8 +708,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 2,
+      "chapter": 17,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -723,8 +733,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 3,
+      "chapter": 18,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -748,8 +758,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 4,
+      "chapter": 19,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -773,8 +783,58 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL07 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL07 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL07 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "(Enable AI Models)",
+        "level_keys": [
+          "Full Year Pilot Experiments Dashboard - AI Models"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Full Year Pilot Experiments Dashboard - AI Models"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "Full Year Pilot Experiments Dashboard - AI Models"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -798,8 +858,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 2,
+      "chapter": 23,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -823,8 +883,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 3,
+      "chapter": 24,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -848,8 +908,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 4,
+      "chapter": 25,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -873,8 +933,8 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 5,
+      "chapter": 26,
+      "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -898,8 +958,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 6,
+      "chapter": 27,
+      "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -923,8 +983,33 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL08 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL08 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL08 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -948,8 +1033,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 2,
+      "chapter": 30,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -973,8 +1058,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 3,
+      "chapter": 31,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -998,8 +1083,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1023,8 +1108,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 5,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1048,8 +1133,33 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL09 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL09 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL09 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1073,8 +1183,58 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL10 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL10 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL10 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL11 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL11 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson11",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL11 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1098,8 +1258,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 2,
+      "chapter": 39,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1123,8 +1283,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 3,
+      "chapter": 40,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1148,8 +1308,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 4,
+      "chapter": 41,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1173,8 +1333,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 5,
+      "chapter": 42,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1198,8 +1358,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 6,
+      "chapter": 43,
+      "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1223,8 +1383,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 7,
+      "chapter": 44,
+      "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1248,8 +1408,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 8,
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1273,8 +1433,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 9,
+      "chapter": 46,
+      "position": 10,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1298,8 +1458,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 10,
+      "chapter": 47,
+      "position": 11,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1323,8 +1483,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 11,
+      "chapter": 48,
+      "position": 12,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1348,8 +1508,33 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 49,
       "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson Overview",
+        "level_keys": [
+          "CSD AIL12 autoSFLP_pilot-2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD AIL12 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson12",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      },
+      "level_keys": [
+        "CSD AIL12 autoSFLP_pilot-2021"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1373,8 +1558,8 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 2,
+      "chapter": 51,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1398,8 +1583,8 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 3,
+      "chapter": 52,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -1423,7 +1608,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1448,7 +1633,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1473,7 +1658,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1498,7 +1683,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1523,7 +1708,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1545,306 +1730,6 @@
       },
       "level_keys": [
         "ml-final project-app lab"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Medical Priority App (external app)",
-        "level_keys": [
-          "ml-model cards-medical app"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-model cards-medical app"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-model cards-medical app"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Which Pixar Character Are You?",
-        "level_keys": [
-          "ml-import ai-pixar placeholder"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-import ai-pixar placeholder"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-import ai-pixar placeholder"
-      ]
-    },
-    {
-      "chapter": 52,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Recognizing Ocean Animals",
-        "level_keys": [
-          "Oceans_CreaturesVTrash"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Oceans_CreaturesVTrash"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "Oceans_CreaturesVTrash"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Medical Dataset Model Cards",
-        "level_keys": [
-          "ml-model card-medical-4"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-model card-medical-4"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-model card-medical-4"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "(Slides) Bias in Machine Learning Video",
-        "level_keys": [
-          "Oceans_Video_Training_Data"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Oceans_Video_Training_Data"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "Oceans_Video_Training_Data"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 6,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "How Much Will Insurance Cost?",
-        "level_keys": [
-          "ml-use model card-example2A"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use model card-example2A"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-use model card-example2A"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 7,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "How Much Will Insurance Cost?",
-        "level_keys": [
-          "ml-use model card-example2B"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use model card-example2B"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-use model card-example2B"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "How Much Will Insurance Cost?",
-        "level_keys": [
-          "ml-use model card-example2C"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use model card-example2C"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-use model card-example2C"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 9,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "How Much Will Insurance Cost?",
-        "level_keys": [
-          "ml-use model card-example2D"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use model card-example2D"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-use model card-example2D"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 10,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "How Much Will Insurance Cost?",
-        "level_keys": [
-          "ml-use model card-example2E"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-use model card-example2E"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-use model card-example2E"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 11,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Supervised Learning",
-        "level_keys": [
-          "ml-L2 supervised - 1"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-L2 supervised - 1"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-L2 supervised - 1"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 12,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Video: Introduction to AI Lab",
-        "level_keys": [
-          "ml-intro ai lab-intro video"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro ai lab-intro video"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      },
-      "level_keys": [
-        "ml-intro ai lab-intro video"
       ]
     }
   ],
@@ -2005,6 +1890,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD AIL06 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL06 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-intro categorical-tacos",
         "script_level.level_keys": [
           "ml-intro categorical-tacos"
@@ -2043,6 +1939,28 @@
           "ml-intro categorical-food choices"
         ],
         "lesson.key": "lesson6",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD AIL07 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL07 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson7",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Full Year Pilot Experiments Dashboard - AI Models",
+        "script_level.level_keys": [
+          "Full Year Pilot Experiments Dashboard - AI Models"
+        ],
+        "lesson.key": "lesson7",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
@@ -2115,6 +2033,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD AIL08 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL08 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson8",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-model card-medical app v2",
         "script_level.level_keys": [
           "ml-model card-medical app v2"
@@ -2170,11 +2099,44 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD AIL09 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL09 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-numerical ai lab-safari 1",
         "script_level.level_keys": [
           "ml-numerical ai lab-safari 1"
         ],
         "lesson.key": "lesson9",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD AIL10 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL10 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson10",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD AIL11 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL11 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson11",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
@@ -2302,6 +2264,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD AIL12 autoSFLP_pilot-2021",
+        "script_level.level_keys": [
+          "CSD AIL12 autoSFLP_pilot-2021"
+        ],
+        "lesson.key": "lesson12",
+        "lesson_group.key": "",
+        "script.name": "ai-unit-pilot"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ml-data decisions-zoo1",
         "script_level.level_keys": [
           "ml-data decisions-zoo1"
@@ -2384,138 +2357,6 @@
           "ml-final project-app lab"
         ],
         "lesson.key": "lesson19",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-model cards-medical app",
-        "script_level.level_keys": [
-          "ml-model cards-medical app"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-import ai-pixar placeholder",
-        "script_level.level_keys": [
-          "ml-import ai-pixar placeholder"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Oceans_CreaturesVTrash",
-        "script_level.level_keys": [
-          "Oceans_CreaturesVTrash"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-model card-medical-4",
-        "script_level.level_keys": [
-          "ml-model card-medical-4"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Oceans_Video_Training_Data",
-        "script_level.level_keys": [
-          "Oceans_Video_Training_Data"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use model card-example2A",
-        "script_level.level_keys": [
-          "ml-use model card-example2A"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use model card-example2B",
-        "script_level.level_keys": [
-          "ml-use model card-example2B"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use model card-example2C",
-        "script_level.level_keys": [
-          "ml-use model card-example2C"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use model card-example2D",
-        "script_level.level_keys": [
-          "ml-use model card-example2D"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-use model card-example2E",
-        "script_level.level_keys": [
-          "ml-use model card-example2E"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-L2 supervised - 1",
-        "script_level.level_keys": [
-          "ml-L2 supervised - 1"
-        ],
-        "lesson.key": "lesson20",
-        "lesson_group.key": "",
-        "script.name": "ai-unit-pilot"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-intro ai lab-intro video",
-        "script_level.level_keys": [
-          "ml-intro ai lab-intro video"
-        ],
-        "lesson.key": "lesson20",
         "lesson_group.key": "",
         "script.name": "ai-unit-pilot"
       }
