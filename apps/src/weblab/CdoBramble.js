@@ -46,12 +46,30 @@ export default class CdoBramble {
       const currentFiles = this.api.getCurrentFileEntries();
       const currentVersionId = this.api.getCurrentFilesVersionId();
       if (currentFiles?.length <= 0 || !currentVersionId) {
-        // TODO: Handle initial project write with default files.
-        callback();
+        this.setupNewProject(this.api.getStartSources()?.files, callback);
       } else {
         this.syncFiles(currentFiles, currentVersionId, callback);
       }
     });
+  }
+
+  setupNewProject(sourceFiles, callback) {
+    this.recursivelyWriteSourceFiles(sourceFiles, 0, () => {
+      // Wait until user-initiated change before saving any files to the server.
+      this.api.registerBeforeFirstWriteHook(
+        this.uploadAllFilesToServer.bind(this)
+      );
+      // Sync files in case there are new files + version.
+      this.syncFiles(
+        this.api.getCurrentFileEntries(),
+        this.api.getCurrentFilesVersionId(),
+        callback
+      );
+    });
+  }
+
+  uploadAllFilesToServer(callback) {
+    // TODO: get all files and upload to server.
   }
 
   mount() {
@@ -284,7 +302,14 @@ export default class CdoBramble {
       path,
       Buffer.from(data),
       {encoding: null},
-      callback
+      err => {
+        err &&
+          console.error(
+            `CdoBramble unable to write ${path} to Bramble. ${err}`
+          );
+
+        callback(err);
+      }
     );
   }
 
@@ -297,6 +322,7 @@ export default class CdoBramble {
         callback(data, null);
       })
       .fail((_xhr, _textStatus, err) => {
+        console.error(`CdoBramble unable to download file at ${url}. ${err}`);
         callback(null, err);
       });
   }
@@ -311,7 +337,7 @@ export default class CdoBramble {
       return;
     }
 
-    const next = () => {
+    const next = err => {
       if (currentIndex >= files.length - 1) {
         finalCallback();
       } else {
@@ -324,20 +350,70 @@ export default class CdoBramble {
 
     this.downloadFile(fullUrl, (fileData, err) => {
       if (err) {
-        console.error(`CdoBramble unable to download file at ${url}. ${err}`);
         next();
         return;
       }
 
-      this.writeFileData(this.prependProjectPath(name), fileData, err => {
-        if (err) {
-          console.error(
-            `CdoBramble unable to write ${name} to Bramble. ${err}`
-          );
-        }
-        next();
-      });
+      this.writeFileData(this.prependProjectPath(name), fileData, next);
     });
+  }
+
+  recursivelyWriteSourceFiles(sourceFiles, currentIndex, finalCallback) {
+    if (sourceFiles?.length <= 0 || !sourceFiles[currentIndex]) {
+      finalCallback();
+      return;
+    }
+
+    const {name, url, data} = sourceFiles[currentIndex];
+    const path = this.prependProjectPath(name);
+    const next = err => {
+      if (currentIndex >= sourceFiles.length - 1) {
+        finalCallback();
+      } else {
+        this.recursivelyWriteSourceFiles(
+          sourceFiles,
+          currentIndex + 1,
+          finalCallback
+        );
+      }
+    };
+
+    const invalidSourceError = this.validateSourceFile(name, url, data);
+    if (invalidSourceError) {
+      console.error(
+        `CdoBramble skipping invalid source file. ${invalidSourceError}`
+      );
+      next();
+      return;
+    }
+
+    if (url) {
+      data &&
+        console.warn(
+          `CdoBramble source file ${name} has both url and data. Defaulting to url.`
+        );
+
+      this.downloadFile(url, (fileData, err) => {
+        if (err) {
+          next();
+          return;
+        }
+
+        this.writeFileData(path, fileData, next);
+      });
+    } else if (data) {
+      this.writeFileData(path, data, next);
+    }
+  }
+
+  validateSourceFile(name, url, data) {
+    if (!name) {
+      return new Error('Name property is required.');
+    }
+
+    if (!url && !data) {
+      return new Error(`${name} has neither url nor data.`);
+    }
   }
 
   fileSystem() {
