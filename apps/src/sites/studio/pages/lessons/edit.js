@@ -37,7 +37,8 @@ $(document).ready(function() {
     resources: resourcesEditor,
     vocabularies: vocabulariesEditor,
     programmingExpressions: programmingExpressionsEditor,
-    standards: createStandardsReducer('standard')
+    standards: createStandardsReducer('standard'),
+    opportunityStandards: createStandardsReducer('opportunityStandard')
   });
   const store = getStore();
 
@@ -50,6 +51,9 @@ $(document).ready(function() {
     initProgrammingExpressions(lessonData.programmingExpressions || [])
   );
   store.dispatch(initStandards('standard', lessonData.standards || []));
+  store.dispatch(
+    initStandards('opportunityStandard', lessonData.opportunityStandards || [])
+  );
 
   ReactDOM.render(
     <Provider store={store}>
