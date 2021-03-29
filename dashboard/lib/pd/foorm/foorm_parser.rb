@@ -40,21 +40,31 @@ module Pd::Foorm
     def self.parse_forms(forms)
       parsed_forms = {general: {}, facilitator: {}}
       forms.each do |form|
-        parsed_form = {general: {}, facilitator: {}}
-        form_questions = JSON.parse(form.questions)
-        form_questions = ::Foorm::Form.fill_in_library_items(form_questions)
-        form_questions.deep_symbolize_keys!
-        form_questions[:pages].each do |page|
-          page[:elements].each do |question_data|
-            parsed_form.deep_merge!(parse_element(question_data, false))
-          end
-        end
-        parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form[:general]
+        parsed_form_questions = parse_form_questions(form.questions)
+
+        parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form_questions[:general]
         unless parsed_form[:facilitator].empty?
-          parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form[:facilitator]
+          parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form_questions[:facilitator]
         end
       end
+
       parsed_forms
+    end
+
+    # Parse single form, and return a readable version of its questions.
+    def self.parse_form_questions(form_questions)
+      form_questions_parsed_from_json = JSON.parse(form_questions)
+      parsed_form_questions = {general: {}, facilitator: {}}
+
+      filled_in_form_questions = ::Foorm::Form.fill_in_library_items(form_questions_parsed_from_json)
+      filled_in_form_questions.deep_symbolize_keys!
+      filled_in_form_questions[:pages].each do |page|
+        page[:elements].each do |question_data|
+          parsed_form_questions.deep_merge!(parse_element(question_data, false))
+        end
+      end
+
+      parsed_form_questions
     end
 
     # parse a form element

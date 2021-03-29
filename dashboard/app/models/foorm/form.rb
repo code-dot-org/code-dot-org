@@ -315,9 +315,17 @@ class Foorm::Form < ApplicationRecord
     csv_result
   end
 
-  def parsed_questions
-    @parsed_questions ||= Pd::Foorm::FoormParser.parse_forms([self])
-    @parsed_questions
+  # For a given question_id, gets metadata about the question (eg, type, choices).
+  def get_question_details(question_id)
+    parsed_questions(true)[question_id]
+  end
+
+  def parsed_questions(should_flatten = false)
+    @parsed_questions ||= Pd::Foorm::FoormParser.parse_form_questions(questions)
+
+    should_flatten ?
+      @parsed_questions[:general].merge!(@parsed_questions[:facilitator]) :
+      @parsed_questions
   end
 
   # Returns a hash with keys matching what is produced by parsed_questions.
@@ -331,7 +339,7 @@ class Foorm::Form < ApplicationRecord
       questions[questions_section] = {}
       next if questions_content.nil_or_empty?
 
-      questions_content[key].each do |question_id, question_details|
+      questions_content.each do |question_id, question_details|
         if question_details[:type] == 'matrix'
           matrix_questions = question_details[:rows]
           matrix_questions.each do |matrix_question_id, matrix_question_text|
