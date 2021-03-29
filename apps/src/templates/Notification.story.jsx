@@ -162,6 +162,7 @@ export default storybook => {
             buttonLink="/"
             newWindow={true}
             firehoseAnalyticsData={firehoseAnalyticsData}
+            googleAnalyticsId="sample_announcement"
           />
         )
       },

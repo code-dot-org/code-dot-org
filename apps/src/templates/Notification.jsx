@@ -146,9 +146,9 @@ class Notification extends Component {
     dismissible: PropTypes.bool.isRequired,
     onDismiss: PropTypes.func,
     newWindow: PropTypes.bool,
-    // analyticId and firehoseAnalyticsData are only used when a primary button is provided.
+    // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
     // It's not used by the array of buttons.
-    analyticId: PropTypes.string,
+    googleAnalyticsId: PropTypes.string,
     firehoseAnalyticsData: PropTypes.object,
     responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
     isRtl: PropTypes.bool.isRequired,
@@ -187,11 +187,11 @@ class Notification extends Component {
   };
 
   onAnnouncementClick() {
-    const {firehoseAnalyticsData, analyticId} = this.props;
+    const {firehoseAnalyticsData, googleAnalyticsId} = this.props;
 
     // Log to Google Analytics
-    if (analyticId) {
-      trackEvent('teacher_announcement', 'click', analyticId);
+    if (googleAnalyticsId) {
+      trackEvent('teacher_announcement', 'click', googleAnalyticsId);
     }
 
     // Log to Firehose
