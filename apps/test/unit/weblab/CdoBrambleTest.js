@@ -305,19 +305,20 @@ describe('CdoBramble', () => {
       });
     });
 
-    it('logs an error if the change failed to save', done => {
+    it('saves the next change if a change fails to save', done => {
       cdoBramble.api.deleteProjectFile.restore();
       sinon
         .stub(cdoBramble.api, 'deleteProjectFile')
         .callsFake((filename, callback) => callback(new Error(), null));
 
-      const changes = [{operation: 'delete', file: 'style.css'}];
+      const changes = [
+        {operation: 'delete', file: 'style.css'},
+        {operation: 'change', file: 'index.html'}
+      ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
         expect(cdoBramble.api.deleteProjectFile).to.have.been.calledOnce;
-        expect(console.error).to.have.been.calledOnce;
-        expect(cdoBramble.api.renameProjectFile).not.to.have.been.called;
-        expect(cdoBramble.getFileData).not.to.have.been.called;
-        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
+        expect(cdoBramble.getFileData).to.have.been.calledOnce;
+        expect(cdoBramble.api.changeProjectFile).to.have.been.calledOnce;
         done();
       });
     });
@@ -408,32 +409,23 @@ describe('CdoBramble', () => {
       });
     });
 
-    it('logs an error if the file failed to download', done => {
+    it('writes the next file if a file fails to download', done => {
       cdoBramble.downloadFile.restore();
-      sinon
-        .stub(cdoBramble, 'downloadFile')
+      const downloadFileStub = sinon.stub(cdoBramble, 'downloadFile');
+      downloadFileStub
+        .onFirstCall()
         .callsFake((url, callback) => callback(null, new Error()));
+      downloadFileStub
+        .onSecondCall()
+        .callsFake((url, callback) => callback('my file data', null));
 
-      const files = [{name: 'index.html', url: '/v3/files/abc/index.html'}];
+      const files = [
+        {name: 'index.html', url: '/v3/files/abc/index.html'},
+        {name: 'other.html', url: '/v3/files/abc/other.html'}
+      ];
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledOnce;
-        expect(console.error).to.have.been.calledOnce;
-        expect(cdoBramble.writeFileData).not.to.have.been.called;
-        done();
-      });
-    });
-
-    it('logs an error if the file failed to write', done => {
-      cdoBramble.writeFileData.restore();
-      sinon
-        .stub(cdoBramble, 'writeFileData')
-        .callsFake((path, data, callback) => callback(new Error()));
-
-      const files = [{name: 'index.html', url: '/v3/files/abc/index.html'}];
-      cdoBramble.recursivelyWriteFiles(files, 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledOnce;
+        expect(cdoBramble.downloadFile).to.have.been.calledTwice;
         expect(cdoBramble.writeFileData).to.have.been.calledOnce;
-        expect(console.error).to.have.been.calledOnce;
         done();
       });
     });
