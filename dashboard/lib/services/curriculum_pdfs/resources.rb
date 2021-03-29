@@ -11,13 +11,14 @@ module Services
       extend ActiveSupport::Concern
       class_methods do
         def generate_script_resources_pdf(script, directory="/tmp/")
-          ChatClient.log("Generating script resources PDF for #{script.name}")
+          ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
           pdfs = []
 
           # Gather together PDFs of all resources in all lessons, grouped by
           # lesson with a title page.
           script.lessons.each do |lesson|
+            ChatClient.log("Gathering resources for #{lesson.key.inspect}") if DEBUG
             lesson_pdfs = lesson.resources.map do |resource|
               fetch_resource_pdf(resource, pdfs_dir)
             end.compact
