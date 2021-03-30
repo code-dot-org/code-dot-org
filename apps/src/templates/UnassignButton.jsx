@@ -4,10 +4,14 @@ import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   buttonMargin: {
     marginLeft: 10
+  },
+  buttonMarginRTL: {
+    marginRight: 10
   }
 };
 
@@ -38,11 +42,15 @@ class UnassignButton extends React.Component {
 
   render() {
     const {text, icon} = this.state;
+    const isRtl = getStore().getState().isRtl;
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMargin;
     return (
       <div
         onMouseOver={this.onMouseOver}
         onMouseLeave={this.onMouseOut}
-        style={styles.buttonMargin}
+        style={buttonMarginStyle}
         className={'uitest-unassign-button'}
       >
         <Button
