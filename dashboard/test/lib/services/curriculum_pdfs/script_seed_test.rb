@@ -8,7 +8,7 @@ class Services::CurriculumPdfs::ScriptSeedTest < ActiveSupport::TestCase
 
   test 'wraps ScriptSeed with PDF generation logic' do
     CDO.stubs(:rack_env).returns(:staging)
-    script = create(:script, is_migrated: true, hidden: true)
+    script = create(:script, is_migrated: true)
     seed_hash = JSON.parse(Services::ScriptSeed.serialize_seeding_json(script))
 
     # Generate PDFs on first seed
