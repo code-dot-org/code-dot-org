@@ -8,6 +8,7 @@ import ProgressBubble from './ProgressBubble';
 import color from '@cdo/apps/util/color';
 import {levelType} from './progressTypes';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   main: {
@@ -99,6 +100,7 @@ class ProgressBubbleSet extends React.Component {
       selectedStudentId,
       hideAssessmentIcon
     } = this.props;
+    const isRtl = getStore().getState().isRtl;
 
     return (
       <div style={styles.withBackground} key={index}>
@@ -108,11 +110,13 @@ class ProgressBubbleSet extends React.Component {
             level.isConceptLevel && styles.backgroundDiamond,
             isSublevel && styles.backgroundSublevel,
             level.isUnplugged && styles.backgroundPill,
-            !isSublevel && index === 0 && styles.backgroundFirst,
+            !isSublevel &&
+              index === 0 &&
+              (isRtl ? styles.backgroundLast : styles.backgroundFirst),
             !isSublevel &&
               !level.sublevels &&
               index === levels.length - 1 &&
-              styles.backgroundLast
+              (isRtl ? styles.backgroundFirst : styles.backgroundLast)
           ]}
         />
         <div
