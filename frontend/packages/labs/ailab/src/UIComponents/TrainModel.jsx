@@ -8,6 +8,7 @@ import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
 import labBackground from "@public/images/lab-background-light.png";
+import Statement from "./Statement";
 import DataTable from "./DataTable";
 
 const framesPerCycle = 40;
@@ -82,22 +83,7 @@ class TrainModel extends Component {
           backgroundImage: "url(" + labBackground + ")"
         }}
       >
-        <div style={styles.statement}>
-          Predict{" "}
-          <span style={styles.statementLabel}>
-            {this.props.labelColumn || "..."}
-          </span>
-          <span>
-            {" "}
-            based on{" "}
-            <span style={styles.statementFeature}>
-              {this.props.selectedFeatures.length > 0
-                ? this.props.selectedFeatures.join(", ")
-                : ".."}
-            </span>
-            {"."}
-          </span>
-        </div>
+        <Statement/>
 
         <div style={styles.trainModelContainer}>
           <div style={styles.trainModelDataTable}>

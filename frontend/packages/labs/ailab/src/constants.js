@@ -356,10 +356,8 @@ export const styles = {
   },
 
   statement: {
-    fontSize: 36,
-    backgroundColor: "rgba(255,255,255,0.8)",
-    padding: 10,
-    borderRadius: 5
+    fontSize: 32,
+    paddingBottom: 15
   },
 
   statementLabel: {
