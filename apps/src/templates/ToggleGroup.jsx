@@ -1,8 +1,16 @@
 /** @file Row of buttons for switching editor modes. */
 import PropTypes from 'prop-types';
+import {getStore} from '@cdo/apps/redux';
 
 import React, {Component} from 'react';
 import ToggleButton from './ToggleButton';
+
+const styles = {
+  buttonReverse: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
+  }
+};
 
 export default class ToggleGroup extends Component {
   static propTypes = {
@@ -38,7 +46,12 @@ export default class ToggleGroup extends Component {
   }
 
   render() {
-    return <span>{this.renderChildren()}</span>;
+    const isRtl = getStore().getState().isRtl;
+    return (
+      <span style={isRtl ? styles.buttonReverse : null}>
+        {this.renderChildren()}
+      </span>
+    );
   }
 
   renderChildren() {
