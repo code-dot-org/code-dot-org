@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   table: {
@@ -43,6 +44,11 @@ const styles = {
     borderWidth: 2,
     borderColor: color.lightest_gray
   },
+  leftBorder: {
+    borderLeftStyle: 'solid',
+    borderWidth: 2,
+    borderColor: color.lightest_gray
+  },
   headerCell: {
     fontWeight: 'bold',
     fontSize: 18
@@ -68,6 +74,10 @@ const styles = {
   },
   icon: {
     marginRight: 5,
+    size: 20
+  },
+  iconRTL: {
+    marginLeft: 5,
     size: 20
   },
   center: {
@@ -100,6 +110,10 @@ export default class ProgressLegend extends Component {
     const {excludeCsfColumn} = this.props;
 
     const secondRowRowSpan = 2;
+
+    const isRtl = getStore().getState().isRtl;
+    const iconStyle = isRtl ? styles.iconRTL : styles.icon;
+    const sideBorderStyle = isRtl ? styles.leftBorder : styles.rightBorder;
 
     return (
       <table style={styles.table} className="progress-legend">
@@ -134,22 +148,22 @@ export default class ProgressLegend extends Component {
         </thead>
         <tbody>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder}>{i18n.concept()}</TD>
+            <TD style={sideBorderStyle}>{i18n.concept()}</TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="file-text" style={styles.icon} />
+                <FontAwesome icon="file-text" style={iconStyle} />
                 {i18n.text()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="video-camera" style={styles.icon} />
+                <FontAwesome icon="video-camera" style={iconStyle} />
                 {i18n.video()}
               </div>
             </TD>
-            <TD style={styles.rightBorder}>
+            <TD style={sideBorderStyle}>
               <div style={styles.iconAndText}>
-                <FontAwesome icon="map" style={styles.icon} />
+                <FontAwesome icon="map" style={iconStyle} />
                 {i18n.map()}
               </div>
             </TD>
@@ -196,36 +210,36 @@ export default class ProgressLegend extends Component {
             <TD>N/A</TD>
           </tr>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder} rowSpan={secondRowRowSpan}>
+            <TD style={sideBorderStyle} rowSpan={secondRowRowSpan}>
               {i18n.activity()}
             </TD>
             <TD>
               <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="scissors" style={styles.icon} />
+                <FontAwesome icon="scissors" style={iconStyle} />
                 {i18n.unplugged()}
               </div>
               <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="flag-checkered" style={styles.icon} />
+                <FontAwesome icon="flag-checkered" style={iconStyle} />
                 {i18n.stageExtras()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="desktop" style={styles.icon} />
+                <FontAwesome icon="desktop" style={iconStyle} />
                 {i18n.online()}
               </div>
               <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="check-circle" style={styles.icon} />
+                <FontAwesome icon="check-circle" style={iconStyle} />
                 {i18n.progressLegendAssessment()}
               </div>
             </TD>
-            <TD style={styles.rightBorder}>
+            <TD style={sideBorderStyle}>
               <div style={styles.iconAndTextDivTop}>
-                <FontAwesome icon="list-ul" style={styles.icon} />
+                <FontAwesome icon="list-ul" style={iconStyle} />
                 {i18n.question()}
               </div>
               <div style={styles.iconAndTextDivBottom}>
-                <FontAwesome icon="sitemap" style={styles.icon} />
+                <FontAwesome icon="sitemap" style={iconStyle} />
                 {i18n.choiceLevel()}
               </div>
             </TD>
