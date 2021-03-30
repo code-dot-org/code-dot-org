@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Statement from "./Statement";
 import DataTable from "./DataTable";
 import { setCurrentColumn } from "../redux";
 import { styles } from "../constants";
@@ -22,13 +23,14 @@ class DataDisplay extends Component {
 
     return (
       <div id="data-display" style={styles.panel}>
+        <Statement />
         <div
           style={styles.tableParent}
           onScroll={() => setCurrentColumn(undefined)}
         >
           <DataTable setColumnRef={setColumnRef} />
         </div>
-        <div style={styles.mediumText}>
+        <div style={styles.footerText}>
           There are {this.props.data.length} rows of data.
         </div>
       </div>

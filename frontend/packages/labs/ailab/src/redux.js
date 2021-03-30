@@ -62,6 +62,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
+const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
@@ -213,6 +214,10 @@ export function setHighlightColumn(highlightColumn) {
   return { type: SET_HIGHLIGHT_COLUMN, highlightColumn };
 }
 
+export function setHighlightDataset(highlightDataset) {
+  return { type: SET_HIGHLIGHT_DATASET, highlightDataset };
+}
+
 export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
@@ -233,6 +238,8 @@ const initialState = {
   metadata: undefined,
   selectedTrainer: undefined,
   kValue: undefined,
+  highlightDataset: undefined,
+  highlightColumn: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -492,7 +499,6 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         currentPanel: action.currentPanel,
         currentColumn: undefined,
-        labelColumn: "",
         selectedFeatures: []
       };
     }
@@ -504,12 +510,27 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_HIGHLIGHT_COLUMN) {
-    if (getShowColumnClicking(state)) {
-      return {
-        ...state,
-        highlightColumn: action.highlightColumn
-      };
+    if (!getShowColumnClicking(state)) {
+      // If no column clicking, do nothing.
+      return state;
     }
+    if (
+      state.currentPanel === "dataDisplayFeatures" &&
+      action.highlightColumn === state.labelColumn
+    ) {
+      // If doing feature selection, and the label column is clicked, do nothing.
+      return state;
+    }
+    return {
+      ...state,
+      highlightColumn: action.highlightColumn
+    };
+  }
+  if (action.type === SET_HIGHLIGHT_DATASET) {
+    return {
+      ...state,
+      highlightDataset: action.highlightDataset
+    };
   }
   if (action.type === SET_CURRENT_COLUMN) {
     if (!getShowColumnClicking(state)) {
@@ -1105,7 +1126,7 @@ function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "selectTrainer") {
-    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
+    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
       return false;
     }
     if (!uniqLabelFeaturesSelected(state)) {
@@ -1181,13 +1202,11 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = isPanelEnabled(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Back" }
-      : isPanelEnabled(state, "dataDisplayFeatures")
+    prev = isPanelEnabled(state, "dataDisplayFeatures")
       ? { panel: "dataDisplayFeatures", text: "Back" }
       : null;
     next = isPanelEnabled(state, "saveModel")
-      ? { panel: "saveModel", text: "Save" }
+      ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };

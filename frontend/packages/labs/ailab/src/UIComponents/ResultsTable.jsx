@@ -33,20 +33,13 @@ class ResultsTable extends Component {
                 <th
                   colSpan={featureCount}
                   style={{
-                    ...styles.largeText,
                     ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  Features
-                </th>
-                <th
-                  style={{
-                    ...styles.tableHeader,
-                    ...styles.resultsTableFirstHeader
-                  }}
-                >
-                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
+                  <span style={styles.largeText}>
+                    Features
+                  </span>
                 </th>
                 <th
                   style={{
@@ -58,6 +51,14 @@ class ResultsTable extends Component {
                   {this.props.isRegression && (
                     <div style={styles.smallText}>{"+/- 3% of range"}</div>
                   )}
+                </th>
+                <th
+                  style={{
+                    ...styles.tableHeader,
+                    ...styles.resultsTableFirstHeader
+                  }}
+                >
+                  <span style={styles.largeText}>{"A.I. Prediction"}</span>
                 </th>
                 <th
                   colSpan={featureCount}
@@ -122,10 +123,10 @@ class ResultsTable extends Component {
                       );
                     })}
                     <td style={styles.tableCell}>
-                      {this.props.accuracyCheckPredictedLabels[index]}
+                      {this.props.accuracyCheckLabels[index]}
                     </td>
                     <td style={styles.tableCell}>
-                      {this.props.accuracyCheckLabels[index]}
+                      {this.props.accuracyCheckPredictedLabels[index]}
                     </td>
                     {this.props.accuracyGrades[index] ===
                       ResultsGrades.CORRECT && (

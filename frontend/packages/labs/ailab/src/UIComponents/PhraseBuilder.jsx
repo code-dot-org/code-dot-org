@@ -59,14 +59,16 @@ class PhraseBuilder extends Component {
       >
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
-            <div style={styles.phraseBuilderHeader}>Predict...</div>
+            <div style={styles.phraseBuilderHeader}>Label:</div>
             {currentPanel === "dataDisplayLabel" && (
               <select
-                value={labelColumn === null ? "" : labelColumn}
+                value={!labelColumn ? "" : labelColumn}
                 onChange={this.handleChangeLabelSelect}
                 style={styles.phraseBuilderSelect}
               >
-                <option>{""}</option>
+                <option key="default" value="" disabled>
+                  Choose Label
+                </option>
                 {selectableLabels.map((feature, index) => {
                   return (
                     <option key={index} value={feature}>
@@ -79,12 +81,9 @@ class PhraseBuilder extends Component {
 
             {currentPanel === "dataDisplayFeatures" && (
               <div>
-                <div style={styles.phraseBuilderSelectReadonly}>
-                  {labelColumn}
-                </div>
-                <br />
+                <div style={styles.phraseBuilderLabel}>{labelColumn}</div>
                 <div>
-                  <div style={styles.phraseBuilderHeader}>Based on...</div>
+                  <div style={styles.phraseBuilderHeaderSecond}>Features:</div>
                   {selectedFeatures.map((feature, index) => {
                     return (
                       <div key={index} style={styles.phraseBuilderFeature}>

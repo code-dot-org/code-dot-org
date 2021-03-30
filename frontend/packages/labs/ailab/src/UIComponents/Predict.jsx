@@ -95,14 +95,20 @@ class Predict extends Component {
           </div>
         </div>
         <br />
-        <button
-          type="button"
-          style={styles.regularButton}
-          onClick={this.onClickPredict}
-          disabled={!this.props.getPredictAvailable}
-        >
-          Predict
-        </button>
+        <div>
+          <button
+            type="button"
+            style={
+              !this.props.getPredictAvailable
+                ? styles.disabledButton
+                : undefined
+            }
+            onClick={this.onClickPredict}
+            disabled={!this.props.getPredictAvailable}
+          >
+            Predict
+          </button>
+        </div>
         {this.props.predictedLabel && (
           <div>
             <p />

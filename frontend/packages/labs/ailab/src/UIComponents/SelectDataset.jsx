@@ -7,7 +7,8 @@ import {
   setSelectedCSV,
   setSelectedJSON,
   resetState,
-  getSpecifiedDatasets
+  getSpecifiedDatasets,
+  setHighlightDataset
 } from "../redux";
 import { parseCSV } from "../csvReaderWrapper";
 import { parseJSON } from "../jsonReaderWrapper";
@@ -19,11 +20,13 @@ class SelectDataset extends Component {
     setSelectedName: PropTypes.func.isRequired,
     setSelectedCSV: PropTypes.func.isRequired,
     setSelectedJSON: PropTypes.func.isRequired,
+    setHighlightDataset: PropTypes.func.isRequired,
     csvfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     jsonfile: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     resetState: PropTypes.func.isRequired,
     specifiedDatasets: PropTypes.arrayOf(PropTypes.string),
-    name: PropTypes.string
+    name: PropTypes.string,
+    highlightDataset: PropTypes.string
   };
 
   constructor(props) {
@@ -100,18 +103,24 @@ class SelectDataset extends Component {
                 <div
                   style={{
                     ...styles.selectDatasetItem,
+                    ...(this.props.highlightDataset === dataset.name &&
+                      styles.selectDatasetItemHighlighted),
                     ...(this.props.name === dataset.name &&
                       styles.selectDatasetItemSelected)
                   }}
                   key={dataset.id}
                   onClick={() => this.handleDatasetClick(dataset.id)}
+                  onMouseEnter={() =>
+                    this.props.setHighlightDataset(dataset.name)
+                  }
+                  onMouseLeave={() => this.props.setHighlightDataset(undefined)}
                 >
                   <img
                     src={assetPath + dataset.imagePath}
                     style={styles.selectDatasetImage}
                     draggable={false}
                   />
-                  <div>{dataset.name}</div>
+                  <div style={styles.selectDatasetText}>{dataset.name}</div>
                 </div>
               );
             })}
@@ -147,7 +156,8 @@ export default connect(
     csvfile: state.csvfile,
     jsonfile: state.jsonfile,
     specifiedDatasets: getSpecifiedDatasets(state),
-    name: state.name
+    name: state.name,
+    highlightDataset: state.highlightDataset
   }),
   dispatch => ({
     resetState() {
@@ -161,6 +171,9 @@ export default connect(
     },
     setSelectedJSON(jsonfilePath) {
       dispatch(setSelectedJSON(jsonfilePath));
+    },
+    setHighlightDataset(id) {
+      dispatch(setHighlightDataset(id));
     }
   })
 )(SelectDataset);

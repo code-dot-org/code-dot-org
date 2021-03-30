@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
 import { styles, saveMessages, ModelNameMaxLength } from "../constants";
+import Statement from "./Statement";
 
 class SaveModel extends Component {
   static propTypes = {
@@ -77,6 +78,7 @@ class SaveModel extends Component {
 
     return (
       <div style={styles.panel}>
+        <Statement />
         <div style={styles.scrollableContentsTinted}>
           <div style={styles.scrollingContents}>
             <div key={nameField.id} style={styles.cardRow}>

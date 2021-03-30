@@ -23,65 +23,25 @@ class DataTable extends Component {
   getColumnHeaderStyle = key => {
     let style;
 
-    if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayHeaderLabelSelected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayHeaderFeatureSelected;
-      } else {
-        style = styles.dataDisplayHeaderSelected;
-      }
-    } else if (key === this.props.highlightColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayHeaderLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayHeaderFeatureUnselected;
-      } else {
-        style = styles.dataDisplayHeaderHighlighted;
-      }
-    } else {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayHeaderLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayHeaderFeatureUnselected;
-      } else {
-        style = styles.dataDisplayHeaderUnselected;
-      }
+    if (key === this.props.labelColumn) {
+      style = styles.dataDisplayHeaderLabel;
+    } else if (this.props.selectedFeatures.includes(key)) {
+      style = styles.dataDisplayHeaderFeature;
     }
 
-    return { ...style, ...styles.tableHeader };
+    return { ...styles.dataDisplayHeader, ...style };
   };
 
   getColumnCellStyle = key => {
     let style;
 
     if (key === this.props.currentColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayCellLabelSelected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayCellFeatureSelected;
-      } else {
-        style = styles.dataDisplayCellSelected;
-      }
+      style = styles.dataDisplayCellSelected;
     } else if (key === this.props.highlightColumn) {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayCellLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayCellFeatureUnselected;
-      } else {
-        style = styles.dataDisplayCellHighlighted;
-      }
-    } else {
-      if (key === this.props.labelColumn) {
-        style = styles.dataDisplayCellLabelUnselected;
-      } else if (this.props.selectedFeatures.includes(key)) {
-        style = styles.dataDisplayCellFeatureUnselected;
-      } else {
-        style = styles.dataDisplayCellUnselected;
-      }
+      style = styles.dataDisplayCellHighlighted;
     }
 
-    return { ...style, ...styles.tableCell };
+    return { ...styles.dataDisplayCell, ...style };
   };
 
   getColumns = () => {

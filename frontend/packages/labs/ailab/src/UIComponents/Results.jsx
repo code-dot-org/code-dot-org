@@ -11,6 +11,7 @@ import {
 import { styles } from "../constants";
 import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
 import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
+import Statement from "./Statement";
 import ResultsTable from "./ResultsTable";
 
 class Results extends Component {
@@ -42,6 +43,7 @@ class Results extends Component {
   render() {
     return (
       <div id="results" style={styles.panel}>
+        <Statement />
         {this.props.resultsPhase === 0 && (
           <div style={{ ...styles.trainBot, margin: "0 auto" }}>
             <img
