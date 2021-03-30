@@ -18,6 +18,7 @@ import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   outer: {
@@ -67,6 +68,9 @@ const styles = {
   },
   caret: {
     marginRight: 10
+  },
+  caretRTL: {
+    marginLeft: 10
   },
   icon: {
     marginRight: 5,
@@ -152,6 +156,9 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
+    const isRtl = getStore().getState().isRtl;
+    const caretStyle = isRtl ? styles.caretRTL : styles.caret;
+
     // Is this a hidden stage that we still render because we're a teacher
     const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
     const title = lesson.stageNumber
@@ -199,7 +206,7 @@ class ProgressLesson extends React.Component {
         >
           <div style={styles.heading}>
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
-              <FontAwesome icon={caret} style={styles.caret} />
+              <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
