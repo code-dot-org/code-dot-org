@@ -6,7 +6,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
-  designMode.onInsertEvent(`var testValues = {};`);
+  designMode.onInsertEvent(`var data = {};`);
   var inputFields = [];
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
@@ -36,7 +36,7 @@ function generateCodeDesignElements(modelId, modelData) {
       input.id = 'design_' + fieldId;
       y = y + SPACER_PIXELS;
     }
-    var addFeature = `testValues.${alphaNumFeature} = getText("${fieldId}");`;
+    var addFeature = `data.${alphaNumFeature} = getText("${fieldId}");`;
     inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
@@ -57,9 +57,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
     ${inputFields.join('\n\t\t')}
     setText("${predictionId}", '');
-    getPrediction("${
-      modelData.name
-    }", "${modelId}", testValues, function(value) {
+    getPrediction("${modelData.name}", "${modelId}", data, function(value) {
       setText("${predictionId}", value);
     });
   });`;
