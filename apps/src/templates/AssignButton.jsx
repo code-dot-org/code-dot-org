@@ -9,10 +9,14 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   buttonMargin: {
     marginLeft: 10
+  },
+  buttonMarginRTL: {
+    marginRight: 10
   }
 };
 
@@ -76,10 +80,14 @@ class AssignButton extends React.Component {
   render() {
     const {confirmationDialogOpen} = this.state;
     const {assignmentName, sectionName} = this.props;
+    const isRtl = getStore().getState().isRtl;
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMargin;
 
     return (
       <div>
-        <div style={styles.buttonMargin}>
+        <div style={buttonMarginStyle}>
           <Button
             __useDeprecatedTag
             color={Button.ButtonColor.orange}
