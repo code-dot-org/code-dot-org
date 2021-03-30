@@ -402,7 +402,7 @@ ar:
       legal_privacy: سياسة الخصوصية
       legal_tos: شروط الخدمة
     user:
-      classroom: الصفحة الرئيسية المعلم
+      classroom: الصفحة الرئيسية للمعلم
       district_dashboard: جزء لوحة المعلومات
       label: مرحباً %{username}
       stats: ستوديو كود
@@ -430,11 +430,12 @@ ar:
       frozen: ملكة الثلج Frozen
       gamelab: أداة Game Lab
       gamelab_jr: Game Lab (بيتا)
-      gumball: جومبول
+      gumball: عالم غامبول المدهش!
       iceage: العصر الجليدي
       infinity: ما لانهاية
       makerlab: مجموعة أدوات المصمِّم
       minecraft_adventurer: مغامر في Minecraft
+      minecraft_aquatic: " Minecraft المائية"
       minecraft_codebuilder: 'Minecraft: كود الاتصالماينكرافت: كود الاتصال'
       minecraft_designer: Minecraft
       minecraft_hero: بطل Minecraft
@@ -446,6 +447,7 @@ ar:
       starwars: حرب النجوم "Star Wars"
       starwarsblocks: حرب النجوم (بلوكات)
       starwarsblocks_hour: حرب النجوم (بلوكات)
+      weblab: مختبر الويب
       view_all: شاهد جميع المشاريع...
     popup:
       progress_for_user: تقدم %{name}
@@ -598,7 +600,7 @@ ar:
     no_primary_course: جرب الدورة تدريبية في "كود استوديو"
     choose_next_course: جرب دورة تدريبية من كود استوديو باختيار واحد من الأسفل
     print_certificate: طباعة الشهادة
-  certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلمك."
+  certificate_sponsor_message: "%{sponsor_name} تقدم بهدية سخية لرعاية تعلّمك."
   move_students:
     new_section_dne: عذراً, ولكن قسم %{new_section_code} غير موجود. الرجاء إدخال كود
       قسم مختلف.
@@ -1240,10 +1242,10 @@ ar:
 '
         ages_19_over: 19 سنة فما فوق
       subjects:
-        cs: علوم الكمبيوتر
+        cs: علم الحاسوب
         ict: تكنولوجيا المعلومات والاتصالات
         math: العمليات الحسابية
-        science: علوم
+        science: علم
         history: التاريخ/ الدراسات الاجتماعية
         la: فنون اللغة
         efl: اللغة الإنجليزية كلغة أجنبية

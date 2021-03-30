@@ -978,8 +978,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
             '"speed"': السرعة
       gamelab_checkTouching:
@@ -1008,8 +1008,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
             '"tint"': لون خفيف
             '"speed"': السرعة
@@ -1203,8 +1203,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
             '"speed"': السرعة
       gamelab_setSizes:
@@ -1309,8 +1309,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_createNewSprite:
         options:
@@ -1333,8 +1333,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
         text: قم بتغيير {SELECT} {COSTUME} في {COSTUME2}
@@ -1351,8 +1351,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
         text: قم بإنشاء {COSTUME} جديد في {LOCATION}
@@ -1386,8 +1386,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupRemoveAllBehaviors:
         text: وقف {SELECT} {COSTUME} السلوكيات
@@ -1416,8 +1416,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupSetTint:
         text: تغيير لون {SELECT} {COSTUME} ل {COLOR}
@@ -1508,8 +1508,8 @@ ar:
           PROPERTY:
             '"scale"': الحجم
             '"rotation"': الدوران
-            '"x"': الموضع س
-            '"y"': الموضع ص
+            '"x"': الموقع س
+            '"y"': الموقع ص
             '"direction"': اتجاه الحركة
       Mikelab_showScoreboard:
         options:

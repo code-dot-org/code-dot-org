@@ -3355,13 +3355,19 @@ sv:
             csf_digcit:
               display_name: Digitalt medborgarskap
             csf_variables:
-              display_name: variabler
+              display_name: "'För' loopar"
             csf_for_loops:
               display_name: "'För' loopar"
+            lessonGroup-8:
+              display_name: variabler
+            lessonGroup-9:
+              display_name: ta bort
         express-2021:
           lessons:
             Dance Party:
               key: Dansparty
+              name: Dansparty
+            lesson-1:
               name: Dansparty
           lesson_groups:
             csf_loops:
@@ -3390,6 +3396,8 @@ sv:
             outbreak:
               display_name: Utbrottssimulering
             lessonGroup-3:
+              display_name: variabler
+            variables:
               display_name: variabler
         csd5-preview-2021:
           lessons:

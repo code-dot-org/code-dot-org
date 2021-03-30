@@ -14,7 +14,6 @@
 #  student_visit_count      :integer
 #  student_first_visited_at :datetime
 #  student_last_visited_at  :datetime
-#  script_level_id          :integer
 #  seen_on_feedback_page_at :datetime
 #  script_id                :integer          not null
 #  analytics_section_id     :integer
@@ -50,11 +49,12 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_student_level_feedback(student_id, level_id, teacher_id)
+  def self.get_student_level_feedback(student_id, level_id, teacher_id, script_id)
     where(
       student_id: student_id,
       level_id: level_id,
-      teacher_id: teacher_id
+      teacher_id: teacher_id,
+      script_id: script_id
     ).latest
   end
 

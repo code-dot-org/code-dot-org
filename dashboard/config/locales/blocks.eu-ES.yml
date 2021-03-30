@@ -558,6 +558,7 @@ eu:
             '"x"': x posizioa
             '"y"': y posizioa
             '"direction"': mugimentuaren norantza
+            '"speed"': abiadura
       gamelab_checkTouching:
         options:
           CONDITION:
