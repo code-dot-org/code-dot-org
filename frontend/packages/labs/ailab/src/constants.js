@@ -205,6 +205,11 @@ export const styles = {
     width: "100%"
   },
 
+  selectDatasetText: {
+    fontSize: 14,
+    marginTop: 10
+  },
+
   specifyColumnsItem: {
     display: "inline-block",
     width: "20%"
@@ -437,6 +442,13 @@ export const styles = {
     backgroundColor: "grey",
     color: "white",
     padding: 15
+  },
+
+  phraseBuilderHeaderSecond: {
+    backgroundColor: "grey",
+    color: "white",
+    padding: 15,
+    marginTop: 30
   },
 
   popupClose: {

@@ -120,7 +120,7 @@ class SelectDataset extends Component {
                     style={styles.selectDatasetImage}
                     draggable={false}
                   />
-                  <div>{dataset.name}</div>
+                  <div style={styles.selectDatasetText}>{dataset.name}</div>
                 </div>
               );
             })}

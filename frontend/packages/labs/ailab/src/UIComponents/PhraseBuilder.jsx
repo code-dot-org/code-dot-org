@@ -62,7 +62,7 @@ class PhraseBuilder extends Component {
             <div style={styles.phraseBuilderHeader}>Label:</div>
             {currentPanel === "dataDisplayLabel" && (
               <select
-                value={labelColumn === null ? "" : labelColumn}
+                value={!labelColumn ? "" : labelColumn}
                 onChange={this.handleChangeLabelSelect}
                 style={styles.phraseBuilderSelect}
               >
@@ -81,12 +81,9 @@ class PhraseBuilder extends Component {
 
             {currentPanel === "dataDisplayFeatures" && (
               <div>
-                <div style={styles.phraseBuilderLabel}>
-                  {labelColumn}
-                </div>
-                <br />
+                <div style={styles.phraseBuilderLabel}>{labelColumn}</div>
                 <div>
-                  <div style={styles.phraseBuilderHeader}>Features:</div>
+                  <div style={styles.phraseBuilderHeaderSecond}>Features:</div>
                   {selectedFeatures.map((feature, index) => {
                     return (
                       <div key={index} style={styles.phraseBuilderFeature}>
