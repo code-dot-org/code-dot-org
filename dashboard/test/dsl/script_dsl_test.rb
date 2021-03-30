@@ -871,8 +871,7 @@ level 'Level 3'
         family_name: 'family name',
         version_year: '2001',
         is_course: true,
-        is_migrated: true,
-        hidden: true
+        is_migrated: true
       }
     script_text = ScriptDSL.serialize_to_string(script)
     expected = <<~SCRIPT
