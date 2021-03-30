@@ -828,6 +828,24 @@ class LessonTest < ActiveSupport::TestCase
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
   end
 
+  test 'opportunity standards do not count as regular standards' do
+    lesson = create :lesson
+    standard = create :standard
+    lesson.opportunity_standards << standard
+    assert_equal 0, lesson.standards.length
+    assert_equal 1, lesson.opportunity_standards.length
+  end
+
+  test 'destroying lesson destroys opportunity_standards join model' do
+    lesson = create :lesson
+    standard = create :standard
+    LessonsOpportunityStandard.destroy_all
+    lesson.opportunity_standards << standard
+    assert_equal 1, LessonsOpportunityStandard.count
+    lesson.destroy
+    assert_equal 0, LessonsOpportunityStandard.count
+  end
+
   def create_swapped_lockable_lesson
     script = create :script
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
