@@ -27,9 +27,11 @@ module Services
           pdfs = []
 
           # Include a PDF of the /s/script.name page itself
-          url = Rails.application.routes.url_helpers.script_url(script)
           script_filename = ActiveStorage::Filename.new("script.#{script.name}.pdf").sanitized
           script_path = File.join(pdfs_dir, script_filename)
+          # Make sure to specify 'no_redirect' so we're guaranteed to get the
+          # actual script we want
+          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true"
           PDF.generate_from_url(url, script_path)
           pdfs << script_path
 
