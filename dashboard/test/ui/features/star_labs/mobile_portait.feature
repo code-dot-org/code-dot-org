@@ -14,5 +14,5 @@ Feature: Look at mobile portait view
     And I close my eyes
     Examples:
       | url                                                                      | test_name     |
-      | http://studio.code.org/s/allthethings/lesson/18/puzzle/5?noautoplay=true  | droplet level |
-      | http://studio.code.org/s/allthethings/lesson/37/puzzle/1?noautoplay=true  | artist level  |
+      | http://studio.code.org/s/allthethings/lessons/18/puzzle/5?noautoplay=true  | droplet level |
+      | http://studio.code.org/s/allthethings/lessons/37/puzzle/1?noautoplay=true  | artist level  |

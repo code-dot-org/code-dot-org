@@ -526,7 +526,7 @@ class ScriptLevel < ApplicationRecord
       {
         # Some lessons have a lesson extras option without any bonus levels. In
         # these cases, they just display previous lesson challenges. These should
-        # be displayed as "perfect." Example level: /s/express-2020/lesson/28/extras
+        # be displayed as "perfect." Example level: /s/express-2020/lessons/28/extras
         id: '-1',
         bonus: true,
         user_id: student.id,

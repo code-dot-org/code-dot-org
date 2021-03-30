@@ -629,7 +629,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Script.twenty_hour_script, chapter: 3
-    assert_equal '/s/20-hour/lesson/2/puzzle/2', build_script_level_path(sl)
+    assert_equal '/s/20-hour/lessons/2/puzzle/2', build_script_level_path(sl)
     assert_routing(
       {method: "get", path: build_script_level_path(sl)},
       {controller: "script_levels", action: "show", script_id: Script::TWENTY_HOUR_NAME, stage_position: sl.lesson.to_param, id: sl.to_param}
@@ -661,32 +661,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       {method: "get", path: '/jigsaw/3'},
       {controller: "script_levels", action: "show", script_id: Script::JIGSAW_NAME, chapter: "3"}
     )
-    assert_equal "/s/jigsaw/lesson/1/puzzle/3", build_script_level_path(jigsaw_level)
+    assert_equal "/s/jigsaw/lessons/1/puzzle/3", build_script_level_path(jigsaw_level)
   end
 
   test "routing for custom scripts with lesson" do
     assert_routing(
-      {method: "get", path: "/s/laurel/lesson/1/puzzle/1"},
+      {method: "get", path: "/s/laurel/lessons/1/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "1", id: "1"}
     )
-    assert_equal "/s/laurel/lesson/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "/s/laurel/lessons/1/puzzle/1", build_script_level_path(@custom_s1_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/lesson/2/puzzle/1"},
+      {method: "get", path: "/s/laurel/lessons/2/puzzle/1"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "1"}
     )
-    assert_equal "/s/laurel/lesson/2/puzzle/1", build_script_level_path(@custom_s2_l1)
+    assert_equal "/s/laurel/lessons/2/puzzle/1", build_script_level_path(@custom_s2_l1)
 
     assert_routing(
-      {method: "get", path: "/s/laurel/lesson/2/puzzle/2"},
+      {method: "get", path: "/s/laurel/lessons/2/puzzle/2"},
       {controller: "script_levels", action: "show", script_id: 'laurel', stage_position: "2", id: "2"}
     )
-    assert_equal "/s/laurel/lesson/2/puzzle/2", build_script_level_path(@custom_s2_l2)
+    assert_equal "/s/laurel/lessons/2/puzzle/2", build_script_level_path(@custom_s2_l2)
   end
 
   test "build_script_level_url" do
-    assert_equal "/s/laurel/lesson/1/puzzle/1", build_script_level_path(@custom_s1_l1)
-    assert_equal "http://test.host/s/laurel/lesson/1/puzzle/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "/s/laurel/lessons/1/puzzle/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "http://test.host/s/laurel/lessons/1/puzzle/1", build_script_level_url(@custom_s1_l1)
   end
 
   test "next routing for custom scripts" do
@@ -699,7 +699,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "next redirects to next level for custom scripts" do
     get :next, params: {script_id: 'laurel'}
-    assert_redirected_to "/s/laurel/lesson/#{@custom_s1_l1.lesson.absolute_position}/puzzle/#{@custom_s1_l1.position}"
+    assert_redirected_to "/s/laurel/lessons/#{@custom_s1_l1.lesson.absolute_position}/puzzle/#{@custom_s1_l1.position}"
   end
 
   test "next redirects to first non-unplugged level for custom scripts" do
@@ -711,7 +711,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lesson/2/puzzle/1"
+    assert_redirected_to "/s/coolscript/lessons/2/puzzle/1"
   end
 
   test "next when logged in redirects to first non-unplugged non-finished level" do
@@ -728,7 +728,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     last_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 4)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lesson/#{last_level.lesson.absolute_position}/puzzle/#{last_level.position}"
+    assert_redirected_to "/s/coolscript/lessons/#{last_level.lesson.absolute_position}/puzzle/#{last_level.position}"
   end
 
   test "next skips entire unplugged lesson" do
@@ -742,7 +742,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
     get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lesson/2/puzzle/1"
+    assert_redirected_to "/s/coolscript/lessons/2/puzzle/1"
   end
 
   test "next when only unplugged level goes back to home" do
@@ -897,7 +897,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in(create(:user))
 
     get :reset, params: {script_id: 'laurel'}
-    assert_redirected_to '/s/laurel/lesson/1/puzzle/1'
+    assert_redirected_to '/s/laurel/lessons/1/puzzle/1'
   end
 
   test "should render blockly partial for blockly levels" do
@@ -1773,7 +1773,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script.update(redirect_to: new_script.name)
 
     get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
-    assert_redirected_to "/s/#{new_script.name}/lesson/1/puzzle/2"
+    assert_redirected_to "/s/#{new_script.name}/lessons/1/puzzle/2"
   end
 
   test 'should redirect to 2017 version in script family' do
@@ -1785,11 +1785,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     cats1.update!(is_stable: true)
     get :show, params: {script_id: 'ui-test-versioned-script', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats1/lesson/1/puzzle/1"
+    assert_redirected_to "/s/cats1/lessons/1/puzzle/1"
 
     create :script, name: 'cats2', family_name: 'ui-test-versioned-script', version_year: '2018', is_stable: true
     get :show, params: {script_id: 'ui-test-versioned-script', stage_position: 1, id: 1}
-    assert_redirected_to "/s/cats2/lesson/1/puzzle/1"
+    assert_redirected_to "/s/cats2/lessons/1/puzzle/1"
 
     # next redirects to latest version in a script family
     get :next, params: {script_id: 'ui-test-versioned-script'}

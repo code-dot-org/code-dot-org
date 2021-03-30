@@ -58,7 +58,7 @@ Scenario: Lock settings for students
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/lesson/31/puzzle/1"
+  And I wait until current URL contains "/s/allthethings/lessons/31/puzzle/1"
 
   # now locked for student
 
@@ -212,7 +212,7 @@ Scenario: Lock settings for retake not submit scenario
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/stage/31/puzzle/1"
+  And I wait until current URL contains "/s/allthethings/lessons/31/puzzle/1"
 
   # now locked for student
 
@@ -255,7 +255,7 @@ Scenario: Lock settings for retake after submit scenario
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
-  And I wait until current URL contains "/s/allthethings/stage/31/puzzle/1"
+  And I wait until current URL contains "/s/allthethings/lessons/31/puzzle/1"
 
   # now locked for student
 
