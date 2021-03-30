@@ -19,7 +19,13 @@
 class Standard < ApplicationRecord
   belongs_to :framework
   belongs_to :category, class_name: 'StandardCategory'
+
+  # ensures associated lessons_standards are deleted when a standard is deleted
   has_and_belongs_to_many :lessons, association_foreign_key: 'stage_id'
+
+  # ensures associated lessons_opportunity_standards are deleted when a standard
+  # is deleted
+  has_many :lessons_opportunity_standards, dependent: :destroy
 
   def summarize
     {
