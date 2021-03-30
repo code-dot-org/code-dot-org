@@ -520,7 +520,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     lesson2 = create :lesson, lesson_group: lesson_group, script: script
     script_level = create :script_level, lesson: lesson1, script: script, bonus: true
 
-    assert_equal script_stage_extras_path(script.name, lesson2.absolute_position),
+    assert_equal script_lesson_extras_path(script.name, lesson2.absolute_position),
       script_level.next_level_or_redirect_path_for_user(@user, lesson2)
   end
 
