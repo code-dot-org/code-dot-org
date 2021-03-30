@@ -20549,17 +20549,17 @@ en:
               key: 'Programming: My Robotic Friends'
               name: My Robotic Friends Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
-              description_teacher: Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.
+              description_teacher: In this **context-setting** lessons, students will use a set of symbols to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.
             Programming in Maze:
               key: Programming in Maze
               name: Programming with Angry Birds
               description_student: Learn about sequences and algorithms with _Angry Birds_.
-              description_teacher: Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
             Debugging in Maze:
               key: Debugging in Maze
               name: Debugging in Maze
               description_student: Find problems in puzzles and practice your debugging skills.
-              description_teacher: Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.
+              description_teacher: In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.
             Programming in Collector:
               key: Programming in Collector
               name: Collecting Treasure with Laurel
@@ -20624,7 +20624,7 @@ en:
               key: 'End of Course Project: Create a Play Lab Game'
               name: End of Course Project
               description_student: Get those hands ready for plenty of coding! It's time to start building your project.
-              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
+              description_teacher: 'This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20851,7 +20851,7 @@ en:
               key: Digital Sharing
               name: Digital Sharing
               description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
-              description_teacher: Developed by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
+              description_teacher: This **exploratory** lesson, developed by the team over at [Copyright and Creativity](https://www.copyrightandcreativity.org/), exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.
             Nested Loops in Bee:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
@@ -20995,12 +20995,12 @@ en:
               key: AI for Oceans
               name: AI For Oceans
               description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
-              description_teacher: In this **standalone** lesson, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
             Internet:
               key: Internet
               name: The Internet
               description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
-              description_teacher: In this **standalone** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
+              description_teacher: In this **exploratory** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
             For Loop Fun:
               key: For Loop Fun
               name: For Loop Fun
@@ -21034,7 +21034,7 @@ en:
             lesson-1:
               name: Designing for Accessibility
               description_student: 'In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
-              description_teacher: 'In this **standalone** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
+              description_teacher: 'In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. '
             lesson-6:
               name: Introducing Sprite Lab
               description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
@@ -21695,37 +21695,37 @@ en:
             lesson2:
               name: How Computers Learn
             lesson3:
-              name: AI for Social Good (Unplugged)
-            lesson4:
               name: Patterns in Data
-            lesson5:
+            lesson4:
               name: Classification with Machine Learning
+            lesson5:
+              name: Training a Model with Features
             lesson6:
-              name: Introduction to AI Lab
+              name: Importing a Model in App Lab
             lesson7:
-              name: Using Models in App Lab
-            lesson8:
               name: The Need for Model Cards
-            lesson9:
+            lesson8:
               name: Numerical Data in AI Lab
-            lesson10:
+            lesson9:
               name: Regression With Machine Learning
-            lesson11:
+            lesson10:
               name: Using Model Cards in App Lab
+            lesson11:
+              name: Customizing Your App
             lesson12:
               name: Making Data Decisions
             lesson13:
-              name: 'Mini-Project: Make an App (2 Days)'
+              name: AI for Social Good (Unplugged)
             lesson14:
-              name: Lesson 14
-            lesson15:
               name: AI Code of Ethics (Unplugged)
-            lesson16:
-              name: 'Goldilocks Principle: Making Models Just Right'
-            lesson17:
-              name: Lesson 17
-            lesson18:
+            lesson15:
               name: Planning Your App
+            lesson16:
+              name: 'Project: App with Real-World Data'
+            lesson17:
+              name: Planning Your App
+            lesson18:
+              name: 'Project: App with Real-World Data'
             lesson19:
               name: 'Project: App with Real-World Data'
             lesson20:
@@ -21745,12 +21745,66 @@ en:
         csa1-pilot:
           lessons:
             lesson-1:
-              name: Lesson 1
+              name: Welcome to CSA
               description_student: In this lesson, you explore software engineering values and the ways that you practice these values in other aspects of your life. By the end of this lesson, you discover your own software engineering identity!
               description_teacher: Believing in one's own software engineering identity develops confidence and perseverance. This lesson introduces core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
             lesson-2:
-              name: Lesson 2
-          lesson_groups: {}
+              name: Classes and Objects
+              description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
+              description_teacher: 'Students access the Java Lab to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
+
+'
+            lesson-3:
+              name: Using Commands
+              description_student: 'Now that you have met the `Painter`, you use action commands in this lesson to move the `Painter` around The Neighborhood. You learn about some of the rules of Java that you need to follow to make the Painter move.
+
+'
+              description_teacher: 'In this lesson, students implement solutions using action commands to move the `Painter` around The Neighborhood. Students develop computational thinking skills by translating solutions into Java code as they practice duplicating patterns. While solving these problems, students learn the importance of case-sensitivity and semicolons in Java and are exposed to the use of dot notation to call `Painter` commands.
+
+'
+            lesson-4:
+              name: Conditionals and Debugging
+              description_student: 'Now that you know how to use action commands, you help the `Painter` make decisions about how to interact with The Neighborhood using information-gathering commands. You also learn about debugging and identify strategies to use throughout the year.
+
+'
+              description_teacher: 'In this lesson, students modify programs using three return commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Booleans, conditionals, and return statements are introduced through `if` statements and `Painter` return commands for students to practice using conditional logic in their programs. These concepts are discussed in more detail in future lessons and reinforced throughout the course. Students also develop debugging strategies by identifying syntax and logic errors.'
+            lesson-5:
+              name: More with Objects
+            lesson-6:
+              name: While Loops and Practice
+            lesson-7:
+              name: More with Conditionals
+            lesson-8:
+              name: Introduction to Code Reviews
+            lesson-9:
+              name: Inheritance and Methods
+            lesson-10:
+              name: More Methods, More Features
+            lesson-11:
+              name: Painting Methods
+            lesson-12:
+              name: SprayPainter
+            lesson-13:
+              name: StampPainter
+            lesson-14:
+              name: Edge Cases
+            lesson-15:
+              name: Software Engineering Wrap Up
+            lesson-16:
+              name: 'Project: Personal Symbol - Day 1'
+            lesson-17:
+              name: 'Project: Personal Symbol - Day 2'
+            lesson-18:
+              name: 'Project: Personal Symbol - Day 3'
+            lesson-19:
+              name: FRQ Day
+            lesson-20:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: csa1-pilot
           title: ''
           description_audience: ''
