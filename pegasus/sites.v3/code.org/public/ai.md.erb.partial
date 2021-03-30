@@ -39,8 +39,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
         <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -54,8 +54,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray;  margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
         <a href="#ai-videos"><button>Watch the videos</button></a>
     </span>
   </div>
@@ -69,8 +69,8 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI and Ethics</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
+        <h3 class="tutorial-info-h" style="color: dimgray;  margin-top:10px; margin-bottom: 10px"><strong>AI and Ethics</strong></h3>
+        <div class="smalltext" style="color: dimgray; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
         <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank"><button>View lesson plan</button></a>
     </span>
   </div>
