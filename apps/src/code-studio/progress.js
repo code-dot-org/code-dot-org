@@ -165,12 +165,12 @@ progress.renderCourseProgress = function(scriptData) {
   initViewAs(store, scriptData);
   queryUserProgress(store, scriptData, null);
 
-  const teacherResources = scriptData.is_migrated
-    ? scriptData.teacher_resources
-    : (scriptData.teacher_resources || []).map(([type, link]) => ({
-        type,
-        link
-      }));
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({
+      type,
+      link
+    })
+  );
 
   store.dispatch(initializeHiddenScripts(scriptData.section_hidden_unit_info));
 
@@ -187,6 +187,7 @@ progress.renderCourseProgress = function(scriptData) {
         onOverviewPage={true}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
+        migratedTeacherResources={scriptData.migrated_teacher_resources}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
         }

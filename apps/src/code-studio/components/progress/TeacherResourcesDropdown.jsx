@@ -4,7 +4,10 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {stringForType} from '@cdo/apps/templates/courseOverview/resourceType';
+import {
+  stringForType,
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   dropdown: {
@@ -15,7 +18,8 @@ const styles = {
 
 export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose
@@ -60,10 +64,10 @@ export default class TeacherResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {resources, useMigratedResources} = this.props;
+    const {resources, migratedResources, useMigratedResources} = this.props;
 
     const dropdownResources = useMigratedResources
-      ? resources.map(resource => (
+      ? migratedResources.map(resource => (
           <a
             key={resource.key}
             href={resource.url}

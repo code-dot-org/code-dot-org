@@ -164,11 +164,6 @@ class UnitGroup < ApplicationRecord
     save!
   end
 
-  def get_teacher_resources
-    return resources if has_migrated_script?
-    return teacher_resources
-  end
-
   # @param types [Array<string>]
   # @param links [Array<string>]
   def update_teacher_resources(types, links)
@@ -341,7 +336,8 @@ class UnitGroup < ApplicationRecord
         include_lessons = false
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
-      teacher_resources: get_teacher_resources,
+      teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_script_unit_group_overview),
       is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,

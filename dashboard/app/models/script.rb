@@ -1308,11 +1308,6 @@ class Script < ApplicationRecord
     self.resources = teacher_resources
   end
 
-  def get_teacher_resources
-    return resources.map(&:summarize_for_script_unit_group_overview) if is_migrated?
-    return teacher_resources
-  end
-
   def self.rake
     # cf. http://stackoverflow.com/a/9943895
     require 'rake'
@@ -1433,7 +1428,8 @@ class Script < ApplicationRecord
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      teacher_resources: get_teacher_resources,
+      teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_script_unit_group_overview),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,

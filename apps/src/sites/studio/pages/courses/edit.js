@@ -14,18 +14,17 @@ function showCourseEditor() {
   const scriptData = document.querySelector('script[data-course-editor]');
   const courseEditorData = JSON.parse(scriptData.dataset.courseEditor);
 
-  const teacherResources = courseEditorData.course_summary.is_migrated
-    ? courseEditorData.course_summary.teacher_resources
-    : (courseEditorData.course_summary.teacher_resources || []).map(
-        ([type, link]) => ({type, link})
-      );
+  const teacherResources = (
+    courseEditorData.course_summary.teacher_resources || []
+  ).map(([type, link]) => ({type, link}));
 
   registerReducers({resources: resourcesEditor});
   const store = getStore();
-  const resourcesForRedux = courseEditorData.course_summary.is_migrated
-    ? courseEditorData.course_summary.teacher_resources
-    : [];
-  store.dispatch(initResources(resourcesForRedux || []));
+  store.dispatch(
+    initResources(
+      courseEditorData.course_summary.migrated_teacher_resources || []
+    )
+  );
 
   let announcements = courseEditorData.course_summary.announcements || [];
 

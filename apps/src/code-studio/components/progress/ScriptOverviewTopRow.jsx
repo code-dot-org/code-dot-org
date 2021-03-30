@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -60,7 +61,8 @@ class ScriptOverviewTopRow extends React.Component {
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    resources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -81,6 +83,7 @@ class ScriptOverviewTopRow extends React.Component {
       viewAs,
       isRtl,
       resources,
+      migratedResources,
       showAssignButton,
       assignedSectionId,
       showCalendar,
@@ -114,9 +117,11 @@ class ScriptOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Teacher &&
-            resources.length > 0 && (
+            ((resources.length > 0 && !isMigrated) ||
+              (migratedResources.length > 0 && isMigrated)) && (
               <TeacherResourcesDropdown
                 resources={resources}
+                migratedResources={migratedResources}
                 unitId={scriptId}
                 useMigratedResources={isMigrated}
               />

@@ -11,7 +11,9 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
+import ResourceType, {
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 import {connect} from 'react-redux';
 
 const styles = {
@@ -52,7 +54,7 @@ class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -62,7 +64,7 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
 
     // Provided by redux
-    resources: PropTypes.arrayOf(PropTypes.object)
+    migratedResources: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
@@ -272,11 +274,11 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources">
-          {this.props.resources && (
+          {this.props.migratedResources && (
             <input
               type="hidden"
               name="resourceIds[]"
-              value={this.props.resources.map(r => r.id)}
+              value={this.props.migratedResources.map(r => r.id)}
             />
           )}
           {this.props.useMigratedResources ? (
@@ -286,7 +288,7 @@ class CourseEditor extends Component {
               />
               Preview
               <TeacherResourcesDropdown
-                resources={this.props.resources}
+                migratedResources={this.props.migratedResources}
                 useMigratedResources
               />
             </div>
@@ -330,5 +332,5 @@ class CourseEditor extends Component {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  resources: state.resources
+  migratedResources: state.resources
 }))(CourseEditor);
