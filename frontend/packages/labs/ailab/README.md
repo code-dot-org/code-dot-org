@@ -62,6 +62,16 @@ yarn link @code-dot-org/ml-playground
 
 This will set up a symlink in main repo's `apps/node_modules/` to point at your local changes. 
 
+Run 
+
+```
+yarn run build
+```
+
+in this repo, and then the main repo's `apps` build should pick the changes up next time it builds.
+
+If you are running `yarn start` for continuous builds in the main repo, it will pick up the changes once the build in this repo has completed.
+
 
 ### Building changes for a local Code Studio
 In main repo:
@@ -75,7 +85,7 @@ In main repo's `apps/` directory, run
 yarn start 
 ```
 
-If you see an error, run ``` yarn ``` before running ``` yarn start ``` again.
+If you see an error, run `yarn` before running `yarn start` again.
 
 In this repo:
 ```
@@ -84,7 +94,7 @@ yarn run build
 
 Then the main repo's `apps` build will pick up changes. 
 
-See ML-playground changes at  [http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1](http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1).
+See ML-playground changes at http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1.
 
 Note that running `yarn start` will erase this build, and so for now it seems best to alternate between using `yarn start` for testing the standalone build, and using `yarn run build` to make a single build for consumption by the main repo.
 
@@ -124,4 +134,4 @@ In main repo:
  cd apps/node_modules/@code-dot-org 
  ls -l 
  ```
-In the output, you should see: ``` ml-playground -> ../../../../../.config/yarn/link/@code-dot-org/ml-playground ```
+In the output, you should see something like this: ``` ml-playground -> ../../../../../.config/yarn/link/@code-dot-org/ml-playground ```
