@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-29 20:43:37 UTC",
+    "serialized_at": "2021-03-30 17:57:23 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -88,6 +88,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "In this lesson, students implement solutions using action commands to move the `Painter` around The Neighborhood. Students develop computational thinking skills by translating solutions into Java code as they practice duplicating patterns. While solving these problems, students learn the importance of case-sensitivity and semicolons in Java and are exposed to the use of dot notation to call `Painter` commands.\n",
+        "student_overview": "Now that you have met the `Painter`, you use action commands in this lesson to move the `Painter` around The Neighborhood. You learn about some of the rules of Java that you need to follow to make the Painter move.\n",
+        "preparation": "* Sticky notes (at least 20 per student)"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -103,6 +106,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "In this lesson, students modify programs using three return commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Booleans, conditionals, and return statements are introduced through `if` statements and `Painter` return commands for students to practice using conditional logic in their programs. These concepts are discussed in more detail in future lessons and reinforced throughout the course. Students also develop debugging strategies by identifying syntax and logic errors.",
+        "student_overview": "Now that you know how to use action commands, you help the `Painter` make decisions about how to interact with The Neighborhood using information-gathering commands. You also learn about debugging and identify strategies to use throughout the year.\n",
+        "preparation": "* Create a debugging wall for your class. You can designate a physical space in your classroom or make a digital version using slides or an interactive whiteboard.\n* If using a physical debugging wall, prepare 3-5 sticky notes for each pair of students\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -448,6 +454,88 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
+    },
+    {
+      "key": "2f0dc0fb-9f82-499a-8793-ca54e74545fc",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f0dc0fb-9f82-499a-8793-ca54e74545fc",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c5c45232-b67e-454e-b8a1-248d9b4ee52f",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5c45232-b67e-454e-b8a1-248d9b4ee52f",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "233478bf-c3fd-472d-8604-7ca35b4fdf94",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "233478bf-c3fd-472d-8604-7ca35b4fdf94",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "544a54c1-d1eb-416d-870c-56e02be3e8e5",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -494,7 +582,7 @@
       "position": 2,
       "properties": {
         "remarks": true,
-        "description": "In this class, you won’t just explore software engineering, you will be software engineers.\n\nWe're going to start by using a common design thinking activity we all know as brainstorming to come up with some ideas about software engineering."
+        "description": "In this class, you won’t just explore software engineering, you will be software engineers.\n\nWe're going to start by using a common design thinking activity we all know as brainstorming to come up with some ideas about software engineering. "
       },
       "seeding_key": {
         "activity_section.key": "3c4c7c9e-7f29-4cd4-bdf4-5f8ae558e946",
@@ -998,6 +1086,422 @@
         "activity_section.key": "78af1614-1425-4640-a087-1c3aa1abaab8",
         "lesson_activity.key": "0b113e7f-e0dc-417b-8f90-ebba71a0e6c1"
       }
+    },
+    {
+      "key": "d89dbdce-92dd-4b56-b297-666d033198a4",
+      "position": 1,
+      "properties": {
+        "name": "Instructions for Computers",
+        "description": "[slide] **Discuss:** *Software is a set of specific instructions that enables a computer to perform a task. What are some examples of technologies that give users specific instructions to perform a task?* \n\n**Discussion Goal:** Students give examples of apps and technologies that give users specific instructions to perform a task.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to come up with their examples, start by giving GPS as an example."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d89dbdce-92dd-4b56-b297-666d033198a4",
+        "lesson_activity.key": "2f0dc0fb-9f82-499a-8793-ca54e74545fc"
+      }
+    },
+    {
+      "key": "f6afd428-9b60-42b7-b333-2dc44e216d62",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** \n* [slide] In their journals or on scrap paper, have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* [slide] Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "From this activity, students should realize how clearly and precisely instructions must be given to direct the driver to complete a task.\n\nFor example, give a set of ambiguous instructions, such as **“Go up the street and over two blocks,”** and have students discuss why the instructions would not be sufficient."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f6afd428-9b60-42b7-b333-2dc44e216d62",
+        "lesson_activity.key": "2f0dc0fb-9f82-499a-8793-ca54e74545fc"
+      }
+    },
+    {
+      "key": "ecb1123e-d106-463d-a4e4-74b4a77b5573",
+      "position": 1,
+      "properties": {
+        "name": "Understanding the Grid",
+        "duration": "5",
+        "description": "**Do This:** Introduce The Neighborhood by walking students through slides about the following ideas:\n* The x-axis and y-axis of the grid\n* How to read and find an intersection"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecb1123e-d106-463d-a4e4-74b4a77b5573",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "6d043043-2eb0-41a9-9681-72f860885638",
+      "position": 2,
+      "properties": {
+        "name": "Writing Commands in Java",
+        "duration": "10",
+        "description": "**Do This:** Introduce students to using and writing commands in Java by walking students through the set of four slides on the following ideas:\n* [slide] `Painter` objects navigate The Neighborhood and complete tasks.\n* [slide] We have five action commands.\n* [slide] Click through the animation to break down the proper Java syntax to use a command.\nSummarize the syntactical elements of Java.\n\n[slide] **Discuss:** Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?\n\n**Discussion Goal:** Students compare the correct syntax to the incorrect syntax. Guide them towards the following: \n* Paint does not have the proper capitalization.\n* Commands are followed by parentheses.\n* Lines need to end with a semicolon.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d043043-2eb0-41a9-9681-72f860885638",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "3f4e4880-2336-495c-ac67-83bc264728f0",
+      "position": 3,
+      "properties": {
+        "name": "Movement Commands",
+        "duration": "10",
+        "description": "**Group:** Pair students up at their stations.  \n\n**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* [slide] The move() command instructs the `Painter` to move forward in the direction that they are facing.\n    * [slide] Direct students to complete Level 1 on Code Studio.\n* [slide] The turnLeft() command instructs the Painter to turn 90 degrees to the left. The Painter can only face North, South, East, or West.\n    * [slide] Direct students to complete Levels 2-3 on Code Studio.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f4e4880-2336-495c-ac67-83bc264728f0",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "9945a427-d169-4622-8d5c-37d28e5eba77",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nStudents will be working independently or in pairs throughout the course in Code Studio. You may choose to establish a signal for students to indicate they are ready for the next level that you use throughout the year. When students complete a level or progression of levels, you could have students indicate they are ready to move on by closing their laptops to 45 degrees, turning off their monitor, or another agreed-upon signal.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9945a427-d169-4622-8d5c-37d28e5eba77",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "62576f56-a293-4fa5-8c6a-751591e8c48b",
+      "position": 5,
+      "properties": {
+        "name": "Painting Commands",
+        "duration": "10",
+        "description": "**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* [slide] The `takePaint()` command instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n    * [slide] Direct students to complete Level 4 on Code Studio.\n* [slide] The `paint(String color)` command instructs the Painter to apply one unit of paint from their tray onto the dot they are currently standing on.\n* [slide] Share with students that they can change the color the Painter paints by adding the name of a color in quotations inside the parentheses.\n    * [slide] Direct students to complete Level 5 on Code Studio.\n* [slide] The `scrapePaint()` command instructs the `Painter` to remove paint off of the dot they are currently standing on.\n    * [slide] Direct students to complete Level 6 on Code Studio.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "62576f56-a293-4fa5-8c6a-751591e8c48b",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "620fe3ac-94cc-41a2-96a1-bc5d7748965c",
+        "lesson_activity.key": "3d6fb62e-3468-480b-a95c-9a9ada1dbfd2"
+      }
+    },
+    {
+      "key": "da0e0980-e14f-425d-af6d-a64d79dd51ac",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "remarks": true,
+        "description": "[slide] As software engineers, our job is to create solutions to different problems and convert them into instructions for a computer.\n\n[slide] **Do This:** Click through the animation to show one command at a time. Before moving onto another command, have students share their understanding of the command. \n\n[slide] **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "da0e0980-e14f-425d-af6d-a64d79dd51ac",
+        "lesson_activity.key": "c5c45232-b67e-454e-b8a1-248d9b4ee52f"
+      }
+    },
+    {
+      "key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
+        "lesson_activity.key": "c5c45232-b67e-454e-b8a1-248d9b4ee52f"
+      }
+    },
+    {
+      "key": "aed67282-2415-4401-9c3e-c62c39d534b1",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The `Painter` started with five units of paint on their paint tray. How many units of paint will the `Painter` have left on their paint tray after painting a straight line that connects the origin, (0, 0) to (3, 3)?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "aed67282-2415-4401-9c3e-c62c39d534b1",
+        "lesson_activity.key": "c5c45232-b67e-454e-b8a1-248d9b4ee52f"
+      }
+    },
+    {
+      "key": "62b20439-8e72-482f-ae6c-b65aba049d53",
+      "position": 1,
+      "properties": {
+        "name": "Debugging: Predict",
+        "description": "[slide] **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students should notice several syntax errors in this code that will prevent the code from running. Use the word “syntax” to refer back to prior learning from Lesson 3. Ask students to identify each error and what strategies they used to help them find errors.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Involve multiple voices in the conversation by asking different students to give one error each. To avoid putting single students on the spot, call on pairs and allow the pair to choose who shares out."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "62b20439-8e72-482f-ae6c-b65aba049d53",
+        "lesson_activity.key": "233478bf-c3fd-472d-8604-7ca35b4fdf94"
+      }
+    },
+    {
+      "key": "e31974ac-b8d4-4765-9cd6-f76d12652ee1",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "As we work through the activities today, you’ll likely encounter bugs of your own. While you work, use your journal to make note of any bugs you encounter and the strategies you used to debug your code. We’ll talk about debugging in more detail later. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e31974ac-b8d4-4765-9cd6-f76d12652ee1",
+        "lesson_activity.key": "233478bf-c3fd-472d-8604-7ca35b4fdf94"
+      }
+    },
+    {
+      "key": "963e87ad-f513-4f33-932d-234733611167",
+      "position": 1,
+      "properties": {
+        "name": "Introduction to New Commands",
+        "duration": "6",
+        "description": "**Do This:** Walk through the following slides with your students:\n* [slide] Review that yesterday’s commands told our `Painter` to do something.\n* [slide] Discuss that today’s commands will give our `Painter` information in the form of `true` or `false`.\n* [slide] Highlight the three information gathering commands they’ll work with today.\n* Show the \"Conditionals\" video. This video covers the basic concept of a conditional, as well as outlines the structure of an `if` statement, which students will be using today.\n* [slide] Click through the animation to review the structure of the basic `if` statement on the slide. Draw special attention to the fact that the code inside the `if` statement will only run if the command inside the `if( )` returns as `true`. Highlight that each of our information gathering commands will give us a piece of information, a Boolean that is either `true` or `false`. The `if` statement allows us to do something with that piece of information."
+      },
+      "seeding_key": {
+        "activity_section.key": "963e87ad-f513-4f33-932d-234733611167",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "585f1a7e-f40a-4526-831e-f19c14b7ff85",
+      "position": 2,
+      "properties": {
+        "name": "Information Gathering Commans",
+        "duration": "10",
+        "remarks": true,
+        "description": "Let’s review the three commands we’ll be working with today in more detail."
+      },
+      "seeding_key": {
+        "activity_section.key": "585f1a7e-f40a-4526-831e-f19c14b7ff85",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "26a0e83b-c1bd-4583-a08c-632539e36ab7",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:**\n* [slide] Showcase the `isOnPaint()` command. Highlight a scenario where a `Painter` may need to check if they are on paint before they scrape paint -- maybe they want to create a mural by removing paint, or they need to clean up The Neighborhood.\n* [slide] Discuss the `isOnBucket()` command.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nWhile it is tempting to go into details about conditionals, Booleans, and return types, the goal here is to provide a basic introduction to these concepts. Keep the conversation around this slide about the basic if statement displayed, rather than going into too much detail.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26a0e83b-c1bd-4583-a08c-632539e36ab7",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Group students into pairs. \n\n[slide] **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio. Remind them that they should use an if statement in each level in addition to the appropriate information gathering command. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "549747e6-ed66-41cf-b266-d6e7f01e7873",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Pair programming allows students to work with a partner to create a program. One student is the Driver, or the one using the computer. The other student is the Navigator, or the one guiding the Driver on what to code. [This pair programming video](https://www.youtube.com/watch?v=q7d_JtyCq1A&t=1s) provides tips for implementing this strategy.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "549747e6-ed66-41cf-b266-d6e7f01e7873",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "be0906d5-5ad3-42f3-b39b-0c17855a375d",
+      "position": 6,
+      "properties": {
+        "remarks": true,
+        "description": "In addition to `Painter`s, buckets, and paint, The Neighborhood also has walls, known as barriers. Our `Painter`, like any human, cannot walk through these barriers, so we need a way to check our surroundings."
+      },
+      "seeding_key": {
+        "activity_section.key": "be0906d5-5ad3-42f3-b39b-0c17855a375d",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "f5edb606-9830-4a63-8e0a-de634970596c",
+      "position": 7,
+      "properties": {
+        "description": "**Do This:**\n* [slide] Open The Neighborhood and run code on Level 3 to show a `Painter` trying to turn into a barrier. \n* [slide] Highlight that the `canMove()` command helps our `Painter` to know whether there is a barrier in front of them (i.e. - they can move!).\n\n[slide] **Do This:** Continuing to work in their pairs, instruct students to complete Level 3 on Code Studio.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5edb606-9830-4a63-8e0a-de634970596c",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "99e5ac2d-ccd2-4109-b365-d5721fbbd798",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "99e5ac2d-ccd2-4109-b365-d5721fbbd798",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "4608dfa8-4e64-4405-a19b-fa98a094a55b",
+      "position": 9,
+      "properties": {
+        "name": "Debugging Wall",
+        "duration": "9",
+        "description": "[slide] **Discuss:** *Think back to the warm-up and your experience so far today with our new commands. What errors have you run into? What are some strategies you’ve used to identify bugs? How have you fixed them?*\n\n**Discussion Goal:** Students should share out both bugs they’ve encountered and ways that they’ve debugged their code. The goal of this discussion is to highlight that everyone has encountered bugs and that they’re a normal part of being a software engineer. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4608dfa8-4e64-4405-a19b-fa98a094a55b",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "11aa59de-1845-484d-8ab9-71d3b33578f1",
+      "position": 10,
+      "properties": {
+        "remarks": true,
+        "description": "Having bugs in your program is a normal part of being a software engineer - even professional software engineers daily discover bugs in their code! Even though bugs can be frustrating, they also can always be found and fixed. Throughout this semester, we’ll have a classroom debugging wall where you can share bugs you’ve encountered and the ways that you’ve fixed them. We’re going to start our wall today."
+      },
+      "seeding_key": {
+        "activity_section.key": "11aa59de-1845-484d-8ab9-71d3b33578f1",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "8a8b4e7a-cec7-4c79-a4e0-bba36abb0977",
+      "position": 11,
+      "properties": {
+        "description": "**Distribute:** Give each student pair three to five sticky notes.\n\n**Do This:** \n* Have students write out one or two different bugs they’ve encountered and the strategy they used to debug. Each sticky note should include both the bug and the strategy/solution. If you are using a digital debugging wall, share the link with students and ensure that sharing settings are set so that students can edit the document.\n* Direct students to add their sticky notes to the classroom Debugging Wall and to take a moment to read over other bugs and solutions.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on students’ previous experience with debugging, they may come up with a variety of strategies. Some to highlight include:\n* **Describe the problem:** What do you expect it to do? What is actually happening? Does this always happen?\n* **Use your tools:** Are there any warnings or errors when your code compiles? What lines does the Java Lab highlight as problematic?\n* **Retrace your steps:** What did you change most recently? What code is related to the problem you’ve identified?\n* **Enlist a partner:** Explain your code to someone else. Sometimes a second pair of eyes is all you need!\n* **Try solutions:** Make small changes to your code - what happens?\n* **Document as you go:** As you debug, make notes in your journal and add new strategies to the debugging wall."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8a8b4e7a-cec7-4c79-a4e0-bba36abb0977",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "69313d6d-eb7b-4742-8eae-33990a61c67c",
+      "position": 12,
+      "properties": {
+        "remarks": true,
+        "description": "[slide] Now that we know we have some strategies to debug, we’re going to practice in The Neighborhood. There are two primary types of errors we’ll focus on debugging today: syntax errors and logic errors."
+      },
+      "seeding_key": {
+        "activity_section.key": "69313d6d-eb7b-4742-8eae-33990a61c67c",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:**\n* [slide] Review the examples of syntax errors on the slide.\n* [slide] Review the definition of logic errors on the slide. Ask students to give an example of a logic error they may have encountered.\n* [slide] Pair students and instruct them to complete the Debugging Challenge Choice Level 4 on Code Studio. There are two options for them to choose from, and each contains both logic and syntax errors.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "2bde556a-e203-4ecd-80c8-0216db7d86c1",
+      "position": 14,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "With choice levels, students may choose to complete one or both challenges. If students finish their first challenge early, encourage them to try the second."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2bde556a-e203-4ecd-80c8-0216db7d86c1",
+        "lesson_activity.key": "b7f68604-f1ac-4d8b-967c-4b16468fac1c"
+      }
+    },
+    {
+      "key": "7bffb895-ac72-4c57-b754-6f801d98dbc9",
+      "position": 1,
+      "properties": {
+        "description": "[slide] **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Closing The Loop is a strategy that can be used to help students synthesize the class day’s material, and as a formative assessment for the teacher. Additional prompts to help metacognitive reflection:\n\n* *Were the strategies for coding and debugging effective for this lesson?*\n* *How did your mindset affect how you approached your work?*\n* *What were some helpful ways you saw members of the class communicating their learning?\nHow are you progressing as a learner?*\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7bffb895-ac72-4c57-b754-6f801d98dbc9",
+        "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5"
+      }
+    },
+    {
+      "key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
+      "position": 2,
+      "properties": {
+        "description": "[slide] **Display:** Key Vocabulary\n\n---\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
+        "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5"
+      }
+    },
+    {
+      "key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Look at the code snippet below. Would the code inside the `if`-statement run? Why or why not?\n\n```\n    Painter jes = new Painter();\n    if(canMove()){\n        jes.Move();\n    }\n```\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
+        "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5"
+      }
     }
   ],
   "script_levels": [
@@ -1053,6 +1557,66 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "0b03493c-b977-497c-93c3-a4500c2c185f"
+      }
+    },
+    {
+      "key": "84454053-a2d0-4e7a-b218-f7efa0f47e03",
+      "properties": {
+        "description": "Identify and utilize five action commands for the `Painter`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "84454053-a2d0-4e7a-b218-f7efa0f47e03"
+      }
+    },
+    {
+      "key": "94b7941d-038a-4e4b-92bd-186a2cc3f8a9",
+      "properties": {
+        "description": "Write commands using proper Java syntax, including case-sensitivity and semicolons"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "94b7941d-038a-4e4b-92bd-186a2cc3f8a9"
+      }
+    },
+    {
+      "key": "e866019f-d96d-4cc2-bb30-91e1fb41fbc0",
+      "properties": {
+        "description": "Identify and utilize three return commands for the `Painter`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e866019f-d96d-4cc2-bb30-91e1fb41fbc0"
+      }
+    },
+    {
+      "key": "07f5ccf8-ab2a-4612-acb1-36022e8acc99",
+      "properties": {
+        "description": "Construct an `if` statement using `Painter`’s return methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "07f5ccf8-ab2a-4612-acb1-36022e8acc99"
+      }
+    },
+    {
+      "key": "48f6ed20-3d45-42a0-8e83-a1899be63212",
+      "properties": {
+        "description": "Debug basic commands for syntax and logic errors"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "48f6ed20-3d45-42a0-8e83-a1899be63212"
+      }
+    },
+    {
+      "key": "38a86851-cc62-4531-8fed-5e632df03afb",
+      "properties": {
+        "description": "Identify three strategies they can use to debug code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "38a86851-cc62-4531-8fed-5e632df03afb"
       }
     }
   ],

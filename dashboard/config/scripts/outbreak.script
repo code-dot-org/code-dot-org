@@ -1,3 +1,5 @@
+hidden false
+
 lesson_group 'outbreak', display_name: 'Outbreak Simulation'
 lesson 'Virus Simulation for Code Bytes', display_name: 'Coding a Simulation', has_lesson_plan: false
 level 'outbreak_story', progression: 'Welcome to Monster Town'
