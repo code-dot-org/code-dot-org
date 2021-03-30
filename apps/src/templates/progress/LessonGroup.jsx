@@ -16,6 +16,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   main: {
@@ -36,6 +37,9 @@ const styles = {
   },
   headingText: {
     marginLeft: 10
+  },
+  headingTextRTL: {
+    marginRight: 10
   },
   contents: {
     backgroundColor: color.lighter_purple,
@@ -119,6 +123,9 @@ class LessonGroup extends React.Component {
       viewAs
     } = this.props;
 
+    const isRtl = getStore().getState().isRtl;
+    const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
+
     const TableType = isSummaryView
       ? SummaryProgressTable
       : DetailProgressTable;
@@ -142,7 +149,7 @@ class LessonGroup extends React.Component {
           <FontAwesome
             icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
-          <span style={styles.headingText}>{lessonGroup.displayName}</span>
+          <span style={headingTextStyle}>{lessonGroup.displayName}</span>
           {(lessonGroup.description || lessonGroup.bigQuestions) && (
             <FontAwesome
               icon="info-circle"
