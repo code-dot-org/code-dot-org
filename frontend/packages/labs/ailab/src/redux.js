@@ -495,16 +495,6 @@ export default function rootReducer(state = initialState, action) {
       state.instructionsKeyCallback(action.currentPanel);
     }
 
-    if (action.currentPanel === "dataDisplayLabel") {
-      return {
-        ...state,
-        currentPanel: action.currentPanel,
-        currentColumn: undefined,
-        labelColumn: "",
-        selectedFeatures: []
-      };
-    }
-
     return {
       ...state,
       currentPanel: action.currentPanel,
