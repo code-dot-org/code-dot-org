@@ -59,7 +59,7 @@ class PhraseBuilder extends Component {
       >
         <div style={styles.scrollableContents}>
           <div style={styles.scrollingContents}>
-            <div style={styles.phraseBuilderHeader}>Predict...</div>
+            <div style={styles.phraseBuilderHeader}>Label:</div>
             {currentPanel === "dataDisplayLabel" && (
               <select
                 value={labelColumn === null ? "" : labelColumn}
@@ -86,7 +86,7 @@ class PhraseBuilder extends Component {
                 </div>
                 <br />
                 <div>
-                  <div style={styles.phraseBuilderHeader}>Based on...</div>
+                  <div style={styles.phraseBuilderHeader}>Features:</div>
                   {selectedFeatures.map((feature, index) => {
                     return (
                       <div key={index} style={styles.phraseBuilderFeature}>

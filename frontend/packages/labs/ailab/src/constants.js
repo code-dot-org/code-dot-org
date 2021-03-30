@@ -420,7 +420,9 @@ export const styles = {
     marginBottom: 5
   },
 
-  regularButton: { width: "20%" },
+  disabledButton: {
+    opacity: 0.5
+  },
 
   floatLeft: {
     float: "left",
