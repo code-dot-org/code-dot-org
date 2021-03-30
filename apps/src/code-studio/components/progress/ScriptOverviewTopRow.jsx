@@ -45,6 +45,12 @@ const styles = {
   },
   resourcesRow: {
     display: 'flex'
+  },
+  buttonMarginLTR: {
+    marginLeft: 10
+  },
+  buttonMarginRTL: {
+    marginRight: 10
   }
 };
 
@@ -104,7 +110,7 @@ class ScriptOverviewTopRow extends React.Component {
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={{marginLeft: 10}}
+              style={isRtl ? styles.buttonMarginRTL : styles.buttonMarginLTR}
             />
             {assignedSectionId && <Assigned />}
           </div>
