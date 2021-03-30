@@ -688,6 +688,14 @@ export function getUniqueOptionsByColumn(state) {
   return uniqueOptionsByColumn;
 }
 
+export function getExtremumsByColumn(state) {
+  let extremumsByColumn = {};
+  getNumericalColumns(state).map(
+    column => (extremumsByColumn[column] = getRange(state, column, false))
+  );
+  return extremumsByColumn;
+}
+
 export function getRangesByColumn(state) {
   let rangesByColumn = {};
   getNumericalColumns(state).map(
@@ -696,11 +704,15 @@ export function getRangesByColumn(state) {
   return rangesByColumn;
 }
 
-export function getRange(state, column) {
+export function getRange(state, column, shouldReturnRange = true) {
   let range = {};
   range.max = Math.max(...state.data.map(row => parseFloat(row[column])));
   range.min = Math.min(...state.data.map(row => parseFloat(row[column])));
-  range.range = range.max - range.min;
+
+  if (shouldReturnRange) {
+    range.range = range.max - range.min;
+  }
+
   return range;
 }
 
@@ -996,6 +1008,7 @@ export function getTrainedModelDataToSave(state) {
   dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
   dataToSave.featureNumberKey = state.featureNumberKey;
+  dataToSave.extremumsByColumn = getExtremumsByColumn(state);
   dataToSave.labelColumn = state.labelColumn;
   dataToSave.summaryStat = getSummaryStat(state);
   dataToSave.trainedModel = state.trainedModel;
