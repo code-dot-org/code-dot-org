@@ -13,6 +13,10 @@ export const commands = {
     }
   },
 
+  getEventLog() {
+    return coreLibrary.eventLog;
+  },
+
   getNumBehaviorsForAnimation(animation) {
     return coreLibrary.getNumBehaviorsForAnimation(animation);
   },
