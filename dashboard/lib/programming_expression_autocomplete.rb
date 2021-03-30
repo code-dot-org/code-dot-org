@@ -1,10 +1,9 @@
 class ProgrammingExpressionAutocomplete < AutocompleteHelper
-  def self.get_search_matches(page, query, limit, programming_environment)
+  def self.get_search_matches(page, query, programming_environment)
     query = format_query(query)
     return [] if query.length < MIN_WORD_LENGTH
 
-    limit = format_limit(limit)
-    rows = ProgrammingExpression.limit(limit)
+    rows = ProgrammingExpression.all
     rows = rows.where(programming_environment: programming_environment) if programming_environment
 
     rows = rows.
