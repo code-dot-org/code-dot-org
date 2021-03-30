@@ -172,7 +172,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson with new lesson plan link in migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, hidden: true
+    script = create :script, name: 'test-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
@@ -367,7 +367,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize for script edit includes bonus levels' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
     activity = create :lesson_activity, lesson: lesson
@@ -384,7 +384,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize uses unplugged property' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
 
@@ -393,7 +393,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_calendar adds durations of all activities' do
-    script = create :script, is_migrated: false, hidden: true
+    script = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
     activity1 = create :lesson_activity, lesson: lesson, duration: 20
@@ -796,7 +796,7 @@ class LessonTest < ActiveSupport::TestCase
       "//test.code.org/curriculum/#{old_lesson.script.name}/1/Teacher.pdf"
     )
 
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
@@ -808,7 +808,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
-    script = create :script, is_migrated: true, hidden: true, include_student_lesson_plans: true
+    script = create :script, is_migrated: true, include_student_lesson_plans: true
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
@@ -826,6 +826,24 @@ class LessonTest < ActiveSupport::TestCase
 
     script.seeded_from = Time.now.to_s
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
+  end
+
+  test 'opportunity standards do not count as regular standards' do
+    lesson = create :lesson
+    standard = create :standard
+    lesson.opportunity_standards << standard
+    assert_equal 0, lesson.standards.length
+    assert_equal 1, lesson.opportunity_standards.length
+  end
+
+  test 'destroying lesson destroys opportunity_standards join model' do
+    lesson = create :lesson
+    standard = create :standard
+    LessonsOpportunityStandard.destroy_all
+    lesson.opportunity_standards << standard
+    assert_equal 1, LessonsOpportunityStandard.count
+    lesson.destroy
+    assert_equal 0, LessonsOpportunityStandard.count
   end
 
   def create_swapped_lockable_lesson

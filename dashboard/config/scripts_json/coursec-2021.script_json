@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-26 14:42:38 UTC",
+    "serialized_at": "2021-03-30 18:53:22 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -150,7 +150,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Using a set of symbols in place of code, students will design algorithms to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.",
+        "overview": "In this **context-setting** lessons, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 2-3 students.\n - Make sure each student has a reflection journal.",
@@ -170,7 +170,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
@@ -190,7 +190,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
+        "overview": "In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
         "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Review the ***Debugging Guide** from this course's curriculum overview page with the class.\n - Make sure every student has a reflection journal.",
@@ -430,7 +430,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
         "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* Review the ***Project Planning Guide (Exemplar)** document.\n* (Optional) Complete your own planning guide and code your own project to show to students!\n",
@@ -1673,8 +1673,14 @@
       "key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
-        "name": "Reflection"
+        "description": "**Prompts:**\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
@@ -1775,7 +1781,7 @@
       "key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
@@ -1830,7 +1836,8 @@
       "key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
@@ -1852,7 +1859,7 @@
       "key": "1108a4f2-f4c2-48ca-be06-124b1270dfc5",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today. When completed, this can be used as a  review sheet for them to look at in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1932,7 +1939,7 @@
       "key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
@@ -1998,7 +2005,7 @@
       "key": "13cf61a7-7e92-40c5-ba55-c4fa27c516a7",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2909,25 +2916,26 @@
       }
     },
     {
-      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen."
+        "description": "**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
+        "name": "A Series of Events"
       },
       "seeding_key": {
-        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
     {
-      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
-        "remarks": true
+        "description": "This lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen.",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
@@ -3557,7 +3565,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming1_2021"
         ]
@@ -3583,7 +3591,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming2_2021"
         ]
@@ -3609,7 +3617,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming3_2021"
         ]
@@ -3635,7 +3643,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming4_2021"
         ]
@@ -3661,7 +3669,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming5_2021"
         ]
@@ -3687,7 +3695,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming6_2021"
         ]
@@ -3896,7 +3904,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging1_2021"
         ]
@@ -3922,7 +3930,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging2_2021"
         ]
@@ -3948,7 +3956,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging3_2021"
         ]
@@ -3974,7 +3982,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging4_2021"
         ]
@@ -4000,7 +4008,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging5_2021"
         ]
@@ -4026,7 +4034,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging6_2021"
         ]
