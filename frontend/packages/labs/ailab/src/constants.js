@@ -34,8 +34,8 @@ const labelColorSemi = "rgba(254, 96, 3, 0.4)";
 const featureColor = "rgb(75, 155, 213)";
 
 export const colors = {
-  feature: "rgb(70, 186, 168)",
-  label: "rgb(186, 168, 70)"
+  feature: featureColor,
+  label: labelColor
 };
 
 export const styles = {
