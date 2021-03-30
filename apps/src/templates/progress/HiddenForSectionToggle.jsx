@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   main: {
@@ -27,6 +28,10 @@ const styles = {
   rightButton: {
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0
+  },
+  reverseButtons: {
+    display: 'flex',
+    flexDirection: 'row-reverse'
   }
 };
 
@@ -43,14 +48,14 @@ export default class HiddenForSectionToggle extends React.Component {
 
   render() {
     const {hidden, disabled, onChange} = this.props;
+    const isRtl = getStore().getState().isRtl;
+    const mainStyle = {
+      ...styles.main,
+      ...(disabled && styles.disabled),
+      ...(isRtl ? styles.reverseButtons : null)
+    };
     return (
-      <div
-        style={{
-          ...styles.main,
-          ...(disabled && styles.disabled)
-        }}
-        className="uitest-togglehidden"
-      >
+      <div style={mainStyle} className="uitest-togglehidden">
         <Button
           __useDeprecatedTag
           onClick={() => !disabled && onChange('visible')}
