@@ -169,7 +169,6 @@ export const styles = {
     width: "calc(30% - 20px)",
     padding: 20,
     backgroundColor: "white", // rgb(230,230,230)",
-    //border: "solid 1px black",
     borderRadius: 5,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
@@ -246,7 +245,7 @@ export const styles = {
     top: 0,
     backgroundColor: "white",
     color: "#4d575f",
-    borderStyle: "solid solid solid solid",
+    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white", // #c6cacd",
     padding: 7,
@@ -269,20 +268,20 @@ export const styles = {
     fontSize: 12,
     color: "#4d575f",
     backgroundColor: "#f2f2f2",
-    borderStyle: "solid solid solid solid",
+    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "white"
   },
   dataDisplayCellHighlighted: {
     backgroundColor: "#d6f2fa",
-    borderStyle: "solid none",
+    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#d6f2fa",
     cursor: "pointer"
   },
   dataDisplayCellSelected: {
     backgroundColor: "#94e3fa",
-    borderStyle: "solid none",
+    borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#94e3fa"
   },
