@@ -29,7 +29,7 @@ export const saveMessages = {
   name: "Please name your model."
 };
 
-const labelColor = "rgb(254, 96, 3)"; // was 186
+const labelColor = "rgb(254, 96, 3)";
 const featureColor = "rgb(75, 155, 213)";
 
 export const colors = {
@@ -108,7 +108,7 @@ export const styles = {
 
   panel: {
     padding: 10,
-    backgroundColor: "white", // rgb(230,230,230)",
+    backgroundColor: "white",
     overflow: "hidden",
     height: "100%",
     boxSizing: "border-box",
@@ -136,7 +136,6 @@ export const styles = {
   },
 
   scrollingContents: {
-    //padding: 15,
     overflow: "scroll",
     height: "100%",
     boxSizing: "border-box"
@@ -168,7 +167,7 @@ export const styles = {
     marginLeft: 10,
     width: "calc(30% - 20px)",
     padding: 20,
-    backgroundColor: "white", // rgb(230,230,230)",
+    backgroundColor: "white",
     borderRadius: 5,
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 18,
@@ -247,7 +246,7 @@ export const styles = {
     color: "#4d575f",
     borderStyle: "solid",
     borderWidth: 1,
-    borderColor: "white", // #c6cacd",
+    borderColor: "white",
     padding: 7,
     fontSize: 14
   },

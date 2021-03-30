@@ -34,9 +34,11 @@ class Statement extends Component {
           <span style={styles.statementFeature}>
             {selectedFeatures.length > 0
               ? selectedFeatures.join(", ")
-              : ".."}
+              : "..."}
           </span>
-          {"."}
+          {selectedFeatures.length > 0 && (
+            "."
+          )}
         </span>
       </div>
     );

@@ -33,12 +33,13 @@ class ResultsTable extends Component {
                 <th
                   colSpan={featureCount}
                   style={{
-                    ...styles.largeText,
                     ...styles.tableHeader,
                     ...styles.resultsTableFirstHeader
                   }}
                 >
-                  Features
+                  <span style={styles.largeText}>
+                    Features
+                  </span>
                 </th>
                 <th
                   style={{
