@@ -158,13 +158,14 @@
     }
     .project_link_box {
       display: block;
-    }
-    .project_link {
-      display: inline-block;
-      padding: 0 10px 0 4px;
-      line-height: 67px;
-      .rtl & {
-        float: right;
+    
+      .project_link {
+        display: inline-block;
+        padding: 0 10px 0 4px;
+        line-height: 67px;
+        // .rtl & {
+        //   float: right;
+        // }
       }
     }
     #view_all_projects {
