@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {getStore} from '@cdo/apps/redux';
 
 const ButtonColor = {
   orange: 'orange',
@@ -56,6 +57,9 @@ const styles = {
   updated: {lineHeight: '12px'},
   icon: {
     marginRight: 5
+  },
+  iconRTL: {
+    marginLeft: 5
   },
   colors: {
     [ButtonColor.orange]: {
@@ -237,6 +241,8 @@ class Button extends React.Component {
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
+    const isRtl = getStore().getState().isRtl;
+    const directionalIconStyle = isRtl ? styles.iconRTL : styles.icon;
 
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
@@ -285,7 +291,7 @@ class Button extends React.Component {
             <FontAwesome
               icon={icon}
               className={iconClassName}
-              style={{...styles.icon, ...iconStyle}}
+              style={{...directionalIconStyle, ...iconStyle}}
             />
           )}
           {isPending && pendingText && (
