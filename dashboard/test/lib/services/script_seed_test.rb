@@ -744,7 +744,7 @@ module Services
     end
 
     test 'import_script sets seeded_from from serialized_at' do
-      script = create(:script, is_migrated: true, hidden: true)
+      script = create(:script, is_migrated: true)
       assert script.seeded_from.nil?
 
       serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
@@ -923,7 +923,6 @@ module Services
         :script,
         name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
-        hidden: true,
         is_migrated: true
       )
 
