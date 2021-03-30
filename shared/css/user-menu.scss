@@ -11,12 +11,16 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    .rtl & {
+      float: right;
+    }
   }
 
   .user_menu_arrow_down,
   .user_menu_arrow_up,
   .create_menu_arrow_down,
   .create_menu_arrow_up, {
+    float: left;
     font-size: 25px;
     margin-top: -3px;
   }
@@ -159,6 +163,9 @@
       display: inline-block;
       padding: 0 10px 0 4px;
       line-height: 67px;
+      .rtl & {
+        float: right;
+      }
     }
     #view_all_projects {
       height: 70px;
