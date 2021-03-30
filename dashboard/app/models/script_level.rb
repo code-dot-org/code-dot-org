@@ -256,7 +256,7 @@ class ScriptLevel < ApplicationRecord
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      script_stage_extras_path(script.name, (extras_lesson || lesson).relative_position)
+      script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end

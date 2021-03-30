@@ -33,7 +33,7 @@ module LevelsHelper
       script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
+      script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
       script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
