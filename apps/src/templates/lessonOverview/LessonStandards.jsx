@@ -3,6 +3,46 @@ import React, {PureComponent} from 'react';
 import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 
+export const ExpandMode = {
+  NONE: 'none',
+  FIRST: 'first',
+  ALL: 'all'
+};
+
+const expandModeShape = PropTypes.oneOf(
+  // The component should not be expanded.
+  ExpandMode.NONE,
+
+  // The component should be expanded. Its first child and the first child of
+  // each of its descendants should also be expanded.
+  ExpandMode.FIRST,
+
+  // This component and all its descendants should be expanded.
+  ExpandMode.ALL
+);
+
+/**
+ * Given the parents expand mode and the index of the child, returns what the
+ * expand mode of the child should be.
+ * @param parentExpandMode {ExpandMode} Expand mode of parent component
+ * @param index {number} index of the child with respect to parent
+ * @returns {ExpandMode} Expand mode of child component
+ */
+function getNextExpandMode(parentExpandMode, index) {
+  switch (parentExpandMode) {
+    case ExpandMode.ALL:
+      return ExpandMode.ALL;
+    case ExpandMode.FIRST:
+      return index === 0 ? ExpandMode.FIRST : ExpandMode.NONE;
+    case ExpandMode.NONE:
+      return ExpandMode.NONE;
+  }
+}
+
+function getDetailsOpen(expandType) {
+  return expandType === ExpandMode.ALL || expandType === ExpandMode.FIRST;
+}
+
 export default class LessonStandards extends PureComponent {
   render() {
     const {standards} = this.props;
@@ -12,13 +52,15 @@ export default class LessonStandards extends PureComponent {
       .value();
     return (
       <div>
-        {Object.keys(standardsByFramework).map(frameworkName => {
+        {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
+          const expandMode = getNextExpandMode(this.props.expandMode, index);
           return (
             <Framework
               name={frameworkName}
               key={frameworkName}
               standards={standards}
+              expandMode={expandMode}
             />
           );
         })}
@@ -28,7 +70,7 @@ export default class LessonStandards extends PureComponent {
 }
 LessonStandards.propTypes = {
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expand: PropTypes.oneOf('first', 'all')
+  expandMode: expandModeShape
 };
 
 class Framework extends PureComponent {
@@ -44,17 +86,20 @@ class Framework extends PureComponent {
       .orderBy(categoryKey, 'shortcode')
       .groupBy(categoryKey)
       .value();
+    const isOpen = getDetailsOpen(this.props.expandMode);
     return (
-      <details key={name}>
+      <details key={name} open={isOpen}>
         <summary>{name}</summary>
         <ul style={{listStyleType: 'none'}}>
-          {Object.keys(standardsByCategory).map(categoryShortcode => {
+          {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
+            const expandMode = getNextExpandMode(this.props.expandMode, index);
             return (
               <CategoryClass
                 key={categoryShortcode}
                 shortcode={categoryShortcode}
                 standards={standards}
+                expandMode={expandMode}
               />
             );
           })}
@@ -65,7 +110,8 @@ class Framework extends PureComponent {
 }
 Framework.propTypes = {
   name: PropTypes.string.isRequired,
-  standards: PropTypes.arrayOf(standardShape).isRequired
+  standards: PropTypes.arrayOf(standardShape).isRequired,
+  expandMode: expandModeShape
 };
 
 class ParentCategory extends PureComponent {
@@ -76,25 +122,33 @@ class ParentCategory extends PureComponent {
       .orderBy('categoryShortcode', 'shortcode')
       .groupBy('categoryShortcode')
       .value();
+    const isOpen = getDetailsOpen(this.props.expandMode);
     return (
       <li key={shortcode}>
-        <details>
+        <details open={isOpen}>
           <summary>
             {shortcode}
             {' - '}
             {description}
           </summary>
           <ul style={{listStyleType: 'none'}}>
-            {Object.keys(standardsByCategory).map(categoryShortcode => {
-              const standards = standardsByCategory[categoryShortcode];
-              return (
-                <Category
-                  key={categoryShortcode}
-                  shortcode={categoryShortcode}
-                  standards={standards}
-                />
-              );
-            })}
+            {Object.keys(standardsByCategory).map(
+              (categoryShortcode, index) => {
+                const standards = standardsByCategory[categoryShortcode];
+                const expandMode = getNextExpandMode(
+                  this.props.expandMode,
+                  index
+                );
+                return (
+                  <Category
+                    key={categoryShortcode}
+                    shortcode={categoryShortcode}
+                    standards={standards}
+                    expandMode={expandMode}
+                  />
+                );
+              }
+            )}
           </ul>
         </details>
       </li>
@@ -103,16 +157,18 @@ class ParentCategory extends PureComponent {
 }
 ParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
-  standards: PropTypes.arrayOf(standardShape).isRequired
+  standards: PropTypes.arrayOf(standardShape).isRequired,
+  expandMode: expandModeShape
 };
 
 class Category extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].categoryDescription;
+    const isOpen = getDetailsOpen(this.props.expandMode);
     return (
       <li key={shortcode}>
-        <details>
+        <details open={isOpen}>
           <summary>{`${shortcode} - ${description}`}</summary>
           <ul>
             {standards.map(standard => (
@@ -126,7 +182,8 @@ class Category extends PureComponent {
 }
 Category.propTypes = {
   shortcode: PropTypes.string.isRequired,
-  standards: PropTypes.arrayOf(standardShape).isRequired
+  standards: PropTypes.arrayOf(standardShape).isRequired,
+  expandMode: expandModeShape
 };
 
 class Standard extends PureComponent {

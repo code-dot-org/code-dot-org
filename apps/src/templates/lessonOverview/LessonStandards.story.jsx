@@ -1,5 +1,5 @@
 import React from 'react';
-import LessonStandards from './LessonStandards';
+import LessonStandards, {ExpandMode} from './LessonStandards';
 import {
   cspStandards,
   cstaStandards
@@ -26,7 +26,16 @@ export default storybook => {
       story: () => (
         <LessonStandards
           standards={cspStandards.concat(cstaStandards)}
-          expand="first"
+          expandMode={ExpandMode.FIRST}
+        />
+      )
+    },
+    {
+      name: 'expand all of many standards',
+      story: () => (
+        <LessonStandards
+          standards={cspStandards.concat(cstaStandards)}
+          expandMode={ExpandMode.ALL}
         />
       )
     }
