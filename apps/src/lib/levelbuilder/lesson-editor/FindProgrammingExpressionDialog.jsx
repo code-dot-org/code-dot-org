@@ -120,7 +120,8 @@ class FindProgrammingExpressionDialog extends Component {
     const searchChanged =
       this.state.searchQuery !== prevState.searchQuery ||
       this.state.filteredProgrammingEnvironment !==
-        prevState.filteredProgrammingEnvironment;
+        prevState.filteredProgrammingEnvironment ||
+      this.state.currentPage !== prevState.currentPage;
     if (searchChanged) {
       this.doSearch();
     }
@@ -177,7 +178,7 @@ class FindProgrammingExpressionDialog extends Component {
   }
 
   setCurrentPage = value => {
-    this.setState({currentPage: value}, this.doSearch);
+    this.setState({currentPage: value});
   };
 
   render() {
