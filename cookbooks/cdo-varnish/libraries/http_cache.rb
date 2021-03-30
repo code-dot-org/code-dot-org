@@ -20,8 +20,8 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script, because they are project-backed.
   UNCACHED_SCRIPT_LEVEL_PATHS = [
-    '/s/dance/lessons/1/puzzle/13',
-    '/s/dance-2019/lessons/1/puzzle/10'
+    '/s/dance/lessons/1/levels/13',
+    '/s/dance-2019/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.

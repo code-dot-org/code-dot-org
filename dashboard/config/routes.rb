@@ -221,8 +221,8 @@ Dashboard::Application.routes.draw do
 
   # quick links for cartoon network arabic
   get '/flappy/lang/ar', to: 'home#set_locale', as: 'flappy/lang/ar', locale: 'ar-SA', user_return_to: '/flappy/1'
-  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/lessons/1/puzzle/1'
-  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/lessons/1/puzzle/1'
+  get '/playlab/lang/ar', to: 'home#set_locale', as: 'playlab/lang/ar', locale: 'ar-SA', user_return_to: '/s/playlab/lessons/1/levels/1'
+  get '/artist/lang/ar', to: 'home#set_locale', as: 'artist/lang/ar', locale: 'ar-SA', user_return_to: '/s/artist/lessons/1/levels/1'
 
   # /lang/xx shortcut for all routes
   get '/lang/:locale', to: 'home#set_locale', user_return_to: '/'
@@ -308,8 +308,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  # Redirects from old /stage url to new /lesson url
-  get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}%{all}')
+  # Redirects from old /stage url to new /lessons url for levels
+  get '/s/:script_name/stage/:position/puzzle/:number(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{number}%{all}')
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
@@ -332,23 +332,23 @@ Dashboard::Application.routes.draw do
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
 
-      # /s/xxx/lessons/yyy/puzzle/zzz
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+      # /s/xxx/lessons/yyy/levels/zzz
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/lessons/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lessons/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          # /s/xxx/lessons/yyy/puzzle/zzz/sublevel/sss
+          # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
           get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
         end
       end
     end
 
-    # /s/xxx/lockable/yyy/puzzle/zzz
+    # /s/xxx/lockable/yyy/levels/zzz
     resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-      resources :script_levels, only: [:show], path: "/puzzle", format: false do
+      resources :script_levels, only: [:show], path: "/levels", format: false do
         member do
-          # /s/xxx/lockable/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lockable/yyy/levels/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
