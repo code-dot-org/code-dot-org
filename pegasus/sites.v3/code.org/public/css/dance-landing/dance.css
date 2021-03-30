@@ -82,7 +82,10 @@ a.translate-link:hover {
   font-weight: bold;
   margin-left: 10px;
 }
-
+div[dir='rtl'] .dance-chevron-icon{
+  float: right;
+  line-height: 20px;
+} 
 .dance-thumbnail-tile-img {
   width: 100%;
 }
