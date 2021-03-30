@@ -1096,7 +1096,7 @@ function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "selectTrainer") {
-    if (mode && mode.hideSelectTrainer && mode.hideChooseReserve) {
+    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
       return false;
     }
     if (!uniqLabelFeaturesSelected(state)) {
