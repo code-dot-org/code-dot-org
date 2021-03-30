@@ -3178,17 +3178,21 @@ code {
 #diversity_survey {
   background-color: $background_gray;
   color: $dark_charcoal;
-  border-radius: 5px;
   overflow: hidden;
-  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
     padding: 20px;
-    background-color: $light-green;
+    color: $bootstrap_success_text;
+    background-color: $bootstrap_success_background;
+    border: solid 1px $bootstrap_success_border;
+    border-radius: 5px;
   }
 
   #surveybody {
+    border: solid 1px $purple;
+    border-radius: 5px;
+
     #headingarea {
       margin-top: 0;
       background-color: $purple;
