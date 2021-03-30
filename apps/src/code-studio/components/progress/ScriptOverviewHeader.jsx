@@ -122,6 +122,7 @@ class ScriptOverviewHeader extends Component {
   render() {
     const {
       plcHeaderProps,
+      scriptId,
       scriptName,
       scriptTitle,
       scriptDescription,
@@ -178,6 +179,10 @@ class ScriptOverviewHeader extends Component {
             announcements={this.props.announcements}
             width={SCRIPT_OVERVIEW_WIDTH}
             viewAs={viewAs}
+            firehoseAnalyticsData={{
+              script_id: scriptId,
+              user_id: userId
+            }}
           />
         )}
         {userId && <StudentFeedbackNotification studentId={userId} />}

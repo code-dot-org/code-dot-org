@@ -2,15 +2,15 @@
   "func": "getPrediction",
   "category": "Data",
   "paletteParams": [
-    "model_name",
-    "model_id",
-    "testValues",
+    "name",
+    "id",
+    "data",
     "callback"
   ],
   "params": [
-    "\"myModel\"",
-    "\"modelId\"",
-    "testValues",
+    "\"name\"",
+    "\"id\"",
+    "data",
     "function (value) {\n \n}"
   ]
 }
