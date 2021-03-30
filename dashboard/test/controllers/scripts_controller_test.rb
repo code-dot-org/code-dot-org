@@ -23,7 +23,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @section_coursez_2017 = create :section, script: @coursez_2017
     @section_coursez_2017.add_student(@student_coursez_2017)
 
-    @migrated_script = create :script, is_migrated: true, hidden: true
+    @migrated_script = create :script, is_migrated: true
     @unmigrated_script = create :script
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
@@ -522,7 +522,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, name: 'migrated', is_migrated: true, hidden: true
+    script = create :script, name: 'migrated', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     activity = create :lesson_activity, lesson: lesson
@@ -555,7 +555,7 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create :script, name: 'migrated', is_migrated: true, hidden: true
+    script = create :script, name: 'migrated', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
 
