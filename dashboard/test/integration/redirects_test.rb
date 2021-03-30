@@ -39,10 +39,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/flappy/1'
 
     get '/playlab/lang/ar'
-    assert_redirected_to '/s/playlab/lesson/1/puzzle/1'
+    assert_redirected_to '/s/playlab/lessons/1/levels/1'
 
     get '/artist/lang/ar'
-    assert_redirected_to '/s/artist/lesson/1/puzzle/1'
+    assert_redirected_to '/s/artist/lessons/1/levels/1'
   end
 
   test 'redirects lang parameter' do
@@ -52,8 +52,8 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     get '/s/frozen/lang/es'
     assert_redirected_to '/s/frozen'
 
-    get '/s/course1/lesson/1/puzzle/1/lang/es'
-    assert_redirected_to '/s/course1/lesson/1/puzzle/1'
+    get '/s/course1/lessons/1/levels/1/lang/es'
+    assert_redirected_to '/s/course1/lessons/1/levels/1'
   end
 
   test 'old script id paths redirect to named paths' do

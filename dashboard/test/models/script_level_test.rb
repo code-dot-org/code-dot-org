@@ -58,14 +58,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/puzzle/1$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/puzzle/2$"), summary[:url]
+    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
@@ -469,7 +469,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'next_level_or_redirect_path_for_user returns to bubble choice activity page for BubbleChoice levels' do
     script_level = create_script_level_with_ancestors({levels: [create(:bubble_choice_level)]})
-    assert_equal "/s/#{script_level.script.name}/lessons/1/puzzle/1", script_level.next_level_or_redirect_path_for_user(nil)
+    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
   test 'end of stage' do
