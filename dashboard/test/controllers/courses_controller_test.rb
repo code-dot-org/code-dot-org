@@ -19,6 +19,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
+    @migrated_script = create :script, is_migrated: true
+    @unit_group_migrated = create :unit_group
+    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
+
+    @unmigrated_script = create :script
+    @unit_group_unmigrated = create :unit_group
+    create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_script, position: 1
+
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
   end
@@ -313,6 +321,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.visible?
     assert unit_group.is_stable?
   end
+
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :resources, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :standards, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
+
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
+  test_user_gets_response_for :code, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
   # tests for edit
 

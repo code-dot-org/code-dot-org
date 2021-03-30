@@ -11,6 +11,8 @@ import {
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
+import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
+import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
 const COLUMN_WIDTH = 40;
 
@@ -32,20 +34,36 @@ class ProgressTableSummaryView extends React.Component {
   constructor(props) {
     super(props);
     this.summaryCellFormatter = this.summaryCellFormatter.bind(this);
+    this.timeSpentCellFormatter = this.timeSpentCellFormatter.bind(this);
+    this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
+  }
+
+  getLessonProgress(lesson, student) {
+    return this.props.lessonProgressByStudent[student.id][lesson.id];
   }
 
   summaryCellFormatter(lesson, student) {
-    const studentLessonProgress = this.props.lessonProgressByStudent[
-      student.id
-    ][lesson.id];
     return (
       <ProgressTableSummaryCell
         studentId={student.id}
-        studentLessonProgress={studentLessonProgress}
+        studentLessonProgress={this.getLessonProgress(lesson, student)}
         isAssessmentLesson={lessonIsAllAssessment(lesson.levels)}
         onSelectDetailView={() => this.props.onClickLesson(lesson.position)}
       />
     );
+  }
+
+  expandedCellFormatter(lesson, student, textFormatter) {
+    const progress = this.getLessonProgress(lesson, student);
+    return <span style={progressStyles.flex}>{textFormatter(progress)}</span>;
+  }
+
+  timeSpentCellFormatter(lesson, student) {
+    return this.expandedCellFormatter(lesson, student, timeSpentFormatter);
+  }
+
+  lastUpdatedCellFormatter(lesson, student) {
+    return this.expandedCellFormatter(lesson, student, lastUpdatedFormatter);
   }
 
   render() {
@@ -56,13 +74,19 @@ class ProgressTableSummaryView extends React.Component {
           columnWidths={new Array(this.props.scriptData.stages.length).fill(
             COLUMN_WIDTH
           )}
-          lessonCellFormatter={this.summaryCellFormatter}
+          lessonCellFormatters={[
+            this.summaryCellFormatter,
+            this.timeSpentCellFormatter,
+            this.lastUpdatedCellFormatter
+          ]}
         />
         <SummaryViewLegend showCSFProgressBox={this.props.scriptData.csf} />
       </div>
     );
   }
 }
+
+export const UnconnectedProgressTableSummaryView = ProgressTableSummaryView;
 
 export default connect(
   state => ({

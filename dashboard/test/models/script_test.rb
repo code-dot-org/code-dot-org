@@ -689,18 +689,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert script.can_view_version?(teacher)
   end
 
-  test 'visible scripts can not be marked at is_migrated' do
-    assert_raises ActiveRecord::RecordInvalid do
-      create :script, name: 'my-visible-script', hidden: false, properties: {is_migrated: true}
-    end
-  end
-
-  test 'hidden scripts can be marked at is_migrated' do
-    script = create :script, name: 'my-hidden-script', hidden: true,  properties: {is_migrated: true}
-
-    assert script.properties["is_migrated"]
-  end
-
   test 'can_view_version? is true if script is latest stable version in student locale or in English' do
     latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', is_stable: true, supported_locales: []
     latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', is_stable: true, supported_locales: ['it-it']
@@ -2881,7 +2869,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'fix script level positions' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
 
     lesson_1 = create :lesson, script: script, lesson_group: lesson_group
@@ -2937,7 +2925,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cannot fix position of legacy script levels' do
-    script = create :script, is_migrated: true, hidden: true
+    script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
