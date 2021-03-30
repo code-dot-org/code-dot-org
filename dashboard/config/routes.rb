@@ -323,16 +323,12 @@ Dashboard::Application.routes.draw do
       get 'instructions'
     end
 
-    ## TODO: Once we move levels over to /lessons as well combine the routing rules
-    resources :lessons, only: [:show], param: 'position' do
-      get 'student', to: 'lessons#student_lesson_plan'
-    end
-
     # Redirects from old /stage url to new /lesson url
-    get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lesson/%{position}%{all}')
+    get '/stage/:position(*all)', to: redirect(path: '/lesson/%{position}%{all}')
 
     # /s/xxx/lesson/yyy/puzzle/zzz
     resources :stages, only: [], path: "/lesson", param: 'position', format: false do
+      get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
