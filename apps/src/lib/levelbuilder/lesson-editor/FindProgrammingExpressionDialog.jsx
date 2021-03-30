@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
@@ -48,16 +49,11 @@ const ProgrammingExpressionTable = function(props) {
     return null;
   }
 
-  // TODO implement pagination
-  // As a temporary crutch until we have time to get pagination working, here's what we do:
-  // Display a maximum of 10 results.
-  // If we are given more than 10 results, inform the user that there
-  // are more results and suggest that they narrow the search term.
-  const tooManyResults = props.programmingExpressions.length > 10;
-  const displayExpressions = props.programmingExpressions.slice(0, 10);
-
   return (
-    <table className="table table-striped table-bordered">
+    <table
+      style={{marginBottom: 0}}
+      className="table table-striped table-bordered"
+    >
       <thead>
         <tr>
           <th />
@@ -66,7 +62,7 @@ const ProgrammingExpressionTable = function(props) {
         </tr>
       </thead>
       <tbody>
-        {displayExpressions.map(programmingExpression => (
+        {props.programmingExpressions.map(programmingExpression => (
           <tr key={programmingExpression.uniqueKey}>
             <td>
               <input
@@ -86,16 +82,6 @@ const ProgrammingExpressionTable = function(props) {
             <td>{programmingExpression.programmingEnvironmentName}</td>
           </tr>
         ))}
-        {tooManyResults && (
-          <tr>
-            <td colSpan="3">
-              <small>
-                Too many results to display; if the block you're looking for
-                isn't here, please narrow your search term
-              </small>
-            </td>
-          </tr>
-        )}
       </tbody>
     </table>
   );
@@ -124,14 +110,18 @@ class FindProgrammingExpressionDialog extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentPage: 1,
+      numPages: 0
+    };
   }
 
   componentDidUpdate(prevProps, prevState) {
     const searchChanged =
       this.state.searchQuery !== prevState.searchQuery ||
       this.state.filteredProgrammingEnvironment !==
-        prevState.filteredProgrammingEnvironment;
+        prevState.filteredProgrammingEnvironment ||
+      this.state.currentPage !== prevState.currentPage;
     if (searchChanged) {
       this.doSearch();
     }
@@ -169,9 +159,7 @@ class FindProgrammingExpressionDialog extends Component {
     }
 
     const params = {
-      // limit to one more than our display limit, so we can detect the 'too
-      // many' case
-      limit: 11,
+      page: this.state.currentPage,
       query: this.state.searchQuery
     };
 
@@ -181,8 +169,17 @@ class FindProgrammingExpressionDialog extends Component {
 
     fetch('/programmingexpressionsearch?' + new URLSearchParams(params))
       .then(response => response.json())
-      .then(data => this.setState({programmingExpressions: data}));
+      .then(data => {
+        this.setState({
+          programmingExpressions: data.programmingExpressions,
+          numPages: data.numPages
+        });
+      });
   }
+
+  setCurrentPage = value => {
+    this.setState({currentPage: value});
+  };
 
   render() {
     return (
@@ -202,6 +199,14 @@ class FindProgrammingExpressionDialog extends Component {
           programmingExpressions={this.state.programmingExpressions}
           handleSelect={this.handleSelectProgrammingExpression}
         />
+
+        <div style={{padding: 20}}>
+          <PaginationWrapper
+            totalPages={this.state.numPages}
+            currentPage={this.state.currentPage}
+            onChangePage={this.setCurrentPage}
+          />
+        </div>
 
         <DialogFooter rightAlign>
           <Button
