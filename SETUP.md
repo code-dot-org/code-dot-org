@@ -319,7 +319,7 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew link imagemagick@6 --force`
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
-- `gem install rmagick -v 2.15.4`
+- `gem install rmagick -v 2.16.0`
 
 ### ImageMagick with Pango
 
