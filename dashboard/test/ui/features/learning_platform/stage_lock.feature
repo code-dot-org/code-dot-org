@@ -27,7 +27,7 @@ Scenario: Lock settings for students
   And I wait until element "td:contains(Anonymous student survey 2)" is visible
   Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
-  When I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/1"
+  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1"
   And I wait until element "#level-body" is visible
   Then element "#locked-stage:contains(stage is currently locked)" is visible
 
@@ -54,7 +54,7 @@ Scenario: Lock settings for students
 
   # student submits
 
-  When I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/4"
+  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
   And I click selector ".submitButton" once I see it
   And I wait to see a dialog titled "Submit your survey"
   And I press "ok-button"
@@ -87,7 +87,7 @@ Scenario: Lock settings for students
   Then I verify progress for stage 31 level 3 is "perfect_assessment"
   Then I verify progress for stage 31 level 4 is "perfect_assessment"
 
-  When I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/4"
+  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
   And I wait until element "h2:contains(Pre-survey)" is visible
   Then element "h3:contains(Answer)" is visible
   Then element ".previousPageButton" is visible

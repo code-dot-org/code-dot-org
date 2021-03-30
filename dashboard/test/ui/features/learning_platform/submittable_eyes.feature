@@ -22,7 +22,7 @@ Scenario: Lockable level
   And I scroll our lockable stage into view
   And I see no difference for "course overview with locked level in view"
 
-  Then I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/1"
+  Then I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1"
   And I wait to see ".submitButton"
   And I see no difference for "locked level on level page"
   Then I click selector ".header_popup_link"

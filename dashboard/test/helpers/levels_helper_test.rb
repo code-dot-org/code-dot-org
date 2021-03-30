@@ -470,8 +470,8 @@ class LevelsHelperTest < ActionView::TestCase
     stage = script.lessons[0]
     assert_equal 1, stage.absolute_position
     assert_equal 1, stage.relative_position
-    assert_equal '/s/test_script/survey/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/survey/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test_script/lockable/1/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/1/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
     stage = script.lessons[1]
     assert_equal 2, stage.absolute_position
@@ -482,14 +482,14 @@ class LevelsHelperTest < ActionView::TestCase
     stage = script.lessons[2]
     assert_equal 3, stage.absolute_position
     assert_equal 2, stage.relative_position
-    assert_equal '/s/test_script/survey/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/survey/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test_script/lockable/2/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
     stage = script.lessons[3]
     assert_equal 4, stage.absolute_position
     assert_equal 3, stage.relative_position
-    assert_equal '/s/test_script/survey/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
-    assert_equal '/s/test_script/survey/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
+    assert_equal '/s/test_script/lockable/3/puzzle/1', build_script_level_path(stage.script_levels[0], {})
+    assert_equal '/s/test_script/lockable/3/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
 
     stage = script.lessons[4]
     assert_equal 5, stage.absolute_position

@@ -345,12 +345,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    # /s/xxx/survey/yyy/puzzle/zzz
-    resources :lockable_stages, only: [], path: "/survey", param: 'position', format: false do
+    # /s/xxx/lockable/yyy/puzzle/zzz
+    resources :lockable_stages, only: [], path: "/lockable", param: 'position', format: false do
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
-          # /s/xxx/survey/yyy/puzzle/zzz/page/ppp
+          # /s/xxx/lockable/yyy/puzzle/zzz/page/ppp
           get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
         end
       end
