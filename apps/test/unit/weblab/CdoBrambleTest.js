@@ -242,16 +242,16 @@ describe('CdoBramble', () => {
   });
 
   describe('uploadAllFilesToServer', () => {
-    let fileEntries;
+    let fileData;
 
     beforeEach(() => {
-      fileEntries = [{path: 'index.html'}, {path: 'style.css'}];
-      sinon.stub(cdoBramble, 'shell').returns({
-        ls: (path, callback) => callback(null, fileEntries)
-      });
+      fileData = [
+        {name: 'index.html', data: '<div></div>'},
+        {name: 'style.css', data: '* {margin: 0;}'}
+      ];
       sinon
-        .stub(cdoBramble, 'getFileData')
-        .callsFake((path, callback) => callback(null, 'my file data'));
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(fileData));
       sinon
         .stub(cdoBramble.api, 'changeProjectFile')
         .callsFake((filename, fileData, callback) =>
@@ -263,39 +263,9 @@ describe('CdoBramble', () => {
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
         expect(error).to.equal(null);
         expect(wasSuccessful).to.be.true;
-        expect(console.error).not.to.have.been.called;
-        expect(cdoBramble.getFileData).to.have.been.calledTwice;
+        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
         expect(cdoBramble.api.changeProjectFile).to.have.been.calledTwice;
         expect(cdoBramble.lastSyncedVersionId).to.equal('new-version-id');
-        done();
-      });
-    });
-
-    it('exits early if request for file entries fails', done => {
-      cdoBramble.shell.restore();
-      sinon.stub(cdoBramble, 'shell').returns({
-        ls: (path, callback) => callback(new Error(), null)
-      });
-
-      cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
-        expect(error).not.to.equal(null);
-        expect(wasSuccessful).to.be.undefined;
-        expect(console.error).to.have.been.calledOnce;
-        expect(cdoBramble.getFileData).not.to.have.been.called;
-        done();
-      });
-    });
-
-    it('exits early if getFileData fails', done => {
-      cdoBramble.getFileData.restore();
-      sinon
-        .stub(cdoBramble, 'getFileData')
-        .callsFake((path, callback) => callback(new Error(), null));
-
-      cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
-        expect(error).not.to.equal(null);
-        expect(wasSuccessful).to.be.undefined;
-        expect(cdoBramble.getFileData).to.have.been.calledOnce;
         done();
       });
     });
@@ -311,7 +281,7 @@ describe('CdoBramble', () => {
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
         expect(error).not.to.equal(null);
         expect(wasSuccessful).to.be.undefined;
-        expect(cdoBramble.getFileData).to.have.been.calledOnce;
+        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
         expect(cdoBramble.api.changeProjectFile).to.have.been.calledOnce;
         done();
       });

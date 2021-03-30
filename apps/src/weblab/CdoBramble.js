@@ -217,14 +217,7 @@ export default class CdoBramble {
   }
 
   uploadAllFilesToServer(callback) {
-    this.shell().ls(this.projectPath, (err, entries) => {
-      if (err) {
-        console.error(
-          `CdoBramble failed to receive file entries from Bramble. ${err}`
-        );
-        callback(err);
-      }
-
+    this.getAllFileData(fileData => {
       const uploadEntry = index => {
         const next = (err, newVersionId) => {
           if (err) {
@@ -233,26 +226,20 @@ export default class CdoBramble {
           }
 
           this.lastSyncedVersionId = newVersionId;
-          if (index >= entries.length - 1) {
+          if (index >= fileData.length - 1) {
             callback(null, true /* preWriteHook was successful */);
           } else {
             uploadEntry(index + 1);
           }
         };
 
-        const filename = entries[index].path; // 'path' is relative, so it will be the filename.
-        this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
-          if (err) {
-            callback(err);
-          } else {
-            this.api.changeProjectFile(
-              filename,
-              fileData,
-              next,
-              true /* skipPreWriteHook because we are calling from the preWriteHook */
-            );
-          }
-        });
+        const {name, data} = fileData[index];
+        this.api.changeProjectFile(
+          name,
+          data,
+          next,
+          true /* skipPreWriteHook because we are calling from the preWriteHook */
+        );
       };
 
       uploadEntry(0);
@@ -333,7 +320,26 @@ export default class CdoBramble {
   }
 
   getFileData(path, callback) {
-    this.fileSystem().readFile(path, {encoding: null}, callback);
+    this.fileSystem().readFile(path, {encoding: null}, (err, fileData) => {
+      err &&
+        console.error(`CdoBramble unable to read ${path} from Bramble. ${err}`);
+
+      callback(err, fileData);
+    });
+  }
+
+  getAllFileData(callback) {
+    this.shell().ls(this.projectPath, (err, entries) => {
+      if (err) {
+        console.error(
+          `CdoBramble failed to receive file entries from Bramble. ${err}`
+        );
+        callback(err);
+      }
+
+      const filenames = entries?.map(entry => entry.path); // 'path' is relative, so it will be the filename.
+      this.recursivelyReadFiles(filenames, 0, [], callback);
+    });
   }
 
   writeFileData(path, data, callback) {
@@ -368,6 +374,37 @@ export default class CdoBramble {
 
   deleteProject(callback) {
     this.shell().rm(this.projectPath, {recursive: true}, callback);
+  }
+
+  recursivelyReadFiles(
+    filenames,
+    currentIndex,
+    currentFileData,
+    finalCallback
+  ) {
+    if (filenames?.length <= 0 || !filenames[currentIndex]) {
+      finalCallback(null, currentFileData);
+      return;
+    }
+
+    const next = err => {
+      if (currentIndex >= filenames.length - 1) {
+        finalCallback(currentFileData);
+      } else {
+        this.recursivelyReadFiles(
+          filenames,
+          currentIndex + 1,
+          currentFileData,
+          finalCallback
+        );
+      }
+    };
+
+    const filename = filenames[currentIndex];
+    this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
+      !err && currentFileData.push({name: filename, data: fileData.toString()});
+      next(err);
+    });
   }
 
   recursivelyWriteFiles(files, currentIndex, finalCallback) {
