@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-24 21:38:25 UTC",
+    "serialized_at": "2021-03-30 18:06:53 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -1310,8 +1310,14 @@
       "key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\n*Goal:* Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n####Journal prompts\n\n-  Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
-        "name": "Reflection"
+        "description": "*Goal:* Help students reflect on the things they learned in this lesson\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\n\n**Prompts:**\n\n-  Can you draw a sequence for getting ready to go to the computer lab?\n-  Draw a computer lab \"Do\" and a \"Don't\"\n- Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4aa550d3-10b9-4151-9ed8-45ce24b49e7d",
@@ -6686,18 +6692,6 @@
       }
     },
     {
-      "name": "Feeling Faces Emotion",
-      "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
-      "key": "feeling_faces_emotion",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "feeling_faces_emotion"
-      }
-    },
-    {
       "name": "How to Make a Class Section on Code.org",
       "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
       "key": "how_to_make_a_class_section_on_code_org",
@@ -7112,12 +7106,6 @@
       "seeding_key": {
         "lesson.key": "Learn to Drag and Drop",
         "resource.key": "wiggles-go_noodle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learn to Drag and Drop",
-        "resource.key": "feeling_faces_emotion"
       }
     },
     {
