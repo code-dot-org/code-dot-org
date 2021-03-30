@@ -102,10 +102,14 @@ export const styles = {
     marginBottom: 8
   },
 
+  footerText: {
+    fontSize: 13,
+    marginTop: 12
+  },
+
   panel: {
-    padding: 20,
+    padding: 10,
     backgroundColor: "white", // rgb(230,230,230)",
-    borderRadius: 5,
     overflow: "hidden",
     height: "100%",
     boxSizing: "border-box",
@@ -127,19 +131,19 @@ export const styles = {
 
   scrollableContentsTinted: {
     overflow: "hidden",
-    borderRadius: 5,
+    borderRadius: 0,
     backgroundColor: "rgb(206, 206, 206)"
   },
 
   scrollingContents: {
-    padding: 15,
+    //padding: 15,
     overflow: "scroll",
     height: "100%",
     boxSizing: "border-box"
   },
 
   contents: {
-    borderRadius: 5,
+    borderRadius: 0,
     backgroundColor: "rgb(206, 206, 206)",
     padding: 15
   },
@@ -185,12 +189,16 @@ export const styles = {
     float: "left",
     boxSizing: "border-box",
     border: "solid 4px rgba(0,0,0,0)",
-    borderRadius: 10,
-    height: 240
+    borderRadius: 0,
+    height: 220
+  },
+
+  selectDatasetItemHighlighted: {
+    backgroundColor: "#d6f2fa",
   },
 
   selectDatasetItemSelected: {
-    border: "solid 4px white"
+    backgroundColor: "#94e3fa",
   },
 
   selectDatasetImage: {
@@ -226,7 +234,12 @@ export const styles = {
     fontSize: 12
   },
 
-  dataDisplayHeaderUnselected: {
+  dataDisplayHeader: {
+    paddingLeft: 20,
+    textAlign: "right",
+    position: "sticky",
+    top: 0,
+    fontSize: 12,
     backgroundColor: "white",
     color: "#4d575f",
     borderStyle: "solid solid solid solid",
@@ -235,21 +248,14 @@ export const styles = {
     padding: 7,
     fontSize: 14
   },
-  dataDisplayHeaderHighlighted: {
-    backgroundColor: "#64fff16b",
-    color: "white",
-    borderStyle: "solid solid solid solid",
-    borderWidth: 1,
-    borderColor: "#00adbc #00adbc grey #00adbc",
-    padding: 7
+
+  dataDisplayHeaderLabel: {
+    backgroundColor: labelColor,
+    color: "white"
   },
-  dataDisplayHeaderSelected: {
-    color: "black",
-    backgroundColor: "white",
-    borderStyle: "solid solid solid solid",
-    borderWidth: 1,
-    borderColor: "#00adbc #00adbc #00adbc green",
-    padding: 7
+  dataDisplayHeaderFeature: {
+    backgroundColor: featureColor,
+    color: "white"
   },
 
   dataDisplayCell: {
@@ -261,39 +267,20 @@ export const styles = {
     backgroundColor: "#f2f2f2",
     borderStyle: "solid solid solid solid",
     borderWidth: 1,
-    borderColor: "white" // "#c6cacd"
+    borderColor: "white"
   },
   dataDisplayCellHighlighted: {
-    backgroundColor: "#d6f2fa", // #64fff16b",
-    borderStyle: "solid none",
-    borderWidth: 1,
-    borderColor: "#d6f2fa", // "#c6cacd" // "#c6cacd #00adbc #c6cacd #00adbc"
-    cursor: "pointer"
-  },
-  dataDisplayCellSelected: {
-    color: "black",
     backgroundColor: "#d6f2fa",
     borderStyle: "solid none",
     borderWidth: 1,
-    borderColor: "#d6f2fa" // "#bae5f1" // "#c6cacd" // "#c6cacd #00adbc #c6cacd #00adbc"
+    borderColor: "#d6f2fa",
+    cursor: "pointer"
   },
-
-  dataDisplayHeaderLabelSelected: {
-    backgroundColor: labelColor,
-    color: "yellow"
-  },
-  dataDisplayHeaderFeatureSelected: {
-    backgroundColor: featureColor,
-    color: "yellow"
-  },
-
-  dataDisplayHeaderLabelUnselected: {
-    backgroundColor: labelColor,
-    color: "white"
-  },
-  dataDisplayHeaderFeatureUnselected: {
-    backgroundColor: featureColor,
-    color: "white"
+  dataDisplayCellSelected: {
+    backgroundColor: "#94e3fa",
+    borderStyle: "solid none",
+    borderWidth: 1,
+    borderColor: "#94e3fa"
   },
 
   tableCell: {
@@ -301,21 +288,11 @@ export const styles = {
     textAlign: "right",
     fontSize: 12
   },
-  dataDisplayCellLabelSelected: {
-    backgroundColor: labelColorSemi,
-    color: "yellow"
-  },
-  dataDisplayCellFeatureSelected: {
-    backgroundColor: featureColor,
-    color: "yellow"
-  },
+  dataDisplayCellLabelSelected: {},
+  dataDisplayCellFeatureSelected: {},
 
-  dataDisplayCellLabelUnselected: {
-    backgroundColor: labelColorSemi
-  },
-  dataDisplayCellFeatureUnselected: {
-    backgroundColor: featureColor
-  },
+  dataDisplayCellLabelUnselected: {},
+  dataDisplayCellFeatureUnselected: {},
   dataDisplayCellUnselected: {},
 
   crossTabCell0: {
@@ -484,13 +461,28 @@ export const styles = {
     width: "100%"
   },
 
-  phraseBuilderSelectReadonly: {
+  phraseBuilderLabel: {
     fontSize: 16,
     marginTop: 10,
-    padding: 6
+    paddingTop: 13,
+    paddingLeft: 13,
+    height: 43,
+    backgroundColor: labelColor,
+    color: "white",
+    boxSizing: "border-box"
   },
 
-  phraseBuilderFeature: { padding: 10, paddingBottom: 0, position: "relative" },
+  phraseBuilderFeature: {
+    fontSize: 16,
+    marginTop: 10,
+    paddingTop: 13,
+    paddingLeft: 13,
+    height: 43,
+    backgroundColor: featureColor,
+    color: "white",
+    boxSizing: "border-box",
+    position: "relative"
+  },
 
   saveInputsWidth: {
     width: "95%"

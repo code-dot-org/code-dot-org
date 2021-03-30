@@ -28,7 +28,7 @@ class DataDisplay extends Component {
         >
           <DataTable setColumnRef={setColumnRef} />
         </div>
-        <div style={styles.mediumText}>
+        <div style={styles.footerText}>
           There are {this.props.data.length} rows of data.
         </div>
       </div>

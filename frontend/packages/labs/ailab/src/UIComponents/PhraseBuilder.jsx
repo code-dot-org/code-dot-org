@@ -81,7 +81,7 @@ class PhraseBuilder extends Component {
 
             {currentPanel === "dataDisplayFeatures" && (
               <div>
-                <div style={styles.phraseBuilderSelectReadonly}>
+                <div style={styles.phraseBuilderLabel}>
                   {labelColumn}
                 </div>
                 <br />

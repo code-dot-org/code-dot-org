@@ -62,6 +62,7 @@ const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
 const SET_HIGHLIGHT_COLUMN = "SET_HIGHLIGHT_COLUMN";
+const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
@@ -213,6 +214,10 @@ export function setHighlightColumn(highlightColumn) {
   return { type: SET_HIGHLIGHT_COLUMN, highlightColumn };
 }
 
+export function setHighlightDataset(highlightDataset) {
+  return { type: SET_HIGHLIGHT_DATASET, highlightDataset };
+}
+
 export function setResultsPhase(phase) {
   return { type: SET_RESULTS_PHASE, phase };
 }
@@ -233,6 +238,8 @@ const initialState = {
   metadata: undefined,
   selectedTrainer: undefined,
   kValue: undefined,
+  highlightDataset: undefined,
+  highlightColumn: undefined,
   columnsByDataType: {},
   selectedFeatures: [],
   labelColumn: undefined,
@@ -510,6 +517,12 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         highlightColumn: action.highlightColumn
       };
+    }
+  }
+  if (action.type === SET_HIGHLIGHT_DATASET) {
+    return {
+      ...state,
+      highlightDataset: action.highlightDataset
     }
   }
   if (action.type === SET_CURRENT_COLUMN) {
@@ -1173,7 +1186,7 @@ export function getPanelButtons(state) {
       ? { panel: "dataDisplayFeatures", text: "Back" }
       : null;
     next = isPanelEnabled(state, "saveModel")
-      ? { panel: "saveModel", text: "Save" }
+      ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
