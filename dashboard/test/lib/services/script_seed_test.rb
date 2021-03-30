@@ -79,6 +79,7 @@ module Services
       #   2 queries, one to remove LessonsVocabularies from each Lesson.
       #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
       #   2 queries, one to remove LessonsStandards from each Lesson.
+      #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
       #   1 query to get all the programming environments
       #   1 query to get all the standards frameworks
       #   17 queries, 1 to populate the Game.by_name cache, and 16 to look up Game objects by id.
@@ -88,7 +89,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(97) do
+      assert_queries(100) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -423,6 +424,32 @@ module Services
       assert_equal expected_descriptions, lesson.standards.map(&:description)
     end
 
+    test 'seed updates lesson opportunity standards' do
+      script = create_script_tree
+
+      # create the standard outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the standard for us.
+      new_standard = create :standard, description: 'New Standard'
+
+      expected_descriptions = [
+        script.lessons.first.opportunity_standards.last.description,
+        new_standard.description
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.opportunity_standards.first.destroy
+        lesson.opportunity_standards.push(new_standard)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
+    end
+
     test 'seed deletes lesson_groups' do
       script = create_script_tree(num_lesson_groups: 2)
       original_counts = get_counts
@@ -457,6 +484,7 @@ module Services
       expected_counts['LessonsProgrammingExpression'] -= 4
       expected_counts['Objective'] -= 4
       expected_counts['LessonsStandard'] -= 4
+      expected_counts['LessonsOpportunityStandard'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -491,6 +519,7 @@ module Services
       expected_counts['LessonsProgrammingExpression'] -= 2
       expected_counts['Objective'] -= 2
       expected_counts['LessonsStandard'] -= 2
+      expected_counts['LessonsOpportunityStandard'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -733,6 +762,28 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    # Standards are shared across all scripts. We should never delete
+    # a standard because it might be in use by another script.
+    test 'seed deletes lessons_opportunity_standards' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        assert_equal 2, lesson.opportunity_standards.count
+        lesson.opportunity_standards.delete(lesson.opportunity_standards.first)
+        assert_equal 1, lesson.opportunity_standards.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LessonsOpportunityStandard'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     test 'seed can only find standard if framework matches' do
       script = create_script_tree(num_lessons_per_group: 1)
       json = ScriptSeed.serialize_seeding_json(script)
@@ -744,7 +795,7 @@ module Services
     end
 
     test 'import_script sets seeded_from from serialized_at' do
-      script = create(:script, is_migrated: true, hidden: true)
+      script = create(:script, is_migrated: true)
       assert script.seeded_from.nil?
 
       serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
@@ -776,7 +827,7 @@ module Services
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -822,6 +873,10 @@ module Services
         assert_standards_equal(
           s1.lessons.map(&:standards).flatten,
           s2.lessons.map(&:standards).flatten,
+        )
+        assert_standards_equal(
+          s1.lessons.map(&:opportunity_standards).flatten,
+          s2.lessons.map(&:opportunity_standards).flatten,
         )
       end
     end
@@ -923,7 +978,6 @@ module Services
         :script,
         name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
-        hidden: true,
         is_migrated: true
       )
 
@@ -1013,6 +1067,11 @@ module Services
         (1..num_standards_per_lesson).each do |s|
           standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-standard-#{s}"
           LessonsStandard.find_or_create_by!(standard: standard, lesson: lesson)
+        end
+
+        (1..num_standards_per_lesson).each do |s|
+          standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
+          LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
       end
 

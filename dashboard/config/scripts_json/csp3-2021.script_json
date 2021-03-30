@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:42 UTC",
+    "serialized_at": "2021-03-26 23:10:49 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -1401,7 +1401,7 @@
       "key": "ecea6124-1b85-4d53-bc07-5a94388ce996",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to Code Studio."
+        "description": "[slide] **Step 5:** Direct students to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "ecea6124-1b85-4d53-bc07-5a94388ce996",
@@ -2016,7 +2016,7 @@
       "key": "f400d836-3586-44b0-94ba-53164c90b275",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021]\r\n\r\n[slide] **Step 5:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\r\n\r\n\r\n\r\n[slide] **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design/csp/2021] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
+        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021]\n\n[slide] **Step 6:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\n\n\n\n[slide] **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design/csp/2021] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "f400d836-3586-44b0-94ba-53164c90b275",
@@ -2160,7 +2160,7 @@
       "key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1",
       "position": 4,
       "properties": {
-        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021].\n\n[slide] **Step 6:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
+        "description": "[slide] **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021].\n\n[slide] **Step 7:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
         "name": "Testing and Feedback - 10 mins\r",
         "progression_name": "Add More Code"
       },
@@ -2173,7 +2173,7 @@
       "key": "5395d19b-c509-43ed-8000-67c1f146723f",
       "position": 1,
       "properties": {
-        "description": "[slide] **Step 7:** Now return to your stations and pick at least one improvement to make to their app based on feedback. Write this down in the Planning Guide in Step 7.",
+        "description": "[slide] **Step 8:** Now return to your stations and pick at least one improvement to make to their app based on feedback. Write this down in the Planning Guide in Step 7.",
         "remarks": true
       },
       "seeding_key": {
@@ -2890,7 +2890,7 @@
       "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample Prototype",
         "level_keys": [
@@ -2916,7 +2916,7 @@
       "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Build Your Screens",
         "level_keys": [
@@ -3332,7 +3332,7 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pair Programming",
         "level_keys": [
@@ -3358,7 +3358,7 @@
       "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add Code",
         "level_keys": [
@@ -3384,7 +3384,7 @@
       "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Add More Code",
         "level_keys": [
