@@ -51,6 +51,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
     size: PropTypes.string,
     onClick: PropTypes.func,
+    className: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -122,6 +123,7 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconStyle={styles.icon}
           color={color}
+          className={this.props.className}
         />
 
         {dropdownOpen && (
