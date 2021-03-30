@@ -6598,6 +6598,7 @@ se:
             Analysis of Design:
               key: Analyseret Designa
               name: Analyseret Designa
+              description_teacher: Go galget álggahit ovttadaga mii lea čadnon joavkočuolbmačoavdimii ja ovdánahttit buktagiid eará geavaheddjiide, oahppit iskagohtet iešguđet deadjalihtiid hábmemiid. Oahppit analyserejit juohke deadjalihtti ja geahččalit identifiseret movt earenoamáš geavaheaddjedárbu soaitá váikkuhan designa. Árvvoštallat dáid designaválljemiid ja geahččalit heivehit deadjalihtti vejolaš geavaheaddjái, sáhttet oahppit geahččagoahtit movt geavaheaddjevuđot lahkoneapmi designat buktagiid (sihke fysalaš ja digitála) sáhttá dahkat buktagiid ávkkáleabbon ja anolaččabun. Loahpas doaimma, oahppit galget evttohit muhtun rievdadusaid ovtta deadjalihttái dahkan dihte dan ávkkáleabbon ja anolaččabun.
             Understanding Your User:
               key: Ipmirdit Du Geavaheaddji
               name: Ipmirdit Du Geavaheaddji
@@ -6610,6 +6611,7 @@ se:
             Market Research:
               key: MárkanIskkadeapmi
               name: MárkanIskkadeapmi
+              description_teacher: Dán lekšuvnnas oahppit isket app:aid mat sulastahttet dan maid ieža áigot ráhkadit ipmirdan dihte geavaheddjiid dárbbuid. Oahppit barget joavkkuin ohcat interneahtas eará app:aid ja de árvvoštallet daid maid sin mielas leat miellagiddevaččat. Loahpas lekšuvnna juohke joavku lea ožžon čielgasit idea makkár app:a áigot ráhkadit ja maid ráddjen geavaheaddjejoavkku. Juohke joavku doalaha listtu mas leat sitáhtat app:ain maid iske maid de sáhttet geavahit loahppa ovdanbuktimis.
             Paper Prototypes:
               key: BáberPrototyhpat
               name: BáberPrototyhpat
@@ -6719,11 +6721,12 @@ se:
               display_name: Dáhpáhusaid
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
         coursee-2021:
           lessons:
             Simon Says:
               key: Simmon Sihtá
-              name: Simmon Sihtá
             Private and Personal Information:
               key: Priváhta ja Persovnnlaš Dieđut
               name: Priváhta ja Persovnnlaš Dieđut
@@ -6751,10 +6754,10 @@ se:
               key: Suohttasat Mohkiid váste
               name: Suohttasat Mohkiid váste
           lesson_groups:
+            ramp_up:
+              display_name: Sprite:at
             csf_digcit:
               display_name: Digitála Stáhtaborgárvuohta
-            csf_sprites:
-              display_name: Sprite:at
         express-2021:
           lesson_groups:
             csf_sprites:
@@ -6823,3 +6826,16 @@ se:
               name: Lekšuvdna 14
             lesson15:
               name: Lekšuvdna 15
+        k5-onlinepd-2021:
+          lessons:
+            Events:
+              key: Dáhpáhusaid
+              name: Dáhpáhusaid
+            Sprite Lab:
+              key: Sprite-lab
+              name: Sprite-lab
+            Getting Started:
+              name: Álgge
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Boahttevaš Lávkkit

@@ -1,19 +1,26 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
-import i18n from '@cdo/locale';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
+
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import Button from '@cdo/apps/templates/Button';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
+import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
-import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
+import Announcements from '../../code-studio/components/progress/Announcements';
+import {linkWithQueryParams} from '@cdo/apps/utils';
+import LessonStandards from './LessonStandards';
+import StyledCodeBlock from './StyledCodeBlock';
 
 const styles = {
   frontPage: {
@@ -64,63 +71,33 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
-  linkWithQueryParams = link => {
-    const queryParams = window.location.search || '';
-    return link + queryParams;
-  };
-
-  normalizeUrl = url => {
-    const httpRegex = /https?:\/\//;
-    if (httpRegex.test(url)) {
-      return url;
-    } else {
-      return 'https://' + url;
-    }
-  };
-
-  compileResourceList = key => {
-    const {lesson} = this.props;
-    return (
-      <ul>
-        {lesson.resources[key].map(resource => (
-          <li key={resource.key}>
-            <a
-              href={this.normalizeUrl(resource.url)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {resource.name}
-            </a>
-            {resource.type && ` -  ${resource.type}`}
-            {resource.download_url && (
-              <span>
-                {' ('}
-                <a
-                  href={this.normalizeUrl(resource.download_url)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >{`${i18n.download()}`}</a>
-                {')'}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
-    );
-  };
-
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
     return (
-      <div>
-        <div style={styles.header}>
-          <a
-            href={this.linkWithQueryParams(lesson.unit.link)}
-            style={styles.navLink}
-          >
-            {`< ${lesson.unit.displayName}`}
-          </a>
-          <LessonNavigationDropdown lesson={lesson} />
+      <div className="lesson-overview">
+        <div className="lesson-overview-header">
+          <div style={styles.header}>
+            <a
+              href={linkWithQueryParams(lesson.unit.link)}
+              style={styles.navLink}
+            >
+              {`< ${lesson.unit.displayName}`}
+            </a>
+            <div>
+              {lesson.lessonPlanPdfUrl && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.gray}
+                  download
+                  href={lesson.lessonPlanPdfUrl}
+                  style={{marginRight: 10}}
+                  target="_blank"
+                  text={i18n.printLessonPlan()}
+                />
+              )}
+              <LessonNavigationDropdown lesson={lesson} />
+            </div>
+          </div>
         </div>
         {isSignedIn && (
           <Announcements
@@ -141,19 +118,34 @@ class LessonOverview extends Component {
             {lesson.overview && (
               <div>
                 <h2 style={styles.titleNoTopMargin}>{i18n.overview()}</h2>
-                <SafeMarkdown markdown={lesson.overview} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.overview}
+                  expandableImages
+                />
               </div>
             )}
             {lesson.purpose && (
               <div>
                 <h2>{i18n.purpose()}</h2>
-                <SafeMarkdown markdown={lesson.purpose} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.purpose}
+                  expandableImages
+                />
               </div>
             )}
             {lesson.assessmentOpportunities && (
               <div>
                 <h2>{i18n.assessmentOpportunities()}</h2>
-                <SafeMarkdown markdown={lesson.assessmentOpportunities} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.assessmentOpportunities}
+                  expandableImages
+                />
+              </div>
+            )}
+            {lesson.standards.length > 0 && (
+              <div>
+                <h2>{i18n.standards()}</h2>
+                <LessonStandards standards={lesson.standards} />
               </div>
             )}
             <h2>{i18n.agenda()}</h2>
@@ -176,7 +168,10 @@ class LessonOverview extends Component {
             {lesson.preparation && (
               <div>
                 <h2>{i18n.preparation()}</h2>
-                <SafeMarkdown markdown={lesson.preparation} />
+                <EnhancedSafeMarkdown
+                  markdown={lesson.preparation}
+                  expandableImages
+                />
               </div>
             )}
             {Object.keys(lesson.resources).length > 0 && (
@@ -188,23 +183,24 @@ class LessonOverview extends Component {
                 {lesson.resources['Teacher'] && (
                   <div>
                     <h5>{i18n.forTheTeachers()}</h5>
-                    {this.compileResourceList('Teacher')}
+                    <ResourceList resources={lesson.resources['Teacher']} />
                   </div>
                 )}
                 {lesson.resources['Student'] && (
                   <div>
                     <h5>{i18n.forTheStudents()}</h5>
-                    {this.compileResourceList('Student')}
+                    <ResourceList resources={lesson.resources['Student']} />
                   </div>
                 )}
                 {lesson.resources['All'] && (
                   <div>
                     <h5>{i18n.forAll()}</h5>
-                    {this.compileResourceList('All')}
+                    <ResourceList resources={lesson.resources['All']} />
                   </div>
                 )}
               </div>
             )}
+
             {lesson.vocabularies.length > 0 && (
               <div>
                 <h2 style={styles.titleNoTopMargin}>{i18n.vocabulary()}</h2>
@@ -214,6 +210,18 @@ class LessonOverview extends Component {
                       <InlineMarkdown
                         markdown={`**${vocab.word}** - ${vocab.definition}`}
                       />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {lesson.programmingExpressions.length > 0 && (
+              <div id="unit-test-introduced-code">
+                <h2 style={styles.titleNoTopMargin}>{i18n.introducedCode()}</h2>
+                <ul>
+                  {lesson.programmingExpressions.map(expression => (
+                    <li key={expression.name}>
+                      <StyledCodeBlock programmingExpression={expression} />
                     </li>
                   ))}
                 </ul>

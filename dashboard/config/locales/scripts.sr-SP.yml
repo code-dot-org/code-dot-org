@@ -2192,13 +2192,19 @@ sr:
               display_name: Кондиционали
             csf_digcit:
               display_name: Дигитално држављанство
+            lessonGroup-6:
+              display_name: Дигитално држављанство
         coursee-2021:
           lessons:
             Conditionals:
               key: Кондиционали
           lesson_groups:
+            ramp_up:
+              display_name: Петље
             csf_digcit:
               display_name: Дигитално држављанство
+            csf_nested_loops:
+              display_name: Кондиционали
             csf_functions:
               display_name: Функције
         coursef-2021:
@@ -2210,9 +2216,13 @@ sr:
             csf_digcit:
               display_name: Дигитално држављанство
             csf_variables:
-              display_name: Променљиве
+              display_name: Бројачке петље
             csf_for_loops:
               display_name: Бројачке петље
+            lessonGroup-8:
+              display_name: Променљиве
+            lessonGroup-9:
+              display_name: уклони
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2235,3 +2245,25 @@ sr:
           lesson_groups:
             lessonGroup-3:
               display_name: Променљиве
+            variables:
+              display_name: Променљиве
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Петље
+              name: Петље
+            Events:
+              key: Догађаји
+              name: Догађаји
+            Conditionals:
+              key: Кондиционали
+              name: Кондиционали
+            Functions:
+              key: Функције
+              name: Функције
+            Variables:
+              key: Променљиве
+              name: Променљиве
+            For Loops:
+              key: Бројачке петље
+              name: Бројачке петље

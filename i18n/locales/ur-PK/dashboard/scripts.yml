@@ -665,18 +665,27 @@ ur:
           lessons:
             Conditionals:
               key: شرائط
+          lesson_groups:
+            ramp_up:
+              display_name: لوپس
+            csf_nested_loops:
+              display_name: شرائط
         coursef-2021:
           lessons:
             Envelope Variables:
               key: لفافہ متغیرات
               name: لفافہ متغیرات
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: متغیرات
+            lessonGroup-9:
+              display_name: ہٹانا
         express-2021:
           lessons:
             Dance Party:
               key: ڈانس پارٹی
+              name: ڈانس پارٹی
+            lesson-1:
               name: ڈانس پارٹی
           lesson_groups:
             csf_loops:
@@ -700,7 +709,23 @@ ur:
               display_name: وباء کی سیمولیشن
             lessonGroup-3:
               display_name: متغیرات
+            variables:
+              display_name: متغیرات
         contagion-pilot:
           description_short: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
           student_description: 'Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے پھیلنے کا سیمیولیشن بنائیں.'
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: لوپس
+              name: لوپس
+            Events:
+              key: ایونٹس/واقعات
+              name: ایونٹس/واقعات
+            Conditionals:
+              key: شرائط
+              name: شرائط
+            Variables:
+              key: متغیرات
+              name: متغیرات

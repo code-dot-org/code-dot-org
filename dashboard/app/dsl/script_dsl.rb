@@ -113,6 +113,7 @@ class ScriptDSL < BaseDSL
         name: properties[:display_name],
         lockable: properties[:lockable],
         has_lesson_plan: properties[:has_lesson_plan],
+        unplugged: properties[:unplugged],
         visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
       }.compact
@@ -385,6 +386,7 @@ class ScriptDSL < BaseDSL
     t += ', lockable: true' if lesson.lockable
     t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
     t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
+    t += ', unplugged: true' if lesson.unplugged
     s << t
     lesson.script_levels.each do |sl|
       type = 'level'

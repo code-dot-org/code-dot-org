@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
+import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
@@ -13,7 +15,9 @@ import {
   relatedLessonShape,
   activityShape,
   resourceShape,
-  vocabularyShape
+  vocabularyShape,
+  programmingExpressionShape,
+  standardShape
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
@@ -22,7 +26,7 @@ import {
   mapActivityDataForEditor,
   initActivities
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
@@ -62,6 +66,9 @@ class LessonEditor extends Component {
     activities: PropTypes.arrayOf(activityShape).isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     vocabularies: PropTypes.arrayOf(vocabularyShape).isRequired,
+    programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
+      .isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -117,6 +124,10 @@ class LessonEditor extends Component {
         activities: getSerializedActivities(this.props.activities),
         resources: JSON.stringify(this.props.resources.map(r => r.key)),
         vocabularies: JSON.stringify(this.props.vocabularies.map(r => r.key)),
+        programmingExpressions: JSON.stringify(
+          this.props.programmingExpressions
+        ),
+        standards: JSON.stringify(this.props.standards),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -125,15 +136,11 @@ class LessonEditor extends Component {
         if (shouldCloseAfterSave) {
           if (data.hasLessonPlan) {
             navigateToHref(
-              `${this.state.originalLessonData.lessonPath}${
-                window.location.search
-              }`
+              linkWithQueryParams(this.state.originalLessonData.lessonPath)
             );
           } else {
             navigateToHref(
-              `${this.state.originalLessonData.scriptPath}${
-                window.location.search
-              }`
+              linkWithQueryParams(this.state.originalLessonData.scriptPath)
             );
           }
         } else {
@@ -305,6 +312,7 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({overview: e.target.value})
             }
+            features={{imageUpload: true, resourceLink: true}}
           />
           <TextareaWithMarkdownPreview
             markdown={studentOverview}
@@ -316,6 +324,7 @@ class LessonEditor extends Component {
             handleMarkdownChange={e =>
               this.setState({studentOverview: e.target.value})
             }
+            features={{imageUpload: true}}
           />
         </CollapsibleEditorSection>
         {hasLessonPlan && (
@@ -340,6 +349,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({purpose: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
               <TextareaWithMarkdownPreview
                 markdown={preparation}
@@ -348,6 +358,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({preparation: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
             </CollapsibleEditorSection>
 
@@ -363,6 +374,7 @@ class LessonEditor extends Component {
                 handleMarkdownChange={e =>
                   this.setState({assessmentOpportunities: e.target.value})
                 }
+                features={{imageUpload: true, resourceLink: true}}
               />
             </CollapsibleEditorSection>
 
@@ -407,6 +419,14 @@ class LessonEditor extends Component {
             </CollapsibleEditorSection>
 
             <CollapsibleEditorSection
+              title="Code"
+              collapsed={true}
+              fullWidth={true}
+            >
+              <ProgrammingExpressionsEditor />
+            </CollapsibleEditorSection>
+
+            <CollapsibleEditorSection
               title="Objectives"
               collapsed={true}
               fullWidth={true}
@@ -415,6 +435,13 @@ class LessonEditor extends Component {
                 objectives={this.state.objectives}
                 updateObjectives={this.handleUpdateObjectives}
               />
+            </CollapsibleEditorSection>
+            <CollapsibleEditorSection
+              title="Standards"
+              collapsed={true}
+              fullwidth={true}
+            >
+              <StandardsEditor />
             </CollapsibleEditorSection>
           </div>
         )}
@@ -439,7 +466,9 @@ export default connect(
   state => ({
     activities: state.activities,
     resources: state.resources,
-    vocabularies: state.vocabularies
+    vocabularies: state.vocabularies,
+    programmingExpressions: state.programmingExpressions,
+    standards: state.standards
   }),
   {
     initActivities

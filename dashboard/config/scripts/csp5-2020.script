@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit5/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit5/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit5/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"Scholarship opportunity for college bound seniors", "details"=>" US high school seniors may apply by Feb 18, 2021 for a chance to receive $40,000 for college and a paid internship at Amazon through the Amazon Future Engineer Scholarhip program.", "link"=>"https://bit.ly/AFEScholarshipLBU5", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
@@ -130,7 +130,7 @@ lesson 'Semester Hackathon Part 5', display_name: 'Semester Hackathon Part 5', h
 level 'CSP U5L17 SFLP 20-21', progression: 'Lesson Overview'
 level 'U5 Hackathon Project Day 5', progression: 'Hackathon Project', assessment: true
 
-lesson 'Lesson 18: Assessment Day', display_name: 'Lesson 18: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 18: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP U5L18 SFLP 20-21', progression: 'Lesson Overview'
 level 'CSP Unit 5 AP-Style Assessment _2020', progression: 'Unit 5 Exam', assessment: true
 

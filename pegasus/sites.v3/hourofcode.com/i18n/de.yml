@@ -12,29 +12,29 @@ de:
   campaign_date_full: 7.-13. Dezember
   campaign_date_year: '2020'
   campaign_date_full_year: 7. - 13. Dezember 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 18
-  latam_campaign_date_full: October 1 - December 18
+  latam_campaign_date_start_short: 1 Okt
+  latam_campaign_date_start_long: 1. Oktober
+  latam_campaign_date_short: 1. Okt - 18. Dec
+  latam_campaign_date_full: '1. Oktober - 18. Dezember '
   latam_campaign_date_year: '2020'
-  latam_campaign_date_full_year: October 1, 2020 - December 18, 2020
-  europe_campaign_date_start_short: Oct. 10
-  europe_campaign_date_start_long: October 10
-  europe_campaign_date_short: Oct. 10-25
-  europe_campaign_date_full: October 10-25
+  latam_campaign_date_full_year: 1. Oktober 2020 - 18. Dezember 2020
+  europe_campaign_date_start_short: 10. Okt
+  europe_campaign_date_start_long: 10. Oktober
+  europe_campaign_date_short: 10. - 25. Okt
+  europe_campaign_date_full: 10. - 25. Oktober
   europe_campaign_date_year: '2020'
-  europe_campaign_date_full_year: October 10-25, 2020
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 10. - 25. Oktober 2020
+  africa_campaign_date_start_short: 1 Okt
+  africa_campaign_date_start_long: 1. Oktober
+  africa_campaign_date_short: 1. - 31. Okt
+  africa_campaign_date_full: 1. - 31. Oktober
   africa_campaign_date_year: '2020'
-  africa_campaign_date_full_year: October 1-31, 2020
+  africa_campaign_date_full_year: 1. - 31. Oktober 2020
   hoc2020_header: "  Lerne heute, und baue dir eine bessere Zukunft.  "
   hoc2020_header_with_line_break_markdown: "  Lerne heute, und baue dir eine bessere
     Zukunft.  "
-  social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
-    we want. #CSforGood'
+  social_hoc2020_cs_important: 'Informatik ist wichtiger denn je. Lass uns die Zukunft
+    bauen nach der wir streben. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: "  Die #HourOfCode betrifft #CSforGood. Lerne
     heute, und baue dir eine bessere Zukunft.  "
   social_hoc2020_global_movement: The Hour of Code ist eine globale Bewegung, die
@@ -145,11 +145,17 @@ de:
     unser Curriculum  beibringt.  "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Mach mit
+  hoc_live_learn_more: Erfahre mehr
   hoc_overview_oceans_tutorial_header: "  KI für Ozeane  "
   hoc_overview_oceans_tutorial_desc: "  Lerne mehr über künstliche Intelligenz (KI
     ), maschinelles Lernen, Daten-Training und Bias, während du ethische Fragen untersuchst

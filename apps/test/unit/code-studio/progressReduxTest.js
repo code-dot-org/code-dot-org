@@ -4,6 +4,7 @@ import {TestResults} from '@cdo/apps/constants';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {ViewType, setViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+import {getLevelResult} from '@cdo/apps/templates/progress/progressHelpers';
 import reducer, {
   initProgress,
   isPerfect,
@@ -24,7 +25,6 @@ import reducer, {
   setCurrentStageId,
   lessonExtrasUrl,
   setStageExtrasEnabled,
-  getLevelResult,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -90,7 +90,9 @@ const stageData = [
     lesson_plan_html_url:
       '//localhost.code.org:3000/curriculum/course3/1/Teacher',
     lesson_plan_pdf_url:
-      '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf'
+      '//localhost.code.org:3000/curriculum/course3/1/Teacher.pdf',
+    student_lesson_plan_html_url:
+      '//localhost.code.org:3000/s/fake-course/lessons/1/student'
   },
   // stage 2 (hacked to have 3 levels)
   {
@@ -1454,7 +1456,7 @@ describe('progressReduxTest', () => {
         focusAreaStageIds: [1, 2],
         lockableAuthorized: true,
         completed: true,
-        levels: {},
+        progress: {},
         peerReviewsPerformed: true,
         current_stage: 1
       };

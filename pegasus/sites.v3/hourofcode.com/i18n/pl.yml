@@ -143,12 +143,18 @@ pl:
     nauczania.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Ucz się w czasie rzeczywistym wraz z gośćmi specjalnymi!
     Mile widziani są wszyscy uczniowie w każdym wieku i dysponujący wszelkimi umiejętnościami,
     również osoby niedysponujące komputerami.Dołącz do  naszej listy mailingowej,
     aby otrzymywać nagrania odcinków i zasobów umożliwiających kontynuację nauki w
     domu.
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Dołącz do nas
+  hoc_live_learn_more: Dowiedz się więcej
   hoc_overview_oceans_tutorial_header: AI dla oceanów
   hoc_overview_oceans_tutorial_desc: Dowiedz się o sztucznej inteligencji, uczeniu
     maszynowym, danych szkoleniowych i uprzedzeniach, wyjaśniając jednocześnie kwestie

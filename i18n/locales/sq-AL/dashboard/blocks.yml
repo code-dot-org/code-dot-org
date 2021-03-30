@@ -187,6 +187,7 @@ sq:
         options:
           PROPERTY:
             '"scale"': madhësia
+            '"speed"': shpejtësia
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -349,7 +350,9 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -358,7 +361,9 @@ sq:
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
             '"w"': P
+            '"a"': A
             '"s"': J
+            '"d"': D
       Mikelab_whileKeyPressed:
         options:
           KEY:

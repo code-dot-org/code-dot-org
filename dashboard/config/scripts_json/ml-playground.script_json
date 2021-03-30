@@ -5,10 +5,10 @@
     "hidden": true,
     "login_required": true,
     "properties": {
-      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-29 02:44:15 UTC",
     "seeding_key": {
       "script.name": "ml-playground"
     }
@@ -28,8 +28,8 @@
   ],
   "lessons": [
     {
-      "key": "intro-categorical",
-      "name": "Introduction to AI Lab",
+      "key": "bug-bash",
+      "name": "Bug Bash Playground",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -37,14 +37,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "intro-categorical",
+        "lesson.key": "bug-bash",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
-      "key": "oceans",
-      "name": "Machine Learning with AI for Oceans",
+      "key": "model-cards",
+      "name": "Model Cards Playground",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -52,14 +52,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "oceans",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
-      "key": "intro",
-      "name": "Introduction to Machine Learning",
+      "key": "exemplars",
+      "name": "Exemplars I Accidentally Made in LB",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -67,112 +67,22 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "intro",
+        "lesson.key": "exemplars",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
-      "key": "KNN",
-      "name": "Feature Selection with Continuous Labels",
+      "key": "temp",
+      "name": "TEMP LEVELS - DELETE LATER",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "KNN",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "SVM",
-      "name": "Data Investigations with Categorical Labels",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "SVM",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "App",
-      "name": "Using Models in the Real-World",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "App",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "ethics",
-      "name": "Using ML Ethically",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "project",
-      "name": "Final project",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "appendix",
-      "name": "Appendix",
-      "absolute_position": 9,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "appendix",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "key": "dog",
-      "name": "Does Code.org Like Your Dog?",
-      "absolute_position": 10,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "dog",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
@@ -180,10 +90,10 @@
     {
       "key": "USE Programs",
       "name": "USE Programs (AppLab Only)",
-      "absolute_position": 11,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -195,14 +105,29 @@
     {
       "key": "MODIFY Programs",
       "name": "MODIFY Programs (AppLab -> Widget -> AppLab)",
-      "absolute_position": 12,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "MODIFY Programs",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      }
+    },
+    {
+      "key": "dog",
+      "name": "Does Code.org Like Your Dog?",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "dog",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
@@ -221,23 +146,23 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dataset #1: Tacos",
+        "progression": "AI Lab Bash",
         "level_keys": [
-          "ml-intro categorical-tacos"
+          "ml-ai lab template"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-tacos"
+          "ml-ai lab template"
         ],
-        "lesson.key": "intro-categorical",
+        "lesson.key": "bug-bash",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-intro categorical-tacos"
+        "ml-ai lab template"
       ]
     },
     {
@@ -246,148 +171,148 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Dataset #2: Ice Cream",
+        "progression": "App Lab Import Bash",
         "level_keys": [
-          "ml-intro categorical-ice cream"
+          "ml-app lab template"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro categorical-ice cream"
+          "ml-app lab template"
         ],
-        "lesson.key": "intro-categorical",
+        "lesson.key": "bug-bash",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-intro categorical-ice cream"
+        "ml-app lab template"
       ]
     },
     {
       "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Dataset #3: Pizza",
-        "level_keys": [
-          "ml-intro categorical-pizza"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-intro categorical-pizza"
-        ],
-        "lesson.key": "intro-categorical",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-intro categorical-pizza"
-      ]
-    },
-    {
-      "chapter": 4,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to Machine Learning",
+        "progression": "Model Card Template",
         "level_keys": [
-          "ml-intro"
+          "ml-model card-template"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-intro"
+          "ml-model card-template"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-intro"
+        "ml-model card-template"
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Machine Learning & Societal Impact",
+        "progression": "Medical Dataset Model Cards",
         "level_keys": [
-          "ml-society"
+          "ml-model card-medical-1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-society"
+          "ml-model card-medical-1"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-society"
+        "ml-model card-medical-1"
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using Models in Apps",
+        "progression": "Medical Dataset Model Cards",
         "level_keys": [
-          "ml-decisions"
+          "ml-model card-medical-2"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-decisions"
+          "ml-model card-medical-2"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-decisions"
+        "ml-model card-medical-2"
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Visualizing Data",
+        "progression": "Medical Dataset Model Cards",
         "level_keys": [
-          "ml-visualizing"
+          "ml-model card-medical-3"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-visualizing"
+          "ml-model card-medical-3"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-visualizing"
+        "ml-model card-medical-3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Medical Dataset Model Cards",
+        "level_keys": [
+          "ml-model card-medical-4"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-model card-medical-4"
+        ],
+        "lesson.key": "model-cards",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-model card-medical-4"
       ]
     },
     {
@@ -396,624 +321,327 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Train a model with continuous labels",
+        "progression": "Pet Exemplar",
         "level_keys": [
-          "ml-knn-train"
+          "ml-pet exemplar"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-knn-train"
+          "ml-pet exemplar"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "exemplars",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-knn-train"
+        "ml-pet exemplar"
       ]
     },
     {
       "chapter": 9,
-      "position": 2,
+      "position": 1,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Act Out an ML Model: KNN",
+        "progression": "Medical Priority App (external app)",
         "level_keys": [
-          "ml-knn-act"
+          "ml-model cards-medical app"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-knn-act"
+          "ml-model cards-medical app"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-knn-act"
+        "ml-model cards-medical app"
       ]
     },
     {
       "chapter": 10,
-      "position": 3,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Your Recommendation App",
+        "progression": "Which Pixar Character Are You?",
         "level_keys": [
-          "ml-knn-ailab"
+          "ml-import ai-pixar placeholder"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-knn-ailab"
+          "ml-import ai-pixar placeholder"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-knn-ailab"
+        "ml-import ai-pixar placeholder"
       ]
     },
     {
       "chapter": 11,
-      "position": 4,
+      "position": 3,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Your Recommendation App",
+        "progression": "Recognizing Ocean Animals",
         "level_keys": [
-          "ml-knn-applab"
+          "Oceans_CreaturesVTrash"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-knn-applab"
+          "Oceans_CreaturesVTrash"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-knn-applab"
+        "Oceans_CreaturesVTrash"
       ]
     },
     {
       "chapter": 12,
-      "position": 1,
+      "position": 4,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Train a model with categorical labels",
+        "progression": "Medical Dataset Model Cards",
         "level_keys": [
-          "ml-svm-train"
+          "ml-model card-medical-4"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-svm-train"
+          "ml-model card-medical-4"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-svm-train"
+        "ml-model card-medical-4"
       ]
     },
     {
       "chapter": 13,
-      "position": 2,
+      "position": 5,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Act Out an ML Model: SVM",
+        "progression": "(Slides) Bias in Machine Learning Video",
         "level_keys": [
-          "ml-svm-act"
+          "Oceans_Video_Training_Data"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-svm-act"
+          "Oceans_Video_Training_Data"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-svm-act"
+        "Oceans_Video_Training_Data"
       ]
     },
     {
       "chapter": 14,
-      "position": 3,
+      "position": 6,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Prepare: Your Category App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
-          "ml-svm-ailab"
+          "ml-use model card-example2A"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-svm-ailab"
+          "ml-use model card-example2A"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-svm-ailab"
+        "ml-use model card-example2A"
       ]
     },
     {
       "chapter": 15,
-      "position": 4,
+      "position": 7,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Make: Your Category App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
-          "ml-svm-applab"
+          "ml-use model card-example2B"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-svm-applab"
+          "ml-use model card-example2B"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-svm-applab"
+        "ml-use model card-example2B"
       ]
     },
     {
       "chapter": 16,
-      "position": 1,
+      "position": 8,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "AI-Lab: Using Data to Make Predictions",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
-          "ml-data"
+          "ml-use model card-example2C"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-data"
+          "ml-use model card-example2C"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-data"
+        "ml-use model card-example2C"
       ]
     },
     {
       "chapter": 17,
-      "position": 2,
+      "position": 9,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Documenting Decisions with Model Cards",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
-          "ml-model card-unplugged"
+          "ml-use model card-example2D"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-model card-unplugged"
+          "ml-use model card-example2D"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-model card-unplugged"
+        "ml-use model card-example2D"
       ]
     },
     {
       "chapter": 18,
-      "position": 3,
+      "position": 10,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mini-Project: Prepare: Your Crystal Ball App",
+        "progression": "How Much Will Insurance Cost?",
         "level_keys": [
-          "ml-mini-project-ailab"
+          "ml-use model card-example2E"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-mini-project-ailab"
+          "ml-use model card-example2E"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-mini-project-ailab"
+        "ml-use model card-example2E"
       ]
     },
     {
       "chapter": 19,
-      "position": 4,
+      "position": 11,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mini-Project: Make: Your Crystal Ball App",
+        "progression": "Supervised Learning",
         "level_keys": [
-          "ml-mini-project-applab"
+          "ml-L2 supervised - 1"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-mini-project-applab"
+          "ml-L2 supervised - 1"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-mini-project-applab"
+        "ml-L2 supervised - 1"
       ]
     },
     {
       "chapter": 20,
-      "position": 1,
+      "position": 12,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mis-education of the Machine",
+        "progression": "Video: Introduction to AI Lab",
         "level_keys": [
-          "ml-miseducation"
+          "ml-intro ai lab-intro video"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "ml-miseducation"
+          "ml-intro ai lab-intro video"
         ],
-        "lesson.key": "ethics",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       },
       "level_keys": [
-        "ml-miseducation"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "AI Code of Ethics (HOC 2020)",
-        "level_keys": [
-          "ml-ethics-hoc2020"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-ethics-hoc2020"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-ethics-hoc2020"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "The Goldilocks Principles: Training Data Just Right",
-        "level_keys": [
-          "ml-goldilocks-ailab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-goldilocks-ailab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-goldilocks-ailab"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Prepare: App Ethics Challenge",
-        "level_keys": [
-          "ml-ethics-ailab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-ethics-ailab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-ethics-ailab"
+        "ml-intro ai lab-intro video"
       ]
     },
     {
       "chapter": 24,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Make: App Ethics Challenge",
-        "level_keys": [
-          "ml-ethics-applab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-ethics-applab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-ethics-applab"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Planning Your App",
-        "level_keys": [
-          "ml-hypothesis"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-hypothesis"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-hypothesis"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Prepare: Collecting Your Own Data",
-        "level_keys": [
-          "ml-collection-ailab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-collection-ailab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-collection-ailab"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Make: Collecting Your Own Data",
-        "level_keys": [
-          "ml-collection-applab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-collection-applab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-collection-applab"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 4,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Prepare: Project",
-        "level_keys": [
-          "ml-final-project-ailab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-final-project-ailab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-final-project-ailab"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Make: Project",
-        "level_keys": [
-          "ml-final-project-applab"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-final-project-applab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-final-project-applab"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "ml-code dog-1"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-code dog-1"
-        ],
-        "lesson.key": "dog",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-code dog-1"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "AIlab-test-1"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "AIlab-test-1"
-        ],
-        "lesson.key": "dog",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "AIlab-test-1"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "level_keys": [
-          "ml-code dog-export"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-code dog-export"
-        ],
-        "lesson.key": "dog",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      },
-      "level_keys": [
-        "ml-code dog-export"
-      ]
-    },
-    {
-      "chapter": 33,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1038,7 +666,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1063,7 +691,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1088,7 +716,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1113,7 +741,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1138,7 +766,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1163,7 +791,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1188,7 +816,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1213,7 +841,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1238,7 +866,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1263,7 +891,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1288,7 +916,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1313,7 +941,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1338,7 +966,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1363,7 +991,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1388,7 +1016,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1413,7 +1041,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1438,7 +1066,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1463,7 +1091,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1488,7 +1116,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1513,7 +1141,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1538,7 +1166,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 45,
       "position": 12,
       "activity_section_position": null,
       "assessment": null,
@@ -1563,7 +1191,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 46,
       "position": 13,
       "activity_section_position": null,
       "assessment": null,
@@ -1586,324 +1214,297 @@
       "level_keys": [
         "ml-candy modify-6"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "ml-code dog-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-code dog-1"
+        ],
+        "lesson.key": "dog",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-code dog-1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "AIlab-test-1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AIlab-test-1"
+        ],
+        "lesson.key": "dog",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "AIlab-test-1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "level_keys": [
+          "ml-code dog-export"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-code dog-export"
+        ],
+        "lesson.key": "dog",
+        "lesson_group.key": "",
+        "script.name": "ml-playground"
+      },
+      "level_keys": [
+        "ml-code dog-export"
+      ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-tacos",
+        "level.key": "ml-ai lab template",
         "script_level.level_keys": [
-          "ml-intro categorical-tacos"
+          "ml-ai lab template"
         ],
-        "lesson.key": "intro-categorical",
+        "lesson.key": "bug-bash",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-ice cream",
+        "level.key": "ml-app lab template",
         "script_level.level_keys": [
-          "ml-intro categorical-ice cream"
+          "ml-app lab template"
         ],
-        "lesson.key": "intro-categorical",
+        "lesson.key": "bug-bash",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro categorical-pizza",
+        "level.key": "ml-model card-template",
         "script_level.level_keys": [
-          "ml-intro categorical-pizza"
+          "ml-model card-template"
         ],
-        "lesson.key": "intro-categorical",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-intro",
+        "level.key": "ml-model card-medical-1",
         "script_level.level_keys": [
-          "ml-intro"
+          "ml-model card-medical-1"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-society",
+        "level.key": "ml-model card-medical-2",
         "script_level.level_keys": [
-          "ml-society"
+          "ml-model card-medical-2"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-decisions",
+        "level.key": "ml-model card-medical-3",
         "script_level.level_keys": [
-          "ml-decisions"
+          "ml-model card-medical-3"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-visualizing",
+        "level.key": "ml-model card-medical-4",
         "script_level.level_keys": [
-          "ml-visualizing"
+          "ml-model card-medical-4"
         ],
-        "lesson.key": "intro",
+        "lesson.key": "model-cards",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-knn-train",
+        "level.key": "ml-pet exemplar",
         "script_level.level_keys": [
-          "ml-knn-train"
+          "ml-pet exemplar"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "exemplars",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-knn-act",
+        "level.key": "ml-model cards-medical app",
         "script_level.level_keys": [
-          "ml-knn-act"
+          "ml-model cards-medical app"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-knn-ailab",
+        "level.key": "ml-import ai-pixar placeholder",
         "script_level.level_keys": [
-          "ml-knn-ailab"
+          "ml-import ai-pixar placeholder"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-knn-applab",
+        "level.key": "Oceans_CreaturesVTrash",
         "script_level.level_keys": [
-          "ml-knn-applab"
+          "Oceans_CreaturesVTrash"
         ],
-        "lesson.key": "KNN",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-svm-train",
+        "level.key": "ml-model card-medical-4",
         "script_level.level_keys": [
-          "ml-svm-train"
+          "ml-model card-medical-4"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-svm-act",
+        "level.key": "Oceans_Video_Training_Data",
         "script_level.level_keys": [
-          "ml-svm-act"
+          "Oceans_Video_Training_Data"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-svm-ailab",
+        "level.key": "ml-use model card-example2A",
         "script_level.level_keys": [
-          "ml-svm-ailab"
+          "ml-use model card-example2A"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-svm-applab",
+        "level.key": "ml-use model card-example2B",
         "script_level.level_keys": [
-          "ml-svm-applab"
+          "ml-use model card-example2B"
         ],
-        "lesson.key": "SVM",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-data",
+        "level.key": "ml-use model card-example2C",
         "script_level.level_keys": [
-          "ml-data"
+          "ml-use model card-example2C"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-model card-unplugged",
+        "level.key": "ml-use model card-example2D",
         "script_level.level_keys": [
-          "ml-model card-unplugged"
+          "ml-use model card-example2D"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-mini-project-ailab",
+        "level.key": "ml-use model card-example2E",
         "script_level.level_keys": [
-          "ml-mini-project-ailab"
+          "ml-use model card-example2E"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-mini-project-applab",
+        "level.key": "ml-L2 supervised - 1",
         "script_level.level_keys": [
-          "ml-mini-project-applab"
+          "ml-L2 supervised - 1"
         ],
-        "lesson.key": "App",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ml-miseducation",
+        "level.key": "ml-intro ai lab-intro video",
         "script_level.level_keys": [
-          "ml-miseducation"
+          "ml-intro ai lab-intro video"
         ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-ethics-hoc2020",
-        "script_level.level_keys": [
-          "ml-ethics-hoc2020"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-goldilocks-ailab",
-        "script_level.level_keys": [
-          "ml-goldilocks-ailab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-ethics-ailab",
-        "script_level.level_keys": [
-          "ml-ethics-ailab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-ethics-applab",
-        "script_level.level_keys": [
-          "ml-ethics-applab"
-        ],
-        "lesson.key": "ethics",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-hypothesis",
-        "script_level.level_keys": [
-          "ml-hypothesis"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-collection-ailab",
-        "script_level.level_keys": [
-          "ml-collection-ailab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-collection-applab",
-        "script_level.level_keys": [
-          "ml-collection-applab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-final-project-ailab",
-        "script_level.level_keys": [
-          "ml-final-project-ailab"
-        ],
-        "lesson.key": "project",
-        "lesson_group.key": "",
-        "script.name": "ml-playground"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-final-project-applab",
-        "script_level.level_keys": [
-          "ml-final-project-applab"
-        ],
-        "lesson.key": "project",
+        "lesson.key": "temp",
         "lesson_group.key": "",
         "script.name": "ml-playground"
       }
@@ -2201,13 +1802,22 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
 
   ]
 }

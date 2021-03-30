@@ -1225,6 +1225,47 @@
           "collect": {
             "name": "mbledh"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "vizato një yll",
+            "parameters": {
+              "points": "pikët",
+              "length": "gjatesi"
+            }
+          },
+          "draw a circle": {
+            "name": "vizato një rreth"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "gjatesi",
+              "repeat": "përsërit"
+            }
+          },
+          "draw a triangle": {
+            "name": "vizato nje trekendesh",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a house": {
+            "name": "vizato një shtëpi",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          },
+          "draw a square": {
+            "name": "vizato një katror",
+            "parameters": {
+              "length": "gjatesi"
+            }
+          }
         }
       }
     }

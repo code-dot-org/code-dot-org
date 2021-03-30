@@ -33,10 +33,11 @@ export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (activities, searchOptions) => ({
+export const init = (activities, searchOptions, programmingEnvironments) => ({
   type: INIT,
   activities,
-  searchOptions
+  searchOptions,
+  programmingEnvironments
 });
 
 export const initActivities = activities => ({
@@ -472,6 +473,14 @@ function searchOptions(state = {}, action) {
   return state;
 }
 
+function programmingEnvironments(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.programmingEnvironments;
+  }
+  return state;
+}
+
 // Serialize the activities into JSON, renaming any keys which are different
 // on the backend.
 export const getSerializedActivities = rawActivities => {
@@ -599,7 +608,8 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  searchOptions
+  searchOptions,
+  programmingEnvironments
 };
 
 export const emptyActivitySection = {

@@ -81,7 +81,7 @@ level 'courseD_bee_nestedLoops9_2019', progression: 'Practice'
 level 'courseD_bee_nestedLoops9_predict2_2019', progression: 'Prediction'
 
 lesson_group 'csf_variables', display_name: 'Variables'
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables-Unplugged'
 
 lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
@@ -119,7 +119,7 @@ level 'simstarter', progression: 'Run a simulation'
 level 'simconfig', progression: 'Modify simulation variables'
 
 lesson_group 'csf_for_loops', display_name: 'For Loops'
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun-Unplugged'
 
 lesson 'For Loops in Bee', display_name: 'For Loops with Bee', has_lesson_plan: true
@@ -155,7 +155,7 @@ bonus 'courseF_artist_for_challenge1_2019'
 bonus 'courseF_artist_for_challenge2_2019'
 
 lesson_group 'csf_internet', display_name: 'Internet'
-lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true
+lesson 'Internet', display_name: 'The Internet', has_lesson_plan: true, unplugged: true
 level 'Internet-Unplugged'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
@@ -181,13 +181,13 @@ level 'Virtual Pet 7_2019', progression: 'Mini-Project: Virtual Pet'
 level 'Virtual Pet 8_2019', progression: 'Mini-Project: Virtual Pet'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
 level 'PowerOfWords-Unplugged'
 
-lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true
+lesson 'Crowdsourcing', display_name: 'Crowdsourcing', has_lesson_plan: true, unplugged: true
 level 'Crowdsourcing-Unplugged'
 
-lesson 'Digital Sharing', display_name: 'Digital Sharing', has_lesson_plan: true
+lesson 'Digital Sharing', display_name: 'Digital Sharing', has_lesson_plan: true, unplugged: true
 level 'DigitalSharing-Unplugged'
 
 lesson_group 'end_of_course_project', display_name: 'End of Course Project'

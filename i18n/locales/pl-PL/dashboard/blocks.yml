@@ -1006,6 +1006,7 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+            '"speed"': prędkość
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1057,6 +1058,8 @@ pl:
           UNIT:
             '"seconds"': sekundy
             '"frames"': ramki
+      gamelab_hideHaiku:
+        text: ukryj haiku
       gamelab_hideTitleScreen:
         text: ukryj ekran tytułowy
       gamelab_ifVarEquals:
@@ -1202,6 +1205,8 @@ pl:
             '"East"': Wschód
             '"South"': Południe
             '"West"': Zachód
+      gamelab_printHaiku:
+        text: pokaż haiku {BREAK} tytuł wiersza {TITLE} autora wiersza {AUTHOR} linię 1 {LINE1} linię 2 {LINE2} linię 3 {LINE3}
       gamelab_printText:
         text: drukuj {TEXT}
       gamelab_randColor:

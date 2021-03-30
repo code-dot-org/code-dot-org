@@ -1280,6 +1280,47 @@
           "collect": {
             "name": "kolektahin"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "gumuhit ng bituin",
+            "parameters": {
+              "points": "mga puntos",
+              "length": "haba"
+            }
+          },
+          "draw a circle": {
+            "name": "gumuhit ng bilog"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "haba",
+              "repeat": "ulitin"
+            }
+          },
+          "draw a triangle": {
+            "name": "gumuhit ng tatsulok",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a house": {
+            "name": "gumuhit ng bahay",
+            "parameters": {
+              "length": "haba"
+            }
+          },
+          "draw a square": {
+            "name": "gumuhit ng parisukat",
+            "parameters": {
+              "length": "haba"
+            }
+          }
         }
       }
     }

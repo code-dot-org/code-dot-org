@@ -2017,6 +2017,47 @@
           "collect stairs": {
             "name": "계단 수집"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "별 그리기",
+            "parameters": {
+              "points": "점수",
+              "length": "length"
+            }
+          },
+          "draw a circle": {
+            "name": "원 그리기"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "length",
+              "repeat": "반복"
+            }
+          },
+          "draw a triangle": {
+            "name": "삼각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a house": {
+            "name": "집 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          },
+          "draw a square": {
+            "name": "사각형 그리기",
+            "parameters": {
+              "length": "length"
+            }
+          }
         }
       }
     }

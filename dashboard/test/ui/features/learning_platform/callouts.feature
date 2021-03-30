@@ -29,6 +29,7 @@ Feature: Callouts
     Given I am on "<url>"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I dismiss the login reminder
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I close callout "<callout_id>"
@@ -48,6 +49,7 @@ Feature: Callouts
     Given I am on "http://studio.code.org/s/20-hour/lesson/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I dismiss the login reminder
     And element ".tooltip-x-close" is visible
     And callout "0" is visible
     And callout "1" is visible
@@ -73,5 +75,6 @@ Feature: Callouts
     Given I am on "http://studio.code.org/s/20-hour/lesson/2/puzzle/1?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I dismiss the login reminder
     When I press "show-code-header"
     Then ".modal-backdrop" should be in front of "#qtip-0"

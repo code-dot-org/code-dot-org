@@ -1,0 +1,17 @@
+{
+  "func": "setGreen",
+  "category": "Canvas",
+  "paletteParams": [
+    "imgData",
+    "x",
+    "y",
+    "g"
+  ],
+  "params": [
+    "imgData",
+    "0",
+    "0",
+    "255"
+  ],
+  "dontMarshal": true
+}

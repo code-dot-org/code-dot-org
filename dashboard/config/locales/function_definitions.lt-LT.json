@@ -1225,6 +1225,47 @@
           "collect": {
             "name": "surink"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "nupiešk žvaigždę",
+            "parameters": {
+              "points": "taškai",
+              "length": "n"
+            }
+          },
+          "draw a circle": {
+            "name": "nubrėžk apskritimą"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "n",
+              "repeat": "kartok"
+            }
+          },
+          "draw a triangle": {
+            "name": "nubrėžk trikampį",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a house": {
+            "name": "namas",
+            "parameters": {
+              "length": "n"
+            }
+          },
+          "draw a square": {
+            "name": "nubrėžk kvadratą",
+            "parameters": {
+              "length": "n"
+            }
+          }
         }
       }
     }

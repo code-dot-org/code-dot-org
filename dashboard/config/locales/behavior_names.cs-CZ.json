@@ -30,6 +30,16 @@
           "recovering": "zotavuje se",
           "moving left and right": "posun doleva a doprava",
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak_freeplay": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "zotavuje se",
+          "moving left and right": "posun doleva a doprava",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         }
       }
     }

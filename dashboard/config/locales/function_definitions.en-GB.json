@@ -890,6 +890,28 @@
           "collect": {
             "name": "collect"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          },
+          "draw a circle": {
+            "name": "dibujar un circulo"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "repeat"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuja un triangulo"
+          },
+          "draw a house": {
+            "name": "dibuja una casa"
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
         }
       }
     }

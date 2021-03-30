@@ -72,7 +72,7 @@ level 'courseE_farmer_ramp12f_2019', progression: 'Challenge', challenge: true
 level 'courseE_farmer_ramp12g_2019', progression: 'Practice'
 
 lesson_group 'csf_sprites', display_name: 'Sprites'
-lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: true
+lesson 'Simon Says', display_name: 'Simon Says', has_lesson_plan: true, unplugged: true
 level 'SimonSays-Unplugged'
 
 lesson 'Learning Sprites with Sprite Lab', display_name: 'Swimming Fish with Sprite Lab', has_lesson_plan: true
@@ -98,7 +98,7 @@ level 'Dance Party 7_2019', progression: 'Mini-Project: Alien Dance Party'
 level 'Dance Party Freeplay_2019', progression: 'Mini-Project: Alien Dance Party'
 
 lesson_group 'csf_digcit', display_name: 'Digital Citizenship'
-lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true
+lesson 'Private and Personal Information', display_name: 'Private and Personal Information', has_lesson_plan: true, unplugged: true
 level 'PrivatePersonalInformation-Unplugged'
 
 lesson 'About Me', display_name: 'About Me with Sprite Lab', has_lesson_plan: true
@@ -110,7 +110,7 @@ level 'courseE_aboutme_5', progression: 'Mini-project: Interactive Poster'
 level 'courseE_aboutme_6', progression: 'Mini-project: Interactive Poster'
 
 lesson_group 'csf_impacts', display_name: 'Impacts of Computing'
-lesson 'Access Ability', display_name: 'Designing for Accessibility', has_lesson_plan: true
+lesson 'Access Ability', display_name: 'Designing for Accessibility', has_lesson_plan: true, unplugged: true
 level 'DesigningForAccessibilityMarkdownLevel_2019'
 
 lesson_group 'csf_nested_loops', display_name: 'Nested Loops'
@@ -160,7 +160,7 @@ level 'courseD_artist_project3a_2019', progression: 'Mini-Project: Snowflake #2'
 level 'courseD_artist_project4a_2019', progression: 'Mini-Project: Snowflake #2'
 
 lesson_group 'csf_functions', display_name: 'Functions'
-lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true
+lesson 'Functions: Songwriting', display_name: 'Songwriting', has_lesson_plan: true, unplugged: true
 level 'Songwriting-Unplugged'
 
 lesson 'Functions in Minecraft', display_name: 'Functions in Minecraft', has_lesson_plan: true

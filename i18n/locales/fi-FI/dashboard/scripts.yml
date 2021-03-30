@@ -2988,6 +2988,8 @@ fi:
               display_name: Binääri
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
+            lessonGroup-6:
+              display_name: Digitaalinen kansalaisuus
         coursee-2021:
           lessons:
             Conditionals:
@@ -2995,10 +2997,12 @@ fi:
             'Functions: Songwriting':
               name: Säveltäminen
           lesson_groups:
+            ramp_up:
+              display_name: Silmukat
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_nested_loops:
-              display_name: Sisäkkäiset silmukat
+              display_name: Ehtolausekkeet
             csf_functions:
               display_name: Funktiot
         coursef-2021:
@@ -3016,13 +3020,19 @@ fi:
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_variables:
-              display_name: Muuttujat
+              display_name: Silmukat
             csf_for_loops:
               display_name: Silmukat
+            lessonGroup-8:
+              display_name: Muuttujat
+            lessonGroup-9:
+              display_name: poista
         express-2021:
           lessons:
             Dance Party:
               key: Tanssibileet
+              name: Tanssibileet
+            lesson-1:
               name: Tanssibileet
           lesson_groups:
             csf_loops:
@@ -3047,6 +3057,8 @@ fi:
               display_name: Johdanto
             lessonGroup-3:
               display_name: Muuttujat
+            variables:
+              display_name: Muuttujat
         csd4-preview-2021:
           lesson_groups:
             csd4_1:
@@ -3067,3 +3079,30 @@ fi:
               display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
             cspSurvey:
               display_name: Kysely
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Johdanto
+            Loops:
+              key: Silmukat
+              name: Silmukat
+            Events:
+              key: Tapahtumat
+              name: Tapahtumat
+            Conditionals:
+              key: Ehtolausekkeet
+              name: Ehtolausekkeet
+            Functions:
+              key: Funktiot
+              name: Funktiot
+            Variables:
+              key: Muuttujat
+              name: Muuttujat
+            For Loops:
+              key: Silmukat
+              name: Silmukat
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Johdanto
+            Introduction:
+              display_name: Johdanto

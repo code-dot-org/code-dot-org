@@ -128,8 +128,11 @@ sk:
     use_clever: Ľutujeme, váš účet Code.org nie je prepojený s účtom %{provider}.
       Musíte sa prihlásiť cez váš Clever Portal.
     invalid_provider: Váš %{provider} účet je už prelinkovný s vašim účtom Code.org.
+    migration_required: Ľutujeme, nemôžeme pripojiť ani odpojiť účty, ktoré stále
+      používajú starý typ účtu. Prejdite na nový typ účtu.
     unable_to_connect_provider: Nedokázali sme prepojiť váš účet na Code.org s Vaším
       %{provider} účtom. Skúste prosím znova.
+    disconnect_successful: Úspech! Odpojili sme externý účet od vášho účtu Code.org.
     already_in_use: Váš účet %{provider} je už prepojený s iným Code.org účtom.
     already_linked: Váš účet %{provider} je už prelinkovný s Vaším Code.org účtom.
     existing_account:
@@ -317,6 +320,7 @@ sk:
     invite_sent: Pozvánka odoslaná
     added_teacher: "%{name} pridaný ako váš učiteľ"
     registered: Zaregistrovali ste sa na %{section_name}.
+    captcha_required: Pre pripojenie k triede, vyplň prosím CAPTCHA.
     error:
       signed_in: Pred pokračovaním sa prosím odhláste
       username_not_found: Užívateľské meno %{username} nebolo nájdené
@@ -375,6 +379,7 @@ sk:
       professional_learning: Vzdelávanie pre profesionálov
       documentation: Dokumentácia
       tutorials: Návody
+      web_lab_documentation: Dokumentácia k Web Lab
       educate_overview: Prehľad školiteľov
       educate_elementary: Základná škola
       educate_middle: 2. stupeň základnej školy
@@ -488,6 +493,7 @@ sk:
       worked_with: Pracoval/a s
       update_lock_settings: Tu aktualizujte nastavenie zámku.
       clear_response: Odstráň odozvu
+    student_code_view_diabled: Pre túto aktivitu nie je možné zobraziť kód študenta.
   user:
     email_confirm_needed: 'Emailová adresa nebola potvrdená:'
     email_confirm_needed_required: 'Vaša emailová adresa %{email} nebola potvrdená:'
@@ -665,6 +671,8 @@ sk:
     code_from_html: Code.org používa p5.play, ktorý je licencovaný pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Poháňaný službami Amazon Web Services
+    google_copyright: Google Inc. použité so súhlasom. Google Classroom je ochranná
+      známka Google Inc.
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
       of Code&reg; sú ochranné známky Code.org."
     copyright: Autorské práva
@@ -980,8 +988,14 @@ sk:
       vašim študentom.
     review_terms: Prezrieť aktualizované podmienky
   donor_interstitial:
+    title: Bezplatné kurzy Informatiky vám prinášajú...
+    subtitle: Ďakujeme štedrým darcom, ktorých podpora umožnila úspech Code.org. Zaviazali
+      sme sa, že udržíme Code.org zadarmo pre školy a študentov na celom svete, a
+      to vďaka neustálej štedrosti našich [donors](%{donors_url})!
     local_supporters: Miestni podporovatelia
     global_supporters: Svetoví podporovatelia
+    support_codeorg_1: Každý príspevok pre Code.org prináša príležitosť ďalším študentom.
+    support_codeorg_2: "[Prispejte teraz](%{donate_url}) na podporu Code.org."
     get_started: Začnite s Code.org
   school_info_interstitial:
     title: Chceme priniesť informatiku ku každému študentovi - pomôžte nám sledovať
@@ -1302,7 +1316,9 @@ sk:
         pri spoznávaní Code.org a jeho nástrojov. Dajte nám prosím vedieť vaše nápady,
         otázky a postrehy emailom na support@code.org %{support_email_url}, alebo
         príspevkom na fóre pre učiteľov %{teacher_forum_url}!
+      facilitator_not_listed: Môj sprostredkovateľ nie je na zozname.
       facilitator_not_applicable: Neuplatňuje sa
+      organizer_not_listed: Môj usporiadateľ nie je na zozname
     logged_out:
       heading: Ďakujeme vám za prejavený záujem o Vzdelávací program pre profesionálov!
       body: Ak chcete začať, musíte sa najprv prihlásiť do vášho účtu na Code.org.
@@ -1331,6 +1347,7 @@ sk:
     adresu a zadajte ju znova. Alebo prejdite na našu domovskú stránku.
   page_not_found_button: Späť na domovskú stránku
   copy: Kopírovať
+  confirm: Potvrdiť
   maker:
     google_oauth:
       login_with_google: Prihláste sa do aplikácie Maker s Googlom
@@ -1338,7 +1355,12 @@ sk:
         na vašom domovskom prehliadači.
       copy_code: Na prihlásenie do Code.org prosím skopírujte a prilepte tento kód
         do aplikácie Maker.
+      error_token_expired: Platnosť tokenu vypršala. Prihláste sa znova prosím.
+      error_wrong_provider: Nesprávny poskytovateľ. Uistite sa, že sa prihlasujete
+        pomocou účtu Google.
+      error_invalid_user: ID používateľa je neplatné. Prihláste sa znova prosím.
       error_no_code: Prosím zadajte svoj prihlasovací kód
+      confirm_login: Kliknite "Potvrdiť" a prihláste sa pomocou svojho účtu Google.
   parent_email_banner:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s
       týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
@@ -1347,3 +1369,4 @@ sk:
   behaviors:
     this_sprite: tento objekt
   unit_prefix: Jednotka %{n}
+  code_org_logo_alt: Code.org Domov

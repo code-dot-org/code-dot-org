@@ -3726,6 +3726,12 @@ hu:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+        csp10-2021:
+          lessons:
+            'Project: Innovation Simulation Part 6':
+              description_student: Lecke áttekintése
+            'Project: Innovation Simulation Part 7':
+              description_student: Lecke áttekintése
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3733,6 +3739,10 @@ hu:
             Programming with Rey and BB-8:
               key: Programozás Rey és BB-8 segítségével
               name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
@@ -3765,6 +3775,11 @@ hu:
             Loops with Rey and BB-8:
               key: Ciklusok Reyjel és BB-8-tel
               name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
             'Events: The Big Event':
               name: A nagy esemény
             Picturing Data:
@@ -3809,13 +3824,14 @@ hu:
               display_name: Bináris
             csf_digcit:
               display_name: Digitális állampolgárság
+            lessonGroup-6:
+              display_name: Digitális állampolgárság
         coursee-2021:
           lessons:
             Conditionals:
               key: Feltételek
             Simon Says:
               key: Simon mondja
-              name: Simon mondja
             Private and Personal Information:
               key: Magán és személyes információk
               name: Magán és személyes információk
@@ -3825,12 +3841,14 @@ hu:
             'Functions: Songwriting':
               name: Dalszerzés paraméterekkel
           lesson_groups:
+            ramp_up:
+              display_name: hurkok
             csf_sprites:
               display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_nested_loops:
-              display_name: Egymásba ágyazott ciklusok
+              display_name: Feltételek
             csf_functions:
               display_name: funkciók
         coursef-2021:
@@ -3845,14 +3863,18 @@ hu:
               key: Szórakozás a For ciklussal
               name: Szórakozás a For ciklussal
           lesson_groups:
+            ramp_up:
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_variables:
-              display_name: változók
+              display_name: Számláló ciklusok
             csf_for_loops:
               display_name: Számláló ciklusok
-            csf_sprites:
-              display_name: manók
+            lessonGroup-8:
+              display_name: változók
+            lessonGroup-9:
+              display_name: Eltávolít
         express-2021:
           lessons:
             Dance Party:
@@ -3861,6 +3883,13 @@ hu:
             Loops with Rey and BB-8:
               key: Ciklusok Reyjel és BB-8-tel
               name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
+            lesson-1:
+              name: Táncos buli
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -3879,6 +3908,9 @@ hu:
             Programming with Rey and BB-8:
               key: Programozás Rey és BB-8 segítségével
               name: Programozás Rey és BB-8 segítségével
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -3892,6 +3924,8 @@ hu:
               display_name: változók
             Sprites:
               display_name: manók
+            variables:
+              display_name: változók
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3908,3 +3942,35 @@ hu:
               name: Lecke 14
             lesson15:
               name: Lecke 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Bevezető
+            Loops:
+              key: hurkok
+              name: hurkok
+            Events:
+              key: Események
+              name: Események
+            Conditionals:
+              key: Feltételek
+              name: Feltételek
+            Functions:
+              key: funkciók
+              name: funkciók
+            Variables:
+              key: változók
+              name: változók
+            For Loops:
+              key: Számláló ciklusok
+              name: Számláló ciklusok
+            Sprite Lab:
+              key: Sprite labor
+              name: Sprite labor
+            Getting Started:
+              name: Első lépések
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Bevezető
+            Introduction:
+              display_name: Bevezető

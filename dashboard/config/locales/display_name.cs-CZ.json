@@ -4,7 +4,7 @@
       "display_name": {
         "App Lab Intro 8 - Video Getting Started": "Video: Začínáme",
         "AppLab Intro 7 - Change Screen Color": "Změň barvu obrazovky",
-        "AppLab Intro 7 - playSound": "Využití playSound",
+        "AppLab Intro 7 - playSound": "Použití playSound",
         "CSD Problem Solving Process Video": "Video: Proces řešení problémů",
         "CSD U2 Pair Programming Video": "Párové programování",
         "CSD U2 Pair Programming Video_2018": "Párové programování",
@@ -118,7 +118,6 @@
         "scrat_loops_C-F_video_2019": "Cykly v Době ledové - video",
         "scrat_loops_C-F_video_2020": "Cykly v Době ledové - video",
         "AB_Debug_Artist1": "Ladění umělce #1 (AB)",
-        "outbreak_freeplay": "Volná hra",
         "outbreak1": "Simulace viru",
         "outbreak2": "Simulace viru",
         "outbreak3": "Simulace viru",
@@ -134,7 +133,20 @@
         "CSD U4 Design Mode Map_2019": "Představení dizajnového módu",
         "CSDU4 Design Mode Video": "Úvod do dizajnového módu",
         "CSDU4 Design Mode Video_2018": "Úvod do dizajnového módu",
-        "CSDU4 Design Mode Video_2019": "Úvod do dizajnového módu"
+        "CSDU4 Design Mode Video_2019": "Úvod do dizajnového módu",
+        "App Lab Intro 8 - Video Design Mode": "Video: Dizajnový mód",
+        "App Lab Intro 8 - Video Images and Sounds": "Video: Obrázky a zvuky",
+        "App Lab Intro 8 - Video Make It Interactive": "Video: Udělej to interaktivní",
+        "App Lab Intro 8 - Video Share Your App": "Video: Sdílej svou appku",
+        "AppLab Intro 7 - Change Text 2": "Změna textu",
+        "AppLab Intro 7 - Full Text": "Dvě tlačítka",
+        "AppLab Intro 7 - onEvent intro": "Jak zfunkčnit tlačítka",
+        "AppLab Intro 7 - onEvent twoButtons": "Další cvičení s 'onEvent'",
+        "AppLab Intro 7 - thisOrThatAddButton": "Tohle nebo tamto",
+        "AppLab Intro 7 - thisOrThatAddScreen": "Tohle nebo tamto",
+        "AppLab Intro 7 - thisOrThatPersonalize": "Tohle nebo tamto",
+        "AppLab Intro 7 - thisOrThatSetScreen": "Tohle nebo tamto",
+        "csd U3 conditional statements video_2019": "Video: Podmíněný příkaz"
       }
     }
   }

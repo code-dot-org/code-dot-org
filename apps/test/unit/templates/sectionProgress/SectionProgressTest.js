@@ -16,7 +16,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadScript');
+    sinon.stub(progressLoader, 'loadScriptProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -35,7 +35,7 @@ describe('SectionProgress', () => {
         stages: [
           {
             id: 456,
-            levels: [{id: 789}]
+            levels: [{id: '789'}]
           }
         ],
         csf: true,
@@ -44,14 +44,14 @@ describe('SectionProgress', () => {
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
-      studentTimestamps: {
+      studentLastUpdateByScript: {
         1: Date.now()
       }
     };
   });
 
   afterEach(() => {
-    progressLoader.loadScript.restore();
+    progressLoader.loadScriptProgress.restore();
   });
 
   it('loading data shows loading icon', () => {
@@ -89,16 +89,5 @@ describe('SectionProgress', () => {
       />
     );
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
-  });
-
-  it('shows student timestamps', () => {
-    const wrapper = shallow(<UnconnectedSectionProgress {...DEFAULT_PROPS} />);
-    const tooltip = wrapper.find('#tooltipIdForStudent1');
-    expect(
-      tooltip
-        .children()
-        .first()
-        .text()
-    ).to.contain('Today');
   });
 });

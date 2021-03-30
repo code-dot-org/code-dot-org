@@ -630,7 +630,7 @@
           "craft2_run_button_callout": "Cuando estés listo, presiona \"Ejecutar\" para probar tu programa."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Presiona \"Ejecutar\" para comenzar a moverte."
+          "MC_HOC_2016_New_Walk_callout2": "Pulsa \"Ejecutar\" para comenzar a moverte."
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "¡Este es un bucle \"Repetir\"!  Haz clic en el área de trabajo y añade el código que quieras ejecutar una y otra vez."
@@ -1789,6 +1789,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Puedes cambiar este número.",
           "courseE_artist_ramp8_2": "Haz click aquí para ingresar el número de veces que tu código se repite."
+        },
+        "outbreak2": {
+          "minitoolbox": "Haga clic aquí para ampliar el bloque.",
+          "pointerlocation": "Arrastre un bloque de sujeto aquí."
+        },
+        "outbreak7": {
+          "costumes_callout": "Haz clic para crear un nuevo traje"
         }
       }
     }

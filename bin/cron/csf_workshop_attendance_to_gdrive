@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/google/sheet'
+
+#
+# Uses a Google Cloud service account to write enrollment data for CSF workshops into
+# a spreadsheet in Google Drive (with permissions locked down to our organization).
+#
+
+EARLIEST_WORKSHOP_END_DATE = Date.new(2020, 6, 1)
+LATEST_WORKSHOP_START_DATE = Date.today
+
+def get_rows
+  # Seed results array with a header row
+  results = [
+    [
+      "Organizer Name",
+      "Organizer Email",
+      "Regional Partner Name",
+      "Workshop Dates",
+      "Funded",
+      "Attendance Url",
+      "Num Facilitators",
+      "Course",
+      "Subject",
+      "Is this a Virtual Workshop?",
+      "Total Hours",
+      "Num Registered",
+      "Number Scholarship Teachers Attending All Sessions",
+      "Attendance Day 1+"
+    ]
+  ]
+
+  subjects = [Pd::SharedWorkshopConstants::SUBJECT_CSF_101, Pd::SharedWorkshopConstants::SUBJECT_CSF_201]
+
+  Pd::Workshop.
+    where(subject: subjects).
+    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
+      results << [
+        workshop.organizer&.name,
+        workshop.organizer&.email,
+        workshop.regional_partner&.name,
+        workshop.sessions.map(&:formatted_date_with_start_and_end_times).join("\n"),
+        workshop.funded ? "Yes" : "No",
+        "https://studio.code.org/pd/workshop_dashboard/workshops/#{workshop.id}",
+        workshop.facilitators.count,
+        workshop.course,
+        workshop.subject,
+        workshop.virtual? ? "Yes" : "No",
+        workshop.effective_num_hours,
+        workshop.enrollments.count,
+        workshop.teachers_attending_all_sessions(true).count,
+        workshop.teachers_attending_all_sessions.count
+      ]
+    end
+
+  results
+end
+
+def main
+  sheet = Google::Sheet.new CDO.csf_workshop_attendance_gsheet_key
+  sheet.export(tab_name: 'CSF workshops', rows: get_rows)
+end
+
+main

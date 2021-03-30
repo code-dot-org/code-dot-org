@@ -3106,6 +3106,8 @@ et:
               display_name: Binaarne
             csf_digcit:
               display_name: Digitaalne kodakondsus
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
         coursee-2021:
           lessons:
             Conditionals:
@@ -3113,10 +3115,12 @@ et:
             'Functions: Songwriting':
               name: Laulude kirjutamine
           lesson_groups:
+            ramp_up:
+              display_name: Tsüklid
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_nested_loops:
-              display_name: Korduvad tsüklid
+              display_name: Tingimuslaused
             csf_functions:
               display_name: Funktsioonid
         coursef-2021:
@@ -3134,13 +3138,19 @@ et:
             csf_digcit:
               display_name: Digitaalne kodakondsus
             csf_variables:
-              display_name: Muutujad
+              display_name: For tsükkel
             csf_for_loops:
               display_name: For tsükkel
+            lessonGroup-8:
+              display_name: Muutujad
+            lessonGroup-9:
+              display_name: eemalda
         express-2021:
           lessons:
             Dance Party:
               key: Tantsuõhtu
+              name: Tantsuõhtu
+            lesson-1:
               name: Tantsuõhtu
           lesson_groups:
             csf_loops:
@@ -3165,6 +3175,8 @@ et:
               display_name: Sissejuhatus
             lessonGroup-3:
               display_name: Muutujad
+            variables:
+              display_name: Muutujad
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3181,3 +3193,32 @@ et:
               name: Õppetund 14
             lesson15:
               name: Õppetund 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Sissejuhatus
+            Loops:
+              key: Tsüklid
+              name: Tsüklid
+            Events:
+              key: Sündmused
+              name: Sündmused
+            Conditionals:
+              key: Tingimuslaused
+              name: Tingimuslaused
+            Functions:
+              key: Funktsioonid
+              name: Funktsioonid
+            Variables:
+              key: Muutujad
+              name: Muutujad
+            For Loops:
+              key: For tsükkel
+              name: For tsükkel
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Sissejuhatus
+            k5_next_steps_1:
+              display_name: Järgmised sammud
+            Introduction:
+              display_name: Sissejuhatus

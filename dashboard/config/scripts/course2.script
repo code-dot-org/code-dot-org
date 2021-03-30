@@ -7,12 +7,12 @@ project_widget_types ["playlab", "artist"]
 curriculum_umbrella 'CSF'
 tts true
 
-lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true
+lesson 'Graph Paper Programming', display_name: 'Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming'
 level '2-3 Graph Paper Multi 1'
 level '2-3 Graph Paper Match 1'
 
-lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true
+lesson 'Real-life Algorithms: Paper Planes', display_name: 'Real-life Algorithms: Paper Planes', has_lesson_plan: true, unplugged: true
 level 'PaperPlanes'
 level '2-3 Algorithms Multi 1'
 level '2-3 Algorithms Multi 2'
@@ -51,7 +51,7 @@ level '2-3 artist match 1'
 bonus 'course2_artist_prog_challenge1'
 bonus 'course2_artist_prog_challenge2'
 
-lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true
+lesson 'Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
 level 'GettingLoopy'
 level '2-3 Getting Loopy Multi 1'
 
@@ -109,7 +109,7 @@ level '2-3 bee loops multi 1'
 bonus 'course2_harvester_loops_challenge1'
 bonus 'course2_harvester_loops_challenge2'
 
-lesson 'Relay programming', display_name: 'Relay programming', has_lesson_plan: true
+lesson 'Relay programming', display_name: 'Relay programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming'
 level '2-3 Relay Programming Multi 1'
 level '2-3 Relay Programming Multi 2'
@@ -143,7 +143,7 @@ level '2-3 Artist Debugging 11'
 level '2-3 Artist Debugging Assessment 1'
 level '2-3 artist debug multi 1'
 
-lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: true
+lesson 'Conditionals', display_name: 'Conditionals', has_lesson_plan: true, unplugged: true
 level 'Conditionals'
 level '2-3 Conditionals Multi 1'
 
@@ -166,11 +166,11 @@ level '2-3 bee conditionals multi 3'
 bonus 'course2_bee_conditionals_challenge2'
 bonus 'course2_bee_conditionals_challenge1'
 
-lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true
+lesson 'Binary Bracelets', display_name: 'Binary Bracelets', has_lesson_plan: true, unplugged: true
 level 'BinaryBracelets'
 level '2-3 Binary Match 1'
 
-lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true
+lesson 'The Big Event', display_name: 'The Big Event', has_lesson_plan: true, unplugged: true
 level 'BigEvent'
 level '2-3 Big Event Match 1'
 
@@ -222,7 +222,7 @@ skin 'studio'
 level_concept_difficulty '{"sequencing":1,"repeat_until_while":1,"events":1}'
 level 'blockly:Studio:c2_11'
 
-lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint', has_lesson_plan: true
+lesson 'Your Digital Footprint', display_name: 'Your Digital Footprint', has_lesson_plan: true, unplugged: true
 level 'DigitalFootprint'
 level 'K-1 Digital Footprint Multi 1'
 

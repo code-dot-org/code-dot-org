@@ -5,6 +5,7 @@ Feature: Complete a simple maze level
     Given I am on "http://studio.code.org/s/20-hour/lesson/2/puzzle/11?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
+    And I dismiss the login reminder
     Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
   # This builds an uncommon program to avoid getting a crowdsourced hint.

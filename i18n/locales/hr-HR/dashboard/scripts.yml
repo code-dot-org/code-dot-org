@@ -2269,6 +2269,8 @@ hr:
               display_name: Binarno
             csf_digcit:
               display_name: Digitalno građanstvo
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
         coursee-2021:
           lessons:
             Conditionals:
@@ -2276,10 +2278,12 @@ hr:
             'Functions: Songwriting':
               name: Pisanje pjesama
           lesson_groups:
+            ramp_up:
+              display_name: Petlje
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_nested_loops:
-              display_name: Ugniježđene petlje
+              display_name: Uvjeti
             csf_functions:
               display_name: Funkcije
         coursef-2021:
@@ -2294,9 +2298,13 @@ hr:
             csf_digcit:
               display_name: Digitalno građanstvo
             csf_variables:
-              display_name: Varijable
+              display_name: Petlja brojača
             csf_for_loops:
               display_name: Petlja brojača
+            lessonGroup-8:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: ukloni
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2321,3 +2329,32 @@ hr:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            variables:
+              display_name: Varijable
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Uvod
+            Loops:
+              key: Petlje
+              name: Petlje
+            Events:
+              key: Događaji
+              name: Događaji
+            Conditionals:
+              key: Uvjeti
+              name: Uvjeti
+            Functions:
+              key: Funkcije
+              name: Funkcije
+            Variables:
+              key: Varijable
+              name: Varijable
+            For Loops:
+              key: Petlja brojača
+              name: Petlja brojača
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Uvod
+            Introduction:
+              display_name: Uvod

@@ -1,0 +1,22 @@
+name 'OPD-K5 journaling_2021'
+title 'Journaling'
+description 'description here'
+markdown <<MARKDOWN
+# Teaching practice: Journaling
+
+<img src="https://images.code.org/49264bf902a5804672133e723bee6e8b-image-1573170371197.42.28 PM.png" class="level-image">
+
+## Why use it? 
+Like a chemist would catalog strategies and solutions, so do we ask our budding computer scientists to take notes on their trials and achievements. Journals are useful as scratch paper for building, debugging, and strategizing, and they offer a fantastic resource for referencing previous answers when struggling with more complex problems.
+
+## How do I use it?
+- Encourage students to keep their journals beside them at all times when coding
+- Remind students that they can write solutions out longhand, then circle patterns to find prime opportunities for loops and functions
+- Have students copy down answers to puzzles that they might need in future levels
+- Ask students to draw emoticons at the top of the pages to help them identify how they’re feeling about concepts
+- End each lesson with a thought or question that students can answer in writing as a way of reflecting on their growth for the day
+
+Lesson plans also have journaling prompts in them! 
+
+
+MARKDOWN

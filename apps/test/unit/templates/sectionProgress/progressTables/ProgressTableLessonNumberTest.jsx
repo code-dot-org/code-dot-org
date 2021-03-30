@@ -10,6 +10,7 @@ import sinon from 'sinon';
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_PROPS = {
+  id: 1,
   name: 'Intro to Problem Solving',
   number: 1,
   lockable: false,

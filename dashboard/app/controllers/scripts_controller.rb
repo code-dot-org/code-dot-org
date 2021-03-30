@@ -1,11 +1,11 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
-  before_action :require_levelbuilder_mode, except: [:show, :edit, :update]
+  before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update]
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_script, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
@@ -143,6 +143,26 @@ class ScriptsController < ApplicationController
     render 'levels/instructions', locals: {stages: script.lessons}
   end
 
+  def vocab
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def resources
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def code
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
+  def standards
+    return render :forbidden unless can? :read, @script
+    @unit_summary = @script.summarize_for_rollup(@current_user)
+  end
+
   private
 
   def set_script_file
@@ -201,17 +221,19 @@ class ScriptsController < ApplicationController
       :is_stable,
       :is_course,
       :show_calendar,
+      :weekly_instructional_minutes,
       :is_migrated,
       :announcements,
       :pilot_experiment,
       :editor_experiment,
       :background,
+      :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h
-    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
+    h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i > 0 ? h[:peer_reviews_to_complete].to_i : nil
     h[:hidden] = !h[:visible_to_teachers]
     h[:announcements] = JSON.parse(h[:announcements]) if h[:announcements]
     h.delete(:visible_to_teachers)

@@ -2346,6 +2346,8 @@ mi:
               display_name: Tāhūrua
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
+            lessonGroup-6:
+              display_name: Te Kirirarautanga Matihiko
         coursee-2021:
           lessons:
             Conditionals:
@@ -2353,10 +2355,12 @@ mi:
             'Functions: Songwriting':
               name: Te Tito Waiata
           lesson_groups:
+            ramp_up:
+              display_name: Ngā Koromeke
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
             csf_nested_loops:
-              display_name: Ngā Koromeke Tauroto
+              display_name: Ngā Here
             csf_functions:
               display_name: Ngā Taumahi
         coursef-2021:
@@ -2374,13 +2378,17 @@ mi:
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
             csf_variables:
-              display_name: Ngā Taurangi
+              display_name: Mō Ngā Koromeke
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            lessonGroup-8:
+              display_name: Ngā Taurangi
         express-2021:
           lessons:
             Dance Party:
               key: Te Pāti Kanikani
+              name: Te Pāti Kanikani
+            lesson-1:
               name: Te Pāti Kanikani
           lesson_groups:
             csf_loops:
@@ -2405,3 +2413,32 @@ mi:
               display_name: Kupu Whakataki
             lessonGroup-3:
               display_name: Ngā Taurangi
+            variables:
+              display_name: Ngā Taurangi
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Kupu Whakataki
+            Loops:
+              key: Ngā Koromeke
+              name: Ngā Koromeke
+            Events:
+              key: Ngā Takunetanga
+              name: Ngā Takunetanga
+            Conditionals:
+              key: Ngā Here
+              name: Ngā Here
+            Functions:
+              key: Ngā Taumahi
+              name: Ngā Taumahi
+            Variables:
+              key: Ngā Taurangi
+              name: Ngā Taurangi
+            For Loops:
+              key: Mō Ngā Koromeke
+              name: Mō Ngā Koromeke
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Kupu Whakataki
+            Introduction:
+              display_name: Kupu Whakataki

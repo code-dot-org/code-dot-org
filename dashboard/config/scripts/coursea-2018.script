@@ -19,7 +19,7 @@ level 'courseB_video_Unspotted_2018'
 lesson 'Persistence & Frustration: Stevie and the Big Project', display_name: 'Stevie and the Big Project', has_lesson_plan: true
 level 'courseA_video_Stevie_2018'
 
-lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Plant a Seed', has_lesson_plan: true
+lesson 'Real-life Algorithms: Plant a Seed', display_name: 'Plant a Seed', has_lesson_plan: true, unplugged: true
 level 'PlantASeed_2018'
 
 lesson 'Sequencing in Maze', display_name: 'Sequencing with Angry Birds', has_lesson_plan: true
@@ -31,7 +31,7 @@ level 'courseA_maze_ramp3b_2018'
 level 'courseA_maze_ramp4a_2018'
 level 'courseA_maze_ramp5a_2018'
 
-lesson 'Programming: Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true
+lesson 'Programming: Happy Maps', display_name: 'Happy Maps', has_lesson_plan: true, unplugged: true
 level 'UnplugHappyMaps_2018'
 
 lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
@@ -65,10 +65,10 @@ level 'courseA_harvester_seq12'
 level 'courseA_harvester_seq11'
 level 'courseA_harvester_seq13'
 
-lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true
+lesson 'Going Places Safely', display_name: 'Going Places Safely', has_lesson_plan: true, unplugged: true
 level 'GoingPlacesSafely_2018'
 
-lesson 'Loops: Happy Loops', display_name: 'Happy Loops', has_lesson_plan: true
+lesson 'Loops: Happy Loops', display_name: 'Happy Loops', has_lesson_plan: true, unplugged: true
 level 'courseA_unplugged_loops_2018'
 
 lesson 'Loops in Harvester', display_name: 'Loops with Harvester', has_lesson_plan: true
@@ -122,7 +122,7 @@ level 'courseA_artist_loops12_2018'
 bonus 'courseA_artist_loops_challenge2a_2018'
 bonus 'courseA_artist_loops_challenge1_2018'
 
-lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true
+lesson 'Events: The Big Event', display_name: 'The Big Event Jr.', has_lesson_plan: true, unplugged: true
 level 'BigEvent_2018'
 
 lesson 'Events in Play Lab', display_name: 'On the Move with Events', has_lesson_plan: true

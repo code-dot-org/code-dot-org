@@ -1082,6 +1082,66 @@
           "growing": "o'sish",
           "jittering": "titrash",
           "patrolling": "patrullash"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "wandering": "daydish"
+        },
+        "outbreak_freeplay": {
+          "recovering": "tiklanish",
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "tiklanish",
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         }
       }
     }

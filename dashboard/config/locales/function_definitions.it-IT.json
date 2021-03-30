@@ -371,11 +371,11 @@
             "parameters": {
               "points": "punti"
             },
-            "description": "Aggiunge il dato numero di punti alla variabile punteggio_giocatore."
+            "description": "Aggiunge il dato numero di punti alla variabile punteggio."
           },
           "level_up": {
-            "name": "level_up",
-            "description": "Aumenta il \"livello\" di 1, ripristina i punti a 0, aumenta la velocità del nemico, e sceglie uno sfondo casuale."
+            "name": "aumenta_livello",
+            "description": "Aumenta il \"livello\" di 1, ripristina i punti a 0, aumenta la velocità del nemico e sceglie uno sfondo casuale."
           }
         },
         "Course 4 Play Lab Params 2": {
@@ -447,7 +447,7 @@
             "parameters": {
               "points": "punti"
             },
-            "description": "Aggiunge il dato numero di punti alla variabile punteggio_giocatore."
+            "description": "Aggiunge il dato numero di punti alla variabile punteggio."
           }
         },
         "Course 4 Play Lab Vars 1": {
@@ -469,7 +469,7 @@
           },
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "shift down/forward": {
             "name": "shift giù/avanti"
@@ -495,7 +495,7 @@
         "Course 4 SCF 2": {
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "draw octagons": {
             "name": "disegna ottagoni",
@@ -513,7 +513,7 @@
         "Course 4 SCF 3": {
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -533,6 +533,9 @@
         "Find the Wizard": {
           "do something": {
             "name": "fai qualcosa"
+          },
+          "check guess": {
+            "name": "controllo risposta"
           }
         },
         "FoodFight": {
@@ -541,11 +544,11 @@
             "parameters": {
               "points": "punti"
             },
-            "description": "Aggiunge il dato numero di punti alla variabile punteggio_giocatore."
+            "description": "Aggiunge il dato numero di punti alla variabile punteggio."
           },
           "level_up": {
-            "name": "level_up",
-            "description": "Aumenta il \"livello\" di 1, ripristina i punti a 0, aumenta la velocità del nemico, e sceglie uno sfondo casuale."
+            "name": "aumenta_livello",
+            "description": "Aumenta il \"livello\" di 1, ripristina i punti a 0, aumenta la velocità del nemico e sceglie uno sfondo casuale."
           }
         },
         "Function intro Ryan": {
@@ -638,14 +641,14 @@
               "length": "lunghezza",
               "sides": "lati"
             },
-            "description": "La forma cambia in base a quanti lati ha attualmente. Prende due parametri, lunghezza e lati.\nLunghezza "
+            "description": "La forma cambia in base a quanti lati ha attualmente. Prende in ingresso due parametri, lunghezza e lati.\nLunghezza "
           },
           "draw a loop": {
             "parameters": {
               "length": "lunghezza",
               "sides": "lati"
             },
-            "name": "disegna un loop"
+            "name": "disegna un ciclo"
           },
           "draw spiral circle": {
             "parameters": {
@@ -660,11 +663,11 @@
               "length": "lunghezza",
               "sides": "lati"
             },
-            "name": "disegna un loop"
+            "name": "disegna un ciclo"
           },
           "n-sided shape": {
             "name": "forma con n lati",
-            "description": "La forma cambia in base a quanti lati ha attualmente. Prende due parametri, lunghezza e lati.\nLunghezza "
+            "description": "La forma cambia in base a quanti lati ha attualmente. Prende in ingresso due parametri, lunghezza e lati.\nLunghezza "
           },
           "draw spiral circle": {
             "parameters": {
@@ -791,7 +794,7 @@
         "NEW Course 4 Artist Functions 12": {
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "draw a line of squares": {
             "name": "disegna una fila di quadrati"
@@ -819,7 +822,7 @@
           },
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -895,7 +898,7 @@
               "length": "lunghezza",
               "sides": "lati"
             },
-            "description": "disegna un poligono con parametro lati e lunghezza"
+            "description": "disegna un poligono con parametri lati e lunghezza"
           }
         },
         "NEW Course 4 Artist Params 12a": {
@@ -905,7 +908,7 @@
               "length": "lunghezza",
               "sides": "lati"
             },
-            "description": "disegna un poligono con parametro lati e lunghezza"
+            "description": "disegna un poligono con parametri lati e lunghezza"
           }
         },
         "NEW Course 4 Artist Params 13": {
@@ -933,11 +936,11 @@
               "points": "punti",
               "length": "lunghezza"
             },
-            "description": "disegna una stella con i punti dati e lati della lunghezza data"
+            "description": "disegna una stella con il numero di punte richiesto e i lati della lunghezza richiesta"
           },
           "draw a circle": {
             "name": "disegna un cerchio",
-            "description": "disegna un cerchio del raggio dato",
+            "description": "disegna un cerchio con il raggio richiesto",
             "parameters": {
               "radius": "raggio"
             }
@@ -1303,7 +1306,7 @@
           },
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -2525,7 +2528,8 @@
             "parameters": {
               "size": "dimensione",
               "color": "colore"
-            }
+            },
+            "name": "controllore"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -2555,7 +2559,8 @@
             "parameters": {
               "size": "dimensione",
               "color": "colore"
-            }
+            },
+            "name": "controllore"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -2616,7 +2621,7 @@
               "length": "lunghezza",
               "sides": "lati"
             },
-            "description": "disegna un poligono con parametro lati e lunghezza"
+            "description": "disegna un poligono con parametri lati e lunghezza"
           }
         },
         "courseF_artist_fwp5": {
@@ -2664,11 +2669,11 @@
               "points": "punti",
               "length": "lunghezza"
             },
-            "description": "disegna una stella con i punti dati e lati della lunghezza data"
+            "description": "disegna una stella con il numero di punte richiesto e i lati della lunghezza richiesta"
           },
           "draw a circle": {
             "name": "disegna un cerchio",
-            "description": "disegna un cerchio del raggio dato",
+            "description": "disegna un cerchio con il raggio richiesto",
             "parameters": {
               "radius": "raggio"
             }
@@ -2730,7 +2735,7 @@
           },
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -2739,7 +2744,7 @@
         "courseF_artist_fwp_challenge2": {
           "draw a square 20": {
             "name": "disegna un quadrato 20",
-            "description": "disegna un quadrato di 20 pixel"
+            "description": "disegna un quadrato con i lati lunghi 20 pixel"
           },
           "do something": {
             "name": "fai qualcosa"
@@ -3714,6 +3719,64 @@
         "courseE_farmer_functions9b": {
           "navigate": {
             "name": "naviga"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "disegna una stella",
+            "description": "disegna una stella con il numero di punte richiesto e i lati della lunghezza richiesta",
+            "parameters": {
+              "points": "punti",
+              "length": "lunghezza"
+            }
+          },
+          "draw a circle": {
+            "name": "disegna un cerchio",
+            "description": "disegna un cerchio con il raggio richiesto",
+            "parameters": {
+              "radius": "raggio"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "disegna una girandola",
+            "parameters": {
+              "sides": "lati",
+              "length": "lunghezza",
+              "repeat": "ripeti"
+            }
+          },
+          "draw a triangle": {
+            "name": "disegna un triangolo",
+            "parameters": {
+              "length": "lunghezza"
+            }
+          },
+          "draw a shape": {
+            "name": "disegna una forma",
+            "parameters": {
+              "sides": "lati",
+              "length": "lunghezza"
+            }
+          },
+          "draw a house": {
+            "name": "disegna una casa",
+            "parameters": {
+              "length": "lunghezza"
+            }
+          },
+          "draw a square": {
+            "name": "disegna un quadrato",
+            "parameters": {
+              "length": "lunghezza"
+            }
+          }
+        },
+        "Guess The Number": {
+          "check guess": {
+            "name": "controllo risposta",
+            "parameters": {
+              "theGuess": "risposta"
+            }
           }
         }
       }

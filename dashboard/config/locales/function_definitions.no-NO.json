@@ -1781,6 +1781,55 @@
           "potential solution": {
             "name": "mulig løsning"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "tegn en stjerne",
+            "description": "Tegn en stjerne med beskrive sider, lengde og  spiser",
+            "parameters": {
+              "points": "poeng",
+              "length": "lengde"
+            }
+          },
+          "draw a circle": {
+            "name": "tegn en sirkel",
+            "description": "Tegn en sirkel med det forklarte radius",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde",
+              "repeat": "gjenta"
+            }
+          },
+          "draw a triangle": {
+            "name": "tegn en trekant",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a shape": {
+            "name": "tegn en form",
+            "parameters": {
+              "sides": "Sider",
+              "length": "lengde"
+            }
+          },
+          "draw a house": {
+            "name": "tegn et hus",
+            "parameters": {
+              "length": "lengde"
+            }
+          },
+          "draw a square": {
+            "name": "tegn en firkant",
+            "parameters": {
+              "length": "lengde"
+            }
+          }
         }
       }
     }

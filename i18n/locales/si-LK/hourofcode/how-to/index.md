@@ -4,7 +4,7 @@ title: Hour of Code How-to Guide
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# පැයක කේථ කරනය සැලසුම් කරන්නේ කෙසේද
 
 ### Join the movement and introduce your students to computer science with these steps.
 

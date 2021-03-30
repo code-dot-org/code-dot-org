@@ -2995,6 +2995,8 @@ el:
               display_name: Δυαδικό
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
+            lessonGroup-6:
+              display_name: Ψηφιακή υπηκοότητα
         coursee-2021:
           lessons:
             Conditionals:
@@ -3002,12 +3004,14 @@ el:
             'Functions: Songwriting':
               name: Σύνθεση τραγουδιού
           lesson_groups:
+            ramp_up:
+              display_name: Βρόχοι
             csf_sprites:
               display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_nested_loops:
-              display_name: Φωλιασμένες Επαναλήψεις
+              display_name: Συνθήκες
             csf_functions:
               display_name: Συναρτήσεις
         coursef-2021:
@@ -3021,19 +3025,27 @@ el:
             For Loop Fun:
               key: Διασκέδαση με το Βρόχο Για
               name: Διασκέδαση με το Βρόχο Για
+            lesson-8:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
+            ramp_up:
+              display_name: Χαρακτήρας
             csf_digcit:
               display_name: Ψηφιακή υπηκοότητα
             csf_variables:
-              display_name: Μεταβλητές
+              display_name: Βρόχοι Για
             csf_for_loops:
               display_name: Βρόχοι Για
-            csf_sprites:
-              display_name: Χαρακτήρας
+            lessonGroup-8:
+              display_name: Μεταβλητές
+            lessonGroup-9:
+              display_name: αφαίρεσε
         express-2021:
           lessons:
             Dance Party:
               key: Πάρτι Χορού
+              name: Πάρτι Χορού
+            lesson-1:
               name: Πάρτι Χορού
           lesson_groups:
             csf_loops:
@@ -3058,6 +3070,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Sprites in Action:
+              name: Χαρακτήρες σε Δράση
           lesson_groups:
             ramp_up:
               display_name: Εισαγωγή
@@ -3067,6 +3081,8 @@ el:
               display_name: Μεταβλητές
             Sprites:
               display_name: Χαρακτήρας
+            variables:
+              display_name: Μεταβλητές
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3081,3 +3097,35 @@ el:
           description_short: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
           description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
           student_description: 'Χρησιμοποιήστε το Εργαστήρι Χαρακτήρων για να προγραμματίσετε μια προσομοίωση από μία έξαρση ιού.'
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Εισαγωγή
+            Loops:
+              key: Βρόχοι
+              name: Βρόχοι
+            Events:
+              key: Συμβάντα
+              name: Συμβάντα
+            Conditionals:
+              key: Συνθήκες
+              name: Συνθήκες
+            Functions:
+              key: Συναρτήσεις
+              name: Συναρτήσεις
+            Variables:
+              key: Μεταβλητές
+              name: Μεταβλητές
+            For Loops:
+              key: Βρόχοι Για
+              name: Βρόχοι Για
+            Sprite Lab:
+              key: Sprite Lab
+              name: Sprite Lab
+            Lesson Planning:
+              name: Σχεδιασμός μαθημάτων
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Εισαγωγή
+            Introduction:
+              display_name: Εισαγωγή

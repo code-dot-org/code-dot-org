@@ -26,7 +26,9 @@ const styles = {
   activityHeaderComponents: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    overflow: 'hidden'
   },
   activityBody: {
     background: color.lightest_cyan,
@@ -59,7 +61,9 @@ const styles = {
   inputsAndIcon: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+    flex: '1 1'
   }
 };
 

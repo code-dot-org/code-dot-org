@@ -1014,6 +1014,7 @@ en:
             '"x"': x position
             '"y"': y position
             '"direction"': movement direction
+            '"speed"': speed
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} touches {SPRITE2}"
         options:
@@ -1065,6 +1066,8 @@ en:
           UNIT:
             '"seconds"': seconds
             '"frames"': frames
+      gamelab_hideHaiku:
+        text: hide haiku
       gamelab_hideTitleScreen:
         text: hide title screen
       gamelab_ifVarEquals:
@@ -1210,6 +1213,8 @@ en:
             '"East"': East
             '"South"': South
             '"West"': West
+      gamelab_printHaiku:
+        text: show haiku {BREAK} poem title {TITLE} poem author {AUTHOR} line 1 {LINE1} line 2 {LINE2} line 3 {LINE3}
       gamelab_printText:
         text: print {TEXT}
       gamelab_randColor:
@@ -1297,6 +1302,8 @@ en:
             '"height"': height
       gamelab_setTint:
         text: change color of {THIS} to {COLOR}
+      gamelab_setupScoreboard:
+        text: "draw scoreboard \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}target{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           setup simulation with
@@ -1348,7 +1355,7 @@ en:
       gamelab_whenLeftArrow:
         text: when left arrow pressed
       gamelab_whenPromptAnswered:
-        text: when {VAR} is answered
+        text: when {VAR} answered
       gamelab_whenRightArrow:
         text: when right arrow pressed
       gamelab_whenSpriteCreated:

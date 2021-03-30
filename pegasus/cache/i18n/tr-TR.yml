@@ -12,7 +12,7 @@ tr-TR:
   upgrade_ie_link: Daha fazlasını öğren
   en: Bilgisayar Bilimi
   computer_science_edweek: Bilgisayar Bilimleri Eğitim Haftası
-  csedweek_dates: 8-14 Aralık 2014
+  csedweek_dates: 3-9 Aralık 2018
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Kodlama Saati</a> yaklaşıyor. Öğretmen ve organizatörleri, <a
     href="http://hourofcode.com" style="color: white; text-decoration:underline; font-weight:bold">kendi
@@ -2068,6 +2068,10 @@ tr-TR:
   header_legal_privacy: Gizlilik Politikası
   header_legal_tos: Şartlar
   header_tutorials: Eğitmler
+  header_screen_reader_hamburger: 'Menü
+
+'
+  header_screen_reader_help: Yardım menüsü
   app_lab_documentation: Uygulama Laboratuvarı Belgelendirmesi
   app_lab_tutorials: Uygulama Laboratuvar Eğitimleri
   game_lab_documentation: Oyun Laboratuvar Belgelendirmesi
@@ -2388,3 +2392,9 @@ tr-TR:
   page_not_available_button: Anasayfaya Dön
   footer_powered_by_aws: Amazon Web Services tarafından desteklenmektedir
   codebytes_skinny_banner_english_only: Sadece İngilizce
+  footer_privacy_policy: Gizlilik Politikası
+  footer_about: Hakkında
+  footer_partners: Ortaklar
+  footer_donate: Bağış Yap
+  footer_support: Yardım ve Topluluk
+  footer_terms: Koşullar

@@ -394,7 +394,7 @@
           "replace_questions": "\"???\" 부분에 수를 입력하면 됩니다."
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "준비 되었을때 \"실행\"버튼을 눌러 프로그램을 시도해 보세요"
+          "craft2_run_button_callout": "준비 되었을 때 \"실행\" 버튼을 눌러 프로그램을 실행해 보세요."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
@@ -1381,7 +1381,7 @@
           "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "\"실행\"을 눌러 이동을 시작하세요."
+          "MC_HOC_2016_New_Walk_callout2": "\"실행\" 버튼을 눌러 이동을 시작하세요."
         }
       }
     }

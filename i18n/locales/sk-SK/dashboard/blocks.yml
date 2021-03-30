@@ -955,12 +955,18 @@ sk:
         text: nastavenie
       gamelab_addBehaviorSimple:
         text: postava {SPRITE} začni {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE} dosiahne cieľ {TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: na {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekundy
+            '"frames"': rámce
+      gamelab_beginCollectingData:
+        text: pozbieraj {BREAK} hodnotu údajov {VALUE} so štítkom {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} odrazí sa {TARGET}"
       gamelab_changePropBy:
@@ -972,6 +978,7 @@ sk:
             '"x"': pozícia x
             '"y"': pozícia y
             '"direction"': smeru pohybu
+            '"speed"': rýchlosť
       gamelab_checkTouching:
         text: "{CONDITION} sa {SPRITE1} dotýka {SPRITE2}"
         options:
@@ -984,6 +991,10 @@ sk:
         text: klikla {SPRITE}
       gamelab_comment:
         text: 'poznámka: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: počet {SPRITE}
       gamelab_createNewSprite:
         text: |-
           vytvor novú postavu
@@ -996,6 +1007,10 @@ sk:
         text: je posúvateľný
       gamelab_edgesDisplace:
         text: okraje blokujú pohyb {SPRITE}
+      gamelab_followingTargets:
+        text: nasledujúce ciele
+      gamelab_getAllSprites:
+        text: všetky postavy
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1012,13 +1027,25 @@ sk:
         options:
           CHOICE:
             '"this"': toto
+            '"other"': iné
       gamelab_getTime:
+        text: čas v {UNIT}
         options:
           UNIT:
             '"seconds"': sekundy
+            '"frames"': rámce
+      gamelab_hideHaiku:
+        text: ukry haiku
       gamelab_hideTitleScreen:
         text: schovať úvodnú obrazovku
+      gamelab_ifVarEquals:
+        text: |-
+          ak {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} má kostým {COSTUME}"
       gamelab_isKeyPressed:
+        text: "{KEY} stlačíš "
         options:
           KEY:
             '"up"': hore
@@ -1099,6 +1126,7 @@ sk:
       gamelab_locationAt:
         text: 'poloha x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} pixelov {DIRECTION} od {LOCATION}"
         options:
           DIRECTION:
             '"North"': Sever
@@ -1113,6 +1141,8 @@ sk:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
+      gamelab_makeNumSprites:
+        text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       gamelab_mirrorSprite:
         text: "{SPRITE} smeruje {DIRECTION}"
         options:
@@ -1151,6 +1181,8 @@ sk:
             '"East"': Východ
             '"South"': Juh
             '"West"': Západ
+      gamelab_printHaiku:
+        text: ukáž haiku {BREAK} názov básne{TITLE} autor básne {AUTHOR} riadok1 {LINE1} riadok2 {LINE2} riadok3 {LINE3}
       gamelab_printText:
         text: tlačiť {TEXT}
       gamelab_randColor:
@@ -1190,12 +1222,17 @@ sk:
       gamelab_setBackgroundImageAs:
         text: nastav pozadie na {IMG}
       gamelab_setDefaultSpriteSize:
+        text: nastav veľkost novej postavy na {SIZE}
         options:
           SIZE:
-            '25': extra small
+            '25': veľmi malé
             '50': Malé
             '75': stredný
             '100': Veľké
+      gamelab_setPrompt:
+        text: vyzvať používateľa {QUESTION} pre premennú {VAR}
+      gamelab_setPromptWithChoices:
+        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       gamelab_setProp:
         text: nastav {SPRITE} {PROPERTY} na {VAL}
         options:
@@ -1225,8 +1262,14 @@ sk:
           CONDITION:
             '"when"': keď
             '"while"': pokiaľ
+      gamelab_stopCollectingData:
+        text: prestaň zbierať údaje
       gamelab_subjectSpritePointer:
         text: klikla {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: omieľanie
       gamelab_turn:
@@ -1254,8 +1297,12 @@ sk:
             '"d"': d
       gamelab_whenLeftArrow:
         text: pri stlačení šípky vľavo
+      gamelab_whenPromptAnswered:
+        text: keď {VAR} zodpovedaná
       gamelab_whenRightArrow:
         text: pri stlačení šípky vpravo
+      gamelab_whenSpriteCreated:
+        text: keď {SPRITE} vytvorená
       gamelab_whenTouching:
         text: keď sa {SPRITE1} dotkne {SPRITE2}
       gamelab_whenUpArrow:
@@ -1283,6 +1330,10 @@ sk:
         text: keď sa {SPRITE1} dotkne {SPRITE2}
       gamelab_whileUpArrow:
         text: pri stlačení šípky hore
+      gamelab_withPercentChance:
+        text: |-
+          ak {NUM}% šanca
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x súradnica {SPRITE}
       gamelab_yLocationOf:
@@ -1302,6 +1353,8 @@ sk:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": nie je môj-štítok
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: vyzvi užívateľa {QUESTION} pre premennú {VAR} s možnosťami {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1478,6 +1531,8 @@ sk:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: nie je môj-štítok
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'poloha x: {X} y: {Y}'
       Mikelab_location_picker:

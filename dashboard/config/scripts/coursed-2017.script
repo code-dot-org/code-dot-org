@@ -8,12 +8,12 @@ new_name 'coursed-2017'
 family_name 'coursed'
 version_year '2017'
 is_stable true
-supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ru-RU", "sk-SK", "tr-TR", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
+supported_locales ["ar-SA", "cs-CZ", "de-DE", "es-ES", "es-MX", "fil-PH", "fr-FR", "hi-IN", "id-ID", "it-IT", "ja-JP", "ko-KR", "mn-MN", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "ta-IN", "th-TH", "tr-TR", "ur-PK", "uz-UZ", "vi-VN", "zh-CN", "zh-TW"]
 curriculum_umbrella 'CSF'
 tts true
 is_course true
 
-lesson 'Algorithms: Graph Paper Programming', display_name: 'Programming: Graph Paper Programming', has_lesson_plan: true
+lesson 'Algorithms: Graph Paper Programming', display_name: 'Programming: Graph Paper Programming', has_lesson_plan: true, unplugged: true
 level 'GraphPaperProgramming'
 
 lesson 'Introduction', display_name: 'Introduction to Online Puzzles', has_lesson_plan: true
@@ -90,7 +90,7 @@ level 'courseD_artist_project2a'
 level 'courseD_artist_project3a'
 level 'courseD_artist_project4a'
 
-lesson 'Algorithms: Relay Programming', display_name: 'Debugging: Relay Programming', has_lesson_plan: true
+lesson 'Algorithms: Relay Programming', display_name: 'Debugging: Relay Programming', has_lesson_plan: true, unplugged: true
 level 'RelayProgramming'
 
 lesson 'Debugging in Collector', display_name: 'Debugging in Collector', has_lesson_plan: true
@@ -124,7 +124,7 @@ level 'courseD_farmer_while10_predict2'
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
-lesson 'Conditionals with Cards', display_name: 'If/Else: Conditionals with Cards', has_lesson_plan: true
+lesson 'Conditionals with Cards', display_name: 'If/Else: Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals'
 
 lesson 'Conditionals in Bee', display_name: 'Conditionals in Bee', has_lesson_plan: true
@@ -175,7 +175,7 @@ level 'courseD_farmer_condLoops9_predict1'
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
-lesson 'Digital Citizenship', display_name: 'Digital Citizenship: Practicing Digital Citizenship', has_lesson_plan: true
+lesson 'Digital Citizenship', display_name: 'Digital Citizenship: Practicing Digital Citizenship', has_lesson_plan: true, unplugged: true
 level 'courseD_unplugged_digitalCitizenship'
 
 lesson 'Build a Play Lab Game', display_name: 'Build a Play Lab Game', has_lesson_plan: true
@@ -189,7 +189,7 @@ level 'courseD_playLab_cond6'
 level 'courseD_playLab_cond6a'
 level 'courseD_playLab_condFP'
 
-lesson 'Unplugged: Binary', display_name: 'Beyond Programming: Binary Images', has_lesson_plan: true
+lesson 'Unplugged: Binary', display_name: 'Beyond Programming: Binary Images', has_lesson_plan: true, unplugged: true
 level 'BinaryImages'
 
 lesson 'Artist Binary', display_name: 'Binary in Artist', has_lesson_plan: true

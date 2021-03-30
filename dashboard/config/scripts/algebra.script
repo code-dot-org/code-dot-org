@@ -2,7 +2,7 @@ hidden false
 login_required true
 hideable_lessons true
 
-lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true
+lesson 'Unplugged: Video Games and Coordinate Planes', display_name: 'Unplugged: Video Games and Coordinate Planes', has_lesson_plan: true, unplugged: true
 level 'VideoGamesCoordinatePlanes'
 level 'Ninjacat Demo B'
 level 'Coordinates Multi 1'
@@ -38,7 +38,7 @@ level 'Eval Strings Images 8'
 level 'Multi Strings Images 1'
 level 'Eval Strings Images Free Play'
 
-lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts, Domain, and Range', has_lesson_plan: true
+lesson 'Unplugged: Contracts', display_name: 'Unplugged: Contracts, Domain, and Range', has_lesson_plan: true, unplugged: true
 level 'Contracts'
 
 lesson 'Eval: Writing Contracts', display_name: 'Writing Contracts', has_lesson_plan: true
@@ -91,7 +91,7 @@ level 'msm variables multi 10'
 level 'msm variables multi 11'
 level 'msm variables multi 13'
 
-lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true
+lesson 'Unplugged: The Design Recipe', display_name: 'Unplugged: The Design Recipe', has_lesson_plan: true, unplugged: true
 level 'DesignRecipe'
 
 lesson 'Play Lab: Defining Functions', display_name: 'Rocket Height', has_lesson_plan: true
@@ -124,7 +124,7 @@ level 'Big Game Animation 2'
 level 'Big Game Animation 3'
 level 'Big Game Animation 4'
 
-lesson 'Unplugged: Booleans', display_name: 'Unplugged: Booleans and Logic', has_lesson_plan: true
+lesson 'Unplugged: Booleans', display_name: 'Unplugged: Booleans and Logic', has_lesson_plan: true, unplugged: true
 level 'Booleans'
 
 lesson 'Eval: Boolean Operators', display_name: 'Boolean Operators', has_lesson_plan: true
@@ -153,7 +153,7 @@ level 'Big Game Booleans 2'
 level 'Big Game Booleans 3'
 level 'Big Game Booleans 5'
 
-lesson 'Unplugged: Conditionals and Piecewise Functions', display_name: 'Unplugged: Conditionals and Piecewise Functions', has_lesson_plan: true
+lesson 'Unplugged: Conditionals and Piecewise Functions', display_name: 'Unplugged: Conditionals and Piecewise Functions', has_lesson_plan: true, unplugged: true
 level 'ConditionalsPiecewiseFunctions'
 
 lesson 'Eval: Conditionals', display_name: 'Conditionals', has_lesson_plan: true
@@ -166,7 +166,7 @@ level 'Eval Cond 5'
 level 'Big Game Player 1'
 level 'Big Game Player 2'
 
-lesson 'Unplugged: Collision Detection and the Distance Formula', display_name: 'Unplugged: Collision Detection and the Pythagorean Theorem', has_lesson_plan: true
+lesson 'Unplugged: Collision Detection and the Distance Formula', display_name: 'Unplugged: Collision Detection and the Pythagorean Theorem', has_lesson_plan: true, unplugged: true
 level 'CollisionDetection'
 
 lesson 'Play Lab: Collision Detection (Big Game)', display_name: 'The Big Game - Collision Detection', has_lesson_plan: true

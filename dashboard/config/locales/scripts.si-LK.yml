@@ -2651,6 +2651,8 @@ si:
               display_name: ද්විමය
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
         coursee-2021:
           lessons:
             Conditionals:
@@ -2658,10 +2660,12 @@ si:
             'Functions: Songwriting':
               name: ගීත ලිවීම
           lesson_groups:
+            ramp_up:
+              display_name: ලූපයන්
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_nested_loops:
-              display_name: නැවත නැවත සිදුවන ලුප
+              display_name: කන්ඩිෂනලස්
             csf_functions:
               display_name: ශ්‍රිතයන්
         coursef-2021:
@@ -2679,11 +2683,15 @@ si:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_variables:
-              display_name: විචල්‍යන්
+              display_name: ලූපයන් සඳහා
             csf_data:
               display_name: දත්ත
             csf_for_loops:
               display_name: ලූපයන් සඳහා
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: ඉවත් කරන්න
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2708,3 +2716,34 @@ si:
               display_name: හැදින්වීම
             lessonGroup-3:
               display_name: විචල්‍යන්
+            variables:
+              display_name: විචල්‍යන්
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: හැදින්වීම
+            Loops:
+              key: ලූපයන්
+              name: ලූපයන්
+            Events:
+              key: වැඩසටහන්
+              name: වැඩසටහන්
+            Conditionals:
+              key: කන්ඩිෂනලස්
+              name: කන්ඩිෂනලස්
+            Functions:
+              key: ශ්‍රිතයන්
+              name: ශ්‍රිතයන්
+            Variables:
+              key: විචල්‍යන්
+              name: විචල්‍යන්
+            For Loops:
+              key: ලූපයන් සඳහා
+              name: ලූපයන් සඳහා
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: හැදින්වීම
+            k5_next_steps_1:
+              display_name: ඉදිරි පියවර
+            Introduction:
+              display_name: හැදින්වීම

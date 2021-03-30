@@ -2533,6 +2533,10 @@ sq:
           lessons:
             Creating Functions:
               name: Krijimi i Funksioneve
+        jess-test-script:
+          lessons:
+            Tools:
+              name: Veglat
         csp5-virtual:
           lessons:
             While Loops:
@@ -2715,6 +2719,8 @@ sq:
               display_name: Binare
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            lessonGroup-6:
+              display_name: Shtetësi Dixhitale
         coursee-2021:
           lessons:
             Conditionals:
@@ -2722,10 +2728,12 @@ sq:
             'Functions: Songwriting':
               name: Të shkruarit e Këngëve
           lesson_groups:
+            ramp_up:
+              display_name: cikle 
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
-              display_name: Përsëritjet e Mbivendosura
+              display_name: Kushtet
             csf_functions:
               display_name: funksione
         coursef-2021:
@@ -2743,11 +2751,15 @@ sq:
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_variables:
-              display_name: variabla
+              display_name: Për Ciklet
             csf_data:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            lessonGroup-8:
+              display_name: variabla
+            lessonGroup-9:
+              display_name: Largo
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2772,9 +2784,40 @@ sq:
               display_name: Hyrja
             lessonGroup-3:
               display_name: variabla
+            variables:
+              display_name: variabla
         ai-unit-pilot:
           lessons:
             lesson14:
               name: Lekcioni 14
             lesson15:
               name: Lekcioni 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Hyrja
+            Loops:
+              key: cikle 
+              name: cikle 
+            Events:
+              key: Ngjarje
+              name: Ngjarje
+            Conditionals:
+              key: Kushtet
+              name: Kushtet
+            Functions:
+              key: funksione
+              name: funksione
+            Variables:
+              key: variabla
+              name: variabla
+            For Loops:
+              key: Për Ciklet
+              name: Për Ciklet
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Hyrja
+            k5_next_steps_1:
+              display_name: Hapat e ardhshme
+            Introduction:
+              display_name: Hyrja

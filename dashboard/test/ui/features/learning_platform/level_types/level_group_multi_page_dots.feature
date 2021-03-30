@@ -8,7 +8,7 @@ Background:
   And I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
-Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
+Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
 
   # Enter answers to all three multis on the first page.
@@ -45,8 +45,9 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
 
   Then I reload the page
   And I wait to see ".react_stage"
+  And I wait until jQuery Ajax requests are finished
 
-  # Verify the three dots in the header are 1. some, 2. none, 3. all questions answered.
+  # Verify the three dots in the header are 1. all, 2. none, 3. some questions answered.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2
   And I verify progress in the header of the current page is "not_tried" for level 3
   And I verify progress in the header of the current page is "attempted_assessment" for level 4
@@ -71,6 +72,7 @@ Scenario: Submit three pages as... 1. some, 2. none, 3. all questions answered.
   And I press "#ok-button" using jQuery to load a new page
   And I am on "http://studio.code.org/s/allthethings/lesson/23/puzzle/1?noautoplay=true"
   And I wait to see ".react_stage"
+  And I wait until jQuery Ajax requests are finished
 
   # Verify the three dots in the header all reflect the submission.
   And I verify progress in the header of the current page is "perfect_assessment" for level 2

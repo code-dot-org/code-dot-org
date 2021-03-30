@@ -271,11 +271,42 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  # Redirects from old /stage url to new /lesson url
-  get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lesson/%{position}%{all}')
+  get '/course/:course_name', to: redirect('/courses/%{course_name}')
+  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
 
-  # Redirects from old /lockable url to new /survey url
-  get '/s/:script_name/lockable/:position(*all)', to: redirect(path: '/s/%{script_name}/survey/%{position}%{all}')
+  resources :courses, param: 'course_name' do
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+    end
+  end
+
+  # CSP 20-21 lockable lessons with lesson plan redirects
+  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/stage/14%{all}')
+  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/stage/9%{all}')
+  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/stage/11%{all}')
+  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/stage/15%{all}')
+  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/stage/18%{all}')
+  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/stage/6%{all}')
+  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/stage/11%{all}')
+  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/stage/9%{all}')
+  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
+
+  resources :lessons, only: [:edit, :update]
+  resources :resources, only: [:create, :update]
+  resources :vocabularies, only: [:create, :update]
+
+  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
+  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
+  get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
+
+  resources :standards, only: [] do
+    collection do
+      get :search
+    end
+  end
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
@@ -284,7 +315,21 @@ Dashboard::Application.routes.draw do
     get 'hidden_stages', to: 'script_levels#hidden_stage_ids'
     post 'toggle_hidden', to: 'script_levels#toggle_hidden'
 
-    get 'instructions', to: 'scripts#instructions'
+    member do
+      get 'vocab'
+      get 'resources'
+      get 'code'
+      get 'standards'
+      get 'instructions'
+    end
+
+    ## TODO: Once we move levels over to /lessons as well combine the routing rules
+    resources :lessons, only: [:show], param: 'position' do
+      get 'student', to: 'lessons#student_lesson_plan'
+    end
+
+    # Redirects from old /stage url to new /lesson url
+    get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lesson/%{position}%{all}')
 
     # /s/xxx/lesson/yyy/puzzle/zzz
     resources :stages, only: [], path: "/lesson", param: 'position', format: false do
@@ -316,18 +361,6 @@ Dashboard::Application.routes.draw do
 
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
-
-  resources :courses, param: 'course_name'
-  get '/course/:course_name', to: redirect('/courses/%{course_name}')
-
-  resources :lessons, only: [:show, :edit, :update]
-
-  resources :resources, only: [:create, :update]
-  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
-
-  resources :vocabularies, only: [:create, :update]
-  get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
 
   get '/beta', to: redirect('/')
 
@@ -520,6 +553,9 @@ Dashboard::Application.routes.draw do
           post :validate_form
           get ':id', action: :get_form_data
         end
+        namespace :library_questions do
+          post :validate_library_question
+        end
       end
     end
   end
@@ -710,6 +746,7 @@ Dashboard::Application.routes.draw do
       post 'ml_models/save', to: 'ml_models#save'
       get 'ml_models/names', to: 'ml_models#user_ml_model_names'
       get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
+      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
@@ -793,6 +830,10 @@ Dashboard::Application.routes.draw do
       get :editor, on: :collection
     end
 
-    resources :library_questions, only: [:show, :update]
+    resources :library_questions, only: [:create, :show, :update] do
+      member do
+        get :published_forms_appeared_in
+      end
+    end
   end
 end

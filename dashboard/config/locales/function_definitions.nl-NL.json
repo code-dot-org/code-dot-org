@@ -1592,6 +1592,56 @@
           "potential solution": {
             "name": "mogelijke oplossing"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "teken een ster",
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "parameters": {
+              "points": "punten",
+              "length": "lengte"
+            }
+          },
+          "draw a circle": {
+            "name": "teken een cirkel",
+            "description": "teken een cirkel met gegeven straal",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte",
+              "repeat": "herhaal"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "sides": "zijden",
+              "length": "lengte"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
         }
       }
     }

@@ -122,7 +122,7 @@ progress.generateStageProgress = function(
 
   store.dispatch(
     mergeProgress(
-      _.mapValues(progressData.levels, level =>
+      _.mapValues(progressData.progress, level =>
         level.submitted ? TestResults.SUBMITTED_RESULT : level.result
       )
     )
@@ -175,6 +175,7 @@ progress.renderCourseProgress = function(scriptData) {
 
   const mountPoint = document.createElement('div');
   $('.user-stats-block').prepend(mountPoint);
+
   ReactDOM.render(
     <Provider store={store}>
       <ScriptOverview
@@ -194,6 +195,9 @@ progress.renderCourseProgress = function(scriptData) {
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}
         assignedSectionId={scriptData.assigned_section_id}
+        showCalendar={scriptData.showCalendar}
+        weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
+        unitCalendarLessons={scriptData.calendarLessons}
       />
     </Provider>,
     mountPoint

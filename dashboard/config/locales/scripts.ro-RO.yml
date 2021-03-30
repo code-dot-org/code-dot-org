@@ -7107,12 +7107,18 @@ ro:
         csd1-2021:
           description_audience: "[șir gol]"
           lessons:
+            CS Discoveries Pre-survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
             The Problem Solving Process:
               key: Procesul de Rezolvare a Problemei
               name: Procesul de Rezolvare a Problemei
             What is a Computer?:
               key: Ce Este un Computer?
               name: Ce Este un Computer?
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
@@ -7122,6 +7128,13 @@ ro:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
         csd2-2021:
           description_audience: "[șir gol]"
+          lessons:
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
           lesson_groups:
             cspSurvey:
               display_name: Sondaj
@@ -7147,6 +7160,12 @@ ro:
             Functions:
               key: Funcţii
               name: Funcţii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
           lesson_groups:
             csd3_1:
               display_name: 'Capitolul 1: Imagini şi animaţii'
@@ -7157,6 +7176,9 @@ ro:
         csd4-2021:
           description_audience: "[șir gol]"
           lessons:
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
             CS Discoveries Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -7172,6 +7194,9 @@ ro:
         csd5-2021:
           description_audience: "[șir gol]"
           lessons:
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
             CS Discoveries Post Course survey:
               description_student: "[șir gol]"
               description_teacher: "[șir gol]"
@@ -7188,6 +7213,12 @@ ro:
             Functions with Parameters:
               key: Funcții cu Parametrii
               name: Funcții cu Parametrii
+            Post-Project Test:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            CS Discoveries Post Course survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
           lesson_groups:
             csd6_1:
               display_name: 'Capitolul 1: Programare cu hardware'
@@ -7196,6 +7227,9 @@ ro:
         csp1-2021:
           description_audience: "[șir gol]"
           lessons:
+            CS Principles Pre-survey:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
             Binary Numbers:
               key: Numerele binare
               name: Numerele binare
@@ -7330,6 +7364,8 @@ ro:
               display_name: Binar
             csf_digcit:
               display_name: Cetățenia Digitală
+            lessonGroup-6:
+              display_name: Cetățenia Digitală
         coursee-2021:
           lessons:
             Conditionals:
@@ -7342,7 +7378,7 @@ ro:
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_nested_loops:
-              display_name: Repetiții imbricate
+              display_name: Condiţionale
             csf_functions:
               display_name: Funcţii
         coursef-2021:
@@ -7358,19 +7394,29 @@ ro:
             For Loop Fun:
               key: Pentru distracția cu bucle
               name: Pentru distracția cu bucle
+            lesson-6:
+              name: Prezentând Laboratorul de Desen
+            lesson-8:
+              name: Spiriduși în acțiune
           lesson_groups:
             ramp_up:
               display_name: Avansare
             csf_digcit:
               display_name: Cetățenia Digitală
             csf_variables:
-              display_name: Variabile
+              display_name: Bucle Pentru
             csf_for_loops:
               display_name: Bucle Pentru
+            lessonGroup-8:
+              display_name: Variabile
+            lessonGroup-9:
+              display_name: elimină
         express-2021:
           lessons:
             Dance Party:
               key: Petrecere dansantă
+              name: Petrecere dansantă
+            lesson-1:
               name: Petrecere dansantă
           lesson_groups:
             csf_loops:
@@ -7384,6 +7430,29 @@ ro:
             csf_for_loops:
               display_name: Bucle Pentru
         pre-express-2021:
+          lessons:
+            Learn to Drag and Drop:
+              description_student: "[șir gol]"
+            Sequencing with Scrat:
+              description_student: "[șir gol]"
+            Programming in with Angry Birds:
+              description_student: "[șir gol]"
+            Programming with Rey and BB-8:
+              description_student: "[șir gol]"
+            Programming in Harvester:
+              description_student: "[șir gol]"
+            Loops with Scrat:
+              description_student: "[șir gol]"
+            Loops with Laurel:
+              description_student: "[șir gol]"
+            Ocean Scene with Loops:
+              description_student: "[șir gol]"
+            Drawing Gardens with Loops:
+              description_student: "[șir gol]"
+            On the Move with Events:
+              description_student: "[șir gol]"
+            A Royal Battle with Events:
+              description_student: "[șir gol]"
           lesson_groups:
             csf_loops:
               display_name: Bucle
@@ -7395,12 +7464,18 @@ ro:
               name: Cum se Codifică o Simulare
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
+            Sprites in Action:
+              name: Spiriduși în acțiune
+            introducing-spritelab:
+              name: Prezentând Laboratorul de Desen
           lesson_groups:
             ramp_up:
               display_name: Introducere
             outbreak:
               display_name: Simulare Epidemie
             lessonGroup-3:
+              display_name: Variabile
+            variables:
               display_name: Variabile
         csd4-preview-2021:
           description_audience: "[șir gol]"
@@ -7472,3 +7547,138 @@ ro:
           description_audience: "[șir gol]"
           description: "[șir gol]"
           student_description: "[șir gol]"
+        csa1-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa2-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa3-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa4-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa5-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa6-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa7-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa8-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        csa9-pilot:
+          title: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+          description: "[șir gol]"
+          student_description: "[șir gol]"
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Introducere
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Understanding the Computer Science Fundamentals Courses:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sequencing:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Loops:
+              key: Bucle
+              name: Bucle
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Events:
+              key: Evenimente
+              name: Evenimente
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Conditionals:
+              key: Condiţionale
+              name: Condiţionale
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            End of Course projects:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Functions:
+              key: Funcţii
+              name: Funcţii
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Variables:
+              key: Variabile
+              name: Variabile
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            For Loops:
+              key: Bucle Pentru
+              name: Bucle Pentru
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Sprite Lab:
+              key: Laborator Sprite
+              name: Laborator Sprite
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Reviewing your reflections:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Next steps:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            Lesson Planning:
+              name: Planificare lecție
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Introducere
+            k5_next_steps_1:
+              display_name: Pașii următori
+            Introduction:
+              display_name: Introducere
+        allthemigratedthings:
+          lessons:
+            lesson-2:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            lesson-3:
+              description_student: "[șir gol]"
+              description_teacher: "[șir gol]"
+            lesson-4:
+              description_student: "[șir gol]"
+          description_audience: "[șir gol]"
+          description_short: "[șir gol]"
+        fancygeometry-pilot:
+          student_description: "[șir gol]"
+        ai-classroom-test:
+          description_audience: "[șir gol]"

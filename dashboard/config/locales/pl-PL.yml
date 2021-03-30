@@ -713,6 +713,7 @@ pl:
     tos_short: Warunki
     tos: Regulamin
     privacy: Polityka prywatności
+    privacy_updated: Polityka prywatności (uaktualniona)
     secure: Bezpieczna wersja
     report_abuse: Zgłoś nadużycie
     built_on_code_studio: Zbudowane na Code Studio
@@ -1423,3 +1424,4 @@ pl:
   behaviors:
     this_sprite: ten duszek
   unit_prefix: Jednostka %{n}
+  code_org_logo_alt: Strona domowa Code.org

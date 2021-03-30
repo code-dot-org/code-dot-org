@@ -2788,6 +2788,49 @@
           "draw": {
             "name": "დახატვა"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "ვარსკვლავის დახატვა",
+            "parameters": {
+              "points": "ქულები",
+              "length": "სიგრძე"
+            }
+          },
+          "draw a circle": {
+            "name": "წრის დახატვა"
+          },
+          "draw a pinwheel": {
+            "name": "ბზრიალას დახატვა",
+            "parameters": {
+              "length": "სიგრძე",
+              "repeat": "გაიმეორეთ"
+            }
+          },
+          "draw a triangle": {
+            "name": "სამკუთხედის დახატვა",
+            "parameters": {
+              "length": "სიგრძე"
+            }
+          },
+          "draw a shape": {
+            "name": "ფორმის დახატვა",
+            "parameters": {
+              "length": "სიგრძე"
+            }
+          },
+          "draw a house": {
+            "name": "სახლის დახატვა",
+            "parameters": {
+              "length": "სიგრძე"
+            }
+          },
+          "draw a square": {
+            "name": "კვადრატის დახატვა",
+            "parameters": {
+              "length": "სიგრძე"
+            }
+          }
         }
       }
     }

@@ -1318,7 +1318,7 @@
         },
         "course4_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Bir fonksiyonu bir kez tanımladığınızda tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!",
-          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n<xml>  <block type=\"jump_to\">\n\n<title name=\"VALUE\">???</title>\n</block></xml>"
+          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "course4_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nBu \"atla\" bloğu Zombie Artist'i istediğiniz zaman ızgara üzerindeki herhangi bir noktaya taşımanızı sağlar. Bunu, zombiyi piksel sayısı kadar sağa ve piksel sayısı kadar aşağıya taşıyarak yapar. Her zaman sol üst köşeden sayılır, Zombi Artist'in komut çalışmadan _önce_ nerede olduğunun bir önemi yoktur!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
@@ -6413,11 +6413,11 @@
         },
         "courseE_artist_concept_challenge2": {
           "courseE_artist_concept_challenge2_a": "Bir fonksiyonu bir kez tanımladığınızda tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!",
-          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n<xml>  <block type=\"jump_to\">\n\n<title name=\"VALUE\">???</title>\n</block></xml>"
+          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "courseE_artist_concept_challenge2_2018": {
           "courseE_artist_concept_challenge2_a": "Bir fonksiyonu bir kez tanımladığınızda tekrar tekrar çağırabilirsiniz. Nerede ve ne zaman isterseniz!",
-          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n<xml>  <block type=\"jump_to\">\n\n<title name=\"VALUE\">???</title>\n</block></xml>"
+          "courseE_artist_concept_challenge2_b": "Bu komutu kullanarak tuval üzerinde farklı konumlara atlayabilirsin:\n\n<xml>  <block type=\"jump_to\">\n    <title name=\"VALUE\">???</title>\n  </block></xml>"
         },
         "courseE_artist_functions1": {
           "courseE_artist_functions1_a": "Karelerin her bir kenarı 100 piksel, ikinci kareyi çizmeden önce 175 piksel ilerlemelisiniz.",

@@ -1074,6 +1074,8 @@ zh-CN:
               name: 机器学习和鱼
             AI Lab:
               name: 人工智能实验室
+            Java Lab:
+              name: Java实验室
         algebraPD2b:
           description: 第二阶段在线：混合的暑期学习
           description_short: 第二阶段在线：混合的暑期学习
@@ -14174,7 +14176,7 @@ zh-CN:
             Semester Hackathon Part 5:
               name: 学期黑客马拉松第 5 部分
             'Lesson 18: Assessment Day':
-              name: 第 18 单元：评估日
+              name: 单元 15：评估日
             Unit 5 STUDENT Survey:
               name: 第 5 单元学生问卷
             Unit 5 TEACHER Survey:
@@ -14207,7 +14209,7 @@ zh-CN:
             Project - Make a Library Part 3:
               name: 项目 - 制作库 第 3 部分
             Assessment Day:
-              name: 评估日
+              name: 单元 15：评估日
             Unit 7 STUDENT Survey:
               name: 第 7 单元学生问卷
             Unit 7 TEACHER Survey:
@@ -14215,7 +14217,7 @@ zh-CN:
             Variables Make Demo:
               name: 变量制作演示
             'Lesson 11: Assessment Day':
-              name: 第 11 单元：评估日
+              name: 单元 15：评估日
         csd2-projects-temp:
           title: 计算机科学发现网站项目 - 临时
           description: 为计算机科学发现网站项目添加的临时小项目
@@ -15660,7 +15662,7 @@ zh-CN:
             Project - Digital Information Dilemmas Part 2:
               name: 项目 - 数字信息困境 第 2 部分
             'Lesson 14: Assessment Day':
-              name: 单元 14：评估日
+              name: 单元 15：评估日
             CS Principles Pre-survey:
               name: 计算机科学原理预调查
         csp2-2020:
@@ -15688,7 +15690,7 @@ zh-CN:
             Project - Internet Dilemmas Part 2:
               name: 项目 - 互联网困境 第 2 部分
             'Lesson 9: Assessment Day':
-              name: 第 9 单元：评估日
+              name: 单元 15：评估日
         csp3-2020:
           lesson_groups:
             csp_unit3_2020:
@@ -15715,7 +15717,7 @@ zh-CN:
             Project - Designing an App Part 5:
               name: 项目 - 设计一个应用 第 5 部分
             'Lesson 11: Assessment Day':
-              name: 第 11 单元：评估日
+              name: 单元 15：评估日
         csp6-2020:
           lesson_groups:
             csp_unit6_2020:
@@ -15734,7 +15736,7 @@ zh-CN:
             Parallel and Distributed Algorithms:
               name: 并行和分布式算法
             'Lesson 6: Assessment Day':
-              name: 第 6 单元：评估日
+              name: 单元 15：评估日
         csp8-2020:
           lessons:
             new stage:
@@ -15769,7 +15771,7 @@ zh-CN:
             Project - Tell a Data Story - Part 2:
               name: 项目 - 讲述数据的故事 - 第 2 部分
             'Lesson 9: Assessment Day':
-              name: 第 9 单元：评估日
+              name: 单元 15：评估日
         csp10-2020:
           lesson_groups:
             csp_unit10_2020:
@@ -16465,18 +16467,28 @@ zh-CN:
             What is a Computer?:
               key: 什么是计算机？
               name: 什么是计算机？
+              description_teacher: '在本课中，学生将对计算机进行了初步定义。开始上课时，全班将集思广益对计算机做可能的定义，并把这个集思广益讨论的结果放在海报上。下一步，学生们将分组在海报上把图片分类为“是计算机”
+                或 “不是计算机” 。小组将他们的海报贴在课室里并简要解释他们选择一些最难归类的动机。然后老师介绍了计算机的定义，并允许学生根据新的定义修改他们的海报。
+
+'
             Input and Output:
               key: 输入和输出
               name: 输入和输出
             Processing:
               key: 正在处理中
               name: 正在处理中
+              description_teacher: 学生完成两个离线的排列卡片的活动, 探讨处理的意义及其与解决问题的关系。第一个活动的约束很少,
+                用于引入一个高级的处理定义。接下来的会引入更多的约束, 迫使学生开发一种算法, 能够一直成功地处理卡片。学生迭代开发、测试，并与同学分享他们的算法。总结性的讨论让学生反思他们在这些活动中所使用的不同类型的问题解决方法,
+                以及产生解决问题的算法的价值。
             Storage:
               key: 存储
               name: 存储
             Project - Propose an App:
               key: 项目- 提议一个应用程序
               name: 项目- 提议一个应用程序
+              description_teacher: 为了完成对计算机的问题解决过程和输入/输出/存储/处理模型的研究, 学生将提出一个用于解决现实世界问题的应用程序。该项目将需要好几天来完成,
+                并会让学生创建一个海报突出显示他们的应用程序的功能，并将呈现同学。项目指南为学生提供循序渐进的指导，并帮助他们组织想法。该项目设计为结对完成,
+                虽然也可以单独完成。
             Post-Project Test:
               key: 项目后测试
               name: 项目后测试
@@ -16514,6 +16526,9 @@ zh-CN:
             Styling Text with CSS:
               key: 使用 CSS 设置文本样式
               name: 使用 CSS 设置文本样式
+              description_teacher: "本课介绍了 CSS 作为网页上样式元素的一种方式。学生学习 CSS 规则集的基本语法, 然后探讨影响
+                HTML 文本元素的属性。他们在一个关于吉尼斯世界纪录保持者的 HTML 页面上工作, 在提供的页面中添加他们自己的风格。在最后一级中,
+                学生将他们所学到的关于文本元素的样式应用到他们的个人网页上。\n\n"
             'Mini-Project: Your Personal Style':
               key: 迷你项目：你的风格
               name: 迷你项目：你的风格
@@ -16529,6 +16544,8 @@ zh-CN:
             Styling Elements with CSS:
               key: 使用 CSS 设置元素的样式
               name: 使用 CSS 设置元素的样式
+              description_teacher: 本课将继续介绍 CSS 样式属性, 此时将更多地关注非文本元素。学生们从一个关于世界甜点的网站上开始这一课。他们在这个网站上调查和修改新的
+                CSS 样式, 在页面中添加他们自己的样式。在甜点页面上工作后, 学生们运用他们的新 CSS 属性的知识来对他们的个人网站做更多的造型。
             Your Web Page - Prepare:
               key: 你的网站：准备
               name: 你的网站：准备
@@ -16582,12 +16599,16 @@ zh-CN:
             Programming for Entertainment:
               key: 娱乐编程
               name: 娱乐编程
+              description_student: 该班级被要求考虑无聊和自我表达的 "问题", 并思考他们在自己的生活中如何处理这些问题。从那里，他们将探索一般的计算机科学,
+                以及特定的编程中，是如何在特定形式的娱乐或者交通工具中自我表达的。
             Plotting Shapes:
               key: 绘制形状
               name: 绘制形状
             Drawing in Game Lab:
               key: 在游戏实验室绘画
               name: 在游戏实验室绘画
+              description_teacher: 学生被引入到游戏实验室, 即这个单元的编程环境, 并开始使用它来在屏幕上定位形状。他们学习了排序和调试的基础知识,
+                以及一些简单的命令。在课程结束时, 学生将能够像在上一课中使用绘图工具制作的图像一样进行编程。
             Shapes and Parameters:
               key: 形状和参数
               name: 形状和参数
@@ -16609,6 +16630,9 @@ zh-CN:
             The Draw Loop:
               key: 绘制循环
               name: 绘制循环
+              description_teacher: 在这一课中, 学生被引入到了游戏实验室的核心编程范式之一 "绘制循环" 中。开始上课的学生看一些手翻书,
+                会看到有许多帧不同的图像创造了运动的印象。然后学生观看一段视频，解释游戏实验室中的绘制循环是如何在他们的程序中产生同样的印象的。学生把绘制循环和随机数结合起来,
+                先用Dots来操纵一些简单的动画, 然后用精灵图。在课程结束的时候, 学生们用他们学到的东西来更新他们在上一课中的精灵图场景。
             Sprite Movement:
               key: 精灵图移动
               name: 精灵图移动
@@ -16627,6 +16651,7 @@ zh-CN:
             Velocity:
               key: 矢量
               name: 矢量
+              description_teacher: 接触在简要的回顾了以前的课堂上如何使用计数器模式移动精灵图后，班级开始设定速度和旋转属性。当他们用不同的方式使用这些新属性，创建一个基本的侧边滚动条游戏时，他们就掌握了新的技能。
             Collision Detection:
               key: 碰撞检测
               name: 碰撞检测
@@ -16639,6 +16664,9 @@ zh-CN:
             Functions:
               key: 函数
               name: 函数
+              description_teacher: 学生学习如何创建函数来组织他们的代码, 使其可读性更强, 并删除重复的代码块。线下预热探讨如何在不同的层次细节如何取决于上下文。学生学习更高层次或更抽象的步骤,
+                使它更容易理解和推理的步骤。之后学生学习在游戏实验室中创建函数。他们将使用函数从其绘制循环中删除长代码块, 并用单个函数替换重复的代码段。在课程结束时,
+                学生使用这些技能来组织和添加功能到他们的侧滚动游戏的最终版本。
             The Game Design Process:
               key: 游戏设计过程
               name: 游戏设计过程
@@ -16671,6 +16699,9 @@ zh-CN:
             Analysis of Design:
               key: 设计分析
               name: 设计分析
+              description_teacher: 为了启动一个致力于小组解决问题和为其他用户开发产品的单位，学生开始调查各种茶壶的设计。学生分析每个茶壶,
+                试图确定特定用户的需求如何告知其设计。通过考虑这些设计选择, 并试图匹配每个茶壶与潜在的用户, 学生可以开始看到如何采取以用户为中心的方法来设计产品
+                (物理和数字) 可以使这些产品更有用和可用。为了完成这项活动, 学生们被要求对其中一个茶壶提出一些改变, 使之更有用或更实用。
             Understanding Your User:
               key: 了解您的用户
               name: 了解您的用户
@@ -16683,6 +16714,8 @@ zh-CN:
             Feedback and Testing:
               key: 反馈和测试
               name: 反馈和测试
+              description_student: 用户一直在测试一个应用程序, 他们对开发者有很多反馈。该课堂需要对所有这些反馈进行分类, 确定共同的主题和需求,
+                并开始修改原型, 使其更好地满足用户的需求。
             Identifying User Needs:
               key: 识别用户需求
               name: 识别用户需求
@@ -16695,6 +16728,8 @@ zh-CN:
             Market Research:
               key: 市场研究
               name: 市场研究
+              description_teacher: 在本课中, 学生研究类似于他们打算创建的应用程序, 以便更好地了解用户的需求。学生在他们的团队中工作,
+                搜索其他应用程序的互联网, 然后评估他们感兴趣的。在课程结束时, 每个团队将对他们想要创建的应用程序类型有一个更清晰的了解, 并进一步细化他们的目标用户。每个团队将为他们在最后的演示中使用的所有应用程序保留一个引用列表。
             Paper Prototypes:
               key: 纸面原型
               name: 纸面原型
@@ -16731,6 +16766,18 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            Build a Digital Prototype:
+              description_student: 在纸面原型上开发、测试并收集了反馈后, 小组现在将移到应用程序实验室, 来构建他们的应用程序的下一个迭代。使用拖放设计模式,
+                每个小组成员至少要建立一页他们小组的应用程序, 对上一轮测试中收到的反馈做出反应。
+            Events In AppLab:
+              description_student: 在上一节课该班设计的屏幕上构建, 小组将屏幕组合成一个单一的应用程序. 然后可以添加简单的代码,
+                单击按钮转换到适当的屏幕。
+            Bugs and Features:
+              description_student: 通过使用上一轮测试的反馈, 小组实现了满足用户需求的更改。每个小组跟踪并优先处理他们想要添加的特点以及需要修复的
+                bug 。
+            Updating Your Prototype:
+              description_student: 通过使用上一轮测试的反馈, 小组实现了满足用户需求的更改。每个小组跟踪并优先处理他们想要添加的特点以及需要修复的
+                bug 。
             Build a Paper Prototype:
               name: 纸面原型
           lesson_groups:
@@ -16768,6 +16815,7 @@ zh-CN:
             Keeping Data Secret:
               key: 数据保密
               name: 数据保密
+              description_teacher: 学生们将讨论他们各自想要的不同级别的数据安全性。一旦全班对隐私权的重要性有了一定的共识后，他们将通过对相互伙伴间的信息进行加密和解密来学习加密信息的过程。最后学生们要讨论实体和数字安全的重要性。
             Combining Representations:
               key: 组合表示
               name: 组合表示
@@ -16792,6 +16840,10 @@ zh-CN:
             Automating Data Decisions:
               key: 自动化数据决策
               name: 自动化数据决策
+            Project - Make a Recommendation:
+              description_teacher: 要结束此单元，学生们要在他们所收集的数据和班级分析结果的基础上设计一个推荐引擎。在看完一个推荐应用程序的示范后，
+                学生们要参照项目指南来完成多天的活动目标。开始的几个步骤是让学生们选择他们要帮助用户做什么样的选择，运用什么数据来做推荐，创建一份调查，并收集全班的选择结果。然后，他们要分析数据并用他们所学到的知识来创建推荐算法。最后，他们要利用这些算法来给一些同学做推荐。在把他们的成果演示给整个班级之前，
+                学生们要相互进行审核，并对他们的项目做必要的修改。
             Post-Project Test:
               key: 项目后测试
               name: 项目后测试
@@ -16817,51 +16869,74 @@ zh-CN:
             Innovations in Computing:
               key: 计算中的创新
               name: 计算中的创新
+              description_teacher: 为了开始这门课程的最后一个单元, 学生们将对计算中有趣的创新做一些研究。本课将向学生展示各种计算形式的因素
+                (计算机的外观是什么样的) 和受计算影响的领域。在本单元的后面课程中, 学生在开发自己的物理计算设备时, 他们会回顾在本课中学习到的设备。
             Designing Screens with Code:
               key: 使用代码设计屏幕
               name: 使用代码设计屏幕
+              description_teacher: 在单元4中，学生们学习了一个非常简单的方法在应用实验室中进行应用开发，它需要一个独立的屏幕来进行大多数互动。为了扩展这类学生们能制作的应用，并且鼓励它们能够用新的方法思考用户与交互，我们引入了`setProperty()`（设置属性）模块。这个命令能够用来设置各种界面元素的内容和属性，允许学生们写程序来在当前屏幕上更新信息，而不是手工创建重复的屏幕。在这堂课中，学生们会创建只需要一个屏幕的简单应用，它的内容会被`setProperty()`（设置属性）改变。
             The Circuit Playground:
               key: 电路游乐场
               name: 电路游乐场
+              description_teacher: 在这一课程中，学生们第一次有机会使用电路游戏板来编写程序。 在初次虚拟查看主板和假想的可能功能后，学生们将在线编写应用程序，它可以使用蜂鸣器制造噪音并让LED
+                灯闪烁。 通过结合应用实验室的屏幕和电路游戏板， 学生们可以逐步开始将主板的元素集成为输出设备，同时又依靠APP 实验室来进行用户输入。
             Input Unplugged:
               key: 线下输入
               name: 线下输入
+              description_teacher: 为了进一步钻研应用程序实验室的编程, 学生们将探索如何在游戏实验室和应用程序实验室中编写一小部分不同的程序,
+                以从用户那里输入信息。在比较和对比他们在示例应用程序中看到的方法之后, 学生分组来实践输入 (无限和异步事件中的条件) 的两个不同的模型,
+                以便更好地了解它们的工作方式。
             Board Events:
               key: 主板事件
               name: 主板事件
+              description_teacher: 本课程将让学生转变他们的认知，电路游戏板不是仅仅只是输出设备，它还可以同时被用为输入和输出的工具。
+                从按钮和开关开始，到硬件开关和按钮的熟悉，学生们将学会运用`onBoardEvent()`（当主板上发生事件时）类似于`onEvent()`（当事件发生时），来从他们的电路游戏板得到输入。
             Getting Properties:
               key: 取值器属性
               name: 取值器属性
+              description_teacher: 这堂课向学生们介绍了`getProperty`（获取属性）模块，它能让学生们用代码存取不同元素的属性。学生们会首先练习用模块来检测是否用户在不同的界面元素中进行了输入。然后同时使用`getProperty`（获取属性）和`setProperty()`（设置属性）模块的counter来让元素在屏幕上移动。同时，也会引入一个新元素-滑动条，以及一个新的事件`onChange`（当改变时）。
             Analog Input:
               key: 模拟输入
               name: 模拟输入
+              description_teacher: 在此课程中，学生们将探索如何使用三个模拟的传感器（声音，光和温度）来编写相应环境变化的程序。
+                使用传感器标示着用户如何和程序互动的过渡。使用传感器作为输入，应用程序的用户不需要直接和它互动，或者可以很自然的互动。
             The Program Design Process:
               key: 程序设计过程
               name: 程序设计过程
+              description_teacher: 这堂课向学生们介绍了设计他们自己的程序的流程。这个流程围绕着一个项目指南，让他们在开始前，先描绘出屏幕的构架，找到电路游戏板需要使用的元素。定义变量，描述事件。这个流程和我们在单元3中的游戏设计流程很像。在这节课中，学生们从玩一个拔河游戏开始，它的代码是隐藏起来的。他们会讨论主板组件是什么，需要使用的事件和变量是什么。然后会给他们完整的项目指南来实现这个项目。学生们然后会通过一系列的关卡来过一下这个流程。在课程结束时，他们有机会改进这个程序，做出自己的版本。
             'Project: Make a Game':
               key: '项目: 建立游戏'
               name: '项目: 建立游戏'
+              description_teacher: 学生们通过他们在第一章中学习到的知识，运用开发他们自己设计的应用程序，它可以使用主板输出信息。
             Arrays and Color LEDs:
               key: 数组和彩色LED灯
               name: 数组和彩色LED灯
+              description_teacher: 数组是一个有序的项目的集合，通常是相同类型的项目。在这节课中，学生们学习如何从列表中，用索引来存储某一个或者随机的值。ta'men他们然后会学习到如何存取colorLEDs来控制电路游戏板上的彩色LED等。学生们需要控制每个LED灯的颜色和强度，然后用学到的程序来画一个光线图案，从而在电路游戏板上展示一场灯光秀。
             Making Music:
               key: 制作音乐
               name: 制作音乐
             Arrays and For Loops:
               key: 数组和计数循环
               name: 数组和计数循环
+              description_teacher: 使用_计数循环_来枚举数组中的所有元素，这在大部分编程语言中都非常有用。在这一课中，学生们会学习如何用_计数循环_来重复代码的基础，然后将它与已学习的数组结合起来，编程处理数组中的所有元素。学生们使用计数循环来遍历列表中的每个元素，而不必为每个元素写一遍代码。到了课程结束时，学生们会将这个应用到主板的`colorLed`（彩色LED灯）数组上，来创建应用，能够在每次按钮被点击时改变所有LED灯的颜色。
             Accelerometer:
               key: 加速传感器
               name: 加速传感器
+              description_student: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
+              description_teacher: 这节课中，学生们需要探索加速度计和它的能力。会熟悉它的事件和属性，也会创造多个程序来使用jia'su'du加速度计来模拟真实世界的应用。
             Functions with Parameters:
               key: 有参数的函数
               name: 有参数的函数
+              description_teacher: 这堂课在最近用到的应用实验室模块的环境中，从快速回顾参数开始。学生们然后会看看用户创建函数的例子，并创建和调用自己的有参数的函数，用它们来控制屏幕上的多个元素。然后，学生们用循环来枚举一个数组，将每个元素传递到函数中。最后，学生们用学过的内容来创建一个捉星星的游戏。
             Circuits and Physical Prototypes:
               key: 电路和物理原型
               name: 电路和物理原型
+              description_teacher: 在准备本章的最终项目时，学生们会学习到如何用电路游戏板开发一个物理对象的原型。用一个模型化的项目规划指南，学生们会使用便宜并容易找到的材料，如纸板、胶带，组合一些简单的电路来做出达到设计意图的产品。
             'Project: Prototype an Innovation':
               key: 项目：创新原型
               name: 项目：创新原型
+              description_teacher: '在这个课程的最后一个项目中, 学生组队来开发并测试一个基于电路游戏板的创新计算设备的原型。通过使用主板上提供的输入和输出,
+                学生组将创建允许有趣和独特的用户交互的程序。 '
             Post-Project Test:
               key: 项目后测试
               name: 项目后测试
@@ -16925,7 +17000,7 @@ zh-CN:
               name: 项目 - 数字信息困境 第 2 部分
             'Lesson 14: Assessment Day':
               key: 单元 14：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             cspSurvey:
               display_name: 调查
@@ -16960,7 +17035,7 @@ zh-CN:
               name: 项目 - 互联网困境 第 2 部分
             'Lesson 9: Assessment Day':
               key: 第 9 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_unit2_2020:
               display_name: 单元 2︰ 互联网
@@ -16995,7 +17070,7 @@ zh-CN:
               name: 项目 - 设计一个应用 第 5 部分
             'Lesson 11: Assessment Day':
               key: 第 11 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_unit3_2020:
               display_name: 第3单元：应用设计简介
@@ -17046,7 +17121,7 @@ zh-CN:
               name: 项目 - 决定制作者应用 第 3 部分
             'Lesson 15: Assessment Day':
               key: 单元 15：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_variables:
               display_name: 变量
@@ -17112,7 +17187,7 @@ zh-CN:
               name: 学期黑客马拉松第 5 部分
             'Lesson 18: Assessment Day':
               key: 第 18 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_lists:
               display_name: 列表
@@ -17141,7 +17216,7 @@ zh-CN:
               name: 并行和分布式算法
             'Lesson 6: Assessment Day':
               key: 第 6 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_unit6_2020:
               display_name: '单元 6: 算法'
@@ -17179,7 +17254,7 @@ zh-CN:
               name: 项目 - 制作库 第 3 部分
             'Lesson 11: Assessment Day':
               key: 第 11 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_parameters_return_values:
               display_name: 参数和返回值
@@ -17224,7 +17299,7 @@ zh-CN:
               name: 项目 - 讲述数据的故事 - 第 2 部分
             'Lesson 9: Assessment Day':
               key: 第 9 单元：评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_unit9_2020:
               display_name: '单元 9: 数据'
@@ -17266,12 +17341,14 @@ zh-CN:
             'Project: Innovation Simulation Part 6':
               key: 项目：创新模拟 第 6 部分
               name: 项目：创新模拟 第 6 部分
+              description_student: 课程概述
             'Project: Innovation Simulation Part 7':
               key: 项目：创新模拟 第 7 部分
               name: 项目：创新模拟 第 7 部分
+              description_student: 课程概述
             'Lesson 14: Unit Assessment Day':
               key: 第 14 课：单元评估日
-              name: 评估日
+              name: 单元 15：评估日
           lesson_groups:
             csp_unit10_2020:
               display_name: 第10单元：网络安全和全球影响
@@ -17284,36 +17361,58 @@ zh-CN:
             Learn to Drag and Drop:
               key: 学习拖放
               name: 学习拖放
+              description_student: 点击并拖拽来完成难题。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             'Programming: Happy Maps':
               key: '编程: 快乐地图'
               name: 快乐地图
+              description_student: 写出指令来让福乐波到达水果。
+              description_teacher: 如果学生理解了计划一个序列和将序列编码成合适的语言的不同，从算法到编程的过渡可能会很简短。这个活动会帮助学生获得读写简短代码的体验。
             Sequencing with Scrat:
               key: 斯奎特和序列
               name: 斯奎特和序列
+              description_student: 编程让斯奎特到达橡子。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Programming in Ice Age:
               key: 在冰河时代里编程
               name: 与斯奎特一起编程
+              description_student: 写程序来帮助斯奎特到达橡子。
+              description_teacher: 用《冰河世纪》中的角色，学生们可以开发序列算法，来让斯奎特从迷宫的一端移动到另一端的橡子那里。要做到这些，需要将代码模块堆成一个序列，让它往前移动，左转或右转。
             Programming with Rey and BB-8:
               key: 与雷伊，BB-8一起编程
               name: 与雷伊，BB-8一起编程
+              description_student: 帮助 BB-8 收集废金属。
+              description_teacher: 这节课，学生会用新学会的编程技巧来用更复杂的方式帮助 BB-8 在更棘手的地图上导航。
             'Loops: Happy Loops':
               key: '循环: 快乐循环'
               name: '循环: 快乐循环'
+              description_student: 用循环帮福乐波解决更麻烦的问题。
+              description_teacher: 循环是编程中非常有用而又强大的工具。为了理解循环的用处，学生们需要被驱动去用简单的方法来解决单调的问题。
             Loops in Ice Age:
               key: 冰河时代里的循环
               name: 斯奎特和循环
+              description_student: 用循环帮助斯奎特走过更多地方。
+              description_teacher: 在 Code.org 上，基于 "快乐循环" 中重复指令的概念，这个阶段会让学生用循环更高效的获得橡子。
             Loops in Collector:
               key: 收集器中的循环
               name: 收集器中的循环
+              description_student: 帮助冒险家罗瑞尔收集地下的宝藏。
+              description_teacher: 基于"快乐循环"中重复指令的概念，这个阶段会让学生用循环来在Code.org上更有效的收集宝藏。
             Ocean Scene with Loops:
               key: 艺术家里的循环
               name: 艺术家里的循环
+              description_student: 用循环和规律来完成这些图画。
+              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             'Events: The Big Event':
               key: '事件: 大事件'
               name: 大事件少儿版。
+              description_student: 当老师按下巨大的遥控器时，移动并喊出来。
+              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
+              description_student: 创建自己的游戏或故事。
+              description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -17333,39 +17432,63 @@ zh-CN:
             Digital Trails:
               key: 数字小径
               name: 数字小径
+              description_student: '了解数字足迹以及如何在访问网站时保证安全。 '
             Move It, Move It:
               key: 移动它，移动它！
               name: 移动它，移动它！
+              description_student: 为同学编程，让他们小心的从一个地方移动到另一个地方。
+              description_teacher: 本课程为学生在心理上，为课程过程中遇到编码练习做好准备。在小团队中，学生将通过身体活动来为同学编程，以使他们从一个地方到另一个地方小心地前进到目标。
             Sequencing in Maze:
               key: 迷宫中的序列
               name: 愤怒的小鸟中的序列
+              description_student: 帮助红色《愤怒的小鸟》沿着道路到达顽皮的猪。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Programming in Maze:
               key: 迷宫编程
               name: 迷宫编程
+              description_student: 编程来帮助《愤怒的小鸟》通过迷宫。
+              description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Programming in Harvester:
               key: 与收割者编程
               name: 与收割者编程
+              description_student: 帮助收获者沿着道路收集蔬菜。
+              description_teacher: '学生们会在收获者环境中使用已学会的编程概念。现在，和让角色到达目标不同，学生们必须用新模块来收集玉米。学生们会继续发展序列的算法技巧，并开始了调试的过程。 '
             'Loops: Getting Loopy':
               key: '循环: 变得糊涂'
               name: 越来越糊涂
+              description_student: 这节课中，会用重复循环来制作舞蹈派对！
+              description_teacher: 随着编写出更长的和更有趣的程序，代码中常常会包含很多重复部分。在本课中，学生将通过观察舞蹈中重复的动作规律，学习如何使用循环来更轻松地执行很多重复指令。
             Loops in Harvester:
               key: 收割者中的循环
               name: 收割者中的循环
+              description_student: 用循环帮助收获者收获更多！
+              description_teacher: 在 Code.org 上，基于 "快乐循环" 中重复指令的概念，这个阶段会让学生用循环更高效的收获玉米。
             Loops in Collector:
               key: 收集器中的循环
               name: 收集器中的循环
+              description_student: 为冒险家罗瑞尔编程来在开放的洞穴中收集宝藏。
+              description_teacher: 这节课中，学生们会继续学习循环的概念。在这里，冒险家罗瑞尔用循环在开放的洞穴中收集宝藏。新的`获得宝藏`模块用来帮助他的旅行。
             Loops in Artist:
               key: 艺术家里的循环
               name: 用循环来画花园
+              description_student: 用规律和循环来完成这幅图画。
+              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个在线课程中，循环被用来遍历迷宫并收集宝藏。在这里，学生们用循环来创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             The Right App:
               key: 正确的应用程序
               name: 正确的应用程序
+              description_student: 画出自己的智能手机应用程序。
+              description_teacher: '这节课让学生们认识到计算机科学可以在现实生活中帮助人们。首先，学生们会感受一些虚构的智能手机用户的情况，来帮助他们找到
+                “正确的应用” 来解决需要。然后，学生们会练习同理心和创造力来画出自己的智能手机应用来解决另外一位用户的需求。 '
             'Events: The Big Event':
               key: '事件: 大事件'
               name: 大事件少儿版。
+              description_student: 当老师按下巨大的遥控器时，移动或喊出来。
+              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
+              description_student: 用事件来创作故事或交互的游戏。
+              description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -17390,50 +17513,83 @@ zh-CN:
             'Programming: My Robotic Friends':
               key: '编程: 我的机器人朋友'
               name: '编程: 我的机器人朋友'
+              description_student: 这节课，会让同学来假装是机器人，并给他们编程序，让他们来完成叠杯子的图案。
+              description_teacher: 学生会使用一些符号来代替代码，设计算法来指挥 "机器人" 用不同的方式来堆叠杯子。他们将轮流扮演机器人，仅对同伴定义的算法做出反应。本部分教给学生符号与动作之间的联系，算法与程序之间的区别以及有用的调试技巧。
             Programming in Maze:
               key: 迷宫编程
               name: 迷宫编程
+              description_student: 通过愤怒的小鸟学习序列和算法。
+              description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Debugging in Maze:
               key: 迷宫里的调试
               name: 迷宫里的调试
+              description_student: 找到难题中的问题，并练习调试技巧。
+              description_teacher: 调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。
             Programming in Collector:
               key: 在收集器中编程
               name: 在收集器中编程
+              description_student: 写出算法来帮助冒险家罗瑞尔收集更多的宝石！
+              description_teacher: 在这一系列的难题中，学生们会继续发展对算法和调试的理解。通过新的角色，冒险家罗瑞尔，学生会创建序列的算法来让罗瑞尔验证路径走路，捡到宝藏。
             Programming in Artist:
               key: 艺术家里的编程
               name: 艺术家里的编程
+              description_student: 通过小艺术家编程创造美丽的图画。
+              description_teacher: 这节课中，学生们会控制小艺术家来完成画画。小艺术家阶段让学生们用 `向前移动 100 像素`
+                和 `向右转 90 度` 这样的新模块来创造不断增加难度的图画。
             Binary Bracelets:
               key: 二进制的手镯
               name: 二进制的手镯
+              description_student: 创作自己的二进制手链，学习计算机如何记住信息！
+              description_teacher: 二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。
             'Loops: My Loopy Robotic Friends':
               key: '循环: 我糊涂的机器人朋友'
               name: '循环: 我糊涂的机器人朋友'
+              description_student: 这节课中，还会给同学编程。但能通过循环来解决更大、更复杂的问题。
+              description_teacher: 在最开始的 "我的机器人朋友" 活动的基础上，学生们会应对更大、更复杂的图案。为了对他们的 "机器人"
+                进行编程以完成这些更大的图案，需要在其指令中识别出可被循环代替的重复模式。
             Loops with Rey and BB-8:
               key: 与雷伊和BB-8一起循环
               name: 与雷伊和BB-8一起循环
+              description_student: '用循环帮助 BB-8 通过迷宫！ '
+              description_teacher: 基于 "快乐循环" 中重复指令的概念，这个阶段会让学生用循环来更高效的帮助 BB-8 通过迷宫。
             Loops in Harvester:
               key: 收割者中的循环
               name: 收割者中的循环
+              description_student: 用循环帮助收获者收集一些蔬菜！
             Looking Ahead:
               key: 展望未来
               name: 与《我的世界》往前看
+              description_student: 躲开岩浆！在《我的世界》里学习条件。
+              description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             Sticker Art with Loops:
               key: 艺术家里的循环
               name: 艺术家里的循环
+              description_student: 这节课中，循环会让小艺术家画出更酷的图像！
+              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             'Events: The Big Event':
               key: '事件: 大事件'
               name: 大事件
+              description_student: '玩游戏来学习事件。 '
+              description_teacher: 学生将学习的事件，与预先写好的算法相比有更大的灵活性。有时程序要响应用户的意图。事件能让程序更有趣，更有交互性。
             Build a Flappy Game:
               key: 创作像素鸟游戏
               name: 创作像素鸟游戏
+              description_student: 构建自己喜欢的像素鸟游戏，然后分享给朋友们！
+              description_teacher: 在这个特殊的阶段，学生们会使用事件处理函数来构建自己的像素鸟游戏，来检测鼠标点击以及对象碰撞。在这一关的最后，学生们可以改变外观或规则来定制游戏。
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
+              description_student: 是时候在剧本实验室里创作游戏了！
+              description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             Picturing Data:
               key: 图片数据
               name: 图片数据
+              description_student: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
+              description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
             'End of Course Project: Create a Play Lab Game':
               name: 课程结束项目
+              description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+              description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -17457,60 +17613,104 @@ zh-CN:
             'Algorithms: Graph Paper Programming':
               key: '算法: 图纸编程'
               name: 方格纸编程
+              description_student: 在这节课中，会给你的同学编程来画画！
+              description_teacher: '通过给别人"编程"来画图，学生们有机会通过好玩又容易的方法，来体验一些编程的核心概念。课程开始时，会让学生通过符号来指挥其他人给方格纸上的方块涂色来重现已有的图画。如果有时间，课程还可以让学生们试试自己创建出的图画。  '
             Introduction to Online Puzzles:
               key: 在线拼图简介
               name: 在线拼图简介
+              description_student: 这堂课会让你练习在这个课程中所需要的技巧。
+              description_teacher: 在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割者。
             Relay Programming:
               key: 编程接力
               name: 编程接力
+              description_student: 记住，在课程开始时，你什么时候用代码画过画？在这堂课中，你会和团队一起合作，做出一些非常相似的东西！
             Debugging in Collector:
               key: 在收集器中调试
               name: 在收集器中调试
+              description_student: 你曾经在编码时遇到困难吗？这堂课中，你会学习调试的秘密。调试是找到并修复你的代码问题的过程。
+              description_teacher: 在这堂在线活动中，学生们会在这个“收集器”环境中练习调试。学生们能练习阅读并编辑代码来修复关卡中的简单算法、循环和嵌套循环。
             Events in Bounce:
               key: 反弹事件
               name: 反弹事件
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
             Build a Star Wars Game:
               key: 建立一个星球大战游戏!
               name: 建立一个星球大战游戏!
+              description_student: 在这堂课程，创建自己的星球大战游戏来体会原力吧。
+              description_teacher: 在这堂课中，学生们会练习使用事件来创建一个能在线共享的游戏。学生们会被引导学习事件，用R2-D2和其它星球大战的角色，来创造他们自己的游戏。
             Dance Party:
               key: 舞蹈派对
               name: 舞蹈派对
+              description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
+              description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
             Loops in Ice Age:
               key: 冰河时代里的循环
               name: 冰河时代里的循环
+              description_student: 这节课会使用重复模块来更高效的帮助斯奎特到达橡子。
+              description_teacher: 这个阶段是快速介绍循环的使用，学生们会使用`重复`模块来更高效的让斯奎特到达橡子。
             Loops in Artist:
               key: 艺术家里的循环
               name: 艺术家里的循环
+              description_student: 这节课中，循环会让小艺术家画出更酷的图像！
+              description_teacher: 本次课建立在前面课程对循环的理解上，并给学生提供机会来创造真正的作品。这次活动也是一次额外的解决问题的调试练习。
             Nested Loops in Bee:
               key: 蜜蜂里的嵌套循环
               name: 迷宫里的嵌套循环
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会介绍将循环嵌套起来会发生什么。
+              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Conditionals with Cards:
               key: 用 扑克牌 的 条件子句
               name: 用 扑克牌 的 条件子句
+              description_student: 是时候玩游戏了，在满足某种条件下才能得分。
+              description_teacher: "这堂课演示了如何用条件来为特定的信息定制程序。在写程序时，不会总是有所有的信息。有时，需要在某种情况下做出一些不同的事情，甚至当代码运行时，不知道什么情况是正确的。这时就要用条件。条件让计算机基于运行时的条件来做出决定。\r\n\r\n"
             Conditionals in Bee:
               key: 蜜蜂里的条件
               name: 蜜蜂里的条件
+              description_student: '现在，你理解条件了。是时候来给蜜蜂编程，让他们何时收集花蜜并酿蜂蜜了。 '
+              description_teacher: 到这时，学什么一直在写代码，来让代码在每次执行时都是完全一样的过程 - 虽然很可靠，但是不够灵活。这堂课中，班级会学习用条件来变成，这允许他们写出根据的程序，能根据遇到的不同的情况有不同的功能。
             While Loops in Farmer:
               key: 当在农民循环中
               name: 当在农民循环中
+              description_student: 循环在代码中非常有用。这一课会教你一种新的循环：当循环！
             Until Loops in Maze:
               key: 迷宫里的直到循环
               name: 迷宫里的直到循环
+              description_student: 使用`直到`循环，就可以做出一些令人惊讶的事情！
+              description_teacher: 这次课中，学生会学习`直到`循环。学生们会构建程序让主要演员重复动作，`直到`满足希望的停止条件。
             Conditionals & Loops in Harvester:
               key: 收割者里的条件和循环
               name: 收割者里的条件和循环
+              description_student: 当使用条件时，不是每次都会很清楚。这一课会帮助你练习决定应该做什么。
+              description_teacher: 学生们会练习`当`循环，`直到`循环和`如果/否则`语句。所有这些模块都用了条件语句。通过练习这三种语句，学生们能学会写复杂而灵活的代码。
             'Unplugged: Binary':
               key: 离线：二进制
               name: 二进制图像
+              description_student: 用只有两个选项的语言来学习计算机如何储存图片。
+              description_teacher: 虽然很多人认为作为二进制就是严格的 0 和 1，学生会学习信息表达成各种二进制的概念。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
+                (如图像和颜色)。
             Artist Binary:
               key: 小艺术家：二进制
               name: 小艺术家：二进制
+              description_student: 这节课中，会学习如何只用 1 和 0 来制作图片。
+              description_teacher: 一系列的在线课程会让学生学习用开和关来制作图片。
             Be A Super Digital Citizen:
               key: 做一个超级数字公民
               name: 做一个超级数字公民
             End of Course Project:
               key: 课程结束项目
               name: 课程结束项目
+              description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+            lesson-6:
+              name: 与《我的世界》往前看
+              description_student: 躲开岩浆！在《我的世界》里学习条件。
+              description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
+            lesson-5:
+              name: 密码升级
+              description_student: 这节课中会学习如何使用密码保护信息，怎样创建出好的密码。
+            lesson-1:
+              name: 语言的力量
+              description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -17526,6 +17726,8 @@ zh-CN:
               display_name: 数字公民
             end_of_course_project:
               display_name: 课程结束项目
+            lessonGroup-6:
+              display_name: 数字公民
           student_description: 学生们会发展自己对于嵌套循环，当循环，条件，和事件的理解。在编码前，学生们会学到数字公民的内容。
         coursee-2021:
           title: 课程 E (2019)
@@ -17536,60 +17738,96 @@ zh-CN:
             Sequencing in the Maze:
               key: 迷宫中的序列
               name: 迷宫中的序列
+              description_student: 这堂课中，会学习如何写出自己的程序！
+              description_teacher: "在这组难题中，学生们会从 Code.org 在线工作区的介绍开始（或根据班级经验来定）。通过一些视频来介绍工作区的基本功能，包括`运行`、`重置`、以及`步进`按钮。视频里还会介绍：拖拽模块式编程，删除模块，连接模块。接下来，学生会在难题中，练习_序列_和_调试_技巧。\r\n调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。"
             Programming and Loops with the Artist:
               key: 艺术家的编程和循环
               name: 艺术家的编程和循环
+              description_student: 这节课中，循环会让小艺术家画出更酷的图像！
+              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             'Conditionals in Minecraft: Voyage Aquatic':
               key: "《我的世界：水上航行》的条件"
               name: "《我的世界：水上航行》的条件"
+              description_student: 在《我的世界》里，会学习条件。
+              description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             Conditionals:
               key: 条件语句
               name: 农夫和条件
+              description_student: 在这一有趣并有挑战的系列中，你能够明白计算机在某些条件下会做什么。
+              description_teacher: 这堂课向学生们介绍了`当`循环和`如果/否则`语句。_当循环_ 是只要条件为真就不停的重复命令。当循环被程序员们用来在不知道命令需要被重复多少次，但是直到什么时候需要被重复的时候使用。`如果/否则`语句经常被灵活的用在整个代码中，它能够帮助在某个条件成立是运行一些代码，不成立时运行另一些代码。
             Simon Says:
               key: Simon 说
-              name: Simon 说
+              description_student: 玩一下游戏，并思考用什么命令能得到正确的结果。
+              description_teacher: '这节课中，学生们会玩游戏，并促使思考什么样的命令才能产生正确的结果。这会帮助他们在接下来的课程中，更容易上手精灵图实验室。 '
             Learning Sprites with Sprite Lab:
               key: 在精灵图实验室学习精灵图
               name: 在精灵图实验室学习精灵图
+              description_student: 学习如何创建并编辑精灵图。
+              description_teacher: 这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。
             Alien Dance Party with Sprite Lab:
               key: 精灵图实验室中的外星人舞蹈派对
               name: 精灵图实验室中的外星人舞蹈派对
+              description_student: 创建能分享给同学的互动项目。
+              description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。  '
             Private and Personal Information:
               key: 私人和个人信息
               name: 私人和个人信息
+              description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
             About Me:
               key: 关于我
               name: 关于我
+              description_student: 通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。
+              description_teacher: "通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。\r\n"
             Digital Sharing:
               key: 数字共享
               name: 数字共享
+              description_student: '这节课中，会学到所有权和版权的挑战和利益。 '
             Nested Loops in Bee:
               key: 蜜蜂里的嵌套循环
               name: 迷宫里的嵌套循环
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。
+              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Nested Loops in Artist:
               key: 艺术家中的嵌套循环
               name: 艺术家中的嵌套循环
+              description_student: 更多的嵌套循环！这次，你能用嵌套循环画出更令人惊奇的图画！
             Nested Loops in Frozen:
               key: 冰雪奇缘里的嵌套循环
               name: 冰雪奇缘和嵌套循环
+              description_student: '安娜和爱莎的溜冰技巧都非常棒，但需要帮助才能在冰面上创作图案。使用嵌套循环来创建一些非常酷的东西。 '
+              description_teacher: 现在学生们知道如何分层循环了，可以创建出非常美丽的东西了。这堂课会让学生通过一系列的练习，用安娜和爱莎高超的溜冰技巧，来创造自己的图像。
             'Functions: Songwriting':
               key: '功能: 作曲'
               name: 写歌
+              description_student: 甚至摇滚巨星也需要编程技能。这堂课会通过歌词来教你函数。
+              description_teacher: 函数是计算机科学世界中最宏伟的结构之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
             Functions in Minecraft:
               key: "《我的世界》中的函数"
               name: "《我的世界》中的函数"
+              description_student: 你能说明如何使用函数来提高编程效率吗？
+              description_teacher: 在有趣互动的《我的世界》冒险中，学生们会理解函数是多么有用！
             Functions in Harvester:
               key: 收割者中的函数
               name: 收割者中的函数
+              description_student: 当你帮助农夫收获时，函数会节约你的大量工作。
+              description_teacher: 学生们已经练习了在小艺术家中创作令人难忘的设计，在蜜蜂中通过了各种迷宫。但今天，要用函数在收割者中收获作物。这堂课会鼓励学生用新的方法来使用函数，将函数和`当`循环、`如果/否则`语句组合起来。
             Functions in Artist:
               key: 艺术家之间的功能
               name: 艺术家之间的功能
+              description_student: 用函数来让复杂的图画变得更简单！
+              description_teacher: 学生们会学习Code.org上的函数。小艺术家中的大部分图片都会通过函数来创造或更改。为了一些更复杂的模式，学生们会学习一个函数内部调用另一个函数的嵌套函数。
             Designing for Accessibility:
               key: 辅助功能设计
               name: 辅助功能设计
+              description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
+              description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
             End of Course Project:
               key: 课程结束项目
               name: 课程结束项目
+              description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
+              description_teacher: "接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\r\n\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它熟悉的界面。（这可能是项目中最长的一个阶段。）最终，要给同学们展示最终的作品。"
+            lesson-4:
+              name: 做一个超级数字公民
           lesson_groups:
             ramp_up:
               display_name: 热身
@@ -17598,7 +17836,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             csf_nested_loops:
-              display_name: 循环嵌套
+              display_name: 条件语句
             csf_functions:
               display_name: 函数
             csf_impacts:
@@ -17615,70 +17853,116 @@ zh-CN:
             Functions in Minecraft:
               key: "《我的世界》中的函数"
               name: "《我的世界》中的函数"
+              description_student: 你能说明如何使用函数来提高编程效率吗？
+              description_teacher: 在有趣互动的《我的世界》冒险中，学生们会理解函数是多么有用！
             Learning Sprites with Sprite Lab:
               key: 在精灵图实验室学习精灵图
               name: 在精灵图实验室学习精灵图
+              description_student: 学习如何创建并编辑精灵图。
+              description_teacher: 这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。
             Events with Sprite Lab:
               name: 精灵图实验室中的外星人舞蹈派对
+              description_student: 创建能分享给同学的互动项目。
+              description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。   '
             Loops with the Artist:
               name: 艺术家的编程和循环
+              description_student: 这节课中，循环会让小艺术家画出更酷的图像！
+              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             Nested Loops in the Maze:
               key: 迷宫里的嵌套循环
               name: 迷宫里的嵌套循环
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会教你什么时候将一个循环放到另一个循环里。
+              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             The Power of Words:
               key: 语言的力量
               name: 语言的力量
+              description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
             Envelope Variables:
               key: 封装变量
               name: 封装变量
+              description_student: 封装和变量有一些相同之处：两者都能保存有用的东西。这里你会学到什么是变量，和它们令人惊奇的作用。
+              description_teacher: 变量被用作值的占位符，例如数字或词语。变量在编程中带来了很大的自由性。在编程中不需要打出同样的内容很多词，或者记住一个隐晦的数字，计算机科学家们用变量来引用它们。这节课帮助解释什么是变量，怎样通过不同的方法使用它们。变量的理念不容易领会，因此我们推荐在课程的结尾允许大量时间的讨论。
             Variables as Constant in Artist:
               key: 艺术家里的变量作为常数
               name: 艺术家和变量
+              description_student: 别忘了将创意带到课堂中！在这些关卡中，你会用变量做出了不起的图画。
+              description_teacher: 在本课中，学生会在小艺术家环境中学习使用变量的重复循环。学生会学习如何使用变量，来让代码更易于编写和阅读，即使变量在运行时不变化也是如此。
             Variables that Change in Bee:
               key: 蜜蜂里的变化的变量
               name: 蜜蜂与改变变量
+              description_student: 蜜蜂喜欢变量！
+              description_teacher: '本课程会展示，能在代码中变化的值会让程序变得有多强大。 '
             Variables that Change in Artist:
               key: 小艺术家里的变化的变量
               name: 小艺术家与改变变量
+              description_student: 本课程会使用在运行时变化的变量来画图。
+              description_teacher: 这节课中，学生们会在小艺术家环境中用变量来探索重复的设计。学生们会学习到变量如何能被用来让代码更容易书写和阅读。在指导的关卡后，学生们会在自由关卡中结束，他们能展示他们学到了什么，创造他们自己的图案。
             Simulating Experiments:
               key: 模拟实验
               name: 模拟实验
+              description_student: 在计算机上模拟运行，并通过修改变量来实验。
+              description_teacher: 通过运行精灵图实验室的简单模拟，学生可以体验到计算是如何被用于收集数据来发现趋势或模式。运行几次模拟以后，学生有机会能预测出变量是如何影响到输出的，并测试这些假设。
             AI for Oceans:
               key: 海洋环保中的人工智能
               name: 海洋环保中的人工智能
             Internet:
               key: 互联网
               name: 互联网
+              description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
+              description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
             For Loop Fun:
               key: 计数循环的乐趣
               name: 计数循环的乐趣
+              description_student: 你会在学习`计数循环`中获得很多乐趣！
+              description_teacher: '我们知道，循环让我们能一遍一遍的做一些事情，但现在，我们要学习如何用循环来构建正确的额外结构。这些新结构允许学生们创建更强大和动态的代码。 '
             For Loops in Bee:
               key: 蜜蜂式里的循环
               name: 蜜蜂式里的循环
+              description_student: 嗡嗡嗡。在这些关卡中，将会有一只蜜蜂来引导你用`计数循环`来采花蜜、酿蜂蜜。
+              description_teacher: 以蜜蜂为特点，这节课着重在计数循环，并用一个增量来解决复杂的关卡。学生们会从回顾前面课程的循环开始，然后学会用计数循环来更有效的解决复杂的问题。
             For Loops in Artist:
               key: 对于艺术家里的循环
               name: 对于艺术家里的循环
+              description_student: 准备好制作你的下一个杰作。这里，你会用`计数循环`来制作一些令人惊叹的图片。
+              description_teacher: 在这节课中，学生们会继续练习计数循环，这次是和小艺术家一起。学生们会组合变量、循环、和计数循环创建复杂的图像，来完成关卡。结束时，他们有机会在自由关卡中创建他们自己的艺术。
             Editing Behaviors:
               key: 编辑行为
               name: 编辑行为
+              description_student: 学习编写自己的精灵图行为！
+              description_teacher: 在这里，学生们会使用精灵图实验室创造出自己的行为。
             Virtual Pet:
-              name: 虚拟宠物
+              description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
+              description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
               key: 课程结束项目
               name: 课程结束项目
+              description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
+              description_teacher: "接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\r\n\r\n在\"探索\"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它合适的界面。（这可能是项目中最长的一个阶段。）学生们会在测试和相互评审后修改代码。最终，学生们要能在同学前展示最终的作品。"
+            lesson-1:
+              name: 辅助功能设计
+              description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
+              description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
+            lesson-6:
+              name: 向你介绍精灵图实验室
+            lesson-8:
+              name: 动作精灵图
           lesson_groups:
             ramp_up:
               display_name: 热身
             csf_digcit:
               display_name: 数字公民
             csf_variables:
-              display_name: 变量
+              display_name: 计数循环
             csf_for_loops:
               display_name: 计数循环
             csf_sprites:
-              display_name: 精灵图
+              display_name: 计算的影响
             end_of_course_project:
               display_name: 课程结束项目
+            lessonGroup-8:
+              display_name: 变量
+            lessonGroup-9:
+              display_name: 移除
           student_description: 学习用不同种类的循环、事件、函数和条件。研究不同的解决问题的计数，并讨论计算和互联网对社会的影响。在课程的第二部分中，设计并创建一个实际项目，并共享给你的亲友。
         express-2021:
           title: 速学课程 (2019)
@@ -17689,87 +17973,145 @@ zh-CN:
             Dance Party:
               key: 舞蹈派对
               name: 舞蹈派对
+              description_student: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
+              description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
             Programming with Angry Birds:
               key: 迷宫编程
               name: 迷宫编程
+              description_student: 编程来帮助《愤怒的小鸟》通过迷宫。
+              description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Debugging with Scrat:
               key: 斯奎特和调试
               name: 斯奎特和调试
+              description_student: 找到难题中的问题，并练习调试技巧。
+              description_teacher: 调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。
             Collecting Treasure with Laurel:
               key: 在收集器中编程
               name: 在收集器中编程
+              description_student: 写出算法来帮助冒险家罗瑞尔收集更多的宝石！
+              description_teacher: 在这一系列的难题中，学生们会继续发展对算法和调试的理解。通过新的角色，冒险家罗瑞尔，学生会创建序列的算法来让罗瑞尔验证路径走路，捡到宝藏。
             Creating Art with Code:
               key: 艺术家里的编程
               name: 艺术家里的编程
+              description_student: 通过小艺术家编程创造美丽的图画。
+              description_teacher: 这节课中，学生们会控制小艺术家来完成画画。小艺术家阶段让学生们用 `向前移动 100 像素`
+                和 `向右转 90 度` 这样的新模块来创造不断增加难度的图画。
             Loops with Rey and BB-8:
               key: 与雷伊和BB-8一起循环
               name: 与雷伊和BB-8一起循环
+              description_student: '用循环帮助 BB-8 通过迷宫！ '
+              description_teacher: 基于 "快乐循环" 中重复指令的概念，这个阶段会让学生用循环来更高效的帮助 BB-8 通过迷宫。
             Sticker Art with Loops:
               key: 艺术家里的循环
               name: 艺术家里的循环
+              description_student: 这节课中，循环会让小艺术家画出更酷的图像！
+              description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             Nested Loops in Maze:
               key: 迷宫里的嵌套循环
               name: 迷宫里的嵌套循环
+              description_student: 在循环里的循环里循环。这是什么意思？这节课会介绍将循环嵌套起来会发生什么。
+              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
             Snowflakes with Anna and Elsa:
               key: 冰雪奇缘里的嵌套循环
               name: 冰雪奇缘里的嵌套循环
+              description_student: '安娜和爱莎的溜冰技巧都非常棒，但需要帮助才能在冰面上创作图案。使用嵌套循环来创建一些非常酷的东西。 '
+              description_teacher: 现在学生们知道如何分层循环了，可以创建出非常美丽的东西了。这堂课会让学生通过一系列的练习，用安娜和爱莎高超的溜冰技巧，来创造自己的图像。
             'Looking Ahead with Minecraft ':
               key: '与《我的世界》往前看 '
               name: 与《我的世界》往前看
+              description_student: 躲开岩浆！在《我的世界》里学习条件。
+              description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             If/Else with Bee:
               key: 蜜蜂里的条件
               name: 蜜蜂里的条件
+              description_student: '现在，你理解条件了。是时候来给蜜蜂编程，让他们何时收集花蜜并酿蜂蜜了。 '
+              description_teacher: 到这时，学什么一直在写代码，来让代码在每次执行时都是完全一样的过程 - 虽然很可靠，但是不够灵活。这堂课中，班级会学习用条件来变成，这允许他们写出根据的程序，能根据遇到的不同的情况有不同的功能。
             While Loops with the Farmer:
               key: 当在农民循环中
               name: 当在农民循环中
+              description_student: 循环在代码中非常有用。这一课会教你一种新的循环：当循环！
             'Conditionals in Minecraft: Voyage Aquatic':
               key: "《我的世界：水上航行》的条件"
               name: "《我的世界：水上航行》的条件"
+              description_student: 在《我的世界》里，会学习条件。
+              description_teacher: 本课程最初由《编程一小时》在《我的世界》团队的帮助下创建。学生们有机会使用学到的知识来实践一些想法，还可以先看看条件语句。
             Until Loops in Maze:
               key: 迷宫里的直到循环
               name: 迷宫里的直到循环
+              description_student: 使用`直到`循环，就可以做出一些令人惊讶的事情！
+              description_teacher: 这次课中，学生会学习`直到`循环。学生们会构建程序让主要演员重复动作，`直到`满足希望的停止条件。
             Harvesting with Conditionals:
               key: 收割者里的条件和循环
               name: 收割者里的条件和循环
+              description_student: 当使用条件时，不是每次都会很清楚。这一课会帮助你练习决定应该做什么。
+              description_teacher: 学生们会练习`当`循环，`直到`循环和`如果/否则`语句。所有这些模块都用了条件语句。通过练习这三种语句，学生们能学会写复杂而灵活的代码。
             Functions in Minecraft:
               key: "《我的世界》中的函数"
               name: "《我的世界》中的函数"
+              description_student: 你能说明如何使用函数来提高编程效率吗？
+              description_teacher: 在有趣互动的《我的世界》冒险中，学生们会理解函数是多么有用！
             Functions with Harvester:
               key: 收割者中的函数
               name: 收割者中的函数
+              description_student: 当你帮助农夫收获时，函数会节约你的大量工作。
+              description_teacher: 学生们已经练习了在小艺术家中创作令人难忘的设计，在蜜蜂中通过了各种迷宫。但今天，要用函数在收割者中收获作物。这堂课会鼓励学生用新的方法来使用函数，将函数和`当`循环、`如果/否则`语句组合起来。
             Functions with Artist:
               key: 艺术家之间的功能
               name: 艺术家之间的功能
+              description_student: 用函数来让复杂的图画变得更简单！
+              description_teacher: 学生们会学习Code.org上的函数。小艺术家中的大部分图片都会通过函数来创造或更改。为了一些更复杂的模式，学生们会学习一个函数内部调用另一个函数的嵌套函数。
             Variables with Artist:
               key: 艺术家和变量
               name: 艺术家和变量
+              description_student: 别忘了将创意带到课堂中！在这些关卡中，你会用变量做出了不起的图画。
+              description_teacher: 在本课中，学生会在小艺术家环境中学习使用变量的重复循环。学生会学习如何使用变量，来让代码更易于编写和阅读，即使变量在运行时不变化也是如此。
             Changing Variables with Bee:
               key: 蜜蜂与改变变量
               name: 蜜蜂与改变变量
+              description_student: 蜜蜂喜欢变量！
+              description_teacher: '本课程会展示，能在代码中变化的值会让程序变得有多强大。 '
             Changing Variables with Artist:
               key: 小艺术家与改变变量
               name: 小艺术家与改变变量
+              description_student: 本课程会使用在运行时变化的变量来画图。
+              description_teacher: 这节课中，学生们会在小艺术家环境中用变量来探索重复的设计。学生们会学习到变量如何能被用来让代码更容易书写和阅读。在指导的关卡后，学生们会在自由关卡中结束，他们能展示他们学到了什么，创造他们自己的图案。
             For Loops with Bee:
               key: 蜜蜂式里的循环
               name: 蜜蜂式里的循环
+              description_student: 嗡嗡嗡。在这些关卡中，将会有一只蜜蜂来引导你用`计数循环`来采花蜜、酿蜂蜜。
+              description_teacher: 以蜜蜂为特点，这节课着重在计数循环，并用一个增量来解决复杂的关卡。学生们会从回顾前面课程的循环开始，然后学会用计数循环来更有效的解决复杂的问题。
             For Loops with Artist:
               key: 对于艺术家里的循环
               name: 对于艺术家里的循环
+              description_student: 准备好制作你的下一个杰作。这里，你会用`计数循环`来制作一些令人惊叹的图片。
+              description_teacher: 在这节课中，学生们会继续练习计数循环，这次是和小艺术家一起。学生们会组合变量、循环、和计数循环创建复杂的图像，来完成关卡。结束时，他们有机会在自由关卡中创建他们自己的艺术。
             Swimming Fish in Sprite Lab:
               key: 在精灵图实验室学习精灵图
               name: 在精灵图实验室学习精灵图
+              description_student: 学习如何创建并编辑精灵图。
+              description_teacher: 这节课，学生会学习精灵图实验室的两个核心概念：精灵图和行为。精灵图是在屏幕上可以移动、变化和操作的角色或对象。行为是精灵图在停止前会一直做的动作。
             Alien Dance Party:
               key: 外星人舞蹈派对
               name: 外星人舞蹈派对
+              description_student: 创建能分享给同学的互动项目。
             Behaviors in Sprite Lab:
               key: 编辑行为
               name: 编辑行为
+              description_student: 学习编写自己的精灵图行为！
+              description_teacher: 在这里，学生们会使用精灵图实验室创造出自己的行为。
             Virtual Pet with Sprite Lab:
               key: 虚拟宠物
               name: 虚拟宠物
+              description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
+              description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
               key: 课程结束项目
               name: 课程结束项目
+              description_student: 准备好大量的编码吧！是时候开始自己的项目了。
+            lesson-1:
+              name: 舞蹈派对
+              description_student: 该庆祝了！这节课，会创作自己的舞蹈派对。
+              description_teacher: 这节课中，学生会制作自己的交互舞蹈派对。这个活动需要声音，才能对音乐有响应。
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -17797,36 +18139,46 @@ zh-CN:
             Learn to Drag and Drop:
               key: 学习拖放
               name: 学习拖放
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Sequencing with Scrat:
               key: 斯奎特和序列
               name: 斯奎特和序列
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
             Programming in with Angry Birds:
               key: 用愤怒的小鸟联系编程
               name: 迷宫编程
+              description_teacher: 用愤怒的小鸟中的角色，学生们可以开发序列算法，来让小鸟从迷宫的一端移动到另一端的猪那里。要做到这些，他们需要将代码模块堆成一个序列，让小鸟往前移动，左转或右转。
             Programming with Rey and BB-8:
               key: 与雷伊，BB-8一起编程
               name: 与雷伊，BB-8一起编程
+              description_teacher: 这节课，学生会用新学会的编程技巧来用更复杂的方式帮助 BB-8 在更棘手的地图上导航。
             Programming in Harvester:
               key: 与收割者编程
               name: 与收割者编程
+              description_teacher: '学生们会在收获者环境中使用已学会的编程概念。现在，和让角色到达目标不同，学生们必须用新模块来收集玉米。学生们会继续发展序列的算法技巧，并开始了调试的过程。 '
             Loops with Scrat:
               key: 斯奎特和循环
               name: 斯奎特和循环
             Loops with Laurel:
               key: 收集器中的循环
               name: 收集器中的循环
+              description_teacher: 这节课中，学生们会继续学习循环的概念。在这里，冒险家罗瑞尔用循环在开放的洞穴中收集宝藏。新的`获得宝藏`模块用来帮助他的旅行。
             Ocean Scene with Loops:
               key: 艺术家里的循环
               name: 艺术家里的循环
+              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             Drawing Gardens with Loops:
               key: 用循环来画花园
               name: 用循环来画花园
+              description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个在线课程中，循环被用来遍历迷宫并收集宝藏。在这里，学生们用循环来创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
             On the Move with Events:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
+              description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             A Royal Battle with Events:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
+              description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
           lesson_groups:
             csf_sequencing:
               display_name: 序列
@@ -17843,6 +18195,10 @@ zh-CN:
               name: 编码一个模拟
             Course F Introduction:
               name: 向你介绍精灵图实验室
+            Sprites in Action:
+              name: 动作精灵图
+            introducing-spritelab:
+              name: 向你介绍精灵图实验室
           lesson_groups:
             ramp_up:
               display_name: 介绍
@@ -17852,6 +18208,8 @@ zh-CN:
               display_name: 变量
             Sprites:
               display_name: 精灵图
+            variables:
+              display_name: 变量
         csd4-preview-2021:
           description: 4单元介绍了计算的更广泛的社会影响。通过一系列的设计挑战, 您将了解如何在开发解决问题的方法时更好地理解他人的需求。该单元的后半部分由一个迭代团队项目组成,
             在这个项目中，团队有机会确定他们所关心的需求、在纸上和应用程序实验室中的原型解决方案, 并与真正的用户测试解决方案以获得反馈并进一步推动迭代.
@@ -18136,3 +18494,67 @@ zh-CN:
               name: 第14课
             lesson15:
               name: 第 15 课
+        k5-onlinepd-2021:
+          description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          student_description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          description_short: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          description_audience: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: 欢迎来到 "教师的计算机科学基础"
+              name: 介绍
+            Understanding the Computer Science Fundamentals Courses:
+              key: 理解计算机科学基础课程
+              name: 理解计算机科学基础课程
+            Sequencing:
+              key: 序列
+              name: 序列
+            Loops:
+              key: 循环
+              name: 循环
+            Events:
+              key: 事件
+              name: 事件
+            Conditionals:
+              key: 条件语句
+              name: 条件语句
+            End of Course projects:
+              key: 结课项目
+              name: 结课项目
+            Functions:
+              key: 函数
+              name: 函数
+            Variables:
+              key: 变量
+              name: 变量
+            For Loops:
+              key: 计数循环
+              name: 计数循环
+            Sprite Lab:
+              key: 精灵图实验室
+              name: 精灵图实验室
+            Reviewing your reflections:
+              key: 评审反思
+              name: 评审反思
+            Next steps:
+              key: 下一步
+              name: 下一步
+            Module 1:
+              name: 模块 1
+            Getting Started:
+              name: 开始
+            What is Code.org:
+              name: 理解计算机科学基础课程
+            Lesson Planning:
+              name: 课程计划
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: 介绍
+            k5_basic_concepts_1:
+              display_name: 基本编程概念和教学策略
+            k5_diving_deeper_1:
+              display_name: 深入学习：课程 E 和 F
+            k5_next_steps_1:
+              display_name: 下一步
+            Introduction:
+              display_name: 介绍

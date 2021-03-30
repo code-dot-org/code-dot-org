@@ -96,11 +96,17 @@ ja:
     \ "
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: あなたもやってみませんか？
+  hoc_live_learn_more: もっと詳しく知る
   hoc_overview_oceans_tutorial_header: "  AI for Oceans  "
   hoc_overview_oceans_tutorial_desc: "  人工知能（AI）、機械学習、トレーニングデータ、偏見について学びながら、倫理的な問題やAIが世界の問題に対処するためにどのように利用できるかを探ります。
     \ "

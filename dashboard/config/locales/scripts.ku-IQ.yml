@@ -756,6 +756,10 @@ ku:
             Conditionals:
               key: مەرجیەکان
           lesson_groups:
+            ramp_up:
+              display_name: گرێکان
+            csf_nested_loops:
+              display_name: مەرجیەکان
             csf_functions:
               display_name: فرمانەکان
         coursef-2021:
@@ -763,8 +767,10 @@ ku:
             Internet:
               name: ئینتەرنێت
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: گۆڕاوەکان
+            lessonGroup-9:
+              display_name: لابردن
         express-2021:
           lesson_groups:
             csf_loops:
@@ -783,3 +789,19 @@ ku:
           lesson_groups:
             lessonGroup-3:
               display_name: گۆڕاوەکان
+            variables:
+              display_name: گۆڕاوەکان
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: گرێکان
+              name: گرێکان
+            Conditionals:
+              key: مەرجیەکان
+              name: مەرجیەکان
+            Functions:
+              key: فرمانەکان
+              name: فرمانەکان
+            Variables:
+              key: گۆڕاوەکان
+              name: گۆڕاوەکان

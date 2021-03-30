@@ -1804,6 +1804,10 @@ az:
             Conditionals:
               key: Şərti ifadələr
           lesson_groups:
+            ramp_up:
+              display_name: dövrlər
+            csf_nested_loops:
+              display_name: Şərti ifadələr
             csf_functions:
               display_name: Funksiyalar
         coursef-2021:
@@ -1812,12 +1816,16 @@ az:
               key: İnternet
               name: İnternet
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: dəyişənlər
+            lessonGroup-9:
+              display_name: sil
         express-2021:
           lessons:
             Dance Party:
               key: Rəqs şənliyi
+              name: Rəqs şənliyi
+            lesson-1:
               name: Rəqs şənliyi
           lesson_groups:
             csf_loops:
@@ -1840,9 +1848,35 @@ az:
               display_name: Giriş
             lessonGroup-3:
               display_name: dəyişənlər
+            variables:
+              display_name: dəyişənlər
         ai-unit-pilot:
           lessons:
             lesson14:
               name: Dərs 14
             lesson15:
               name: Dərs 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Giriş
+            Loops:
+              key: dövrlər
+              name: dövrlər
+            Events:
+              key: Hadisələr
+              name: Hadisələr
+            Conditionals:
+              key: Şərti ifadələr
+              name: Şərti ifadələr
+            Functions:
+              key: Funksiyalar
+              name: Funksiyalar
+            Variables:
+              key: dəyişənlər
+              name: dəyişənlər
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Giriş
+            Introduction:
+              display_name: Giriş

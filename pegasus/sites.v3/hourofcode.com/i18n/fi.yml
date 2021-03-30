@@ -138,11 +138,17 @@ fi:
   hoc_live_sign_up_title: 'Rekisteröidy Hour of Code Liveen
 
 '
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Opi reaaliajassa erityisvieraiden rinnalla! Kaiken ikäisiä
     ja kykyisiä opiskelijoita, myös tietokoneettomia, ovat tervetulleita. Liity postituslistallemme
     saadaksesi tallenteita jaksoista ja resursseista jatkaaksesi oppimista kotona.
     Katso aiemmat jaksot [täältä] (%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Liity joukkoomme
+  hoc_live_learn_more: Lue lisää
   hoc_overview_oceans_tutorial_header: AI for Oceans
   hoc_overview_oceans_tutorial_desc: 'Opi ymmärtämään tekoäly ja training data samalla,
     kun tutkit eettisiä ongelmia ja kuinka AI:ta voidaan käyttää näiden ongelmien

@@ -13,8 +13,13 @@ import {
   setAuthProviders,
   setPageType,
   setStageExtrasScriptIds,
+  setTextToSpeechScriptIds,
+  setPreReaderScriptIds,
   setValidGrades
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import currentUser, {
+  setCurrentUserId
+} from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleEnglishName} from '@cdo/apps/redux/localesRedux';
@@ -30,14 +35,17 @@ function showHomepage() {
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
   const query = queryString.parse(window.location.search);
-  registerReducers({locales, mapbox: mapboxReducer});
+  registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setStageExtrasScriptIds(homepageData.lessonExtrasScriptIds));
+  store.dispatch(setTextToSpeechScriptIds(homepageData.textToSpeechScriptIds));
+  store.dispatch(setPreReaderScriptIds(homepageData.preReaderScriptIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleEnglishName(homepageData.locale));
+  store.dispatch(setCurrentUserId(homepageData.currentUserId));
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
   }

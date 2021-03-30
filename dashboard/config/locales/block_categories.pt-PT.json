@@ -1,0 +1,72 @@
+{
+  "pt-PT": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Ações",
+          "Brushes": "Pincéis",
+          "Loops": "Ciclos",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Functions": "Funções",
+          "Variables": "Variáveis"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Mundo",
+          "Dancers": "Dançarinos",
+          "Properties": "Propriedades",
+          "Events": "Eventos",
+          "Numbers": "Números",
+          "Logic": "Lógica"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Loops": "Ciclos",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Games/Score": "Jogos/Pontuação"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Mundo",
+          "Locations": "Localizações",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Behaviors": "Comportamentos",
+          "Variables": "Variáveis",
+          "Math": "Matemática",
+          "Logic": "Lógica",
+          "Functions": "Funções",
+          "Text": "Texto",
+          "Comments": "Comentários"
+        },
+        "outbreak_freeplay": {
+          "World": "Mundo",
+          "Actions": "Ações",
+          "Behaviors": "Comportamentos",
+          "Events": "Eventos",
+          "Locations": "Localizações",
+          "Logic": "Lógica",
+          "Loops": "Ciclos",
+          "Math": "Matemática",
+          "Variables": "Variáveis",
+          "Functions": "Funções",
+          "Comments": "Comentários"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Mundo",
+          "Actions": "Ações",
+          "Events": "Eventos",
+          "Logic": "Lógica",
+          "Math": "Matemática"
+        }
+      }
+    }
+  }
+}

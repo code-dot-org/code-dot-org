@@ -74,7 +74,13 @@ export default function initPage(scriptEditorData) {
         initialIsCourse={scriptData.is_course}
         hasCourse={scriptEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
+        initialWeeklyInstructionalMinutes={
+          scriptData.weeklyInstructionalMinutes
+        }
         isMigrated={scriptData.is_migrated}
+        initialIncludeStudentLessonPlans={
+          scriptData.includeStudentLessonPlans || false
+        }
       />
     </Provider>,
     document.querySelector('.edit_container')

@@ -52,6 +52,7 @@ Scenario: Complete Bounce freeplay level
   Given I am on "http://studio.code.org/s/course3/lesson/15/puzzle/10?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   And element "#finishButton" is not visible
   And I press "runButton"
   And element "#finishButton" is visible

@@ -361,9 +361,13 @@ my:
           lesson_groups:
             csf_loops:
               display_name: Loops
+        coursee-2021:
+          lesson_groups:
+            ramp_up:
+              display_name: Loops
         coursef-2021:
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: Variables
         express-2021:
           lesson_groups:
@@ -379,3 +383,13 @@ my:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
+            variables:
+              display_name: Variables
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Loops
+              name: Loops
+            Variables:
+              key: Variables
+              name: Variables

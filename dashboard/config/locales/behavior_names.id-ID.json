@@ -1154,7 +1154,54 @@
           "moving north": "bergerak ke utara",
           "jittering": "gugup",
           "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "recovering": "memulihkan",
+          "moving left and right": "bergerak ke kiri dan ke kanan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
           "patrolling": "perondaan"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "wandering": "pengembaraan"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "memulihkan",
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "moving left and right": "bergerak ke kiri dan ke kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         }
       }
     }

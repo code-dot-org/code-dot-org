@@ -1,5 +1,6 @@
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import progressTableStyles from '@cdo/apps/templates/sectionProgress/progressTables/progressTableStyles.scss';
 
 export const DOT_SIZE = 30;
 export const DIAMOND_DOT_SIZE = 22;
@@ -12,14 +13,10 @@ export const BUBBLE_BORDER_WIDTH = 2;
 // Two pixels on each side for margin, plus 2 x border width
 export const BUBBLE_CONTAINER_WIDTH = DOT_SIZE + 4 + 2 * BUBBLE_BORDER_WIDTH;
 
-export const LETTER_BUBBLE_SIZE = 12;
+export const LETTER_BUBBLE_SIZE = 16;
 export const LETTER_BUBBLE_MARGIN = 3;
-export const LETTER_BUBBLE_PAD = 1;
 export const LETTER_BUBBLE_CONTAINER_WIDTH =
-  LETTER_BUBBLE_SIZE +
-  2 * LETTER_BUBBLE_MARGIN +
-  LETTER_BUBBLE_PAD +
-  2 * BUBBLE_BORDER_WIDTH;
+  LETTER_BUBBLE_SIZE + 2 * LETTER_BUBBLE_MARGIN + 2 * BUBBLE_BORDER_WIDTH;
 
 export const flex = {
   display: 'flex',
@@ -43,6 +40,16 @@ export const font = {
 export const CELL_PADDING = 4;
 export const cellContent = {
   padding: `0px ${CELL_PADDING}px`
+};
+
+export const studentListContent = {
+  height: parseInt(progressTableStyles.ROW_HEIGHT),
+  boxSizing: 'border-box',
+  padding: 10,
+  fontSize: 14,
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden'
 };
 
 // Style used when hovering

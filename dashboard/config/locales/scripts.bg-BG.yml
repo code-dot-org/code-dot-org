@@ -3859,6 +3859,8 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
+            lessonGroup-6:
+              display_name: Цифрови граждани
         coursee-2021:
           lessons:
             Conditionals:
@@ -3866,10 +3868,12 @@ bg:
             'Functions: Songwriting':
               name: Писане на песен
           lesson_groups:
+            ramp_up:
+              display_name: Повторения
             csf_digcit:
               display_name: Цифрови граждани
             csf_nested_loops:
-              display_name: Вмъкнати цикли
+              display_name: Условия
             csf_functions:
               display_name: Функции
         coursef-2021:
@@ -3887,11 +3891,15 @@ bg:
             csf_digcit:
               display_name: Цифрови граждани
             csf_variables:
-              display_name: Променливи
+              display_name: За циклите
             csf_data:
               display_name: Данни
             csf_for_loops:
               display_name: За циклите
+            lessonGroup-8:
+              display_name: Променливи
+            lessonGroup-9:
+              display_name: изтрива
         express-2021:
           lesson_groups:
             csf_loops:
@@ -3916,6 +3924,8 @@ bg:
               display_name: Въведение
             lessonGroup-3:
               display_name: Променливи
+            variables:
+              display_name: Променливи
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3932,3 +3942,32 @@ bg:
               name: Урок 14
             lesson15:
               name: Урок 15
+        k5-onlinepd-2021:
+          lessons:
+            Welcome to "Teaching Computer Science Fundamentals":
+              name: Въведение
+            Loops:
+              key: Повторения
+              name: Повторения
+            Events:
+              key: Събития
+              name: Събития
+            Conditionals:
+              key: Условия
+              name: Условия
+            Functions:
+              key: Функции
+              name: Функции
+            Variables:
+              key: Променливи
+              name: Променливи
+            For Loops:
+              key: За циклите
+              name: За циклите
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Въведение
+            k5_next_steps_1:
+              display_name: Следващи стъпки
+            Introduction:
+              display_name: Въведение

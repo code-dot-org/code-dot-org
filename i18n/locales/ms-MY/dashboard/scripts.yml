@@ -987,8 +987,12 @@ ms:
             Conditionals:
               key: Bersyarat
           lesson_groups:
+            ramp_up:
+              display_name: Gelung
             csf_sprites:
               display_name: Jin
+            csf_nested_loops:
+              display_name: Bersyarat
             csf_functions:
               display_name: Fungsi
         coursef-2021:
@@ -997,14 +1001,18 @@ ms:
               key: Internet
               name: Internet
           lesson_groups:
-            csf_variables:
-              display_name: Pembolehubah
-            csf_sprites:
+            ramp_up:
               display_name: Jin
+            lessonGroup-8:
+              display_name: Pembolehubah
+            lessonGroup-9:
+              display_name: alihkan
         express-2021:
           lessons:
             Dance Party:
               key: Majlis Tari-Menari
+              name: Majlis Tari-Menari
+            lesson-1:
               name: Majlis Tari-Menari
           lesson_groups:
             csf_loops:
@@ -1034,7 +1042,26 @@ ms:
               display_name: Pembolehubah
             Sprites:
               display_name: Jin
+            variables:
+              display_name: Pembolehubah
         contagion-pilot:
           description_short: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
           student_description: 'Gunakan Makmal Jin untuk memprogramkan simulasi wabak virus.'
+        k5-onlinepd-2021:
+          lessons:
+            Loops:
+              key: Gelung
+              name: Gelung
+            Events:
+              key: Acara-acara
+              name: Acara-acara
+            Conditionals:
+              key: Bersyarat
+              name: Bersyarat
+            Functions:
+              key: Fungsi
+              name: Fungsi
+            Variables:
+              key: Pembolehubah
+              name: Pembolehubah

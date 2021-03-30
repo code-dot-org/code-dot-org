@@ -700,7 +700,7 @@ it:
         csd_external_netflix_data: In che modo Netflix crea show televisivi e suggerimenti
           sui film?
         csd_external_waze_data: Perchè cosi tanti utenti sono ossesionati con Waze?
-        csd_gamelab_animation_tab: La scheda dell'animazione
+        csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_velocity: Velocità
         csd_weblab_intro_1: Introduzione a Sviluppo Web - Parte 1
         csd_weblab_intro_2: Introduzione a Sviluppo Web - Parte 2
@@ -855,7 +855,7 @@ it:
         csd_applab_loops: Loop in Sviluppo App
         csd_problem_solving_process: Il Processo di Risoluzione dei Problemi
         CSF_Going_Places_Safely: Il mio quartiere digitale
-        CSF_SpriteLab_Intro_v2: Introducendo lo Sviluppo Personaggi
+        CSF_SpriteLab_Intro_v2: Introduzione al Laboratorio dei Personaggi
         CSF_Spritelab_MakeSprite_v2: Come creare un personaggio
         CSF_SpriteLab_SpritesInAction_v2: Personaggi in azione
         csd_debugging: Correzione errori (debugging)

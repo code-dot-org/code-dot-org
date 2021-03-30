@@ -430,11 +430,11 @@
         "CSD U4L16 autoSFLP_2019": "Resumen de la lección",
         "CSD U5 Amazon Data Video": "Recopilar información sobre los usuarios",
         "CSD U5 Amazon Data Video_2018": "Recopilar información sobre los usuarios",
-        "CSD U5 Amazon Data Video_2019": "Cómo Amazon utiliza los datos",
-        "CSD U5 Netflix Data Video_2019": "Cómo Netflix utiliza los datos",
+        "CSD U5 Amazon Data Video_2019": "Cómo utiliza los datos Amazon",
+        "CSD U5 Netflix Data Video_2019": "Como usa los datos Netflix ",
         "CSD U5 Waze Data Video": "Recopilar información sobre los usuarios",
         "CSD U5 Waze Data Video_2018": "Recopilar información sobre los usuarios",
-        "CSD U5 Waze Data Video_2019": "Cómo Waze utiliza los datos",
+        "CSD U5 Waze Data Video_2019": "Cómo utiliza los datos  Waze",
         "CSD U5 binary video": "Binario y datos",
         "CSD U5 binary video_2018": "Binario y datos",
         "CSD U5 binary video_2019": "Binario y datos",
@@ -774,7 +774,16 @@
         "scrat_loops_C-F_video_2020": "Video de bucles en la Era de Hielo",
         "CSD U1L01 TFMD_2018": "Resumen de la lección",
         "CSD U1L01 TFMD_2019": "Resumen de la lección",
-        "outbreak_freeplay": "Juego libre"
+        "outbreak1": "Simulación de un virus",
+        "outbreak2": "Simulación de un virus",
+        "outbreak3": "Simulación de un virus",
+        "outbreak4": "Modificar tu simulación",
+        "outbreak6": "Probabilidad Aleatoria",
+        "outbreak7": "Inmunidad y vacunas",
+        "outbreak8": "Comparte un mensaje",
+        "outbreak_freeplay": "Caja de herramientas ampliada",
+        "outbreak_freeplay_basic": "Caja de herramientas estándar",
+        "CSD: For Loop_2019": "Vídeo: Bucles \"for\""
       }
     }
   }

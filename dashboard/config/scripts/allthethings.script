@@ -259,7 +259,7 @@ level 'allthethings-mini-rubric-gamelab', assessment: true
 lesson 'Pluralsight Test', display_name: 'Pluralsight Test', lockable: true, has_lesson_plan: false
 level 'Pluralsight LevelGroup Test', assessment: true
 
-lesson 'Externals Optionally Displayed as Unplugged', display_name: 'Externals Optionally Displayed as Unplugged', has_lesson_plan: false
+lesson 'Externals Optionally Displayed as Unplugged', display_name: 'Externals Optionally Displayed as Unplugged', has_lesson_plan: false, unplugged: true
 level 'allthethings_external_displayed_as_unplugged'
 level 'allthethings_external_not_displayed_as_unplugged'
 
@@ -281,4 +281,9 @@ level 'allthethings HOC ML Fish 1'
 
 lesson 'AI Lab', display_name: 'AI Lab', has_lesson_plan: false
 level 'allthethings AI Lab 1'
+level 'AppLab AI Enabled'
+
+lesson 'Java Lab', display_name: 'Java Lab', has_lesson_plan: false
+level 'Allthethings Java Lab 1'
+level 'Allthethings Java Lab 2'
 

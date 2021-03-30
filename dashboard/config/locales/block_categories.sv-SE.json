@@ -1,0 +1,72 @@
+{
+  "sv-SE": {
+    "data": {
+      "block_categories": {
+        "Course F: Artist Project_2020": {
+          "Actions": "Åtgärder",
+          "Brushes": "Borstar",
+          "Loops": "loopar",
+          "Math": "Matte",
+          "Logic": "Logik",
+          "Functions": "funktioner",
+          "Variables": "variabler"
+        },
+        "CourseD_EOC_dance": {
+          "World": "Världen",
+          "Dancers": "Dansare",
+          "Properties": "Egenskaper",
+          "Events": "Händelser",
+          "Numbers": "Siffror",
+          "Logic": "Logik"
+        },
+        "CourseD_EOC_starwars": {
+          "Actions": "Åtgärder",
+          "Events": "Händelser",
+          "Loops": "loopar",
+          "Math": "Matte",
+          "Logic": "Logik",
+          "Games/Score": "Spel/Poäng"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "World": "Världen",
+          "Actions": "Åtgärder",
+          "Events": "Händelser",
+          "Behaviors": "Beteenden"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "World": "Världen",
+          "Locations": "Platser",
+          "Actions": "Åtgärder",
+          "Events": "Händelser",
+          "Behaviors": "Beteenden",
+          "Variables": "variabler",
+          "Math": "Matte",
+          "Logic": "Logik",
+          "Functions": "funktioner",
+          "Text": "text",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay": {
+          "World": "Världen",
+          "Actions": "Åtgärder",
+          "Behaviors": "Beteenden",
+          "Events": "Händelser",
+          "Locations": "Platser",
+          "Logic": "Logik",
+          "Loops": "loopar",
+          "Math": "Matte",
+          "Variables": "variabler",
+          "Functions": "funktioner",
+          "Comments": "Kommentarer"
+        },
+        "outbreak_freeplay_basic": {
+          "World": "Världen",
+          "Actions": "Åtgärder",
+          "Events": "Händelser",
+          "Logic": "Logik",
+          "Math": "Matte"
+        }
+      }
+    }
+  }
+}

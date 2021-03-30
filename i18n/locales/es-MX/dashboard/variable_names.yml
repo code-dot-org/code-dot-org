@@ -1,0 +1,37 @@
+es-MX:
+  data:
+    variable_names:
+      Blue: Azul
+      Green: Verde
+      Red: Rojo
+      actor: actor
+      armlength: Longitud de brazo
+      binary: binario
+      birds: pájaros
+      bodylength: Longitud de cuerpo
+      cats: gatos
+      color: color
+      counter: contador
+      direction: dirección
+      dogs: perros
+      height: altura
+      honey: miel
+      i: i
+      left: izquierda
+      length: longitud
+      name: nombre
+      nectar: néctar
+      nectars: néctares
+      points: puntos
+      random: al azar
+      repeat: repetir
+      right: derecha
+      score: puntuación
+      shout: gritar
+      sides: lados
+      size: tamaño
+      speed: velocidad
+      variable: variable
+      width: ancho
+      wizard: mago
+      x: x

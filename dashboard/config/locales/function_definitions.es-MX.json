@@ -57,6 +57,9 @@
           },
           "draw cord": {
             "name": "dibujar una cuerda"
+          },
+          "draw R pad": {
+            "name": "dibuja la cuadrícula R"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -701,7 +704,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -719,7 +723,8 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Geometric Sun_2018": {
@@ -733,7 +738,8 @@
             "name": "dibujar ventanas"
           },
           "rectangle": {
-            "name": "rectángulo"
+            "name": "rectángulo",
+            "description": "jajaja"
           },
           "sun": {
             "name": "sol"
@@ -751,14 +757,15 @@
             "name": "triángulo"
           },
           "square": {
-            "name": "cuadrado"
+            "name": "cuadrado",
+            "description": "jajaja"
           }
         },
         "Guess The Number": {
           "check guess": {
             "name": "verificar hipótesis",
             "parameters": {
-              "theGuess": "la Suposición"
+              "theGuess": "laSuposición"
             }
           }
         },
@@ -768,7 +775,8 @@
             "parameters": {
               "length": "longitud",
               "sides": "lados"
-            }
+            },
+            "description": "La forma cambia en función de cuántos lados tiene actualmente.  Se necesitan dos parámetros, longitud y lados. Longitud"
           },
           "draw a loop": {
             "name": "dibujar un bucle",
@@ -793,7 +801,8 @@
             }
           },
           "n-sided shape": {
-            "name": "forma de n lados"
+            "name": "forma de n lados",
+            "description": "La forma cambia en función de cuántos lados tiene actualmente.  Se necesitan dos parámetros, longitud y lados. Longitud"
           },
           "draw spiral circle": {
             "name": "dibujar un círculo en espiral",
@@ -3869,6 +3878,56 @@
           },
           "draw bit": {
             "name": "dibujar un poco"
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "dibujar una estrella",
+            "description": "Dibuja una estrella especificando sus puntos y la longitud de sus lados ",
+            "parameters": {
+              "points": "puntos",
+              "length": "longitud"
+            }
+          },
+          "draw a circle": {
+            "name": "dibujar un círculo",
+            "description": "Dibuja un circulo especificando su radio",
+            "parameters": {
+              "radius": "radio"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibujar un molinete",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud",
+              "repeat": "repetir"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibujar un triángulo",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a shape": {
+            "name": "dibujar una forma",
+            "parameters": {
+              "sides": "lados",
+              "length": "longitud"
+            }
+          },
+          "draw a house": {
+            "name": "dibujar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a square": {
+            "name": "Dibuje un cuadrado",
+            "parameters": {
+              "length": "longitud"
+            }
           }
         }
       }

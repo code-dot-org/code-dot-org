@@ -17,22 +17,25 @@ class Foorm::Library < ApplicationRecord
   include Seeded
 
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
+  validates :name, :version, presence: true
 
-  after_save :write_library_to_file
+  after_commit :write_library_to_file
 
   def self.setup
-    Dir.glob('config/foorm/library/**/*.json').each do |path|
-      # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
-      # we get full_name: "surveys/pd/pre_workshop_survey"
-      #      and version: 0
-      unique_path = path.partition("config/foorm/library/")[2]
-      filename_and_version = File.basename(unique_path, ".json")
-      filename, version = filename_and_version.split(".")
-      version = version.to_i
-      full_name = File.dirname(unique_path) + "/" + filename
+    # Seed all libraries inside of a transaction, such that all libraries are imported/updated successfully
+    # or none at all.
+    ActiveRecord::Base.transaction do
+      Dir.glob('config/foorm/library/**/*.json').each do |path|
+        # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
+        # we get full_name: "surveys/pd/pre_workshop_survey"
+        #      and version: 0
+        unique_path = path.partition("config/foorm/library/")[2]
+        filename_and_version = File.basename(unique_path, ".json")
+        filename, version = filename_and_version.split(".")
+        version = version.to_i
+        full_name = File.dirname(unique_path) + "/" + filename
 
-      # Let's load the JSON text.
-      begin
+        # Let's load the JSON text.
         library = Foorm::Library.find_or_initialize_by(
           name: full_name,
           version: version
@@ -58,7 +61,7 @@ class Foorm::Library < ApplicationRecord
             library_question.save! if library_question.changed?
           end
         end
-      rescue
+      rescue JSON::ParserError
         raise format('failed to parse %s', full_name)
       end
     end

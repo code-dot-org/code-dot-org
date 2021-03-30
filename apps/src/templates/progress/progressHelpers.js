@@ -4,7 +4,10 @@ import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {TestResults} from '@cdo/apps/constants';
-import {activityCssClass} from '@cdo/apps/code-studio/activityUtils';
+import {
+  activityCssClass,
+  resultFromStatus
+} from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
 /**
@@ -113,64 +116,107 @@ export function isLevelAssessment(level) {
 }
 
 /**
- * Checks if a whole stage is assessment levels
+ * Checks if a whole lesson is assessment levels
  * @param {[]} levels An array of levels
- * @returns {bool} If all the levels in a stage are assessment levels
+ * @returns {bool} If all the levels in a lesson are assessment levels
  */
-export function stageIsAllAssessment(levels) {
+export function lessonIsAllAssessment(levels) {
   return levels.every(level => level.kind === LevelKind.assessment);
 }
 
 /**
- * Summarizes stage progress data.
- * @param {[]} levelsWithStatus An array of objects each representing
- * students progress in a level
- * @returns {object} An object with a total count of levels in each of the
- * following buckets: total, completed, imperfect, incomplete, attempted.
+ * Computes summary of a student's progress in a lesson's levels.
+ * @param {{id: studentLevelProgressType}} studentLevelProgress
+ * An object keyed by level id containing objects representing the student's
+ * progress in that level
+ * @param {levelType[]} levels An array of levels
+ * @returns {studentLessonProgressType}
+ * An object representing student's progress in the lesson
  */
-export function summarizeProgressInStage(levelsWithStatus) {
+function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   // Filter any bonus levels as they do not count toward progress.
-  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
-
-  // Get counts of statuses
-  let statusCounts = {
-    total: levelsWithStatus.length,
-    completed: 0,
-    imperfect: 0,
-    incomplete: 0,
-    attempted: 0
-  };
-  for (let i = 0; i < levelsWithStatus.length; i++) {
-    const status = levelsWithStatus[i].status;
-    switch (status) {
-      case LevelStatus.perfect:
-      case LevelStatus.submitted:
-      case LevelStatus.free_play_complete:
-      case LevelStatus.completed_assessment:
-      case LevelStatus.readonly:
-        statusCounts.completed = statusCounts.completed + 1;
-        break;
-      case LevelStatus.not_tried:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        break;
-      case LevelStatus.attempted:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-        statusCounts.attempted = statusCounts.attempted + 1;
-        break;
-      case LevelStatus.passed:
-        statusCounts.imperfect = statusCounts.imperfect + 1;
-        break;
-      // All others are assumed to be not tried
-      default:
-        statusCounts.incomplete = statusCounts.incomplete + 1;
-    }
+  const filteredLevels = lessonLevels.filter(level => !level.bonus);
+  if (!filteredLevels.length) {
+    return null;
   }
-  return statusCounts;
+
+  const completedStatuses = [
+    LevelStatus.perfect,
+    LevelStatus.submitted,
+    LevelStatus.free_play_complete,
+    LevelStatus.completed_assessment,
+    LevelStatus.readonly
+  ];
+
+  let attempted = 0;
+  let imperfect = 0;
+  let completed = 0;
+  let timeSpent = 0;
+  let lastTimestamp = 0;
+
+  filteredLevels.forEach(level => {
+    const levelProgress = studentLevelProgress[level.id];
+    if (levelProgress) {
+      attempted += levelProgress.status === LevelStatus.attempted;
+      imperfect += levelProgress.status === LevelStatus.passed;
+      completed += completedStatuses.includes(levelProgress.status);
+      timeSpent += levelProgress.timeSpent || 0;
+      lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp || 0);
+    }
+  });
+
+  const incomplete = filteredLevels.length - completed - imperfect;
+  const isLessonStarted = attempted + imperfect + completed > 0;
+
+  if (!isLessonStarted) {
+    return null;
+  }
+
+  const getPercent = count => (100 * count) / filteredLevels.length;
+  return {
+    incompletePercent: getPercent(incomplete),
+    imperfectPercent: getPercent(imperfect),
+    completedPercent: getPercent(completed),
+    timeSpent: timeSpent,
+    lastTimestamp: lastTimestamp
+  };
 }
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
- * contains more data than we need. This filters to the parts our views care about.
+ * Computes studentLessonProgressType objects for each lesson from the provided
+ * level progress data for each student.
+ * @param {studentId: {levelId: studentLevelProgressType}} sectionLevelProgress
+ * An object keyed by student id all the student's level progress data
+ * @param {lessonType[]} lessons An array of lessons
+ * @returns {studentId: {lessonId: studentLessonProgressType}}
+ * An object containing lesson progress data for each student in a section
+ */
+export function lessonProgressForSection(sectionLevelProgress, lessons) {
+  // create empty "dictionary" to store lesson progress for each student
+  const sectionLessonProgress = {};
+  Object.entries(sectionLevelProgress).forEach(
+    // key: studentId, value: "dictionary" of level progress for that student
+    ([studentId, studentLevelProgress]) => {
+      // create empty "dictionary" to store per-lesson progress for student
+      const studentLessonProgress = {};
+      // for each lesson, summarize student's progress based on level progress
+      lessons.forEach(lesson => {
+        studentLessonProgress[lesson.id] = lessonProgressForStudent(
+          studentLevelProgress,
+          lesson.levels
+        );
+      });
+      // add student progress to section progress
+      sectionLessonProgress[studentId] = studentLessonProgress;
+    }
+  );
+  return sectionLessonProgress;
+}
+
+/**
+ * The level object passed down to use via the server (and stored in
+ * script.stages.levels) contains more data than we need. This parses the parts
+ * we care about to conform to our `levelType` oject.
  */
 export const processedLevel = level => {
   return {
@@ -198,7 +244,7 @@ export const processedLevel = level => {
   };
 };
 
-const getLevelResult = serverProgress => {
+export const getLevelResult = serverProgress => {
   if (serverProgress.status === LevelStatus.locked) {
     return TestResults.LOCKED_RESULT;
   }
@@ -209,7 +255,7 @@ const getLevelResult = serverProgress => {
     return TestResults.SUBMITTED_RESULT;
   }
 
-  return serverProgress.result || TestResults.NO_TESTS_RUN;
+  return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
 /**
@@ -224,7 +270,10 @@ export const levelProgressFromServer = serverProgress => {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
     paired: serverProgress.paired || false,
-    timeSpent: serverProgress.time_spent || 0,
+    timeSpent: serverProgress.time_spent,
+    lastTimestamp: serverProgress.last_progress_at,
+    // `pages` is used by multi-page assessments, and its presence
+    // (or absence) is how we distinguish those from single-page assessments
     pages:
       serverProgress.pages_completed &&
       serverProgress.pages_completed.length > 1

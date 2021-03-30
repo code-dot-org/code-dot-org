@@ -18,23 +18,9 @@ Try writing down your observations as you run your simulation. You can use the d
 
 ## Making Predictions
 If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:
-* What would happen if there were twice as many monsters?
-* What would happen if only healthy monsters wore masks? What about only sick monsters? 
+* What would happen if only healthy monsters wore masks? 
+* What about only sick monsters? 
+<img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right; width:10%">
 
-<img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
-
-## What else can we model?
-You have already created a working model of the outbreak at Monster Town. What are the things your simulation can't do or show that you wish it could? Press continue to keep going and learn to model even more:
-* Increasing the number of monsters in the simulation
-* Helping monsters recover from the virus
-* Probability, immunity, vaccines, and more!
-
-## Is Monster Town like the real world?
-There is a limit to how realistic any model can get. 
-* What does your outbreak simulation have in common with real world virus outbreaks?
-* What are the differences?
-When you finish this activity, discuss these questions with teachers or your family!
-
-You can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town. 
-
+## Let's Build Two More Models for our Simulation
 MARKDOWN

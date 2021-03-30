@@ -23,6 +23,9 @@ class ScriptsControllerTest < ActionController::TestCase
     @section_coursez_2017 = create :section, script: @coursez_2017
     @section_coursez_2017.add_student(@student_coursez_2017)
 
+    @migrated_script = create :script, is_migrated: true, hidden: true
+    @unmigrated_script = create :script
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -515,6 +518,71 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test 'can update migrated script containing migrated script levels' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, name: 'migrated', is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    activity = create :lesson_activity, lesson: lesson
+    section = create :activity_section, lesson_activity: activity
+
+    # A migrated script level is one with an activity section.
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      activity_section: section,
+      activity_section_position: 1,
+      levels: [create(:applab)]
+    )
+
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      is_migrated: true,
+      script_text: ScriptDSL.serialize_lesson_groups(script),
+    }
+    assert_response :success
+    assert script.is_migrated
+    assert script.script_levels.any?
+  end
+
+  test 'cannot update migrated script containing legacy script levels' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, name: 'migrated', is_migrated: true, hidden: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'problem lesson'
+
+    # A legacy script level is one without an activity section.
+    create(
+      :script_level,
+      script: script,
+      lesson: lesson,
+      levels: [create(:applab)]
+    )
+
+    stub_file_writes(script.name)
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      is_migrated: true,
+      script_text: ScriptDSL.serialize_lesson_groups(script),
+    }
+
+    assert_response :not_acceptable
+    msg = 'Legacy script levels are not allowed in migrated scripts. Problem lessons: [\"problem lesson\"]'
+    assert_includes response.body, msg
+    assert script.is_migrated
+    assert script.script_levels.any?
+  end
+
   test 'updates teacher resources' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -708,9 +776,7 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
     script.reload
 
-    # peer_reviews_to_complete gets converted to an int by general_params in scripts_controller, so it becomes 0
-    expected = {"peer_reviews_to_complete" => 0}
-    assert_equal expected, script.properties
+    assert_equal({}, script.properties)
   end
 
   test 'add lesson to script' do
@@ -864,6 +930,18 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
     Timecop.return
   end
+
+  test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :vocab, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :resources, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :resources, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :standards, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :standards, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
+
+  test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]

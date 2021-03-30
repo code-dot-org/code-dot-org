@@ -140,11 +140,17 @@ uz:
     in a new journey to teach more about AI throughout our curriculum.
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
+  hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
     our mailing list to receive recordings of the episodes and resources to continue
     learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_learn_message: Learn basic concepts of computer science alongside special
+    guests! Students of all ages and abilities, including those without computers,
+    are welcome to our virtual workshop. Continue learning at home through our Hour
+    of Code Live episodes.
   hoc_live_join_us: Bizga qo'shiling
+  hoc_live_learn_more: Ko‘proq ma'lumot olish.
   hoc_overview_oceans_tutorial_header: Sun’iy Intellekt ummonlar uchun
   hoc_overview_oceans_tutorial_desc: Axloqiy muammolarni o'rganish va sun’iy intellekt
     - Artificial Intelligence (AI)dan dunyo muammolarini hal qilishda qanday foydalanish

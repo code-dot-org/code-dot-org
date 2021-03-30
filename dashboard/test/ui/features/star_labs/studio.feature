@@ -5,6 +5,7 @@ Scenario: Using a studio dropdown
   Given I am on "http://studio.code.org/s/course1/lesson/16/puzzle/2"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   Then there's an SVG image "studio/dog_thumb.png"
   Then there's not an SVG image "studio/cat_thumb.png"
   And I drag block "1" to block "2"

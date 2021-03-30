@@ -10,6 +10,7 @@
         "playlab_k1",
         "artist_k1"
       ],
+      "has_lesson_plan": true,
       "version_year": "2017",
       "is_stable": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}",
@@ -19,18 +20,26 @@
         "de-DE",
         "es-ES",
         "es-MX",
+        "fil-PH",
         "fr-FR",
         "hi-IN",
         "id-ID",
         "it-IT",
         "ja-JP",
         "ko-KR",
+        "mn-MN",
         "pl-PL",
         "pt-BR",
+        "pt-PT",
+        "ro-RO",
         "ru-RU",
         "sk-SK",
+        "ta-IN",
+        "th-TH",
         "tr-TR",
+        "ur-PK",
         "uz-UZ",
+        "vi-VN",
         "zh-CN",
         "zh-TW"
       ],
@@ -39,8 +48,7 @@
       "tts": true,
       "lesson_extras_available": true,
       "hideable_lessons": true,
-      "is_course": true,
-      "peer_reviews_to_complete": 0
+      "is_course": true
     },
     "new_name": "pre-express-2017",
     "family_name": "pre-express",
@@ -67,6 +75,7 @@
       "name": "Debugging: Unspotted Bugs",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -81,6 +90,7 @@
       "name": "Persistence: Stevie and the Big Project",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -95,8 +105,10 @@
       "name": "Real-life Algorithms: Plant a Seed",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Real-life Algorithms: Plant a Seed",
@@ -109,6 +121,7 @@
       "name": "Sequencing with Drag and Drop",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -123,8 +136,10 @@
       "name": "Digital Citizenship: My Digital Footprint",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Online Safety: Your Digital Footprint",
@@ -137,8 +152,10 @@
       "name": "Programming: My Robotic Friends",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Programming: My Robotic Friends",
@@ -151,6 +168,7 @@
       "name": "Programming in Maze",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -165,6 +183,7 @@
       "name": "Programming: Star Wars",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -179,8 +198,10 @@
       "name": "Loops: My Loopy Robotic Friends",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
@@ -193,6 +214,7 @@
       "name": "Loops in Collector",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -207,6 +229,7 @@
       "name": "Loops in Artist",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -221,8 +244,10 @@
       "name": "Events: The Big Event",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
@@ -235,6 +260,7 @@
       "name": "Events in Play Lab",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -249,6 +275,7 @@
       "name": "Spelling Bee",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
       },

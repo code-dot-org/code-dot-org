@@ -48,28 +48,20 @@ social:
 <a id="bhm-panel"></a>
 <div class="rounded-box bp3">  
   <h2 class="bhm-heading">Panel: Recruiting Black teachers and students into CS</h2>
-  <div class="column-container">
-    <div class="col-66">
-
-      <p>Code.org will be hosting a series of panel presentations on Black Leaders' voices in Computer Science (CS) Education throughout 2021. The themes of the panel presentations will each focus on a specific aspect of increasing representation of Black and African American teachers and students in the field of Computer Science Education. </p>
-      <p>Our first panel is slated to take place on <span style="font-weight:bold;">Friday, February 26th, 11:00 am - noon PST</span> as we continue our celebration of "Black History Month and Beyond".  During the panel we will explore <span style="font-weight:bold;">the 'WHY' for having focused recruitment</span> of Black students and teachers in CS Education. Each panelist is a subject matter expert in this topic representing industry, community engagement, academia and school teachers.</p>
-    </div>
-    <div class="col-33" style="padding: 0 15px;">
-    <p style="color:#7665a0">Sign up to get information on how to tune in as we get closer to the event.</p>
-    <iframe src="http://go.pardot.com/l/153401/2021-02-02/p1svmj" width="100%" height="220" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
-    </div>
-  </div>  
-  <!--<p>Join us on <a href>zoom</a> or stream on <a href>YouTube</a>.</p>-->
+  <p>Code.org will be hosting a series of panel presentations on Black Leaders' voices in Computer Science (CS) Education throughout 2021. The themes of the panel presentations will each focus on a specific aspect of increasing representation of Black and African American teachers and students in the field of Computer Science Education.</p>
+  <p>Our first panel is slated to take place on <span style="font-weight:bold;">Friday, February 26th, 11:00 am - noon PST</span> as we continue our celebration of "Black History Month and Beyond".</p>
+  <p>During the panel we will explore <span style="font-weight:bold;">the 'WHY' for having focused recruitment</span> of Black students and teachers in CS Education. Each panelist is a subject matter expert in this topic representing industry, community engagement, academia and school teachers.</p>
+  <p> <a href="https://code.zoom.us/webinar/register/WN_Ym6l5Nb0SoymXHVvXaOcJg" target="_blank"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px; padding-left:30px; padding-right: 30px;">Register</button></a></p>
   <h3 style="margin-bottom:25px">Featuring:</h3>
   <div class="column-container">
     <div class="col-20" style="text-align:center">
       <img src="/images/fill-200x200/avatars/leolin_bowen.jpg" class="bordered-circle">
-      <p> <i>Moderator:</i> <br/><span style="font-weight:bold;"> LeoLin Bowen</span> <br/>Regional Manager for Outreach Team, Code.org
+      <p> <i>Moderator:</i> <br/><span style="font-weight:bold;"> LeoLin Bowen</span> <br/>Education Programs, Code.org
       </p>
     </div>
     <div class="col-20" style="text-align:center">
       <img src="/images/fill-200x200/avatars/sabine_thomas.jpg" class="bordered-circle">
-      <p> <i>Moderator:</i><br><span style="font-weight:bold;">Dr. Sabine Thomas</span><br>Regional Manager for Outreach Team, Code.org
+      <p> <i>Moderator:</i><br><span style="font-weight:bold;">Dr. Sabine Thomas</span><br>Education Programs, Code.org
       </p>
     </div>
     <div class="col-20" style="text-align:center">
@@ -222,7 +214,7 @@ social:
 </div>
 
 <hr class="bhm-border"/>
-<h2 class="bhm-heading" id="black_voices_videos">More black voices in computer science </h2>
+<h2 class="bhm-heading" id="black_voices_videos">More Black voices in computer science </h2>
 <p style="margin-bottom: 25px">Black students, techologists, and inspirational figures talk about the importance of computer science.</p>
 <div class="column-container">
   <div class="col-50 embedvid" >{{ vid_whyicode }}

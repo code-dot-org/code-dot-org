@@ -1434,6 +1434,47 @@
           "collect": {
             "name": "bailigh"
           }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "name": "tarraing réalta",
+            "parameters": {
+              "points": "pointí",
+              "length": "fad"
+            }
+          },
+          "draw a circle": {
+            "name": "tarraing ciorcal"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "fad",
+              "repeat": "athdhéan"
+            }
+          },
+          "draw a triangle": {
+            "name": "tarraing triantán",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a house": {
+            "name": "tarraing teach",
+            "parameters": {
+              "length": "fad"
+            }
+          },
+          "draw a square": {
+            "name": "tarraing cearnóg",
+            "parameters": {
+              "length": "fad"
+            }
+          }
         }
       }
     }

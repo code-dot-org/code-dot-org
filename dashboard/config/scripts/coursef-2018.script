@@ -14,7 +14,7 @@ tts true
 is_course true
 
 lesson_group 'csf_f_1', display_name: 'Ramp Up to Course F (Optional)'
-lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends', has_lesson_plan: true
+lesson 'Programming: My Robotic Friends', display_name: 'My Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_MRF_2018'
 
 lesson 'Sequence in Maze', display_name: 'Coding with Comments', has_lesson_plan: true
@@ -32,7 +32,7 @@ level 'courseD_maze_ramp5c_2018'
 level 'courseD_maze_ramp5d_2018'
 level 'courseF_markdown_algorithms_end'
 
-lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true
+lesson 'Building a Foundation', display_name: 'Building a Foundation', has_lesson_plan: true, unplugged: true
 level 'BuildingAFoundation_2018'
 
 lesson 'Debugging with Scrat', display_name: 'Debugging with Scrat', has_lesson_plan: true
@@ -63,7 +63,7 @@ level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
-lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends', has_lesson_plan: true
+lesson 'Loops: My Loopy Robotic Friends', display_name: 'My Loopy Robotic Friends', has_lesson_plan: true, unplugged: true
 level 'courseB_unplugged_loopyMRF_2018'
 
 lesson 'Loops in Artist', display_name: 'Drawing Shapes with Loops', has_lesson_plan: true
@@ -109,7 +109,7 @@ level 'courseD_artist_project2a_2018'
 level 'courseD_artist_project3a_2018'
 level 'courseD_artist_project4a_2018'
 
-lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true
+lesson 'Conditionals with Cards', display_name: 'Conditionals with Cards', has_lesson_plan: true, unplugged: true
 level 'Conditionals_2018'
 
 lesson 'Conditionals in Farmer', display_name: 'Conditionals with the Farmer', has_lesson_plan: true
@@ -143,10 +143,10 @@ level 'MC_HOC_2017_Ali'
 level 'MC_HOC_2017_FP20x20'
 
 lesson_group 'csf_f_2', display_name: 'Course F Content'
-lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'The Power of Words', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
 level 'courseF_unplugged_powerOfWords_2018'
 
-lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true
+lesson 'Envelope Variables', display_name: 'Envelope Variables', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables_2018'
 
 lesson 'Variables as Constant in Artist', display_name: 'Variables with Artist', has_lesson_plan: true
@@ -182,7 +182,7 @@ level 'courseF_markdown_variables_end'
 bonus 'courseF_artist_variables_challenge1_2018'
 bonus 'courseF_artist_variables_challenge2_2018'
 
-lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true
+lesson 'For Loop Fun', display_name: 'For Loop Fun', has_lesson_plan: true, unplugged: true
 level 'ForLoopFun_2018'
 
 lesson 'For Loops in Bee', display_name: 'For Loops with Bee', has_lesson_plan: true

@@ -1,10 +1,10 @@
 ---
-title: Hour of Code How-to Guide for parents
+title: Hora de Código - Guía práctica para padres
 ---
 
-# Cómo realizar una Hora del Código con tus hijos
+# Cómo hacer una Hora de Código con tu hijo
 
-Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Not only is computer science foundational to all fields of study, but [recent studies show](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): children who study computer science perform better in other subjects, excel at problem-solving, and are <font color="00adbc"><b>17% more likely to enroll in college</b></font>.
+Trying an Hour of Code is a simple and fun way to introduce your child to computer science, perhaps for the very first time. Las ciencias de la computacion es fundacional para todos campos de estudio, tambien [recientes estudions muestran](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536): que los niños que estudian ciencas de la computacion muestras mejores resultados en areas como resolicion de problemas y hay un <font color="00adbc"><b>17% mas de posibilidades que concurran a la universidad</b></font>.
 
 You can join tens of millions of students worldwide in this global event. Together, we can inspire kids to learn, break stereotypes, and help children discover a newfound interest. Best of all, you already have everything you need to bring the Hour of Code into your home!
 
@@ -14,9 +14,9 @@ You can join tens of millions of students worldwide in this global event. Togeth
 
 The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+¡ Puede probar la Hora de Código con una computadora, tableta, teléfono inteligente o completamente desconectado ! Así es como se comienza.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Ver Guía en PDF</button>]({{ localized_files/hourofcode_parent_how_to }})
 
 * * *
 
@@ -95,4 +95,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 ¡Las ciencias de la computación no tienen que terminar con la Hora del Código! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. [Learn how](https://code.org/yourschool) to bring CS to your child’s school today.
 
-[<button>View PDF Guide</button>]({{ localized_files/hourofcode_parent_how_to }})
+[<button>Ver Guía en PDF</button>]({{ localized_files/hourofcode_parent_how_to }})

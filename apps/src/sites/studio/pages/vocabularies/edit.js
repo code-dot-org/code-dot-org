@@ -10,7 +10,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(function() {
   const vocabularies = getScriptData('vocabularies');
-  const courseVersionId = getScriptData('courseVersionId');
+  const courseVersionData = getScriptData('courseVersionData');
   const courseName = getScriptData('courseName');
 
   registerReducers({
@@ -23,7 +23,8 @@ $(document).ready(function() {
     <Provider store={store}>
       <AllVocabulariesEditor
         vocabularies={vocabularies}
-        courseVersionId={courseVersionId}
+        courseVersionId={courseVersionData.id}
+        courseVersionLessons={courseVersionData.lessons}
         courseName={courseName}
       />
     </Provider>,

@@ -30,6 +30,16 @@
           "recovering": "pulih",
           "moving with arrow keys": "bergerak dengan kunci arah",
           "moving left and right": "bergerak kiri dan kanan"
+        },
+        "outbreak_freeplay": {
+          "recovering": "pulih",
+          "moving left and right": "bergerak kiri dan kanan",
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "outbreak_freeplay_basic": {
+          "recovering": "pulih",
+          "moving left and right": "bergerak kiri dan kanan",
+          "moving with arrow keys": "bergerak dengan kunci arah"
         }
       }
     }

@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit1/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit1/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit1/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"Scholarship opportunity for college bound seniors", "details"=>"US high school seniors may apply by Feb 18, 2021 for a chance to receive $40,000 for college and a paid internship at Amazon through the Amazon Future Engineer Scholarhip program.", "link"=>"http://bit.ly/AFEScholarshipLBU1", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
 curriculum_umbrella 'CSP'
 
@@ -93,6 +93,6 @@ lesson 'Project - Digital Information Dilemmas Part 2', display_name: 'Project -
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 
-lesson 'Lesson 14: Assessment Day', display_name: 'Lesson 14: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 14: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 1 AP-Style Assessment _2020', progression: 'Unit 1 Exam', assessment: true
 

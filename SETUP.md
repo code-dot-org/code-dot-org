@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1604-download-iso), [Windows](#windows)
+   - See the appropriate section below: [OS X](#os-x-catalina), [Ubuntu](#ubuntu-1804-download-iso), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
 
      ```
@@ -50,6 +50,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Some functionality will not work on your local site without this, for example, some project-backed level types such as https://studio.code.org/projects/gamelab. This setup is only available to Code.org engineers for now, but it is recommended for Code.org engineers.
 1. Run the website `bin/dashboard-server`
 1. Visit http://localhost-studio.code.org:3000/ to verify it is running.
+1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
 
 After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
@@ -165,7 +166,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
-### Ubuntu 16.04 ([Download iso][ubuntu-iso-url]) 
+### Ubuntu 18.04 ([Download iso][ubuntu-iso-url])
 
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
@@ -217,7 +218,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
 1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 16.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
 
@@ -230,7 +231,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 
 ### Alternative: Use an Ubuntu VM
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 16.04 iso image][ubuntu-iso-url]
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 18.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to at least 35.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 8 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -242,7 +243,7 @@ From here, you can follow the [Ubuntu procedure above](#ubuntu-1604-download-iso
 * Option C: Use an Amazon EC2 instance:
   1. Request AWS access from [accounts@code.org](mailto:accounts@code.org) if you haven't already done so.
   1. From the [EC2 Homepage](https://console.aws.amazon.com/ec2), click on "Launch Instance" and follow the wizard:
-     * **Step 1: Choose AMI**: Select Ubuntu Server 16.04
+     * **Step 1: Choose AMI**: Select Ubuntu Server 18.04
      * **Step 2: Choose instance type**: Choose at least 8GiB memory (e.g. `t2.large`)
      * **Step 3: Configure Instance**: Set IAM Role to `DeveloperEC2`
      * **Step 4: Storage**: Increase storage to 100GiB
@@ -295,7 +296,7 @@ Our lint configuration uses formatting rules provided by [Prettier](https://pret
 
 ### Ruby
 
-We use [RuboCop](https://docs.rubocop.org/en/latest/) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/en/latest/integration_with_other_tools/) for instructions for your editor of choice.
+We use [RuboCop](https://docs.rubocop.org/rubocop/index) to lint our Ruby; see [the official integrations guide](https://docs.rubocop.org/rubocop/integration_with_other_tools) for instructions for your editor of choice.
 
 ## More Information
 Please also see our other documentation, including our:
@@ -318,7 +319,7 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew link imagemagick@6 --force`
 If you continue to have issues with rmagick, after changing your imagemagick version, you may need to uninstall/reinstall the gem
 - `gem uninstall rmagick`
-- `gem install rmagick -v 2.15.4`
+- `gem install rmagick -v 2.16.0`
 
 ### ImageMagick with Pango
 
@@ -434,4 +435,4 @@ While it's possible to run the server locally without these, we've found the fol
 - Storage: The repository takes up 20GB
 
 
-[ubuntu-iso-url]: http://releases.ubuntu.com/16.04/ubuntu-16.04.3-desktop-amd64.iso
+[ubuntu-iso-url]: http://releases.ubuntu.com/bionic/ubuntu-18.04.5-desktop-amd64.iso
