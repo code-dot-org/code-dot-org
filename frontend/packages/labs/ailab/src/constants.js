@@ -131,7 +131,8 @@ export const styles = {
   scrollableContentsTinted: {
     overflow: "hidden",
     borderRadius: 0,
-    backgroundColor: "rgb(206, 206, 206)"
+    backgroundColor: "rgb(206, 206, 206)",
+    padding: 10
   },
 
   scrollingContents: {
