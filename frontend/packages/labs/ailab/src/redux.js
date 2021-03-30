@@ -244,7 +244,6 @@ const initialState = {
   accuracyCheckExamples: [],
   accuracyCheckLabels: [],
   accuracyCheckPredictedLabels: [],
-  accuracyCheckGrades: [],
   testData: {},
   prediction: {},
   modelSize: undefined,
