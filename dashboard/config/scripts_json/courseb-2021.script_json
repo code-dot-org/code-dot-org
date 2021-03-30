@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-24 21:38:29 UTC",
+    "serialized_at": "2021-03-30 18:02:15 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -1331,8 +1331,14 @@
       "key": "93f8de74-6246-4227-8418-08d5c736633b",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nGive the students a journal prompt to help them process some of the things that they encountered during the day. You can choose one of the prompts below, or make up your own.\n\n####Journal Prompts:\n\n- Draw a ***Feeling Faces** in the corner of your journal page.\n- What were the four directions on the compass rose?\n\t- What tricks can we use to remember North, South, East and West?\n- Draw another way we could we have given instructions without using our arms.\n- Draw your favorite part about that game.",
-        "name": "Reflection"
+        "description": "**Prompts:**\n\n- What were the four directions on the compass rose?\n\t- What tricks can we use to remember North, South, East and West?\n- Draw another way we could we have given instructions without using our arms.\n- Draw your favorite part about that game.",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "93f8de74-6246-4227-8418-08d5c736633b",
@@ -6400,18 +6406,6 @@
       }
     },
     {
-      "name": "Stevie and the Big Project",
-      "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
-      "key": "stevie_and_the_big_project",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "stevie_and_the_big_project"
-      }
-    },
-    {
       "name": "Feeling Faces Emotion Image",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
       "key": "feeling_faces_emotion_image",
@@ -6542,6 +6536,18 @@
       },
       "seeding_key": {
         "resource.key": "feeling_faces_-_emotion_image"
+      }
+    },
+    {
+      "name": "Stevie and the Big Project",
+      "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
+      "key": "stevie_and_the_big_project",
+      "properties": {
+        "type": "Resource",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "stevie_and_the_big_project"
       }
     },
     {
@@ -6745,12 +6751,6 @@
       "seeding_key": {
         "lesson.key": "Move It, Move It",
         "resource.key": "teacher-video-move-it"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Move It, Move It",
-        "resource.key": "stevie_and_the_big_project"
       }
     },
     {

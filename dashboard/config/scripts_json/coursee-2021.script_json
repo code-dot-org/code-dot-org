@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-03-29 18:29:33 UTC",
+    "serialized_at": "2021-03-30 17:44:35 UTC",
     "seeding_key": {
       "script.name": "coursee-2021"
     }
@@ -241,7 +241,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Developed by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.",
+        "overview": "This **exploratory** lesson, developed by the team over at [Copyright and Creativity](https://www.copyrightandcreativity.org/), exists to help students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.",
         "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. ",
         "purpose": "Students will soon be creating projects to share and most of these projects will contain either code or imagery that students did not create themselves. This lesson is here to show students the proper way to handle the use of content that is not their own.",
         "preparation": "- Locate the ***Copyright Sharing video** in \"Links\" below\n- Download and review the complete ***Digital Sharing Lesson Plan** from Copyright and Creativity\n- As the teacher, create a piece of art for the lesson (picture, song, slideshow, etc.) \n- Make sure every student has a reflection journal.\n- You will need a tablet or smart phone to replicate the sharing of that item",
@@ -4131,7 +4131,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Exploration: Rikki's Poster",
         "level_keys": [
@@ -4157,7 +4157,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: About Me",
         "level_keys": [
@@ -4183,7 +4183,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: About Me",
         "level_keys": [
@@ -4209,7 +4209,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: About Me",
         "level_keys": [
@@ -4235,7 +4235,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: About Me",
         "level_keys": [
@@ -4261,7 +4261,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-Project: About Me",
         "level_keys": [
@@ -4287,7 +4287,7 @@
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Digital Sharing - Unplugged Activity",
         "level_keys": [
@@ -9062,6 +9062,18 @@
       }
     },
     {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
       "name": "Be A Super Digital Citizen: Lesson Slides",
       "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit",
       "key": "be_a_super_digital_citizen_lesson_slides",
@@ -9360,6 +9372,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "be_a_super_digital_citizen_lesson_slides"
       }
@@ -9410,6 +9434,12 @@
       "seeding_key": {
         "lesson.key": "About Me",
         "resource.key": "about_me_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "About Me",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -9939,76 +9969,7 @@
     }
   ],
   "lessons_programming_expressions": [
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_setProp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_makeNewSpriteAnon"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Learning Sprites with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_setBackground"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_whenTouching"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_randomLocation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_location_picker"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_spriteClicked"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_removeTint"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_setBackgroundImage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Alien Dance Party with Sprite Lab",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_setTint"
-      }
-    }
+
   ],
   "objectives": [
     {

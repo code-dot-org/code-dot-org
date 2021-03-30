@@ -2,7 +2,7 @@
   "script": {
     "name": "test-serialize-seeding-json-script",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
       "curriculum_path": "my_curriculum_path",
@@ -1018,6 +1018,36 @@
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "framework.shortcode": "test_framework",
         "standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-standard-2"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-opportunity-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-opportunity-standard-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-opportunity-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "opportunity_standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-opportunity-standard-2"
       }
     }
   ]

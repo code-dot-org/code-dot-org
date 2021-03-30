@@ -19,7 +19,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
-    @migrated_script = create :script, is_migrated: true, hidden: true
+    @migrated_script = create :script, is_migrated: true
     @unit_group_migrated = create :unit_group
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
 
