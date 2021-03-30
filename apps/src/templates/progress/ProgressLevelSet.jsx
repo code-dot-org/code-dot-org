@@ -7,6 +7,7 @@ import {levelType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   table: {
@@ -23,6 +24,9 @@ const styles = {
   },
   col2: {
     paddingLeft: 20
+  },
+  col2RTL: {
+    paddingRight: 20
   },
   linesAndDot: {
     whiteSpace: 'nowrap',
@@ -80,6 +84,8 @@ class ProgressLevelSet extends React.Component {
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
+    const isRtl = getStore().getState().isRtl;
+    const col2Style = isRtl ? styles.col2RTL : styles.col2;
 
     let pillText, icon;
     let progressStyle = false;
@@ -115,7 +121,7 @@ class ProgressLevelSet extends React.Component {
                 onSingleLevelClick={onBubbleClick}
               />
             </td>
-            <td style={styles.col2}>
+            <td style={col2Style}>
               <a href={url}>
                 <div style={{...styles.nameText, ...styles.text}}>{name}</div>
               </a>
