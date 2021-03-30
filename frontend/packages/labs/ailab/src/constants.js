@@ -30,7 +30,6 @@ export const saveMessages = {
 };
 
 const labelColor = "rgb(254, 96, 3)"; // was 186
-const labelColorSemi = "rgba(254, 96, 3, 0.4)";
 const featureColor = "rgb(75, 155, 213)";
 
 export const colors = {
@@ -244,7 +243,6 @@ export const styles = {
     textAlign: "right",
     position: "sticky",
     top: 0,
-    fontSize: 12,
     backgroundColor: "white",
     color: "#4d575f",
     borderStyle: "solid solid solid solid",
