@@ -327,8 +327,8 @@ Dashboard::Application.routes.draw do
     get '/stage/:position(*all)', to: redirect(path: '/lessons/%{position}%{all}')
 
     # /s/xxx/lessons/yyy
-    resources :stages, only: [], path: "/lessons", param: 'position', format: false do
-      get 'student', to: 'student_lesson_plan'
+    resources :lessons, only: [:show], path: "/lessons", param: 'position', format: false do
+      get 'student', to: 'lessons#student_lesson_plan'
       get 'extras', to: 'script_levels#stage_extras', format: false
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
 
