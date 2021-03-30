@@ -635,7 +635,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 4, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script6.title",
+      scriptTitle: "script6",
       versionYear: nil,
       lockable: false,
       relativePosition: 1,
@@ -645,7 +645,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary, summaries[0]
 
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script0.title",
+      scriptTitle: "script0",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -695,7 +695,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 2, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script4.title",
+      scriptTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
@@ -759,7 +759,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal 3, summaries.count
     expected_summary = {
-      scriptTitle: "translation missing: en-US.data.script.name.script4.title",
+      scriptTitle: "script4",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
