@@ -308,6 +308,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Redirects from old /stage url to new /lesson url
+  get '/s/:script_name/stage/:position(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}%{all}')
+
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
     get 'reset', to: 'script_levels#reset'
@@ -322,9 +325,6 @@ Dashboard::Application.routes.draw do
       get 'standards'
       get 'instructions'
     end
-
-    # Redirects from old /stage url to new /lesson url
-    get '/stage/:position(*all)', to: redirect(path: '/lessons/%{position}%{all}')
 
     # /s/xxx/lessons/yyy
     resources :lessons, only: [:show], path: "/lessons", param: 'position', format: false do
