@@ -8,6 +8,7 @@ import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
 import {isLevelAssessment} from './progressHelpers';
 import {SmallAssessmentIcon} from './SmallAssessmentIcon';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   levelPill: {
@@ -48,6 +49,9 @@ const styles = {
   },
   iconMargin: {
     marginLeft: 10
+  },
+  iconMarginRTL: {
+    marginRight: 10
   }
 };
 
@@ -99,6 +103,9 @@ class ProgressPill extends React.Component {
         levelProgressStyle(levels[0].status, levels[0].kind, false))
     };
 
+    const isRtl = getStore().getState().isRtl;
+    const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
+
     // If we're passed a tooltip, we also need to reference it from our div
     let tooltipProps = {};
     if (tooltip) {
@@ -128,7 +135,7 @@ class ProgressPill extends React.Component {
               className="ProgressPillTextAndIcon"
               style={{
                 ...textStyle,
-                ...(icon && styles.iconMargin)
+                ...(icon && iconMarginStyle)
               }}
             >
               {text}
