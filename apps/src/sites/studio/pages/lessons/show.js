@@ -46,6 +46,8 @@ function displayLessonOverview() {
       activitySection.displayName = activitySection.name || '';
       delete activitySection.name;
 
+      activitySection.duration = activitySection.duration || 0;
+
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
