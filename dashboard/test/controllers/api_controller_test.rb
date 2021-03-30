@@ -786,7 +786,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1
     }
     result = {"status" => "perfect", "result" => 100}
@@ -826,7 +826,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1
     }
 
@@ -845,7 +845,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1
     }
     assert_response :success
@@ -873,7 +873,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1
     }
     assert_response :success
@@ -890,7 +890,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1
     }
     assert_response :success
@@ -910,7 +910,7 @@ class ApiControllerTest < ActionController::TestCase
 
     get :user_progress_for_stage, params: {
       script: script.name,
-      stage_position: 1,
+      lesson_position: 1,
       level_position: 1,
       level: level1a.id
     }
