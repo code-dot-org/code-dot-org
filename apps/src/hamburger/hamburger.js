@@ -13,12 +13,31 @@ export const initHamburger = function() {
       e.preventDefault();
     });
 
-    $(document).on('click', function(e) {
+    // allows users to toggle help menu by pressing return
+    // while tabbing through elements
+    $('#hamburger').on('keypress', function(e) {
+      if (
+        e.type === 'keypress' &&
+        e.which === 13 &&
+        e.target.className !== 'hamburger-expandable-item item'
+      ) {
+        $(this).toggleClass('active');
+        $('#hamburger-icon').toggleClass('active');
+        $('#hamburger #hamburger-contents').slideToggle();
+        e.preventDefault();
+      }
+    });
+
+    $(document).on('keypress click', function(e) {
       var hamburger = $('#hamburger');
 
       // If we didn't click the hamburger itself, and also nothing inside it,
       // then hide it.
-      if (!hamburger.is(e.target) && hamburger.has(e.target).length === 0) {
+      if (
+        !hamburger.is(e.target) &&
+        hamburger.has(e.target).length === 0 &&
+        e.target.className !== 'hamburger-expandable-item item'
+      ) {
         hamburger.children('#hamburger-contents').slideUp();
         $('#hamburger-icon').removeClass('active');
       }
@@ -34,15 +53,17 @@ export const initHamburger = function() {
     });
 
     $('.hamburger-expandable-item').each(function() {
-      $(this).click(function(e) {
-        $('#' + $(this).attr('id') + '-items').slideToggle();
-        $(this)
-          .find('.arrow-down')
-          .toggle();
-        $(this)
-          .find('.arrow-up')
-          .toggle();
-        e.preventDefault();
+      $(this).on('keypress click', function(e) {
+        if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
+          $('#' + $(this).attr('id') + '-items').slideToggle();
+          $(this)
+            .find('.arrow-down')
+            .toggle();
+          $(this)
+            .find('.arrow-up')
+            .toggle();
+          e.preventDefault();
+        }
       });
     });
 
@@ -50,6 +71,16 @@ export const initHamburger = function() {
       $(this).toggleClass('active');
       $('#help-button #help-contents').slideToggle();
       e.preventDefault();
+    });
+
+    // allows users to toggle help menu by pressing return
+    // while tabbing through elements
+    $('#help-button').on('keypress', function(e) {
+      if (e.type === 'keypress' && e.which === 13) {
+        $(this).toggleClass('active');
+        $('#help-button #help-contents').slideToggle();
+        e.preventDefault();
+      }
     });
 
     $('#help-icon #report-bug').click(function() {

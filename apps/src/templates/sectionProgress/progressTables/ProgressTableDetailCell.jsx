@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {
   levelTypeWithoutStatus,
   studentLevelProgressType
@@ -10,9 +9,6 @@ import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import _ from 'lodash';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-
-const UNPLUGGED_BUBBLE_WIDTH = getUnpluggedWidth();
 
 const styles = {
   container: {
@@ -33,22 +29,6 @@ const styles = {
   }
 };
 export default class ProgressTableDetailCell extends React.Component {
-  static widthForLevels(levels) {
-    return (
-      levels.reduce((sum, level) => {
-        return (
-          sum +
-          (level.isUnplugged
-            ? UNPLUGGED_BUBBLE_WIDTH
-            : progressStyles.BUBBLE_CONTAINER_WIDTH) +
-          (level.sublevels || []).length *
-            progressStyles.LETTER_BUBBLE_CONTAINER_WIDTH
-        );
-      }, 0) +
-      2 * progressStyles.CELL_PADDING
-    );
-  }
-
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
@@ -147,57 +127,13 @@ export default class ProgressTableDetailCell extends React.Component {
 
   render() {
     return (
-      <div style={{...styles.container, ...progressStyles.cellContent}}>
+      <div
+        style={{...styles.container, ...progressStyles.cellContent}}
+        className="uitest-detail-cell"
+      >
         <div style={styles.background} />
         {this.props.levels.map(level => this.renderBubble(level))}
       </div>
     );
   }
 }
-
-/**
- * The width of the unplugged bubble depends on the localization of the text,
- * but our table needs to know its rendered width for determining column width,
- * so we calculate the width here by adding the element to the DOM, getting its
- * width, then removing it.
- *
- * Note: it would make more sense to put this code in the same file with the
- * ProgressTableLevelBubble component, but due to JSX compilation the class
- * symbol for the component is undefined in that file.
- */
-function getUnpluggedWidth() {
-  // Create invisible container
-  const outer = document.createElement('div');
-  outer.style.visibility = 'hidden';
-  document.body.appendChild(outer);
-
-  // Create React element
-  const unpluggedElement = React.createElement(
-    ProgressTableLevelBubble,
-    {
-      levelStatus: LevelStatus.not_tried,
-      unplugged: true,
-      disabled: false,
-      url: ''
-    },
-    null
-  );
-
-  // Render node and fetch from DOM
-  const unpluggedNode = ReactDOM.findDOMNode(
-    ReactDOM.render(unpluggedElement, outer)
-  );
-
-  // Store the width
-  const width = unpluggedNode.offsetWidth;
-
-  // Remove temporary elements from DOM
-  ReactDOM.unmountComponentAtNode(outer);
-  outer.parentNode.removeChild(outer);
-
-  return width;
-}
-
-export const unitTestExports = {
-  getUnpluggedWidth
-};

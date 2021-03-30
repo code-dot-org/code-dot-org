@@ -51,11 +51,6 @@ class Experiment < ApplicationRecord
   # http://studio.code.org/experiments/set_single_user_experiment/<EXPERIMENT_NAME>
   PILOT_EXPERIMENTS = [
     {
-      name: 'csd-piloters',
-      label: 'CSD Pilot',
-      allow_joining_via_url: true
-    },
-    {
       name: 'csp-piloters',
       label: 'CSP Pilot',
       allow_joining_via_url: false
@@ -68,16 +63,6 @@ class Experiment < ApplicationRecord
     {
       name: '20-21-virtual-AYW-CSP',
       label: 'For facilitators in virtual academic year workshops for CSP',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csp-preview',
-      label: 'CSP Preview',
-      allow_joining_via_url: true
-    },
-    {
-      name: 'csp-2020-access',
-      label: 'CSP 2020 Access',
       allow_joining_via_url: true
     },
     {
@@ -108,6 +93,26 @@ class Experiment < ApplicationRecord
     {
       name: 'contagion-pilot',
       label: 'Contagion Simulator',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'ai-unit-pilot',
+      label: 'AI Unit Pilot',
+      allow_joining_via_url: false
+    },
+    {
+      name: 'haikubot-pilot',
+      label: 'Haiku Bot',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'fancygeometry-pilot',
+      label: 'Fancy Geometry',
+      allow_joining_via_url: true
+    },
+    {
+      name: 'section-progress-details-pilot',
+      label: 'Section Progress Details Pilot',
       allow_joining_via_url: true
     }
   ]

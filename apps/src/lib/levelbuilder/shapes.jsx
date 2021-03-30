@@ -75,6 +75,7 @@ export const activityShape = PropTypes.shape({
 
 export const resourceShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
@@ -87,8 +88,34 @@ export const resourceShape = PropTypes.shape({
 export const vocabularyShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   word: PropTypes.string.isRequired,
-  definition: PropTypes.string.isRequired
+  definition: PropTypes.string.isRequired,
+  commonSenseMedia: PropTypes.bool.isRequired
+});
+
+export const programmingEnvironmentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+export const programmingExpressionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkShortcode: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });
 
 export const levelShapeForScript = PropTypes.shape({

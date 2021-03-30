@@ -15,7 +15,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {},
+        progress: {},
         # second stage because first is unplugged
         current_stage: script.lessons[1].id,
         completed: false,
@@ -32,7 +32,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {
+        progress: {
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
@@ -106,7 +106,7 @@ class UsersHelperTest < ActionView::TestCase
         linesOfCode: 42,
         linesOfCodeText: 'Total lines of code: 42',
         lockableAuthorized: false,
-        levels: {
+        progress: {
           ul.level_id => {
             status: LEVEL_STATUS.perfect,
             result: ActivityConstants::BEST_PASS_RESULT,
@@ -141,7 +141,7 @@ class UsersHelperTest < ActionView::TestCase
       linesOfCode: 150,
       linesOfCodeText: 'Total lines of code: 150',
       lockableAuthorized: false,
-      levels: {
+      progress: {
         # BubbleChoice levels return status/result using the sublevel with the highest best_result.
         level.id => {
           status: LEVEL_STATUS.perfect,
@@ -182,28 +182,28 @@ class UsersHelperTest < ActionView::TestCase
     assert UserLevel.find_by(user: user, level: level).nil?
     assert_equal(
       {level.id => {status: LEVEL_STATUS.locked}},
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
 
     # Now "unlock" it by creating a non-submitted UserLevel
-    user_level = create :user_level, user: user, best_result: nil, level: level, script: script, unlocked_at: Time.now, readonly_answers: false, submitted: false
-    assert_equal({}, summarize_user_progress(script, user)[:levels], 'No level progress since we dont have a result')
+    user_level = create :user_level, user: user, best_result: nil, level: level, script: script, locked: false, readonly_answers: false, submitted: false
+    assert_equal({}, summarize_user_progress(script, user)[:progress], 'No level progress since we dont have a result')
 
     # put in in "view answers" mode
     user_level.delete
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: true, submitted: true
+    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: true, submitted: true
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.submitted, submitted: true, readonly_answers: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
         "#{level.id}_0" => {submitted: true, readonly_answers: true},
         "#{level.id}_1" => {submitted: true, readonly_answers: true}
       },
-      summarize_user_progress(script, user)[:levels], 'level shows as locked again'
+      summarize_user_progress(script, user)[:progress], 'level shows as locked again'
     )
 
     # now submit it (the student ui will display this as locked)
     user_level.delete
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: true
+    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: true
     assert_equal(
       {
         level.id => {
@@ -216,40 +216,40 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true},
         "#{level.id}_1" => {submitted: true}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows as locked again'
     )
 
     # unlock it again
     user_level.delete
     level_source = create :level_source, data: "{}"
-    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: Time.now, readonly_answers: false, submitted: false, level_source: level_source
+    user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: false, submitted: false, level_source: level_source
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level still shows as locked'
     )
 
-    # now unlock it
+    # now lock it
     user_level.delete
-    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: false, submitted: false
+    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: false
     assert_equal(
       {
-        level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil]},
+        level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, locked: true, pages_completed: [nil, nil]},
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows attempted now'
     )
 
     # appears submitted while viewing answers (appears in student ui as locked)
     user_level.delete
-    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: 2.days.ago, readonly_answers: true, submitted: true
+    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, readonly_answers: true, submitted: true
     assert_equal(
       {
         level.id => {
@@ -263,7 +263,7 @@ class UsersHelperTest < ActionView::TestCase
         "#{level.id}_0" => {submitted: true, readonly_answers: true},
         "#{level.id}_1" => {submitted: true, readonly_answers: true}
       },
-      summarize_user_progress(script, user)[:levels],
+      summarize_user_progress(script, user)[:progress],
       'level shows as submitted'
     )
   end
@@ -287,29 +287,29 @@ class UsersHelperTest < ActionView::TestCase
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?
-    assert_equal({}, summarize_user_progress(script, user)[:levels])
+    assert_equal({}, summarize_user_progress(script, user)[:progress])
 
     # now create a non-submitted user level
-    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: false
+    user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: false
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.attempted, result: ActivityConstants::UNSUBMITTED_RESULT, pages_completed: [nil, nil]},
         "#{level.id}_0" => {},
         "#{level.id}_1" => {}
       },
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
 
     # now create a submitted user level
     user_level.delete
-    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, unlocked_at: nil, readonly_answers: nil, submitted: true
+    create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: true
     assert_equal(
       {
         level.id => {status: LEVEL_STATUS.submitted, submitted: true, result: ActivityConstants::BEST_PASS_RESULT, pages_completed: [nil, nil]},
         "#{level.id}_0" => {submitted: true},
         "#{level.id}_1" => {submitted: true}
       },
-      summarize_user_progress(script, user)[:levels]
+      summarize_user_progress(script, user)[:progress]
     )
   end
 

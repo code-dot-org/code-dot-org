@@ -2,6 +2,8 @@
 %script{src: webpack_asset_path('js/lessons/show.js'),
         data: {lesson: @lesson_data.to_json}}
 
+= render partial: 'shared/emulate_print_media'
+
 #show-container
 
 - if can? :edit, @lesson

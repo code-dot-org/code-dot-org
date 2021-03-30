@@ -169,6 +169,48 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_upload_html_file
+    filename = 'index.html'
+    # The below HTML is valid/invalid in WebLab projects only. Other project types do not
+    # follow the same validity rules.
+    valid_html = '<div></div>'
+    invalid_html = '<script src="index.js"></script>'
+
+    # WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    # Not WebLab
+    StorageApps.any_instance.stubs(:get).returns({projectType: 'applab'})
+    @api.put_object(filename, valid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html)
+    assert successful?
+    @api.delete_object(filename)
+
+    # This means the channel_id does not belong to a valid project.
+    # These requests should always return a 400.
+    StorageApps.any_instance.stubs(:get).returns(nil)
+    @api.put_object(filename, valid_html)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    StorageApps.any_instance.unstub(:get)
+    delete_all_manifest_versions
+  end
+
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'

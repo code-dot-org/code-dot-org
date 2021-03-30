@@ -197,6 +197,7 @@ class Button extends React.Component {
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
+    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     onClick: PropTypes.func,
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -226,6 +227,7 @@ class Button extends React.Component {
       style,
       onClick,
       disabled,
+      download,
       id,
       tabIndex,
       isPending,
@@ -245,9 +247,24 @@ class Button extends React.Component {
       Tag = href ? 'a' : 'div';
     }
 
+    if (download && Tag !== 'a') {
+      // <button> and <div> elements do not support the download attribute, so
+      // don't let this component attempt to do that.
+      throw new Error(
+        'Attempted to use the download attribute with a non-anchor tag'
+      );
+    }
+
     const sizeStyle = __useDeprecatedTag
       ? styles.sizes[size]
       : {...styles.sizes[size], ...styles.updated};
+
+    // Opening links in new tabs with 'target=_blank' is inherently insecure.
+    // Unfortunately, we depend on this functionality in a couple of place.
+    // Fortunately, it is possible to partially mitigate some of the insecurity
+    // of this functionality by using the `rel` tag to block some of the
+    // potential exploits. Therefore, we do so here.
+    const rel = target === '_blank' ? 'noopener noreferrer' : undefined;
 
     return (
       <Tag
@@ -255,7 +272,9 @@ class Button extends React.Component {
         style={[styles.main, styles.colors[color], sizeStyle, style]}
         href={disabled ? 'javascript:void(0);' : href}
         target={target}
+        rel={rel}
         disabled={disabled}
+        download={download}
         onClick={disabled ? null : onClick}
         onKeyDown={this.onKeyDown}
         tabIndex={tabIndex}

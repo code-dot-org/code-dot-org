@@ -10,11 +10,11 @@
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ],
-      "peer_reviews_to_complete": 0
+      ]
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-03 20:33:37 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -81,6 +81,42 @@
         "lesson_group.key": "Loom Levels",
         "script.name": "2021drafting"
       }
+    },
+    {
+      "key": "contagion",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Contagion"
+      },
+      "seeding_key": {
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 7,
+      "properties": {
+        "display_name": "Contagion-Guided-Practice"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "haiku bot",
+      "user_facing": true,
+      "position": 8,
+      "properties": {
+        "display_name": "Haiku Bot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "haiku bot",
+        "script.name": "2021drafting"
+      }
     }
   ],
   "lessons": [
@@ -130,23 +166,24 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Blank Space Variables",
+      "key": "blank space stories",
+      "name": "Blank Space Stories",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
     },
     {
       "key": "lesson-2",
-      "name": "Storing and Retrieving Text",
+      "name": "Text and Prompts",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -161,7 +198,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Create a Chat-Bot",
+      "name": "Mini-Project: User Input Programs",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
@@ -175,27 +212,12 @@
       }
     },
     {
-      "key": "lesson-3-ci",
-      "name": "Create a Haiku Bot",
+      "key": "lesson-4",
+      "name": "Counting with Variables",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3-ci",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Counting with Variables",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -207,10 +229,10 @@
     {
       "key": "lesson-5",
       "name": "Groups of Sprites",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -222,10 +244,10 @@
     {
       "key": "lesson-6",
       "name": "Create a Collector Game",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -237,10 +259,10 @@
     {
       "key": "Virus Simulation for Code Bytes",
       "name": "Coding a Simulation",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -252,10 +274,10 @@
     {
       "key": "Sprite Lab",
       "name": "Sprite Lab Blocks",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -267,6 +289,21 @@
     {
       "key": "video",
       "name": "Sprite Lab Videos",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "video",
+        "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "how things spread",
+      "name": "How Things Spread",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": false,
@@ -274,8 +311,158 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "video",
-        "lesson_group.key": "Loom Levels",
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "contagion simulator setup",
+      "name": "Contagion Simulator Setup",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "sometimes but not always",
+      "name": "Sometimes, but Not Always",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "modifying your model",
+      "name": "Modifying Your model",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "telling a data story",
+      "name": "Telling a Data Story",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "how things spread gp",
+      "name": "How Things Spread  - Guided Practice",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "how things spread gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "contagion simulator gp",
+      "name": "Contagion Simulator - Guided Practice",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "sometimes not always gp",
+      "name": "Sometimes, Not Always - Practice",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "modifying your simulator gp",
+      "name": "Modifying Your Simulator - Guided Practice",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "modifying your simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "collecting data gp",
+      "name": "Collecting Data Guided Practice",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "collecting data gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Haiku Bot",
+      "name": "Haiku Bot",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
         "script.name": "2021drafting"
       }
     }
@@ -318,7 +505,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Exploration: Sample Apps",
+        "progression": "Exploration: Sample Programs",
         "level_keys": [
           "courseF_intro_apps"
         ]
@@ -793,7 +980,7 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Blank Space Variables",
+        "progression": "Video: Variables in Envelopes",
         "level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ]
@@ -804,7 +991,7 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       },
@@ -839,56 +1026,281 @@
     },
     {
       "chapter": 23,
-      "position": 1,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Exemplar",
-        "level_keys": [
-          "haiku_prototype_exemplar"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "haiku_prototype_exemplar"
-        ],
-        "lesson.key": "lesson-3-ci",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2021drafting"
-      },
-      "level_keys": [
-        "haiku_prototype_exemplar"
-      ]
-    },
-    {
-      "chapter": 24,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Project",
+        "progression": "Video: Text and Prompts",
         "level_keys": [
-          "haiku_prototype"
+          "courseF_pilotVideo_prompts"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "haiku_prototype"
+          "courseF_pilotVideo_prompts"
         ],
-        "lesson.key": "lesson-3-ci",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       },
       "level_keys": [
-        "haiku_prototype"
+        "courseF_pilotVideo_prompts"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_review"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_review"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_review"
       ]
     },
     {
       "chapter": 25,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_print"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_events"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_prompts"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_answer"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "courseF_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_concat"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Practice",
+        "level_keys": [
+          "courseF_text_practice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_text_practice"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Exploration: Sample Programs",
+        "level_keys": [
+          "courseF_variables_samples"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_samples"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prepare Your Plan",
+        "level_keys": [
+          "courseF_variables_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_stop"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Application: Create Your Project",
+        "level_keys": [
+          "courseF_variables_projects"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseF_variables_projects"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -913,7 +1325,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -938,7 +1350,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -963,7 +1375,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -988,7 +1400,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1013,7 +1425,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1038,7 +1450,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -1063,7 +1475,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": null,
       "assessment": null,
@@ -1089,7 +1501,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": null,
       "assessment": null,
@@ -1115,7 +1527,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": null,
       "assessment": null,
@@ -1140,7 +1552,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": null,
       "assessment": null,
@@ -1165,7 +1577,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1190,7 +1602,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1215,7 +1627,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1240,7 +1652,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1265,7 +1677,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1290,7 +1702,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1315,7 +1727,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1337,6 +1749,531 @@
       },
       "level_keys": [
         "courseF_variables_loom_sandbox"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "How Things Spread",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Welcome to Monster Town",
+        "level_keys": [
+          "contagion_story"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_story"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Creating a Simulation",
+        "level_keys": [
+          "contagion_setup"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_setup"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_setup"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Programming Our Rules",
+        "level_keys": [
+          "contagion_events"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_events"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_events"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Data Tracking: Model 1",
+        "level_keys": [
+          "contagion_data"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_data"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_data"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "STOP!",
+        "level_keys": [
+          "contagion_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_stop"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Slowing the Contagion with Masks",
+        "level_keys": [
+          "contagion_masks"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_masks"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_masks"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Sometimes, but Not Always",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Thinking Like a Scientist",
+        "level_keys": [
+          "contagion_scientist"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_scientist"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_scientist"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "90% Chance",
+        "level_keys": [
+          "contagion_chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_chance"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Model 2",
+        "level_keys": [
+          "contagion_more chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_more chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_more chance"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "STOP!",
+        "level_keys": [
+          "contagion_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_stop"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Model 3",
+        "level_keys": [
+          "contagion_modify_chance"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_modify_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_modify_chance"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "STOP AGAIN!",
+        "level_keys": [
+          "contagion_stop_again"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_stop_again"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_stop_again"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Vaccines",
+        "level_keys": [
+          "contagion_vaccine"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_vaccine"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_vaccine"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Telling a Data Story",
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_lesson1_markdown"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 2: Bridging Activity",
+        "level_keys": [
+          "contagion_teachers"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_teachers"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 4: Collecting Data",
+        "level_keys": [
+          "contagion_teachers2"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "contagion_teachers2"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Lesson 3: Dice Roll",
+        "level_keys": [
+          "6sidedDie"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "6sidedDie"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Prompt 1",
+        "level_keys": [
+          "haiku_prompt1"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prompt1"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "haiku_prompt1"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Haiku Prototype",
+        "level_keys": [
+          "haiku_prototype_choice"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "haiku_prototype_choice"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "haiku_prototype_choice"
       ]
     }
   ],
@@ -1567,7 +2504,7 @@
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "blank space stories",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
@@ -1585,22 +2522,121 @@
     },
     {
       "seeding_key": {
-        "level.key": "haiku_prototype_exemplar",
+        "level.key": "courseF_pilotVideo_prompts",
         "script_level.level_keys": [
-          "haiku_prototype_exemplar"
+          "courseF_pilotVideo_prompts"
         ],
-        "lesson.key": "lesson-3-ci",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
     },
     {
       "seeding_key": {
-        "level.key": "haiku_prototype",
+        "level.key": "courseF_text_review",
         "script_level.level_keys": [
-          "haiku_prototype"
+          "courseF_text_review"
         ],
-        "lesson.key": "lesson-3-ci",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_print",
+        "script_level.level_keys": [
+          "courseF_text_print"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_events",
+        "script_level.level_keys": [
+          "courseF_text_events"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_prompts",
+        "script_level.level_keys": [
+          "courseF_text_prompts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_answer",
+        "script_level.level_keys": [
+          "courseF_text_answer"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_concat",
+        "script_level.level_keys": [
+          "courseF_text_concat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_text_practice",
+        "script_level.level_keys": [
+          "courseF_text_practice"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_samples",
+        "script_level.level_keys": [
+          "courseF_variables_samples"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_stop",
+        "script_level.level_keys": [
+          "courseF_variables_stop"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables_projects",
+        "script_level.level_keys": [
+          "courseF_variables_projects"
+        ],
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "2021drafting"
       }
@@ -1800,6 +2836,237 @@
         ],
         "lesson.key": "video",
         "lesson_group.key": "Loom Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "how things spread",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_story",
+        "script_level.level_keys": [
+          "contagion_story"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_setup",
+        "script_level.level_keys": [
+          "contagion_setup"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_events",
+        "script_level.level_keys": [
+          "contagion_events"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_data",
+        "script_level.level_keys": [
+          "contagion_data"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_stop",
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_masks",
+        "script_level.level_keys": [
+          "contagion_masks"
+        ],
+        "lesson.key": "contagion simulator setup",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "sometimes but not always",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_scientist",
+        "script_level.level_keys": [
+          "contagion_scientist"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_chance",
+        "script_level.level_keys": [
+          "contagion_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_more chance",
+        "script_level.level_keys": [
+          "contagion_more chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_stop",
+        "script_level.level_keys": [
+          "contagion_stop"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_modify_chance",
+        "script_level.level_keys": [
+          "contagion_modify_chance"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_stop_again",
+        "script_level.level_keys": [
+          "contagion_stop_again"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_vaccine",
+        "script_level.level_keys": [
+          "contagion_vaccine"
+        ],
+        "lesson.key": "modifying your model",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_lesson1_markdown",
+        "script_level.level_keys": [
+          "contagion_lesson1_markdown"
+        ],
+        "lesson.key": "telling a data story",
+        "lesson_group.key": "contagion",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers",
+        "script_level.level_keys": [
+          "contagion_teachers"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "contagion_teachers2",
+        "script_level.level_keys": [
+          "contagion_teachers2"
+        ],
+        "lesson.key": "contagion simulator gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "6sidedDie",
+        "script_level.level_keys": [
+          "6sidedDie"
+        ],
+        "lesson.key": "sometimes not always gp",
+        "lesson_group.key": "lesson group",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "haiku_prompt1",
+        "script_level.level_keys": [
+          "haiku_prompt1"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "haiku_prototype_choice",
+        "script_level.level_keys": [
+          "haiku_prototype_choice"
+        ],
+        "lesson.key": "Haiku Bot",
+        "lesson_group.key": "haiku bot",
         "script.name": "2021drafting"
       }
     }

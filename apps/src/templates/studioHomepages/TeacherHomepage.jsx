@@ -51,8 +51,7 @@ export class UnconnectedTeacherHomepage extends Component {
   };
 
   state = {
-    showCensusBanner: this.props.showCensusBanner,
-    donorBannerName: this.props.donorBannerName
+    showCensusBanner: this.props.showCensusBanner
   };
 
   bindCensusBanner = banner => {
@@ -176,7 +175,8 @@ export class UnconnectedTeacherHomepage extends Component {
       teacherEmail,
       canViewAdvancedTools,
       isEnglish,
-      specialAnnouncement
+      specialAnnouncement,
+      donorBannerName
     } = this.props;
 
     // Whether we show the regular announcement/notification
@@ -189,6 +189,8 @@ export class UnconnectedTeacherHomepage extends Component {
 
     // Verify background image works for both LTR and RTL languages.
     const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
+
+    const showDonorBanner = isEnglish && donorBannerName;
 
     return (
       <div>
@@ -204,6 +206,7 @@ export class UnconnectedTeacherHomepage extends Component {
           {isEnglish && specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={specialAnnouncement}
+              marginBottom="30px"
             />
           )}
           {announcement && showAnnouncement && (
@@ -216,7 +219,7 @@ export class UnconnectedTeacherHomepage extends Component {
                 buttonText={announcement.buttonText}
                 buttonLink={announcement.link}
                 newWindow={true}
-                analyticId={announcement.id}
+                googleAnalyticsId={announcement.id}
               />
               <div style={styles.clear} />
             </div>
@@ -258,7 +261,7 @@ export class UnconnectedTeacherHomepage extends Component {
               <br />
             </div>
           )}
-          {isEnglish && this.state.donorBannerName && (
+          {showDonorBanner && (
             <div>
               <DonorTeacherBanner
                 showPegasusLink={true}

@@ -1,30 +1,43 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 import firehoseClient from '../../../lib/util/firehose';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 
 const styles = {
   link: {
-    color: color.teal
+    color: color.teal,
+    verticalAlign: 'middle'
   },
   tooltip: {
     display: 'flex',
     textAlign: 'center'
+  },
+  collapser: {
+    paddingRight: '8px',
+    fontSize: '20px',
+    verticalAlign: 'middle',
+    width: '11px'
   }
 };
-export default class ProgressTableStudentName extends React.PureComponent {
+class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
-    localeCode: PropTypes.string,
-    studentUrl: PropTypes.string.isRequired
+    studentUrl: PropTypes.string.isRequired,
+    onToggleExpand: PropTypes.func.isRequired,
+    isExpanded: PropTypes.bool.isRequired,
+
+    // redux provided
+    showSectionProgressDetails: PropTypes.bool
   };
 
   constructor(props) {
@@ -53,13 +66,9 @@ export default class ProgressTableStudentName extends React.PureComponent {
   }
 
   renderTooltip() {
-    const {lastTimestamp, localeCode} = this.props;
     const id = this.tooltipId();
-    if (localeCode) {
-      moment.locale(localeCode);
-    }
-    const timestamp = lastTimestamp
-      ? moment(lastTimestamp).calendar()
+    const timestamp = this.props.lastTimestamp
+      ? moment(this.props.lastTimestamp).calendar()
       : i18n.none();
     return (
       <ReactTooltip
@@ -79,7 +88,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
   }
 
   render() {
-    const {name, studentUrl} = this.props;
+    const {name, studentUrl, onToggleExpand, isExpanded} = this.props;
     const tooltipId = this.tooltipId();
 
     return (
@@ -89,6 +98,15 @@ export default class ProgressTableStudentName extends React.PureComponent {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
+        {this.props.showSectionProgressDetails && (
+          <CollapserIcon
+            isCollapsed={!isExpanded}
+            onClick={onToggleExpand}
+            collapsedIconClass="fa-caret-right"
+            expandedIconClass="fa-caret-down"
+            style={styles.collapser}
+          />
+        )}
         {this.renderTooltip()}
         <a
           style={styles.link}
@@ -101,3 +119,9 @@ export default class ProgressTableStudentName extends React.PureComponent {
     );
   }
 }
+
+export const UnconnectedProgressTableStudentName = ProgressTableStudentName;
+
+export default connect(state => ({
+  showSectionProgressDetails: state.sectionProgress.showSectionProgressDetails
+}))(ProgressTableStudentName);

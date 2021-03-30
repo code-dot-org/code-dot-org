@@ -5,7 +5,7 @@ student_detail_progress_view true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/csp-20/unit2/"], ["standardMappings", "https://curriculum.code.org/csp-20/unit2/standards/"]]
 has_verified_resources true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-20/unit2/{LESSON}'
-announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}, {"notice"=>"Scholarship opportunity for college bound seniors", "details"=>"US high school seniors may apply by Feb 18, 2021 for a chance to receive $40,000 for college and a paid internship at Amazon through the Amazon Future Engineer Scholarhip program.", "link"=>"https://bit.ly/AFEScholarshipLBU2", "type"=>"information", "visibility"=>"Teacher-only"}]
+announcements [{"notice"=>"", "details"=>"Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ", "link"=>"https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005", "type"=>"bullhorn", "visibility"=>"Teacher-only"}]
 is_stable true
 project_sharing true
 curriculum_umbrella 'CSP'
@@ -50,6 +50,6 @@ level 'CSP U2L7 SFLP 20-21', progression: 'Lesson Overview'
 lesson 'Project - Internet Dilemmas Part 2', display_name: 'Project - Internet Dilemmas Part 2', has_lesson_plan: true
 level 'CSP U2L9 SFLP 20-21', progression: 'Lesson Overview'
 
-lesson 'Lesson 9: Assessment Day', display_name: 'Lesson 9: Assessment Day', lockable: true, has_lesson_plan: false
+lesson 'Lesson 9: Assessment Day', display_name: 'Assessment Day', lockable: true, has_lesson_plan: true
 level 'CSP Unit 2 MC Assessment _2020', progression: 'Unit 2 Exam', assessment: true
 

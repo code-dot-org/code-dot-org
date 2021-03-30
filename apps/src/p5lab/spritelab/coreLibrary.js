@@ -8,9 +8,10 @@ var totalPauseTime = 0;
 var currentPauseStartTime = 0;
 
 export var background;
-export var title = '';
-export var subtitle = '';
+export var screenText = {};
 export var defaultSpriteSize = 100;
+export var printLog = [];
+export var promptVars = {};
 
 export function reset() {
   spriteId = 0;
@@ -18,10 +19,12 @@ export function reset() {
   inputEvents = [];
   behaviors = [];
   background = 'white';
-  title = subtitle = '';
   userInputEventCallbacks = {};
   defaultSpriteSize = 100;
   totalPauseTime = 0;
+  printLog = [];
+  promptVars = {};
+  screenText = {};
 }
 
 export function startPause(time) {
@@ -181,6 +184,15 @@ export function deleteSprite(spriteId) {
 }
 
 export function registerPrompt(promptText, variableName, setterCallback) {
+  if (!variableName) {
+    return;
+  }
+  if (promptVars[variableName] === undefined) {
+    // Set explicitly to null so that we can tell that there *is* a prompt
+    // for this variable name, it just hasn't been answered yet.
+    promptVars[variableName] = null;
+  }
+
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -191,6 +203,9 @@ export function registerPrompt(promptText, variableName, setterCallback) {
 }
 
 export function registerPromptAnswerCallback(variableName, userCallback) {
+  if (!variableName) {
+    return;
+  }
   if (!userInputEventCallbacks[variableName]) {
     userInputEventCallbacks[variableName] = {
       setterCallbacks: [],
@@ -201,6 +216,7 @@ export function registerPromptAnswerCallback(variableName, userCallback) {
 }
 
 export function onPromptAnswer(variableName, userInput) {
+  promptVars[variableName] = userInput;
   const callbacks = userInputEventCallbacks[variableName];
   if (callbacks) {
     // Make sure to call the setter callback to set the variable

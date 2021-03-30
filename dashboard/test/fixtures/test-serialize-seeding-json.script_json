@@ -8,7 +8,7 @@
       "curriculum_path": "my_curriculum_path",
       "is_migrated": true,
       "is_course": true,
-      "version_year": "test-serialize-seeding-json-version"
+      "version_year": "1999"
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
@@ -22,6 +22,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "test-serialize-seeding-json-lesson-group-1",
         "description": "description 1"
       },
       "seeding_key": {
@@ -804,6 +805,16 @@
       "seeding_key": {
         "resource.key": "test-serialize-seeding-json-lg-1-l-2-resource-2"
       }
+    },
+    {
+      "name": "fake name",
+      "url": "fake.url",
+      "key": "test-serialize-seeding-json-script-resource-1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "test-serialize-seeding-json-script-resource-1"
+      }
     }
   ],
   "lessons_resources": [
@@ -832,37 +843,53 @@
       }
     }
   ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "test-serialize-seeding-json-script-resource-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    }
+  ],
   "vocabularies": [
     {
-      "key": "test-serialize-seeding-json-lg-1-l-1-vocab-1",
+      "key": "test_serialize_seeding_json_lg_l_vocab_",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-1"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab_"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-l-1-vocab-2",
+      "key": "test_serialize_seeding_json_lg_l_vocab__a",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-2"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__a"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-l-2-vocab-1",
+      "key": "test_serialize_seeding_json_lg_l_vocab__b",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-1"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__b"
       }
     },
     {
-      "key": "test-serialize-seeding-json-lg-1-l-2-vocab-2",
+      "key": "test_serialize_seeding_json_lg_l_vocab__c",
       "word": "word",
       "definition": "definition",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-2"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__c"
       }
     }
   ],
@@ -870,25 +897,55 @@
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-1"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-1-vocab-2"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__a"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-1"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__b"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
-        "vocabulary.key": "test-serialize-seeding-json-lg-1-l-2-vocab-2"
+        "vocabulary.key": "test_serialize_seeding_json_lg_l_vocab__c"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_environment.name": "new-lab",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "programming_environment.name": "new-lab",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-1-programming-expression-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_environment.name": "new-lab",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "programming_environment.name": "new-lab",
+        "programming_expression.key": "test-serialize-seeding-json-lg-1-l-2-programming-expression-2"
       }
     }
   ],
@@ -931,6 +988,36 @@
       "seeding_key": {
         "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
         "objective.key": "test-serialize-seeding-json-lg-1-l-2-objective-2"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-1",
+        "framework.shortcode": "test_framework",
+        "standard.shortcode": "test-serialize-seeding-json-lg-1-l-1-standard-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-standard-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "test-serialize-seeding-json-lg-1-l-2",
+        "framework.shortcode": "test_framework",
+        "standard.shortcode": "test-serialize-seeding-json-lg-1-l-2-standard-2"
       }
     }
   ]

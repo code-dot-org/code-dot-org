@@ -10,10 +10,18 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import standardsEditor, {
+  initStandards
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
@@ -25,22 +33,34 @@ $(document).ready(function() {
 
   registerReducers({
     ...reducers,
+    instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
+    programmingExpressions: programmingExpressionsEditor,
+    standards: standardsEditor
   });
   const store = getStore();
 
-  store.dispatch(init(activities, searchOptions));
+  store.dispatch(
+    init(activities, searchOptions, lessonData.programmingEnvironments)
+  );
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(
+    initProgrammingExpressions(lessonData.programmingExpressions || [])
+  );
+  store.dispatch(initStandards(lessonData.standards || []));
 
   ReactDOM.render(
     <Provider store={store}>
-      <LessonEditor
-        initialObjectives={objectives}
-        relatedLessons={relatedLessons}
-        initialLessonData={lessonData}
-      />
+      <div>
+        <LessonEditor
+          initialObjectives={objectives}
+          relatedLessons={relatedLessons}
+          initialLessonData={lessonData}
+        />
+        <ExpandableImageDialog />
+      </div>
     </Provider>,
     document.getElementById('edit-container')
   );

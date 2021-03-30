@@ -31,6 +31,7 @@ class GamelabJr < Gamelab
     use_default_sprites
     block_pools
     mini_toolbox
+    hide_pause_button
   )
 
   def shared_blocks
@@ -57,7 +58,8 @@ class GamelabJr < Gamelab
           hide_custom_blocks: true,
           all_animations_single_frame: true,
           use_modal_function_editor: true,
-          mini_toolbox: false
+          mini_toolbox: false,
+          hide_pause_button: false
         }
       )
     )

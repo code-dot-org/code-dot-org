@@ -507,7 +507,7 @@ const sourceHandler = {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
-      if (window.Blockly) {
+      if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
         source = Blockly.mainBlockSpace.isReadOnly()
           ? currentLevelSource
@@ -519,9 +519,10 @@ const sourceHandler = {
         source = appOptions.getCode();
         resolve(source);
       } else if (appOptions.getCodeAsync) {
-        appOptions.getCodeAsync().then(source => {
-          resolve(source);
-        });
+        appOptions
+          .getCodeAsync()
+          .then(source => resolve(source))
+          .catch(err => reject(err));
       }
     });
   },

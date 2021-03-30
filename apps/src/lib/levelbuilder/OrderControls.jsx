@@ -9,7 +9,7 @@ import color from '@cdo/apps/util/color';
 
 const styles = {
   controls: {
-    float: 'right'
+    display: 'flex'
   },
   controlIcon: {
     margin: '0 5px',

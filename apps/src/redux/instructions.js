@@ -21,7 +21,10 @@ const SET_ALLOW_INSTRUCTIONS_RESIZE =
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
-
+const SET_DYNAMIC_INSTRUCTIONS_DEFAULTS =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_DEFAULTS';
+const SET_DYNAMIC_INSTRUCTIONS_KEY =
+  'instructions/SET_DYNAMIC_INSTRUCTIONS_KEY';
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
 
 /**
@@ -39,9 +42,12 @@ const instructionsInitialState = {
   shortInstructions: undefined,
   shortInstructions2: undefined,
   longInstructions: undefined,
+  dynamicInstructions: undefined,
+  dynamicInstructionsDefaults: undefined,
+  dynamicInstructionsKey: undefined,
   teacherMarkdown: undefined,
   hasContainedLevels: false,
-  collapsed: false,
+  isCollapsed: false,
   // The amount of vertical space consumed by the TopInstructions component
   renderedHeight: 0,
   // The amount of vertical space consumed by the TopInstructions component
@@ -70,6 +76,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      dynamicInstructions,
       hasContainedLevels,
       overlayVisible,
       teacherMarkdown,
@@ -77,20 +84,21 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       mapReference,
       referenceLinks
     } = action;
-    let collapsed = state.collapsed;
+    let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
       // If we only have short instructions, we want to be in collapsed mode
-      collapsed = true;
+      isCollapsed = true;
     }
     return Object.assign({}, state, {
       noInstructionsWhenCollapsed,
       shortInstructions,
       shortInstructions2,
       longInstructions,
+      dynamicInstructions,
       teacherMarkdown,
       hasContainedLevels,
       overlayVisible,
-      collapsed,
+      isCollapsed,
       levelVideos,
       mapReference,
       referenceLinks
@@ -99,7 +107,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
 
   if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
     return Object.assign({}, state, {
-      collapsed: !state.collapsed
+      isCollapsed: !state.isCollapsed
     });
   }
 
@@ -110,7 +118,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
   ) {
     return Object.assign({}, state, {
       renderedHeight: action.height,
-      expandedHeight: !state.collapsed ? action.height : state.expandedHeight
+      expandedHeight: !state.isCollapsed ? action.height : state.expandedHeight
     });
   }
 
@@ -161,6 +169,18 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_DEFAULTS) {
+    return Object.assign({}, state, {
+      dynamicInstructionsDefaults: action.dynamicInstructionsDefaults
+    });
+  }
+
+  if (action.type === SET_DYNAMIC_INSTRUCTIONS_KEY) {
+    return Object.assign({}, state, {
+      dynamicInstructionsKey: action.dynamicInstructionsKey
+    });
+  }
+
   return state;
 }
 
@@ -169,6 +189,7 @@ export const setInstructionsConstants = ({
   shortInstructions,
   shortInstructions2,
   longInstructions,
+  dynamicInstructions,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
@@ -181,6 +202,7 @@ export const setInstructionsConstants = ({
   shortInstructions,
   shortInstructions2,
   longInstructions,
+  dynamicInstructions,
   hasContainedLevels,
   overlayVisible,
   teacherMarkdown,
@@ -239,6 +261,16 @@ export const hideOverlay = () => ({
   type: HIDE_OVERLAY
 });
 
+export const setDynamicInstructionsDefaults = dynamicInstructionsDefaults => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_DEFAULTS,
+  dynamicInstructionsDefaults: dynamicInstructionsDefaults
+});
+
+export const setDynamicInstructionsKey = dynamicInstructionsKey => ({
+  type: SET_DYNAMIC_INSTRUCTIONS_KEY,
+  dynamicInstructionsKey: dynamicInstructionsKey
+});
+
 // HELPERS
 
 /**
@@ -276,6 +308,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {string} config.level.shortInstructions
  * @param {string} config.level.instructions2
  * @param {string} config.level.longInstructions
+ * @param {string} config.level.dynamicInstructions
  * @param {array} config.level.inputOutputTable
  * @param {array} config.level.levelVideos
  * @param {stirng} config.level.mapReference,
@@ -302,7 +335,7 @@ export const determineInstructionsConstants = config => {
     referenceLinks
   } = level;
 
-  let {longInstructions, shortInstructions} = level;
+  let {longInstructions, shortInstructions, dynamicInstructions} = level;
 
   let shortInstructions2;
 
@@ -377,6 +410,7 @@ export const determineInstructionsConstants = config => {
     shortInstructions,
     shortInstructions2,
     longInstructions,
+    dynamicInstructions,
     teacherMarkdown,
     hasContainedLevels,
     levelVideos,
@@ -384,3 +418,14 @@ export const determineInstructionsConstants = config => {
     referenceLinks
   };
 };
+
+export function getDynamicInstructions(state) {
+  if (!state.dynamicInstructionsDefaults && !state.dynamicInstructions) {
+    return undefined;
+  }
+
+  return {
+    ...state.dynamicInstructionsDefaults,
+    ...(state.dynamicInstructions && JSON.parse(state.dynamicInstructions))
+  };
+}

@@ -4,6 +4,7 @@ Scenario: Complete Bee Conditions 4-5 Level 3
   Given I am on "http://studio.code.org/s/course3/lesson/7/puzzle/3?noautoplay=true"
   When I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   # repeat to when run
   And I drag block "6" to block "8"
   And I set block "9" to have a value of "2" for title "TIMES"

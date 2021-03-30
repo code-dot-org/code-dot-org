@@ -59,6 +59,7 @@ const LessonArrow = () => {
 
 class ProgressTableLessonNumber extends React.Component {
   static propTypes = {
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.number.isRequired,
     lockable: PropTypes.bool.isRequired,
@@ -69,7 +70,7 @@ class ProgressTableLessonNumber extends React.Component {
   };
 
   tooltipId() {
-    return `tooltipForLesson${this.props.number}`;
+    return `tooltipForLesson${this.props.id}`;
   }
 
   renderTooltip() {

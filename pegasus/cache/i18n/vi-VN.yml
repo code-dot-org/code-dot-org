@@ -26,14 +26,14 @@ vi-VN:
   n_have_learned_an_hoc: "<h1>Hãy thử một</h1><h2>Hour of Code</h2><h3># phục vụ</h3>"
   anybody_can_learn: Tất cả mọi người điều có thể học.
   learn_now: Học ngay
-  petition_message: Mỗi học sinh trong tất cả các trường nên có cơ hội để tìm hiểu
-    khoa học máy tính
-  petition_sign_message: 'Nếu bạn đồng ý, điền tên của bạn.  Tham gia # những người
-    khác.'
+  petition_message: Mọi học sinh ở mọi trường học đều phải có cơ hội học khoa học
+    máy tính
+  petition_sign_message: 'Nếu bạn đồng ý, hãy ký tên của bạn và tham gia vào danh
+    sách gửi thư của chúng tôi cùng với # người khác.'
   petition_join_others: 'Tham gia cùng # những người khác'
   name: Tên
   email: Thư điện tử
-  zipcode: Mã bưu chính
+  zipcode: Mã ZIP hoặc quốc gia
   submit: Gửi
   twentyhours_heading: Hãy thử xem Giới thiệu khóa học Khoa học Máy tính của chúng
     tôi
@@ -56,7 +56,7 @@ vi-VN:
   hoc2014_teachers: Giáo viên
   hoc2014_host: Lưu trữ nó
   hoc2014_everyone: Tất cả mọi người
-  hoc2014_support: Hỗ trợ nó &#x25BE;
+  hoc2014_support: Ủng hộ điều này &#x25BE;
   hoc2014_whatishoc: Giờ Mã là gì?
   csedweek_map_header: "# CSEdWeek / Các sự kiện Hour of Code trên toàn thế giới"
   csedweek_map_signup: Đăng ký sự kiện của bạn
@@ -223,21 +223,22 @@ vi-VN:
   share_on_twitter: Chia sẻ lên Twitter
   beyond_an_hour: Hơn cả một tiếng học lập trinh
   get_started: Bắt đầu
-  i_agree: Tôi đồng ý
-  participant_select: "-Chọn-"
+  i_agree: tôi đồng ý
+  participant_select: "- Lựa chọn -"
   participant_student: Học sinh
-  participant_parent: Phụ Huynh
-  participant_educator: Giáo viên
-  participant_engineer: Kĩ sư phần mềm
-  participant_other: Không có ở trên
+  participant_parent: Cha mẹ
+  participant_educator: Nhà giáo dục
+  participant_engineer: Kỹ sư phần mềm
+  participant_other: Không có điều nào ở trên
   print_all: In tất cả
   print_ice_art: In tác phẩm Ice art của bạn
   create_art_with_zombie: hoặc thiết kế đồ họa chuyên nghiệp với zombie
-  i_am_a: Tôi là một
+  i_am_a: tôi là
   never_spam: Chúng tôi sẽ không bao giờ gửi tin nhắn rác cho bạn
-  enter_country: Nhập đất nước Nếu bạn không sống ở Mỹ
-  used_infrequent_updates: Chỉ được dùng cho những cập nhật không thường xuyên
-  privacy_practices_children: Hãy xem nguyên tắc bảo mật cho trẻ em
+  enter_country: Nhập quốc gia nếu bên ngoài Hoa Kỳ
+  used_infrequent_updates: Chỉ được sử dụng cho các bản cập nhật không thường xuyên
+  privacy_practices_children: Xem các thực tiễn về quyền riêng tư của chúng tôi dành
+    cho trẻ em
   petition_thankyou: Cảm ơn bạn đã đăng ký kiến nghị
   continue_learning_header: Tiếp tục học tập hơn 1 giờ
   continue_learning_body: Có rất nhiều lựa chọn.  Bạn có thể học trực tuyến, hoặc
@@ -280,7 +281,7 @@ vi-VN:
   studiobar_elementary_title: Các khóa học tiểu học
   studiobar_elementary_body: Ba khóa học mới của chúng tôi dành cho K&#8209;5
   studiobar_dance_title: Bữa Tiệc Khiêu Vũ
-  studiobar_dance_body: Tạo và chia sẻ buổi Bữa Tiệc Khiêu Vũ của riêng bạn
+  studiobar_dance_body: Tạo và chia sẻ Bữa tiệc khiêu vũ của riêng bạn
   studiobar_hoc_title: Một giờ lập trình
   studiobar_hoc_body: Học cách lập trình với Angry Birds
   studiobar_flappy_title: Lập trình Flappy
@@ -354,7 +355,7 @@ vi-VN:
   homepage_action_text_learn: Bắt đầu học
   homepage_action_text_signpetition: Ký vào bản kiến nghị
   homepage_signpetition_dropdown: Tôi đồng ý &#x25BE;
-  homepage_signpetition_dropdown_text: Tôi đồng ý
+  homepage_signpetition_dropdown_text: tôi đồng ý
   homepage_banner_text_prizes: The Hour of Code sắp diễn ra một lần nữa từ ngày
     7 đến ngày 13 tháng mười hai
   homepage_banner_link_prizes: 'Tham gia sự kiện học lập trình lớn nhất trong lịch
@@ -370,19 +371,19 @@ vi-VN:
   homepage_banner_emailprivacy_link: Đọc thêm
   homepage_banner_40k_teachers_link: Tìm hiểu thêm
   homepage_slot_text_title_hoc: Giờ của mã
-  homepage_slot_text_blurb_hoc: Ai cũng có thể học. Ngay hôm nay
+  homepage_slot_text_blurb_hoc: Ai cũng có thể học. Bắt đầu hôm nay
   homepage_slot_text_link_hoc: Học thử Hour of Code
   homepage_slot_text_link_host: Đăng cai một Giờ Lập Trình
   homepage_slot_text_link_hocserved: phục vụ
   homepage_solot_text_link_volunteer: Tình nguyện viên cho Hour of Code
   homepage_slot_text_title_students: Học sinh
-  homepage_slot_text_blurb_students: Khám phá tất cả các bài hướng dẫn của chúng tôi
+  homepage_slot_text_blurb_students: Khám phá tất cả các hướng dẫn của chúng tôi
   homepage_slot_text_blurb_students_courses: Tìm hiểu các khóa học của chúng tôi
   homepage_slot_text_link_codestudio: Thử Code Studio
   homepage_slot_text_link_local: Tìm lớp ở địa phương
   homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
-  homepage_slot_text_title_educators: Nhà giáo
-  homepage_slot_text_blurb_educators: Dạy các học viên của bạn
+  homepage_slot_text_title_educators: Nhà giáo dục
+  homepage_slot_text_blurb_educators: Dạy học sinh của bạn
   homepage_slot_text_link_elementary: Trường trung học cơ sở
   homepage_slot_text_link_middle: Trung học cơ sở
   homepage_slot_text_link_high: Trung học phổ thông
@@ -395,8 +396,9 @@ vi-VN:
   homepage_slot_text_link_buy: Tham gia
   homepage_slot_text_link_donate: Quyên góp
   homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
-  homepage_header_donors: Code.org cảm ơn những người hỗ trợ
-  homepage_donors_seall: Xem tất cả
+  homepage_gallery_header: Hơn %{project_count} triệu dự án Code.org đã được tạo
+  homepage_header_donors: Code.org cảm ơn những người ủng hộ nó
+  homepage_donors_seall: Nhìn tất cả
   homepage_donors_donate: Quyên góp
   homepage_below_hero_announcement_text: Chúng tôi quan tâm đến việc giữ bảo mật thông
     tin của bạn và đang cập nhật chính sách bảo mật, có hiệu lực từ ngày 25 tháng
@@ -836,6 +838,16 @@ vi-VN:
   course2_name: Khóa học 2
   course3_name: Khóa học 3
   course4_name: Khóa học 4
+  coursea-draft_name: Khóa học A
+  coursea_name: Khóa học A
+  courseb-draft_name: Khóa học B
+  courseb_name: Khóa học B
+  coursec-draft_name: Khóa học C
+  coursec_name: Khóa học C
+  coursed-draft_name: Khóa học D
+  coursed_name: Khóa học D
+  coursee-draft_name: Khóa học E
+  coursee_name: Khóa học E
   coursed-2018_name: Kịch bản khóa D mới
   accelerated_name: Khóa học cấp tốc
   20-hour_name: Khóa học cấp tốc
@@ -844,7 +856,7 @@ vi-VN:
   minecraft_name: Minecraft
   text-compression_name: Nén văn bản
   applab_name: Phòng thí nghiệm ứng dụng
-  gamelab_name: Kho Trò chơi
+  gamelab_name: Phòng thí nghiệm trò chơi
   applab_gradelevel: 13 tuổi trở lên
   lightbot_gradelevel: Mọi lứa tuổi
   thinkersmith_gradelevel: Mọi lứa tuổi
@@ -859,9 +871,9 @@ vi-VN:
   touchdevelop_gradelevel: Trung học phổ thông
   blockly_gradelevel: Mọi lứa tuổi
   boxisland_gradelevel: Tiểu học
-  course1_gradelevel: 4-6 tuổi
+  course1_gradelevel: Tuổi từ 4-6
   course2_gradelevel: Lứa tuổi 6 + (yêu cầu biết đọc)
-  course3_gradelevel: Lứa tuổi 8 + (sau khi khóa học 2)
+  course3_gradelevel: 8-18 tuổi
   course4_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   coursed_gradelevel: Lớp 8 +
   coursed-2017_gradelevel: Lớp 8 +
@@ -902,6 +914,8 @@ vi-VN:
     trên điện thoại của bạn. '
   appinventor_shortdescription: Làm ứng dụng của riêng bạn! (Chỉ cho android)
   hourofcode_shortdescription: Học mã lập trình với  Mark Zuckerberg và Angry Birds!
+  frozen_shortdescription: Hãy sử dụng mã để tham gia cùng Anna và Elsa khi họ khám
+    phá sự kỳ diệu và vẻ đẹp của băng.
   starwars_shortdescription: Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars
     của riêng bạn trong một thiên hà xa xôi.
   playlab_shortdescription: Tạo ra một câu chuyện hoặc làm cho một trò chơi với phòng
@@ -909,6 +923,50 @@ vi-VN:
   infinity_shortdescription: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
     hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
   artist_shortdescription: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
+  coursea_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
+    trước.
+  courseb_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc
+    trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính
+    và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học
+    C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế
+    nữa.
+  coursee_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa
+    học C & D và sau đó đi xa hơn với các chức năng.
+  coursea-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2017_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2017_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2017_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursea-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2018_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2018_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2018_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursea-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước.
+  courseb-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người
+    đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
+  coursec-2019_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy
+    tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+  coursed-2019_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa
+    học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+    thế nữa.
+  coursee-2019_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong
+    Khóa học C & D và sau đó đi xa hơn với các chức năng.
   frozen_longdescription: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá
     sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt
     băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ
@@ -986,10 +1044,11 @@ vi-VN:
   header_learn: Học
   header_teach: Dạy
   header_help_us: Giúp đỡ chúng tôi
-  header_about: Thông tin
+  header_about: về chúng tôi
   header_teacher_community: Cộng đồng giáo viên
-  header_report_bug: Báo lỗi
-  header_legal_privacy: Chính sách riêng tư
+  header_help_support: Giúp đỡ và hỗ trợ
+  header_report_bug: Báo cáo sự cố
+  header_legal_privacy: Chính sách bảo mật
   header_legal_tos: Các điều khoản của Code.org
   header_tutorials: Hướng dẫn
   header_documentation: Tài liệu
@@ -999,11 +1058,15 @@ vi-VN:
   user_header_settings: Cài đặt tài khoản
   user_header_logout: Đăng xuất
   user_header_signin: Đăng nhập
-  user_header_gamelab: Kho Trò chơi
+  user_header_create: Tạo
+  user_header_applab: Phòng thí nghiệm ứng dụng
+  user_header_artist: Họa sĩ
+  user_header_gamelab: Phòng thí nghiệm trò chơi
   user_header_playlab: Phòng trò chơi
   user_header_dance: Bữa Tiệc Khiêu Vũ
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy bird
+  user_header_view_all: Xem tất cả các dự án ...
   user_header_view_my_projects: Xem chương trình của tôi
   view_all_sections: Xem tất cả các phần
   hero_name: 'Minecraft: Hero''s Journey'
@@ -1151,3 +1214,9 @@ vi-VN:
   footer_powered_by_aws: Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là
     các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và
     / hoặc các quốc gia khác.
+  footer_privacy_policy: Chính sách bảo mật
+  footer_about: về chúng tôi
+  footer_partners: Đối tác
+  footer_donate: Quyên góp
+  footer_support: Trợ giúp và Cộng đồng
+  footer_terms: Điều khoản

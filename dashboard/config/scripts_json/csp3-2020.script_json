@@ -8,6 +8,7 @@
       "curriculum_umbrella": "CSP",
       "student_detail_progress_view": true,
       "has_verified_resources": true,
+      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit3/{LESSON}",
       "project_sharing": true,
       "hideable_lessons": true,
@@ -51,13 +52,6 @@
           "details": "Teachers, some lessons in this unit contain activities that are not located on Code Studio. Make sure to read the Lesson Plans and check out the unit slides. ",
           "link": "https://curriculum.code.org/csp-20/unit3/",
           "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "Scholarship opportunity for college bound seniors",
-          "details": "US high school seniors may apply by Feb 18, 2021 for a chance to receive $40,000 for college and a paid internship at Amazon through the Amazon Future Engineer Scholarhip program.",
-          "link": "https://bit.ly/AFEScholarshipLBU3",
-          "type": "bullhorn",
           "visibility": "Teacher-only"
         }
       ],

@@ -17,15 +17,9 @@
     "family_name": "csp",
     "has_verified_resources": true,
     "visible": true,
-    "is_stable": true,
-    "announcements": [
-      {
-        "notice": "Scholarship Opportunity for College Bound Seniors ",
-        "details": "Encourage your seniors to apply for the Amazon Future Engineer Scholarship program for a chance to receive $40,000 for college and a paid internship at Amazon! Applications open to US high school seniors. Deadline is Feburary 18, 2021.",
-        "link": "https://bit.ly/AFEScholarshipLBCO",
-        "type": "bullhorn",
-        "visibility": "Teacher-only"
-      }
-    ]
-  }
+    "is_stable": true
+  },
+  "resources": [
+
+  ]
 }

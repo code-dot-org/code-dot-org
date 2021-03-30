@@ -12,15 +12,16 @@ Feature: Using the SectionActionDropdown
 
     When I sign in as "Teacher_Sally" and go home
     And I open the section action dropdown
-    And I press the first ".view-progress-link" element
+    And I press the first ".view-progress-link" element to load a new page
     And I wait until current URL contains "/progress"
 
   # * Check that we get redirected to the right page
   Scenario: Managing students from SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
+    And I wait to see ".ui-test-section-dropdown"
     And I open the section action dropdown
-    And I press the first ".manage-students-link" element
+    And I press the first ".manage-students-link" element to load a new page
     And I wait until current URL contains "/manage"
 
   # * Check that we get redirected to the right page
@@ -28,7 +29,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I press the first ".print-login-link" element
+    And I press the first ".print-login-link" element to load a new page
     And I wait until current URL contains "/login_info"
 
   # * Add a section and then opens the edit dialog.

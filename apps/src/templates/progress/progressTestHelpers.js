@@ -7,7 +7,10 @@
 
 import _ from 'lodash';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {levelProgressFromStatus} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  levelProgressFromStatus,
+  lessonProgressForSection
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {createStore} from 'redux';
 import Immutable from 'immutable';
 
@@ -94,9 +97,12 @@ const randomNumberUpTo100 = () => {
   return Math.floor(Math.random() * 100);
 };
 
+let lessonId = 1;
+
 export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   const position = overrideFields.position || randomNumberUpTo100();
   return {
+    id: lessonId++,
     name: `Lesson - ${position}`,
     lockable: false,
     relative_position: position,
@@ -153,4 +159,54 @@ export const fakeStudentLastUpdate = students => {
 
 export const fakeStudentLastUpdateByScript = (scriptData, students) => {
   return {[scriptData.id]: fakeStudentLastUpdate(students)};
+};
+
+export const fakeProgressTableReduxInitialState = (
+  stages,
+  scriptData,
+  students = fakeStudents(2)
+) => {
+  if (!stages) {
+    const lesson1 = fakeLessonWithLevels({position: 1, levels: fakeLevels(1)});
+    const lesson2 = fakeLessonWithLevels({position: 2, levels: fakeLevels(2)});
+    stages = [lesson1, lesson2];
+  }
+  if (!scriptData) {
+    scriptData = fakeScriptData({stages});
+  }
+  const levelProgressData = fakeStudentLevelProgress(
+    scriptData.stages[0].levels,
+    students
+  );
+
+  return {
+    progress: {
+      lessonGroups: [],
+      stages: stages,
+      focusAreaStageIds: [],
+      professionalLearningCourse: false
+    },
+    sectionData: {
+      section: fakeSection(students)
+    },
+    sectionProgress: {
+      scriptDataByScript: {[scriptData.id]: scriptData},
+      studentLevelProgressByScript: {
+        [scriptData.id]: levelProgressData
+      },
+      studentLessonProgressByScript: {
+        [scriptData.id]: lessonProgressForSection(
+          levelProgressData,
+          scriptData.stages
+        )
+      },
+      studentLastUpdateByScript: fakeStudentLastUpdateByScript(
+        scriptData,
+        students
+      ),
+      lessonOfInterest: 1
+    },
+    scriptSelection: {scriptId: scriptData.id},
+    locales: {localeCode: 'en-US'}
+  };
 };

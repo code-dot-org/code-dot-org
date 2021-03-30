@@ -34,4 +34,49 @@ class Foorm::LibraryQuestionTest < ActiveSupport::TestCase
     library_question = library.library_questions.first
     library_question.save
   end
+
+  test 'published_forms_appeared_in returns form for library question in published form' do
+    library = create :foorm_library, :with_questions
+    library_question = library.library_questions.first
+
+    assert_empty library_question.published_forms_appeared_in
+    form = create :foorm_form, questions: "{
+       \"pages\":[
+          {
+            \"name\":\"page_1\",
+            \"elements\":[
+              {
+                \"type\": \"library_item\",
+                \"library_name\": \"#{library.name}\",
+                \"library_version\": #{library.version},
+                \"name\": \"#{library.library_questions.first.question_name}\"
+              }
+            ]
+          }
+        ]
+    }"
+    assert_equal Set[form], library_question.published_forms_appeared_in
+  end
+
+  test 'published_forms_appeared_in returns empty for library question in unpublished form' do
+    library = create :foorm_library, :with_questions
+    library_question = library.library_questions.first
+
+    create :foorm_form, published: false, questions: "{
+       \"pages\":[
+          {
+            \"name\":\"page_1\",
+            \"elements\":[
+              {
+                \"type\": \"library_item\",
+                \"library_name\": \"#{library.name}\",
+                \"library_version\": #{library.version},
+                \"name\": \"#{library.library_questions.first.question_name}\"
+              }
+            ]
+          }
+        ]
+    }"
+    assert_empty library_question.published_forms_appeared_in
+  end
 end

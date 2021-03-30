@@ -1380,6 +1380,7 @@ es-MX:
   express-2019_name: Curso Express (2019)
   pre-express-2019_name: Curso Express para prelectores (2019)
   express-2020_name: Curso Express (2019)
+  pre-express-2020_name: Curso Express para prelectores (2020)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
@@ -2582,3 +2583,9 @@ es-MX:
   page_not_available_button: Volver a la página de inicio
   footer_powered_by_aws: Impulsado por Amazon Web Services
   codebytes_skinny_banner_english_only: Solo en inglés
+  footer_privacy_policy: Política de privacidad
+  footer_about: Acerca de
+  footer_partners: Socios
+  footer_donate: Dona
+  footer_support: Soporte
+  footer_terms: Términos

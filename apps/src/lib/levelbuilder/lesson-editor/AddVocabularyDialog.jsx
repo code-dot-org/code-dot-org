@@ -5,6 +5,8 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
 const styles = {
   dialog: {
@@ -24,6 +26,12 @@ const styles = {
   textInput: {
     width: '98%'
   },
+  checkboxAndLabel: {
+    display: 'flex'
+  },
+  checkboxInput: {
+    marginRight: 5
+  },
   submitButton: {
     color: 'white',
     backgroundColor: color.orange,
@@ -42,8 +50,10 @@ const styles = {
 const initialState = {
   word: '',
   definition: '',
+  commonSenseMedia: false,
   isSaving: false,
-  error: ''
+  error: '',
+  lessons: []
 };
 
 export default class AddVocabularyDialog extends Component {
@@ -51,7 +61,8 @@ export default class AddVocabularyDialog extends Component {
     afterSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     editingVocabulary: vocabularyShape,
-    courseVersionId: PropTypes.number.isRequired
+    courseVersionId: PropTypes.number.isRequired,
+    selectableLessons: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
@@ -75,6 +86,10 @@ export default class AddVocabularyDialog extends Component {
     this.setState({definition: e.target.value});
   };
 
+  handleCommonSenseMediaChange = e => {
+    this.setState({commonSenseMedia: e.target.checked});
+  };
+
   resetState = () => {
     this.setState(initialState);
   };
@@ -82,6 +97,10 @@ export default class AddVocabularyDialog extends Component {
   onClose = () => {
     this.resetState();
     this.props.handleClose();
+  };
+
+  handleLessonSelectChange = lessonSelections => {
+    this.setState({lessons: lessonSelections.map(l => l.value)});
   };
 
   saveVocabulary = e => {
@@ -93,10 +112,14 @@ export default class AddVocabularyDialog extends Component {
     const data = {
       word: this.state.word,
       definition: this.state.definition,
+      commonSenseMedia: this.state.commonSenseMedia,
       courseVersionId: this.props.courseVersionId
     };
     if (this.props.editingVocabulary) {
       data['key'] = this.props.editingVocabulary.key;
+    }
+    if (this.props.selectableLessons) {
+      data['lessonIds'] = JSON.stringify(this.state.lessons);
     }
     $.ajax({
       url: url,
@@ -110,7 +133,10 @@ export default class AddVocabularyDialog extends Component {
         this.onClose();
       })
       .fail(error => {
-        this.setState({isSaving: false, error: error.responseText});
+        this.setState({
+          isSaving: false,
+          error: error.responseText
+        });
       });
   };
 
@@ -119,6 +145,12 @@ export default class AddVocabularyDialog extends Component {
       !this.state.isSaving &&
       this.state.word !== '' &&
       this.state.definition !== '';
+    const selectableLessonOptions = this.props.selectableLessons
+      ? this.props.selectableLessons.map(l => ({
+          label: l.name,
+          value: l.id
+        }))
+      : null;
     return (
       <BaseDialog isOpen={true} handleClose={this.onClose}>
         <h2>
@@ -126,14 +158,23 @@ export default class AddVocabularyDialog extends Component {
         </h2>
 
         {this.state.error && <h3>{this.state.error}</h3>}
+
         <label style={styles.inputAndLabel}>
-          Word
+          <span>
+            Word{' '}
+            {this.props.editingVocabulary === null && (
+              <span style={{color: color.red}}>
+                {' (Note: this cannot be edited after creation!)'}
+              </span>
+            )}
+          </span>
           <input
             type="text"
             name="word"
             value={this.state.word}
             onChange={this.handleWordChange}
             style={styles.textInput}
+            disabled={!!this.props.editingVocabulary}
           />
         </label>
         <label style={styles.inputAndLabel}>
@@ -144,8 +185,37 @@ export default class AddVocabularyDialog extends Component {
             value={this.state.definition}
             onChange={this.handleDefinitionChange}
             style={styles.textInput}
+            disabled={
+              !!this.props.editingVocabulary && this.state.commonSenseMedia
+            }
           />
         </label>
+        <label style={styles.checkboxAndLabel}>
+          <input
+            type="checkbox"
+            name="commonSenseMedia"
+            value={this.state.commonSenseMedia}
+            checked={this.state.commonSenseMedia}
+            onChange={this.handleCommonSenseMediaChange}
+            style={styles.checkboxInput}
+            disabled={!!this.props.editingVocabulary}
+          />
+          Common Sense Media
+        </label>
+        {this.props.selectableLessons && (
+          <label>
+            Lessons this vocabulary is in
+            <Select
+              closeMenuOnSelect={false}
+              options={selectableLessonOptions}
+              multi={true}
+              value={this.state.lessons}
+              onChange={this.handleLessonSelectChange}
+              className={'lessons-dropdown'}
+            />
+          </label>
+        )}
+
         <DialogFooter rightAlign>
           <button
             id="submit-button"

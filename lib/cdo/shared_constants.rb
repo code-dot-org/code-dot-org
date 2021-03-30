@@ -193,6 +193,7 @@ module SharedConstants
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
+      "getPrediction": null,
 
       // Turtle
       "moveForward": null,
@@ -233,6 +234,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -532,6 +534,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,

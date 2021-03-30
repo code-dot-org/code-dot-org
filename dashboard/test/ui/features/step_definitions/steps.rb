@@ -509,8 +509,9 @@ When /^I click selector "([^"]*)" if it exists$/ do |jquery_selector|
 end
 
 When /^I click selector "([^"]*)" once I see it(?: to load a new (page|tab))?$/ do |selector, load|
+  wait_for_jquery
   wait_until do
-    @browser.execute_script("return $(\"#{selector}:visible\").length != 0;")
+    @browser.execute_script(jquery_is_element_visible(selector))
   end
   page_load(load) do
     @browser.execute_script("$(\"#{selector}\")[0].click();")
@@ -1214,6 +1215,13 @@ And /^I dismiss the language selector$/ do
   }
 end
 
+And /^I dismiss the login reminder$/ do
+  steps %Q{
+    And I click selector ".modal-backdrop" if I see it
+    And I wait until I don't see selector ".uitest-login-callout"
+  }
+end
+
 And /^I dismiss the teacher panel$/ do
   steps %Q{
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
@@ -1479,6 +1487,10 @@ And(/^I delete the cookie named "([^"]*)"$/) do |cookie_name|
   end
 end
 
+And(/^I clear session storage/) do
+  @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
@@ -1706,6 +1718,13 @@ end
 Then /^I unlock the stage for students$/ do
   # allow editing
   @browser.execute_script("$('.modal-body button').first().click()")
+  # save
+  @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
+end
+
+Then /^I lock the stage for students$/ do
+  # lock assessment
+  @browser.execute_script('$(".modal-body button:contains(Lock)").click()')
   # save
   @browser.execute_script('$(".modal-body button:contains(Save)").first().click()')
 end

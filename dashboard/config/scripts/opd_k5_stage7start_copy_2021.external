@@ -1,0 +1,14 @@
+name 'OPD-K5 Stage7Start_copy_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Overview: Events
+
+<img src="https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG" width="450px" style="border-radius: 10px; float: right; margin: 0 0 40px 40px;">
+
+## Coding concepts: Events
+- Make a program interactive
+
+## Teaching practice: Debugging
+- Find and fix problems in an algorithm or program
+
+MARKDOWN

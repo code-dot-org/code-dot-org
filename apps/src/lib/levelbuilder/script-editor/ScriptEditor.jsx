@@ -15,7 +15,7 @@ import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
-import {navigateToHref} from '@cdo/apps/utils';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
   getSerializedLessonGroups,
@@ -51,7 +51,7 @@ const styles = {
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
 
 /**
  * Component for editing course scripts.
@@ -93,7 +93,9 @@ class ScriptEditor extends React.Component {
     hasCourse: PropTypes.bool,
     initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
+    initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
+    initialIncludeStudentLessonPlans: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -117,6 +119,8 @@ class ScriptEditor extends React.Component {
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
+      weeklyInstructionalMinutes:
+        this.props.initialWeeklyInstructionalMinutes || '',
       description: this.props.i18nData.description,
       studentDescription: this.props.i18nData.studentDescription,
       announcements: this.props.initialAnnouncements,
@@ -150,7 +154,8 @@ class ScriptEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.stageDescriptions,
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData
+      oldScriptText: this.props.initialLessonLevelData,
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
     };
   }
 
@@ -179,6 +184,17 @@ class ScriptEditor extends React.Component {
 
   handleStandaloneCourseChange = () => {
     this.setState({isCourse: !this.state.isCourse});
+  };
+
+  handleShowCalendarChange = () => {
+    if (!this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
+      this.setState({
+        showCalendar: !this.state.showCalendar,
+        weeklyInstructionalMinutes: '225'
+      });
+    } else {
+      this.setState({showCalendar: !this.state.showCalendar});
+    }
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -216,11 +232,34 @@ class ScriptEditor extends React.Component {
       shouldCloseAfterSave = false;
     }
 
+    if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide instructional minutes per week in Unit Calendar Settings.'
+      });
+      return;
+    } else if (
+      this.state.showCalendar &&
+      (parseInt(this.state.weeklyInstructionalMinutes) <= 0 ||
+        isNaN(parseInt(this.state.weeklyInstructionalMinutes)))
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+      });
+      return;
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
       is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
+      weekly_instructional_minutes: parseInt(
+        this.state.weeklyInstructionalMinutes
+      ),
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
@@ -257,7 +296,8 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      is_migrated: this.props.isMigrated
+      is_migrated: this.props.isMigrated,
+      include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
 
     if (this.state.hasImportedLessonDescriptions) {
@@ -273,7 +313,7 @@ class ScriptEditor extends React.Component {
     })
       .done(data => {
         if (shouldCloseAfterSave) {
-          navigateToHref(`${data.scriptPath}${window.location.search}`);
+          navigateToHref(linkWithQueryParams(data.scriptPath));
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
@@ -345,6 +385,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({description: e.target.value})
             }
+            features={{imageUpload: true}}
           />
           <TextareaWithMarkdownPreview
             markdown={this.state.studentDescription}
@@ -354,6 +395,7 @@ class ScriptEditor extends React.Component {
             handleMarkdownChange={e =>
               this.setState({studentDescription: e.target.value})
             }
+            features={{imageUpload: true}}
           />
         </CollapsibleEditorSection>
 
@@ -422,25 +464,6 @@ class ScriptEditor extends React.Component {
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this script.</p>
-            </HelpTip>
-          </label>
-          <label>
-            Show Calendar
-            <input
-              type="checkbox"
-              checked={this.state.showCalendar}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({showCalendar: !this.state.showCalendar})
-              }
-            />
-            <HelpTip>
-              <p>
-                Check to enable the calendar view on the Unit Overview Page. The
-                calendar displays each lesson and generally how long it will
-                take as well how many weeks the unit is expected to take in
-                general. (Actual calendar UI coming soon!)
-              </p>
             </HelpTip>
           </label>
           <label>
@@ -747,6 +770,29 @@ class ScriptEditor extends React.Component {
               }
             />
           )}
+          {this.props.isMigrated && (
+            <label>
+              Include student-facing lesson plans
+              <input
+                type="checkbox"
+                checked={this.state.includeStudentLessonPlans}
+                style={styles.checkbox}
+                onChange={() =>
+                  this.setState({
+                    includeStudentLessonPlans: !this.state
+                      .includeStudentLessonPlans
+                  })
+                }
+              />
+              <HelpTip>
+                <p>
+                  Checking this will automatically generate student-facing
+                  lesson plans for any lesson that is marked as “Has Lesson
+                  Plan”
+                </p>
+              </HelpTip>
+            </label>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources Settings">
@@ -784,6 +830,47 @@ class ScriptEditor extends React.Component {
             />
           </div>
         </CollapsibleEditorSection>
+        {this.props.isMigrated && (
+          <CollapsibleEditorSection title="Unit Calendar Settings">
+            <label>
+              Show Calendar
+              <input
+                type="checkbox"
+                checked={this.state.showCalendar}
+                style={styles.checkbox}
+                onChange={this.handleShowCalendarChange}
+              />
+              <HelpTip>
+                <p>
+                  Check to enable the calendar view on the Unit Overview Page.
+                  The calendar displays each lesson and generally how long it
+                  will take as well how many weeks the unit is expected to take
+                  in general. (Actual calendar UI coming soon!)
+                </p>
+              </HelpTip>
+            </label>
+            <label>
+              Instructional Minutes Per Week
+              <HelpTip>
+                <p>
+                  Number of instructional minutes to allocate to each week in
+                  the calendar. Lessons will be divided across the days/weeks in
+                  the calendar based on their length of time.
+                </p>
+              </HelpTip>
+              <input
+                value={this.state.weeklyInstructionalMinutes}
+                style={styles.input}
+                disabled={!this.state.showCalendar}
+                onChange={e =>
+                  this.setState({
+                    weeklyInstructionalMinutes: e.target.value
+                  })
+                }
+              />
+            </label>
+          </CollapsibleEditorSection>
+        )}
 
         <CollapsibleEditorSection title="Professional Learning Settings">
           {this.props.isLevelbuilder && (

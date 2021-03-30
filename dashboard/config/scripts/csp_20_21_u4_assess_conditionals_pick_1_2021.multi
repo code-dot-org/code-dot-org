@@ -22,5 +22,16 @@ The customer's age is stored in the variable `age` and the price is stored in th
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
+**Explanation:** There are multiple ways to write this conditional statement so that it correctly decides the price for each ticket. C is the only one of these choices that accomplishes that. Options A and B will assign a ticket price of $8 to anyone over the age of 12, including those 65 and older. Option D will assign a ticket price of $8 to everyone under the age of 65, including those 12 and younger.
+
+This question is similar to the set of levels where students programing the star-color changing app in [Lesson 7 - Conditionals Practice](https://curriculum.code.org/csp-20/unit4/7/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+* CRD-2.J - Identify inputs and corresponding expected output or behaviors that can be used to check the correctness of an algorithm or program.
+AAP-2.E.2 - The exam reference sheet provides the following relational operators: =, ≠, >, <, ≥, and ≤. ●   	a = b●   	a ≠ b●   	a > b●   	a < b●   	a ≥ b●  a ≤ b These are used to test the relationship between two variables, expressions, or values.
+* AAP-2.I - For nested selection: a. Represent using nested conditional statements. b. Determine the result of nested conditional statements.
+
+:::
 
 MARKDOWN

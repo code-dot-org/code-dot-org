@@ -87,8 +87,8 @@ describe('ScriptEditor', () => {
     it('uses old script editor for non migrated script', () => {
       const wrapper = createWrapper({initialHidden: false});
 
-      expect(wrapper.find('input').length).to.equal(23);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('input').length).to.equal(22);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(10);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
@@ -101,11 +101,11 @@ describe('ScriptEditor', () => {
     it('uses new script editor for migrated script', () => {
       const wrapper = createWrapper({initialHidden: false, isMigrated: true});
 
-      expect(wrapper.find('input').length).to.equal(23);
-      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('input').length).to.equal(25);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
@@ -281,6 +281,79 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
+      ).to.be.true;
+
+      server.restore();
+    });
+
+    it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
+      const wrapper = createWrapper({initialShowCalendar: true});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide instructional minutes per week in Unit Calendar Settings.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
+          )
+      ).to.be.true;
+
+      server.restore();
+    });
+
+    it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
+      const wrapper = createWrapper({
+        initialShowCalendar: true,
+        initialWeeklyInstructionalMinutes: -100
+      });
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(0);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect(scriptEditor.state().isSaving).to.equal(false);
+      expect(scriptEditor.state().error).to.equal(
+        'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
+          )
       ).to.be.true;
 
       server.restore();

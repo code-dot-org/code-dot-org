@@ -4,6 +4,7 @@ Background:
   Given I am on "http://studio.code.org/s/course4/lesson/14/puzzle/12?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 

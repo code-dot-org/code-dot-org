@@ -7,6 +7,7 @@
     "properties": {
       "student_detail_progress_view": true,
       "has_verified_resources": true,
+      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
       "curriculum_umbrella": "CSP",
       "project_sharing": true,
@@ -51,13 +52,6 @@
           "details": "In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
           "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
           "type": "information",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "Scholarship opportunity for college bound seniors",
-          "details": "US high school seniors may apply by Feb 18, 2021 for a chance to receive $40,000 for college and a paid internship at Amazon through the Amazon Future Engineer Scholarhip program.",
-          "link": "https://bit.ly/AFEScholarshipLBU4",
-          "type": "bullhorn",
           "visibility": "Teacher-only"
         }
       ],

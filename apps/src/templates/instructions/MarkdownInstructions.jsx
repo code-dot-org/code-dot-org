@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {connect} from 'react-redux';
 import {convertXmlToBlockly} from './utils';
 
 import EnhancedSafeMarkdown from '../EnhancedSafeMarkdown';
@@ -106,14 +105,10 @@ class MarkdownInstructions extends React.Component {
           inTopPane && canCollapse && styles.inTopPaneCanCollapse
         ]}
       >
-        <EnhancedSafeMarkdown markdown={markdown} expandableImages={true} />
+        <EnhancedSafeMarkdown markdown={markdown} expandableImages />
       </div>
     );
   }
 }
 
-export const StatelessMarkdownInstructions = Radium(MarkdownInstructions);
-export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly,
-  noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed
-}))(Radium(MarkdownInstructions));
+export default Radium(MarkdownInstructions);

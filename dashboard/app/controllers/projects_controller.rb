@@ -138,6 +138,10 @@ class ProjectsController < ApplicationController
     },
     eval: {
       name: 'Eval Free Play'
+    },
+    javalab: {
+      name: 'New Java Lab Project',
+      levelbuilder_required: true
     }
   }.with_indifferent_access.freeze
 
@@ -321,7 +325,8 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
-      azure_speech_service_voices: azure_speech_service_options[:voices]
+      azure_speech_service_voices: azure_speech_service_options[:voices],
+      disallowed_html_tags: disallowed_html_tags
     )
 
     if params[:key] == 'artist'

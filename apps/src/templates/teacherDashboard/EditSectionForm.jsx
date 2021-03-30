@@ -22,6 +22,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenStageRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const style = {
   root: {
@@ -69,6 +70,7 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
+    textToSpeechScriptIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     stageExtrasAvailable: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object.isRequired,
     assignedScriptName: PropTypes.string.isRequired,
@@ -121,6 +123,21 @@ class EditSectionForm extends Component {
     ].includes(loginType);
   }
 
+  recordAutoplayToggleEvent = ttsAutoplayEnabled => {
+    firehoseClient.putRecord(
+      {
+        study: 'section_setting',
+        study_group: 'tts_auto_play',
+        event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
+        script_id: this.props.section.scriptId,
+        data_json: JSON.stringify({
+          section_id: this.props.section.id
+        })
+      },
+      {useProgressScriptId: false, includeUserId: true}
+    );
+  };
+
   render() {
     const {
       section,
@@ -132,6 +149,7 @@ class EditSectionForm extends Component {
       editSectionProperties,
       handleClose,
       stageExtrasAvailable,
+      textToSpeechScriptIds,
       assignedScriptName,
       localeEnglishName,
       isNewSection
@@ -218,6 +236,16 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {textToSpeechScriptIds.indexOf(section.scriptId) > -1 && (
+            <TtsAutoplayField
+              value={section.ttsAutoplayEnabled}
+              onChange={ttsAutoplayEnabled => {
+                editSectionProperties({ttsAutoplayEnabled});
+                this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
+              }}
+              disabled={isSaveInProgress}
+            />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -417,6 +445,19 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
 );
 PairProgrammingField.propTypes = FieldProps;
 
+const TtsAutoplayField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enableTtsAutoplay()}</FieldName>
+    <FieldDescription>{i18n.explainTtsAutoplay()} </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={ttsAutoplayEnabled => onChange(ttsAutoplayEnabled)}
+      disabled={disabled}
+    />
+  </div>
+);
+TtsAutoplayField.propTypes = FieldProps;
+
 const FieldName = props => (
   <div
     style={{
@@ -459,6 +500,7 @@ let defaultPropsFromState = state => ({
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
+  textToSpeechScriptIds: state.teacherSections.textToSpeechScriptIds,
   stageExtrasAvailable: id => stageExtrasAvailable(state, id),
   hiddenStageState: state.hiddenStage,
   assignedScriptName: assignedScriptName(state),

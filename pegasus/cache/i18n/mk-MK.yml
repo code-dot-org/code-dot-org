@@ -59,6 +59,7 @@ mk-MK:
   volunteer_engineer_submission_field_description: Опис
   volunteer_engineer_submission_submit: Поднеси
   dashboard_action_cancel: Откажи
+  dashboard_sections_close: затвори
   dashboard_students_name: Име
   blockly_name: Blockly
   gamelab_name: Работилница за апликации
@@ -80,3 +81,4 @@ mk-MK:
   user_header_gamelab: Работилница за апликации
   hoc2018_creativity_create: Креирај
   hoc2018_mc_homepage_try_it: Обидете се
+  footer_about: За нас

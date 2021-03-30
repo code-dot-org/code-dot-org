@@ -6,6 +6,7 @@ Background:
 Scenario: Drag a dropdown and select a different option.
   When I rotate to landscape
   And I wait for the page to fully load
+  And I dismiss the login reminder
   And I drag block "4" to offset "250, 100"
   And I press dropdown number 11
   Then the dropdown is visible

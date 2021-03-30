@@ -80,6 +80,9 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
 
+    # will be true if the user is in any unarchived section where tts autoplay is enabled
+    @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
+
     # @view_as_user is used to determine redirect path for bubble choice levels
     view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
     @view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
@@ -485,7 +488,8 @@ class ScriptLevelsController < ApplicationController
       is_bonus_level: @script_level.bonus,
       useGoogleBlockly: params[:blocklyVersion] == "Google",
       azure_speech_service_voices: azure_speech_service_options[:voices],
-      authenticity_token: form_authenticity_token
+      authenticity_token: form_authenticity_token,
+      disallowed_html_tags: disallowed_html_tags
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 

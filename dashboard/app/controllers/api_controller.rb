@@ -332,8 +332,8 @@ class ApiController < ApplicationController
 
     # Get the level progress for each student
     render json: {
-      students: student_progress,
-      student_timestamps: student_timestamps,
+      student_progress: student_progress,
+      student_last_updates: student_timestamps,
       pagination: {
         total_pages: paged_students.total_pages,
         page: page,
@@ -373,13 +373,7 @@ class ApiController < ApplicationController
     timestamp_by_user = progress_by_user.transform_values do |user|
       user.values.map {|level| level[:last_progress_at]}.compact.max
     end
-    # Remove last_progress_at from the return value, to keep the data sent to
-    # the client to a minimum.
-    progress_by_user.values.each do |user|
-      user.values.each do |level|
-        level.delete(:last_progress_at)
-      end
-    end
+
     [progress_by_user, timestamp_by_user]
   end
 
@@ -431,7 +425,7 @@ class ApiController < ApplicationController
       level_source = user_level.try(:level_source).try(:data)
 
       # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:levels]
+      response[:progress] = summarize_user_progress(script, current_user)[:progress]
 
       if user_level
         response[:lastAttempt] = {

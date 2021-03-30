@@ -24,6 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-25 19:29:16 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -114,7 +115,7 @@
         "purpose": "This lesson introduces many new concepts and tools to students. They are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. While the understanding of HTML as a way to communicate the structure of a web page is a critical learning objective, this lesson has students do minimal programming since there are many other new ideas and tools to grasp. In the next lesson students will have more time to spend programming in HTML.",
         "preparation": "* Review the Code Studio levels",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\r\n\r\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\r\n\r\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\r\n\r\n\tLevel 7 on Code Studio provides a mini-rubric to assess student use of HTML.\r\n\r\n3. **Understand how to use lesson resources provided in Web Lab**\r\n\r\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool.",
+        "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\n\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\n\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\n\n\tLevel 6 on Code Studio provides a mini-rubric to assess student use of HTML.\n\n3. **Understand how to use lesson resources provided in Web Lab**\n\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -321,7 +322,7 @@
         "student_overview": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\r\n\r\nThe class starts by considering the ethical implications of using images on websites, specifically in terms of intellectual property. They then learn how to add images to their web pages using the <img> tag and how to cite the image sources appropriately.",
         "purpose": "This lesson introduces images, which are different from earlier tags in that they are 'self-closing' and include attributes.  Students should understand that these tags do not surround content in the same way as other tags.\r\n\r\nThis is also the first time that students are encouraged to use content from others, and provides them an opportunity to put into practice what they have learned about intellectual property and copyright.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Follow copyright law, accurately attributing others when using their work.**\r\n\r\n\tSee Level 8 in the Code Studio lesson.\r\n    \r\n2. **Add an image to a web page**\r\n\r\n    See Level 8 in the Code Studio lesson.",
+        "assessment_opportunities": "1. **Follow copyright law, accurately attributing others when using their work.**\n\n\tSee Level 7 in the Code Studio lesson.\n    \n2. **Add an image to a web page**\n\n    See Level 7 in the Code Studio lesson.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -380,7 +381,7 @@
         "student_overview": "**Question of the Day: How can we style the images and layouts of our pages?**\r\n\r\nThis lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.\r\n",
         "purpose": "This lesson builds on what students previously learned about CSS properties, this time looking at properties that can be used on elements.  These new properties impact the visual look of the web page beyond its text and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href=\"http://www.w3schools.com/cssref/\"> W3 Schools </a>.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Use CSS properties to change the layout properties of elements.**\r\n\r\n\tSee Level 8 in Code Studio.\r\n\r\n2. **Create a CSS rule-set for the body element that impacts all elements on the page.**\r\n\r\n\tSee Level 8 in Code Studio",
+        "assessment_opportunities": "1. **Use CSS properties to change the layout properties of elements.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Create a CSS rule-set for the body element that impacts all elements on the page.**\n\n\tSee Level 8 in Code Studio",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -741,7 +742,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 20
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "94d4f5a6-67f3-4e3b-96e6-1c8eeb6a0bf3",
@@ -755,7 +756,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33",
@@ -782,7 +783,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "a0692a63-008e-4013-9089-9f9c9b22d67c",
@@ -796,7 +797,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "53d85fa1-fecf-43b6-83f0-bef5454c41ed",
@@ -824,7 +825,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "5ea39814-570e-4b27-a399-fe1e3f197d77",
@@ -838,7 +839,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 45
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "c3347e87-c7d1-4002-aa31-a53dd8deee41",
@@ -866,7 +867,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "ff0f61fd-a59d-4c4b-aae7-ad0c35798747",
@@ -880,7 +881,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14",
@@ -894,7 +895,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "68062c41-3e39-40ec-9cae-d096b0bdca24",
@@ -908,7 +909,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "13fad4d8-f6df-4655-9054-9fdb847371db",
@@ -922,7 +923,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "03d57f25-1cca-49af-8487-43c3a7efceb8",
@@ -964,7 +965,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "9d2f6fef-3722-429e-b4c1-f6d1103c942b",
@@ -978,7 +979,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "2d66b959-ae8c-430d-b72c-fe68923080c5",
@@ -992,7 +993,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "479d0cbe-6860-44be-bd76-9d7e266e0785",
@@ -1006,7 +1007,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "9982617c-045f-447f-8f83-522ea617c3b9",
@@ -1020,7 +1021,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "442c4f1b-bf6a-4e06-a8a7-92ebb259d010",
@@ -1034,7 +1035,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "d8c9fbdb-b731-44f3-aa89-3bfd07111678",
@@ -1048,7 +1049,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 20
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "87977467-a47d-46de-90b9-df606358da99",
@@ -1062,7 +1063,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "c83ce210-dedc-4eec-bdcf-a5a96c75ecdf",
@@ -1076,7 +1077,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4",
@@ -1090,7 +1091,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 20
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "60f3718d-0319-4213-a83d-3ce3cb6bdd80",
@@ -1132,7 +1133,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 20
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "b3d7133e-335d-4c28-98d8-a61e8fecaab5",
@@ -1150,19 +1151,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "7899e7b1-0a30-4699-bcae-48dd6a61c8f3",
-        "lesson.key": "Websites for Expression ",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
-      "key": "de4b0c2d-c96b-4019-b69e-92fec2801af0",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "de4b0c2d-c96b-4019-b69e-92fec2801af0",
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021"
@@ -1187,7 +1175,7 @@
       "position": 2,
       "properties": {
         "name": "Activity ",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d72bad77-760b-4fe9-9282-586e05a164a7",
@@ -1229,7 +1217,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 20
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d6982573-b0dc-4c36-a400-b426cb43e2b4",
@@ -1271,7 +1259,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 165
       },
       "seeding_key": {
         "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5",
@@ -1295,24 +1283,11 @@
       }
     },
     {
-      "key": "74549511-494c-4c13-9823-bfcb37550a74",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74",
-        "lesson.key": "Project - Personal Web Page",
-        "lesson_group.key": "csd2_1v2",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
       "key": "d0d7583f-c507-4ad5-92fa-0dff5d463423",
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "d0d7583f-c507-4ad5-92fa-0dff5d463423",
@@ -1326,7 +1301,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "d5dd115f-dd41-4a16-b59f-0f77bb79ed00",
@@ -1339,8 +1314,7 @@
       "key": "af86f558-77c1-432e-a909-e02c93ad7c7c",
       "position": 3,
       "properties": {
-        "name": "Forming Groups",
-        "duration": 0
+        "name": "Forming Groups"
       },
       "seeding_key": {
         "lesson_activity.key": "af86f558-77c1-432e-a909-e02c93ad7c7c",
@@ -1368,7 +1342,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "0e81302e-2d3e-4a15-a0be-8b8efd6c082f",
@@ -1382,7 +1356,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "dd80250a-acb3-4fe7-a9b3-3703faad40ce",
@@ -1396,7 +1370,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "972e8bec-fac2-49b3-ab29-8d58ddfa01f1",
@@ -1423,7 +1397,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "ba30039c-8c54-4e5a-a810-18052eac7d45",
@@ -1437,7 +1411,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "54106bc6-dce5-43e9-965a-07567d1856dc",
@@ -1479,7 +1453,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "8d3448c6-d7e5-44f9-8b60-e207f0026848",
@@ -1507,7 +1481,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "ed6098ff-6be9-40e7-838e-eef99d12259b",
@@ -1521,7 +1495,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "71440e94-c031-42dd-a79d-3f8cb5056b9f",
@@ -1531,8 +1505,21 @@
       }
     },
     {
-      "key": "378bdb3f-7f63-4ac5-aeb3-957a4b98a354",
+      "key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494",
       "position": 3,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494",
+        "lesson.key": "Planning a Multi-page Website",
+        "lesson_group.key": "csd2_2v2",
+        "script.name": "csd2-2021"
+      }
+    },
+    {
+      "key": "378bdb3f-7f63-4ac5-aeb3-957a4b98a354",
+      "position": 4,
       "properties": {
         "name": "Wrap Up",
         "duration": 5
@@ -1545,24 +1532,11 @@
       }
     },
     {
-      "key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494",
-        "lesson.key": "Planning a Multi-page Website",
-        "lesson_group.key": "csd2_2v2",
-        "script.name": "csd2-2021"
-      }
-    },
-    {
       "key": "0051624b-1122-464c-a805-9dfd4e8afb4c",
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "0051624b-1122-464c-a805-9dfd4e8afb4c",
@@ -1590,7 +1564,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "c68e1b20-2fee-4a79-8b34-e6f38c9cd672",
@@ -1604,7 +1578,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "3a252e7c-c299-41f2-8617-a6b165dfd91f",
@@ -1618,7 +1592,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 0
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "9c7bec47-be70-4024-a4f2-21f687434008",
@@ -1632,7 +1606,7 @@
       "position": 3,
       "properties": {
         "name": "Wrap Up",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "6bef749f-9fe6-445c-b873-bb9040b750b2",
@@ -1660,7 +1634,7 @@
       "position": 2,
       "properties": {
         "name": "Feedback and Iteration",
-        "duration": 0
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "7d6a40f7-3dce-4820-a330-59810b38dc39",
@@ -1674,7 +1648,7 @@
       "position": 3,
       "properties": {
         "name": "Showcase",
-        "duration": 0
+        "duration": 40
       },
       "seeding_key": {
         "lesson_activity.key": "bb408703-11ec-4822-a86b-b8625a121f6f",
@@ -1688,7 +1662,7 @@
       "position": 4,
       "properties": {
         "name": "Post-Project Test",
-        "duration": 0
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "1840d382-40db-43dd-b6cd-4f002ec7eb04",
@@ -1756,7 +1730,6 @@
         "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of the discussion is to help students see web development as a form of self-expression and communication, and to set an expectation that they have something valuable to contribute.  While some students may want to share something silly, encourage students to consider that they have something valuable to say and that others can benefit from it.  This discussion should set a positive atmosphere that respects the diversity of perspectives that the group can bring.\r\n"
           }
@@ -1818,7 +1791,7 @@
       "key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\r\n\r\n**Distribute:** Pass out a copy of the activity guide to each student.\r\n\r\n&fa-desktop; Direct students to the \"Sample Web Pages\" level on Code Studio.\r\n\r\n\r\n\r\n\r\n\r\n\r\n    \r\n\r\n#### Exploring Websites"
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Web Pages\" level on Code Studio.\n\n\n\n\n\n\n    \n\n#### Exploring Websites"
       },
       "seeding_key": {
         "activity_section.key": "aeb0ec32-aea0-4bfd-82de-d37b71b2075c",
@@ -1843,7 +1816,6 @@
         "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students don't need to get it \"right\" for each site, but they should demonstrate that they have considered the reasons someone might make a web page. If students struggle to identify the purpose a site serves its creator, consider asking the following prompts:\r\n\r\n* Does the website creator want the user to do something?\r\n* Does the website try to convince the user of something in particular?\r\n* Does the website serve as a form of personal expression for the creator?\r\n\r\nThe sites are intentionally simple, to help set expectations about the websites that students will be creating over the course of the unit.\r\n\r\n"
           }
@@ -1883,7 +1855,6 @@
         "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to prepare students to think of themselves as potential website creators.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what their motivations might be.  Remind them that they will have an opportunity in this unit to create a website that will be shared with the entire world.\r\n"
           }
@@ -1910,7 +1881,6 @@
       "key": "0ca4137c-b4bf-45d3-af15-ff3800a98935",
       "position": 1,
       "properties": {
-        "name": "Sample Personal Web Pages",
         "progression_name": "Sample Personal Web Pages"
       },
       "seeding_key": {
@@ -1922,10 +1892,9 @@
       "key": "248256b0-de8c-4fcf-8f60-58492ef07802",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show the image inside the [r exemplar-text-website]",
+        "description": "**Display:** Show the image inside the [Exemplar Text Website](https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If this site is blocked for students, your IT department may need to whitelist codeprojects.org.  This is the same site that students will use to publish their own web pages, so it's important that they have access.\r\n"
           }
@@ -1955,7 +1924,6 @@
         "description": "**Discuss:** Once students have written their instructions, have them briefly share their instructions with a neighbor.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Activities like this one are often used in CS courses to help highlight just how much precision is needed to communicate instructions to a computer. In this instance the goal is similar. You want to highlight the challenge of differentiating the actual content on the page and instructions indicating how it should be structured. This demonstration helps justify the creation of HTML in order to tag pieces of content to help the computer understand what they are and hence how they should look.\r\n"
           }
@@ -2020,7 +1988,6 @@
         "description": "**Display:** At the front of the room, write the heading \"Resources\" on the board or blank poster paper, leaving space to list the various resources as they appear in the lesson.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Using Resources:** Below you can find recommendations for using the many resources students are introduced to in the lesson. Wait until after students have seen all of these resources to review at the end of the lesson, but add them to the list and model the correct usage as they appear.\r\n\r\n* **Videos:** Watched as a class, but students can always return to them.\r\n* **Help and Tips Tab** This tab contains all of the relevant videos and map levels for a particular level.\r\n* **Map Levels:** Contain text and diagrams explaining content. These are intended as helpful student resources, not class readings. They are a good place to go for review after learning content or when students get stuck in levels.\r\n* **Level Instructions:** Instructions may introduce small pieces of new content. Each level features a \"Do This\" section explaining what students are supposed to do in that level. Set the expectation early that reading these instructions, not just the \"Do This\" section, is important.\r\n* **Level Drop-down Tips:** Students can click these tips in the instruction areas of lessons. Students should use these as a first place to check for help before talking with peers or a teacher.\r\n* **Inspector Tool:** Highlights the code corresponding to a web page element when hovered over in the Preview Area.\r\n* **Bubble Color:** Bubbles may turn green but there is no validation of correctness. Green only means a student clicked Continue or Finish for a level. Set the understanding early that this is more a tool for them than an indication of either completeness or correctness.\r\n"
           }
@@ -2035,8 +2002,13 @@
       "key": "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7",
       "position": 3,
       "properties": {
-        "name": "Experiment with Web Lab",
-        "progression_name": "Experiment with Web Lab"
+        "progression_name": "Experiment with Web Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "After giving students some time to explore the tool, ask them to share out anything that they have discovered. The video on the next level will give them a short tour, so it's okay if they don't notice everything."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7",
@@ -2047,8 +2019,13 @@
       "key": "08e81098-b771-4c82-bb64-9108ece6c97c",
       "position": 4,
       "properties": {
-        "name": "Video: Intro to Web Lab - Part 1",
-        "progression_name": "Video: Intro to Web Lab - Part 1"
+        "progression_name": "Video: Intro to Web Lab - Part 1",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n\nAlthough it's not part of the video, the instructions pane will also often include drop down questions and answers that students can use when they are completing an activity, and in some levels the tabs at the top of the instructions pane will take students to a \"Help and Tips\" area that includes reference information relevant to the activities."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "08e81098-b771-4c82-bb64-9108ece6c97c",
@@ -2059,8 +2036,13 @@
       "key": "693d5350-e425-4ae5-926e-85984858fb31",
       "position": 5,
       "properties": {
-        "name": "Explore HTML",
-        "progression_name": "Explore HTML"
+        "progression_name": "Explore HTML",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using the Tool**\nAs students explore the site, make sure that they understand how to use the inspector tool, the drop-down tips on the right side of the instruction pane, and the \"Help and Tips\" tab, which will give them access to the previous video.\n\n**HTML Discussion**\nYou should bring students back together once they've spent a couple of minutes looking through this level. The discussion prompts listed in the level should be used in a standard Think-Pair-Share structure.\n- What text is appearing in both the code and the web page?\n- How is this language communicating extra information about the way to represent text?\n\nThe goal of the discussion is to call out the features of HTML that students are noticing. The two primary takeaways (reinforced in the subsequent video as well) are that HTML uses a system of tags to surround content and indicate what it is and how it should be displayed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "693d5350-e425-4ae5-926e-85984858fb31",
@@ -2071,8 +2053,13 @@
       "key": "470c3268-f70d-43ac-831f-b37c3103531b",
       "position": 6,
       "properties": {
-        "name": "Video: Intro to Web Lab - Part 2",
-        "progression_name": "Video: Intro to Web Lab - Part 2"
+        "progression_name": "Video: Intro to Web Lab - Part 2",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Discussion Goals**\n\n**Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n\nAs students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nAlthough certain structural roles may be associated with appearance (headings are larger), HTML does not specify anything in particular about the appearance. This allows users with different needs, such as the visually impaired, to interact with the structured content in a way that makes the most sense for them. Later in the unit, students will learn about styles and CSS, which allows them to specify the exact size, color, and spacing of their HTML elements.\n\nThe paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "470c3268-f70d-43ac-831f-b37c3103531b",
@@ -2083,8 +2070,13 @@
       "key": "1d5ddfcc-e375-4d04-9822-019d51c5272d",
       "position": 7,
       "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using the Tool:**\nAs students work on this level, make sure they see that there is a new map level available to them in the \"Help and Tips\" tab. This is a great place to look for extra resources that will help them to complete a level."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1d5ddfcc-e375-4d04-9822-019d51c5272d",
@@ -2095,8 +2087,13 @@
       "key": "73435ea5-4c6f-4317-b21a-4fc9c732a4bf",
       "position": 8,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Using the Tool:**\nThis level contains a new tab, \"Key Concepts\", that gives guidance on how student work can be evaluated. This makes the level particularly useful as an assessment. Students can see how their work is evaluated by clicking on the \"Key Concepts\" tab. Later, any teacher feedback will appear in the same area\n\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "73435ea5-4c6f-4317-b21a-4fc9c732a4bf",
@@ -2107,8 +2104,13 @@
       "key": "579df0b6-aebc-48d8-9ac3-427a2c04e61f",
       "position": 9,
       "properties": {
-        "name": "Challenge",
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging:**\nAs students begin to debug, this is a great time to emphasize a positive culture around debugging. This is a central skill that students will develop throughout the course. Emphasize that debugging is a normal part of the programming process, and that all programmers, even experts get bugs. More information can be found in the \"Debugging Guide\" linked on the CS Discoveries curriculum page at https://curriculum.code.org/csd."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "579df0b6-aebc-48d8-9ac3-427a2c04e61f",
@@ -2134,7 +2136,6 @@
         "description": "**Journal Prompt:** In your own words, how does HTML help solve the problem of telling a computer what a web page looks like, not just what content is on it?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "**Goal:** Students’ answers will vary but will likely center around the fact that using tags helps the computer know what different pieces of content \"are\". Using these tags helps the computer know what the tags are supposed to look like. If this discussion needs to be returned to after students have seen more tags that's fine as well. In either case, use this discussion to motivate the content vs. structure wrap-up point.\r\n\r\nAs students discuss HTML as a solution, make sure that they are using the key vocabulary of the lesson: \r\n\r\n* **website content** - the text and images on a website\r\n* **website structure** - how the content of a website is organized \r\n* **HTML** - Hypertext Markup Language, a language used to create web pages\r\n* **HTML Element** - A piece of a website, marked by a start tag and often closed with an end tag\r\n* **HTML Tag** - The special set of characters that indicates the start and end of an HTML element and that element's type\r\n\r\nThe content is the literal words that are being typed on the page. Using HTML, students are providing structure to the page, explaining how those pieces of content should be interpreted. Later in the unit students will learn CSS, a language that allows them to individually style elements. For now, however, the styles being applied based on their HTML tags are just the default styles of their web browser. Students don't need to fully understand this difference at this point, as it will be much clearer once they learn CSS later in the unit.\r\n"
           }
@@ -2186,9 +2187,8 @@
         "description": "**Journal:** Have students make a T-chart on a blank page in their journals and label the top \"HTML Tags\"",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\n"
+            "markdown": "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n\n**Anchor Chart / Poster:** Throughout this unit students will be keeping track of the tags they learn. This warm-up prompts students to record the HTML tags that they learn by writing them in their journals. If you wish, you can also keep track of the same information on a shared class poster or anchor chart that you update after each lesson. Prompts throughout the unit will tell you when students should update their journals, and updating the anchor chart may provide reinforcement of that process.\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n\n\n"
           }
         ],
         "name": "Tags Poster\r"
@@ -2228,7 +2228,6 @@
         "description": "**Discuss:** Pairs should discuss with one another and record their ideas in their journals. Afterward, share across the room and add the different tags to a poster or anchor chart, if you choose to make one.  As you go through the tags, highlight how working together allowed the students to make their lists more comprehensive.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The goal of this discussion is to review the tags that students saw in the previous lesson.\r\n\r\n* `<!DOCTYPE html>` - Tells the computer that this is a document written in HTML\r\n* `<html>` - Indicates the beginning of your code written in HTML\r\n* `<head>` - Contains information (sometimes called \"metadata\") about your web page\r\n* `<body>` - Contains all the main content of your web page\r\n* `<p>` - Defines a paragraph\r\n"
           }
@@ -2269,7 +2268,6 @@
         "description": "**Group:** Put students into pairs.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Pair Programming:** Pair programming is practiced in education and in industry.  Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher.  You can read more about Pair Programming in the Curriculum Guide linked in the CS Discoveries curriculum page at [https://curriculum.code.org/csd](https://curriculum.code.org/csd).\r\n"
           }
@@ -2311,7 +2309,6 @@
         "description": "**Review:** Ensure that students understand the rules for pair programming:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Some classes may need more support in communicating and collaborating effectively.  If appropriate, consider having your students brainstorm a list of \"sentence stems\" that they can use for respectful and effective communication before they break into pairs (\"Have you considered...\"  \"What about...\" \"I think the problem might be...\").  As students move through the lesson, remind them that their main goal today is to learn how to work together on a web page, which is even more important than the heading tag!\r\n\r\n"
           }
@@ -2349,8 +2346,13 @@
       "key": "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1",
       "position": 7,
       "properties": {
-        "name": "Video: Pair Programming",
-        "progression_name": "Video: Pair Programming"
+        "progression_name": "Video: Pair Programming",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\nThe goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry standard practice, not just something done by learners in the classroom."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1",
@@ -2361,8 +2363,13 @@
       "key": "27e7e382-bef2-4576-94b2-15f081c1c260",
       "position": 8,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging**:\nStudents may note that when code is organized and uses whitespace, it's much easier to find bugs, but any reasonable piece of advice around debugging could work here.\n\nAllow students to share out their advice, and continue to emphasize that getting bugs is a normal part of programming. Students will be introduced to a formal debugging process later in the lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "27e7e382-bef2-4576-94b2-15f081c1c260",
@@ -2373,8 +2380,13 @@
       "key": "415a1a02-00ce-4eee-9af3-bcddf1369b79",
       "position": 9,
       "properties": {
-        "name": "Quick Check",
-        "progression_name": "Quick Check"
+        "progression_name": "Quick Check",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "[pull-right]\n\n![](https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg)\n\n[/pull-right]\n\n**Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side. Students who have successfully answered the question will have a green bubble. Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "415a1a02-00ce-4eee-9af3-bcddf1369b79",
@@ -2385,8 +2397,13 @@
       "key": "f5c13deb-a9a7-4f04-9daa-ec92ec261b02",
       "position": 10,
       "properties": {
-        "name": "Video: Debugging",
-        "progression_name": "Video: Debugging"
+        "progression_name": "Video: Debugging",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describe the bug, hunt for the bug, try out small solutions (or change your code), and document what you have learned.\n\nYou may also want to reference the Guide to Debugging found on the CS Discoveries curriculum page."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f5c13deb-a9a7-4f04-9daa-ec92ec261b02",
@@ -2397,7 +2414,6 @@
       "key": "b9b617ce-f9b9-4d30-90ae-0ecb111821d7",
       "position": 11,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2409,7 +2425,6 @@
       "key": "d3b01200-6f32-4a93-be82-df50df4e8221",
       "position": 12,
       "properties": {
-        "name": "Assessment",
         "progression_name": "Assessment"
       },
       "seeding_key": {
@@ -2421,7 +2436,6 @@
       "key": "499a4b6c-eccd-4c51-a6db-17c2c9a0801a",
       "position": 13,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -2448,7 +2462,6 @@
         "description": "**Prompt:** Today, you learned a lot about debugging, which is an important skill for programmers.  What is one way working with a partner helped you to debug today?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Check that students are describing effective forms of collaboration.\r\n"
           }
@@ -2478,7 +2491,6 @@
         "description": "Allow volunteers to share out personal values that they think are important.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion allows students to share ideas for their websites, but it is not necessary for everyone to share if they prefer not to.  The goal of the discussion is to start students thinking about the topic and encourage them to think of websites as a way to express themselves.\r\n  \r\n"
           }
@@ -2563,7 +2575,6 @@
       "key": "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6",
       "position": 5,
       "properties": {
-        "name": "Review: HTML",
         "progression_name": "Review: HTML"
       },
       "seeding_key": {
@@ -2575,7 +2586,6 @@
       "key": "db6b9679-26c9-45e7-9f82-03b3a92d3abf",
       "position": 6,
       "properties": {
-        "name": "Challenge: Lists",
         "progression_name": "Challenge: Lists"
       },
       "seeding_key": {
@@ -2587,7 +2597,6 @@
       "key": "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a",
       "position": 7,
       "properties": {
-        "name": "Code Your Page",
         "progression_name": "Code Your Page"
       },
       "seeding_key": {
@@ -2599,7 +2608,6 @@
       "key": "b8b06d7c-cb56-4412-85ad-c68fb0953dc0",
       "position": 8,
       "properties": {
-        "name": "Review Your Page",
         "progression_name": "Review Your Page"
       },
       "seeding_key": {
@@ -2661,7 +2669,6 @@
         "description": "As students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them. For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills.\r\n"
           }
@@ -2691,7 +2698,6 @@
         "description": "**Discuss:** Have students silently brainstorm or journal, then share with a partner, and finally share as a full class. Create a comprehensive list of all of the websites that may have their personal information.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves.\r\n\r\nThis will prime them for the main activity of the day, looking at specific pieces of information and audiences to consider when their privacy matters, and whether they are unknowingly giving up their privacy.\r\n\r\nIf students are having trouble thinking of information, you may want to follow up with some more specific prompts: \r\n\r\n* What information do you know you've given to a website (eg. your email address)\r\n* What information might you have unknowingly given to a website (eg. a picture with your home address)\r\n* What information might other people have shared about you without your knowledge or permission (eg. tagging you on Facebook)\r\n"
           }
@@ -2730,7 +2736,7 @@
       "position": 1,
       "properties": {
         "description": "**Goal:** Explore how small pieces of personal information, spread across multiple sites on the Internet, can produce a fairly detailed picture of a person, known as a [v digital footprint].\r\n\r\n**Group:** This activity can be done individually, but is better when students are in groups of 2-3\r\n\r\n**Distribute:** Activity guide to \"Social Sleuth\"\r\n\r\n**Transition:** Send students to Code Studio.",
-        "name": "&fa-desktop; Investigating Social Profiles\r"
+        "name": "Investigating Social Profiles"
       },
       "seeding_key": {
         "activity_section.key": "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9",
@@ -2741,8 +2747,13 @@
       "key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
       "position": 2,
       "properties": {
-        "name": "Social Sleuth",
-        "progression_name": "Social Sleuth"
+        "progression_name": "Social Sleuth",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Social Sleuth:**\n\n**Step 1:** Students look through all of the provided social media pages on Code Studio. The pages represent several unique individuals, each of whom has an account on three social media platforms. They are distributed as follows (do not share this with students):\n\n**Tip:**\n\nStudents are asked to choose two users from the available profiles, but if you are short on time, you can ask students to complete just one of the footprints.\n\n**Step 2:** Once they've looked through the pages, students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\n**Share:** Have the class share the digital footprints that they developed through the activity.\n\n**Discuss:**\n\n- Which information was most difficult to find?\n- Which details were innocuous on their own, but revealed private information when combined with other details?\n- How does this make you think differently about what you choose to post online?"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "71a885a3-e705-4367-8d43-5711b5af7e8f",
@@ -2780,7 +2791,6 @@
         "description": "**Prompt:** With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "**Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\r\n\r\n* Could someone identify me with this information?: for example name, address, phone number, etc.\r\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\r\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\r\n\r\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson.\r\n\r\nEnsure that students are using the lesson's key vocabulary:\r\n\r\n**digital footprint** - the collected information about an individual across multiple websites on the Internet\r\n\r\n\r\n"
           }
@@ -2832,7 +2842,6 @@
         "description": "**Discuss:** Have students share which parts they know and don't know",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should notice that they can get the structure and size of the text right using headings (e.g. `<h1>`) and paragraphs `<p>`. They may notice that they cannot change the color of the text. Some other styles to notice are that all the paragraphs are in italics, the speech names are underlined, and the citations are much smaller than the paragraphs.\r\n\r\n"
           }
@@ -2904,7 +2913,6 @@
       "key": "9440d9cc-5d69-417b-837e-c143b30dab47",
       "position": 4,
       "properties": {
-        "name": "Sample Website",
         "progression_name": "Sample Website"
       },
       "seeding_key": {
@@ -2916,8 +2924,13 @@
       "key": "0fb9d1d3-097c-4ce5-b276-aa71c839c82f",
       "position": 5,
       "properties": {
-        "name": "Exploration",
-        "progression_name": "Exploration"
+        "progression_name": "Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students explore this level with a partner. Afterward, lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0fb9d1d3-097c-4ce5-b276-aa71c839c82f",
@@ -2928,8 +2941,13 @@
       "key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
       "position": 6,
       "properties": {
-        "name": "Video: Intro to CSS - Part 1",
-        "progression_name": "Video: Intro to CSS - Part 1"
+        "progression_name": "Video: Intro to CSS - Part 1",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals**\n\n**Key Vocabulary:**\n\n- CSS - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n- CSS Selector - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\nStudents should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "029f4c9c-3f40-458c-8480-b677aee2c5f5",
@@ -2940,7 +2958,6 @@
       "key": "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d",
       "position": 7,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2952,8 +2969,13 @@
       "key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
       "position": 8,
       "properties": {
-        "name": "Video: Intro to CSS - Part 2",
-        "progression_name": "Video: Intro to CSS - Part 2"
+        "progression_name": "Video: Intro to CSS - Part 2",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal**\n\nMake sure all the students understand how to link to their stylesheet from each web page."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9",
@@ -2964,7 +2986,6 @@
       "key": "d9a4b1da-84da-40b3-a256-bbd4223652cd",
       "position": 9,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2976,7 +2997,6 @@
       "key": "497dd6c0-f7ae-4c32-a6b2-086a26b849b6",
       "position": 10,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2988,8 +3008,13 @@
       "key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
       "position": 11,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3d52ed72-b57b-4d05-902a-c9daceffadc6",
@@ -3000,8 +3025,13 @@
       "key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
       "position": 12,
       "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on fonts and font families**\n\nFor a web browser to display font, the **font** must be available on the device the web browser is running on. There's no guarantee that any device has a particular font, so it's much safer to use font **families**, which allows for many different fonts that have the same general look at feel.\n\nIf students want to specify an exact font, they'll need to use a font from the web, so the browser can download that specific font to use when rendering the page. More information on these fonts can be found at **Google Fonts** and **W3Schools**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3a9a8696-72e3-4e6f-9812-59e180a16192",
@@ -3015,7 +3045,6 @@
         "description": "**Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Make sure students are distinguishing between how HTML indicates the structure of a document and how CSS allows students to set the styles, as well as the differences in how the languages look on the screen and where they are used.\r\n"
           }
@@ -3045,7 +3074,6 @@
         "description": "**Set Up:** Have students create a new page in their journals called CSS Properties.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\r\n"
           }
@@ -3086,7 +3114,6 @@
         "description": "Allow volunteers to share out aspects of their personal style that they think are important.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion allows students to share ideas for their websites, but it is not necessary for everyone to share if they prefer not to.  The goal of the discussion is to start students thinking about the topic and encourage them to think of websites as a way to express themselves.\r\n  \r\n"
           }
@@ -3162,7 +3189,6 @@
         "description": "After you have checked the designs, allow students to log into code studio and code their pages.  They will have a chance to review all of the tags they have learned before they start on their web pages. They can complete these activities as a review or use them as resources while they work on their projects.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**New Style, New Project**: In order to create opportunities for students to develop a variety of projects and help emphasize their newfound CSS skills, this project is **not** linked to the previous HTML Mini-Project in Lesson 4. If students would like to build off of their previous work, they can return to their previous project and copy-and-paste their HTML Code into this project. Or, they can use this as an opportunity to build a completely new website to suit their personality.\n\n"
           }
@@ -3178,7 +3204,6 @@
       "key": "58f32e0f-f519-4eae-9c0c-a5cd428869b2",
       "position": 5,
       "properties": {
-        "name": "Review: CSS",
         "progression_name": "Review: CSS"
       },
       "seeding_key": {
@@ -3190,7 +3215,6 @@
       "key": "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc",
       "position": 6,
       "properties": {
-        "name": "Challenge: RGB Colors",
         "progression_name": "Challenge: RGB Colors"
       },
       "seeding_key": {
@@ -3202,7 +3226,6 @@
       "key": "81ab793a-d696-4167-a9db-9258e5f476b4",
       "position": 7,
       "properties": {
-        "name": "Add Content and Structure to Your Page",
         "progression_name": "Add Content and Structure to Your Page"
       },
       "seeding_key": {
@@ -3214,7 +3237,6 @@
       "key": "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9",
       "position": 8,
       "properties": {
-        "name": "Add Style to Your Page",
         "progression_name": "Add Style to Your Page"
       },
       "seeding_key": {
@@ -3226,7 +3248,6 @@
       "key": "30535418-4101-4313-b0f2-fb2afdde6b62",
       "position": 9,
       "properties": {
-        "name": "Review Your Page",
         "progression_name": "Review Your Page"
       },
       "seeding_key": {
@@ -3277,7 +3298,6 @@
         "description": "As students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them.  For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills.\r\n"
           }
@@ -3302,28 +3322,16 @@
       }
     },
     {
-      "key": "23cdad16-6aac-4c5b-ae69-7340e6ed1039",
+      "key": "3356cda1-c8fe-4475-aaf6-1361379c848f",
       "position": 2,
       "properties": {
-        "description": "1.  You take an awesome picture and someone puts it on their social media account with your name beside it.\r\n2. You write a story and someone else publishes it and says that they wrote it.",
+        "description": "1.  You take an awesome picture and someone puts it on their social media account with your name beside it.\n2. You write a story and someone else publishes it and says that they wrote it.\n3. You write a song and someone sings it to her friends.\n4. You write a song and someone sings it at a concert and makes a lot of money.\n5. You take a picture and someone else Photoshops it and puts the new version on his web site.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "These prompts aim to relate broader questions of copyright to students' own experiences creating and sharing content online. To make this hit close to home you may want to change the prompts to pick particular forms of social media that students are interested in. If you know students don't use a lot of social media, then alter the prompt to reflect another area where your students might think their own creative work was used inappropriately.\r\n\r\n"
+            "markdown": "These prompts aim to relate broader questions of copyright to students' own experiences creating and sharing content online. To make this hit close to home you may want to change the prompts to pick particular forms of social media that students are interested in. If you know students don't use a lot of social media, then alter the prompt to reflect another area where your students might think their own creative work was used inappropriately.\n"
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "23cdad16-6aac-4c5b-ae69-7340e6ed1039",
-        "lesson_activity.key": "d8c9fbdb-b731-44f3-aa89-3bfd07111678"
-      }
-    },
-    {
-      "key": "3356cda1-c8fe-4475-aaf6-1361379c848f",
-      "position": 3,
-      "properties": {
-        "description": "3. You write a song and someone sings it to her friends.\r\n4. You write a song and someone sings it at a concert and makes a lot of money.\r\n5. You take a picture and someone else Photoshops it and puts the new version on his web site."
       },
       "seeding_key": {
         "activity_section.key": "3356cda1-c8fe-4475-aaf6-1361379c848f",
@@ -3332,7 +3340,7 @@
     },
     {
       "key": "cc6c7ed6-ebad-4438-9198-e25fa7d61234",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Prompt:** What rules would you make for people who want to use your creative work?"
       },
@@ -3343,12 +3351,11 @@
     },
     {
       "key": "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This discussion serves to get students thinking about the problem before introducing them to the Creative Commons solution. As students discuss the rules that they would like for their own work, make sure to emphasize and highlight the principles that correspond to the Creative Commons properties that they will explore later in the lesson.\r\n\r\n\r\n"
           }
@@ -3361,7 +3368,7 @@
     },
     {
       "key": "36bd75d0-1aa9-4fd5-82f7-84b15aa6c2f0",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "It's okay if not everyone agrees how they want their work to be used. Copyright law says that whoever creates new content, such as a picture, a story, or a song, gets to decide how other people are allowed to use it.",
         "remarks": true
@@ -3373,7 +3380,7 @@
     },
     {
       "key": "29bd3aba-9e14-4d7d-b88c-54ea4d67f323",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Key Vocabulary:**\r\n\r\n* **copyright** - the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same\r\n\r\n**Question of the Day: What kind of rules protect everyone's rights when we use each other's content?**"
       },
@@ -3424,7 +3431,6 @@
         "description": "The first portion of this activity guide covers the components of a Creative Commons license. Push students to think critically here about both the value each component adds to the creator, but also the ways it might limit the cultural exchange of ideas, connecting the components of the license to the scenarios that they considered earlier in the class.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "As students go through the guide, the goal is not for them to memorize all aspects of the various licenses, but to have an understanding that creators can choose how their work is to be used by other people.  This activity should prepare them to legally and responsibly use images that they find on the web in their own web sites.\r\n"
           }
@@ -3442,7 +3448,6 @@
         "description": "**Other Options**",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Students may also be curious about how to attribute pictures that they take themselves.  You can remind them that as the content creators, they can **choose** the license that they want to use, and list themselves as the creator along with their chosen license.\r\n"
           }
@@ -3482,7 +3487,6 @@
         "description": "**Discuss:** Ask several students to share out their responses to the _Choosing the Right License_ scenarios. Encourage discussion and debate if students identified different licenses for the same scenarios.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** While there may not be a specific \"right\" license for each of these scenarios, encourage students to always consider whether the license they chose is more restrictive than it strictly needs to be. One of the design goals of the Creative Commons license is to increase the amount of creative material available to the general public, promoting the sharing of intellectual property for the common good. With this in mind, we should only be adding the minimal restrictions needed to meet the content creator's wishes.\r\n\r\n"
           }
@@ -3534,7 +3538,6 @@
         "description": "**Journal:** Think about some of the photos, drawings, and written work that you have created in the past, or even the web site that you will create in this class. Without a clear license, all of those things are covered under the fully restrictive copyright. Which Creative Commons license would you rather use (if any) and why?",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "As students discuss the advantages and disadvantages of various types of licenses, make sure that they recognize that copyright is intended to protect the rights of content creators, such as themselves. These rights include being recognized as the creator when the work is displayed, or deciding who can use and make money off the work.\r\n\r\n"
           }
@@ -3576,7 +3579,6 @@
         "description": "**Prompt:** In your journal, think of some guidelines we should keep in mind when using images. How can we make sure that we are safe and respecting the rights of others?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "As students come up with their guidelines, you may choose to prompt them by reminding them of the recent activities they have done around sharing personal information and respecting copyright.  Many classes may also want to add in other guidelines, such as defining what is appropriate in a school setting, or making sure that any people depicted in the image are comfortable with the image being posted online.  Regardless, make sure that you are satisfied that the guidelines are sufficient before you move on.\r\n"
           }
@@ -3605,7 +3607,6 @@
         "description": "**Transition**: Send students to Code Studio.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "As students start to use images, they may have trouble finding the right size to fit their pages.  In the two lessons, students will learn how to resize their images with CSS.  For now, students can use an online image resizer, such as the one found at [https://resizeimage.net/](https://resizeimage.net/), to resize their images.  Alternatively, they can use the `height` or `width` attribute inside the `img` tag to resize it as the page loads.\r\n\r\n\r\n"
           }
@@ -3621,8 +3622,13 @@
       "key": "f69595ea-98fa-4c39-9686-6916ab265ab4",
       "position": 2,
       "properties": {
-        "name": "Skill Building",
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Level 1**\n\nStudents may come across some image tags that include a slash at the end, like this: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.\n\n**Level 2**\n\nBecause of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.\n\n**Level 5**\n\n**Recommended Search Engines**\n\nBecause we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f69595ea-98fa-4c39-9686-6916ab265ab4",
@@ -3633,8 +3639,13 @@
       "key": "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52",
       "position": 3,
       "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Although this level can be used to assess student understanding of the syntax of the `<img>` tag, its main purpose is to make students aware of the most common types of bugs they may encounter when adding images to web pages."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52",
@@ -3645,8 +3656,13 @@
       "key": "168bbc11-2203-44d6-88fc-e6be6c05180b",
       "position": 4,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "168bbc11-2203-44d6-88fc-e6be6c05180b",
@@ -3657,7 +3673,6 @@
       "key": "125e32e7-13c6-48a9-8fcb-b8635d079ecf",
       "position": 5,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -3696,7 +3711,6 @@
         "description": "**Discuss:** Students should brainstorm ideas independently, then share with a neighbor, and finally share with the whole class.",
         "tips": [
           {
-            "key": "1",
             "type": "discussionGoal",
             "markdown": "**Goal:** This warm-up should generate a list of ways students express their ideas. If they need help getting started, offer them a couple of examples from the list below. The goal of this warm-up is to frame web development as another form of self-expression. \r\n\r\n"
           }
@@ -3772,7 +3786,6 @@
         "description": "**Brainstorm Content:** Read through this section of the activity guide. Then give students several minutes to silently brainstorm content they might want to include on a personal website.",
         "tips": [
           {
-            "key": "2",
             "type": "teachingTip",
             "markdown": "**Use Journals:** The activity for today's lesson can easily be completed in student journals. Project or otherwise share the prompts and let students complete their work in their journals.\r\n"
           }
@@ -3818,13 +3831,23 @@
       }
     },
     {
-      "key": "f694e569-1f2b-40ac-8e46-0439d6b12551",
+      "key": "890f7764-695b-4258-acbb-9b7e29804fc5",
       "position": 8,
+      "properties": {
+        "progression_name": "Sample Personal Websites"
+      },
+      "seeding_key": {
+        "activity_section.key": "890f7764-695b-4258-acbb-9b7e29804fc5",
+        "lesson_activity.key": "b3d7133e-335d-4c28-98d8-a61e8fecaab5"
+      }
+    },
+    {
+      "key": "f694e569-1f2b-40ac-8e46-0439d6b12551",
+      "position": 9,
       "properties": {
         "description": "**Web Page Purpose:** Give students some time to think about what purposes their own web pages will serve. Try to steer the conversation away from the exact content of the site, which they will have time to plan in a later lesson.",
         "tips": [
           {
-            "key": "3",
             "type": "assessmentOpportunity",
             "markdown": "Students should identify their websites as an opportunity to express themselves and their own goals. Check that each student has an explanation of why their site is personally significant.\r\n"
           }
@@ -3837,7 +3860,7 @@
     },
     {
       "key": "30cecc18-d9a2-4653-967d-0c73584a3390",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Share:** Give students a chance to share their website purposes with a neighbor."
       },
@@ -3865,7 +3888,6 @@
         "description": "**Prompt:**  Now that you've had a chance to share your website ideas, write down...",
         "tips": [
           {
-            "key": "4",
             "type": "assessmentOpportunity",
             "markdown": "As students share different aspects of the websites, make sure that the discussion highlights the creative aspects of making websites, and that websites can be a form of personal expression unique to each individual.\r\n"
           }
@@ -3911,18 +3933,6 @@
       }
     },
     {
-      "key": "b4c291eb-30c6-4699-ac56-24df952ccb92",
-      "position": 1,
-      "properties": {
-        "name": "Sample Personal Websites",
-        "progression_name": "Sample Personal Websites"
-      },
-      "seeding_key": {
-        "activity_section.key": "b4c291eb-30c6-4699-ac56-24df952ccb92",
-        "lesson_activity.key": "de4b0c2d-c96b-4019-b69e-92fec2801af0"
-      }
-    },
-    {
       "key": "149e485f-35bf-40c0-b2bd-f32a5e23c5bc",
       "position": 1,
       "properties": {
@@ -3941,7 +3951,6 @@
         "description": "**Discuss:** Have students share different stylings on the page.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion serves as a review of the CSS properties students have already learned and showcases some of the new properties they will be learning in this lesson.  Some of the new properties showcased are:\r\n\r\n* Adding background colors to things\r\n* Being able to move things around on the page (the images to the left of the text)\r\n* Being able to add borders to and round corners of images\r\n\r\n\r\n"
           }
@@ -3982,7 +3991,6 @@
         "description": "**Transition:** Send students to Code Studio.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Pair Programming:** Consider using pair programming for some or all of this lesson, in particular as students are learning new CSS properties.\r\n"
           }
@@ -3998,7 +4006,6 @@
       "key": "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26",
       "position": 2,
       "properties": {
-        "name": "Sample Website",
         "progression_name": "Sample Website"
       },
       "seeding_key": {
@@ -4010,7 +4017,6 @@
       "key": "cbb6abd1-911a-4ea4-b133-78742425ccbc",
       "position": 3,
       "properties": {
-        "name": "Exploration",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -4022,7 +4028,6 @@
       "key": "e26e14a3-6dad-4328-82ae-39649c0e2970",
       "position": 4,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4034,7 +4039,6 @@
       "key": "6fd29f2b-af40-4cc1-89c1-1f25aab27647",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -4046,8 +4050,13 @@
       "key": "60bf9811-2a1c-4ff5-8986-082f04512e85",
       "position": 6,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "60bf9811-2a1c-4ff5-8986-082f04512e85",
@@ -4058,7 +4067,6 @@
       "key": "fa81a49c-8be7-43ac-92fe-cbc509b0970c",
       "position": 7,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -4095,7 +4103,6 @@
         "description": "**Discuss:** Have students share out their ideas and display them at the front of the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This is a chance for students to remind themselves of (and for you to check on) the most important things that they have learned in the unit so far.  While the focus may vary from class to class, most classes should have a few things to say in every category.  Make sure that you are highlighting the differences between structure (HTML) and style (CSS) in your conversations.  If you have noticed particular obstacles for your students, this is a good place to make sure they are prepared to face them.\r\n"
           }
@@ -4156,10 +4163,9 @@
       "key": "cc6a79fc-1951-4e82-8952-39b9a662aca5",
       "position": 4,
       "properties": {
-        "description": "&fa-desktop; **Transition** Allow students to go online to find the images that they want to use for their sites. Make sure that they are writing down the information about the copyright and that they can tell you where the image is from, so that they (or you!) can find it in the future.",
+        "description": "**Transition** Allow students to go online to find the images that they want to use for their sites. Make sure that they are writing down the information about the copyright and that they can tell you where the image is from, so that they (or you!) can find it in the future.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You may want to have each student check in with you on their web page plan before allowing them online to find their images. Make sure each student has sketched out a rough site and described the styles for a few different tags. The sketch and description should show that the page will be sufficient to demonstrate that they have acquired the target skills and understandings of the chapter.\r\n"
           }
@@ -4190,7 +4196,6 @@
         "description": "**Prompt:** Think back to the \"Define\" part of this project.  Explain two ways that your plan will make your personal web page successful.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Check that students have tied design decisions to the purpose of the website as explained in the \"Websites for Expression\" lesson.\r\n"
           }
@@ -4232,7 +4237,6 @@
         "description": "**Prompt:** What are the top **3** bugs you have seen so far when making web pages? What are **2** things you can do while coding to make bugs easier to find and fix? What is the **1** piece of advice you'd give someone who has a bug?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug.  Common bugs they may have seen might be spelling errors, forgetting to link the style sheet, not properly nesting tags, etc. This will vary from class to class, but most students will have encountered multiple bugs in the chapter. While coding, students should use proper formatting to help them to read their code, code small bits at a time and check as they go, and use good naming conventions. For debugging advice, students may give dispositional advice (\"Don't give up!\", \"Remember that it's normal\"), recommended resources (\"Ask a friend to look at it\", \"look at the map levels\"), process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\"), or tools based advice (\"look above where the pink is\", \"use the inspector tool\"). Give students time to share their advice, and make sure that they are referencing the Debugging Process.\r\n   \r\n"
           }
@@ -4267,8 +4271,75 @@
       }
     },
     {
-      "key": "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76",
+      "key": "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1",
       "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Planning Checkpoint**\n\nCheck over student plans before allowing them to continue on the rest of the levels."
+          }
+        ],
+        "progression_name": "Project Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Website Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "f82407b3-02da-446b-9c56-6e11c8f2df36",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal**\n\nThe video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nAs they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written."
+          }
+        ],
+        "progression_name": "Video: Publishing Your Website"
+      },
+      "seeding_key": {
+        "activity_section.key": "f82407b3-02da-446b-9c56-6e11c8f2df36",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "21f831a9-7123-4982-b5fb-d37eadd0df25",
+      "position": 5,
+      "properties": {
+        "progression_name": "Publishing Your Website"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f831a9-7123-4982-b5fb-d37eadd0df25",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d",
+        "lesson_activity.key": "50301e64-0051-4071-ab27-c0f0eb834ca5"
+      }
+    },
+    {
+      "key": "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76",
+      "position": 7,
       "properties": {
         "description": "**Distribute:**  The 'Personal Web Page' Reflect and Peer Review Guides.\r\n\r\n\r\n**Support:** Help students as they complete the Personal Web Page - Reflect guide.  This guide asks students to reflect on whether the web page met the criteria students came up with in the \"Define\" phase, and whether they followed through on the plan they made in the \"Prepare\" phase. It then prompts them for what they like the most and what they would want to improve on their site, as well as what kind of feedback would be helpful to them.\r\n\r\n**Group:** Place students in pairs.",
         "name": "Peer Review\r"
@@ -4280,7 +4351,7 @@
     },
     {
       "key": "6b3cfe52-1dd0-4a4c-8de2-360db4cd636d",
-      "position": 3,
+      "position": 8,
       "properties": {
         "description": "Before students review each other's work, each student should fill out the top of the guide with what they are most interested in feedback on.",
         "name": "Pre-Review\r"
@@ -4292,7 +4363,7 @@
     },
     {
       "key": "4c77683d-f5ce-4793-a6b2-7b99901aaa77",
-      "position": 4,
+      "position": 9,
       "properties": {
         "description": "After switching guides, the students evaluate how well the projects met the criteria of the rubric.  Encourage students to find evidence for learning in their peer's projects, but also to suggest how the projects could be taken further. You may need to support students in providing constructive feedback.",
         "name": "Reviewer Section\r"
@@ -4304,7 +4375,7 @@
     },
     {
       "key": "0792fa5e-646b-4a0f-b83d-19d7683ecaed",
-      "position": 5,
+      "position": 10,
       "properties": {
         "description": "Students then use the \"I like, I wish, What if\" structure to provide more open-ended feedback to each other. Again, some classes may need specific support in providing constructive feedback.",
         "name": "Free Response Feedback\r"
@@ -4316,7 +4387,7 @@
     },
     {
       "key": "de945d97-6003-41a8-aa24-26bc06841303",
-      "position": 6,
+      "position": 11,
       "properties": {
         "description": "Next, students should switch back and creators reflect on how the feedback can help them make their project better. Students may then go back to Code Studio to make the revisions that they have decided on.\r\n\r\n\r\n\r\n\r\n**Collect:** Project Guides and Peer Review Guides.",
         "name": "Creator Response\r"
@@ -4345,7 +4416,6 @@
         "description": "**Discuss:** Have students share out the different skills and practices that they used.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Students should reflect on the process so far.  If students have trouble thinking of different practices that are helpful, you may want to remind them of the five practices of computer science: problem solving, persistence, creativity, communication, and collaboration.  Students may also mention more specific skills such as using documentation, planning, teamwork, and debugging. Prompt students to explain how these practices helped them as they coded.\r\n\r\n"
           }
@@ -4360,71 +4430,11 @@
       "key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7",
       "position": 3,
       "properties": {
-        "description": "&fa-desktop; Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
       },
       "seeding_key": {
         "activity_section.key": "bb76c259-62ef-49ef-9b8c-d0ca91a380a7",
         "lesson_activity.key": "c9582674-40a5-483b-b016-17a03f824858"
-      }
-    },
-    {
-      "key": "75942ada-453d-4de7-870e-9ea233b7171d",
-      "position": 1,
-      "properties": {
-        "name": "Project Guide",
-        "progression_name": "Project Guide"
-      },
-      "seeding_key": {
-        "activity_section.key": "75942ada-453d-4de7-870e-9ea233b7171d",
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74"
-      }
-    },
-    {
-      "key": "50e5a99a-962c-46c7-aa6d-884741f164de",
-      "position": 2,
-      "properties": {
-        "name": "Website Project",
-        "progression_name": "Website Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de",
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74"
-      }
-    },
-    {
-      "key": "d8373943-01d1-45d5-b2e7-133c5d96159e",
-      "position": 3,
-      "properties": {
-        "name": "Video: Publishing Your Website",
-        "progression_name": "Video: Publishing Your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "d8373943-01d1-45d5-b2e7-133c5d96159e",
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74"
-      }
-    },
-    {
-      "key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330",
-      "position": 4,
-      "properties": {
-        "name": "Publishing Your Website",
-        "progression_name": "Publishing Your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330",
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74"
-      }
-    },
-    {
-      "key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd",
-      "position": 5,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd",
-        "lesson_activity.key": "74549511-494c-4c13-9823-bfcb37550a74"
       }
     },
     {
@@ -4434,7 +4444,6 @@
         "description": "**Prompt:** What was the last website you visited? Why did you go to that website?",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Websites vs. Apps:** You may find that students don't _think_ that they actually visit websites very frequently, because they use apps instead. If you encounter this, encourage students to consider whether those apps might also have website versions. Facebook, for example, might be used more frequently from an app, but it originally started as a website, and can still be accessed from the web.\r\n"
           }
@@ -4453,7 +4462,6 @@
         "description": "**Discuss:** Have students share out the last website they visited. Make sure students share why they went to that website and whether the website provided what they were looking for.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The goal of having this discussion is to pull out that websites share information and that people go to websites for a particular purpose.\r\n"
           }
@@ -4491,7 +4499,7 @@
       "key": "fb115984-94cf-4127-a53a-43a973865616",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students in pairs.\r\n\r\n**Distribute:** Pass out a copy of the activity guide to each student.\r\n\r\n&fa-desktop; Direct students to the \"Sample Websites\" level on Code Studio.",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Websites\" level on Code Studio.",
         "name": "Purpose of Websites\r"
       },
       "seeding_key": {
@@ -4503,7 +4511,6 @@
       "key": "4e4b8bec-4263-4163-9bad-dee99822db2a",
       "position": 2,
       "properties": {
-        "name": "Top Websites",
         "progression_name": "Top Websites"
       },
       "seeding_key": {
@@ -4529,7 +4536,6 @@
         "description": "This activity guide asks students to consider what purposes some sample web pages might serve. Student pairs select two sites that interest them and for each discuss:",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "They don't need to necessarily get it \"right\" for each site, but they should demonstrate that they have considered the potential purposes that a website might serve for the creator. If students struggle to identify the purpose of a site, consider asking the following prompts:\r\n\r\n* Does the website creator want the user to do something?\r\n* Does the website try to convince the user of something in particular?\r\n* What problem is the website addressing?\r\n* What impact does the creator want the website to have?\r\n\r\n\r\n"
           }
@@ -4558,7 +4564,6 @@
         "description": "**Discuss:** Once everyone has had a chance to brainstorm about their sites, give the class a chance to discuss their thoughts on the sample websites.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to prepare students to think of websites as a tool to solve problems and effect change.  As students discuss the prompt, encourage them to imagine why they might create a site similar to those in the examples, and what problems they might address with a site.  \r\n"
           }
@@ -4610,7 +4615,6 @@
         "description": "**Group:** Based on the natural discussion of how students reacted to the different topics, groupings may have started to emerge.  Allow students to form groups of 3-4, or assign them into groups.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "There are many considerations when forming groups for a long-term project. Depending on your class, you may choose to assign groups, allow students to form their own groups, or another approach that works best for your class. However you decide to group students, it will be important that they have their groups for the beginning of the next class session.\r\n\r\n"
           }
@@ -4639,7 +4643,6 @@
         "description": "**Share:** Allow teams to share out their designs and mottos.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "As students share out their mottos or logos, encourage them to explain how their values are reflected in them, highlighting the importance of effective collaboration and a focus on shared goals.\r\n"
           }
@@ -4657,7 +4660,6 @@
         "description": "**Game: Top Five Teams**",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "You may also choose to have this game displayed as the class walks in, and allow them to write down their answers at their own pace.\r\n"
           }
@@ -4709,7 +4711,6 @@
         "description": "**Share:** Allow students some time to write down their own answers, then have them share with the rest of the class. Highlight characteristics that will be helpful when they are working with their teams on the project.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This game and discussion should prime students to think about strategies for successful teamwork on the project. Feel free to swap out the categories for ones that make more sense for your own classroom. \r\n"
           }
@@ -4761,7 +4762,6 @@
         "description": "Each student should identify their own personal strengths and areas of growth for the project, then share those out with the group.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "This type of personal reflection and sharing may be difficult for some students. Depending on the class, you may want to take some time to review how to listen respectfully to others in the group. This first activity is a good chance for students to practice this type of listening. Some groups may need teacher intervention to explain what sorts of specific behaviors promote good group dynamics.\r\n"
           }
@@ -4815,7 +4815,6 @@
         "description": "Students plan how they will deal with disagreement and come up with strategies for advocating for themselves and their team members.",
         "tips": [
           {
-            "key": "content",
             "type": "contentCorner",
             "markdown": "Fostering an inclusive culture and collaborating around computing are core practices in the CS K12 Framework. Students may need guidance on effective strategies for inclusion and collaboration. For example, some students may suggest a \"majority rules\" approach to disagreement. Challenge students to think of how that may exclude valuable perspectives and whether there are better strategies that can incorporate the entire team's voice.\r\n\r\n"
           }
@@ -4854,7 +4853,6 @@
       "key": "3d200812-9df8-42ca-94f5-c1bbda254c45",
       "position": 1,
       "properties": {
-        "name": "Video: Teamwork",
         "progression_name": "Video: Teamwork"
       },
       "seeding_key": {
@@ -4866,7 +4864,6 @@
       "key": "80ca305a-9689-43f6-9086-222cf4a1e287",
       "position": 2,
       "properties": {
-        "name": "Video: Managing Disagreement",
         "progression_name": "Video: Managing Disagreement"
       },
       "seeding_key": {
@@ -4893,7 +4890,6 @@
         "description": "**Distribute:** Each group will need a copy of the Internet Scavenger Hunt activity guide.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Reducing Printing:** Rather than print an activity guide for each student, consider displaying the questions and allowing students to answer in their journals or on scrap paper.\r\n"
           }
@@ -4945,7 +4941,6 @@
         "description": "**Discuss:**  Student pairs share out what they were able to discover during the scavenger hunt and what strategies worked well for finding accurate information.  If possible, use the discussion to introduce the key vocabulary for the lesson.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** The first three prompt questions are intended to help students identify any searching techniques that they currently use. If students _don't_ have clear strategies, you may want to spend some time discussing basic search techniques. Keep track of search strategies on the board for reference later.\r\n\r\nAs students discuss the search engines that they used in the process, you may want to challenge them to think about how the search engines are able to give them relevant results.  This can provide a good transition to the video in the next activity.\r\n\r\n"
           }
@@ -5010,7 +5005,6 @@
         "description": "**Prompt:** Now that we've identified some sites that are, and are not, trustworthy, work with your group to come up with a list of things to check for when trying to determine whether or not to believe a website.",
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Check students' lists to make sure that they are coming up with criteria that relate to a site's trustworthiness. For example, students might mention that trustworthy sites have clear contact information, cite their sources, tend to have fewer and less invasive ads, and may be better designed than less credible sites. The domains .edu and .gov are reserved for schools and the government, and may be more credible.\r\n"
           }
@@ -5050,7 +5044,6 @@
       "properties": {
         "tips": [
           {
-            "key": "assessment",
             "type": "assessmentOpportunity",
             "markdown": "Students should connect the criteria from the lists that they have created to their own sites.  While they may not be able to control the web address of their site, they should be able to identify design elements and content features that will make their sites more trustworthy, such as orderly layout and properly citing sources.\r\n"
           }
@@ -5092,7 +5085,6 @@
         "description": "**Discuss:** Have students share their answers to the questions.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** This discussion serves as a review of the CSS properties students have already learned and prompts them to think about how this page goes beyond that knowledge. Students may not realize it, but this page styles the same types of elements in different ways on different parts of the page. You may want to prompt students to think more deeply about why this is difficult by asking them what the color property of the paragraph element would be in the stylesheet for this page.\r\n\r\n\r\n"
           }
@@ -5142,7 +5134,6 @@
       "key": "8d36fb80-6b63-4f51-a57c-76712a9d5d7d",
       "position": 2,
       "properties": {
-        "name": "Sample Web Page",
         "progression_name": "Sample Web Page"
       },
       "seeding_key": {
@@ -5154,7 +5145,6 @@
       "key": "39d43b4f-8e5c-4459-9592-b9a44cd41c4d",
       "position": 3,
       "properties": {
-        "name": "Exploration",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -5166,7 +5156,6 @@
       "key": "6a056ff0-2cca-4983-bfe6-a78771cae232",
       "position": 4,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5178,7 +5167,6 @@
       "key": "a7488505-0cbe-4c90-83cd-481891cac662",
       "position": 5,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5190,8 +5178,13 @@
       "key": "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a",
       "position": 6,
       "properties": {
-        "name": "Assessment",
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a",
@@ -5202,7 +5195,6 @@
       "key": "5aa91065-3f4e-409f-9f3e-14bd98649ef5",
       "position": 7,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5240,7 +5232,6 @@
         "description": "**Share:** Allow students to share out some of their favorite features.",
         "tips": [
           {
-            "key": "38",
             "type": "discussionGoal",
             "markdown": "The goal of this discussion is to make sure that the various features that students have learned are top of mind when they begin to design their sites. Make sure students are mentioning the features that they have particularly enjoyed in the unit, and review the tags and css properties that create them.\r\n\r\n"
           }
@@ -5304,7 +5295,6 @@
         "description": "Teams should describe each page in the site, including its purpose. On separate sheets of paper, they should sketch out the various pages. This allows different team members to focus on different pages.",
         "tips": [
           {
-            "key": "39",
             "type": "teachingTip",
             "markdown": "You may want to ask groups to run their sketches by you before moving on. Make sure that the pages all appear to be the same style, and that they include a way to navigate from one to another.\r\n\r\n"
           }
@@ -5376,6 +5366,17 @@
       }
     },
     {
+      "key": "9e600819-184b-4958-801d-5466137f6fe0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Upload Your Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e600819-184b-4958-801d-5466137f6fe0",
+        "lesson_activity.key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494"
+      }
+    },
+    {
       "key": "06b391d9-3723-444d-9c93-882c4f22a1ad",
       "position": 1,
       "properties": {
@@ -5394,7 +5395,6 @@
         "description": "**Prompt:** Describe a difference of opinion that members of your team had, and how you resolved it.",
         "tips": [
           {
-            "key": "40",
             "type": "assessmentOpportunity",
             "markdown": "Check that student descriptions of the disagreement and resolution involve effective and collaborative strategies for working together.\r\n"
           }
@@ -5403,18 +5403,6 @@
       "seeding_key": {
         "activity_section.key": "754d0467-6e5e-45c8-8692-2fab52c45548",
         "lesson_activity.key": "378bdb3f-7f63-4ac5-aeb3-957a4b98a354"
-      }
-    },
-    {
-      "key": "9e600819-184b-4958-801d-5466137f6fe0",
-      "position": 1,
-      "properties": {
-        "name": "Upload Your Images",
-        "progression_name": "Upload Your Images"
-      },
-      "seeding_key": {
-        "activity_section.key": "9e600819-184b-4958-801d-5466137f6fe0",
-        "lesson_activity.key": "7a2f0b93-71ae-458e-948e-38b9e0bc4494"
       }
     },
     {
@@ -5436,7 +5424,6 @@
         "description": "**Display:**  Show the two following prompt questions on the board, and direct students to find the answers online by using a search engine of their choice, or whatever methods they might normally use for research.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Although there are many places students could go for the answer to this question, a Google search will most likely take them to an article describing the page that Tim Berners-Lee created on August 6, 1991.  The page is comprised of simple text with a few hyperlinks.\r\n\r\n![](https://curriculum.code.org/media/uploads/Screen-Shot-2019-10-18-at-11.58.45-AM.png)\r\n"
           }
@@ -5497,7 +5484,6 @@
       "key": "01cbfd4f-3493-48d9-beb3-04018d4272f3",
       "position": 2,
       "properties": {
-        "name": "Exploration",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -5509,7 +5495,6 @@
       "key": "850ba43d-59d1-4cf8-be6c-b2c33b4b4875",
       "position": 3,
       "properties": {
-        "name": "Skill Building",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -5521,7 +5506,6 @@
       "key": "0a2cb9cf-e6bb-433b-aed9-61118385f936",
       "position": 4,
       "properties": {
-        "name": "Practice",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -5533,8 +5517,13 @@
       "key": "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81",
       "position": 5,
       "properties": {
-        "name": "Adding Pages",
-        "progression_name": "Adding Pages"
+        "progression_name": "Adding Pages",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81",
@@ -5545,7 +5534,6 @@
       "key": "76186510-9804-44d1-8371-4aa2895fc16d",
       "position": 6,
       "properties": {
-        "name": "Challenges",
         "progression_name": "Challenges"
       },
       "seeding_key": {
@@ -5572,7 +5560,6 @@
         "description": "**Discuss:** After students have time to write down their thoughts, allow them to share in small groups before taking ideas from the whole class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "Students may come up with ideas such as a similar color scheme or styles, or similar content.  They may mention a header at the top of the page or navigation bar.  The most important thing is that they are thinking of the site as a single project that they are all contributing to, rather than a set of individual web pages.\r\n"
           }
@@ -5603,7 +5590,6 @@
         "description": "**Share:** Give students some time to come up with a cheer for themselves, then allow them to share with the class if they'd like.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Depending on your classroom, you may want to alter the activity.  Any activity that gets students in a good mood to persist through coding out this project will work well.\r\n\r\n"
           }
@@ -5631,7 +5617,7 @@
       "key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\r\n\r\n\r\n&fa-desktop; **Transition:** Teams log onto Code Studio and begin finalizing their websites."
+        "description": "**Distribute:** Return the \"Prepare\" project guide to groups.\n\n\n**Transition:** Teams log onto Code Studio and begin finalizing their websites."
       },
       "seeding_key": {
         "activity_section.key": "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497",
@@ -5642,7 +5628,6 @@
       "key": "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed",
       "position": 3,
       "properties": {
-        "name": "Your Team Project",
         "progression_name": "Your Team Project"
       },
       "seeding_key": {
@@ -5654,7 +5639,6 @@
       "key": "30c8efa1-9c2a-434b-8e72-474a8f38d93e",
       "position": 4,
       "properties": {
-        "name": "Add Content and HTML",
         "progression_name": "Add Content and HTML"
       },
       "seeding_key": {
@@ -5666,7 +5650,6 @@
       "key": "3c67e494-744f-4bc3-8068-56698fcc6c42",
       "position": 5,
       "properties": {
-        "name": "Share Your Pages",
         "progression_name": "Share Your Pages"
       },
       "seeding_key": {
@@ -5678,7 +5661,6 @@
       "key": "61b38059-437b-4b5b-a71d-e94ff04f6ae6",
       "position": 6,
       "properties": {
-        "name": "Add Style",
         "progression_name": "Add Style"
       },
       "seeding_key": {
@@ -5690,7 +5672,6 @@
       "key": "3db737c5-d81b-44fc-a3b1-6dd08594ce19",
       "position": 7,
       "properties": {
-        "name": "Share Your Stylesheets",
         "progression_name": "Share Your Stylesheets"
       },
       "seeding_key": {
@@ -5702,7 +5683,6 @@
       "key": "f6c5624d-14b2-4344-86e9-2a2da40edf31",
       "position": 8,
       "properties": {
-        "name": "Check Your Work",
         "progression_name": "Check Your Work"
       },
       "seeding_key": {
@@ -5741,7 +5721,6 @@
         "description": "**Share:** Allow students to share their responses with the class.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "This should be a fun time for students to reflect on the great work that they have done, but also recognize that they can always use an outside perspective. This will also prepare them to fill out the creator portion of the peer review guide.\r\n"
           }
@@ -5850,7 +5829,6 @@
       "key": "d83f6313-db10-4296-b6da-6c1bba821159",
       "position": 1,
       "properties": {
-        "name": "Final Website",
         "progression_name": "Final Website"
       },
       "seeding_key": {
@@ -5862,7 +5840,6 @@
       "key": "0c6704fa-47c4-481a-bf57-5f7ec89a88bf",
       "position": 2,
       "properties": {
-        "name": "Reflection",
         "progression_name": "Reflection"
       },
       "seeding_key": {
@@ -5898,10 +5875,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Sample Personal Web Pages",
         "level_keys": [
           "CSD Web Sample Pages_2021"
-        ],
-        "progression": "Sample Personal Web Pages"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5924,10 +5901,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Experiment with Web Lab",
         "level_keys": [
           "CSDU2 - Type Anything_2021"
-        ],
-        "progression": "Experiment with Web Lab"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5950,10 +5927,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Intro to Web Lab - Part 1",
         "level_keys": [
           "Intro to Web Lab - Part 1_2021"
-        ],
-        "progression": "Video: Intro to Web Lab - Part 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5976,10 +5953,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Explore HTML",
         "level_keys": [
           "CSD U2 Inspector Warm Up_2021"
-        ],
-        "progression": "Explore HTML"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6002,10 +5979,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Intro to Web Lab - Part 2",
         "level_keys": [
           "Intro to Web Lab - Part 2_2021"
-        ],
-        "progression": "Video: Intro to Web Lab - Part 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6028,10 +6005,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD U2 HTML Adding Paragraphs_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6054,10 +6031,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD U2 HTML Adding Paragraphs pt 2_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6080,10 +6057,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenge",
         "level_keys": [
           "CSD U2 HTML Debug Paragraphs_2021"
-        ],
-        "progression": "Challenge"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6104,12 +6081,12 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Video: Pair Programming",
         "level_keys": [
           "CSD U2 Pair Programming Video_2021"
-        ],
-        "progression": "Video: Pair Programming"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6130,12 +6107,12 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading debug_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6156,12 +6133,12 @@
       "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading Demo_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6182,12 +6159,12 @@
       "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Heading Sizes_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6210,10 +6187,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Quick Check",
         "level_keys": [
           "CSD Header Size MC_2018_2019_pilot_2021"
-        ],
-        "progression": "Quick Check"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6234,12 +6211,12 @@
       "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Video: Debugging",
         "level_keys": [
           "CSD Web Debugging_2021"
-        ],
-        "progression": "Video: Debugging"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6260,12 +6237,12 @@
       "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD Web Headings practice_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6288,10 +6265,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD U2 Heading Test_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6312,12 +6289,12 @@
       "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD Web Headings challenge_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6340,10 +6317,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Review: HTML",
         "level_keys": [
           "CSD HTML project Review_2021"
-        ],
-        "progression": "Review: HTML"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6366,10 +6343,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenge: Lists",
         "level_keys": [
           "CSD HTML project Lists_2021"
-        ],
-        "progression": "Challenge: Lists"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6392,10 +6369,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Code Your Page",
         "level_keys": [
           "CSD web HTML project HTML_2021"
-        ],
-        "progression": "Code Your Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6418,10 +6395,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Review Your Page",
         "level_keys": [
           "CSD web HTML project check_2021"
-        ],
-        "progression": "Review Your Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6444,10 +6421,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Social Sleuth",
         "level_keys": [
           "Social Sleuth_2018_2019_pilot_2021"
-        ],
-        "progression": "Social Sleuth"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6470,10 +6447,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Sample Website",
         "level_keys": [
           "CSD U2 Sample CSS text_2021"
-        ],
-        "progression": "Sample Website"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6496,10 +6473,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Exploration",
         "level_keys": [
           "CSD U2 CSS explore CSS_2021"
-        ],
-        "progression": "Exploration"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6522,10 +6499,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Intro to CSS - Part 1",
         "level_keys": [
           "Video: Intro to CSS_2021"
-        ],
-        "progression": "Video: Intro to CSS - Part 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6548,10 +6525,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style h1_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6574,10 +6551,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style h3_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6600,10 +6577,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 text style size_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6626,10 +6603,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Intro to CSS - Part 2",
         "level_keys": [
           "Video: Intro to CSS Part 2_2021"
-        ],
-        "progression": "Video: Intro to CSS - Part 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6652,10 +6629,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 add file_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6678,10 +6655,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD U2 CSS practice_pilot_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6704,10 +6681,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD Web CSS Assessment_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6730,10 +6707,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD U2 CSS challenge_pilot_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6756,10 +6733,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Review: CSS",
         "level_keys": [
           "CSD CSS project Review_2021"
-        ],
-        "progression": "Review: CSS"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6782,10 +6759,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenge: RGB Colors",
         "level_keys": [
           "CSD CSS project RGB_2021"
-        ],
-        "progression": "Challenge: RGB Colors"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6808,10 +6785,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Add Content and Structure to Your Page",
         "level_keys": [
           "CSD web CSS project HTML_2021"
-        ],
-        "progression": "Add Content and Structure to Your Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6834,10 +6811,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Add Style to Your Page",
         "level_keys": [
           "CSD web CSS project CSS_2021"
-        ],
-        "progression": "Add Style to Your Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6860,10 +6837,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Review Your Page",
         "level_keys": [
           "CSD web CSS project check_2021"
-        ],
-        "progression": "Review Your Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6886,10 +6863,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag 1_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6912,10 +6889,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Credit_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6938,10 +6915,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag Debug_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6964,10 +6941,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image choose name_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -6990,10 +6967,10 @@
       "activity_section_position": 5,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 Image Tag 2_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7016,10 +6993,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD U2 Image practice_pilot_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7042,10 +7019,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD U2 Image assessment_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7068,10 +7045,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD U2 Image challenge_pilot_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7092,11 +7069,8 @@
       "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Expression Exemplars_2018_2019_pilot_2021"
-        ],
         "progression": "Sample Personal Websites"
       },
       "named_level": null,
@@ -7108,7 +7082,7 @@
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "b4c291eb-30c6-4699-ac56-24df952ccb92"
+        "activity_section.key": "890f7764-695b-4258-acbb-9b7e29804fc5"
       },
       "level_keys": [
         "CSD U2 Expression Exemplars_2018_2019_pilot_2021"
@@ -7120,10 +7094,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Sample Website",
         "level_keys": [
           "CSD U2 Sample CSS layout_2021"
-        ],
-        "progression": "Sample Website"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7146,10 +7120,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Exploration",
         "level_keys": [
           "CSD U2 layout style sample_2021"
-        ],
-        "progression": "Exploration"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7172,10 +7146,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style bgcolor_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7198,10 +7172,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style body_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7224,10 +7198,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style float_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7250,10 +7224,10 @@
       "activity_section_position": 4,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 layout style width_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7276,10 +7250,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD U2 layout style practice_pilot_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7302,10 +7276,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD U2 add style_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7328,10 +7302,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD U2 layout style challenge_pilot_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7352,11 +7326,8 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 project guide_2018_2019_pilot_2021"
-        ],
         "progression": "Project Guide"
       },
       "named_level": null,
@@ -7368,7 +7339,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "75942ada-453d-4de7-870e-9ea233b7171d"
+        "activity_section.key": "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1"
       },
       "level_keys": [
         "CSD U2 project guide_2018_2019_pilot_2021"
@@ -7378,11 +7349,8 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 upload images_2021"
-        ],
         "progression": "Website Project"
       },
       "named_level": null,
@@ -7394,7 +7362,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       },
       "level_keys": [
         "CSD U2 upload images_2021"
@@ -7404,11 +7372,8 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 add content_2021"
-        ],
         "progression": "Website Project"
       },
       "named_level": null,
@@ -7420,7 +7385,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       },
       "level_keys": [
         "CSD U2 add content_2021"
@@ -7430,11 +7395,8 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 CSS_2021"
-        ],
         "progression": "Website Project"
       },
       "named_level": null,
@@ -7446,7 +7408,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       },
       "level_keys": [
         "CSD U2 CSS_2021"
@@ -7456,11 +7418,8 @@
       "chapter": 61,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 project review_2021"
-        ],
         "progression": "Website Project"
       },
       "named_level": null,
@@ -7472,7 +7431,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       },
       "level_keys": [
         "CSD U2 project review_2021"
@@ -7482,11 +7441,8 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 publish video_2021"
-        ],
         "progression": "Video: Publishing Your Website"
       },
       "named_level": null,
@@ -7498,7 +7454,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "d8373943-01d1-45d5-b2e7-133c5d96159e"
+        "activity_section.key": "f82407b3-02da-446b-9c56-6e11c8f2df36"
       },
       "level_keys": [
         "CSD U2 publish video_2021"
@@ -7508,11 +7464,8 @@
       "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 project share_2021"
-        ],
         "progression": "Publishing Your Website"
       },
       "named_level": null,
@@ -7524,7 +7477,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330"
+        "activity_section.key": "21f831a9-7123-4982-b5fb-d37eadd0df25"
       },
       "level_keys": [
         "CSD U2 project share_2021"
@@ -7536,9 +7489,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
-        ],
         "progression": "Reflection"
       },
       "named_level": null,
@@ -7550,7 +7500,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd"
+        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
@@ -7562,10 +7512,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Top Websites",
         "level_keys": [
           "CSD U2 Top Websites_2018_2019_pilot_2021"
-        ],
-        "progression": "Top Websites"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7588,10 +7538,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Teamwork",
         "level_keys": [
           "csd web teamwork video_2021"
-        ],
-        "progression": "Video: Teamwork"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7614,10 +7564,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Video: Managing Disagreement",
         "level_keys": [
           "csd web disagreement video_2021"
-        ],
-        "progression": "Video: Managing Disagreement"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7640,10 +7590,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Sample Web Page",
         "level_keys": [
           "CSD U2 Sample classes_2021"
-        ],
-        "progression": "Sample Web Page"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7666,10 +7616,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Exploration",
         "level_keys": [
           "CSD U2 classes waterfalls_2021"
-        ],
-        "progression": "Exploration"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7692,10 +7642,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 classes humors_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7718,10 +7668,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD web classes practice_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7744,10 +7694,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Assessment",
         "level_keys": [
           "CSD U2 classes haikus_2021"
-        ],
-        "progression": "Assessment"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7770,10 +7720,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD web classes challenge_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7796,10 +7746,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Upload Your Images",
         "level_keys": [
           "CSD web upload images multi_2021"
-        ],
-        "progression": "Upload Your Images"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7822,10 +7772,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Exploration",
         "level_keys": [
           "CSD U2 link demo_2021"
-        ],
-        "progression": "Exploration"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7848,10 +7798,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 making links_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7874,10 +7824,10 @@
       "activity_section_position": 2,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 naming links_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7900,10 +7850,10 @@
       "activity_section_position": 3,
       "assessment": null,
       "properties": {
+        "progression": "Skill Building",
         "level_keys": [
           "CSD U2 naming pages_2021"
-        ],
-        "progression": "Skill Building"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7926,10 +7876,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Practice",
         "level_keys": [
           "CSD U2 nav bar_2021"
-        ],
-        "progression": "Practice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7952,10 +7902,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Adding Pages",
         "level_keys": [
           "CSD U2 adding pages_2021"
-        ],
-        "progression": "Adding Pages"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7978,10 +7928,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Challenges",
         "level_keys": [
           "CSD U2 links challenge_2021"
-        ],
-        "progression": "Challenges"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8004,10 +7954,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Your Team Project",
         "level_keys": [
           "CSD web create pages project_2021"
-        ],
-        "progression": "Your Team Project"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8030,10 +7980,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Add Content and HTML",
         "level_keys": [
           "CSD web add html_2021"
-        ],
-        "progression": "Add Content and HTML"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8056,10 +8006,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Share Your Pages",
         "level_keys": [
           "CSD web share html_2021"
-        ],
-        "progression": "Share Your Pages"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8082,10 +8032,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Add Style",
         "level_keys": [
           "CSD web add CSS_2021"
-        ],
-        "progression": "Add Style"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8108,10 +8058,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Share Your Stylesheets",
         "level_keys": [
           "CSD web share CSS_2021"
-        ],
-        "progression": "Share Your Stylesheets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8134,10 +8084,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Check Your Work",
         "level_keys": [
           "CSD web check_2021"
-        ],
-        "progression": "Check Your Work"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8160,10 +8110,10 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
+        "progression": "Final Website",
         "level_keys": [
           "CSD Web incorporate feedback_2021"
-        ],
-        "progression": "Final Website"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8186,10 +8136,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Reflection",
         "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021"
-        ],
-        "progression": "Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8844,7 +8794,7 @@
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "b4c291eb-30c6-4699-ac56-24df952ccb92"
+        "activity_section.key": "890f7764-695b-4258-acbb-9b7e29804fc5"
       }
     },
     {
@@ -8964,7 +8914,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "75942ada-453d-4de7-870e-9ea233b7171d"
+        "activity_section.key": "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1"
       }
     },
     {
@@ -8976,7 +8926,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       }
     },
     {
@@ -8988,7 +8938,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       }
     },
     {
@@ -9000,7 +8950,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       }
     },
     {
@@ -9012,7 +8962,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "50e5a99a-962c-46c7-aa6d-884741f164de"
+        "activity_section.key": "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7"
       }
     },
     {
@@ -9024,7 +8974,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "d8373943-01d1-45d5-b2e7-133c5d96159e"
+        "activity_section.key": "f82407b3-02da-446b-9c56-6e11c8f2df36"
       }
     },
     {
@@ -9036,7 +8986,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "0a28ee05-d0c2-43e8-b62e-31b5db4d1330"
+        "activity_section.key": "21f831a9-7123-4982-b5fb-d37eadd0df25"
       }
     },
     {
@@ -9048,7 +8998,7 @@
         "lesson.key": "Project - Personal Web Page",
         "lesson_group.key": "csd2_1v2",
         "script.name": "csd2-2021",
-        "activity_section.key": "53a14f3d-4c6c-4be2-b7f3-817a0b6ee9cd"
+        "activity_section.key": "bc36f38c-700e-493f-9d15-ab0b7be43b8d"
       }
     },
     {
@@ -10171,19 +10121,6 @@
     },
     {
       "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1hOQsOiL7FyAXXWFZ0xnuOsKP3xRiPyYihHWau5PAj04",
-      "key": "website-for-a-purpose-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "website-for-a-purpose-1"
-      }
-    },
-    {
-      "name": "Website for a Purpose",
       "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
       "key": "website-for-a-purpose-1-2",
       "properties": {
@@ -10192,32 +10129,6 @@
       },
       "seeding_key": {
         "resource.key": "website-for-a-purpose-1-2"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "name": "Website for a Purpose",
-      "url": "https://docs.google.com/document/d/1hOQsOiL7FyAXXWFZ0xnuOsKP3xRiPyYihHWau5PAj04",
-      "key": "website-for-a-purpose-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "website-for-a-purpose-1"
       }
     },
     {
@@ -10735,117 +10646,148 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
     {
-      "key": "HTML",
+      "key": "html",
       "word": "HTML",
       "definition": "Hypertext Markup Language, a language used to create web pages",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "HTML"
+        "vocabulary.key": "html"
       }
     },
     {
-      "key": "HTML Element",
+      "key": "html_element",
       "word": "HTML Element",
       "definition": "A piece of a website, marked by a start tag and often closed with an end tag",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "HTML Element"
+        "vocabulary.key": "html_element"
       }
     },
     {
-      "key": "HTML Tag",
+      "key": "html_tag",
       "word": "HTML Tag",
       "definition": "The special set of characters that indicates the start and end of an HTML element and that element's type",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "HTML Tag"
+        "vocabulary.key": "html_tag"
       }
     },
     {
-      "key": "Website Content",
+      "key": "website_content",
       "word": "Website Content",
       "definition": "the text and images on a website",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Website Content"
+        "vocabulary.key": "website_content"
       }
     },
     {
-      "key": "Website Structure",
+      "key": "website_structure",
       "word": "Website Structure",
       "definition": "how the content of a website is organized",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Website Structure"
+        "vocabulary.key": "website_structure"
       }
     },
     {
-      "key": "Heading",
+      "key": "heading",
       "word": "Heading",
       "definition": "A title or summary for a document or section of a document.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Heading"
+        "vocabulary.key": "heading"
       }
     },
     {
-      "key": "Digital Footprint",
+      "key": "digital_footprint",
       "word": "Digital Footprint",
       "definition": "The collected information about an individual across multiple websites on the Internet.",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Digital Footprint"
+        "vocabulary.key": "digital_footprint"
       }
     },
     {
-      "key": "CSS",
+      "key": "css",
       "word": "CSS",
       "definition": "Cascading Style Sheets; a language used to describe how HTML elements should be styled",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "CSS"
+        "vocabulary.key": "css"
       }
     },
     {
-      "key": "CSS Selector",
+      "key": "css_selector",
       "word": "CSS Selector",
       "definition": "the part of a CSS rule-set that defines which HTML elements the style should be applied to",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "CSS Selector"
+        "vocabulary.key": "css_selector"
       }
     },
     {
-      "key": "Copyright",
+      "key": "copyright",
       "word": "Copyright",
       "definition": "the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
-      "key": "Relevant",
+      "key": "relevant",
       "word": "Relevant",
       "definition": "closely connected to a topic",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Relevant"
+        "vocabulary.key": "relevant"
       }
     },
     {
-      "key": "Search Engine",
-      "word": "Search Engine",
-      "definition": "A program that searches for items on the World Wide Web.",
-      "seeding_key": {
-        "vocabulary.key": "Search Engine"
-      }
-    },
-    {
-      "key": "Trustworthy",
+      "key": "trustworthy",
       "word": "Trustworthy",
       "definition": "reliable, honest, and truthful ",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "Trustworthy"
+        "vocabulary.key": "trustworthy"
       }
     },
     {
-      "key": "CSS Class",
+      "key": "search_engine",
+      "word": "Search Engine",
+      "definition": "A program that searches for items on the World Wide Web.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "search_engine"
+      }
+    },
+    {
+      "key": "css_class",
       "word": "CSS Class",
       "definition": "An identifier that allows multiple elements in an HTML document to be styled in the same way",
+      "properties": {
+      },
       "seeding_key": {
-        "vocabulary.key": "CSS Class"
+        "vocabulary.key": "css_class"
       }
     }
   ],
@@ -10853,85 +10795,241 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML"
+        "vocabulary.key": "html"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML Element"
+        "vocabulary.key": "html_element"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "HTML Tag"
+        "vocabulary.key": "html_tag"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "Website Content"
+        "vocabulary.key": "website_content"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "vocabulary.key": "Website Structure"
+        "vocabulary.key": "website_structure"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Headings",
-        "vocabulary.key": "Heading"
+        "vocabulary.key": "heading"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Digital Footprint",
-        "vocabulary.key": "Digital Footprint"
+        "vocabulary.key": "digital_footprint"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
-        "vocabulary.key": "CSS"
+        "vocabulary.key": "css"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
-        "vocabulary.key": "CSS Selector"
+        "vocabulary.key": "css_selector"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "vocabulary.key": "Copyright"
+        "vocabulary.key": "copyright"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Relevant"
+        "vocabulary.key": "relevant"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Search Engine"
+        "vocabulary.key": "trustworthy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
-        "vocabulary.key": "Trustworthy"
+        "vocabulary.key": "search_engine"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "CSS Classes",
-        "vocabulary.key": "CSS Class"
+        "vocabulary.key": "css_class"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "html"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "doctype"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "body"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "head"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "P"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "h"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "font-family"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "font-size"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "Text-Dec"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "text-align"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "img"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-width"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "background-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "margin"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "float"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "height"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "width"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-style"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "border-radius"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "A"
       }
     }
   ],
@@ -11284,6 +11382,491 @@
       "seeding_key": {
         "lesson.key": "Peer Review and Final Touches",
         "objective.key": "c2b66c71-919f-4bbb-bdc4-9fbb244e4991"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Headings",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Your Personal Style",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Elements with CSS",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Team Problem Solving",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "CSS Classes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Planning a Multi-page Website",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Pages",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Website for a Purpose",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Peer Review and Final Touches",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
       }
     }
   ]
