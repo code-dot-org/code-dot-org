@@ -495,6 +495,15 @@ export default function rootReducer(state = initialState, action) {
       state.instructionsKeyCallback(action.currentPanel);
     }
 
+    if (action.currentPanel === "dataDisplayLabel") {
+      return {
+        ...state,
+        currentPanel: action.currentPanel,
+        currentColumn: undefined,
+        selectedFeatures: []
+      };
+    }
+
     return {
       ...state,
       currentPanel: action.currentPanel,
@@ -1170,9 +1179,7 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = isPanelEnabled(state, "dataDisplayLabel")
-      ? { panel: "dataDisplayLabel", text: "Back" }
-      : isPanelEnabled(state, "dataDisplayFeatures")
+    prev = isPanelEnabled(state, "dataDisplayFeatures")
       ? { panel: "dataDisplayFeatures", text: "Back" }
       : null;
     next = isPanelEnabled(state, "saveModel")
