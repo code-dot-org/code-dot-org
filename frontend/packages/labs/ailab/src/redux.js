@@ -511,18 +511,27 @@ export default function rootReducer(state = initialState, action) {
     };
   }
   if (action.type === SET_HIGHLIGHT_COLUMN) {
-    if (getShowColumnClicking(state)) {
-      return {
-        ...state,
-        highlightColumn: action.highlightColumn
-      };
+    if (!getShowColumnClicking(state)) {
+      // If no column clicking, do nothing.
+      return state;
     }
+    if (
+      state.currentPanel === "dataDisplayFeatures" &&
+      action.highlightColumn === state.labelColumn
+    ) {
+      // If doing feature selection, and the label column is clicked, do nothing.
+      return state;
+    }
+    return {
+      ...state,
+      highlightColumn: action.highlightColumn
+    };
   }
   if (action.type === SET_HIGHLIGHT_DATASET) {
     return {
       ...state,
       highlightDataset: action.highlightDataset
-    }
+    };
   }
   if (action.type === SET_CURRENT_COLUMN) {
     if (!getShowColumnClicking(state)) {
