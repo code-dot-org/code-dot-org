@@ -21,12 +21,12 @@ class SurveyResult < ApplicationRecord
   SYSTEM_DELETED = 'system_deleted'.freeze
 
   ETHNICITIES = {
-    "white" => "White",
+    "asian" => "Asian",
     "black" => "Black / African American",
     "hispanic" => "Hispanic / Latino / Latina",
-    "asian" => "Asian",
-    "hawaiian" => "Native Hawaiian / Pacific Islander",
     "american_indian" => "Native American / Alaskan",
+    "hawaiian" => "Native Hawaiian / Pacific Islander",
+    "white" => "White",
     "tr" => "Two or more races"
   }.freeze
 
@@ -34,14 +34,18 @@ class SurveyResult < ApplicationRecord
 
   NET_PROMOTER_SCORE_ATTRS = %w(nps_value nps_comment).freeze
 
+  # Note: diversity_native is deprecated. It corresponded to the "Native Hawaiian
+  # or Other Pacific Islander" option in the diversity survey for 2019 and earlier.
   FREE_RESPONSE_ATTRS = %w(nps_comment).freeze
   NON_FREE_RESPONSE_ATTRS = %w(
     diversity_white
     diversity_black
     diversity_hispanic
     diversity_asian
+    diversity_native
     diversity_hawaiian
     diversity_american_indian
+    diversity_other
     diversity_tr
     diversity_farm
     nps_value

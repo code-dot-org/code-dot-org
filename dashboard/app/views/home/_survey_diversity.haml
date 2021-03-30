@@ -15,7 +15,7 @@
       .survey_questions
         %ol
           %li
-            Of your students using Code.org's courses, how many are
+            Of your students using Code.org's courses, how many identify as:
         .dots
           - SurveyResult::ETHNICITIES.each do |key, value|
             %input#ethnicity_input{maxlength: "3", name: "survey[diversity_#{key}]", placeholder: "0"}
