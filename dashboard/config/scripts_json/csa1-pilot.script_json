@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-25 19:43:29 UTC",
+    "serialized_at": "2021-03-29 16:52:04 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -162,7 +162,7 @@
       "key": "beee5f00-6076-4e55-8e59-19d2a08e6b0f",
       "position": 3,
       "properties": {
-        "description": " [slide] **Do This:** Ask a student to read the question on the slide to the whole class. Students write as many words/phrases  as they can, one per sticky note, about the phrase \"software engineering\". Remind them to keep generating more ideas: there are no wrong answers (1 min).\n",
+        "description": " [slide] **Do This:** Ask a student to read the question on the slide to the whole class. Students write as many words/phrases as they can, one per sticky note, about the phrase \"software engineering\". Remind them to keep generating more ideas: there are no wrong answers",
         "tips": [
           {
             "type": "teachingTip",
@@ -180,7 +180,7 @@
       "position": 4,
       "properties": {
         "remarks": true,
-        "description": "Now we’re going to group similar sticky notes together. It’s up to you to decide how to group them!"
+        "description": "Now we’re going to group similar sticky notes. It’s up to you to decide how to group them!"
       },
       "seeding_key": {
         "activity_section.key": "9721d168-de29-4fdc-a035-f91740126e84",
@@ -202,7 +202,7 @@
       "key": "bedc6269-35d4-43f3-85ff-794f3a67083d",
       "position": 6,
       "properties": {
-        "description": "**Do This:** In their group:\n* [slide] Students share out their sticky notes.\n* [slide] Students group similar sticky notes together.\n* [slide] Students stick their sticky notes on the wall, keeping similar notes together.\n",
+        "description": "**Do This:** In their group:\n* [slide] Students share out their sticky notes.\n* [slide] Students group similar sticky notes.\n* [slide] Students stick their sticky notes on the wall, keeping similar notes together.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -242,7 +242,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students bring their own life experiences (funds of knowledge) to class, and it’s important to acknowledge that they may already have been exposed to narratives and stories of software engineering."
+            "markdown": "Students bring their own life experiences ([funds of knowledge](https://www.k12.wa.us/student-success/access-opportunity-education/migrant-and-bilingual-education/funds-knowledge-and-home-visits-toolkit/funds-knowledge)) to class, and it’s important to acknowledge that they may already have been exposed to narratives and stories of software engineering."
           }
         ]
       },
@@ -255,7 +255,7 @@
       "key": "49e1ee1b-e651-435a-8cdd-f256709efe4d",
       "position": 9,
       "properties": {
-        "description": "**Do This:** Ask a student to read out the definition of software engineer: \"Software engineers 'combine their expertise in computer science, engineering, and math to design, develop, and test software for home, school and business use.'\""
+        "description": "**Do This:** Read out the definition of a software engineer, pausing at the underlined words. Ask a student to read those words out loud. \"Software engineers 'combine their expertise in computer science, engineering, and math to *design*, *develop*, and *test* software for home, school, and business use.'\" Give students thirty seconds to process and think about the definition. \n"
       },
       "seeding_key": {
         "activity_section.key": "49e1ee1b-e651-435a-8cdd-f256709efe4d",
@@ -284,7 +284,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Think-Pair-Share gives students time to think on their own before pairing with a classmate to exchange thoughts. Give students enough time to think on their own. If students are hesitant to share out their own ideas, you can ask students to share their partner’s ideas."
+            "markdown": "Think-Pair-Share gives students time to think on their own before pairing with a classmate to exchange thoughts. Give students enough time to think on their own. If students are hesitant to share out their ideas, you can ask students to share their partner’s ideas."
           }
         ]
       },
@@ -309,7 +309,7 @@
       "position": 13,
       "properties": {
         "remarks": true,
-        "description": "These characteristics are the most important parts of being a software engineer. Even though you may not realize yet, you already have the mindset of a software engineer. "
+        "description": "These characteristics are the most important parts of being a software engineer. Even though you may not realize it yet, you already have the mindset of a software engineer. "
       },
       "seeding_key": {
         "activity_section.key": "dec68dbb-45ed-4df4-9e4f-e46cdad7c9d8",
