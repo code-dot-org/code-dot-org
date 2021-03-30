@@ -81,7 +81,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_includes @response.body, '/s/csp1-2020/stage/14/'
+    assert_includes @response.body, '/s/csp1-2020/lessons/14/'
 
     get :show, params: {
       script_id: @unit.name,
@@ -89,7 +89,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
 
     get :show, params: {
       script_id: @unit.name,
@@ -98,7 +98,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       puzzle_page: 1
     }
 
-    assert_redirected_to '/s/csp1-2020/stage/14/puzzle/2/page/1'
+    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
   end
 
   test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
@@ -117,7 +117,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    assert_includes @response.body, '/s/csp2-2020/stage/9/'
+    assert_includes @response.body, '/s/csp2-2020/lessons/9/'
 
     get :show, params: {
       script_id: @unit.name,
@@ -125,7 +125,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
+    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
 
     get :show, params: {
       script_id: @unit.name,
@@ -134,7 +134,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       puzzle_page: 1
     }
 
-    assert_redirected_to '/s/csp2-2020/stage/9/puzzle/2/page/1'
+    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
   end
 
   test 'should show script level for twenty hour' do
