@@ -20,6 +20,15 @@ export default storybook => {
       story: () => (
         <LessonStandards standards={cspStandards.concat(cstaStandards)} />
       )
+    },
+    {
+      name: 'expand first of many standards',
+      story: () => (
+        <LessonStandards
+          standards={cspStandards.concat(cstaStandards)}
+          expand="first"
+        />
+      )
     }
   ]);
 };
