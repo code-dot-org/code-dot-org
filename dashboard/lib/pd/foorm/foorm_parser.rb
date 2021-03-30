@@ -43,7 +43,7 @@ module Pd::Foorm
         parsed_form_questions = parse_form_questions(form.questions)
 
         parsed_forms[:general][get_form_key(form.name, form.version)] = parsed_form_questions[:general]
-        unless parsed_form[:facilitator].empty?
+        unless parsed_form_questions[:facilitator].empty?
           parsed_forms[:facilitator][get_form_key(form.name, form.version)] = parsed_form_questions[:facilitator]
         end
       end

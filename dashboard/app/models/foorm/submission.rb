@@ -73,7 +73,7 @@ class Foorm::Submission < ApplicationRecord
         pairs[key] = choices[matrix_question_answer]
       end
       return pairs
-    when ANSWER_SCALE, ANSWER_TEXT
+    when ANSWER_RATING, ANSWER_TEXT
       return {question_id => answer}
     when ANSWER_SINGLE_SELECT
       choices = question_details[:choices]
