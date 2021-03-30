@@ -34,7 +34,7 @@ yarn install
 yarn start
 ```
 
-The app will be running at [http://localhost:8080](http://localhost:8080).
+The app will be running at http://localhost:8080.
 
 ### Running a local standalone server
 
@@ -44,7 +44,7 @@ Borrowing one step from above:
 yarn start
 ```
 
-The app will be running at [http://localhost:8080](http://localhost:8080).
+The app will be running at http://localhost:8080.
 
 ### First time integration with local Code Studio
 
