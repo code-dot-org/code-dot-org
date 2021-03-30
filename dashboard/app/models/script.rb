@@ -88,7 +88,8 @@ class Script < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
-            :standards
+            :standards,
+            :opportunity_standards
           ]
         },
         :script_levels,
