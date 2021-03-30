@@ -46,7 +46,7 @@ Scenario: Toggle on Lockable Level
   Given I create an authorized teacher-associated student named "Joffrey"
   Then I sign in as "Teacher_Joffrey"
 
-  Then I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/1?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1?noautoplay=true"
   And I wait until element ".level-group" is visible
   And element "#locked-stage" is not visible
   And I see no difference for "page load"
@@ -70,7 +70,7 @@ Scenario: Toggle on Lockable Level
   Then I open the stage lock dialog
   Then I unlock the stage for students
 
-  Then I am on "http://studio.code.org/s/allthethings/survey/1/puzzle/1/page/1?noautoplay=true"
+  Then I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/1?noautoplay=true"
   And I wait until element ".level-group" is visible
   And element "#locked-stage" is not visible
   Then I click selector ".show-handle .fa-chevron-left"
