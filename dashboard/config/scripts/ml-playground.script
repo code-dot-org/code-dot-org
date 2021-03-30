@@ -11,57 +11,22 @@ level 'ml-model card-medical-2', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-3', progression: 'Medical Dataset Model Cards'
 level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
 
-lesson 'superunsuper', display_name: 'Unsupervised and Supervised', has_lesson_plan: false
-level 'ml-L2 unsupervised - 1', progression: 'Unsupervised'
+lesson 'exemplars', display_name: 'Exemplars I Accidentally Made in LB', has_lesson_plan: false
+level 'ml-pet exemplar', progression: 'Pet Exemplar'
 
-lesson 'intro-categorical', display_name: 'Introduction to AI Lab', has_lesson_plan: false
-
-lesson 'oceans', display_name: 'Machine Learning with AI for Oceans', has_lesson_plan: false
-
-lesson 'intro', display_name: 'Introduction to Machine Learning', has_lesson_plan: false
-level 'ml-intro', progression: 'Introduction to Machine Learning'
-level 'ml-society', progression: 'Machine Learning & Societal Impact'
-level 'ml-decisions', progression: 'Using Models in Apps'
-level 'ml-visualizing', progression: 'Visualizing Data'
-
-lesson 'KNN', display_name: 'Feature Selection with Continuous Labels', has_lesson_plan: false
-level 'ml-knn-train', progression: 'AI-Lab: Train a model with continuous labels'
-level 'ml-knn-act', progression: 'Act Out an ML Model: KNN'
-level 'ml-knn-ailab', progression: 'Prepare: Your Recommendation App'
-level 'ml-knn-applab', progression: 'Make: Your Recommendation App'
-
-lesson 'SVM', display_name: 'Data Investigations with Categorical Labels', has_lesson_plan: false
-level 'ml-svm-train', progression: 'AI-Lab: Train a model with categorical labels'
-level 'ml-svm-act', progression: 'Act Out an ML Model: SVM'
-level 'ml-svm-ailab', progression: 'Prepare: Your Category App'
-level 'ml-svm-applab', progression: 'Make: Your Category App'
-
-lesson 'App', display_name: 'Using Models in the Real-World', has_lesson_plan: false
-level 'ml-data', progression: 'AI-Lab: Using Data to Make Predictions'
-level 'ml-model card-unplugged', progression: 'Documenting Decisions with Model Cards'
-level 'ml-mini-project-ailab', progression: 'Mini-Project: Prepare: Your Crystal Ball App'
-level 'ml-mini-project-applab', progression: 'Mini-Project: Make: Your Crystal Ball App'
-
-lesson 'ethics', display_name: 'Using ML Ethically', has_lesson_plan: false
-level 'ml-miseducation', progression: 'Mis-education of the Machine'
-level 'ml-ethics-hoc2020', progression: 'AI Code of Ethics (HOC 2020)'
-level 'ml-goldilocks-ailab', progression: 'The Goldilocks Principles: Training Data Just Right'
-level 'ml-ethics-ailab', progression: 'Prepare: App Ethics Challenge'
-level 'ml-ethics-applab', progression: 'Make: App Ethics Challenge'
-
-lesson 'project', display_name: 'Final project', has_lesson_plan: false
-level 'ml-hypothesis', progression: 'Planning Your App'
-level 'ml-collection-ailab', progression: 'Prepare: Collecting Your Own Data'
-level 'ml-collection-applab', progression: 'Make: Collecting Your Own Data'
-level 'ml-final-project-ailab', progression: 'Prepare: Project'
-level 'ml-final-project-applab', progression: 'Make: Project'
-
-lesson 'appendix', display_name: 'Appendix', has_lesson_plan: false
-
-lesson 'dog', display_name: 'Does Code.org Like Your Dog?', has_lesson_plan: false
-level 'ml-code dog-1'
-level 'AIlab-test-1'
-level 'ml-code dog-export'
+lesson 'temp', display_name: 'TEMP LEVELS - DELETE LATER', has_lesson_plan: true
+level 'ml-model cards-medical app', progression: 'Medical Priority App (external app)'
+level 'ml-import ai-pixar placeholder', progression: 'Which Pixar Character Are You?'
+level 'Oceans_CreaturesVTrash', progression: 'Recognizing Ocean Animals'
+level 'ml-model card-medical-4', progression: 'Medical Dataset Model Cards'
+level 'Oceans_Video_Training_Data', progression: '(Slides) Bias in Machine Learning Video'
+level 'ml-use model card-example2A', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2B', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2C', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2D', progression: 'How Much Will Insurance Cost?'
+level 'ml-use model card-example2E', progression: 'How Much Will Insurance Cost?'
+level 'ml-L2 supervised - 1', progression: 'Supervised Learning'
+level 'ml-intro ai lab-intro video', progression: 'Video: Introduction to AI Lab'
 
 lesson 'USE Programs', display_name: 'USE Programs (AppLab Only)', has_lesson_plan: false
 level 'ml-netflix use-1', progression: 'Movie Recommendations (AppLab Only)'
@@ -89,4 +54,9 @@ level 'ml-candy modify-3', progression: 'Candy Predictor'
 level 'ml-candy modify-4', progression: 'Candy Predictor'
 level 'ml-candy modify-5', progression: 'Candy Predictor'
 level 'ml-candy modify-6', progression: 'Candy Predictor'
+
+lesson 'dog', display_name: 'Does Code.org Like Your Dog?', has_lesson_plan: false
+level 'ml-code dog-1'
+level 'AIlab-test-1'
+level 'ml-code dog-export'
 
