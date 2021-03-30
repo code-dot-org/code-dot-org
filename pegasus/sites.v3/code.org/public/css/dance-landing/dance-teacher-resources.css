@@ -15,8 +15,6 @@
 }
 
 .resource-gif {
-  /* does not need to be absolutely positioned */
-  /* position: absolute; */ 
   width: 234px;
   float: left;
 }

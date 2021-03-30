@@ -29,14 +29,14 @@
 .left-tutorial  {
   right: 20px;
 }
-.left-tutorial.inverted{
+.left-tutorial.right-to-left{
   left: 20px;
   right: auto;
 }
 .right-tutorial {
   right: 270px;
 }
-.right-tutorial.inverted{
+.right-tutorial.right-to-left{
   left: 270px;
   right: auto;
 }
