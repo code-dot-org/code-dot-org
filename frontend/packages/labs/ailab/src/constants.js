@@ -325,7 +325,8 @@ export const styles = {
   },
 
   resultsTableSecondHeader: {
-    top: "30px"
+    top: "30px",
+    color: "white"
   },
 
   previousButton: {
