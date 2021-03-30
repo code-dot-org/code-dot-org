@@ -26,14 +26,13 @@ export default function initPage(scriptEditorData) {
   registerReducers({...reducers, resources: resourcesEditor, isRtl});
   const store = getStore();
   store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
-  const teacherResources = scriptData.is_migrated
-    ? scriptData.teacher_resources || []
-    : (scriptData.teacher_resources || []).map(([type, link]) => ({
-        type,
-        link
-      }));
-  const resourcesForRedux = scriptData.is_migrated ? teacherResources : [];
-  store.dispatch(initResources(resourcesForRedux || []));
+  const teacherResources = (scriptData.teacher_resources || []).map(
+    ([type, link]) => ({
+      type,
+      link
+    })
+  );
+  store.dispatch(initResources(scriptData.migrated_teacher_resources || []));
 
   let announcements = scriptData.announcements || [];
 

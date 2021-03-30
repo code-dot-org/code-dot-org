@@ -13,7 +13,9 @@ import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/script-editor/LessonE
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
+import ResourceType, {
+  resourceShape
+} from '@cdo/apps/templates/courseOverview/resourceType';
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
@@ -71,7 +73,7 @@ class ScriptEditor extends React.Component {
     initialWrapupVideo: PropTypes.string,
     initialProjectWidgetVisible: PropTypes.bool,
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
-    initialTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLessonExtrasAvailable: PropTypes.bool,
     initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
@@ -101,7 +103,7 @@ class ScriptEditor extends React.Component {
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    resources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     init: PropTypes.func.isRequired
   };
 
@@ -301,7 +303,7 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      resourceIds: this.props.resources.map(resource => resource.id),
+      resourceIds: this.props.migratedResources.map(resource => resource.id),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
@@ -846,7 +848,7 @@ class ScriptEditor extends React.Component {
                 <div style={styles.box}>
                   <div style={{marginBottom: 5}}>Preview:</div>
                   <TeacherResourcesDropdown
-                    resources={this.props.resources}
+                    migratedResources={this.props.migratedResources}
                     useMigratedResources
                   />
                 </div>
@@ -964,7 +966,7 @@ export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
     levelKeyList: state.levelKeyList,
-    resources: state.resources
+    migratedResources: state.resources
   }),
   {
     init
