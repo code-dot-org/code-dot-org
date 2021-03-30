@@ -284,15 +284,15 @@ Dashboard::Application.routes.draw do
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
-  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/stage/14%{all}')
-  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/stage/9%{all}')
-  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/stage/11%{all}')
-  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/stage/15%{all}')
-  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/stage/18%{all}')
-  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/stage/6%{all}')
-  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/stage/11%{all}')
-  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/stage/9%{all}')
-  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
+  get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
+  get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
+  get '/s/csp3-2020/lockable/1(*all)', to: redirect(path: '/s/csp3-2020/lessons/11%{all}')
+  get '/s/csp4-2020/lockable/1(*all)', to: redirect(path: '/s/csp4-2020/lessons/15%{all}')
+  get '/s/csp5-2020/lockable/1(*all)', to: redirect(path: '/s/csp5-2020/lessons/18%{all}')
+  get '/s/csp6-2020/lockable/1(*all)', to: redirect(path: '/s/csp6-2020/lessons/6%{all}')
+  get '/s/csp7-2020/lockable/1(*all)', to: redirect(path: '/s/csp7-2020/lessons/11%{all}')
+  get '/s/csp9-2020/lockable/1(*all)', to: redirect(path: '/s/csp9-2020/lessons/9%{all}')
+  get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
   resources :lessons, only: [:edit, :update]
   resources :resources, only: [:create, :update]
@@ -679,8 +679,8 @@ Dashboard::Application.routes.draw do
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:stage_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
-  get '/api/user_progress/:script/:stage_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
+  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage'
+  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_stage', as: 'user_progress_for_stage_and_level'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
