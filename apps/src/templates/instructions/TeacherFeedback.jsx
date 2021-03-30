@@ -142,17 +142,19 @@ export class TeacherFeedback extends Component {
   }
 
   componentDidMount = () => {
-    window.addEventListener('beforeunload', event => {
-      if (!this.feedbackIsUnchanged()) {
-        event.preventDefault();
-        event.returnValue = i18n.feedbackNotSavedWarning();
-      }
-    });
+    window.addEventListener('beforeunload', this.onUnload);
   };
 
   componentWillUnmount() {
-    window.removeEventListener('beforeunload');
+    window.removeEventListener('beforeunload', this.onUnload);
   }
+
+  onUnload = event => {
+    if (!this.feedbackIsUnchanged()) {
+      event.preventDefault();
+      event.returnValue = i18n.feedbackNotSavedWarning();
+    }
+  };
 
   onCommentChange = value => {
     this.setState({comment: value});
