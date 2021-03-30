@@ -338,6 +338,13 @@ class BucketHelper
     result.deleted.count
   end
 
+  # Check whether a project has any S3 Objects in this bucket.
+  def project_contains_objects?(storage_id, storage_app_id)
+    project_s3_prefix = s3_path storage_id, storage_app_id
+    version_list = s3.list_object_versions(bucket: @bucket, prefix: project_s3_prefix)
+    return version_list.versions.present?
+  end
+
   def list_versions(encrypted_channel_id, filename)
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename

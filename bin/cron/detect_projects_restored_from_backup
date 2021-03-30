@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require_relative '../../shared/middleware/helpers/storage_id'
+
+# Detect if the project system has been restored from backup and alert that projects belonging to purged users
+# are deleted from the restored system with bin/oneoff/data_fix/delete_projects_for_purged_users
+#
+# Student project S3 Objects are irrevocably deleted by the Account Purger (28 days after the user's account is
+# soft deleted). But, S3 Bucket Replication (used to backup project buckets to offsite account for disaster recovery)
+# intentionally does not propagate Object deletion to the backup to prevent malicious deletions from propagating to the
+# backup. In the unlikely recovery scenario that the projects system is restored from the offsite backup, use the script
+# bin/oneoff/data_fix/delete_projects_for_purged_users to delete S3 Objects for projects belonging to purged users.
+#
+# storage_id: [pegasus.storage.id] Unique integer identifying a group of projects that are owned by a single user
+#   (pegasus.storage.user_id) and are stored together in
+#    S3 with a shared S3 Object prefix.
+# storage_app_id: [pegasus.storage_apps.id] Unique integer identifying a project
+
+NUMBER_OF_PURGED_USERS_TO_SAMPLE = 100
+PEGASUS_REPORTING_DB_READER = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
+BUCKETS = BucketHelper.descendants.map(&:new)
+
+def main
+  User.
+    with_deleted.
+    where.
+    not(purged_at: nil).
+    order(:purged_at).
+    last(NUMBER_OF_PURGED_USERS_TO_SAMPLE).
+    reject {|user| user.user_storage_id.nil?}.
+    map(&:user_storage_id).
+    each do |storage_id|
+      storage_app_ids = PEGASUS_REPORTING_DB_READER[:storage_apps].where(storage_id: storage_id).map(:id)
+      BUCKETS.product(storage_app_ids).each do |bucket, storage_app_id|
+        raise "Project #{storage_app_id} belonging to a purged user contains objects in Bucket #{bucket}" if bucket.project_contains_objects?(storage_id, storage_app_id)
+      end
+    end
+end
+
+main
