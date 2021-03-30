@@ -6,7 +6,10 @@ export const buildProgrammingExpressionMarkdown = function(
   programmingExpression
 ) {
   let block = `\`${programmingExpression.name}`;
-  if (programmingExpression.parameters.length > 0) {
+  if (
+    programmingExpression.parameters &&
+    programmingExpression.parameters.length > 0
+  ) {
     block += `\(`;
     programmingExpression.parameters.forEach((param, index) => {
       if (index === programmingExpression.parameters.length - 1) {
