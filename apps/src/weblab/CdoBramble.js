@@ -492,6 +492,48 @@ export default class CdoBramble {
     }
   }
 
+  validateProjectChanged(callback) {
+    const startSourceFiles = this.api.getStartSources()?.files;
+    this.getAllFileData(userFiles => {
+      if (userFiles?.length !== startSourceFiles.length) {
+        callback(true /* projectChanged */);
+        return;
+      }
+
+      // Map array of files to an object with structure {filename: fileData}
+      const reduceToObj = filesArray =>
+        filesArray.reduce((acc, val) => {
+          acc[val.name] = val.data;
+          return acc;
+        }, {});
+      const startObj = reduceToObj(startSourceFiles);
+      const userObj = reduceToObj(userFiles);
+
+      // If startFile doesn't have `data` (and instead has something different like `url`),
+      // it is an image and is stored differently in startSources than in Bramble.
+      // In that case, check for a matching file name, but don't compare data.
+      // Regex: Compare without whitespace.
+      const projectChanged = Object.keys(startObj).reduce(
+        (hasChanged, currentFilename) => {
+          if (!userObj.hasOwnProperty(currentFilename)) {
+            hasChanged = true;
+          } else {
+            const dataChanged =
+              startObj[currentFilename]?.replace(/\s+/g, '') !==
+              userObj[currentFilename]?.replace(/\s+/g, '');
+            if (startObj[currentFilename] && dataChanged) {
+              hasChanged = true;
+            }
+          }
+
+          return hasChanged;
+        },
+        false
+      );
+      callback(projectChanged);
+    });
+  }
+
   fileSystem() {
     return this.Bramble.getFileSystem();
   }
