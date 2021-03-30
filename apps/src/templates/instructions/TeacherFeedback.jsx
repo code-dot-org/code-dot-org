@@ -419,9 +419,7 @@ export class TeacherFeedback extends Component {
 export const UnconnectedTeacherFeedback = TeacherFeedback;
 export default connect(state => ({
   viewAs: state.viewAs,
-  serverScriptId: state.pageConstants.serverScriptId,
-  serverLevelId: state.pageConstants.serverLevelId,
-  teacher: state.pageConstants.userId,
-  verifiedTeacher: state.pageConstants.verifiedTeacher,
-  selectedSectionId: state.teacherSections.selectedSectionId
+  verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
+  selectedSectionId:
+    state.teacherSections && state.teacherSections.selectedSectionId
 }))(TeacherFeedback);
