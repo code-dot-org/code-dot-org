@@ -11,6 +11,7 @@ describe('CdoBramble', () => {
     const api = {
       getCurrentFileEntries: () => {},
       getCurrentFilesVersionId: () => {},
+      getStartSources: () => {},
       registerBeforeFirstWriteHook: () => {},
       deleteProjectFile: () => {},
       renameProjectFile: () => {},
@@ -543,6 +544,108 @@ describe('CdoBramble', () => {
         expect(cdoBramble.downloadFile).to.have.been.calledOnce;
         expect(cdoBramble.writeFileData).to.have.been.calledOnce;
         expect(console.error).to.have.been.calledOnce;
+        done();
+      });
+    });
+  });
+
+  describe('validateProjectChanged', () => {
+    beforeEach(() => {
+      const startSources = {files: [{name: 'index.html', data: '<div></div>'}]};
+      sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
+    });
+
+    it('is true if source files and user files have different lengths', done => {
+      const userFiles = [{name: 'index.html'}, {name: 'style.css'}];
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(userFiles));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.true;
+        done();
+      });
+    });
+
+    it('is true if user files are missing a file in source files', done => {
+      const userFiles = [{name: 'style.css'}];
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(userFiles));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.true;
+        done();
+      });
+    });
+
+    it('is true if file data is different between source and user files', done => {
+      const userFiles = [{name: 'index.html', data: '<p></p>'}];
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(userFiles));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.true;
+        done();
+      });
+    });
+
+    it('is true if only one of multiple source files has changed', done => {
+      const startSources = {
+        files: [
+          {name: 'index.html', data: '<div></div>'},
+          {name: 'other.html', data: '<p></p>'}
+        ]
+      };
+      const userFiles = [
+        {name: 'index.html', data: '<span></span>'},
+        {name: 'other.html', data: '<p></p>'}
+      ];
+      cdoBramble.api.getStartSources.restore();
+      sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(userFiles));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.true;
+        done();
+      });
+    });
+
+    it('is false if no files have changed', done => {
+      const files = [
+        {name: 'index.html', data: '<div></div>'},
+        {name: 'other.html', data: '<p></p>'}
+      ];
+      cdoBramble.api.getStartSources.restore();
+      sinon
+        .stub(cdoBramble.api, 'getStartSources')
+        .returns({files: [...files]});
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback([...files]));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.false;
+        done();
+      });
+    });
+
+    it('is false if source file has no data', done => {
+      const startSources = {
+        files: [{name: 'img.png', url: '/v3/files/img.png'}]
+      };
+      const userFiles = [{name: 'img.png', data: 'stringified-image-data'}];
+      cdoBramble.api.getStartSources.restore();
+      sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(userFiles));
+
+      cdoBramble.validateProjectChanged(projectChanged => {
+        expect(projectChanged).to.be.false;
         done();
       });
     });
