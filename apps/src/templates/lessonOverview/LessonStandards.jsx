@@ -27,7 +27,8 @@ export default class LessonStandards extends PureComponent {
   }
 }
 LessonStandards.propTypes = {
-  standards: PropTypes.arrayOf(standardShape).isRequired
+  standards: PropTypes.arrayOf(standardShape).isRequired,
+  expand: PropTypes.oneOf('first', 'all')
 };
 
 class Framework extends PureComponent {
