@@ -9,7 +9,8 @@ import {
   getSelectedCategoricalFeatures,
   getUniqueOptionsByColumn,
   getConvertedPredictedLabel,
-  getPredictAvailable
+  getPredictAvailable,
+  getRangesByColumn
 } from "../redux";
 import { styles } from "../constants";
 
@@ -23,7 +24,8 @@ class Predict extends Component {
     setTestData: PropTypes.func.isRequired,
     predictedLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     confidence: PropTypes.number,
-    getPredictAvailable: PropTypes.bool
+    getPredictAvailable: PropTypes.bool,
+    rangesByColumn: PropTypes.object
   };
 
   handleChange = (event, feature) => {
@@ -44,16 +46,21 @@ class Predict extends Component {
           <div style={styles.scrollingContents}>
             <form>
               {this.props.selectedNumericalFeatures.map((feature, index) => {
+                let min = this.props.rangesByColumn[feature].min.toFixed(2);
+                let max = this.props.rangesByColumn[feature].max.toFixed(2);
+
                 return (
-                  <div key={index}>
+                  <div style={styles.cardRow} key={index}>
                     <label>
-                      {feature}: &nbsp;
+                      {feature} {`(min: ${+min}, max: ${+max})`}
+                      : &nbsp;
                       <input
                         type="number"
                         onChange={event => this.handleChange(event, feature)}
                         value={this.props.testData[feature]}
                       />
                     </label>
+
                   </div>
                 );
               })}
@@ -122,7 +129,8 @@ export default connect(
     selectedNumericalFeatures: getSelectedNumericalFeatures(state),
     selectedCategoricalFeatures: getSelectedCategoricalFeatures(state),
     uniqueOptionsByColumn: getUniqueOptionsByColumn(state),
-    getPredictAvailable: getPredictAvailable(state)
+    getPredictAvailable: getPredictAvailable(state),
+    rangesByColumn: getRangesByColumn(state)
   }),
   dispatch => ({
     setTestData(testData) {
