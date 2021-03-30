@@ -1,9 +1,14 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
-import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import ActivitySectionCardButtons from './ActivitySectionCardButtons';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
+
+import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
+import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import color from '@cdo/apps/util/color';
+import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {tokenMargin, borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import {
   moveActivitySection,
   removeActivitySection,
@@ -13,11 +18,9 @@ import {
   addLevel,
   NEW_LEVEL_ID
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
-import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
-import ReactDOM from 'react-dom';
-import color from '@cdo/apps/util/color';
-import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+
+import ActivitySectionCardButtons from './ActivitySectionCardButtons';
+import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 // When dragging within this many pixels of the top or bottom of the screen,
 // start scrolling the page.
@@ -364,6 +367,12 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  appendProgrammingExpressionLink = programmingExpression => {
+    this.appendMarkdownSyntax(
+      buildProgrammingExpressionMarkdown(programmingExpression)
+    );
+  };
+
   appendResourceLink = resourceKey => {
     this.appendMarkdownSyntax(`\n[r ${resourceKey}]`);
   };
@@ -542,6 +551,7 @@ class ActivitySectionCard extends Component {
           addLevel={this.handleAddLevel}
           uploadImage={this.handleUploadImage}
           activityPosition={this.props.activityPosition}
+          appendProgrammingExpressionLink={this.appendProgrammingExpressionLink}
           appendResourceLink={this.appendResourceLink}
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}

@@ -8,16 +8,29 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-12 23:06:07 UTC",
+    "serialized_at": "2021-03-26 21:05:54 UTC",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
   },
   "lesson_groups": [
     {
-      "key": "poem bot",
+      "key": "rampup",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Coding Ramp Up",
+        "description": "Learn the basics of coding with sprites and text!"
+      },
+      "seeding_key": {
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "poem bot",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Poem Bot"
       },
@@ -29,12 +42,27 @@
   ],
   "lessons": [
     {
-      "key": "Poem Bot",
-      "name": "Poem Bot",
+      "key": "Introducing Sprite Lab",
+      "name": "Introducing Sprite Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "key": "Poem Bot",
+      "name": "Poem Bot",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -53,6 +81,231 @@
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_sprites_make"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_make"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_make"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_sprites_positioning"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_positioning"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_positioning"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_sprites_properties"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_properties"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_properties"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_sprites_behaviors"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_sprites_behaviors"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Please pause",
+        "level_keys": [
+          "poembot_stop"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_stop"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_stop"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_text_print"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_print"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_print"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_text_prompts"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_prompts"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_prompts"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_text_answer"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_answer"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_answer"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "Skill Building",
+        "level_keys": [
+          "poembot_text_concat"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poembot_text_concat"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      },
+      "level_keys": [
+        "poembot_text_concat"
+      ]
+    },
+    {
+      "chapter": 10,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -77,7 +330,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -102,7 +355,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -127,7 +380,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -153,6 +406,105 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_make",
+        "script_level.level_keys": [
+          "poembot_sprites_make"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_positioning",
+        "script_level.level_keys": [
+          "poembot_sprites_positioning"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_properties",
+        "script_level.level_keys": [
+          "poembot_sprites_properties"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_sprites_behaviors",
+        "script_level.level_keys": [
+          "poembot_sprites_behaviors"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_stop",
+        "script_level.level_keys": [
+          "poembot_stop"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_print",
+        "script_level.level_keys": [
+          "poembot_text_print"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_prompts",
+        "script_level.level_keys": [
+          "poembot_text_prompts"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_answer",
+        "script_level.level_keys": [
+          "poembot_text_answer"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poembot_text_concat",
+        "script_level.level_keys": [
+          "poembot_text_concat"
+        ],
+        "lesson.key": "Introducing Sprite Lab",
+        "lesson_group.key": "rampup",
+        "script.name": "haikubot-pilot"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "haiku_prototype_choice1",
@@ -204,13 +556,22 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
 
   ]
 }

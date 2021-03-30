@@ -1124,7 +1124,7 @@ class LevelTest < ActiveSupport::TestCase
       "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
-      "GamelabJr", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
+      "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",
       "Odometer", "Pixelation", "PublicKeyCryptography", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
       "Vigenere", "Weblab"
@@ -1137,5 +1137,10 @@ class LevelTest < ActiveSupport::TestCase
     ]
     assert (scripts - search_options[:scriptOptions].map {|option| option[0]}).empty?
     assert (["Any owner"] - search_options[:ownerOptions].map {|option| option[0]}).empty?
+  end
+
+  test "summarize_for_lesson_show does not include teacher markdown if can_view_teacher_markdown is false" do
+    summary = @custom_level.summarize_for_lesson_show(false)
+    refute summary.key?('teacherMarkdown')
   end
 end

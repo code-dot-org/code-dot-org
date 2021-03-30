@@ -99,6 +99,42 @@ describe('SafeMarkdown', () => {
     );
   });
 
+  it('implements visualCodeBlocks', () => {
+    const regularCodeBlock = shallow(
+      <SafeMarkdown markdown="some markdown with a `regular` code block" />
+    );
+
+    expect(
+      regularCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a <code>regular</code> code block
+          </p>
+        </div>
+      ),
+      'regular code blocks are rendered normally'
+    ).to.equal(true);
+
+    const visualCodeBlock = shallow(
+      <SafeMarkdown markdown="some markdown with a `visual`(#c0ffee) code block" />
+    );
+
+    expect(
+      visualCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a{' '}
+            <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
+              visual
+            </code>{' '}
+            code block
+          </p>
+        </div>
+      ),
+      'visual code blocks are rendered with expected properties'
+    ).to.equal(true);
+  });
+
   it('renders XML as top level block when appropriate', () => {
     const inlineXml = shallow(
       <SafeMarkdown markdown="Text with <xml><block type='xml'></block></xml> inline" />
