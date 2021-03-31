@@ -98,7 +98,7 @@ class ProgressPill extends React.Component {
 
     let style = {
       ...styles.levelPill,
-      ...(url && hoverStyle),
+      ...((url || onClick) && hoverStyle),
       ...(!multiLevelStep &&
         levelProgressStyle(levels[0].status, levels[0].kind, false))
     };

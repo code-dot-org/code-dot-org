@@ -612,6 +612,7 @@ en:
         codebreak_e12: 'Code Break 12.0: Hardware with Aloe Blacc, Bret Taylor, & Paula Mejia'
         csf21pilot_events: 'Sprite Lab: Sprites in Action (CSF 2021 Pilot)'
         csf21pilot_prompts: 'Sprite Lab: Text and Prompts (CSF 2021 Pilot)'
+        outbreak_mike: CodeBytes Episode 3 with Mike - Outbreak Simulator
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
