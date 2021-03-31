@@ -530,7 +530,7 @@
       "key": "88a741b7-9186-48b2-abcc-d316064077a4",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
       },
       "seeding_key": {
         "activity_section.key": "88a741b7-9186-48b2-abcc-d316064077a4",
@@ -587,7 +587,7 @@
       "key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
       },
       "seeding_key": {
         "activity_section.key": "e1c3344a-5c04-4435-ae07-f0185eb8b616",
@@ -634,7 +634,7 @@
       "key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Discuss:** *Which of these algorithms are “the same” as one another?*\n\n**Discussion Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Which of these algorithms are “the same” as one another?*\n\n**Discussion Goal:** This discussion should focus on what made the algorithms the same. While they are designed to fall into two categories, ideally a number of points should come out of this discussion.\n\n* Algorithms 1, 3, and 4 draw a square while 2, 5, and 6 draw a rectangle\n* Algorithms 4 and 6 are written using a flowchart while 1, 2, 3, and 5 are written in the AP Pseudocode\n* Some of these algorithms turn the robot right by turning left three times. It's debateable whether we can really call these algorithms \"the same\"\n* Some of these algorithms create lists or variables to store information. Depending on the context we may not be able to call these algorithms \"the same\"\n"
       },
       "seeding_key": {
         "activity_section.key": "8be32204-a3c8-4e9f-872a-7ddedb1309d3",
@@ -645,7 +645,7 @@
       "key": "212c5de8-d427-4c75-afde-15549baa2a05",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n[slide] **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side."
+        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side."
       },
       "seeding_key": {
         "activity_section.key": "212c5de8-d427-4c75-afde-15549baa2a05",
@@ -656,7 +656,7 @@
       "key": "c01e282b-682f-48c4-8a79-f3a40fc3413a",
       "position": 1,
       "properties": {
-        "description": "[slide] **Journal:** Students add the following vocabulary words and definitions to their journals: problem, algorithm, sequencing, selection, iteration."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: problem, algorithm, sequencing, selection, iteration."
       },
       "seeding_key": {
         "activity_section.key": "c01e282b-682f-48c4-8a79-f3a40fc3413a",
@@ -724,7 +724,7 @@
       "key": "2a1ac74b-aca7-4991-9854-26330b83effb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *Have you ever lost a pencil in a backpack? What are the steps you take to find the pencil?*\n\n**Discussion Goal:** Use this discussion to highlight the following points\n\n* Students may have as systematic approach (search through every pocket in order) or a random approach.\n* Some students may have a system where they place their books and materials in their backpack to be retrieved in the order of their class schedule. If they look in their bag at a certain spot and don't see the pencil, they have a pretty good idea where to search next. \n* There are no right answers here - the idea is to start thinking about the efficiency of different search methods. \n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Have you ever lost a pencil in a backpack? What are the steps you take to find the pencil?*\n\n**Discussion Goal:** Use this discussion to highlight the following points\n\n* Students may have as systematic approach (search through every pocket in order) or a random approach.\n* Some students may have a system where they place their books and materials in their backpack to be retrieved in the order of their class schedule. If they look in their bag at a certain spot and don't see the pencil, they have a pretty good idea where to search next. \n* There are no right answers here - the idea is to start thinking about the efficiency of different search methods. \n"
       },
       "seeding_key": {
         "activity_section.key": "2a1ac74b-aca7-4991-9854-26330b83effb",
@@ -758,7 +758,7 @@
       "key": "99ab2370-b406-4107-bf8e-5abe8e51f3f7",
       "position": 1,
       "properties": {
-        "description": "[slide] **Distribute:** Students should have sticky notes and their journals\r\n\r\n[slide] **Do This:** Call for three volunteers. These students use the Ticket Generator on Code Studio to produce raffle tickets numbers (one per volunteer). Students write the number on a sticky note and come to the front of the room."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Distribute:** Students should have sticky notes and their journals\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Call for three volunteers. These students use the Ticket Generator on Code Studio to produce raffle tickets numbers (one per volunteer). Students write the number on a sticky note and come to the front of the room."
       },
       "seeding_key": {
         "activity_section.key": "99ab2370-b406-4107-bf8e-5abe8e51f3f7",
@@ -769,7 +769,7 @@
       "key": "c1d58639-1249-4cd5-8af1-eb9376904058",
       "position": 2,
       "properties": {
-        "description": "[slide]  Thank you, volunteers! Let's figure out if any of you have the winning number for this instance of the problem. I'm going to ask you one by one to show your number and we will compare it with the winning number.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  Thank you, volunteers! Let's figure out if any of you have the winning number for this instance of the problem. I'm going to ask you one by one to show your number and we will compare it with the winning number.",
         "tips": [
           {
             "type": "teachingTip",
@@ -798,7 +798,7 @@
       "key": "9dbbcbb0-bc8c-4ffc-9f57-97bc41904929",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Discuss:** *How many steps did it take to find out if anyone had the winning ticket? What is the greatest possible number of steps it could take for this instance?*\n\n**Answer:** \n\n* The greatest possible number of steps for this instance is 3.\n* With six volunteers, the greates number of steps is 6.\n* The patterns is a 1:1 relationship. The number of tickets in the raffle exactly equals the number of steps it would take to check for a number in the worst case.  \n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *How many steps did it take to find out if anyone had the winning ticket? What is the greatest possible number of steps it could take for this instance?*\n\n**Answer:** \n\n* The greatest possible number of steps for this instance is 3.\n* With six volunteers, the greates number of steps is 6.\n* The patterns is a 1:1 relationship. The number of tickets in the raffle exactly equals the number of steps it would take to check for a number in the worst case.  \n"
       },
       "seeding_key": {
         "activity_section.key": "9dbbcbb0-bc8c-4ffc-9f57-97bc41904929",
@@ -809,7 +809,7 @@
       "key": "e76cd7ae-1bb0-4291-a914-df826a786a5a",
       "position": 5,
       "properties": {
-        "description": "[slide] **Discuss:** *What if we had six volunteers? The whole class? The whole school? What is the pattern here?*\n\n[slide] **Display:** Look at the chart as a class and examine the graph. The graph visualizes the pattern the class discussed."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** *What if we had six volunteers? The whole class? The whole school? What is the pattern here?*\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Look at the chart as a class and examine the graph. The graph visualizes the pattern the class discussed."
       },
       "seeding_key": {
         "activity_section.key": "e76cd7ae-1bb0-4291-a914-df826a786a5a",
@@ -832,7 +832,7 @@
       "key": "6147bae7-d45c-45e2-889e-bc76c32968ed",
       "position": 7,
       "properties": {
-        "description": "**Group:** Place students in groups of two\n    \n[slide] **Do This:** With a partner, students navigate to Code Studio and use the Ticket Generator to create seven random numbers that are copied to sticky notes. Students organize these sticky notes in numerical order. Students choose one extra number as the \"winning number\" and write that number down on a separate sticky note.",
+        "description": "**Group:** Place students in groups of two\n    \n<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** With a partner, students navigate to Code Studio and use the Ticket Generator to create seven random numbers that are copied to sticky notes. Students organize these sticky notes in numerical order. Students choose one extra number as the \"winning number\" and write that number down on a separate sticky note.",
         "progression_name": "Widget: Ticket Generator"
       },
       "seeding_key": {
@@ -844,7 +844,7 @@
       "key": "41d2ba90-288e-46a8-b6b7-0581a88f6a09",
       "position": 8,
       "properties": {
-        "description": "\n\n[slide] **Challenge:** Students work with their partner to write an algorithm to search for their winning number. Make sure the rules are displayed.\n\n* The search can start at any of the sticky notes\n* You can \"jump\" over sticky notes. In other words, you don't need to search the stickies in order. \n* You can determine which sticky notes to search next based on the current sticky note you are checking. \n* The goal is to make the determination in the least steps possible, but don't forget your number could be anywhere in the list - what is the worst possible case? What is the greatest number of comparison steps it would take to find any number in your list using your current algorithm?",
+        "description": "\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Challenge:** Students work with their partner to write an algorithm to search for their winning number. Make sure the rules are displayed.\n\n* The search can start at any of the sticky notes\n* You can \"jump\" over sticky notes. In other words, you don't need to search the stickies in order. \n* You can determine which sticky notes to search next based on the current sticky note you are checking. \n* The goal is to make the determination in the least steps possible, but don't forget your number could be anywhere in the list - what is the worst possible case? What is the greatest number of comparison steps it would take to find any number in your list using your current algorithm?",
         "progression_name": "Widget: Ticket Generator"
       },
       "seeding_key": {
@@ -856,7 +856,7 @@
       "key": "dc264093-a8dd-4ff3-b7a9-ce8c1c73b906",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Discuss:** *Students share their algorithms with another group and determine which one runs faster, depending on the number of steps it takes to find a number in the list.*",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Students share their algorithms with another group and determine which one runs faster, depending on the number of steps it takes to find a number in the list.*",
         "tips": [
           {
             "type": "teachingTip",
@@ -873,7 +873,7 @@
       "key": "9ef0e7df-ed69-48aa-92d9-1cb3ec749a73",
       "position": 10,
       "properties": {
-        "description": "[slide] **Do This:** Students return to their partner and now run a given algorithm, displayed on the board, step by step (click through for animation). As they are doing this, they should think about whether or not this algorithm runs faster (has less steps) than their own algorithms.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Students return to their partner and now run a given algorithm, displayed on the board, step by step (click through for animation). As they are doing this, they should think about whether or not this algorithm runs faster (has less steps) than their own algorithms.",
         "progression_name": "Widget: Ticket Generator"
       },
       "seeding_key": {
@@ -897,7 +897,7 @@
       "key": "50128730-c11f-4d6a-b43e-a0c00f134637",
       "position": 12,
       "properties": {
-        "description": "[slide] **Do This:** Click through the animations to see Binary Search in action on the activity slide. Discuss each step as it is happening.\r\n\r\n* Find the number in the middle and compare it with the given number. The given number is greater than the middle number, so remove the middle number and all to the left. \r\n* Find the number in the middle of the numbers left, and compare it with the given number. The given number is less than the middle number, so remove the middle number and all to the right.\r\n* Find the number in the middle of the numbers left (there is only one!), and compare it with the given number. The given number is equal to the middle number. We have found our number!"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Click through the animations to see Binary Search in action on the activity slide. Discuss each step as it is happening.\r\n\r\n* Find the number in the middle and compare it with the given number. The given number is greater than the middle number, so remove the middle number and all to the left. \r\n* Find the number in the middle of the numbers left, and compare it with the given number. The given number is less than the middle number, so remove the middle number and all to the right.\r\n* Find the number in the middle of the numbers left (there is only one!), and compare it with the given number. The given number is equal to the middle number. We have found our number!"
       },
       "seeding_key": {
         "activity_section.key": "50128730-c11f-4d6a-b43e-a0c00f134637",
@@ -920,7 +920,7 @@
       "key": "2948c67d-c61e-4eb2-9a55-aee742115e07",
       "position": 14,
       "properties": {
-        "description": "[slide]  **Do This:** Display the graph. Students copy the chart into their journals and fill out the missing parts. They can use their sticky note to try out each instance of the problem. When the class has mostly finished, click through the animations to see the answers.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Do This:** Display the graph. Students copy the chart into their journals and fill out the missing parts. They can use their sticky note to try out each instance of the problem. When the class has mostly finished, click through the animations to see the answers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -937,7 +937,7 @@
       "key": "deb5b7ba-166b-43ed-88f1-f40cb334282c",
       "position": 15,
       "properties": {
-        "description": "[slide]  **Display:** Display the chart on the next slide. Click through the animations. This slide shows another way to fill out the chart, that does not require multiple sticky notes. Instead, we can use the flippy do! For Binary Search, for each instance the number of steps it take to run is equal to the number of bits required to represent the input.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Display:** Display the chart on the next slide. Click through the animations. This slide shows another way to fill out the chart, that does not require multiple sticky notes. Instead, we can use the flippy do! For Binary Search, for each instance the number of steps it take to run is equal to the number of bits required to represent the input.",
         "tips": [
           {
             "type": "teachingTip",
@@ -954,7 +954,7 @@
       "key": "576d7c61-6721-4613-9afc-c8e0e6a6d0ce",
       "position": 16,
       "properties": {
-        "description": "[slide] **Display:** Discuss the graph and click through the animation to see Binary Search graphed."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Discuss the graph and click through the animation to see Binary Search graphed."
       },
       "seeding_key": {
         "activity_section.key": "576d7c61-6721-4613-9afc-c8e0e6a6d0ce",
@@ -977,7 +977,7 @@
       "key": "afa358f2-6ee0-4f88-8209-7881a3c15a71",
       "position": 1,
       "properties": {
-        "description": "[slide]   **Discuss:** *If I had one input, which algorithm would I use to get my answer with the fewest amount of steps? What if I had five? What about one hundred?*\n\n**Answers:**\n\n* For one input, either Binary Search or Linear Search would be appropriate. Students may argue for Linear as it does not need to first be sorted.\n* For five inputs, it's clear that Binary Search is fastest, although it only saves two steps over Linear Search. This is all the more true with one hundred inputs, which only takes seven steps (Binary number: 1100100) compared to Linear Search's one hundred steps. \n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>   **Discuss:** *If I had one input, which algorithm would I use to get my answer with the fewest amount of steps? What if I had five? What about one hundred?*\n\n**Answers:**\n\n* For one input, either Binary Search or Linear Search would be appropriate. Students may argue for Linear as it does not need to first be sorted.\n* For five inputs, it's clear that Binary Search is fastest, although it only saves two steps over Linear Search. This is all the more true with one hundred inputs, which only takes seven steps (Binary number: 1100100) compared to Linear Search's one hundred steps. \n"
       },
       "seeding_key": {
         "activity_section.key": "afa358f2-6ee0-4f88-8209-7881a3c15a71",
@@ -1045,7 +1045,7 @@
       "key": "a1dee69e-0914-4035-97ad-7aab30413277",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What does it mean to say one algorithm is “more efficient” than another?*\n\nHave students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** This discussion is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What does it mean to say one algorithm is “more efficient” than another?*\n\nHave students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** This discussion is a review from the previous lesson. Students should be free to refer to notes or their journals. You should might hear the following points.\n\n* One algorithm requires fewer steps to complete than another\n* \"The line for one algorithm curves below the other\"\n* More efficient algorithms are much more helpful as input size grows. The amount of work grows more slowly.\n\nYou may wish to refer to slides from previous lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "a1dee69e-0914-4035-97ad-7aab30413277",
@@ -1095,7 +1095,7 @@
       "key": "8ae4ce3b-5858-4bc4-8a89-48fda7232bbe",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Send students to the ticket generator widget on Code Studio.\n\n[slide] **Display:** Show slides that explain the pair raffle.\n\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a partner with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
+        "description": "**Distribute:** Send students to the ticket generator widget on Code Studio.\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show slides that explain the pair raffle.\n\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a partner with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
       },
       "seeding_key": {
         "activity_section.key": "8ae4ce3b-5858-4bc4-8a89-48fda7232bbe",
@@ -1118,7 +1118,7 @@
       "key": "ccf3f078-038f-4a88-878f-e74160854611",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Show slides that explain the group raffle.\r\n\r\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a group with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show slides that explain the group raffle.\r\n\r\n**Circulate:** Give students a couple of minutes to walk around the room seeing if they can find a group with which they can win the raffle. After a couple of minutes have them return to their desks. If there are any winners feel free to celebrate."
       },
       "seeding_key": {
         "activity_section.key": "ccf3f078-038f-4a88-878f-e74160854611",
@@ -1191,7 +1191,7 @@
       "key": "372ef136-5d57-4c7a-a456-daa9aa817bf6",
       "position": 10,
       "properties": {
-        "description": "**Pair Raffle:** Ask students to fill out the first page where they must figure out the total number of pairs for different sized \"pair raffles\". This may take several minutes and require students to draw pictures.\n\n**Group Raffle:** Ask students to fill out the second page where they must figure out the total number of groups for different sized \"group raffles\". This may take several minutes and require students to draw pictures.\n\n[slide] **Share Responses:** Ask students to share their responses with another group.\n\n[slide] **Display:** Show the slides summarizing the correct solutions for each as well as providing language to describe these two kinds of curves. \n\n**Discuss:** *Polynomial and exponential both curve up. Why do you think only exponential is considered “unreasonable”?*\n\nBriefly ask students for their ideas why before showing them the following slides. Exponential curves grow extremely quickly. You simply can't build a computer fast enough even for relatively small raffle sizes."
+        "description": "**Pair Raffle:** Ask students to fill out the first page where they must figure out the total number of pairs for different sized \"pair raffles\". This may take several minutes and require students to draw pictures.\n\n**Group Raffle:** Ask students to fill out the second page where they must figure out the total number of groups for different sized \"group raffles\". This may take several minutes and require students to draw pictures.\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Share Responses:** Ask students to share their responses with another group.\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the slides summarizing the correct solutions for each as well as providing language to describe these two kinds of curves. \n\n**Discuss:** *Polynomial and exponential both curve up. Why do you think only exponential is considered “unreasonable”?*\n\nBriefly ask students for their ideas why before showing them the following slides. Exponential curves grow extremely quickly. You simply can't build a computer fast enough even for relatively small raffle sizes."
       },
       "seeding_key": {
         "activity_section.key": "372ef136-5d57-4c7a-a456-daa9aa817bf6",
@@ -1202,7 +1202,7 @@
       "key": "f656a2f9-8797-426e-81e6-caac0728f84c",
       "position": 1,
       "properties": {
-        "description": "[slide] **Journal:** Students add the following vocabulary words and definitions to their journals: unreasonable time, reasonable time"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: unreasonable time, reasonable time"
       },
       "seeding_key": {
         "activity_section.key": "f656a2f9-8797-426e-81e6-caac0728f84c",
@@ -1270,7 +1270,7 @@
       "key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What is the difference between a reasonable and unreasonable time algorithm?*\n\n**Discussion Goal:** Use this discussion to quickly review topics brought up in the previous lesson.\n\n* Reasonable algorithms grow at a polynomial rate or slower. Unreasonable algorithms grow exponentially.\n* The time to solve an unreasonable algorithm grows very quickly even for relatively small problem sizes.\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What is the difference between a reasonable and unreasonable time algorithm?*\n\n**Discussion Goal:** Use this discussion to quickly review topics brought up in the previous lesson.\n\n* Reasonable algorithms grow at a polynomial rate or slower. Unreasonable algorithms grow exponentially.\n* The time to solve an unreasonable algorithm grows very quickly even for relatively small problem sizes.\n"
       },
       "seeding_key": {
         "activity_section.key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
@@ -1304,7 +1304,7 @@
       "key": "0cca99a5-7575-45a7-b5e7-192a04f79e29",
       "position": 1,
       "properties": {
-        "description": "[slide] **Set Up:** Each student needs to have their journals and a pen or pencil. \n\n[slide] **Display:** Use the activity slides for this lesson to guide the activity on the limits of algorithms.\t\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms.svg) |**Say:** Today we are going to explore the Traveling Salesman Problem. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms1_zZJMEDG.svg) |**Discuss:** How many different paths can you find to visit all of your friends' houses?<br><br> **Do This:** Students should sketch out different paths in their journals. Read through the rules together as a class. <br><br>**Rules:**<br><ul><li>You must start and end at your own house.</li><li>You can only visit each house once.</li></ul><br><br>**Discuss:** Students share their paths with a partner before discussing as a class. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms2.svg) | **Say:** Take a look at some of these paths on the screen. You may have similar ones in your journal. <br><br> **Discuss:** What do you need to know to determine the best path?   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms3.svg) | **Say:** Distance! If we know the distance between each house, we can make a better decision about which path to take. In this example, the first option is shortest, so that's the path we would choose. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms4.svg) | **Discuss:** What if we had a lot more places to visit? How would we determine the best path? <br><br> **Discussion Goal:** The goal here is for students to come to the realization that they would need to explore all possible paths in order to determine which one is the best.   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms5.svg) | **Say:** This is known as the Traveling Salesman Problem. For each new place to visit, the number of options for possible paths increases factorialy.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms6.svg) | **Say:** A factorial function is written with the letter \"n\" followed by an explanation point. Here's how n! works: Multiply all whole numbers from the given number down to the number 1.<br><br>**Note:** Talk through the examples and the table. The goal here isn't for students to memorize the math, but to understand that with each new house added, the number of potential paths that have to be checked expands very quickly.  | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---AlgorithmsDecisions.svg) | **Say:** The Traveling Salesman is an Optimization Problem. It's not a Decision Problem. We know there is a path. Now we must determine which is the shortest or most efficient path. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms7.svg) | **Say:** The Traveling Salesman Problem can be solved with an algorithm, which checks each possible option. <br><br> BUT, it would take massive amounts of computing power to compare every single option, especially as the number of homes to visit (otherwise known as nodes) increases. <br><br> Therefore, it would take an **unreasonable** amount of time for the solution to be calculated for most instances of the problem. \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms8.svg) | **Say:** Welcome to **heuristics**! Heuristics provide a good enough solution to a problem when an actual solution is impractical or impossible. |\n\n<br><br>\n\n\n[slide] **Do This:** Students now navigate to Level 1 on Code Studio where they will use the Traveling Salesman Widget to find the \"best\" path to visit all nodes. \n\n* In their journal, students should write down a plan or **heuristic** for choosing a good path. \n\n**Discuss:** In pairs, students should share their heuristics and make adjustments to their own as needed. \n",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Set Up:** Each student needs to have their journals and a pen or pencil. \n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Use the activity slides for this lesson to guide the activity on the limits of algorithms.\t\n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms.svg) |**Say:** Today we are going to explore the Traveling Salesman Problem. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms1_zZJMEDG.svg) |**Discuss:** How many different paths can you find to visit all of your friends' houses?<br><br> **Do This:** Students should sketch out different paths in their journals. Read through the rules together as a class. <br><br>**Rules:**<br><ul><li>You must start and end at your own house.</li><li>You can only visit each house once.</li></ul><br><br>**Discuss:** Students share their paths with a partner before discussing as a class. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms2.svg) | **Say:** Take a look at some of these paths on the screen. You may have similar ones in your journal. <br><br> **Discuss:** What do you need to know to determine the best path?   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms3.svg) | **Say:** Distance! If we know the distance between each house, we can make a better decision about which path to take. In this example, the first option is shortest, so that's the path we would choose. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms4.svg) | **Discuss:** What if we had a lot more places to visit? How would we determine the best path? <br><br> **Discussion Goal:** The goal here is for students to come to the realization that they would need to explore all possible paths in order to determine which one is the best.   |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms5.svg) | **Say:** This is known as the Traveling Salesman Problem. For each new place to visit, the number of options for possible paths increases factorialy.  |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms6.svg) | **Say:** A factorial function is written with the letter \"n\" followed by an explanation point. Here's how n! works: Multiply all whole numbers from the given number down to the number 1.<br><br>**Note:** Talk through the examples and the table. The goal here isn't for students to memorize the math, but to understand that with each new house added, the number of potential paths that have to be checked expands very quickly.  | \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---AlgorithmsDecisions.svg) | **Say:** The Traveling Salesman is an Optimization Problem. It's not a Decision Problem. We know there is a path. Now we must determine which is the shortest or most efficient path. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms7.svg) | **Say:** The Traveling Salesman Problem can be solved with an algorithm, which checks each possible option. <br><br> BUT, it would take massive amounts of computing power to compare every single option, especially as the number of homes to visit (otherwise known as nodes) increases. <br><br> Therefore, it would take an **unreasonable** amount of time for the solution to be calculated for most instances of the problem. \n|![](https://curriculum.code.org/media/uploads/CSP-Unit-6---Algorithms8.svg) | **Say:** Welcome to **heuristics**! Heuristics provide a good enough solution to a problem when an actual solution is impractical or impossible. |\n\n<br><br>\n\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Students now navigate to Level 1 on Code Studio where they will use the Traveling Salesman Widget to find the \"best\" path to visit all nodes. \n\n* In their journal, students should write down a plan or **heuristic** for choosing a good path. \n\n**Discuss:** In pairs, students should share their heuristics and make adjustments to their own as needed. \n",
         "name": "Traveling Salesman    \r",
         "progression_name": "Widget: Traveling Salesman"
       },
@@ -1317,7 +1317,7 @@
       "key": "465ad5d0-3a02-4a6b-a0b5-54edb8d75789",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Now students navigate to Level 2 and use the Widget: Traveling Salesman with Random Nodes. Students test their heuristic on this widget, keeping a log in their journal of the distance for the path their heuristic finds and the best distance the student finds not using the stated heuristic (i.e. clicking around, or \"brute force\"). \n\n* Note: Click reset to try different paths on the same level. Click \"New Level\" to generate at new random assortment of nodes.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Now students navigate to Level 2 and use the Widget: Traveling Salesman with Random Nodes. Students test their heuristic on this widget, keeping a log in their journal of the distance for the path their heuristic finds and the best distance the student finds not using the stated heuristic (i.e. clicking around, or \"brute force\"). \n\n* Note: Click reset to try different paths on the same level. Click \"New Level\" to generate at new random assortment of nodes.",
         "progression_name": "Widget: Traveling Salesman - Random Nodes"
       },
       "seeding_key": {
@@ -1329,7 +1329,7 @@
       "key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *How did you create your heuristic? Did you change your heuristic after testing it out?*\n\n**Discussion Goal:** Tease out what factors students used to create their heuristics. "
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *How did you create your heuristic? Did you change your heuristic after testing it out?*\n\n**Discussion Goal:** Tease out what factors students used to create their heuristics. "
       },
       "seeding_key": {
         "activity_section.key": "a10a4d75-2889-4f2a-ae40-bfc3f13b3a7f",
@@ -1351,7 +1351,7 @@
       "key": "62340708-1d6d-440e-b507-899ad8047991",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Show the sample heuristic. This may be one that students already came up with. Discuss whether or not this heuristic is \"good enough\"."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the sample heuristic. This may be one that students already came up with. Discuss whether or not this heuristic is \"good enough\"."
       },
       "seeding_key": {
         "activity_section.key": "62340708-1d6d-440e-b507-899ad8047991",
@@ -1362,7 +1362,7 @@
       "key": "6720ed4b-af9e-447f-b241-08c8992f76ab",
       "position": 6,
       "properties": {
-        "description": "[slide] The Traveling Salesman Problem is an optimization problem. We are attempting to find the best path. \r\n\r\nIt's also unreasonable because there is not an algorithm that can solve the problem in a reasonable amount of time.\r\n\r\nWe need to use a heuristic to come up wtih a solution that is \"good enough\" for most instances of the problem.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> The Traveling Salesman Problem is an optimization problem. We are attempting to find the best path. \r\n\r\nIt's also unreasonable because there is not an algorithm that can solve the problem in a reasonable amount of time.\r\n\r\nWe need to use a heuristic to come up wtih a solution that is \"good enough\" for most instances of the problem.",
         "remarks": true
       },
       "seeding_key": {
@@ -1374,7 +1374,7 @@
       "key": "ae6bf149-1d2f-4d97-b551-e2cd04afec34",
       "position": 7,
       "properties": {
-        "description": "[slide] We've learned how we address unreasonable problems. Before we finish our study of problems let's learn about one more type, problems that no algorithm will ever be able to solve. This video is a little tricky, but it gives you a good sense for the way this problem shows up.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> We've learned how we address unreasonable problems. Before we finish our study of problems let's learn about one more type, problems that no algorithm will ever be able to solve. This video is a little tricky, but it gives you a good sense for the way this problem shows up.",
         "remarks": true,
         "name": "Undecidable Problems\r"
       },
@@ -1387,7 +1387,7 @@
       "key": "271eb129-5afe-442a-9757-2d09964fa685",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Video:** Show the video on the halting problem, located on the slide",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Video:** Show the video on the halting problem, located on the slide",
         "tips": [
           {
             "type": "teachingTip",
@@ -1404,7 +1404,7 @@
       "key": "b37e5e7a-4862-4f80-b23f-57d1e5e32cce",
       "position": 9,
       "properties": {
-        "description": "[slide] **Display:** Review the main takeaways about undecidable problems."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Review the main takeaways about undecidable problems."
       },
       "seeding_key": {
         "activity_section.key": "b37e5e7a-4862-4f80-b23f-57d1e5e32cce",
@@ -1415,7 +1415,7 @@
       "key": "b15692f7-45b2-46f9-9285-d37d4f2cc434",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *Why is a heuristic acceptable when it doesn't always produce the \"best\" result?*\n\n**Answer:** A heuristic is used when it's impossible or impractical to use an algorithm to solve a problem. Therefore, we need something that is good enough on average for most instances. This is where a heuristic shines. \n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Why is a heuristic acceptable when it doesn't always produce the \"best\" result?*\n\n**Answer:** A heuristic is used when it's impossible or impractical to use an algorithm to solve a problem. Therefore, we need something that is good enough on average for most instances. This is where a heuristic shines. \n"
       },
       "seeding_key": {
         "activity_section.key": "b15692f7-45b2-46f9-9285-d37d4f2cc434",
@@ -1494,7 +1494,7 @@
       "key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *Brainstorm a task that you can complete faster if you get other people to help. What’s the most number of people you’d want to help you and why?*\n\n**Discussion Goal:** This should be a quick discussion to foreshadow the main ideas of the lesson. Students should brainstorm many potential tasks. When they start mentioning the maximum number of people they'd want to help them direct attention towards why that's the case. You might hear that:\n\n* Adding extra people makes it more complicated\n* Sometimes extra people doesn't really speed things up\n* If you're working with lots of people then if one person is slower the whole group is slowed down\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Brainstorm a task that you can complete faster if you get other people to help. What’s the most number of people you’d want to help you and why?*\n\n**Discussion Goal:** This should be a quick discussion to foreshadow the main ideas of the lesson. Students should brainstorm many potential tasks. When they start mentioning the maximum number of people they'd want to help them direct attention towards why that's the case. You might hear that:\n\n* Adding extra people makes it more complicated\n* Sometimes extra people doesn't really speed things up\n* If you're working with lots of people then if one person is slower the whole group is slowed down\n"
       },
       "seeding_key": {
         "activity_section.key": "f1db5574-263e-4f1c-83fe-7871d9da6996",
@@ -1545,7 +1545,7 @@
       "key": "d23829e2-81aa-4f30-96b8-b47e84dc0493",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n[slide]  **Distribute:** Give one member of each group a deck of cards."
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class="fa fa-list-alt" aria-hidden="true"></i>  **Distribute:** Give one member of each group a deck of cards."
       },
       "seeding_key": {
         "activity_section.key": "d23829e2-81aa-4f30-96b8-b47e84dc0493",
@@ -1556,7 +1556,7 @@
       "key": "c1563179-1b78-48ff-bcc4-83a52a2a849b",
       "position": 3,
       "properties": {
-        "description": "[slide] **Challenge 1 - One Person Sort:** At the front of the room display the directions for the first sort as well as the clock. Run the clock, and have students put the cards in order. Have students record their time. Then let the another partner repeat the process.\r\n\r\n[slide] **Challenge 2 - Two Person Sort:** At the front of the room display the directions for the second. Run the clock, and have students put the cards in order. Have students record their time. If students are in groups of four offer to let the other two students try the challenge.\r\n\r\n[slide] **Challenge 3 - Full Group Sort:** At the front of the room display the directions for the challenge. Run the clock, and have students put the cards in order. Have students record their time."
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Challenge 1 - One Person Sort:** At the front of the room display the directions for the first sort as well as the clock. Run the clock, and have students put the cards in order. Have students record their time. Then let the another partner repeat the process.\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Challenge 2 - Two Person Sort:** At the front of the room display the directions for the second. Run the clock, and have students put the cards in order. Have students record their time. If students are in groups of four offer to let the other two students try the challenge.\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Challenge 3 - Full Group Sort:** At the front of the room display the directions for the challenge. Run the clock, and have students put the cards in order. Have students record their time."
       },
       "seeding_key": {
         "activity_section.key": "c1563179-1b78-48ff-bcc4-83a52a2a849b",
@@ -1567,7 +1567,7 @@
       "key": "84ec8c3b-7150-4263-b21f-6b1560936fb8",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Show the slides explaining the difference between parallel and sequential computing models. Talk through the different models.",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the slides explaining the difference between parallel and sequential computing models. Talk through the different models.",
         "name": "Debriefing the Challenge\r"
       },
       "seeding_key": {
@@ -1579,7 +1579,7 @@
       "key": "ffa20030-db47-4e84-8640-eb0a43e84183",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Discuss:** *What portions of your algorithms for Challenges 2 and 3 were parallel? What makes things complicated or slows you down during parallel portions of your algorithm?*\n\n**Discussion Goal:** This discussion has two goals. The first is to reinforce the difference between parallel and sequential portions of an algorithm. Any time multiple processes are happening at once (for example multiple people are sorting cards), an algorithm is parallel. The second goal is to bring up some common challenges that come up when running parallel algorithms. The remarks cover some of the most important ones but the main point is that while parallel algorithms are faster, they still present challenges.\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What portions of your algorithms for Challenges 2 and 3 were parallel? What makes things complicated or slows you down during parallel portions of your algorithm?*\n\n**Discussion Goal:** This discussion has two goals. The first is to reinforce the difference between parallel and sequential portions of an algorithm. Any time multiple processes are happening at once (for example multiple people are sorting cards), an algorithm is parallel. The second goal is to bring up some common challenges that come up when running parallel algorithms. The remarks cover some of the most important ones but the main point is that while parallel algorithms are faster, they still present challenges.\n"
       },
       "seeding_key": {
         "activity_section.key": "ffa20030-db47-4e84-8640-eb0a43e84183",
@@ -1613,7 +1613,7 @@
       "key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Discuss:** *What was your group’s speedup in Challenge 2? What about in Challenge 3? Are you surprised?*\n\n**Discussion Goal:** Use this discussion to reinforce how speedup is calculated, but also to prime students to realize that adding additional parallel processes doesn't always lead to the same amount of speedup. During the parallel portion things are in fact moving faster, but sequential portions still take a long time (e.g. collecting individual piles once each group member has sorted their cards). Therefore speedup is rarely your original time divided by the number of computers running the process. Eventually it will level off.\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What was your group’s speedup in Challenge 2? What about in Challenge 3? Are you surprised?*\n\n**Discussion Goal:** Use this discussion to reinforce how speedup is calculated, but also to prime students to realize that adding additional parallel processes doesn't always lead to the same amount of speedup. During the parallel portion things are in fact moving faster, but sequential portions still take a long time (e.g. collecting individual piles once each group member has sorted their cards). Therefore speedup is rarely your original time divided by the number of computers running the process. Eventually it will level off.\n"
       },
       "seeding_key": {
         "activity_section.key": "a500cb91-1d95-4a30-9156-6e8bb4b5f5c8",
@@ -1624,7 +1624,7 @@
       "key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
       "position": 9,
       "properties": {
-        "description": "Have groups calculate their speedup and share with the room. \n \n[slide] **Display:** Cover the primary points of speed in the real world.\n\n* Students probably noticed their speedup is lower than the number of people helping sort. Sorting with two people doesn't give a speedup of 2. Sorting with 3 people doesn't give a speedup of 3.\n* Because some portions are always still sequential, the benefits of adding more processors will go down and eventually the speedup reaches a limit."
+        "description": "Have groups calculate their speedup and share with the room. \n \n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Cover the primary points of speed in the real world.\n\n* Students probably noticed their speedup is lower than the number of people helping sort. Sorting with two people doesn't give a speedup of 2. Sorting with 3 people doesn't give a speedup of 3.\n* Because some portions are always still sequential, the benefits of adding more processors will go down and eventually the speedup reaches a limit."
       },
       "seeding_key": {
         "activity_section.key": "9f5d397b-0697-4d64-b526-b9f06f48f2a5",
@@ -1648,7 +1648,7 @@
       "key": "f419ec07-5b7a-4130-a041-5f5fe10b444d",
       "position": 11,
       "properties": {
-        "description": "[slide] **Discuss:** Before showing the video share these two questions.\n\n* Why is the type of computing presented “distributed”?\n* Why is distributed computing used to solve the problem?\n\n[slide] **Display:** Show the video on Folding at home\n\n\n[slide] **Discuss:** Have students share their responses to the two questions:\n\n* Why is the type of computing presented \"distributed\"?\n* Why is distributed computing used to solve the problem?"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** Before showing the video share these two questions.\n\n* Why is the type of computing presented “distributed”?\n* Why is distributed computing used to solve the problem?\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the video on Folding at home\n\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** Have students share their responses to the two questions:\n\n* Why is the type of computing presented \"distributed\"?\n* Why is distributed computing used to solve the problem?"
       },
       "seeding_key": {
         "activity_section.key": "f419ec07-5b7a-4130-a041-5f5fe10b444d",
@@ -1683,7 +1683,7 @@
       "key": "861fd17b-4dd9-47ab-9f46-44fc0fc72cfa",
       "position": 2,
       "properties": {
-        "description": "[slide] **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup"
       },
       "seeding_key": {
         "activity_section.key": "861fd17b-4dd9-47ab-9f46-44fc0fc72cfa",
@@ -1694,7 +1694,7 @@
       "key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.*\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.*\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
       },
       "seeding_key": {
         "activity_section.key": "f34dadb4-6ba3-4df6-8012-0901760a7b29",
@@ -1739,7 +1739,7 @@
       "key": "45fda808-fbed-42fc-a5d5-bcb365642709",
       "position": 1,
       "properties": {
-        "description": "[slide]  Administer the Unit 6 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  Administer the Unit 6 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "tips": [
           {
             "type": "teachingTip",
