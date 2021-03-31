@@ -74,6 +74,7 @@ export const activityShape = PropTypes.shape({
 });
 
 export const resourceShape = PropTypes.shape({
+  id: PropTypes.number,
   key: PropTypes.string.isRequired,
   markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,

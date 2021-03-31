@@ -8,6 +8,7 @@ import {
   stringForType,
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   dropdown: {
@@ -19,7 +20,7 @@ const styles = {
 export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose

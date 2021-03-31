@@ -101,7 +101,7 @@ describe('CourseEditor', () => {
           {...defaultProps}
           useMigratedResources
           initialMigratedTeacherResources={[
-            {id: 1, name: 'Curriculum', url: '/foo'}
+            {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
           ]}
         />
       );
