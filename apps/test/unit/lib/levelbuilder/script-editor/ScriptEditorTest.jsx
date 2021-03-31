@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/redux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import _ from 'lodash';
 
 describe('ScriptEditor', () => {
   let defaultProps, store, server;
@@ -48,7 +49,6 @@ describe('ScriptEditor', () => {
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
-        title: 'Test-Script',
         stageDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
@@ -436,23 +436,52 @@ describe('ScriptEditor', () => {
   });
 
   describe('Professional Learning Course', () => {
-    it('disable launching plc course without title and professional learning course', () => {
+    it('disable launching plc course without title', () => {
+      const wrapper = createWrapper({
+        initialProfessionalLearningCourse: 'PLC Course'
+      });
+
+      const launchButton = wrapper.find('Button[name="launch_plc_course"]');
+      expect(launchButton.contains('Launch PLC Course')).to.be.true;
+      expect(launchButton.props().disabled).to.be.true;
+    });
+
+    it('disable launching plc course without professional learning course', () => {
+      let i18nCopy = _.cloneDeep(defaultProps.i18nData);
+      i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({});
 
       const launchButton = wrapper.find('Button[name="launch_plc_course"]');
       expect(launchButton.contains('Launch PLC Course')).to.be.true;
       expect(launchButton.props().disabled).to.be.true;
     });
-    it('successfully launch plc course', () => {
+
+    it('disable launching plc course if already launched', () => {
+      let i18nCopy = _.cloneDeep(defaultProps.i18nData);
+      i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({
-        initialProfessionalLearningCourse: 'PLC Course'
+        initialPlcCourseLaunched: true,
+        initialProfessionalLearningCourse: 'PLC Course',
+        i18nData: i18nCopy
+      });
+
+      const launchButton = wrapper.find('Button[name="launch_plc_course"]');
+      expect(launchButton.contains('Launch PLC Course')).to.be.true;
+      expect(launchButton.props().disabled).to.be.true;
+    });
+
+    it('successfully launch plc course', () => {
+      let i18nCopy = _.cloneDeep(defaultProps.i18nData);
+      i18nCopy['title'] = 'Test-Script';
+      const wrapper = createWrapper({
+        initialPlcCourseLaunched: false,
+        initialProfessionalLearningCourse: 'PLC Course',
+        i18nData: i18nCopy
       });
       const scriptEditor = wrapper.find('ScriptEditor');
 
       const launchButton = wrapper.find('Button[name="launch_plc_course"]');
       expect(launchButton.contains('Launch PLC Course')).to.be.true;
-
-      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
 
       server.respondWith('PUT', `/plc/Test-Script/launch`, [
         200,
@@ -464,21 +493,23 @@ describe('ScriptEditor', () => {
       server.respond();
       scriptEditor.update();
 
-      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
-        'Course Launched'
-      );
+      expect(scriptEditor.state().plcCourseLaunched).to.be.true;
     });
 
     it('launch plc course gives error', () => {
+      let i18nCopy = _.cloneDeep(defaultProps.i18nData);
+      i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({
-        initialProfessionalLearningCourse: 'PLC Course'
+        initialPlcCourseLaunched: false,
+        initialProfessionalLearningCourse: 'PLC Course',
+        i18nData: i18nCopy
       });
       const scriptEditor = wrapper.find('ScriptEditor');
 
       const launchButton = wrapper.find('Button[name="launch_plc_course"]');
       expect(launchButton.contains('Launch PLC Course')).to.be.true;
 
-      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
+      expect(scriptEditor.state().plcCourseLaunchError).to.equal(null);
 
       let returnData = 'There was an error';
       server.respondWith('PUT', `/plc/Test-Script/launch`, [
@@ -491,7 +522,7 @@ describe('ScriptEditor', () => {
       server.respond();
       scriptEditor.update();
 
-      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
+      expect(scriptEditor.state().plcCourseLaunchError).to.equal(
         'There was an error'
       );
     });
