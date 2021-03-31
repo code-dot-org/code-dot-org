@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import CourseScriptsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseScriptsEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
@@ -282,33 +280,23 @@ class CourseEditor extends Component {
               value={this.props.migratedResources.map(r => r.id)}
             />
           )}
-          {this.props.useMigratedResources ? (
+          <div>
             <div>
-              <MigratedResourcesEditor
-                courseVersionId={this.props.courseVersionId}
-              />
-              Preview
-              <TeacherResourcesDropdown
-                migratedResources={this.props.migratedResources}
-                useMigratedResources
-              />
+              Select the Teacher Resources buttons you'd like to have show up on
+              the top of the course overview page
             </div>
-          ) : (
-            <div>
-              <div>
-                Select the Teacher Resources buttons you'd like to have show up
-                on the top of the course overview page
-              </div>
 
-              <ResourcesEditor
-                inputStyle={styles.input}
-                resources={teacherResources}
-                updateTeacherResources={teacherResources =>
-                  this.setState({teacherResources})
-                }
-              />
-            </div>
-          )}
+            <ResourcesEditor
+              inputStyle={styles.input}
+              resources={teacherResources}
+              migratedResources={this.props.migratedResources}
+              updateTeacherResources={teacherResources =>
+                this.setState({teacherResources})
+              }
+              courseVersionId={this.props.courseVersionId}
+              useMigratedResources={this.props.useMigratedResources}
+            />
+          </div>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
