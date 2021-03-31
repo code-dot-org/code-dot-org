@@ -3,7 +3,8 @@
  *       combination of cookies and HTML5 web storage.
  */
 import {trySetSessionStorage} from '../utils';
-import {getStore} from './redux';
+import {mergeActivityResult} from './activityUtils';
+
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
@@ -37,9 +38,13 @@ clientState.reset = function() {
   } catch (e) {}
 };
 
+/**
+ * Clear progress-related values from session storage.
+ */
 clientState.clearProgress = function() {
   sessionStorage.removeItem('progress');
   sessionStorage.removeItem('lines');
+  removeItemsWithPrefix(sessionStorage, 'source_');
 };
 
 /**
@@ -93,48 +98,58 @@ clientState.writeSourceForLevel = function(
 
 /**
  * Tracks the lines of code written after the user clicks run if their
- * solution is successful. Skips if the user is logged in.
+ * solution is successful.
  * @param {boolean} result - Whether the user's solution is successful
  * @param {number} lines - Number of lines of code user wrote in this solution
  */
 clientState.trackLines = function(result, lines) {
-  if (
-    result &&
-    isFinite(lines) &&
-    !getStore().getState().progress.usingDbProgress
-  ) {
+  if (result && isFinite(lines)) {
     addLines(lines);
   }
 };
 
 /**
- * Write down user progress for an entire script.
+ * Merges the given testResult for the given level into the progress
+ * data stored in session storage.
  * @param {string} scriptName
- * @param {Object<String, number>} progress
+ * @param {number} levelId
+ * @param {TestResults} testResult
  */
-clientState.batchTrackProgress = function(scriptName, progress) {
-  var data = {};
-  var keys = Object.keys(progress);
-  for (let i = 0; i < keys.length; i++) {
-    let level = keys[i];
-    if (
-      progress[level] &&
-      progress[level] <= clientState.MAXIMUM_CACHABLE_RESULT
-    ) {
-      data[level] = progress[level];
-    }
+clientState.trackProgress = function(scriptName, levelId, testResult) {
+  // testResult values > 1000 are for server use only and should not be stored
+  // locally
+  if (!testResult || testResult > clientState.MAXIMUM_CACHABLE_RESULT) {
+    return;
   }
 
-  var progressMap = clientState.allLevelsProgress();
-  progressMap[scriptName] = data;
-  trySetSessionStorage('progress', JSON.stringify(progressMap));
+  const progressData = levelProgressByScript();
+  if (!progressData[scriptName]) {
+    progressData[scriptName] = {};
+  }
+  const savedResult = progressData[scriptName][levelId] || 0;
+  const mergedResult = mergeActivityResult(savedResult, testResult);
+
+  if (mergedResult !== savedResult) {
+    progressData[scriptName][levelId] = mergedResult;
+    trySetSessionStorage('progress', JSON.stringify(progressData));
+  }
 };
 
 /**
- * Returns a map from (string) level id to progress value.
- * @return {Object<String, number>}
+ * Returns the level progress map for the given script.
+ * @param {string} scriptName The script name
+ * @returns {Object<number, number>} map from levelId -> testResult
  */
-clientState.allLevelsProgress = function() {
+clientState.levelProgress = function(scriptName) {
+  var progressMap = levelProgressByScript();
+  return progressMap[scriptName] || {};
+};
+
+/**
+ * Returns a map from script name to level progress map
+ * @return {Object<String, Object>}
+ */
+function levelProgressByScript() {
   var progressJson = sessionStorage.getItem('progress');
   try {
     return progressJson ? JSON.parse(progressJson) : {};
@@ -142,7 +157,7 @@ clientState.allLevelsProgress = function() {
     // Recover from malformed data.
     return {};
   }
-};
+}
 
 /**
  * Returns the number of lines completed from the cookie.
@@ -244,4 +259,17 @@ function hasSeenVisualElement(visualElementType, visualElementId) {
  */
 function createKey(scriptName, levelId, prefix) {
   return (prefix ? prefix + '_' : '') + scriptName + '_' + levelId;
+}
+
+/**
+ * Removes all items from the given sessionStorage object that start with the
+ * given prefix.
+ *
+ * @param {Storage} sessionStorage
+ * @param {string} prefix
+ */
+function removeItemsWithPrefix(sessionStorage, prefix) {
+  Object.keys(sessionStorage)
+    .filter(key => key.startsWith(prefix))
+    .forEach(key => sessionStorage.removeItem(key));
 }
