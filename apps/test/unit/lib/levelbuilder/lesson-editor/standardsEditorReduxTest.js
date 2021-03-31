@@ -27,23 +27,26 @@ const fakeStandards = [
 const getInitialState = () => _.cloneDeep(fakeStandards);
 
 describe('standardsEditorRedux reducer', () => {
-  let initialState, standardsEditor;
+  let initialState, standardsEditor, opportunityStandardsEditor, newStandard;
   beforeEach(() => {
     standardsEditor = createStandardsEditor('standard');
+    opportunityStandardsEditor = createStandardsEditor('opportunityStandard');
+    newStandard = {
+      frameworkShortcode: 'framework-1',
+      frameworkName: 'Framework One',
+      categoryShortcode: 'CS',
+      categoryDescription: 'Computing Systems',
+      shortcode: 'new-1',
+      description: 'fake description'
+    };
+
     initialState = getInitialState();
   });
 
-  it('add standard', () => {
+  it('adds standard', () => {
     const nextState = standardsEditor(
       initialState,
-      addStandard('standard', {
-        frameworkShortcode: 'framework-1',
-        frameworkName: 'Framework One',
-        categoryShortcode: 'CS',
-        categoryDescription: 'Computing Systems',
-        shortcode: 'new-1',
-        description: 'fake description'
-      })
+      addStandard('standard', newStandard)
     );
     assert.deepEqual(nextState.map(s => s.shortcode), [
       'shortcode-1',
@@ -61,5 +64,26 @@ describe('standardsEditorRedux reducer', () => {
       })
     );
     assert.deepEqual(nextState.map(s => s.shortcode), ['shortcode-2']);
+  });
+
+  it('adds opportunity standard without adding regular standard', () => {
+    let nextState = opportunityStandardsEditor(
+      initialState,
+      addStandard('opportunityStandard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-1',
+      'shortcode-2',
+      'new-1'
+    ]);
+
+    nextState = standardsEditor(
+      initialState,
+      addStandard('opportunityStandard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-1',
+      'shortcode-2'
+    ]);
   });
 });
