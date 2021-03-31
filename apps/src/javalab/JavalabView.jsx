@@ -89,12 +89,13 @@ class JavalabView extends React.Component {
   }
 
   getToken = () => {
+    // TODO: Use token to connect to Java Builder
     $.ajax({
       url: '/javabuilder/access_token',
       type: 'get'
     })
-      .done(result => console.log(result))
-      .fail(() => console.log('get token failed!'));
+      .done()
+      .fail();
   };
 
   run = () => {
