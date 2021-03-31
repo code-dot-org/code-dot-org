@@ -168,6 +168,13 @@ class LessonProgress extends Component {
     );
   }
 
+  /**
+   * Determines if we're on a bonus level page, in which case we want to pass
+   * `isSelected=true` into our `LessonExtrasProgressBubble` component.
+   * `isLessonExtras` indicates whether we're on the bonus level selection
+   * page, and `currentLevel.bonus` indicates whether we're on an actual
+   * bonus level page.
+   */
   isOnBonusLevel() {
     const {isLessonExtras, levels, currentLevelId} = this.props;
     return (
