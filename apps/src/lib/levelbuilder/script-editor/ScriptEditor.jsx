@@ -47,6 +47,12 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  courseLaunchedText: {
+    color: color.level_perfect
+  },
+  courseLaunchedErrorText: {
+    color: color.red
   }
 };
 
@@ -97,7 +103,7 @@ class ScriptEditor extends React.Component {
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
-    initialPlcCourseLaunched: PropTypes.bool,
+    initialIsPlcCourseLaunched: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -159,7 +165,7 @@ class ScriptEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
-      plcCourseLaunched: this.props.initialPlcCourseLaunched
+      isPlcCourseLaunched: this.props.initialIsPlcCourseLaunched
     };
   }
 
@@ -345,7 +351,7 @@ class ScriptEditor extends React.Component {
     })
       .done(() => {
         this.setState({
-          plcCourseLaunched: true
+          isPlcCourseLaunched: true
         });
       })
       .fail(error => {
@@ -937,7 +943,7 @@ class ScriptEditor extends React.Component {
               color={Button.ButtonColor.purple}
               disabled={
                 !(this.state.title && this.state.professionalLearningCourse) ||
-                this.state.plcCourseLaunched
+                this.state.isPlcCourseLaunched
               }
             />
             <HelpTip>
@@ -954,13 +960,11 @@ class ScriptEditor extends React.Component {
                 </p>
               )}
             </HelpTip>
-            {this.state.plcCourseLaunched && (
-              <span style={{color: color.level_perfect}}>
-                {'Course Launched'}
-              </span>
+            {this.state.isPlcCourseLaunched && (
+              <span style={styles.courseLaunchedText}>Course Launched</span>
             )}
             {this.state.plcCourseLaunchError && (
-              <span style={{color: color.red}}>
+              <span style={styles.courseLaunchedErrorText}>
                 {this.state.plcCourseLaunchError}
               </span>
             )}

@@ -460,7 +460,7 @@ describe('ScriptEditor', () => {
       let i18nCopy = _.cloneDeep(defaultProps.i18nData);
       i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({
-        initialPlcCourseLaunched: true,
+        initialIsPlcCourseLaunched: true,
         initialProfessionalLearningCourse: 'PLC Course',
         i18nData: i18nCopy
       });
@@ -474,7 +474,7 @@ describe('ScriptEditor', () => {
       let i18nCopy = _.cloneDeep(defaultProps.i18nData);
       i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({
-        initialPlcCourseLaunched: false,
+        initialIsPlcCourseLaunched: false,
         initialProfessionalLearningCourse: 'PLC Course',
         i18nData: i18nCopy
       });
@@ -493,14 +493,14 @@ describe('ScriptEditor', () => {
       server.respond();
       scriptEditor.update();
 
-      expect(scriptEditor.state().plcCourseLaunched).to.be.true;
+      expect(scriptEditor.state().isPlcCourseLaunched).to.be.true;
     });
 
     it('launch plc course gives error', () => {
       let i18nCopy = _.cloneDeep(defaultProps.i18nData);
       i18nCopy['title'] = 'Test-Script';
       const wrapper = createWrapper({
-        initialPlcCourseLaunched: false,
+        initialIsPlcCourseLaunched: false,
         initialProfessionalLearningCourse: 'PLC Course',
         i18nData: i18nCopy
       });

@@ -81,7 +81,7 @@ export default function initPage(scriptEditorData) {
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
-        initialPlcCourseLaunched={scriptData.plc_course_launched}
+        initialIsPlcCourseLaunched={scriptData.is_plc_course_launched}
       />
     </Provider>,
     document.querySelector('.edit_container')

@@ -1479,7 +1479,7 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_script_edit)
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
-    summary[:plc_course_launched] = plc_course_unit&.started?
+    summary[:is_plc_course_launched] = plc_course_unit&.started?
     summary
   end
 
