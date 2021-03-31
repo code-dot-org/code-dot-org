@@ -51,11 +51,10 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
 
   # DELETE api/v1/ml_models/:model_id
   def destroy
-    @user_ml_model = UserMLModel.where(model_id: params[:model_id])
+    @user_ml_model = UserMlModel.find_by(model_id: params[:model_id])
     return head :forbidden unless @user_ml_model.user_id == current_user.id
     @user_ml_model.destroy
     delete_from_s3(@user_ml_model.model_id)
-    head :no_content
   end
 
   private

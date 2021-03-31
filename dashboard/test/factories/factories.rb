@@ -722,6 +722,13 @@ FactoryGirl.define do
     storage_app_id {456}
   end
 
+  factory :user_ml_model do
+    user
+    model_id "1234AIBot"
+    metadata "Model details"
+    name "Model name"
+  end
+
   factory :script_level do
     script
 
