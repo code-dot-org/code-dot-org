@@ -7,7 +7,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true, hidden: true
+    @script = create :script, name: 'unit-1', is_migrated: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -22,6 +22,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
         student_overview: 'student overview'
       }
     )
+    standard = create :standard, description: 'Standard Description'
+    @lesson.standards = [standard]
 
     @lesson2 = create(
       :lesson,
@@ -78,6 +80,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal '/s/unit-1', lesson_data['unit']['link']
     assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessons'][0]['link']
     assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessons'][1]['link']
+    assert_equal 'Standard Description', lesson_data['standards'][0]['description']
   end
 
   test 'lesson edit page contains expected data' do

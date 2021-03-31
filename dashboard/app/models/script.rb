@@ -40,7 +40,8 @@ class Script < ApplicationRecord
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
   has_many :levels, through: :script_levels
-  has_many :resources, join_table: :scripts_resources
+  has_and_belongs_to_many :resources, join_table: :scripts_resources
+  has_many :scripts_resources
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -87,11 +88,13 @@ class Script < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
-            :standards
+            :standards,
+            :opportunity_standards
           ]
         },
         :script_levels,
-        :levels
+        :levels,
+        :resources
       ]
     )
   end
@@ -115,8 +118,6 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validate :set_is_migrated_only_for_migrated_scripts
-
   def prevent_duplicate_levels
     reload
 
@@ -132,12 +133,6 @@ class Script < ApplicationRecord
   after_save :generate_plc_objects
 
   SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
-
-  def set_is_migrated_only_for_migrated_scripts
-    if !!is_migrated && !hidden
-      errors.add(:is_migrated, "Can't be set on a course that is visible")
-    end
-  end
 
   def prevent_course_version_change?
     lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
@@ -1463,6 +1458,22 @@ class Script < ApplicationRecord
     summary
   end
 
+  def summarize_for_rollup(user = nil)
+    summary = {
+      title: title_for_display,
+      name: name,
+      link: script_path(self)
+    }
+
+    # Filter out stages that have a visible_after date in the future
+    filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
+    # Only get lessons with lesson plans
+    filtered_lessons = filtered_lessons.select(&:has_lesson_plan)
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
+
+    summary
+  end
+
   def summarize_for_script_edit
     include_lessons = false
     summary = summarize(include_lessons)
@@ -1583,7 +1594,12 @@ class Script < ApplicationRecord
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    I18n.t(
+      "title",
+      default: name,
+      scope: [:data, :script, :name, name],
+      smart: true
+    )
   end
 
   def title_for_display

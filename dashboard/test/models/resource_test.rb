@@ -88,4 +88,23 @@ class ResourceTest < ActiveSupport::TestCase
       assert_equal expected, resource.seeding_key(seed_context)
     end
   end
+
+  test 'serialize scripts that resource is in' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    @levelbuilder = create :levelbuilder
+
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    script1 = create :script
+    script2 = create :script
+    script1.expects(:write_script_json).once
+    script2.expects(:write_script_json).once
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    lesson1 = create :lesson, script: script1
+    lesson2 = create :lesson, script: script2
+    resource = create :resource, course_version: course_version
+    resource.lessons = [lesson1, lesson2]
+    resource.serialize_scripts
+  end
 end

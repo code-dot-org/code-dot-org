@@ -113,7 +113,8 @@ export const studentLessonShape = PropTypes.shape({
   overview: PropTypes.string.isRequired,
   resources: PropTypes.arrayOf(PropTypes.object),
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
-  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
+  studentLessonPlanPdfUrl: PropTypes.string
 });
 
 export const navigationLessonShape = PropTypes.shape({
@@ -127,4 +128,14 @@ export const navigationLessonShape = PropTypes.shape({
       })
     ).isRequired
   }).isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });
