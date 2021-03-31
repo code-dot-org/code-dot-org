@@ -101,7 +101,9 @@ describe('CourseEditor', () => {
         <CourseEditor
           {...defaultProps}
           useMigratedResources
-          initialTeacherResources={[{id: 1, name: 'Curriculum', url: '/foo'}]}
+          initialMigratedTeacherResources={[
+            {id: 1, name: 'Curriculum', url: '/foo'}
+          ]}
         />
       );
       assert.equal(wrapper.find(MigratedResourceEditor).length, 1);

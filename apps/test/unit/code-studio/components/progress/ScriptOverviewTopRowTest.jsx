@@ -178,7 +178,7 @@ describe('ScriptOverviewTopRow', () => {
         {...defaultProps}
         viewAs={ViewType.Teacher}
         isMigrated={true}
-        resources={[
+        migratedResources={[
           {
             id: 1,
             name: 'Curriculum',
@@ -195,7 +195,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <TeacherResourcesDropdown
-          resources={[
+          migratedResources={[
             {
               id: 1,
               name: 'Curriculum',

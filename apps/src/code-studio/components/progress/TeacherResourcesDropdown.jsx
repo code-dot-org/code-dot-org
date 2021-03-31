@@ -18,8 +18,8 @@ const styles = {
 
 export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    resources: PropTypes.arrayOf(resourceShape),
+    migratedResources: PropTypes.arrayOf(PropTypes.object),
     useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose

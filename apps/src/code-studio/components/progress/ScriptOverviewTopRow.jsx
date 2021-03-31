@@ -61,8 +61,8 @@ class ScriptOverviewTopRow extends React.Component {
     scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    resources: PropTypes.arrayOf(resourceShape),
+    migratedResources: PropTypes.arrayOf(PropTypes.object),
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -117,8 +117,8 @@ class ScriptOverviewTopRow extends React.Component {
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
             viewAs === ViewType.Teacher &&
-            ((resources.length > 0 && !isMigrated) ||
-              (migratedResources.length > 0 && isMigrated)) && (
+            ((!isMigrated && resources.length > 0) ||
+              (isMigrated && migratedResources.length > 0)) && (
               <TeacherResourcesDropdown
                 resources={resources}
                 migratedResources={migratedResources}
