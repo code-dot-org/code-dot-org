@@ -101,19 +101,19 @@ class ScriptEditor extends React.Component {
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
     init: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
+    const teacherResources = [...props.initialTeacherResources];
 
     if (!props.isMigrated) {
       // add empty entries to get to max
-      while (resources.length < Object.keys(ResourceType).length) {
-        resources.push({type: '', link: ''});
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
       }
     }
 
@@ -157,7 +157,7 @@ class ScriptEditor extends React.Component {
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
       descriptionShort: this.props.i18nData.descriptionShort || '',
       lessonDescriptions: this.props.i18nData.stageDescriptions,
-      teacherResources: resources,
+      teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
@@ -301,7 +301,9 @@ class ScriptEditor extends React.Component {
       description_short: this.state.descriptionShort,
       resourceLinks: this.state.teacherResources.map(resource => resource.link),
       resourceTypes: this.state.teacherResources.map(resource => resource.type),
-      resourceIds: this.props.migratedResources.map(resource => resource.id),
+      resourceIds: this.props.migratedTeacherResources.map(
+        resource => resource.id
+      ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans
     };
@@ -830,13 +832,13 @@ class ScriptEditor extends React.Component {
               </div>
               <ResourcesEditor
                 inputStyle={styles.input}
-                resources={this.state.teacherResources}
+                teacherResources={this.state.teacherResources}
                 updateTeacherResources={teacherResources =>
                   this.setState({teacherResources})
                 }
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.migratedResources}
+                migratedTeacherResources={this.props.migratedTeacherResources}
               />
             </div>
           </div>
@@ -951,7 +953,7 @@ export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
     levelKeyList: state.levelKeyList,
-    migratedResources: state.resources
+    migratedTeacherResources: state.resources
   }),
   {
     init

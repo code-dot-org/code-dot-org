@@ -37,8 +37,8 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.array,
-    migratedResources: PropTypes.array,
+    teacherResources: PropTypes.array,
+    migratedTeacherResources: PropTypes.array,
     useMigratedResources: PropTypes.bool.isRequired,
     updateTeacherResources: PropTypes.func,
     courseVersionId: PropTypes.number
@@ -53,7 +53,7 @@ export default class ResourcesEditor extends Component {
   }
 
   handleChangeType = (event, index) => {
-    const oldResources = this.props.resources;
+    const oldResources = this.props.teacherResources;
     const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
     newResources[index].type = type;
@@ -73,7 +73,7 @@ export default class ResourcesEditor extends Component {
   };
 
   handleChangeLink = (event, index) => {
-    const newResources = _.cloneDeep(this.props.resources);
+    const newResources = _.cloneDeep(this.props.teacherResources);
     const link = event.target.value;
     newResources[index].link = link;
     this.props.updateTeacherResources(newResources);
@@ -81,11 +81,11 @@ export default class ResourcesEditor extends Component {
 
   render() {
     const {errorString} = this.state;
-    const {useMigratedResources, resources} = this.props;
+    const {useMigratedResources, teacherResources} = this.props;
 
     // avoid showing multiple empty resources
     const lastNonEmpty = _.findLastIndex(
-      resources,
+      teacherResources,
       ({type, link}) => link && type
     );
 
@@ -99,7 +99,7 @@ export default class ResourcesEditor extends Component {
             courseVersionId={this.props.courseVersionId}
           />
         ) : (
-          resources
+          teacherResources
             .slice(0, lastNonEmpty + 2)
             .map((resource, index) => (
               <Resource
@@ -117,8 +117,8 @@ export default class ResourcesEditor extends Component {
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
           <TeacherResourcesDropdown
-            resources={(resources || []).filter(x => !!x.type)}
-            migratedResources={this.props.migratedResources}
+            teacherResources={(teacherResources || []).filter(x => !!x.type)}
+            migratedTeacherResources={this.props.migratedTeacherResources}
             useMigratedResources={this.props.useMigratedResources}
           />
         </div>

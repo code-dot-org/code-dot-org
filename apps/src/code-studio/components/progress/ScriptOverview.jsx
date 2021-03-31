@@ -176,8 +176,8 @@ class ScriptOverview extends React.Component {
               currentCourseId={currentCourseId}
               viewAs={viewAs}
               isRtl={isRtl}
-              resources={teacherResources}
-              migratedResources={migratedTeacherResources}
+              teacherResources={teacherResources}
+              migratedTeacherResources={migratedTeacherResources}
               showAssignButton={showAssignButton}
               assignedSectionId={assignedSectionId}
               showCalendar={showCalendar}

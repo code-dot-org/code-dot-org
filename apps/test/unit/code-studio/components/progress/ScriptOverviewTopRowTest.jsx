@@ -25,7 +25,7 @@ const defaultProps = {
   scriptTitle: 'Unit test script title',
   viewAs: ViewType.Student,
   isRtl: false,
-  resources: [],
+  teacherResources: [],
   showAssignButton: true,
   isMigrated: false
 };
@@ -141,7 +141,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Teacher}
-        resources={[
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: 'https://example.com/a'
@@ -156,7 +156,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <TeacherResourcesDropdown
-          resources={[
+          teacherResources={[
             {
               type: ResourceType.curriculum,
               link: 'https://example.com/a'
@@ -178,7 +178,7 @@ describe('ScriptOverviewTopRow', () => {
         {...defaultProps}
         viewAs={ViewType.Teacher}
         isMigrated={true}
-        migratedResources={[
+        migratedTeacherResources={[
           {
             id: 1,
             name: 'Curriculum',
@@ -195,7 +195,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <TeacherResourcesDropdown
-          migratedResources={[
+          migratedTeacherResources={[
             {
               id: 1,
               name: 'Curriculum',

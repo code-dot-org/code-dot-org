@@ -63,18 +63,18 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
 
     // Provided by redux
-    migratedResources: PropTypes.arrayOf(PropTypes.object)
+    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
+    const teacherResources = [...props.initialTeacherResources];
 
     if (!props.useMigratedResources) {
       // add empty entries to get to max
-      while (resources.length < Object.keys(ResourceType).length) {
-        resources.push({type: '', link: ''});
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
       }
     }
 
@@ -84,7 +84,7 @@ class CourseEditor extends Component {
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
-      teacherResources: resources
+      teacherResources: teacherResources
     };
   }
 
@@ -273,11 +273,11 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources">
-          {this.props.migratedResources && (
+          {this.props.migratedTeacherResources && (
             <input
               type="hidden"
               name="resourceIds[]"
-              value={this.props.migratedResources.map(r => r.id)}
+              value={this.props.migratedTeacherResources.map(r => r.id)}
             />
           )}
           <div>
@@ -288,8 +288,8 @@ class CourseEditor extends Component {
 
             <ResourcesEditor
               inputStyle={styles.input}
-              resources={teacherResources}
-              migratedResources={this.props.migratedResources}
+              teacherResources={teacherResources}
+              migratedTeacherResources={this.props.migratedTeacherResources}
               updateTeacherResources={teacherResources =>
                 this.setState({teacherResources})
               }
@@ -321,5 +321,5 @@ class CourseEditor extends Component {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  migratedResources: state.resources
+  migratedTeacherResources: state.resources
 }))(CourseEditor);
