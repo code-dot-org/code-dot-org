@@ -302,9 +302,6 @@ img.video_thumbnail {
     .user_options, .help_contents {
       font-size: 14px;
       line-height: 20px;
-      html[dir=rtl] & {
-        text-align: right;
-      }
     }
   }
 
