@@ -97,6 +97,7 @@ class ScriptEditor extends React.Component {
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
+    initialPlcCourseLaunched: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -117,7 +118,7 @@ class ScriptEditor extends React.Component {
       isSaving: false,
       error: null,
       lastSaved: null,
-      plcCourseLaunchStatus: null,
+      plcCourseLaunchError: null,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
@@ -157,7 +158,8 @@ class ScriptEditor extends React.Component {
       teacherResources: resources,
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
-      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans
+      includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      plcCourseLaunched: this.props.initialPlcCourseLaunched
     };
   }
 
@@ -342,10 +344,12 @@ class ScriptEditor extends React.Component {
       contentType: 'application/json;charset=UTF-8'
     })
       .done(() => {
-        this.setState({plcCourseLaunchStatus: 'Course Launched'});
+        this.setState({
+          plcCourseLaunched: true
+        });
       })
       .fail(error => {
-        this.setState({plcCourseLaunchStatus: error.responseText});
+        this.setState({plcCourseLaunchError: error.responseText});
       });
   };
 
@@ -932,7 +936,8 @@ class ScriptEditor extends React.Component {
               onClick={this.launchPlcCourse}
               color={Button.ButtonColor.purple}
               disabled={
-                !(this.state.title && this.state.professionalLearningCourse)
+                !(this.state.title && this.state.professionalLearningCourse) ||
+                this.state.plcCourseLaunched
               }
             />
             <HelpTip>
@@ -949,15 +954,14 @@ class ScriptEditor extends React.Component {
                 </p>
               )}
             </HelpTip>
-            {this.state.plcCourseLaunchStatus && (
-              <span
-                style={
-                  this.state.plcCourseLaunchStatus === 'Course Launched'
-                    ? {color: color.level_perfect}
-                    : {color: color.red}
-                }
-              >
-                {this.state.plcCourseLaunchStatus}
+            {this.state.plcCourseLaunched && (
+              <span style={{color: color.level_perfect}}>
+                {'Course Launched'}
+              </span>
+            )}
+            {this.state.plcCourseLaunchError && (
+              <span style={{color: color.red}}>
+                {this.state.plcCourseLaunchError}
               </span>
             )}
           </div>
