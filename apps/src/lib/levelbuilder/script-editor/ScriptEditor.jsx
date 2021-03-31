@@ -3,9 +3,7 @@ import React from 'react';
 import UnitCard from '@cdo/apps/lib/levelbuilder/script-editor/UnitCard';
 import LessonDescriptions from '@cdo/apps/lib/levelbuilder/script-editor/LessonDescriptions';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import VisibleAndPilotExperiment from '@cdo/apps/lib/levelbuilder/script-editor/VisibleAndPilotExperiment';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -825,35 +823,22 @@ class ScriptEditor extends React.Component {
           </label>
           <div>
             <h4>Teacher Resources</h4>
-            {!this.props.isMigrated && (
+            <div>
               <div>
-                <div>
-                  Select the Teacher Resources buttons you'd like to have show
-                  up on the top of the script overview page
-                </div>
-                <ResourcesEditor
-                  inputStyle={styles.input}
-                  resources={this.state.teacherResources}
-                  updateTeacherResources={teacherResources =>
-                    this.setState({teacherResources})
-                  }
-                />
+                Select the Teacher Resources buttons you'd like to have show up
+                on the top of the script overview page
               </div>
-            )}
-            {this.props.isMigrated && (
-              <div>
-                <MigratedResourcesEditor
-                  courseVersionId={this.props.initialCourseVersionId}
-                />
-                <div style={styles.box}>
-                  <div style={{marginBottom: 5}}>Preview:</div>
-                  <TeacherResourcesDropdown
-                    migratedResources={this.props.migratedResources}
-                    useMigratedResources
-                  />
-                </div>
-              </div>
-            )}
+              <ResourcesEditor
+                inputStyle={styles.input}
+                resources={this.state.teacherResources}
+                updateTeacherResources={teacherResources =>
+                  this.setState({teacherResources})
+                }
+                useMigratedResources={this.props.isMigrated}
+                courseVersionId={this.props.initialCourseVersionId}
+                migratedResources={this.props.migratedResources}
+              />
+            </div>
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (

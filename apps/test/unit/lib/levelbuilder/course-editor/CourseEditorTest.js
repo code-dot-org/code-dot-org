@@ -12,7 +12,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import resourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
-import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 
 const defaultProps = {
   name: 'csp',
@@ -106,7 +105,9 @@ describe('CourseEditor', () => {
           ]}
         />
       );
-      assert.equal(wrapper.find(MigratedResourceEditor).length, 1);
+      expect(wrapper.find('ResourcesEditor').length).to.equal(1);
+      expect(wrapper.find('ResourcesEditor').props().useMigratedResources).to.be
+        .true;
     });
   });
 
