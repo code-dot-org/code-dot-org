@@ -18867,6 +18867,8 @@ en:
               name: Collecting Data Guided Practice
             Haiku Bot:
               name: Haiku Bot
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             Toolbox Levels:
               display_name: Toolbox Levels
@@ -18886,6 +18888,8 @@ en:
               display_name: Contagion-Guided-Practice
             haiku bot:
               display_name: Haiku Bot
+            AB EOC:
+              display_name: Course A and B EOC Project
           title: Planning script for CI and CSF 2021
           description_audience: Internal
           description_short: Internal
@@ -18894,7 +18898,7 @@ en:
           student_description: ''
         csd1-2021:
           title: CSD Unit 1 - Problem Solving and Computing ('21-'22)
-          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
           lessons:
@@ -18997,7 +19001,7 @@ en:
           student_description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
         csd2-2021:
           title: CSD Unit 2 - Web Development ('21-'22)
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   "
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
           lessons:
@@ -20380,52 +20384,52 @@ en:
               key: Learn to Drag and Drop
               name: Learn to Drag and Drop
               description_student: Click and drag to finish the puzzles.
-              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
+              description_teacher: This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
             'Programming: Happy Maps':
               key: 'Programming: Happy Maps'
               name: Happy Maps
               description_student: Write instructions to get the Flurb to the fruit.
-              description_teacher: 'This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
+              description_teacher: 'This **context-setting** lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.'
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
               description_student: Program Scrat to reach the acorn.
-              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Ice Age:
               key: Programming in Ice Age
               name: Programming with Scrat
               description_student: Write programs to help Scrat reach the acorn.
-              description_teacher: Using characters from _Ice Age_, students will develop sequential algorithms to move _Scrat_ from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+              description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
             Programming with Rey and BB-8:
               key: Programming with Rey and BB-8
               name: Programming with Rey and BB-8
               description_student: Help BB-8 collect the scrap metal.
-              description_teacher: In this lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with _BB-8_.
+              description_teacher: In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with _BB-8_.
             'Loops: Happy Loops':
               key: 'Loops: Happy Loops'
               name: Happy Loops
               description_student: Help the Flurb solve bigger problems using loops.
-              description_teacher: This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.
+              description_teacher: This **context-setting** lesson revisits Happy Maps. This time, student will use loops to solve bigger, longer puzzles with their code.
             Loops in Ice Age:
               key: Loops in Ice Age
               name: Loops with Scrat
               description_student: Help Scrat cover more ground using loops.
-              description_teacher: Building on the concept of repeating instructions from "Happy Loops," this stage will have students using loops to get to the acorn more efficiently on Code.org.
+              description_teacher: In this **skill-building** lesson, students will practice the concept of loops in programming puzzles where the goal is to help the squirrel reach the acorn.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Help Laurel the adventurer collect the treasure underground.
-              description_teacher: In this lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze and picking corn. Here, loops are used to collect treasure in open cave spaces.
+              description_teacher: In this **skill-building** lesson, students continue learning the concept of loops. In the previous lesson, students were introduced to loops by moving through a maze. Here, loops are used to collect treasure in open cave spaces.
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
               name: Ocean Scene with Loops
               description_student: Use loops and patterns to finish the images.
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will be given the opportunity to create their own images.
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
-              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
               name: On the Move with Events
@@ -20462,52 +20466,52 @@ en:
               key: Move It, Move It
               name: Move It, Move It
               description_student: Program your classmates to step carefully from place to place.
-              description_teacher: This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
+              description_teacher: This **context-setting** lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course.  In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.
             Sequencing in Maze:
               key: Sequencing in Maze
               name: Sequencing with Angry Birds
               description_student: Help Red the Angry Bird follow the path to the naughty pig.
-              description_teacher: Using characters from _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
             Programming in Maze:
               key: Programming in Maze
               name: Programming with Angry Birds
               description_student: Create programs to help _Angry Bird_ move through the maze.
-              description_teacher: Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence.
+              description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
             Programming in Harvester:
               key: Programming in Harvester
               name: Programming with Harvester
               description_student: Help the Harvester collect vegetables along a path.
-              description_teacher: 'Students will apply the programming concepts that they have learned to the Harvester environment. Now, instead of just getting the character to a goal, students have to collect corn using a new block. Students will continue to develop sequential algorithm skills and start using the debugging process. '
+              description_teacher: 'In this *skill-building** lesson, students will apply the programming concepts that they have learned to the Harvester environment. Students will continue to develop sequential algorithm skills and start using the debugging process. '
             'Loops: Getting Loopy':
               key: 'Loops: Getting Loopy'
               name: Getting Loopy
               description_student: In this lesson, we'll have a dance party using repeat loops!
-              description_teacher: As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
+              description_teacher: In this **context-setting** lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.
             Loops in Harvester:
               key: Loops in Harvester
               name: Loops with Harvester
               description_student: Help the Harvester collect even more, using loops!
-              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
+              description_teacher: In this **skill-building** lesson, students will help the harvester collect crops by using loops.
             Loops in Collector:
               key: Loops in Collector
               name: Loops with Laurel
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
-              description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
+              description_teacher: 'In this **skill-building** lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. '
             Loops in Artist:
               key: Loops in Artist
               name: Drawing Gardens with Loops
               description_student: Use patterns and loops to finish the images.
-              description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous online lesson, loops were used to traverse a maze and collect treasure. Here, students use loops to create patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
+              description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. At the end of this lesson, students will be given the opportunity to create their own images.
             The Right App:
               key: The Right App
               name: The Right App
               description_student: Sketch your own smartphone app.
-              description_teacher: 'This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
+              description_teacher: 'This **exploratory** lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user. '
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
-              description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
+              description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
             Events in Play Lab:
               key: Events in Play Lab
               name: A Royal Battle with Events
@@ -20597,7 +20601,7 @@ en:
               description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
             Sticker Art with Loops:
               key: Sticker Art with Loops
-              name: 'Mini-Project: Sticker Art'
+              name: Sticker Art with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             'Events: The Big Event':
@@ -20612,7 +20616,7 @@ en:
               description_teacher: This lesson combines **skill-building** around events with a **mini-project** where students get to build their own Flappy Bird game. At the end of the lesson, students will be able to customize their game by changing the visuals or rules.
             Events in Play Lab:
               key: Events in Play Lab
-              name: 'Mini-Project: Chase Game'
+              name: Chase Game with Events
               description_student: It's time to get creative and make a game in Play Lab!
               description_teacher: This lesson combines **skill-building** around events with a **mini-project** where students get to build their own animated game.
             Picturing Data:
@@ -22007,7 +22011,7 @@ en:
             poem bot:
               display_name: Poem Bot
             rampup:
-              display_name: Coding Ramp Up
+              display_name: Introducing Sprite Lab
               description: Learn the basics of coding with sprites and text!
           name: haikubot-pilot
           title: Poem Bot
