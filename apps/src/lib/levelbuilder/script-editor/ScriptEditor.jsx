@@ -704,7 +704,9 @@ class ScriptEditor extends React.Component {
                   type="checkbox"
                   checked={this.state.deprecated}
                   style={styles.checkbox}
-                  onChange={() => this.setState({deprecated: true})}
+                  onChange={() =>
+                    this.setState({deprecated: !this.state.deprecated})
+                  }
                 />
                 <HelpTip>
                   <p>
