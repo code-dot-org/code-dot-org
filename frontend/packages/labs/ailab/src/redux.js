@@ -1083,14 +1083,6 @@ const panelList = [
 */
 
 function isPanelEnabled(state, panelId) {
-  const mode = state.mode;
-
-  if (panelId === "selectDataset") {
-    if (mode && mode.datasets && mode.datasets.length === 1) {
-      return false;
-    }
-  }
-
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
       return false;
@@ -1099,10 +1091,6 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "dataDisplayLabel") {
     if (state.data.length === 0) {
-      return false;
-    }
-
-    if (mode && mode.hideSelectLabel) {
       return false;
     }
   }
@@ -1126,9 +1114,6 @@ function isPanelEnabled(state, panelId) {
   }
 
   if (panelId === "selectTrainer") {
-    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
-      return false;
-    }
     if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
@@ -1149,14 +1134,38 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "saveModel") {
-    if (mode && mode.hideSave) {
+  if (panelId === "save") {
+    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
   }
 
-  if (panelId === "save") {
-    if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+  return true;
+}
+
+function isPanelAvailable(state, panelId) {
+  const mode = state.mode;
+
+  if (panelId === "selectDataset") {
+    if (mode && mode.datasets && mode.datasets.length === 1) {
+      return false;
+    }
+  }
+
+  if (panelId === "dataDisplayLabel") {
+    if (mode && mode.hideSelectLabel) {
+      return false;
+    }
+  }
+
+  if (panelId === "selectTrainer") {
+    if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
+      return false;
+    }
+  }
+
+  if (panelId === "saveModel") {
+    if (mode && mode.hideSave) {
       return false;
     }
   }
@@ -1170,30 +1179,30 @@ export function getPanelButtons(state) {
 
   if (state.currentPanel === "selectDataset") {
     prev = null;
-    next = isPanelEnabled(state, "dataDisplayLabel")
+    next = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
-      : isPanelEnabled(state, "dataDisplayFeatures")
+      : isPanelAvailable(state, "dataDisplayFeatures")
       ? { panel: "dataDisplayFeatures", text: "Continue" }
       : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
-    prev = isPanelEnabled(state, "selectDataset")
+    prev = isPanelAvailable(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
       : null;
-    next = isPanelEnabled(state, "dataDisplayFeatures")
+    next = isPanelAvailable(state, "dataDisplayFeatures")
       ? { panel: "dataDisplayFeatures", text: "Continue" }
       : null;
   } else if (state.currentPanel === "dataDisplayFeatures") {
-    prev = isPanelEnabled(state, "dataDisplayLabel")
+    prev = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
-    next = isPanelEnabled(state, "selectTrainer")
+    next = isPanelAvailable(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
-      : isPanelEnabled(state, "trainModel")
+      : isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
-    next = isPanelEnabled(state, "trainModel")
+    next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
   } else if (state.currentPanel === "trainModel") {
@@ -1202,17 +1211,24 @@ export function getPanelButtons(state) {
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
-    prev = isPanelEnabled(state, "dataDisplayFeatures")
+    prev = isPanelAvailable(state, "dataDisplayFeatures")
       ? { panel: "dataDisplayFeatures", text: "Back" }
       : null;
-    next = isPanelEnabled(state, "saveModel")
+    next = isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
       : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelEnabled(state, "save")
+    next = isPanelAvailable(state, "save")
       ? { panel: "save", text: "Finish" }
       : null;
+  }
+
+  if (prev) {
+    prev.enabled = isPanelEnabled(state, prev.panel);
+  }
+  if (next) {
+    next.enabled = isPanelEnabled(state, next.panel);
   }
 
   return { prev, next };
