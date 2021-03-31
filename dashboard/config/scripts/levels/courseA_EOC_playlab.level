@@ -1,0 +1,145 @@
+<Studio>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"sprite\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":1},{\"tileType\":0},{\"tileType\":16,\"sprite\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"sprite\":3},{\"tileType\":0},{\"tileType\":16,\"sprite\":8},{\"tileType\":0},{\"tileType\":16,\"sprite\":7},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"sprite\":9},{\"tileType\":0},{\"tileType\":16,\"sprite\":4},{\"tileType\":0},{\"tileType\":16,\"sprite\":6},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "It's time for your final project. You can make whatever you want!",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "background": "city",
+    "parent_level_id": 26460,
+    "name_suffix": "_2021",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "encrypted": "false",
+    "long_instructions": "It's time for your final project. You can make whatever you want!",
+    "mini_rubric": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "encrypted_examples": [
+
+    ],
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"question_mark\",\r\n  \"callout_text\": \"?\",\r\n  \"element_id\": \"#actor\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -32,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "display_name": "Play Lab: Animals",
+    "preload_asset_list": null
+  },
+  "game_id": 33,
+  "published": true,
+  "created_at": "2021-03-31T14:25:32.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:00:28 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 17:58:49 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 17:59:33 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"background\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-24 18:32:51 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"background\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-04-09 16:06:27 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2019-08-16 18:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"},{\"changed_at\":\"2021-03-31 14:29:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:30:42 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:30:42 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:30:57 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:30:57 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:31:01 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:32:25 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:33:55 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:34:44 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:35:09 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:35:25 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:36:25 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:39:17 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"sprites_hidden_to_start\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:39:31 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:39:31 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:40:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:42:10 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:43:44 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:44:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:45:47 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 14:46:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"sprites_hidden_to_start\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml>
+        <block type="when_run"/>
+      </xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+          <next>
+            <block type="studio_setSprite" id="actor">
+              <title name="VALUE">"visible"</title>
+              <title name="SPRITE">0</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteClicked" x="232" y="20">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_whenArrow" y="264">
+          <title name="VALUE">left</title>
+        </block>
+        <block type="studio_whenArrow" x="232" y="264">
+          <title name="VALUE">right</title>
+        </block>
+        <block type="studio_whenArrow" y="396">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenArrow" x="232" y="396">
+          <title name="VALUE">down</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"city"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"visible"</title>
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="VALUE">"hidden"</title>
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

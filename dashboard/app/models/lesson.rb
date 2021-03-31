@@ -50,6 +50,12 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
   has_many :lessons_standards, foreign_key: 'stage_id' # join table. we need this association for seeding logic
 
+  # the dependent: :destroy clause is needed to ensure that the associated join
+  # models are deleted when this lesson is deleted. in order for this to work,
+  # the join model must have an :id column.
+  has_many :lessons_opportunity_standards,  dependent: :destroy
+  has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
@@ -221,9 +227,15 @@ class Lesson < ApplicationRecord
 
   def lesson_plan_pdf_url
     if script.is_migrated && has_lesson_plan
-      Services::LessonPlanPdfs.get_url(self)
+      Services::CurriculumPdfs.get_lesson_plan_url(self)
     else
       "#{lesson_plan_base_url}/Teacher.pdf"
+    end
+  end
+
+  def student_lesson_plan_pdf_url
+    if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
+      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
     end
   end
 
@@ -349,7 +361,10 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
+      standards: standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
@@ -357,7 +372,7 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(user)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown)
     {
       unit: script.summarize_for_lesson_show,
       position: relative_position,
@@ -368,14 +383,30 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: Services::MarkdownPreprocessor.process(purpose || ''),
       preparation: Services::MarkdownPreprocessor.process(preparation || ''),
-      activities: lesson_activities.map(&:summarize_for_lesson_show),
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url
+    }
+  end
+
+  def summarize_for_rollup(user)
+    {
+      key: key,
+      position: relative_position,
+      displayName: localized_name,
+      preparation: Services::MarkdownPreprocessor.process(preparation || ''),
+      resources: resources_for_lesson_plan(user&.authorized_teacher?),
+      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      objectives: objectives.map(&:summarize_for_lesson_show),
+      standards: standards.map(&:summarize_for_lesson_show),
+      link: script_lesson_path(script, self)
     }
   end
 
@@ -390,7 +421,8 @@ class Lesson < ApplicationRecord
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show)
+      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
 
@@ -463,8 +495,14 @@ class Lesson < ApplicationRecord
     end
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
-      # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
-      # don't yet have a user_level, and need to provide enough data to create one
+      # user_level_data is provided so that we can get back to our user_level
+      # when updating. in some cases we don't yet have a user_level, and need
+      # to provide enough data to create one
+
+      # if we don't have a user level, consider ourselves locked
+      locked = user_level.nil? || user_level.show_as_locked?(self)
+      # if we don't have a user level, we can't be readonly
+      readonly = user_level.present? && user_level.show_as_readonly?(self)
       {
         user_level_data: {
           user_id: student.id,
@@ -472,9 +510,8 @@ class Lesson < ApplicationRecord
           script_id: script_level.script.id
         },
         name: student.name,
-        # if we don't have a user level, consider ourselves locked
-        locked: user_level ? user_level.locked?(self) : true,
-        readonly_answers: user_level ? !user_level.locked?(self) && user_level.readonly_answers? : false
+        locked: locked,
+        readonly_answers: readonly
       }
     end
   end

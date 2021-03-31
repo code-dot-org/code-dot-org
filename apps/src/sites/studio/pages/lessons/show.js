@@ -13,6 +13,7 @@ import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 $(document).ready(function() {
   displayLessonOverview();
@@ -45,6 +46,8 @@ function displayLessonOverview() {
       activitySection.displayName = activitySection.name || '';
       delete activitySection.name;
 
+      activitySection.duration = activitySection.duration || 0;
+
       activitySection.text = activitySection.description || '';
       delete activitySection.description;
 
@@ -63,6 +66,7 @@ function displayLessonOverview() {
   });
 
   const store = getStore();
+  registerReducers({isRtl});
 
   if (isTeacher) {
     store.dispatch(setViewType(ViewType.Teacher));

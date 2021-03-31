@@ -19,7 +19,7 @@ nl:
           description_audience: Leeftijden 4 + (pre lezers)
           lessons:
             'Artist: Loops':
-              name: 'Kustenaar: lussen'
+              name: 'Kunstenaar: lussen'
             'Artist: Sequence':
               name: 'Kunstenaar: volgorde'
             'Artist: Shapes':
@@ -64,7 +64,7 @@ nl:
             'Artist: Debugging':
               name: 'Kunstenaar: foutopsporing'
             'Artist: Loops':
-              name: 'Kustenaar: lussen'
+              name: 'Kunstenaar: lussen'
             'Artist: Nested Loops':
               name: 'Kunstenaar: geneste lussen'
             'Artist: Sequence':
@@ -240,7 +240,7 @@ nl:
             'Artist: Functions':
               name: 'Kunstenaar: Functies'
             'Artist: Loops':
-              name: 'Kustenaar: lussen'
+              name: 'Kunstenaar: lussen'
             'Artist: Nested Loops':
               name: 'Kunstenaar: geneste lussen'
             'Artist: Sequence':

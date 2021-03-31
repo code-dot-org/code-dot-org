@@ -11,6 +11,8 @@ tr:
       length: uzunluk
       min: min
       points: Puanlar
+      radius: yarıçap
+      sides: kenarlar
       size: boyut
       speed: hız
       theGuess: Tahmin

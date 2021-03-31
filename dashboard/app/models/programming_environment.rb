@@ -15,6 +15,8 @@
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
+  validates_uniqueness_of :name
+
   has_many :programming_expressions
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
@@ -43,5 +45,9 @@ class ProgrammingEnvironment < ApplicationRecord
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
     environment.update! properties
     environment.name
+  end
+
+  def summarize_for_lesson_edit
+    {id: id, name: name}
   end
 end

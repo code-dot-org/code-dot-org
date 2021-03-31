@@ -81,7 +81,7 @@ export default class ModelManagerDialog extends React.Component {
           handleClose={this.closeModelManager}
           useUpdatedStyles
         >
-          <h2>A.I Trained Models</h2>
+          <h2>AI Trained Models</h2>
           <div style={styles.left}>
             <select
               name="model"

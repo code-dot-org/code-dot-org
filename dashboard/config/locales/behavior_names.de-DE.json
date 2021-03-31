@@ -359,7 +359,7 @@
           "swimming left and right": "links und rechts schwimmend",
           "shrinking": "schrumpfend",
           "patrolling": "patrouillierend",
-          "wandering": "wandering",
+          "wandering": "wandernd",
           "growing": "wachsend",
           "jittering": "zitternd",
           "moving east": "nach Osten gehend",
@@ -383,7 +383,7 @@
         },
         "Fish Tank 6-validated_2019": {
           "swimming left and right": "links und rechts schwimmend",
-          "shrinking": "shrinking",
+          "shrinking": "schrumpfend",
           "patrolling": "patrouillierend",
           "wandering": "wandernd",
           "growing": "wachsend",

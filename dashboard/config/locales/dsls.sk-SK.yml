@@ -4630,3 +4630,73 @@ sk-SK:
           </p>
 
           <div style="clear: both">&nbsp;</div>
+      Unit 1 Lesson 1 Overview:
+        markdown: "#  Prehľad\n\nV tejto lekcii študenti pracujú v skupinách na navrhovaní
+          člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac
+          drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami
+          s touto aktivitou a spoja si ich s typmi riešenia problémov, ktoré budú
+          riešiť po zvyšok kurzu\n\nTrieda pracuje v skupinách \n\n## Materiál\n*[
+          Hliníkove člny](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          -Sprievodca aktivitami(ulož ako[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
+        teacher_markdown: "*  [Hliníkove člny - Príklad]\n(https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing)-
+          Sprievodca akvitami  \n(https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf)\n(https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))"
+      Unit 1 Lesson 2 Overview:
+        markdown: "# Prehľad\n\nV tejto lekcii sa naučíš všeobecný proces riešenia
+          problémov ,ktorý ti pomôže vhodne zvoliť prístup pri riešení najrôznejších
+          problémov \n\n## Materiál\n\n* [Proces riešenia problémov- Sprievodca aktivitami
+          ](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)\n"
+        teacher_markdown: "* [Proces riešenia problémov](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
+      Unit 1 Lesson 3 Overview:
+        teacher_markdown: "[Riešenie problémov KĽÚČ](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Sprievodca aktivitami ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
+      Building a UI with Design Mode:
+        markdown: "# Vitaj v dizajnovom režime App Labu \nV aplikácii App Lab ti \"dizajnový
+          režim\" umožňuje presúvať prvky používateľského rozhrania do aplikácie.\n\n###
+          Slovná zásoba\n**Používateľské rozhranie  (UI)** - Používateľské rozhranie
+          aplikácie alebo **UI** označuje spôsob interakcie osoby (používateľa) s
+          počítačom alebo aplikáciou. Existujú bežné vzory používateľských rozhraní,
+          o ktorých pravdepodobne viete len zo skúseností:\n\n* **Prvky používateľského
+          rozhrania** alebo objekty, ako sú tlačidlá, obrázky, textové polia, rozbaľovacie
+          ponuky, obrazovky atď. \n* **Udalosti používateľského rozhrania** alebo
+          ovládacie prvky, ako *klik*, *skrolovanie*, *pohyb myšou*, *zadanie klávesovej
+          skratky*, atď. \n\nApp Lab ti umožní ľahko pridať do aplikácie prvky používateľského
+          rozhrania a potom pridať kód, ktorý bude reagovať na interakciu používateľa
+          s týmito prvkami. Jedná sa o dvojkrokový proces, ale všetko sa o ňom dozvieš
+          v tejto lekcii.\n\nNa začiatok sa pozrime do Dizajnového režimu a pridáme
+          jeden prvok používateľského rozhrania (tlačidlo) do našej aplikácie. Neskôr
+          pridáme kód.\n\n<div style=\"column-count: 4; column-gap: 20px; column-rule:
+          0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">1.</span>\nNad
+          oblasťou aplikácie sa zobrazí nová skupina prepínačov, ktorá ti umožní prepínať
+          medzi \"dizajnovým režimom\" a \"programovacím režimom\".</p>\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">2.</span>Pridanie
+          prvku je také ľahké ako jeho presunutie do aplikácie, kamkoľvek chceš. Akonáhle
+          je na obrazovke aplikácie, môžeš ho upraviť, zmeniť jeho veľkosť a mnoho
+          ďalších vlastností. </p>\n\n<p style=\"break-after: always; -moz-column-break-after:
+          always; -webkit-column-break-after: always;\"><span style=\"font-weight:
+          bold; color: #00adbc; font-size: 200%;\">3.</span> Karta <em>Vlastnosti</em>
+          zobrazuje všetko, čo môžeš zmeniť vo vzhľade prvku používateľského rozhrania.</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">4.</span>
+          <strong>ID elementu</strong> je dôležité, pretože to je spôsob, akým odkazuješ
+          na prvok v kóde. O ID prvkov budeme diskutovať neskôr.</p>\n</div>\n\n![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)\n\n\n<div
+          style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc;
+          -moz-column-count: 3; width: 66%; float: right\">\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\"><span
+          style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">5.</span>Môžeš
+          vytvoriť ľubovoľný text, ktorý používateľ uvidí v texte tlačidla.</p>\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\"><span style=\"font-weight: bold; color: #00adbc; font-size: 200%;\">6.</span><strong>Poznámka:</strong>
+          Posunutím nadol zobrazíš ďalšie vlastnosti prvku UI, ktorý sa môže \"skrývať\"
+          dole.</p>\n</div>\n\n<div style=\"clear: both\"></div>\n<hr>\n\n**Teraz
+          si to vyskúšaj!**\n"
+        teacher_markdown: |
+          ### Najprv dizajn
+
+          Niektorí študenti môžu byť v pokušení začať sa hrať v programovacom režime príliš skoro, ale v tejto lekcii sa zameriame výlučne na simuláciu používateľského rozhrania. Dajte študentom vedieť, že sa ku kódu čoskoro dostanú. Týchto prvých pár úrovní umožní študentom zostaviť obrazovku ich vlastného dizajnu pomocou všetkých prvkov dostupných v App Lab bez obáv o skutočnú aplikáciu, ktorú vytvárajú.
