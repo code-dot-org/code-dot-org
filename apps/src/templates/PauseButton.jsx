@@ -36,6 +36,7 @@ const styles = {
 class PauseButton extends React.Component {
   static propTypes = {
     pauseHandler: PropTypes.func.isRequired,
+    marginRight: PropTypes.number,
     // from redux
     togglePause: PropTypes.func.isRequired,
     setArrowButtonDisabled: PropTypes.func.isRequired,
@@ -58,7 +59,8 @@ class PauseButton extends React.Component {
     const buttonStyle = {
       ...styles.button,
       ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor)
+      ...(this.props.isPaused && styles.pausedColor),
+      ...(this.props.marginRight && {marginRight: this.props.marginRight})
     };
 
     return (
