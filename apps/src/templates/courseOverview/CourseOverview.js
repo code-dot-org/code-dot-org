@@ -215,6 +215,10 @@ class CourseOverview extends Component {
             announcements={this.props.announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+            firehoseAnalyticsId={{
+              user_id: userId,
+              unit_group_id: id
+            }}
           />
         )}
         <div style={styles.titleWrapper}>

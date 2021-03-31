@@ -12,19 +12,13 @@
       "has_verified_resources": true,
       "show_calendar": true,
       "is_migrated": true,
-      "teacher_resources": [
-        [
-          "curriculum",
-          "/link/to/curriculum"
-        ]
-      ],
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:35 UTC",
+    "serialized_at": "2021-03-29 23:47:41 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -998,19 +992,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ea01201e-f86b-44dd-98ea-26bfe3a9833d",
-        "lesson.key": "Intellectual Property",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021"
-      }
-    },
-    {
-      "key": "391c0e99-bf8a-41dd-b7d7-4f4bc5512d60",
-      "position": 4,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "391c0e99-bf8a-41dd-b7d7-4f4bc5512d60",
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021"
@@ -3683,14 +3664,7 @@
       "key": "573f5302-83cb-4d32-a3d8-fc0fac1023c8",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Prompt:** Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \r\n\r\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \r\n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\r\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?"
       },
       "seeding_key": {
         "activity_section.key": "573f5302-83cb-4d32-a3d8-fc0fac1023c8",
@@ -3702,7 +3676,13 @@
       "position": 2,
       "properties": {
         "description": "When you create materials on the computer, you own them - they are your \"Intellectual Property\". Using materials created by someone else and trying to pass them off as your own is plagiarism when you don't have the creator's permissions. There may even be legal consequences for using these materials! \r\n\r\nHowever, we can see from our discussion that it can be complicated when we talk about ownership of digital information. Today we are going to explore these issues.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f74599a-6493-44c3-8441-ee4ca1ead7de",
@@ -3713,14 +3693,7 @@
       "key": "17e3d3b0-3bd0-4148-96dc-9d0e357fdbc8",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Distribute:** [r fortnite-article/csp/2021].",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "You may find that a topic about digital copyright is in the news when you are teaching this lesson.  It may be appropriate and relevant to use those news events in addition to, or instead of, the article in this lesson plan.  Any article you use should:\r\n\r\n* Discuss the complexities of owning and sharing digital information \r\n* Explore who benefits or is harmed by policies around copyright\r\n \r\nIf you find current news stories that also cover these points, you may want to consider using those articles here. This is also a good opportunity to visit the [forum](https://forum.code.org/c/csp) to share with other teachers the articles you found.\r\n"
-          }
-        ],
+        "description": "[slide]  **Distribute:** \n[r fortnite-article/csp/2021]",
         "name": "Activity Part 1: Read the Article (10 minutes)\r"
       },
       "seeding_key": {
@@ -3732,14 +3705,7 @@
       "key": "765d6127-9d1a-410a-b754-088c6e8e7cf4",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred tools of digital annotation, and may require some additional adjustments to some of the later annotation strategies in this lesson.\r\n\r\n"
-          }
-        ]
+        "description": "[slide]  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:"
       },
       "seeding_key": {
         "activity_section.key": "765d6127-9d1a-410a-b754-088c6e8e7cf4",
@@ -3761,14 +3727,7 @@
       "key": "2b7ef6a7-c84a-4a7a-ae09-a6f0e04e8b81",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\r\n"
-          }
-        ]
+        "description": "[slide]  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
       },
       "seeding_key": {
         "activity_section.key": "2b7ef6a7-c84a-4a7a-ae09-a6f0e04e8b81",
@@ -3779,7 +3738,13 @@
       "key": "2f72c6c9-8304-4417-907d-5e2a1514101f",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?"
+        "description": "[slide] **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may find that a topic about digital copyright is in the news when you are teaching this lesson.  It may be appropriate and relevant to use those news events in addition to, or instead of, the article in this lesson plan.  Any article you use should:\n\n* Discuss the complexities of owning and sharing digital information \n* Explore who benefits or is harmed by policies around copyright\n \nIf you find current news stories that also cover these points, you may want to consider using those articles here. This is also a good opportunity to visit the [forum](https://forum.code.org/c/csp) to share with other teachers the articles you found.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f72c6c9-8304-4417-907d-5e2a1514101f",
@@ -3806,9 +3771,8 @@
         "description": "* [slide]  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* [slide] Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* [slide] Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
-            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos.\r\n"
+            "markdown": "**To Print or Not To Print?** This lesson is written assuming that you have printed out the article and have it physically available for students to write on, even though it is also possible to have students interact with this text digitally. If students read the article digitally, it is most important that they still follow the active reading strategies outlined in this lesson - highlighting the text, writing in the margins, and summarizing. This may require some additional time & instruction to teach students your preferred tools of digital annotation, and may require some additional adjustments to some of the later annotation strategies in this lesson.\n\n"
           }
         ]
       },
@@ -3845,14 +3809,7 @@
       "key": "990d9cac-8d69-4e27-8d81-cd13613104a0",
       "position": 10,
       "properties": {
-        "description": "[slide] **Do This:** Have students re-read the article in order to answer these questions:",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Activity Repetition:** This aspect of the lesson - reading an article and looking at these questions - is repeated in tomorrow’s lesson as well. Students are presented with a different set of articles to examine and must also identify benefits, harms, and impacts. Having them complete this same task today acts as a scaffold to prepare students to read an article with purpose. As you circulate and work with students, offer reading tips and strategies that will help them complete this similar task independently tomorrow.\r\n\r\n\r\n"
-          }
-        ]
+        "description": "[slide] **Do This:** Have students re-read the article in order to answer these questions:"
       },
       "seeding_key": {
         "activity_section.key": "990d9cac-8d69-4e27-8d81-cd13613104a0",
@@ -3863,7 +3820,21 @@
       "key": "754cf8cd-ea45-401d-a6c3-a694639b4f79",
       "position": 11,
       "properties": {
-        "description": "* What was digitized?\r\n* What was the goal or purpose of digitizing this thing?\r\n* Is someone benefiting from this situation? If so, who?\r\n* Is someone being harmed in this situation? If so, who?\r\n* Are these impacts intended or unintended? How do you know?\r\n\r\nStudents should continue to annotate the article by adding the following symbols:\r\n\r\n* Add a + next to sentences that show benefit\r\n* Add a - next to sentences that show harm\r\n* Add a face next to sentences that show impact\r\n\r\n[slide] **Prompt:** Share some of the sentences you annotated. Did everyone identify the same areas?"
+        "description": "* What was digitized?\r\n* What was the goal or purpose of digitizing this thing?\r\n* Is someone benefiting from this situation? If so, who?\r\n* Is someone being harmed in this situation? If so, who?\r\n* Are these impacts intended or unintended? How do you know?\r\n\r\nStudents should continue to annotate the article by adding the following symbols:\r\n\r\n* Add a + next to sentences that show benefit\r\n* Add a - next to sentences that show harm\r\n* Add a face next to sentences that show impact\r\n\r\n[slide] **Prompt:** Share some of the sentences you annotated. Did everyone identify the same areas?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "The videos in this section are sourced from the [Copyright & Creativity for Ethical Digital Citizens Curriculum](https://www.copyrightandcreativity.org/high-school/). Credit to the Internet Education Foundation and iKeepSafe for these videos.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Repetition:** This aspect of the lesson - reading an article and looking at these questions - is repeated in tomorrow’s lesson as well. Students are presented with a different set of articles to examine and must also identify benefits, harms, and impacts. Having them complete this same task today acts as a scaffold to prepare students to read an article with purpose. As you circulate and work with students, offer reading tips and strategies that will help them complete this similar task independently tomorrow.\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "754cf8cd-ea45-401d-a6c3-a694639b4f79",
@@ -3886,14 +3857,7 @@
       "key": "7aacda94-7277-46d1-9f70-251d4dce508d",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Do This:**",
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "**Creating the Artifact:** This is another aspect of the lesson that will be repeated in tomorrow’s project - students will create an artifact that will be displayed for their peers to see, and this artifact must also include references to the text they read. Displaying the artifacts from today’s lesson acts as a model for what students will be expected to do independently in tomorrow’s lesson.\n\n\n"
-          }
-        ]
+        "description": "[slide]  **Do This:**"
       },
       "seeding_key": {
         "activity_section.key": "7aacda94-7277-46d1-9f70-251d4dce508d",
@@ -3916,7 +3880,13 @@
       "position": 4,
       "properties": {
         "description": "Today we learned about Creative Commons, a license that allows you to freely use materials created by others. There are a few other licenses that you may have heard about that also allow access:\n\n* Open Source: programs that are made freely available and may be redistributed and modified.\n* Open Access: online research output free of restrictions to access and use\n\nYou do have options when you want to ethically use others' materials! Because of these licenses, we have access to a wide variety of digital materials. \n\nTo close, when you use these materials, always make sure to cite where you found your sources. Citations come in many forms - it could be a link, or a description of where you found the source. There are formal versions of citations recommended by various organizations, but generally the most important thing to remember when citing a source is to provide as much information as possible about the materials you are using.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Creating the Artifact:** This is another aspect of the lesson that will be repeated in tomorrow’s project - students will create an artifact that will be displayed for their peers to see, and this artifact must also include references to the text they read. Displaying the artifacts from today’s lesson acts as a model for what students will be expected to do independently in tomorrow’s lesson.\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d42116d6-1656-4ef4-9e76-96ea6b729f65",
@@ -3947,18 +3917,6 @@
       }
     },
     {
-      "key": "b7684656-3581-4d68-a76c-e7a85aa36f9c",
-      "position": 1,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c",
-        "lesson_activity.key": "391c0e99-bf8a-41dd-b7d7-4f4bc5512d60"
-      }
-    },
-    {
       "key": "c1b31340-2112-4d99-b8ca-ca7025267e3a",
       "position": 1,
       "properties": {
@@ -3974,14 +3932,7 @@
       "key": "65a34bc3-2aaa-45ed-ad11-666131494553",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Prompt:** Is our world better or worse because of digital representation? Place a sticky note (or draw an X) on the board at the place on the line that feels right to you right now.",
-        "tips": [
-          {
-            "key": "discussion",
-            "type": "discussionGoal",
-            "markdown": "**Goal:** This activity is supposed to be open-ended and something that students come back to at the end of this lesson and the following one. Don't enforce too many rules and don't spend too much time. Just ask them to make a decision and let them know they'll have a chance to make a change to their choice at the end of the next two lessons.\n\nWhen students have filled in the spectrum it will look something like the drawing below. \n\n![](https://images.code.org/8ce9e193210753e29ae826918ab92b0c-image-1611866479179.jpg)"
-          }
-        ]
+        "description": "[slide]  **Prompt:** Is our world better or worse because of digital representation? Place a sticky note (or draw an X) on the board at the place on the line that feels right to you right now."
       },
       "seeding_key": {
         "activity_section.key": "65a34bc3-2aaa-45ed-ad11-666131494553",
@@ -3993,7 +3944,13 @@
       "position": 3,
       "properties": {
         "description": "We're going to think more about this question together. You'll have a chance once we've done some more digging to update your answer if you like.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This activity is supposed to be open-ended and something that students come back to at the end of this lesson and the following one. Don't enforce too many rules and don't spend too much time. Just ask them to make a decision and let them know they'll have a chance to make a change to their choice at the end of the next two lessons.\n\nWhen students have filled in the spectrum it will look something like the drawing below. \n\n![](https://images.code.org/8ce9e193210753e29ae826918ab92b0c-image-1611866479179.jpg)\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "90867336-ae6a-4363-95de-1a288ba6795b",
@@ -4007,7 +3964,6 @@
         "description": "Yesterday, you stated an opinion on a copyright issue based on reading an article. Today, you will get to choose an article to read and respond to, focusing on the digital dilemma: Is our world better or worse?",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "**Role of the Assessment:** In this lesson, students begin a two day project where they will demonstrate their understanding of key issues surrounding digital information. This project is designed to be used in tandem with the Unit 1 Assessment to evaluate student progress in Unit 1 content. You may find after this assessment that students are confused about how some things are represented digitally. This is a good opportunity to go back and review key takeaways from previous lessons before continuing on to the Unit 1 Assessment. \n"
           }
@@ -4037,7 +3993,6 @@
         "description": "[slide]  **Prompt:** Share your 10 word summary with the group and discuss the main content in the articles. Together look up any unfamiliar words or concepts.",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** At the end of this time, students should feel comfortable with the content of their articles. Opinions will be shared later. \n"
           }
@@ -4101,7 +4056,6 @@
         "description": "[slide]  **Do This:** Complete the top two quadrants.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Student answers will vary. Students could answer in complete sentences, draw pictures, or use other creative ways to represent information. \n"
           }
@@ -4142,7 +4096,6 @@
         "description": "[slide]  **Prompt:** Do you think there is always both a benefit and a harm to digitizing analog content? Why or why not?",
         "tips": [
           {
-            "key": "discussion",
             "type": "discussionGoal",
             "markdown": "**Goal:** Answers will vary. The goal here is for students to start thinking about the tradeoffs when it comes to digitizing the world. \r\n"
           }
@@ -5203,7 +5156,7 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Text Compression",
         "level_keys": [
@@ -5229,7 +5182,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Text Compression Widget with Aloe Blacc",
         "level_keys": [
@@ -5307,7 +5260,7 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5333,7 +5286,7 @@
       "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5387,7 +5340,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Creative Commons_2021"
         ]
@@ -5401,7 +5353,7 @@
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c"
+        "activity_section.key": "9baa05b0-d7d8-4065-9ac2-ba33023ff793"
       },
       "level_keys": [
         "U1L12 CFU Creative Commons_2021"
@@ -5413,7 +5365,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding",
         "level_keys": [
           "U1L12 CFU Copyright_2021"
         ]
@@ -5427,7 +5378,7 @@
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c"
+        "activity_section.key": "9baa05b0-d7d8-4065-9ac2-ba33023ff793"
       },
       "level_keys": [
         "U1L12 CFU Copyright_2021"
@@ -5966,7 +5917,7 @@
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c"
+        "activity_section.key": "9baa05b0-d7d8-4065-9ac2-ba33023ff793"
       }
     },
     {
@@ -5978,7 +5929,7 @@
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "b7684656-3581-4d68-a76c-e7a85aa36f9c"
+        "activity_section.key": "9baa05b0-d7d8-4065-9ac2-ba33023ff793"
       }
     },
     {
