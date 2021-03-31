@@ -217,12 +217,10 @@ export default class CdoBramble {
   }
 
   uploadAllFilesToServer(callback) {
-    this.shell().ls(this.projectPath, (err, entries) => {
+    this.getAllFileData((err, files) => {
       if (err) {
-        console.error(
-          `CdoBramble failed to receive file entries from Bramble. ${err}`
-        );
         callback(err);
+        return;
       }
 
       const uploadEntry = index => {
@@ -233,26 +231,20 @@ export default class CdoBramble {
           }
 
           this.lastSyncedVersionId = newVersionId;
-          if (index >= entries.length - 1) {
+          if (index >= files.length - 1) {
             callback(null, true /* preWriteHook was successful */);
           } else {
             uploadEntry(index + 1);
           }
         };
 
-        const filename = entries[index].path; // 'path' is relative, so it will be the filename.
-        this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
-          if (err) {
-            callback(err);
-          } else {
-            this.api.changeProjectFile(
-              filename,
-              fileData,
-              next,
-              true /* skipPreWriteHook because we are calling from the preWriteHook */
-            );
-          }
-        });
+        const {name, data} = files[index];
+        this.api.changeProjectFile(
+          name,
+          data,
+          next,
+          true /* skipPreWriteHook because we are calling from the preWriteHook */
+        );
       };
 
       uploadEntry(0);
@@ -333,7 +325,26 @@ export default class CdoBramble {
   }
 
   getFileData(path, callback) {
-    this.fileSystem().readFile(path, {encoding: null}, callback);
+    this.fileSystem().readFile(path, {encoding: null}, (err, fileData) => {
+      err &&
+        console.error(`CdoBramble unable to read ${path} from Bramble. ${err}`);
+
+      callback(err, fileData);
+    });
+  }
+
+  getAllFileData(callback) {
+    this.shell().ls(this.projectPath, (err, entries) => {
+      if (err) {
+        console.error(
+          `CdoBramble failed to receive file entries from Bramble. ${err}`
+        );
+        callback(err);
+      }
+
+      const filenames = entries?.map(entry => entry.path); // 'path' is relative, so it will be the filename.
+      this.recursivelyReadFiles(filenames, 0, [], callback);
+    });
   }
 
   writeFileData(path, data, callback) {
@@ -368,6 +379,42 @@ export default class CdoBramble {
 
   deleteProject(callback) {
     this.shell().rm(this.projectPath, {recursive: true}, callback);
+  }
+
+  recursivelyReadFiles(
+    filenames,
+    currentIndex,
+    currentFileData,
+    finalCallback
+  ) {
+    if (filenames?.length <= 0 || !filenames[currentIndex]) {
+      finalCallback(null, currentFileData);
+      return;
+    }
+
+    const filename = filenames[currentIndex];
+    const next = err => {
+      err &&
+        console.error(
+          `CdoBramble could not read file ${filename} - skipping. ${err}`
+        );
+
+      if (currentIndex >= filenames.length - 1) {
+        finalCallback(null, currentFileData);
+      } else {
+        this.recursivelyReadFiles(
+          filenames,
+          currentIndex + 1,
+          currentFileData,
+          finalCallback
+        );
+      }
+    };
+
+    this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
+      !err && currentFileData.push({name: filename, data: fileData.toString()});
+      next(err);
+    });
   }
 
   recursivelyWriteFiles(files, currentIndex, finalCallback) {
@@ -453,6 +500,49 @@ export default class CdoBramble {
     if (!url && !data) {
       return new Error(`${name} has neither url nor data.`);
     }
+  }
+
+  validateProjectChanged(callback) {
+    const startSourceFiles = this.api.getStartSources()?.files;
+    this.getAllFileData((err, userFiles) => {
+      // Don't block user if Bramble errors.
+      if (err || userFiles?.length !== startSourceFiles.length) {
+        callback(true /* projectChanged */);
+        return;
+      }
+
+      // Map array of files to an object with structure {filename: fileData}
+      const reduceToObj = filesArray =>
+        filesArray.reduce((acc, val) => {
+          acc[val.name] = val.data;
+          return acc;
+        }, {});
+      const startObj = reduceToObj(startSourceFiles);
+      const userObj = reduceToObj(userFiles);
+
+      // If startFile doesn't have `data` (and instead has something different like `url`),
+      // it is an image and is stored differently in startSources than in Bramble.
+      // In that case, check for a matching file name, but don't compare data.
+      // Regex: Compare without whitespace.
+      const projectChanged = Object.keys(startObj).reduce(
+        (hasChanged, currentFilename) => {
+          if (!userObj.hasOwnProperty(currentFilename)) {
+            hasChanged = true;
+          } else {
+            const dataChanged =
+              startObj[currentFilename]?.replace(/\s+/g, '') !==
+              userObj[currentFilename]?.replace(/\s+/g, '');
+            if (startObj[currentFilename] && dataChanged) {
+              hasChanged = true;
+            }
+          }
+
+          return hasChanged;
+        },
+        false
+      );
+      callback(projectChanged);
+    });
   }
 
   fileSystem() {
