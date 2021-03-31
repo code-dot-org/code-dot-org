@@ -148,6 +148,12 @@ class LessonOverview extends Component {
                 <LessonStandards standards={lesson.standards} />
               </div>
             )}
+            {lesson.opportunityStandards.length > 0 && (
+              <div>
+                <h2>{i18n.crossCurricularOpportunities()}</h2>
+                <LessonStandards standards={lesson.opportunityStandards} />
+              </div>
+            )}
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
