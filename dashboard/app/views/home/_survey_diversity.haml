@@ -1,16 +1,6 @@
-- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLScg0PJasQW-uJ3TVR9dIgseGs_xnOHOWLeWJq7bYfIkgjIunA/viewform?usp=pp_url&entry.1305684097=#{current_user.id}"
-
 #diversity_survey
   #surveythanks{style: "display: none; "}
     Thank you for telling us about your students!
-    %br/
-    %br/
-    We're continuing to make improvements to our student and teacher tools.  We'd love your feedback on how we can make them work best for your classroom.
-    %br/
-    %br/
-    %a{href: survey_url, target: "_blank"}
-      %button.btn-primary
-        Go to survey
 
   #surveybody
     #headingarea
@@ -22,37 +12,17 @@
           %a#privacylink{href: CDO.code_org_url('/privacy'), target: "_blank"} privacy policy
 
     = form_for(SurveyResult.new, html: {id: 'survey', onsubmit: "return window.submitSurvey(true)"}) do |f|
-      .survey_left
+      .survey_questions
         %ol
           %li
-            Of your students using Code.org's courses, how many are
+            Of your students using Code.org's courses, how many identify as:
         .dots
           - SurveyResult::ETHNICITIES.each do |key, value|
             %input#ethnicity_input{maxlength: "3", name: "survey[diversity_#{key}]", placeholder: "0"}
             = value
             %br/
-      .survey_right
 
-        %ol{start: 2}
-          %li
-            What is the percentage of students with free and reduced meals (FARMs) at your school?
-            .subtext
-              Only answer this if you're using Code Studio during school hours.
-        .dots
-          - (0..9).each do |index|
-            - if index.between?(0,7)
-              - value = index * 10
-              - max_value = value == 70 ? 100 : (value+9)
-              - text = "#{value}-#{max_value}%"
-            - elsif index == 8
-              - text = "My school has a Title I designation, but I’m not sure what our rate of Free and Reduced lunch is."
-            - else
-              - text = "Other"
-            .dot
-              %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_farm]", value: index}
-              %label{for: "radio_#{index}"}= text
-
-      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2019}
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2021}
 
       #submit
         %button.btn-primary#submitSurvey{type: "submit"} Submit
