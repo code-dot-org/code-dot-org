@@ -1083,8 +1083,6 @@ const panelList = [
 */
 
 function isPanelEnabled(state, panelId) {
-  const mode = state.mode;
-
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
       return false;
