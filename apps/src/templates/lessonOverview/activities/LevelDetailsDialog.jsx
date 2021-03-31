@@ -170,6 +170,8 @@ class LevelDetailsDialog extends Component {
           }
           collapsible={false}
           resizable={false}
+          serverLevelId={parseInt(level.id)}
+          serverScriptId={this.state.scriptLevel.scriptId}
         />
       );
     } else {

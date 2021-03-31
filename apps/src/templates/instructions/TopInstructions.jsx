@@ -721,6 +721,9 @@ class TopInstructions extends Component {
                 ref={ref => (this.commentTab = ref)}
                 latestFeedback={feedbacks}
                 token={token}
+                serverScriptId={this.props.serverScriptId}
+                serverLevelId={this.props.serverLevelId}
+                teacher={this.props.user}
               />
             )}
             {this.isViewingAsTeacher &&
