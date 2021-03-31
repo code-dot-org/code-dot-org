@@ -450,8 +450,17 @@ describe('ScriptEditor', () => {
   });
 
   describe('Professional Learning Course', () => {
-    it('successfully launch plc course', () => {
+    it('disable launching plc course without title and professional learning course', () => {
       const wrapper = createWrapper({});
+
+      const launchButton = wrapper.find('Button[name="launch_plc_course"]');
+      expect(launchButton.contains('Launch PLC Course')).to.be.true;
+      expect(launchButton.props().disabled).to.be.true;
+    });
+    it('successfully launch plc course', () => {
+      const wrapper = createWrapper({
+        initialProfessionalLearningCourse: 'PLC Course'
+      });
       const scriptEditor = wrapper.find('ScriptEditor');
 
       const launchButton = wrapper.find('Button[name="launch_plc_course"]');
@@ -473,10 +482,14 @@ describe('ScriptEditor', () => {
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
         'Course Launched'
       );
+
+      server.restore();
     });
 
     it('launch plc course gives error', () => {
-      const wrapper = createWrapper({});
+      const wrapper = createWrapper({
+        initialProfessionalLearningCourse: 'PLC Course'
+      });
       const scriptEditor = wrapper.find('ScriptEditor');
 
       const launchButton = wrapper.find('Button[name="launch_plc_course"]');
@@ -499,6 +512,8 @@ describe('ScriptEditor', () => {
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
         'There was an error'
       );
+
+      server.restore();
     });
   });
 });
