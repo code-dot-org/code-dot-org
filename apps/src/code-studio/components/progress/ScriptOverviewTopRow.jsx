@@ -94,6 +94,11 @@ class ScriptOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes
     } = this.props;
 
+    // Adjust styles if locale is RTL
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMarginLTR;
+
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
         {!professionalLearningCourse && viewAs === ViewType.Student && (
@@ -110,7 +115,7 @@ class ScriptOverviewTopRow extends React.Component {
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={isRtl ? styles.buttonMarginRTL : styles.buttonMarginLTR}
+              style={buttonMarginStyle}
             />
             {assignedSectionId && <Assigned />}
           </div>

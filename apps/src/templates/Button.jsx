@@ -241,6 +241,8 @@ class Button extends React.Component {
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
+
+    // Adjust styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const directionalIconStyle = isRtl ? styles.iconRTL : styles.icon;
 

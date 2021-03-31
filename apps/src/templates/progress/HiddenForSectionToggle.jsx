@@ -48,12 +48,15 @@ export default class HiddenForSectionToggle extends React.Component {
 
   render() {
     const {hidden, disabled, onChange} = this.props;
+
+    // Reverse button order if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const mainStyle = {
       ...styles.main,
       ...(disabled && styles.disabled),
       ...(isRtl ? styles.reverseButtons : null)
     };
+
     return (
       <div style={mainStyle} className="uitest-togglehidden">
         <Button

@@ -100,7 +100,15 @@ class ProgressBubbleSet extends React.Component {
       selectedStudentId,
       hideAssessmentIcon
     } = this.props;
+
+    // Adjust background styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
+    const backgroundFirstStyle = isRtl
+      ? styles.backgroundLast
+      : styles.backgroundFirst;
+    const backgroundLastStyle = isRtl
+      ? styles.backgroundFirst
+      : styles.backgroundLast;
 
     return (
       <div style={styles.withBackground} key={index}>
@@ -110,13 +118,11 @@ class ProgressBubbleSet extends React.Component {
             level.isConceptLevel && styles.backgroundDiamond,
             isSublevel && styles.backgroundSublevel,
             level.isUnplugged && styles.backgroundPill,
-            !isSublevel &&
-              index === 0 &&
-              (isRtl ? styles.backgroundLast : styles.backgroundFirst),
+            !isSublevel && index === 0 && backgroundFirstStyle,
             !isSublevel &&
               !level.sublevels &&
               index === levels.length - 1 &&
-              (isRtl ? styles.backgroundFirst : styles.backgroundLast)
+              backgroundLastStyle
           ]}
         />
         <div

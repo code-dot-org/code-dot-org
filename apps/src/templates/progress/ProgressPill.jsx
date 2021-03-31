@@ -103,6 +103,7 @@ class ProgressPill extends React.Component {
         levelProgressStyle(levels[0].status, levels[0].kind, false))
     };
 
+    // Adjust icon margins if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const iconMarginStyle = isRtl ? styles.iconMarginRTL : styles.iconMargin;
 

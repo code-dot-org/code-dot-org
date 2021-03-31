@@ -46,12 +46,11 @@ export default class ToggleGroup extends Component {
   }
 
   render() {
+    // Reverse children order if locale is RTL
     const isRtl = getStore().getState().isRtl;
-    return (
-      <span style={isRtl ? styles.buttonReverse : null}>
-        {this.renderChildren()}
-      </span>
-    );
+    const spanStyle = isRtl ? styles.buttonReverse : null;
+
+    return <span style={spanStyle}>{this.renderChildren()}</span>;
   }
 
   renderChildren() {

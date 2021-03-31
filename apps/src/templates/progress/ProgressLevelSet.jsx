@@ -84,6 +84,8 @@ class ProgressLevelSet extends React.Component {
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
+
+    // Adjust column styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const col2Style = isRtl ? styles.col2RTL : styles.col2;
 
