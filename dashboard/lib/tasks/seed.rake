@@ -248,6 +248,10 @@ namespace :seed do
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
 
+      # This is only expected to happen when DSL_FILENAME is set and the
+      # filename is not found
+      raise "no matching dsl-defined level files found" unless dsls_glob.count > 0
+
       # Parse each .[dsl] file and setup its model.
       dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
