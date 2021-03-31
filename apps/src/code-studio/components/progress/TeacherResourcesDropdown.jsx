@@ -18,8 +18,8 @@ const styles = {
 
 export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape),
-    migratedResources: PropTypes.arrayOf(PropTypes.object),
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object),
     useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose
@@ -64,10 +64,14 @@ export default class TeacherResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {resources, migratedResources, useMigratedResources} = this.props;
+    const {
+      teacherResources,
+      migratedTeacherResources,
+      useMigratedResources
+    } = this.props;
 
     const dropdownResources = useMigratedResources
-      ? migratedResources.map(resource => (
+      ? migratedTeacherResources.map(resource => (
           <a
             key={resource.key}
             href={resource.url}
@@ -78,7 +82,7 @@ export default class TeacherResourcesDropdown extends React.Component {
             {resource.name}
           </a>
         ))
-      : resources.map(({type, link}, index) => (
+      : teacherResources.map(({type, link}, index) => (
           <a
             key={index}
             href={link}

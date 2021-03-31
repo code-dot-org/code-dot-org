@@ -12,7 +12,7 @@ describe('ResourcesEditor', () => {
     updateTeacherResources = sinon.spy();
     defaultProps = {
       inputStyle: {},
-      resources: [
+      teacherResources: [
         {link: '', type: ''},
         {link: '', type: ''},
         {link: '', type: ''},
@@ -33,7 +33,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -54,7 +54,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -92,7 +92,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -122,8 +122,8 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={undefined}
-        migratedResources={[
+        teacherResources={undefined}
+        migratedTeacherResources={[
           {
             id: 1,
             name: 'Curriculum',

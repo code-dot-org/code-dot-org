@@ -19,8 +19,8 @@ export default class CourseOverviewTopRow extends Component {
   static propTypes = {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     id: PropTypes.number.isRequired,
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
-    migratedResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object),
     showAssignButton: PropTypes.bool,
     useMigratedResources: PropTypes.bool.isRequired
   };
@@ -28,8 +28,8 @@ export default class CourseOverviewTopRow extends Component {
   render() {
     const {
       id,
-      resources,
-      migratedResources,
+      teacherResources,
+      migratedTeacherResources,
       showAssignButton,
       sectionsForDropdown,
       useMigratedResources
@@ -37,10 +37,11 @@ export default class CourseOverviewTopRow extends Component {
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {resources.length > 0 && (
+        {((useMigratedResources && migratedTeacherResources.length > 0) ||
+          (!useMigratedResources && teacherResources.length > 0)) && (
           <TeacherResourcesDropdown
-            resources={resources}
-            migratedResources={migratedResources}
+            teacherResources={teacherResources}
+            migratedTeacherResources={migratedTeacherResources}
             unitGroupId={id}
             useMigratedResources={useMigratedResources}
           />

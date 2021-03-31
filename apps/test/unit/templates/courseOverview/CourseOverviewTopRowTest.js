@@ -8,7 +8,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
-  resources: [],
+  teacherResources: [],
   showAssignButton: true,
   useMigratedResources: false
 };
@@ -23,7 +23,7 @@ describe('CourseOverviewTopRow', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: '/link/to/curriculum'
@@ -41,27 +41,27 @@ describe('CourseOverviewTopRow', () => {
     );
     assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[0].type,
       ResourceType.curriculum
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[0].link,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[1].type,
       ResourceType.professionalLearning
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[1].link,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[2].type,
       ResourceType.teacherForum
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[2].link,
       'https://forum.code.org/'
     );
   });
@@ -70,7 +70,7 @@ describe('CourseOverviewTopRow', () => {
     const wrapper = shallow(
       <CourseOverviewTopRow
         {...defaultProps}
-        resources={[
+        migratedTeacherResources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -92,31 +92,38 @@ describe('CourseOverviewTopRow', () => {
     );
     assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources.length,
+      wrapper.find('TeacherResourcesDropdown').props().migratedTeacherResources
+        .length,
       3
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].name,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[0].name,
       'Curriculum'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].url,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[0].url,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].name,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[1].name,
       'Professional Learning'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].url,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[1].url,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].name,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[2].name,
       'Teacher Forum'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].url,
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[2].url,
       'https://forum.code.org/'
     );
   });
