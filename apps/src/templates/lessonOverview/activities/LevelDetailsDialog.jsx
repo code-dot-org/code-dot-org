@@ -283,6 +283,7 @@ class LevelDetailsDialog extends Component {
           />
           <Button
             href={level.url || scriptLevel.url}
+            target={'_blank'}
             text={i18n.seeFullLevel()}
             color={'orange'}
             __useDeprecatedTag
