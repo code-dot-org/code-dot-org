@@ -156,6 +156,7 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
+    // Adjust caret style if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
 

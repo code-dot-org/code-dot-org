@@ -123,6 +123,7 @@ class LessonGroup extends React.Component {
       viewAs
     } = this.props;
 
+    // Adjust styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
 

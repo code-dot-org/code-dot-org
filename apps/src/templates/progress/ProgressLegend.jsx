@@ -111,6 +111,7 @@ export default class ProgressLegend extends Component {
 
     const secondRowRowSpan = 2;
 
+    // Adjust icon and border styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const iconStyle = isRtl ? styles.iconRTL : styles.icon;
     const sideBorderStyle = isRtl ? styles.leftBorder : styles.rightBorder;

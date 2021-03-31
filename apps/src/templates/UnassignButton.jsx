@@ -42,10 +42,13 @@ class UnassignButton extends React.Component {
 
   render() {
     const {text, icon} = this.state;
+
+    // Adjust styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
       : styles.buttonMargin;
+
     return (
       <div
         onMouseOver={this.onMouseOver}

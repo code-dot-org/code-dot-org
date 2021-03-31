@@ -80,6 +80,8 @@ class AssignButton extends React.Component {
   render() {
     const {confirmationDialogOpen} = this.state;
     const {assignmentName, sectionName} = this.props;
+
+    // Adjust styles if locale is RTL
     const isRtl = getStore().getState().isRtl;
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
