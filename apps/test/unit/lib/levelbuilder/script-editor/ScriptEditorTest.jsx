@@ -457,7 +457,7 @@ describe('ScriptEditor', () => {
       server.respondWith('PUT', `/plc/Test-Script/launch`, [
         200,
         {'Content-Type': 'application/json'},
-        'Success'
+        JSON.stringify({})
       ]);
 
       launchButton.simulate('click');
