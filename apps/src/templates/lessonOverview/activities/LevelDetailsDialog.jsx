@@ -170,6 +170,8 @@ class LevelDetailsDialog extends Component {
           }
           collapsible={false}
           resizable={false}
+          serverLevelId={parseInt(level.id)}
+          serverScriptId={this.state.scriptLevel.scriptId}
         />
       );
     } else {
@@ -283,6 +285,7 @@ class LevelDetailsDialog extends Component {
           />
           <Button
             href={level.url || scriptLevel.url}
+            target={'_blank'}
             text={i18n.seeFullLevel()}
             color={'orange'}
             __useDeprecatedTag
