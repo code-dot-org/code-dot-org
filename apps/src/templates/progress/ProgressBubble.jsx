@@ -152,8 +152,9 @@ class ProgressBubble extends React.Component {
 
     const number = level.levelNumber;
     const url = level.url;
-    const levelName =
-      level.display_name || level.name || level.progressionDisplayName;
+    const levelName = this.props.smallBubble
+      ? level.display_name || level.name
+      : level.name || level.progressionDisplayName;
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
