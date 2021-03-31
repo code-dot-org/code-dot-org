@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-03-29 18:45:06 UTC",
+    "serialized_at": "2021-03-30 17:28:00 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -412,7 +412,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "In this **standalone** lesson, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
+        "overview": "In this **exploratory** lesson, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
         "student_overview": "Classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "purpose": "This lesson is designed to quickly introduce students to machine learning, a type of artificial intelligence. Students will explore how training data is used to enable a machine learning model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. "
@@ -431,7 +431,7 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "In this **standalone** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
+        "overview": "In this **exploratory** lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.",
         "student_overview": "Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.",
         "purpose": "If you have been doing every lesson in this course, then each student in your classroom has used the internet... but how many know how it works? Learning more about the internet will help students develop a better understanding of its endless possibilities.",
         "preparation": "- Watch the ***Internet** - Teacher Video.\n- Print enough ***IP Address Cards and Delivery Type Cards** - Manipulatives for each group.\n- Print one ***Internet** Assessment - for each student.\n- Access to the internet (such as ***get-site-ip.com**.\n- Make sure every student has a reflection journal.",
@@ -452,7 +452,7 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "overview": "In this **standalone** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
+        "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "student_overview": "In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "unplugged": true,
         "purpose": "Through learning about accessibility, students recognize the impacts of computing beyond their own lives. Accessibility might not seem like a relevant CS topic, but creating technology that is accessible for underserved users helps make tech better for everyone else as well. ",
@@ -1678,7 +1678,7 @@
       "key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
       "position": 3,
       "properties": {
-        "description": "**Do this:** Using the lesson warm up slides, or this ***sample project**, show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
+        "description": "**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/), show students the animation of the ant and dragonfly.\n\n**Discuss:** _How would you describe this sprite scene?\nIf you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?\n"
       },
       "seeding_key": {
         "activity_section.key": "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5",
@@ -7852,7 +7852,7 @@
       }
     },
     {
-      "name": "sample project",
+      "name": "Sample Project",
       "url": "https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/",
       "key": "sample_project",
       "properties": {
@@ -7861,6 +7861,18 @@
       },
       "seeding_key": {
         "resource.key": "sample_project"
+      }
+    },
+    {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -8223,8 +8235,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "making_sprites"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "sprites_in_action"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -8243,6 +8273,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "text_and_prompts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -9000,27 +9036,7 @@
     }
   ],
   "lessons_programming_expressions": [
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_printText"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_jumpTo"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Virtual Pet",
-        "programming_environment.name": "spritelab",
-        "programming_expression.key": "gamelab_keyPressed"
-      }
-    }
+
   ],
   "objectives": [
     {
@@ -9495,6 +9511,111 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Loops with the Artist",
