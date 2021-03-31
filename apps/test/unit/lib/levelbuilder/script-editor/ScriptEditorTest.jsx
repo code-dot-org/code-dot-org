@@ -18,8 +18,9 @@ import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
 describe('ScriptEditor', () => {
-  let defaultProps, store;
+  let defaultProps, store, server;
   beforeEach(() => {
+    server = sinon.fakeServer.create();
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
@@ -73,6 +74,7 @@ describe('ScriptEditor', () => {
   afterEach(() => {
     restoreRedux();
     utils.navigateToHref.restore();
+    server.restore();
   });
 
   const createWrapper = overrideProps => {
@@ -219,7 +221,6 @@ describe('ScriptEditor', () => {
       let returnData = {
         scriptPath: '/s/test-script'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
@@ -256,7 +257,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
@@ -283,8 +283,6 @@ describe('ScriptEditor', () => {
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
-
-      server.restore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
@@ -292,7 +290,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
@@ -318,8 +315,6 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-
-      server.restore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
@@ -330,7 +325,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
@@ -356,8 +350,6 @@ describe('ScriptEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).to.be.true;
-
-      server.restore();
     });
 
     it('can save and close', () => {
@@ -367,7 +359,6 @@ describe('ScriptEditor', () => {
       let returnData = {
         scriptPath: '/s/test-script'
       };
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         200,
         {'Content-Type': 'application/json'},
@@ -389,8 +380,6 @@ describe('ScriptEditor', () => {
       expect(utils.navigateToHref).to.have.been.calledWith(
         `/s/test-script${window.location.search}`
       );
-
-      server.restore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -398,7 +387,6 @@ describe('ScriptEditor', () => {
       const scriptEditor = wrapper.find('ScriptEditor');
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/s/1`, [
         404,
         {'Content-Type': 'application/json'},
@@ -426,8 +414,6 @@ describe('ScriptEditor', () => {
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).to.be.true;
-
-      server.restore();
     });
   });
 
@@ -468,7 +454,6 @@ describe('ScriptEditor', () => {
 
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
 
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/plc/Test-Script/launch`, [
         200,
         {'Content-Type': 'application/json'},
@@ -482,8 +467,6 @@ describe('ScriptEditor', () => {
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
         'Course Launched'
       );
-
-      server.restore();
     });
 
     it('launch plc course gives error', () => {
@@ -498,7 +481,6 @@ describe('ScriptEditor', () => {
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
 
       let returnData = 'There was an error';
-      let server = sinon.fakeServer.create();
       server.respondWith('PUT', `/plc/Test-Script/launch`, [
         404,
         {'Content-Type': 'application/json'},
@@ -512,8 +494,6 @@ describe('ScriptEditor', () => {
       expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
         'There was an error'
       );
-
-      server.restore();
     });
   });
 });
