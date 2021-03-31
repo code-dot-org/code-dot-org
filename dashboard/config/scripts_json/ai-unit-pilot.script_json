@@ -21,11 +21,12 @@
       ],
       "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
       "has_lesson_plan": true,
-      "pilot_experiment": "ai-unit-pilot"
+      "pilot_experiment": "ai-unit-pilot",
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-30 05:11:37 UTC",
+    "serialized_at": "2021-03-31 21:47:17 UTC",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -2585,6 +2586,9 @@
 
   ],
   "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

@@ -22009,10 +22009,16 @@ en:
             haiku bot:
               display_name: Haiku Bot
             poem bot:
-              display_name: Poem Bot
+              display_name: Programming Poem Bot
             rampup:
-              display_name: Introducing Sprite Lab
+              display_name: Programming Ramp Up for Poem Bot
               description: Learn the basics of coding with sprites and text!
+            write a haikut:
+              display_name: Write a Haiku
+            plan your poem:
+              display_name: Plan Your Haiku Poem
+            poetry circle:
+              display_name: Poetry Circle
           name: haikubot-pilot
           title: Poem Bot
           description_audience: Grade 4, Grade 5

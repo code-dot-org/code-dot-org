@@ -1,4 +1,4 @@
-lesson_group 'rampup', display_name: 'Introducing Sprite Lab'
+lesson_group 'rampup', display_name: 'Programming Ramp Up for Poem Bot'
 lesson_group_description 'Learn the basics of coding with sprites and text!'
 lesson 'Introducing Sprite Lab', display_name: 'Introducing Sprite Lab', has_lesson_plan: false
 level 'poembot_video_sprites', progression: 'Video: Making Sprites'
@@ -14,12 +14,7 @@ level 'poembot_text_answer', progression: 'Text and Prompts'
 level 'poembot_text_concat', progression: 'Text and Prompts'
 level 'poembot_text_concat_freeplay', progression: 'Text and Prompts'
 
-lesson_group 'poem bot', display_name: 'Poem Bot'
+lesson_group 'poetry circle', display_name: 'Poetry Circle'
 lesson 'Poem Bot', display_name: 'Poem Bot', has_lesson_plan: false
-level 'haiku_prototype_choice1', progression: 'Poem Bot Prototype'
-level 'poembot_video_choices', progression: 'Video: Prompt with Choices'
-level 'Poem Bot_Prompt 1 Mike', progression: 'Code Your Prompts'
-level 'Poem Bot_Prompt 2', progression: 'Code Your Prompts'
-level 'Poem Bot_Fat Level_2', progression: 'Haiku Block'
-level 'Poem Bot Choice Home', progression: 'Customize Your Program'
+level 'poembot_lesson 5_markdown', progression: 'Poem Bot Prototype'
 
