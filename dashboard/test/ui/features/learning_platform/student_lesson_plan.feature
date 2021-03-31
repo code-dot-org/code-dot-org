@@ -1,4 +1,3 @@
-@no_ie
 @no_mobile
 Feature: Student Lesson Plan
 
