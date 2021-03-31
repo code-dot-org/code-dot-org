@@ -19,12 +19,22 @@
   .user_menu_arrow_down,
   .user_menu_arrow_up,
   .create_menu_arrow_down,
-  .create_menu_arrow_up, {
-    float: left;
+  .create_menu_arrow_up {
     font-size: 25px;
     margin-top: -3px;
+    .rtl & {
+      float: left;
+    }
+    html[dir='rtl'] & {
+      float: left;
+    }
   }
-
+  .rtl .create_menu_arrow_down,
+  .rtl .user_menu_arrow_up,
+  .rtl .create_menu_arrow_down,
+  .rtl .create_menu_arrow_up, {
+    float: left
+  }
   .user_options, .create_options, .help_contents {
     position: absolute;
     top: 55px;
