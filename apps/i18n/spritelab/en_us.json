@@ -143,5 +143,9 @@
   "spriteLabFeedbackGiveFishBehavior": "You need to give your fish a behavior.",
   "spritelabFeedbackCreateTwoDifferentSprites": "You need two sprites with different costumes.",
   "spritelabFeedbackGiveSecondSpriteBehavior": "Your second sprite needs a behavior.",
-  "growAndShrink": "Your sprite needs to shrink and grow."
+  "growAndShrink": "Your sprite needs to shrink and grow.",
+  "addPromptWithChoices": "You need to add the prompt block to your code: \n <xml><block type=\"gamelab_setPromptWithChoices\"></block></xml>",
+  "addAdditionalPrompts": "Your program didn't create enough prompts.",
+  "answerPromptWithChoices": "Your prompt should give the user three choices. Don't forget to answer your prompts after running your program!",
+  "haikuBlock": "The haiku didn't show up. If you have already added the block, check the variable labels in your code carefully and make sure all prompts were answered."
 }
