@@ -12,19 +12,13 @@
       "has_verified_resources": true,
       "show_calendar": true,
       "is_migrated": true,
-      "teacher_resources": [
-        [
-          "curriculum",
-          "/link/to/curriculum"
-        ]
-      ],
       "has_lesson_plan": true,
       "weekly_instructional_minutes": 225,
       "include_student_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-29 17:59:01 UTC",
+    "serialized_at": "2021-03-29 23:47:41 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -5162,7 +5156,7 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Widget: Text Compression",
         "level_keys": [
@@ -5188,7 +5182,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Text Compression Widget with Aloe Blacc",
         "level_keys": [
@@ -5266,7 +5260,7 @@
       "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5292,7 +5286,7 @@
       "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Lossy Compression Widget",
         "level_keys": [
@@ -5346,6 +5340,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Creative Commons_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -5368,6 +5365,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
