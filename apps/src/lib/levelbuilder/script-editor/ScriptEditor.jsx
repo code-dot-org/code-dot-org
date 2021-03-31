@@ -22,7 +22,10 @@ import {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {
+  lessonGroupShape,
+  resourceShape as migratedResourceShape
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 
 const styles = {
@@ -101,7 +104,8 @@ class ScriptEditor extends React.Component {
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
     levelKeyList: PropTypes.object.isRequired,
-    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
+      .isRequired,
     init: PropTypes.func.isRequired
   };
 

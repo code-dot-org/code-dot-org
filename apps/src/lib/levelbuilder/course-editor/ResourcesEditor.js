@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import ResourceType, {
   stringForType
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
@@ -38,7 +39,7 @@ export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
     teacherResources: PropTypes.array,
-    migratedTeacherResources: PropTypes.array,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
     updateTeacherResources: PropTypes.func,
     courseVersionId: PropTypes.number

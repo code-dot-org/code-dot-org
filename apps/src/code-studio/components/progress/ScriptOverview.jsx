@@ -14,6 +14,7 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
@@ -38,7 +39,7 @@ class ScriptOverview extends React.Component {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,

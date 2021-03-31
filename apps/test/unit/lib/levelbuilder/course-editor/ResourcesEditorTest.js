@@ -126,11 +126,13 @@ describe('ResourcesEditor', () => {
         migratedTeacherResources={[
           {
             id: 1,
+            key: 'curriculum',
             name: 'Curriculum',
             url: 'https://example.com/a'
           },
           {
             id: 2,
+            key: 'vocabulary',
             name: 'Vocabulary',
             url: 'https://example.com/b'
           }

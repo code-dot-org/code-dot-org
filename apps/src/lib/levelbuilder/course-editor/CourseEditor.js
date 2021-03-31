@@ -12,6 +12,7 @@ import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/
 import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
 
 const styles = {
@@ -53,7 +54,7 @@ class CourseEditor extends Component {
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
-    initialMigratedTeacherResources: PropTypes.arrayOf(PropTypes.object),
+    initialMigratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
