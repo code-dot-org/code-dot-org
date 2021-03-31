@@ -39,6 +39,10 @@ function getNextExpandMode(parentExpandMode, index) {
   }
 }
 
+/**
+ * @param expandType {ExpandMode} The expand mode of the component
+ * @returns {boolean} Whether the component's details element should be expanded
+ */
 function getDetailsOpen(expandType) {
   return expandType === ExpandMode.ALL || expandType === ExpandMode.FIRST;
 }
