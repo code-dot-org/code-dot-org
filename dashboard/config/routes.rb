@@ -744,6 +744,7 @@ Dashboard::Application.routes.draw do
       get 'ml_models/names', to: 'ml_models#user_ml_model_names'
       get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
       get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
+      delete 'ml_models/:model_id', to: 'ml_models#destroy'
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
