@@ -931,12 +931,23 @@ class ScriptEditor extends React.Component {
               text="Launch PLC Course"
               onClick={this.launchPlcCourse}
               color={Button.ButtonColor.purple}
+              disabled={
+                !(this.state.title && this.state.professionalLearningCourse)
+              }
             />
             <HelpTip>
-              <p>
-                In order for users to be able to make progress on this plc
-                course you need to launch it.
-              </p>
+              {this.state.title && this.state.professionalLearningCourse && (
+                <p>
+                  In order for users to be able to make progress on this plc
+                  course you need to launch it.
+                </p>
+              )}
+              {!(this.state.title && this.state.professionalLearningCourse) && (
+                <p>
+                  You must set title and professional learning course in order
+                  to launch a professional learning course.
+                </p>
+              )}
             </HelpTip>
             {this.state.plcCourseLaunchStatus && (
               <span
