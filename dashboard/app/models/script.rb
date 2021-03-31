@@ -1594,7 +1594,12 @@ class Script < ApplicationRecord
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    I18n.t(
+      "title",
+      default: name,
+      scope: [:data, :script, :name, name],
+      smart: true
+    )
   end
 
   def title_for_display
