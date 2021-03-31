@@ -528,7 +528,7 @@ WebLab.prototype.loadFileEntries = function() {
       project.filesVersionId = filesVersionId;
     }
 
-    this.syncBrambleFiles(() => this.brambleHost?.fileRefresh());
+    this.syncBrambleFiles(this.brambleHost?.fileRefresh);
   };
 
   filesApi.getFiles(
