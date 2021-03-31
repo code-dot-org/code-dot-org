@@ -1,9 +1,10 @@
-require 'securerandom' unless defined?(SecureRandom)
+require 'jwt'
 
 class JavaBuilderSessionsController < ApplicationController
   authorize_resource class: false
 
-  PRIVATE_KEY = CDO.java_builder_secret
+  PRIVATE_KEY = CDO.java_builder_private_key
+  PASSWORD = CDO.java_builder_key_password
 
   # GET /javabuilder/access_token
   def get_access_token
@@ -16,7 +17,7 @@ class JavaBuilderSessionsController < ApplicationController
         iat: issued_at_time,
         exp: expiration_time
       },
-      PRIVATE_KEY,
+      OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSWORD),
       'RS256'
     )
     render json: {token: payload}
