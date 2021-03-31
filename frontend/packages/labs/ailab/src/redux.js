@@ -503,6 +503,14 @@ export default function rootReducer(state = initialState, action) {
       };
     }
 
+    if (action.currentPanel === "results") {
+      return {
+        ...state,
+        currentPanel: action.currentPanel,
+        testData: {}
+      };
+    }
+
     return {
       ...state,
       currentPanel: action.currentPanel,
