@@ -3302,15 +3302,21 @@ bs:
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_variables:
-              display_name: Varijable
+              display_name: Od-Do-Za Petlje
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+            lessonGroup-8:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: ukloni
         express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
             Dance Party:
               key: Plesna zabava
+              name: Plesna zabava
+            lesson-1:
               name: Plesna zabava
           lesson_groups:
             csf_loops:
@@ -3351,6 +3357,8 @@ bs:
             ramp_up:
               display_name: Uvod
             lessonGroup-3:
+              display_name: Varijable
+            variables:
               display_name: Varijable
         csd4-preview-2021:
           lesson_groups:

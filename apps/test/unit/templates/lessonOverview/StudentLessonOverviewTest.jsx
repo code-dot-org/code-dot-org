@@ -7,6 +7,7 @@ import {
   fakeTeacherAndStudentAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
+import Button from '@cdo/apps/templates/Button';
 
 describe('StudentLessonOverview', () => {
   let defaultProps;
@@ -65,7 +66,9 @@ describe('StudentLessonOverview', () => {
             name: 'playSound',
             link: '/docs/applab/playSound'
           }
-        ]
+        ],
+        studentLessonPlanPdfUrl:
+          'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
       },
       activities: [],
       announcements: [],
@@ -94,6 +97,38 @@ describe('StudentLessonOverview', () => {
     expect(inlineMarkdowns.at(0).props().markdown).to.contain(
       '**Algorithm** - A list of steps to finish a task.'
     );
+  });
+
+  it('show print button if there is a pdf', () => {
+    const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={
+            'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
+          }
+          text="Print"
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('hide print button if there is no pdf', () => {
+    let myProps = defaultProps;
+    myProps.lesson.studentLessonPlanPdfUrl = null;
+    const wrapper = shallow(<StudentLessonOverview {...myProps} />);
+
+    expect(
+      wrapper.containsMatchingElement(
+        <Button
+          href={
+            'https://lesson-plans.code.org/unit-1/20210302010608/student/lesson-1.pdf'
+          }
+          text="Print"
+        />
+      )
+    ).to.be.false;
   });
 
   it('has no announcements if none provided', () => {
@@ -130,7 +165,7 @@ describe('StudentLessonOverview', () => {
   it('displays the introduced code', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const codeSection = wrapper.find('#unit-test-introduced-code');
-    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+    assert.equal(codeSection.find('StyledCodeBlock').length, 1);
   });
 
   it('does not display the introduced code if no code', () => {

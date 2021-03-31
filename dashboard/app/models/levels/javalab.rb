@@ -30,7 +30,10 @@ class Javalab < Level
     hide_share_and_remix
     is_project_level
     submittable
+    encrypted_examples
   )
+
+  before_save :fix_examples
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -41,6 +44,12 @@ class Javalab < Level
         properties: {}
       )
     )
+  end
+
+  def fix_examples
+    # remove nil and empty strings from examples
+    return if examples.nil?
+    self.examples = examples.select(&:present?)
   end
 
   # Return an 'appOptions' hash derived from the level contents

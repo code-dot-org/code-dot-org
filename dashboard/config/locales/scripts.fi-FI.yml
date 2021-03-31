@@ -3096,13 +3096,19 @@ fi:
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_variables:
-              display_name: Muuttujat
+              display_name: Silmukat
             csf_for_loops:
               display_name: Silmukat
+            lessonGroup-8:
+              display_name: Muuttujat
+            lessonGroup-9:
+              display_name: poista
         express-2021:
           lessons:
             Dance Party:
               key: Tanssibileet
+              name: Tanssibileet
+            lesson-1:
               name: Tanssibileet
           lesson_groups:
             csf_loops:
@@ -3126,6 +3132,8 @@ fi:
             ramp_up:
               display_name: Johdanto
             lessonGroup-3:
+              display_name: Muuttujat
+            variables:
               display_name: Muuttujat
         csd4-preview-2021:
           lesson_groups:

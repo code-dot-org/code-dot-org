@@ -1789,6 +1789,13 @@
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Puedes cambiar este número.",
           "courseE_artist_ramp8_2": "Haz click aquí para ingresar el número de veces que tu código se repite."
+        },
+        "outbreak2": {
+          "minitoolbox": "Haga clic aquí para ampliar el bloque.",
+          "pointerlocation": "Arrastre un bloque de sujeto aquí."
+        },
+        "outbreak7": {
+          "costumes_callout": "Haz clic para crear un nuevo traje"
         }
       }
     }

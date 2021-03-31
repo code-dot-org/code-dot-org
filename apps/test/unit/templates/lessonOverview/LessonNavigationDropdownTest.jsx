@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
@@ -52,7 +53,7 @@ describe('LessonNavigationDropdown', () => {
   it('renders dropdown for short lesson list', () => {
     lesson.unit.lessons = shortLessonList;
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
-    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     expect(wrapper.find('a').length).to.equal(2);
 
     expect(wrapper.contains('1 - Lesson 1')).to.be.true;
@@ -62,7 +63,7 @@ describe('LessonNavigationDropdown', () => {
   it('renders dropdown for long lesson list', () => {
     lesson.unit.lessons = longLessonList;
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
-    expect(wrapper.find('DropdownButton').length).to.equal(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     expect(wrapper.find('a').length).to.equal(12);
 
     expect(wrapper.contains('Lessons 1 to 10')).to.be.true;

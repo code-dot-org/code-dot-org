@@ -12,6 +12,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
+import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 import _ from 'lodash';
 import styleConstants from '@cdo/apps/styleConstants';
 import {connect} from 'react-redux';
@@ -26,6 +27,10 @@ const styles = {
   sublevelCards: {
     display: 'flex',
     flexWrap: 'wrap'
+  },
+  scrollContainer: {
+    maxHeight: '60vh',
+    overflow: 'auto'
   }
 };
 
@@ -50,12 +55,31 @@ class LevelDetailsDialog extends Component {
     };
   }
 
+  getTeacherOnlyMarkdownComponent = level => {
+    if (level.teacherMarkdown) {
+      return <TeacherOnlyMarkdown content={level.teacherMarkdown} />;
+    } else {
+      return null;
+    }
+  };
+
   getComponentContent = level => {
     if (level.type === 'External') {
-      return <SafeMarkdown markdown={level.markdown} />;
+      return (
+        <div style={styles.scrollContainer}>
+          <SafeMarkdown markdown={level.markdown} />
+          {level.videoOptions && (
+            <div
+              id={'level-details-dialog-video'}
+              ref={ref => (this.video = ref)}
+            />
+          )}
+          {this.getTeacherOnlyMarkdownComponent(level)}
+        </div>
+      );
     } else if (level.type === 'StandaloneVideo') {
       return (
-        <div>
+        <div style={styles.scrollContainer}>
           {level.longInstructions && (
             <SafeMarkdown markdown={level.longInstructions} />
           )}
@@ -63,17 +87,36 @@ class LevelDetailsDialog extends Component {
             id={'level-details-dialog-video'}
             ref={ref => (this.video = ref)}
           />
+          {this.getTeacherOnlyMarkdownComponent(level)}
         </div>
       );
     } else if (level.type === 'LevelGroup') {
       return (
+        <SafeMarkdown
+          markdown={i18n.levelGroupDetailsDialogText({
+            buttonText: i18n.seeFullLevel()
+          })}
+        />
+      );
+    } else if (level.containedLevels && level.containedLevels.length > 0) {
+      return (
         <div>
-          {i18n.levelGroupDetailsDialogText({buttonText: i18n.seeFullLevel()})}
+          {level.containedLevels.map(l => (
+            <div key={l.name}>{this.getComponentContent(l)}</div>
+          ))}
+        </div>
+      );
+    } else if (level.type === 'Match' || level.type === 'Multi') {
+      return (
+        <div style={styles.scrollContainer}>
+          {level.question && <SafeMarkdown markdown={level.question} />}
+          {level.questionText && <SafeMarkdown markdown={level.questionText} />}
+          {this.getTeacherOnlyMarkdownComponent(level)}
         </div>
       );
     } else if (level.type === 'BubbleChoice') {
       return (
-        <div style={styles.sublevelCards}>
+        <div style={{...styles.scrollContainer, ...styles.sublevelCards}}>
           {this.props.scriptLevel.sublevels.map(sublevel => (
             <SublevelCard
               isLessonExtra={false}
@@ -83,7 +126,11 @@ class LevelDetailsDialog extends Component {
           ))}
         </div>
       );
-    } else {
+    } else if (
+      level.longInstructions ||
+      level.long_instructions ||
+      level.shortInstructions
+    ) {
       // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
@@ -92,7 +139,11 @@ class LevelDetailsDialog extends Component {
           isMinecraft={false}
           isBlockly={false}
           isRtl={this.props.isRtl}
-          longInstructions={level.longInstructions || level.long_instructions}
+          longInstructions={
+            level.longInstructions ||
+            level.long_instructions ||
+            level.shortInstructions
+          }
           shortInstructions={level.shortInstructions}
           noInstructionsWhenCollapsed={true}
           levelVideos={level.videos}
@@ -108,7 +159,7 @@ class LevelDetailsDialog extends Component {
           isEmbedView={false}
           mainStyle={{paddingBottom: 5}}
           containerStyle={{
-            overflowY: 'scroll',
+            overflowY: 'auto',
             height: this.state.height - HEADER_HEIGHT
           }}
           setInstructionsRenderedHeight={height =>
@@ -117,7 +168,19 @@ class LevelDetailsDialog extends Component {
           setInstructionsMaxHeightNeeded={maxHeight =>
             this.setState({maxHeight})
           }
+          collapsible={false}
           resizable={false}
+          serverLevelId={parseInt(level.id)}
+          serverScriptId={this.state.scriptLevel.scriptId}
+        />
+      );
+    } else {
+      return (
+        <SafeMarkdown
+          markdown={i18n.noLevelPreviewAvailable({
+            buttonText: i18n.seeFullLevel()
+          })}
+          openExternalLinksInNewTab
         />
       );
     }
@@ -197,31 +260,32 @@ class LevelDetailsDialog extends Component {
     const {scriptLevel} = this.props;
     const level = this.state.selectedLevel;
     const preview = this.getComponentContent(level);
-    const levelSpecificStyling =
-      level.type === 'StandaloneVideo'
-        ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
-        : {};
+    const hasVideo =
+      level.type === 'StandaloneVideo' ||
+      (level.type === 'External' && !!level.videoOptions);
+    const levelSpecificStyling = hasVideo
+      ? {width: VIDEO_MODAL_WIDTH, marginLeft: -VIDEO_MODAL_WIDTH / 2}
+      : {};
     return (
       <BaseDialog
         isOpen={true}
         handleClose={this.props.handleClose}
-        fullWidth={level.type !== 'StandaloneVideo'}
-        style={{padding: 15, ...levelSpecificStyling}}
-        useUpdatedStyles
+        fullWidth={!hasVideo}
+        style={{...levelSpecificStyling}}
       >
         <h1>{i18n.levelPreview()}</h1>
         {this.renderBubbleChoiceBubbles()}
-        <div>{preview}</div>
+        <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
           <Button
             onClick={this.props.handleClose}
             text={i18n.dismiss()}
             color={'gray'}
-            __useDeprecatedTag
             style={{margin: 5}}
           />
           <Button
             href={level.url || scriptLevel.url}
+            target={'_blank'}
             text={i18n.seeFullLevel()}
             color={'orange'}
             __useDeprecatedTag
