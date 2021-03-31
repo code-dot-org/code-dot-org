@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
-export function getTeacherFeedbackForStudent(studentId, levelId) {
+export function getTeacherFeedbackForStudent(studentId, levelId, scriptId) {
   return $.ajax({
-    url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${studentId}&level_id=${levelId}`,
+    url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${studentId}&level_id=${levelId}&script_id=${scriptId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8'
   });
@@ -16,9 +16,14 @@ export function getRubric(levelId) {
   });
 }
 
-export function getTeacherFeedbackForTeacher(studentId, levelId, teacherId) {
+export function getTeacherFeedbackForTeacher(
+  studentId,
+  levelId,
+  teacherId,
+  scriptId
+) {
   return $.ajax({
-    url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${levelId}&teacher_id=${teacherId}`,
+    url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${levelId}&teacher_id=${teacherId}&script_id=${scriptId}`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8'
   });

@@ -11,7 +11,7 @@ class AbilityTest < ActiveSupport::TestCase
       @login_required_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, hidden: true).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
     end
   end

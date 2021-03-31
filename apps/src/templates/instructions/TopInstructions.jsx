@@ -131,6 +131,7 @@ class TopInstructions extends Component {
     viewAs: PropTypes.oneOf(Object.keys(ViewType)),
     readOnlyWorkspace: PropTypes.bool,
     serverLevelId: PropTypes.number,
+    serverScriptId: PropTypes.number,
     user: PropTypes.number,
     noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
     teacherMarkdown: PropTypes.string,
@@ -143,11 +144,13 @@ class TopInstructions extends Component {
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
-    setAllowInstructionsResize: PropTypes.func
+    setAllowInstructionsResize: PropTypes.func,
+    collapsible: PropTypes.bool
   };
 
   static defaultProps = {
-    resizable: true
+    resizable: true,
+    collapsible: true
   };
 
   constructor(props) {
@@ -187,7 +190,7 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId} = this.props;
+    const {user, serverLevelId, serverScriptId} = this.props;
     const {studentId} = this.state;
 
     window.addEventListener('resize', this.adjustMaxNeededHeight);
@@ -202,10 +205,10 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (this.isViewingAsStudent && user && serverLevelId) {
+    if (this.isViewingAsStudent && user && serverLevelId && serverScriptId) {
       promises.push(
         topInstructionsDataApi
-          .getTeacherFeedbackForStudent(user, serverLevelId)
+          .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
           .done((data, _, request) => {
             // If student has feedback make their default tab the feedback tab instead of instructions
             if (data[0] && (data[0].comment || data[0].performance)) {
@@ -231,11 +234,17 @@ class TopInstructions extends Component {
       this.state.teacherViewingStudentWork &&
       user &&
       serverLevelId &&
-      studentId
+      studentId &&
+      serverScriptId
     ) {
       promises.push(
         topInstructionsDataApi
-          .getTeacherFeedbackForTeacher(studentId, serverLevelId, user)
+          .getTeacherFeedbackForTeacher(
+            studentId,
+            serverLevelId,
+            user,
+            serverScriptId
+          )
           .done((data, textStatus, request) => {
             this.setState({
               feedbacks: request.status === 204 ? [] : [data],
@@ -683,6 +692,7 @@ class TopInstructions extends Component {
           handleHelpTabClick={this.handleHelpTabClick}
           handleCommentTabClick={this.handleCommentTabClick}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
+          collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
           {...passThroughHeaderProps}
         />
@@ -769,6 +779,7 @@ export default connect(
     viewAs: state.viewAs,
     readOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     serverLevelId: state.pageConstants.serverLevelId,
+    serverScriptId: state.pageConstants.serverScriptId,
     user: state.pageConstants.userId,
     noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
     teacherMarkdown: state.instructions.teacherMarkdown,

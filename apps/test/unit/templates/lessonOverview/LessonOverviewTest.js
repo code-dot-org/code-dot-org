@@ -76,7 +76,8 @@ describe('LessonOverview', () => {
             name: 'playSound',
             link: '/docs/applab/playSound'
           }
-        ]
+        ],
+        standards: []
       },
       activities: [],
       announcements: [],
@@ -119,6 +120,8 @@ describe('LessonOverview', () => {
     );
 
     expect(wrapper.find('LessonAgenda').length).to.equal(1);
+
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
   });
 
   it('renders correct number of activities', () => {
@@ -166,7 +169,7 @@ describe('LessonOverview', () => {
   it('displays the introduced code', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const codeSection = wrapper.find('#unit-test-introduced-code');
-    expect(codeSection.containsMatchingElement(<a>playSound</a>)).to.be.true;
+    assert.equal(codeSection.find('StyledCodeBlock').length, 1);
   });
 
   it('does not display the introduced code if no code', () => {
@@ -175,5 +178,29 @@ describe('LessonOverview', () => {
 
     const wrapper = shallow(<LessonOverview {...newDefaultProps} />);
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
+  });
+
+  it('renders standards header when standards are present', () => {
+    const standards = [
+      {
+        frameworkName: 'ngss',
+        parentCategoryShortcode: 'ESS',
+        parentCategoryDescription: 'Earth and Space Science',
+        categoryShortcode: 'ESS1',
+        categoryDescription: "Earth's Place in the Universe",
+        shortcode: '1-ESS1-1',
+        description:
+          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
+      }
+    ];
+    const lesson = {
+      ...defaultProps.lesson,
+      standards: standards
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
   });
 });

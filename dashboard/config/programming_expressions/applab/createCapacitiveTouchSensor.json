@@ -1,5 +1,5 @@
 {
-  "func": "var mySensor = createCapacitiveTouchSensor",
+  "func": "createCapacitiveTouchSensor",
   "category": "Maker",
   "paletteParams": [
     "pin"
@@ -7,6 +7,5 @@
   "params": [
     "0"
   ],
-  "noAutocomplete": true,
-  "docFunc": "createCapacitiveTouchSensor"
+  "type": "either"
 }

@@ -1,6 +1,8 @@
 {
   "clicked": "haga clic en ",
   "clickedSprite": "clic en gráfico",
+  "new": "nuevo ",
+  "newSprite": "nuevo sprite",
   "subject": "Asunto:",
   "subjectSprite": "sprite de sujeto",
   "object": "objeto",
