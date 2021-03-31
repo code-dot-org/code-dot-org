@@ -119,6 +119,7 @@ describe('LessonEditor', () => {
         .props().disabled
     ).to.equal(false);
     expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
     expect(wrapper.find('ResourcesEditor').length).to.equal(1);
     expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
     expect(wrapper.find('ProgrammingExpressionsEditor').length).to.equal(1);
