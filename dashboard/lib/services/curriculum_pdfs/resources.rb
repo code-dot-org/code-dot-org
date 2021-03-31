@@ -58,6 +58,14 @@ module Services
           return path
         end
 
+        def export_from_google(url, path)
+          @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
+            StringIO.new(CDO.gdrive_export_secret&.to_json || "")
+          )
+          file = @google_drive_session.file_by_url(url)
+          file.export_as_file(path)
+        end
+
         def fetch_resource_pdf(resource, directory="/tmp/")
           filename = ActiveStorage::Filename.new("resource.#{resource.key}.pdf").sanitized
           path = File.join(directory, filename)
@@ -65,11 +73,7 @@ module Services
 
           if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
             begin
-              @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
-                StringIO.new(CDO.gdrive_export_secret.to_json)
-              )
-              file = @google_drive_session.file_by_url(resource.url)
-              file.export_as_file(path)
+              export_from_google(resource.url, path)
               return path
             rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => e
               ChatClient.log(

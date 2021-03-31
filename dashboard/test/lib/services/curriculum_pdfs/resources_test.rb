@@ -5,11 +5,6 @@ require 'open-uri'
 require 'pdf/collate'
 require 'pdf/conversion'
 
-class MockFile
-  def export_as_file(path)
-  end
-end
-
 class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   setup do
     PDF.stubs(:generate_from_url)
@@ -19,9 +14,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     IO.stubs(:copy_stream)
     URI.stubs(:open).returns(StringIO.new)
 
-    # mock some google APIs for the 'export PDF from google' case
-    @mock_file = MockFile.new
-    GoogleDrive::Session.any_instance.stubs(:file_by_url).returns(@mock_file)
+    Services::CurriculumPdfs.stubs(:export_from_google)
   end
 
   test 'script resources PDF includes resources from all lessons' do
@@ -52,7 +45,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     resource = create(:resource, url: "https://docs.google.com/example")
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
       path = File.join(tmpdir, "resource.fake_name.pdf")
-      @mock_file.expects(:export_as_file).with(path)
+      Services::CurriculumPdfs.expects(:export_from_google).with("https://docs.google.com/example", path)
       assert Services::CurriculumPdfs.fetch_resource_pdf(resource, tmpdir)
     end
   end
