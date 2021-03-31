@@ -94,6 +94,30 @@ export const vocabularyShape = PropTypes.shape({
   commonSenseMedia: PropTypes.bool.isRequired
 });
 
+export const programmingEnvironmentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+export const programmingExpressionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkShortcode: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
+});
+
 export const levelShapeForScript = PropTypes.shape({
   position: PropTypes.number,
   activeId: PropTypes.string,

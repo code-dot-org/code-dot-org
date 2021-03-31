@@ -1,3 +1,5 @@
+//This is the original library for the setupSim block that prints "collected" messages. Not translatable.
+
 // Setup sim
 function setupSim(
   s1number,
@@ -10,10 +12,13 @@ function setupSim(
   s3costume,
   s3speed
 ) {
-  World.collisions = {};
-  World.s3ToDelete = [];
-  World.sprite1score = 0;
-  World.sprite2score = 0;
+    if(!World.collisions){
+      World.collisions = {};
+      World.s3ToDelete = [];
+      World.sprite1score = 0;
+      World.sprite2score = 0;
+    }
+
 
   // Wandering behavior at a certain speed, will be added to both s1 and s2 sprites.
   function movementBehavior(speed) {
@@ -46,6 +51,8 @@ function setupSim(
   }
   setProp({costume: s3costume}, 'scale', 50);
 
+
+    
   /**
   * We want to be able to randomize which sprite gets the point in the case of a tie. So the approach here is
   * to use checkTouching() to detect all the collisions, but delay until the next frame to actually give a point

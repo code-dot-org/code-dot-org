@@ -11,12 +11,14 @@ import {
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import ProgressTableContainer from './ProgressTableContainer';
 import ProgressTableDetailCell from './ProgressTableDetailCell';
-import ProgressTableLevelIcon from './ProgressTableLevelIcon';
+import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import {lastUpdatedFormatter, timeSpentFormatter} from './progressTableHelpers';
+import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 
 // This component displays progress bubbles for all levels in all lessons
 // for each student in the section. It combines detail-specific components such as
-// ProgressTableLevelIcon, ProgressTableDetailCell with shared progress view
+// ProgressTableLevelIconSet, ProgressTableDetailCell with shared progress view
 // components like ProgressTableContainer. An equivalent compact
 // ProgressTableSummaryView component also exists
 class ProgressTableDetailView extends React.Component {
@@ -34,18 +36,24 @@ class ProgressTableDetailView extends React.Component {
     super(props);
     this.levelIconHeaderFormatter = this.levelIconHeaderFormatter.bind(this);
     this.detailCellFormatter = this.detailCellFormatter.bind(this);
+    this.timeSpentCellFormatter = this.timeSpentCellFormatter.bind(this);
+    this.lastUpdatedCellFormatter = this.lastUpdatedCellFormatter.bind(this);
   }
 
   levelIconHeaderFormatter(_, {columnIndex}) {
     return (
-      <ProgressTableLevelIcon
+      <ProgressTableLevelIconSet
         levels={this.props.scriptData.stages[columnIndex].levels}
       />
     );
   }
 
+  getStudentProgress(student) {
+    return this.props.levelProgressByStudent[student.id];
+  }
+
   detailCellFormatter(lesson, student) {
-    const studentProgress = this.props.levelProgressByStudent[student.id];
+    const studentProgress = this.getStudentProgress(student);
     return (
       <ProgressTableDetailCell
         studentId={student.id}
@@ -57,12 +65,33 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 
+  expandedCellFormatter(lesson, student, textFormatter) {
+    const studentProgress = this.getStudentProgress(student);
+    const levelItems = lesson.levels.map(level => ({
+      node: textFormatter(studentProgress[level.id]),
+      sublevelCount: level.sublevels && level.sublevels.length
+    }));
+    return <ProgressTableLevelSpacer items={levelItems} />;
+  }
+
+  timeSpentCellFormatter(lesson, student) {
+    return this.expandedCellFormatter(lesson, student, timeSpentFormatter);
+  }
+
+  lastUpdatedCellFormatter(lesson, student) {
+    return this.expandedCellFormatter(lesson, student, lastUpdatedFormatter);
+  }
+
   render() {
     return (
       <div>
         <ProgressTableContainer
           onClickLesson={this.props.onClickLesson}
-          lessonCellFormatter={this.detailCellFormatter}
+          lessonCellFormatters={[
+            this.detailCellFormatter,
+            this.timeSpentCellFormatter,
+            this.lastUpdatedCellFormatter
+          ]}
           includeHeaderArrows={true}
           extraHeaderFormatters={[this.levelIconHeaderFormatter]}
           extraHeaderLabels={[i18n.levelType()]}
@@ -72,6 +101,9 @@ class ProgressTableDetailView extends React.Component {
     );
   }
 }
+
+export const UnconnectedProgressTableDetailView = ProgressTableDetailView;
+
 export default connect(
   state => ({
     section: state.sectionData.section,

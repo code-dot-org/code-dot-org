@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-18 18:21:23 UTC",
+    "serialized_at": "2021-03-24 21:40:46 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -2056,7 +2056,7 @@
       "key": "cb34d587-4b26-41be-8f4e-cbab88c3e575",
       "position": 4,
       "properties": {
-        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functionsconditionals1.svg) | **Say:** Today we are going to explore Conditionals. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions1.svg) | **Say:** Previously, we learned that information can be stored as numbers or strings in variables. These are two different types of data. Numbers and strings can be combined together using operators to make expressions. Expressions are evaluated before storing in variables. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions2.svg) | **Say:** Boolean values are another type of data. They can store the values “true” or “false”. Why would we want that information? Booleans are used to make decisions. If something is true, do this. If something is false, do that. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** You only need two blue sticky notes today. Write down “true” on one and “false” on the other. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions3.svg) | **Say:** Let’s look at this expression. Take a guess as to what Boolean value this evaluates to. <br><br> **Do This:** Hold up the sticky note with the correct value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The expression evaluates to true, because 3 is less than 8. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The less than symbol is a comparison operator. When we see a comparison operator, we need to stop and evaluate for a Boolean value. There are six different comparison operators - you may be familiar with some of them from math class. Notice the double equal signs for \"equal to\". Here we are distinguishing from a single equal sign that is used to assign value to a variable. We read a single equal sign as “gets the value”. A double equal sign can be read as \"equal to”. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions4.svg) | **Say:** Both sides of the relational operator should be reduced to a single value before we can compare. Think of it in terms of sticky notes. You should have only one sticky note on each side. <br><br> **Do This:** What does 3 + 6 equate to? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Right: 9! Now we can compare 9 and 8 using the relational operator: less than. <br><br> **Do This:** Does this evaluate to true or false? Hold up the correct sticky note. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-5.svg) | **Say:** Let’s evaluate these expressions line by line. It may be helpful to use your sticky notes here. <br><br> **Do This:** Reduce each side of the relational operator to one sticky note. Then evaluate for a Boolean value. Compare your answers with a partner. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through to view the answers. The third line may be a little tricky. Remind students to evaluate the information in the parenthesis first. In the fourth line, draw attention to the double equal signs and remind the class double equal signs are a signal to compare if both sides are the same. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-6.svg) | **Say:** The expressions that we evaluate can also contain variables. Remember, variables store information. This information can be different data types like numbers, strings, or even Boolean values themselves. For now, we are going to stick with numbers. <br><br> **Do This:** With a partner, reduce both sides of the relational operator. Then evaluate for a Boolean value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through for the answer. Draw attention to the note: any expression that can be evaluated for true or false is known as a Boolean Expression. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions7.svg) | **Say:** At the beginning of class, we talked about how Booleans are used to make decisions. Let’s see that in action. Consider the following question: Can I go to the movies? I’m allowed to if it’s before 8 o’clock. This may seem like a simple decision! But let’s think about this like a computer. <br><br> **Do This:** What information would the computer need to know in order to answer the question. Create a  baggie variable to store the information. Give it a name. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions8.svg) | **Say:** This is a flowchart. It’s an organized way to make a decision or come to a conclusion. Creating a flowchart helps us think like a computer. At the top, we are listing the variables that are needed. Your variable might be called time or clock or really anything. It doesn’t matter as long as you use the same name every time you refer to the variable. For this example, I’m naming my variable “time”. Let’s step through the flowchart with an example to see how it works. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions9.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Say:** It’s 9 o’clock. Can I go to the movies? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First I assign 9 to the variable time, then I move on to the diamond section. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I see a comparison operator, which let’s me know that we need to stop and evaluate the Boolean expression. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First reduce both sides to a single value. Then evaluate for a Boolean value. In this case, The Boolean expression evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Follow the “false” path, and we arrive at the result: “I can’t go to the movies.” <br><br> **Note:** If students are confused, return back to the previous slide and try running some examples together as a class. Students can hold up true or false when evaluating the Boolean expression. Once students get the hang of using a flowchart, continue on to the next slide. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions10.svg) | **Say:** Here’s another decision that needs to be made. I’m not sure if I have won the game I’m playing. I have won it if my score * (times) my lives is greater than 10. <br><br> **Do This:** Direct students to create baggie variables for the information that needs to be stored and write down the Boolean expression on a spare sticky note or scrap paper. Groups then compare their Boolean expressions. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions11.svg) | **Say:** Take a look at the Boolean expression in the decision section of the flowchart. Is this similar to what you and your partner wrote? Are there other ways we could construct this? (score and lives might have different names, score and lives might be in opposite order, you could write it as 10 < score * lives). <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** With a partner, try following the flowchart with a few different inputs. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions12.svg) | **Say:** Here's a new decision we need to make. <br><br> **Do This:** With a partner walk through the steps on the screen. Think about what the Boolean expression will look like. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions13.svg) | **Say:** Here's a flowchart for the question we just considered. <br><br> **Do This:** With your partner, step through the flowchart with a few different inputs. <br><br> **Note:** After students have practice on their own, call on one group to give input values for `dogAge` and `myAge` and step through the flowchart as a class.|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions14.svg) | **Say:** What happens if my decision requires several steps? I want to adopt a cat, but I have to have both 40 dollars and be over 14 years old. <br><br> **Note:** Emphasize precise language here. The Boolean is checking if I *have* 40 dollars - that's exactly 40, not one cent more! In the Conditional Practice lesson, students will return to this flowchart and edit it to account for having more than 40 dollars. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions15.svg) | **Say:** Let's get setup for stepping through the decision making process for this question. <br><br> **Do This:** Set up your baggies, and discuss with a partner how the flowchart might be set up. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions16.svg) | **Say:** This flowchart looks a little different from the previous one. There are two stopping points where a Boolean expression is evaluated. Let’s try this out with an example. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through, one step at a time with the class. When you get to a decision point, before clicking to the next animation have students evaluate the expression and hold up a blue sticky note. <br><br> **Say:** Notice in question box, I’ve stated that I can adopt the cat if I have 40 dollars AND (emphasize) I am over 14 years old. I am checking two things. Let’s look at a way to simplify that process. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions17.svg) | **Say:** In the previous example, we had two Boolean expressions to evaluate. We can use logical operators to compare the results of those Boolean expressions. The logical operators we will look at are && (AND), || (OR), and ! (NOT). When we see a Logical Operator, it’s another clue that we need to stop and evaluate for a Boolean value. Here, two expressions have already been evalauted to Boolean values. If something is true and false, it evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Think back to the cat example. It was true that I was old enough to adopt the cat, but false that I had enough money. Therefore, I followed the false path to the output that stated I could not adopt a cat. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions18.svg) | **Say:** Now we're going to take a look at something called a Truth Table. We are going to change the color of the sticky notes a little bit. Boolean values will still be on blue stickies, but *true* will be a dark blue, and *false* a light blue. <br><br> **Note:** there is no need to supply two different colors of blue sticky notes for these slides. Students can follow along. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions19.svg) | **Say:** This is a Truth Table. It demonstrates all the possible combinations of true and false and what they would evaluate to if combined with the logical operator && (AND). The first one seems obvious to us - if something is true and another thing is true, then the whole thing is true!. Read through each row, and consider what is being stated. In rows 2 and 3, if one value is false, the whole thing evaluates to false. This is what happened with the cat example. On the final line, if both values are false, the final evaluation is false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** What's the takeway? In evaluating two Boolean expressions with the AND operator, both must be true in order for the whole expression to evaluate as true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions20.svg) | **Say:** Now let's consider a Truth Table for OR. <br><br> **Do This:** With a partner, evaluate each row. For example, if the first sticky is *True* or the second sticky is *True* what do you think the whole expression will evaluate to: true or false? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop line by line and allow time for groups to make their predictions. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** For the OR Truth Table, if either sticky note is *True* the expression evaluates to true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions21.svg) | **Say:** The ! NOT table is simple because it reverses the value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** As a class quickly state what the opposite values are and click through the animations. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions22.svg) | **Say:** Let’s return to the cat example. How can we write a single expression that accounts for all the information that needs to be checked? <br><br> **Do This:** With a partner, create the expression using logical operators. <br><br> **Note:** It’s ok if students struggle with this activity. After a few minutes, move on to the next slide and reveal the answer. This will help students make the connection. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions23.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through the animation step by step and follow along as a class. Allow time to predict at decision points. When the truth table (yellow box) appears on the screen, take a moment to remind students what this is and what it demonstrates. If a value is true and another value is true, it evaluates to true. It’s not expected that students will memorize the truth tables, but they should be familiar with how they work. <br><br> **Note:** If you have extra time, try running this flowchart with other inputs. Try changing the conditions and then running the flowchart (i.e. I can adopt the cat if I have 40 dollars OR I am over 14 years old) <br><br> **Say:** Today we used flowcharts to demonstrate how computers make decisions. In the next class, we will investigate how decisions are made in code. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions24.svg) | **Do This:** Give students a few minutes to craft their own flowcharts and test on each other following the instructions on the screen. <br><br> **Note:** Simple flowcharts are fine, or students can build more complex models. Students are ready to move on when the majority of the class has made and tested a flowchart. \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions25.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways on the screen with students. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-26.svg) |<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways with students.  |"
+        "description": "| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functionsconditionals1.svg) | **Say:** Today we are going to explore Conditionals. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions1.svg) | **Say:** Previously, we learned that information can be stored as numbers or strings in variables. These are two different types of data. Numbers and strings can be combined together using operators to make expressions. Expressions are evaluated before storing in variables. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions2.svg) | **Say:** Boolean values are another type of data. They can store the values “true” or “false”. Why would we want that information? Booleans are used to make decisions. If something is true, do this. If something is false, do that. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** You only need two blue sticky notes today. Write down “true” on one and “false” on the other. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions3.svg) | **Say:** Let’s look at this expression. Take a guess as to what Boolean value this evaluates to. <br><br> **Do This:** Hold up the sticky note with the correct value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The expression evaluates to true, because 3 is less than 8. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** The less than symbol is a comparison operator. When we see a comparison operator, we need to stop and evaluate for a Boolean value. There are six different comparison operators - you may be familiar with some of them from math class. Notice the double equal signs for \"equal to\". Here we are distinguishing from a single equal sign that is used to assign value to a variable. We read a single equal sign as “gets the value”. A double equal sign can be read as \"equal to”. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions4.svg) | **Say:** Both sides of the relational operator should be reduced to a single value before we can compare. Think of it in terms of sticky notes. You should have only one sticky note on each side. <br><br> **Do This:** What does 3 + 6 equate to? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Right: 9! Now we can compare 9 and 8 using the relational operator: less than. <br><br> **Do This:** Does this evaluate to true or false? Hold up the correct sticky note. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-5.svg) | **Say:** Let’s evaluate these expressions line by line. It may be helpful to use your sticky notes here. <br><br> **Do This:** Reduce each side of the relational operator to one sticky note. Then evaluate for a Boolean value. Compare your answers with a partner. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through to view the answers. The third line may be a little tricky. Remind students to evaluate the information in the parenthesis first. In the fourth line, draw attention to the double equal signs and remind the class double equal signs are a signal to compare if both sides are the same. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-6.svg) | **Say:** The expressions that we evaluate can also contain variables. Remember, variables store information. This information can be different data types like numbers, strings, or even Boolean values themselves. For now, we are going to stick with numbers. <br><br> **Do This:** With a partner, reduce both sides of the relational operator. Then evaluate for a Boolean value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** When the class is finished, click through for the answer. Draw attention to the note: any expression that can be evaluated for true or false is known as a Boolean Expression. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions7.svg) | **Say:** At the beginning of class, we talked about how Booleans are used to make decisions. Let’s see that in action. Consider the following question: Can I go to the movies? I’m allowed to if it’s before 8 o’clock. This may seem like a simple decision! But let’s think about this like a computer. <br><br> **Do This:** What information would the computer need to know in order to answer the question. Create a  baggie variable to store the information. Give it a name. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions8.svg) | **Say:** This is a flowchart. It’s an organized way to make a decision or come to a conclusion. Creating a flowchart helps us think like a computer. At the top, we are listing the variables that are needed. Your variable might be called time or clock or really anything. It doesn’t matter as long as you use the same name every time you refer to the variable. For this example, I’m naming my variable “time”. Let’s step through the flowchart with an example to see how it works. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions9.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Say:** It’s 9 o’clock. Can I go to the movies? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First I assign 9 to the variable time, then I move on to the diamond section. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I see a comparison operator, which let’s me know that we need to stop and evaluate the Boolean expression. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** First reduce both sides to a single value. Then evaluate for a Boolean value. In this case, The Boolean expression evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Follow the “false” path, and we arrive at the result: “I can’t go to the movies.” <br><br> **Note:** If students are confused, return back to the previous slide and try running some examples together as a class. Students can hold up true or false when evaluating the Boolean expression. Once students get the hang of using a flowchart, continue on to the next slide. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions10.svg) | **Say:** Here’s another decision that needs to be made. I’m not sure if I have won the game I’m playing. I have won it if my score * (times) my lives is greater than 10. <br><br> **Do This:** Direct students to create baggie variables for the information that needs to be stored and write down the Boolean expression on a spare sticky note or scrap paper. Groups then compare their Boolean expressions. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions11.svg) | **Say:** Take a look at the Boolean expression in the decision section of the flowchart. Is this similar to what you and your partner wrote? Are there other ways we could construct this? (score and lives might have different names, score and lives might be in opposite order, you could write it as 10 < score * lives). <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** With a partner, try following the flowchart with a few different inputs. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions12.svg) | **Say:** Here's a new decision we need to make. <br><br> **Do This:** With a partner walk through the steps on the screen. Think about what the Boolean expression will look like. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions13.svg) | **Say:** Here's a flowchart for the question we just considered. <br><br> **Do This:** With your partner, step through the flowchart with a few different inputs. <br><br> **Note:** After students have practice on their own, call on one group to give input values for `dogAge` and `myAge` and step through the flowchart as a class.|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions14.svg) | **Say:** What happens if my decision requires several steps? I want to adopt a cat, but I have to have both 40 dollars and be over 14 years old. <br><br> **Note:** Emphasize precise language here. The Boolean is checking if I *have* 40 dollars - that's exactly 40, not one cent more! In the Conditional Practice lesson, students will return to this flowchart and edit it to account for having more than 40 dollars. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions15.svg) | **Say:** Let's get setup for stepping through the decision making process for this question. <br><br> **Do This:** Set up your baggies, and discuss with a partner how the flowchart might be set up. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions16.svg) | **Say:** This flowchart looks a little different from the previous one. There are two stopping points where a Boolean expression is evaluated. Let’s try this out with an example. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through, one step at a time with the class. When you get to a decision point, before clicking to the next animation have students evaluate the expression and hold up a blue sticky note. <br><br> **Say:** Notice in question box, I’ve stated that I can adopt the cat if I have 40 dollars AND (emphasize) I am over 14 years old. I am checking two things. Let’s look at a way to simplify that process. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions17.svg) | **Say:** In the previous example, we had two Boolean expressions to evaluate. We can use logical operators to compare the results of those Boolean expressions. The logical operators we will look at are && (AND), || (OR), and ! (NOT). When we see a Logical Operator, it’s another clue that we need to stop and evaluate for a Boolean value. Here, two expressions have already been evalauted to Boolean values. If something is true and false, it evaluates to false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Think back to the cat example. It was true that I was old enough to adopt the cat, but false that I had enough money. Therefore, I followed the false path to the output that stated I could not adopt a cat. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions18.svg) | **Say:** Now we're going to take a look at something called a Truth Table. We are going to change the color of the sticky notes a little bit. Boolean values will still be on blue stickies, but *true* will be a dark blue, and *false* a light blue. <br><br> **Note:** there is no need to supply two different colors of blue sticky notes for these slides. Students can follow along. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions19.svg) | **Say:** This is a Truth Table. It demonstrates all the possible combinations of true and false and what they would evaluate to if combined with the logical operator && (AND). The first one seems obvious to us - if something is true and another thing is true, then the whole thing is true!. Read through each row, and consider what is being stated. In rows 2 and 3, if one value is false, the whole thing evaluates to false. This is what happened with the cat example. On the final line, if both values are false, the final evaluation is false. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** What's the takeway? In evaluating two Boolean expressions with the AND operator, both must be true in order for the whole expression to evaluate as true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions20.svg) | **Say:** Now let's consider a Truth Table for OR. <br><br> **Do This:** With a partner, evaluate each row. For example, if the first sticky is *True* or the second sticky is *True* what do you think the whole expression will evaluate to: true or false? <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop line by line and allow time for groups to make their predictions. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** For the OR Truth Table, if either sticky note is *True* the expression evaluates to true. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions21.svg) | **Say:** The ! NOT table is simple because it reverses the value. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** As a class quickly state what the opposite values are and click through the animations. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions22.svg) | **Say:** Let’s return to the cat example. How can we write a single expression that accounts for all the information that needs to be checked? <br><br> **Do This:** With a partner, create the expression using logical operators. <br><br> **Note:** It’s ok if students struggle with this activity. After a few minutes, move on to the next slide and reveal the answer. This will help students make the connection. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions23.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click through the animation step by step and follow along as a class. Allow time to predict at decision points. When the truth table (yellow box) appears on the screen, take a moment to remind students what this is and what it demonstrates. If a value is true and another value is true, it evaluates to true. It’s not expected that students will memorize the truth tables, but they should be familiar with how they work. <br><br> **Note:** If you have extra time, try running this flowchart with other inputs. Try changing the conditions and then running the flowchart (i.e. I can adopt the cat if I have 40 dollars OR I am over 14 years old) <br><br> **Say:** Today we used flowcharts to demonstrate how computers make decisions. In the next class, we will investigate how decisions are made in code. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions24.svg) | **Do This:** Give students a few minutes to craft their own flowcharts and test on each other following the instructions on the screen. <br><br> **Note:** Simple flowcharts are fine, or students can build more complex models. Students are ready to move on when the majority of the class has made and tested a flowchart. \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions25.svg) | ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways on the screen with students. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-4---Variables,-Conditionals,-and-Functions-26.svg) |<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Review the key takeaways with students.  |"
       },
       "seeding_key": {
         "activity_section.key": "cb34d587-4b26-41be-8f4e-cbab88c3e575",
@@ -4232,7 +4232,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Conditionals: Boolean Expressions",
         "level_keys": [
@@ -6545,18 +6545,6 @@
       }
     },
     {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
       "name": "Guide to Investigate Lessons",
       "url": "https://youtu.be/jC85CeXs3ds",
       "key": "guide_to_investigate_lessons",
@@ -6566,30 +6554,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "EIPM: A Short Introduction",
-      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "eipm_a_short_introduction",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -6605,18 +6569,6 @@
       }
     },
     {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
       "name": "Guide to Practice Lessons",
       "url": "https://youtu.be/Aad0UJXGcR4",
       "key": "guide_to_practice_lessons",
@@ -6626,30 +6578,6 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "EIPM: A Short Introduction",
-      "url": "https://docs.google.com/document/d/1ncil5b0yWAN4LCyOeXwYuNrNKEHtN4nmAd2o-_K5Psw/edit?usp=sharing",
-      "key": "eipm_a_short_introduction",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "eipm_a_short_introduction"
       }
     },
     {
@@ -6666,18 +6594,6 @@
       }
     },
     {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
       "name": "Guide to Make Lessons",
       "url": "https://youtu.be/d5IK3kUlXW4",
       "key": "guide_to_make_lessons",
@@ -6690,18 +6606,6 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
       "name": "CS Principles: Conditionals - Part 1 Boolean Expressions",
       "url": "https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s",
       "key": "cs-principles-conditionals-part-1-boolean-expressions",
@@ -6711,102 +6615,6 @@
       },
       "seeding_key": {
         "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
-      }
-    },
-    {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "name": "Guide to Explore Lessons",
-      "url": "https://youtu.be/mzm-xqXH8BQ",
-      "key": "guide_to_explore_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_explore_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "Guide to Investigate Lessons",
-      "url": "https://youtu.be/jC85CeXs3ds",
-      "key": "guide_to_investigate_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "CSP Debugging Guide",
-      "url": "https://docs.google.com/document/d/13wipr2CpR3kHY2_pLoiUtVPqt2prMaTASYr5XaRoy-Q/edit?usp=sharing",
-      "key": "debugging-guide-csp-20-21",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "debugging-guide-csp-20-21"
-      }
-    },
-    {
-      "name": "Guide to Practice Lessons",
-      "url": "https://youtu.be/Aad0UJXGcR4",
-      "key": "guide_to_practice_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6823,18 +6631,6 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
       "name": "Song Lyrics",
       "url": "https://docs.google.com/document/d/1Kf0x84kHyOPXsEVp3LnXEYGiGybKXqqL86a4xgKHBLI/edit?usp=sharing",
       "key": "song-lyrics-functions",
@@ -6845,102 +6641,6 @@
       },
       "seeding_key": {
         "resource.key": "song-lyrics-functions"
-      }
-    },
-    {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "name": "Guide to Explore Lessons",
-      "url": "https://youtu.be/mzm-xqXH8BQ",
-      "key": "guide_to_explore_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_explore_lessons"
-      }
-    },
-    {
-      "name": "Guide to Investigate Lessons",
-      "url": "https://youtu.be/jC85CeXs3ds",
-      "key": "guide_to_investigate_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_investigate_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "Guide to Practice Lessons",
-      "url": "https://youtu.be/Aad0UJXGcR4",
-      "key": "guide_to_practice_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "Guide to Make Lessons",
-      "url": "https://youtu.be/d5IK3kUlXW4",
-      "key": "guide_to_make_lessons",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_make_lessons"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     },
     {
@@ -6957,18 +6657,6 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
       "name": "CSP U4 Practice PT Rubric",
       "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
       "key": "csp_u4_practice_pt_rubric",
@@ -6992,94 +6680,6 @@
       },
       "seeding_key": {
         "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Rubric",
-      "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_rubric",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_rubric"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Planning Guide",
-      "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_planning_guide",
-      "properties": {
-        "type": "Planning Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Rubric",
-      "url": "https://docs.google.com/document/d/1mldgFK3CJbsWnTS8WYVDtEY1e7V4c0_V0sv63dYUkG8/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_rubric",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_rubric"
-      }
-    },
-    {
-      "name": "CSP U4 Practice PT Planning Guide",
-      "url": "https://docs.google.com/document/d/1IojBJ1NQPDz4SajskdWq_6LSstg3_9EgpTAwQf63M5g/edit?usp=sharing",
-      "key": "csp_u4_practice_pt_planning_guide",
-      "properties": {
-        "type": "Planning Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csp_u4_practice_pt_planning_guide"
-      }
-    },
-    {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1GhpZOh2589s9MuKsll7YkQ3xv6nwcpmtAnTCgJPIXC0/copy",
-      "key": "csp_unit_4_-_variables_conditionals_and_functions",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     }
   ],
@@ -7372,6 +6972,9 @@
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
 
@@ -7765,6 +7368,544 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.F.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.H.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.I.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.J.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    }
   ]
 }

@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-03-15 12:51:02 UTC",
+    "serialized_at": "2021-03-24 21:40:31 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -10169,19 +10169,6 @@
       }
     },
     {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
       "name": "Prototype an Innovation",
       "url": "https://studio.code.org/s/csd6-2019/stage/16/puzzle/1",
       "key": "protype-an-innovation-exemplars",
@@ -10311,6 +10298,9 @@
         "resource.key": "planning-your-innovation"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
     {
@@ -10464,222 +10454,259 @@
     {
       "seeding_key": {
         "lesson.key": "Designing Screens with Code",
+        "programming_environment.name": "applab",
         "programming_expression.key": "setProperty"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.off"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.on"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.blink"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.toggle"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
         "programming_expression.key": "led.pulse"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "isPressed"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "toggleSwitch.isOpen"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "toggleSwitch"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "buttons"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
         "programming_expression.key": "onBoardEvent"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Getting Properties",
+        "programming_environment.name": "applab",
         "programming_expression.key": "getProperty"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "soundSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "tempSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "lightSensor"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "soundSensor.setScale"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Analog Input",
+        "programming_environment.name": "applab",
         "programming_expression.key": "soundSensor.value"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "on"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "accessListItem"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "blink"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "color"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "colorLeds"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
         "programming_expression.key": "intensity"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "declareAssign_list_abd"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "listLength"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "buzzer.note"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
         "programming_expression.key": "buzzerplaynotes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
         "programming_expression.key": "functionParams_n"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
         "programming_expression.key": "forLoop_i_0_4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Arrays and For Loops",
+        "programming_environment.name": "applab",
         "programming_expression.key": "callMyFunction_n"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accelerometer",
+        "programming_environment.name": "applab",
         "programming_expression.key": "accelerometer.getOrientation"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
+        "programming_environment.name": "applab",
         "programming_expression.key": "functionParams_n"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
+        "programming_environment.name": "applab",
         "programming_expression.key": "callMyFunction_n"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "digitalWrite"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "createLed"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "createButton"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "programming_environment.name": "applab",
         "programming_expression.key": "pinMode"
       }
     }
@@ -11073,6 +11100,561 @@
       "seeding_key": {
         "lesson.key": "Project: Prototype an Innovation",
         "objective.key": "5ae2739b-3776-43ba-973f-50fa22302e32"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input Unplugged",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Program Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Make a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and For Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
       }
     }
   ]
