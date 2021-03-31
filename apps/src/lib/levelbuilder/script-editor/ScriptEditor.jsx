@@ -927,6 +927,7 @@ class ScriptEditor extends React.Component {
           </label>
           <div>
             <Button
+              name="launch_plc_course"
               text="Launch PLC Course"
               onClick={this.launchPlcCourse}
               color={Button.ButtonColor.purple}

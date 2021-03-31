@@ -47,6 +47,7 @@ describe('ScriptEditor', () => {
       initialAnnouncements: [],
       curriculumUmbrella: 'CSF',
       i18nData: {
+        title: 'Test-Script',
         stageDescriptions: [],
         description:
           '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
@@ -445,6 +446,59 @@ describe('ScriptEditor', () => {
       });
       const checkbox = wrapper.find('input[name="visible_to_teachers"]');
       expect(checkbox.prop('checked')).to.be.false;
+    });
+  });
+
+  describe('Professional Learning Course', () => {
+    it('successfully launch plc course', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      const launchButton = wrapper.find('Button[name="launch_plc_course"]');
+      expect(launchButton.contains('Launch PLC Course')).to.be.true;
+
+      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
+
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/plc/Test-Script/launch`, [
+        200,
+        {'Content-Type': 'application/json'},
+        'Success'
+      ]);
+
+      launchButton.simulate('click');
+      server.respond();
+      scriptEditor.update();
+
+      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
+        'Course Launched'
+      );
+    });
+
+    it('launch plc course gives error', () => {
+      const wrapper = createWrapper({});
+      const scriptEditor = wrapper.find('ScriptEditor');
+
+      const launchButton = wrapper.find('Button[name="launch_plc_course"]');
+      expect(launchButton.contains('Launch PLC Course')).to.be.true;
+
+      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(null);
+
+      let returnData = 'There was an error';
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/plc/Test-Script/launch`, [
+        404,
+        {'Content-Type': 'application/json'},
+        returnData
+      ]);
+
+      launchButton.simulate('click');
+      server.respond();
+      scriptEditor.update();
+
+      expect(scriptEditor.state().plcCourseLaunchStatus).to.equal(
+        'There was an error'
+      );
     });
   });
 });
