@@ -250,7 +250,9 @@ namespace :seed do
 
       # This is only expected to happen when DSL_FILENAME is set and the
       # filename is not found
-      raise "no matching dsl-defined level files found" unless dsls_glob.count > 0
+      unless dsls_glob.count > 0
+        raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
+      end
 
       # Parse each .[dsl] file and setup its model.
       dsls_glob.each do |filename|
