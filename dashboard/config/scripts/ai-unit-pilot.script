@@ -1,4 +1,5 @@
 login_required true
+hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 pilot_experiment 'ai-unit-pilot'

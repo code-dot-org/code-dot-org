@@ -615,6 +615,7 @@ en:
         outbreak_mike: CodeBytes Episode 3 with Mike - Outbreak Simulator
         poembot-pilot-prompts: Haiku Bots - Prompt with Choices [PILOT]
         poembot-pilot-text: Haiku Bots - Storing Text [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Show Your Haiku [PILOT]
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
