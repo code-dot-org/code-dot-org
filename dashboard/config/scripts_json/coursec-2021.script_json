@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-18 18:30:31 UTC",
+    "serialized_at": "2021-03-30 18:53:22 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -150,10 +150,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Using a set of symbols in place of code, students will design **algorithms** to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the **algorithm** defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an **algorithm** and a **program**, and the valuable skill of **debugging**.",
+        "overview": "In this **context-setting** lessons, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
-        "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the **programming** that students will do throughout the course as they learn the importance of defining a clearly communicated **algorithm**.",
-        "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***My Robotic Friends - Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***My Robotic Friends - Cup Stacking Ideas** per group of 2-3 students.\n - Make sure each student has a journal.",
+        "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
+        "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 2-3 students.\n - Make sure each student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -170,10 +170,10 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Using characters from the game _Angry Birds_, students will develop sequential **algorithms** to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
-        "student_overview": "Learn about sequences and algorithms with Angry Birds.",
-        "purpose": "In this lesson, students will develop programming and **debugging** skills on a computer platform. The block-based format of these puzzles help students learn about **sequence** and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - (Optional) Pick a couple of puzzles to do as a group with your class. \r\n - Make sure every student has a journal.",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+        "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
+        "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -190,10 +190,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Debugging** is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
+        "overview": "In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
-        "purpose": "Students in your class might become frustrated with this lesson because of the essence of **debugging**. **Debugging** is a concept that is very important to computer programming. Computer scientists have to get really good at facing the **bugs** in their own programs. **Debugging** forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Review the ***Debugging Guide** from this course's curriculum overview page with the class.\n - Make sure every student has a journal.",
+        "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Review the ***Debugging Guide** from this course's curriculum overview page with the class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -210,10 +210,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, _Laurel the Adventurer_, students will create sequential **algorithms** to get _Laurel_ to pick up treasure as she walks along a path.",
+        "overview": "In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get _Laurel_ to pick up treasure as she walks along a path.",
         "student_overview": "Write algorithms to help Laurel the Adventurer collect lots of gems!",
-        "purpose": "In this lesson, students will be practicing their programming skills using a new character, Laurel the Adventurer. When someone starts **programming** they piece together instructions in a specific order using something that a machine can read. Through the use of **programming**, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and **algorithms** in **programming**.",
-        "preparation": " - Play through the puzzles to find potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "In this lesson, students will be practicing their programming skills using a new character, Laurel the Adventurer. When someone starts programming they piece together instructions in a specific order using something that a machine can read. Through the use of programming, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and algorithms in programming.",
+        "preparation": " - Play through the puzzles to find potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -233,7 +233,7 @@
         "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
         "student_overview": "Create beautiful images by programming the Artist.",
         "purpose": "Building off of the students' previous experience with sequencing, this lesson will work to inspire more creativity with coding. The purpose of this lesson is to solidify knowledge on sequencing by introducing new blocks and goals. In this case, students learn more about pixels and angles using the new blocks, while still practicing their sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Turns & Angles - Student Handout** for each student.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Student Handout** for each student.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -250,10 +250,10 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**Binary** is extremely important in the world of computers. The majority of computers today store all sorts of information in **binary** form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.",
+        "overview": "Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.",
         "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
-        "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning **binary**, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to **binary**, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into **binary**, stores the information, then posts a message indicating the document has been saved.",
-        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***Binary Bracelets** - worksheet and one ***Binary Bracelets** - assessment per student.\n- Make sure every student has a journal.\n- (Optional) Write a short message on the board in binary.",
+        "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- Make sure every student has a reflection journal.\n- (Optional) Write a short message on the board in binary.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -270,9 +270,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify **repeated** patterns in their instructions that could be replaced with a **loop**.",
+        "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
-        "purpose": "This lesson serves as a reintroduction to **loops**, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those **repeated** patterns using **loops**.",
+        "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
         "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
@@ -290,10 +290,10 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Building on the concept of **repeating** instructions from \"Getting Loopy,\" this stage will have students using **loops** to help _BB-8_ traverse a maze more efficiently than before.",
+        "overview": "Building on the concept of repeating instructions from \"Getting Loopy,\" this stage will have students using loops to help _BB-8_ traverse a maze more efficiently than before.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
-        "purpose": "In this lesson, students will be learning more about **loops** and how to implement them in Blockly code. Using **loops** is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing **loops**, gather **repeated** code into **loops**, and recognize patterns that need to be **looped**. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
-        "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
+        "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -310,10 +310,10 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Students **loop** new actions in order to help the harvester collect multiple veggies growing in large bunches.",
+        "overview": "Students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
         "student_overview": "Let's use loops to help the harvester collect some veggies!",
-        "purpose": "In this lesson, students will use **loops** to repeat actions like harvesting pumpkins. New patterns will emerge and students will use creativity and logical thinking to determine what code needs to be **repeated** and how many times.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "In this lesson, students will use loops to repeat actions like harvesting pumpkins. New patterns will emerge and students will use creativity and logical thinking to determine what code needs to be repeated and how many times.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -324,16 +324,16 @@
     },
     {
       "key": "Sticker Art with Loops",
-      "name": "Sticker Art with Loops",
+      "name": "Mini-Project: Sticker Art",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
-        "purpose": "This series highlights the power of **loops** with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
-        "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\r\n - Make sure every student has a journal.",
+        "purpose": "This series highlights the power of loops with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
+        "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -350,10 +350,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. **Events** can make your program more interesting and interactive.",
+        "overview": "Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.",
         "student_overview": "Play a fun game to learn about events. ",
-        "purpose": "Today, students will learn to distinguish **events** and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this **event**, the class will react with a unique action. **Events** are widely used in programming and should be easily recognizable after this lesson.",
-        "preparation": "- Print or display the ***Event Controller**.\n- Print one ***Big Event** assessment for each student.\n- Make sure every student has a journal.",
+        "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
+        "preparation": "- Print or display the ***Event Controller**.\n- Print one ***assessment** for each student.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -370,10 +370,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this special stage, students get to build their own Flappy Bird game by using **event** handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.",
+        "overview": "In this special stage, students get to build their own Flappy Bird game by using event handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.",
         "student_overview": "Build you own Flappy Bird game however you like, then share it with your friends!",
-        "purpose": "**Events** are very common in computer programs. In this lesson, students will further develop their understanding of **events** by making a _Flappy Bird_ game. Students will learn to make their character move across the screen, make noises, and react to obstacles based on user-initiated **events**.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "Events are very common in computer programs. In this lesson, students will further develop their understanding of events by making a _Flappy Bird_ game. Students will learn to make their character move across the screen, make noises, and react to obstacles based on user-initiated events.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -390,10 +390,10 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use **events** in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
+        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
         "student_overview": "It's time to get creative and make a game in Play Lab!",
-        "purpose": "Here, students will further develop their understanding of **events** using Play Lab. Students will use **events** to make characters move around the screen, make noises, and change backgrounds based on user input. At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.  ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "Here, students will further develop their understanding of events using Play Lab. Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.  ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -413,7 +413,7 @@
         "overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
         "student_overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
         "purpose": "Computers were created to help process data. There is an increasing amount of data in the world, so being able to read and analyze it is important.  This lesson is here to make sure students have the basic experience of collecting, visualizing, and analyzing a simple set of data.",
-        "preparation": "* Print out one ***Graphing Data from Play Lab** worksheet for each student.\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.",
+        "preparation": "* Print out one ***worksheet** for each student.\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -430,10 +430,10 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
-        "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Play Lab Project Planning Guide** for each student (or pair).\n* Review the ***Play Lab Project Planning Guide (Exemplar)** document.\n* (Optional) Complete your own planning guide and code your own project to show to students!",
+        "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* Review the ***Project Planning Guide (Exemplar)** document.\n* (Optional) Complete your own planning guide and code your own project to show to students!\n",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -1567,7 +1567,7 @@
       "key": "49bc6fdd-0a8e-422b-a5bc-b2a97cecb7b7",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Refer to the video that you chose and ask students how they think that the robot knew what to do. _Does a robot really “understand” what you say? Is it worried about getting in trouble if it doesn't do what it's told?_\n\n**Discussion Goal:** The goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their **programming**. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_."
+        "description": "**Discuss:** Refer to the video that you chose and ask students how they think that the robot knew what to do. _Does a robot really “understand” what you say? Is it worried about getting in trouble if it doesn't do what it's told?_\n\n**Discussion Goal:** The goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_."
       },
       "seeding_key": {
         "activity_section.key": "49bc6fdd-0a8e-422b-a5bc-b2a97cecb7b7",
@@ -1616,7 +1616,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Handy Rules:\n\n- **Up** means that the cup automatically goes up as high as it needs to.\n- **Down** means that it automatically goes down until it lands on something.\n\t- The hand automatically returns to cup stack after setting down a cup.\n- **Forward** means the robot moves one step (1/2 cup width) forward.\n- **Backward** means the robot moves one step (1/2 cup width) backward.\n\t- Note: Students may not use backward at this age unless they want to build the cup stacks in reverse (which is also okay).\n- Programmers are not allowed to talk when the robot is working. This includes blurting out answers or pointing out when the robot has done something wrong.\n - Programmers should raise their hand if they see a **bug**.\n\n---\n\n\n### Differentiation Options:\n\n\n**Simplify:**  Does this all feel a little complicated for your students?  \n\nDon't forget to model this in front of the class until students understand all of the rules.  If it's still confusing, try running this whole activity together as a classroom using volunteers as robots, instead of breaking up into groups!\n\n\n\n**Intensify:**  Are your students more advanced? Do you want this lesson to relate more closely to the online puzzles? Here are some modifications that you can make:\n\n- One arrow corresponds to one movement:\n\t- When a cup is removed from the stack, it returns to table-level before moving.\n\t- Students need to use multiple \"up\" arrows to lift the cup multiple levels.\n\t- Students need to use multiple \"down\" arrows to lower the cups multiple levels.\n\t- Students need to use the \"back\" arrows to get back to the cup stack.\n\n"
+            "markdown": "### Handy Rules:\n\n- **Up** means that the cup automatically goes up as high as it needs to.\n- **Down** means that it automatically goes down until it lands on something.\n\t- The hand automatically returns to cup stack after setting down a cup.\n- **Forward** means the robot moves one step (1/2 cup width) forward.\n- **Backward** means the robot moves one step (1/2 cup width) backward.\n\t- Note: Students may not use backward at this age unless they want to build the cup stacks in reverse (which is also okay).\n- Programmers are not allowed to talk when the robot is working. This includes blurting out answers or pointing out when the robot has done something wrong.\n - Programmers should raise their hand if they see a bug.\n\n---\n\n\n### Differentiation Options:\n\n\n**Simplify:**  Does this all feel a little complicated for your students?  \n\nDon't forget to model this in front of the class until students understand all of the rules.  If it's still confusing, try running this whole activity together as a classroom using volunteers as robots, instead of breaking up into groups!\n\n\n\n**Intensify:**  Are your students more advanced? Do you want this lesson to relate more closely to the online puzzles? Here are some modifications that you can make:\n\n- One arrow corresponds to one movement:\n\t- When a cup is removed from the stack, it returns to table-level before moving.\n\t- Students need to use multiple \"up\" arrows to lift the cup multiple levels.\n\t- Students need to use multiple \"down\" arrows to lower the cups multiple levels.\n\t- Students need to use the \"back\" arrows to get back to the cup stack.\n\n"
           }
         ]
       },
@@ -1629,7 +1629,7 @@
       "key": "18c817e9-4ffc-43c1-b470-4ae4fb703372",
       "position": 4,
       "properties": {
-        "description": "**Display:** ***My Robotic Friends - Symbol Key** or write the allowed actions on the board - make sure these are in a place where they can be seen for the whole activity. Explain to the class that these will be the only four actions that they can use for this exercise. For this task, they will instruct their “robot” friend to build a specific cup stack using only the commands listed on the key.\n\n**Model:** In order to explain how the instructions are intended to work, model for the class how to create and follow an algorithm for replicating a simple pattern. Place a single stack of cups in front of you to start.\n\n**Display:** Hold up the pattern you plan to model. A simple three cup pattern is a great place to start.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n**Prompt:** Ask the class what the first instruction should be, using _only the four instructions allowed_. The first move should be to \"pick up cup.\" If students suggest something else from the list, perform that action and allow them to see their error.  If they suggest something not from the list, make a clear malfunction reaction and let them know that the command is not understood.\n\nWith cup in hand, ask the class to continue giving you instructions until the first cup is placed. This is a great place to clarify that \"step forward\" and \"step backward\" each imply moving half a cup width. See the image below for reference.\n\n![3 cup pattern](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinue asking for instructions from the classroom until you have completed the entire design.\n\nOnce your stack is complete, point out that they just gave you a list of steps for completing a task. That's an **algorithm**.  **Algorithms** are great for sharing ideas, but spelling them out word by word can take a long time. That's what the symbols are for!  When you change an **algorithm** into symbols that a robot (or computer) understands, that's called **programming**.\n\nAsk the class to help you write the **\"program\"** for that first move by changing the text into an arrow. Then work with them to write down the rest of the moves necessary to complete the pattern. Depending on the confidence of your students, you might switch back and forth frequently between acting as the \"robot\" and writing down the code, or you might push them to write the whole **program** before you will implement it. One possible solution looks like this:\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Volunteer:** Once the class has completed the model **program**, ask one of the students to come up and act as the \"robot\" to ensure that the **program** really works. Encourage them to say the instructions out loud as they \"run\" the code."
+        "description": "**Display:** ***Symbol Key** or write the allowed actions on the board - make sure these are in a place where they can be seen for the whole activity. Explain to the class that these will be the only four actions that they can use for this exercise. For this task, they will instruct their “robot” friend to build a specific cup stack using only the commands listed on the key.\n\n**Model:** In order to explain how the instructions are intended to work, model for the class how to create and follow an algorithm for replicating a simple pattern. Place a single stack of cups in front of you to start.\n\n**Display:** Hold up the pattern you plan to model. A simple three cup pattern is a great place to start.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n**Prompt:** Ask the class what the first instruction should be, using _only the four instructions allowed_. The first move should be to \"pick up cup.\" If students suggest something else from the list, perform that action and allow them to see their error.  If they suggest something not from the list, make a clear malfunction reaction and let them know that the command is not understood.\n\nWith cup in hand, ask the class to continue giving you instructions until the first cup is placed. This is a great place to clarify that \"step forward\" and \"step backward\" each imply moving half a cup width. See the image below for reference.\n\n![3 cup pattern](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinue asking for instructions from the classroom until you have completed the entire design.\n\nOnce your stack is complete, point out that they just gave you a list of steps for completing a task. That's an algorithm.  Algorithms are great for sharing ideas, but spelling them out word by word can take a long time. That's what the symbols are for!  When you change an algorithm into symbols that a robot (or computer) understands, that's called programming.\n\nAsk the class to help you write the \"program\" for that first move by changing the text into an arrow. Then work with them to write down the rest of the moves necessary to complete the pattern. Depending on the confidence of your students, you might switch back and forth frequently between acting as the \"robot\" and writing down the code, or you might push them to write the whole program before you will implement it. One possible solution looks like this:\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Volunteer:** Once the class has completed the model program, ask one of the students to come up and act as the \"robot\" to ensure that the program really works. Encourage them to say the instructions out loud as they \"run\" the code."
       },
       "seeding_key": {
         "activity_section.key": "18c817e9-4ffc-43c1-b470-4ae4fb703372",
@@ -1640,7 +1640,7 @@
       "key": "81f309fd-bac6-4eb6-9056-b469ccdf98b7",
       "position": 5,
       "properties": {
-        "description": "####Programming Your Robots\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own **program** to be \"run\" by the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** ***My Robotic Friends - Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which design they would like their robots to do. Try to push for an easier design for the first time, then have them choose a more complex design later on. Encourage pairs to keep their choice secret from the other half of their group.\n\n**Discuss:** Give each pair time to discuss how the stack should be built, using only the provided symbols. Make sure each group writes down the **\"program\"** somewhere for the \"robot\" to read later.\n\n\n**Do:** Once both of the group's pairs have completed their programs, they can take turns being \"robots\" for each other by following the instructions the other pair wrote. Encourage students to watch their \"robot\" closely to ensure that they are following instructions. If a student sees a **bug** and raises their hand, have the robot finish the instructions to the best of their ability. Afterward, have the students discuss the potential **bug** and come up with solutions. Continue repeating until the stack is built properly.\n\n**Circulate:** Look for groups who are trying to take shortcuts by adding extra things (like numbers) to their code.  Praise them for their ingenuity, but remind them that for this exercise, the robots do not understand *anything* but the provided symbols.  If you like, you can hint that they should save their brilliant solution for the next time they play this game, since they might get the chance to use their invention soon!\n\n**Iterate:** Depending on the time available, mix up the pairs and give them a chance to do a different pattern. Each time groups repeat the process, encourage them to choose a more challenging pattern."
+        "description": "####Programming Your Robots\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program to be \"run\" by the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** ***Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which design they would like their robots to do. Try to push for an easier design for the first time, then have them choose a more complex design later on. Encourage pairs to keep their choice secret from the other half of their group.\n\n**Discuss:** Give each pair time to discuss how the stack should be built, using only the provided symbols. Make sure each group writes down the \"program\" somewhere for the \"robot\" to read later.\n\n\n**Do:** Once both of the group's pairs have completed their programs, they can take turns being \"robots\" for each other by following the instructions the other pair wrote. Encourage students to watch their \"robot\" closely to ensure that they are following instructions. If a student sees a bug and raises their hand, have the robot finish the instructions to the best of their ability. Afterward, have the students discuss the potential bug and come up with solutions. Continue repeating until the stack is built properly.\n\n**Circulate:** Look for groups who are trying to take shortcuts by adding extra things (like numbers) to their code.  Praise them for their ingenuity, but remind them that for this exercise, the robots do not understand *anything* but the provided symbols.  If you like, you can hint that they should save their brilliant solution for the next time they play this game, since they might get the chance to use their invention soon!\n\n**Iterate:** Depending on the time available, mix up the pairs and give them a chance to do a different pattern. Each time groups repeat the process, encourage them to choose a more challenging pattern."
       },
       "seeding_key": {
         "activity_section.key": "81f309fd-bac6-4eb6-9056-b469ccdf98b7",
@@ -1662,7 +1662,7 @@
       "key": "0faa4b5a-9049-426f-986b-b1aaf242c6b3",
       "position": 7,
       "properties": {
-        "description": "* _What was the most difficult part of coming up with the instructions?_\n* _Did anyone find a **bug** in your instructions once your robot started following them?_\n\t* _What was the **bug**?_\n\t* _Why do you think you didn't notice it when writing the **program**?_\n* _When you were the robot, what was the hardest part of following the instructions you were given?_"
+        "description": "* _What was the most difficult part of coming up with the instructions?_\n* _Did anyone find a bug in your instructions once your robot started following them?_\n\t* _What was the bug?_\n\t* _Why do you think you didn't notice it when writing the program?_\n* _When you were the robot, what was the hardest part of following the instructions you were given?_"
       },
       "seeding_key": {
         "activity_section.key": "0faa4b5a-9049-426f-986b-b1aaf242c6b3",
@@ -1673,8 +1673,14 @@
       "key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
-        "name": "Reflection"
+        "description": "**Prompts:**\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
@@ -1685,7 +1691,7 @@
       "key": "0919b37a-9bc1-44a3-ac64-8be4769d5ef4",
       "position": 1,
       "properties": {
-        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.\n\n**Display:** Show students a cup stack from the \"My Robotic Friends\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"My Robotic Friends.\"    \n\n- _What happens when the robot reads the different arrows?_\n\nEncourage students to think about the **debugging** tips:\n\n- _Was everything right at the first step?_\n- _How about the second?_\n- _Where did it go wrong?_\n\n\n**Transition:** Once you are satisfied that your students remember \"My Robotic Friends\", you can move into the Bridging Activity.",
+        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.\n\n**Display:** Show students a cup stack from the \"My Robotic Friends\" exercise that they completed in the lessons prior to this one. \n\n**Discuss:** Ask students to recall the symbols used in \"My Robotic Friends.\"    \n\n- _What happens when the robot reads the different arrows?_\n\nEncourage students to think about the debugging tips:\n\n- _Was everything right at the first step?_\n- _How about the second?_\n- _Where did it go wrong?_\n\n\n**Transition:** Once you are satisfied that your students remember \"My Robotic Friends\", you can move into the Bridging Activity.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1697,7 +1703,7 @@
       "key": "ccbf325b-05d5-4e4a-b009-1576cdfce4a4",
       "position": 1,
       "properties": {
-        "description": "This short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Unplugged Maze Blocks** in a configuration like the one below:\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
+        "description": "This short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Maze Blocks** in a configuration like the one below:\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
         "name": "Transitioning from Unplugged to Online\r"
       },
       "seeding_key": {
@@ -1775,7 +1781,7 @@
       "key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
@@ -1830,7 +1836,8 @@
       "key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
@@ -1841,7 +1848,7 @@
       "key": "b36f792a-6557-4c68-9065-3a87966f2cf6",
       "position": 9,
       "properties": {
-        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - _Did anyone feel frustrated during any of the puzzles?_\n - _Did anyone notice the need to be persistent?_\n\n**Transition:** Have students grab their ***Thinkspot Journals** and take a moment to reflect on the lesson for themselves."
+        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - _Did anyone feel frustrated during any of the puzzles?_\n - _Did anyone notice the need to be persistent?_\n\n**Transition:** Have students grab their reflection journals and take a moment to reflect on the lesson for themselves."
       },
       "seeding_key": {
         "activity_section.key": "b36f792a-6557-4c68-9065-3a87966f2cf6",
@@ -1852,7 +1859,7 @@
       "key": "1108a4f2-f4c2-48ca-be06-124b1270dfc5",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today. When completed, this can be used as a  review sheet for them to look at in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1886,7 +1893,7 @@
       "key": "34b2ac1f-8204-4cf2-817c-26a6eafb348b",
       "position": 1,
       "properties": {
-        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - _How do you fix something that isn't working?_\n - _Do you follow a specific series of steps?_\n - _The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)_\n - _We call the problems in these programs **\"bugs,\"** and it will be your job to **\"debug\"** them._",
+        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - _How do you fix something that isn't working?_\n - _Do you follow a specific series of steps?_\n - _The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)_\n - _We call the problems in these programs \"bugs,\" and it will be your job to \"debug\" them._",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1898,7 +1905,7 @@
       "key": "7e3e24b8-f0bf-4e20-891a-c39951719f1d",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\nThis lesson has three new and important vocabulary words:\n\n - ***Bug*** - *Say it with me - Buhh-g.*\n\nSomething that is going wrong. An error.\n\n - ***Debugging*** - *Say it with me: Dee-bug-ing.*\n\nTo find and fix errors.\n\n - ***Persistence*** - *Say it with me: Purr-siss-tense.*\n\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** _**Debugging** is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a **bug**. Once you've discovered your **bug**, you can work to fix (or \"debug\") it!_\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, *Scrat* from _\"Ice Age\"_. If students aren't familiar with *Scrat*, show some video clips of the quirky squirrel running into trouble."
+        "description": "####Vocabulary\nThis lesson has three new and important vocabulary words:\n\n - ***Bug*** - *Say it with me - Buhh-g.*\n\nSomething that is going wrong. An error.\n\n - ***Debugging*** - *Say it with me: Dee-bug-ing.*\n\nTo find and fix errors.\n\n - ***Persistence*** - *Say it with me: Purr-siss-tense.*\n\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** _**Debugging** is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!_\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, *Scrat* from _\"Ice Age\"_. If students aren't familiar with *Scrat*, show some video clips of the quirky squirrel running into trouble."
       },
       "seeding_key": {
         "activity_section.key": "7e3e24b8-f0bf-4e20-891a-c39951719f1d",
@@ -1932,7 +1939,7 @@
       "key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
@@ -1998,7 +2005,7 @@
       "key": "13cf61a7-7e92-40c5-ba55-c4fa27c516a7",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2146,7 +2153,7 @@
       "key": "5ba69a56-1f3b-42fa-9be4-9463ae109962",
       "position": 1,
       "properties": {
-        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n***Artist Introduction** - student video (1.5 minutes long)\n\n***Turns & Angles** - student video (2 minutes long)\n\nUse ***Turns & Angles** - student handout to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the square and triangle shapes from the document.\n\n - _How would you code a computer to draw that shape?_\n - _What order do the instructions need to be in?_\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
+        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n***Artist Introduction** - student video (1.5 minutes long)\n\n***Turns & Angles** - student video (2 minutes long)\n\nUse ***student handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the square and triangle shapes from the document.\n\n - _How would you code a computer to draw that shape?_\n - _What order do the instructions need to be in?_\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2300,7 +2307,7 @@
       "position": 3,
       "properties": {
         "remarks": true,
-        "description": "- Wires carry information through the machine in the form of electricity.\n\t- The two options that a computer uses with respect to this electrical information are \"off\" and \"on.\" Just like the lights in this room!\n\t\t- When computers represent information using only two options, it's called \"Binary.\"\n\t- That theme of two options doesn't stop when the information gets to its destination.\n- Computers also _store_ information using binary.\n\t- Binary isn't always off and on.\n\t\t- Hard Disk Drives store information using magnetic positive and magnetic negative.\n\t\t- DVDs store information as either reflective or non-reflective.\n\t- How do you suppose we can convert real-life things that we want to store in a computer into binary?\n\t\t- Let's start with letters.\n\t\t- Use the ***Binary Bracelets - Worksheet** to show how a computer might represent capital letters.\n\t\t\t- This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n\t\t\t- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n\t\t\t- Fun fact: A grouping of four bits is called a nibble.\n\t\t\t- Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\t\t- Go over a few examples of converting letters into binary, then back.\n\t\t- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n\t\t- When the class can figure out that encoded letter on their own, you can move on to the activity."
+        "description": "- Wires carry information through the machine in the form of electricity.\n\t- The two options that a computer uses with respect to this electrical information are \"off\" and \"on.\" Just like the lights in this room!\n\t\t- When computers represent information using only two options, it's called \"Binary.\"\n\t- That theme of two options doesn't stop when the information gets to its destination.\n- Computers also _store_ information using binary.\n\t- Binary isn't always off and on.\n\t\t- Hard Disk Drives store information using magnetic positive and magnetic negative.\n\t\t- DVDs store information as either reflective or non-reflective.\n\t- How do you suppose we can convert real-life things that we want to store in a computer into binary?\n\t\t- Let's start with letters.\n\t\t- Use the ***Worksheet** to show how a computer might represent capital letters.\n\t\t\t- This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n\t\t\t- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n\t\t\t- Fun fact: A grouping of four bits is called a nibble.\n\t\t\t- Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\t\t- Go over a few examples of converting letters into binary, then back.\n\t\t- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n\t\t- When the class can figure out that encoded letter on their own, you can move on to the activity."
       },
       "seeding_key": {
         "activity_section.key": "f77e3c90-8113-43bb-a9d1-31dd1827e961",
@@ -2400,7 +2407,7 @@
       "key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
       "position": 1,
       "properties": {
-        "description": "- Hand out the ***Binary Bracelets** - assessment and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
+        "description": "- Hand out the ***assessment** and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
@@ -2422,7 +2429,7 @@
       "key": "359899f5-314a-401a-a75f-1b0cd32829d8",
       "position": 1,
       "properties": {
-        "description": "\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the ***My Robotic Friends - Symbol Key** that we used in \"My Robotic Friends\". For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** With the class together as a group, pull an easy puzzle from the ***My Robotic Friends Cup Stacking Ideas** and program with each other as a reminder of rules and terminology.\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of **“repeating”** code, give them the vocabulary around it.  Make sure to share with them that often the terms “**repeat** something” and “**loop** something” are often used interchangeably.",
+        "description": "\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the ***Symbol Key** that we used in \"My Robotic Friends\". For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** With the class together as a group, pull an easy puzzle from the ***Cup Stacking Ideas** and program with each other as a reminder of rules and terminology.\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” are often used interchangeably.",
         "name": "My Robotic Friends Review"
       },
       "seeding_key": {
@@ -2446,7 +2453,7 @@
       "key": "76533bba-6245-4429-b8ef-a406d2dd250b",
       "position": 1,
       "properties": {
-        "description": "####Introduction and Modeling\n\n**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\n\n\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that **repeat** uninterrupted (one repetition after another).\n\n**Pair:** Turn to a neighbor and share one of the **repeating** patterns you found.\n\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\n\n**Model:** Using one of the **repeating** patterns that the class identified, model how to Circle the instruction or pattern that **repeats**, write the number of **loops** near that circle, then cross out the rest of the arrows.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\n\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much simpler the resulting instructions are."
+        "description": "####Introduction and Modeling\n\n**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\n\n\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that repeat uninterrupted (one repetition after another).\n\n**Pair:** Turn to a neighbor and share one of the repeating patterns you found.\n\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\n\n**Model:** Using one of the repeating patterns that the class identified, model how to Circle the instruction or pattern that repeats, write the number of loops near that circle, then cross out the rest of the arrows.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\n\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much simpler the resulting instructions are."
       },
       "seeding_key": {
         "activity_section.key": "76533bba-6245-4429-b8ef-a406d2dd250b",
@@ -2457,7 +2464,7 @@
       "key": "30f90b0d-b307-4fe8-b89a-c2e07583227e",
       "position": 2,
       "properties": {
-        "description": "####Looping Your Robots\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program \"run\" on the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** Show ***My Robotic Friends - Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which stack they would like their robot to do. Encourage pairs to select a more complicated pattern this time around."
+        "description": "####Looping Your Robots\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program \"run\" on the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** Show ***Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which stack they would like their robot to do. Encourage pairs to select a more complicated pattern this time around."
       },
       "seeding_key": {
         "activity_section.key": "30f90b0d-b307-4fe8-b89a-c2e07583227e",
@@ -2468,11 +2475,11 @@
       "key": "5e5453a7-f35f-458a-9831-b7c7b7f0fde1",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Let each group discuss how the stack should be built, then instruct each group to translate the algorithm into symbols. Make sure each group writes down the symbol algorithm somewhere for the \"robot\" to read later. As students are working on their programs, remind them to be on the lookout for opportunities to replace a **repeating** pattern with a **loop**.",
+        "description": "**Discuss:** Let each group discuss how the stack should be built, then instruct each group to translate the algorithm into symbols. Make sure each group writes down the symbol algorithm somewhere for the \"robot\" to read later. As students are working on their programs, remind them to be on the lookout for opportunities to replace a repeating pattern with a loop.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Looking for Loops:** Be sure to keep your eyes open for students using **loops**. Try to avoid correcting their overall algorithms or prescribing a solution, but feel free to direct students towards patterns that could be shortened by using a repeat circle. \n\nWatch students as they run through the code. Are there any bugs?  Use the debugging questions to help them find a solution.\n\n - What does it do?\n - What is it supposed to do?\n - What does that tell you?\n - Does it work at the first step?\n - Does it work at the second step?\n - Where does it stop working?\n  "
+            "markdown": "**Looking for Loops:** Be sure to keep your eyes open for students using loops. Try to avoid correcting their overall algorithms or prescribing a solution, but feel free to direct students towards patterns that could be shortened by using a repeat circle. \n\nWatch students as they run through the code. Are there any bugs?  Use the debugging questions to help them find a solution.\n\n - What does it do?\n - What is it supposed to do?\n - What does that tell you?\n - Does it work at the first step?\n - Does it work at the second step?\n - Where does it stop working?\n  "
           }
         ]
       },
@@ -2485,7 +2492,7 @@
       "key": "377094f1-b92e-40c3-a27e-864858517d4d",
       "position": 4,
       "properties": {
-        "description": "**Do:** When groups have finished their instructions, have each pair trade with another pair to run one another's code. Remind students to be on the lookout for bugs, but not to interrupt a robot until it's finished running the program.\n\n**Discuss:** When all of the pairs have had a chance to run their programs, ask a few to share their solutions with the class. Use this opportunity to discuss how groups came up with different solutions to the same puzzle. In particular, you might ask of each program:\n\n* _How did they identify the **loops**?_\n* _Are there other ways those **loops** could have been written?_\n* _How much shorter is the program with **loops** than it would be without?_\n* _Is the program easier to understand with **loops**, or written out longhand? Why?_"
+        "description": "**Do:** When groups have finished their instructions, have each pair trade with another pair to run one another's code. Remind students to be on the lookout for bugs, but not to interrupt a robot until it's finished running the program.\n\n**Discuss:** When all of the pairs have had a chance to run their programs, ask a few to share their solutions with the class. Use this opportunity to discuss how groups came up with different solutions to the same puzzle. In particular, you might ask of each program:\n\n* _How did they identify the loops?_\n* _Are there other ways those loops could have been written?_\n* _How much shorter is the program with loops than it would be without?_\n* _Is the program easier to understand with loops, or written out longhand? Why?_"
       },
       "seeding_key": {
         "activity_section.key": "377094f1-b92e-40c3-a27e-864858517d4d",
@@ -2496,7 +2503,7 @@
       "key": "dba044f7-494f-4657-a69b-ae2c7cf29ea0",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the ***Feeling Faces - Emotion Image** that shows how you felt about today's lesson in the corner of your journal page.\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
+        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2519,7 +2526,7 @@
       "key": "ff476c40-142d-458c-8c84-04f775b46de3",
       "position": 1,
       "properties": {
-        "description": "Review with students the \"My Loopy Robotic Friends\" activity:\n\n- _What are **loops**?_\n- _Why do we use them?_\n\nQuickly show the students a program (with repeated steps) for the rest of the class to do. Ask the rest of the class to find the **loops** within the program and point them out.\n\nIf you're comfortable, give an introduction to _BB-8_ from _Star Wars_. Many children may be familiar with the lovable robot, but an introduction will surely build excitement.",
+        "description": "Review with students the \"My Loopy Robotic Friends\" activity:\n\n- _What are loops?_\n- _Why do we use them?_\n\nQuickly show the students a program (with repeated steps) for the rest of the class to do. Ask the rest of the class to find the loops within the program and point them out.\n\nIf you're comfortable, give an introduction to _BB-8_ from _Star Wars_. Many children may be familiar with the lovable robot, but an introduction will surely build excitement.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2542,7 +2549,7 @@
       "key": "3ac4fdef-870d-4cad-8022-649ab64336b0",
       "position": 2,
       "properties": {
-        "description": "Revisit \"My Loopy Robotic Friends\". This time, work with the class to \"code\" it out using ***Unplugged Blocks (Courses C-F)** instead of writing the instructions on paper. Make sure the students know that the blocks need to go from top to bottom and they all need to touch!\n\n####-Or-",
+        "description": "Revisit \"My Loopy Robotic Friends\". This time, work with the class to \"code\" it out using ***manipulatives** instead of writing the instructions on paper. Make sure the students know that the blocks need to go from top to bottom and they all need to touch!\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -2554,7 +2561,7 @@
       "key": "870aa404-0931-4b87-ab53-5fc373ff8dc2",
       "position": 3,
       "properties": {
-        "description": "Pull up the online puzzles and choose a puzzle to do in front of the class. We recommend puzzle 10 for its staircase pattern. Ask the students to write a program to solve the puzzle on paper.  Have the students circle **repeated** chunks and label with the number of **repeats**, the same way they did in \"My Loopy Robotic Friends.\"",
+        "description": "Pull up the online puzzles and choose a puzzle to do in front of the class. We recommend puzzle 10 for its staircase pattern. Ask the students to write a program to solve the puzzle on paper.  Have the students circle repeated chunks and label with the number of repeats, the same way they did in \"My Loopy Robotic Friends.\"",
         "name": "Previewing Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -2677,7 +2684,7 @@
       "key": "351f97fd-0d87-49c1-90ee-f4243884adf9",
       "position": 11,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a **loop** vs. not using a **loop**. ***Pair Programming - Student Video** works really well with this set of puzzles because there are a few ways to fill the **loops**. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\n \n - *How did you come up with that solution?*\n - *What are some benefits of solving the puzzle that way?*\n\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in **loops**."
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. not using a loop. ***Pair Programming - Student Video** works really well with this set of puzzles because there are a few ways to fill the loops. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\n \n - *How did you come up with that solution?*\n - *What are some benefits of solving the puzzle that way?*\n\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in loops."
       },
       "seeding_key": {
         "activity_section.key": "351f97fd-0d87-49c1-90ee-f4243884adf9",
@@ -2711,7 +2718,7 @@
       "key": "dacd64e5-3f26-48ad-9e50-3d2eaca56292",
       "position": 1,
       "properties": {
-        "description": "At this point, students have only used **loops** in the Maze puzzles. Those puzzles focused on **looping** movement instructions. This stage will use **loops** to pick up multiple items in the same spot.\n\n**Ask:**\n\n - _What are some other elements of our programs that could benefit from loops?_\n - _Harvester puzzles can have lots of items in one spot. How can we use **loops** to pick up any number of them with just two blocks?_",
+        "description": "At this point, students have only used loops in the Maze puzzles. Those puzzles focused on looping movement instructions. This stage will use loops to pick up multiple items in the same spot.\n\n**Ask:**\n\n - _What are some other elements of our programs that could benefit from loops?_\n - _Harvester puzzles can have lots of items in one spot. How can we use loops to pick up any number of them with just two blocks?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2825,7 +2832,7 @@
       "key": "aaae9aa4-7847-4f45-be5e-96f454d2e343",
       "position": 1,
       "properties": {
-        "description": "Students should have had plenty of introduction to **loops** at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a new dance with **loops** just like in \"Getting Loopy\".\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Programming in Artist\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review **loops** or the artist, which will help prepare your class for fun with the online puzzles!",
+        "description": "Students should have had plenty of introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a new dance with loops just like in \"Getting Loopy\".\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Programming in Artist\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review loops or the artist, which will help prepare your class for fun with the online puzzles!",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2878,7 +2885,7 @@
       "key": "ba2a825d-3cae-456c-bb17-91711afe364a",
       "position": 4,
       "properties": {
-        "description": "Some students may discover where to add `repeat` **loops** by writing out the program without **loops** then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
+        "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
       },
       "seeding_key": {
         "activity_section.key": "ba2a825d-3cae-456c-bb17-91711afe364a",
@@ -2909,25 +2916,26 @@
       }
     },
     {
-      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen."
+        "description": "**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
+        "name": "A Series of Events"
       },
       "seeding_key": {
-        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
     {
-      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word **\"event\"** today. Let's focus on **\"events\"** that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
-        "remarks": true
+        "description": "This lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen.",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
@@ -2953,7 +2961,7 @@
             "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\r\n"
           }
         ],
-        "description": "- _Do you remember guiding *Red* from \"Angry Birds\" to the pig in the Maze puzzles?_\n\t- _In that exercise, you knew in advance exactly where you wanted *Red* to go, so you could make a program that took *Red* from start to finish without any interruptions._\n\t- _In most real programs, we can't do that because we want to have options, depending on what the user needs._\n\t\t- _Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone._\n\t\t- _Putting my finger on the screen would then become an **event** that tells my character to move._\n\nIn earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where **events** come in!\n"
+        "description": "- _Do you remember guiding *Red* from \"Angry Birds\" to the pig in the Maze puzzles?_\n\t- _In that exercise, you knew in advance exactly where you wanted *Red* to go, so you could make a program that took *Red* from start to finish without any interruptions._\n\t- _In most real programs, we can't do that because we want to have options, depending on what the user needs._\n\t\t- _Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone._\n\t\t- _Putting my finger on the screen would then become an event that tells my character to move._\n\nIn earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n"
       },
       "seeding_key": {
         "activity_section.key": "67fb7588-f699-4cf5-9a67-065456c6baee",
@@ -2964,7 +2972,7 @@
       "key": "69aeb015-b7ba-46c1-a176-5289f7de9a92",
       "position": 3,
       "properties": {
-        "description": "\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an **event** that lets them know what they are expected to do next.\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "69aeb015-b7ba-46c1-a176-5289f7de9a92",
@@ -2994,7 +3002,7 @@
       "key": "e597d594-8df0-40d4-a4a5-9de0932f0bfc",
       "position": 1,
       "properties": {
-        "description": "- Hand out ***The Big Event - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
+        "description": "- Hand out ***Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
         "name": "Assessment",
         "duration": "5"
       },
@@ -3034,7 +3042,7 @@
       "key": "6cc5d299-00fd-477a-a654-60dc83031733",
       "position": 2,
       "properties": {
-        "description": "- Review \"The Big Event\" activity with students:\n\t- _What did we \"program\" the button click **events** to do?_\n- _Now we're going to add **events** to our coding. Specifically, we're going to create an **event** for clicking the mouse and one for when the bird hits an object like the ground or an obstacle. When have you seen a character touch another object as an **event** in a game?_",
+        "description": "- Review \"The Big Event\" activity with students:\n\t- _What did we \"program\" the button click events to do?_\n- _Now we're going to add events to our coding. Specifically, we're going to create an event for clicking the mouse and one for when the bird hits an object like the ground or an obstacle. When have you seen a character touch another object as an event in a game?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3057,7 +3065,7 @@
       "key": "029d4726-2804-4d14-9270-4405e9461405",
       "position": 2,
       "properties": {
-        "description": "Using the remote from the ***The Big Event (Course C) - Event Controller** and ***Unplugged Blocks (Courses C-F)**, gather your class to reprise the activity from the previous lesson. Ask the class _\"when the teal button is pushed, what do we do?\"_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
+        "description": "Using the remote from the ***Event Controller** and ***Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class _\"when the teal button is pushed, what do we do?\"_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks\r"
       },
       "seeding_key": {
@@ -3069,7 +3077,7 @@
       "key": "40f62515-242b-4604-9733-f33d348ac655",
       "position": 3,
       "properties": {
-        "description": "Pull a lesson from the corresponding online stage, we recommend puzzle 2. Ask the students what should happen when the *Flappy Bird* runs into something like the ground or an obstacle. Explain that *Flappy* in this game will move forward with a click of the mouse and the game will end if *Flappy* runs into anything. \n\nComplete the puzzle with the class and allow time for a quick discussion on what was and wasn't an **event**. For every **event**, ask the students what the action corresponding to this **event** is.",
+        "description": "Pull a lesson from the corresponding online stage, we recommend puzzle 2. Ask the students what should happen when the *Flappy Bird* runs into something like the ground or an obstacle. Explain that *Flappy* in this game will move forward with a click of the mouse and the game will end if *Flappy* runs into anything. \n\nComplete the puzzle with the class and allow time for a quick discussion on what was and wasn't an event. For every event, ask the students what the action corresponding to this event is.",
         "name": "Preview of Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -3155,7 +3163,7 @@
       "key": "736fbe77-a681-409c-b263-2de52938dd92",
       "position": 1,
       "properties": {
-        "description": "###Become a Game Designer (45-135 minutes)\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + Math + Science**\n\n[**Become a Game Designer**](https://docs.google.com/document/d/1ixA6YaNmP_bhBZWEHazDuuc4PTJjWGgTtvI-3W2Gkj4/edit?usp=sharing) is an optional activity aligned to Common Core Math and Next Generation Science Standards, written by our teacher community. Students will become Game Designers as they create create and test a game. Students will also record scores, make observations, create a bar graph, analyze the results and justify the changes they would make to their game.\n\n*Standards Addressed:*\n\n- **2.MD.D.10:**  Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. \n\n- **K-2 ETS1-1:** Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.\n\n- **K-2 ETS1-3:** Analyze data from tests of an object or tool to determine if it works as intended to compare the strengths and weaknesses of how each performs.\n\n\n\n"
+        "description": "###Become a Game Designer (45-135 minutes)\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Computer Science + Math + Science**\n\n[**Become a Game Designer**](https://docs.google.com/document/d/1QfcYmWyn2U1X2IZO9Kpt2rH3uoxPpcEtp3ypVWcmBC8/edit?usp=sharing) is an optional activity aligned to Common Core Math and Next Generation Science Standards, written by our teacher community. Students will become Game Designers as they create create and test a game. Students will also record scores, make observations, create a bar graph, analyze the results and justify the changes they would make to their game.\n\n*Standards Addressed:*\n\n- **2.MD.D.10:**  Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. \n\n- **K-2 ETS1-1:** Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.\n\n- **K-2 ETS1-3:** Analyze data from tests of an object or tool to determine if it works as intended to compare the strengths and weaknesses of how each performs.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "736fbe77-a681-409c-b263-2de52938dd92",
@@ -3166,7 +3174,7 @@
       "key": "782d1991-785a-406b-963c-687abb77e247",
       "position": 1,
       "properties": {
-        "description": "Briefly discuss the *Flappy Bird* game from the last lesson. Ask students to come up with the various **events** in the game. **Events** include:\n \n - *Flappy* hitting the ground\n - *Flappy* hitting an obstacle\n - A player clicking the screen\n - *Flappy* passing an obstacle\n\nNow discuss the actions that correspond to these **events**. *Flappy* running into something ends the game, but *Flappy* passing an obstacle wins a point. A player clicking makes *Flappy* flap his wings.\n\nAsk the students what other **events** and actions they'd like to see. What other kinds of games could be built around those **events** and actions?",
+        "description": "Briefly discuss the *Flappy Bird* game from the last lesson. Ask students to come up with the various events in the game. Events include:\n \n - *Flappy* hitting the ground\n - *Flappy* hitting an obstacle\n - A player clicking the screen\n - *Flappy* passing an obstacle\n\nNow discuss the actions that correspond to these events. *Flappy* running into something ends the game, but *Flappy* passing an obstacle wins a point. A player clicking makes *Flappy* flap his wings.\n\nAsk the students what other events and actions they'd like to see. What other kinds of games could be built around those events and actions?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3321,7 +3329,7 @@
       "key": "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Pass out the ***Graphing Data** worksheet along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
+        "description": "**Distribute**: Pass out the ***worksheet** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3407,7 +3415,7 @@
       "key": "11dd8aea-0a51-4c88-8517-0543fa4afb32",
       "position": 3,
       "properties": {
-        "description": "**Distribute**: Distribute one ***Play Lab Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
+        "description": "**Distribute**: Distribute one ***Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3557,7 +3565,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming1_2021"
         ]
@@ -3583,7 +3591,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming2_2021"
         ]
@@ -3609,7 +3617,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming3_2021"
         ]
@@ -3635,7 +3643,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming4_2021"
         ]
@@ -3661,7 +3669,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming5_2021"
         ]
@@ -3687,7 +3695,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming6_2021"
         ]
@@ -3896,7 +3904,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging1_2021"
         ]
@@ -3922,7 +3930,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging2_2021"
         ]
@@ -3948,7 +3956,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging3_2021"
         ]
@@ -3974,7 +3982,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging4_2021"
         ]
@@ -4000,7 +4008,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging5_2021"
         ]
@@ -4026,7 +4034,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging6_2021"
         ]
@@ -6683,7 +6691,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project Examples"
+        "progression": "Project Examples",
+        "level_keys": [
+          "Begin planning your project_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -8422,7 +8433,7 @@
   "resources": [
     {
       "name": "Putting a STOP to Online Meanness: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY",
+      "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
       "key": "putting-a-stop-to-online-meanness-lesson-slides",
       "properties": {
         "type": "Slide Deck",
@@ -8447,7 +8458,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4",
+      "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
       "key": "csf-mrf-cup-spacing",
       "properties": {
         "type": "Cup Spacing",
@@ -8460,7 +8471,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc",
+      "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
       "key": "csf-mrf-symbol-key",
       "properties": {
         "type": "Symbol Key",
@@ -8486,7 +8497,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM",
+      "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
       "key": "csf-mrf-cup-stacking-ideas",
       "properties": {
         "type": "Cup Stacking Ideas",
@@ -8499,7 +8510,7 @@
     },
     {
       "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA",
+      "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
       "key": "csf-mrf-paper-trapezoid-template",
       "properties": {
         "type": "Paper Trapezoid Template",
@@ -8512,7 +8523,7 @@
     },
     {
       "name": "Maze Bridging Page",
-      "url": "https://drive.google.com/open?id=19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS",
+      "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view",
       "key": "c2-maze-bridge",
       "properties": {
         "audience": "Student"
@@ -8523,7 +8534,7 @@
     },
     {
       "name": "Unplugged Maze Blocks",
-      "url": "https://drive.google.com/open?id=1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48",
+      "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
       "key": "unplugged-maze-blocks",
       "properties": {
         "type": "Manipulatives",
@@ -8531,18 +8542,6 @@
       },
       "seeding_key": {
         "resource.key": "unplugged-maze-blocks"
-      }
-    },
-    {
-      "name": "Think Spot Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think_spot_journal",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "think_spot_journal"
       }
     },
     {
@@ -8620,7 +8619,7 @@
     },
     {
       "name": "Turns & Angles",
-      "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+      "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "csf-turns-angles-doc",
       "properties": {
         "type": "Student Handout",
@@ -8670,7 +8669,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE",
+      "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
       "key": "csf-binary-bracelets-activity",
       "properties": {
         "type": "Worksheet",
@@ -8683,7 +8682,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU",
+      "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
       "key": "csf-binary-bracelets-assessment",
       "properties": {
         "type": "Assessment",
@@ -8696,7 +8695,7 @@
     },
     {
       "name": "Binary Bracelets",
-      "url": "https://drive.google.com/open?id=1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE",
+      "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
       "key": "assessment-answer-binary-bracelets",
       "properties": {
         "type": "Assessment Answer Key",
@@ -8705,58 +8704,6 @@
       },
       "seeding_key": {
         "resource.key": "assessment-answer-binary-bracelets"
-      }
-    },
-    {
-      "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4",
-      "key": "csf-mrf-cup-spacing",
-      "properties": {
-        "type": "Cup Spacing",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-mrf-cup-spacing"
-      }
-    },
-    {
-      "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc",
-      "key": "csf-mrf-symbol-key",
-      "properties": {
-        "type": "Symbol Key",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-mrf-symbol-key"
-      }
-    },
-    {
-      "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM",
-      "key": "csf-mrf-cup-stacking-ideas",
-      "properties": {
-        "type": "Cup Stacking Ideas",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-mrf-cup-stacking-ideas"
-      }
-    },
-    {
-      "name": "My Robotic Friends",
-      "url": "https://drive.google.com/open?id=1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA",
-      "key": "csf-mrf-paper-trapezoid-template",
-      "properties": {
-        "type": "Paper Trapezoid Template",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-mrf-paper-trapezoid-template"
       }
     },
     {
@@ -8769,30 +8716,6 @@
       },
       "seeding_key": {
         "resource.key": "feeling_faces_emotion_image"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
-      "key": "pair-programming-vid",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "pair-programming-vid"
-      }
-    },
-    {
-      "name": " Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "course-cf-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-cf-blockly-blocks"
       }
     },
     {
@@ -8810,7 +8733,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw",
+      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
       "key": "csf-the-big-event-assessment",
       "properties": {
         "type": "Assessment",
@@ -8823,7 +8746,7 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://drive.google.com/open?id=1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8",
+      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
       "properties": {
         "type": "Assessment Answer Key",
@@ -8836,7 +8759,7 @@
     },
     {
       "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
+      "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
       "key": "the_big_event_course_c_",
       "properties": {
         "type": "Event Controller",
@@ -8845,55 +8768,6 @@
       },
       "seeding_key": {
         "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
-      "name": " Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "course-cf-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-cf-blockly-blocks"
-      }
-    },
-    {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "pause_and_think_online",
-      "properties": {
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "pause_and_think_online"
-      }
-    },
-    {
-      "name": "The Big Event (Course C)",
-      "url": "https://drive.google.com/open?id=1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ",
-      "key": "the_big_event_course_c_",
-      "properties": {
-        "type": "Event Controller",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_course_c_"
-      }
-    },
-    {
-      "name": " Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "course-cf-blockly-blocks",
-      "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "course-cf-blockly-blocks"
       }
     },
     {
@@ -9000,12 +8874,6 @@
       "seeding_key": {
         "lesson.key": "Programming in Maze",
         "resource.key": "unplugged-maze-blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "resource.key": "think_spot_journal"
       }
     },
     {
@@ -9200,6 +9068,9 @@
         "resource.key": "play-lab-project-guide"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
     {
@@ -10011,6 +9882,299 @@
     }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Putting a STOP to Online Meanness",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-15"
+      }
+    }
   ]
 }

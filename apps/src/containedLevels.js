@@ -60,7 +60,15 @@ export function postContainedLevelAttempt({
   attempts,
   onAttempt
 }) {
-  if (!hasContainedLevels || attempts !== 1) {
+  const isTeacher = getStore().getState().currentUser?.userType === 'teacher';
+  const isViewingStudent = !!new URLSearchParams(window.location.search).get(
+    'user_id'
+  );
+  if (
+    !hasContainedLevels ||
+    attempts !== 1 ||
+    (isTeacher && isViewingStudent)
+  ) {
     return;
   }
 

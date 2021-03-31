@@ -71,4 +71,12 @@ class External < DSLDefined
   def self.possible_associated_blocks
     %w(bounce flappy jigsaw maze studio turtle)
   end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    super.merge(
+      {
+        markdown: localized_property('markdown')
+      }
+    )
+  end
 end

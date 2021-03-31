@@ -11,7 +11,6 @@ import _ from 'lodash';
 const DEFAULT_PROPS = {
   studentId: 1,
   studentLessonProgress: {
-    isStarted: true,
     completedPercent: 100,
     imperfectPercent: 0,
     incompletePercent: 0,
@@ -47,8 +46,7 @@ describe('ProgressTableSummaryCell', () => {
   });
 
   it('displays border as color.light_gray when a lesson has not been started', () => {
-    const studentLessonProgress = {isStarted: false};
-    const wrapper = setUp({studentLessonProgress});
+    const wrapper = setUp({studentLessonProgress: null});
     expect(wrapper.props().borderColor).to.equal(color.light_gray);
   });
 

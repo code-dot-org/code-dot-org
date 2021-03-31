@@ -9,7 +9,7 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create :script, name: 'unit-1', is_migrated: true, hidden: true
+    @script = create :script, name: 'unit-1', is_migrated: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -69,7 +69,7 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', hidden: true, is_migrated: true, include_student_lesson_plans: true
+    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
     pilot_lesson_group = create :lesson_group, script: @pilot_script
     @pilot_lesson = create(
       :lesson,
@@ -88,7 +88,7 @@ class LessonsControllerTest < ActionController::TestCase
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    @login_req_script = create :script, name: 'signed-in-script', hidden: true, is_migrated: true, include_student_lesson_plans: true, login_required: true
+    @login_req_script = create :script, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
     login_req_lesson_group = create :lesson_group, script: @login_req_script
     @login_req_lesson = create(
       :lesson,
@@ -200,7 +200,7 @@ class LessonsControllerTest < ActionController::TestCase
   end
 
   test 'show lesson when lesson is the only lesson in script' do
-    script = create :script, name: 'one-lesson-script', is_migrated: true, hidden: true
+    script = create :script, name: 'one-lesson-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     @solo_lesson_in_script = create(
       :lesson,
@@ -306,7 +306,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'can not show student lesson plan when lesson is in a script without student lesson plans' do
     sign_in @levelbuilder
-    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false, hidden: true
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -328,7 +328,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'show student lesson plan' do
     sign_in @levelbuilder
-    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true, hidden: true
+    script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -837,6 +837,42 @@ class LessonsControllerTest < ActionController::TestCase
     assert @lesson.vocabularies.include?(vocab_to_keep)
     assert @lesson.vocabularies.include?(vocab_to_add)
     refute @lesson.vocabularies.include?(vocab_to_remove)
+  end
+
+  test 'update lesson by removing and adding programming expressions' do
+    expression_to_keep = create :programming_expression
+    expression_to_remove = create :programming_expression
+    expression_to_add = create :programming_expression
+    @lesson.programming_expressions = [expression_to_keep, expression_to_remove]
+
+    sign_in @levelbuilder
+    new_update_params = @update_params.merge({programming_expressions: [expression_to_keep.summarize_for_lesson_edit, expression_to_add.summarize_for_lesson_edit].to_json})
+    put :update, params: new_update_params
+    @lesson.reload
+
+    assert_equal 2, @lesson.programming_expressions.count
+    assert @lesson.programming_expressions.include?(expression_to_keep)
+    assert @lesson.programming_expressions.include?(expression_to_add)
+    refute @lesson.programming_expressions.include?(expression_to_remove)
+  end
+
+  test 'update lesson removing and adding standards' do
+    standard_to_keep = create :standard
+    standard_to_add = create :standard
+    standard_to_remove = create :standard
+
+    @lesson.standards << standard_to_keep
+    @lesson.standards << standard_to_remove
+
+    sign_in @levelbuilder
+    new_standards_data = [standard_to_add, standard_to_keep].map(&:summarize_for_lesson_edit).to_json
+    new_update_params = @update_params.merge({standards: new_standards_data})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 2, @lesson.standards.count
+    assert @lesson.standards.include?(standard_to_add)
+    assert @lesson.standards.include?(standard_to_keep)
+    refute @lesson.standards.include?(standard_to_remove)
   end
 
   test 'lesson is not partially updated if any data is bad' do

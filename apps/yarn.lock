@@ -1568,21 +1568,19 @@
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@code-dot-org/artist/-/artist-0.2.1.tgz#fcfe7ea5cfb3f19ddb6b912e70e922ba4b7ef0b1"
 
-"@code-dot-org/blockly@3.5.33":
-  version "3.5.33"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.33.tgz#cf7cf61eeb7f4d10aebcedb1307bf35c12f3d052"
-  integrity sha512-KGFYKhGZ2UrRzqxkL0cvY85DUIPLUh1jCu9EUyfYYhEHcqICUnM52Jd3w0b8q53sMyKqktxGExI20dXG7QR6RQ==
+"@code-dot-org/blockly@3.5.34":
+  version "3.5.34"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-3.5.34.tgz#5ae60e57616928ccee70c3c8542496645607ff4e"
+  integrity sha512-/gtryo3Ax7mfifZAnvovsD9a10tto2+loETMn2FCM3HYjF+jqCehr0R3ktymHKoVuQEmUy/Bv9+uNqGeGw5W7w==
 
 "@code-dot-org/craft@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.1.tgz#1c78132791485a003c5022113afe669ed58834a6"
-  integrity sha512-IQ8bTTmbTBOyhGz4+u/NYEijWKTkUHsvtP0fPKvXJTm56vKNMozTbgHpColzruyQoJ3s9AC5t3dIOrLClkgaPA==
-  optionalDependencies:
-    canvas "^1.6.13"
+"@code-dot-org/dance-party@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.3.tgz#93fbd9827a89cc3f240bafc33ab7b82f7643b200"
+  integrity sha512-92Ja8B0ktsadnEqNsJDgFEX39ZLtYL4SkFlpo50s2t8YRNTKx67QkAu9Kvxi/vlqDxZemMvpldkbHgRsZLtpsg==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -1639,10 +1637,10 @@
     messageformat "^1.1.0"
     react-typist "^2.0.5"
 
-"@code-dot-org/ml-playground@0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.19.tgz#73a88ef8e9b26a15138e106a69ed9edd2f9b2f5e"
-  integrity sha512-2VeLdXK3nTHfmZineIURfpQHB/BYlrjYY5PGTmRlBp54vV7vAdHk1T3Em7Vx1tQcErXAxauGjBakrhaaCj1xmg==
+"@code-dot-org/ml-playground@0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-playground/-/ml-playground-0.0.22.tgz#3e14645d1da5ce43b33826b29a85405ffa0353b4"
+  integrity sha512-Bw4g7bppzurlbO2P/pZwOotZNll8d9DX6wGpReIPkgPqDeKqR2xJ+bb2MnU126lQULgAY/RUVm49M5yBketQJw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-regular-svg-icons" "^5.11.2"
@@ -1652,17 +1650,17 @@
     ml-svm "^2.1.2"
     react-chartjs-2 "^2.11.1"
 
-"@code-dot-org/p5.play@^1.3.12-cdo":
-  version "1.3.12-cdo"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.12-cdo.tgz#4bf3e9c8045ab7a3109cae31bbe73603fb209fe5"
-  integrity sha512-3zVTCLeOMowuZICzWF3OF9qY88j2Iq7q6h+NM6xvspecISi+veQ2JrO1FxXJL9wCIj75gJC1S3IKdYD66Bsk/w==
+"@code-dot-org/p5.play@^1.3.14-cdo":
+  version "1.3.14-cdo"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5.play/-/p5.play-1.3.14-cdo.tgz#af4566a0314590663004a0c65a4b79a1ffd3f9c2"
+  integrity sha512-flG1f0FQK73YrNBwyTECYmokARCnlLttCXoujZ5QX1vG3ex6YI0wc+V/vBV1s0g0gaEH3z9QLw3jeozJQAlR/w==
   dependencies:
-    "@code-dot-org/p5" "0.5.4-cdo.4"
+    "@code-dot-org/p5" "0.5.4-cdo.6"
 
-"@code-dot-org/p5@0.5.4-cdo.4":
-  version "0.5.4-cdo.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.4.tgz#81f7b3525d1a0395df50754710810d2333a82a11"
-  integrity sha512-WtAJokLTOVg2H4GsboMRnR0jgXxFBbxiHimDo2yY88xzBNI9NugV8EA474IO8U7m6guo3FfM4LzilY6O51HDnw==
+"@code-dot-org/p5@0.5.4-cdo.6":
+  version "0.5.4-cdo.6"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/p5/-/p5-0.5.4-cdo.6.tgz#d004e71e98d91ced6bf1bd7ed28e9ad5faa43c88"
+  integrity sha512-qcrqnrMwIXvRc3kwI+t0LRrVa/GsondnIazbOrQuoVDvPZnCbf+VAD75+jJjcmaDS7Bqw+KlNlIX/WSmgDIY+w==
   dependencies:
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
@@ -1680,6 +1678,11 @@
     remark-parse "^6.0.0"
     remark-stringify "^6.0.0"
     unified "^7.0.0"
+
+"@code-dot-org/remark-plugins@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/remark-plugins/-/remark-plugins-1.1.0.tgz#3b7b87137999a5858105485835f6c58fc0c3aebc"
+  integrity sha512-k0lX5WKihcLkIH6riAslNfTSMiDqJZ7psC7pg1cX5QhgvkfmAgsCzJpsGxyU0XSxqxiKWrPCV+WozuxQVO2+rg==
 
 "@codemirror/closebrackets@^0.17.0":
   version "0.17.2"
@@ -4279,13 +4282,6 @@ caniuse-lite@^1.0.30001010:
   version "1.0.30001012"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001012.tgz#653ec635e815b9e0fb801890923b0c2079eb34ec"
   integrity sha512-7RR4Uh04t9K1uYRWzOJmzplgEOAXbfK72oVNokCdMzA67trrhPzy93ahKk1AWHiA0c58tD2P+NHqxrA8FZ+Trg==
-
-canvas@^1.6.13:
-  version "1.6.13"
-  resolved "https://registry.yarnpkg.com/canvas/-/canvas-1.6.13.tgz#8cb4e9abbea9e615a377890ffac50277a1167c73"
-  integrity sha512-XAfzfEOHZ3JIPjEV+WSI6PpISgUta3dgmndWbsajotz+0TQOX/jDpp2kawjRERatOGv9sMMzk5auB3GKEKA6hg==
-  dependencies:
-    nan "^2.10.0"
 
 canvg@gabelerner/canvg:
   version "1.0.0"
@@ -10805,7 +10801,7 @@ nan@2.4.x, nan@^2.3.0, nan@^2.3.5:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
-nan@^2.10.0, nan@^2.13.2:
+nan@^2.13.2:
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
