@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
 import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   input: {
@@ -116,6 +117,7 @@ class ScriptEditor extends React.Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      plcCourseLaunchStatus: null,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
@@ -327,6 +329,23 @@ class ScriptEditor extends React.Component {
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
+      });
+  };
+
+  launchPlcCourse = event => {
+    event.preventDefault();
+
+    $.ajax({
+      url: `/plc/${this.state.title}/launch`,
+      method: 'PUT',
+      dataType: 'json',
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(() => {
+        this.setState({plcCourseLaunchStatus: 'Course Launched'});
+      })
+      .fail(error => {
+        this.setState({plcCourseLaunchStatus: error.responseText});
       });
   };
 
@@ -906,6 +925,30 @@ class ScriptEditor extends React.Component {
               }
             />
           </label>
+          <div>
+            <Button
+              text="Launch PLC Course"
+              onClick={this.launchPlcCourse}
+              color={Button.ButtonColor.purple}
+            />
+            <HelpTip>
+              <p>
+                In order for users to be able to make progress on this plc
+                course you need to launch it.
+              </p>
+            </HelpTip>
+            {this.state.plcCourseLaunchStatus && (
+              <span
+                style={
+                  this.state.plcCourseLaunchStatus === 'Course Launched'
+                    ? {color: color.level_perfect}
+                    : {color: color.red}
+                }
+              >
+                {this.state.plcCourseLaunchStatus}
+              </span>
+            )}
+          </div>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">

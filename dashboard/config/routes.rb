@@ -455,6 +455,7 @@ Dashboard::Application.routes.draw do
 
   get '/plc/user_course_enrollments/group_view', to: 'plc/user_course_enrollments#group_view'
   get '/plc/user_course_enrollments/manager_view/:id', to: 'plc/user_course_enrollments#manager_view', as: 'plc_user_course_enrollment_manager_view'
+  put '/plc/:course_unit_name/launch/', to: 'plc/course_unit#launch'
 
   namespace :plc do
     root to: 'plc#index'
