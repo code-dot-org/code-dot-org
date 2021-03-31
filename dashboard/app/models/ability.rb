@@ -197,9 +197,11 @@ class Ability
 
     # Override Script and ScriptLevel.
     can :read, Script do |script|
-      return script.has_pilot_access?(user) if script.pilot?
-
-      true
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        true
+      end
     end
 
     can :read, ScriptLevel do |script_level, params|
