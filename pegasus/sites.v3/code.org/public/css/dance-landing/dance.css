@@ -157,7 +157,7 @@ a:hover {
 
   /* the background image must be flipped horizontally on mobile or else the text will blend into the background */
   div[dir = 'rtl'] .img-container{
-    background: url(/images/dance-hoc/dance_party_2019_tutorial_hero_flipped.png);
+    transform: scaleX(-1);
   }
   .img-container {
     /* This background is only visible on mobile width.  It's covered by an image
