@@ -217,7 +217,12 @@ export default class CdoBramble {
   }
 
   uploadAllFilesToServer(callback) {
-    this.getAllFileData(fileData => {
+    this.getAllFileData((err, fileData) => {
+      if (err) {
+        callback(err);
+        return;
+      }
+
       const uploadEntry = index => {
         const next = (err, newVersionId) => {
           if (err) {
@@ -387,9 +392,15 @@ export default class CdoBramble {
       return;
     }
 
+    const filename = filenames[currentIndex];
     const next = err => {
+      err &&
+        console.error(
+          `CdoBramble could not read file ${filename} - skipping. ${err}`
+        );
+
       if (currentIndex >= filenames.length - 1) {
-        finalCallback(currentFileData);
+        finalCallback(null, currentFileData);
       } else {
         this.recursivelyReadFiles(
           filenames,
@@ -400,7 +411,6 @@ export default class CdoBramble {
       }
     };
 
-    const filename = filenames[currentIndex];
     this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
       !err && currentFileData.push({name: filename, data: fileData.toString()});
       next(err);
@@ -494,8 +504,9 @@ export default class CdoBramble {
 
   validateProjectChanged(callback) {
     const startSourceFiles = this.api.getStartSources()?.files;
-    this.getAllFileData(userFiles => {
-      if (userFiles?.length !== startSourceFiles.length) {
+    this.getAllFileData((err, userFiles) => {
+      // Don't block user if Bramble errors.
+      if (err || userFiles?.length !== startSourceFiles.length) {
         callback(true /* projectChanged */);
         return;
       }

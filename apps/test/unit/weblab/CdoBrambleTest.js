@@ -252,7 +252,7 @@ describe('CdoBramble', () => {
       ];
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(fileData));
+        .callsFake(callback => callback(null, fileData));
       sinon
         .stub(cdoBramble.api, 'changeProjectFile')
         .callsFake((filename, fileData, callback) =>
@@ -267,6 +267,21 @@ describe('CdoBramble', () => {
         expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
         expect(cdoBramble.api.changeProjectFile).to.have.been.calledTwice;
         expect(cdoBramble.lastSyncedVersionId).to.equal('new-version-id');
+        done();
+      });
+    });
+
+    it('exits early if files cannot be read', done => {
+      cdoBramble.getAllFileData.restore();
+      sinon
+        .stub(cdoBramble, 'getAllFileData')
+        .callsFake(callback => callback(new Error(), null));
+
+      cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
+        expect(error).not.to.equal(null);
+        expect(wasSuccessful).to.be.undefined;
+        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
+        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
         done();
       });
     });
@@ -559,7 +574,7 @@ describe('CdoBramble', () => {
       const userFiles = [{name: 'index.html'}, {name: 'style.css'}];
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(userFiles));
+        .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.true;
@@ -571,7 +586,7 @@ describe('CdoBramble', () => {
       const userFiles = [{name: 'style.css'}];
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(userFiles));
+        .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.true;
@@ -583,7 +598,7 @@ describe('CdoBramble', () => {
       const userFiles = [{name: 'index.html', data: '<p></p>'}];
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(userFiles));
+        .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.true;
@@ -606,7 +621,7 @@ describe('CdoBramble', () => {
       sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(userFiles));
+        .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.true;
@@ -625,7 +640,7 @@ describe('CdoBramble', () => {
         .returns({files: [...files]});
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback([...files]));
+        .callsFake(callback => callback(null, [...files]));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.false;
@@ -642,7 +657,7 @@ describe('CdoBramble', () => {
       sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
       sinon
         .stub(cdoBramble, 'getAllFileData')
-        .callsFake(callback => callback(userFiles));
+        .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
         expect(projectChanged).to.be.false;
