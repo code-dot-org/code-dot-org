@@ -217,7 +217,7 @@ export default class CdoBramble {
   }
 
   uploadAllFilesToServer(callback) {
-    this.getAllFileData((err, fileData) => {
+    this.getAllFileData((err, files) => {
       if (err) {
         callback(err);
         return;
@@ -231,14 +231,14 @@ export default class CdoBramble {
           }
 
           this.lastSyncedVersionId = newVersionId;
-          if (index >= fileData.length - 1) {
+          if (index >= files.length - 1) {
             callback(null, true /* preWriteHook was successful */);
           } else {
             uploadEntry(index + 1);
           }
         };
 
-        const {name, data} = fileData[index];
+        const {name, data} = files[index];
         this.api.changeProjectFile(
           name,
           data,
