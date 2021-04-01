@@ -7,7 +7,7 @@ import {levelType} from './progressTypes';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 import i18n from '@cdo/locale';
-import {getStore} from '@cdo/apps/redux';
+import {connect} from 'react-redux';
 
 const styles = {
   table: {
@@ -70,7 +70,9 @@ class ProgressLevelSet extends React.Component {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     selectedSectionId: PropTypes.string,
-    onBubbleClick: PropTypes.func
+    onBubbleClick: PropTypes.func,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   render() {
@@ -79,14 +81,14 @@ class ProgressLevelSet extends React.Component {
       levels,
       disabled,
       selectedSectionId,
-      onBubbleClick
+      onBubbleClick,
+      isRtl
     } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
 
     // Adjust column styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const col2Style = isRtl ? styles.col2RTL : styles.col2;
 
     let pillText, icon;
@@ -154,4 +156,8 @@ class ProgressLevelSet extends React.Component {
   }
 }
 
-export default Radium(ProgressLevelSet);
+export const UnconnectedProgressLevelSet = ProgressLevelSet;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(ProgressLevelSet));

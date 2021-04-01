@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   buttonMargin: {
@@ -19,7 +18,8 @@ class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     // Redux
-    unassignSection: PropTypes.func.isRequired
+    unassignSection: PropTypes.func.isRequired,
+    isRtl: PropTypes.bool
   };
 
   constructor() {
@@ -42,9 +42,9 @@ class UnassignButton extends React.Component {
 
   render() {
     const {text, icon} = this.state;
+    const {isRtl} = this.props;
 
     // Adjust styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
       : styles.buttonMargin;
@@ -71,7 +71,9 @@ class UnassignButton extends React.Component {
 export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
-  null,
+  state => ({
+    isRtl: state.isRtl
+  }),
   {
     unassignSection
   }

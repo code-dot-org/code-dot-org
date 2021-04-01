@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressLevelSet from './ProgressLevelSet';
+import {UnconnectedProgressLevelSet as ProgressLevelSet} from './ProgressLevelSet';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {fakeLevels, fakeLevel} from './progressTestHelpers';
 

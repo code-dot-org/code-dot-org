@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import {UnconnectedButton as Button} from './Button';
 
 export default storybook => {
   storybook.storiesOf('Buttons/Button', module).addStoryTable([

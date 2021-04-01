@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {getStore} from '@cdo/apps/redux';
+import {connect} from 'react-redux';
 
 const ButtonColor = {
   orange: 'orange',
@@ -207,7 +207,8 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
-    __useDeprecatedTag: PropTypes.bool
+    __useDeprecatedTag: PropTypes.bool,
+    isRtl: PropTypes.bool
   };
 
   onKeyDown = event => {
@@ -236,14 +237,14 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
-      __useDeprecatedTag
+      __useDeprecatedTag,
+      isRtl
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
 
     // Adjust styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const directionalIconStyle = isRtl ? styles.iconRTL : styles.icon;
 
     if (!href && !onClick) {
@@ -313,4 +314,8 @@ Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
 Button.ButtonHeight = ButtonHeight;
 
-export default Radium(Button);
+export const UnconnectedButton = Button;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(Radium(Button));

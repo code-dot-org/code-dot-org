@@ -18,7 +18,6 @@ import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
-import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   outer: {
@@ -95,7 +94,8 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -149,7 +149,8 @@ class ProgressLesson extends React.Component {
       showLockIcon,
       lessonIsVisible,
       lessonLockedForSection,
-      selectedSectionId
+      selectedSectionId,
+      isRtl
     } = this.props;
 
     if (!lessonIsVisible(lesson, viewAs)) {
@@ -157,7 +158,6 @@ class ProgressLesson extends React.Component {
     }
 
     // Adjust caret style if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
 
     // Is this a hidden stage that we still render because we're a teacher
@@ -289,5 +289,6 @@ export default connect(state => ({
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
-  scriptId: state.progress.scriptId
+  scriptId: state.progress.scriptId,
+  isRtl: state.isRtl
 }))(ProgressLesson);

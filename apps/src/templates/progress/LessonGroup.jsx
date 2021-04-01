@@ -16,7 +16,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
-import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   main: {
@@ -72,7 +71,8 @@ class LessonGroup extends React.Component {
     // redux provided
     scriptId: PropTypes.number,
     lessonIsVisible: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -120,11 +120,11 @@ class LessonGroup extends React.Component {
       isSummaryView,
       isPlc,
       lessonIsVisible,
-      viewAs
+      viewAs,
+      isRtl
     } = this.props;
 
     // Adjust styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
 
     const TableType = isSummaryView
@@ -193,5 +193,6 @@ export const UnconnectedLessonGroup = LessonGroup;
 export default connect(state => ({
   scriptId: state.progress.scriptId,
   lessonIsVisible: lesson => lessonIsVisible(lesson, state, state.viewAs),
-  viewAs: state.viewAs
+  viewAs: state.viewAs,
+  isRtl: state.isRtl
 }))(Radium(LessonGroup));
