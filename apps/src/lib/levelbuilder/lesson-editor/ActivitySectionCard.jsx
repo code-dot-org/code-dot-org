@@ -367,6 +367,29 @@ class ActivitySectionCard extends Component {
     );
   };
 
+  insertMarkdownSyntaxAtSelection = newText => {
+    // If we (for whatever reason) don't have a reference for the textarea, we
+    // can't get the selection location. In that case, we could probably do
+    // nothing or throw an error or something. For now, let's just default to
+    // appending the text to the end.
+    if (!this.editorTextAreaRef) {
+      return this.appendMarkdownSyntax(newText);
+    }
+    const currentText = this.props.activitySection.text;
+    const selectionStart = this.editorTextAreaRef.selectionStart;
+    const selectionEnd = this.editorTextAreaRef.selectionEnd || selectionStart;
+    const resultingText =
+      currentText.slice(0, selectionStart) +
+      newText +
+      currentText.slice(selectionEnd);
+    this.props.updateActivitySectionField(
+      this.props.activityPosition,
+      this.props.activitySection.position,
+      'text',
+      resultingText
+    );
+  };
+
   appendProgrammingExpressionLink = programmingExpression => {
     this.appendMarkdownSyntax(
       buildProgrammingExpressionMarkdown(programmingExpression)
@@ -382,7 +405,9 @@ class ActivitySectionCard extends Component {
   };
 
   appendSlide = () => {
-    this.appendMarkdownSyntax(' [slide]');
+    this.insertMarkdownSyntaxAtSelection(
+      '<i class="fa fa-list-alt" aria-hidden="true"></i>'
+    );
   };
 
   handleRemoveLevel = levelPos => {
@@ -503,6 +528,7 @@ class ActivitySectionCard extends Component {
         {hasLessonPlan && (
           <textarea
             value={this.props.activitySection.text}
+            ref={ref => (this.editorTextAreaRef = ref)}
             rows={Math.max(
               this.props.activitySection.text.split(/\r\n|\r|\n/).length + 1,
               2
