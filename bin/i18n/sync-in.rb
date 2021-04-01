@@ -17,7 +17,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   puts "Sync in starting"
-  HocSyncUtils.sync_in
+  # HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
   localize_animation_library
@@ -115,7 +115,9 @@ def get_i18n_strings(level)
       end
 
       ## Variable Names
-      variables = blocks.xpath("//block[@type=\"variables_get\"]")
+      variables_get = blocks.xpath("//block[@type=\"variables_get\"]")
+      variables_set = blocks.xpath("//block[@type=\"variables_set\"]")
+      variables = variables_get + variables_set
       i18n_strings['variable_names'] = Hash.new unless variables.empty?
       variables.each do |variable|
         name = variable.at_xpath('./title[@name="VAR"]')
