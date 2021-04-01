@@ -581,8 +581,6 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
-    'admin_standards/index':
-      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
