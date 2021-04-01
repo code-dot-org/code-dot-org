@@ -4,7 +4,7 @@ module Plc::CoursesHelper
   end
 
   def options_for_plc_course_launch
-    Plc::CourseUnit.all.select(&:started).map {|pc| [pc.name, pc.id]}.sort
+    Plc::CourseUnit.all.select {|pc| !pc.startedg}.map {|pc| [pc.name, pc.id]}.sort
   end
 
   def launched_plc_courses
