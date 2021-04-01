@@ -13,3 +13,9 @@
 
   .actions
     = submit_tag('Launch Course', id: 'launchCourse')
+
+%div
+  %h3 Already Launched PLC Courses
+  - launched_plc_courses.each do |course|
+    %p
+      =course
