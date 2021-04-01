@@ -459,6 +459,12 @@ Dashboard::Application.routes.draw do
   namespace :plc do
     root to: 'plc#index'
     resources :user_course_enrollments
+    resources :course_units, only: [] do
+      collection do
+        get :launch
+        post :launch_plc_course
+      end
+    end
   end
 
   concern :api_v1_pd_routes do
