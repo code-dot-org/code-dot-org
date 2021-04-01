@@ -28,6 +28,3 @@
 - Experiment::PILOT_EXPERIMENTS.each do |pilot|
   %p
     = link_to pilot[:label], show_pilot_path(pilot_name: pilot[:name])
-
-%h3 Standards
-= link_to "Import Standards", admin_standards_import_path
