@@ -63,11 +63,13 @@ describe('LevelDetailsDialogTest', () => {
         {...defaultProps}
         scriptLevel={{
           url: 'level.url',
-          level: {type: 'External', markdown: 'This is some text.'}
+          level: {type: 'External', markdown: 'This is some text.'},
+          name: 'External Markdown Level'
         }}
       />
     );
     expect(wrapper.contains('This is some text.')).to.be.true;
+    expect(wrapper.find('h1').contains('External Markdown Level')).to.be.true;
   });
 
   it('can display the video and teacher markdown for an external markdown level', () => {
@@ -214,14 +216,16 @@ describe('LevelDetailsDialogTest', () => {
           status: 'not_tried',
           name: 'sublevel1',
           type: 'External',
-          markdown: 'Markdown1'
+          markdown: 'Markdown1',
+          display_name: 'Choice 1'
         },
         {
           id: '2',
           status: 'not_tried',
           name: 'sublevel2',
           type: 'External',
-          markdown: 'Markdown1'
+          markdown: 'Markdown1',
+          display_name: 'Choice 2'
         }
       ]
     };
@@ -238,6 +242,7 @@ describe('LevelDetailsDialogTest', () => {
         .first()
         .props().markdown
     ).to.equal('Markdown1');
+    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
   });
 
   it('can display a CSD/CSP puzzle level', () => {

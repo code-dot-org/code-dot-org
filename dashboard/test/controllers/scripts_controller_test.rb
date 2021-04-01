@@ -85,9 +85,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should not get show of ECSPD if not signed in" do
+  test "should get show of ECSPD if not signed in" do
     get :show, params: {id: 'ECSPD'}
-    assert_redirected_to_sign_in
+    assert_response :success
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
