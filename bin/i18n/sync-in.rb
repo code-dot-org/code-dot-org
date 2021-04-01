@@ -17,7 +17,7 @@ require_relative '../../tools/scripts/ManifestBuilder'
 
 def sync_in
   puts "Sync in starting"
-  # HocSyncUtils.sync_in
+  HocSyncUtils.sync_in
   localize_level_and_project_content
   localize_block_content
   localize_animation_library
