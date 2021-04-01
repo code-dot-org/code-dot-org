@@ -63,6 +63,8 @@ class LoginTypePicker extends Component {
     // source text can cause unexpected layout changes, and this constraint
     // should help mitigate some of them.
     const containerStyle = {maxWidth: styleConstants['content-width']};
+    // anchor the privacy note to the bottom of the dialog
+    const privacyNoteStyle = {position: 'relative', bottom: '0px'};
 
     return (
       <div style={containerStyle}>
@@ -76,13 +78,6 @@ class LoginTypePicker extends Component {
           <WordLoginCard onClick={setLoginType} />
           <EmailLoginCard onClick={setLoginType} />
         </CardContainer>
-        <div>
-          <b>{i18n.note()}</b>
-          {' ' + i18n.emailAddressPolicy() + ' '}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-            {i18n.moreInfo()}
-          </a>
-        </div>
         {anyImportOptions && (
           <div>
             <Heading3>{i18n.addStudentsSyncThirdParty()}</Heading3>
@@ -97,6 +92,13 @@ class LoginTypePicker extends Component {
             </CardContainer>
           </div>
         )}
+        <div style={privacyNoteStyle}>
+          <b>{i18n.note()}</b>
+          {' ' + i18n.emailAddressPolicy() + ' '}
+          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+            {i18n.moreInfo()}
+          </a>
+        </div>
         <DialogFooter>
           <Button
             __useDeprecatedTag
