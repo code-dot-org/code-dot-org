@@ -75,11 +75,12 @@ theme: responsive
 <div style="clear: both; margin-bottom: 20px"></div>
 
 <p><a href="#top">[Back to top]</a></p>
-
+<br>
+<br>
 
 <a id="videos"></a>
 <div class="col-100" style="padding:25px; border-radius: 15px; background-color: #ebe8f1">
-<h2>Watch an engaging series of short videos to learn how computers, the internet, and AI work</h2>
+<h2 style="margin-top:0">Watch an engaging series of short videos to learn how computers, the internet, and AI work</h2>
 <p>Learn the basics of computer science with videos featuring famous technologists like Bill Gates and Satya Nadella, as well as a diverse cast of presenters from a number of industries and organizations.</p>
 <br>
 <div class="col-33" style="padding-bottom:15px">
@@ -106,7 +107,6 @@ theme: responsive
       <span>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
-        <br>
         <a href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
     </span>
   </div>
@@ -130,19 +130,19 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-</div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-
-
 <p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
 <br>
 <p><a href="#top">[Back to top]</a></p>
+
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
 
 <a id="express"></a>
 <h2>Learn the fundamentals with our self-paced courses</h2>
 <h3>Self-paced introductory courses</h3>
 <p>A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour <a href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. To see what's available in your language, visit our <a href="https://studio.code.org/courses" target="_blank">course catalog</a>.</p>
+<br>
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
 <a href="https://code.org/educate/curriculum/express-course"><img src="/images/curriculum/course-tile-express.png" style="width: 100%"></a><br/><a href="https://code.org/educate/curriculum/express-course">Express Course</a>
@@ -157,19 +157,19 @@ theme: responsive
 <div style="clear: both"></div>
 
 <h3>Self-paced introductions to Game Lab and App Lab</h3>
-<p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools.</p>
+<p>Adapted from our CS Discoveries and CS Principles courses, these short, self-paced modules are a great way to learn concepts that span all programming languages and tools. <i>Requires Code.org account to access</i>.</p>
 
 <br>
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/oceans/oceans-overview.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      <a href="https://studio.code.org/s/csd3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/alien2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Learn about training data and bias, and how AI can address world problems. View <a href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
-        <a href="https://studio.code.org/s/oceans/stage/1/puzzle/1" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games.</div>
+        <a href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Try the module</button></a>
     </span>
   </div>
 </div>
@@ -177,14 +177,14 @@ theme: responsive
 
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a href="#ai-videos">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-intro-2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      <a href="https://studio.code.org/s/csp3-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/fill-485x235/turtle2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>
-        <a href="#ai-videos"><button>Watch the videos</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
+        <a href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
     </span>
   </div>
 </div>
@@ -192,14 +192,14 @@ theme: responsive
 
 <div class="col-33">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/fill-485x235/ai/ai-ethics-lp.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
+      <a href="https://studio.code.org/s/csp5-virtual" target="_blank">
+        <img class="tutorial-tile-img" src="/images/athome/events3.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI and Ethics</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Students reflect on the ethical implications of AI, then work together to create an “AI Code of Ethics” resource for AI creators and legislators everywhere.</div>
-        <a href="https://curriculum.code.org/hoc/unplugged/5/" target="_blank"><button>View lesson plan</button></a>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Create a series of simple applications (apps) that live on the web!</div>
+        <a href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Try the module</button></a>
     </span>
   </div>
 </div>
