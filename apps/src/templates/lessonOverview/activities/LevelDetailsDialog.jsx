@@ -273,7 +273,7 @@ class LevelDetailsDialog extends Component {
         fullWidth={!hasVideo}
         style={{...levelSpecificStyling}}
       >
-        <h1>{i18n.levelPreview()}</h1>
+        <h1>{level.display_name || scriptLevel.name || level.name}</h1>
         {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
