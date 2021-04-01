@@ -10,7 +10,7 @@ export function timeSpentFormatter(studentProgress) {
 
 export function lastUpdatedFormatter(studentProgress) {
   if (studentProgress?.lastTimestamp) {
-    return moment(studentProgress.lastTimestamp).format('M/D');
+    return moment.unix(studentProgress.lastTimestamp).format('M/D');
   }
   return missingDataFormatter(studentProgress, 'lastTimestamp');
 }

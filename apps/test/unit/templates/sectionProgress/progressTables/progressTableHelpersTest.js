@@ -43,7 +43,7 @@ describe('progressTableHelpers', () => {
 
     it('returns timestamp in month and day format', () => {
       const studentProgress = {lastTimestamp: 1614841198};
-      expect(lastUpdatedFormatter(studentProgress)).to.equal('1/19');
+      expect(lastUpdatedFormatter(studentProgress)).to.equal('3/4');
     });
   });
 });
