@@ -1,4 +1,6 @@
 class Plc::CourseUnitsController < ApplicationController
+  load_and_authorize_resource
+
   # GET /launch/
   def launch
   end
