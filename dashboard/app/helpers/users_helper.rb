@@ -162,15 +162,23 @@ module UsersHelper
   #   A collection of UserLevel ids where the user was pairing.
   # @return [Hash<Integer, Hash>]
   #   a map from level_id to a progress summary for the level.
-  private def merge_user_progress_by_level(script:, user:, user_levels_by_level:, paired_user_levels:, include_timestamp: false)
+  private def merge_user_progress_by_level(
+    script:, 
+    user:, 
+    user_levels_by_level:, 
+    paired_user_levels:, 
+    include_timestamp: false
+  )
     progress = {}
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
-        # if we have a contained level or BubbleChoice level, use that to represent progress
         level = Level.cache_find(level_id)
-        sublevel_id = level.is_a?(BubbleChoice) ? level.best_result_sublevel(user)&.id : nil
-        if level.is_a?(BubbleChoice) # we have a parent level
-          # get progress for sublevels to save in levels hash
+
+        # get progress for sublevels
+        if level.is_a?(BubbleChoice)
+
+          # we want the cumulative time spent of all sublevels
+          time_spent = 0
           level.sublevels.each do |sublevel|
             ul = user_levels_by_level.try(:[], sublevel.id)
             completion_status = activity_css_class(ul)
@@ -198,38 +206,43 @@ module UsersHelper
               last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
               time_spent: ul&.time_spent&.to_i
             }.compact
+
+          best_sublevel_id = level.best_result_sublevel(user)&.id
+          progress[level_id] = progress[best_sublevel_id]
           end
-        end
-        contained_level_id = level.contained_levels.try(:first).try(:id)
+        else
+          # if we have a contained level, use that to represent progress
+          contained_level_id = level.contained_levels.try(:first).try(:id)
+          ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
+          time_spent = ul&.time_spent&.to_i
+          completion_status = activity_css_class(ul)
+          # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
+          submitted = !!ul.try(:submitted) &&
+            !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
+          readonly_answers = !!ul.try(:readonly_answers)
+          locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
 
-        ul = user_levels_by_level.try(:[], sublevel_id || contained_level_id || level_id)
-        completion_status = activity_css_class(ul)
-        # a UL is submitted if the state is submitted UNLESS it is a peer reviewable level that has been reviewed
-        submitted = !!ul.try(:submitted) &&
-          !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
-        readonly_answers = !!ul.try(:readonly_answers)
-        locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
-
-        if completion_status == LEVEL_STATUS.not_tried
-          # for now, we don't allow authorized teachers to be "locked"
-          if locked && !user.authorized_teacher?
-            progress[level_id] = {
-              status: LEVEL_STATUS.locked
-            }
+          if completion_status == LEVEL_STATUS.not_tried
+            # for now, we don't allow authorized teachers to be "locked"
+            if locked && !user.authorized_teacher?
+              progress[level_id] = {
+                status: LEVEL_STATUS.locked
+              }
+            end
+            next
           end
-          next
-        end
 
-        progress[level_id] = {
-          status: completion_status,
-          result: ul.try(:best_result) || 0,
-          submitted: submitted ? true : nil,
-          readonly_answers: readonly_answers ? true : nil,
-          paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-          locked: locked ? true : nil,
-          last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
-          time_spent: ul&.time_spent&.to_i
-        }.compact
+          progress[level_id] = {
+            status: completion_status,
+            result: ul.try(:best_result) || 0,
+            submitted: submitted ? true : nil,
+            readonly_answers: readonly_answers ? true : nil,
+            paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
+            locked: locked ? true : nil,
+            last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
+            time_spent: time_spent
+          }.compact
+        end
 
         # Just in case this level has multiple pages, in which case we add an additional
         # array of booleans indicating which pages have been completed.
