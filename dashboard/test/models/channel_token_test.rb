@@ -6,7 +6,9 @@ class ChannelTokenTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    @script = create :script
     @level = create :level
+    create :script_level, script: @script levels: [@level]
     @fake_ip = '127.0.0.1'
   end
 
@@ -14,7 +16,8 @@ class ChannelTokenTest < ActiveSupport::TestCase
     channel_token = ChannelToken.find_or_create_channel_token(
       @level,
       @fake_ip,
-      get_storage_id
+      get_storage_id,
+      @script.id
     )
 
     storage_id, storage_app_id = storage_decrypt_channel_id(channel_token.channel)
