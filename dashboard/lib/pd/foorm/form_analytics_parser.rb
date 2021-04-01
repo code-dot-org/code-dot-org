@@ -18,12 +18,12 @@ module Pd::Foorm
     extend Helper
 
     def self.reshape_all_forms
-      reshaped_forms = reshape_forms_for_analytics_export(::Foorm::Form.all)
+      reshaped_forms = reshape_forms(::Foorm::Form.all)
       reshaped_forms_to_csv(reshaped_forms)
     end
 
     def self.reshaped_forms_to_csv(reshaped_forms)
-      CSV.open('./test.csv', 'wb') do |csv|
+      CSV.open('./test_forms.csv', 'wb') do |csv|
         csv << HEADERS
         reshaped_forms.each do |question|
           row = question.stringify_keys.values_at(*HEADERS)
@@ -32,17 +32,17 @@ module Pd::Foorm
       end
     end
 
-    def self.reshape_forms_for_analytics_export(forms)
+    def self.reshape_forms(forms)
       reshaped_forms = []
 
       forms.each do |form|
-        reshaped_forms = reshaped_forms.concat reshape_form_for_analytics_export(form)
+        reshaped_forms = reshaped_forms.concat reshape_form(form)
       end
 
       reshaped_forms
     end
 
-    def self.reshape_form_for_analytics_export(form)
+    def self.reshape_form(form)
       reshaped_form_questions_with_metadata = []
 
       form_metadata = {
@@ -52,7 +52,7 @@ module Pd::Foorm
       }
 
       parsed_form_questions = FoormParser.parse_form_questions(form.questions)
-      reshaped_form_questions = reshape_form_questions_for_analytics_export(parsed_form_questions)
+      reshaped_form_questions = reshape_form_questions(parsed_form_questions)
 
       reshaped_form_questions.each do |reshaped_form_question|
         reshaped_form_questions_with_metadata << form_metadata.merge(reshaped_form_question)
@@ -61,18 +61,9 @@ module Pd::Foorm
       reshaped_form_questions_with_metadata
     end
 
-    # matrix item name
-    # item name
-    # item type
-    # item text
-    # response options
-    # num response options
-    # item position ? <- display data
-    # library question ID ?
-    # library question name ?
-    # visible if ?
-    # @return [Array] List of hashes (each representing a question in the form) with keys representing headers for export to a tabular format.
-    def self.reshape_form_questions_for_analytics_export(parsed_form_questions)
+    # @param [Hash] parsed_form_questions
+    # @return [Array] Array of hashes (each representing a question in the form) with keys representing headers for export to a tabular format.
+    def self.reshape_form_questions(parsed_form_questions)
       reshaped_form_questions = []
 
       # Two sections -- general and facilitator
