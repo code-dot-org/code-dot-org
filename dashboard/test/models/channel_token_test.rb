@@ -8,7 +8,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
   setup_all do
     @script = create :script
     @level = create :level
-    create :script_level, script: @script levels: [@level]
+    create :script_level, script: @script, levels: [@level]
     @fake_ip = '127.0.0.1'
   end
 
