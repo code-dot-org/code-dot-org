@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -28,46 +27,16 @@ const styles = {
 
 export default class ModelCard extends React.Component {
   static propTypes = {
-    modelId: PropTypes.string
-  };
-
-  state = {
-    metadata: [],
-    isLoadPending: false
-  };
-
-  componentDidUpdate(prevProps) {
-    if (this.props.modelId !== prevProps.modelId) {
-      this.setState({metadata: undefined});
-      this.getModelMetadata();
-    }
-  }
-
-  getModelMetadata = () => {
-    if (this.props.modelId) {
-      this.setState({isImportPending: true});
-      $.ajax({
-        url: '/api/v1/ml_models/' + this.props.modelId + '/metadata',
-        method: 'GET',
-        dataType: 'json'
-      })
-        .done(metadata => {
-          this.setState({isImportPending: false, metadata});
-        })
-        .fail(e => {
-          console.log(e);
-          this.setState({isImportPending: false, metadata: undefined});
-        });
-    }
+    model: PropTypes.object
   };
 
   render() {
-    const modelId = this.props.modelId;
-    const metadata = this.state.metadata;
+    const model = this.props.model;
+    const metadata = model?.metadata;
 
     return (
       <div>
-        {modelId && metadata && (
+        {model && metadata && (
           <div style={styles.container}>
             <div>
               <span style={styles.bold}>Name:</span> &nbsp;
