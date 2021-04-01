@@ -1,7 +1,7 @@
 import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
+import {UnconnectedProgressLevelSet as ProgressLevelSet} from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {
   fakeLevels,
   fakeLevel

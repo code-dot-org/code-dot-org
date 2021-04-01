@@ -9,7 +9,6 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
-import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   buttonMargin: {
@@ -30,7 +29,8 @@ class AssignButton extends React.Component {
     // Redux
     assignToSection: PropTypes.func.isRequired,
     hiddenStageState: PropTypes.object,
-    updateHiddenScript: PropTypes.func.isRequired
+    updateHiddenScript: PropTypes.func.isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -79,10 +79,9 @@ class AssignButton extends React.Component {
 
   render() {
     const {confirmationDialogOpen} = this.state;
-    const {assignmentName, sectionName} = this.props;
+    const {assignmentName, sectionName, isRtl} = this.props;
 
     // Adjust styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const buttonMarginStyle = isRtl
       ? styles.buttonMarginRTL
       : styles.buttonMargin;
@@ -116,7 +115,8 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    hiddenStageState: state.hiddenStage
+    hiddenStageState: state.hiddenStage,
+    isRtl: state.isRtl
   }),
   {
     assignToSection,

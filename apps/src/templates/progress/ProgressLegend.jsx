@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import ProgressBubble from './ProgressBubble';
 import FontAwesome from '../FontAwesome';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {getStore} from '@cdo/apps/redux';
+import {connect} from 'react-redux';
 
 const styles = {
   table: {
@@ -101,18 +101,19 @@ TD.propTypes = {
   style: PropTypes.object
 };
 
-export default class ProgressLegend extends Component {
+class ProgressLegend extends Component {
   static propTypes = {
-    excludeCsfColumn: PropTypes.bool.isRequired
+    excludeCsfColumn: PropTypes.bool.isRequired,
+    // Redux
+    isRtl: PropTypes.bool
   };
 
   render() {
-    const {excludeCsfColumn} = this.props;
+    const {excludeCsfColumn, isRtl} = this.props;
 
     const secondRowRowSpan = 2;
 
     // Adjust icon and border styles if locale is RTL
-    const isRtl = getStore().getState().isRtl;
     const iconStyle = isRtl ? styles.iconRTL : styles.icon;
     const sideBorderStyle = isRtl ? styles.leftBorder : styles.rightBorder;
 
@@ -317,3 +318,9 @@ export default class ProgressLegend extends Component {
     );
   }
 }
+
+export const UnconnectedProgressLegend = ProgressLegend;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(ProgressLegend);
