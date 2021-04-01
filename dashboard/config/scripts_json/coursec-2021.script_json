@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-30 21:02:46 UTC",
+    "serialized_at": "2021-03-31 22:03:23 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -10138,5 +10138,8 @@
         "standard.shortcode": "1A-AP-15"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
