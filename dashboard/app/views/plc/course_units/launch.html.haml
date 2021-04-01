@@ -8,7 +8,7 @@
     = params[:notice].try(:html_safe)
 
   .field
-    = label_tag :course_unit
+    = label_tag 'Pick a Course to Launch'
     = select_tag :plc_course_unit_id, options_for_select(options_for_plc_course_launch)
 
   .actions
