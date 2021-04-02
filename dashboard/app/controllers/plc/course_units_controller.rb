@@ -13,9 +13,9 @@ class Plc::CourseUnitsController < ApplicationController
     course_unit.reload
 
     notice_string = if course_unit.started
-                      "#{course_unit.unit_name} was Launched"
+                      "#{course_unit.unit_name} was launched"
                     else
-                      "#{course_unit.unit_name} was failed to launch"
+                      "#{course_unit.unit_name} failed to launch"
                     end
 
     redirect_to action: :launch, notice: notice_string
