@@ -13,6 +13,7 @@
     white-space: nowrap;
     .rtl & {
       float: right;
+      padding-left: 3px;
     }
   }
 
@@ -26,7 +27,8 @@
       float: left;
     }
     html[dir='rtl'] & {
-      float: left;
+      float: left; 
+      
     }
   }
   .user_options, .create_options, .help_contents {
