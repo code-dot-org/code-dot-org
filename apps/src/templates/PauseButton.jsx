@@ -69,6 +69,7 @@ class PauseButton extends React.Component {
         onClick={this.togglePause}
         style={buttonStyle}
         disabled={!this.props.isRunning}
+        id="pause-button"
       >
         <div style={styles.container}>
           <i
