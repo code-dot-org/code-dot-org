@@ -16,11 +16,11 @@ class Plc::CourseUnitsControllerTest < ActionController::TestCase
   test_user_gets_response_for :launch, params: -> {}, user: :admin, response: :success
 
   # only admins can call launch plc course
-  test_user_gets_response_for :launch_plc_course, params: -> {{plc_course_unit_id: @course_unit.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :launch_plc_course, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :levelbuilder, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :admin, response: :redirect, redirected_to: '/plc/course_units/launch?notice=PLC+Course+was+Launched'
+  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :levelbuilder, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :admin, response: :redirect, redirected_to: '/plc/course_units/launch?notice=PLC+Course+was+launched'
 
   test "launching course sets started to true" do
     sign_in(@admin)
