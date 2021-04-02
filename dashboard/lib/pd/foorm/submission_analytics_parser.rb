@@ -1,16 +1,16 @@
 module Pd::Foorm
-  HEADERS = %w(
-    submission_id
-    question_name
-    matrix_item_name
-    response_value
-    response_text
-  )
-
   class SubmissionAnalyticsParser
     include Constants
 
-    def self.reshape_all_submissions
+    HEADERS = %w(
+      submission_id
+      question_name
+      matrix_item_name
+      response_value
+      response_text
+    )
+
+    def self.reshape_all_submissions_and_export_to_csv
       reshaped_submissions = reshape_submissions(::Foorm::Submission.all)
       reshaped_submissions_to_csv(reshaped_submissions)
     end
@@ -38,9 +38,7 @@ module Pd::Foorm
     def self.reshape_submission(submission)
       reshaped_submission_answers_with_metadata = []
 
-      submission_metadata = {
-        submission_id: submission.id
-      }
+      submission_metadata = {submission_id: submission.id}
 
       parsed_answers = JSON.parse(submission.answers)
       reshaped_submission_answers = reshape_submission_answers(parsed_answers, submission.form)
@@ -52,6 +50,9 @@ module Pd::Foorm
       reshaped_submission_answers_with_metadata
     end
 
+    # @param [Hash] parsed_answers a Hash of the answers attribute of a Foorm::Submission
+    # @param [Foorm::Form] form the form associated with the Foorm::Submission from which parsed_answers was derived
+    # @return [Array] array of hashes, with each hash representing an answer to export to CSV
     def self.reshape_submission_answers(parsed_answers, form)
       reshaped_submission_answers = []
 
@@ -60,28 +61,20 @@ module Pd::Foorm
         question_details = form&.get_question_details(question_name)
 
         # If question isn't in the Form, return as-is.
-        # This is expected for metadata about the submission.
+        # This is expected for metadata about the submission,
+        # which doesn't have an associated question in the Form.
         if question_details.nil?
           reshaped_submission_answer[:response_text] = answer
           reshaped_submission_answers << reshaped_submission_answer
           next
         end
 
-        # What are we doing here? (if we want to refactor)
-        # take base hash
-        # get additional attributes
-        # merge those additional attributes into hash
-        # add hash into list of all answers
-        #
-        # Challenges:
-        # Make this work for matrix questions
-        # Make this work for questions that are not in the Form
-
         case question_details[:type]
         when ANSWER_MATRIX
           choices = question_details[:columns]
 
           answer.each do |matrix_item_name, matrix_item_answer|
+            # Need a new object for each matrix item.
             reshaped_matrix_item_submission = reshaped_submission_answer.clone
 
             additional_attributes = {
@@ -95,7 +88,6 @@ module Pd::Foorm
           end
         when ANSWER_RATING, ANSWER_TEXT
           reshaped_submission_answer[:response_text] = answer
-
           reshaped_submission_answers << reshaped_submission_answer
         when ANSWER_SINGLE_SELECT
           choices = question_details[:choices]
