@@ -1,7 +1,6 @@
 login_required true
 hideable_lessons true
 student_detail_progress_view true
-teacher_resources [["curriculum", "/link/to/curriculum"]]
 has_verified_resources true
 version_year '2021'
 curriculum_umbrella 'CSP'
@@ -69,8 +68,8 @@ level 'U1 Lossy Compression Widget v2_2021', progression: 'Lossy Compression Wid
 level 'U1L11 CPS CFU Cell Phone_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Intellectual Property', display_name: 'Intellectual Property', has_lesson_plan: true
-level 'U1L12 CFU Creative Commons_2021', progression: 'Check For Understanding', assessment: true
-level 'U1L12 CFU Copyright_2021', progression: 'Check For Understanding', assessment: true
+level 'U1L12 CFU Creative Commons_2021', assessment: true
+level 'U1L12 CFU Copyright_2021', assessment: true
 
 lesson 'Project - Digital Information Dilemmas Part 1', display_name: 'Project   Digital Information Dilemmas Part 1', has_lesson_plan: true
 level 'U1L13 CFU Digital Representation_2021', progression: 'Check For Understanding', assessment: true

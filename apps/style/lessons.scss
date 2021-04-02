@@ -1,3 +1,4 @@
+@import "font";
 @import "markdown";
 @import "pdf_printing";
 
@@ -49,6 +50,8 @@
 .modal .level-details {
   a {
     color: $link_color;
+    font-family: $gotham-regular, sans-serif;
+    font-weight: normal;
     &:hover {
       color: $link_color;
       background: none;

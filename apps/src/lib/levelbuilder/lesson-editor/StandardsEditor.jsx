@@ -5,7 +5,12 @@ import {lessonEditorTableStyles} from './TableConstants';
 import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
-import {removeStandard} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import {
+  addStandard,
+  removeStandard
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import {standardShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
 const styles = {
   actionsColumn: {
@@ -21,19 +26,26 @@ const styles = {
     textAlign: 'center',
     width: 50,
     lineHeight: '30px'
+  },
+  select: {
+    width: 400
   }
 };
 
 class StandardsEditor extends Component {
   static propTypes = {
+    standardType: PropTypes.string.isRequired,
+    standards: PropTypes.arrayOf(standardShape).isRequired,
+
     // provided by redux
-    standards: PropTypes.arrayOf(PropTypes.object).isRequired,
+    addStandard: PropTypes.func.isRequired,
     removeStandard: PropTypes.func.isRequired
   };
 
   state = {
     standardToRemove: null,
-    confirmRemovalDialogOpen: false
+    confirmRemovalDialogOpen: false,
+    frameworkShortcode: null
   };
 
   actionsCellFormatter = (actions, {rowData}) => {
@@ -130,15 +142,77 @@ class StandardsEditor extends Component {
   };
 
   removeStandard = () => {
-    const {frameworkShortcode, shortcode} = this.state.standardToRemove;
-    this.props.removeStandard(frameworkShortcode, shortcode);
+    this.props.removeStandard(
+      this.props.standardType,
+      this.state.standardToRemove
+    );
     this.handleRemoveStandardDialogClose();
+  };
+
+  handleSelectFramework = e => {
+    const frameworkShortcode = e.target.value;
+    this.setState({frameworkShortcode});
+  };
+
+  constructStandardOption = standard => ({
+    value: standard.shortcode,
+    label: `${standard.frameworkShortcode.toUpperCase()} - ${
+      standard.shortcode
+    } - ${standard.description}`,
+    standard: standard
+  });
+
+  constructSearchOptions = json => {
+    const existingShortcodes = this.props.standards.map(
+      standard => standard.shortcode
+    );
+    const standards = json
+      // Filter any that are already added to lesson
+      .filter(standard => !existingShortcodes.includes(standard.shortcode))
+      .map(standard => this.constructStandardOption(standard));
+    return {options: standards};
+  };
+
+  onSearchSelect = option => {
+    this.props.addStandard(this.props.standardType, option.standard);
   };
 
   render() {
     const columns = this.getColumns();
     return (
       <div>
+        <label>
+          <strong>Filter by framework</strong>
+        </label>
+        <select onChange={this.handleSelectFramework} style={styles.select}>
+          <option value="">(none)</option>
+          <option value="iste">ISTE Standards for Students</option>
+          <option value="ccela">
+            Common Core English Language Arts Standards
+          </option>
+          <option value="ccmath">Common Core Math Standards</option>
+          <option value="ngss">Next Generation Science Standards</option>
+          <option value="csta">
+            CSTA K-12 Computer Science Standards (2017)
+          </option>
+          <option value="csp2021">CSP Conceptual Framework</option>
+        </select>
+        <label>
+          <strong>Select a Standard to add</strong>
+        </label>
+        <SearchBox
+          // Specify a key in order to force this component to remount when
+          // framework changes. Otherwise, it may return stale results when
+          // a query is repeated after changing the framework.
+          key={this.state.frameworkShortcode}
+          onSearchSelect={this.onSearchSelect}
+          searchUrl={'standards/search'}
+          constructOptions={this.constructSearchOptions}
+          additionalQueryParams={{
+            framework: this.state.frameworkShortcode
+          }}
+        />
+        <br />
         <Table.Provider columns={columns}>
           <Table.Header />
           <Table.Body rows={this.props.standards} rowKey="shortcode" />
@@ -165,10 +239,9 @@ class StandardsEditor extends Component {
 export const UnconnectedStandardsEditor = StandardsEditor;
 
 export default connect(
-  state => ({
-    standards: state.standards
-  }),
+  state => ({}),
   {
+    addStandard,
     removeStandard
   }
 )(StandardsEditor);

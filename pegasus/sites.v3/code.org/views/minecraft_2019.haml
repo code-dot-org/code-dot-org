@@ -21,99 +21,102 @@
   designer_description = I18n.t(:minecraft_designer_description)
   designer_link = CDO.studio_url('/s/minecraft/reset')
 
-%h1.responsive-padding= I18n.t(:minecraft_tutorials)
-%h2= I18n.t(:hoc2020_mc_available_code_org)
-%p.responsive-padding= I18n.t(:minecraft_specs)
-%div{style: "clear:both"}
+%div{dir: language_dir_class}
 
-.mc-container
-  .mc-tutorials
-    .tutorial-box{style: "margin-right: 14px"}
-      .img-container
-        %img.mc-img{src: aquatic_image}
-      .mc-tutorial-info
-        .mc-tutorial-details
-          %h2.mc-h1-second-box= aquatic_title
-          %p.mc-tutorial-description= aquatic_description
-          %a{href: aquatic_link, target: '_blank'}
-            %button.primary.padded-button= I18n.t(:minecraft_adventurer_button)
-    .tutorial-box{style: "margin-right: 14px;"}
-      .img-container
-        %img.mc-img{src: hero_image}
-      .mc-tutorial-info
-        .mc-tutorial-details
-          %h2.mc-h1-second-box= hero_title
-          %p.mc-tutorial-description= hero_description
-          %a{href: hero_link, target: '_blank'}
-            %button.primary= I18n.t(:minecraft_designer_button)
+  %h1.responsive-padding= I18n.t(:minecraft_tutorials)
 
-    .tutorial-box{style: "height: 150px; overflow: hidden; margin-bottom: 14px"}
-      .img-container
-        %img.mc-img{style: "height: initial", src: adventurer_image}
-      .mc-tutorial-info
-        .mc-tutorial-details
-          %h2.mc-h1-second-box= adventurer_title
-          %a{href: adventurer_link, target: '_blank'}
-            %button.primary= I18n.t(:minecraft_agent_button)
+  %h2= I18n.t(:hoc2020_mc_available_code_org)
+  %p.responsive-padding= I18n.t(:minecraft_specs)
+  %div{style: "clear:both"}
 
-    .tutorial-box{style: "height: 150px; overflow: hidden"}
-      .img-container
-        %img.mc-img{style: "height: initial", src: designer_image}
-      .mc-tutorial-info
-        .mc-tutorial-details
-          %h2.mc-h1-second-box= designer_title
-          %a{href: designer_link, target: '_blank'}
-            %button= I18n.t(:minecraft_agent_button)
+  .mc-container
+    .mc-tutorials
+      .tutorial-box{style: "margin-right: 14px"}
+        .img-container
+          %img.mc-img{src: aquatic_image}
+        .mc-tutorial-info
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= aquatic_title
+            %p.mc-tutorial-description= aquatic_description
+            %a{href: aquatic_link, target: '_blank'}
+              %button.primary.padded-button= I18n.t(:minecraft_adventurer_button)
+      .tutorial-box{style: "margin-right: 14px;"}
+        .img-container
+          %img.mc-img{src: hero_image}
+        .mc-tutorial-info
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= hero_title
+            %p.mc-tutorial-description= hero_description
+            %a{href: hero_link, target: '_blank'}
+              %button.primary= I18n.t(:minecraft_designer_button)
 
-%div{style: "clear: both; margin-bottom: 40px;"}
-%h3.responsive-padding
-  =I18n.t(:minecraft_no_internet)
-  %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
+      .tutorial-box{style: "height: 150px; overflow: hidden; margin-bottom: 14px"}
+        .img-container
+          %img.mc-img{style: "height: initial", src: adventurer_image}
+        .mc-tutorial-info
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= adventurer_title
+            %a{href: adventurer_link, target: '_blank'}
+              %button.primary= I18n.t(:minecraft_agent_button)
 
-.clear
-%h2= I18n.t(:hoc2020_mc_available_mee)
+      .tutorial-box{style: "height: 150px; overflow: hidden"}
+        .img-container
+          %img.mc-img{style: "height: initial", src: designer_image}
+        .mc-tutorial-info
+          .mc-tutorial-details
+            %h2.mc-h1-second-box= designer_title
+            %a{href: designer_link, target: '_blank'}
+              %button= I18n.t(:minecraft_agent_button)
 
-= view :minecraft_2020_promo
-= view :minecraft_2019_promo
+  %div{style: "clear: both; margin-bottom: 40px;"}
+  %h3.responsive-padding
+    =I18n.t(:minecraft_no_internet)
+    %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
 
-%div{style: "clear: both; margin-top: 45px;"}
+  .clear
+  %h2= I18n.t(:hoc2020_mc_available_mee)
 
-%link{href: "/css/tools.css", rel: "stylesheet"}
+  = view :minecraft_2020_promo
+  = view :minecraft_2019_promo
 
-%h2= I18n.t(:hoc2019_mc_more_coding_resources)
-.tile-container-responsive{style: "padding: 5px"}
-  .col-50
-    .tutorial-tile
-      %a{href: "https://www.microsoft.com/en-us/store/locations/events-for-students", target: '_blank'}
-        %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg")}
-      .tutorial-info
-        %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box3_title)
-        .smalltext= I18n.t(:hoc2018_mc_educators_box3_desc)
+  %div{style: "clear: both; margin-top: 45px;"}
+
+  %link{href: "/css/tools.css", rel: "stylesheet"}
+
+  %h2= I18n.t(:hoc2019_mc_more_coding_resources)
+  .tile-container-responsive{style: "padding: 5px"}
+    .col-50
+      .tutorial-tile
         %a{href: "https://www.microsoft.com/en-us/store/locations/events-for-students", target: '_blank'}
-          %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box3_button)
-        .clear
+          %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg")}
+        .tutorial-info
+          %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box3_title)
+          .smalltext= I18n.t(:hoc2018_mc_educators_box3_desc)
+          %a{href: "https://www.microsoft.com/en-us/store/locations/events-for-students", target: '_blank'}
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box3_button)
+          .clear
 
-  .col-50
-    .tutorial-tile
-      %a{href: "https://www.microsoft.com/digitalskills", target: '_blank'}
-        %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small2.jpg")}
-      .tutorial-info
-        %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box4_title)
-        .smalltext= I18n.t(:hoc2018_mc_educators_box4_desc)
+    .col-50
+      .tutorial-tile
         %a{href: "https://www.microsoft.com/digitalskills", target: '_blank'}
-          %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box4_button)
-        .clear
+          %img.tutorial-tile-img{src: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small2.jpg")}
+        .tutorial-info
+          %h3{style: "margin-top: 0px;"}= I18n.t(:hoc2018_mc_educators_box4_title)
+          .smalltext= I18n.t(:hoc2018_mc_educators_box4_desc)
+          %a{href: "https://www.microsoft.com/digitalskills", target: '_blank'}
+            %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc2018_mc_educators_box4_button)
+          .clear
 
-.clear
+  .clear
 
-.mc-videos{style: "clear: both;"}
-  %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
-  = view :inspirational_videos
+  .mc-videos{style: "clear: both;"}
+    %h2.mc-header2.responsive-padding= I18n.t(:watch_inspirational_videos)
+    = view :inspirational_videos
 
-.microsoft-partnership
-  = I18n.t(:hoc2018_mc_with_microsoft)
-  &nbsp;
-  %img{src: "images/fit-240/avatars/microsoft.jpg"}
+  .microsoft-partnership
+    = I18n.t(:hoc2018_mc_with_microsoft)
+    &nbsp;
+    %img{src: "images/fit-240/avatars/microsoft.jpg"}
 
-.microsoft-thanks
-  = I18n.t(:hoc2018_mc_thank_microsoft)
+  .microsoft-thanks
+    = I18n.t(:hoc2018_mc_thank_microsoft)
