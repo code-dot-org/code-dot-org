@@ -1,4 +1,8 @@
 module Pd::Foorm
+  # Responsible for taking Submissions (ie, a response submitted by a user to one of our Forms)
+  # from our in-house survey system (Foorm)
+  # and processing them into a "one row per question answered" format
+  # for export to CSV, and, ultimately, to our analytics database (Redshift).
   class SubmissionAnalyticsParser
     include Constants
 

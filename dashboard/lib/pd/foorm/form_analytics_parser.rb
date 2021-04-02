@@ -1,4 +1,8 @@
 module Pd::Foorm
+  # Responsible for taking Forms (ie, a survey comprised of many questions)
+  # from our in-house survey system (Foorm)
+  # and processing them into a "one row per question" format
+  # for export to CSV, and, ultimately, to our analytics database (Redshift).
   class FormAnalyticsParser
     include Constants
     extend Helper
