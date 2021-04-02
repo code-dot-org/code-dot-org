@@ -1,23 +1,23 @@
 module Pd::Foorm
-  HEADERS = %w(
-    form_id
-    form_name
-    form_version
-    question_type
-    question_name
-    question_text
-    matrix_item_name
-    matrix_item_text
-    is_facilitator_specific
-    response_options
-    num_response_options
-  )
-
   class FormAnalyticsParser
     include Constants
     extend Helper
 
-    def self.reshape_all_forms
+    HEADERS = %w(
+      form_id
+      form_name
+      form_version
+      question_type
+      question_name
+      question_text
+      matrix_item_name
+      matrix_item_text
+      is_facilitator_specific
+      response_options
+      num_response_options
+    )
+
+    def self.reshape_all_forms_and_export_to_csv
       reshaped_forms = reshape_forms(::Foorm::Form.all)
       reshaped_forms_to_csv(reshaped_forms)
     end
