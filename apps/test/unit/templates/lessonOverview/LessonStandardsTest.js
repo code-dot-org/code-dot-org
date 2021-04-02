@@ -40,23 +40,16 @@ describe('LessonStandards', () => {
       expect(text).to.contain(standard.description);
     });
 
-    it('renders many standards with all standards expanded', () => {
-      const standards = cspStandards.concat(cstaStandards);
-      const wrapper = mount(
-        <LessonStandards standards={standards} expandMode={ExpandMode.ALL} />
-      );
-
-      const frameworks = wrapper.find('Framework');
-      expect(frameworks.length).to.equal(2);
-      frameworks.forEach(framework => {
-        expect(isOpen(framework)).to.be.false;
-        const parentCategories = framework.find('ParentCategory');
-        parentCategories.forEach(parentCategory => {
-          expect(isOpen(parentCategory)).to.be.false;
-          const categories = parentCategory.find('Category');
-          categories.forEach(category => {
-            expect(isOpen(category)).to.be.false;
-          });
+    const frameworks = wrapper.find('Framework');
+    expect(frameworks.length).to.equal(2);
+    frameworks.forEach(framework => {
+      expect(isOpen(framework)).to.be.false;
+      const parentCategories = framework.find('ParentCategory');
+      parentCategories.forEach(parentCategory => {
+        expect(isOpen(parentCategory)).to.be.false;
+        const categories = parentCategory.find('Category');
+        categories.forEach(category => {
+          expect(isOpen(category)).to.be.false;
         });
       });
     });
