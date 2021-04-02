@@ -44,14 +44,17 @@ describe('LessonStandards', () => {
     expect(frameworks.length).to.equal(2);
     frameworks.forEach(framework => {
       expect(isOpen(framework)).to.be.false;
-      const parentCategories = framework.find('ParentCategory');
-      parentCategories.forEach(parentCategory => {
-        expect(isOpen(parentCategory)).to.be.false;
-        const categories = parentCategory.find('Category');
-        categories.forEach(category => {
-          expect(isOpen(category)).to.be.false;
-        });
-      });
+    });
+
+    const parentCategories = wrapper.find('ParentCategory');
+    expect(parentCategories.length > 0).to.be.true;
+    parentCategories.forEach(parentCategory => {
+      expect(isOpen(parentCategory)).to.be.false;
+    });
+    const categories = wrapper.find('Category');
+    expect(categories.length > 0).to.be.true;
+    categories.forEach(category => {
+      expect(isOpen(category)).to.be.false;
     });
   });
 
@@ -84,14 +87,18 @@ describe('LessonStandards', () => {
     expect(frameworks.length).to.equal(2);
     frameworks.forEach(framework => {
       expect(isOpen(framework)).to.be.true;
-      const parentCategories = framework.find('ParentCategory');
-      parentCategories.forEach(parentCategory => {
-        expect(isOpen(parentCategory)).to.be.true;
-        const categories = parentCategory.find('Category');
-        categories.forEach(category => {
-          expect(isOpen(category)).to.be.true;
-        });
-      });
+    });
+
+    const parentCategories = wrapper.find('ParentCategory');
+    expect(parentCategories.length > 0).to.be.true;
+    parentCategories.forEach(parentCategory => {
+      expect(isOpen(parentCategory)).to.be.true;
+    });
+
+    const categories = wrapper.find('Category');
+    expect(categories.length > 0).to.be.true;
+    categories.forEach(category => {
+      expect(isOpen(category)).to.be.true;
     });
   });
 });
