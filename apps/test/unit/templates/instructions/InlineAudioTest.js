@@ -115,7 +115,7 @@ describe('InlineAudio', function() {
     expect(component.find('.inline-audio').exists()).to.be.true;
   });
 
-  it('can toggle audio', function() {
+  it('can toggle audio', async function() {
     const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
