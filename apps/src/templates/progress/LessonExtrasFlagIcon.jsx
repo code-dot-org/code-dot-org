@@ -1,49 +1,53 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 
 const styles = {
-  default: {
-    color: color.lighter_gray,
-    ':hover': {
-      color: color.orange
-    }
+  flagNormal: {
+    color: color.white
   },
-  selected: {
-    color: color.charcoal
+  checkFlagNormal: {
+    color: color.lighter_gray
   },
   perfect: {
     color: color.level_perfect
   },
+  hoverOverlay: {
+    ':hover': {
+      color: color.orange
+    }
+  },
   smallStack: {
     width: '1em',
-    height: '1.1em',
+    height: '1em',
     lineHeight: '1em'
   }
 };
 
-class LessonExtrasFlagIcon extends React.PureComponent {
+class LessonExtrasFlagIcon extends Component {
   static propTypes = {
-    isPerfect: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    size: PropTypes.number
+    perfect: PropTypes.bool,
+    style: PropTypes.object
   };
 
   render() {
-    const {isPerfect, isSelected, size} = this.props;
-    const sizeStyle = {...styles.smallStack, fontSize: size};
-    const colorStyle = {
-      ...styles.default,
-      ...(isSelected && styles.selected),
-      ...(isPerfect && styles.perfect)
-    };
+    const {perfect, style} = this.props;
 
     return (
-      <span className="fa-stack fa-1x" style={sizeStyle}>
-        <i className="fa fa-flag fa-stack-1x fa-inverse" />
-        <i className="fa fa-flag-checkered fa-stack-1x" style={colorStyle} />
-      </span>
+      <div style={style}>
+        <span className="fa-stack fa-1x" style={styles.smallStack}>
+          <i className="fa fa-flag fa-stack-1x" style={styles.flagNormal} />
+          <i
+            className="fa fa-flag-checkered fa-stack-1x"
+            style={{
+              ...styles.checkFlagNormal,
+              ...styles.hoverOverlay,
+              ...(perfect && styles.perfect)
+            }}
+          />
+        </span>
+      </div>
     );
   }
 }
