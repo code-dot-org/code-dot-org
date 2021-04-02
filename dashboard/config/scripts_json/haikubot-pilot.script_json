@@ -5,10 +5,11 @@
     "hidden": true,
     "login_required": false,
     "properties": {
+      "pilot_experiment": "haikubot-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-01 13:54:08 UTC",
+    "serialized_at": "2021-04-02 18:17:12 UTC",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
