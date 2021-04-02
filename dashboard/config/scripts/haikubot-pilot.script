@@ -1,3 +1,5 @@
+pilot_experiment 'haikubot-pilot'
+
 lesson_group 'Peom Bot', display_name: 'Poem Bot'
 lesson 'Introducing Sprite Lab', display_name: 'Programming Ramp Up for Poem Bot', has_lesson_plan: false
 level 'poembot_video_sprites', progression: 'Video: Making Sprites'
