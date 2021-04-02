@@ -937,7 +937,7 @@ export var blocks = [
   },
   {
     func: 'declareAssign_object',
-    block: `var object = {"key", "value"};`,
+    block: `var object = ({"key": "value"});`,
     category: 'Variables',
     noAutocomplete: true
   },
