@@ -877,12 +877,12 @@ class Script < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_stage)
+  def get_bonus_script_levels(current_stage, current_user)
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |stage|
         {
           stageNumber: stage.relative_position,
-          levels: stage.script_levels.select(&:bonus).map(&:summarize_as_bonus)
+          levels: stage.script_levels.select(&:bonus).map {|bonus_level| bonus_level.summarize_as_bonus(current_user&.id)}
         }
       end
       @all_bonus_script_levels.select! {|stage| stage[:levels].any?}
