@@ -28,7 +28,7 @@ const expandModeShape = PropTypes.oneOf(
  * @param index {number} index of the child with respect to parent
  * @returns {ExpandMode} Expand mode of child component
  */
-function getNextExpandMode(parentExpandMode, index) {
+function getChildExpandMode(parentExpandMode, index) {
   switch (parentExpandMode) {
     case ExpandMode.ALL:
       return ExpandMode.ALL;
@@ -58,7 +58,7 @@ export default class LessonStandards extends PureComponent {
       <div>
         {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
-          const expandMode = getNextExpandMode(this.props.expandMode, index);
+          const expandMode = getChildExpandMode(this.props.expandMode, index);
           return (
             <Framework
               name={frameworkName}
@@ -97,7 +97,7 @@ class Framework extends PureComponent {
         <ul style={{listStyleType: 'none'}}>
           {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
-            const expandMode = getNextExpandMode(this.props.expandMode, index);
+            const expandMode = getChildExpandMode(this.props.expandMode, index);
             return (
               <CategoryClass
                 key={categoryShortcode}
@@ -139,7 +139,7 @@ class ParentCategory extends PureComponent {
             {Object.keys(standardsByCategory).map(
               (categoryShortcode, index) => {
                 const standards = standardsByCategory[categoryShortcode];
-                const expandMode = getNextExpandMode(
+                const expandMode = getChildExpandMode(
                   this.props.expandMode,
                   index
                 );
