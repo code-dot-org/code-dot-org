@@ -24,11 +24,14 @@ const fakeStandards = [
 ];
 
 describe('StandardsEditor', () => {
-  let defaultProps, removeStandard;
+  let defaultProps, addStandard, removeStandard;
   beforeEach(() => {
+    addStandard = sinon.spy();
     removeStandard = sinon.spy();
     defaultProps = {
+      standardType: 'standard',
       standards: fakeStandards,
+      addStandard,
       removeStandard
     };
   });

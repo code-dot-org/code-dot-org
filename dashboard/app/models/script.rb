@@ -88,7 +88,8 @@ class Script < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
-            :standards
+            :standards,
+            :opportunity_standards
           ]
         },
         :script_levels,
@@ -117,8 +118,6 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validate :set_is_migrated_only_for_migrated_scripts
-
   def prevent_duplicate_levels
     reload
 
@@ -134,12 +133,6 @@ class Script < ApplicationRecord
   after_save :generate_plc_objects
 
   SCRIPT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
-
-  def set_is_migrated_only_for_migrated_scripts
-    if !!is_migrated && !hidden
-      errors.add(:is_migrated, "Can't be set on a course that is visible")
-    end
-  end
 
   def prevent_course_version_change?
     lessons.any? {|l| l.resources.count > 0 || l.vocabularies.count > 0}
@@ -1601,7 +1594,12 @@ class Script < ApplicationRecord
   end
 
   def localized_title
-    I18n.t "data.script.name.#{name}.title"
+    I18n.t(
+      "title",
+      default: name,
+      scope: [:data, :script, :name, name],
+      smart: true
+    )
   end
 
   def title_for_display
