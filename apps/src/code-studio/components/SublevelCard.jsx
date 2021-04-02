@@ -46,6 +46,11 @@ const styles = {
     color: color.white,
     opacity: 0.8
   },
+  flagBubble: {
+    fontSize: 30,
+    height: 30,
+    width: 30
+  },
   column: {
     marginLeft: MARGIN * 2,
     display: 'flex',
@@ -153,8 +158,11 @@ export default class SublevelCard extends React.Component {
 
     if (isLessonExtra) {
       return (
-        <a href={this.getSublevelUrl()}>
-          <LessonExtrasFlagIcon isPerfect={sublevel.perfect} size={30} />
+        <a style={styles.flagBubble} href={this.getSublevelUrl()}>
+          <LessonExtrasFlagIcon
+            perfect={sublevel.perfect}
+            style={styles.flagBubble}
+          />
         </a>
       );
     }
