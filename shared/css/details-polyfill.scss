@@ -13,12 +13,13 @@ details {
   }
 }
 
-details, summary {
+details {
   display: block;
 }
 
 summary {
   cursor: pointer;
+  display: list-item;
 }
 
 summary:hover {
