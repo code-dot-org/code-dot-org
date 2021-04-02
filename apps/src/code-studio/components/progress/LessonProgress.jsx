@@ -163,7 +163,7 @@ class LessonProgress extends Component {
   }
 
   isBonusComplete() {
-    return !!this.props.levels.find(
+    return this.props.levels.some(
       level => level.bonus && level.status === LevelStatus.perfect
     );
   }
@@ -179,7 +179,7 @@ class LessonProgress extends Component {
     const {isLessonExtras, levels, currentLevelId} = this.props;
     return (
       isLessonExtras ||
-      !!levels.find(level => level.id === currentLevelId && level.bonus)
+      levels.some(level => level.id === currentLevelId && level.bonus)
     );
   }
 
