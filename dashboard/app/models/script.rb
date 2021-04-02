@@ -1429,7 +1429,7 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_script_unit_group_overview),
+      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
