@@ -65,8 +65,9 @@ Scenario: Lock settings for students
 
   # now locked for student
 
-  When I am on "http://studio.code.org/s/allthethings/lockable/1/puzzle/1/page/4"
-  And element "#level-body" contains text "this stage is currently locked"
+  When I am on "http://studio.code.org/s/allthethings"
+  And I wait until element "td:contains(Anonymous student survey 2)" is visible
+  Then element "td:contains(Anonymous student survey 2) .fa-lock" is visible
 
   # teacher marks readonly
 
