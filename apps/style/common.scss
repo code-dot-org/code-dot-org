@@ -107,6 +107,10 @@ html[dir='rtl'] #visualizationColumn {
   }
 }
 
+#pause-button:focus:not(:focus-visible) {
+  outline: none;
+}
+
 div.droplet-palette-group-header {
   @include font;
   line-height: 24px;
