@@ -621,7 +621,7 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceIds: teacher_resources.map(&:id),
       is_migrated: true
     }
-    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).get_teacher_resources.map {|r| r[:key]}
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
   end
 
   test 'updates pilot_experiment' do
