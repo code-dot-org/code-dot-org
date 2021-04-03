@@ -4960,7 +4960,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\r\n\r\n1. import the screen your teammate created\r\n2. add an event handler to your code using the button ID\r\n3. use the `setScreen` block to change to the new screen\r\n\r\n"
+            "markdown": "**Goal:** This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\r\n\r\n1. import the screen your teammate created\r\n2. add an event handler to your code using the button ID\r\n3. use the [`setScreen`(#fff176)](/docs/applab/setScreen/) block to change to the new screen\r\n\r\n"
           }
         ]
       },

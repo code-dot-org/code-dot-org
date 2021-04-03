@@ -50,6 +50,12 @@ class Lesson < ApplicationRecord
   has_and_belongs_to_many :standards, foreign_key: 'stage_id'
   has_many :lessons_standards, foreign_key: 'stage_id' # join table. we need this association for seeding logic
 
+  # the dependent: :destroy clause is needed to ensure that the associated join
+  # models are deleted when this lesson is deleted. in order for this to work,
+  # the join model must have an :id column.
+  has_many :lessons_opportunity_standards,  dependent: :destroy
+  has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
@@ -359,6 +365,7 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: standards.map(&:summarize_for_lesson_edit),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
@@ -383,6 +390,7 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url

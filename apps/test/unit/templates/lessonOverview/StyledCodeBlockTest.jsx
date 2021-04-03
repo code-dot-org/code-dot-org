@@ -17,6 +17,17 @@ describe('StyledCodeBlock', () => {
       expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
     });
 
+    it('builds a full visual code block markdown expression with parameters', () => {
+      const input = {
+        color: '#c0ffee',
+        link: 'https://example.com',
+        name: 'test block',
+        parameters: ['x', 'y']
+      };
+      const expected = '[`test block(x, y)`(#c0ffee)](https://example.com)';
+      expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
+    });
+
     it('builds a regular code block when not given a color', () => {
       const input = {
         link: 'https://example.com',
