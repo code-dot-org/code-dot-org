@@ -1137,8 +1137,8 @@ if (experiments.isEnabled(experiments.APPLAB_ML)) {
     func: 'getPrediction',
     parent: api,
     category: 'Data',
-    paletteParams: ['model_name', 'model_id', 'testValues', 'callback'],
-    params: ['"myModel"', '"modelId"', 'testValues', 'function (value) {\n \n}']
+    paletteParams: ['name', 'id', 'data', 'callback'],
+    params: ['"name"', '"id"', 'data', 'function (value) {\n \n}']
   });
 }
 

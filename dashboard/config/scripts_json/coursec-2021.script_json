@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-26 15:40:59 UTC",
+    "serialized_at": "2021-04-02 21:07:31 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -140,7 +140,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Using a set of symbols in place of code, students will design algorithms to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.",
+        "overview": "In this **context-setting** lessons, students will use a set of symbols to instruct a \"robot\" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.",
         "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.",
         "purpose": "This unplugged lesson brings the class together as a team with a simple task to complete: get a \"robot\" to stack cups in a specific design. This activity lays the groundwork for the programming that students will do throughout the course as they learn the importance of defining a clearly communicated algorithm.",
         "preparation": " - Prepare a stack of 20 paper cups (or paper trapezoids) for each group of 2-3 students.\n - Display the symbols from ***Symbol Key** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 2-3 students.\n - Make sure each student has a reflection journal.",
@@ -160,7 +160,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+        "overview": "In this **skill-building** lesson, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
         "purpose": "In this lesson, students will develop programming and debugging skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
@@ -180,7 +180,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
+        "overview": "In this **skill-building** lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
         "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at facing the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Review ***CS Fundamentals Main Activity Tips - Lesson Recommendations**.\n - Review the ***Debugging Guide** from this course's curriculum overview page with the class.\n - Make sure every student has a reflection journal.",
@@ -200,7 +200,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get _Laurel_ to pick up treasure as she walks along a path.",
+        "overview": "In this **skill-building** lesson, students will continue to develop their understanding of algorithms and debugging. With a new character, _Laurel the Adventurer_, students will create sequential algorithms to get _Laurel_ to pick up treasure as she walks along a path.",
         "student_overview": "Write algorithms to help Laurel the Adventurer collect lots of gems!",
         "purpose": "In this lesson, students will be practicing their programming skills using a new character, Laurel the Adventurer. When someone starts programming they piece together instructions in a specific order using something that a machine can read. Through the use of programming, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and algorithms in programming.",
         "preparation": " - Play through the puzzles to find potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -220,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
+        "overview": "In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.",
         "student_overview": "Create beautiful images by programming the Artist.",
         "purpose": "Building off of the students' previous experience with sequencing, this lesson will work to inspire more creativity with coding. The purpose of this lesson is to solidify knowledge on sequencing by introducing new blocks and goals. In this case, students learn more about pixels and angles using the new blocks, while still practicing their sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Student Handout** for each student.",
@@ -240,7 +240,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.",
+        "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
         "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
         "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
         "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- Make sure every student has a reflection journal.\n- (Optional) Write a short message on the board in binary.",
@@ -260,7 +260,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Building on the initial \"My Robotic Friends\" activity, students tackle larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
+        "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
         "purpose": "This lesson serves as a reintroduction to loops, using the now familiar set of \"robot\" programming instructions. Students will develop critical thinking skills by looking for patterns of repetition in the movements of classmates and determining how to simplify those repeated patterns using loops.",
         "preparation": " - Make sure each student has a journal.\n - Prepare a stack of 20 paper cups (or ***paper trapezoids**) for each group of 4 students.\n - Display the ***symbols** where students can reference throughout the lesson.\n - (Optional) Print out one ***Cup Stacking Ideas** per group of 4 students.",
@@ -280,7 +280,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "Building on the concept of repeating instructions from \"Getting Loopy,\" this stage will have students using loops to help _BB-8_ traverse a maze more efficiently than before.",
+        "overview": "This **skill-building** lesson builds has students using loops to help _BB-8_ traverse a maze more efficiently than before.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
         "purpose": "In this lesson, students will be learning more about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
         "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -300,7 +300,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
+        "overview": "In this **skill-building** lesson, students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
         "student_overview": "Let's use loops to help the harvester collect some veggies!",
         "purpose": "In this lesson, students will use loops to repeat actions like harvesting pumpkins. New patterns will emerge and students will use creativity and logical thinking to determine what code needs to be repeated and how many times.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -320,7 +320,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+        "overview": "This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
         "purpose": "This series highlights the power of loops with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
         "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a reflection journal.",
@@ -340,7 +340,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.",
+        "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
         "student_overview": "Play a fun game to learn about events. ",
         "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
         "preparation": "- Print or display the ***Event Controller**.\n- Print one ***assessment** for each student.\n - Make sure every student has a reflection journal.",
@@ -360,7 +360,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this special stage, students get to build their own Flappy Bird game by using event handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.",
+        "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own Flappy Bird game. At the end of the lesson, students will be able to customize their game by changing the visuals or rules.",
         "student_overview": "Build you own Flappy Bird game however you like, then share it with your friends!",
         "purpose": "Events are very common in computer programs. In this lesson, students will further develop their understanding of events by making a _Flappy Bird_ game. Students will learn to make their character move across the screen, make noises, and react to obstacles based on user-initiated events.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -374,13 +374,13 @@
     },
     {
       "key": "Events in Play Lab",
-      "name": "Chase Game with Events",
+      "name": "Mini-Project: Chase Game",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!",
+        "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own animated game.",
         "student_overview": "It's time to get creative and make a game in Play Lab!",
         "purpose": "Here, students will further develop their understanding of events using Play Lab. Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.  ",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
@@ -400,8 +400,8 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
-        "student_overview": "Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.",
+        "overview": "In this **exploratory** lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs. Data can be used to help students understand their world and answer interesting questions. ",
+        "student_overview": "Data can be used to understand our world and answer interesting questions. ",
         "purpose": "Computers were created to help process data. There is an increasing amount of data in the world, so being able to read and analyze it is important.  This lesson is here to make sure students have the basic experience of collecting, visualizing, and analyzing a simple set of data.",
         "preparation": "* Print out one ***worksheet** for each student.\n* Try today's lesson on Code Studio. This is meant to be used as a tool for today's activity. Be prepared to project it to the class, or otherwise allow students to visit it on their own computers.\n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
@@ -420,7 +420,7 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
+        "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
         "preparation": "* Play through the puzzles to find any potential problem areas for your class.\n* Print out one ***Project Planning Guide** for each student (or pair).\n* Review the ***Project Planning Guide (Exemplar)** document.\n* (Optional) Complete your own planning guide and code your own project to show to students!\n",
@@ -1663,8 +1663,14 @@
       "key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
-        "name": "Reflection"
+        "description": "**Prompts:**\n\n - Draw your own stack of cups that you would like to see a robot build.\n - Can you create a program for that cup stack?",
+        "name": "Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflection prompts like these can be completed in a variety of styles. Journaling or discussion (with groups or partners) are great options!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1d9f53b2-4d8b-4d95-83b3-a9775f72da01",
@@ -1765,7 +1771,7 @@
       "key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "1ebd42df-a302-418a-be1e-6bbca930cedf",
@@ -1820,7 +1826,8 @@
       "key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
       "position": 8,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb",
@@ -1842,7 +1849,7 @@
       "key": "1108a4f2-f4c2-48ca-be06-124b1270dfc5",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today. When completed, this can be used as a  review sheet for them to look at in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw an activity you like to do that you struggled with the first time. Draw or describe how you got better.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1922,7 +1929,7 @@
       "key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "9b6832e5-f80f-4baa-9049-48d9526443ba",
@@ -1988,7 +1995,7 @@
       "key": "13cf61a7-7e92-40c5-ba55-c4fa27c516a7",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What kind of bugs did you find today?\n - Draw a bug you encountered in one of the puzzles today. What did you do to \"debug\" the program?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2058,7 +2065,7 @@
       "key": "e79bc3de-623c-4238-bdd7-6a6128f79ff8",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e79bc3de-623c-4238-bdd7-6a6128f79ff8",
@@ -2124,7 +2131,7 @@
       "key": "02bdc7bd-ae6d-426d-8e13-7f804e2292d4",
       "position": 1,
       "properties": {
-        "description": "\n\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw a maze that you might solve with the blocks you used today.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Draw a maze that you might solve with the blocks you used today.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2171,7 +2178,7 @@
       "key": "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65",
@@ -2232,7 +2239,7 @@
       "key": "e7143536-5b4e-4594-b2ff-707b87e128c3",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are the interior angles that make up a square. What about for a triangle?\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What are the interior angles that make up a square. What about for a triangle?\n - Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2379,7 +2386,7 @@
       "key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
       "position": 2,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Use the activity worksheet to write out the rest of your name or your favorite word in binary.\n - Imagine a world where we spoke in binary, saying \"on\" or \"off\", but nothing else. Draw two characters trying to talk to each other in binary."
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Use the activity worksheet to write out the rest of your name or your favorite word in binary.\n - Imagine a world where we spoke in binary, saying \"on\" or \"off\", but nothing else. Draw two characters trying to talk to each other in binary."
       },
       "seeding_key": {
         "activity_section.key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
@@ -2486,7 +2493,7 @@
       "key": "dba044f7-494f-4657-a69b-ae2c7cf29ea0",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
+        "description": "**Prompts:**\n\n - Have the students write or draw something in their journal that will remind them later what loops are.  This can come from a prompt like:\n    - What does \"repeat\" mean to you?\n    - Draw a picture of you repeating something.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2568,7 +2575,7 @@
       "key": "aadcbed9-b15e-4fcb-b277-fd1c8156270e",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "aadcbed9-b15e-4fcb-b277-fd1c8156270e",
@@ -2601,7 +2608,7 @@
       "key": "6fed6081-6c4a-4a1a-8db9-69ab9fd41513",
       "position": 5,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "6fed6081-6c4a-4a1a-8db9-69ab9fd41513",
@@ -2678,7 +2685,7 @@
       "key": "b8bea90c-e431-4f96-846f-733476b53374",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How did loops make your program easier to write?\n - Think of something that repeats over and over again.  What might the program for that look like?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - How did loops make your program easier to write?\n - Think of something that repeats over and over again.  What might the program for that look like?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2725,7 +2732,7 @@
       "key": "2f87a826-1460-4d5c-9db3-47911c77a56a",
       "position": 2,
       "properties": {
-        "progression_name": "Practice",
+        "progression_name": "Skill Building",
         "description": "When students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?"
       },
       "seeding_key": {
@@ -2781,7 +2788,7 @@
       "key": "809e449a-e392-48c2-9b9f-f53ce1d06366",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give two examples of when you used loops in your code.\n - What else could a farmer harvest? Draw the code block that you would need to harvest that item.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Give two examples of when you used loops in your code.\n - What else could a farmer harvest? Draw the code block that you would need to harvest that item.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2845,7 +2852,7 @@
       "key": "0e769463-817e-4432-be93-87047256d015",
       "position": 2,
       "properties": {
-        "progression_name": "Mini-project: Sticker Design",
+        "progression_name": "Mini-project: Sticker Art",
         "description": "####Mini-project: Sticker Design"
       },
       "seeding_key": {
@@ -2879,7 +2886,7 @@
       "key": "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - What was the coolest shape or figure you programmed today? Draw it out!\n - What is another shape or figure you would like to program? Can you come up with the code to create it?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2899,25 +2906,26 @@
       }
     },
     {
-      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary####\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen."
+        "description": "**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
+        "name": "A Series of Events"
       },
       "seeding_key": {
-        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
+        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
     {
-      "key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+      "key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
       "position": 2,
       "properties": {
-        "description": "####A Series of Events####\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* event.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on \"events\" that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n",
-        "remarks": true
+        "description": "This lesson has one new and important vocabulary word:\n\n**Event** - *Say it with me: E-vent.*\n\nAn event is an action that causes something to happen.",
+        "name": "Vocabulary"
       },
       "seeding_key": {
-        "activity_section.key": "a252a858-6aeb-414f-8529-0f5b89a3791e",
+        "activity_section.key": "082fb58c-df8c-4ac2-a314-22ecf1c4d14a",
         "lesson_activity.key": "8d10f0a0-909f-482c-a17f-3477280c7375"
       }
     },
@@ -2965,7 +2973,7 @@
       "key": "abca79b2-6a21-4f74-b06d-07ea956d12bc",
       "position": 1,
       "properties": {
-        "description": "**Discuss:** Ask students to reflect on what they have learned through the following prompts:\n\n- What did we learn?\n- What are some examples of events?",
+        "description": "**Prompts:**\n\n- What did we learn?\n- What are some examples of events?",
         "tips": [
           {
             "type": "teachingTip",
@@ -3084,7 +3092,7 @@
       "key": "3344bb9f-6bfa-40f1-b21a-26a077f975a5",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "3344bb9f-6bfa-40f1-b21a-26a077f975a5",
@@ -3122,7 +3130,7 @@
       "key": "a49ab9e9-2a47-4d02-93bf-ec9bd241a125",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What did you do to make your game unique?\n - Draw out a game you want to make in the future.",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What did you do to make your game unique?\n - Draw out a game you want to make in the future.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3196,7 +3204,7 @@
       "key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
       "position": 3,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Skill-Building"
       },
       "seeding_key": {
         "activity_section.key": "55ade85d-fedf-4c9d-9046-4d1e6d813638",
@@ -3240,7 +3248,7 @@
       "key": "27d0103f-b003-4668-bab3-46e2517d375f",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is an event your program used today?\n - Is there an event that would you like to have used in your game that you did not get to use in Play Lab?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How did you feel about today's lesson?\n - What is an event your program used today?\n - Is there an event that would you like to have used in your game that you did not get to use in Play Lab?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3300,7 +3308,7 @@
       "position": 1,
       "properties": {
         "name": "Picturing Data",
-        "progression_name": "Picturing Data - Unplugged Activity"
+        "progression_name": "Picturing Data"
       },
       "seeding_key": {
         "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024",
@@ -3361,7 +3369,7 @@
       "key": "49ce681a-9731-4e09-8d4a-e6d4d8895a9a",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\nCollecting and graphing data can help us ask and answer interesting questions. \n\n####Journal Prompt:\n\nIn your journal, write down one question that you would like to answer and what data you might want to collect. For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center - what data would you want to collect to answer that question? How would you show it?",
+        "description": "**Say:**\nCollecting and graphing data can help us ask and answer interesting questions. \n\n**Prompt:**\n\n* What is one question that you would like to answer and what data you might want to collect? \n\n*For example, if you play soccer, you might want to know if goals are more often scored from the left, the right, or center. What data would you want to collect to answer that question? How would you show it?*",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3432,7 +3440,7 @@
       "key": "1c65a4a2-b069-4b30-b733-a80c5081f8e3",
       "position": 2,
       "properties": {
-        "progression_name": "Project Examples"
+        "progression_name": "Exploration: Sample Project"
       },
       "seeding_key": {
         "activity_section.key": "1c65a4a2-b069-4b30-b733-a80c5081f8e3",
@@ -3443,7 +3451,7 @@
       "key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",
       "position": 3,
       "properties": {
-        "progression_name": "Coding Project"
+        "progression_name": "Project"
       },
       "seeding_key": {
         "activity_section.key": "8bc8bad1-8150-46ce-bf97-0d368dafd6ef",
@@ -3547,7 +3555,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming1_2021"
         ]
@@ -3573,7 +3581,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming2_2021"
         ]
@@ -3599,7 +3607,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming3_2021"
         ]
@@ -3625,7 +3633,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming4_2021"
         ]
@@ -3651,7 +3659,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming5_2021"
         ]
@@ -3677,7 +3685,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_programming6_2021"
         ]
@@ -3886,7 +3894,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging1_2021"
         ]
@@ -3912,7 +3920,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging2_2021"
         ]
@@ -3938,7 +3946,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging3_2021"
         ]
@@ -3964,7 +3972,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging4_2021"
         ]
@@ -3990,7 +3998,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging5_2021"
         ]
@@ -4016,7 +4024,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_maze_debugging6_2021"
         ]
@@ -4199,7 +4207,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog1_2021"
         ]
@@ -4225,7 +4233,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog2_2021"
         ]
@@ -4251,7 +4259,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog3_2021"
         ]
@@ -4277,7 +4285,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog4_2021"
         ]
@@ -4303,7 +4311,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog5_2021"
         ]
@@ -4329,7 +4337,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_collector_prog6_2021"
         ]
@@ -4590,7 +4598,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog1_2021"
         ]
@@ -4616,7 +4624,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog2_2021"
         ]
@@ -4642,7 +4650,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog3_2021"
         ]
@@ -4668,7 +4676,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog4_2021"
         ]
@@ -4694,7 +4702,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog5_2021"
         ]
@@ -4720,7 +4728,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_artist_prog6_2021"
         ]
@@ -4955,7 +4963,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops1_2021"
         ]
@@ -5033,7 +5041,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops2_2021"
         ]
@@ -5059,7 +5067,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops4_2021"
         ]
@@ -5085,7 +5093,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops5_2021"
         ]
@@ -5111,7 +5119,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops6_2021"
         ]
@@ -5137,7 +5145,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_starWars_loops7_2021"
         ]
@@ -5372,7 +5380,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops1_2021"
         ]
@@ -5398,7 +5406,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops2_2021"
         ]
@@ -5424,7 +5432,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops3_2021"
         ]
@@ -5450,7 +5458,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops4_2021"
         ]
@@ -5476,7 +5484,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops6_2021"
         ]
@@ -5502,7 +5510,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops7_2021"
         ]
@@ -5528,7 +5536,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_harvester_loops5_2021"
         ]
@@ -5737,7 +5745,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops1a_2021"
         ]
@@ -5763,7 +5771,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops1b_2021"
         ]
@@ -5789,7 +5797,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops2a_2021"
         ]
@@ -5815,7 +5823,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops3a_2021"
         ]
@@ -5841,7 +5849,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops4a_2021"
         ]
@@ -5867,7 +5875,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops5b_2021"
         ]
@@ -5893,7 +5901,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops6a_2021"
         ]
@@ -5919,7 +5927,7 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Mini-project: Sticker Design",
+        "progression": "Mini-project: Sticker Art",
         "level_keys": [
           "courseC_artist_loops7a_2021"
         ]
@@ -6023,7 +6031,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_flappy_events1_2021"
         ]
@@ -6049,7 +6057,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_flappy_events2_2021"
         ]
@@ -6075,7 +6083,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_flappy_events3_2021"
         ]
@@ -6101,7 +6109,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill Building",
         "level_keys": [
           "courseC_flappy_events4_2021"
         ]
@@ -6283,7 +6291,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill-Building",
         "level_keys": [
           "courseC_PlayLab_events1_2021"
         ]
@@ -6309,7 +6317,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill-Building",
         "level_keys": [
           "courseC_PlayLab_events2_2021"
         ]
@@ -6335,7 +6343,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill-Building",
         "level_keys": [
           "courseC_PlayLab_events3_2021"
         ]
@@ -6361,7 +6369,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill-Building",
         "level_keys": [
           "courseC_PlayLab_events4_2021"
         ]
@@ -6387,7 +6395,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice",
+        "progression": "Skill-Building",
         "level_keys": [
           "courseC_PlayLab_events5_2021"
         ]
@@ -6621,33 +6629,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Picturing Data - Unplugged Activity",
-        "level_keys": [
-          "PicturingData-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "PicturingData-Unplugged_2021"
-        ],
-        "lesson.key": "Picturing Data",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursec-2021",
-        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024"
-      },
-      "level_keys": [
-        "PicturingData-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 123,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Picturing Data - Unplugged Activity",
+        "progression": "Picturing Data",
         "level_keys": [
           "courseC_data wizard_2021"
         ]
@@ -6668,21 +6650,18 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project Examples",
-        "level_keys": [
-          "Begin planning your project_2021"
-        ]
+        "progression": "Exploration: Sample Project"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Begin planning your project_2021"
+          "courseF_EOC_samples_2021"
         ],
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "lesson_group.key": "end_of_course_project",
@@ -6690,16 +6669,16 @@
         "activity_section.key": "1c65a4a2-b069-4b30-b733-a80c5081f8e3"
       },
       "level_keys": [
-        "Begin planning your project_2021"
+        "courseF_EOC_samples_2021"
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC1_2021"
         ]
@@ -6720,12 +6699,12 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC2_2021"
         ]
@@ -6746,12 +6725,12 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC3_2021"
         ]
@@ -6772,12 +6751,12 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC4_2021"
         ]
@@ -6798,12 +6777,12 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC5_2021"
         ]
@@ -6824,12 +6803,12 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Coding Project",
+        "progression": "Project",
         "level_keys": [
           "courseC19_playLab_EOC6_2021"
         ]
@@ -8305,18 +8284,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "PicturingData-Unplugged_2021",
-        "script_level.level_keys": [
-          "PicturingData-Unplugged_2021"
-        ],
-        "lesson.key": "Picturing Data",
-        "lesson_group.key": "csf_data",
-        "script.name": "coursec-2021",
-        "activity_section.key": "7a3d8d3f-1c95-475e-b752-5df39bf0f024"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseC_data wizard_2021",
         "script_level.level_keys": [
           "courseC_data wizard_2021"
@@ -8329,9 +8296,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Begin planning your project_2021",
+        "level.key": "courseF_EOC_samples_2021",
         "script_level.level_keys": [
-          "Begin planning your project_2021"
+          "courseF_EOC_samples_2021"
         ],
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "lesson_group.key": "end_of_course_project",
@@ -10191,5 +10158,8 @@
         "standard.shortcode": "1A-AP-15"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

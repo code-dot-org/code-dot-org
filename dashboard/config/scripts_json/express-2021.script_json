@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-26 15:41:40 UTC",
+    "serialized_at": "2021-03-29 20:17:33 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -17305,6 +17305,18 @@
       }
     },
     {
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
       "name": "Pause and Think Online",
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
@@ -17470,14 +17482,38 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Behaviors in Sprite Lab",
         "resource.key": "pause_and_think_online"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -17490,6 +17526,12 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "rubric-csf-final-projects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "sprite_lab_documentation"
       }
     }
   ],
@@ -19077,20 +19119,6 @@
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
@@ -19395,6 +19423,20 @@
         "lesson.key": "For Loops with Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {

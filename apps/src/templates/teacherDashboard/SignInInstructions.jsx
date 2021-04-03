@@ -34,7 +34,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInWordIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
                 codeOrgLink: pegasus('/')
               })}
@@ -49,7 +49,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInPicIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
                 codeOrgLink: pegasus('/')
               })}

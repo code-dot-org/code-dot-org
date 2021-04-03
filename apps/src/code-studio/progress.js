@@ -16,13 +16,14 @@ import {getHiddenStages, initializeHiddenScripts} from './hiddenStageRedux';
 import {TestResults} from '@cdo/apps/constants';
 import {
   initProgress,
-  mergeProgress,
+  overwriteProgress,
   disablePostMilestone,
   setIsHocScript,
   setIsAge13Required,
   setStudentDefaultsSummaryView,
   setStageExtrasEnabled,
-  queryUserProgress as reduxQueryUserProgress
+  queryUserProgress as reduxQueryUserProgress,
+  useDbProgress
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 import {
@@ -84,6 +85,7 @@ progress.showDisabledBubblesAlert = function() {
  *   level and therefore are on lesson extras
  * @param {number} currentPageNumber The page we are on if this is a multi-
  *   page level.
+ * @returns {Promise<void>}
  */
 progress.generateStageProgress = function(
   scriptData,
@@ -101,8 +103,6 @@ progress.generateStageProgress = function(
 
   const {name, disablePostMilestone, isHocScript, age_13_required} = scriptData;
 
-  // Depend on the fact that signed in users have a bunch of progress related
-  // keys that signed out users do not
   initializeStoreWithProgress(
     store,
     {
@@ -120,25 +120,114 @@ progress.generateStageProgress = function(
     currentPageNumber
   );
 
-  store.dispatch(
-    mergeProgress(
-      _.mapValues(progressData.progress, level =>
-        level.submitted ? TestResults.SUBMITTED_RESULT : level.result
-      )
-    )
-  );
-
   store.dispatch(setIsHocScript(isHocScript));
-  if (signedIn) {
-    progress.showDisabledBubblesAlert();
-  }
+
   if (stageExtrasEnabled) {
     store.dispatch(setStageExtrasEnabled(true));
   }
-  if (progressData.isVerifiedTeacher) {
-    store.dispatch(setVerified());
-  }
+
+  return populateProgress(store, signedIn, progressData, name);
 };
+
+/**
+ * Populates progress data in the given redux strore.
+ * @param {Store} store redux store
+ * @param {boolean|null} signedIn true if the user is signed in, false if the
+ *    user is not signed in, null if we don't know
+ * @param {Object} progressData progress data if it is already known, only used
+ *    if signedIn === true
+ * @param {string} scriptName
+ * @returns {Promise<void>}
+ */
+function populateProgress(store, signedIn, progressData, scriptName) {
+  return getLevelProgress(signedIn, progressData, scriptName).then(data => {
+    if (data.usingDbProgress) {
+      store.dispatch(useDbProgress());
+      clientState.clearProgress();
+    }
+
+    if (data.progress) {
+      store.dispatch(overwriteProgress(data.progress));
+    }
+
+    if (data.isVerifiedTeacher) {
+      store.dispatch(setVerified());
+    }
+
+    if (signedIn) {
+      progress.showDisabledBubblesAlert();
+    }
+  });
+}
+
+/**
+ * Returns a promise that, when resolved, returns an object with two properties:
+ * - usingDbProgress: indicates if level progress came from the database
+ * - progress: map from level id to result
+ *
+ * This function contains logic that determines whether progress data should
+ * come from the data embedded in the html page (passed in as progressData),
+ * from session storage, or from an ajax request to the server.
+ *
+ * @param {boolean|null} signedIn true if the user is signed in, false if the
+ *    user is not signed in, null if we don't know
+ * @param {Object} progressData progress data if it is already known, only used
+ *    if signedIn === true
+ * @param {string} scriptName
+ * @returns {Promise}
+ */
+function getLevelProgress(signedIn, progressData, scriptName) {
+  switch (signedIn) {
+    case true:
+      // User is signed in, return a resolved promise with the given progress data
+      return Promise.resolve({
+        usingDbProgress: true,
+        progress: extractLevelResults(progressData)
+      });
+    case false:
+      // User is not signed in, return a resolved promise with progress data
+      // retrieved from session storage
+      return Promise.resolve({
+        usingDbProgress: false,
+        progress: clientState.levelProgress(scriptName)
+      });
+    case null:
+      // We do not know if user is signed in or not, send a request to the server
+      // to find out if the user is signed in and retrieve progress information
+      return $.ajax(`/api/user_progress/${scriptName}`)
+        .then(data => {
+          if (data.signedIn) {
+            return {
+              usingDbProgress: true,
+              progress: extractLevelResults(data)
+            };
+          } else {
+            return {
+              usingDbProgress: false,
+              progress: clientState.levelProgress(scriptName)
+            };
+          }
+        })
+        .fail(() =>
+          // TODO: Show an error to the user here? (LP-1815)
+          console.error(
+            'Could not load user progress. User progress may not be saved.'
+          )
+        );
+  }
+}
+
+/**
+ * Extracts the level results from the response to /api/user_progress.
+ * @param {object} userProgressResponse parsed response object to a
+ *    /api/user_progress request
+ * @returns {Object<string, TestResults>} map from level id to level result
+ */
+function extractLevelResults(userProgressResponse) {
+  return _.mapValues(userProgressResponse.progress, level =>
+    level.submitted ? TestResults.SUBMITTED_RESULT : level.result
+  );
+}
 
 /**
  * @param {object} scriptData
@@ -229,7 +318,8 @@ function initViewAs(store, scriptData) {
 
 /**
  * Query the server for user_progress data for this script, and update the store
- * as appropriate
+ * as appropriate. If the user is not signed in, level progress data is populated
+ * from session storage.
  */
 function queryUserProgress(store, scriptData, currentLevelId) {
   const userId = clientState.queryParams('user_id');
@@ -239,12 +329,18 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       return;
     }
 
-    // Depend on the fact that even if we have no levelProgress, our progress
-    // data will have other keys
-    const signedInUser = Object.keys(data).length > 0;
+    // If the user is not signed in, retrieve level progress from session storage.
+    // (If the user is signed in, level progress would have been set by the call
+    // to reduxQueryUserProgress above.)
+    if (!data.signedIn) {
+      store.dispatch(
+        overwriteProgress(clientState.levelProgress(scriptData.name))
+      );
+    }
+
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (signedInUser && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
       showDisabledBubblesModal();
     }
 
@@ -321,43 +417,12 @@ function initializeStoreWithProgress(
     store.dispatch(disablePostMilestone());
   }
 
-  // Determine if we are viewing student progress.
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
-
   if (scriptData.hideable_lessons) {
     // Note: This call is async
     store.dispatch(getHiddenStages(scriptData.name, true));
   }
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
-
-  // The rest of these actions are only relevant if the current user is the
-  // owner of the code being viewed.
-  if (isViewingStudentAnswer) {
-    return;
-  }
-
-  // We should use client state XOR database state to track user progress
-  if (!store.getState().progress.usingDbProgress) {
-    store.dispatch(
-      mergeProgress(clientState.allLevelsProgress()[scriptData.name] || {})
-    );
-  }
-
-  let lastProgress;
-  store.subscribe(() => {
-    const progressState = store.getState().progress;
-    const nextProgress = progressState.levelProgress;
-    const usingDbProgress = progressState.usingDbProgress;
-
-    // We should use client state XOR database state to track user progress.
-    // We may not know until much later, when we load the app, that there
-    // is state available from the DB.
-    if (!usingDbProgress && nextProgress !== lastProgress) {
-      lastProgress = nextProgress;
-      clientState.batchTrackProgress(scriptData.name, nextProgress);
-    }
-  });
 }
 
 function initializeStoreWithSections(store, scriptData) {
