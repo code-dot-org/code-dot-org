@@ -10637,7 +10637,7 @@
       "seeding_key": {
         "lesson.key": "Making Music",
         "programming_environment.name": "applab",
-        "programming_expression.key": "buzzerplaynotes"
+        "programming_expression.key": "buzzer.playNotes"
       }
     },
     {
