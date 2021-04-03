@@ -398,6 +398,7 @@ Dashboard::Application.routes.draw do
   get '/admin/lookup_section', to: 'admin_search#lookup_section', as: 'lookup_section'
   post '/admin/lookup_section', to: 'admin_search#lookup_section'
   post '/admin/undelete_section', to: 'admin_search#undelete_section', as: 'undelete_section'
+  get '/admin/pilots/', to: 'admin_search#pilots', as: 'pilots'
   get '/admin/pilots/:pilot_name', to: 'admin_search#show_pilot', as: 'show_pilot'
   post '/admin/add_to_pilot', to: 'admin_search#add_to_pilot', as: 'add_to_pilot'
 
@@ -459,6 +460,12 @@ Dashboard::Application.routes.draw do
   namespace :plc do
     root to: 'plc#index'
     resources :user_course_enrollments
+    resources :course_units, only: [] do
+      collection do
+        get :launch
+        post :launch_plc_course
+      end
+    end
   end
 
   concern :api_v1_pd_routes do
