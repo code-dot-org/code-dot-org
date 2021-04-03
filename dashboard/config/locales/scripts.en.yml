@@ -22041,7 +22041,7 @@ en:
             Peom Bot:
               display_name: Poem Bot
           name: haikubot-pilot
-          title: Poem Bot
+          title: Poem Bot (Pilot)
           description_audience: Grade 4, Grade 5
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
           description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Poem Bot. Once they’ve built their Poem Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
