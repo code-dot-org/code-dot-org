@@ -19,7 +19,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
-import LessonStandards from './LessonStandards';
+import LessonStandards, {ExpandMode} from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 
 const styles = {
@@ -145,7 +145,10 @@ class LessonOverview extends Component {
             {lesson.standards.length > 0 && (
               <div>
                 <h2>{i18n.standards()}</h2>
-                <LessonStandards standards={lesson.standards} />
+                <LessonStandards
+                  standards={lesson.standards}
+                  expandMode={ExpandMode.FIRST}
+                />
               </div>
             )}
             {lesson.opportunityStandards.length > 0 && (
