@@ -23839,6 +23839,7 @@ pl:
             oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej
             części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
             udostępnić znajomym i rodzinie.
+          name: coursef-2020
         express-2020:
           title: Kurs ekspresowy (2020)
           description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
@@ -25694,13 +25695,15 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 5
+              name: Lekcja 6
             model-cards:
               name: Plac zabaw dla modeli kart
             bug-bash:
               name: Plac zabaw Bug Basha
             superunsuper:
               name: Bez nadzoru i nadzorowane
+            temp:
+              name: Lekcja 20
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25780,6 +25783,8 @@ pl:
               name: Gromadzenie danych - praktyka z przewodnikiem
             Haiku Bot:
               name: Bot Haiku
+            End of Course Project:
+              name: Koniec projektu kursu
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -28581,10 +28586,29 @@ pl:
                 \n"
             lesson-9:
               name: Historie pustej przestrzeni
+              description_student: 'W tym ćwiczeniu użyjesz historii do wypełnienia
+                (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki
+                sposób komputery przyjmują i przechowują dane wejściowe od użytkownika,
+                a następnie wykorzystasz je podczas działania programu. '
+              description_teacher: 'W tym ćwiczeniu użyjesz historii do wypełnienia
+                (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki
+                sposób komputery przyjmują i przechowują dane wejściowe od użytkownika,
+                a następnie wykorzystasz je podczas działania programu. '
             lesson-10:
               name: Przechowywanie i przetwarzanie tekstu
+              description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
+                Lab.
+              description_teacher: Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+                pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem.
             lesson-5:
               name: Epidemia
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się
+                tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia.
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii
+                przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak
+                szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić
+                zarażanie. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -29883,6 +29907,21 @@ pl:
           lessons:
             lesson-1:
               name: Lekcja 1
+              description_student: Na tej lekcji poznasz wartości inżynierii oprogramowania
+                i sposoby, w jakie je praktykujesz w innych aspektach swojego życia.
+                Pod koniec tej lekcji odkryjesz własną tożsamość inżynierii oprogramowania!
+              description_teacher: Wiara we własną tożsamość inżynierii oprogramowania
+                rozwija pewność siebie i wytrwałość. Ta lekcja wprowadza podstawowe
+                wartości inżynierii oprogramowania i bada typowe spostrzeżenia, jakie
+                mogą mieć uczniowie. Zastanawiają się oni, jak już praktykują wiele
+                z tych wartości, aby odkryć własną tożsamość inżynierii oprogramowania.
+            lesson-2:
+              name: Lekcja 2
+            lesson-20:
+              name: 'Lekcja 15: Dzień sprawdzianu'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -29999,10 +30038,36 @@ pl:
               name: Bot Haiku
             Poem Bot:
               name: Bot Haiku
+            write a haiku:
+              name: Napisz Haiku
+            Plan Your Haiku Poem:
+              name: Zaplanuj swoje Haiku
+            Programming Poem Bot:
+              name: Bot Haiku
           lesson_groups:
             haiku bot:
               display_name: Bot Haiku
             poem bot:
+              display_name: Bot Haiku
+            rampup:
+              display_name: Przyspieszenie kodowania
+              description: Naucz się podstaw kodowania z duszkami i tekstem!
+            write a haikut:
+              display_name: Napisz Haiku
+            plan your poem:
+              display_name: Zaplanuj swoje Haiku
+            Lesson 1:
+              display_name: Lekcja 1
+              description: Naucz się podstaw kodowania z duszkami i tekstem!
+            Lesson 2:
+              display_name: Lekcja 2
+            Lesson 3:
+              display_name: Lekcja 3
+            Lesson 4:
+              display_name: Lekcja 4
+            Lesson 5:
+              display_name: Lekcja 5
+            Peom Bot:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku
