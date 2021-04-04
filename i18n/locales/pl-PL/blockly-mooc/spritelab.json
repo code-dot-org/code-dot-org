@@ -135,5 +135,11 @@
   "madlibPrintVariable": "Wygląda na to, że chatbot reaguje, ale nie wydrukował tego, co wpisałeś w monicie. Upewnij się, że właściwa etykieta **zmienna** jest połączona z blokiem „drukuj”. ",
   "madlibNoSprites": "Twój monit działa. Jeśli robi to, czego się spodziewałeś, możesz zacząć dodawać duszki do swojego projektu. O czym jest twoja historia lub wiersz? \n",
   "madlibNoBehavior": "Twój monit działa. Jeśli robi to, czego się spodziewałeś, możesz nadać swoim duszkom zachowania, aby ożywić swój projekt. Spróbuj użyć różnych zachowań ze zdarzeniami, aby projekt był bardziej interaktywny. \n",
-  "madlibExplore": "Spełniłeś wymagania projektu, ale kontynuuj, jeśli możesz. Zadawaj użytkownikowi dodatkowe pytania lub wykaż się kreatywnością w zakresie zachowań, tła i dźwięków. Kliknij „Graj dalej”, aby wprowadzić zmiany w kodzie i uruchomić go ponownie. Naciśnij „Kontynuuj”, aby przejść dalej i zakończyć projekt. "
+  "madlibExplore": "Spełniłeś wymagania projektu, ale kontynuuj, jeśli możesz. Zadawaj użytkownikowi dodatkowe pytania lub wykaż się kreatywnością w zakresie zachowań, tła i dźwięków. Kliknij „Graj dalej”, aby wprowadzić zmiany w kodzie i uruchomić go ponownie. Naciśnij „Kontynuuj”, aby przejść dalej i zakończyć projekt. ",
+  "cloudOnlyMovedY": "Chmura poruszała się w górę i w dół, ale nie w lewo i prawo. Spróbuj innego zachowania. ",
+  "butterflyDidntMoveXY": "Motyl nie wędrował. Spróbuj innego zachowania. ",
+  "spritelabFeedbackUseFishCostume": "Musisz użyć co najmniej jednego kostiumu ryby.",
+  "spriteLabFeedbackGiveFishBehavior": "Musisz nadać rybom zachowanie. ",
+  "spritelabFeedbackCreateTwoDifferentSprites": "Potrzebujesz dwóch duszków z różnymi kostiumami. ",
+  "spritelabFeedbackGiveSecondSpriteBehavior": "Twój drugi duszek potrzebuje zachowania. "
 }
