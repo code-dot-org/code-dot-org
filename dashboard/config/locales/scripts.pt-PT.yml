@@ -709,6 +709,8 @@ pt:
               name: Olá!
         K5-OnlinePD:
           lessons:
+            Computer Science Fundamentals:
+              name: Fundamentos da Ciência da Computação
             Next Steps:
               name: Próximos Passos
         ECSPD2:
@@ -3002,6 +3004,8 @@ pt:
             k5_next_steps:
               display_name: Próximos Passos
           lessons:
+            Computer Science Fundamentals:
+              name: Fundamentos da Ciência da Computação
             Next Steps:
               name: Próximos Passos
             Sequencing:
@@ -3380,6 +3384,8 @@ pt:
           lessons:
             new stage:
               name: nova fase
+            Tools:
+              name: Ferramentas
         csp5-virtual:
           lessons:
             While Loops:
@@ -3703,7 +3709,7 @@ pt:
                 por que combinar blocos de códigos em funções é uma prática útil.
           lesson_groups:
             ramp_up:
-              display_name: Ciclos
+              display_name: Laços aninhados
             csf_digcit:
               display_name: Cidadania digital
             csf_nested_loops:
@@ -3784,6 +3790,12 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
