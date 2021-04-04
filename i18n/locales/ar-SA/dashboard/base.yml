@@ -313,17 +313,17 @@ ar:
       sections: "الأقسام"
       help_support: "المساعدة والدعم"
       report_bug: "أبلغ عن وجود خلل"
-      report_abuse: "الابلاغ عن سوء استخدام"
+      report_abuse: "الإبلاغ عن سوء استخدام"
       teacher_community: "مجتمع المدرسين"
       professional_learning: "التعلّم المهني"
       documentation: "الوثائق"
       tutorials: "البرامج التعليمية"
-      app_lab_documentation: "توثيق معمل التطبيقات"
-      app_lab_tutorials: "معمل تطبيقات البرامج التعليمية"
-      game_lab_documentation: "تويثق معمل الألعاب"
-      game_lab_tutorials: "برامج تعليمية لمعمل الألعاب"
-      sprite_lab_documentation: "توثيق معمل العفاريت"
-      sprite_lab_tutorials: "برامج تعليمية لمعمل العفاريت"
+      app_lab_documentation: "وثائق مختبر التطبيقات"
+      app_lab_tutorials: "البرامج التعليمية لمختبر التطبيقات"
+      game_lab_documentation: "وثائق مختبر الألعاب"
+      game_lab_tutorials: "البرامج التعليمية لمختبر الألعاب"
+      sprite_lab_documentation: "وثائق مختبر الرسوم المتحركة"
+      sprite_lab_tutorials: "البرامج التعليمية لمختبر الرسوم المتحركة"
       educate_overview: "لمحة عن المعلم"
       educate_elementary: "المدرسة الابتدائية"
       educate_middle: "المرحلة المتوسطة"
@@ -357,7 +357,7 @@ ar:
       district_dashboard: 'جزء لوحة المعلومات'
       label: 'مرحباً %{username}'
       stats: 'ستوديو كود'
-      my_projects: 'مشروعاتي'
+      my_projects: 'مشاريعي'
       settings: 'حسابي'
       logout: 'تسجيل الخروج'
       signin: 'تسجيل الدخول'
@@ -379,7 +379,7 @@ ar:
       eval: 'تقييم'
       flappy: 'فلابي'
       frozen: 'ملكة الثلج Frozen'
-      gamelab: 'أداة Game Lab'
+      gamelab: 'مختبر اللعب'
       gamelab_jr: 'Game Lab (بيتا)'
       gumball: 'عالم غامبول المدهش!'
       iceage: 'العصر الجليدي'
@@ -394,7 +394,7 @@ ar:
       playlab_k1: 'Play Lab (ما قبل القراءة)'
       scratch: 'لغة سكراتش (برمجة)'
       sports: 'الأنشطة الرياضية'
-      spritelab: 'مختبر النقوش المتحركة'
+      spritelab: 'مختبر الرسوم المتحركة'
       starwars: 'حرب النجوم "Star Wars"'
       starwarsblocks: 'حرب النجوم (بلوكات)'
       starwarsblocks_hour: 'حرب النجوم (بلوكات)'
@@ -651,12 +651,12 @@ ar:
       title: "معرض"
       body: "عرض معرض صور \"تطبيقات\" و \"الفنانين\" التي تم إنشاؤها من قبل مستخدمينا"
     gamelab:
-      title: "أداة Game Lab"
+      title: "مختبر اللعب"
       body: "أداة Game Lab بيئة برمجية يمكنك من خلالها عمل رسومات متحركة بسيطة وألعاب بعناصر وشخصيات تتفاعل مع بعضها البعض."
       audience: "الأعمار فوق 13 عامًا"
       cta: "تعلم كيف"
     hoc-encryption:
-      title: "شفرة بسيطة"
+      title: "شيفرة بسيطة"
       body: "سيتعلم الطلاب أساليب لإنشاء الرسائل المشفَّرة واختراقها."
     weblab:
       title: "مختبر الويب Web Lab (بيتا)"
