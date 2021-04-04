@@ -1,0 +1,7 @@
+name 'courseF_EOC_samples_2021'
+display_name 'End of Course Project'
+description 'You have reached the end of Course F! Choose a project to create.'
+
+sublevels
+level 'courseC19_playLab_sample1_2021'
+level 'courseC19_playLab_sample2_2021'
