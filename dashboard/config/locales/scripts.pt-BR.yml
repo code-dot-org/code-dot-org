@@ -26242,6 +26242,10 @@ pt:
               name: Festa dançante alienígena
               description_student: Crie um projeto interativo que possa ser compartilhado
                 com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma
+                na qual os alunos podem criar suas próprias animações e jogos interativos.
+                Além dos comportamentos, hoje os alunos incorporam a entrada do usuário
+                como eventos para criar uma "festa de dança alienígena".  '
             Behaviors in Sprite Lab:
               key: Comportamentos no Lab Sprite
               name: Comportamentos no Lab Sprite
@@ -27067,6 +27071,15 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lição 15: Dia da Avaliação'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
