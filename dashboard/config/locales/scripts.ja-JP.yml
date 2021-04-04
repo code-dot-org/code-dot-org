@@ -15912,6 +15912,8 @@ ja:
               name: スプライトラボの紹介
             Sprites in Action:
               name: 実行中のスプライト
+            End of Course Project:
+              name: コース最後のプロジェクト
           lesson_groups:
             introduction:
               display_name: はじめに
@@ -16900,6 +16902,7 @@ ja:
               key: めいろ のプログラミング
               name: めいろ のプログラミング
               description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
+              description_teacher: アイスエイジのキャラクターを使って、生徒はスクラットを迷路の片側から反対側のどんぐりに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、スクラットをまっすぐ移動、左折、または右折させます。
             Programming in Harvester:
               key: 農夫と学ぶプログラミング
               name: 農夫と学ぶプログラミング
@@ -17446,6 +17449,7 @@ ja:
               key: めいろ のプログラミング
               name: めいろ のプログラミング
               description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
+              description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
             Debugging with Scrat:
               key: スクラットと学ぶデバッグ
               name: スクラットと学ぶデバッグ
@@ -17561,6 +17565,7 @@ ja:
               key: エイリアンダンスパーティー
               name: エイリアンダンスパーティー
               description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
+              description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Behaviors in Sprite Lab:
               key: スプライトラボで学ぶビヘイビア
               name: スプライトラボで学ぶビヘイビア
@@ -17890,6 +17895,15 @@ ja:
               name: レッスン14
             lesson15:
               name: レッスン15
+            lesson17:
+              name: レッスン15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'レッスン15: 評価日'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
           student_description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター
