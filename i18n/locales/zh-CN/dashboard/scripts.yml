@@ -15390,6 +15390,8 @@ zh-CN:
               name: 编码一个模拟
             Sprites in Action:
               name: 动作精灵图
+            End of Course Project:
+              name: 课程结束项目
           lesson_groups:
             introduction:
               display_name: 介绍
@@ -16311,7 +16313,7 @@ zh-CN:
               key: '事件: 大事件'
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动并喊出来。
-              description_teacher: "事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。"
+              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
@@ -16371,7 +16373,7 @@ zh-CN:
               key: 收集器中的循环
               name: 收集器中的循环
               description_student: 为冒险家罗瑞尔编程来在开放的洞穴中收集宝藏。
-              description_teacher: 这节课中，学生们会继续学习循环的概念。在这里，冒险家罗瑞尔用循环在开放的洞穴中收集宝藏。新的`获得宝藏`模块用来帮助他的旅行。
+              description_teacher: '这节课中，学生们会继续学习循环的概念。在这里，冒险家罗瑞尔用循环在开放的洞穴中收集宝藏。新的`获得宝藏`模块用来帮助他的旅行。'
             Loops in Artist:
               key: 艺术家里的循环
               name: 用循环来画花园
@@ -16386,7 +16388,7 @@ zh-CN:
               key: '事件: 大事件'
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动或喊出来。
-              description_teacher: "事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。"
+              description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
             Events in Play Lab:
               key: 游戏实验室中的事件
               name: 游戏实验室中的事件
@@ -16427,7 +16429,7 @@ zh-CN:
               key: 迷宫里的调试
               name: 迷宫里的调试
               description_student: 找到难题中的问题，并练习调试技巧。
-              description_teacher: "调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。"
+              description_teacher: 调试是学习编程的必要技能。学生们会遇到一些没有正确解决的难题。这需要一步一步的执行代码来找到错误，包括错误的循环，缺少模块，有多余模块，或者模块顺序不正确。
             Programming in Collector:
               key: 在收集器中编程
               name: 在收集器中编程
@@ -16442,7 +16444,7 @@ zh-CN:
               key: 二进制的手镯
               name: 二进制的手镯
               description_student: 创作自己的二进制手链，学习计算机如何记住信息！
-              description_teacher: "二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。"
+              description_teacher: 二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。
             'Loops: My Loopy Robotic Friends':
               key: '循环: 我糊涂的机器人朋友'
               name: '循环: 我糊涂的机器人朋友'
@@ -16485,8 +16487,8 @@ zh-CN:
             Picturing Data:
               key: 图片数据
               name: 图片数据
-              description_student: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
-              description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
+              description_student: '数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。'
+              description_teacher: '数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。'
             'End of Course Project: Create a Play Lab Game':
               name: 课程结束项目
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
@@ -16520,7 +16522,7 @@ zh-CN:
               key: 在线拼图简介
               name: 在线拼图简介
               description_student: 这堂课会让你练习在这个课程中所需要的技巧。
-              description_teacher: '在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割者。'
+              description_teacher: 在这组关卡中，学生们先从code.org的在线工作区的简介开始（或根据班级的经验来复习）。有视频来介绍工作区的基本功能，如`运行`，`重置`，和`步进`按钮。视频中也会探讨：拖拽模块，删除模块，和连接模块。接下来，学生们会在关卡中练习他们的_序列_和_调试_能力。在那里，学生们学习_循环_的非常基础的知识时，他们会看见新的关卡类型，比如：收集器，艺术家和收割者。
             Relay Programming:
               key: 编程接力
               name: 编程接力
@@ -16559,7 +16561,7 @@ zh-CN:
               key: 蜜蜂里的嵌套循环
               name: 迷宫里的嵌套循环
               description_student: 在循环里的循环里循环。这是什么意思？这节课会介绍将循环嵌套起来会发生什么。
-              description_teacher: 在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。
+              description_teacher: '在这次在线活动中，学生们有机会将他们对循环的理解上升到一个全新的水平。与蜜蜂和植物大战僵尸一起游戏，学生们能学会如何在一个循环里放入另一个循环。当他们点击`运行`时，也会因为找出某个循环中的一点小变化而感受到鼓励。'
             Conditionals with Cards:
               key: 用 扑克牌 的 条件子句
               name: 用 扑克牌 的 条件子句
@@ -16675,7 +16677,7 @@ zh-CN:
               description_student: 互联网非常有趣也令人激动，但是保证安全也非常重要。这堂课教会你在能安全共享的信息和隐私信息间的不同。
             About Me:
               key: 关于我
-              name: 关于我
+              name: '关于我'
               description_student: 通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。
               description_teacher: "通过使用精灵图实验室创建交互式海报，学生们会应用对于在网络上分享个人和私人信息的理解。\\r\n"
             Digital Sharing:
@@ -16693,7 +16695,7 @@ zh-CN:
               description_student: 更多的嵌套循环！这次，你能用嵌套循环画出更令人惊奇的图画！
             Nested Loops in Frozen:
               key: 冰雪奇缘里的嵌套循环
-              name: 冰雪奇缘和嵌套循环
+              name: '冰雪奇缘和嵌套循环'
               description_student: '安娜和爱莎的溜冰技巧都非常棒，但需要帮助才能在冰面上创作图案。使用嵌套循环来创建一些非常酷的东西。 '
               description_teacher: 现在学生们知道如何分层循环了，可以创建出非常美丽的东西了。这堂课会让学生通过一系列的练习，用安娜和爱莎高超的溜冰技巧，来创造自己的图像。
             'Functions: Songwriting':
@@ -16993,6 +16995,7 @@ zh-CN:
               key: 外星人舞蹈派对
               name: 外星人舞蹈派对
               description_student: 创建能分享给同学的互动项目。
+              description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。  '
             Behaviors in Sprite Lab:
               key: 编辑行为
               name: 编辑行为
@@ -17311,10 +17314,21 @@ zh-CN:
           student_description: '使用精灵图实验室编程一个病毒爆发模拟。 '
         ai-unit-pilot:
           lessons:
+            lesson1:
+              name: 机器学习的简介
             lesson14:
               name: 第14课
             lesson15:
               name: 第 15 课
+            lesson17:
+              name: 第 15 课
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 单元 15：评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           description: "学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！"
           student_description: '学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！'

@@ -16438,6 +16438,8 @@ zh-CN:
               name: 编码一个模拟
             Sprites in Action:
               name: 动作精灵图
+            End of Course Project:
+              name: 课程结束项目
           lesson_groups:
             introduction:
               display_name: 介绍
@@ -18094,6 +18096,7 @@ zh-CN:
               key: 外星人舞蹈派对
               name: 外星人舞蹈派对
               description_student: 创建能分享给同学的互动项目。
+              description_teacher: '这节课的特色：精灵图实验室，这是学生可以创建自己的交互动画和游戏的平台。除了行为，学生还会将用户输入作为事件来创建"外星人舞蹈派对"。  '
             Behaviors in Sprite Lab:
               key: 编辑行为
               name: 编辑行为
@@ -18490,10 +18493,21 @@ zh-CN:
           student_description: '使用精灵图实验室编程一个病毒爆发模拟。 '
         ai-unit-pilot:
           lessons:
+            lesson1:
+              name: 机器学习的简介
             lesson14:
               name: 第14课
             lesson15:
               name: 第 15 课
+            lesson17:
+              name: 第 15 课
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 单元 15：评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
           student_description: 学习如何使用 Code.org 免费、自定进度的计算机科学基础课程来教授计算机科学！
