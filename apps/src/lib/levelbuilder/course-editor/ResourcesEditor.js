@@ -5,6 +5,8 @@ import color from '@cdo/apps/util/color';
 import ResourceType, {
   stringForType
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import MigratedResourceEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 
 const styles = {
@@ -36,8 +38,11 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    resources: PropTypes.array.isRequired,
-    updateTeacherResources: PropTypes.func.isRequired
+    teacherResources: PropTypes.array,
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    useMigratedResources: PropTypes.bool.isRequired,
+    updateTeacherResources: PropTypes.func,
+    courseVersionId: PropTypes.number
   };
 
   constructor(props) {
@@ -49,7 +54,7 @@ export default class ResourcesEditor extends Component {
   }
 
   handleChangeType = (event, index) => {
-    const oldResources = this.props.resources;
+    const oldResources = this.props.teacherResources;
     const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
     newResources[index].type = type;
@@ -69,7 +74,7 @@ export default class ResourcesEditor extends Component {
   };
 
   handleChangeLink = (event, index) => {
-    const newResources = _.cloneDeep(this.props.resources);
+    const newResources = _.cloneDeep(this.props.teacherResources);
     const link = event.target.value;
     newResources[index].link = link;
     this.props.updateTeacherResources(newResources);
@@ -77,11 +82,11 @@ export default class ResourcesEditor extends Component {
 
   render() {
     const {errorString} = this.state;
-    const {resources} = this.props;
+    const {useMigratedResources, teacherResources} = this.props;
 
     // avoid showing multiple empty resources
     const lastNonEmpty = _.findLastIndex(
-      resources,
+      teacherResources,
       ({type, link}) => link && type
     );
 
@@ -90,22 +95,32 @@ export default class ResourcesEditor extends Component {
     // and +1 more because slice is exclusive.
     return (
       <div>
-        {resources.slice(0, lastNonEmpty + 2).map((resource, index) => (
-          <Resource
-            key={index}
-            id={index + 1}
-            resource={resource}
-            inputStyle={this.props.inputStyle}
-            handleChangeType={event => this.handleChangeType(event, index)}
-            handleChangeLink={event => this.handleChangeLink(event, index)}
+        {useMigratedResources ? (
+          <MigratedResourceEditor
+            courseVersionId={this.props.courseVersionId}
           />
-        ))}
+        ) : (
+          teacherResources
+            .slice(0, lastNonEmpty + 2)
+            .map((resource, index) => (
+              <Resource
+                key={index}
+                id={index + 1}
+                resource={resource}
+                inputStyle={this.props.inputStyle}
+                handleChangeType={event => this.handleChangeType(event, index)}
+                handleChangeLink={event => this.handleChangeLink(event, index)}
+              />
+            ))
+        )}
 
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
           <TeacherResourcesDropdown
-            resources={resources.filter(x => !!x.type)}
+            teacherResources={(teacherResources || []).filter(x => !!x.type)}
+            migratedTeacherResources={this.props.migratedTeacherResources}
+            useMigratedResources={this.props.useMigratedResources}
           />
         </div>
       </div>

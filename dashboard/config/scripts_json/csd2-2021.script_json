@@ -11,12 +11,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
@@ -10231,6 +10225,17 @@
       "seeding_key": {
         "resource.key": "website-for-a-purpose-reflect"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -10674,7 +10679,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd2-2021"
+      }
+    }
   ],
   "vocabularies": [
     {

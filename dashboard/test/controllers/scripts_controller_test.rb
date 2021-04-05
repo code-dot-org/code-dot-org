@@ -600,6 +600,30 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
   end
 
+  test 'updates migrated teacher resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    teacher_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceIds: teacher_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
+  end
+
   test 'updates pilot_experiment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
