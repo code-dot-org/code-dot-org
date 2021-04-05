@@ -493,6 +493,48 @@
         },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
         }
       }
     }

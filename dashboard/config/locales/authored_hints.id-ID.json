@@ -969,31 +969,31 @@
           "mc_2_b": "Perintah 'destroy block' menebang pohon di depan Anda."
         },
         "Overworld Chop Trees": {
-          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Apa jalan yang mengambil blok dengan jumlah terkecil?",
+          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Jalan mana yang mengambil blok dengan jumlah terkecil?",
           "mc_4_b": "Perintah 'destroy block' menebang pohon di depan Anda."
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Apa jalan yang mengambil blok dengan jumlah terkecil?",
+          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Jalan mana yang mengambil blok dengan jumlah terkecil?",
           "mc_4_b": "Perintah 'destroy block' menebang pohon di depan Anda."
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Apa jalan yang mengambil blok dengan jumlah terkecil?",
+          "mc_4_a": "Anda dapat menebang pohon dalam urutan apa saja. Jalan mana yang mengambil blok dengan jumlah terkecil?",
           "mc_4_b": "Perintah 'destroy block' menebang pohon di depan Anda."
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Klik panah di blok 'place' untuk memilih benda yang ingin Anda taruh.",
           "mc_6_b": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
-          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld House Frame Chosen_2019": {
           "mc_6_a": "Klik panah di blok 'place' untuk memilih benda yang ingin Anda taruh.",
           "mc_6_b": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
-          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld House Frame Chosen_2020": {
           "mc_6_a": "Klik panah di blok 'place' untuk memilih benda yang ingin Anda taruh.",
           "mc_6_b": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu.",
-          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_6_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld Move to Sheep": {
           "mc_1_a": "Blok 'move forward' ada di bagian atas toolbox.",
@@ -1023,19 +1023,19 @@
           "mc_5_c": "Jangan takut melakukan kesalahan! Jalankan kode untuk melihat hasil yang muncul meskipun Anda belum memecahkan puzzle itu."
         },
         "Overworld Plant Crops": {
-          "mc_7_a": "Gunakan blok 'plant crop' untuk bercocok tanam di kotak yang Anda pijak.",
+          "mc_7_a": "Gunakan blok 'plant crop' untuk menanam tanaman di tempat Anda berada.",
           "mc_7_b": "Kedua bentangan tanah cokelat tua di samping air perlu diisi dengan tanaman.",
-          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_a": "Gunakan blok 'plant crop' untuk bercocok tanam di kotak yang Anda pijak.",
+          "mc_7_a": "Gunakan blok 'plant crop' untuk menanam tanaman di tempat Anda berada.",
           "mc_7_b": "Kedua bentangan tanah cokelat tua di samping air perlu diisi dengan tanaman.",
-          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_a": "Gunakan blok 'plant crop' untuk bercocok tanam di kotak yang Anda pijak.",
+          "mc_7_a": "Gunakan blok 'plant crop' untuk menanam tanaman di tempat Anda berada.",
           "mc_7_b": "Kedua bentangan tanah cokelat tua di samping air perlu diisi dengan tanaman.",
-          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam 'repeat' loop."
+          "mc_7_c": "Anda dapat memasukkan lebih dari satu blok ke dalam loop 'repeat'."
         },
         "Overworld Powered Minecart": {
           "mc_13_a": "Gunakan 'place rail' untuk meletakkan rel di kotak yang Anda pijak.",
@@ -3844,25 +3844,25 @@
         },
         "courseC_artist_prog5": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_artist_prog5_c": "Anda bisa menggunakan menu drop dwon pada blok `turn` untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_a": "Perlambat slider di sepanjang jalan hingga Anda dapat menjalankan code baris demi baris untuk mengetahui titik munculnya masalah.",
-          "courseC_artist_prog5_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_artist_prog5_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_artist_prog5_c": "Anda bisa menggunakan menu dropdown pada blok untuk mengubah fungsinya!",
           "courseC_artist_prog5_d": "Setiap putaran harus 90 derajat ke kanan."
         },
@@ -3891,28 +3891,28 @@
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog7_2018": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog7_2019": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog7_2020": {
           "courseC_artist_prog7_a": "Setiap sudut adalah 45 atau 90 derajat.",
           "courseC_artist_prog7_b": "Apakah berhasil pada langkah pertama?\\\nBagaimana dengan langkah kedua?\\\nDi mana letak kesalahannya?",
           "courseC_artist_prog7_c": "Anda bisa menggunakan menu dropdown pada blok putar untuk melihat sudut mana yang Anda butuhkan!",
           "courseC_artist_prog7_d": "Anda akan ingin:\n\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 90 derajat\n-   bergerak maju kedepan\n-   berbelok ke kanan 45 derajat\n\nUlang pola ini sebanyak 2 kali!",
-          "courseC_artist_prog7_e": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_artist_prog7_e": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Anda dapat menggambar ini sebagai persegi panjang dengan sebuah garis di tengah atau dua persegi yang berbeda!"
@@ -3972,19 +3972,19 @@
         },
         "courseC_collector_prog2": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_collector_prog2_2018": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_collector_prog2_2019": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_collector_prog2_2020": {
           "courseC_collector_prog2_a": "Anda dapat menggunakan empat blok <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> atau blok <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> untuk lebih mempersingkat program.",
-          "courseC_collector_prog2_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_collector_prog2_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "Program hanya akan menjalankan blok yang terhubung ke blok <xml><block type=\"when_run\"/></xml>.",
@@ -4008,22 +4008,22 @@
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_a": "Jika Anda terjebak, mencoba menulis langkah-langkah pada selembar kertas.",
-          "courseC_collector_prog4_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle.",
+          "courseC_collector_prog4_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu.",
           "courseC_collector_prog4_c": "Mencoba opsi ini untuk sebuah jalan."
         },
         "courseC_collector_prog5": {
@@ -4707,19 +4707,19 @@
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_maze_programming8_2018": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_maze_programming8_2019": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_maze_programming8_2020": {
           "courseC_maze_programming8_a": "Ingat Anda bisa menggunakan tombol \"Step\" untuk melihat-lihat kode Anda, garis demi garis, jika Anda terjebak.",
-          "courseC_maze_programming8_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming8_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "Ada banyak cara untuk sampai ke babi. \nGunakan jari Anda untuk menemukan sebuah jalan dan program jalan tersebut!"
@@ -6546,12 +6546,12 @@
         "courseD_maze_intro5a_2019": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa belokan itu dari perspektif Red.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_intro5a_2020": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa belokan itu dari perspektif Red.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_nestedLoops3": {
           "courseD_maze_nestedLoops3_a": "Untuk memecahkan puzzle ini, Anda perlu \"nest\" satu loop `repeat` ke dalam loop `repeat` yang lain.",
@@ -6631,19 +6631,19 @@
         },
         "courseD_maze_ramp1": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp1_2018": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp1_2019": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp1_2020": {
           "courseC_maze_programming1_a": "Jika burung tersebut tidak sampai ke babi, pastikan ketiga blok telah diklik sepenuhnya bersama-sama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.",
@@ -6692,62 +6692,62 @@
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5_2018": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5_2019": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5_2020": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5a_2018": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5a_2019": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa putaran itu berasal dari perspektif Scrat.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5a_2020": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingatlah bahwa putaran itu berasal dari perspektif Scrat.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5b_2018": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5b_2019": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp5b_2020": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
           "courseC_maze_programming5_b": "Ingat bahwa perputarannya adalah dari sudut pandang burung.",
-          "courseC_maze_programming5_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming5_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
@@ -6836,7 +6836,7 @@
         "courseD_maze_until6": {
           "courseD_maze_until6_a": "Kali ini, cobalah `if path to the right` untuk menjaga zombie tetap di jalur.",
           "courseD_maze_until6_b": "Untuk menggunakan hanya satu `move forward`, taruh di dalam blok `repeat until sunflower`.",
-          "courseD_maze_until6_c": "Meski ada lebih banyak belokan di sini daripada di puzzle terakhir, kode bisa nyaris sama lantaran blok `repeat until`!"
+          "courseD_maze_until6_c": "Walau ada lebih banyak belokan di sini daripada di puzzle sebelumnya, kode dapat menjadi mirip karena blok `repeat until`!"
         },
         "courseD_maze_until6_2018": {
           "courseD_maze_until6_b": "Untuk menggunakan hanya satu `move forward`, taruh di dalam blok `repeat until sunflower`."
@@ -6849,20 +6849,20 @@
         },
         "courseD_maze_until7": {
           "courseD_maze_until7_a": "Kode Anda tidak harus lebih panjang daripada sebelumnya hanya karena labirinnya begitu!",
-          "courseD_maze_until7_b": "Meski ada lebih banyak belokan di sini daripada di puzzle terakhir, kode bisa nyaris sama lantaran blok `repeat until`!",
+          "courseD_maze_until7_b": "Walau ada lebih banyak belokan di sini daripada di puzzle sebelumnya, kode dapat menjadi mirip karena blok `repeat until`!",
           "courseD_maze_until7_c": "Ingatlah untuk mengecek jalur ke kiri, karena belok kanan akan membawa Anda ke jalur yang salah!"
         },
         "courseD_maze_until7_2018": {
           "courseD_maze_until7_a": "Kode Anda tidak harus lebih panjang daripada sebelumnya hanya karena labirinnya begitu!",
-          "courseD_maze_until7_b": "Meski ada lebih banyak belokan di sini daripada di puzzle terakhir, kode bisa nyaris sama lantaran blok `repeat until`!"
+          "courseD_maze_until7_b": "Walau ada lebih banyak belokan di sini daripada di puzzle sebelumnya, kode dapat menjadi mirip karena blok `repeat until`!"
         },
         "courseD_maze_until7_2019": {
           "courseD_maze_until7_a": "Kode Anda tidak harus lebih panjang daripada sebelumnya hanya karena labirinnya begitu!",
-          "courseD_maze_until7_b": "Meski ada lebih banyak belokan di sini daripada di puzzle terakhir, kode bisa nyaris sama lantaran blok `repeat until`!"
+          "courseD_maze_until7_b": "Walau ada lebih banyak belokan di sini daripada di puzzle sebelumnya, kode dapat menjadi mirip karena blok `repeat until`!"
         },
         "courseD_maze_until7_2020": {
           "courseD_maze_until7_a": "Kode Anda tidak harus lebih panjang daripada sebelumnya hanya karena labirinnya begitu!",
-          "courseD_maze_until7_b": "Meski ada lebih banyak belokan di sini daripada di puzzle terakhir, kode bisa nyaris sama lantaran blok `repeat until`!"
+          "courseD_maze_until7_b": "Walau ada lebih banyak belokan di sini daripada di puzzle sebelumnya, kode dapat menjadi mirip karena blok `repeat until`!"
         },
         "courseD_maze_until8": {
           "courseD_maze_until8_a": "Pastikan Anda menggunakan blok `if/else` untuk menjaga zombie di arah yang benar.",
@@ -6945,7 +6945,7 @@
         },
         "courseD_scrat_ramp1": {
           "courseC_maze_programming1_a": "Jika Scrat tidak mencapai biji ek, pastikan ketiga blok telah saling menutup bersama, lalu klik \"Jalankan\" lagi.",
-          "courseC_maze_programming1_b": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming1_b": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_a": "Untuk menggunakan sebuah blok `move forward`, seret dari toolbox ke dalam ruang kerja dan hubungkan ke blok`when run`.",
@@ -6958,7 +6958,7 @@
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_a": "Anda dapat belok kanan atau kiri dari sudut pandang Scrat. Jika Anda menghadap ke kanan, belok kanan akan membuat Anda menunjuk ke bawah.",
           "courseC_maze_programming4_b": "Untuk mengikuti jalan, bergerak maju dan berbelok ke satu arah, kemudian bergerak lagi dan berbelok sebaliknya. Maju terus satu kali lagi untuk menjangkau biji acorn.",
-          "courseC_maze_programming4_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseC_maze_programming4_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_scrat_ramp5": {
           "courseC_maze_programming5_a": "Coba gunakan tombol \"step\" untuk menjalankan kode baris demi baris. Bisakah Anda menebak tindakan yang perlu Anda lakukan selanjutnya?",
@@ -6971,12 +6971,12 @@
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseD_scrat_programming6_b": "Ingat untuk berbelok dulu sebelum bergerak, sejak Scrat menghadap ke arah yang salah.",
-          "courseD_scrat_programming6_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_scrat_programming6_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_b": "Jangan lupa gunakan tombol \"Step\" untuk melewati blok demi blok dan mencari kesalahan.",
           "courseD_maze_ramp7_a": "Gunakan blok-blok repeat (ulang) untuk menjalankan satu blok atau sekumpulan kode berkali-kali.",
-          "courseD_maze_ramp7_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_maze_ramp7_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "Heksagon memiliki sisi 50 piksel dan belokan 60 derajat ke kanan.",
@@ -8065,46 +8065,46 @@
           "courseF_artist_variables6_b": "Anda perlu mengganti blok angka dengan nilai 50, tetapi yang lain-lain dalam kode tidak perlu diubah."
         },
         "courseF_artist_variables6a": {
-          "courseF_artist_variables6a_a": "Ingat, gunakan variabel `length` alih-alih angka untuk memecahkan puzzle ini. ",
+          "courseF_artist_variables6a_a": "Ingat untuk menggunakan variabel `length` daripada sebuah angka untuk memecahkan puzzle ini. ",
           "courseF_artist_variables6a_b": "Kode ini akan sangat mirip dengan kode segitiga Anda, hanya bentuknya yang berbeda!",
           "courseF_artist_variables6a_c": "Tulis kode untuk satu persegi terlebih dahulu, lalu tambahkan kodenya agar bergerak di antara persegi. Terakhir, tambahkan sebuah loop yang mencakup semuanya!",
           "courseF_artist_variables6a_d": "Ini adalah pola yang akan Anda ikuti!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2018": {
-          "courseF_artist_variables6a_a": "Ingat, gunakan variabel `length` alih-alih angka untuk memecahkan puzzle ini. ",
+          "courseF_artist_variables6a_a": "Ingat untuk menggunakan variabel `length` daripada sebuah angka untuk memecahkan puzzle ini. ",
           "courseF_artist_variables6a_b": "Kode ini akan sangat mirip dengan kode segitiga Anda, hanya bentuknya yang berbeda!",
           "courseF_artist_variables6a_c": "Tulis kode untuk satu persegi terlebih dahulu, lalu tambahkan kodenya agar bergerak di antara persegi. Terakhir, tambahkan sebuah loop yang mencakup semuanya!",
           "courseF_artist_variables6a_d": "Ini adalah pola yang akan Anda ikuti!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2019": {
-          "courseF_artist_variables6a_a": "Ingat, gunakan variabel `length` alih-alih angka untuk memecahkan puzzle ini. ",
+          "courseF_artist_variables6a_a": "Ingat untuk menggunakan variabel `length` daripada sebuah angka untuk memecahkan puzzle ini. ",
           "courseF_artist_variables6a_b": "Kode ini akan sangat mirip dengan kode segitiga Anda, hanya bentuknya yang berbeda!",
           "courseF_artist_variables6a_c": "Tulis kode untuk satu persegi terlebih dahulu, lalu tambahkan kodenya agar bergerak di antara persegi. Terakhir, tambahkan sebuah loop yang mencakup semuanya!",
           "courseF_artist_variables6a_d": "Ini adalah pola yang akan Anda ikuti!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables6a_2020": {
-          "courseF_artist_variables6a_a": "Ingat, gunakan variabel `length` alih-alih angka untuk memecahkan puzzle ini. ",
+          "courseF_artist_variables6a_a": "Ingat untuk menggunakan variabel `length` daripada sebuah angka untuk memecahkan puzzle ini. ",
           "courseF_artist_variables6a_b": "Kode ini akan sangat mirip dengan kode segitiga Anda, hanya bentuknya yang berbeda!",
           "courseF_artist_variables6a_c": "Tulis kode untuk satu persegi terlebih dahulu, lalu tambahkan kodenya agar bergerak di antara persegi. Terakhir, tambahkan sebuah loop yang mencakup semuanya!",
           "courseF_artist_variables6a_d": "Ini adalah pola yang akan Anda ikuti!\n\n![](https://images.code.org/7fd21023b1498742d1a83ad4132d276e-image-1500328404912.9_hint.gif)"
         },
         "courseF_artist_variables7": {
-          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur variabel panjang ke 150.",
+          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur kepanjangan variabel menjadi 150.",
           "courseF_artist_variables7_b": "Anda dapat menggunakan sebuah loop `repeat` agar membuat kode untuk segitiga lebih mudah.",
           "courseF_artist_variables7_c": "Anda haru belok kiri 120 derajat untuk membuat sudut-sudut segitiga."
         },
         "courseF_artist_variables7_2018": {
-          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur variabel panjang ke 150.",
+          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur kepanjangan variabel menjadi 150.",
           "courseF_artist_variables7_b": "Anda dapat menggunakan sebuah loop `repeat` agar membuat kode untuk segitiga lebih mudah.",
           "courseF_artist_variables7_c": "Anda haru belok kiri 120 derajat untuk membuat sudut-sudut segitiga."
         },
         "courseF_artist_variables7_2019": {
-          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur variabel panjang ke 150.",
+          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur kepanjangan variabel menjadi 150.",
           "courseF_artist_variables7_b": "Anda dapat menggunakan sebuah loop `repeat` agar membuat kode untuk segitiga lebih mudah.",
           "courseF_artist_variables7_c": "Anda haru belok kiri 120 derajat untuk membuat sudut-sudut segitiga."
         },
         "courseF_artist_variables7_2020": {
-          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur variabel panjang ke 150.",
+          "courseF_artist_variables7_a": "Mulai kode Anda dengan menggunakan blok `set length`. Atur kepanjangan variabel menjadi 150.",
           "courseF_artist_variables7_b": "Anda dapat menggunakan sebuah loop `repeat` agar membuat kode untuk segitiga lebih mudah.",
           "courseF_artist_variables7_c": "Anda haru belok kiri 120 derajat untuk membuat sudut-sudut segitiga."
         },
@@ -8669,7 +8669,7 @@
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "Ada dua alternatif untuk menyelesaikan teka-teki ini!",
           "courseD_scrat_programming6_b": "Ingat untuk berbelok dulu sebelum bergerak, sejak Scrat menghadap ke arah yang salah.",
-          "courseD_scrat_programming6_c": "Jangan takut salah! Coba tambahkan blok dan jalankan kode untuk melihat hasil yang muncul, meskipun Anda menganggap diri belum menyelesaikan puzzle."
+          "courseD_scrat_programming6_c": "Jangan takut membuat kesalahan! Cobalah menambahkan blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika anda berpikir bahwa anda belum menyelesaikan puzzle itu."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_a": "Untuk menggambar sebuah sisi, gunakan blok `move forward by 100 pixels` , dan mengubah 100 menjadi 200.",

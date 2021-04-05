@@ -2620,7 +2620,7 @@ da:
               name: Sangskrivning
           lesson_groups:
             ramp_up:
-              display_name: Løkker
+              display_name: Indlejret Løkker
             csf_sprites:
               display_name: figure
             csf_digcit:

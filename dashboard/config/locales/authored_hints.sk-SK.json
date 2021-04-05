@@ -7461,6 +7461,19 @@
         },
         "4-5 Maze 7": {
           "4-5_Maze_7_a": "**Chceš mať svoj kód čo najkratší?** \n\nHľadaj vzory vo svojich blokoch. Vidíš niečo, čo sa opakuje? Skús vložiť cyklus okolo týchto opakujúcich sa blokov!"
+        },
+        "courseA_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_b": "Na vyriešenie tejto úlohy ti stačí použiť 1 blok. ",
+          "courseA_collector_loops_challenge2_a": "Môžeš sa vrátiť po svojej trase predtým, než pôjdeš na juh. "
+        },
+        "courseA_collector_preLoops4": {
+          "courseA_collector_preLoops4_a": "Na získanie pokladu pridaj dva bloky ![](https://images.code.org/2df8a25d7e96207f57d1a6b504950b70-image-1508906116743.34.37.png) a jeden ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png) na koniec programu a stlač \"Spustiť\"!"
+        },
+        "courseA_collector_preLoops5": {
+          "courseA_collector_preLoops5_a": "Budeš musieť ísť dvoma rôznymi smermi, aby si získal aspoň jeden diamant."
+        },
+        "courseA_collector_preLoops6": {
+          "courseA_collector_preLoops6_a": "Na vyriešenie tejto úlohy použi dva bloky ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)."
         }
       }
     }
