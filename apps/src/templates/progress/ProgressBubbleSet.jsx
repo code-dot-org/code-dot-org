@@ -58,7 +58,7 @@ const styles = {
 };
 
 // Deprecated in favor of ProgressTableDetailCell
-// component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606
+// component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1782
 class ProgressBubbleSet extends React.Component {
   static propTypes = {
     levels: PropTypes.arrayOf(levelType).isRequired,

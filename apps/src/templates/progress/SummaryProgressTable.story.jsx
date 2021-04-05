@@ -198,7 +198,11 @@ export default storybook => {
             fakeLesson('Assessment One', 2, true),
             fakeLesson('Artist', 3, false, 2)
           ]}
-          levelsByLesson={[fakeLevels(3), fakeLevels(4), fakeLevels(2)]}
+          levelsByLesson={[
+            fakeLevels(3),
+            fakeLevels(4, {locked: false}),
+            fakeLevels(2)
+          ]}
           viewAs={ViewType.Teacher}
           lessonIsVisible={() => true}
           lessonLockedForSection={() => false}
