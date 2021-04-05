@@ -3693,6 +3693,10 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
         coursef-2017:
+          title: Khóa học F
+          assignment_family_title: Khóa học F
+          description_audience: 'Tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -4616,6 +4620,9 @@ vi:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
+          assignment_family_title: Khóa học F
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             'Programming: My Robotic Friends':
               name: Bạn bè robot của tôi
@@ -5226,6 +5233,8 @@ vi:
           description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý tưởng dự án mở rộng.
         coursef-2019:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_variables:
               display_name: Các biến
@@ -6588,6 +6597,8 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
         coursef-2020:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7269,12 +7280,12 @@ vi:
             Conditionals:
               key: Điều kiện
             Nested Loops in Frozen:
-              name: Vòng lặp lồng với Frozen
+              name: 'Vòng lặp lồng với Frozen'
             'Functions: Songwriting':
               name: Sáng tác với tham số
           lesson_groups:
             ramp_up:
-              display_name: Vòng lặp
+              display_name: Vòng lặp lồng nhau
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
@@ -7282,6 +7293,8 @@ vi:
             csf_functions:
               display_name: Các hàm
         coursef-2021:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             Envelope Variables:
               key: Các biến phong bì
@@ -7409,6 +7422,12 @@ vi:
               name: Bài học 14
             lesson15:
               name: Bài học 15
+            lesson17:
+              name: Bài học 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

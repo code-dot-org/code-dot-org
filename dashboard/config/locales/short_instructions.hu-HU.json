@@ -1222,7 +1222,18 @@
         "courseC_starWars_loops9": "Használd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
         "courseC_starWars_loops9_2018": "Használd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
         "courseC_starWars_loops9_2019": "Használd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
-        "courseC_starWars_loops9_2020": "Használd a korábban tanultakat, hogy minden fémdarabot megszerezz!"
+        "courseC_starWars_loops9_2020": "Használd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
+        "2-3 Artist Debugging 10": "A kontroller irányítórésze túl keskeny.\n\nKi tudod szélesíteni 10 képponttal?  \n\nElőször próbáld a kódot lefuttatni, hogy lásd, mi is a probléma.",
+        "2-3 Artist Debugging 11": "A hópelyhem nem teljes!\n\nTalán az ismétlések számánál lehet a probléma?",
+        "2-3 Artist Debugging Assessment 1": "Értékelés: Ennek a négyzetnek az oldalai 75 képponttal rövidebbek a kelleténél!\n\nHol a hiba a kódban?",
+        "2-3 Bee Conditionals 11": "Kiváncsi vagyok, mit találok itt!\n\nSegíts körberepülni a mezőn és nektárt gyűjteni - persze csak azokból a virágokban, amikben van nektár.",
+        "2-3 Bee Conditionals 15": "Ez a lépcsőszerű minta ismerős lehet.\n\nGyűjts nektárt azokból a virágokból, amikben van nektár. Ja, és a legkevesebb lépésből érd el a célod!",
+        "2-3 Bee Conditionals 2": "Szia! Én egy éhes méh vagyok! \nSegíts nekem összegyűjteni az összes nektárt a virágokból! A lehető legkevesebb blokkot használd.",
+        "2-3 Bee Conditionals 3": "Nézd ezt a rengeteg nektárt!\n\nSegíts nekem, hogy a lehető legkevesebb blokkot felhasználva összegyűjtsem az összeset, aztán mézet is csinálhassak belőlük. ",
+        "2-3 Bee Conditionals 5": "Arra figyelj, hogy azonból a lila virágokból ne akarj nektárt gyűjteni, amikben nincs egy sem.\nElőször ellenőrizned kell őket a `ha nektár = 1` blokk segítségével.",
+        "2-3 Bee Conditionals 8": "Ezen a mezőn piros és lila virágok vannak. A piros virágokról tudjuk, mennyi nektár van bennük, de a lila virágokról nem. Gyűjtsd össze az összes nektárt!",
+        "2-3 Bee Conditionals Assessment 1": "Értékelés: Gyűjtsd össze az összes nektárt. Vigyázz, ne próbálj meg nektárt gyűjteni nektárt azokból a lila virágokból, amikben nincs nektár!",
+        "NEW Course 4 Artist Vars 2": "Húzz egy szám blokkot a `legyen length értéke` blokkhoz, és az `ismétled _ alkalommal` blokkhoz is, hogy 50 képpont oldalú háromszögleket rajzolj."
       }
     }
   }

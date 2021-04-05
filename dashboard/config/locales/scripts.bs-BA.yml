@@ -3286,7 +3286,7 @@ bs:
               name: Pisanje pjesama
           lesson_groups:
             ramp_up:
-              display_name: Petlje
+              display_name: Ugniježdene Petlje
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_nested_loops:
@@ -3375,6 +3375,8 @@ bs:
             lesson14:
               name: Lekcija 14
             lesson15:
+              name: Lekcija 15
+            lesson17:
               name: Lekcija 15
         k5-onlinepd-2021:
           lessons:

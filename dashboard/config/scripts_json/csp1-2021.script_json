@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-02 22:13:38 UTC",
+    "serialized_at": "2021-04-02 23:43:11 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -2993,7 +2993,7 @@
       "key": "9fa1cf22-38b9-41fb-8e92-d0200630962e",
       "position": 10,
       "properties": {
-        "description": "[slide] **Do This:** Regroup the class for levels 6-7 and direct everyone to the images on the slides. \n\n**Levels 6-7:**  Level 6 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling, and attempt to reproduce the sample gradient as best they can on Level 7."
+        "description": "[slide] **Do This:** Regroup the class for levels 6-7 and direct everyone to the images on the slides. \n\n**Levels 6-7:**  Level 6 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling using the widget on level 6 as a support, and attempt to reproduce the sample gradient as best they can on Level 7."
       },
       "seeding_key": {
         "activity_section.key": "9fa1cf22-38b9-41fb-8e92-d0200630962e",
@@ -3005,7 +3005,13 @@
       "position": 11,
       "properties": {
         "name": "Color Sampling",
-        "progression_name": "Color Sampling"
+        "progression_name": "Color Sampling Widget",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The widget on Level 6 is meant to help students visualize different sampling frequencies, just like the different grids on the last page of the activity guide from the previous lesson. Students should make their own attempt at matching one of these images using the widget on Level 7."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3",
@@ -4584,7 +4590,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Odometer Activity",
         "level_keys": [
@@ -5054,33 +5060,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color Sampling",
-        "level_keys": [
-          "CSP U1L10 Color Sampling_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U1L10 Color Sampling_2021"
-        ],
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021",
-        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
-      },
-      "level_keys": [
-        "CSP U1L10 Color Sampling_2021"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Pixelation Widget: Color"
+        "progression": "Color Sampling Widget"
       },
       "named_level": null,
       "bonus": false,
@@ -5091,16 +5071,16 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
+        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
       },
       "level_keys": [
         "U1 Sampling Widget"
       ]
     },
     {
-      "chapter": 29,
-      "position": 8,
-      "activity_section_position": 2,
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: Color",
@@ -5124,8 +5104,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 29,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5150,8 +5130,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 10,
+      "chapter": 30,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5176,7 +5156,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5202,7 +5182,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5228,7 +5208,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5254,7 +5234,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5280,7 +5260,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5306,7 +5286,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5332,7 +5312,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5358,7 +5338,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5383,7 +5363,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5408,7 +5388,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5434,7 +5414,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5460,7 +5440,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5801,18 +5781,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP U1L10 Color Sampling_2021",
-        "script_level.level_keys": [
-          "CSP U1L10 Color Sampling_2021"
-        ],
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2021",
-        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U1 Sampling Widget",
         "script_level.level_keys": [
           "U1 Sampling Widget"
@@ -5820,7 +5788,7 @@
         "lesson.key": "Color Images",
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
-        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
+        "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
       }
     },
     {
@@ -6290,6 +6258,17 @@
       "seeding_key": {
         "resource.key": "csp_unit_1_project_rubric"
       }
+    },
+    {
+      "name": "Curriculum",
+      "url": "/link/to/curriculum",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
     }
   ],
   "lessons_resources": [
@@ -6511,7 +6490,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum",
+        "script.name": "csp1-2021"
+      }
+    }
   ],
   "vocabularies": [
 
