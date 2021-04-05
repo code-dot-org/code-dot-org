@@ -2,11 +2,11 @@ require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
 require 'cdo/firehose'
 
-class JavaBuilderSessionsController < ApplicationController
+class JavabuilderSessionsController < ApplicationController
   authorize_resource class: false
 
-  PRIVATE_KEY = CDO.java_builder_private_key
-  PASSWORD = CDO.java_builder_key_password
+  PRIVATE_KEY = CDO.javabuilder_private_key
+  PASSWORD = CDO.javabuilder_key_password
 
   # GET /javabuilder/access_token
   def get_access_token
