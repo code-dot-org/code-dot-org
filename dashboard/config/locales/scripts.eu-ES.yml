@@ -2437,7 +2437,7 @@ eu:
               name: Musika idazten
           lesson_groups:
             ramp_up:
-              display_name: Itzuliak
+              display_name: Kabiatutako begiztak
             csf_digcit:
               display_name: Hiritartasun digitala
             csf_nested_loops:

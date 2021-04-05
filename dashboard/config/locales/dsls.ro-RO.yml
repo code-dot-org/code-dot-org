@@ -2505,3 +2505,126 @@ ro-RO:
         description: Ai terminat tutorialul! Continuă să faci schimbări sau îmbunătățiri
           ale proiectului tău. Poți alege să continui să lucrezi cu aceleazi blocuri
           sau să încerci o cutie cu instrumente expandată.
+      OPD-K5 CS Courses:
+        markdown: "# Planificare > Cum să începeți pe Code.org## Pasul 1: Alegeți
+          un cursToate cursurile noastre – de la preșcolari la elevi de liceu – sunt
+          incluse în **[catalogul cursurilor](https://studio.code.org/courses)**.
+          Pentru a identifica lecțiile pentru Noțiuni de bază de știința calculatoarelor
+          cu care ați exersat, accesați **[pagina pentru școala elementară](https://code.org/educate/curriculum/elementary-school)**
+          și derulați până la secțiunea „Cursuri”. Toate cursurile noastre sunt puse
+          la dispoziție cu titlu gratuit. Discutați cu colegii din școala dvs. pentru
+          a stabili modul în care programa de curs poate fi integrată în diverse discipline.![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)***##
+          Pasul 2: Configurați secțiunea atribuită clasei dvs.Configurați secțiunea
+          atribuită clasei dvs. în așa fel încât să puteți vizualiza progresele elevilor
+          dvs., să imprimați carduri de autentificare pentru elevi, să le gestionați
+          conturile și să imprimați certificate pe care le pot lua acasă când termină
+          cursul. Faceți clic pe acest link pentru a **[vizualiza un scurt clip video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          în care se demonstrează cum puteți să configurați prima oră de știința calculatoarelor
+          pe Code.org. De asemenea, puteți găsi pașii în **[acest articol de asistență](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)***##
+          Pasul 3: Alocați cursul secțiunii dvs.Faceți clic pe cursul pe care îl predați
+          – ar trebui să vedeți un ecran care seamănă cu cel de mai jos. Puteți face
+          clic apoi pe „Alocare curs” și să alocați cursul respectiv uneia dintre
+          secțiunile dvs. ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)***##
+          Pasul 4: Începeți să predați! Aveți nevoie de o singură lecție pentru a
+          prezenta concepte de știința calculatoarelor în sala de clasă. După ce veți
+          vedea cât de entuziasmați sunt elevii dvs. cu privire la știința calculatoarelor,
+          continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
+          offline pe care le puteți desfășura fără să aveți nevoie de un computer
+          și cu forumurile pentru a lua legătura cu alți profesori."
+      OPD-K5 CS Courses_copy:
+        markdown: '# Cum să începeți pe Code.org## Pasul 1: Alegeți un cursToate cursurile
+          noastre – de la preșcolari la elevi de liceu – sunt incluse în **<a href="https://studio.code.org/courses"
+          target="blank">catalogul cursurilor</a>**. Toate cursurile noastre sunt
+          puse la dispoziție cu titlu gratuit. Discutați cu colegii din școala dvs.
+          pentru a stabili modul în care programa de curs poate fi integrată în diverse
+          discipline.<table style="width:100%; border-style:none;">  <tr>    <th style="background-color:#ff9900;
+          text-align:center; border-style:none; font-weight:bold;""">      <b>Curs
+          A</b><br/>      <i>Grădiniță</i>    </th>    <th style="background-color:#f1c232;
+          text-align:center; border-style:none;""">        Curs B<br/>        <i>Clasa
+          I</i>    </th>    <th style="background-color:#b8bf0d; text-align:center;
+          border-style:none;""">        Curs C<br/>        <i>Clasa a II-a</i>    </th>    <th
+          style="background-color:#53bac2; text-align:center; border-style:none;""">        Curs
+          D<br/>        <i>Clasa a III-a</i>    </th>    <th style="background-color:#0094ca;
+          text-align:center; border-style:none;""">        Curs E<br/>        <i>Clasa
+          a IV-a</i>    </th>    <th style="background-color:#7664a0; text-align:center;
+          border-style:none;""">        Curs F<br/>        <i>Clasa a V-a</i>    </th>  </tr>  <tr>    <td
+          style="background-color:#f9cb9c; color:black; border-style:none; vertical-align:
+          text-top;"">12 lecții, ~12 ore necesare pentru finalizare</td>    <td style="background-color:#ffe599;
+          color:black; border-style:none; vertical-align: text-top;"">12 lecții, ~12
+          ore necesare pentru finalizare</td>    <td style="background-color:#d2da0e;
+          color:black; border-style:none; vertical-align: text-top;"">18 lecții, ~18
+          ore necesare pentru finalizare</td>    <td style="background-color:#68ebf5;
+          color:black; border-style:none; vertical-align: text-top;"">18 lecții, ~18
+          ore necesare pentru finalizare</td>    <td style="background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;"">18 lecții, ~18-20
+          ore necesare pentru finalizare</td>    <td style="background-color:#c9c1e9;
+          color:black; border-style:none; vertical-align: text-top;"">18 lecții, ~20-22
+          ore necesare pentru finalizare</td>  </tr>  <tr>    <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;">Concepte</td>  </tr>  <tr>    <td style="background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;"">      <ul style="font-style:italic;">        <li>Cetățenie
+          digitală</li>        <li>Secvențiere</li>        <li>Bucle</li>        <li>Evenimente</li>      </ul>    </td>    <td
+          style="background-color:#ffe599; color:black; border-style:none; vertical-align:
+          text-top;"">      <ul style="font-style:italic;">        <li>Cetățenie digitală</li>        <li>Secvențiere</li>        <li>Bucle</li>        <li>Impactul
+          computerelor</li>        <li>Evenimente</li>      </ul>    </td>    <td
+          style="background-color:#d2da0e; color:black; border-style:none; vertical-align:
+          text-top;"">      <ul style="font-style:italic;">        <li>Cetățenie digitală</li>        <li>Secvențiere</li>        <li>Limbajul
+          binar</li>        <li>Bucle</li>        <li>Evenimente</li>        <li>Date</li>      </ul>    </td>    <td
+          style="background-color:#68ebf5; color:black; border-style:none; vertical-align:
+          text-top;"">      <ul style="font-style:italic;">        <li>Secvențiere</li>        <li>Evenimente</li>        <li>Bucle</li>        <li>Relații
+          de condiționalitate</li>        <li>Limbajul binar</li>        <li>Cetățenie
+          digitală</li>      </ul>    </td>    <td style="background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;"">      <ul style="font-style:italic;">        <li>Sprites</li>        <li>Cetățenie
+          digitală</li>        <li>Impactul computerelor</li>        <li>Bucle imbricate</li>        <li>Funcții</li>      </ul>    </td>    <td
+          style="background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;"">      <ul style="font-style:italic;">        <li>Variabile</li>        <li>Date</li>        <li>Bucle
+          For</li>        <li>Internet</li>        <li>Sprites</li>        <li>Cetățenie
+          digitală</li>        </ul>    </td>  <tr>  <td style="background-color:#f9cb9c">     <a
+          href="https://studio.code.org/s/coursea" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/coursea"
+          target="_blank" style=''text-decoration:none''>          <button>Planuri
+          de lecție</button>      </a>    </td>    <td style="background-color:#ffe599">    <a
+          href="https://studio.code.org/s/courseb" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/courseb"
+          target="_blank" style=''text-decoration:none''>        <button>Planuri de
+          lecție</button>      </a>    </td>      <td style="background-color:#d2da0e">    <a
+          href="https://studio.code.org/s/coursec" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/coursec"
+          target="_blank" style=''text-decoration:none''>        <button>Planuri de
+          lecție</button>      </a>    </td>       <td style="background-color:#68ebf5">    <a
+          href="https://studio.code.org/s/coursed" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/coursed"
+          target="_blank" style=''text-decoration:none''>        <button>Planuri de
+          lecție</button>      </a>    </td>      <td style="background-color:#9ed7ed">    <a
+          href="https://studio.code.org/s/coursee" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/coursee"
+          target="_blank" style=''text-decoration:none''>        <button>Planuri de
+          lecție</button>      </a>    </td>       <td style="background-color:#c9c1e9">    <a
+          href="https://studio.code.org/s/coursee" target="_blank" style=''text-decoration:none''>        <button>Vizualizați
+          cursul</button><br/>      </a>      <a href="https://curriculum.code.org/csf/coursee"
+          target="_blank" style=''text-decoration:none''>        <button>Planuri de
+          lecție</button>      </a>    </td>    </tr></table><br/>***## Pasul 2: Configurați
+          secțiunea atribuită clasei dvs.Configurați secțiunea atribuită clasei dvs.
+          în așa fel încât să puteți vizualiza progresele elevilor dvs., să imprimați
+          carduri de autentificare pentru elevi, să le gestionați conturile și să
+          imprimați certificate pe care le pot lua acasă când termină cursul. Faceți
+          clic pe acest link pentru a **<a href="https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b"
+          target="blank">vizualiza un scurt clip video</a>** în care se demonstrează
+          cum puteți să configurați prima oră de știința calculatoarelor pe Code.org.
+          De asemenea, puteți găsi pașii în **<a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"
+          target="blank">acest articol de asistență</a>**.***## Pasul 3: Alocați cursul
+          secțiunii dvs.Faceți clic pe cursul pe care îl predați. Puteți face clic
+          apoi pe „Alocare curs” și să alocați cursul respectiv uneia dintre secțiunile
+          dvs. ***## Pasul 4: Începeți să predați! Aveți nevoie de o singură lecție
+          pentru a prezenta concepte de informatică în sala de clasă. După ce veți
+          vedea cât de entuziasmați sunt elevii dvs. cu privire la știința calculatoarelor,
+          continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
+          offline pe care le puteți desfășura fără să aveți nevoie de un computer
+          și cu forumurile pentru a lua legătura cu alți profesori.'
+      courseD_EOC_2020:
+        display_name: Proiect de final de curs
+      courseE_EOC_2020:
+        display_name: Proiect de final de curs
+      courseExpress_EOC_2020:
+        display_name: Proiect de final de curs
+      courseF_EOC_2020:
+        display_name: Proiect de final de curs

@@ -2,7 +2,7 @@
 import '../assetManagement/download';
 import {makeEnum} from '../utils';
 import logToCloud from '../logToCloud';
-import {removeDisallowedHtmlContent} from './brambleUtils';
+import {createHtmlDocument, removeDisallowedHtmlContent} from './brambleUtils';
 
 const PageAction = makeEnum(
   logToCloud.PageAction.BrambleError,
@@ -684,5 +684,72 @@ export default class CdoBramble {
 
   logAction(actionName, value = {}) {
     logToCloud.addPageAction(actionName, value);
+  }
+
+  addFileHTML() {
+    this.brambleProxy?.addNewFile(
+      {
+        basenamePrefix: 'new',
+        ext: 'html',
+        contents: createHtmlDocument()
+      },
+      err => {
+        if (err) {
+          throw err;
+        }
+      }
+    );
+  }
+
+  addFileCSS() {
+    this.brambleProxy?.addNewFile(
+      {
+        basenamePrefix: 'new',
+        ext: 'css',
+        contents:
+          'body {\n  background: white;\n}\np {\n  color: black;\n}\nh1 {\n  font-weight: bold;\n}'
+      },
+      err => {
+        if (err) {
+          throw err;
+        }
+      }
+    );
+  }
+
+  undo() {
+    this.brambleProxy?.undo();
+  }
+
+  redo() {
+    this.brambleProxy?.redo();
+  }
+
+  hideTutorial() {
+    this.brambleProxy?.hideTutorial();
+  }
+
+  showTutorial() {
+    this.brambleProxy?.showTutorial();
+  }
+
+  enableInspector() {
+    this.brambleProxy?.enableInspector();
+  }
+
+  disableInspector() {
+    this.brambleProxy?.disableInspector();
+  }
+
+  refreshPreview() {
+    this.brambleProxy?.refreshPreview();
+  }
+
+  enableFullscreenPreview(callback) {
+    this.brambleProxy?.enableFullscreenPreview(callback);
+  }
+
+  disableFullscreenPreview(callback) {
+    this.brambleProxy?.disableFullscreenPreview(callback);
   }
 }

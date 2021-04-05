@@ -42,7 +42,8 @@ const defaultProps = {
   versions: [],
   sectionsForDropdown: [],
   announcements: [],
-  isSignedIn: true
+  isSignedIn: true,
+  useMigratedResources: false
 };
 
 const fakeTeacherAnnouncement = {

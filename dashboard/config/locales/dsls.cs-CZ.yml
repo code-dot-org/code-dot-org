@@ -2907,3 +2907,30 @@ cs-CZ:
           programování (stejně jako lidi, kteří se tím živí), je skvělým zdrojem informací
           o různých způsobech, jak si amatéři hrají s programováním. \n\n### Relevantní
           oblasti\n\n* Vše\n\n[/key]\n"
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Silná hesla
+
+          Prozkoumej, proč lidé používají hesla, zjisti výhody používání hesel a najdi způsob, jak vytvářet a uchovávat silná, bezpečná hesla.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)

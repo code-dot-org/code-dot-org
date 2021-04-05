@@ -611,6 +611,12 @@ in:
         codebreak_e12: 'crwdns2435290:0crwdne2435290:0'
         csf21pilot_events: 'crwdns2478938:0crwdne2478938:0'
         csf21pilot_prompts: 'crwdns2481438:0crwdne2481438:0'
+        outbreak_mike: crwdns2485800:0crwdne2485800:0
+        poembot-pilot-prompts: crwdns2485802:0[PILOT]crwdne2485802:0
+        poembot-pilot-text: crwdns2485804:0[PILOT]crwdne2485804:0
+        poembot-pilot-haiku: crwdns2485806:0[PILOT]crwdne2485806:0
+        csd_ml_intro_to_ai_lab: crwdns2485808:0crwdne2485808:0
+        csd_ml_import_model: crwdns2485810:0crwdne2485810:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

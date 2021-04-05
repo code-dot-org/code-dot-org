@@ -780,7 +780,8 @@
             "parameters": {
               "length": "长度",
               "sides": "边"
-            }
+            },
+            "description": "形状的变化取决于它当前有多少个边。它有两个参数，长度和边数。长度 "
           },
           "draw a loop": {
             "name": "画一个循环",
@@ -805,7 +806,8 @@
             }
           },
           "n-sided shape": {
-            "name": "n边形"
+            "name": "n边形",
+            "description": "形状的变化取决于它当前有多少个边。它有两个参数，长度和边数。长度 "
           },
           "draw spiral circle": {
             "name": "画螺旋圈",

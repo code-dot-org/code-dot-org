@@ -17,5 +17,6 @@
   "danceFeedbackOnlyOneDancerMoved": "មានតែអ្នករបាំម្នាក់គត់ដែលបានផ្លាស់ទីតាំង។",
   "danceFeedbackNeedLead": "អ្នកក៏ត្រូវបង្កើតអ្នករបាំនាំមុខម្នាក់ជាមួយនឹង<xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml>ប្លុក។",
   "danceFeedbackNeedBackup": "អ្នកត្រូវបង្កើតក្រុមអ្នករបាំបម្រុងទុកជាមួយ<xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">១០</title><title name=\"COSTUME\">​\"សេះដុះស្នែង</title><title name=\"LAYOUT\">\"រង្វង់</title></block></xml>ប្លុក។",
-  "danceFeedbackSetSize": "អ្នកត្រូវផ្លាស់ប្តូរទំហំអ្នករបាំយ៉ាងហោចណាស់ម្នាក់បន្ទាប់ពីតន្ត្រីចាប់ផ្តើម។"
+  "danceFeedbackSetSize": "អ្នកត្រូវផ្លាស់ប្តូរទំហំអ្នករាំយ៉ាងហោចណាស់ម្នាក់បន្ទាប់ពីតន្ត្រីចាប់ផ្តើម។",
+  "measure": "វាស់កំរិត៖"
 }

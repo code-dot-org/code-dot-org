@@ -108,6 +108,13 @@ html[dir='rtl'] #visualizationColumn {
   }
 }
 
+// Use the focus-visible pseudoclass to hide the outline when clicked.
+// This leaves the outline behavior unchanged for keyboard navigation.
+// Note: this isn't supported in every browser yet.
+.no-focus-outline:focus:not(:focus-visible) {
+  outline: none;
+}
+
 div.droplet-palette-group-header {
   @include font;
   line-height: 24px;

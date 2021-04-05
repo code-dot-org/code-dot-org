@@ -25,8 +25,9 @@ const defaultProps = {
   scriptTitle: 'Unit test script title',
   viewAs: ViewType.Student,
   isRtl: false,
-  resources: [],
-  showAssignButton: true
+  teacherResources: [],
+  showAssignButton: true,
+  isMigrated: false
 };
 
 describe('ScriptOverviewTopRow', () => {
@@ -140,7 +141,7 @@ describe('ScriptOverviewTopRow', () => {
       <ScriptOverviewTopRow
         {...defaultProps}
         viewAs={ViewType.Teacher}
-        resources={[
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: 'https://example.com/a'
@@ -155,7 +156,7 @@ describe('ScriptOverviewTopRow', () => {
     expect(
       wrapper.containsMatchingElement(
         <TeacherResourcesDropdown
-          resources={[
+          teacherResources={[
             {
               type: ResourceType.curriculum,
               link: 'https://example.com/a'
@@ -165,6 +166,52 @@ describe('ScriptOverviewTopRow', () => {
               link: 'https://example.com/b'
             }
           ]}
+          useMigratedResources={false}
+        />
+      )
+    ).to.be.true;
+  });
+
+  it('renders migrated resources for teacher on a migrated script', () => {
+    const wrapper = shallow(
+      <ScriptOverviewTopRow
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+        isMigrated={true}
+        migratedTeacherResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <TeacherResourcesDropdown
+          migratedTeacherResources={[
+            {
+              id: 1,
+              key: 'curriculum',
+              name: 'Curriculum',
+              url: 'https://example.com/a'
+            },
+            {
+              id: 2,
+              key: 'vocabulary',
+              name: 'Vocabulary',
+              url: 'https://example.com/b'
+            }
+          ]}
+          useMigratedResources={true}
         />
       )
     ).to.be.true;

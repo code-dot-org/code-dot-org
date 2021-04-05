@@ -37,7 +37,8 @@
           "2-3_Artist_9_a": "Ez a gyémánt valóban csak egy csúcsára állított négyzet"
         },
         "2-3 Artist Debugging 10": {
-          "2-3_Artist_Debugging_10_b": "\\*\\* A próbálkozás és hiba teljesen elfogadott itt! \\*\\*\n\nKezdd úgy, hogy egyszerre csak egy számot változtass meg.\n\nMelyik szám mit csinál?   \n\nHa túlságosan belebonyolódsz, csak kattints az \"Újrakezdés\"-re, és visszakapod a kezdeti állapotot."
+          "2-3_Artist_Debugging_10_b": "\\*\\* A próbálkozás és hiba teljesen elfogadott itt! \\*\\*\n\nKezdd úgy, hogy egyszerre csak egy számot változtass meg.\n\nMelyik szám mit csinál?   \n\nHa túlságosan belebonyolódsz, csak kattints az \"Újrakezdés\"-re, és visszakapod a kezdeti állapotot.",
+          "2-3_Artist_Debugging_10_a": "Emlékszel? Ha azt akarod, hogy az irányító 10 képponttal _szélesebb_ legyen... győződj meg róla, hogy **hozzáadsz** 10-et a korábbi számhoz."
         },
         "2-3 Artist Debugging 2": {
           "2-3_Artist_Debugging_2_a": "Tipp: Minden egyes darukar 75 képpont hosszú."
@@ -110,7 +111,8 @@
         },
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "Hiába agyalsz rajta, hogy mit kezd a blokkokkal? Próbáld ugyanúgy kezelni a piros virágot, mint a lilát!",
-          "2-3_Bee_Conditionals_14_b": "Ha a piros virág lila lenne, kitalálnád hogyan kell a kódba egy extra \"ismétlés\" ciklust tenni, hogy hozzájuss a nektárhoz?"
+          "2-3_Bee_Conditionals_14_b": "Ha a piros virág lila lenne, kitalálnád hogyan kell a kódba egy extra \"ismétlés\" ciklust tenni, hogy hozzájuss a nektárhoz?",
+          "2-3_Bee_Conditionals_14_c": "Próbáld két részre bontani a kódot:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Gyűjts nektárt háromszor \n    -   Lépj előre 5-ször\n    -   Ellenőrizd, hogy van-e nektár a virágban, vagy nincs\n    -   Fordulj balre\n\n2.  Készíts mézet\n    -   Lépj előre egyet\n    -   Csinálj két mézet"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "Emlékezz rá: a lila virágokban 0 vagy 1 nektár lehet, ráadásul minden futtatáskor változik, hogy épp mennyi van benne. "
@@ -215,7 +217,10 @@
           "Course_4_Artist_11_b": "A 2/3 háromszög **oldalai 80 pixelesek** és mindig jobbra kell fordulni **120 fokkal**. "
         },
         "Course 4 Artist 12": {
-          "Course_4_Artist_12_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "Course_4_Artist_12_d": "**Megoldás:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#843179</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">60</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant\">\n                        <title name=\"DIR\">turnRight</title>\n                        <title name=\"VALUE\">60</title>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"controls_repeat\">\n                    <title name=\"TIMES\">2</title>\n                    <statement name=\"DO\">\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveForward</title>\n                        <title name=\"VALUE\">80</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant\">\n                            <title name=\"DIR\">turnRight</title>\n                            <title name=\"VALUE\">120</title>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "Course_4_Artist_12_a": "Az ismételt alakzato két részből állnak: egy **fél nyolcszög**, majd egy **háromszög 2/3-a** alkotja őket.",
+          "Course_4_Artist_12_b": "Az alap mintája majdnem ugyanaz, mint a legutóbbi feladatban, kivéve, hogy a fél-hatszög most egy kicsit nagyobb.",
+          "Course_4_Artist_12_c": "1.  Az első három vonal 60 képpont hosszú, és mindegyik után 60 fokot kell fordulni.\n\n2.  A következő két vonal 80 képpont hosszú, ezek után pedig 120 fokot kell fordulni. "
         },
         "Course 4 Artist 6": {
           "Course_4_Artist_6_a": "Itt van három háromszög egy körben egyenlően elforgatva... mennyi 360-ban a 3?"
@@ -2811,6 +2816,21 @@
         "courseC_starWars_loops9_2020": {
           "course_starWars_loops9_b": "Az `ismétlés` ciklusba több blokkot is belerakhatsz.",
           "course_starWars_loops9_c": "Nem kell jobbra fordulnod, hogy megoldd ezt a feladatot. Csak jobbra menj minden alkalommal!\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "2-3 Bee Conditionals 6": {
+          "2-3_Bee_Conditionals_6_a": "Emlékezz rá: a lila virágokban lévő nektárok száma 0 vagy 1 lehet a program futtatása után. "
+        },
+        "Course 4 Artist Vars 6": {
+          "Course_4_Artist_Vars_6_a": "Hogy egy szabályos sokszöget rajzolj, minden vonal után **360/sides** fokot fordulj."
+        },
+        "Course 4 Artist Vars 8": {
+          "Course_4_Artist_Vars_8_a": "Az oldalak hosszának az összegét hívhatjuk akár kerületnek is. Ha ezt elosztod az oldalak számával, akkor észreveheted, hogy minél több oldala van a sokszögnek, az oldalak hossza annál rövidebb lesz."
+        },
+        "course2_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_a": "Találj egy utat, ami minden virágot és méhsejtet érint és nem megy neki se fának, se világos színű blokknak. A legjobb út egy spirál lehet.\n\n**Megoldhatod anélkül a feladatot, hogy akár egyszer is balra fordulnál.**"
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge1_b": "Ahogy a `ha a virágnál` blokk esetén, úgy az `amíg nektár > 0` blokkon belüli parancsokat is csak akkor hajtjuk végre, ha a méh épp egy virágnál van. A fő különbség az, hogy az `amíg`-cikluson belüli kódot addig ismételjük, amíg elfogy a nektár. Próbáld ki ezt a megoldást:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         }
       }
     }
