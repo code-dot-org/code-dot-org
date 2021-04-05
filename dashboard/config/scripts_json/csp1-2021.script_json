@@ -6258,6 +6258,17 @@
       "seeding_key": {
         "resource.key": "csp_unit_1_project_rubric"
       }
+    },
+    {
+      "name": "Curriculum",
+      "url": "/link/to/curriculum",
+      "key": "curriculum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum"
+      }
     }
   ],
   "lessons_resources": [
@@ -6479,7 +6490,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum",
+        "script.name": "csp1-2021"
+      }
+    }
   ],
   "vocabularies": [
 

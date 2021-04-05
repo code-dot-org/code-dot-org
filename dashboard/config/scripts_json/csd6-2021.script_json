@@ -18,12 +18,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "peer_reviews_to_complete": 0,
@@ -31,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-03-24 21:40:31 UTC",
+    "serialized_at": "2021-03-26 15:41:24 UTC",
     "seeding_key": {
       "script.name": "csd6-2021"
     }
@@ -10205,6 +10199,17 @@
       "seeding_key": {
         "resource.key": "planning-your-innovation"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -10300,7 +10305,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd6-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
@@ -10637,7 +10647,7 @@
       "seeding_key": {
         "lesson.key": "Making Music",
         "programming_environment.name": "applab",
-        "programming_expression.key": "buzzerplaynotes"
+        "programming_expression.key": "buzzer.playNotes"
       }
     },
     {
