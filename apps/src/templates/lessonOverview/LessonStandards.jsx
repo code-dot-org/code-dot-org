@@ -90,10 +90,9 @@ class Framework extends PureComponent {
       .orderBy(categoryKey, 'shortcode')
       .groupBy(categoryKey)
       .value();
-    const isOpen = getDetailsOpen(this.props.expandMode);
     return (
-      <details key={name} open={isOpen}>
-        <summary>{name}</summary>
+      <div>
+        {name}
         <ul style={{listStyleType: 'none'}}>
           {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
@@ -108,7 +107,7 @@ class Framework extends PureComponent {
             );
           })}
         </ul>
-      </details>
+      </div>
     );
   }
 }
