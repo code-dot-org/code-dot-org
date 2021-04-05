@@ -224,6 +224,7 @@ export const processedLevel = level => {
     progressionDisplayName: level.progression_display_name,
     kind: level.kind,
     icon: level.icon,
+    locked: level.locked,
     isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     bubbleText:

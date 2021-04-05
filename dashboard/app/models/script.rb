@@ -1450,7 +1450,7 @@ class Script < ApplicationRecord
 
     # Filter out stages that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels, user)} if include_lessons
     summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)

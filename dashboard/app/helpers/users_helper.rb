@@ -178,7 +178,7 @@ module UsersHelper
             submitted = !!ul.try(:submitted) &&
               !(ul.level.try(:peer_reviewable?) && [ActivityConstants::REVIEW_REJECTED_RESULT, ActivityConstants::REVIEW_ACCEPTED_RESULT].include?(ul.best_result))
             readonly_answers = !!ul.try(:readonly_answers)
-            locked = ul.try(:show_as_locked?, sl.lesson) || sl.lesson.lockable? && !ul
+            locked = ul.try(:show_as_locked?, sl.lesson) || (sl.lesson.lockable? && !ul)
             if completion_status == LEVEL_STATUS.not_tried
               # for now, we don't allow authorized teachers to be "locked"
               if locked && !user.authorized_teacher?
@@ -194,7 +194,7 @@ module UsersHelper
               submitted: submitted ? true : nil,
               readonly_answers: readonly_answers ? true : nil,
               paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-              locked: locked ? true : nil,
+              locked: locked ? true : false,
               last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
               time_spent: ul&.time_spent&.to_i
             }.compact
@@ -214,7 +214,8 @@ module UsersHelper
           # for now, we don't allow authorized teachers to be "locked"
           if locked && !user.authorized_teacher?
             progress[level_id] = {
-              status: LEVEL_STATUS.locked
+              status: LEVEL_STATUS.locked,
+              locked: locked
             }
           end
           next
@@ -226,7 +227,7 @@ module UsersHelper
           submitted: submitted ? true : nil,
           readonly_answers: readonly_answers ? true : nil,
           paired: (paired_user_levels.include? ul.try(:id)) ? true : nil,
-          locked: locked ? true : nil,
+          locked: locked ? true : false,
           last_progress_at: include_timestamp ? ul&.updated_at&.to_i : nil,
           time_spent: ul&.time_spent&.to_i
         }.compact
@@ -242,6 +243,7 @@ module UsersHelper
           progress["#{level_id}_#{index}"] = {
             result: result,
             submitted: submitted ? true : nil,
+            locked: locked ? true : false,
             readonly_answers: readonly_answers ? true : nil
           }.compact
         end

@@ -243,7 +243,7 @@ class Lesson < ApplicationRecord
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize(include_bonus_levels = false, for_edit: false)
+  def summarize(include_bonus_levels = false, user=nil, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
@@ -267,7 +267,7 @@ class Lesson < ApplicationRecord
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
-        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
+        levels: cached_levels.map {|sl| sl.summarize(false, user, for_edit: for_edit)},
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
