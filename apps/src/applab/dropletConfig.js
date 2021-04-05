@@ -937,9 +937,17 @@ export var blocks = [
   },
   {
     func: 'declareAssign_object',
-    block: `var object = ({"key": "value"});`,
+    block: `var object = {"key": "value"};`,
     category: 'Variables',
     noAutocomplete: true
+  },
+  {
+    func: 'getValue',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"'],
+    params: ['object', '"key"'],
+    dontMarshal: true
   },
 
   {

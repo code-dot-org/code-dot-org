@@ -1,0 +1,13 @@
+{
+  "func": "getValue",
+  "category": "Variables",
+  "paletteParams": [
+    "object",
+    "\"key\""
+  ],
+  "params": [
+    "object",
+    "\"key\""
+  ],
+  "noAutocomplete": true
+}

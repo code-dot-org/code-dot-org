@@ -543,3 +543,10 @@ export function getPrediction(modelName, modelId, testValues, callback) {
     callback
   });
 }
+
+export function getValue(object, key) {
+  return Applab.executeCmd(null, 'getValue', {
+    object,
+    key
+  });
+}
