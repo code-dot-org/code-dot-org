@@ -2484,6 +2484,22 @@ es-MX:
           * [App Presentation](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubric
       CSD U5 Encryption 1:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificación
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "El mensaje en sí es un donut, un pulgar hacia abajo y una
+          cara enfadada.  Los alumnos pueden divertirse haciendo sus propias interpretaciones
+          de los emoticonos.  Una posible interpretación es que el remitente esperaba
+          un donut, no lo recibió y se enfadó, pero no hay una respuesta \"correcta\"
+          a lo que significan los emoticonos.\n    \n(Oculta este mensaje yendo a
+          tu panel de profesor a la derecha y eligiendo ver como alumno).\n"
       CSD U5 Encryption 1_2018:
         content1: descripción aquí
         markdown: |-
@@ -2522,6 +2538,13 @@ es-MX:
           tu panel de profesor a la derecha y eligiendo ver como alumno).\n"
       CSD U5 Encryption 2:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * ¿Puedes decodificar esta cadena binaria?
+          * ¿Qué necesitas saber para poder decodificarla?
       CSD U5 Encryption 2_2018:
         content1: descripción aquí
         markdown: |-
@@ -2551,8 +2574,32 @@ es-MX:
 
           * [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide
           * [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource
+        teacher_markdown: "* Interpretación de datos - Ejemplo ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: descripción aquí
+        markdown: |
+          # Encuesta sobre pasteles
+
+          Para esta encuesta, la gente tenía que elegir un sabor de pastel y un sabor de glaseado.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de la tarta</td><td style="width: 200px; background-color: gray; color:white">Sabor del glaseado</td></tr>.
+          <tr><td>1</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>2</td><td>Tarta de terciopelo rojo</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>3</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>4</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>5</td><td>Tarta de zanahoria</td><td>Glaseado de vainilla</td></tr>
+          <tr><td>6</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>7</td><td>Tarta de chocolate</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>8</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          </table>
+          <br><br>
+
+          Si estas personas tuvieran que ponerse de acuerdo en una combinación de pastel y glaseado para una fiesta, ¿cuál debería ser?
+
+          Y si pudieran pedir dos tartas con glaseado?
+
+          ¿De qué manera conocer ambas opciones nos ayuda a entender mejor qué tipo de tartas deberíamos pedir?
       CSD U5 crosstab warmup_2018:
         content1: descripción aquí
         markdown: |
@@ -2605,6 +2652,15 @@ es-MX:
           ¿De qué manera conocer ambas opciones nos ayuda a entender mejor qué tipo de tartas deberíamos pedir?
       CSD U5 data visualization:
         content1: descripción aquí
+        markdown: |-
+          ## Mejor Mascota de la Clase
+          ### Aquí hay tres maneras diferentes de mostrar los resultados de una votación para la mejor mascota de la clase.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### ¿Cuál hace más fácil para un humano tomar una decisión sobre qué mascota es la más popular?
+          ### ¿Cuál es la más fácil para que un ordenador tome una decisión?
       CSD U5 data visualization_2018:
         content1: descripción aquí
         markdown: |-
@@ -2629,6 +2685,84 @@ es-MX:
           ### ¿Cuál es la más fácil para que un ordenador tome una decisión?
       CSD U5 student record:
         content1: descripción aquí
+        markdown: "# Registro de alumnos\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## El registro del alumno contiene
+          información según las siguientes reglas:\n\n * <h4>Los primeros ocho bits
+          almacenan la nota del alumno como un número binario.</h4>\n * <h4>Los segundos
+          ocho almacenan la edad del alumno como un número binario.</h4>\n * <h4>Los
+          siguientes ocho almacenan la primera inicial del alumno en ASCII.</h4>\n
+          * <h4>Los últimos ocho almacenan la última inicial del alumno en ASCII.</h4>\n\n<br
+          />\n<br />"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** El alumno está en el 9º curso.
+
+          **Byte 1:** El alumno tiene 15 años.
+
+          **Byte 2** La primera inicial del alumno es "J".
+
+          **Byte 3** La segunda inicial es "H".
+
+          [/key]
+
+          Para ocultar esta casilla al mostrar el nivel, haga clic en el panel del profesor en la parte derecha de esta página y elija la opción "Ver como alumno".
       CSD U5 student record_2018:
         content1: descripción aquí
         markdown: "# Registro de alumnos\n\n<div style=\"float: right; height:209px;
@@ -3030,6 +3164,9 @@ es-MX:
           ## Recursos
 
           * [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
       CSD-U5-SFLP Automating Data Decisions:
         markdown: |
           # Resumen
@@ -3040,6 +3177,7 @@ es-MX:
 
           * [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
           * [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* Automatización de decisiones de datos - Ejemplo ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
       CSD-U5-SFLP Combining Representations:
         markdown: |
           # Resumen
@@ -3051,6 +3189,8 @@ es-MX:
 
           * [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
           * [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Registros de mascotas] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWwmEmwfN8/)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWmEmwfN8/export?format=pdf))"
       CSD-U5-SFLP Create a Representation:
         markdown: |
           # Resumen
@@ -3060,6 +3200,9 @@ es-MX:
           ## Recursos
 
           * [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* Crear una representación - Guía del proyecto ([Google
+          Doc] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))"
       CSD-U5-SFLP Interpreting Data:
         markdown: |
           # Resumen
@@ -3069,6 +3212,7 @@ es-MX:
           ## Recursos
 
           * [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Estructuración de datos - Ejemplo ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
       CSD-U5-SFLP Making Decisions with Data:
         markdown: |
           # Resumen
@@ -3078,6 +3222,9 @@ es-MX:
           ## Recursos
 
           * [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide
+        teacher_markdown: "* [Toma de decisiones con datos] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # Resumen
@@ -3093,6 +3240,9 @@ es-MX:
           ## Recursos
 
           * [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |-
+          * [Representación de información](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Ejemplo 1 ([PDF] (https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [Representación de información](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Ejemplo 2 ([PDF] (https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
           # Resumen
@@ -3102,6 +3252,7 @@ es-MX:
           ## Recursos
 
           * [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Resolución de problemas con datos - Ejemplo ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # Resumen
@@ -3134,6 +3285,10 @@ es-MX:
 
 
 
+        teacher_markdown: |-
+          * [Datos de comidas] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Recurso ([PDF] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/tecla]
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # Resumen
@@ -3154,6 +3309,12 @@ es-MX:
           ## Recursos
           * [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
           * [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [clave]
+
+          * Representación de números - Ejemplo ([Google Doc] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/tecla]
       CSD-U5-SFLP Representing Numbers Part 2:
         markdown: |
           # Resumen
@@ -3164,6 +3325,7 @@ es-MX:
           ## Recursos
 
           * [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* Mantener Secreto de Datos - Ejemplo ([PDF] (https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))"
       CSD-U5-SFLP Solve a Data Problem:
         markdown: |
           # Resumen
@@ -3174,6 +3336,9 @@ es-MX:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+        teacher_markdown: |-
+          * Hacer una recomendación - Ejemplo de guía de proyecto ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * Hacer una recomendación - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
       'CSD: getText vs getNumber':
         markdown: |-
           # obtenerTexto vs obtenerNúmero
@@ -3855,6 +4020,10 @@ es-MX:
           <strong>Idea clave: Múltiples pantallas: un espacio de trabajo de codificación.</strong> Este es el código que maneja un evento de "clic" para una imagen <em>que está en una pantalla diferente</em>: la <em> pantallaAdiós</em>. No puedes ver esa imagen en este momento, o esa pantalla, porque la pantalla no está seleccionada. Sin embargo, el código para ello todavía va aquí. </p>
 
           </div>
+        teacher_markdown: |-
+          #### Tarjetas en pantallas
+
+          Para simplificar el proceso de creación de prototipos, los equipos pueden pensar en cada tarjeta que crearon en el Prototipo en Papel como una pantalla separada en la repetición de su aplicación en el Laboratorio de Aplicaciones. En realidad, las pantallas que son muy similares, a menudo se pueden desarrollar como una sola pantalla con contenido que cambia en función de la intervención del usuario. En la próxima lección los alumnos verán algunos ejemplos de cómo podría funcionar eso, pero no se espera que incorporen ese tipo de funcionalidad en este proyecto.
       New Challenge Introduction:
         content1: descripción aquí
         markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
@@ -6451,6 +6620,33 @@ es-MX:
 
           ### ¡Intentarás esto a continuación!
 
+        teacher_markdown: "#### Sólo los detalles\n\nHay mucho que analizar aquí y
+          muchos de los detalles sobre cómo funcionan los sucesos (events) en Laboratorio
+          de Aplicaciones no son totalmente necesarios para entender nuestras necesidades
+          en esta unidad. Si los alumnos tienen problemas con el funcionamiento de
+          la programación en Laboratorio de Aplicaciones, concéntrate en estos aspectos
+          esenciales:\n\n* No hay un bucle `dibujar` que se ejecute eternamente\n*
+          El bloque `onEvent()` especifica:\n\t* un identificador de elemento\n    *
+          un suceso (como \"clic\" o \"mouseover\")\n    * El código que debe ser
+          ejecutado cuando el suceso ocurra (este código es técnicamente una función
+          anónima de devolución de llamada, representada por el bloque verde)\n* El
+          código dentro de los bloques `onEvent()` se ejecuta cada vez que ocurre
+          el suceso especificado\n\n#### Comparado con Laboratorio de Juegos\n\nEn
+          Laboratorio de Juegos, podríamos utilizar el siguiente código para comprobar
+          si un sprite llamado \"botón\" fue pulsado y hacer algo al respecto:\n\n
+          \   function draw() {\n    \tif (mousePressedOver(botón)) {\n       \t\t//
+          Hacer algo\n       \t}\n    }\n\n\nEn Laboratorio de Aplicaciones, dado
+          un botón con el identificador \"botón\", podríamos escribir el siguiente
+          código para conseguir el mismo objetivo:\n\n\n    onEvent(\"botón\", \"clic\",
+          function () {\n    \t// Hacer algo\n    });\n\nEn el ejemplo de Laboratorio
+          de Aplicaciones, la función es sólo un argumento más que se pasa a la función
+          onEvent, lo que ocurre es que el argumento debe ser una función en sí misma.
+          También podríamos definir la función por separado y escribir este mismo
+          programa de la siguiente manera:\n\n    function doSomething() {\n    \t//
+          Hacer algo\n    }\n    \n    onEvent(\"botón\", \"clic\", hacerAlgo);\n\n\nEn
+          el segundo ejemplo, fíjate que cuando pasamos la función `hacerAlgo` a la
+          función `onEvent` no _incluimos el paréntesis al final. Esto es porque en
+          realidad estamos pasando la función completa como un objeto."
       SimonSays-Unplugged:
         markdown: |-
           # Simón Dice
@@ -6868,12 +7064,25 @@ es-MX:
             hará que el programa falle? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota.
+        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
+            "avance".
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: No lo sé.
+          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
+            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
+            suficientes veces para llegar a la bellota.
         questions:
-        - {}
+        - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
+            problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
@@ -7064,6 +7273,8 @@ es-MX:
             clic en "Ejecutar"?
       courseD_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
+          para crear."
       courseD_external_binary1:
         markdown: "<h1>Dibuja con binario</h1>\n \n<h3>Binario es una forma de representar
           información usando solo dos opciones. En este caso, <b>apagado</b> y <b>encendido</b>.\n<br/>\nAquí,
@@ -8074,8 +8285,26 @@ es-MX:
             "Ejecutar"?
       courseD_project_exemplars_2020_2021:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de empezar, dedica un tiempo a mirar los ejemplos de proyecto.
+
+
+          | Velocidad aleatoria en el rebote (baloncesto) | Multiplicación de las tropas de asalto (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | ¡La bola cambia de velocidad cuando rebota! | ¡Evita a los stormtroopers o se multiplicarán! |
+
+
+          | ¡Pánico! en la Discoteca (Fiesta de Baile) | Escena de Playa (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | ¡Tus bailarines de fondo siguen cambiando sus movimientos! | ¡Intenta añadir más color y fondo a esta escena! |
+
       courseE_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
       courseE_multi_bee_functions_predict1:
         answers:
         - text: El mismo programa también funcionará para resolver este desafío.
@@ -8266,12 +8495,46 @@ es-MX:
 
       courseE_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# Ejemplos de proyectos\n\nEstás a punto de comenzar tu proyecto
+          fin de curso. Antes de empezar, dedica un tiempo a mirar los proyectos de
+          ejemplo.\n\n## Laboratorio de Sprite\n\n| Baile de Monstruos (Laboratorio
+          de Sprite) | Juego de Pastelitos (Laboratorio de Sprite)\n|---|---|\n| [![Monster
+          Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Intenta añadir un texto o una puntuación a este juego. | Intenta añadir
+          un texto o una puntuación a este juego. |\n\n## Artista\n\n| Patrón (Artista)
+          | Flores de Copos de Nieve (Frozen) | \n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Seamos creativos con los bucles anidados. | Seamos creativos con las
+          funciones. |\n"
       courseExpress_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado a la última lección del Curso Express! Elige un
+          proyecto para crear."
       courseExpress_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto fin de curso. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          | ¡Pánico en la discoteca! (Fiesta de baile) | Escena de la playa (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | ¡Ponte a bailar en la discoteca mientras tus bailarines de fondo cambian el ritmo! | ¡Intenta añadir más color y fondo a esta escena! |
+
+          | Flores de copos de nieve (Frozen) | Juego del avión (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | ¡Pongámonos creativos con las funciones! | ¡Intenta añadir texto o una puntuación a este juego! |
+
       courseF_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
       courseF_bee_variables_8a_2018:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
@@ -8874,6 +9137,25 @@ es-MX:
           | Pongámonos creativos con las variables. | ¡Seremos creativos con los bucles For! |
       courseF_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          ## Laboratorio de Sprite
+
+          ## Juego de Magdalenas (Sprite Lab) ## Juego de Aviones (Sprite Lab)
+          |---|---|
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Airplane Game (Sprite Lab)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | ¡Intenta añadir texto o una puntuación a este juego! | ¡Intenta añadir texto o una puntuación a este juego! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flowers (Artist)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Spiral (Artist)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+          | ¡Seamos creativos con las variables! | ¡Seamos creativos con los bucles For! |
+
       coursee_prediction_artistfunction2:
         answers:
         - text: El artista resolverá el desafío correctamente.
@@ -10112,4 +10394,18 @@ es-MX:
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
         title: "¡Encuesta rápida de CS Discoveries!"
       csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # El poder de las palabras
+
+          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Información privada y personal
+
+          ## ¿Qué información sobre tí es adecuada para compartir en línea?
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
         title: "¡Encuesta rápida de CS Discoveries!"
