@@ -186,7 +186,19 @@ function interpreterGetValue(object, key) {
 
 export function getValue(object, key, calledWithinInterpreter) {
   const objectContents = calledWithinInterpreter ? object.properties : object;
-  return objectContents.key.data;
+  const keyData = key.data;
+  return objectContents[keyData].data;
+}
+
+function interpreterAddPair(object, key, value) {
+  return addPair(object, key, value, true);
+}
+
+export function addPair(object, key, value, calledWithinInterpreter) {
+  const newKey = key.data;
+  const objectContents = calledWithinInterpreter ? object.properties : object;
+  objectContents[newKey] = value;
+  return objectContents;
 }
 
 // ImageData RGB helper functions
@@ -287,6 +299,7 @@ const interpreterFunctions = {
   removeItem: interpreterRemoveItem,
   appendItem: interpreterAppendItem,
   getValue: interpreterGetValue,
+  addPair: interpreterAddPair,
   getRed: interpreterGetRed,
   getGreen: interpreterGetGreen,
   getBlue: interpreterGetBlue,

@@ -1,12 +1,14 @@
 {
-  "func": "getValue",
+  "func": "addPair",
   "category": "Variables",
   "paletteParams": [
     "object",
-    "\"key\""
+    "\"key\"",
+    "\"value\""
   ],
   "params": [
     "object",
-    "\"key\""
+    "\"key\"",
+    "\"value\""
   ]
 }
