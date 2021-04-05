@@ -107,7 +107,10 @@ html[dir='rtl'] #visualizationColumn {
   }
 }
 
-.accessibility-friendly-no-focus-outline:focus:not(:focus-visible) {
+// Use the focus-visible pseudoclass to hide the outline when clicked.
+// This leaves the outline behavior unchanged for keyboard navigation.
+// Note: this isn't supported in every browser yet.
+.no-focus-outline:focus:not(:focus-visible) {
   outline: none;
 }
 
