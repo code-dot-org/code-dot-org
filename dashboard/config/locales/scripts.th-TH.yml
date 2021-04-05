@@ -3399,7 +3399,7 @@ th:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
           lesson_groups:
             ramp_up:
-              display_name: ลูป
+              display_name: ลูปซ้อนลูป
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             csf_nested_loops:
