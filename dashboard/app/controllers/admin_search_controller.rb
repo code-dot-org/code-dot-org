@@ -73,6 +73,9 @@ class AdminSearchController < ApplicationController
     redirect_to :lookup_section
   end
 
+  def pilots
+  end
+
   def show_pilot
     @pilot_name = params[:pilot_name]
     return head :bad_request unless Experiment::PILOT_EXPERIMENTS.find {|p| p[:name] == @pilot_name}
