@@ -43,12 +43,12 @@ describe('LessonStandards', () => {
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
 
-    const parentCategories = wrapper.find('ParentCategory');
+    const parentCategories = wrapper.find('UnconnectedParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.false;
     });
-    const categories = wrapper.find('Category');
+    const categories = wrapper.find('UnconnectedCategory');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.false;
@@ -63,11 +63,11 @@ describe('LessonStandards', () => {
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
 
-    const parentCategories = frameworks.at(0).find('ParentCategory');
+    const parentCategories = frameworks.at(0).find('UnconnectedParentCategory');
     expect(parentCategories.length).to.equal(1);
     expect(isOpen(parentCategories.at(0))).to.be.true;
 
-    const categories = parentCategories.at(0).find('Category');
+    const categories = parentCategories.at(0).find('UnconnectedCategory');
     expect(categories.length).to.equal(2);
     expect(isOpen(categories.at(0))).to.be.true;
     expect(isOpen(categories.at(1))).to.be.false;
@@ -81,13 +81,13 @@ describe('LessonStandards', () => {
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
 
-    const parentCategories = wrapper.find('ParentCategory');
+    const parentCategories = wrapper.find('UnconnectedParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.true;
     });
 
-    const categories = wrapper.find('Category');
+    const categories = wrapper.find('UnconnectedCategory');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.true;
