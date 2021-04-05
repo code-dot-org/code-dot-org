@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-29 23:47:41 UTC",
+    "serialized_at": "2021-04-02 22:13:38 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -4922,7 +4922,7 @@
       "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "RGB Color",
         "level_keys": [
@@ -4948,7 +4948,7 @@
       "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -4974,7 +4974,7 @@
       "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "More Shades of Color",
         "level_keys": [
@@ -5000,7 +5000,7 @@
       "chapter": 25,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5026,7 +5026,7 @@
       "chapter": 26,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5052,7 +5052,7 @@
       "chapter": 27,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Color Sampling",
         "level_keys": [
@@ -5078,7 +5078,30 @@
       "chapter": 28,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
+      "properties": {
+        "progression": "Pixelation Widget: Color"
+      },
+      "named_level": null,
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U1 Sampling Widget"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
+      },
+      "level_keys": [
+        "U1 Sampling Widget"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
         "progression": "Pixelation Widget: Color",
         "level_keys": [
@@ -5101,8 +5124,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 8,
+      "chapter": 30,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5127,8 +5150,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5153,7 +5176,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5179,7 +5202,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": null,
@@ -5205,7 +5228,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5231,7 +5254,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5257,7 +5280,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": null,
@@ -5283,7 +5306,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": null,
@@ -5309,7 +5332,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5335,7 +5358,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5360,7 +5383,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5385,7 +5408,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5411,7 +5434,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5437,7 +5460,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5786,6 +5809,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2021",
         "activity_section.key": "58b93972-cb49-482a-bedf-93f3ef51e9f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U1 Sampling Widget",
+        "script_level.level_keys": [
+          "U1 Sampling Widget"
+        ],
+        "lesson.key": "Color Images",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2021",
+        "activity_section.key": "c3c484f5-36a4-42a8-824e-3a81bb1c84ca"
       }
     },
     {
@@ -7179,5 +7214,8 @@
         "standard.shortcode": "3A-IC-28"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

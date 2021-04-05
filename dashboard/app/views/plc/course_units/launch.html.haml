@@ -1,0 +1,21 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/plc', media: 'all'
+
+%h1 Launch PLC Courses
+
+= form_tag(action: 'launch_plc_course') do
+  %div#notice{style: '-webkit-user-select: initial'}
+    = params[:notice].try(:html_safe)
+
+  .field
+    = label_tag 'Pick a Course to Launch'
+    = select_tag :plc_course_unit_id, options_for_select(options_for_plc_course_launch)
+
+  .actions
+    = submit_tag('Launch Course', id: 'launchCourse')
+
+%div
+  %h3 Already Launched PLC Courses
+  - launched_plc_courses.each do |course|
+    %p
+      =course
