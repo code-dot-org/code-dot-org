@@ -36,6 +36,7 @@ class XhrProxyController < ApplicationController
     api.football-data.org
     api.foursquare.com
     api.fungenerators.com
+    api.funtranslations.com
     api.mojang.com
     api.nasa.gov
     api.nookipedia.com
@@ -72,6 +73,7 @@ class XhrProxyController < ApplicationController
     hamlin.myschoolapp.com
     herokuapp.com
     hubblesite.org
+    icanhazdadjoke.com
     images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
