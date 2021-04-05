@@ -949,6 +949,14 @@ export var blocks = [
     params: ['object', '"key"'],
     dontMarshal: true
   },
+  {
+    func: 'addPair',
+    parent: dontMarshalApi,
+    category: 'Variables',
+    paletteParams: ['object', '"key"', '"value"'],
+    params: ['object', '"key"', '"value"'],
+    dontMarshal: true
+  },
 
   {
     func: 'imageUploadButton',
