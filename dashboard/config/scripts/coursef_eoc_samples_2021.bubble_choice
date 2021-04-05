@@ -1,6 +1,6 @@
 name 'courseF_EOC_samples_2021'
 display_name 'End of Course Project'
-description 'You have reached the end of Course F! Choose a project to create.'
+description 'You are about to start your final project. Before you begin, spend some time looking at the example projects.'
 
 sublevels
 level 'courseC19_playLab_sample1_2021'
