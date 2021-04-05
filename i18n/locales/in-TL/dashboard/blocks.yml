@@ -1284,6 +1284,8 @@ in:
             '"height"': crwdns169140:0crwdne169140:0
       gamelab_setTint:
         text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
+      gamelab_setupScoreboard:
+        text: crwdns2485636:0[SPRITE1COSTUME]crwdnd2485636:0[0]crwdnd2485636:0[VAR1]crwdnd2485636:0[1]crwdnd2485636:0[SPRITE2COSTUME]crwdnd2485636:0[2]crwdnd2485636:0[VAR2]crwdnd2485636:0[3]crwdnd2485636:0[SPRITE3COSTUME]crwdnd2485636:0[4]crwdne2485636:0
       gamelab_setupSim:
         text: crwdns401124:0[SPRITE1N]crwdnd401124:0[0]crwdnd401124:0[SPRITE1COSTUME]crwdnd401124:0[1]crwdnd401124:0[SPRITE1SPEED]crwdnd401124:0[2]crwdnd401124:0[SPRITE2N]crwdnd401124:0[3]crwdnd401124:0[SPRITE2COSTUME]crwdnd401124:0[4]crwdnd401124:0[SPRITE2SPEED]crwdnd401124:0[5]crwdnd401124:0[SPRITE3N]crwdnd401124:0[6]crwdnd401124:0[SPRITE3COSTUME]crwdnd401124:0[7]crwdne401124:0
       gamelab_showTitleScreen:
