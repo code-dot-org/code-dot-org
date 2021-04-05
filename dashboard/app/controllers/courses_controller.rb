@@ -92,7 +92,10 @@ class CoursesController < ApplicationController
   def update
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_scripts_changes(params[:scripts], params[:alternate_scripts], i18n_params)
-    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
+    unit_group.update_teacher_resources(params[:resourceTypes], params[:resourceLinks]) unless unit_group.has_migrated_script?
+    if unit_group.has_migrated_script? && unit_group.course_version
+      unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)}
+    end
     # Convert checkbox values from a string ("on") to a boolean.
     [:has_verified_resources, :has_numbered_units, :visible, :is_stable].each {|key| params[key] = !!params[key]}
     unit_group.update(course_params)

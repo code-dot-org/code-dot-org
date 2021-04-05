@@ -11,12 +11,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd3"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
@@ -25,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:14 UTC",
+    "serialized_at": "2021-03-26 15:41:14 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -16975,6 +16969,17 @@
       "seeding_key": {
         "resource.key": "make-your-own-game-1-2-3"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd3",
+      "key": "teacher_forum_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
+      }
     }
   ],
   "lessons_resources": [
@@ -17406,7 +17411,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
+        "script.name": "csd3-2021"
+      }
+    }
   ],
   "vocabularies": [
     {

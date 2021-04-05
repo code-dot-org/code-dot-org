@@ -14,16 +14,6 @@
       "lesson_extras_available": true,
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
-        ]
-      ],
       "is_course": true,
       "is_migrated": true,
       "has_lesson_plan": true
@@ -8200,6 +8190,28 @@
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "key": "curriculum_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide"
+      }
     }
   ],
   "lessons_resources": [
@@ -8421,7 +8433,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide",
+        "script.name": "coursef-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
