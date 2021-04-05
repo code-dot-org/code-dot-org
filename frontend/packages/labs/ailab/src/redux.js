@@ -1152,7 +1152,7 @@ function isPanelEnabled(state, panelId) {
   return true;
 }
 
-function  isPanelAvailable(state, panelId) {
+function isPanelAvailable(state, panelId) {
   const mode = state.mode;
 
   if (panelId === "selectDataset") {
