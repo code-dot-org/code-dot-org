@@ -180,6 +180,15 @@ export function appendItem(
   }
 }
 
+function interpreterGetValue(object, key) {
+  return getValue(object, key, true);
+}
+
+export function getValue(object, key, calledWithinInterpreter) {
+  const objectContents = calledWithinInterpreter ? object.properties : object;
+  return objectContents.key.data;
+}
+
 // ImageData RGB helper functions
 
 // TODO: more parameter validation (data array type, length), error output
@@ -277,6 +286,7 @@ const interpreterFunctions = {
   insertItem: interpreterInsertItem,
   removeItem: interpreterRemoveItem,
   appendItem: interpreterAppendItem,
+  getValue: interpreterGetValue,
   getRed: interpreterGetRed,
   getGreen: interpreterGetGreen,
   getBlue: interpreterGetBlue,
