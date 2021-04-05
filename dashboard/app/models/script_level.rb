@@ -369,7 +369,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false)
+  def summarize(include_prev_next=true, user=nil, for_edit: false)
     kind =
       if level.unplugged?
         LEVEL_KIND.unplugged
@@ -398,6 +398,10 @@ class ScriptLevel < ApplicationRecord
       bonus: bonus,
       display_as_unplugged: level.display_as_unplugged?
     }
+
+    if user
+      summary[:locked] = locked?(user)
+    end
 
     if progression
       summary[:progression] = progression
