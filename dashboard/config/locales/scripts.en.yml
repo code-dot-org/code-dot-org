@@ -22004,20 +22004,47 @@ en:
             Poem Bot:
               name: Poem Bot
             Introducing Sprite Lab:
-              name: Introducing Sprite Lab
+              name: Programming Ramp Up for Poem Bot
+            write a haiku:
+              name: Write a Haiku
+            Plan Your Haiku Poem:
+              name: Plan Your Haiku Poem
+            Programming Poem Bot:
+              name: Programming Poem Bot
+            poetry circle:
+              name: Poetry Circle
           lesson_groups:
             haiku bot:
               display_name: Haiku Bot
             poem bot:
-              display_name: Poem Bot
+              display_name: Programming Poem Bot
             rampup:
-              display_name: Introducing Sprite Lab
+              display_name: Programming Ramp Up for Poem Bot
               description: Learn the basics of coding with sprites and text!
+            write a haikut:
+              display_name: Write a Haiku
+            plan your poem:
+              display_name: Plan Your Haiku Poem
+            poetry circle:
+              display_name: Poetry Circle
+            Lesson 1:
+              display_name: Lesson 1
+              description: Learn the basics of coding with sprites and text!
+            Lesson 2:
+              display_name: Lesson 2
+            Lesson 3:
+              display_name: Lesson 3
+            Lesson 4:
+              display_name: Lesson 4
+            Lesson 5:
+              display_name: Lesson 5
+            Peom Bot:
+              display_name: Poem Bot
           name: haikubot-pilot
-          title: Poem Bot
+          title: Poem Bot (Pilot)
           description_audience: Grade 4, Grade 5
           description_short: 'In this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. '
-          description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Haiku Bot. Once they’ve built their Haiku Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
+          description: "**Overview:** \nIn this module, students will create a haiku poem generator in a Mad Libs style using what they know about the elements of poetry, diction, and coding with variables. First, students will study the structure and elements of a haiku poem by reading poems together, decomposing a haiku poem into its parts, and writing a haiku. Then, over the course of the next two lessons, students will learn how computers can take in user input and store it in its memory and will build a Poem Bot. Once they’ve built their Poem Bot, they will test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle. \n"
           student_description: Use Sprite Lab to make a Haiku Bot!
         allthemigratedthings:
           lessons:

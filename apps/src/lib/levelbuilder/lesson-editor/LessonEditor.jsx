@@ -69,6 +69,7 @@ class LessonEditor extends Component {
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
     standards: PropTypes.arrayOf(standardShape).isRequired,
+    opportunityStandards: PropTypes.arrayOf(standardShape).isRequired,
     initActivities: PropTypes.func.isRequired
   };
 
@@ -128,6 +129,7 @@ class LessonEditor extends Component {
           this.props.programmingExpressions
         ),
         standards: JSON.stringify(this.props.standards),
+        opportunityStandards: JSON.stringify(this.props.opportunityStandards),
         announcements: JSON.stringify(this.state.announcements),
         originalLessonData: JSON.stringify(this.state.originalLessonData)
       })
@@ -182,7 +184,7 @@ class LessonEditor extends Component {
       preparation,
       announcements
     } = this.state;
-    const {relatedLessons} = this.props;
+    const {relatedLessons, standards, opportunityStandards} = this.props;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
@@ -441,7 +443,15 @@ class LessonEditor extends Component {
               collapsed={true}
               fullwidth={true}
             >
-              <StandardsEditor />
+              <StandardsEditor
+                standardType={'standard'}
+                standards={standards}
+              />
+              <h3>Opportunity Standards</h3>
+              <StandardsEditor
+                standardType={'opportunityStandard'}
+                standards={opportunityStandards}
+              />
             </CollapsibleEditorSection>
           </div>
         )}
@@ -468,7 +478,8 @@ export default connect(
     resources: state.resources,
     vocabularies: state.vocabularies,
     programmingExpressions: state.programmingExpressions,
-    standards: state.standards
+    standards: state.standards,
+    opportunityStandards: state.opportunityStandards
   }),
   {
     initActivities

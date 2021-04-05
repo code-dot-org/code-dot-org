@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-03-30 21:02:46 UTC",
+    "serialized_at": "2021-04-02 21:07:31 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -6665,16 +6665,13 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploration: Sample Project",
-        "level_keys": [
-          "Begin planning your project_2021"
-        ]
+        "progression": "Exploration: Sample Project"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Begin planning your project_2021"
+          "courseF_EOC_samples_2021"
         ],
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "lesson_group.key": "end_of_course_project",
@@ -6682,7 +6679,7 @@
         "activity_section.key": "1c65a4a2-b069-4b30-b733-a80c5081f8e3"
       },
       "level_keys": [
-        "Begin planning your project_2021"
+        "courseF_EOC_samples_2021"
       ]
     },
     {
@@ -8309,9 +8306,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Begin planning your project_2021",
+        "level.key": "courseF_EOC_samples_2021",
         "script_level.level_keys": [
-          "Begin planning your project_2021"
+          "courseF_EOC_samples_2021"
         ],
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "lesson_group.key": "end_of_course_project",
@@ -10138,5 +10135,8 @@
         "standard.shortcode": "1A-AP-15"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
