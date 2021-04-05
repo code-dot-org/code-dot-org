@@ -507,7 +507,8 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
-        testData: {}
+        testData: {},
+        prediction: {}
       };
     }
 
@@ -1151,7 +1152,7 @@ function isPanelEnabled(state, panelId) {
   return true;
 }
 
-function isPanelAvailable(state, panelId) {
+function  isPanelAvailable(state, panelId) {
   const mode = state.mode;
 
   if (panelId === "selectDataset") {
