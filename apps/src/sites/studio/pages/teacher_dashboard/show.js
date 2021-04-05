@@ -15,7 +15,8 @@ import teacherSections, {
   setValidAssignments,
   setValidGrades,
   setTextToSpeechScriptIds,
-  setPreReaderScriptIds
+  setPreReaderScriptIds,
+  setStageExtrasScriptIds
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
@@ -49,6 +50,7 @@ const {
   localeCode,
   textToSpeechScriptIds,
   preReaderScriptIds,
+  lessonExtrasScriptIds,
   showSectionProgressDetails
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -82,6 +84,7 @@ $(document).ready(function() {
   store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setValidGrades(validGrades));
   store.dispatch(setLocaleCode(localeCode));
+  store.dispatch(setStageExtrasScriptIds(lessonExtrasScriptIds));
   store.dispatch(setTextToSpeechScriptIds(textToSpeechScriptIds));
   store.dispatch(setPreReaderScriptIds(preReaderScriptIds));
   store.dispatch(setShowSectionProgressDetails(showSectionProgressDetails));
