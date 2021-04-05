@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class JavaBuilderSessionsControllerTest < ActionController::TestCase
+class JavabuilderSessionsControllerTest < ActionController::TestCase
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
