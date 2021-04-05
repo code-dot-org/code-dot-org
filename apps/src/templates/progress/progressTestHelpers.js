@@ -43,7 +43,10 @@ export const fakeLevel = (overrides = {}) => {
   };
 };
 
-export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
+export const fakeLevels = (
+  numLevels,
+  {startLevel = 1, named = true, locked} = {}
+) =>
   _.range(numLevels).map(index => {
     let overrideData = {
       id: index + startLevel,
@@ -51,6 +54,9 @@ export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
     };
     if (!named) {
       overrideData['name'] = undefined;
+    }
+    if (locked !== undefined) {
+      overrideData['locked'] = locked;
     }
     return fakeLevel(overrideData);
   });
