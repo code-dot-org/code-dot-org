@@ -1,5 +1,4 @@
 hideable_lessons true
-teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
