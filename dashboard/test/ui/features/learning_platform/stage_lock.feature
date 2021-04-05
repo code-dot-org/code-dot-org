@@ -1,8 +1,5 @@
 Feature: Stage Locking
 
-# Currently bypasses bug where course overview lock icon for student
-# misrepresents lock status if not locked for all students
-
 Background:
   Given I create an authorized teacher-associated student named "bobby"
   Given I create an authorized teacher-associated student named "billy"
