@@ -8,6 +8,7 @@ import {
   stringForType,
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const styles = {
   dropdown: {
@@ -18,7 +19,9 @@ const styles = {
 
 export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose
     unitGroupId: PropTypes.number,
@@ -62,8 +65,35 @@ export default class TeacherResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {resources} = this.props;
+    const {
+      teacherResources,
+      migratedTeacherResources,
+      useMigratedResources
+    } = this.props;
 
+    const dropdownResources = useMigratedResources
+      ? migratedTeacherResources.map(resource => (
+          <a
+            key={resource.key}
+            href={resource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={this.handleItemClick}
+          >
+            {resource.name}
+          </a>
+        ))
+      : teacherResources.map(({type, link}, index) => (
+          <a
+            key={index}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={this.handleItemClick}
+          >
+            {stringForType[type]}
+          </a>
+        ));
     return (
       <div style={styles.dropdown}>
         <DropdownButton
@@ -71,17 +101,7 @@ export default class TeacherResourcesDropdown extends React.Component {
           color={Button.ButtonColor.blue}
           onClick={this.handleDropdownClick}
         >
-          {resources.map(({type, link}, index) => (
-            <a
-              key={index}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={this.handleItemClick}
-            >
-              {stringForType[type]}
-            </a>
-          ))}
+          {dropdownResources}
         </DropdownButton>
       </div>
     );
