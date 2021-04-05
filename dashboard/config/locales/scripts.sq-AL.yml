@@ -2814,7 +2814,7 @@ sq:
               name: Të shkruarit e Këngëve
           lesson_groups:
             ramp_up:
-              display_name: cikle
+              display_name: Përsëritjet e Mbivendosura
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -2877,6 +2877,12 @@ sq:
               name: Lekcioni 14
             lesson15:
               name: Lekcioni 15
+            lesson17:
+              name: Lekcioni 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

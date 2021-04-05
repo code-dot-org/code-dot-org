@@ -997,8 +997,6 @@ ms:
             Conditionals:
               key: Bersyarat
           lesson_groups:
-            ramp_up:
-              display_name: Gelung
             csf_sprites:
               display_name: Jin
             csf_nested_loops:

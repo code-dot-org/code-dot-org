@@ -120,7 +120,10 @@ es:
     need_unlock: "¿No recibiste las instrucciones de desbloqueo?"
     not_linked: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Tendrás que escribir tu contraseña debajo para iniciar sesión."
     use_clever: "Lo sentimos, tu cuenta de Code.org no está vinculada a tu %{provider}. Por favor, inicia sesión a través de tu Portal Clever."
+    invalid_provider: "Lo sentimos, %{provider} las cuentas no pueden ser vinculadas a las cuentas de Code.org."
+    migration_required: "Lo sentimos, no podemos conectar o desconectar las cuentas que todavía utilizan la versión antigua de cuenta. Por favor, actualice a la nueva versión de la cuenta."
     unable_to_connect_provider: "No se pudo conectar tu cuenta de Code.org a tu %{provider}. Por favor, inténtalo de nuevo."
+    disconnect_successful: "¡Correcto! Hemos desconectado la cuenta externa de su cuenta de Code.org."
     already_in_use: "Tu %{provider} ya está conectado a otra cuenta de Code.org."
     already_linked: "La cuenta con tu %{provider} ya está vinculada a tu cuenta de Code.org."
     existing_account:
@@ -261,6 +264,7 @@ es:
     invite_sent: 'Invitación enviada'
     added_teacher: '%{name} añadido como tu profesor'
     registered: "Se/te ha/has inscrito en % {section_name}."
+    captcha_required: 'Por favor, rellene el CAPTCHA para entrar en esta sección.'
     error:
       signed_in: 'Cierra la sesión antes de continuar'
       username_not_found: 'Usuario %{username} no encontrado'
@@ -317,6 +321,7 @@ es:
       game_lab_tutorials: "Tutoriales del Laboratorio de juegos"
       sprite_lab_documentation: "Documentación del Laboratorio de sprites"
       sprite_lab_tutorials: "Tutoriales del Laboratorio de sprites"
+      web_lab_documentation: "Documentación del Laboratorio Web"
       educate_overview: "Resumen del docente"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
@@ -430,6 +435,7 @@ es:
       worked_with: 'Trabajado con'
       update_lock_settings: 'Actualiza la configuración de bloqueo aquí.'
       clear_response: 'Respuesta clara'
+    student_code_view_diabled: 'El código del alumno no puede ser consultado para esta actividad.'
   user:
     email_confirm_needed: 'La dirección de correo electrónico no ha sido confirmada:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no ha sido confirmada:'
@@ -543,6 +549,7 @@ es:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos los derechos reservados. Star Wars&#8482; &copy; %{current_year} Disney y Lucasfilm. Todos los derechos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos los derechos reservados. La Era de Hielo&#8482; &copy; %{current_year} 20th Century Fox. Todos los derechos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos los derechos reservados. Plantas vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos los derechos reservados. El asombroso mundo de Gumball es marca comercial y &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Impulsado por Amazon Web Services'
+    google_copyright: '&copy; Google Inc. utilizado con permiso. Google Classroom es una marca comercial de Google Inc.'
     trademark: '© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de Hora de Code ® son marcas registradas de Code.org.'
     copyright: 'Derechos de autor'
     more: 'Más'
@@ -970,6 +977,7 @@ es:
       school_country: 'País en el que está la escuela'
       colombian_school_city: 'Ciudad de la escuela'
       colombian_school_department: 'Departamento de Escuela'
+      colombian_school_municipality: 'Municipio escolar'
       colombian_school_name: 'Nombre de la escuela'
       ages: '¿A qué grupos de edades enseñas este año?'
       subjects: '¿Qué materias enseñas este año?'
@@ -990,6 +998,7 @@ es:
       school_country:
         canada: 'Canadá'
         chile: 'Chile'
+        colombia: 'Colombia'
         israel: 'Israel'
         malaysia: 'Malasia'
         mexico: 'México'
@@ -1048,7 +1057,9 @@ es:
       intro: "Gracias por tomarte el tiempo de conocer el plan de estudios de Code.org. Nuestra misión de enseñar ciencias de la computación a cada niño de cada escuela alrededor del mundo no sería posible sin ti."
       instructions: "Completa el formulario a continuación para indicar que 1) asististe a un taller a cargo de uno de los socios internacionales de Code.org, y 2) estás de acuerdo en compartir tu información con nuestros socios internacionales en tu país, para que puedan ayudarte en tu viaje como docente de ciencias de la computación."
       thanks_markdown: "¡Gracias por enviarnos tu solicitud! Esperamos acompañarte mientras conoces el plan de estudios y las herramientas de Code.org. Si quieres compartir tus dudas y sugerencias con nosotros, ¡puedes escribirnos a [support@code.org](%{support_email_url}) o publicar en el [foro de docentes](%{teacher_forum_url})!"
+      facilitator_not_listed: "Mi moderador no aparece en la lista"
       facilitator_not_applicable: "No aplicable"
+      organizer_not_listed: "Mi organizador no aparece en la lista"
     logged_out:
       heading: '¡Gracias por tu interés en el Programa de Aprendizaje Profesional!'
       body: 'Para empezar, necesitas iniciar sesión en tu cuenta de Code.org. Si quieres obtener más información acerca del programa antes de iniciar tu solicitud, echa un vistazo al <a href="%{url}">Programa de Aprendizaje Internacional</a>.'
@@ -1067,6 +1078,7 @@ es:
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
   copy: 'Copiar'
+  confirm: 'Confirmar'
   maker:
     google_oauth:
       login_with_google: 'Inicia sesión en la aplicación Maker con Google'
@@ -1076,9 +1088,12 @@ es:
       error_wrong_provider: 'Proveedor incorrecto. Asegúrate de iniciar sesión con Google.'
       error_invalid_user: 'ID de usuario inválida. Intenta iniciar sesión de nuevo.'
       error_no_code: 'Por favor, ingresa tu código de inicio de sesión.'
+      confirm_login: 'Selecciona "Confirmar" para iniciar sesión con tu cuenta de Google.'
   parent_email_banner:
     text: "** Ste rodič alebo zákonný zástupca dieťaťa? ** Prepojte svoj e-mail s týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
     link_your_email: "Prepojte svoj e-mail"
     not_now: "Teraz nie"
   behaviors:
     this_sprite: "Este sprite"
+  unit_prefix: "Unidad %{n}"
+  code_org_logo_alt: "Inicio de Code.org"

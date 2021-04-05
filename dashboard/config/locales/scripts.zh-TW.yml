@@ -1135,6 +1135,8 @@ zh-TW:
               name: 包含關卡
             ML Fish:
               name: ML 魚
+            Java Lab:
+              name: Java 實驗室
         algebraPD2b:
           title: 代數裡的計算機科學 PD
           description: 階段 2 暑假的線上混合式學習
@@ -16740,6 +16742,8 @@ zh-TW:
               name: 編碼一個模擬
             Sprites in Action:
               name: 運行中的角色
+            End of Course Project:
+              name: 課程結束專案
           lesson_groups:
             introduction:
               display_name: 介紹
@@ -18460,6 +18464,7 @@ zh-TW:
               key: 外星人舞蹈派對
               name: 外星人舞蹈派對
               description_student: 製作可與同學分享的互動專案。
+              description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
             Behaviors in Sprite Lab:
               key: Sprite Lab 的行為（Behavior）
               name: Sprite Lab 的行為（Behavior）
@@ -18814,6 +18819,15 @@ zh-TW:
               name: 第 14 課
             lesson15:
               name: 第 15 課
+            lesson17:
+              name: 第 15 課
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 課堂 15：評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
         k5-onlinepd-2021:
           title: 計算機科學基礎的教授
           description: 使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！

@@ -3,7 +3,9 @@ ar:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} كل بديل {N} التدابير \nبين {MOVE1} و {MOVE2}"
+        text: |-
+          {GROUP} بدل كل {N} مقياس
+          بين {MOVE1} و {MOVE2}
         options:
           GROUP:
             sprites: الكل

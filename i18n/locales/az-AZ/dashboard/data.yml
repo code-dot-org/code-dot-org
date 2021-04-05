@@ -184,6 +184,7 @@ az:
         Unplug4: Alqoritmlər
         Unplug5: Funksiyalar
         Unplug6: Şərti ifadələr
+        Unplug7: Mahnı yazma
         Unplug8: Mücərrədlik
         Unplug9: Estafet proqramlaşdırması
         Unplug10: İnternet
@@ -214,12 +215,14 @@ az:
         C3_computational_thinking: Hesablama təfəkkürü
         C3_dice_race: Zər Yarışı
         C3_internet: İnternet
+        C3_functional_suncatchers: Funksional muncuqlar
         C4_intro: Giriş
         C4_loops_zombie: dövrlər
         C4_bee_conditional: Arı Şərti ifadələr
         C4_function_parameters: Parametrli funksiyalar
         C4_conditionals: Şərti ifadələr
         C4_unplugged_binary: İkilik
+        CSF_Super_Digital_Citizen: Super rəqəmsal vətəndaş
         frozen_intro: Kod Saatına giriş
         frozen_loops: Dövrlərə giriş
         frozen_functions: Funksiyalara giriş
