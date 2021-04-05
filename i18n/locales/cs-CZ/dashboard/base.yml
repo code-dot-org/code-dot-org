@@ -19,6 +19,11 @@ cs:
       pair_programmer: 'Právě pracuješ v páru se studentem, který nemá přístup k tomuto obsahu. Aby ses mohl sem dostat, zruš programování v páru a začni znovu.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "je neplatný. Každý odkaz může být použit pro nastavení hesla pouze jednou a pouze poslední zaslaný odkaz bude fungovat."
       messages:
         blank: "je požadováno"
         blank_plural: "jsou potřeba"
@@ -115,9 +120,14 @@ cs:
     need_unlock: "Nezískal si instrukce pro odemčení?"
     not_linked: "Váš účet Code.org není propojen s %{provider}. Budete se muset přihlásit zadáním vašeho hesla níže."
     use_clever: "Váš účet Code.org není bohužel propojen se systémem %{provider}. Přihlaste se prosím prostřednictvím systému Clever Portal."
+    invalid_provider: "Je nám líto, %{provider} účty nelze propojit s účty Code.org."
+    migration_required: "Je nám líto, nemůžeme připojit nebo odpojit účty, který stále používají staré nastavení. Přejděte na nové nastavení účtu."
     unable_to_connect_provider: "Váš účet Code.org nelze propojit se systémem %{provider}. Opakujte prosím akci."
+    disconnect_successful: "Povedlo se! Odpojili jsme externí účet z vašeho účtu Code.org."
     already_in_use: "Účet %{provider} je již připojen k jinému účtu Code.org."
     already_linked: "Účet %{provider} je již propojen s vaším účtem Code.org."
+    existing_account:
+      account_exists: "Dobrá zpráva! Již máte účet Code.org, který využívá %{email}"
   signup_form:
     email_signup: 'Zaregistrujte se svou e-mailovou adresou'
     student_count: 'Již se zaregistrovalo %{count} studentů.'
@@ -551,6 +561,7 @@ cs:
     upgrade:
       unsupported_message: "Váš prohlížeč není podporován. Nainstalujte a použijte některý z <a href='%{supported_browsers_url}', target='_blank'>podporovaných prohlížečů</a>. Můžete zkusit pokračovat se současným prohlížečem, ale mohou nastat chyby ve funkcionalitě."
       link: "Zjisti více"
+      oceans_unsupported_browser: "Tento kurz nepodporuje váš prohlížeč. Zkuste prosím použít Edge, Chrome, Firefox nebo jiný moderní prohlížeč."
   slow_loading: 'Trvá to déle než obvykle...'
   try_reloading: 'Zkus znovu načíst stránku'
   next_stage: 'Hotovo! Pokračuj do další fáze'
@@ -742,6 +753,7 @@ cs:
     reminder_desc_markdown: Aktualizovali jsme naše [Smluvní podmínky](%{tos_url})a[Ochranu osobních údajů](%{privacy_url}). Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.
     review_terms: "Zkontrolujte aktualizované podmínky"
   school_info_interstitial:
+    message: "Zadejte prosím níže údaje vaší školy."
     save: "Uložit"
   race_interstitial:
     title: "Dobrovolné: Pomozte nám sledovat pokrok ve zlepšení diverzity"
