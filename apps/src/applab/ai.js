@@ -49,6 +49,7 @@ function generateCodeDesignElements(modelId, modelData) {
   var predictionId = alphaNumModelName + '_prediction';
   var prediction = designMode.createElement('TEXT_INPUT', x, y);
   prediction.id = 'design_' + predictionId;
+  prediction.readOnly = true;
   y = y + 2 * SPACER_PIXELS;
   var predictButton = designMode.createElement('BUTTON', x, y);
   predictButton.textContent = 'Predict';
