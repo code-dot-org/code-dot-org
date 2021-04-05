@@ -22,7 +22,7 @@ level 'courseF_sprites_moreSprites', progression: 'Skill Building'
 level 'courseF_sprites_properties', progression: 'Skill Building'
 level 'courseF_sprites_behaviors', progression: 'Skill Building'
 level 'courseF_sprites_practice', progression: 'Practice'
-level 'courseF_sprites_freeplay', progression: 'Free Play - Make a Scene'
+level 'courseF_sprites_freeplay', progression: 'Free Play: Make a Scene'
 
 lesson 'lesson-8', display_name: 'Sprites in Action', has_lesson_plan: true
 level 'courseF_events_predict', progression: 'Prediction'
@@ -32,19 +32,22 @@ level 'courseF_events_time', progression: 'Skill Building'
 level 'courseF_events_key', progression: 'Skill Building'
 level 'courseF_events_conflict', progression: 'Skill Building'
 level 'courseF_events_practice', progression: 'Practice'
-level 'courseF_events_freeplay', progression: 'Free Play'
+level 'courseF_events_freeplay', progression: 'Free Play: Make an Interactive Scene'
 
 lesson 'Virtual Pet', display_name: 'Mini-Project: Virtual Pet', has_lesson_plan: true
 level 'Virtual Pet 1_2021', progression: 'Exploration'
-level 'Virtual Pet 2_2021', progression: 'Application: Create a Virtual Pet'
-level 'Virtual Pet 3_2021', progression: 'Application: Create a Virtual Pet'
-level 'Virtual Pet 5_2021', progression: 'Application: Create a Virtual Pet'
-level 'Virtual Pet 6_2021', progression: 'Application: Create a Virtual Pet'
-level 'Virtual Pet 7_2021', progression: 'Application: Create a Virtual Pet'
+level 'Virtual Pet 2_2021', progression: 'Mini-Project: Create a Virtual Pet'
+level 'Virtual Pet 3_2021', progression: 'Mini-Project: Create a Virtual Pet'
+level 'Virtual Pet 5_2021', progression: 'Mini-Project: Create a Virtual Pet'
+level 'Virtual Pet 6_2021', progression: 'Mini-Project: Create a Virtual Pet'
+level 'Virtual Pet 7_2021', progression: 'Mini-Project: Create a Virtual Pet'
 level 'Virtual Pet 8_2021', progression: 'Free Play'
 
+lesson_group 'lessonGroup-7', display_name: 'Digital Citizenship'
+lesson 'lesson-2', display_name: 'The Power of Words', has_lesson_plan: true
+
 lesson_group 'lessonGroup-8', display_name: 'Variables'
-lesson 'lesson-9', display_name: 'Blank Space Stories', has_lesson_plan: true
+lesson 'lesson-9', display_name: 'Blank Space Stories', has_lesson_plan: true, unplugged: true
 level 'EnvelopeVariables-Unplugged_2021_2', progression: 'Video: Unplugged Variables in Envelopes'
 
 lesson 'lesson-10', display_name: 'Text and Prompts', has_lesson_plan: true
