@@ -42,9 +42,6 @@ describe('LessonStandards', () => {
 
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    frameworks.forEach(framework => {
-      expect(isOpen(framework)).to.be.false;
-    });
 
     const parentCategories = wrapper.find('ParentCategory');
     expect(parentCategories.length > 0).to.be.true;
@@ -65,8 +62,6 @@ describe('LessonStandards', () => {
     );
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    expect(isOpen(frameworks.at(0))).to.be.true;
-    expect(isOpen(frameworks.at(1))).to.be.false;
 
     const parentCategories = frameworks.at(0).find('ParentCategory');
     expect(parentCategories.length).to.equal(1);
@@ -85,9 +80,6 @@ describe('LessonStandards', () => {
     );
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    frameworks.forEach(framework => {
-      expect(isOpen(framework)).to.be.true;
-    });
 
     const parentCategories = wrapper.find('ParentCategory');
     expect(parentCategories.length > 0).to.be.true;
