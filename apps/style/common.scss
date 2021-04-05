@@ -107,7 +107,7 @@ html[dir='rtl'] #visualizationColumn {
   }
 }
 
-#pause-button:focus:not(:focus-visible) {
+.accessibility-friendly-no-focus-outline:focus:not(:focus-visible) {
   outline: none;
 }
 
