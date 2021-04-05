@@ -678,8 +678,6 @@ ur:
             Conditionals:
               key: شرائط
           lesson_groups:
-            ramp_up:
-              display_name: لوپس
             csf_nested_loops:
               display_name: شرائط
         coursef-2021:
