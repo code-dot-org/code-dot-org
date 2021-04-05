@@ -145,11 +145,11 @@ describe('SpriteLab', () => {
       });
 
       describe('dispatching Blockly events', () => {
-        let store, eventSpy;
+        let store, eventSpy, originalMainBlockSpace;
         beforeEach(() => {
           store = getStore();
           instance.setupReduxSubscribers(store);
-
+          originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
           Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
           eventSpy = sinon.stub(Blockly.mainBlockSpace.events, 'dispatchEvent');
 
@@ -178,7 +178,10 @@ describe('SpriteLab', () => {
           eventSpy.reset();
         });
 
-        afterEach(() => eventSpy.restore());
+        afterEach(() => {
+          eventSpy.restore();
+          Blockly.blockly_.mainBlockSpace = originalMainBlockSpace;
+        });
 
         it('dispatches event when animations are added', () => {
           const newAnimation = {
