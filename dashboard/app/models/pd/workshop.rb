@@ -63,7 +63,7 @@ class Pd::Workshop < ApplicationRecord
     # Only current allowed values are "friday_institute" and nil.
     # "friday_institute" represents The Friday Institute,
     # a regional partner whose model of virtual workshop is being used
-    # by several partners during summer 2020.
+    # by several partners.
     'third_party_provider',
 
     # If true, our system will not send enrollees reminders related to this workshop.
