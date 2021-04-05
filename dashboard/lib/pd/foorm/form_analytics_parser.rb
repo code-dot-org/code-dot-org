@@ -22,28 +22,20 @@ module Pd::Foorm
     )
 
     def self.reshape_all_forms_and_export_to_csv
-      reshaped_forms = reshape_forms(::Foorm::Form.all)
-      reshaped_forms_to_csv(reshaped_forms)
-    end
-
-    def self.reshaped_forms_to_csv(reshaped_forms)
       CSV.open('./test_forms.csv', 'wb') do |csv|
         csv << HEADERS
-        reshaped_forms.each do |question|
-          row = question.stringify_keys.values_at(*HEADERS)
-          csv << row
+
+        # Loads 1000 records at a time to manage loading records into memory.
+        # Probably unnecessary optimization until we have many more Forms.
+        ::Foorm::Form.find_each do |form|
+          reshaped_form = reshape_form(form)
+
+          reshaped_form.each do |question|
+            row = question.stringify_keys.values_at(*HEADERS)
+            csv << row
+          end
         end
       end
-    end
-
-    def self.reshape_forms(forms)
-      reshaped_forms = []
-
-      forms.each do |form|
-        reshaped_forms = reshaped_forms.concat reshape_form(form)
-      end
-
-      reshaped_forms
     end
 
     def self.reshape_form(form)

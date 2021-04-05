@@ -14,29 +14,21 @@ module Pd::Foorm
       response_text
     )
 
+    # Loads 1000 records at a time to manage loading records into memory.
     def self.reshape_all_submissions_and_export_to_csv
-      reshaped_submissions = reshape_submissions(::Foorm::Submission.all)
-      reshaped_submissions_to_csv(reshaped_submissions)
-    end
-
-    def self.reshaped_submissions_to_csv(reshaped_submissions)
       CSV.open('./test_submissions.csv', 'wb') do |csv|
         csv << HEADERS
-        reshaped_submissions.each do |answer|
-          row = answer.stringify_keys.values_at(*HEADERS)
-          csv << row
+
+        # Loads 1000 records at a time
+        ::Foorm::Submission.find_each do |submission|
+          reshaped_submission = reshape_submission(submission)
+
+          reshaped_submission.each do |answer|
+            row = answer.stringify_keys.values_at(*HEADERS)
+            csv << row
+          end
         end
       end
-    end
-
-    def self.reshape_submissions(submissions)
-      reshaped_submissions = []
-
-      submissions.each do |submission|
-        reshaped_submissions = reshaped_submissions.concat reshape_submission(submission)
-      end
-
-      reshaped_submissions
     end
 
     def self.reshape_submission(submission)
