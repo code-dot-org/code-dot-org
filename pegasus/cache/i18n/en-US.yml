@@ -1097,6 +1097,12 @@
   coursed-2019_gradelevel: Ages 7-11
   coursee-2019_gradelevel: Ages 8-12
   coursef-2019_gradelevel: Ages 9-13
+  coursea-2020_gradelevel: Ages 4-7
+  courseb-2020_gradelevel: Ages 5-8
+  coursec-2020_gradelevel: Ages 6-10
+  coursed-2020_gradelevel: Ages 7-11
+  coursee-2020_gradelevel: Ages 8-12
+  coursef-2020_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1223,6 +1229,12 @@
   coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
   coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
   coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2020_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  courseb-2020_shortdescription_congrats: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+  coursec-2020_shortdescription_congrats: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+  coursed-2020_shortdescription_congrats: Students develop their understanding of loops, conditionals, and events. Beyond coding, students learn about digital citizenship.
+  coursee-2020_shortdescription_congrats: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
+  coursef-2020_shortdescription_congrats: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."

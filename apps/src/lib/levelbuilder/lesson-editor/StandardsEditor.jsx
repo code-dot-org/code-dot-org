@@ -34,8 +34,10 @@ const styles = {
 
 class StandardsEditor extends Component {
   static propTypes = {
-    // provided by redux
+    standardType: PropTypes.string.isRequired,
     standards: PropTypes.arrayOf(standardShape).isRequired,
+
+    // provided by redux
     addStandard: PropTypes.func.isRequired,
     removeStandard: PropTypes.func.isRequired
   };
@@ -140,8 +142,10 @@ class StandardsEditor extends Component {
   };
 
   removeStandard = () => {
-    const {frameworkShortcode, shortcode} = this.state.standardToRemove;
-    this.props.removeStandard(frameworkShortcode, shortcode);
+    this.props.removeStandard(
+      this.props.standardType,
+      this.state.standardToRemove
+    );
     this.handleRemoveStandardDialogClose();
   };
 
@@ -170,7 +174,7 @@ class StandardsEditor extends Component {
   };
 
   onSearchSelect = option => {
-    this.props.addStandard(option.standard);
+    this.props.addStandard(this.props.standardType, option.standard);
   };
 
   render() {
@@ -235,9 +239,7 @@ class StandardsEditor extends Component {
 export const UnconnectedStandardsEditor = StandardsEditor;
 
 export default connect(
-  state => ({
-    standards: state.standards
-  }),
+  state => ({}),
   {
     addStandard,
     removeStandard

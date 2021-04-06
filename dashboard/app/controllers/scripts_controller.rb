@@ -230,6 +230,7 @@ class ScriptsController < ApplicationController
       :include_student_lesson_plans,
       resourceTypes: [],
       resourceLinks: [],
+      resourceIds: [],
       project_widget_types: [],
       supported_locales: [],
     ).to_h
