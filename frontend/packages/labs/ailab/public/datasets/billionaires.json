@@ -1,11 +1,6 @@
 {
   "fields": [
     {
-      "type": "categorical",
-      "id": "Name",
-      "description": "The billionaire's name. This shouldn't be used as a feature."
-    },
-    {
       "type": "numerical",
       "id": "Rank",
       "description": "Their wealth rank for the year of this record."
