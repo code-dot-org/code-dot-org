@@ -24,7 +24,7 @@
     &nbsp;
     %i.create_menu_arrow_down{class: "fa fa-caret-down"}
     %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
-    .create_options{style: 'display: none'}
+    .create_options{style: 'display: none', dir: language_dir_class}
       - create_drop_down_items.each do |entry|
         %a.project_link_box{href: entry[:url]}
           %img{src: "/shared/images/fill-70x70/courses/#{entry[:image]}"}
@@ -44,7 +44,7 @@
     &nbsp;
     %i.user_menu_arrow_down{class: "fa fa-caret-down"}
     %i.user_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
-    .user_options{style: 'display: none'}
+    .user_options{style: 'display: none', dir: language_dir_class}
       %a.linktag#my-projects{href: CDO.studio_url('projects')}= I18n.t("#{loc_prefix}my_projects")
       - if current_user.can_pair?
         - if session_pairings.present?
