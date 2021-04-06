@@ -73,9 +73,17 @@ export default class ModelManagerDialog extends React.Component {
       method: 'GET'
     }).then(models => {
       if (this.props.levelbuilderModel?.id) {
-        models.unshift(this.props.levelbuilderModel);
+        $.ajax({
+          url: `/api/v1/ml_models/${this.props.levelbuilderModel.id}`,
+          method: 'GET'
+        }).then(metadata => {
+          this.props.levelbuilderModel.metadata = metadata;
+          models.unshift(this.props.levelbuilderModel);
+          this.setState({models, selectedModel: models[0]});
+        });
+      } else {
+        this.setState({models, selectedModel: models[0]});
       }
-      this.setState({models, selectedModel: models[0]});
     });
   };
 
@@ -118,6 +126,8 @@ export default class ModelManagerDialog extends React.Component {
   render() {
     const {isOpen} = this.props;
     const noModels = this.state.models.length === 0;
+    const showDeleteButton =
+      this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
       <div>
@@ -150,14 +160,16 @@ export default class ModelManagerDialog extends React.Component {
               isPending={this.state.isImportPending}
               pendingText={'Importing...'}
             />
-            <Button
-              text={'Delete'}
-              color={Button.ButtonColor.red}
-              onClick={this.showDeleteConfirmation}
-              disabled={noModels}
-              icon={'trash'}
-              iconClassName={'fa-trash'}
-            />
+            {showDeleteButton && (
+              <Button
+                text={'Delete'}
+                color={Button.ButtonColor.red}
+                onClick={this.showDeleteConfirmation}
+                disabled={noModels}
+                icon={'trash'}
+                iconClassName={'fa-trash'}
+              />
+            )}
           </div>
           <div style={styles.right}>
             <ModelCard model={this.state.selectedModel} />

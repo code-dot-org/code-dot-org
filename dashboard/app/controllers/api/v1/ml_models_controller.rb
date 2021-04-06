@@ -27,7 +27,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   end
 
   # GET api/v1/ml_models/names
-  # Retrieve the names and ids of a user's trained ML models.
+  # Retrieve the names, ids and metadata of a user's trained ML models.
   def user_ml_model_names
     user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {"id": user_ml_model.model_id, "name": user_ml_model.name, "metadata": JSON.parse(user_ml_model.metadata)}}
     render json: user_ml_model_data.to_json
@@ -36,7 +36,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/metadata/:model_id
   # Retrieve a trained ML model's metadata
   def user_ml_model_metadata
-    metadata = UserMlModel.where(user_id: current_user&.id, model_id: params[:model_id])&.first&.metadata
+    metadata = UserMlModel.where(model_id: params[:model_id])&.first&.metadata
     return render_404 unless metadata
     render json: JSON.parse(metadata)
   end
