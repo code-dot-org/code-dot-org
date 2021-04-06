@@ -9,8 +9,9 @@
   }
 }
 
-// We only want to apply table styling to the text areas or it will apply on the progression details
+
 .activity-section-text {
+  // We only want to apply table styling to the text areas or it will apply on the progression details
   table {
     thead {
       th {
@@ -38,6 +39,11 @@
         border: 1px solid $light_gray;
       }
     }
+  }
+
+  // "slide" icons
+  .fa.fa-list-alt {
+    color: $purple;
   }
 }
 
