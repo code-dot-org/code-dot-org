@@ -244,8 +244,7 @@ class Lesson < ApplicationRecord
   end
 
   def course_version_standards_url
-    course_version_name = script.get_course_version&.name
-    CDO.studio_url "/courses/#{course_version_name}/standards" if course_version_name
+    script.get_course_version&.all_standards_url
   end
 
   def summarize(include_bonus_levels = false, for_edit: false)

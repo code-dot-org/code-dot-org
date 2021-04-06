@@ -95,4 +95,9 @@ class CourseVersion < ApplicationRecord
   def contained_lessons
     units.map(&:lessons).flatten
   end
+
+  def all_standards_url
+    prefix = content_root_type === 'UnitGroup' ? 'courses' : 's'
+    "/#{prefix}/#{name}/standards"
+  end
 end

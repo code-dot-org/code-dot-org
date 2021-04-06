@@ -879,7 +879,7 @@ class LessonTest < ActiveSupport::TestCase
     assert script.get_course_version
     assert_equal unit_group, script.get_course_version.content_root
 
-    expected_url = CDO.studio_url "/courses/#{unit_group.name}/standards"
+    expected_url = "/courses/#{unit_group.name}/standards"
     assert_equal expected_url, lesson.course_version_standards_url
   end
 
@@ -892,7 +892,7 @@ class LessonTest < ActiveSupport::TestCase
     assert script.get_course_version
     assert_equal script, script.get_course_version.content_root
 
-    expected_url = CDO.studio_url "/s/#{script.name}/standards"
+    expected_url = "/s/#{script.name}/standards"
     assert_equal expected_url, lesson.course_version_standards_url
   end
 end
