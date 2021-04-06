@@ -22,6 +22,15 @@ export default storybook => {
       )
     },
     {
+      name: 'many standards with full course alignment button',
+      story: () => (
+        <LessonStandards
+          standards={cspStandards.concat(cstaStandards)}
+          courseVersionStandardsUrl="/path/to/standards"
+        />
+      )
+    },
+    {
       name: 'expand first of many standards',
       story: () => (
         <LessonStandards
