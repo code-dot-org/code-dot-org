@@ -14,13 +14,14 @@ module Pd::Foorm
       response_text
     )
 
-    # Loads 1000 records at a time to manage loading records into memory.
+    # Iterates over all Foorm Submissions, and exports them to a CSV.
+    # Each row represents an answer to a single question.
     def self.reshape_all_submissions_and_export_to_csv
       CSV.open('./test_submissions.csv', 'wb') do |csv|
         csv << HEADERS
 
-        # Loads 1000 records at a time
-        ::Foorm::Submission.find_each do |submission|
+        # Loads 1000 records at a time to manage loading records into memory.
+        ::Foorm::Submission.find_each(batch_size: 1000) do |submission|
           reshaped_submission = reshape_submission(submission)
 
           reshaped_submission.each do |answer|
@@ -31,6 +32,8 @@ module Pd::Foorm
       end
     end
 
+    # @param [Foorm::Submission] submission Submission to reshape
+    # @return [Array] array of hashes, each representing a user's answer to a single question
     def self.reshape_submission(submission)
       reshaped_submission_answers_with_metadata = []
 
