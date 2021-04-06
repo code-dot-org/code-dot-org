@@ -10,9 +10,15 @@ import reducers, {
 import resourcesEditor, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import createStandardsReducer, {
+  initStandards
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
   initVocabularies
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
@@ -29,13 +35,25 @@ $(document).ready(function() {
     ...reducers,
     instructionsDialog: instructionsDialog,
     resources: resourcesEditor,
-    vocabularies: vocabulariesEditor
+    vocabularies: vocabulariesEditor,
+    programmingExpressions: programmingExpressionsEditor,
+    standards: createStandardsReducer('standard'),
+    opportunityStandards: createStandardsReducer('opportunityStandard')
   });
   const store = getStore();
 
-  store.dispatch(init(activities, searchOptions));
+  store.dispatch(
+    init(activities, searchOptions, lessonData.programmingEnvironments)
+  );
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(
+    initProgrammingExpressions(lessonData.programmingExpressions || [])
+  );
+  store.dispatch(initStandards('standard', lessonData.standards || []));
+  store.dispatch(
+    initStandards('opportunityStandard', lessonData.opportunityStandards || [])
+  );
 
   ReactDOM.render(
     <Provider store={store}>

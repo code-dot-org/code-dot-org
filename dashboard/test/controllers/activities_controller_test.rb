@@ -1117,7 +1117,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response 403
 
     # explicity create a user_level that is unlocked
-    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, unlocked_at: Time.now
+    user_level = create :user_level, user: student_1, script: script, level: level, submitted: false, locked: false
 
     # should now succeed
     post :milestone, params: milestone_params
@@ -1125,7 +1125,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # milestone post should cause it to become locked again
     user_level = UserLevel.find(user_level.id)
-    assert user_level.locked?(stage)
+    assert user_level.show_as_locked?(stage)
 
     # milestone post should also fail when we have an existing user_level that is locked
     post :milestone, params: milestone_params
@@ -1133,7 +1133,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     user_level.delete
     # explicity create a user_level that is readonly_answers
-    create :user_level, user: student_1, script: script, level: level, submitted: true, unlocked_at: nil, readonly_answers: true
+    create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
     post :milestone, params: milestone_params
     assert_response 403
   end

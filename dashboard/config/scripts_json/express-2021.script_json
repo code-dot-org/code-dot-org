@@ -14,19 +14,13 @@
       "lesson_extras_available": true,
       "version_year": "2021",
       "curriculum_umbrella": "CSF",
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csf"
-        ]
-      ],
       "is_course": true,
       "is_migrated": true,
       "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-03-16 22:56:54 UTC",
+    "serialized_at": "2021-03-29 20:17:33 UTC",
     "seeding_key": {
       "script.name": "express-2021"
     }
@@ -150,10 +144,10 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "Using characters from the game _Angry Birds_, students will develop sequential **algorithms** to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear **sequence**, making them move straight, turn left, or turn right.",
+        "overview": "Using characters from the game _Angry Birds_, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
         "student_overview": "Learn about sequences and algorithms with _Angry Birds_.",
         "purpose": "In this lesson, students will develop programming skills on a computer platform. The block-based format of these puzzles help students learn about sequence and concepts, without having to worry about perfecting syntax.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a reflection journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -172,8 +166,8 @@
       "properties": {
         "overview": "Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.",
         "student_overview": "Find problems in puzzles and practice your debugging skills.",
-        "purpose": "Students in your class might become frustrated with this lesson because of the essence of **debugging**. **Debugging** is a concept that is very important to computer programming. Computer scientists have to get really good at finding the **bugs** in their own programs. **Debugging** forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a ***Think Spot - Reflection Journal**.",
+        "purpose": "Students in your class might become frustrated with this lesson because of the essence of debugging. Debugging is a concept that is very important to computer programming. Computer scientists have to get really good at finding the bugs in their own programs. Debugging forces the students to recognize problems and overcome them while building critical thinking and problem solving skills.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class. \n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -190,10 +184,10 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this series of puzzles, students will continue to develop their understanding of **algorithms** and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.",
+        "overview": "In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.",
         "student_overview": "Write algorithms to help Laurel the Adventurer collect lots of gems!",
-        "purpose": "In this lesson, students will be practicing their **programming** skills using a new character, _Laurel the Adventurer_. When someone starts **programming** they piece together instructions in a specific order using something that a machine can read. Through the use of **programming**, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and **algorithms** in **programming**.",
-        "preparation": " - Play through the puzzles to find potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "In this lesson, students will be practicing their programming skills using a new character, _Laurel the Adventurer_. When someone starts programming they piece together instructions in a specific order using something that a machine can read. Through the use of programming, students will develop an understanding of how a computer navigates instructions and order. Using a new character with a different puzzle objective will help students widen their scope of experience with sequencing and algorithms in programming.",
+        "preparation": " - Play through the puzzles to find potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -213,7 +207,7 @@
         "overview": "In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.",
         "student_overview": "Create beautiful images by programming the Artist.",
         "purpose": "Building off of the students' previous experience with sequencing, this lesson will work to inspire more creativity with coding. The purpose of this lesson is to solidify knowledge on sequencing by introducing new blocks and goals. In this case, students learn more about pixels and angles using the new blocks, while still practicing their sequencing skills. Also, students will be able to visualize new goals such as coding the Artist to draw a square.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Turns & Angles - Student Handout** for each student.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Obtain protractors for your class to visualize the angles they must use to complete the puzzles.\n - Print one ***Student Handout** for each student.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -230,10 +224,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "This stage will have students using **loops** to help _BB-8_ traverse a maze efficiently.",
+        "overview": "This stage will have students using loops to help _BB-8_ traverse a maze efficiently.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
-        "purpose": "In this lesson, students will be learning about **loops** and how to implement them in Blockly code. Using **loops** is an important skill in programming because manually **repeating** commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing **loops**, gather **repeated** code into **loops**, and recognize patterns that need to be **looped**. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
-        "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "In this lesson, students will be learning about loops and how to implement them in Blockly code. Using loops is an important skill in programming because manually repeating commands is tedious and inefficient. With the Code.org puzzles, students will learn to add instructions to existing loops, gather repeated code into loops, and recognize patterns that need to be looped. It should be noted that students will face puzzles with many different solutions. This will open up discussions on the various ways to solve puzzles with advantages and disadvantages to each approach.",
+        "preparation": " - Play through the puzzles to determine if there will be any problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -250,10 +244,10 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of **loops** from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+        "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
-        "purpose": "This series highlights the power of **loops** with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
-        "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a journal.",
+        "purpose": "This series highlights the power of loops with creative and personal designs.  \n\nOffered as a project-backed sequence, this progression will allow students to build on top of their own work and create amazing artifacts.",
+        "preparation": " - Practice making your own design. Make note of how these levels are different from everything that came before.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -270,10 +264,10 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to push their understanding of **loops** to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a **loop** to be inside of another **loop**. They will also be encouraged to figure out how little changes in either **loop** will affect their program when they click `Run`.",
+        "overview": "In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the _Bee_ and _Plants vs Zombies_, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.",
         "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.",
-        "purpose": "In this introduction to **nested loops**, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* **repeated** patterns to develop these **nested loops**. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces **nested loops**, students are shown an example and asked to predict what will happen when a **loop** is put inside of another **loop**. This progression leads to plenty of practice for students to solidify and build on their understanding of **looping** in programming.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "In this introduction to nested loops, students will go outside of their comfort zone to create more efficient solutions to puzzles.  \n\nIn earlier puzzles, loops pushed students to recognize repetition. Here, students will learn to recognize patterns *within* repeated patterns to develop these nested loops. This stage starts off by encouraging students to try to solve a puzzle where the code is irritating and complex to write out the long way. After a video introduces nested loops, students are shown an example and asked to predict what will happen when a loop is put inside of another loop. This progression leads to plenty of practice for students to solidify and build on their understanding of looping in programming.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -290,10 +284,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "Now that students know how to layer their **loops**, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!",
+        "overview": "Now that students know how to layer their loops, they can create so many beautiful things.  This lesson will take students through a series of exercises to help them create their own portfolio-ready images using the excellent ice-skating skills of _Anna_ and _Elsa_ from _Frozen_!",
         "student_overview": "_Anna_ and _Elsa_ have excellent ice-skating skills, but need your help to create patterns in the ice. Use nested loops to create something super COOL. ",
-        "purpose": "In this series, students will get practice nesting **loops** while creating images that they will be excited to share. \n\nBeginning with a handful of instructions, students will make their own decisions when it comes to creating designs for repetition.  They will then spin those around a variety of ways to end up with a work of art that is truly unique.",
-        "preparation": " - Play through the lesson to find and potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "purpose": "In this series, students will get practice nesting loops while creating images that they will be excited to share. \n\nBeginning with a handful of instructions, students will make their own decisions when it comes to creating designs for repetition.  They will then spin those around a variety of ways to end up with a work of art that is truly unique.",
+        "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -310,10 +304,10 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at **conditionals**!",
+        "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!",
         "student_overview": "Avoid the lava! Here you will start to learn about conditionals in the world of _Minecraft_.",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce **conditionals**. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
-        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and introduce conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
+        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -330,10 +324,10 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with **conditionals**, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
+        "overview": "Up until this point students have been writing code that executes exactly the same way each time it is run - reliable, but not very flexible. In this lesson, your class will begin to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
         "student_overview": "Now that you understand conditionals, it's time to program Bee to use them when collecting honey and nectar. ",
-        "purpose": "Students will practice using **conditionals** in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar _if_ there is a flower or make honey _if_ there is a honeycomb. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "Students will practice using conditionals in their programs. The `if / else` blocks will allow for a more flexible program. The bee will only collect nectar _if_ there is a flower or make honey _if_ there is a honeycomb. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -350,10 +344,10 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n**While loops** are loops that continue to **repeat** commands while a **condition** is met. **While loops** are used when the programmer doesn't know the exact number of times commands need to be **repeated**, but does know what **condition** needs to be true in order for the **loop** to continue **repeating**. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat.",
+        "overview": "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\nWhile loops are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat.",
         "student_overview": "Loops are so useful in coding. This lesson will teach you about a new kind of loop: while loops!",
-        "purpose": "As your students continue to deepen their knowledge of **loops**, they will come across problems where a command needs to be **repeated**, but it is unknown how many times it needs to be **repeated**. This is where **while loops** come in. In today's lesson, students will develop a beginner's understanding of **condition**-based **loops** and also expand their knowledge of **loops** in general. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "As your students continue to deepen their knowledge of loops, they will come across problems where a command needs to be repeated, but it is unknown how many times it needs to be repeated. This is where while loops come in. In today's lesson, students will develop a beginner's understanding of condition-based loops and also expand their knowledge of loops in general. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -372,8 +366,8 @@
       "properties": {
         "overview": "This lesson was originally created for the Hour of Code, alongside the _Minecraft_ team. Students will get the chance to practice ideas that they have learned up to this point!",
         "student_overview": "Here you will use conditionals in the world of Minecraft.",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and  **conditionals**. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
-        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops, and  conditionals. By pairing these two concepts together, students will be able to explore the potential for creating fun and innovative programs in a new and exciting environment.",
+        "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -390,10 +384,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this lesson, students will learn about `until` **loops**. Students will build programs that have the main character **repeat** actions `until` they reach their desired stopping point.",
+        "overview": "In this lesson, students will learn about `until` loops. Students will build programs that have the main character repeat actions `until` they reach their desired stopping point.",
         "student_overview": "You can do some amazing things when you use `until` loops!",
-        "purpose": "This set of puzzles will work to solidify and build on the knowledge of **loops** by adding the `until` **conditional**. By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "This set of puzzles will work to solidify and build on the knowledge of loops by adding the `until` conditional. By pairing these concepts together, students will be able to explore the potential for creating complex and innovative programs.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -410,10 +404,10 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "Students will practice `while` **loops**, `until` **loops**, and `if / else` statements. All of these blocks use **conditionals**. By practicing all three, students will learn to write complex and flexible code.",
-        "student_overview": "It's not always clear when to use each **conditional**.  This lesson will help you get practice deciding what to do.",
-        "purpose": "Practicing the use of **conditionals** in different scenarios helps to develop a student's understanding of what **conditionals** can do. In the previous lesson, students only used **conditionals** to move around a maze. In this lesson, students will use **conditionals** to help the farmer know when to harvest crops. New patterns will emerge and students will use creativity and logical thinking to determine the **conditions** where code should be run and **repeated**.",
-        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - Make sure every student has a ***Think Spot - Reflection Journal**.",
+        "overview": "Students will practice `while` loops, `until` loops, and `if / else` statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.",
+        "student_overview": "It's not always clear when to use each conditional.  This lesson will help you get practice deciding what to do.",
+        "purpose": "Practicing the use of conditionals in different scenarios helps to develop a student's understanding of what conditionals can do. In the previous lesson, students only used conditionals to move around a maze. In this lesson, students will use conditionals to help the farmer know when to harvest crops. New patterns will emerge and students will use creativity and logical thinking to determine the conditions where code should be run and repeated.",
+        "preparation": " - Play through the lesson to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -430,10 +424,10 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "Students will begin to understand how **functions** can be helpful in this fun and interactive _Minecraft_ adventure!",
+        "overview": "Students will begin to understand how functions can be helpful in this fun and interactive _Minecraft_ adventure!",
         "student_overview": "Can you figure out how to use functions for the most efficient code?",
-        "purpose": "Students will discover the versatility of programming by practicing **functions** in different environments. Here, students will recognize reusable patterns and be able to incorporate named blocks to call pre-defined **functions**.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "Students will discover the versatility of programming by practicing functions in different environments. Here, students will recognize reusable patterns and be able to incorporate named blocks to call pre-defined functions.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -450,10 +444,10 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "Students have practiced creating impressive designs in Artist and navigating mazes in Bee, but today they will use **functions** to harvest crops in Harvester. This lesson will push students to use **functions** in the new ways by combining them with `while` loops and `if / else` statements.",
+        "overview": "Students will use functions to harvest crops in Harvester. This lesson will push students to use functions in the new ways by combining them with `while` loops and `if / else` statements.",
         "student_overview": "Functions will save you lots of work as you help the farmer with her harvest!",
-        "purpose": "This lesson is meant to further push students to use **functions** in more creative ways. By also using conditionals and loops, students will learn there are many ways to approach a problem, but some are more efficient than others. These puzzles are intended to increase problem solving and critical thinking skills.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure ever student has a journal.",
+        "purpose": "This lesson is meant to further push students to use functions in more creative ways. Students will learn there are many ways to approach a problem, but some are more efficient than others. These puzzles are intended to increase problem solving and critical thinking skills.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure ever student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -470,10 +464,10 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "Students will be using **functions** with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting **functions** by calling one **function** from inside another.",
+        "overview": "Students will be using functions with the Artist. Magnificent images will be created and modified. For more complicated patterns, students will learn about nesting functions by calling one function from inside another.",
         "student_overview": "Make complex drawings more easily with functions!",
         "purpose": "One of the most important components to this lesson is providing students with a space to create something they are proud of. These puzzles progress to more and more complex images, but each new puzzle only builds off the previous puzzle. At the end of this lesson, students will feel confident and proud of their hard work.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -490,10 +484,10 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
-        "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using **variables**.",
-        "purpose": "This stage teaches the most basic use for **variables**, as a **constant** that reoccurs frequently in a program. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "overview": "In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read, even when the values don't change at runtime.",
+        "student_overview": "Don't forget to bring creativity to class! In these puzzles you will be making fantastic drawings using variables.",
+        "purpose": "This stage teaches the most basic use for variables, as a constant that reoccurs frequently in a program. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -510,10 +504,10 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "overview": "This lesson will help illustrate how **variables** can make programs more powerful by allowing values to change while the code is running. ",
-        "student_overview": "This bee loves **variables**!",
+        "overview": "This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. ",
+        "student_overview": "This bee loves variables!",
         "purpose": "You don't always know what a value is going to be before you begin your program.  Sometimes, values change while your code is running.  This lesson will illustrate how code with changing values can be helpful.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -530,10 +524,10 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "overview": "In this lesson, students will explore the creation of repetitive designs using **variables** in the Artist environment. Students will learn how **variables** can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
-        "student_overview": "In this lesson, you'll make drawings using **variables** that change as the program runs.",
-        "purpose": "**Variables** are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of **variables**, using the most basic capabilities of setting and using them.",
-        "preparation": "- Play through the lesson to find any potential problem areas for your class.\r\n- Make sure every student has a journal.",
+        "overview": "In this lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables can be used to make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create their own designs.",
+        "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs.",
+        "purpose": "Variables are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of variables, using the most basic capabilities of setting and using them.",
+        "preparation": "- Play through the lesson to find any potential problem areas for your class.\n- Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -553,7 +547,7 @@
         "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
         "student_overview": "Buzz buzz. In these puzzles you will be guiding a bee to nectar and honey using `for` loops!",
         "purpose": "Today's concept, `for` loops, are a very important topic in computer science. Not only are they widely used, the process of learning `for` loops enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each `for` loop. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -573,7 +567,7 @@
         "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a free play level.",
         "student_overview": "Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.",
         "purpose": "Creativity and critical thinking come together beautifully in this lesson. Students will continue their practice with `for` loops and variables while they create jaw-dropping images. This lesson inspires a creative mind while teaching core concepts to computer science.",
-        "preparation": " - Play through the lesson to find and potential problem areas for your class.\r\n - Make sure every student has a journal.",
+        "preparation": " - Play through the lesson to find and potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -593,7 +587,7 @@
         "overview": "In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.",
         "student_overview": "Time to celebrate! In this lesson, you will program your own interactive dance party.",
         "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks).",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.\n - Consider the need for headphones. This activity relies on sound."
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.\n - Consider the need for headphones. This activity relies on sound."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -609,10 +603,10 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: **sprites** and **behaviors**. **Sprites** are characters or objects on the screen that students can move, change, and manipulate. **Behaviors** are actions that **sprites** will take continuously until they are stopped.",
+        "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
         "student_overview": "Learn how to create and edit sprites.",
         "purpose": "This lesson is designed to introduce students to the core vocabulary of Sprite Lab, and allow them to apply concepts they learned in other environments to this tool. By creating a fish tank, students will begin to form an understanding of the programming model of this tool, and explore ways they can use it to express themselves.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -629,10 +623,10 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as **events** to create an \"alien dance party\".  ",
+        "overview": "This lesson features Sprite Lab, a platform where students can create their own interactive animations and games. In addition to behaviors, today students will incorporate user input as events to create an \"alien dance party\".  ",
         "student_overview": "Create an interactive project that can be shared with classmates.",
-        "purpose": "Students will use **events** to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson reinforces **events** in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "Students will use events to make characters move around the screen, make noises, and change backgrounds based on user input. This lesson reinforces events in programming and even gives students a chance to show creativity! At the end of the puzzle sequence, students will be presented with the opportunity to share their projects.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -652,7 +646,7 @@
         "overview": "Here, students will use Sprite Lab to create their own customized behaviors.",
         "student_overview": "Learn to program your own sprite behaviors!",
         "purpose": "Students will use events to make characters move around the screen, change size, and change colors based on user input. This lesson offers a great introduction to events in programming and even gives a chance to show creativity! ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -671,8 +665,8 @@
       "properties": {
         "overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!",
         "student_overview": "Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!",
-        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. For example, students will use a **variable** to store their pet's \"happiness\" as a number, which should help them understand how **variables** can be used in other applications. ",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a journal.",
+        "purpose": "This lesson allows students to apply programming concepts from prior lessons in another creative context. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a Reflection Journal.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -692,7 +686,7 @@
         "overview": "This capstone lesson takes students through the process of designing, developing, and showcasing their own projects! ",
         "student_overview": "Get those hands ready for plenty of coding! It's time to start building your project.",
         "purpose": "This lesson provides students with space to create a project of their own design, using a step-by-step process that requires planning but also allows for broad creativity.",
-        "preparation": " - Spend time making your own project with both the project tools available to students. Familiarize yourself with the capabilities and limitations of each tool.\r\n - Modify the rubric to fit your class goals and print one copy for each student or group.\r\n - Modify the project planning guide to fit your class and print one for each student or group.",
+        "preparation": " - Spend time making your own project with both the project tools available to students. Familiarize yourself with the capabilities and limitations of each tool.\n - Modify the ***rubric** to fit your class goals and print one copy for each student or group.\n - Modify the ***project planning guide** to fit your class and print one for each student or group.",
         "creative_commons_license": "Creative Commons BY-NC-SA"
       },
       "seeding_key": {
@@ -2114,7 +2108,7 @@
       "key": "2765363f-4649-4b42-b4ae-245c6f5347ad",
       "position": 1,
       "properties": {
-        "description": "    \n**Model:** Pull up Puzzle 5 to do in front of the class. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent. Discuss what to do when a program doesn't work (**debug** it!) or how to get through the frustration that can come with working on a computer.\n\nNext, you'll need to describe how the blocks in the workspace move the bird toward the pig.  Show students how to drag blocks from the toolbox and connect them beneath the `when run` block, but don't solve the puzzle.\n\n**Discuss:** Think about how we would get the bird to the pig using arrows.  How do we use these blocks instead?\n\nHave students use their fingers to point the direction that the bird should go next.  Once you feel like you have a classroom consensus, try to get students to put into words which block will make that action happen.  Roll your mouse over different options and have them shout \"Yes\" or \"No\".\n\nDrag blocks into place one at a time, then click \"Run\" after each one.  This will not only let them see how far the bird has gone, but set good habits for when they start working to solve their own puzzles.\n\nContinue this pattern, fixing **bugs** as they arise, until the bird successfully gets to the pig.\n\n#### Additional Demonstration\n\nWe've included some multiple choice prediction levels. These could be used after finishing the Warm Up.\n\nPrediction Levels:\n\n - [Programming in Maze #1](https://studio.code.org/levels/8730)\n - [Programming in Maze #2](https://studio.code.org/levels/8729)\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom computers.",
+        "description": "    \n**Model:** Pull up Puzzle 5 to do in front of the class. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent. Discuss what to do when a program doesn't work (debug it!) or how to get through the frustration that can come with working on a computer.\n\nNext, you'll need to describe how the blocks in the workspace move the bird toward the pig.  Show students how to drag blocks from the toolbox and connect them beneath the `when run` block, but don't solve the puzzle.\n\n**Discuss:** Think about how we would get the bird to the pig using arrows.  How do we use these blocks instead?\n\nHave students use their fingers to point the direction that the bird should go next.  Once you feel like you have a classroom consensus, try to get students to put into words which block will make that action happen.  Roll your mouse over different options and have them shout \"Yes\" or \"No\".\n\nDrag blocks into place one at a time, then click \"Run\" after each one.  This will not only let them see how far the bird has gone, but set good habits for when they start working to solve their own puzzles.\n\nContinue this pattern, fixing bugs as they arise, until the bird successfully gets to the pig.\n\n#### Additional Demonstration\n\nWe've included some multiple choice prediction levels. These could be used after finishing the Warm Up.\n\nPrediction Levels:\n\n - [Programming in Maze #1](https://studio.code.org/levels/8730)\n - [Programming in Maze #2](https://studio.code.org/levels/8729)\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom computers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2216,7 +2210,7 @@
       "key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize Pair Programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their ***Thinkspot Journals* and take a moment to reflect on the experience for themselves."
+        "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize Pair Programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - Did anyone feel frustrated during any of the puzzles?\n - Did anyone notice the need to be persistent?\n\n**Transition:** Have students grab their ***Thinkspot Journals** and take a moment to reflect on the experience for themselves."
       },
       "seeding_key": {
         "activity_section.key": "d09eb753-cf01-4cfa-b252-0e6d4faa4f97",
@@ -2261,7 +2255,7 @@
       "key": "defc5a97-b60a-4a6b-8617-e05be08dab35",
       "position": 1,
       "properties": {
-        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - How do you fix something that isn't working?\n - Do you follow a specific series of steps?\n - The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)\n - We call the problems in these programs \"**bugs**,\" and it will be your job to \"**debug**\" them.",
+        "description": "Ask students to think about problems they have to solve in everyday life.\n\n - How do you fix something that isn't working?\n - Do you follow a specific series of steps?\n - The puzzles in this unit have already been solved for you (yay!), but they don't seem to be working (boo!)\n - We call the problems in these programs \"bugs,\" and it will be your job to \"debug\" them.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2273,7 +2267,7 @@
       "key": "a03b28fc-fd86-4f3a-ba44-ade5b7437f24",
       "position": 2,
       "properties": {
-        "description": "This lesson has three new and important vocabulary words:\n\n - **Bug** - _Say it with me - Buhh-g._\n\nSomething that is going wrong. An error.\n\n - **Debugging** - _Say it with me: Dee-bug-ing._\n\nTo find and fix errors.\n\n - **Persistence** - _Say it with me: Purr-siss-tense._\n\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** _**Debugging** is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a **bug**. Once you've discovered your **bug**, you can work to fix (or \"**debug**\") it!_\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, _Scrat_ from _Ice Age_. If students aren't familiar with _Scrat_, show some clips of the quirky squirrel running into trouble.",
+        "description": "This lesson has three new and important vocabulary words:\n\n - **Bug** - _Say it with me - Buhh-g._\n\nSomething that is going wrong. An error.\n\n - **Debugging** - _Say it with me: Dee-bug-ing._\n\nTo find and fix errors.\n\n - **Persistence** - _Say it with me: Purr-siss-tense._\n\nNot giving up. Persistence works best when you try things many different ways, many different times.\n\n**Say:** _**Debugging** is a process. First, you must recognize that there is an error in your program. You then work through the program step by step to find the error. Try the first step, did it work? Then the second, how about now? If you make sure that everything is working line by line, then when you get to the place that your code isn't doing what it's supposed to, you know that you've found a bug. Once you've discovered your bug, you can work to fix (or \"debug\") it!_\n\nIf you think it will build excitement in the class you can introduce the character of today's puzzles, _Scrat_ from _Ice Age_. If students aren't familiar with _Scrat_, show some clips of the quirky squirrel running into trouble.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2510,7 +2504,7 @@
       "key": "493408f8-a48b-457f-924d-0c99519b55e2",
       "position": 1,
       "properties": {
-        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n***Artist Introduction - Student Video** (1.5 minutes long)\n\n***Turns & Angles - Student Video** (2 minutes long)\n\nUse ***Turns & Angles - Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the square and triangle shapes from the document.\n\n - *How would you code a computer to draw that shape?*\n - *What order do the instructions need to be in?*\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
+        "description": "Show the students one or both of the following videos as an introduction to angles:\n\n***Artist Introduction** (1.5 minutes long)\n\n***Turns & Angles** (2 minutes long)\n\nUse ***Student Handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the square and triangle shapes from the document.\n\n - *How would you code a computer to draw that shape?*\n - *What order do the instructions need to be in?*\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes, including a square.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2763,7 +2757,7 @@
       "key": "a26945ef-9b81-4b37-96f8-c18304af3332",
       "position": 11,
       "properties": {
-        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a **loop** vs. not using a **loop**. ***Pair Programming - Student Video** works really well with this set of puzzles because there are a few ways to fill the **loops**. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\n \n - *How did you come up with that solution?*\n - *What are some benefits of solving the puzzle that way?*\n\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in **loops**."
+        "description": "As students work through the puzzles, see if they can figure out how many blocks they use with a loop vs. not using a loop. ***Student Video** works really well with this set of puzzles because there are a few ways to fill the loops. Push for friendly discussion between pairs in instances of disagreement on how to solve the puzzle. Have the students ask each other questions like:\n \n - *How did you come up with that solution?*\n - *What are some benefits of solving the puzzle that way?*\n\nWe also recommend having paper on hand for students to write out their code and find any repetition to use in loops."
       },
       "seeding_key": {
         "activity_section.key": "a26945ef-9b81-4b37-96f8-c18304af3332",
@@ -2797,7 +2791,7 @@
       "key": "63067b3c-f088-46f7-a3af-7feb4225a2ac",
       "position": 1,
       "properties": {
-        "description": "Students should have had plenty of introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a dance, putting repeated steps in loops.\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Creating Art with Code\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review *loops** or the artist, which will help prepare your class for fun with the online puzzles!",
+        "description": "Students should have had plenty of introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a dance, putting repeated steps in loops.\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Creating Art with Code\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review loops or the artist, which will help prepare your class for fun with the online puzzles!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2850,7 +2844,7 @@
       "key": "2ac3318e-254b-47cc-ac59-28cd8b7cc622",
       "position": 4,
       "properties": {
-        "description": "Some students may discover where to add `repeat` **loops** by writing out the program without **loops** then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
+        "description": "Some students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper before they program it online. (When drawing stamps, it can be easier to symbolize those with simple shapes like circles and squares.)"
       },
       "seeding_key": {
         "activity_section.key": "2ac3318e-254b-47cc-ac59-28cd8b7cc622",
@@ -2884,7 +2878,7 @@
       "key": "05c7c3a3-3378-4904-9136-be16d24330a3",
       "position": 1,
       "properties": {
-        "description": "Briefly review with the class what **loops** are and why we use them.\n\n - _What do **loops** do?_\n    - **Loops** **repeat** a set of **commands**.\n - _How do we use **loops**?_\n    - We use **loops** to create a pattern made of **repeated** actions.\n\nTell the class that they will now be doing something super cool: using **loops** inside **loops**. Ask the class to predict what kinds of things we would be using a **loop** inside of a **loop** for.\n\n_If a **loop** **repeats** a pattern, then **looping** a **loop** would **repeat** a pattern of patterns!_\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
+        "description": "Briefly review with the class what **loops** are and why we use them.\n\n - _What do loops do?_\n    - Loops repeat a set of commands.\n - _How do we use loops?_\n    - We use loops to create a pattern made of repeated actions.\n\nTell the class that they will now be doing something super cool: using loops inside loops. Ask the class to predict what kinds of things we would be using a loop inside of a loop for.\n\n_If a loop repeats a pattern, then looping a loop would repeat a pattern of patterns!_\n\nStudents don't need to understand this right away, so feel free to move on to the online puzzles even if students still seem a little confused.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2896,7 +2890,7 @@
       "key": "614b6acb-6e88-403e-a873-aa900b8666c4",
       "position": 1,
       "properties": {
-        "description": "We highly recommend pair programming for this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nAlso, have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks you can use, so if students like to write out the long answer to find the **repeats**, paper can be useful.",
+        "description": "We highly recommend pair programming for this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nAlso, have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks you can use, so if students like to write out the long answer to find the repeats, paper can be useful.",
         "name": "Nested Loops in Maze"
       },
       "seeding_key": {
@@ -3056,7 +3050,7 @@
       "key": "a608e3c1-c749-4463-b478-51d339fab447",
       "position": 1,
       "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain **conditions**.\n\nOpen up a discussion of when you might use a **conditional** in your code.",
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using conditionals during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain **conditions**.\n\nOpen up a discussion of when you might use a conditional in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3069,7 +3063,8 @@
       "position": 1,
       "properties": {
         "description": "####Online Puzzles\n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of _Minecraft_, but give a brief introduction for those that may not know.\n\n_Minecraft_ is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to avoid lava, pick up items, and explore in a world made up of cubes of things.\n\nDemonstrate one of the puzzles to the class (we recommend puzzle 11.) Once all questions have been addressed, transition students to computers and let them start pair programming.",
-        "name": "Looking Ahead with Minecraft"
+        "name": "Looking Ahead with Minecraft",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "db402396-6473-4942-a3b9-e3833beb0cd8",
@@ -3125,7 +3120,7 @@
       "key": "888667b6-71ac-4d2f-81df-ac6b8769f8b8",
       "position": 1,
       "properties": {
-        "description": "\nWe are going to use **conditionals** with the Code.org _bee_ to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use **conditionals** to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the `if at flower / else` block. Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should `get nectar` if there is a flower and `make honey` if there is a honeycomb.\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.",
+        "description": "\nWe are going to use **conditionals** with the Code.org _bee_ to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the `if at flower / else` block. Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should `get nectar` if there is a flower and `make honey` if there is a honeycomb.\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3271,7 +3266,7 @@
       "key": "c75f92ab-cfc1-481f-b93a-c6496cd99709",
       "position": 1,
       "properties": {
-        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say *\"while there is a hole, fill it with dirt\"* what would they do? How long would they do that?\n\nWhen you use a word like “while”, you are relying on a **condition** to tell the computer how long the **loop** should run. A **condition** is a statement that is tested and found to be true or false. In the case above, the **condition** is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\n\nTell the students they will be learning about a new kind of **loop**. Previously, students only used **loops** to **repeat* a command a certain number of times. Here, they won't always know how many times to **repeat** the **command**, however, they will know when to stop or when to keep going. **While loops** allow the programmer to **repeat** a command as long as a **condition** is still true. In the previous example, the **condition** is the existence of a hole.\n\nPull up a puzzle from today's online Code Studio puzzles. We recommend Puzzle 6.\n\n - Ask the class what the farmer should do when she gets to the pile of dirt.\n    - She should use a **while loop** to start removing the dirt.\n - Use the `while there is a pile / do` block. Ask the class what the farmer should do within the **while loop**. \n    - The farmer should `remove 1`. The farmer will keep \"removing 1 dirt\" while there is dirt. In other words, when there is no dirt, `remove 1` will no longer execute!\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.\n\nIf there's time, have the students discuss other times using a **while loop** would be useful. Examples include:\n\n - Running toward a ball while it is in front of you.\n - Filling a glass while it has space for more liquid.\n - Walk forward while there is a path ahead.",
+        "description": "Use \"while\" in a sentence in front of the students. Ask the students what the word \"while\" means. If you were to say *\"while there is a hole, fill it with dirt\"* what would they do? How long would they do that?\n\nWhen you use a word like “while”, you are relying on a condition to tell the computer how long the loop should run. A condition is a statement that is tested and found to be true or false. In the case above, the condition is if there is a hole. It’s only possible for there to be a hole or for there not to be a hole, thus the statement is only ever true or false.\n\nTell the students they will be learning about a new kind of loop. Previously, students only used loops to repeat a command a certain number of times. Here, they won't always know how many times to repeat the command, however, they will know when to stop or when to keep going. While loops allow the programmer to repeat a command as long as a condition is still true. In the previous example, the condition is the existence of a hole.\n\nPull up a puzzle from today's online Code Studio puzzles. We recommend Puzzle 6.\n\n - Ask the class what the farmer should do when she gets to the pile of dirt.\n    - She should use a while loop to start removing the dirt.\n - Use the `while there is a pile / do` block. Ask the class what the farmer should do within the while loop. \n    - The farmer should `remove 1`. The farmer will keep \"removing 1 dirt\" while there is dirt. In other words, when there is no dirt, `remove 1` will no longer execute!\n\nFill in the rest of the code and press `Run`. Discuss with the class why this worked.\n\nIf there's time, have the students discuss other times using a while loop would be useful. Examples include:\n\n - Running toward a ball while it is in front of you.\n - Filling a glass while it has space for more liquid.\n - Walk forward while there is a path ahead.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3284,7 +3279,7 @@
       "position": 1,
       "properties": {
         "name": "While Loops in Farmer",
-        "description": "**while loops** are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like **while loops**."
+        "description": "while loops are not always a difficult concept for students to understand, but if you think your class might struggle with these puzzles, we recommend pair programming. This will allow students to bounce ideas of each other before implementing the code. Pair programming works to increase confidence and understanding with topics like while loops."
       },
       "seeding_key": {
         "activity_section.key": "b6676ce5-2f4a-4761-a053-792853904bd5",
@@ -3395,7 +3390,7 @@
       "key": "dc1332e9-8b48-4325-a310-3de22c787e7d",
       "position": 1,
       "properties": {
-        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using **conditionals** during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "Gather the class together and ask two volunteers to walk straight in some direction in the classroom. If they encounter a chair out of place, they must step over it. If they reach a wall, they must sit down.\n\nOnce all of the students are sitting down, ask how you would program a robot to respond to a wall or a chair. Remind students that you cannot simply say \"Step over chair\" unless you know there is a chair, and you will not always know there is a chair.  It might be helpful to translate the task into instructions like: \n\n* while there is a path ahead  \n     * walk forward\n     * if there is a chair, step over it\n* sit down\n\nTell students they will be using conditionals during this lesson. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3443,7 +3438,7 @@
       "key": "f6d8a30c-dedb-4797-b71a-d661fb24aeec",
       "position": 1,
       "properties": {
-        "description": "In this lesson, students will be creating **loops** that only run `until` a **condition** is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some **condition** is true.  For example: Have students touch their nose `until` you tell them to stop.",
+        "description": "In this lesson, students will be creating loops that only run `until` a condition is true.  Help the students understand how this works by leading them in group activities and having them do an action `until` some condition is true.  For example: Have students touch their nose `until` you tell them to stop.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3455,7 +3450,7 @@
       "key": "c29aeb9a-7814-4b58-ba32-bf9407d7ff6d",
       "position": 2,
       "properties": {
-        "description": "####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should **repeat** to get to the pig.\n    - The bird should **repeat** `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to **repeat** this code. \n    - The bird should **repeat** this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` **loop** and press `Run`. Discuss with the class why this worked."
+        "description": "####Preview of Online Puzzles \n\nPull up a puzzle from today's Code Studio puzzles. We recommend Puzzle 4. \n\n - Ask the class what the bird should repeat to get to the pig.\n    - The bird should repeat `move forward`, `turn right`, `move forward`, and then `turn left`.\n - Ask the class what they can use to repeat this code. \n    - The bird should repeat this pattern *until* it reaches the pig. \n\nFill in the rest of the code using the `repeat until` loop and press `Run`. Discuss with the class why this worked."
       },
       "seeding_key": {
         "activity_section.key": "c29aeb9a-7814-4b58-ba32-bf9407d7ff6d",
@@ -3468,7 +3463,7 @@
       "properties": {
         "name": "Until Loops in Maze",
         "progression_name": "Practice",
-        "description": "Bringing together concepts is not easy, but this set of levels is meant to help students see the endless possibilities of coding when using **conditions**. If students struggle at all with understanding the similarities or differences between `while` **loops** and `until` **loops**, have them try to think of how they would use similar statements in their real lives."
+        "description": "Bringing together concepts is not easy, but this set of levels is meant to help students see the endless possibilities of coding when using conditions. If students struggle at all with understanding the similarities or differences between `while` loops and `until` loops, have them try to think of how they would use similar statements in their real lives."
       },
       "seeding_key": {
         "activity_section.key": "3fabd283-0831-412f-8a9f-76e9bf96206f",
@@ -3671,7 +3666,7 @@
       "key": "88c1c297-1627-45ec-9eb7-f6fffbe45240",
       "position": 1,
       "properties": {
-        "description": "Help the class understand that **functions** are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \n\nAs a class, work through the puzzle without using **functions**. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. \n\n**Ask:** _Why can't you just use a loop?_\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a **function**. Off to the side, declare the **function** like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why **functions** could be useful in programming. Invite students to discuss the difference between **functions** and loops.",
+        "description": "Help the class understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.\n\nPull up a puzzle from the lesson. We recommend puzzle 9. \n\nAs a class, work through the puzzle without using functions. Once you have gotten the solution, display it on a white board or overhead. Ask the class to point to the repeated code. Ask the class how they would simplify the program. \n\n**Ask:** _Why can't you just use a loop?_\n\nOn the white board or overhead, rewrite the program without the repeated code, but leaving one line space. In that/those line space(s), call a function. Off to the side, declare the function like the left example block in the lesson tip. Ask the class what they think the code will do now.\n\nOpen up a discussion with the class on why functions could be useful in programming. Invite students to discuss the difference between functions and loops.",
         "name": "Introduction\r",
         "tips": [
           {
@@ -3725,7 +3720,7 @@
       "key": "efc04a38-eabb-4c39-8ba5-571b966a2bd7",
       "position": 1,
       "properties": {
-        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - _When would you use a **function**?_\n - _Why does a **function** help to simplify your program?_\n - _Do you think **functions** make programming easier or harder? Why?_",
+        "description": "At this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either Artist or Bee.\n\nAsk the class:\n\n - _When would you use a function?_\n - _Why does a function help to simplify your program?_\n - _Do you think functions make programming easier or harder? Why?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3737,7 +3732,7 @@
       "key": "cbe7cad1-610d-4da8-9af6-fceb37bdeeed",
       "position": 1,
       "properties": {
-        "description": "\n####Online Puzzles\n\nSome puzzles will have a **function** pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a **function** first, then determine where a **function** would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use **functions**, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions.",
+        "description": "\n####Online Puzzles\n\nSome puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions.",
         "name": "Functions with Harvester",
         "progression_name": "The Harvester"
       },
@@ -3828,7 +3823,7 @@
       "key": "99fdf72d-5290-448c-a15d-5da9d2cac486",
       "position": 1,
       "properties": {
-        "description": "Tell the class that there are two main components to using functions.\n\n1. _The Declaration:_ Function declarations are what create a **function**. In a function declaration, you fill in the **function** with code and you give the **function** a name. You must declare a **function** before you can use it.\n\n2. _The Call:_ Function calls are what makes the program run the code in the **function**. To call a function, you place the name of the **function** in your program. Make sure your **function** is properly defined before calling it in your program.\n    \nStudents may benefit from writing code without **functions** then creating **functions** from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas.",
+        "description": "Tell the class that there are two main components to using functions.\n\n1. _The Declaration:_ Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. _The Call:_ Function calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3941,7 +3936,7 @@
       "key": "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0",
       "position": 1,
       "properties": {
-        "description": "**Discussion:**\n\n- _What is a **variable?**_ (A placeholder for a piece of information that can change.)\n- _When can a **variable** be helpful?_ (When you don't know what information is going to be used in a certain place until runtime, or when you have lots of places that one piece of information will be used, but that information might change someday.)\n\nAsk the class when they could see a **variable** being helpful in programming. When would they NOT want to use a **variable**?\n\nIf the class seems interested, continue the discussion. Otherwise, move on to previewing the online puzzles as a class.\n\n**Demo:** Display a puzzle for the class. We recommend the 6th puzzle. \n\nGo over the code with the students to make sure they understand what's happening before they help you convert the code to use **variables**. Can they think of something that might happen that would make them really glad that they used **variables** instead of hardcoded numbers?\n\n**Transition:** Now it's time for your students to move to their own computers and get started!\n",
+        "description": "**Discussion:**\n\n- _What is a **variable?**_ (A placeholder for a piece of information that can change.)\n- _When can a **variable** be helpful?_ (When you don't know what information is going to be used in a certain place until runtime, or when you have lots of places that one piece of information will be used, but that information might change someday.)\n\nAsk the class when they could see a variable being helpful in programming. When would they NOT want to use a variable?\n\nIf the class seems interested, continue the discussion. Otherwise, move on to previewing the online puzzles as a class.\n\n**Demo:** Display a puzzle for the class. We recommend the 6th puzzle. \n\nGo over the code with the students to make sure they understand what's happening before they help you convert the code to use variables. Can they think of something that might happen that would make them really glad that they used variables instead of hardcoded numbers?\n\n**Transition:** Now it's time for your students to move to their own computers and get started!\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3953,7 +3948,7 @@
       "key": "b270733d-2d48-4470-a0e4-7a805255d765",
       "position": 1,
       "properties": {
-        "description": "Notice that this stage first covers the idea of a **variable** as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.\n\nWatch out for puzzle #6. It is the first time that students will be expected to set a **variable** on their own.  This can be tricky if they don't have a true grasp on the concept. If they're having trouble, send them back to the prediction level (#5) and have them explain to their partners why the answer ended up what it was.  Once both partners are convinced, let them continue back to puzzle #6.",
+        "description": "Notice that this stage first covers the idea of a variable as a constant (a variable that you use in many places, but it does not change.) This might be something that students find helpful as they're creating their own projects.",
         "name": "Variables with Artist"
       },
       "seeding_key": {
@@ -3999,12 +3994,12 @@
       "key": "6ab692c9-eee1-4966-91fa-3bda39450263",
       "position": 1,
       "properties": {
-        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a **variable** and running your code, you'll need to help students see how a **variable** can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n\n![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a **variable** to have our loop do this for us?\n",
+        "description": "This series is a little different than what students have done in the past.  Now, instead of simply assigning a value to a variable and running your code, you'll need to help students see how a variable can be modified during program runtime.\n\n**Display** Show students the play area from one of the later puzzles.\n\n\n![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)\n\nThere are several things to unpack here, so you might need to give your students a chance to look at it critically before you expect them to do anything with it.\n\n**Think/Pair:**  Suppose all of the flowers/honeycomb in this picture had the same amount of nectar/honey. How would you solve this puzzle?\n\n**Share:** Let students share their ideas until you decide on one that the entire class is good with.\n\n**Discuss:**\nNow, imagine that we didn't want to have to write a separate chunk of code for each set of flowers and honeycomb.  How could we use a variable to have our loop do this for us?\n",
         "name": "Introduction\r",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Eventually, students will want to get to the place where they initialize a **variable** to the original value, then change it each time through the loop so that it's ready for the next time."
+            "markdown": "Eventually, students will want to get to the place where they initialize a variable to the original value, then change it each time through the loop so that it's ready for the next time."
           }
         ]
       },
@@ -4017,7 +4012,7 @@
       "key": "60fb6e02-bbf3-49df-ab58-79496259ada1",
       "position": 1,
       "properties": {
-        "description": "\n\nThis set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- What would it look like without the functions?\n- Now how can you use a **variable** to get the quantities the way you want them?\n- Now can you build it back up to use a function?\n\n**Hint:** Puzzle 7 becomes much easier if students utilize the `while path ahead` loop instead of a **variable**.",
+        "description": "\n\nThis set of puzzles takes some serious computational thinking skills.  If you find that students are getting stuck, help them break down the puzzles into the individual pieces:\n\n- What would it look like if the flowers/honeycomb all had the same amount of nectar/honey?\n- What would it look like without the functions?\n- Now how can you use a variable to get the quantities the way you want them?\n- Now can you build it back up to use a function?\n\n**Hint:** Puzzle 7 becomes much easier if students utilize the `while path ahead` loop instead of a variable.",
         "name": "Changing Variables with Bee",
         "progression_name": "Practice"
       },
@@ -4064,7 +4059,7 @@
       "key": "beb275b1-d235-4fb3-8910-bcfe9c6ae05a",
       "position": 1,
       "properties": {
-        "description": "It might be helpful to remind students of \"Variables that Change in Bee,\" since **variables** will be used in a similar way here.\n\n- How can we change the value of a **variable** inside of a loop?\n- Do we have to change the value of a **variable** only by one each time?",
+        "description": "It might be helpful to remind students of \"Variables that Change in Bee,\" since variables will be used in a similar way here.\n\n- How can we change the value of a variable inside of a loop?\n- Do we have to change the value of a variable only by one each time?",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4077,7 +4072,7 @@
       "position": 1,
       "properties": {
         "name": "Changing Variables with Artist",
-        "description": "The latter half of this series is made up of free play puzzles.  Students will have the opportunity to play with **variables**, shape, and color to create something unique.",
+        "description": "The latter half of this series is made up of free play puzzles.  Students will have the opportunity to play with variables, shape, and color to create something unique.",
         "progression_name": "Skill building"
       },
       "seeding_key": {
@@ -4123,7 +4118,7 @@
       "key": "b3ac68a6-7600-49ad-bfb3-88d318e25658",
       "position": 1,
       "properties": {
-        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line, mark the start and ending values of the given `for` loop (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.",
+        "description": "Display a puzzle from the lesson. We recommend the prediction level because it displays a potential solution and asks the user to evaluate it.\n\nUsing a number line (example pictured below), mark the start and ending values of the given `for` loop (if you aren't using puzzle #5, you will need to come up with a potential solution first). With the class's help, circle the values between the start and end that the `for` loop will touch. If you are working on puzzle #5, ask the class what they think the answer is to the question, given what they found with the number line.\n- Point out that there are certain loops that happen very frequently, for example, loops where you need to keep track of how many times you have been through\n\t- Sometimes, you don't want to start with one\n\t- Sometimes, you don't want to count by ones\n\t- `for` loops give you a powerful way to keep a counter that starts when you want, ends when you want, and increases by whatever size step that you want\n\nHere, you can jump right into a sample of the game.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -4340,7 +4335,7 @@
       "key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
       "position": 3,
       "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist (all ages)** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can be express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
       },
       "seeding_key": {
         "activity_section.key": "2a089231-5563-4b8e-a861-8faf4bda0cf5",
@@ -4352,7 +4347,7 @@
       "position": 1,
       "properties": {
         "name": "Code Your Own Dance Party",
-        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist (all ages).**. We are using radio-safe versions of all songs and for students under 13, we limit the music to this filtered list ***Spotify Playlist.** If you would like to use the filtered list with older students, you can share ***Spotify Playlist for Under 13** with your classroom."
+        "description": "#### Music Filtering\n\nThis tutorial features songs from popular artists. To get a preview of the song list in this tutorial, check out this ***Spotify Playlist.** We are using radio-safe versions of all songs. For students under 13, we limit the music to this filtered list. If you would like to use the filtered list with older students, you can share ***Spotify Playlist** with your classroom."
       },
       "seeding_key": {
         "activity_section.key": "88b00482-3c11-4079-9869-faaa51c340c2",
@@ -4448,12 +4443,12 @@
       "key": "7e0f9f67-19cb-455a-bd75-d771183b8773",
       "position": 9,
       "properties": {
-        "description": "\n\n#### Properties Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Properties Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Properties Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the **code students write in this level is not checked for correctness**. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n",
+        "description": "\n\n#### Properties Level 11\n\n* Levels 11-13 are about adjusting the properties (e.g. size, color) of the dancers.\n* It is important to make sure that the teal `set` block is placed somewhere in the program *after* the dancers have been created. To solve this puzzle, place a `set size` block anywhere in your program and use it to change the size of some of your dancers. \n* Dancers created as a group have a default size of 30. Other dancers have a default size of 100.\n\n#### Properties Level 12\n\n* As with the previous level, make sure to only use the `set tint to (color)` block after you have made the dancers in your program. For example, placing it as the first step in the `setup` area of your program will have no effect.\n\n#### Properties Level 13\n\n* With the right code, you should see the dancer cycle through different colors, sizes, or dance moves.\n* Make sure there is a teal `change`, a teal `randomize` block, or a purple `do forever` block connected inside the `every 2 measures` block. \n* Make sure `do forever` blocks are set to either (Next), (Previous), or (Random). Otherwise, the dancer will just perform the set move repeatedly.\n* Note that the code students write in this level is not checked for correctness. This means they will always pass the level, even if they do not change the program. Students should feel free to experiment with their code in ways that are interesting to them. Click the “Finish” button to move on.\n* Making new dancers inside the `every 2 measures` block will cause your program to create multiple identical dancers at the same location(s) and may lead to unintended consequences!\n",
         "progression_name": "Properties",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is **not checked for correctness** in order to encourage experimentation instead of solving a specific task."
+            "markdown": "By this point in the lesson you may notice that the instructions are less prescriptive. Encourage students to be creative and explore the new blocks that are introduced. From this point on student code is not checked for correctness in order to encourage experimentation instead of solving a specific task."
           }
         ]
       },
@@ -4540,12 +4535,12 @@
       "key": "0d4256d9-a4f5-4fed-9958-f515dd431f6e",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with **sprites** in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from *Ice Age* or one of the *Angry Birds.*\n\n**Discuss:** Let the students know that this character on the screen is a **sprite**.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own **sprites** to control.\n\nThis demonstration and discussion can help students move into the Sprite Lab environment.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.\n\n- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the **sprite** to begin two behaviors at once?_\n- _Will the **sprite** ever stop these **behaviors** on its own?_\n- _If we want the **sprite** to stop a **behavior** when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.",
+        "description": "Today students will learn how to work with sprites in Sprite Lab.\n\n**Display:** Pull up a previous puzzle from Code.org, ideally one containing a \"main character\" like *Scrat* from *Ice Age* or one of the *Angry Birds.*\n\n**Discuss:** Let the students know that this character on the screen is a sprite.  It is a graphic that is controlled by a program.  In this lesson, students will have the opportunity to choose their own sprites to control.\n\nThis demonstration and discussion can help students move into the Sprite Lab environment.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.\n\n- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the sprite to begin two behaviors at once?_\n- _Will the sprite ever stop these behaviors on its own?_\n- _If we want the sprite to stop a behavior when we click it, how might we do that?_\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.",
         "name": "Introduction",
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a **sprite** to begin and start the same **behavior** won't result in any observable effect because there is no time between each action. "
+            "markdown": "Sprite Lab works differently in some ways from the other online tools in the course. Most importantly, all code runs in order and immediately unless attached to an event block. Telling a sprite to begin and start the same behavior won't result in any observable effect because there is no time between each action. "
           }
         ]
       },
@@ -4676,7 +4671,7 @@
       "key": "4db4f5ce-88ef-4fdf-9282-cb2315983481",
       "position": 1,
       "properties": {
-        "description": "Today students will visit **events** in programming.\n\n**Demo:** Ask the students to raise their hands in the air.\n\nWhat you did was declare an **event**. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\n\nYou can also think of cities as declaring **events**. There are laws that say \"when there is a green light, cars move through the intersection\". \n\n**Discuss:** Ask the students why they think this is an **event**.\n\nToday, students will play in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other.\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
+        "description": "Today students will visit events in programming.\n\n**Demo:** Ask the students to raise their hands in the air.\n\nWhat you did was declare an event. When you say \"raise your hands in the air\" the students responded by raising their hands. In coding, you would declare this by saying something like \"when I say 'raise your hands,' you raise your hands\".\n\nYou can also think of cities as declaring events. There are laws that say \"when there is a green light, cars move through the intersection\". \n\n**Discuss:** Ask the students why they think this is an event.\n\nToday, students will play in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other.\n\n**Display:** Begin by showing Puzzle 1 to your students. \n\n**Think/Pair:** Ask them to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -4688,7 +4683,7 @@
       "key": "88d3b0f5-9351-4573-a499-88354556fc44",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an **event** is initiated.",
+        "description": "**Goal:** Today, students will be creating their own alien dance party! They’ll begin by reviewing how to put sprites on the screen, then they will assign them behaviors and learn to change those behaviors when an event is initiated.",
         "name": "Alien Dance Party with Sprite Lab",
         "tips": [
           {
@@ -4966,7 +4961,7 @@
       "key": "8970ddea-49ba-429a-9607-6239c33e06be",
       "position": 1,
       "properties": {
-        "description": "\n####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n    \n    \n#### Journal Prompts:\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
+        "description": "**Prompts:**\n\n - What was today's lesson about?\n - How do you feel about today's lesson?\n - What other options would you like to be able to have your pet do?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -5013,10 +5008,9 @@
       "key": "83a07440-69f4-47bc-9a0a-4281dd6b5b7b",
       "position": 3,
       "properties": {
-        "description": "**Distribute**: Distribute one **CSF Express End of Course Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
+        "description": "**Distribute**: Distribute one ***End of Course Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "If students are pair programming for this assignment, this warm up is a great opportunity for them to practice sharing and respecting others' ideas. Ensure students are following group work norms you already have in place in your classroom. Otherwise, spend a brief moment going over your expectations.\n"
           }
@@ -5034,7 +5028,6 @@
         "description": "Equipped with their completed planning guides, students are now ready to bring their projects to life. These levels correspond to the structure of the planning guide, and help navigate students through the process of transforming their ideas into code.",
         "tips": [
           {
-            "key": "tip",
             "type": "teachingTip",
             "markdown": "Students will experience plenty of trial and error while coding. Their projects are likely to become truncated versions of their original scope. Remind students that this kind of compromise is common in software design. It's okay if they don't get to build in every feature they planned!\r\n"
           }
@@ -5426,7 +5419,7 @@
       "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Debugging with Scrat ",
         "level_keys": [
@@ -5452,7 +5445,7 @@
       "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5478,7 +5471,7 @@
       "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5504,7 +5497,7 @@
       "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5530,7 +5523,7 @@
       "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5556,7 +5549,7 @@
       "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5582,7 +5575,7 @@
       "chapter": 20,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5608,7 +5601,7 @@
       "chapter": 21,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "challenge": true,
@@ -5635,7 +5628,7 @@
       "chapter": 22,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5661,7 +5654,7 @@
       "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5687,7 +5680,7 @@
       "chapter": 24,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5713,7 +5706,7 @@
       "chapter": 25,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -7485,7 +7478,7 @@
       "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7511,7 +7504,7 @@
       "chapter": 94,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7537,7 +7530,7 @@
       "chapter": 95,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7563,7 +7556,7 @@
       "chapter": 96,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -7589,7 +7582,7 @@
       "chapter": 97,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7615,7 +7608,7 @@
       "chapter": 98,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -7645,7 +7638,8 @@
       "properties": {
         "level_keys": [
           "Overworld Move to Sheep_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7670,7 +7664,8 @@
       "properties": {
         "level_keys": [
           "Overworld Chop Tree_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7695,7 +7690,8 @@
       "properties": {
         "level_keys": [
           "Overworld Shear Sheep_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7720,7 +7716,8 @@
       "properties": {
         "level_keys": [
           "Overworld Chop Trees_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7745,7 +7742,8 @@
       "properties": {
         "level_keys": [
           "Overworld Place Wall_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7770,7 +7768,8 @@
       "properties": {
         "level_keys": [
           "Overworld House Frame Chosen_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7795,7 +7794,8 @@
       "properties": {
         "level_keys": [
           "Overworld Plant Crops_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7820,7 +7820,8 @@
       "properties": {
         "level_keys": [
           "Overworld Avoid Monsters_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7845,7 +7846,8 @@
       "properties": {
         "level_keys": [
           "Overworld Powered Minecart_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7870,7 +7872,8 @@
       "properties": {
         "level_keys": [
           "Underground Mining Coal_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -7895,7 +7898,8 @@
       "properties": {
         "level_keys": [
           "Underground Iron_2021"
-        ]
+        ],
+        "progression": "Practice"
       },
       "named_level": null,
       "bonus": null,
@@ -9325,7 +9329,7 @@
       "chapter": 164,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Harvesting with Conditionals",
         "level_keys": [
@@ -9351,7 +9355,7 @@
       "chapter": 165,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9377,7 +9381,7 @@
       "chapter": 166,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9403,7 +9407,7 @@
       "chapter": 167,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9429,7 +9433,7 @@
       "chapter": 168,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -9455,7 +9459,7 @@
       "chapter": 169,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9481,7 +9485,7 @@
       "chapter": 170,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9507,7 +9511,7 @@
       "chapter": 171,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -9534,7 +9538,7 @@
       "chapter": 172,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9560,7 +9564,7 @@
       "chapter": 173,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -9586,7 +9590,7 @@
       "chapter": 174,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -9612,7 +9616,7 @@
       "chapter": 175,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -9638,7 +9642,7 @@
       "chapter": 176,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -13157,32 +13161,6 @@
       "properties": {
         "progression": "Create a Virtual Pet",
         "level_keys": [
-          "Virtual Pet 4_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      },
-      "level_keys": [
-        "Virtual Pet 4_2021"
-      ]
-    },
-    {
-      "chapter": 312,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Create a Virtual Pet",
-        "level_keys": [
           "Virtual Pet 5_2021"
         ]
       },
@@ -13202,9 +13180,9 @@
       ]
     },
     {
-      "chapter": 313,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 312,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13228,9 +13206,9 @@
       ]
     },
     {
-      "chapter": 314,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 313,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13254,9 +13232,9 @@
       ]
     },
     {
-      "chapter": 315,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 314,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Create a Virtual Pet",
@@ -13280,21 +13258,21 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 315,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Example Projects",
         "level_keys": [
-          "courseExpress_project_exemplars_2021"
+          "courseF_EOC_examples_2021"
         ]
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseExpress_project_exemplars_2021"
+          "courseF_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -13302,14 +13280,14 @@
         "activity_section.key": "b4d55ac7-44a4-4551-89ca-9fce880121ac"
       },
       "level_keys": [
-        "courseExpress_project_exemplars_2021"
+        "courseF_EOC_examples_2021"
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 316,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Create your project",
         "level_keys": [
@@ -17055,18 +17033,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Virtual Pet 4_2021",
-        "script_level.level_keys": [
-          "Virtual Pet 4_2021"
-        ],
-        "lesson.key": "Virtual Pet with Sprite Lab",
-        "lesson_group.key": "csf_sprites",
-        "script.name": "express-2021",
-        "activity_section.key": "bee07420-6a4f-4f4f-9058-c651486b7b38"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Virtual Pet 5_2021",
         "script_level.level_keys": [
           "Virtual Pet 5_2021"
@@ -17115,9 +17081,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseExpress_project_exemplars_2021",
+        "level.key": "courseF_EOC_examples_2021",
         "script_level.level_keys": [
-          "courseExpress_project_exemplars_2021"
+          "courseF_EOC_examples_2021"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -17140,20 +17106,8 @@
   ],
   "resources": [
     {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
       "name": "Unplugged Maze Blocks",
-      "url": "https://drive.google.com/open?id=1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48\t",
+      "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit\t",
       "key": "unplugged_maze_blocks",
       "properties": {
         "type": "Resource",
@@ -17161,18 +17115,6 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_maze_blocks"
-      }
-    },
-    {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17224,7 +17166,7 @@
     },
     {
       "name": "Turns & Angles",
-      "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+      "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "turns_angles_1",
       "properties": {
         "audience": "Student",
@@ -17258,18 +17200,6 @@
       }
     },
     {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
       "name": "Unplugged Blocks (Courses C-F)",
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "unplugged_blocks_courses_c-f__2",
@@ -17289,18 +17219,6 @@
       },
       "seeding_key": {
         "resource.key": "unplugged_blocks_courses_c-f__3"
-      }
-    },
-    {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17339,29 +17257,6 @@
       }
     },
     {
-      "name": "Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "unplugged_blocks_courses_c-f_",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
       "name": "Variables",
       "url": "https://youtu.be/DI7DprN4FtE",
       "key": "variables",
@@ -17372,29 +17267,6 @@
       },
       "seeding_key": {
         "resource.key": "variables"
-      }
-    },
-    {
-      "name": "Unplugged Blocks (Courses C-F)",
-      "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
-      "key": "unplugged_blocks_courses_c-f_",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
-      "name": "Think Spot - Reflection Journal",
-      "url": "https://drive.google.com/open?id=1IwPCkbZen2Md6MsbaOO5wYA93e8qrgrna2pozTGazjY",
-      "key": "think-spot-journal",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17422,18 +17294,6 @@
       }
     },
     {
-      "name": "Spotify Play List (Under 13)",
-      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
-      "key": "spotify_play_list_under_13_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "spotify_play_list_under_13_"
-      }
-    },
-    {
       "name": "Swimming Fish Teacher Sandbox",
       "url": "https://studio.code.org/levels/18623",
       "key": "swimming_fish_teacher_sandbox",
@@ -17445,15 +17305,15 @@
       }
     },
     {
-      "name": "Pause and Think Online",
-      "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
-      "key": "pause_and_think_online",
+      "name": "Sprite Lab Documentation",
+      "url": "https://studio.code.org/docs/spritelab/",
+      "key": "sprite_lab_documentation",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "pause_and_think_online"
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -17492,25 +17352,24 @@
       "seeding_key": {
         "resource.key": "rubric-csf-final-projects"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming with Angry Birds",
         "resource.key": "unplugged_maze_blocks"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging with Scrat",
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17557,12 +17416,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Snowflakes with Anna and Elsa",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f__2"
       }
@@ -17571,12 +17424,6 @@
       "seeding_key": {
         "lesson.key": "While Loops with the Farmer",
         "resource.key": "unplugged_blocks_courses_c-f__3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Harvesting with Conditionals",
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17606,12 +17453,6 @@
     {
       "seeding_key": {
         "lesson.key": "Changing Variables with Artist",
-        "resource.key": "think-spot-journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Changing Variables with Artist",
         "resource.key": "variables"
       }
     },
@@ -17619,12 +17460,6 @@
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "For Loops with Artist",
-        "resource.key": "think-spot-journal"
       }
     },
     {
@@ -17641,14 +17476,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "spotify_play_list_under_13_"
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "resource.key": "swimming_fish_teacher_sandbox"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish in Sprite Lab",
-        "resource.key": "swimming_fish_teacher_sandbox"
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -17659,8 +17500,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "resource.key": "sprite_lab_documentation"
       }
     },
     {
@@ -17673,6 +17526,20 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "rubric-csf-final-projects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "sprite_lab_documentation"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "express-2021"
       }
     }
   ],
@@ -18140,7 +18007,7 @@
     {
       "key": "code",
       "word": "code",
-      "definition": "(v) to write code, or to write instructions for a computer.",
+      "definition": "to write code, or to write instructions for a computer.",
       "properties": {
       },
       "seeding_key": {
@@ -18198,13 +18065,33 @@
       }
     },
     {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "variable"
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that a sprite performs continuously until it’s told to stop.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -18563,8 +18450,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Virtual Pet with Sprite Lab",
-        "vocabulary.key": "variable"
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "behavior"
       }
     },
     {
@@ -19214,6 +19113,372 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "objective.key": "db7a8439-bc00-43ef-a9a8-2067da8dbda6"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Angry Birds",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collecting Treasure with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Art with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Snowflakes with Anna and Elsa",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops with the Farmer",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Harvesting with Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Changing Variables with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish in Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Behaviors in Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     }
   ]

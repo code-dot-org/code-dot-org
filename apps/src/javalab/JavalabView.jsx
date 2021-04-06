@@ -10,16 +10,19 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 const style = {
   instructionsAndPreview: {
     width: '40%',
     position: 'relative',
-    marginRight: 15
+    marginRight: 15,
+    color: color.black
   },
   editorAndConsole: {
     width: '60%',
-    position: 'relative'
+    position: 'relative',
+    color: color.white
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -43,7 +46,7 @@ const style = {
     flexDirection: 'column'
   },
   singleButton: {
-    // this matches the current ace editor theme we are using
+    // this matches the current code mirror theme we are using
     // TODO: either add to color.scss or use a color from there depending
     // on final theme choice.
     backgroundColor: '#272822',
@@ -60,12 +63,14 @@ class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
+    onCommitCode: PropTypes.func.isRequired,
     suppliedFilesVersionId: PropTypes.string,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    appendOutputLog: PropTypes.func
+    appendOutputLog: PropTypes.func,
+    channelId: PropTypes.string
   };
 
   state = {
@@ -82,7 +87,22 @@ class JavalabView extends React.Component {
       () => this.setState({loading: false, loadSuccess: false}),
       this.props.suppliedFilesVersionId
     );
+    this.getToken();
   }
+
+  getToken = () => {
+    // TODO: Use token to connect to Java Builder
+    $.ajax({
+      url: '/javabuilder/access_token',
+      type: 'get',
+      data: {
+        channelId: this.props.channelId,
+        projectVersion: project.getCurrentSourceVersionId()
+      }
+    })
+      .done()
+      .fail();
+  };
 
   run = () => {
     this.props.appendOutputLog('Running program...');
@@ -108,7 +128,7 @@ class JavalabView extends React.Component {
             </InstructionsWithWorkspace>
           </div>
           <div style={style.editorAndConsole}>
-            <JavalabEditor />
+            <JavalabEditor onCommitCode={this.props.onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
@@ -175,7 +195,8 @@ class JavalabView extends React.Component {
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    channelId: state.pageConstants.channelId
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))

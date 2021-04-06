@@ -97,6 +97,23 @@ class Resource < ApplicationRecord
     }
   end
 
+  def summarize_for_teacher_resources_dropdown
+    {
+      id: id,
+      key: key,
+      name: name,
+      url: url
+    }
+  end
+
+  def serialize_scripts
+    if Rails.application.config.levelbuilder_mode
+      scripts_to_serialize = lessons.map(&:script).concat(scripts).uniq
+      scripts_to_serialize.each(&:write_script_json)
+      unit_groups.each(&:write_serialization)
+    end
+  end
+
   private
 
   def generate_key_from_name

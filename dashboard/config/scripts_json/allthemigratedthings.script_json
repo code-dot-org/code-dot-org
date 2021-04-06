@@ -413,6 +413,15 @@
       }
     }
   ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "playSound"
+      }
+    }
+  ],
   "objectives": [
     {
       "key": "a1419708-f12c-4bc0-ab6b-827dd9136255",

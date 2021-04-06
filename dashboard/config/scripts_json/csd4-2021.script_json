@@ -11,12 +11,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
@@ -25,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:49:31 UTC",
+    "serialized_at": "2021-03-26 15:41:18 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -4966,7 +4960,7 @@
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goal:** This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\r\n\r\n1. import the screen your teammate created\r\n2. add an event handler to your code using the button ID\r\n3. use the `setScreen` block to change to the new screen\r\n\r\n"
+            "markdown": "**Goal:** This prompt is a review of yesterday’s lesson. Try to draw out that there are several steps to complete in this process:\r\n\r\n1. import the screen your teammate created\r\n2. add an event handler to your code using the button ID\r\n3. use the [`setScreen`(#fff176)](/docs/applab/setScreen/) block to change to the new screen\r\n\r\n"
           }
         ]
       },
@@ -7141,18 +7135,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "Reacting as Your User",
       "url": "https://studio.code.org/s/csd4-2019/stage/2/puzzle/1",
       "key": "reacting-as-your-user-exemplar-19",
@@ -7230,18 +7212,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "User Centered Design (Define & Prepare) 2021",
       "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
       "key": "user-centered-design-2021",
@@ -7279,30 +7249,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "User Centered Design",
-      "url": "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1",
-      "key": "user-centered-design-exemplar-19",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "user-centered-design-exemplar-19"
-      }
-    },
-    {
       "name": "User Centered Design (Try & Reflect) 2021",
       "url": "https://docs.google.com/document/d/1mHWy7a3_eSdEgjXRFCb1ezGFdi1QMgPTtitqHap0ERQ/view",
       "key": "user-centered-design-reflect-2021",
@@ -7313,18 +7259,6 @@
       },
       "seeding_key": {
         "resource.key": "user-centered-design-reflect-2021"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7367,31 +7301,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "User Interface Screens",
-      "url": "https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/edit",
-      "key": "user-interface-screens",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "user-interface-screens"
-      }
-    },
-    {
       "name": "Improve a Screen",
       "url": "https://studio.code.org/s/csd4-2019/stage/5/puzzle/1",
       "key": "improve-a-screen-exemplar-19",
@@ -7427,18 +7336,6 @@
       },
       "seeding_key": {
         "resource.key": "improve-a-screen"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7481,18 +7378,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "Paper Prototype 2021",
       "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view",
       "key": "paper-prototype-2021",
@@ -7531,18 +7416,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "App Design Kickoff",
       "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
       "key": "app-design-kickoff-2019",
@@ -7569,18 +7442,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/edit",
       "key": "market-research",
@@ -7594,18 +7455,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "Explore UI Elements",
       "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
       "key": "explore-ui-elements",
@@ -7616,18 +7465,6 @@
       },
       "seeding_key": {
         "resource.key": "explore-ui-elements"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7645,7 +7482,7 @@
     },
     {
       "name": "Phone Paper Prototype",
-      "url": "https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE",
+      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE/view",
       "key": "phone-paper-prototype",
       "properties": {
         "type": "Template",
@@ -7653,18 +7490,6 @@
       },
       "seeding_key": {
         "resource.key": "phone-paper-prototype"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7703,18 +7528,6 @@
       },
       "seeding_key": {
         "resource.key": "whats-for-lunch-testing"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7757,80 +7570,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "Screen Design (2021)",
-      "url": "https://docs.google.com/document/d/1QGuwv8brhQRgXewOgsEV1zy7qrhCMawqlMNP4WLNh9Y/view",
-      "key": "screen-design-1",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "screen-design-1"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
-      "name": "User Test Cases",
-      "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
-      "key": "user-test-cases",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "user-test-cases"
-      }
-    },
-    {
       "name": "Digital Prototype User Testing",
       "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
       "key": "digital-prototype-user-testing",
@@ -7841,18 +7580,6 @@
       },
       "seeding_key": {
         "resource.key": "digital-prototype-user-testing"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7869,18 +7596,6 @@
       }
     },
     {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
-      }
-    },
-    {
       "name": "Updating Your Prototype",
       "url": "https://docs.google.com/document/d/1-Ax_KooQaPObURbSS7tYp00gshGzIjufv7P-y5UU98M/view",
       "key": "updating-your-prototype",
@@ -7891,31 +7606,6 @@
       },
       "seeding_key": {
         "resource.key": "updating-your-prototype"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "name": "Unit 4 The Design Process",
-      "url": "https://docs.google.com/presentation/d/1ERI-1GNmt3En199xerV9xDXvUkOfz-lAs2Qu4yalaMk/copy",
-      "key": "unit-4-the-design-process",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "unit-4-the-design-process"
       }
     },
     {
@@ -7964,6 +7654,17 @@
       },
       "seeding_key": {
         "resource.key": "app-presentation-exemplar"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
       }
     }
   ],
@@ -8389,6 +8090,14 @@
       }
     }
   ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd4-2021"
+      }
+    }
+  ],
   "vocabularies": [
     {
       "key": "empathy",
@@ -8493,18 +8202,21 @@
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "console.log"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "onEvent"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events In AppLab",
+        "programming_environment.name": "applab",
         "programming_expression.key": "setScreen"
       }
     }
@@ -8878,6 +8590,715 @@
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
         "objective.key": "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Analysis of Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Your User",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User-Centered Design 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Interfaces",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Feedback and Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Identifying User Needs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Apps for Good",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Paper Prototypes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Design",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Digital Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events In AppLab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Linking Screens",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bugs and Features",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Your Prototype",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
       }
     }
   ]

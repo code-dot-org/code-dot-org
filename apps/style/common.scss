@@ -1,7 +1,8 @@
 @import "color";
 @import "font";
-@import "style-constants";
+@import "markdown";
 @import "responsive-visualization";
+@import "style-constants";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -105,6 +106,13 @@ html[dir='rtl'] #visualizationColumn {
     position: absolute;
     overflow: auto;
   }
+}
+
+// Use the focus-visible pseudoclass to hide the outline when clicked.
+// This leaves the outline behavior unchanged for keyboard navigation.
+// Note: this isn't supported in every browser yet.
+.no-focus-outline:focus:not(:focus-visible) {
+  outline: none;
 }
 
 div.droplet-palette-group-header {

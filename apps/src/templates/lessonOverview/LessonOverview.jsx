@@ -17,9 +17,10 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import LessonStandards, {ExpandMode} from './LessonStandards';
+import StyledCodeBlock from './StyledCodeBlock';
 
 const styles = {
   frontPage: {
@@ -141,6 +142,21 @@ class LessonOverview extends Component {
                 />
               </div>
             )}
+            {lesson.standards.length > 0 && (
+              <div>
+                <h2>{i18n.standards()}</h2>
+                <LessonStandards
+                  standards={lesson.standards}
+                  expandMode={ExpandMode.FIRST}
+                />
+              </div>
+            )}
+            {lesson.opportunityStandards.length > 0 && (
+              <div>
+                <h2>{i18n.crossCurricularOpportunities()}</h2>
+                <LessonStandards standards={lesson.opportunityStandards} />
+              </div>
+            )}
             <h2>{i18n.agenda()}</h2>
             <LessonAgenda activities={this.props.activities} />
           </div>
@@ -214,13 +230,7 @@ class LessonOverview extends Component {
                 <ul>
                   {lesson.programmingExpressions.map(expression => (
                     <li key={expression.name}>
-                      <a
-                        href={studio(expression.link)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {expression.name}
-                      </a>
+                      <StyledCodeBlock programmingExpression={expression} />
                     </li>
                   ))}
                 </ul>
