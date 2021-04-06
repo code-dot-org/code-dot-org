@@ -1,38 +1,10 @@
 export const allDatasets = [
   {
-    id: "candy",
-    name: "Erin's Candy Preferences - all binary",
-    path: "datasets/erin_candy_preferences.csv",
-    metadataPath: "datasets/erin_candy_preferences.json",
-    imagePath: "datasets/erin_candy_preferences.jpg"
-  },
-  {
-    id: "titanic",
-    name: "Titanic - multiple datatypes",
-    path: "datasets/titanic.csv",
-    metadataPath: "datasets/titanic.json",
-    imagePath: "datasets/titanic.jpg"
-  },
-  {
     id: "foods",
     name: "Foods",
     path: "datasets/foods.csv",
     metadataPath: "datasets/foods.json",
     imagePath: "datasets/foods.jpg"
-  },
-  {
-    id: "flights",
-    name: "Flight delays",
-    path: "datasets/flight_delays.csv",
-    metadataPath: "datasets/flight_delays.json",
-    imagePath: "datasets/flight_delays.jpg"
-  },
-  {
-    id: "videogames",
-    name: "Videogame sales",
-    path: "datasets/videogame_sales.csv",
-    metadataPath: "datasets/videogame_sales.json",
-    imagePath: "datasets/videogame_sales.jpg"
   },
   {
     id: "bike_sharing",
@@ -49,13 +21,6 @@ export const allDatasets = [
     imagePath: "datasets/billionaires.jpg"
   },
   {
-    id: "census_knn",
-    name: "Full Census Data",
-    path: "datasets/census_full_for_knn.csv",
-    metadataPath: "datasets/census_full_for_knn.json",
-    imagePath: "datasets/census.jpg"
-  },
-  {
     id: "census_svm",
     name: "Partial Census Data",
     path: "datasets/census_part_for_svm.csv",
@@ -63,25 +28,11 @@ export const allDatasets = [
     imagePath: "datasets/census.jpg"
   },
   {
-    id: "happiness_contribution",
-    name: "Global Happiness (contribution)",
-    path: "datasets/global_happiness_contribution.csv",
-    metadataPath: "datasets/global_happiness_contribution.json",
-    imagePath: "datasets/global_happiness.jpg"
-  },
-  {
     id: "happiness_raw",
     name: "Global Happiness (raw)",
     path: "datasets/global_happiness_raw.csv",
     metadataPath: "datasets/global_happiness_raw.json",
     imagePath: "datasets/global_happiness.jpg"
-  },
-  {
-    id: "land_temp",
-    name: "Global Land Temperature",
-    path: "datasets/global_land_temp_country_1995_2016.csv",
-    metadataPath: "datasets/global_land_temp_country_1995_2016.json",
-    imagePath: "datasets/global_land_temp_country_1995_2016.jpg"
   },
   {
     id: "housing",
@@ -98,20 +49,6 @@ export const allDatasets = [
     imagePath: "datasets/insurance_cost.jpg"
   },
   {
-    id: "spotify",
-    name: "Spotify (2005-2020)",
-    path: "datasets/spotify_2005_to_2020.csv",
-    metadataPath: "datasets/spotify_2005_to_2020.json",
-    imagePath: "datasets/temp.jpg"
-  },
-  {
-    id: "state_demographics",
-    name: "State Demographics",
-    path: "datasets/state_demographics.csv",
-    metadataPath: "datasets/state_demographics.json",
-    imagePath: "datasets/state_demographics.jpg"
-  },
-  {
     id: "student_alcohol_consumption",
     name: "Student Health Survey",
     path: "datasets/student_alcohol_consumption.csv",
@@ -124,13 +61,6 @@ export const allDatasets = [
     path: "datasets/heart.csv",
     metadataPath: "datasets/heart.json",
     imagePath: "datasets/heart.jpg"
-  },
-  {
-    id: "pokemon",
-    name: "Pokemon",
-    path: "datasets/pokemon.csv",
-    metadataPath: "datasets/pokemon.json",
-    imagePath: "datasets/temp.jpg"
   },
   {
     id: "zoo",
@@ -287,33 +217,12 @@ export const allDatasets = [
     imagePath: "datasets/temp.jpg"
   },
   {
-    id: "mushrooms",
-    name: "Poisonous Mushrooms",
-    path: "datasets/mushrooms.csv",
-    metadataPath: "datasets/mushrooms.json",
-    imagePath: "datasets/mushrooms.jpg"
-  },
-  {
     id: "car_evaluation",
     name: "Car Evaluation",
     path: "datasets/car_evaluation.csv",
     metadataPath: "datasets/car_evaluation.json",
     imagePath: "datasets/car_evaluation.jpg"
   },
-  {
-    id: "school_scores",
-    name: "SAT Scores",
-    path: "datasets/school_scores.csv",
-    metadataPath: "datasets/school_scores.json",
-    imagePath: "datasets/school_scores.jpg"
-  },
-  {
-    id: "house-votes-84",
-    name: "1984 US House Votes",
-    path: "datasets/house-votes-84.csv",
-    metadataPath: "datasets/house-votes-84.json",
-    imagePath: "datasets/house-votes-84.jpg"
-  }
 ];
 
 export function getAvailableDatasets(specificDatasets) {
