@@ -71,115 +71,131 @@ export const allDatasets = [
   },
   {
     id: "tacos_toy",
-    name: "Tacos (Toy)",
+    name: "Tacos",
     path: "datasets/taco_toppings_toy.csv",
     metadataPath: "datasets/taco_toppings_toy.json",
-    imagePath: "datasets/taco_toppings_toy.jpg"
+    imagePath: "datasets/taco_toppings_toy.jpg",
+    toy: true
   },
   {
     id: "icecream_toy",
-    name: "Ice Cream (Toy)",
+    name: "Ice Cream",
     path: "datasets/icecream_toppings_toy.csv",
     metadataPath: "datasets/icecream_toppings_toy.json",
-    imagePath: "datasets/icecream_toppings_toy.jpg"
+    imagePath: "datasets/icecream_toppings_toy.jpg",
+    toy: true
   },
   {
     id: "pizza_toy",
-    name: "Pizza (Toy)",
+    name: "Pizza",
     path: "datasets/pizza_toppings_toy.csv",
     metadataPath: "datasets/pizza_toppings_toy.json",
-    imagePath: "datasets/pizza_toppings_toy.jpg"
+    imagePath: "datasets/pizza_toppings_toy.jpg",
+    toy: true
   },
   {
     id: "boba_toy",
-    name: "Bubble Tea (Toy)",
+    name: "Bubble Tea",
     path: "datasets/boba_toy.csv",
     metadataPath: "datasets/boba_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "cookies_toy",
-    name: "Cookies (Toy)",
+    name: "Cookies",
     path: "datasets/cookies_toy.csv",
     metadataPath: "datasets/cookies_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "naan_toy",
-    name: "Naan (Toy)",
+    name: "Naan",
     path: "datasets/naan_toy.csv",
     metadataPath: "datasets/naan_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "poke_toy",
-    name: "Poke (Toy)",
+    name: "Poke",
     path: "datasets/poke_toy.csv",
     metadataPath: "datasets/poke_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "poutine_toy",
-    name: "Poutine (Toy)",
+    name: "Poutine",
     path: "datasets/poutine_toy.csv",
     metadataPath: "datasets/poutine_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "raspado_toy",
-    name: "Raspado (Toy)",
+    name: "Raspado",
     path: "datasets/raspado_toy.csv",
     metadataPath: "datasets/raspado_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "salad_toy",
-    name: "Salad (Toy)",
+    name: "Salad",
     path: "datasets/salad_toy.csv",
     metadataPath: "datasets/salad_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "salsa_toy",
-    name: "Salsa (Toy)",
+    name: "Salsa",
     path: "datasets/salsa_toy.csv",
     metadataPath: "datasets/salsa_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "breakfast_toy",
     name: "Breakfast Quiz",
     path: "datasets/breakfast_toy.csv",
     metadataPath: "datasets/breakfast_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "drink_toy",
     name: "Drink Quiz",
     path: "datasets/drink_toy.csv",
     metadataPath: "datasets/drink_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "workout_toy",
     name: "Workout Quiz",
     path: "datasets/workout_toy.csv",
     metadataPath: "datasets/workout_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "safari_toy",
     name: "Safari",
     path: "datasets/safari_toy.csv",
     metadataPath: "datasets/safari_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "medical_priority",
-    name: "Medical Priority (toy)",
+    name: "Medical Priority",
     path: "datasets/medical_priority.csv",
     metadataPath: "datasets/medical_priority.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/temp.jpg",
+    toy: true
   },
   {
     id: "nutrition",
