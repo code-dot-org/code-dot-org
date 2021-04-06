@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-05 15:45:39 UTC",
+    "serialized_at": "2021-04-06 21:58:08 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -4487,7 +4487,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Power of Words - Unplugged Activity"
+        "progression": "The Power of Words - Unplugged Activity",
+        "level_keys": [
+          "PowerOfWords-Unplugged_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6588,7 +6591,7 @@
       "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Designing for Accessibility - Unplugged Activity",
         "level_keys": [
@@ -10174,6 +10177,19 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "opportunity_standard.shortcode": "4.RI.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "opportunity_standard.shortcode": "4.RI.7"
+      }
+    }
   ]
 }
