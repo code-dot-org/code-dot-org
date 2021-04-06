@@ -1466,10 +1466,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     workshop.third_party_provider = nil
     assert workshop.valid?
-
-    # friday_institute is in list of approved third party providers
-    workshop.third_party_provider = 'friday_institute'
-    assert workshop.valid?
   end
 
   private
