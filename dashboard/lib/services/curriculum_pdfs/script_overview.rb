@@ -29,9 +29,10 @@ module Services
           # Include a PDF of the /s/script.name page itself
           script_filename = ActiveStorage::Filename.new("script.#{script.name}.pdf").sanitized
           script_path = File.join(pdfs_dir, script_filename)
-          # Make sure to specify 'no_redirect' so we're guaranteed to get the
-          # actual script we want
-          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true"
+          # Make sure to specify
+          # 1. 'no_redirect' so we're guaranteed to get the actual script we want
+          # 2. 'view as teacher' so we don't get the default student view
+          url = Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Teacher"
           PDF.generate_from_url(url, script_path)
           pdfs << script_path
 
