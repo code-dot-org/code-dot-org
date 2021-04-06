@@ -43,6 +43,12 @@ class CourseVersion < ApplicationRecord
 
   alias_attribute :version_year, :key
 
+  # For now, delegate any fields stored on the content root so that we can start
+  # accessing them via course version. In the future, these fields will be moved
+  # into the course version itself.
+
+  delegate :name, to: :content_root
+
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
   #
