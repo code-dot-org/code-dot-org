@@ -24,6 +24,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
     )
     standard = create :standard, description: 'Standard Description'
     @lesson.standards = [standard]
+    standard = create :standard, description: 'Opportunity Standard Description'
+    @lesson.opportunity_standards = [standard]
 
     @lesson2 = create(
       :lesson,
@@ -81,6 +83,7 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessons'][0]['link']
     assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessons'][1]['link']
     assert_equal 'Standard Description', lesson_data['standards'][0]['description']
+    assert_equal 'Opportunity Standard Description', lesson_data['opportunityStandards'][0]['description']
   end
 
   test 'lesson edit page contains expected data' do

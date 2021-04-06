@@ -10,6 +10,9 @@ import reducers, {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
 import {valueOr} from '@cdo/apps/utils';
 
@@ -20,13 +23,16 @@ export default function initPage(scriptEditorData) {
 
   const locales = scriptEditorData.locales;
 
-  registerReducers({...reducers, isRtl});
+  registerReducers({...reducers, resources: resourcesEditor, isRtl});
   const store = getStore();
   store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
-
   const teacherResources = (scriptData.teacher_resources || []).map(
-    ([type, link]) => ({type, link})
+    ([type, link]) => ({
+      type,
+      link
+    })
   );
+  store.dispatch(initResources(scriptData.migrated_teacher_resources || []));
 
   let announcements = scriptData.announcements || [];
 
@@ -77,6 +83,7 @@ export default function initPage(scriptEditorData) {
         initialWeeklyInstructionalMinutes={
           scriptData.weeklyInstructionalMinutes
         }
+        initialCourseVersionId={scriptData.courseVersionId}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false

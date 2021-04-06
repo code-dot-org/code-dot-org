@@ -11,20 +11,14 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
-      "peer_reviews_to_complete": 0,
-      "has_lesson_plan": true
+      "has_lesson_plan": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-25 19:29:16 UTC",
+    "serialized_at": "2021-03-31 15:45:45 UTC",
     "seeding_key": {
       "script.name": "csd2-2021"
     }
@@ -3608,7 +3602,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "As students start to use images, they may have trouble finding the right size to fit their pages.  In the two lessons, students will learn how to resize their images with CSS.  For now, students can use an online image resizer, such as the one found at [https://resizeimage.net/](https://resizeimage.net/), to resize their images.  Alternatively, they can use the `height` or `width` attribute inside the `img` tag to resize it as the page loads.\r\n\r\n\r\n"
+            "markdown": "As students start to use images, they may have trouble finding the right size to fit their pages.  In the two lessons, students will learn how to resize their images with CSS.  For now, students can use an online image resizer, such as the one found at [https://resizeimage.net/](https://resizeimage.net/), to resize their images.  Alternatively, they can use the [`height`](/docs/weblab/height/) or [`width`](/docs/weblab/width/) attribute inside the [`img`](/docs/weblab/img/) tag to resize it as the page loads.\r\n\r\n\r\n"
           }
         ],
         "name": "Adding Images\r"
@@ -6081,7 +6075,7 @@
       "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Pair Programming",
         "level_keys": [
@@ -6107,7 +6101,7 @@
       "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6133,7 +6127,7 @@
       "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6159,7 +6153,7 @@
       "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6211,7 +6205,7 @@
       "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Debugging",
         "level_keys": [
@@ -6237,7 +6231,7 @@
       "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -6289,7 +6283,7 @@
       "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenges",
         "level_keys": [
@@ -7069,9 +7063,12 @@
       "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Sample Personal Websites"
+        "progression": "Sample Personal Websites",
+        "level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7326,9 +7323,12 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Project Guide"
+        "progression": "Project Guide",
+        "level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7349,9 +7349,12 @@
       "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Website Project"
+        "progression": "Website Project",
+        "level_keys": [
+          "CSD U2 upload images_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7372,9 +7375,12 @@
       "chapter": 59,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Website Project"
+        "progression": "Website Project",
+        "level_keys": [
+          "CSD U2 add content_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7395,9 +7401,12 @@
       "chapter": 60,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Website Project"
+        "progression": "Website Project",
+        "level_keys": [
+          "CSD U2 CSS_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7418,9 +7427,12 @@
       "chapter": 61,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Website Project"
+        "progression": "Website Project",
+        "level_keys": [
+          "CSD U2 project review_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7441,9 +7453,12 @@
       "chapter": 62,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Video: Publishing Your Website"
+        "progression": "Video: Publishing Your Website",
+        "level_keys": [
+          "CSD U2 publish video_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7464,9 +7479,12 @@
       "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Publishing Your Website"
+        "progression": "Publishing Your Website",
+        "level_keys": [
+          "CSD U2 project share_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7489,7 +7507,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "progression": "Reflection",
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -10204,6 +10225,17 @@
       "seeding_key": {
         "resource.key": "website-for-a-purpose-reflect"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -10647,7 +10679,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd2-2021"
+      }
+    }
   ],
   "vocabularies": [
     {
@@ -11869,5 +11906,8 @@
         "standard.shortcode": "2-AP-19"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
