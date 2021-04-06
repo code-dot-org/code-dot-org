@@ -22,6 +22,8 @@ class UnitGroup < ApplicationRecord
   has_many :default_scripts, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
+  has_many :unit_groups_student_resources, dependent: :destroy
+  has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root
 
   after_save :write_serialization
@@ -98,7 +100,7 @@ class UnitGroup < ApplicationRecord
     course_version = unit_group.course_version
 
     if course_version
-      resources_imported = (hash['resources'] || []).map do |resource_data|
+      teacher_resources_imported = (hash['resources'] || []).map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version.id
         resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
@@ -106,7 +108,16 @@ class UnitGroup < ApplicationRecord
         resource.save! if resource.changed?
         resource
       end
-      unit_group.resources = resources_imported
+      unit_group.resources = teacher_resources_imported
+      student_resources_imported = (hash['student_resources'] || []).map do |resource_data|
+        resource_attrs = resource_data.except('seeding_key')
+        resource_attrs['course_version_id'] = course_version.id
+        resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
+        resource.assign_attributes(resource_attrs)
+        resource.save! if resource.changed?
+        resource
+      end
+      unit_group.student_resources = student_resources_imported
     end
 
     unit_group.save!
@@ -137,6 +148,7 @@ class UnitGroup < ApplicationRecord
         alternate_scripts: summarize_alternate_scripts,
         properties: properties,
         resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
+        student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
     )
   end
