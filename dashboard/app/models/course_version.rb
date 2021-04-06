@@ -20,6 +20,8 @@
 #
 
 class CourseVersion < ApplicationRecord
+  include Rails.application.routes.url_helpers
+
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
@@ -97,7 +99,6 @@ class CourseVersion < ApplicationRecord
   end
 
   def all_standards_url
-    prefix = content_root_type === 'UnitGroup' ? 'courses' : 's'
-    "/#{prefix}/#{name}/standards"
+    content_root_type === 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 end
