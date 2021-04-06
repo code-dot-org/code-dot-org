@@ -6,7 +6,8 @@ module PDF
       [
         '-u', url,
         '-o', Shellwords.escape(outpath),
-      ]
+      ],
+      options
     )
   end
 
@@ -15,7 +16,8 @@ module PDF
       [
         '-h', Shellwords.escape(html),
         '-o', Shellwords.escape(outpath),
-      ]
+      ],
+      options
     )
   end
 

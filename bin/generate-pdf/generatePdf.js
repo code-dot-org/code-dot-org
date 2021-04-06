@@ -23,7 +23,9 @@ const puppeteer = require("puppeteer");
 
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  const pageOptions = { waitUntil: "networkidle2" };
+  const pageOptions = {
+    waitUntil: ["domcontentloaded", "networkidle2"]
+  };
 
   if (argv.url) {
     await page.goto(argv.url, pageOptions);
