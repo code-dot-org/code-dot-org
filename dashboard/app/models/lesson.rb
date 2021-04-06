@@ -365,6 +365,7 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: standards.map(&:summarize_for_lesson_edit),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
@@ -389,6 +390,7 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url

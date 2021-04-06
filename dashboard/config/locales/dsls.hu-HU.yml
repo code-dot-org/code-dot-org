@@ -39,20 +39,20 @@ hu-HU:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content2: A billentyűkombinációkat párosítása a táncmozdulatokhoz.
         questions:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Megfelelő
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         content2: Használd a betűket és a kódokat a párosításhoz!
         questions:
         - text: "***N***"
@@ -60,15 +60,21 @@ hu-HU:
         - text: "***P***"
         - text: "***Q***"
         title: Megfelelő
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         questions:
         - text: A játék szabályai szerint, melyik sor kártya van helyesen pontozva?
         title: Feleletválasztós
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
+        teacher_markdown: "## Tanárok:\n\nA diákok azt hihetik, hogy *nincs* helyes
+          válasz a kérdésre, és ez abból fakadhat, hogy félreértik a szabályokat.
+          \n\nItt egy videó, ami elmagyarázza, hogy mi is a lényeg ebben a feladatban:\n\nhttps://youtu.be/TbUaEnAYPjI\n"
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -144,12 +150,16 @@ hu-HU:
         title: Feleletválasztós
       2-3 artist debug multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         questions:
-        - {}
+        - text: Mi az, amin változtatni kell, hogy egy teljes kör legyen a végeredmény?
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
+        title: Művész hibakeresés Többszörös választás 1
       2-3 artist functions multi 1:
         answers:
         - correct: true
@@ -211,21 +221,27 @@ hu-HU:
         title: Művész - feleletválasztás
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Melyik összehasonlítás helyes az alábbiak közül?
+        title: Méh feltételek Többszörös választás 1
       2-3 bee conditionals multi 3:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         questions:
         - text: Válaszd ki a legmegfelelőbb blokkokat! A lila virágokban 0 vagy 1
             nektár van.
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
+        title: Méh feltételek Többszörös választás 2
       2-3 bee loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
@@ -1131,13 +1147,15 @@ hu-HU:
         title: Megfelelő
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+          correct: true
         questions:
         - text: Melyik állatnak van olyan digitális lábnyoma, ami a <strong>legnagyobb
             veszélybe</strong> sodorja őt?
         title: Feleletválasztós
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
       K-1 Getting Loopy Multi 1:
         answers:
         - correct: true

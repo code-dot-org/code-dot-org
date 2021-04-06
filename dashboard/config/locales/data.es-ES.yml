@@ -881,6 +881,12 @@ es:
           CSF 2021)'
         csf21pilot_prompts: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto
           CSF 2021)'
+        outbreak_mike: CodeBytes Episodio 3 con Mike - Simulador de brotes
+        poembot-pilot-prompts: Haiku Bots - Prompt con Opciones [PILOT]
+        poembot-pilot-text: Haiku Bots - Almacenar Texto [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

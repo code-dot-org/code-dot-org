@@ -28030,6 +28030,8 @@ de:
               name: Programmierung einer Simulation
             Sprites in Action:
               name: Sprites in Aktion
+            End of Course Project:
+              name: Projekt am Ende des Kurses
           lesson_groups:
             introduction:
               display_name: Einführung
@@ -30790,7 +30792,7 @@ de:
               key: Ernten mit Bedingungen
               name: Ernten mit Bedingungen
               description_student: Es ist nicht immer klar, wann jede einzelne Bedingung
-                anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu
+                anzuwenden ist. Diese Lektion wird Dir helfen, die Entscheidung zu
                 üben, was zu tun ist.
               description_teacher: Die SchülerInnen üben `während`-Schleifen, `bis`-Schleifen
                 und `wenn/sonst`-Aussagen. Alle diese Bausteine verwenden Bedingungen.
@@ -30894,6 +30896,11 @@ de:
               name: Tanzparty für Aliens
               description_student: Erstellen Sie ein interaktives Projekt, das Sie
                 mit den KlassenkameradInnen teilen können.
+              description_teacher: Diese Lektion befasst sich mit Sprite Lab, einer
+                Plattform, auf der die SchülerInnen ihre eigenen interaktiven Animationen
+                und Spiele erstellen können. Zusätzlich zu den Behaviors werden die
+                SchülerInnen heute Benutzereingaben als Ereignisse einbauen, um eine
+                "Tanzparty für Aliens" zu erstellen.
             Behaviors in Sprite Lab:
               key: Behaviors im Sprite-Labor
               name: Behaviors im Sprite-Labor
@@ -31817,10 +31824,18 @@ de:
               name: Lektion 14
             lesson15:
               name: Lektion 15
+            lesson17:
+              name: Lektion 15
           description_audience: " "
           description: " "
           student_description: " "
         csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lektion 15: Bewertungstag'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
           title: " "
           description_audience: " "
           description_short: " "
