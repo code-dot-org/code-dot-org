@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-03-31 13:40:27 UTC",
+    "serialized_at": "2021-04-06 22:05:45 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -7919,6 +7919,19 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "K-2-ETS1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "K-2-ETS1-2"
+      }
+    }
   ]
 }

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-04-02 21:07:31 UTC",
+    "serialized_at": "2021-04-06 22:04:56 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -6655,7 +6655,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Exploration: Sample Project"
+        "progression": "Exploration: Sample Project",
+        "level_keys": [
+          "courseF_EOC_samples_2021"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -10160,6 +10163,12 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "ccmath",
+        "opportunity_standard.shortcode": "2.MD.10"
+      }
+    }
   ]
 }

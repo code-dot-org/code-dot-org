@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-30 17:57:23 UTC",
+    "serialized_at": "2021-04-06 21:18:42 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -124,6 +124,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "The relationship between classes and objects is reinforced as students create their own objects. Students are introduced to creating objects both with and without parameters. Students begin to consider what makes 'good code' and practice writing efficient solutions.",
+        "student_overview": "In this lesson, you learn how to make `Painter` objects by specifying where the `Painter` starts, what direction the `Painter` is facing, and the paint color. You also consider what makes \"good code\" and practice writing efficient code.",
+        "preparation": "If using, print a copy of the Parameterized Constructors Guided Notes for each student."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -139,6 +142,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "Students have learned a lot in their first week! In this lesson, students are introduced to the `while` loop and additional methods to control the movement of the `Painter` in The Neighborhood. Students combine their knowledge of methods, constructors, and control structures to develop solutions for increasingly complex puzzles",
+        "student_overview": "You have practiced moving the `Painter` and using conditionals to help the `Painter` make decisions about interacting with The Neighborhood. What if you could have the `Painter` repeat commands? In this lesson, you learn to use a `while` loop with some new commands to move the `Painter` around The Neighborhood.",
+        "preparation": "* Print a copy of Vocabulary Draw Activity Guide, which includes rules and slips for each group of students\n(Optional) Cut out the strips for the vocabulary game before class\n* Prepare necessary materials for each group: blank paper or a whiteboard and marker for each group, pair of scissors if not pre-cutting vocabulary strips\n* Have sticky notes available for all students\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -154,6 +160,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.",
+        "student_overview": "You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. In this lesson, you use `if-else` statements to give the `Painter` an alternative action. You also learn about the `!` (not) operator to help with the decisions the `Painter` makes.",
+        "preparation": "* Review the Painter Says Resource\n* Have Painter Toolbox Resource available\n* Have sticky notes available for students"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -533,6 +542,131 @@
       "seeding_key": {
         "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "20315198-b4d8-45b6-9135-39b4085a3b92",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20315198-b4d8-45b6-9135-39b4085a3b92",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "03fbb47e-cb3b-4375-ac85-85b04d13fb3a",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03fbb47e-cb3b-4375-ac85-85b04d13fb3a",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "7d69aa07-5735-4c65-a491-ce5dd9f194ea",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d69aa07-5735-4c65-a491-ce5dd9f194ea",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "3e6ded95-ffbe-412c-84bc-34e55eb19144",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "abb43144-c74a-40d4-8ae0-749adbd757a1",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abb43144-c74a-40d4-8ae0-749adbd757a1",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "6c2f9edf-4890-4422-acf6-c2cbb2800180",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c2f9edf-4890-4422-acf6-c2cbb2800180",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "cbdd952c-dd9f-4393-afee-4a13cf710f65",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "ef4334d0-052e-4899-af77-8856485852ef",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -1502,6 +1636,583 @@
         "activity_section.key": "ba62e1e4-96d9-4a36-8eb0-de935b3307d7",
         "lesson_activity.key": "544a54c1-d1eb-416d-870c-56e02be3e8e5"
       }
+    },
+    {
+      "key": "d37c089c-aa3b-4657-83d9-09b8ce847745",
+      "position": 1,
+      "properties": {
+        "name": "Class - Objects Review",
+        "duration": "5",
+        "remarks": true,
+        "description": "So far, we’ve talked about a class as a blueprint or a template for creating an object. Many different objects can be created from a single class definition. \n\nBut if there’s no class?\n\n\"No\" ______, \n\nRight - no object! Today it’s going to be important for us to leverage that relationship. We will be using the blueprint of a class to create objects.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d37c089c-aa3b-4657-83d9-09b8ce847745",
+        "lesson_activity.key": "20315198-b4d8-45b6-9135-39b4085a3b92"
+      }
+    },
+    {
+      "key": "5ef3f2a6-40a3-4df8-8ded-b8ecd80cb33c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**\n* Use the diagram to explain the outline of the Superhero class. Highlight:\n  * The class name is at the top and is capitalized.\n  * The items in the section below are the characteristics of the Superhero class.\n  * When we create an object, we give it a name and specific values or \"settings\" for each characteristic. \n* Direct students to complete the task on the slide independently. They should select a specific value for each characteristic listed on the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the connection between your object and the Superhero class? What are some features of this relationship that are visible in your diagram?*\n\n**Discussion Goal:** Keep an ear out for:\n* The vocabulary “instance of”\n* The object has the same characteristic as the class\n* All characteristics have been given a value\n\nThis discussion helps prepare students to make connections between classes and objects and the fact that not all instances of an object have the exact same attributes. This will appear later in the lesson when students are creating objects with parameters. There is no need for students to share with the whole class.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide visualizes a class in a style similar to a [UML class diagram](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-uml/). The goal is NOT to introduce UML but to offer the visual so that it will be familiar when they create their own classes in the future.\n\nYou may hear students identify characteristics that they *don't* want, i.e., “My superhero doesn’t have a cape.\" If it comes up, this is a great place to foreshadow future lessons without going into detail with a response along the lines of, “That’s a really interesting concept, and we’ll address it later in this course! For now, you can write ‘none’ next to capeColor.”\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5ef3f2a6-40a3-4df8-8ded-b8ecd80cb33c",
+        "lesson_activity.key": "20315198-b4d8-45b6-9135-39b4085a3b92"
+      }
+    },
+    {
+      "key": "5e04ea07-3d7b-45df-ba47-5bca6bd44af4",
+      "position": 1,
+      "properties": {
+        "name": "No-Argument Constructors and Objects",
+        "duration": "7",
+        "remarks": true,
+        "description": "Today we’re going to focus on creating new objects from the `Painter` class. "
+      },
+      "seeding_key": {
+        "activity_section.key": "5e04ea07-3d7b-45df-ba47-5bca6bd44af4",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "a0da48d6-a320-4ef4-bb89-7b0f17129d51",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating Objects video. \n\n**Discuss: **  \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the slide with the self-check question. After giving students a minute to consider the question on their own, ask a student to share their answer either with a partner or as a whole group. Click through the animation to highlight the correct answer.\n    * *Which of the following will correctly initialize a Painter object?* \n\n      a. *Painter jes = Painter;*\n\n      b. *Painter jes = new Painter();*\n\n      c. *Painter jes = Painter ();*\n\n      d. *Jes = new painter();*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the correct solution (b) and take a moment to synthesize the information in the video by reviewing the anatomy of the initialization statement.\n\n**Discussion Goal:** This self-check gives students an opportunity to confirm that they remember the constructor syntax before moving on. If they chose a different answer, they have a chance to address their misconception rather than re-learning this information in the future.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to use this as an additional check for understanding by either:\n* Calling on students to identify each component of the statement as a whole class.\n* Directing students to diagram the statement in their journals or on a piece of paper before moving through the slide animation.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a0da48d6-a320-4ef4-bb89-7b0f17129d51",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "a08784fa-1792-4619-8898-fa5e01837cb3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Transition students to The Neighborhood and instruct them to complete Levels 1 and 2 on Code Studio individually or in pairs."
+      },
+      "seeding_key": {
+        "activity_section.key": "a08784fa-1792-4619-8898-fa5e01837cb3",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "86eeb69e-2051-4faa-a437-39d24e4bc1ba",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "86eeb69e-2051-4faa-a437-39d24e4bc1ba",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "b34928fd-5e9b-45c1-9350-897521cf862c",
+      "position": 5,
+      "properties": {
+        "name": "Parameterized Constructors",
+        "duration": "13",
+        "remarks": true,
+        "description": "Earlier today, you each created unique Superhero objects with their own characteristics based on the class diagram I showed you. We can do this same thing with our code to make Painters with different starting characteristics."
+      },
+      "seeding_key": {
+        "activity_section.key": "b34928fd-5e9b-45c1-9350-897521cf862c",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "772cb9e7-b9b1-4003-8941-41683287b7b8",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Parameterized Constructors video to the class. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This video has a lot of vocabulary. Use the optional activity guide as a tool to help students organize this information."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "772cb9e7-b9b1-4003-8941-41683287b7b8",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 through 6 on Code Studio. If students finish early, encourage them to try multiple puzzles in the Level 5 choice group or to help their peers debug. It is important to begin the next part of the activity together for a class discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "c337c0a1-7b58-410a-9b16-fb60ae1b6c88",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "67a66bf6-f52e-4ee9-b6f6-1a4e3e667b54",
+      "position": 8,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All four puzzles include paint buckets to pick up, but the most efficient solutions will ignore them and initialize the Painter with the correct amount of paint.\n\nThe fourth puzzle has the potential to take a lot of time - there is not an easy solution. If students are going down a rabbit hole, ground them in this lesson's objectives around creating objects and invite them to continue making their code more efficient on their own time if they’re excited to do so.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "67a66bf6-f52e-4ee9-b6f6-1a4e3e667b54",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "767fddae-af42-4313-b765-0ee3a38e5210",
+      "position": 9,
+      "properties": {
+        "name": "Efficient Solutions",
+        "duration": "10",
+        "remarks": true,
+        "description": "There are a lot of different ways you could have solved the puzzles on Level 5. As you learn new content in this course, your goal should not just be to write code but to be a software engineer who writes code well."
+      },
+      "seeding_key": {
+        "activity_section.key": "767fddae-af42-4313-b765-0ee3a38e5210",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "478d4313-87ae-49bd-9444-9ff2052bf06a",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We could use a no-argument constructor to replicate this design. Why might we choose to use the parameterized version?*\n\n**Discussion Goal:** This open-ended question gives students the opportunity to think critically about why they might use specific coding structures so that they are more confident in their choices when writing their own code in the future. \n\nListen for the following statements and encourage students to think more deeply:\n* We could start in the top right.\n    * *Why would this be valuable?*\n* It would be faster.\n    * *What makes it faster?*\n    * *How do we define ‘fast’ when writing code?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "478d4313-87ae-49bd-9444-9ff2052bf06a",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "82abacbd-3ead-45f2-afea-d908c2185d8a",
+      "position": 11,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> One of the elements of writing ‘good code’ is writing ‘efficient code.' Today, we’re going to define efficiency as “getting the best outcome with the least amount of waste.\" We will do this by reducing unnecessary code or writing our solutions with fewer lines of code."
+      },
+      "seeding_key": {
+        "activity_section.key": "82abacbd-3ead-45f2-afea-d908c2185d8a",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "edc423bf-01a5-4697-b68c-ed5e045ae33f",
+      "position": 12,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instruct students to choose a puzzle and complete it as efficiently as possible. Pair them with a neighbor to brainstorm possibilities and share solutions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Before moving on to the wrap up, have students share their best solutions with the class through a class Gallery Walk."
+      },
+      "seeding_key": {
+        "activity_section.key": "edc423bf-01a5-4697-b68c-ed5e045ae33f",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "74e39e0c-7e77-446a-a756-19b9f99d115e",
+      "position": 13,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74e39e0c-7e77-446a-a756-19b9f99d115e",
+        "lesson_activity.key": "775ce938-52e0-4085-9d4b-fdc2d22f10cb"
+      }
+    },
+    {
+      "key": "242ecbec-c9d5-49aa-b4b7-8062c26ab815",
+      "position": 1,
+      "properties": {
+        "name": "Synthesis",
+        "duration": "10",
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are many ways to write code to solve a single problem. As software engineers, why might we value efficient code?\n* When might we want to use a no-argument constructor? When might we want to use the parameterized version? \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>\nDiscussion Goal: \nHighlight the value of spending the time to write good code rather than writing the first thing that solves a problem. Help students solidify why they might use the two different types of constructors they learned about today.\nNo-argument constructors are useful when all of the default values are exactly what you need (no need to respecify).\nParameterized versions allow you to specify unique starting attributes so the object can do something that the no-argument cannot (in the case of walls in The Neighborhood) or can allow you to write more efficient code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students copy the code segment into their journal or onto a sheet of paper and then annotate it with the given symbols.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "242ecbec-c9d5-49aa-b4b7-8062c26ab815",
+        "lesson_activity.key": "03fbb47e-cb3b-4375-ac85-85b04d13fb3a"
+      }
+    },
+    {
+      "key": "3d2272ff-3e29-499f-aa35-b5859d96a92c",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** In what situations might we want to use a no-argument constructor, and in what type of cases do we want to use the parameterized version? \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d2272ff-3e29-499f-aa35-b5859d96a92c",
+        "lesson_activity.key": "03fbb47e-cb3b-4375-ac85-85b04d13fb3a"
+      }
+    },
+    {
+      "key": "c2443f15-f3a2-4bcb-8c90-69e7f0ca4ad1",
+      "position": 1,
+      "properties": {
+        "name": "Vocabulary Draw",
+        "duration": "8",
+        "remarks": true,
+        "description": "In our first week, we learned a lot of new vocabulary. Today, we’re going to play a game called Vocabulary Draw to help review all of the new terms we’ve learned."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2443f15-f3a2-4bcb-8c90-69e7f0ca4ad1",
+        "lesson_activity.key": "7d69aa07-5735-4c65-a491-ce5dd9f194ea"
+      }
+    },
+    {
+      "key": "71031814-4c77-4818-9eb7-c6bc8ae62953",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give each group a copy of the Vocabulary Draw Activity Guide, which includes the rules, vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are passing out Activity Guides, students should cut out their set of vocabulary strips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Running the Game:\n* To save time in class, you can choose to cut out sets of the vocabulary strips for each group.\n* Alternatively, you can choose to play this review game as a whole class. Group students into four different teams, and rotate which team provides the artist. Play following the rules, but award the slip to the team that guesses the word rather than an individual. Pause as needed to review the terms.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "71031814-4c77-4818-9eb7-c6bc8ae62953",
+        "lesson_activity.key": "7d69aa07-5735-4c65-a491-ce5dd9f194ea"
+      }
+    },
+    {
+      "key": "14bb3844-50e4-4faf-a18c-bdd39fea9592",
+      "position": 3,
+      "properties": {
+        "name": "Debrief",
+        "duration": "2",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which words were most difficult to remember from last week? What additional clarity do you need?*\n\n**Discussion Goal:** This discussion aims to provide additional clarification around any words that students are struggling with. Make a note of any commonalities, and continue to use these vocabulary terms throughout instruction. "
+      },
+      "seeding_key": {
+        "activity_section.key": "14bb3844-50e4-4faf-a18c-bdd39fea9592",
+        "lesson_activity.key": "7d69aa07-5735-4c65-a491-ce5dd9f194ea"
+      }
+    },
+    {
+      "key": "580b9077-890f-41b5-9790-4600380fc845",
+      "position": 1,
+      "properties": {
+        "name": "Introducing While Loops",
+        "duration": "7",
+        "remarks": true,
+        "description": "Last week, we learned about using our information gathering commands with a structure called an `if` statement, which allowed us to run a piece of code **if** the information gathering command returned as `true`. But what if we wanted to run the code **as long as** it was true?"
+      },
+      "seeding_key": {
+        "activity_section.key": "580b9077-890f-41b5-9790-4600380fc845",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "7afcf9db-910a-4d5e-ade8-9a8eeedb9b5b",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through a `while` loop.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the repetitive code on the screen. Ask students: Why might we want to reduce repetition?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A `while` loop can simplify repetitive code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through the flowchart on the screen: while our information gathering command is `true`, the code in the `while` loop runs over and over until it is no longer `true`. Then move on to the example on the next slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to illustrate that the `Painter` will continue to move forward as long as `canMove()` returns `true`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n**Discussion Goal:** Students should identify a few benefits of using `while` loops:\n* Reduces redundancy, which in turn leads to fewer opportunities for syntax or logic errors.\n* Makes our code more efficient. Remind students of the vocabulary word 'efficiency' from the previous class.\n  * Efficiency: getting the best outcome with the least amount of waste\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7afcf9db-910a-4d5e-ade8-9a8eeedb9b5b",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "33ac2cc2-db5b-4cda-a0b0-03182735b77c",
+      "position": 3,
+      "properties": {
+        "name": "New Commands and Practicing with While Loops",
+        "duration": "10",
+        "remarks": true,
+        "description": "Last week, we learned three information gathering commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Each of these commands return either `true` or `false` to our `Painter`, who can then use that information to make a decision. Today, we’ll learn five additional information gathering commands and practice using them with our `while` loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "33ac2cc2-db5b-4cda-a0b0-03182735b77c",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "7d4dd409-6595-40bc-87b1-804844146f51",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slides to walk through the five new commands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `hasPaint()` - this command returns a Boolean value true if the Painter has paint in their tray\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()` - this command returns a Boolean value true if the Painter is facing North\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingEast()` - this command returns a Boolean value true if the Painter is facing East\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingWest()` - this command returns a Boolean value true if the Painter is facing West\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingSouth()` - this command returns a Boolean value true if the Painter is facing South\n\n**Group:** Group students into pairs. \n\n**Do This:** Direct students to the lesson on Code Studio. Instruct students to complete the first three levels. Remind them that they should use at least one `while` loop in each level in addition to the appropriate information gathering commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "7d4dd409-6595-40bc-87b1-804844146f51",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "742b915f-ea50-42ba-a39f-ad794986db54",
+      "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While not likely, it is possible that a student may create an infinite loop. While an infinite loop will be introduced in more detail for the whole class in coming lessons, the following questions may help the student debug their code:\n* Describe what is happening. What did you expect to happen?\n* Walk me through your code: what does each line cause the `Painter` to do?\n* Infinite loops happen because the condition never changes to `false`. What can we do to make sure our condition does change to `false`?\n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "742b915f-ea50-42ba-a39f-ad794986db54",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "366325a1-e98d-4556-b46f-8d01732cd589",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have pairs match up with another pair and talk about their experience: *What went well? What would you do differently next time?*\n\n**Discussion Goal:** Use this discussion to allow students to process their experience working with while loops before moving on to using a wider range of commands and structures."
+      },
+      "seeding_key": {
+        "activity_section.key": "366325a1-e98d-4556-b46f-8d01732cd589",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "91eea5ac-41cc-4b0b-a61b-6a272cc3ff8b",
+      "position": 7,
+      "properties": {
+        "name": "Using Your Toolbox",
+        "duration": "13",
+        "remarks": true,
+        "description": "Over the last six days, we’ve accumulated quite a few tools in our `Painter`’s toolbox. Now, you’re going to have the chance to use all of the commands, constructors, and control structures to solve more complex puzzles. When we say control structures, we’re referring to `while` loops and `if` statements that allow us more control over what our Painter does"
+      },
+      "seeding_key": {
+        "activity_section.key": "91eea5ac-41cc-4b0b-a61b-6a272cc3ff8b",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "f522356e-cead-4967-9917-92f415fd7cc8",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with all commands, constructors, and control structures. Leave this up for students to reference throughout their work on these levels.\n\n**Do This:** Instruct students to complete the next five levels. Level 4 is a check for understanding to summarize and remind students of the vocabulary already in their toolbox before they begin practicing with code. Level 8 is a choice level. There are three options for them to choose from. If students finish early, encourage them to complete a second (or third!) level.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Because students are applying what they’ve learned in these four levels, it’s suggested that students work independently. However, these lessons can be scaffolded by allowing students to work in pairs or providing the Painter Toolbox Reference Sheet for any student who needs it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f522356e-cead-4967-9917-92f415fd7cc8",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "afa79071-fa52-4575-86f5-d35c584a6355",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "afa79071-fa52-4575-86f5-d35c584a6355",
+        "lesson_activity.key": "3e6ded95-ffbe-412c-84bc-34e55eb19144"
+      }
+    },
+    {
+      "key": "5c7dc049-6e09-490f-920f-f9ee2872d72f",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down any bugs they encountered, plus the strategy they used to debug, on a sticky note. Have students add their sticky notes to the class debugging wall. If time permits, students should read over other students’ sticky notes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c7dc049-6e09-490f-920f-f9ee2872d72f",
+        "lesson_activity.key": "abb43144-c74a-40d4-8ae0-749adbd757a1"
+      }
+    },
+    {
+      "key": "b811ebf7-f13d-4936-91ca-3bc552346bb1",
+      "position": 2,
+      "properties": {
+        "description": "---\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b811ebf7-f13d-4936-91ca-3bc552346bb1",
+        "lesson_activity.key": "abb43144-c74a-40d4-8ae0-749adbd757a1"
+      }
+    },
+    {
+      "key": "d5e5ffed-b969-48e1-aa58-1911a87a74bd",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket. *\n\n**Question:** How are `while` loops and `if` statements similar? How are they different?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5e5ffed-b969-48e1-aa58-1911a87a74bd",
+        "lesson_activity.key": "abb43144-c74a-40d4-8ae0-749adbd757a1"
+      }
+    },
+    {
+      "key": "062d08c8-ffdd-444d-9928-f77b16d09947",
+      "position": 1,
+      "properties": {
+        "name": "Painter Says",
+        "duration": "10",
+        "remarks": true,
+        "description": "In Lesson 4, you learned how to use an if statement to control the `Painter`. Let's practice using conditional statements by playing The Neighborhood's version of Simon Says called “Painter Says.\" I want you to imagine that you are the object, `Painter`, and based on my commands, you respond.\n\nFirst, I need you to stay seated. I will call out a series of conditional statements using **IF** and **ELSE**. For example, if I say, “Painter says, **IF** you have on a blue shirt, stand up, **ELSE** stay seated,” you would stand up ONLY if you have on a blue shirt. Otherwise, you would stay seated."
+      },
+      "seeding_key": {
+        "activity_section.key": "062d08c8-ffdd-444d-9928-f77b16d09947",
+        "lesson_activity.key": "6c2f9edf-4890-4422-acf6-c2cbb2800180"
+      }
+    },
+    {
+      "key": "54ee69a4-5022-4f7f-a968-8d3fb4c4c925",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the Painter Says Reference Guide, lead the activity to practice conditionals. If time permits, have every student write their own conditional on a sticky note.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "* You should play this game as a whole class.\n* Students should be able to make the connection of decision-making by using IF and ELSE, so emphasize those words.\n* Read the conditional statements slowly and clearly.\n* Reset students to regular sitting positions between each conditional statement.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "54ee69a4-5022-4f7f-a968-8d3fb4c4c925",
+        "lesson_activity.key": "6c2f9edf-4890-4422-acf6-c2cbb2800180"
+      }
+    },
+    {
+      "key": "463d6012-ba1d-47ea-85c9-5533c37344e9",
+      "position": 1,
+      "properties": {
+        "name": "Introducing `if-else` Statements",
+        "duration": "10",
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When programming, it is necessary to establish when something is `true` or `false`. In an earlier lesson, we defined this as a Boolean value. We will look at scenarios where if the Boolean value for the command is `true`, you will see the output, else if the value is `false` you will see the alternative output.\n\nWe can use the `Painter`'s information gathering commands to determine if something is `true` or `false`."
+      },
+      "seeding_key": {
+        "activity_section.key": "463d6012-ba1d-47ea-85c9-5533c37344e9",
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
+      }
+    },
+    {
+      "key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Walk through the following slides with your students. Review the different scenarios:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `canMove()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `isOnBucket()`\n*  <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the `if-else` video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the advantages of using `if-else statements` vs. just using `if` statements?*\n\n**Discussion Goal:** Students explain the benefits of using an `if-else` statement. Students should be able to identify that an `if-else` statement:\n* Gives a two-way selection based on the Boolean condition (`true`/`false`).\n* Creates an additional option that executes (runs) if the `if` statement is `false`.\n\n**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the `if` statement structure looking at the flowchart.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the structure of how to write an `if` statement in Java.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `if-else` statement structure looking at the flowchart.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the structure of how to write an `if-else` statement in Java.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> On this slide, exit out of presentation mode and ask the students to guide you in dragging and dropping program code to create the program outlined on the slide. Answer:\n    * Answer\n```\nif (art.facingNorth()) {\n          art.move();\n} else {\n          art.turnLeft();\n}\n```\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This: **\n* Direct students to the lesson on Code Studio. \n* Instruct students to complete the first three levels. Remind students they must include an `else` statement in each level. Highlight why it is beneficial to provide our `Painter` with a decision while navigating through The Neighborhood.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students of the levels' goal to use basic `if-else` statements to provide the `Painter` a decision. Based on the class's comfortability with conditionals and Booleans, you can have students work in pairs. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c1cea9c6-f4b2-467e-980e-0f72f09e32cc",
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
+      }
+    },
+    {
+      "key": "8fc9757e-3507-468a-b50d-2f6096a42791",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8fc9757e-3507-468a-b50d-2f6096a42791",
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
+      }
+    },
+    {
+      "key": "760871fe-2af7-4aba-ae49-03c9c1571078",
+      "position": 4,
+      "properties": {
+        "name": "The `!` (not) Operator",
+        "duration": "10",
+        "description": "**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Read out the statement to your students, pausing at the bold words. Instruct students to yell out bold words collectively.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Again, read out the statements and have students read out loud the bold words. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss ! (not) using the `canMove()` command.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show students how to use `!` (not) in a Java code segment.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you walk through the slides, you might want to ask the following prompting questions to students.\n* What symbol represents the word “not”?\n* How does the `!` (not) logical operator work?\n\nThe goal is to ensure students understand when they see the `!` (not) symbol, it reverses the logic. Remind students that when applied to a value, the `!` (not) operator turns `true` to `false` and `false` to `true`. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "760871fe-2af7-4aba-ae49-03c9c1571078",
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
+      }
+    },
+    {
+      "key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Explain the use of `!` (not) to a partner. When would you use it in a conditional statement?*\n\n**Discussion Goal:** Students talk to a partner about the use of `!` (not). Students understand when to use a `!` (not) in a conditional statement. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students back to Code Studio to complete Levels 4-6. On Level 6, students can choose to complete any of the choice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Painter's Toolbox for students to reference as they work.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work on the levels, you can help them, but encourage them to figure things out for themselves. \n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "08dcebaf-50a2-4c50-9493-3e6d6e23cedf",
+        "lesson_activity.key": "cbdd952c-dd9f-4393-afee-4a13cf710f65"
+      }
+    },
+    {
+      "key": "20d4bf23-7f1a-46d7-ab86-38d98d149110",
+      "position": 1,
+      "properties": {
+        "name": "Gots and Needs",
+        "duration": "5",
+        "remarks": true,
+        "description": "We learned two new concepts in class today.  As we move forward, we can use conditional statements and logical operators to improve our `Painter`'s navigation of The Neighborhood. Please write down at least one *got*: something you learned in this lesson, and one *need*: something you want to know more about or have a question about."
+      },
+      "seeding_key": {
+        "activity_section.key": "20d4bf23-7f1a-46d7-ab86-38d98d149110",
+        "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef"
+      }
+    },
+    {
+      "key": "141f0aed-bfc5-46cd-99e0-bc311dcd5aee",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Students take two sticky notes and write down their gots and needs. Review these notes after class and consider what you might need to review at the beginning of the next lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "141f0aed-bfc5-46cd-99e0-bc311dcd5aee",
+        "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef"
+      }
     }
   ],
   "script_levels": [
@@ -1618,9 +2329,92 @@
         "lesson.key": "lesson-4",
         "objective.key": "38a86851-cc62-4531-8fed-5e632df03afb"
       }
+    },
+    {
+      "key": "15cb15aa-1c15-40fb-960c-48e614606564",
+      "properties": {
+        "description": "Identify components of a constructor signature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "15cb15aa-1c15-40fb-960c-48e614606564"
+      }
+    },
+    {
+      "key": "c9ae685e-41f3-4cb9-a5d1-00c8e20ee2c2",
+      "properties": {
+        "description": "Create objects without a parameter"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "c9ae685e-41f3-4cb9-a5d1-00c8e20ee2c2"
+      }
+    },
+    {
+      "key": "75662524-1fc5-443d-baef-e791701e6627",
+      "properties": {
+        "description": "Create objects by calling constructors with actual parameters based on a signature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "75662524-1fc5-443d-baef-e791701e6627"
+      }
+    },
+    {
+      "key": "3c9c6d2a-a62e-4655-9387-6f24e7618b86",
+      "properties": {
+        "description": "Compare and contrast when to use a no-argument constructor and a parameterized constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "3c9c6d2a-a62e-4655-9387-6f24e7618b86"
+      }
+    },
+    {
+      "key": "cb063d59-0308-4947-b118-21c5f14a42ba",
+      "properties": {
+        "description": "Identify and utilize five new methods for the `Painter`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "cb063d59-0308-4947-b118-21c5f14a42ba"
+      }
+    },
+    {
+      "key": "275b5c08-cd0c-4d5c-a84b-eacc54dca7e9",
+      "properties": {
+        "description": "Use a `while` loop with the `Painter`’s non-void methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "275b5c08-cd0c-4d5c-a84b-eacc54dca7e9"
+      }
+    },
+    {
+      "key": "4356b4ea-ad37-4b57-915e-9c3c12ccbcd6",
+      "properties": {
+        "description": "Construct an `if-else` statement using the `Painter`'s information gathering commands"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "4356b4ea-ad37-4b57-915e-9c3c12ccbcd6"
+      }
+    },
+    {
+      "key": "ba1b8d82-19de-4ec2-ad74-af3bfffa8047",
+      "properties": {
+        "description": "Use the `!` logical operator in program code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "ba1b8d82-19de-4ec2-ad74-af3bfffa8047"
+      }
     }
   ],
   "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

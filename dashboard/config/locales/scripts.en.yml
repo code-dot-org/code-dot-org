@@ -21789,10 +21789,16 @@ en:
               description_teacher: 'In this lesson, students modify programs using three return commands: `isOnPaint()`, `isOnBucket()`, and `canMove()`. Booleans, conditionals, and return statements are introduced through `if` statements and `Painter` return commands for students to practice using conditional logic in their programs. These concepts are discussed in more detail in future lessons and reinforced throughout the course. Students also develop debugging strategies by identifying syntax and logic errors.'
             lesson-5:
               name: More with Objects
+              description_student: In this lesson, you learn how to make `Painter` objects by specifying where the `Painter` starts, what direction the `Painter` is facing, and the paint color. You also consider what makes "good code" and practice writing efficient code.
+              description_teacher: The relationship between classes and objects is reinforced as students create their own objects. Students are introduced to creating objects both with and without parameters. Students begin to consider what makes 'good code' and practice writing efficient solutions.
             lesson-6:
               name: While Loops and Practice
+              description_student: You have practiced moving the `Painter` and using conditionals to help the `Painter` make decisions about interacting with The Neighborhood. What if you could have the `Painter` repeat commands? In this lesson, you learn to use a `while` loop with some new commands to move the `Painter` around The Neighborhood.
+              description_teacher: Students have learned a lot in their first week! In this lesson, students are introduced to the `while` loop and additional methods to control the movement of the `Painter` in The Neighborhood. Students combine their knowledge of methods, constructors, and control structures to develop solutions for increasingly complex puzzles
             lesson-7:
               name: More with Conditionals
+              description_student: You have been using `if` statements to help the `Painter` make decisions to interact with The Neighborhood. In this lesson, you use `if-else` statements to give the `Painter` an alternative action. You also learn about the `!` (not) operator to help with the decisions the `Painter` makes.
+              description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.
             lesson-8:
               name: Introduction to Code Reviews
             lesson-9:
