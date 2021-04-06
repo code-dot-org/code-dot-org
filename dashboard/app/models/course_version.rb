@@ -99,6 +99,6 @@ class CourseVersion < ApplicationRecord
   end
 
   def all_standards_url
-    content_root_type === 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
+    content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 end
