@@ -328,8 +328,8 @@ export function startWebRequest(url, func) {
   return Applab.executeCmd(null, 'startWebRequest', {url: url, func: func});
 }
 
-export function startWebRequestSync(url, headers, func) {
-  return Applab.executeCmd(null, 'startWebRequestSync', {url, func, headers});
+export function startWebRequestSync(url, func) {
+  return Applab.executeCmd(null, 'startWebRequestSync', {url, func});
 }
 
 export function getKeyValue(key, onSuccess, onError) {
