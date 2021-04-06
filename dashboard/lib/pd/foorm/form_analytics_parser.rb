@@ -21,13 +21,15 @@ module Pd::Foorm
       num_response_options
     )
 
+    # Iterates over all Foorm Forms, and exports them to a CSV.
+    # Each row represents a single question.
     def self.reshape_all_forms_and_export_to_csv
       CSV.open('./test_forms.csv', 'wb') do |csv|
         csv << HEADERS
 
         # Loads 1000 records at a time to manage loading records into memory.
-        # Probably unnecessary optimization until we have many more Forms.
-        ::Foorm::Form.find_each do |form|
+        # An unnecessary optimization at this point, as we only have 10s of Forms.
+        ::Foorm::Form.find_each(batch_size: 1000) do |form|
           reshaped_form = reshape_form(form)
 
           reshaped_form.each do |question|
@@ -38,6 +40,8 @@ module Pd::Foorm
       end
     end
 
+    # @param [Foorm::Form] form Form to reshape
+    # @return [Array] array of hashes, each representing a single question in the Form
     def self.reshape_form(form)
       reshaped_form_questions_with_metadata = []
 
