@@ -861,6 +861,7 @@
   "freePlayUnchangedFail": "Are you sure you're finished? It looks like you have more work to do on this level. If you choose to continue, this level will be marked as \"In progress\" so you can come back to finish it later.",
   "freePlayUnchangedFailInline": "It looks like you haven't finished working on this level yet. Try adding some more blocks!",
   "fromWhen": "(From {when}):",
+  "fullCourseAlignment": "Full Course Alignment",
   "gdprDialogHeaderUpdated": "Do you agree that Code.org may transfer data (including personal data) from your use of this site to the United States for the purpose of hosting and processing such data?",
   "gdprDialogDetailsUpdated": "Code.org is a US-based not-for-profit website and the laws governing data collection in the U.S. may differ from the laws in your country.",
   "gdprDialogVisitPrivacyPolicy": "Visit Code.org’s Privacy Policy to learn more.",
