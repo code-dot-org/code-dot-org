@@ -1332,7 +1332,26 @@
         "CSD: Animation Tab_2019": "## Otázky k zamyšlení\n\n-   Jaké jsou kroky přidání obrázku do spritu?\n-   Jaké jsou různé způsoby získání obrázku?",
         "CSD: Introduction to the Draw Loop_2019": "## Otázky k zamyšlení\n\n-   Co dělá funkce draw?",
         "CSD: Sprites in Game Lab_2019": "## Otázky k zamyšlení\n\n-   Co je to sprite?\n-   Co jsou to vlastnosti?\n-   Jaké problémy sprite vyřeší?",
-        "csd U3 conditional statements video_2019": "## Otázky k zamyšlení\n\n-   Kdy budeš chtít použít příkaz `if`?"
+        "csd U3 conditional statements video_2019": "## Otázky k zamyšlení\n\n-   Kdy budeš chtít použít příkaz `if`?",
+        "Fish Tank 2-validated_2019": "Vytvořme akvárium!\nNahraď chuchvalec jakýmkoliv druhem ryby kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\nNezapomeň také upravit kostým postavy v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "Fish Tank 2-validated_2020": "Vytvořme akvárium!\nNahraď chuchvalec jakýmkoliv druhem ryby kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\nNezapomeň také upravit kostým postavy v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "Fish Tank 3-validated_2019": "Rybě se začíná točit hlava!\nUprav chování ryby, aby plavala doleva a doprava.",
+        "Fish Tank 3-validated_2020": "Rybě se začíná točit hlava!\nUprav chování ryby, aby plavala doleva a doprava.",
+        "Fish Tank 4-validated_2019": "V našem akváriu chybí voda!\nPomocí <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> nastav barvu pozadí. Doporučujeme modrou!",
+        "Fish Tank 4-validated_2020": "V našem akváriu chybí voda!\nPomocí <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> nastav barvu pozadí. Doporučujeme modrou!",
+        "Fish Tank 5-validated_2019": "Ryba má ráda dobrodružství a přeje si potkat další mořské tvory. Přidej do akvária další postavu. Postava může mít jakýkoliv kostým, ale ať je jiný než má tvá ryba.",
+        "Fish Tank 5-validated_2020": "Ryba má ráda dobrodružství a přeje si potkat další mořské tvory. Přidej do akvária další postavu. Postava může mít jakýkoliv kostým, ale ať je jiný než má tvá ryba.",
+        "Fish Tank 6-validated_2019": "Co si přeješ, aby nový přítel tvé ryby udělal?\n\nDoplň jeho chování a dívej se na ně!",
+        "Fish Tank 6-validated_2020": "Co si přeješ, aby nový přítel tvé ryby udělal?\n\nDoplň jeho chování a dívej se na ně!",
+        "OPD-K5-spritelab-2": "Vytvořme akvárium!\nNahraď chuchvalec jakýmkoliv druhem ryby kliknutím na <xml><block type=\"gamelab_allSpritesWithAnimation\" block-text=\"the sprite picker block\"><title name=\"ANIMATION\">\"tumbleweed\"</title></block></xml>.\nNezapomeň také upravit kostým postavy v <xml><block type=\"gamelab_addBehaviorSimple\" block-text=\"the add behavior block\"></block></xml>.",
+        "OPD-K5-spritelab-3": "Rybě se začíná točit hlava!\nUprav chování ryby, aby plavala doleva a doprava.",
+        "OPD-K5-spritelab-4": "V našem akváriu chybí voda!\nPomocí <xml><block type=\"gamelab_setBackground\" inline=\"true\" block-text=\"the set background color block\">\n    <value name=\"COLOR\">\n      <block type=\"colour_picker\">\n        <title name=\"COLOUR\">#0000ff</title>\n      </block>\n    </value>\n  </block></xml> nastav barvu pozadí. Doporučujeme modrou!",
+        "OPD-K5-spritelab-6": "Ryba má ráda dobrodružství a přeje si potkat další mořské tvory. Přidej do akvária další postavu. Postava může mít jakýkoliv kostým, ale ať je jiný než má tvá ryba.",
+        "OPD-K5-spritelab-7": "Co si přeješ, aby nový přítel tvé ryby udělal?\n\nDoplň jeho chování a dívej se na ně!",
+        "courseC_collector_prog2_2019": "Přesuň Laurel k pokladu a potom jej seber pomocí <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml>.",
+        "courseC_collector_prog2_2020": "Přesuň Laurel k pokladu a potom jej seber pomocí <xml><block type=\"collector_collect\" block-text=\"collect\"/></xml>.",
+        "courseD_maze_ramp4_2019": "_\"Najdi cestu a doveď mě k žaludu.\"_ ",
+        "courseD_maze_ramp4_2020": "_\"Najdi cestu a doveď mě k žaludu.\"_ "
       }
     }
   }

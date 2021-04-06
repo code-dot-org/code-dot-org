@@ -36,7 +36,17 @@
         "frozen square iterative": "Dvi linijas nubrėžti jau moki. O dabar nubrėžk keturias, kad sukurtum kvadratą.",
         "frozen square loop": "Labas! Aš Anna iš Arendelės! Dabar panaudosime naują blokelį „kartok“ tam pačiam kvadratui nupiešti. Jis padės panaudoti mažiau blokelių. Sugalvok, kiek kartų reikės kartoti tuos pačius veiksmus, kad pavyktų nubrėžti kvadratą.",
         "frozen square loop 3x": "Pamėginkime nubrėžti tris kvadratus. Po kiekvieno jų reikės pasisukti po 120 laipsnių.",
-        "frozen square snowflake": "Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų, o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą."
+        "frozen square snowflake": "Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų, o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.",
+        "MC HOC 2016 SCORE LEVEL": "Kai kurie žaidimai leidžia skaičiuoti taškus. Žaisk gaudynes su šiais Geležiniais Golemais ir naudok blokelį „pridėk tašką“, kad gautum tašką kiekvieną kartą juos palietęs. Surink 5 taškus, kad laimėtum!",
+        "Standalone_Artist_2": "Nupiešk šį deimantą, kuris turi 120 ir 60 laipsnių kampus ir 150 pikselių ilgumo kraštines",
+        "Standalone_Artist_3": "Ar tu gali nupiešti šį šešiakampį, kurio kraštinęs lygios 100 pikselių, o kampai yra 60 laipsių?",
+        "Standalone_Artist_4": "Dabar jūs turitę naują blokeli sukuriuo jūs galite žaisti, tai \"Kartok\" blokelis. \"Kartok\" blokelis kartos komandos kurios yra įrašytos į jį. Kas atsitiks jei jūs nūstatysite \"Kartoti\" blokelį, kad jis kartotu 6 kartus?",
+        "Standalone_Artist_5": "Kiek kartų jums reikia pakartoti šį deimantą, kad nupieštumete gelytę?",
+        "Standalone_Artist_5.5": "Pastebėkite kaip mes supaprastinome šį kodą naudojantis \"Kartoti\" blokeliu. Jūs galite nūstatyti \"Kartok\" blokęlį į 12 tam, kad nupieštumete gėlytę. Užuomina: Jums reikės pasukti 30 laipsnių poto kai jūs nupiešitę deimantą, tokiu būdu jūs nepiešite and to paties deimanto.",
+        "Standalone_Artist_6": "Pakartok šį penkiakampį 6 kartus, kad sukurtumetę šį dezainą. Kiek laipsnių jums reikės pasukti kiekvieną kartą? Užoumina: padalykite laipsnių skaičių apskritime iš skaičiaus kartų, kiek kartojate.",
+        "Standalone_Artist_7": "Funkcija tai kitas programavimo instrumentas, kuris padės nesikartoti. Ši junkcija nupieš gelyte, tai naudokitę ją kai jūs norėsite nupiešti gelytę. naudodamas šia funkcija ir naujajį peršokimo blokelį, kad nupieštumete šias gelytes. Užoumina: Šios gelytes tarp savęs turi 150 pikselių tarpą.",
+        "Standalone_Artist_8": "Štai funkcija pavadinimu \"Nupiešk figūrą\" kuria mes užprogramavome piešti šešiakampius. Paleisk programa, kad pažiūrėtum ką jinai daro ir tada eksperementuok su šia funkcija, tam kad pamatytumete, kas atsitiks. Ar jūs galite perprougramuoti taip, kad pieštu raštą iš kvadratų, trikampių, daugiakampių?",
+        "Standalone_Artist_9": "Dabar tavo laikas piešti, padarykite kokį tik noritę pavikslėlį! Jūs net tūrite tuščia funkciją kuria jūs galite užprogramuoti daryti ką tik norite! "
       }
     }
   }

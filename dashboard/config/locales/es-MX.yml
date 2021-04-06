@@ -332,6 +332,7 @@ es-MX:
     invite_sent: Se envió la invitación
     added_teacher: "%{name} añadido como tu docente"
     registered: Te has registrado en %{section_name}.
+    captcha_required: Por favor, rellene el CAPTCHA para entrar en esta sección.
     error:
       signed_in: Cierra la sesión antes de proceder
       username_not_found: No se encontró el usuario %{username}
@@ -395,6 +396,7 @@ es-MX:
       game_lab_tutorials: Tutoriales del Laboratorio de juegos
       sprite_lab_documentation: Documentación del Laboratorio de sprites
       sprite_lab_tutorials: Tutoriales del Laboratorio de sprites
+      web_lab_documentation: Documentación del Laboratorio Web
       educate_overview: Descripción del educador
       educate_elementary: Escuela primaria
       educate_middle: Escuela secundaria
@@ -508,6 +510,8 @@ es-MX:
       worked_with: Trabajado con
       update_lock_settings: Actualiza la configuración de bloqueo aquí.
       clear_response: Respuesta clara
+    student_code_view_diabled: El código del alumno no puede ser consultado para esta
+      actividad.
   user:
     email_confirm_needed: 'No se pudo confirmar la dirección de correo electrónico:'
     email_confirm_needed_required: 'Tu dirección de correo electrónico %{email} no
@@ -696,6 +700,8 @@ es-MX:
     code_from_html: Code.org utiliza p5.play, bajo la licencia <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Impulsado por Amazon Web Services
+    google_copyright: "&copy; Google Inc. utilizado con permiso. Google Classroom
+      es una marca comercial de Google Inc."
     trademark: "© Code.org, %{current_year}. Code.org®, el logotipo de CODE y el de
       Hora de Código ® son marcas registradas de Code.org."
     copyright: Derechos de autor
@@ -1400,6 +1406,7 @@ es-MX:
         Google.
       error_invalid_user: ID de usuario inválida. Intenta iniciar sesión de nuevo.
       error_no_code: Por favor, ingresa tu código de inicio de sesión.
+      confirm_login: Selecciona "Confirmar" para iniciar sesión con tu cuenta de Google.
   parent_email_banner:
     text: "**¿Eres un padre o tutor?** ¡Conecta tu correo electrónico a esta cuenta
       para mantenerte al tanto del progreso y proyectos de tu hijo!"
@@ -1407,3 +1414,5 @@ es-MX:
     not_now: Ahora no
   behaviors:
     this_sprite: este sprite
+  unit_prefix: Unidad %{n}
+  code_org_logo_alt: Inicio de Code.org

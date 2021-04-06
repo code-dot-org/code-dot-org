@@ -1266,6 +1266,11 @@
               "length": "n"
             }
           }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "Mano funkcija"
+          }
         }
       }
     }

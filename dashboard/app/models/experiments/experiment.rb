@@ -83,7 +83,7 @@ class Experiment < ApplicationRecord
     {
       name: 'csf-2021-pilot',
       label: 'CSF 2021 Pilot',
-      allow_joining_via_url: false
+      allow_joining_via_url: true
     },
     {
       name: 'csd-2021-preview',
@@ -114,6 +114,11 @@ class Experiment < ApplicationRecord
       name: 'section-progress-details-pilot',
       label: 'Section Progress Details Pilot',
       allow_joining_via_url: true
+    },
+    {
+      name: 'csa-pilot',
+      label: 'CSA Pilot',
+      allow_joining_view_url: false
     }
   ]
 

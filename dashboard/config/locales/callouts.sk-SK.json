@@ -1466,6 +1466,9 @@
         },
         "outbreak7": {
           "costumes_callout": "Kliknite na vytvorenie nového kostýmu"
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Ak chceš sledovať spustený kód, klikni sem!"
         }
       }
     }

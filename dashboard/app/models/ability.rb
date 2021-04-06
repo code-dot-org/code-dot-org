@@ -55,7 +55,8 @@ class Ability
       :pd_foorm,
       Foorm::Form,
       Foorm::Library,
-      Foorm::LibraryQuestion
+      Foorm::LibraryQuestion,
+      :javabuilder_session
     ]
     cannot :index, Level
 
@@ -196,11 +197,23 @@ class Ability
     end
 
     # Override Script and ScriptLevel.
-    can [:read], Script do |script|
+    can :read, Script do |script|
       if script.pilot?
         script.has_pilot_access?(user)
       else
-        user.persisted? || !script.login_required?
+        true
+      end
+    end
+
+    can :read, ScriptLevel do |script_level, params|
+      script = script_level.script
+      if script.pilot?
+        script.has_pilot_access?(user)
+      else
+        # login is required if this script always requires it or if request
+        # params were passed to authorize! and includes login_required=true
+        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
+        user.persisted? || !login_required
       end
     end
 
@@ -214,17 +227,6 @@ class Ability
         script.has_pilot_access?(user)
       else
         true
-      end
-    end
-    can :read, ScriptLevel do |script_level, params|
-      script = script_level.script
-      if script.pilot?
-        script.has_pilot_access?(user)
-      else
-        # login is required if this script always requires it or if request
-        # params were passed to authorize! and includes login_required=true
-        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-        user.persisted? || !login_required
       end
     end
 
@@ -260,7 +262,8 @@ class Ability
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
-        Foorm::LibraryQuestion
+        Foorm::LibraryQuestion,
+        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -285,6 +288,12 @@ class Ability
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
+      end
+    end
+
+    if user.persisted?
+      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+        can :get_access_token, :javabuilder_session
       end
     end
 

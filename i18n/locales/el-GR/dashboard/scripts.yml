@@ -3005,7 +3005,7 @@ el:
               name: Σύνθεση τραγουδιού
           lesson_groups:
             ramp_up:
-              display_name: Βρόχοι
+              display_name: Φωλιασμένες Επαναλήψεις
             csf_sprites:
               display_name: Χαρακτήρας
             csf_digcit:

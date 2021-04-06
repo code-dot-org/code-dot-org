@@ -3101,7 +3101,15 @@
         "outbreak_freeplay_basic": "Realice las modificaciones o mejoras que desee en su proyecto. ",
         "4-5 Bee Conditionals 2": "¡Más nubes! \n\nAntes de obtener el polen, comprueba si debajo de cada nube se esconde una flor.  \n\nRecuerda: ¡No todas las nubes esconden lo mismo!",
         "course3_bee_functions_challenge2": "¡Estás tú solo para este desafío!",
-        "course3_maze_debugging_challenge1": "\"¿Estoy dando vueltas en círculos?\""
+        "course3_maze_debugging_challenge1": "\"¿Estoy dando vueltas en círculos?\"",
+        "4-5 Artist Patterns 1": "Dibuja este cuadrado utilizando un bucle.\n\nCada lado tiene 20 píxeles de longitud.",
+        "4-5 Maze Conditionals 5": "\"¡Quiero un girasol!\"  \n\nUtiliza una sentencia `if` para que el zombi llegue al girasol con el menor número de bloques.",
+        "4-5 Nested Loops 7": "Haz un bucle con este diseño repitiendo 10 veces. \n\n¿Cuánto hay que girar cada vez que se hace el bucle?",
+        "4-5 While Loops 4": "¡Vaya, mira eso! \n\nNo sé cuántas paladas de tierra necesita este agujero.\n¿Puedes escribir un programa que siga usando el bloque `llenar` hasta que el suelo esté igualado?  ",
+        "CourseD_EOC_artist": "¡Crea tu propio dibujo!",
+        "CourseD_EOC_bounce1": "¡Crea tu propio juego de baloncesto!",
+        "CourseD_EOC_dance": "¡Crea tu propio baile!",
+        "CourseD_EOC_starwars": "¡Crea tu propio juego de Star Wars!"
       }
     }
   }
