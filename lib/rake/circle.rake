@@ -115,7 +115,7 @@ namespace :circle do
           " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
           " --parallel #{use_saucelabs ? 16 : 8}" \
           " --abort_when_failures_exceed 10" \
-          " --retry_count 2" \
+          " --magic_retry" \
           " --output-synopsis" \
           " --html"
       if test_eyes?
