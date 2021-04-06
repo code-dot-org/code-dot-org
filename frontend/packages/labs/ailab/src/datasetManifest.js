@@ -242,13 +242,13 @@ export const allDatasets = [
 ];
 
 export function getAvailableDatasets(specificDatasets) {
-  if (specificDatasets && specificDatasets.length > 1) {
-    return allDatasets.filter(dataset => {
-      return specificDatasets.includes(dataset.id);
-    });
-  } else {
-    return allDatasets;
-  }
+  // Filter datasets by a specified array (in Levelbuilder) or filter out toy datasets.
+  let availableDatasets = (specificDatasets && specificDatasets.length > 1) ?
+    allDatasets.filter(dataset => specificDatasets.includes(dataset.id)) :
+    allDatasets.filter(dataset => dataset.toy !== true);
+
+  // Sort dataset names alphabetically.
+  return availableDatasets.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 export function getDefaultLabelForDataset(datasetId) {
