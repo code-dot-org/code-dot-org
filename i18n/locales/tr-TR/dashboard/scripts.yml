@@ -14123,13 +14123,7 @@ tr:
             Safety in My Online Neighborhood:
               name: Çevrimiçi Mahallemde Güvenlik
               description_student: Çevrimiçi bir yerlere güvenli bir şekilde nasıl gidileceğini öğrenin.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur. 
-
-                İnternetin gücü, öğrencilerin, şahsen göremeyecekleri yerleri görmesine ve ziyaret etmesine olanak sağlar. Ancak, tıpkı gerçek dünyada seyahat ederken olduğu gibi, çevrimiçi seyahat ederken de güvende olmak önemlidir. Bu sanal gezide çocuklar, çevrimiçi maceralarda güvenli kalma pratiği yapabilir.
-
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nBu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur. \n\nİnternetin gücü, öğrencilerin, şahsen göremeyecekleri yerleri görmesine ve ziyaret etmesine olanak sağlar. Ancak, tıpkı gerçek dünyada seyahat ederken olduğu gibi, çevrimiçi seyahat ederken de güvende olmak önemlidir. Bu sanal gezide çocuklar, çevrimiçi maceralarda güvenli kalma pratiği yapabilir.\n"
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         courseb-2020:
           title: Kurs B (2020)
@@ -14199,12 +14193,7 @@ tr:
             Digital Trails:
               name: Dijital İzler
               description_student: 'Dijital ayak izinizi ve web sitelerini ziyaret ederken nasıl güvenli kalacağınızı öğrenin. '
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.
-
-                Çevrimiçi yaptığın her şey daima çevrimiçi kalır mı? Öğrenciler, çevrimiçi ortamda paylaştıkları bilginin dijital bir ayak izi veya "iz" bıraktığını öğrenir. Bunu nasıl yönettiklerine bağlı olarak bu iz küçük veya büyük ve faydalı veya zararlı olabilir. Öğrenciler, farklı izleri karşılaştırır ve hangi türde bilgiyi arkalarında bırakmak istediğini eleştirel bir şekilde düşünür.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nBu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.\n\nÇevrimiçi yaptığın her şey daima çevrimiçi kalır mı? Öğrenciler, çevrimiçi ortamda paylaştıkları bilginin dijital bir ayak izi veya \"iz\" bıraktığını öğrenir. Bunu nasıl yönettiklerine bağlı olarak bu iz küçük veya büyük ve faydalı veya zararlı olabilir. Öğrenciler, farklı izleri karşılaştırır ve hangi türde bilgiyi arkalarında bırakmak istediğini eleştirel bir şekilde düşünür."
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         coursec-2020:
           title: Kurs C (2020)
@@ -14302,22 +14291,11 @@ tr:
             Putting a STOP to Online Meanness:
               name: Çevrimiçi Kötülüğe bir DUR deme
               description_student: Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.
-
-                İnternet, her tip ilginç insanla doludur ancak bazen bunlardan bazıları birbirine karşı kötü davranabilir. Bu rol oyunu ile, öğrencilerinizin, yüz yüze olmaktan ziyade çevrimiçi ortamda kötü davranmanın neden genelde daha kolay olduğunu ve çevrimiçi kötülükle karşılaştıklarında bunun üstesinden nasıl geleceğini anlamalarına yardım edin.
-
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nBu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.\n\nİnternet, her tip ilginç insanla doludur ancak bazen bunlardan bazıları birbirine karşı kötü davranabilir. Bu rol oyunu ile, öğrencilerinizin, yüz yüze olmaktan ziyade çevrimiçi ortamda kötü davranmanın neden genelde daha kolay olduğunu ve çevrimiçi kötülükle karşılaştıklarında bunun üstesinden nasıl geleceğini anlamalarına yardım edin.\n"
             Password Power-Up:
               name: Şifre Güçlendirme
               description_student: Bu derste, şifrelerinizin bilgilerinizi nasıl koruduğunu ve nasıl iyi bir şifre oluşturulacağını öğreneceksiniz.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.
-
-                Daha güçlü, daha güvenli çevrimiçi şifreler herkes için iyi bir fikirdir. Ancak çocukların daha iyi şifre oluşturmalarına ve esasen bu şifreleri hatırlamalarına nasıl yardımcı olabiliriz? Çocukların hem güvenli hem de hatırlanabilir şifreleri oluşturmalarında yardım etmek için bu dersteki ipuçlarını kullanın.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nBu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.\n\nDaha güçlü, daha güvenli çevrimiçi şifreler herkes için iyi bir fikirdir. Ancak çocukların daha iyi şifre oluşturmalarına ve esasen bu şifreleri hatırlamalarına nasıl yardımcı olabiliriz? Çocukların hem güvenli hem de hatırlanabilir şifreleri oluşturmalarında yardım etmek için bu dersteki ipuçlarını kullanın."
           student_description: Döngüler, olaylar ve koşullar içeren programlar oluştur. İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye oluştur.
         coursed-2020:
           title: Kurs D (2020)
@@ -14421,12 +14399,7 @@ tr:
             Be A Super Digital Citizen:
               name: Süper Bir Dijital Vatandaş Olun
               description_student: Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi öğrenin.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.
-
-                Çevrimiçi araçlar çocuklara izin verir ve bunlar da büyük sorumlulukları beraberinde getirir. Ancak Çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Karşı çıkmaktan ihtiyacı olanlara yardım etmeye kadar her şey dahil olmak üzere, öğrencilerinize hareket geçme ve çatışmaları çözmeye dair uygun yolları gösterin.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nBu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.\n\nÇevrimiçi araçlar çocuklara izin verir ve bunlar da büyük sorumlulukları beraberinde getirir. Ancak Çocuklar siber zorbalıkla karşılaştıklarında ne yapacaklarını her zaman biliyor mu? Karşı çıkmaktan ihtiyacı olanlara yardım etmeye kadar her şey dahil olmak üzere, öğrencilerinize hareket geçme ve çatışmaları çözmeye dair uygun yolları gösterin."
           student_description: Öğrenciler; döngüler, koşullar ve olaylara dair anlayışlarını geliştirecektir. Kodlamanın ötesinde öğrenciler, dijital vatandaşlık ile ilgili bilgi edinecektir.
         coursee-2020:
           title: Kurs E (2020)
@@ -14480,10 +14453,7 @@ tr:
             Private and Personal Information:
               name: Özel ve Kişisel Bilgiler
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
-              description_teacher: |-
-                Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.
-
-                Öğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler.
+              description_teacher: "Common Sense Education tarafından geliştirilen bu ders, çevrimiçi paylaşım için güvenli olmayan bilgi ile güvenli olan bilgi arasındaki fark ile ilgilidir.\n\nÖğrenciler, kimlikleri ile ilgili bilgileri isteyen siteleri ziyaret ederken, kendilerini ve ailelerini kimlik hırsızlığından korumak için onları güçlendiren eleştirel bir araştırma sürecini öğrenirler. Özel bilgi ve kişisel bilgi arasındaki farkı öğrenmenin yanı sıra çevrimiçi paylaşmak için güvenli olan ya da güvenli olmayanı nasıl ayırt edeceklerini de öğrenirler."
             About Me:
               name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
               description_student: "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar.\n"
@@ -14621,10 +14591,7 @@ tr:
             The Power of Words:
               name: Kelimelerin gücü
               description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size, çevrimiçi ortamda neyi söylemenin doğru ve neyi söylemenin yanlış olduğunu öğretecektir.
-              description_teacher: |-
-                Öğrenciler, en sevdikleri web sitelerinde eğlenirken, diğer çocukların onları kızdıracak, incitecek, üzecek ya da korkutacak mesajları ile karşılaşacaklarını düşünürler. Siber zorbalıkla başa çıkmanın yollarını ve çevrimiçi rahatsız edici dil karşısında nasıl cevap vereceklerini keşfederler. 
-
-                Öğrenciler, iletişim için kullandıkları teknolojinin tüm araçlarını tartışırlar ve yüz yüze ve çevrimiçi iletişimin benzerlik ve farklılıklarını keşfederler. Daha sonra öğrenciler, siber zorbalığa tepki verme yöntemleri hakkında beyin fırtınası yaparlar. 
+              description_teacher: "Öğrenciler, en sevdikleri web sitelerinde eğlenirken, diğer çocukların onları kızdıracak, incitecek, üzecek ya da korkutacak mesajları ile karşılaşacaklarını düşünürler. Siber zorbalıkla başa çıkmanın yollarını ve çevrimiçi rahatsız edici dil karşısında nasıl cevap vereceklerini keşfederler. \n\nÖğrenciler, iletişim için kullandıkları teknolojinin tüm araçlarını tartışırlar ve yüz yüze ve çevrimiçi iletişimin benzerlik ve farklılıklarını keşfederler. Daha sonra öğrenciler, siber zorbalığa tepki verme yöntemleri hakkında beyin fırtınası yaparlar. "
             Crowdsourcing:
               name: Kalabalık Kaynaklandırma 'Crowdsourcing'
               description_student: Bu ders size kitle hakkında, bir ekiple bir proje oluşturma sürecini öğretecektir.
@@ -15827,6 +15794,8 @@ tr:
               name: Simülasyon Kodlama
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            End of Course Project:
+              name: Ders Projesinin Sonu
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -16856,7 +16825,7 @@ tr:
               key: Toplayıcıda Döngüler
               name: Toplayıcıda Döngüler
               description_student: Maceracı Laurel'in açık bir mağarada hazine toplaması için programla.
-              description_teacher: Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.
+              description_teacher: 'Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir ''hazineyi al'' bloğu, macerasında ona yardım etmek için getirilir.'
             Loops in Artist:
               key: Sanatçı- Döngüler
               name: Sanatçıların Döngüleri
@@ -16974,8 +16943,8 @@ tr:
             Picturing Data:
               key: Verilerin Resmedilmesi
               name: Verilerin Resmedilmesi
-              description_student: Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
-              description_teacher: Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
+              description_student: 'Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.'
+              description_teacher: 'Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.'
             'End of Course Project: Create a Play Lab Game':
               name: Ders Projesinin Sonu
               description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi.
@@ -17016,7 +16985,6 @@ tr:
               key: Röle Programlama
               name: Röle Programlama
               description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın. Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
-              description_teacher: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır, sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana karşı yarışacaktır. 
             Debugging in Collector:
               key: Toplayıcıda Hata Ayıklama
               name: Toplayıcıda Hata Ayıklama
@@ -17051,12 +17019,12 @@ tr:
               key: Arı -içiçe döngüler
               name: Labirentte İçiçe Döngüler
               description_student: Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir.
-              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.
+              description_teacher: 'Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.'
             Conditionals with Cards:
               key: Kartlarla Koşullu Önermeler
               name: Kartlarla Koşullu Önermeler
               description_student: Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!
-              description_teacher: "Bu ders, bir programı belirli bilgilere uyarlamak için koşulların nasıl kullanılabileceğini göstermektedir. Bir program yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar, koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin verir."
+              description_teacher: 'Bu ders, bir programı belirli bilgilere uyarlamak için koşulların nasıl kullanılabileceğini göstermektedir. Bir program yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar, koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin verir.'
             Conditionals in Bee:
               key: Koşullar-Arı
               name: Koşullar-Arı
@@ -17138,7 +17106,7 @@ tr:
               key: Sanatçı ile Programlama ve Döngüler
               name: Döngüler ile çizim
               description_student: Bu derste döngüler, Sanatçı ile daha güzel resimler yapmayı kolaylaştırır.
-              description_teacher: Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.
+              description_teacher: 'Az sayıda blok ve dijital etiketleri kullanarak kendi mükemmel tasarımlarını yaptıkça öğrencilerinizin ne kadar neşelendiğine bakın! Bu ders, önceki derslerden döngülerin anlaşılmasını geliştirir ve öğrencilere gerçek bir yaratıcı olma şansını verir. Bu aktivite, portföyler veya anne-baba/öğretmen konferansları için  eserler üretmek için mükemmeldir.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft''ta Koşullar: Su Yolculuğu'
               name: 'Minecraft''ta Koşullar: Su Yolculuğu'
@@ -17148,7 +17116,7 @@ tr:
               key: Koşullar
               name: Çiftçi Koşulları
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin.
-              description_teacher: Bu ders öğrencilere `while` döngüleri ve` if / else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.
+              description_teacher: 'Bu ders öğrencilere `while` döngüleri ve` if / else` ifadeleri tanıtır. _ While loops_, koşullar doğru olduğu sürece komutları yinelemeye devam eden döngülerdir. Döngüler, programcı tam olarak kaç kez komutun bilmediğini bilmediğinde kullanılır; ama programcı döngülerin döngüye devam edebilmesi için hangi koşulun doğru olması gerektiğini bilir. `If / Else` ifadeleri, bütün bölümleri sadece bir şey doğruysa çalıştırarak programlamada esneklik sağlar, aksi halde bu döngüler başka bir şey çalıştırır.'
             Simon Says:
               key: Simon Diyor ki
               description_student: Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün.
@@ -17169,7 +17137,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
             About Me:
               key: Hakkımda
-              name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
+              name: 'Ben ve Hareketli Nesne Laboratuvarı Hakkında'
               description_student: "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar.\n"
               description_teacher: "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar.\\r\n"
             Digital Sharing:
@@ -17187,7 +17155,7 @@ tr:
               description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız.
             Nested Loops in Frozen:
               key: Frozen'da İç İçe Döngüler
-              name: Frozen ile İçiçe Döngüler
+              name: 'Frozen ile İçiçe Döngüler'
               description_student: 'Anna ve Elsa''nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın.'
               description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!
             'Functions: Songwriting':
@@ -17266,7 +17234,7 @@ tr:
             Nested Loops in the Maze:
               key: Labirentte İçiçe Döngüler
               name: Labirentte İçiçe Döngüler
-              description_student: "Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek."
+              description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.
             The Power of Words:
               key: Kelimelerin gücü
@@ -17301,11 +17269,7 @@ tr:
               key: "Okyanuslar için Yapay Zeka\n"
               name: "Okyanuslar için Yapay Zeka\n"
               description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.'
-              description_teacher: |
-                **Ders Özeti**: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.\r
-                \r
-                \r
-                **Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\r
+              description_teacher: "**Ders Özeti**: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.\\r\n\\r\n\\r\n**Doğruluğunu Kontrol Etme** Bu ders, öğrencilere bu seviyeyi doğru bir şekilde tamamlayıp tamamlamadıklarını gösterecektir. Aktivitenin farklı kısımlarını hızlıca atlamak mümkündür. Öğrencileri bu ders boyunca videolar izleme, talimatları okuma ve farklı şeyleri deneme konusunda teşvik edin. Bulgularını dilediği zaman sizinle veya bir sınıf arkadaşı ile paylaşabilirler.\\r"
             Internet:
               key: İnternet
               name: İnternet
@@ -17495,7 +17459,8 @@ tr:
             Alien Dance Party:
               key: Uzaylı Dans Partisi
               name: Uzaylı Dans Partisi
-              description_student: Arkadaşlarınızla ve ailenizle paylaşmak için oyun hazırlama alıştırması.
+              description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil edecektir.  '
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
@@ -17822,6 +17787,15 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+            lesson17:
+              name: Ders 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           description: "Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin!"
           student_description: 'Kişiye özel ücretsiz çevrimiçi kurs ile Code.org''un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin!'

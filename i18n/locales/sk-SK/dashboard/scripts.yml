@@ -1839,14 +1839,19 @@ sk:
                 Dokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu.
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: 'V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.'
             Input and Output:
               name: Vstup a Výstup
+              description_student: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
+              description_teacher: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
             Processing:
               name: Spracovanie
+              description_teacher: "Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.\n\n\n"
             Storage:
               name: Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
         csp-online-test:
           lesson_groups:
             required:
@@ -2307,6 +2312,8 @@ sk:
               name: Cykly "For"
             Map:
               name: Mapa
+            Arrays:
+              name: Rady
             Functions with Parameters:
               name: Funkcie s parametrami
         workshop-gamelab:
@@ -2361,6 +2368,8 @@ sk:
               name: Zoznamy
             For Loops:
               name: Cykly "For"
+            Arrays:
+              name: Rady
             Functions with Parameters:
               name: Funkcie s parametrami
             Functions with Parameters_:
@@ -4497,14 +4506,22 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
+              description_student: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
+              description_teacher: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
             Processing:
               name: Spracovanie
+              description_teacher: "Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.\n\n\n"
             Storage:
               name: Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
+            Apps and Storage:
+              name: Aplikácie a Pamäť
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
         csd4-2018:
           lesson_groups:
             csd4_1:
@@ -5355,12 +5372,20 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
+              description_student: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
+              description_teacher: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
             Processing:
               name: Spracovanie
+              description_teacher: "Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.\n\n\n"
+            Apps and Storage:
+              name: Aplikácie a Pamäť
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
           student_description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
         andrea-test:
           title: andrea-test
@@ -6190,12 +6215,20 @@ sk:
               description_teacher: "V tejto lekcii študenti aplikujú proces riešenia problémov na tri rôzne úlohy, aby lepšie pochopili hodnotu každého kroku. Vyriešia osemsmerovku, rozdelia sedenie na narodeninovú oslavu a naplánujú výlet. Problémy sú čoraz zložitejšie a horšie definované, aby sa zdôraznilo, ako je proces riešenia problémov obzvlášť nápomocný pri riešení takýchto problémov. Na konci hodiny sa študenti zamýšľajú nad svojimi skúsenosťami s procesom riešenia problémov. Zdôvodnia zahrnutie každého kroku a budú diskutovať o otázkach alebo stratégiách, ktoré im môžu pomôcť lepšie definovať neurčité problémy, pretože to je často najdôležitejší krok.\\r\n\\r\nDokončenie tejto lekcie bude pravdepodobne trvať dve alebo viac vyučovacích hodín. Prvé dva problémy sa môžu zmestiť do jednej hodiny, ale tretí bude potrebné posunúť na druhú hodinu."
             What is a Computer?:
               name: Čo je počítač?
+              description_teacher: "V tejto lekcii študenti vypracujú predbežnú definíciu počítača. Po diskusii možných definícií pre počítač trieda umiestni výsledky diskusie na tabuľu. Následne, v skupinách, študenti triedia obrázky na „je počítač“ alebo „nie je počítač“ na vlastnom plagáte a vysvetľujú ich rozhodnutia pri niektorých z najťažších kategorizácií. Učiteľ potom predstaví definíciu počítača a umožní skupinám, aby prehodnotili svoje plagáty podľa novej definície.\\r"
             Input and Output:
               name: Vstup a Výstup
+              description_student: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
+              description_teacher: "V tejto lekcii študenti zvážia niekoľko výpočtových zariadení, aby určili, aké typy vstupov a výstupov používajú. Skupiny sú priradené k výpočtovému zariadeniu a na základe definície vstupu a výstupu poskytnutej učiteľom uvádzajú zoznam vstupov a výstupov ich zariadenia. Na začiatku aktivity sú študenti vyzvaní, aby sa zamerali na zjavnejšie fyzické vstupy a výstupy (napr. klávesnica ako vstup alebo obrazovka ako výstup), ale neskoršie diskusie vedú študentov k tomu, aby zvážili menej zrejmé príklady (napr. že dotyková obrazovka je vstupom a skutočnosť, že internet môže slúžiť ako vstup aj výstup). Počas celej hodiny učiteľ zaznamenáva vstupy a výstupy, ktoré sú identifikované v T-grafe pred triedou. Na záver hodiny študenti preskúmajú bežné činnosti, ktoré vykonávajú na výpočtovom zariadení, a z grafu vyberú vstupy a výstupy použité pre túto činnosť.\n"
             Processing:
               name: Spracovanie
+              description_teacher: "Študenti dvakrát absolvujú aktivitu - triedenie kariet - bez elektronických pomôcok, aby preskúmali význam spracovania a jeho vzťah k riešeniu problémov. Prvé triedenie má niekoľko obmedzení a slúži na zavedenie obecnej definície spracovania. Druhé triedenie predstavuje ďalšie obmedzenia, ktoré nútia študentov vyvinúť algoritmus, ktorý karty vždy úspešne vytriedi. Študenti iteratívne vyvíjajú, testujú a zdieľajú svoje algoritmy so spolužiakmi. V rámci záverečnej diskusie sa študenti zamýšľajú nad rôznymi typmi riešenia problémov, ktoré použili pri týchto aktivitách, a nad hodnotou vyvinutia algoritmu na riešenie problému.\n\n\n"
+            Apps and Storage:
+              name: Aplikácie a Pamäť
+              description_teacher: 'Táto lekcia skúma vstupné, výstupné, úložné a spracovateľské aspekty počítača v známom a relevantnom kontexte pre študentov: mobilných aplikáciách. Študenti v pároch analyzujú mobilné aplikácie, a rozmýšľajú, na riešenie akých špecifických problémov bola daná aplikácia vytvorená, s akými vstupmi pracuje, ako mení tieto vstupy na želané výstupy , a ktoré informácie si ukladá na neskoršie použitie. Hodina končí diskusiou, ktorá prepojí lekciu s aplikáciami, ktoré sú pre študentov známe.'
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
+              description_teacher: Na záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.
           student_description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
         csd2-pilot:
           lesson_groups:
@@ -6420,6 +6453,8 @@ sk:
               name: Vstup a Výstup
             Processing:
               name: Spracovanie
+            Apps and Storage:
+              name: Aplikácie a Pamäť
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
         csp2-pilot:
@@ -6749,12 +6784,13 @@ sk:
               description_student: "**Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?\n**\\r\n\\r\nTáto lekcia predstavuje štyri typy spracovania, ktoré bude trieda používať počas celého kurzu. Prostredníctvom série aplikácií trieda skúma, ako sa spracovaním menia vstupy na výstupy. Nakoniec trieda prediskutuje ďalšie typy spracovania, ktoré by boli užitočné."
               description_teacher: "**Otázka dňa: Akými rôznymi spôsobmi spracovávajú počítače informácie?\n**\\r\n\\r\nTáto lekcia zoznamuje študentov so štyrmi bežnými typmi spracovania: ak / tak (podmienky), hľadanie zhody (vyhľadávanie), počítanie a porovnávanie. Prostredníctvom vzorových aplikácií sú študenti najskôr oboznámení s rôznymi typmi spracovania. Následne preskúmajú ďalšie aplikácie, aby určili, aké typy spracovania sa v nich používajú. Potom vymyslia svoju vlastnú aplikáciu a rozhodnú, aké typy spracovania by potrebovala používať. Na záver brainstormingom prediskutujú ďalšie potenciálne užitočné typy spracovania, ktoré neboli zahrnuté v hlavnej lekcii."
             Apps and Storage:
+              name: Aplikácie a Pamäť
               description_student: "** Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu? **\\r\n\\r\nTáto lekcia sa venuje poslednej časti modelu výpočtovej techniky v tejto kapitole: pamäť. Trieda pracuje s niekoľkými rôznymi aplikáciami a určuje, ktoré informácie by sa mali uložiť na neskôr a prečo. Následne je predstavený výpočtový model vstup-výstup-pamäť -spracovanie a trieda sa zamýšľa nad tým, ako rôzne aplikácie používajú jednotlivé komponenty, a aký vplyv má model na to, či by sa niečo malo považovať za počítač alebo nie."
               description_teacher: "** Otázka dňa: Prečo je pamäť dôležitou súčasťou výpočtového procesu? **\n\\ r\nTáto lekcia predstavuje posledný komponent modelu výpočtu: pamäť. Po vyskúšaní aplikácie „výber oblečenia“ študenti diskutujú o tom, aké informácie by sa mali v aplikácii ukladať, a naopak, aké by mali byť vkladané pri jej každom spustení. Potom sa pozrú na sériu aplikácií a na základe svojich rozhodnutí o tom, čo sa má uložiť, vytvoria smernice o tom, ktoré informácie by sa mali ukladať. Potom preskúmajú štyri komponenty výpočtového modelu tejto kapitoly: vstup, výstup, pamäť a spracovanie. Potom majú ešte jednu príležitosť zrevidovať svoje rozhodnutia o tom, ktoré položky, spomínané skôr v tejto kapitole, by sa mali byť klasifikované ako „počítače“. Hodina končí úvahou o ich vlastných nápadoch na aplikáciu a o tom, ako by pamäť využívali.\n"
             Project - Propose an App:
               name: Projekt - Navrhnite aplikáciu
               description_student: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r\n\\r\nNa záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / výpočet študenti navrhnú aplikáciu s cieľom vyriešiť problém skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a vyvrcholí prezentáciou plagátov, ktorý zdôrazňujú vlastnosti jednotlivých aplikácií. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť individuálne."
-              description_teacher: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r\n\\r\nNa záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / výpočet študenti navrhnú aplikáciu s cieľom vyriešiť problém skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využívajú dokument sprievodcu projektom, ktorý poskytuje podrobné pokyny a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť individuálne.\n"
+              description_teacher: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r\n\\r\nNa záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.\n"
             'Alternate Versions of Lesson 3: Exploring Problem Solving':
               name: 'Alternatívne Verzie Lekcie 3: Objavovanie riešenia problémov'
             'Lesson 3: Exploring Problem Solving - Games Theme':
@@ -7196,10 +7232,7 @@ sk:
             Private and Personal Information:
               name: Súkromné a osobné údaje
               description_student: Na internete zažijeme veľa zábavy, ale je tiež dôležité myslieť na bezpečnosť. V tejto lekcii sa naučíme rozlišovať medzi informáciami, ktoré je bezpečné zdieľať online a a informáciami, ktoré majú zostať súkromné.
-              description_teacher: |-
-                Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. 
-
-                Ako študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete.
+              description_teacher: "Táto lekcia bez počítača vytvorená v spolupráci s Common Sense Education je o rozlišovaní medzi údajmi, ktoré je bezpečné zdieľať online a ktoré už nie. \n\nAko študenti navštevujú stránky, ktoré vyžadujú zadanie rôznych údajov, naučia sa kriticky rozmýšľať o týchto požiadavkách - zručnosť nevyhnutná na ochranu pred krádežou identity. V tejto lekcii sa naučia kriticky rozmýšľať o informáciách, ktoré od nich požadujú rôzne internetové stránky. Naučia rozlišovať medzi osobnými a súkromnými údajmi a medzi informáciami, ktoré je a ktoré nie je bezpečné zdieľať na internete."
             About Me:
               name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
@@ -7741,6 +7774,8 @@ sk:
               name: Kódovanie nákazy
             Sprites in Action:
               name: Postavy v akcii
+            End of Course Project:
+              name: Záverečný projekt
           lesson_groups:
             introduction:
               display_name: Úvod
@@ -7755,6 +7790,7 @@ sk:
             Intro to Problem Solving:
               key: Úvod do riešenia problémov
               name: Úvod do riešenia problémov
+              description_student: "Študenti pracujú v skupinách na navrhovaní člnov z hliníkovej fólie. Cieľom je navrhnúť čln, ktorý udrží čo najviac drobných. Na konci hodiny sa študenti zamyslia nad svojimi skúsenosťami s touto aktivitou a spoja si ich s typmi riešenia problémov, na ktorých budú pracovať po zvyšok kurzu."
             The Problem Solving Process:
               key: Proces riešenia problémov
               name: Proces riešenia problémov
@@ -7778,7 +7814,7 @@ sk:
             Project - Propose an App:
               key: Projekt - Navrhnite aplikáciu
               name: Projekt - Navrhnite aplikáciu
-              description_teacher: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r\n\\r\nNa záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / výpočet študenti navrhnú aplikáciu s cieľom vyriešiť problém skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využívajú dokument sprievodcu projektom, ktorý poskytuje podrobné pokyny a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, hoci je možné ho dokončiť individuálne.\n"
+              description_teacher: "**Otázka dňa: Ako nám môže model IOSP pomôcť navrhnúť aplikáciu, ktorá rieši problém?**\\r\n\\r\nNa záver svojej štúdie procesu riešenia problémov a počítačového modelu vstup / výstup / pamäť / spracovanie študenti navrhnú aplikáciu s cieľom vyriešiť problém zo skutočného sveta. Riešenie projektu bude rozložené na niekoľko dní a jeho výsledkom bude, že študenti vytvoria plagát, na ktorom zvýraznia funkcie svojej aplikácie, a predstavia ich svojim spolužiakom. Študenti využijú sprievodný dokument projektom, ktorý poskytuje podrobné pokyny, a pomáha im usporiadať si myšlienky pri riešení projektu. Projekt je navrhnutý pre prácu v dvojici, avšak je možné ho dokončiť aj individuálne.\n"
             Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
               key: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
               name: Objavovanie riešenia problémov - Zvieratá (Alternatívna Lekcia 3)
@@ -8165,11 +8201,10 @@ sk:
             Introduction to Online Puzzles:
               key: Predstavenie online úloh
               name: Predstavenie online úloh
-              description_teacher: 'V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.'
+              description_teacher: V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia code.org. Videá vám vysvetlia, ako funguje pracovné prostredie, vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu, ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti uvidia nové typy úloh, ako napríklad Zberateľka, Umelec a Záhradníčka.
             Relay Programming:
               key: Štafetové programovanie
               name: Štafetové programovanie
-              description_teacher: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
             Debugging in Collector:
               key: Odstraňovanie chýb s Laurel
               name: Odstraňovanie chýb s Laurel
@@ -8198,6 +8233,7 @@ sk:
               key: Podmienky s kartami
               name: Podmienky s kartami
               description_student: Je čas na hru, v ktorej budeš zbierať body len za určitých podmienok!
+              description_teacher: "Táto lekcia bez počítača žiakom ukazuje, ako sa dajú využiť podmienky na úpravu programu tak, aby reagoval na vstupné informácie. Častokrát pri písaní programu nemáme všetky informácie, ktoré potrebujeme. Niekedy tiež chceme, aby sa program v rôznych situáciách zachoval rozdielne - a to aj vtedy, keď nevieme, ktorá situácia reálne nastane v momente spustenia programu. Toto je moment, keď do hry vstupujú podmienky. Podmienky umožňujú počítačom robiť rozhodnutia na základe informácie pravdivej v momente spustenia kódu.\n\n"
             Conditionals in Bee:
               key: Podmienky s včelou
               name: Podmienky "ak/inak" s včelou
@@ -8255,7 +8291,7 @@ sk:
               description_teacher: "V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia code.org. Videá vám vysvetlia, ako funguje pracovné prostredie vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu, ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_ v bludisku. \\r\nHľadanie a odstraňovanie chýb je dôležitou súčasťou učenia. Študenti sa preto stretnú s úlohami, ktoré boli vyriešené _nesprávne_. V týchto úlohách si budú musieť preštudovať ponúknutý kód tak, aby identifikovali chyby vrátane nesprávnych cyklov, chýbajúcich blokov, blokov navyše, či v blokov umiestnených na nesprávnom mieste. "
             Programming and Loops with the Artist:
               name: Kreslenie s cyklami
-              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
+              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
@@ -8263,7 +8299,7 @@ sk:
             Conditionals:
               key: Podmienky
               name: Podmienky s Farmárkou
-              description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.
+              description_teacher: 'Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.'
             Simon Says:
               key: Simon vraví
               description_teacher: 'V tejto lekcii si študenti zahrajú hru, ktorá im pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby spôsobili želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite Labu v nasledujúcej lekcii.'
@@ -8282,7 +8318,7 @@ sk:
             About Me:
               name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete
-              description_teacher: "Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete.\\r"
+              description_teacher: 'Prostredníctvom tvorby interaktívneho plagátu v SpriteLabe si študenti overia, čo sa naučili o zdielaní súkromných a osobných údajov na internete.\r'
             Digital Sharing:
               key: Digitálne zdieľanie
               name: Digitálne zdieľanie
@@ -8295,7 +8331,7 @@ sk:
               description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami vytvoríš ÚŽASNÉ kresby.
             Nested Loops in Frozen:
               key: Vnorené cykly vo Frozen
-              name: Vnorené cykly s Frozen
+              name: 'Vnorené cykly s Frozen'
             'Functions: Songwriting':
               key: 'Funkcie: Písanie pesničiek'
               name: Písanie pesničiek
@@ -8508,6 +8544,7 @@ sk:
             Alien Dance Party:
               key: Mimozemská tanečná párty
               name: Mimozemská tanečná párty
+              description_teacher: 'V tejto lekcii študenti pracujú v Sprite Labe, v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť, ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
             Behaviors in Sprite Lab:
               key: Správania v Sprite Labe
               name: Správania v Sprite Labe
@@ -8658,6 +8695,12 @@ sk:
               name: Hodina 14
             lesson15:
               name: Hodina 15
+            lesson17:
+              name: Hodina 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

@@ -71,6 +71,14 @@ es-MX:
         - text: Según las reglas del juego, ¿qué conjunto de naipes tiene la puntuación
             correcta?
         title: Opción múltiple
+        teacher_markdown: |-
+          ## Profesores:
+
+          Los alumnos pueden estar trabajando a partir de un concepto equivocado, y este es un buen lugar para descubrirlo.  Si los alumnos creen que no hay *ninguna* respuesta correcta, es probable que no hayan entendido bien las condicionales.
+
+          Aquí hay un video que ayuda a explicar lo que sucede en esta pregunta:
+
+          https://youtu.be/TbUaEnAYPjI
       2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
@@ -528,12 +536,102 @@ es-MX:
         title: Laberinto - Opción múltiple
       Begin planning your project:
         content1: descripción aquí
+        markdown: "# El proceso de diseño\nDiseñar software significa resolver un
+          montón de pequeños problemas, todo el tiempo. El principal problema en el
+          diseño de software es qué crear en primer lugar.\n\nEste proceso es útil
+          para todo tipo de cosas, pero nos vamos a centrar en usarlo para el diseño
+          de aplicaciones.\n\n<!-- Traducir los términos \"Definir\", \"Preparar\",
+          \"Probar\", \"Reflejar\" y cambiar el tamaño y el posicionamiento de la
+          fuente según sea necesario, >\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Proceso de diseño\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **Definir**\n  * ¿Qué tipo de aplicación te gustaría crear?\n  * ¿Cuáles
+          son sus limitaciones?\n  * ¿Cómo es el éxito?\n* **Preparar**\n  * Lluvia
+          de ideas / investigar posibles elementos\n  * Comparar pros y contras\n
+          \ * Hacer un plan\n* **Pruébalo**\n  * Pon tu plan en acción\n* **Reflexionar**\n
+          \ * ¿Cómo se comparan tus resultados con los objetivos que estableces al
+          definir la aplicación?\n  * ¿Qué puedes aprender de esto o hacerlo mejor
+          la próxima vez?\n  * ¿Qué nuevos problemas has descubierto?\n\n# Cómo se
+          ve\nEn el transcurso de las próximas semanas, tendrás la oportunidad de
+          experimentar con algunos juegos existentes y diseñar tu propio juego basado
+          en lo que has aprendido.  Después de crear tu juego, tendrás la oportunidad
+          de presentarlo a los demás y recibir comentarios.  Todos estos pasos son
+          de vital importancia en la industria del software, y la práctica con los
+          elementos del proceso de diseño te ayudará a crear mejores productos de
+          manera más eficiente.  \n\nEsto es lo que tendrás las próximas semanas a
+          medida que aprendamos más sobre el proceso de diseño:\n\n1. **Definir &
+          Preparar**\n   * Juega con juegos existentes para obtener ideas y entender
+          las limitaciones\n   * Lluvia de ideas para planificar tu nueva o modificada
+          aplicación\n1. **Pruébalo**\n   * Sigue tu plan para crear una aplicación\n1.
+          **Reflejar & Editar**\n   * Intercambiar aplicaciones con otro grupo para
+          ayudar a mejorar sus proyectos\n1. **Presentación**\n   * ¡Muestra tu producto
+          final!"
       Begin planning your project_2018:
         content1: descripción aquí
+        markdown: "# El proceso de diseño\nDiseñar software significa resolver un
+          montón de pequeños problemas, todo el tiempo. El principal problema en el
+          diseño de software es qué crear en primer lugar.\n\nEste proceso es útil
+          para todo tipo de cosas, pero nos vamos a centrar en usarlo para el diseño
+          de aplicaciones.\n\n<!-- Traducir los términos \"Definir\", \"Preparar\",
+          \"Probar\", \"Reflejar\" y cambiar el tamaño y el posicionamiento de la
+          fuente según sea necesario, >\n<div style=\"position: relative; text-align:
+          center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\"
+          alt=\"Proceso de diseño\" style=\"width: 50%;\">\n  <div style=\"position:
+          absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight:
+          bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left:
+          61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div
+          style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%);
+          font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top:
+          52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n*
+          **Definir**\n  * ¿Qué tipo de aplicación te gustaría crear?\n  * ¿Cuáles
+          son sus limitaciones?\n  * ¿Cómo es el éxito?\n* **Preparar**\n  * Lluvia
+          de ideas / investigar posibles elementos\n  * Comparar pros y contras\n
+          \ * Hacer un plan\n* **Pruébalo**\n  * Pon tu plan en acción\n* **Reflexionar**\n
+          \ * ¿Cómo se comparan tus resultados con los objetivos que estableces al
+          definir la aplicación?\n  * ¿Qué puedes aprender de esto o hacerlo mejor
+          la próxima vez?\n  * ¿Qué nuevos problemas has descubierto?\n\n# Cómo se
+          ve\nEn el transcurso de las próximas semanas, tendrás la oportunidad de
+          experimentar con algunos juegos existentes y diseñar tu propio juego basado
+          en lo que has aprendido.  Después de crear tu juego, tendrás la oportunidad
+          de presentarlo a los demás y recibir comentarios.  Todos estos pasos son
+          de vital importancia en la industria del software, y la práctica con los
+          elementos del proceso de diseño te ayudará a crear mejores productos de
+          manera más eficiente.  \n\nEsto es lo que tendrás las próximas semanas a
+          medida que aprendamos más sobre el proceso de diseño:\n\n1. **Definir &
+          Preparar**\n   * Juega con juegos existentes para obtener ideas y entender
+          las limitaciones\n   * Lluvia de ideas para planificar tu nueva o modificada
+          aplicación\n1. **Pruébalo**\n   * Sigue tu plan para crear una aplicación\n1.
+          **Reflejar & Editar**\n   * Intercambiar aplicaciones con otro grupo para
+          ayudar a mejorar sus proyectos\n1. **Presentación**\n   * ¡Muestra tu producto
+          final!"
       Begin planning your project_2018_2019:
         content1: descripción aquí
+        markdown: |
+          # Ejemplos de proyectos
+
+          Está a punto de comenzar su proyecto final. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          | Ardilla Hambrienta | Historia de un Extraterrestre
+          |---|---|
+          | [![Ardilla hambrienta (Laboratorio de juegos)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Ardilla hambrienta (Laboratorio de juegos")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [[Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | ¡Intenta añadir sonidos a este juego! | ¡Intenta añadir otra escena a esta historia! |
       Begin planning your project_2018_2019_2020:
         content1: descripción aquí
+        markdown: |
+          # Ejemplos de proyectos
+
+          Está a punto de comenzar su proyecto final. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          | Ardilla Hambrienta | Historia de un Extraterrestre
+          |---|---|
+          | [![Ardilla hambrienta (Laboratorio de juegos)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Ardilla hambrienta (Laboratorio de juegos")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [[Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
+          | ¡Intenta añadir sonidos a este juego! | ¡Intenta añadir otra escena a esta historia! |
       BigEvent-Unplugged:
         markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
           acciones que un computador monitorea. En esta lección usted reaccionará
@@ -624,6 +722,18 @@ es-MX:
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Huevos &lt;/h3&gt;
+          &lt;h1&gt; Tocino &lt;/h1&gt;
+          &lt;h6&gt; Gofres &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de niveles:** Esta pregunta de opción múltiple que pide a los estudiantes que elijan cómo se mostrarán los encabezados HTML en una página web. Puede ver qué estudiantes han respondido correctamente a la pregunta yendo a ese nivel y abriendo el panel del profesor en la parte derecha.  Los estudiantes que hayan respondido correctamente a la pregunta tendrán una marca verde.  Los alumnos tienen tantas oportunidades como quieran para responder correctamente, por lo que adivinar y comprobar también puede llevar a una respuesta correcta.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -638,6 +748,18 @@ es-MX:
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Huevos &lt;/h3&gt;
+          &lt;h1&gt; Tocino &lt;/h1&gt;
+          &lt;h6&gt; Gofres &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de niveles:** Esta pregunta de opción múltiple que pide a los estudiantes que elijan cómo se mostrarán los encabezados HTML en una página web. Puede ver qué estudiantes han respondido correctamente a la pregunta yendo a ese nivel y abriendo el panel del profesor en la parte derecha.  Los estudiantes que hayan respondido correctamente a la pregunta tendrán una marca verde.  Los alumnos tienen tantas oportunidades como quieran para responder correctamente, por lo que adivinar y comprobar también puede llevar a una respuesta correcta.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -652,6 +774,18 @@ es-MX:
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Huevos &lt;/h3&gt;
+          &lt;h1&gt; Tocino &lt;/h1&gt;
+          &lt;h6&gt; Gofres &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de niveles: Esta pregunta de opción múltiple pide a los alumnos que elijan cómo se mostrarán los encabezados HTML en una página web. Puede ver qué alumnos han respondido correctamente a la pregunta yendo a ese nivel y sacando el Panel del Profesor de la parte derecha.  Los alumnos que hayan respondido correctamente a la pregunta tendrán un punto verde.  Los alumnos tienen tantas oportunidades como quieran para responder correctamente, por lo que adivinar y comprobar también puede conducir a una respuesta correcta.
+
+          <div class="clear"></div>
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Resumen
@@ -726,10 +860,100 @@ es-MX:
           * [Apps y Problema Solventado](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
       CSD U2 Design Project:
         content1: descripción aquí
+        markdown: |-
+          #Inicie su página
+
+          ¡Es hora de crear tu página web personal!  Podrás elegir el contenido que compartirás con el mundo.
+
+          ## Definir
+
+          Tu tarea es hacer una página web utilizando el HTML que has aprendido.  La página web debe tener al menos **dos encabezados de diferentes tamaños**, y debe **utilizar párrafos**, también.
+
+          ## Preparar
+
+          Antes de empezar a codificar tu página web, debes tener un plan.  Utiliza las ideas que escribiste hace un par de lecciones, y decide de qué tratará esta página.  Tendrás la oportunidad de hacer otras páginas más tarde.
+
+          Dibuja un boceto de tu página web, incluyendo los títulos y los párrafos que incluye. Enseña tu boceto a tu compañero y explícale qué etiquetas vas a utilizar para las distintas partes de la página.  Puedes consultar los niveles anteriores si has olvidado cuáles son las diferentes etiquetas o pedir ayuda a tu compañero.
+
+          Si has dibujado algo que aún no has aprendido a codificar, puedes guardarlo para más adelante.
+
+          ## Intentar
+
+          Utiliza el HTML que has aprendido para crear tu página.  Puedes pedir ayuda a un compañero si te quedas atascado, pero **tú eres el conductor** de tu propia página web, lo que significa que debes escribir todo el código tú mismo.
+
+          ## Reflexionar
+
+          Cuando hayas terminado tu página web, compárala con tu boceto para asegurarte de que no has olvidado nada.  Pídele a tu compañero que la mire también y piensa en los comentarios que recibas y en si quieres hacer cambios en tu página.
+        teacher_markdown: |-
+          # Proyecto de página web personal
+
+          Este nivel da el pistoletazo de salida al proyecto de sitio web personal en el que los alumnos seguirán trabajando a lo largo de la unidad. Puede exigirles que le muestren un boceto del diario antes de volver a Code Studio, o dejarles que decidan por sí mismos cuándo están listos.
+
+          Se puede animar a los alumnos que terminen antes a que añadan nuevos contenidos a la página o a que revisen los que ya tienen.
       CSD U2 Design Project_2018:
         content1: descripción aquí
+        markdown: |-
+          #Inicie su página
+
+          ¡Es hora de crear tu página web personal!  Podrás elegir el contenido que compartirás con el mundo.
+
+          ## Definir
+
+          Tu tarea es hacer una página web utilizando el HTML que has aprendido.  La página web debe tener al menos **dos encabezados de diferentes tamaños**, y debe **utilizar párrafos**, también.
+
+          ## Preparar
+
+          Antes de empezar a codificar tu página web, debes tener un plan.  Utiliza las ideas que escribiste hace un par de lecciones, y decide de qué tratará esta página.  Tendrás la oportunidad de hacer otras páginas más tarde.
+
+          Dibuja un boceto de tu página web, incluyendo los títulos y los párrafos que incluye. Enseña tu boceto a tu compañero y explícale qué etiquetas vas a utilizar para las distintas partes de la página.  Puedes consultar los niveles anteriores si has olvidado cuáles son las diferentes etiquetas o pedir ayuda a tu compañero.
+
+          Si has dibujado algo que aún no has aprendido a codificar, puedes guardarlo para más adelante.
+
+          ## Intentar
+
+          Utiliza el HTML que has aprendido para crear tu página.  Puedes pedir ayuda a un compañero si te quedas atascado, pero **tú eres el conductor** de tu propia página web, lo que significa que debes escribir todo el código tú mismo.
+
+          ## Reflexionar
+
+          Cuando hayas terminado tu página web, compárala con tu boceto para asegurarte de que no has olvidado nada.  Pídele a tu compañero que la mire también y piensa en los comentarios que recibas y en si quieres hacer cambios en tu página.
+        teacher_markdown: |-
+          # Proyecto de página web personal
+
+          Este nivel da el pistoletazo de salida al proyecto de sitio web personal en el que los alumnos seguirán trabajando a lo largo de la unidad. Puede exigirles que le muestren un boceto del diario antes de volver a Code Studio, o dejarles que decidan por sí mismos cuándo están listos.
+
+          Se puede animar a los alumnos que terminen antes a que añadan nuevos contenidos a la página o a que revisen los que ya tienen.
       CSD U2 Design Project_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          #Inicie su página
+
+          ¡Es hora de crear tu página web personal!  Podrás elegir el contenido que compartirás con el mundo.
+
+          ## Definir
+
+          Tu tarea es hacer una página web utilizando el HTML que has aprendido.  La página web debe tener al menos **dos encabezados de diferentes tamaños**, y debe **utilizar párrafos**, también.
+
+          ## Preparar
+
+          Antes de empezar a codificar tu página web, debes tener un plan.  Utiliza las ideas que escribiste hace un par de lecciones, y decide de qué tratará esta página.  Tendrás la oportunidad de hacer otras páginas más tarde.
+
+          Dibuja un boceto de tu página web, incluyendo los títulos y los párrafos que incluye. Enseña tu boceto a tu compañero y explícale qué etiquetas vas a utilizar para las distintas partes de la página.  Puedes consultar los niveles anteriores si has olvidado cuáles son las diferentes etiquetas o pedir ayuda a tu compañero.
+
+          Si has dibujado algo que aún no has aprendido a codificar, puedes guardarlo para más adelante.
+
+          ## Intentar
+
+          Utiliza el HTML que has aprendido para crear tu página.  Puedes pedir ayuda a un compañero si te quedas atascado, pero **tú eres el conductor** de tu propia página web, lo que significa que debes escribir todo el código tú mismo.
+
+          ## Reflexionar
+
+          Cuando hayas terminado tu página web, compárala con tu boceto para asegurarte de que no has olvidado nada.  Pídele a tu compañero que la mire también y piensa en los comentarios que recibas y en si quieres hacer cambios en tu página.
+        teacher_markdown: |-
+          # Proyecto de página web personal
+
+          Este nivel da el pistoletazo de salida al proyecto de sitio web personal en el que los alumnos seguirán trabajando a lo largo de la unidad. Puede exigirles que le muestren un boceto del diario antes de volver a Code Studio, o dejarles que decidan por sí mismos cuándo están listos.
+
+          Se puede animar a los alumnos que terminen antes a que añadan nuevos contenidos a la página o a que revisen los que ya tienen.
       CSD U2 Expression Exemplars:
         markdown: |
           # Ejemplares de sitios web personales
@@ -800,6 +1024,9 @@ es-MX:
 
           * [Internet Scavenger Hunt - Activity Guide](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
           * [Strange Yet True Animals - Activity Guide](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
+        teacher_markdown: Animales extraños y verdaderos - Clave](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit)
+          ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))
       CSD U2 L2 Overview:
         content1: descripción aquí
         markdown: |
@@ -871,6 +1098,7 @@ es-MX:
 
           * [When Does Your Privacy Matter? - Activity Guide](https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
           * [Social Sleuth - Activity Guide](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: "¿Cuándo importa tu privacidad?"
       CSD U2 L6 Overview:
         content1: descripción aquí
         markdown: |+
@@ -906,6 +1134,7 @@ es-MX:
 
           * [Creative Commons Overview](https://www.youtube.com/watch?v=HKfqoPYJdVc) - Video
           * [Licensing Your Work - Activity Guide](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licencia de su trabajo - Ejemplo de guía de actividades](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
       CSD U2 Lesson 6 Overview:
         content1: descripción aquí
         markdown: |
@@ -936,6 +1165,9 @@ es-MX:
           Recursos\n\n* [Personal Website - Project Guide](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
           [Personal Website - Peer Review](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
           [Personal Web Site - Rubric](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
+        teacher_markdown: |
+          * [Sitio web personal](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Ejemplo de guía de proyecto ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Sitio web personal](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
       CSD U2 Top Websites:
         markdown: |
           # Principales sitios web en EE. UU.
@@ -974,10 +1206,82 @@ es-MX:
           -> dsls -> markdown\n"
       CSD U2 expand project:
         content1: descripción aquí
+        markdown: |-
+          # Ampliación de su sitio web
+
+          En el siguiente nivel, ampliarás tu sitio web añadiendo una segunda página.  Discutirás tu plan con tu compañero, pero estarás trabajando en tu propio sitio.
+
+          Tendrás que hacer tres cosas en el siguiente nivel.
+
+          1. Crear una nueva página.
+          2. Nombrar la nueva página.
+          3. Poner contenido en la nueva página.
+
+          La nueva página que añadas debe incluir:
+
+          * al menos una lista
+          * al menos un título
+
+          Antes de empezar a codificar, debes tener un plan sobre lo que quieres que sea el sitio web.  Aquí tienes algunas ideas. Puedes hacer clic en cada página para ver una versión a tamaño completo.
+
+          | Receta, lista de datos curiosos, guía de instrucciones, etc.
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instrucciones para ampliar las páginas web de los
+          alumnos pueden mostrarse en la pizarra para poder repasarlas en clase.  Haga
+          clic para mostrar a los alumnos las páginas web de muestra.
       CSD U2 expand project_2018:
         content1: descripción aquí
+        markdown: |-
+          # Ampliación de su sitio web
+
+          En el siguiente nivel, ampliarás tu sitio web añadiendo una segunda página.  Discutirás tu plan con tu compañero, pero estarás trabajando en tu propio sitio.
+
+          Tendrás que hacer tres cosas en el siguiente nivel.
+
+          1. Crear una nueva página.
+          2. Nombrar la nueva página.
+          3. Poner contenido en la nueva página.
+
+          La nueva página que añadas debe incluir:
+
+          * al menos una lista
+          * al menos un título
+
+          Antes de empezar a codificar, debes tener un plan sobre lo que quieres que sea el sitio web.  Aquí tienes algunas ideas. Puedes hacer clic en cada página para ver una versión a tamaño completo.
+
+          | Receta, lista de datos curiosos, guía de instrucciones, etc.
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instrucciones para ampliar las páginas web de los
+          alumnos pueden mostrarse en la pizarra para poder repasarlas en clase.  Haga
+          clic para mostrar a los alumnos las páginas web de muestra.
       CSD U2 expand project_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Ampliación de su sitio web
+
+          En el siguiente nivel, ampliarás tu sitio web añadiendo una segunda página.  Discutirás tu plan con tu compañero, pero estarás trabajando en tu propio sitio.
+
+          Tendrás que hacer tres cosas en el siguiente nivel.
+
+          1. Crear una nueva página.
+          2. Nombrar la nueva página.
+          3. Poner contenido en la nueva página.
+
+          La nueva página que añadas debe incluir:
+
+          * al menos una lista
+          * al menos un título
+
+          Antes de empezar a codificar, debes tener un plan sobre lo que quieres que sea el sitio web.  Aquí tienes algunas ideas. Puedes hacer clic en cada página para ver una versión a tamaño completo.
+
+          | Receta, lista de datos curiosos, guía de instrucciones, etc.
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instrucciones para ampliar las páginas web de los
+          alumnos pueden mostrarse en la pizarra para poder repasarlas en clase.  Haga
+          clic para mostrar a los alumnos las páginas web de muestra.
       CSD U2 image debug match:
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -998,6 +1302,12 @@ es-MX:
         - text: La dirección de la imagen no incluye la extensión de archivo (.jpg)
         - text: La dirección de la imagen no se da como un atributo `src`
         - text: Hay un espacio en el nombre del archivo
+        teacher_markdown: 'Aunque este nivel puede utilizarse para evaluar la comprensión
+          por parte de los alumnos de la sintaxis de la etiqueta `<img>`, su objetivo
+          principal es que los alumnos conozcan los tipos de errores más comunes que
+          pueden encontrar al añadir imágenes a las páginas web.
+
+'
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1023,6 +1333,8 @@ es-MX:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Verificación rápida de las listas
+        markdown: " *Pista: Algunas de las listas HTML tienen errores, así que tendrás
+          que pensar qué fallos en el código están causando los errores.*"
       CSD U2 lists match_2018:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1048,6 +1360,8 @@ es-MX:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Verificación rápida de las listas
+        markdown: " *Pista: Algunas de las listas HTML tienen errores, así que tendrás
+          que pensar qué fallos en el código están causando los errores.*"
       CSD U2 lists match_2018_2019:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -1073,12 +1387,86 @@ es-MX:
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
         title: Verificación rápida de las listas
+        markdown: " *Pista: Algunas de las listas HTML tienen errores, así que tendrás
+          que pensar qué fallos en el código están causando los errores.*"
       CSD U2 project guide:
         content1: descripción aquí
+        markdown: |-
+          # Tu sitio web personal
+
+          En los próximos niveles, completarás y publicarás tu sitio web personal.
+
+          Ya has hecho mucho trabajo en tu sitio web, pero esta es tu oportunidad de ser creativo y añadir una nueva página de algo que te interese.
+
+          Aquí tienes algunas ideas para tu nueva página, pero puedes hacer cualquier cosa aprobada por tu profesor.
+
+          * Una reseña de una película, televisión o libro
+          * Descripción de una tradición festiva favorita
+          * Una página "con causa" que explique un tema que sea importante para ti
+
+          Si tienes más de una idea, puedes añadir varias páginas a tu sitio.
+
+          Tu Guía del Proyecto te ayudará a recordar todo lo que tienes que hacer.  Asegúrate de tener la aprobación de tu profesor antes de pasar al siguiente nivel.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Punto de control de la planificación
+
+          Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
       CSD U2 project guide_2018:
         content1: descripción aquí
+        markdown: |-
+          # Tu sitio web personal
+
+          En los próximos niveles, completarás y publicarás tu sitio web personal.
+
+          Ya has hecho mucho trabajo en tu sitio web, pero esta es tu oportunidad de ser creativo y añadir una nueva página de algo que te interese.
+
+          Aquí tienes algunas ideas para tu nueva página, pero puedes hacer cualquier cosa aprobada por tu profesor.
+
+          * Una reseña de una película, televisión o libro
+          * Descripción de una tradición festiva favorita
+          * Una página "con causa" que explique un tema que sea importante para ti
+
+          Si tienes más de una idea, puedes añadir varias páginas a tu sitio.
+
+          Tu Guía del Proyecto te ayudará a recordar todo lo que tienes que hacer.  Asegúrate de tener la aprobación de tu profesor antes de pasar al siguiente nivel.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Punto de control de la planificación
+
+          Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
       CSD U2 project guide_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Tu sitio web personal
+
+          En los próximos niveles, completarás y publicarás tu sitio web personal.
+
+          Ya has hecho mucho trabajo en tu sitio web, pero esta es tu oportunidad de ser creativo y añadir una nueva página de algo que te interese.
+
+          Aquí tienes algunas ideas para tu nueva página, pero puedes hacer cualquier cosa aprobada por tu profesor.
+
+          * Una reseña de una película, televisión o libro
+          * Descripción de una tradición festiva favorita
+          * Una página "con causa" que explique un tema que sea importante para ti
+
+          Si tienes más de una idea, puedes añadir varias páginas a tu sitio.
+
+          Tu Guía del Proyecto te ayudará a recordar todo lo que tienes que hacer.  Asegúrate de tener la aprobación de tu profesor antes de pasar al siguiente nivel.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Punto de control de la planificación
+
+          Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
       CSD U3 - conditionals - Matching:
         answers:
         - text: perro.rotacion &lt; gato.rotacion
@@ -1140,6 +1528,14 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |-
+          # Expresiones booleanas
+
+          La toma de decisiones en los ordenadores se basa en declaraciones denominadas **expresiones booleanas**. Una expresión booleana es **cualquier expresión que sólo puede evaluarse como `TRUE` o `FALSE`**. Esto puede ser particularmente útil cuando se utiliza para comparar las propiedades de dos sprites. Por ejemplo, puedes averiguar cuál es más grande o está más arriba. En los siguientes puzzles utilizaremos expresiones booleanas simples para comparar las propiedades de los sprites.
+
+          # Predecir
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina lo que significan e intenta responder a la siguiente pregunta
       CSD U3 Boolean MC_2018:
         answers:
         - text: verdadero<br>falso<br>verdadero
@@ -1150,6 +1546,14 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |-
+          # Expresiones booleanas
+
+          La toma de decisiones en los ordenadores se basa en declaraciones denominadas **expresiones booleanas**. Una expresión booleana es **cualquier expresión que sólo puede evaluarse como `TRUE` o `FALSE`**. Esto puede ser particularmente útil cuando se utiliza para comparar las propiedades de dos sprites. Por ejemplo, puedes averiguar cuál es más grande o está más arriba. En los siguientes puzzles utilizaremos expresiones booleanas simples para comparar las propiedades de los sprites.
+
+          # Predecir
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina lo que significan e intenta responder a la siguiente pregunta
       CSD U3 Boolean MC_2018_2019:
         answers:
         - text: verdadero<br>falso<br>verdadero
@@ -1160,10 +1564,34 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |-
+          # Expresiones booleanas
+
+          La toma de decisiones en los ordenadores se basa en declaraciones denominadas **expresiones booleanas**. Una expresión booleana es **cualquier expresión que sólo puede evaluarse como `TRUE` o `FALSE`**. Esto puede ser particularmente útil cuando se utiliza para comparar las propiedades de dos sprites. Por ejemplo, puedes averiguar cuál es más grande o está más arriba. En los siguientes puzzles utilizaremos expresiones booleanas simples para comparar las propiedades de los sprites.
+
+          # Predecir
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina lo que significan e intenta responder a la siguiente pregunta
       CSD U3 Card Examples_2018:
         content1: descripción aquí
+        markdown: |-
+          # Tu tarjeta interactiva
+
+          En los próximos niveles, completarás tu propia tarjeta interactiva.  Aquí tienes algunos ejemplos para darte algunas ideas.  No olvides mirar el código para ver cómo funcionan.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295. png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
       CSD U3 Card Examples_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Tu tarjeta interactiva
+
+          En los próximos niveles, completarás tu propia tarjeta interactiva.  Aquí tienes algunos ejemplos para darte algunas ideas.  No olvides mirar el código para ver cómo funcionan.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295. png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
       CSD U3 Collisions SFLP:
         markdown: |+
           # Resumen
@@ -1217,6 +1645,10 @@ es-MX:
           que programan (Como en, la gente que se dedican a esto), es un recurso excelente
           para ver las maneras varias que los aficionados hacen entretenmiento con
           código.\n\n### Campos Relevantes\n\n* Todo"
+        markdown: |-
+          # Inicio de tu búsqueda
+
+          Para obtener más información sobre cómo las ciencias de la computación y la programación juegan un papel en el entretenimiento, tendrá que hacer algunas investigaciones. Trate de buscar "Ciencias de la computación y &#95;&#95;&#95;&#95;&#95;&#95;" y probar diferentes tipos de entretenimiento como cine, televisión, música, juegos, animación, moda, etc.
       CSD U3 Functions Prediction define first:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
@@ -1235,6 +1667,12 @@ es-MX:
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        markdown: |-
+          # ¿Importa dónde se crean las funciones?
+
+          Hasta ahora todas tus funciones han sido creadas en la parte inferior de tu código. ¿Qué crees que pasará si llamas a una función antes de que esté definida?
+
+          Observa que el cuadrado rojo se dibuja **antes** de que se cree su función mientras que el cuadrado verde se dibuja **después** de que se cree su función. ¿Cuál de ellos crees que se dibujará?
       CSD U3 Functions Prediction define first_2018:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
@@ -1253,6 +1691,12 @@ es-MX:
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        markdown: |-
+          # ¿Importa dónde se crean las funciones?
+
+          Hasta ahora todas tus funciones han sido creadas en la parte inferior de tu código. ¿Qué crees que pasará si llamas a una función antes de que esté definida?
+
+          Observa que el cuadrado rojo se dibuja **antes** de que se cree su función mientras que el cuadrado verde se dibuja **después** de que se cree su función. ¿Cuál de ellos crees que se dibujará?
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
@@ -1271,6 +1715,12 @@ es-MX:
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        markdown: |-
+          # ¿Importa dónde se crean las funciones?
+
+          Hasta ahora todas tus funciones han sido creadas en la parte inferior de tu código. ¿Qué crees que pasará si llamas a una función antes de que esté definida?
+
+          Observa que el cuadrado rojo se dibuja **antes** de que se cree su función mientras que el cuadrado verde se dibuja **después** de que se cree su función. ¿Cuál de ellos crees que se dibujará?
       CSD U3 Functions SFLP:
         markdown: |+
           # Resumen
@@ -1406,6 +1856,9 @@ es-MX:
           * [Interactive Card - Project Guide](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
           * [Interactive Card - Rubric](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [Interactive Card - Peer Review](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |-
+          * [Tarjeta interactiva] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Ejemplo de guía de proyecto([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Tarjeta interactiva] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Ejemplo de revisión por pares ([PDF] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
       CSD U3 Lesson Overview 2:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -1428,6 +1881,10 @@ es-MX:
 
 
 
+        teacher_markdown: |
+          [clave]
+
+          * [Formas de dibujo] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Ejemplar ([PDF] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
       CSD U3 Lesson Overview 3:
         markdown: |+
           # Resumen
@@ -1501,6 +1958,9 @@ es-MX:
           ## Recursos
 
           * [Sprite Scene Planning - Activity Guide](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+        teacher_markdown: "* [Planificación de escenas sprite](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/editar)
+          - Ejemplo de guía de actividad ([PDF] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))"
       CSD U3 Lesson Overview 7:
         markdown: |+
           # Resumen
@@ -1535,6 +1995,9 @@ es-MX:
 
           * [Variables Unplugged - Activity Guide](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
           * [Variables Unplugged Board - Manipulative](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+        teacher_markdown: "* [Variables desenchufadas](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
+          - Tecla guía de actividad ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))"
       CSD U3 Lesson Overview 9:
         markdown: |+
           # Resumen
@@ -1564,6 +2027,9 @@ es-MX:
           * [Make Your Own Game - Project Guide](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
           * [Make Your Own Game - Rubric](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
           * [Make Your Own Game - Peer Review](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |-
+          * [Hacer su propio juego] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Guía del proyecto Exe ([PDF] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+          * [Hacer su propio juego] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Ejemplo de revisión por pares ([PDF] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
       CSD U3 SFLP Velocity:
         markdown: |
           # Resumen
@@ -1632,10 +2098,11 @@ es-MX:
         - text: "¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?"
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - text: "¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?"
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -1661,6 +2128,9 @@ es-MX:
           ## Recursos
 
           * [Planning Your Platform Game - Project Guide](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Planificación de su juego de plataforma] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Guía del proyecto ([PDF] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))"
       CSD U3 combining rep:
         content1: descripción aquí
         markdown: |+
@@ -1676,8 +2146,28 @@ es-MX:
 
       CSD U3 combining rep_2018:
         content1: descripción aquí
+        markdown: |-
+          ### ¿Puedes decodificar esta cadena binaria?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### ¿Qué información necesitas para ayudarte a descifrarla?
       CSD U3 combining rep_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          ### ¿Puedes decodificar esta cadena binaria?
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### ¿Qué información necesitas para ayudarte a descifrarla?
       CSD U3 drawSprites placement match:
         answers:
         - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
@@ -1722,16 +2212,76 @@ es-MX:
         title: dibujarSprites
       CSD U3 game intro:
         content1: descripción aquí
+        markdown: |-
+          # Crea tu propio juego
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego.  Puedes pensar en los juegos que ya has visto, o mirar algunos juegos más de ejemplo para darte ideas.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 game intro_2018:
         content1: descripción aquí
+        markdown: |-
+          # Crea tu propio juego
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego.  Puedes pensar en los juegos que ya has visto, o mirar algunos juegos más de ejemplo para darte ideas.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 game intro_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Crea tu propio juego
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego.  Puedes pensar en los juegos que ya has visto, o mirar algunos juegos más de ejemplo para darte ideas.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 platform intro:
         content1: descripción aquí
+        markdown: |-
+          # Construye un saltador de plataforma
+
+          En los próximos niveles, construirás un juego de salto de plataforma.  Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera las instrucciones de tu profesor antes de pasar al siguiente nivel.
       CSD U3 platform intro_2018:
         content1: descripción aquí
+        markdown: |-
+          # Construye un saltador de plataforma
+
+          En los próximos niveles, construirás un juego de salto de plataforma.  Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera las instrucciones de tu profesor antes de pasar al siguiente nivel.
       CSD U3 platform intro_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Construye un saltador de plataforma
+
+          En los próximos niveles, construirás un juego de salto de plataforma.  Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera las instrucciones de tu profesor antes de pasar al siguiente nivel.
       CSD U4L01 SFLP:
         markdown: |+
           # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
@@ -1934,16 +2484,85 @@ es-MX:
           * [App Presentation](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubric
       CSD U5 Encryption 1:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificación
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "El mensaje en sí es un donut, un pulgar hacia abajo y una
+          cara enfadada.  Los alumnos pueden divertirse haciendo sus propias interpretaciones
+          de los emoticonos.  Una posible interpretación es que el remitente esperaba
+          un donut, no lo recibió y se enfadó, pero no hay una respuesta \"correcta\"
+          a lo que significan los emoticonos.\n    \n(Oculta este mensaje yendo a
+          tu panel de profesor a la derecha y eligiendo ver como alumno).\n"
       CSD U5 Encryption 1_2018:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificación
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "El mensaje en sí es un donut, un pulgar hacia abajo y una
+          cara enfadada.  Los alumnos pueden divertirse haciendo sus propias interpretaciones
+          de los emoticonos.  Una posible interpretación es que el remitente esperaba
+          un donut, no lo recibió y se enfadó, pero no hay una respuesta \"correcta\"
+          a lo que significan los emoticonos.\n    \n(Oculta este mensaje yendo a
+          tu panel de profesor a la derecha y eligiendo ver como alumno).\n"
       CSD U5 Encryption 1_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## Sistema de codificación
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png) &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "El mensaje en sí es un donut, un pulgar hacia abajo y una
+          cara enfadada.  Los alumnos pueden divertirse haciendo sus propias interpretaciones
+          de los emoticonos.  Una posible interpretación es que el remitente esperaba
+          un donut, no lo recibió y se enfadó, pero no hay una respuesta \"correcta\"
+          a lo que significan los emoticonos.\n    \n(Oculta este mensaje yendo a
+          tu panel de profesor a la derecha y eligiendo ver como alumno).\n"
       CSD U5 Encryption 2:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * ¿Puedes decodificar esta cadena binaria?
+          * ¿Qué necesitas saber para poder decodificarla?
       CSD U5 Encryption 2_2018:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * ¿Puedes decodificar esta cadena binaria?
+          * ¿Qué necesitas saber para poder decodificarla?
       CSD U5 Encryption 2_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Decodificación de cadenas binarias
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * ¿Puedes decodificar esta cadena binaria?
+          * ¿Qué necesitas saber para poder decodificarla?
       CSD U5 L13 SFLP Interpreting Data:
         content1: descripción aquí
         markdown: |
@@ -1955,30 +2574,379 @@ es-MX:
 
           * [Interpreting Data](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Activity Guide
           * [Interpreting Data](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Resource
+        teacher_markdown: "* Interpretación de datos - Ejemplo ([PDF] (https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: descripción aquí
+        markdown: |
+          # Encuesta sobre pasteles
+
+          Para esta encuesta, la gente tenía que elegir un sabor de pastel y un sabor de glaseado.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de la tarta</td><td style="width: 200px; background-color: gray; color:white">Sabor del glaseado</td></tr>.
+          <tr><td>1</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>2</td><td>Tarta de terciopelo rojo</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>3</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>4</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>5</td><td>Tarta de zanahoria</td><td>Glaseado de vainilla</td></tr>
+          <tr><td>6</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>7</td><td>Tarta de chocolate</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>8</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          </table>
+          <br><br>
+
+          Si estas personas tuvieran que ponerse de acuerdo en una combinación de pastel y glaseado para una fiesta, ¿cuál debería ser?
+
+          Y si pudieran pedir dos tartas con glaseado?
+
+          ¿De qué manera conocer ambas opciones nos ayuda a entender mejor qué tipo de tartas deberíamos pedir?
       CSD U5 crosstab warmup_2018:
         content1: descripción aquí
+        markdown: |
+          # Encuesta sobre pasteles
+
+          Para esta encuesta, la gente tenía que elegir un sabor de pastel y un sabor de glaseado.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de la tarta</td><td style="width: 200px; background-color: gray; color:white">Sabor del glaseado</td></tr>.
+          <tr><td>1</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>2</td><td>Tarta de terciopelo rojo</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>3</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>4</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>5</td><td>Tarta de zanahoria</td><td>Glaseado de vainilla</td></tr>
+          <tr><td>6</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>7</td><td>Tarta de chocolate</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>8</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          </table>
+          <br><br>
+
+          Si estas personas tuvieran que ponerse de acuerdo en una combinación de pastel y glaseado para una fiesta, ¿cuál debería ser?
+
+          Y si pudieran pedir dos tartas con glaseado?
+
+          ¿De qué manera conocer ambas opciones nos ayuda a entender mejor qué tipo de tartas deberíamos pedir?
       CSD U5 crosstab warmup_2018_2019:
         content1: descripción aquí
+        markdown: |
+          # Encuesta sobre pasteles
+
+          Para esta encuesta, la gente tenía que elegir un sabor de pastel y un sabor de glaseado.
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">Sabor de la tarta</td><td style="width: 200px; background-color: gray; color:white">Sabor del glaseado</td></tr>.
+          <tr><td>1</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>2</td><td>Tarta de terciopelo rojo</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>3</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>4</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>5</td><td>Tarta de zanahoria</td><td>Glaseado de vainilla</td></tr>
+          <tr><td>6</td><td>Tarta de chocolate</td><td>Glaseado de chocolate</td></tr>
+          <tr><td>7</td><td>Tarta de chocolate</td><td>Glaseado de crema de queso</td></tr>
+          <tr><td>8</td><td>Tarta de zanahoria</td><td>Glaseado de crema de queso</td></tr>
+          </table>
+          <br><br>
+
+          Si estas personas tuvieran que ponerse de acuerdo en una combinación de pastel y glaseado para una fiesta, ¿cuál debería ser?
+
+          Y si pudieran pedir dos tartas con glaseado?
+
+          ¿De qué manera conocer ambas opciones nos ayuda a entender mejor qué tipo de tartas deberíamos pedir?
       CSD U5 data visualization:
         content1: descripción aquí
+        markdown: |-
+          ## Mejor Mascota de la Clase
+          ### Aquí hay tres maneras diferentes de mostrar los resultados de una votación para la mejor mascota de la clase.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### ¿Cuál hace más fácil para un humano tomar una decisión sobre qué mascota es la más popular?
+          ### ¿Cuál es la más fácil para que un ordenador tome una decisión?
       CSD U5 data visualization_2018:
         content1: descripción aquí
+        markdown: |-
+          ## Mejor Mascota de la Clase
+          ### Aquí hay tres maneras diferentes de mostrar los resultados de una votación para la mejor mascota de la clase.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### ¿Cuál hace más fácil para un humano tomar una decisión sobre qué mascota es la más popular?
+          ### ¿Cuál es la más fácil para que un ordenador tome una decisión?
       CSD U5 data visualization_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          ## Mejor Mascota de la Clase
+          ### Aquí hay tres maneras diferentes de mostrar los resultados de una votación para la mejor mascota de la clase.
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### ¿Cuál hace más fácil para un humano tomar una decisión sobre qué mascota es la más popular?
+          ### ¿Cuál es la más fácil para que un ordenador tome una decisión?
       CSD U5 student record:
         content1: descripción aquí
+        markdown: "# Registro de alumnos\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## El registro del alumno contiene
+          información según las siguientes reglas:\n\n * <h4>Los primeros ocho bits
+          almacenan la nota del alumno como un número binario.</h4>\n * <h4>Los segundos
+          ocho almacenan la edad del alumno como un número binario.</h4>\n * <h4>Los
+          siguientes ocho almacenan la primera inicial del alumno en ASCII.</h4>\n
+          * <h4>Los últimos ocho almacenan la última inicial del alumno en ASCII.</h4>\n\n<br
+          />\n<br />"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** El alumno está en el 9º curso.
+
+          **Byte 1:** El alumno tiene 15 años.
+
+          **Byte 2** La primera inicial del alumno es "J".
+
+          **Byte 3** La segunda inicial es "H".
+
+          [/key]
+
+          Para ocultar esta casilla al mostrar el nivel, haga clic en el panel del profesor en la parte derecha de esta página y elija la opción "Ver como alumno".
       CSD U5 student record_2018:
         content1: descripción aquí
+        markdown: "# Registro de alumnos\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## El registro del alumno contiene
+          información según las siguientes reglas:\n\n * <h4>Los primeros ocho bits
+          almacenan la nota del alumno como un número binario.</h4>\n * <h4>Los segundos
+          ocho almacenan la edad del alumno como un número binario.</h4>\n * <h4>Los
+          siguientes ocho almacenan la primera inicial del alumno en ASCII.</h4>\n
+          * <h4>Los últimos ocho almacenan la última inicial del alumno en ASCII.</h4>\n\n<br
+          />\n<br />"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** El alumno está en el 9º curso.
+
+          **Byte 1:** El alumno tiene 15 años.
+
+          **Byte 2** La primera inicial del alumno es "J".
+
+          **Byte 3** La segunda inicial es "H".
+
+          [/key]
+
+          Para ocultar esta casilla al mostrar el nivel, haga clic en el panel del profesor en la parte derecha de esta página y elija la opción "Ver como alumno".
       CSD U5 student record_2018_2019:
         content1: descripción aquí
+        markdown: "# Registro de alumnos\n\n<div style=\"float: right; height:209px;
+          width: 456px; background-color: black;\">\n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## El registro del alumno contiene
+          información según las siguientes reglas:\n\n * <h4>Los primeros ocho bits
+          almacenan la nota del alumno como un número binario.</h4>\n * <h4>Los segundos
+          ocho almacenan la edad del alumno como un número binario.</h4>\n * <h4>Los
+          siguientes ocho almacenan la primera inicial del alumno en ASCII.</h4>\n
+          * <h4>Los últimos ocho almacenan la última inicial del alumno en ASCII.</h4>\n\n<br
+          />\n<br />"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** El alumno está en el 9º curso.
+
+          **Byte 1:** El alumno tiene 15 años.
+
+          **Byte 2** La primera inicial del alumno es "J".
+
+          **Byte 3** La segunda inicial es "H".
+
+          [/key]
+
+          Para ocultar esta casilla al mostrar el nivel, haga clic en el panel del profesor en la parte derecha de esta página y elija la opción "Ver como alumno".
       CSD U6 LED create intro:
         content1: descripción aquí
+        markdown: |-
+          # Aplicaciones para LED
+
+          En el último nivel, hiciste una aplicación para controlar el LED con diferentes botones en la pantalla.   En los próximos dos niveles, verás otros ejemplos de aplicaciones y luego tendrás la oportunidad de crear una propia.
+
+          Mientras miras los ejemplos, piensa en qué código podría ser útil para la app que tú y tu compañero queréis crear.
       CSD U6 LED create intro_2018:
         content1: descripción aquí
+        markdown: |-
+          # Aplicaciones para LED
+
+          En el último nivel, hiciste una aplicación para controlar el LED con diferentes botones en la pantalla.   En los próximos dos niveles, verás otros ejemplos de aplicaciones y luego tendrás la oportunidad de crear una propia.
+
+          Mientras miras los ejemplos, piensa en qué código podría ser útil para la app que tú y tu compañero queréis crear.
       CSD U6 LED create intro_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Aplicaciones para LED
+
+          En el último nivel, hiciste una aplicación para controlar el LED con diferentes botones en la pantalla.   En los próximos dos niveles, verás otros ejemplos de aplicaciones y luego tendrás la oportunidad de crear una propia.
+
+          Mientras miras los ejemplos, piensa en qué código podría ser útil para la app que tú y tu compañero queréis crear.
       CSD U6 array multi:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -1994,6 +2962,8 @@ es-MX:
         - text: "¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el
             código de la izquierda?"
         title: Uso de arreglos
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 array multi_2018:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -2009,6 +2979,8 @@ es-MX:
         - text: "¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el
             código de la izquierda?"
         title: Uso de arreglos
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 array multi_2018_2019:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -2024,12 +2996,104 @@ es-MX:
         - text: "¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el
             código de la izquierda?"
         title: Uso de arreglos
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 final intro:
         content1: descripción aquí
+        markdown: |-
+          # Prototipo de tu propia creación
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero o un equipo, haz un derroche de ideas sobre diferentes dispositivos físicos de los que podrías hacer prototipo. Podéis basaros en los programas que ya habéis hecho en lecciones anteriores, en dispositivos innovadores que hayáis visto en el mundo real o en cualquier idea descabellada que se os ocurra.
+
+          Una vez que hayas decidido una idea con tu equipo, rellena la Guía del Proyecto con los bocetos de los componentes físicos de tu dispositivo, las entradas y salidas que necesitarás y los planes sobre la información que tendrás que procesar.
+
+          ## Ideas de innovación
+
+          Para ayudarte a iniciar tu lluvia de ideas, echa un vistazo a estos proyectos de ejemplo:
+
+          ### Luz nocturna automática
+
+          Utilizando hilo conductor, LEDs y el sensor de luz, crea una pieza decorativa de arte mural que se convierta en una luz nocturna cuando se apaguen las luces. Ésta está diseñada para que parezca que las luciérnagas parpadean.
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Diseña un instrumento musical que pueda ser tocado como quieras, utilizando sensores o botones de entrada. En este caso hemos creado cinco nuevos botones utilizando cinta de cobre conductora, aunque también podrías utilizar papel de aluminio o cualquier otro material conductor.
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          ¡Haz un juego! Este utiliza una matriz para almacenar los diferentes comandos, que se eligen al azar cada vez que sigues correctamente las instrucciones en pantalla.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018:
         content1: descripción aquí
+        markdown: |-
+          # Prototipo de tu propia creación
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero o un equipo, haz un derroche de ideas sobre diferentes dispositivos físicos de los que podrías hacer prototipo. Podéis basaros en los programas que ya habéis hecho en lecciones anteriores, en dispositivos innovadores que hayáis visto en el mundo real o en cualquier idea descabellada que se os ocurra.
+
+          Una vez que hayas decidido una idea con tu equipo, rellena la Guía del Proyecto con los bocetos de los componentes físicos de tu dispositivo, las entradas y salidas que necesitarás y los planes sobre la información que tendrás que procesar.
+
+          ## Ideas de innovación
+
+          Para ayudarte a iniciar tu lluvia de ideas, echa un vistazo a estos proyectos de ejemplo:
+
+          ### Luz nocturna automática
+
+          Utilizando hilo conductor, LEDs y el sensor de luz, crea una pieza decorativa de arte mural que se convierta en una luz nocturna cuando se apaguen las luces. Ésta está diseñada para que parezca que las luciérnagas parpadean.
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Diseña un instrumento musical que pueda ser tocado como quieras, utilizando sensores o botones de entrada. En este caso hemos creado cinco nuevos botones utilizando cinta de cobre conductora, aunque también podrías utilizar papel de aluminio o cualquier otro material conductor.
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          ¡Haz un juego! Este utiliza una matriz para almacenar los diferentes comandos, que se eligen al azar cada vez que sigues correctamente las instrucciones en pantalla.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018_2019:
         content1: descripción aquí
+        markdown: |-
+          # Prototipo de tu propia creación
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero o un equipo, haz un derroche de ideas sobre diferentes dispositivos físicos de los que podrías hacer prototipo. Podéis basaros en los programas que ya habéis hecho en lecciones anteriores, en dispositivos innovadores que hayáis visto en el mundo real o en cualquier idea descabellada que se os ocurra.
+
+          Una vez que hayas decidido una idea con tu equipo, rellena la Guía del Proyecto con los bocetos de los componentes físicos de tu dispositivo, las entradas y salidas que necesitarás y los planes sobre la información que tendrás que procesar.
+
+          ## Ideas de innovación
+
+          Para ayudarte a iniciar tu lluvia de ideas, echa un vistazo a estos proyectos de ejemplo:
+
+          ### Luz nocturna automática
+
+          Utilizando hilo conductor, LEDs y el sensor de luz, crea una pieza decorativa de arte mural que se convierta en una luz nocturna cuando se apaguen las luces. Ésta está diseñada para que parezca que las luciérnagas parpadean.
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Diseña un instrumento musical que pueda ser tocado como quieras, utilizando sensores o botones de entrada. En este caso hemos creado cinco nuevos botones utilizando cinta de cobre conductora, aunque también podrías utilizar papel de aluminio o cualquier otro material conductor.
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          ¡Haz un juego! Este utiliza una matriz para almacenar los diferentes comandos, que se eligen al azar cada vez que sigues correctamente las instrucciones en pantalla.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 setProperty predict multi:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -2044,6 +3108,10 @@ es-MX:
         questions:
         - text: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
         title: Haz una predicción
+        teacher_markdown: Para muchas de las actividades de programación de esta unidad,
+          los elementos del modo de diseño ya han sido creados.  Un consejo útil para
+          los alumnos es que pueden pasar el ratón por encima de cualquiera de estos
+          elementos para ver el identificador del elemento.
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -2058,6 +3126,10 @@ es-MX:
         questions:
         - text: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
         title: Haz una predicción
+        teacher_markdown: Para muchas de las actividades de programación de esta unidad,
+          los elementos del modo de diseño ya han sido creados.  Un consejo útil para
+          los alumnos es que pueden pasar el ratón por encima de cualquiera de estos
+          elementos para ver el identificador del elemento.
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -2072,6 +3144,10 @@ es-MX:
         questions:
         - text: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
         title: Haz una predicción
+        teacher_markdown: Para muchas de las actividades de programación de esta unidad,
+          los elementos del modo de diseño ya han sido creados.  Un consejo útil para
+          los alumnos es que pueden pasar el ratón por encima de cualquiera de estos
+          elementos para ver el identificador del elemento.
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |
           # Resumen
@@ -2088,6 +3164,9 @@ es-MX:
           ## Recursos
 
           * [ASCII - Activity Guide](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
       CSD-U5-SFLP Automating Data Decisions:
         markdown: |
           # Resumen
@@ -2098,6 +3177,7 @@ es-MX:
 
           * [Automating Data Decisions](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Resource (copy as [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
           * [Automating Data Decisions](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* Automatización de decisiones de datos - Ejemplo ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
       CSD-U5-SFLP Combining Representations:
         markdown: |
           # Resumen
@@ -2109,6 +3189,8 @@ es-MX:
 
           * [Pet Records - Activity Guide](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
           * [ASCII to Binary Table - Reference](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Registros de mascotas] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWwmEmwfN8/)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWmEmwfN8/export?format=pdf))"
       CSD-U5-SFLP Create a Representation:
         markdown: |
           # Resumen
@@ -2118,6 +3200,9 @@ es-MX:
           ## Recursos
 
           * [Create a Representation - Project Guide](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* Crear una representación - Guía del proyecto ([Google
+          Doc] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF] (https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))"
       CSD-U5-SFLP Interpreting Data:
         markdown: |
           # Resumen
@@ -2127,6 +3212,7 @@ es-MX:
           ## Recursos
 
           * [Structuring Data](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Estructuración de datos - Ejemplo ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
       CSD-U5-SFLP Making Decisions with Data:
         markdown: |
           # Resumen
@@ -2136,6 +3222,9 @@ es-MX:
           ## Recursos
 
           * [Making Decisions with Data](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Activity Guide
+        teacher_markdown: "* [Toma de decisiones con datos] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # Resumen
@@ -2151,6 +3240,9 @@ es-MX:
           ## Recursos
 
           * [Representing Information](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |-
+          * [Representación de información](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Ejemplo 1 ([PDF] (https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [Representación de información](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Ejemplo 2 ([PDF] (https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
           # Resumen
@@ -2160,6 +3252,7 @@ es-MX:
           ## Recursos
 
           * [Problem Solving with Data](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Activity Guide
+        teacher_markdown: "* Resolución de problemas con datos - Ejemplo ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # Resumen
@@ -2192,6 +3285,10 @@ es-MX:
 
 
 
+        teacher_markdown: |-
+          * [Datos de comidas] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Recurso ([PDF] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX] (https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/tecla]
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # Resumen
@@ -2212,6 +3309,12 @@ es-MX:
           ## Recursos
           * [Representing Numbers - Activity Guide](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
           * [Number Cards - Manipulative](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [clave]
+
+          * Representación de números - Ejemplo ([Google Doc] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF] (https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/tecla]
       CSD-U5-SFLP Representing Numbers Part 2:
         markdown: |
           # Resumen
@@ -2222,6 +3325,7 @@ es-MX:
           ## Recursos
 
           * [Keeping Data Secret - Activity Guide](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: "* Mantener Secreto de Datos - Ejemplo ([PDF] (https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/export?format=pdf))"
       CSD-U5-SFLP Solve a Data Problem:
         markdown: |
           # Resumen
@@ -2232,6 +3336,9 @@ es-MX:
 
           * [Make a Recommendation](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Project Guide
           * [Make a Recommendation](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Peer Review
+        teacher_markdown: |-
+          * Hacer una recomendación - Ejemplo de guía de proyecto ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * Hacer una recomendación - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
       'CSD: getText vs getNumber':
         markdown: |-
           # obtenerTexto vs obtenerNúmero
@@ -2913,6 +4020,10 @@ es-MX:
           <strong>Idea clave: Múltiples pantallas: un espacio de trabajo de codificación.</strong> Este es el código que maneja un evento de "clic" para una imagen <em>que está en una pantalla diferente</em>: la <em> pantallaAdiós</em>. No puedes ver esa imagen en este momento, o esa pantalla, porque la pantalla no está seleccionada. Sin embargo, el código para ello todavía va aquí. </p>
 
           </div>
+        teacher_markdown: |-
+          #### Tarjetas en pantallas
+
+          Para simplificar el proceso de creación de prototipos, los equipos pueden pensar en cada tarjeta que crearon en el Prototipo en Papel como una pantalla separada en la repetición de su aplicación en el Laboratorio de Aplicaciones. En realidad, las pantallas que son muy similares, a menudo se pueden desarrollar como una sola pantalla con contenido que cambia en función de la intervención del usuario. En la próxima lección los alumnos verán algunos ejemplos de cómo podría funcionar eso, pero no se espera que incorporen ese tipo de funcionalidad en este proyecto.
       New Challenge Introduction:
         content1: descripción aquí
         markdown: "### Nuevo desafío: descifrar un cifrado de sustitución aleatoria...
@@ -5449,6 +6560,10 @@ es-MX:
           </div>
       Prepare for your presentation:
         content1: descripción aquí
+        markdown: |-
+          #Presentaciones de proyectos
+
+          ¡Es hora de presentar tus proyectos! Tu profesor te dará más detalles sobre cómo vas a presentar tu trabajo a tus compañeros.
       Responding to User Input:
         markdown: |+
           # Responder a la entrada del usuario
@@ -5505,6 +6620,33 @@ es-MX:
 
           ### ¡Intentarás esto a continuación!
 
+        teacher_markdown: "#### Sólo los detalles\n\nHay mucho que analizar aquí y
+          muchos de los detalles sobre cómo funcionan los sucesos (events) en Laboratorio
+          de Aplicaciones no son totalmente necesarios para entender nuestras necesidades
+          en esta unidad. Si los alumnos tienen problemas con el funcionamiento de
+          la programación en Laboratorio de Aplicaciones, concéntrate en estos aspectos
+          esenciales:\n\n* No hay un bucle `dibujar` que se ejecute eternamente\n*
+          El bloque `onEvent()` especifica:\n\t* un identificador de elemento\n    *
+          un suceso (como \"clic\" o \"mouseover\")\n    * El código que debe ser
+          ejecutado cuando el suceso ocurra (este código es técnicamente una función
+          anónima de devolución de llamada, representada por el bloque verde)\n* El
+          código dentro de los bloques `onEvent()` se ejecuta cada vez que ocurre
+          el suceso especificado\n\n#### Comparado con Laboratorio de Juegos\n\nEn
+          Laboratorio de Juegos, podríamos utilizar el siguiente código para comprobar
+          si un sprite llamado \"botón\" fue pulsado y hacer algo al respecto:\n\n
+          \   function draw() {\n    \tif (mousePressedOver(botón)) {\n       \t\t//
+          Hacer algo\n       \t}\n    }\n\n\nEn Laboratorio de Aplicaciones, dado
+          un botón con el identificador \"botón\", podríamos escribir el siguiente
+          código para conseguir el mismo objetivo:\n\n\n    onEvent(\"botón\", \"clic\",
+          function () {\n    \t// Hacer algo\n    });\n\nEn el ejemplo de Laboratorio
+          de Aplicaciones, la función es sólo un argumento más que se pasa a la función
+          onEvent, lo que ocurre es que el argumento debe ser una función en sí misma.
+          También podríamos definir la función por separado y escribir este mismo
+          programa de la siguiente manera:\n\n    function doSomething() {\n    \t//
+          Hacer algo\n    }\n    \n    onEvent(\"botón\", \"clic\", hacerAlgo);\n\n\nEn
+          el segundo ejemplo, fíjate que cuando pasamos la función `hacerAlgo` a la
+          función `onEvent` no _incluimos el paréntesis al final. Esto es porque en
+          realidad estamos pasando la función completa como un objeto."
       SimonSays-Unplugged:
         markdown: |-
           # Simón Dice
@@ -5632,6 +6774,9 @@ es-MX:
           ## Recursos
 
           * [RGB Colors - Activity Guide](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+        teacher_markdown: "* [Colores RGB](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?copiedFromTrash)
+          - Guía de actividades ([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))"
       Unit 2 Lesson 16 Overview:
         markdown: |
           # Resumen
@@ -5643,6 +6788,13 @@ es-MX:
           * [Final Personal Website - Peer Review](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
           * [Final Personal Website - Project Guide](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
           * [Final Personal Website - Rubric](https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [Sitio web personal final](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Ejemplo de guía de proyecto ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+          * [Sitio web personal final](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Ejemplo de revisión por pares ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
+
+          [/key]
       Unit 2 Lesson 7 Overview:
         markdown: |+
           # Resumen
@@ -5912,12 +7064,25 @@ es-MX:
             hará que el programa falle? '
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - correct: true
-        - correct: true
+        - text: Scrat llegará a la bellota. No hay errores en el código.
+          feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota.
+        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
+        - text: Scrat no llegará a la bellota porque no hay suficientes bloques de
+            "avance".
+          correct: true
+          feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
+            Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: No lo sé.
+          feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
+            la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
+            suficientes veces para llegar a la bellota.
         questions:
-        - {}
+        - text: Busca errores en este código. ¿Llegará Scrat a la bellota o hay algún
+            problema?
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
@@ -6108,6 +7273,8 @@ es-MX:
             clic en "Ejecutar"?
       courseD_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado a la última lección del Curso D! Elige un proyecto
+          para crear."
       courseD_external_binary1:
         markdown: "<h1>Dibuja con binario</h1>\n \n<h3>Binario es una forma de representar
           información usando solo dos opciones. En este caso, <b>apagado</b> y <b>encendido</b>.\n<br/>\nAquí,
@@ -6281,6 +7448,13 @@ es-MX:
         questions:
         - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
             haces clic en "Ejecutar"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -6298,6 +7472,13 @@ es-MX:
         questions:
         - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
             haces clic en "Ejecutar"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -6315,6 +7496,13 @@ es-MX:
         questions:
         - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
             haces clic en "Ejecutar"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
@@ -6332,6 +7520,13 @@ es-MX:
         questions:
         - text: Observa bien el siguiente código. ¿Qué dibujo hará el programa si
             haces clic en "Ejecutar"?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
@@ -7090,8 +8285,26 @@ es-MX:
             "Ejecutar"?
       courseD_project_exemplars_2020_2021:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de empezar, dedica un tiempo a mirar los ejemplos de proyecto.
+
+
+          | Velocidad aleatoria en el rebote (baloncesto) | Multiplicación de las tropas de asalto (Star Wars) |
+          |---|---|
+          | [![Random Speed on Bounce (Basketball)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "Random Speed on Bounce (Basketball)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![Multiplying Stormtroopers (Star Wars)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "Multiplying Stormtroopers (Star Wars)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | ¡La bola cambia de velocidad cuando rebota! | ¡Evita a los stormtroopers o se multiplicarán! |
+
+
+          | ¡Pánico! en la Discoteca (Fiesta de Baile) | Escena de Playa (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | ¡Tus bailarines de fondo siguen cambiando sus movimientos! | ¡Intenta añadir más color y fondo a esta escena! |
+
       courseE_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
       courseE_multi_bee_functions_predict1:
         answers:
         - text: El mismo programa también funcionará para resolver este desafío.
@@ -7282,12 +8495,46 @@ es-MX:
 
       courseE_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# Ejemplos de proyectos\n\nEstás a punto de comenzar tu proyecto
+          fin de curso. Antes de empezar, dedica un tiempo a mirar los proyectos de
+          ejemplo.\n\n## Laboratorio de Sprite\n\n| Baile de Monstruos (Laboratorio
+          de Sprite) | Juego de Pastelitos (Laboratorio de Sprite)\n|---|---|\n| [![Monster
+          Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png
+          \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view)
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png
+          \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view)
+          |\n| Intenta añadir un texto o una puntuación a este juego. | Intenta añadir
+          un texto o una puntuación a este juego. |\n\n## Artista\n\n| Patrón (Artista)
+          | Flores de Copos de Nieve (Frozen) | \n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png
+          \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view)
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png
+          \"Snowflake Flowers (Frozen)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view)
+          |\n| Seamos creativos con los bucles anidados. | Seamos creativos con las
+          funciones. |\n"
       courseExpress_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado a la última lección del Curso Express! Elige un
+          proyecto para crear."
       courseExpress_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto fin de curso. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          | ¡Pánico en la discoteca! (Fiesta de baile) | Escena de la playa (Artista) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "Pattern (Artist)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | ¡Ponte a bailar en la discoteca mientras tus bailarines de fondo cambian el ritmo! | ¡Intenta añadir más color y fondo a esta escena! |
+
+          | Flores de copos de nieve (Frozen) | Juego del avión (Sprite Lab) |
+          |---|---|
+          | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) | [![#Airplane Game (Sprite Lab)](https://images.code.org/6d7053c472b093f273207cae6282fa2d-image-1592510538635.png "Airplane Game (Sprite Lab )")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view)  |
+          | ¡Pongámonos creativos con las funciones! | ¡Intenta añadir texto o una puntuación a este juego! |
+
       courseF_EOC_2020:
         display_name: Proyecto de fin de curso
+        description: "¡Has llegado al final del Curso F! Elige un proyecto para crear."
       courseF_bee_variables_8a_2018:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
@@ -7350,16 +8597,74 @@ es-MX:
           dentro del programa.</h3>\n\n"
       courseF_markdown_algorithms_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# **Acabas de aprender \"algoritmos\"!**  \n\n\n\n### **Un algoritmo
+          es sólo una lista de pasos para terminar una tarea**. Lo divertido de los
+          algoritmos es que puedes decidir qué pasa, paso a paso.  \n\n### Cuando
+          escribes un algoritmo para una máquina, esto se denomina **programa**.  \n\n---\n\n##
+          **Aprender Vocabulario**\n\n* ### **Algoritmo** - Una lista de pasos para
+          terminar una tarea\n\n* ### **Programa** - Un algoritmo que ha sido codificado
+          en algo que puede ser ejecutado por una máquina"
       courseF_markdown_algorithms_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          #En esta lección...#
+
+          ### ¿Alguna vez has querido decirle a alguien exactamente lo que tiene que hacer? ¿Siempre te escuchan?
+
+          ### Hoy le dirás a una máquina lo que tiene que hacer, paso a paso, ¡y te escuchará!
+
+          ---
+
+          ## **Conocer los bloques**
+
+          ![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)
+
+          ![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)
+
+          ![](https://images.code.org/db76d28bb3dbabdb78edb2cf54c6cb11-image-1524678618646.png)
       courseF_markdown_conditionals_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "#¡Acabas de aprender \"condicionales\"!#\n\n### Los condicionales
+          son súper útiles en informática. Imagina que entras en tu sitio web favorito
+          y escribes tu contraseña. El sitio web tiene que usar condicionales para
+          comprobar *si* la contraseña que has introducido coincide con la contraseña
+          que ha guardado para tu nombre de usuario. \n\n### `If` coincide, ¡conéctate!
+          \n\n### `Else`, da un error al usuario.  \n\n---\n\n## **Conocer el vocabulario**\n\n*
+          ### **Condición** - Algo que un programa comprueba antes de permitir una
+          acción\n\n* ### **Condicionales** - Declaraciones que sólo se ejecutan bajo
+          ciertas condiciones"
       courseF_markdown_conditionals_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "### En esta lección...###\n\n### **Las condiciones** son cosas
+          que pueden ser verdaderas o falsas. \n\n¡### Aprenderás a usar condiciones
+          en un programa para hacer que las cosas sucedan `mientras`, `hasta`, o `si`
+          algo es verdadero!\n---\n\n## **Conocer los bloques**\n\n![](https://images.code.org/8c6cc9ffa31c916fc970c67382d83b8d-image-1524770260439.png)\n\n![](https://images.code.org/c2fbbaf80b348d47ba2dac4497ae2624-image-1524770272898.png)\n\n![](https://images.code.org/6b90e2dfb025609f8762014ff0ba51dc-image-1524770241058.png)\n"
       courseF_markdown_debugging_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          #¡Acabas de aprender a "depurar"!#
+
+          ### **Un bug es algo que va mal.** Es un error en un programa. Cuando encuentras y arreglas esos errores, estás **depurando** un problema.
+
+          ### Tienes que practicar la **persistencia**, otra palabra para no rendirse, para encontrar y arreglar todos los errores.
+
+          ---
+
+          ## **Conocer el vocabulario**
+
+          * ### **Bug** - Parte de un programa que no funciona correctamente
+
+          * ### **Debugging** - Encontrar y arreglar problemas en un algoritmo o programa
+
+          * ### **Persistencia** - No rendirse
       courseF_markdown_debugging_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "#En esta lección...\n\n### ¿En qué piensas cuando piensas en bichos?
+          \n\n### Cuando la mayoría de la gente piensa en bichos, piensa en cosas
+          espeluznantes. En informática, los bichos no están vivos, pero aún así pueden
+          ser complicados.\n\n### ¡Los rompecabezas de esta lección ya han sido resueltos
+          para ti! Pero no tan rápido: parece que aún no funcionan. ¿Están los bichos
+          detrás de todo esto? \n\n---\n\n## Conocer los bloques\n\n![](https://images.code.org/b2376dc67948e29247931dec5e9fef8f-image-1524678585868.png)\n\n![](https://images.code.org/bd2de01f2c3b86109329b10eb544a6e6-image-1524678600994.png)"
       courseF_markdown_forloops_end:
         content1: Prueba de reducción de la página del libro de texto
         markdown: |-
@@ -7416,12 +8721,38 @@ es-MX:
           *¡Este nuevo bucle hará que resolver puzles como estos sera muy fácil!
       courseF_markdown_loops_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "#¡Acabas de aprender \"bucles\"!#  \n\n### **Un bucle es la acción
+          de hacer algo una y otra vez.** Otra palabra para hacer algo de nuevo es
+          repetir.\n\n### Los bucles son realmente útiles para repetir patrones. Puede
+          ser útil escribir su programa sin ningún bucle primero, y luego tratar de
+          encontrar un patrón. \n\n### Cuando veas uno, mete ese patrón en un bloque
+          de `repetición`.\n\n---\n\n## **Conocer el vocabulario**\n\n* ### **Bucle**
+          - La acción de hacer algo una y otra vez\n\n* ### **Repetir** - Hacer algo
+          de nuevo"
       courseF_markdown_loops_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# En esta lección...\n\n### Imagina que quieres que tu personaje
+          se mueva hacia adelante **5** veces. Esto sería bastante fácil: sólo tienes
+          que arrastrar **5** bloques de avance. Ahora, imagina que quieres que tu
+          personaje avance **5.000** veces. \n\n### ¿Cuánto tiempo te llevaría arrastrar
+          **5.000** bloques? \n\n### ¿Desearía que hubiera una manera fácil de hacer
+          esto? La hay.\n\n---\n\n## Conocer los bloques\n\n![](https://images.code.org/2d949be303e653f4ea203cc00f0b06c3-image-1524697677509.png)"
       courseF_markdown_nestedloops_end:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "### ¡Acabas de aprender \"bucles anidados\"!\n\n### **Un bucle
+          anidado es un bucle dentro de otro bucle.** Piensa que es como un bucle
+          exterior, con otro bucle que se puso cómodo y acogedor y se anidó dentro
+          del bucle exterior. \n\n### Los bucles anidados son geniales para repetir
+          patrones de patrones. ¡Pueden ser muy poderosos si se usan correctamente!\n\n---\n\n##
+          **Conocer el vocabulario**\n\n### __Los bucles anidados__ - Un bucle dentro
+          de otro bucle\n"
       courseF_markdown_nestedloops_intro:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: "# En esta lección...\n\n### ¿Te has preguntado alguna vez qué pasaría
+          si pusieras un bucle *dentro de otro bucle*? \n\n### ¡Podría hacer que te
+          volvieras loco!\n\n### Si un bucle normal es bueno para repetir patrones,
+          ¿para qué crees que sería bueno un bucle dentro de otro bucle? ¡Averigüémoslo!\n\n---\n\n##
+          **Conocer los bloques**\n\n![](https://images.code.org/cecea12a6973648b56512ff0990da6fb-image-1524759116715.gif)"
       courseF_markdown_variables_end:
         content1: Prueba de reducción de la página del libro de texto
         markdown: |-
@@ -7786,8 +9117,45 @@ es-MX:
         - text: ¿Qué sucederá si el usuario ingresa el nombre "Ali" en la ventana?
       courseF_project_exemplars_2019:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |-
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          ## Laboratorio de Sprites (Sprite Lab)
+
+          | Juego de Magdalenas (Sprite Lab) | Juego de Helicópteros (Sprite Lab)
+          |---|---|
+          | [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | Intenta añadir texto o una puntuación a este juego. | Intenta añadir texto o una puntuación a este juego. |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Arista) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |
+          | Pongámonos creativos con las variables. | ¡Seremos creativos con los bucles For! |
       courseF_project_exemplars_2019_2020:
         content1: Prueba de reducción de la página del libro de texto
+        markdown: |+
+          # Ejemplos de proyectos
+
+          Estás a punto de comenzar tu proyecto final. Antes de empezar, dedica un tiempo a mirar los proyectos de ejemplo.
+
+          ## Laboratorio de Sprite
+
+          ## Juego de Magdalenas (Sprite Lab) ## Juego de Aviones (Sprite Lab)
+          |---|---|
+          | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab)")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![Airplane Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png "Airplane Game (Sprite Lab)")](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |
+          | ¡Intenta añadir texto o una puntuación a este juego! | ¡Intenta añadir texto o una puntuación a este juego! |
+
+          ## Artista
+
+          | Flores (Artista) | Espiral (Artista) |
+          |---|---|
+          | [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png "Flowers (Artist)")](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png "Spiral (Artist)")](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view)  |
+          | ¡Seamos creativos con las variables! | ¡Seamos creativos con los bucles For! |
+
       coursee_prediction_artistfunction2:
         answers:
         - text: El artista resolverá el desafío correctamente.
@@ -8011,6 +9379,17 @@ es-MX:
 
 
 
+        teacher_markdown: |-
+          **¡¡¡Por favor, pida a sus estudiantes que completen esta encuesta!!! **
+
+          * Puede ver los resultados anónimos de la encuesta en el panel de su maestro
+          * Los resultados son vitales para nosotros (code.org) para mantener nuestros cursos y hacer mejoras.
+          * También habrá una encuesta de profesores, donde puede proporcionar su propia opinión, que se le notificará por correo electrónico.
+
+          **Nota:**
+
+          * El botón de esta página redirige a [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Si lo prefiere, puede establecer "Encuesta de post-curso de estudiante" como la unidad actual para su sección en el menú desplegable en el panel del profesor.
       CSD U1 Test:
         title: Ordenadores y resolución de problemas post-proyecto prueba.
       Unit 1 Lesson 1 Overview:
@@ -8134,3 +9513,899 @@ es-MX:
           En la siguiente parte de la serie, escribirás código con variables que "sí" cambian dentro del programa.
       outbreak_freeplay_choice:
         display_name: Juego libre
+        description: "¡Has terminado el tutorial! Sigue haciendo cambios o mejoras
+          en tu proyecto. Puedes optar por seguir trabajando con los mismos bloques
+          o probar una caja de herramientas ampliada."
+      BinaryBracelets-Unplugged:
+        markdown: |-
+          # Pulseras binarias
+
+          ¡Crea una pulsera que represente tu nombre en un sistema que los ordenadores entiendan!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged_2020:
+        markdown: |-
+          # Pulseras binarias
+
+          ¡Crea una pulsera que represente tu nombre en un sistema que los ordenadores entiendan!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |-
+          # Imágenes binarias
+
+          Explicar cómo recrear una imagen utilizando sólo dos valores simples.
+      BinaryImages-Unplugged_2020:
+        markdown: |-
+          # Imágenes binarias
+
+          Explicar cómo recrear una imagen utilizando sólo dos valores simples.
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Evaluación final del curso de Animaciones Interactivas y Juegos
+      CSD Physical Computing Post-Project Test:
+        title: Prueba fin de curso de Computación Física
+      CSD U2 PSP Programming:
+        markdown: |
+          # El proceso de resolución de problemas de programación
+
+          ## Definir
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Lee las instrucciones cuidadosamente para asegurarte de que entiendes los objetivos
+          * Replantea el problema con tus propias palabras
+          * Identifica las nuevas habilidades que te piden que apliques
+          * Busca otros problemas que hayas resuelto y que sean similares a éste
+          * Si hay código de inicio, léelo para entender lo que hace
+
+          ## Prepara
+          * Escribe una idea en inglés sencillo o en pseudocódigo
+          * Redacta tu idea en papel
+          * Enumera lo que ya sabes hacer y lo que todavía no
+          * Describe tu idea a un compañero de clase
+          * Revisa programas similares que hayas escrito en el pasado
+
+          #Intenta
+          * Escribe una pequeña parte a la vez
+          * Prueba tu programa a menudo
+          * Utiliza comentarios para documentar lo que hace tu código
+          * Aplica estrategias de depuración adecuadas
+          * Vuelve a los pasos anteriores si te quedas atascado o no sabes si has resuelto el problema
+
+          ## Reflexiona
+          * Compara tu programa terminado con el problema definido para asegurarte de que has resuelto todos los aspectos del problema
+          * Pide a un compañero de clase que pruebe tu programa y anota los puntos en los que tiene dificultades o muestra confusión
+          * Pide a un compañero que lea tu código para asegurarte de que tu documentación es clara y precisa
+          * Intenta "analizar" tu programa para encontrar tipos de interacciones o entradas que podrías mejorar
+          * Identifica algunos cambios graduales que podrías hacer en la siguiente iteración
+        teacher_markdown: |-
+          # Repasar el proceso de resolución de problemas
+
+          Repasa en clase los cuatro pasos del proceso de resolución de problemas.
+      CSD U2 PSP Programming_2018:
+        markdown: |
+          # El proceso de resolución de problemas de programación
+
+          ## Definir
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Lee las instrucciones cuidadosamente para asegurarte de que entiendes los objetivos
+          * Replantea el problema con tus propias palabras
+          * Identifica las nuevas habilidades que te piden que apliques
+          * Busca otros problemas que hayas resuelto y que sean similares a éste
+          * Si hay código de inicio, léelo para entender lo que hace
+
+          ## Prepara
+          * Escribe una idea en inglés sencillo o en pseudocódigo
+          * Redacta tu idea en papel
+          * Enumera lo que ya sabes hacer y lo que todavía no
+          * Describe tu idea a un compañero de clase
+          * Revisa programas similares que hayas escrito en el pasado
+
+          #Intenta
+          * Escribe una pequeña parte a la vez
+          * Prueba tu programa a menudo
+          * Utiliza comentarios para documentar lo que hace tu código
+          * Aplica estrategias de depuración adecuadas
+          * Vuelve a los pasos anteriores si te quedas atascado o no sabes si has resuelto el problema
+
+          ## Reflexiona
+          * Compara tu programa terminado con el problema definido para asegurarte de que has resuelto todos los aspectos del problema
+          * Pide a un compañero de clase que pruebe tu programa y anota los puntos en los que tiene dificultades o muestra confusión
+          * Pide a un compañero que lea tu código para asegurarte de que tu documentación es clara y precisa
+          * Intenta "analizar" tu programa para encontrar tipos de interacciones o entradas que podrías mejorar
+          * Identifica algunos cambios graduales que podrías hacer en la siguiente iteración
+        teacher_markdown: |-
+          # Repasar el proceso de resolución de problemas
+
+          Repasa en clase los cuatro pasos del proceso de resolución de problemas.
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |
+          # El proceso de resolución de problemas de programación
+
+          ## Definir
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * Lee las instrucciones cuidadosamente para asegurarte de que entiendes los objetivos
+          * Replantea el problema con tus propias palabras
+          * Identifica las nuevas habilidades que te piden que apliques
+          * Busca otros problemas que hayas resuelto y que sean similares a éste
+          * Si hay código de inicio, léelo para entender lo que hace
+
+          ## Prepara
+          * Escribe una idea en inglés sencillo o en pseudocódigo
+          * Redacta tu idea en papel
+          * Enumera lo que ya sabes hacer y lo que todavía no
+          * Describe tu idea a un compañero de clase
+          * Revisa programas similares que hayas escrito en el pasado
+
+          #Intenta
+          * Escribe una pequeña parte a la vez
+          * Prueba tu programa a menudo
+          * Utiliza comentarios para documentar lo que hace tu código
+          * Aplica estrategias de depuración adecuadas
+          * Vuelve a los pasos anteriores si te quedas atascado o no sabes si has resuelto el problema
+
+          ## Reflexiona
+          * Compara tu programa terminado con el problema definido para asegurarte de que has resuelto todos los aspectos del problema
+          * Pide a un compañero de clase que pruebe tu programa y anota los puntos en los que tiene dificultades o muestra confusión
+          * Pide a un compañero que lea tu código para asegurarte de que tu documentación es clara y precisa
+          * Intenta "analizar" tu programa para encontrar tipos de interacciones o entradas que podrías mejorar
+          * Identifica algunos cambios graduales que podrías hacer en la siguiente iteración
+        teacher_markdown: |-
+          # Repasar el proceso de resolución de problemas
+
+          Repasa en clase los cuatro pasos del proceso de resolución de problemas.
+      CSD U3 AnimationsMulti STOP project guide:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U3 AnimationsMulti STOP project guide_2018:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U3 AnimationsMulti STOP project guide_2018_2019:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U3 Entertainment:
+        markdown: |-
+          # Inicio de tu búsqueda
+
+          Para obtener más información sobre cómo las ciencias de la computación y la programación juegan un papel en el entretenimiento, tendrá que hacer algunas investigaciones. Trate de buscar "Ciencias de la computación y &#95;&#95;&#95;&#95;&#95;&#95;" y probar diferentes tipos de entretenimiento como cine, televisión, música, juegos, animación, moda, etc.
+        teacher_markdown: |-
+          Estos son algunos sitios para que los estudiantes empiecen.  Estos sitios son generalmente apropiados para la escuela, pero el contenido con ellos cambia con frecuencia, por lo que **le sugerimos encarecidamente que revise cada sitio en busca de contenido inapropiado antes de compartirlo con los estudiantes**.
+
+          ## Dentro de la magia - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visión general
+
+          Este sitio se centra en las noticias sobre Disney, pero usted podría sorprenderse por el gran papel que CS juega en todas sus diferentes formas de entretenimiento. Dado que este no es un sitio centrado en CS, deberá usar la función de búsqueda para encontrar artículos relevantes.
+
+          ### Campos relevantes
+
+          * Cine / TV
+          * Animación
+          * Robótica/Animatronics
+          * Juegos
+
+          ## Videos de ruta crítica - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Visión general
+
+          Vídeos con una amplia gama de personas trabajando en diversas áreas de la industria del juego, hablando de lo que hacen.
+
+          ### Campos relevantes
+
+          * Juegos
+          * Animación
+          * Arte
+
+          ## Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)
+
+          ### Visión general
+
+          Music Think Tank es un blog dirigido a personas que trabajan en la industria de la música. No es un sitio específico de CS, pero la búsqueda de "ciencias de la computación" o "programación" revelará algunos artículos interesantes.
+
+          ### Campos relevantes
+
+          * Música
+
+          ## Podcast de codificación creativa - [creativecodingpodcast.com](http://creativecodingpodcast.com/)
+
+          ### Visión general
+
+          Si bien este podcast no cuenta mucho en el camino de la programación profesional formal (como en, las personas que hacen esto para ganarse la vida), es un gran recurso para ver las variadas maneras en que los aficionados están haciendo entretenimiento con código.
+
+          ### Campos relevantes
+
+          * Todo
+      CSD U3 Lesson Overview 1:
+        markdown: |-
+          # Visión general
+
+          Se pide a la clase que considere los "problemas" del aburrimiento y la autoexpresión, y que reflexione sobre cómo abordan esos problemas en sus propias vidas. A partir de ahí, explorarán cómo la informática en general, y la programación específicamente, juega un papel en una forma específica de entretenimiento o como un vehículo para la autoexpresión.
+
+
+          ## Recursos
+
+          * [CS in Entertainment - Guía de actividades] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: "* [CS in Entertainment] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit)
+          - Ejemplo ([PDF] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf)
+          | [DOCX] (https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))"
+      CSD U5 test:
+        title: Prueba postproyecto de datos y sociedad
+      CSD U6 circuit smart bike blinker build:
+        markdown: |-
+          # Construye tus intermitentes
+
+          Utilizando el circuito que acabas de construir, vuelve a tu prototipo de bicicleta inteligente y añade los intermitentes.
+      CSD U6 circuit smart bike blinker build_2018:
+        markdown: |-
+          # Construye tus intermitentes
+
+          Utilizando el circuito que acabas de construir, vuelve a tu prototipo de bicicleta inteligente y añade los intermitentes.
+      CSD U6 circuit smart bike blinker build_2018_2019:
+        markdown: |-
+          # Construye tus intermitentes
+
+          Utilizando el circuito que acabas de construir, vuelve a tu prototipo de bicicleta inteligente y añade los intermitentes.
+      CSD U6 game project stop:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 game project stop_2018:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 game project stop_2018_2019:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 tugowar stop:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 tugowar stop_2018:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 tugowar stop_2018_2019:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD User Centered Design Post-Project Test:
+        title: 'Diseño centrado en el usuario: Prueba fin de curso '
+      CSD Web Development Post-Project Test:
+        title: Prueba final del Proyecto de Desarrollo Web
+      CSDU6 Innovation:
+        markdown: |+
+          #Investigación sobre la innovación
+
+          Elija uno de los siguientes temas para investigar. Querrá encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con su categoría.
+
+          ## Tecnología vestible
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos wearables, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez wearable _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que usted podría utilizar para mejorar su salud o seguridad) como la tecnología profesional (equipos que podría utilizar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que abordamos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de las fábricas, hay muchas áreas interesantes que investigar aquí.
+
+          ## Arte y diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la investigación
+
+          Cuando busques dispositivos sobre tu tema, ten en cuenta las siguientes consideraciones:
+
+          * Concéntrese en las soluciones basadas en hardware sobre los programas de software
+          * Céntrese en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
+
+        teacher_markdown: |+
+          A continuación se presentan algunos sitios recomendados para que los alumnos comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, su contenido cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebe cada sitio para ver si hay contenido inapropiado antes de compartirlo con los alumnos**.
+
+          ### Tecnología usable
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Salud y seguridad
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricación
+
+          * [Semana de la Industria](http://www.industryweek.com/technology)
+          * [Impresión 3D](https://3dprinting.com/)
+
+          ### Arte y Diseño
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+      CSDU6 Innovation_2018:
+        markdown: |+
+          #Investigación sobre la innovación
+
+          Elija uno de los siguientes temas para investigar. Querrá encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con su categoría.
+
+          ## Tecnología vestible
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos wearables, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez wearable _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que usted podría utilizar para mejorar su salud o seguridad) como la tecnología profesional (equipos que podría utilizar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que abordamos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de las fábricas, hay muchas áreas interesantes que investigar aquí.
+
+          ## Arte y diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la investigación
+
+          Cuando busques dispositivos sobre tu tema, ten en cuenta las siguientes consideraciones:
+
+          * Concéntrese en las soluciones basadas en hardware sobre los programas de software
+          * Céntrese en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
+
+        teacher_markdown: |+
+          A continuación se presentan algunos sitios recomendados para que los alumnos comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, su contenido cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebe cada sitio para ver si hay contenido inapropiado antes de compartirlo con los alumnos**.
+
+          ### Tecnología usable
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Salud y seguridad
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricación
+
+          * [Semana de la Industria](http://www.industryweek.com/technology)
+          * [Impresión 3D](https://3dprinting.com/)
+
+          ### Arte y Diseño
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+      CSDU6 Innovation_2018_2019:
+        markdown: |+
+          #Investigación sobre la innovación
+
+          Elija uno de los siguientes temas para investigar. Querrá encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con su categoría.
+
+          ## Tecnología vestible
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos wearables, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez wearable _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que usted podría utilizar para mejorar su salud o seguridad) como la tecnología profesional (equipos que podría utilizar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que abordamos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de las fábricas, hay muchas áreas interesantes que investigar aquí.
+
+          ## Arte y diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la investigación
+
+          Cuando busques dispositivos sobre tu tema, ten en cuenta las siguientes consideraciones:
+
+          * Concéntrese en las soluciones basadas en hardware sobre los programas de software
+          * Céntrese en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
+
+        teacher_markdown: |+
+          A continuación se presentan algunos sitios recomendados para que los alumnos comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, su contenido cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebe cada sitio para ver si hay contenido inapropiado antes de compartirlo con los alumnos**.
+
+          ### Tecnología usable
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Salud y seguridad
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricación
+
+          * [Semana de la Industria](http://www.industryweek.com/technology)
+          * [Impresión 3D](https://3dprinting.com/)
+
+          ### Arte y Diseño
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+      ConditionalsWithCards-Unplugged:
+        markdown: |-
+          # Condicionales con cartas
+
+          Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
+      ConditionalsWithCards-Unplugged_2020:
+        markdown: |-
+          # Condicionales con cartas
+
+          Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
+      Crowdsourcing-Unplugged:
+        markdown: |-
+          Colaboración colectiva (Crowdsourcing)
+
+          Mira cómo la colaboración colectiva (crowdsourcing), una técnica de resolución de problemas común en la informática, puede ayudarte a completar una tarea todos juntos, como un aula, de manera más eficiente que si tuvieras que hacerlo tú solo.
+      Design a Screen for your App_2018:
+        markdown: |-
+          #Montaje de la aplicación
+
+          Ahora que tienes algo de práctica en el diseño de elementos en App Lab, puedes empezar a trabajar en el diseño de tu propia aplicación. Con tu grupo, divide las pantallas para que cada uno trabaje en una pantalla diferente.
+
+          Dado que vas a dividir el trabajo, deberás planearlo con antelación para decidir un aspecto común para tus páginas. Por ejemplo, querrás acordar cosas como:
+
+          * ¿Dónde van los botones de navegación?
+          * Qué colores se utilizarán para el fondo, el texto y los botones.
+          * ¿Cuál es el estilo y el diseño general?
+
+          # Espacio de nombres
+
+          En la siguiente lección combinarás todas las pantallas de los miembros de tu equipo en una sola aplicación. Para asegurarte de que los identificadores de una página no entran en conflicto con otra, tendrás que incluir un _espacio de nombres_ único para tu página. Esto será algo que añadirás al principio de cada id para que los ids de tus elementos no entren en conflicto con los de los demás cuando combines las pantallas de todos juntos. Tu espacio de nombres debe ser el identificador de tu pantalla con un guión bajo al final. Por ejemplo, si estás haciendo la página de inicio, puedes utilizar "home_" como su espacio de nombres - lo que lleva a identificadores como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |-
+          #### Espacio de nombres
+
+          Asegurarse de que todos los alumnos están creando identificadores únicos para todos los elementos y espaciando correctamente los nombres será de gran ayuda para evitar problemas en la siguiente lección, por lo que vale la pena ser riguroso en este aspecto. Puede proporcionar a los alumnos la Guía de Actividades de Diseño de Pantallas opcional para que lleven la cuenta de los identificadores de sus elementos.
+
+          #### Trabajando juntos, separados
+
+          Incluso más que en la actividad de creación de prototipos en papel, es fácil que los alumnos de esta lección olviden que deben tener en cuenta cómo sus elecciones afectan a su equipo. Fomente el debate activo entre los equipos mientras diseñan las pantallas para asegurarse de que todos están trabajando hacia un objetivo común.
+      Design a Screen for your App_2018_2019:
+        markdown: |-
+          #Montaje de la aplicación
+
+          Ahora que tienes algo de práctica en el diseño de elementos en App Lab, puedes empezar a trabajar en el diseño de tu propia aplicación. Con tu grupo, divide las pantallas para que cada uno trabaje en una pantalla diferente.
+
+          Dado que vas a dividir el trabajo, deberás planearlo con antelación para decidir un aspecto común para tus páginas. Por ejemplo, querrás acordar cosas como:
+
+          * ¿Dónde van los botones de navegación?
+          * Qué colores se utilizarán para el fondo, el texto y los botones.
+          * ¿Cuál es el estilo y el diseño general?
+
+          # Espacio de nombres
+
+          En la siguiente lección combinarás todas las pantallas de los miembros de tu equipo en una sola aplicación. Para asegurarte de que los identificadores de una página no entran en conflicto con otra, tendrás que incluir un _espacio de nombres_ único para tu página. Esto será algo que añadirás al principio de cada id para que los ids de tus elementos no entren en conflicto con los de los demás cuando combines las pantallas de todos juntos. Tu espacio de nombres debe ser el identificador de tu pantalla con un guión bajo al final. Por ejemplo, si estás haciendo la página de inicio, puedes utilizar "home_" como su espacio de nombres - lo que lleva a identificadores como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |-
+          #### Espacio de nombres
+
+          Asegurarse de que todos los alumnos están creando identificadores únicos para todos los elementos y espaciando correctamente los nombres será de gran ayuda para evitar problemas en la siguiente lección, por lo que vale la pena ser riguroso en este aspecto. Puede proporcionar a los alumnos la Guía de Actividades de Diseño de Pantallas opcional para que lleven la cuenta de los identificadores de sus elementos.
+
+          #### Trabajando juntos, separados
+
+          Incluso más que en la actividad de creación de prototipos en papel, es fácil que los alumnos de esta lección olviden que deben tener en cuenta cómo sus elecciones afectan a su equipo. Fomente el debate activo entre los equipos mientras diseñan las pantallas para asegurarse de que todos están trabajando hacia un objetivo común.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Diseñando para ser accesible
+
+          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Diseñando para ser accesible
+
+          * En el mundo de la informática, la **accesibilidad** consiste en crear tecnología para personas con discapacidades.
+          * Las discapacidades incluyen las físicas, auditivas, visuales y muchas otras.
+          * Las discapacidades son diversas y afectan a las personas de diferentes maneras, incluida la forma en que utilizan la tecnología, como las **aplicaciones para teléfonos inteligentes**.
+          * El diseño de aplicaciones accesibles para las personas con discapacidad hace que esas aplicaciones sean mejores para todos los demás.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalCitizenship-Unplugged:
+        markdown: |-
+          # Ciudadanía digital
+
+          Hay información que no es segura para compartir en Internet. Esta lección te ayudará a aprender la diferencia entre información segura y privada.
+      DigitalSharing-Unplugged:
+        markdown: |-
+          # Intercambio digital
+
+          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
+      DigitalSharing-Unplugged_2020:
+        markdown: |-
+          # Intercambio digital
+
+          En esta lección tendrás en cuenta los retos y las ventajas de respetar la propiedad y los derechos de autor, especialmente en los entornos digitales.
+      Example App Types_2018:
+        markdown: |-
+          # Tipos de ejemplos de aplicaciones
+
+          En los siguientes niveles puedes ver diferentes ejemplos de aplicaciones. Te darán una idea de cómo podría ser la UI (Interfaz de Usuario) para aplicaciones con diferentes objetivos.
+
+          Para cada ejemplo de aplicación:
+
+          * Haz clic en el ejemplo para hacerte una idea de cómo funciona.
+          * En tu guía de actividades, anota las características o elementos de la interfaz de usuario que encuentres y para qué se utilizan.
+          * Comenta con tus grupos cómo esa aplicación y cualquiera de sus características de interfaz de usuario podrían aplicarse a tu tema elegido.
+
+          # Una nota sobre la funcionalidad
+
+          Estas aplicaciones son _prototipos_; permiten al usuario interactuar con el diseño sin preocuparse de la funcionalidad subyacente. Por ejemplo, cuando se utiliza la App Quiz, cada pregunta responderá siempre de la misma manera, independientemente de la respuesta que se elija.
+
+          Si te centras primero en un prototipo interactivo, puedes aprender mucho sobre cómo los usuarios podrían utilizar tu aplicación antes de emplear demasiada energía en hacerla funcionar realmente.
+        teacher_markdown: |-
+          En esta actividad se presentará a los alumnos un pequeño número de aplicaciones relativamente limitadas:
+
+          * Quiz Me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para los alumnos más jóvenes o inexpertos, es posible que desee restringirlos a _sólo_ estos tipos de aplicaciones. Hemos elegido específicamente estos ejemplos porque son relativamente fáciles para hacer un prototipo en App Lab.
+
+          Si permite que los alumnos se desvíen de ellos, tenga en cuenta que algunos tipos de aplicaciones son más difíciles de crear en App Lab y pueden requerir más creatividad para desarrollar un prototipo. Por ejemplo, App Lab no tiene funcionalidad de mapas, así que si los alumnos quisieran crear una aplicación de mapas, tendrían que encontrar o crear una imagen estática de un mapa para utilizarla en su aplicación.
+      Example App Types_2018_2019:
+        markdown: |-
+          # Tipos de ejemplos de aplicaciones
+
+          En los siguientes niveles puedes ver diferentes ejemplos de aplicaciones. Te darán una idea de cómo podría ser la UI (Interfaz de Usuario) para aplicaciones con diferentes objetivos.
+
+          Para cada ejemplo de aplicación:
+
+          * Haz clic en el ejemplo para hacerte una idea de cómo funciona.
+          * En tu guía de actividades, anota las características o elementos de la interfaz de usuario que encuentres y para qué se utilizan.
+          * Comenta con tus grupos cómo esa aplicación y cualquiera de sus características de interfaz de usuario podrían aplicarse a tu tema elegido.
+
+          # Una nota sobre la funcionalidad
+
+          Estas aplicaciones son _prototipos_; permiten al usuario interactuar con el diseño sin preocuparse de la funcionalidad subyacente. Por ejemplo, cuando se utiliza la App Quiz, cada pregunta responderá siempre de la misma manera, independientemente de la respuesta que se elija.
+
+          Si te centras primero en un prototipo interactivo, puedes aprender mucho sobre cómo los usuarios podrían utilizar tu aplicación antes de emplear demasiada energía en hacerla funcionar realmente.
+        teacher_markdown: |-
+          En esta actividad se presentará a los alumnos un pequeño número de aplicaciones relativamente limitadas:
+
+          * Quiz Me
+          * Decision Maker
+          * List Manager
+          * Crowdsourcing
+
+          Para los alumnos más jóvenes o inexpertos, es posible que desee restringirlos a _sólo_ estos tipos de aplicaciones. Hemos elegido específicamente estos ejemplos porque son relativamente fáciles para hacer un prototipo en App Lab.
+
+          Si permite que los alumnos se desvíen de ellos, tenga en cuenta que algunos tipos de aplicaciones son más difíciles de crear en App Lab y pueden requerir más creatividad para desarrollar un prototipo. Por ejemplo, App Lab no tiene funcionalidad de mapas, así que si los alumnos quisieran crear una aplicación de mapas, tendrían que encontrar o crear una imagen estática de un mapa para utilizarla en su aplicación.
+      MyLoopyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mis amigos robóticos de Loopy
+
+          ¡Haz tus programas más cortos usando bucles!
+      MyLoopyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mis amigos robóticos de Loopy
+
+          ¡Haz tus programas más cortos usando bucles!
+      MyRoboticFriends-Unplugged:
+        markdown: |-
+          # Mis Amigos Robóticos
+
+          ¡Aprende a programar escribiendo código para tus amigos!
+      MyRoboticFriends-Unplugged_2020:
+        markdown: |-
+          # Mis Amigos Robóticos
+
+          ¡Aprende a programar escribiendo código para tus amigos!
+      PicturingData-Unplugged:
+        markdown: |-
+          #Representación de datos
+
+          Utiliza un proyecto de Play Lab para recoger datos y hacer predicciones.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PicturingData-Unplugged_2020:
+        markdown: |-
+          #Representación de datos
+
+          Utiliza un proyecto de Play Lab para recoger datos y hacer predicciones.
+
+          ![](https://images.code.org/606a78c09a01133a1bbc1aa9c76f3320-image-1557334268558.png)
+      PowerOfWords-Unplugged:
+        markdown: |-
+          # El poder de las palabras
+
+          Hoy aprenderás qué hacer si alguien se comporta mal en Internet.
+      PowerfulPasswords-Unplugged:
+        markdown: |-
+          # Contraseñas potentes
+
+          Explora por qué la gente usa contraseñas, aprende los beneficios de usar contraseñas y descubre estrategias para crear y mantener contraseñas fuertes y seguras.
+
+          ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
+      Prepare for your presentation_2018:
+        markdown: |-
+          #Presentaciones de proyectos
+
+          ¡Es hora de presentar tus proyectos! Tu profesor te dará más detalles sobre cómo vas a presentar tu trabajo a tus compañeros.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Información privada y personal
+
+          Desarrollada por Common Sense Education, esta lección trata sobre la diferencia entre la información que es segura para compartir en línea y la que no lo es.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: |-
+          # Programación por relevos
+
+          Divídanse en equipos y trabajen juntos para escribir programas que hagan dibujos.
+      RelayProgramming-Unplugged_2020:
+        markdown: |-
+          # Programación por relevos
+
+          Divídanse en equipos y trabajen juntos para escribir programas que hagan dibujos.
+      ScreenOutTheMean-Unplugged:
+        markdown: |-
+          # Evita a los malvados
+
+          Hoy aprenderás qué hacer si alguien es malvado en Internet.
+      Social Sleuth_2018_2019:
+        markdown: |+
+          # Investigación Social
+
+          Necesitarás la <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Hoja de trabajo de Investigación Social </a> para completar esta actividad.
+
+          ## Perfiles
+
+          Haz clic en la imagen de cada perfil para abrirlo.
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell | FaceSpace: John T | FaceSpace: Haley G.
+          | --------- | ------ | ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow | Chirpr:@flyinghail | Chirpr: @lillizard |
+          | --------- | ------ | ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow | instantframe: @photolizzie | instantframe:@desertrider |
+          | --------- | ------ | ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+
+
+
+        teacher_markdown: |
+          #### Investigación Social
+
+          **Paso 1:** Los alumnos examinan todas las páginas de redes sociales proporcionadas en Code Studio. Las páginas representan a varios individuos únicos, cada uno de los cuales tiene una cuenta en tres plataformas de medios sociales. Se distribuyen de la siguiente manera (no comparta esto con los alumnos):
+
+          |                           |   FaceSpace  |     Chirpr      |  instantframe   |
+          | -----------------------|----------------------| --------------------|-------------------------|
+          | John Thomas John T @johnsnow Johnsnow
+          | Haley Gutierrez Haley G @flyinghail desertrider
+          | Lizzie Dell: Lizzie Dell: @lillizard: photolizzie
+
+          **Consejo:**
+
+          Se pide a los alumnos que elijan dos usuarios de los perfiles disponibles, pero si tiene poco tiempo, puede pedir a los alumnos que completen sólo una de las huellas.
+
+          **Paso 2: Una vez que hayan consultado las páginas, los alumnos intentarán averiguar quiénes son los dos usuarios y responderán a algunas preguntas detalladas sobre ellos. Las preguntas sobre la huella están diseñadas para empujar a los alumnos a combinar detalles de múltiples plataformas sociales y a comprender que, en conjunto, los perfiles representan información más detallada de la que los usuarios probablemente pretenden revelar sobre sí mismos. Es posible que algunas preguntas no puedan ser contestadas por todos los usuarios, o que tengan diferentes niveles de detalles (la dirección completa de un usuario, pero sólo la ciudad y el estado de otro).
+
+
+          **Compartir:** Hacer que la clase comparta las huellas digitales que desarrollaron a través de la actividad.
+
+          **Debatir:**
+
+          * ¿Qué información fue más difícil de encontrar?
+          * ¿Qué detalles eran inocuos por sí solos, pero revelaban información privada cuando se combinaban con otros detalles?
+          * ¿Cómo te hace esto pensar de manera diferente sobre lo que eliges publicar en línea?
+      Songwriting-Unplugged:
+        markdown: |-
+          # Composición de canciones
+
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+      Songwriting-Unplugged_2020:
+        markdown: |-
+          # Composición de canciones
+
+          Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
+      csd-post-survey-2017-levelgroup:
+        title: Encuesta de final de semestre de los alumnos de CS Discoveries
+      csd-post-survey-2017-levelgroup_2018:
+        title: Encuesta de final de semestre de los alumnos de CS Discoveries
+      csd-post-survey-2018-markdown-with-link-to-survey_v2:
+        markdown: |
+          # Encuesta fin de curso de CS Discoveries
+
+          **Su opinión es importante para nosotros. La utilizamos para:
+
+          * entender su experiencia
+          * realizar mejoras en el curso
+
+          ¡Gracias por emplear su tiempo en ayudar a que CS Discoveries sea aún mejor!
+
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2018/stage/1/puzzle/1/page/1" target="top">Haga clic aquí para completar la encuesta fin de curso de CS Discoveries</a>
+
+          (se abre en una nueva pestaña)
+
+          <br>
+        teacher_markdown: "**Por favor, pida a sus alumnos que completen esta encuesta.\n\n*
+          Los resultados son vitales para nosotros (code.org) para mantener nuestros
+          cursos y hacer mejoras.\n* También habrá una encuesta para los profesores,
+          en la que podrán dar su propia opinión, que se les notificará por correo
+          electrónico.\n\n**Para ver los resultados** -- la encuesta fin de curso
+          es un poco diferente. La encuesta que se desarrolla en su propia unidad
+          del curso y esta página simplemente enlazan con ella.\n\n* Para ver los
+          resultados anónimos de la encuesta en el panel del profesor, debe (1) ver
+          la encuesta/evaluaciones, y luego (2) seleccionar la unidad de la encuesta
+          fin de curso como la unidad que desea ver.  \n\n* **Más instrucciones para
+          ver los resultados de la encuesta posterior al curso**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n"
+      csd-post-survey-intro-2019:
+        markdown: |-
+          # Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+
+          ** ¡Tu opinión y comentarios son importantes para nosotros! ** Los usamos para:
+
+          * entender tu experiencia
+          * realizar mejoras en el curso
+
+          ¡Gracias por dedicarnos tu tiempo para ayudar a que Descubrimientos de CS sea aún mejor!
+      csd-post-survey-levelgroup_2019:
+        title: Encuesta de final de semestre de los alumnos de CS Discoveries
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      PowerOfWords-Unplugged_2020:
+        markdown: |
+          # El poder de las palabras
+
+          #¿Qué debes hacer cuando alguien utiliza un lenguaje mezquino o hiriente en Internet?
+      PrivatePersonalInformation-Unplugged_2020:
+        markdown: |
+          # Información privada y personal
+
+          ## ¿Qué información sobre tí es adecuada para compartir en línea?
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: "¡Encuesta rápida de CS Discoveries!"

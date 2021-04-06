@@ -571,6 +571,14 @@ es-MX:
         codebreak_e10: 'Code Break 10.0: Inteligencia Artificial con Kat Graham y Kate Park'
         codebreak_e11: 'Code Break 11.0: Abstracción con Susan Wojcicki y China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor y Paula Mejia'
+        csf21pilot_events: 'Laboratorio de Sprites: Sprites en acción (piloto del CSF 2021)'
+        csf21pilot_prompts: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto CSF 2021)'
+        outbreak_mike: CodeBytes Episodio 3 con Mike - Simulador de brotes
+        poembot-pilot-prompts: Haiku Bots - Prompt con Opciones [PILOT]
+        poembot-pilot-text: Haiku Bots - Almacenar Texto [PILOT]
+        poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

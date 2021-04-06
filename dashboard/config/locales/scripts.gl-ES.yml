@@ -2401,7 +2401,7 @@ gl:
               name: Composición
           lesson_groups:
             ramp_up:
-              display_name: Bucles
+              display_name: Bucles aniñados
             csf_digcit:
               display_name: Cidadanía dixital
             csf_nested_loops:
@@ -2423,9 +2423,13 @@ gl:
             csf_digcit:
               display_name: Cidadanía dixital
             csf_variables:
-              display_name: Variables
+              display_name: Bucles "Para" (For)
             csf_for_loops:
               display_name: Bucles "Para" (For)
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: eliminar
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2449,6 +2453,8 @@ gl:
             ramp_up:
               display_name: Introdución
             lessonGroup-3:
+              display_name: Variables
+            variables:
               display_name: Variables
         k5-onlinepd-2021:
           lessons:

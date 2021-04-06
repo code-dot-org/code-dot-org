@@ -8,21 +8,9 @@ const defaultProps = {
   sectionsForDropdown: [],
   id: 30,
   title: 'Computer Science Principles',
-  resources: [
-    {
-      type: ResourceType.curriculum,
-      link: '/link/to/curriculum'
-    },
-    {
-      type: ResourceType.professionalLearning,
-      link: '/link/to/professional/learning'
-    },
-    {
-      type: ResourceType.teacherForum,
-      link: 'https://forum.code.org/'
-    }
-  ],
-  showAssignButton: true
+  teacherResources: [],
+  showAssignButton: true,
+  useMigratedResources: false
 };
 
 describe('CourseOverviewTopRow', () => {
@@ -31,31 +19,111 @@ describe('CourseOverviewTopRow', () => {
     assert.equal(wrapper.find('Connect(SectionAssigner)').length, 1);
   });
 
-  it('renders teacher resource dropdown', () => {
-    const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
+  it('renders unmigrated teacher resource dropdown', () => {
+    const wrapper = shallow(
+      <CourseOverviewTopRow
+        {...defaultProps}
+        teacherResources={[
+          {
+            type: ResourceType.curriculum,
+            link: '/link/to/curriculum'
+          },
+          {
+            type: ResourceType.professionalLearning,
+            link: '/link/to/professional/learning'
+          },
+          {
+            type: ResourceType.teacherForum,
+            link: 'https://forum.code.org/'
+          }
+        ]}
+      />
+    );
     assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[0].type,
       ResourceType.curriculum
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[0].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[0].link,
       '/link/to/curriculum'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[1].type,
       ResourceType.professionalLearning
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[1].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[1].link,
       '/link/to/professional/learning'
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].type,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[2].type,
       ResourceType.teacherForum
     );
     assert.equal(
-      wrapper.find('TeacherResourcesDropdown').props().resources[2].link,
+      wrapper.find('TeacherResourcesDropdown').props().teacherResources[2].link,
+      'https://forum.code.org/'
+    );
+  });
+
+  it('renders migrated teacher resource dropdown', () => {
+    const wrapper = shallow(
+      <CourseOverviewTopRow
+        {...defaultProps}
+        migratedTeacherResources={[
+          {
+            key: 'key1',
+            name: 'Curriculum',
+            url: '/link/to/curriculum'
+          },
+          {
+            key: 'key2',
+            name: 'Professional Learning',
+            url: '/link/to/professional/learning'
+          },
+          {
+            key: 'key2',
+            name: 'Teacher Forum',
+            url: 'https://forum.code.org/'
+          }
+        ]}
+        useMigratedResources
+      />
+    );
+    assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props().migratedTeacherResources
+        .length,
+      3
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[0].name,
+      'Curriculum'
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[0].url,
+      '/link/to/curriculum'
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[1].name,
+      'Professional Learning'
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[1].url,
+      '/link/to/professional/learning'
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[2].name,
+      'Teacher Forum'
+    );
+    assert.equal(
+      wrapper.find('TeacherResourcesDropdown').props()
+        .migratedTeacherResources[2].url,
       'https://forum.code.org/'
     );
   });

@@ -3,7 +3,7 @@ tr:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} her birini {N} measures \nbetween {MOVE1} ve {MOVE2} arasında değiştirin"
+        text: "{MOVE1} ve {MOVE2} arasındaki her {N} ölçümünde  {GROUP} değiştirilir"
         options:
           GROUP:
             sprites: tüm
@@ -50,7 +50,7 @@ tr:
             '"measures"': ölçü
             '"seconds"': saniye
       Dancelab_changeColorBy:
-        text: "{COLOR} {METHOD}’u {AMOUNT} kadar değiştir"
+        text: "{COLOR} {METHOD}’i {AMOUNT} kadar değiştir"
         options:
           METHOD:
             '"hue"': renk tonu
@@ -953,6 +953,8 @@ tr:
         text: kurulum
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} Başlar {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE}, {TARGET}'e erişir."
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -961,6 +963,8 @@ tr:
           UNIT:
             '"seconds"': saniye
             '"frames"': çerçeveler
+      gamelab_beginCollectingData:
+        text: değeri {VALUE} olan {LABEL} etiketli {BREAK} verisi toplamaya başla
       gamelab_bounceOff:
         text: "{TARGET}'in {SPRITE} sekmeleri"
       gamelab_changePropBy:
@@ -985,6 +989,8 @@ tr:
         text: tıklandığında {SPRITE}
       gamelab_comment:
         text: 'yorum: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: "{SPRITE} sayısı"
       gamelab_createNewSprite:
@@ -995,6 +1001,8 @@ tr:
         text: sürüklenebilir olmak
       gamelab_edgesDisplace:
         text: kenarları blok {SPRITE} hareket
+      gamelab_followingTargets:
+        text: takip eden hedefler
       gamelab_getAllSprites:
         text: tüm hareketli nesneler
       gamelab_getProp:
@@ -1020,8 +1028,16 @@ tr:
           UNIT:
             '"seconds"': saniye
             '"frames"': çerçeveler
+      gamelab_hideHaiku:
+        text: haiku'yu sakla
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
+      gamelab_ifVarEquals:
+        text: |-
+          eğer {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE}'ın kostümü {COSTUME}'dir."
       gamelab_isKeyPressed:
         text: "{KEY}'a basılır"
         options:
@@ -1104,6 +1120,7 @@ tr:
       gamelab_locationAt:
         text: 'konum x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{LOCATION} konumun {DIRECTION} yönüne {DISTANCE} pixel"
         options:
           DIRECTION:
             '"North"': Kuzey
@@ -1158,6 +1175,8 @@ tr:
             '"East"': Doğu
             '"South"': Güney
             '"West"': Batı
+      gamelab_printHaiku:
+        text: haiku {BREAK} başlık {TITLE} yazar {AUTHOR} satır 1 {LINE1} satır 2 {LINE2} satır 3 {LINE3} göster
       gamelab_printText:
         text: yazdırma {TEXT}
       gamelab_randColor:
@@ -1197,12 +1216,17 @@ tr:
       gamelab_setBackgroundImageAs:
         text: arka planı {IMG} olarak ayarlayın
       gamelab_setDefaultSpriteSize:
+        text: yeni hareketli şekil varsayılan boyutunu {SIZE} olarak ayarla
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': çok küçük
+            '50': Küçük
             '75': orta
-            '100': large
+            '100': Büyük
+      gamelab_setPrompt:
+        text: "{VAR} değişkeni için {QUESTION} sorusunu kullanıcıya sor"
+      gamelab_setPromptWithChoices:
+        text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
       gamelab_setProp:
         text: "{SPRITE} {PROPERTY}’i {VAL} olarak ayarla "
         options:
@@ -1237,8 +1261,14 @@ tr:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
+      gamelab_stopCollectingData:
+        text: veri toplamayı bırak
       gamelab_subjectSpritePointer:
         text: tıklandığında {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: karıştır
       gamelab_turn:
@@ -1266,8 +1296,12 @@ tr:
             '"d"': d
       gamelab_whenLeftArrow:
         text: sol ok basıldığında
+      gamelab_whenPromptAnswered:
+        text: "{VAR} cevaplandığında"
       gamelab_whenRightArrow:
         text: sağ ok basıldığında
+      gamelab_whenSpriteCreated:
+        text: "{SPRITE} oluşturulduğunda"
       gamelab_whenTouching:
         text: "{SPRITE1} [SPRITE2]dokunduğunda[1]"
       gamelab_whenUpArrow:
@@ -1295,6 +1329,10 @@ tr:
         text: Süre {SPRITE1} dokunuyor {SPRITE2}
       gamelab_whileUpArrow:
         text: yukarı ok basıldığında
+      gamelab_withPercentChance:
+        text: |-
+          eğer % {NUM} şans varsa
+          {STATEMENT}
       gamelab_xLocationOf:
         text: x {SPRITE} koordinatı
       gamelab_yLocationOf:
@@ -1314,6 +1352,8 @@ tr:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": benim etiketimi değil
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: "{VAR} değişkeni için {A}{B}{C} seçenekleriyle {QUESTION} sorusunu kullanıcıya sor"
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1492,6 +1532,8 @@ tr:
           DANCE:
             MOVES.ClapHigh: balıklar
             MOVES.Clown: benim etiketimi değil
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'konum x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1750,6 +1792,7 @@ tr:
             '"stoneBricks"': taş tuğlalar
             '"mossyStoneBricks"': yosunlu taş tuğlalar
             '"crackedStoneBricks"': çatlamış taş tuğlalar
+            '"chiseledStoneBricks"': dekoratif taş tuğlalar
             '"blueCoralBlock"': mavi mercan blok
             '"pinkCoralBlock"': pembe mercan blok
             '"magentaCoralBlock"': eflatun mercan blok

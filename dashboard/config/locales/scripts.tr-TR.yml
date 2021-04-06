@@ -21971,7 +21971,7 @@ tr:
                 göremeyecekleri yerleri görmesine ve ziyaret etmesine olanak sağlar.
                 Ancak, tıpkı gerçek dünyada seyahat ederken olduğu gibi, çevrimiçi
                 seyahat ederken de güvende olmak önemlidir. Bu sanal gezide çocuklar,
-                çevrimiçi maceralarda güvenli kalma pratiği yapabilir."
+                çevrimiçi maceralarda güvenli kalma pratiği yapabilir.\n"
           student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
             öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
             hikaye oluştur.
@@ -22310,7 +22310,7 @@ tr:
               name: Çevrimiçi Kötülüğe bir DUR deme
               description_student: Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi
                 ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz.
-              description_teacher: |-
+              description_teacher: |
                 <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
 
                 Bu ders, aslında [Ortak Düşünce Eğitimi](https://www.commonsense.org/education/digital-citizenship/curriculum) tarafından oluşturulmuştur.
@@ -24756,6 +24756,8 @@ tr:
               name: Simülasyon Kodlama
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            End of Course Project:
+              name: Ders Projesinin Sonu
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -26568,10 +26570,6 @@ tr:
               name: Röle Programlama
               description_student: Kod ile çizimler yaptığınız kursun başını hatırlayın.
                 Bu derste, çok benzer bir şey yapmak için bir takımla birlikte çalışacaksınız!
-              description_teacher: Bu aktivite, hata ayıklama ve sebat ile başlayacaktır,
-                sonra öğrenciler ekiplere girdiğinde ve bir defada bir programa bir
-                talimat yazması için birlikte çalıştığında hızlı bir şekilde zamana
-                karşı yarışacaktır.
             Debugging in Collector:
               key: Toplayıcıda Hata Ayıklama
               name: Toplayıcıda Hata Ayıklama
@@ -26958,6 +26956,8 @@ tr:
                 sunabilecekler."
             lesson-4:
               name: Süper Bir Dijital Vatandaş Olun
+              description_student: Siber zorbalığa şahit olduğunuzda nasıl karşı çıkabileceğinizi
+                öğrenin.
           lesson_groups:
             ramp_up:
               display_name: Arttır
@@ -27171,7 +27171,6 @@ tr:
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak
                 için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
-              name: Hareketli Nesne Laboratuvarı ile Sanal Evcil Hayvan
               description_student: Bu derste öğrenciler, istedikleri gibi görünen
                 ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler,
                 kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli
@@ -27214,23 +27213,29 @@ tr:
               description_teacher: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden
                 erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları
                 tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
+            lesson-6:
+              name: Hareketli Nesne Laboratuvarı Tanıtımı
+            lesson-8:
+              name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
             ramp_up:
               display_name: Arttır
             csf_digcit:
               display_name: Sayısal Vatandaşlık
             csf_variables:
-              display_name: Değişkenler
+              display_name: For Döngüleri
             csf_data:
               display_name: Veri
             csf_for_loops:
               display_name: For Döngüleri
             csf_sprites:
-              display_name: Hareketli Nesneler
+              display_name: Bilgisayarın Etkileri
             end_of_course_project:
               display_name: Ders Projesinin Sonu
             lessonGroup-8:
-              display_name: Bilgisayarın Etkileri
+              display_name: Değişkenler
+            lessonGroup-9:
+              display_name: kaldır
           student_description: Farklı döngüler, olaylar, fonksiyonlar ve koşulları
             kullanma hakkında bilgi edinin. Farklı problem çözme tekniklerini incelemek
             ve bilgisayarın ve internetin toplumsal etkilerini tartışmak. Bu dersin
@@ -27257,12 +27262,12 @@ tr:
             Programming with Angry Birds:
               key: Labirentte Programlama
               name: Labirentte Programlama
-              description_student: Angry Birds ile sıraları ve algoritmaları öğrenin.
+              description_student: Angry Bird'ün labirentten ilerlemesine yardım etmek
+                için programlar oluşturun.
               description_teacher: Angry Birds oyununun karakterlerini kullanarak
                 öğrenciler, bir kuşu labirentin bir tarafından diğer taraftaki domuza
-                ulaştırmak için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
-                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek,
-                böylelikle bunları ileri doğru hareket ettirecek, sola ve sağa döndürecek.
+                götürmek için sıralı algoritmalar geliştireceklerdir. Bunu yapmak
+                için öğrenciler, lineer bir sırada kod bloklarını biraraya getirecek.
             Debugging with Scrat:
               key: Scrat ile Hata Ayıklama
               name: Scrat ile Hata Ayıklama
@@ -27338,7 +27343,7 @@ tr:
               key: Minecraft ile Geleceğe Bakma
               name: Geleceğe bakış
               description_student: Lavdan Kaçının! Burada Minecraft dünyasındaki koşulları
-                öğreneceksiniz.
+                öğrenmeye başlayacaksınız.
               description_teacher: Bu ders, aslında Minecraft takımında Kod Saati
                 için oluşturuldu. Öğrencilerin, şu ana kadar öğrendikleri fikirleri
                 pratiğe dökme ve ayrıca koşullara şöyle bir göz atma şansı olacak!
@@ -27357,17 +27362,6 @@ tr:
               name: Çiftçi Döngüleri
               description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu
                 ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
-              description_teacher: "Öğrenciler bu dersi aldıklarında 'tekrarlama'
-                döngülerini kullanarak çoktan pratiğe sahip olmalılar, bu yüzden şimdi
-                işleri karıştırmanın zamanı geldi. \n\n_Döngüler_ şartlar karşılanırken
-                komutları tekrarlamaya devam eden döngülerdir. Programcılar komutların
-                kaç kez tekrar edilmesi gerektiğini tam olarak bilmediğinde döngüler
-                kullanılırken, döngünün tekrarlamaya devam etmesi için hangi koşulun
-                doğru olması gerektiğini bilir. Örneğin öğrenciler Çiftçinin deliklerini
-                doldurmak ve kirleri kazmak için çalışacaklar. Deliklerin boyutlarını
-                veya kir dağlarının yüksekliğini bilmeyeceklerdir, ancak öğrenciler
-                zemini düz olmadığı sürece delikleri doldurmaya ve kiri kazmaya ihtiyaç
-                duyacaklarını bilecektir."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft''ta Koşullar: Su Yolculuğu'
               name: 'Minecraft''ta Koşullar: Su Yolculuğu'
@@ -27481,8 +27475,13 @@ tr:
             Alien Dance Party:
               key: Uzaylı Dans Partisi
               name: Uzaylı Dans Partisi
-              description_student: Arkadaşlarınızla ve ailenizle paylaşmak için oyun
-                hazırlama alıştırması.
+              description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje
+                oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını
+                ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını
+                içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans
+                partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
+                edecektir.  '
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
@@ -27512,6 +27511,13 @@ tr:
                 başlamanın zamanı geldi.
               description_teacher: Bu bitirme dersi, öğrencileri kendi projelerini
                 tasarlama, geliştirme ve sergileme süreçlerinden geçirir.
+            lesson-1:
+              name: Dans Partisi
+              description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans
+                partinizi programlayacaksınız.
+              description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini
+                programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan
+                dolayı bu aktivite ses gerektirir.
           lesson_groups:
             csf_sequencing:
               display_name: Sıralama
@@ -27641,6 +27647,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            introducing-spritelab:
+              name: Hareketli Nesne Laboratuvarı Tanıtımı
           lesson_groups:
             ramp_up:
               display_name: Giriş
@@ -27650,6 +27658,8 @@ tr:
               display_name: Değişkenler
             Sprites:
               display_name: Hareketli Nesneler
+            variables:
+              display_name: Değişkenler
         csd4-preview-2021:
           description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır.
             Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin
@@ -28274,6 +28284,15 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+            lesson17:
+              name: Ders 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
             Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini

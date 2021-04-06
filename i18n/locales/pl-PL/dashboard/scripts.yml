@@ -14077,12 +14077,7 @@ pl:
             Safety in My Online Neighborhood:
               name: Bezpieczeństwo w moim otoczeniu online
               description_student: Dowiedz się, jak bezpiecznie przechodzić do miejsc w Internecie.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Dzięki mocy Internetu uczniowie mogą zbierać doświadczenia i odwiedzać miejsca, których mogliby nie być w stanie zobaczyć osobiście. Niemniej, podobnie jak w przypadku podróżowania po świecie rzeczywistym, w trakcie podróży w Internecie bezpieczeństwo jest niezwykle ważne. Podczas tej wirtualnej wycieczki dzieci mogą przećwiczyć bezpiecznie zachowanie w trakcie przygód w Internecie.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nDzięki mocy Internetu uczniowie mogą zbierać doświadczenia i odwiedzać miejsca, których mogliby nie być w stanie zobaczyć osobiście. Niemniej, podobnie jak w przypadku podróżowania po świecie rzeczywistym, w trakcie podróży w Internecie bezpieczeństwo jest niezwykle ważne. Podczas tej wirtualnej wycieczki dzieci mogą przećwiczyć bezpiecznie zachowanie w trakcie przygód w Internecie."
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         courseb-2020:
           title: Kurs B (2020)
@@ -14152,12 +14147,7 @@ pl:
             Digital Trails:
               name: Cyfrowe szlaki
               description_student: 'Dowiedz się o swoim śladzie cyfrowym oraz jak zachowywać bezpieczeństwo przy wchodzeniu na strony internetowe.'
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Czy to, co robisz w Internecie, pozostaje w nim na zawsze? Uczniowie dowiadują się, że informacje udostępniane przez nich w Internecie, pozostawiają ślad lub "trop" cyfrowy. W zależności od tego, jak ktoś się z nim obchodzi, może on być duży lub mały, szkodliwy lub przydatny. Uczniowie porównują różne tropy i zastanawiają się krytycznie nad różnymi rodzajami informacji, które chcą tam pozostawić.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nCzy to, co robisz w Internecie, pozostaje w nim na zawsze? Uczniowie dowiadują się, że informacje udostępniane przez nich w Internecie, pozostawiają ślad lub \"trop\" cyfrowy. W zależności od tego, jak ktoś się z nim obchodzi, może on być duży lub mały, szkodliwy lub przydatny. Uczniowie porównują różne tropy i zastanawiają się krytycznie nad różnymi rodzajami informacji, które chcą tam pozostawić."
           student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         coursec-2020:
           title: Kurs C (2020)
@@ -14253,21 +14243,11 @@ pl:
             Putting a STOP to Online Meanness:
               name: Stawianie STOP świństwom online
               description_student: Na tej lekcji dowiesz się, czym jest złośliwość oraz co robić, jeśli spotka Cię ona w Internecie.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                W Internecie pojawia się całe mnóstwo ciekawych ludzi, ale czasem niektórzy z nich mogą być względem siebie złośliwi. Odegranie scenek pomoże Twoim uczniom zrozumieć, dlaczego często łatwiej jest być złośliwym w Internecie niż osobiście oraz jak radzić sobie ze złośliwością w internecie, gdy ją zauważą. 
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nW Internecie pojawia się całe mnóstwo ciekawych ludzi, ale czasem niektórzy z nich mogą być względem siebie złośliwi. Odegranie scenek pomoże Twoim uczniom zrozumieć, dlaczego często łatwiej jest być złośliwym w Internecie niż osobiście oraz jak radzić sobie ze złośliwością w internecie, gdy ją zauważą. "
             Password Power-Up:
               name: Włączenie na hasło
               description_student: Na tej lekcji dowiesz się jak hasło chroni Twoje informacje oraz jak utworzyć dobre hasło.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Skuteczniejsze, bardziej bezpieczne hasła internetowe są dobrym rozwiązaniem dla wszystkich. Jak możemy pomóc dzieciom w tworzeniu lepszych haseł i ich zapamiętaniu? Na tej lekcji korzystaj ze wskazówek, które pomogą dzieciom w tworzeniu haseł, które są zarówno bezpieczne, jak i łatwe do zapamiętania.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nSkuteczniejsze, bardziej bezpieczne hasła internetowe są dobrym rozwiązaniem dla wszystkich. Jak możemy pomóc dzieciom w tworzeniu lepszych haseł i ich zapamiętaniu? Na tej lekcji korzystaj ze wskazówek, które pomogą dzieciom w tworzeniu haseł, które są zarówno bezpieczne, jak i łatwe do zapamiętania."
           student_description: Twórz programy przy pomocy tworzenia sekwencji, pętli i zdarzeń. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
         coursed-2020:
           title: Kurs D (2020)
@@ -14371,12 +14351,7 @@ pl:
             Be A Super Digital Citizen:
               name: Bądź Super Cyfrowym Obywatelem
               description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy jesteś świadkiem cybernękania.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Narzędzia online wzmacniają poczucie pewności dzieci, ale niosą ze sobą duże obowiązki. Czy dzieci zawsze wiedzą, co zrobić, gdy dojdzie do konfrontacji z cybernękaniem? Pokaż swoim uczniom, jak podejmować działania i rozwiązywać konflikty, od przeciwstawiania się po udzielaniu pomocy tym, którzy jej potrzebują.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nNarzędzia online wzmacniają poczucie pewności dzieci, ale niosą ze sobą duże obowiązki. Czy dzieci zawsze wiedzą, co zrobić, gdy dojdzie do konfrontacji z cybernękaniem? Pokaż swoim uczniom, jak podejmować działania i rozwiązywać konflikty, od przeciwstawiania się po udzielaniu pomocy tym, którzy jej potrzebują."
           student_description: Uczniowie pogłębiają poziom zrozumienia zagadnień pętli, wyrażeń warunkowych i zdarzeń. Poza kodowaniem, uczniowie uczą się o obywatelstwie cyfrowym.
         coursee-2020:
           title: Kurs E (2020)
@@ -14430,12 +14405,7 @@ pl:
             Private and Personal Information:
               name: Informacje prywatne i osobowe
               description_student: Internet niesie rozrywkę i radość, ale ważne jest to, aby przebywając w nim, zachowywać bezpieczeństwo. Ta lekcja jest poświęcona różnicy pomiędzy informacjami, które są bezpieczne do udostępniania online a informacjami, które takie nie są.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Chęć dzielenia się i łączenia z innymi leży w naturze naszych uczniów. Jak możemy pomóc dzieciom budować mocne, pozytywne i bezpieczne relacje w Internecie? Pomóż uczniom nauczyć się odróżniać to, co ma charakter osobisty od tego, co najlepiej zachować dla siebie.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nChęć dzielenia się i łączenia z innymi leży w naturze naszych uczniów. Jak możemy pomóc dzieciom budować mocne, pozytywne i bezpieczne relacje w Internecie? Pomóż uczniom nauczyć się odróżniać to, co ma charakter osobisty od tego, co najlepiej zachować dla siebie."
             About Me:
               name: O mnie ze Sprite Lab
               description_student: Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.
@@ -14571,12 +14541,7 @@ pl:
             The Power of Words:
               name: Moc słów
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style="padding:10px 0"}
-
-                Ta lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
-
-                Zupełnie naturalne jest to, że w miarę dorastania, dzieci zaczynają w większym stopniu korzystać z komunikacji online. Niemniej część rzeczy, które widzą, może sprawić, że czują się dotknięte, jest im smuto, są zdenerwowane lub przestraszone. Pomóż swoim uczniom budować empatię dla innych oraz uczyć się strategii, które należy stosować w konfrontacji z cybernękaniem.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png){: style=\"padding:10px 0\"}\n\nTa lekcja została opracowana przez [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nZupełnie naturalne jest to, że w miarę dorastania, dzieci zaczynają w większym stopniu korzystać z komunikacji online. Niemniej część rzeczy, które widzą, może sprawić, że czują się dotknięte, jest im smuto, są zdenerwowane lub przestraszone. Pomóż swoim uczniom budować empatię dla innych oraz uczyć się strategii, które należy stosować w konfrontacji z cybernękaniem."
             Crowdsourcing:
               name: Praca w grupie (Crowdsourcing)
               description_student: Na tej lekcji będziesz się uczył o crowdsourcingu, procesie budowania projektu z zespołem.
@@ -14594,6 +14559,7 @@ pl:
               description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
               description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\r\n\\r\n\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\\r"
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń, funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz udostępnić znajomym i rodzinie.
+          name: coursef-2020
         express-2020:
           title: Kurs ekspresowy (2020)
           description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności w zakresie rozwiązywania problemów i pokonuj rozrywkowe wyzwania! Twórz gry i kreatywne projekty, aby udostępniać je znajomym, rodzinie i nauczycielom.
@@ -15849,13 +15815,17 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 5
+              name: Lekcja 6
             model-cards:
               name: Plac zabaw dla modeli kart 
             bug-bash:
               name: Plac zabaw Bug Basha 
             superunsuper:
               name: Bez nadzoru i nadzorowane 
+            exemplars:
+              name: Wzory przypadkowo wykonane w LB 
+            temp:
+              name: Lekcja 20
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI dla CSD. W przypadku pytań na ten temat, należy zwrócić się do Dana Schneidera.
@@ -15930,6 +15900,8 @@ pl:
               name: Gromadzenie danych - praktyka z przewodnikiem 
             Haiku Bot:
               name: Bot Haiku
+            End of Course Project:
+              name: Koniec projektu kursu
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -15949,6 +15921,8 @@ pl:
               display_name: wyświetlana nazwa grupy lekcji
             haiku bot:
               display_name: Bot Haiku
+            AB EOC:
+              display_name: Kurs A i B Projekt EOC 
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -17070,7 +17044,7 @@ pl:
               key: Pętle w interfejsie Collector
               name: Pętle z Laurel
               description_student: Pomóż poszukiwaczce przygód Laurel zebrać skarb w otwartej jaskini.
-              description_teacher: Na tej lekcji uczniowie będą nadal poznawać koncepcję pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok "zdobądź skarb", aby pomóc jej w podróży.
+              description_teacher: 'Na tej lekcji uczniowie będą nadal poznawać koncepcję pętli. Tutaj, poszukiwaczka przygód, Laurel, używa pętli, aby zebrać skarb w miejscach otwartych jaskiń. Wprowadza się nowy blok "zdobądź skarb", aby pomóc jej w podróży.'
             Loops in Artist:
               key: Pętle z Artystą
               name: Rysowanie ogrodów z pętlami
@@ -17189,8 +17163,8 @@ pl:
             Picturing Data:
               key: Zobrazowanie Danych
               name: Zobrazowanie Danych
-              description_student: Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów.
-              description_teacher: Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów.
+              description_student: 'Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów.'
+              description_teacher: 'Danych można użyć, aby pomogły uczniom zrozumieć ich świat oraz odpowiedzieć na interesujące pytania. Na tej lekcji uczniowie będą zbierać dane w ramach projektu z Play Lab i przeprowadzać ich wizualizację z użyciem różnego rodzaju wykresów.'
             'End of Course Project: Create a Play Lab Game':
               key: 'Projekt na koniec kursu: Utwórz grę Play Lab'
               name: Koniec projektu kursu
@@ -17231,7 +17205,6 @@ pl:
               key: Sztafeta programowania
               name: Sztafeta programowania
               description_student: Pamiętaj na początku kursu, gdy tworzysz rysunki z kodem? Na tej lekcji będziesz pracować z zespołem, aby robić coś bardzo podobnego!
-              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą debugowaniu i wytrwałości, a następnie szybko przejdzie w wyścig z czasem, gdy uczniowie dobiorą się w zespoły i będą pracować razem nad programem instrukcja po instrukcji.
             Debugging in Collector:
               key: Debugowanie w interfejsie Collector
               name: Debugowanie z Laurel
@@ -17266,7 +17239,7 @@ pl:
               key: Zagnieżdżone pętle z pszczółką
               name: Zagnieżdżone pętle w labiryncie
               description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy? Na tej lekcji dowiesz się, co się dzieje, gdy utworzysz pętlę zagnieżdżoną.
-              description_teacher: Na tych zajęciach internetowych uczniowie będą mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee and Plants vs Zombies], uczniowie będą się uczyć, jak programować pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program, gdy klikają "Uruchom".
+              description_teacher: 'Na tych zajęciach internetowych uczniowie będą mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee and Plants vs Zombies], uczniowie będą się uczyć, jak programować pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program, gdy klikają "Uruchom".'
             Conditionals with Cards:
               key: Warunkowe z kartami
               name: Warunkowe z kartami
@@ -17354,7 +17327,7 @@ pl:
               key: Programowanie i pętle z Artystą
               name: Rysowanie przy pomocy pętli 
               description_student: Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!
-              description_teacher: Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.
+              description_teacher: 'Patrz jak twarze uczniów rozpromieniają się na widok utworzonych przez siebie wspaniałych projektów przy użyciu niewielkiej liczby bloków oraz naklejek cyfrowych! Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia są fantastyczne jeśli chodzi o tworzenie przedmiotów do portfolio lub na wywiadówki.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
               name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
@@ -17364,7 +17337,7 @@ pl:
               key: Zdania z warunkami
               name: Wyrażenia warunkowe z interfejsem Farmer
               description_student: Musisz powiedzieć komputerowi, co zrobić w określonych warunkach w ramach tej rozrywkowej i pełnej wyzwań serii.
-              description_teacher: Ta lekcja wprowadza uczniów w pętle "dopóki" i instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami, które nieustannie powtarzają komendy, gdy spełniony jest warunek. Pętli "dopóki" używa się, gdy programista nie zna dokładnej liczby komend, które trzeba wykonać, ale wie, że warunek musi być spełniony, aby pętla kontynuowała zapętlanie. Instrukcje "jeśli/ w przeciwnym razie" zapewniają elastyczność w programowaniu poprzez uruchamianie wszystkich sekcji kodu tylko, jeśli coś jest prawdziwe, w przeciwnym razie uruchamia się coś innego.
+              description_teacher: 'Ta lekcja wprowadza uczniów w pętle "dopóki" i instrukcje "jeśli/ w przeciwnym razie". _Pętle "dopóki"_ są pętlami, które nieustannie powtarzają komendy, gdy spełniony jest warunek. Pętli "dopóki" używa się, gdy programista nie zna dokładnej liczby komend, które trzeba wykonać, ale wie, że warunek musi być spełniony, aby pętla kontynuowała zapętlanie. Instrukcje "jeśli/ w przeciwnym razie" zapewniają elastyczność w programowaniu poprzez uruchamianie wszystkich sekcji kodu tylko, jeśli coś jest prawdziwe, w przeciwnym razie uruchamia się coś innego.'
             Simon Says:
               key: Simon mówi
               description_student: Zagraj w grę i pomyśl, jakie komendy są potrzebne, aby uzyskać właściwy wynik.
@@ -17385,9 +17358,9 @@ pl:
               description_student: Internet niesie rozrywkę i radość, ale ważne jest to, aby przebywając w nim, zachowywać bezpieczeństwo. Ta lekcja jest poświęcona różnicy pomiędzy informacjami, które są bezpieczne do udostępniania online a informacjami, które takie nie są.
             About Me:
               key: O mnie
-              name: O mnie ze Sprite Lab
+              name: 'O mnie ze Sprite Lab'
               description_student: Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.
-              description_teacher: "Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.\\r"
+              description_teacher: 'Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją.\r'
             Digital Sharing:
               key: Udostępnianie cyfrowe
               name: Udostępnianie cyfrowe
@@ -17403,7 +17376,7 @@ pl:
               description_student: Więcej pętli zagnieżdżonych! Tym razem będziesz tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych.
             Nested Loops in Frozen:
               key: Zagnieżdżone pętle w Krainie Lodu
-              name: Zagnieżdżone pętle w Krainie Lodu
+              name: 'Zagnieżdżone pętle w Krainie Lodu'
               description_student: 'Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO.'
               description_teacher: Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!
             'Functions: Songwriting':
@@ -17487,7 +17460,7 @@ pl:
             Nested Loops in the Maze:
               key: Zagnieżdżone pętle w labiryncie
               name: Zagnieżdżone pętle w labiryncie
-              description_student: "Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy? Na tej lekcji dowiesz się, co się dzieje, gdy wstawisz pętlę do innej pętli."
+              description_student: Pętle wewnątrz pętli wewnątrz pętli. Co to znaczy? Na tej lekcji dowiesz się, co się dzieje, gdy wstawisz pętlę do innej pętli.
               description_teacher: Na tych zajęciach internetowych uczniowie będą mieli możliwość wypchnięcia ich zrozumienia dla pętli na zupełnie nowy poziom. Rozgrywając grę "Pszczółka i rośliny kontra zombie" [Bee and Plants vs Zombies], uczniowie będą się uczyć, jak programować pętlę, aby znalazła się z innej pętli. Będą również zachęcani do wymyślenia sposobu, w jaki niewielkie zmiany w pętli będzie wpływać na program, gdy klikają "Uruchom".
             The Power of Words:
               key: Moc słów
@@ -17522,11 +17495,7 @@ pl:
               key: AI dla oceanów
               name: AI dla oceanów
               description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
-              description_teacher: |
-                **Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\r
-                \r
-                \r
-                **Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\r
+              description_teacher: "**Podsumowanie samouczka**: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując usunć śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.\\r\n\\r\n\\r\n**Sprawdzanie poprawności:** W ramach tego samouczka uczniowie nie będą otrzymywali informacji, czy ukończyli poziom poprawnie. Istnieje możliwość szybkiego pominięcia wielu części ćwiczenia. Zachęcaj uczniów do oglądania filmów wideo, czytania instrukcji oraz wypróbowania różnych rzeczy w trakcie. W dowolnym momencie mogą przestawić swoje wnioski Tobie lub komuś z klasy.\\r"
             Internet:
               key: Internet
               name: Internet
@@ -17581,10 +17550,16 @@ pl:
               description_teacher: "Podczas tej lekcji uczniowie będą pracować nad serią poziomów programowania na komputerze, kończąc na otwartym zadaniu „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika. \n"
             lesson-9:
               name: Historie pustej przestrzeni
+              description_student: 'W tym ćwiczeniu użyjesz historii do wypełnienia (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki sposób komputery przyjmują i przechowują dane wejściowe od użytkownika, a następnie wykorzystasz je podczas działania programu. '
+              description_teacher: 'W tym ćwiczeniu użyjesz historii do wypełnienia (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki sposób komputery przyjmują i przechowują dane wejściowe od użytkownika, a następnie wykorzystasz je podczas działania programu. '
             lesson-10:
               name: Przechowywanie i przetwarzanie tekstu
+              description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite Lab. 
+              description_teacher: Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać wartości, a następnie wydrukują te wartości wraz z innym tekstem. 
             lesson-5:
               name: Epidemia
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. 
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -17732,7 +17707,7 @@ pl:
             Alien Dance Party:
               key: Potańcówka ufoludków
               name: Potańcówka ufoludków
-              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym i rodzinie.
+              description_student: Twórz projekt interaktywny, który możesz udostępnić kolegom z klasy.
               description_teacher: 'Na tej lekcji wykorzystuje się interfejs Sprite Lab, platformę, na której uczniowie mogą tworzyć swoją własną potańcówkę ufoludków z interakcjami między postaciami i danych użytkownika. Uczniowie będą posługiwać się zdarzeniami, aby kontrolować grę.'
             Behaviors in Sprite Lab:
               key: Zachowania w interfejsie Sprite Lab
@@ -18205,7 +18180,7 @@ pl:
             lesson12:
               name: Lekcja 12
             lesson13:
-              name: 'Lekcja 13'
+              name: Lekcja 13
             lesson14:
               name: Lekcja 14
             lesson15:
@@ -18215,7 +18190,7 @@ pl:
             lesson17:
               name: Lekcja 17
             lesson18:
-              name: Lekcja 18
+              name: 'Lekcja 18'
             lesson19:
               name: 'Lekcja 19'
             lesson20:
@@ -18230,6 +18205,57 @@ pl:
           lessons:
             lesson-1:
               name: Lekcja 1
+              description_student: Na tej lekcji poznasz wartości inżynierii oprogramowania i sposoby, w jakie je praktykujesz w innych aspektach swojego życia. Pod koniec tej lekcji odkryjesz własną tożsamość inżynierii oprogramowania! 
+              description_teacher: Wiara we własną tożsamość inżynierii oprogramowania rozwija pewność siebie i wytrwałość. Ta lekcja wprowadza podstawowe wartości inżynierii oprogramowania i bada typowe spostrzeżenia, jakie mogą mieć uczniowie. Zastanawiają się oni, jak już praktykują wiele z tych wartości, aby odkryć własną tożsamość inżynierii oprogramowania. 
+            lesson-2:
+              name: Lekcja 2
+              description_student: Zbadasz, jak działa The Neighborhood i poznasz niektóre kluczowe komponenty języka programowania Java. Spotykasz „Malarza” i wprowadzisz zmiany w kodzie, aby dowiedzieć się, co potrafi „Malarz".
+              description_teacher: 'Uczniowie korzystają z Java Lab, aby zbadać The Neighborhood i zapoznają się z klasą „Malarz”. Badają kod startowy i dokonują prostych modyfikacji, aby otrzymać różne wyniki za pomocą obiektu „Malarz” i ćwiczą tworzenie obiektu „Malarz”, aby zidentyfikować relacje między klasą a obiektem. '
+            lesson-3:
+              name: Korzystanie z poleceń 
+              description_student: 'Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń akcji w tej lekcji, aby przesunąć „Malarza” po okolicy. Dowiesz się o niektórych zasadach Javy, których musisz przestrzegać, aby Malarz się poruszał. '
+              description_teacher: 'Podczas tej lekcji uczniowie wdrażają rozwiązania za pomocą poleceń akcji, aby poruszać „Malarzem” po okolicy. Rozwijają umiejętności myślenia komputacyjnego, tłumacząc rozwiązania na kod Java, ćwicząc powielanie wzorców. Podczas rozwiązywania tych problemów, uczą się, jak ważne jest uwzględnianie wielkości liter i średników w Javie, i są narażeni na użycie notacji kropkowej do wywoływania poleceń „Malarz”.'
+            lesson-4:
+              name: Warunki i debugowanie
+              description_student: 'Teraz, gdy wiesz, jak używać poleceń akcji, pomagasz `Malarzowi` w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem za pomocą poleceń zbierających informacje. Dowiesz się również o debugowaniu i zidentyfikujesz strategie do wykorzystania przez cały rok. '
+              description_teacher: 'Na tej lekcji uczniowie modyfikują programy przy użyciu trzech poleceń zwrotnych: `isOnPaint ()`, `isOnBucket ()` i `canMove ()`. Instrukcje logiczne, instrukcje warunkowe i instrukcje powrotu są wprowadzane za pomocą instrukcji `jeżli` i poleceń powrotu` Malarz`, aby mogli ćwiczyć używanie logiki warunkowej w swoich programach. Pojęcia te zostaną omówione bardziej szczegółowo na przyszłych lekcjach i utrwalone w trakcie kursu. Uczniowie opracowują również strategie debugowania, identyfikując błędy składniowe i logiczne. '
+            lesson-5:
+              name: Więcej z obiektami 
+            lesson-6:
+              name: Pętle "dopóki" i praktyka
+            lesson-7:
+              name: Więcej z warunkami
+            lesson-8:
+              name: Wprowadzenie do weryfikacji kodu 
+            lesson-9:
+              name: Dziedziczenie i metody 
+            lesson-10:
+              name: Więcej metod, więcej właściwości
+            lesson-11:
+              name: Metody malowania
+            lesson-12:
+              name: Malarz natryskowy
+            lesson-13:
+              name: Malarz stempli
+            lesson-14:
+              name: Skrajne przypadki
+            lesson-15:
+              name: Podsumowanie inżynierii oprogramowania 
+            lesson-16:
+              name: 'Projekt: Osobisty Symbol - Dzień 1 '
+            lesson-17:
+              name: 'Projekt: Osobisty Symbol - Dzień 2'
+            lesson-18:
+              name: 'Projekt: Osobisty Symbol - Dzień 3'
+            lesson-19:
+              name: Dzień FRQ
+            lesson-20:
+              name: 'Lekcja 15: Dzień sprawdzianu'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz 
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -18338,10 +18364,40 @@ pl:
               name: Bot Haiku
             Poem Bot:
               name: Bot Haiku
+            write a haiku:
+              name: Napisz Haiku
+            Plan Your Haiku Poem:
+              name: Zaplanuj swoje Haiku
+            Programming Poem Bot:
+              name: Bot Haiku
+            poetry circle:
+              name: Koło poezji
           lesson_groups:
             haiku bot:
               display_name: Bot Haiku
             poem bot:
+              display_name: Bot Haiku
+            rampup:
+              display_name: Przyspieszenie kodowania 
+              description: Naucz się podstaw kodowania z duszkami i tekstem! 
+            write a haikut:
+              display_name: Napisz Haiku
+            plan your poem:
+              display_name: Zaplanuj swoje Haiku
+            poetry circle:
+              display_name: Koło poezji
+            Lesson 1:
+              display_name: Lekcja 1
+              description: Naucz się podstaw kodowania z duszkami i tekstem! 
+            Lesson 2:
+              display_name: Lekcja 2
+            Lesson 3:
+              display_name: Lekcja 3
+            Lesson 4:
+              display_name: Lekcja 4
+            Lesson 5:
+              display_name: Lekcja 5
+            Peom Bot:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku

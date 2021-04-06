@@ -20005,13 +20005,15 @@ fil:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
             csf_variables:
-              display_name: Mga variable
+              display_name: For Loops
             csf_for_loops:
               display_name: For Loops
             csf_sprites:
-              display_name: Mga Sprites
-            lessonGroup-8:
               display_name: Epekto ng Pag-Compute
+            lessonGroup-8:
+              display_name: Mga variable
+            lessonGroup-9:
+              display_name: tanggalin
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga
             event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
             pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng
@@ -20053,8 +20055,6 @@ fil:
               name: Naka-nest na mga Loop sa Frozen
             'Looking Ahead with Minecraft ':
               name: Masdan ang Hinaharap
-              description_student: Iwasan ang laba! Dito matutunan mo ang tungkol
-                sa mga kondisyonal sa mundo ng Minecraft.
             If/Else with Bee:
               key: Mga Kondisyonal sa Bee
               name: Mga Kondisyonal sa Bee
@@ -20113,12 +20113,11 @@ fil:
                 loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
                 sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
                 sining sa libreng laro na antas.
-            Alien Dance Party:
-              description_student: Magsanay sa paggawa ng mga laro para ibahagi sa
-                iyong mga kaibigan at pamilya.
             End of Course Project:
               description_student: Ihanda ang iyong mga kamay para sa maraming pag-code!
                 Oras na para magsimulang bumuo ng iyong proyekto.
+            lesson-1:
+              name: Dance Party
           lesson_groups:
             csf_loops:
               display_name: Mga loop
@@ -20200,6 +20199,8 @@ fil:
               display_name: Mga variable
             Sprites:
               display_name: Mga Sprites
+            variables:
+              display_name: Mga variable
         csd4-preview-2021:
           description: Ang Yunit 4 ay nagpapakilala sa mas pinalawak na epekto ng
             pag-compute sa lipunan. Sa pamamagitan ng isang serye ng mga pag-disenyo
@@ -20944,6 +20945,8 @@ fil:
             lesson14:
               name: Aralin 14
             lesson15:
+              name: Araling 15
+            lesson17:
               name: Araling 15
         k5-onlinepd-2021:
           lessons:

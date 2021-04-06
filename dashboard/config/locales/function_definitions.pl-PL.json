@@ -1004,7 +1004,7 @@
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
             "name": "narysuj trójkąt",
-            "description": "narysuj trójkąt o bokach o długości 50 pikseli"
+            "description": "narysuj trójkąt o bokach długości 50 pikseli"
           }
         },
         "NEW Course 4 Artist Params 4": {
@@ -1036,14 +1036,14 @@
             "parameters": {
               "length": "długość"
             },
-            "description": "narysuj sześciokąt o bokach o długości 100 pikseli"
+            "description": "narysuj sześciokąt o bokach długości 100 pikseli"
           },
           "draw a square": {
             "name": "narysuj kwadrat",
             "parameters": {
               "length": "długość"
             },
-            "description": "Narysuj kwadrat, który ma bok długości 100 pikseli."
+            "description": "narysuj kwadrat, który ma bok długości 100 pikseli."
           },
           "draw a sqaure": {
             "parameters": {
@@ -1059,7 +1059,7 @@
             "parameters": {
               "length": "długość"
             },
-            "description": "narysuj kwadrat przy pomocy parametru długości"
+            "description": "narysuj kwadrat z parametrem długość boku"
           }
         },
         "NEW Course 4 Artist Params 8": {

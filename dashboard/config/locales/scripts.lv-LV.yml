@@ -2220,7 +2220,7 @@ lv:
               name: Dziesmu rakstīšana
           lesson_groups:
             ramp_up:
-              display_name: Cikli
+              display_name: Cikls ciklā
             csf_digcit:
               display_name: Digitālā pilsonība
             csf_nested_loops:
@@ -2242,9 +2242,13 @@ lv:
             csf_digcit:
               display_name: Digitālā pilsonība
             csf_variables:
-              display_name: Mainīgie
+              display_name: '"par" cikli'
             csf_for_loops:
               display_name: '"par" cikli'
+            lessonGroup-8:
+              display_name: Mainīgie
+            lessonGroup-9:
+              display_name: noņemt
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2268,6 +2272,8 @@ lv:
             ramp_up:
               display_name: Ievads
             lessonGroup-3:
+              display_name: Mainīgie
+            variables:
               display_name: Mainīgie
         k5-onlinepd-2021:
           lessons:

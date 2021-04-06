@@ -1127,6 +1127,8 @@ zh-TW:
               name: 包含關卡
             ML Fish:
               name: ML 魚
+            Java Lab:
+              name: Java 實驗室
         algebraPD2b:
           title: 代數裡的計算機科學 PD
           description: '階段 2 暑假的線上混合式學習'
@@ -14476,10 +14478,7 @@ zh-TW:
             Private and Personal Information:
               name: 私密與個人資訊
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
-              description_teacher: |-
-                本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\r
-                \r
-                瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。
+              description_teacher: "本課堂由常識教育（Common Sense Education）制定，內容關於可在線上安全分享的內容，與不可在線上安全分享的內容有哪些區別。\\r\n\\r\n瀏覽一些網站時，若網站請求學生取得他們身分的資訊，他們就會學習採取批判性的查詢程序，讓他們能保護自己與家人免遭盜用身分。在本課堂中，學生會學習以批判思考方式，思考部分網站請求或要求取得的使用者資訊。他們會學習私密資訊與個人資訊的分別，並瞭解如何分辦哪些內容可在線上安全分享，哪些內容則不安全。"
             About Me:
               name: 關於我
               description_student: 學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。
@@ -14617,10 +14616,7 @@ zh-TW:
             The Power of Words:
               name: 語言的力量
               description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
-              description_teacher: |-
-                學生要思考一下，他們在瀏覽喜愛的網站時，可能會有其他小孩傳送某些訊息，令他們憤怒、受傷、不快或恐懼。他們會學習一些方法處理網路霸凌，以及在線上面對難聽的話時應怎樣做出反應。\r
-                \r
-                學生會討論在通訊時所有使用科技的方式，並探索親身會面與線上溝通的相似與相異之處。學生之後會一起討論如何面對網路霸凌。
+              description_teacher: "學生要思考一下，他們在瀏覽喜愛的網站時，可能會有其他小孩傳送某些訊息，令他們憤怒、受傷、不快或恐懼。他們會學習一些方法處理網路霸凌，以及在線上面對難聽的話時應怎樣做出反應。\\r\n\\r\n學生會討論在通訊時所有使用科技的方式，並探索親身會面與線上溝通的相似與相異之處。學生之後會一起討論如何面對網路霸凌。"
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
               description_student: 本課堂會教導你關於群眾外包（Crowdsourcing）的知識，這是以團隊製作專案的流程。
@@ -15466,6 +15462,8 @@ zh-TW:
               name: 編碼一個模擬
             Sprites in Action:
               name: 運行中的角色
+            End of Course Project:
+              name: 課程結束專案
           lesson_groups:
             introduction:
               display_name: 介紹
@@ -16436,7 +16434,7 @@ zh-TW:
               key: 收藏家中的迴圈（Loops）
               name: 與 Laurel 一起學習迴圈
               description_student: 為冒險家 Laurel 編寫程式，讓她能夠在開放的洞穴中收集寶藏。
-              description_teacher: 在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get treasure」（取得寶藏）積木，協助她完成旅程。
+              description_teacher: '在本課堂中，學生會繼續學習迴圈（loop）的概念。在這裡，冒險家 Laurel 會使用迴圈，在開放的洞穴中收集寶藏。這個時候會介紹新的「get treasure」（取得寶藏）積木，協助她完成旅程。'
             Loops in Artist:
               key: 藝術家中的迴圈（Loops）
               name: 使用迴圈（Loop）在花園中繪畫
@@ -16547,8 +16545,8 @@ zh-TW:
             Picturing Data:
               key: 描繪資料
               name: 描繪資料
-              description_student: 資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。
-              description_teacher: 資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。
+              description_student: '資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。'
+              description_teacher: '資料可用來幫助學生瞭解自己的世界，並解答有趣的問題。在本課堂中，學生會收集一個 Play Lab 專案的資料，並使用不同類型的圖表將資料視覺化。'
             'End of Course Project: Create a Play Lab Game':
               name: 課程結束專案
               description_student: 準備就緒，開始編寫大量程式！是時候開始製作你的專案了。
@@ -16584,12 +16582,11 @@ zh-TW:
               key: 線上謎題簡介
               name: 線上謎題簡介
               description_student: 本課堂會讓你練習本課程中需要的技巧。
-              description_teacher: '在這組謎題中，首先會向學生簡介（或重溫，視你的班級經驗而定） Code.org 的線上工作區。我們有各種影片指出工作區的基本功能，包括「Run」（執行）、「Reset」（重設）與「Step」（步進）按鈕。這些影片也會說明怎樣拖曳 Blockly 積木、刪除 Blockly 積木與連接 Blockly 積木。之後，學生會在迷宮裡練習_序列_與_除錯_技巧。接著，學生會在學習_迴圈_的基本知識時看到一些新的謎題類型，例如收藏家、藝術家與收割者。'
+              description_teacher: 在這組謎題中，首先會向學生簡介（或重溫，視你的班級經驗而定） Code.org 的線上工作區。我們有各種影片指出工作區的基本功能，包括「Run」（執行）、「Reset」（重設）與「Step」（步進）按鈕。這些影片也會說明怎樣拖曳 Blockly 積木、刪除 Blockly 積木與連接 Blockly 積木。之後，學生會在迷宮裡練習_序列_與_除錯_技巧。接著，學生會在學習_迴圈_的基本知識時看到一些新的謎題類型，例如收藏家、藝術家與收割者。
             Relay Programming:
               key: 接力編程
               name: 接力編程
               description_student: 還記得課程開始時，你使用程式碼繪畫嗎？在本課堂中，你會與一個團隊合作，做一些類似的事情！
-              description_teacher: 這項活動首先會以簡短的課堂開始，內容關於除錯與堅持，然後會快速轉至倒數計時活動，學生會分為多個團隊，一起編寫程式，每次編寫一項指令。
             Debugging in Collector:
               key: 和收藏家學除錯（Debug）
               name: 和 Laurel 學除錯（Debug）
@@ -16624,7 +16621,7 @@ zh-TW:
               key: 蜜蜂裡的巢狀迴圈（Nested Loops）
               name: 迷宮裡的巢狀迴圈（Nested Loops）
               description_student: 迴圈裡的迴圈裡的迴圈 - 這是甚麼意思？本課堂會說明你在建立巢狀迴圈（nested loop）時會發生甚麼事。
-              description_teacher: 在這項線上活動中，學生將有機會把自己對迴圈（loop）的認識推上另一個新的層次。學生會玩蜜蜂和植物大戰殭屍，同時學習怎樣設計程式，使一個迴圈放進另一個迴圈內。我們也會鼓勵學生瞭解，任一個迴圈的少許變更，可怎樣影響程式在點擊「Run」（執行）後的結果。
+              description_teacher: '在這項線上活動中，學生將有機會把自己對迴圈（loop）的認識推上另一個新的層次。學生會玩蜜蜂和植物大戰殭屍，同時學習怎樣設計程式，使一個迴圈放進另一個迴圈內。我們也會鼓勵學生瞭解，任一個迴圈的少許變更，可怎樣影響程式在點擊「Run」（執行）後的結果。'
             Conditionals with Cards:
               key: 用撲克牌學習條件判斷（Conditionals）
               name: 用撲克牌學習條件判斷（Conditionals）
@@ -16705,7 +16702,7 @@ zh-TW:
               key: 用藝術家設計程式並練習迴圈（Loop）
               name: 以迴圈（Loop）繪畫
               description_student: 在本課堂中，迴圈（loop）讓你在藝術家中輕鬆製作更酷炫的圖像！
-              description_teacher: 觀看學生怎樣使用少量積木與數位貼紙創作精彩的設計，讓他們歡喜雀躍！本課堂以先前的課堂中對迴圈的認識為基礎，讓學生有機會真正發揮創意。這項活動非常適合用來製作數位作品，或是用於家長/教師會議。
+              description_teacher: '觀看學生怎樣使用少量積木與數位貼紙創作精彩的設計，讓他們歡喜雀躍！本課堂以先前的課堂中對迴圈的認識為基礎，讓學生有機會真正發揮創意。這項活動非常適合用來製作數位作品，或是用於家長/教師會議。'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraft 中的條件式：水上巡航 '
               name: 'Minecraft 中的條件式：水上巡航 '
@@ -16715,7 +16712,7 @@ zh-TW:
               key: 條件判斷（Conditionals）
               name: 與農夫一起嘗試條件式（Conditional）
               description_student: 在這個有趣而具挑戰的遊戲系列中，你會告訴電腦在某些特定條件下如何行動。
-              description_teacher: 本課堂會向學生介紹「while」（當）迴圈與「if / else」（如果/否則）陳述句。_While 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。
+              description_teacher: '本課堂會向學生介紹「while」（當）迴圈與「if / else」（如果/否則）陳述句。_While 迴圈_ 用於在條件是 true 時繼續重複命令。While 迴圈的使用情況是：程式設計師不知道命令確實需要重複多少次，但是知道哪項條件需要為 true，才可讓迴圈繼續重複。「If / Else」陳述句為程式設計提供彈性，程式僅會在某個項目為 true 時執行整個部分，否則便會執行其他項目。'
             Simon Says:
               key: 老師說
               description_student: 玩一款遊戲，想想需要使用哪些命令才可獲得正確的結果。
@@ -16724,7 +16721,7 @@ zh-TW:
               key: 在 Sprite Lab 中學習角色（Sprite）
               name: Sprite Lab 中的游泳小魚
               description_student: 學習建立與編輯角色（sprite）。
-              description_teacher: '在本課堂中，學生會學習 Sprite Lab 的 2 大核心概念：角色（sprite）與行為。角色是畫面上的人物或物件，學生可移動、變更或操控角色。行為是讓角色連續進行的動作，直到角色停止。'
+              description_teacher: 在本課堂中，學生會學習 Sprite Lab 的 2 大核心概念：角色（sprite）與行為。角色是畫面上的人物或物件，學生可移動、變更或操控角色。行為是讓角色連續進行的動作，直到角色停止。
             Alien Dance Party with Sprite Lab:
               key: 用 Sprite Lab 創作外星人舞蹈派對
               name: 用 Sprite Lab 創作外星人舞蹈派對
@@ -16736,7 +16733,7 @@ zh-TW:
               description_student: 網際網路刺激有趣，但是也有必要保持安全！本課堂會教你有哪些資訊可安全分享，有哪些資訊則應保持私密。
             About Me:
               key: 關於我
-              name: 關於我
+              name: '關於我'
               description_student: 學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。
               description_teacher: "學生會使用 SpriteLab 製作互動海報，從而應用在網際網路上分享個人與私人資訊的知識。\\r\n"
             Digital Sharing:
@@ -16754,7 +16751,7 @@ zh-TW:
               description_student: 更多巢狀迴圈（nested loop）！這一次，你將能夠使用巢狀迴圈製作一些非常漂亮的圖畫！
             Nested Loops in Frozen:
               key: 冰雪奇緣中的巢狀迴圈（Nested Loop）
-              name: 在冰雪奇緣中使用巢狀迴圈（Nested Loop）
+              name: '在冰雪奇緣中使用巢狀迴圈（Nested Loop）'
               description_student: '安娜與艾莎的滑冰技術非常出眾，但是需要你的協助，在冰上建立模式。請使用巢狀迴圈（nested loop）製作非常酷炫的效果！'
               description_teacher: 學生已學懂怎樣把迴圈分層，現在他們可製作許多漂亮的東西。本課堂會把學生帶到一系列的練習中，協助他們運用安娜與艾莎的優秀滑冰技巧，製作適用於自己個人作品的圖像！
             'Functions: Songwriting':
@@ -16831,7 +16828,7 @@ zh-TW:
             Nested Loops in the Maze:
               key: 迷宮裡的巢狀迴圈（Nested Loop）
               name: 迷宮裡的巢狀迴圈（Nested Loops）
-              description_student: "迴圈裡的迴圈裡的迴圈 - 這是甚麼意思？本課堂會說明把迴圈放進另一個迴圈裡會發生甚麼事。"
+              description_student: 迴圈裡的迴圈裡的迴圈 - 這是甚麼意思？本課堂會說明把迴圈放進另一個迴圈裡會發生甚麼事。
               description_teacher: 在這項線上活動中，學生將有機會把自己對迴圈（loop）的認識推上另一個新的層次。學生會玩蜜蜂和植物大戰殭屍，同時學習怎樣設計程式，使一個迴圈放進另一個迴圈內。我們也會鼓勵學生瞭解，任一個迴圈的少許變更，可怎樣影響程式在點擊「Run」（執行）後的結果。
             The Power of Words:
               key: 語言的力量
@@ -17054,7 +17051,8 @@ zh-TW:
             Alien Dance Party:
               key: 外星人舞蹈派對
               name: 外星人舞蹈派對
-              description_student: 練習製作遊戲，並與好友和家人分享。
+              description_student: 製作可與同學分享的互動專案。
+              description_teacher: '本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。'
             Behaviors in Sprite Lab:
               key: Sprite Lab 的行為（Behavior）
               name: Sprite Lab 的行為（Behavior）
@@ -17380,6 +17378,15 @@ zh-TW:
               name: 第 14 課
             lesson15:
               name: 第 15 課
+            lesson17:
+              name: 第 15 課
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 課堂 15：評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
         k5-onlinepd-2021:
           title: 計算機科學基礎的教授
           description: "使用 Code.org 的電腦科學基礎 - 免費的自訂進度線上課程，學習怎樣教授電腦科學！"

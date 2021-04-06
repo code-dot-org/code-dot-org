@@ -133,8 +133,9 @@ vi:
             phức tạp hơn. Cuối khóa học này, học viên tạo cốt truyện và trò chơi có
             tương tác mà họ muốn chia sẻ với bất cứ ai. Khuyến khích cho học sinh
             các lớp 4-5.
-          description_short: Khóa học 3 là kháo học sau khóa học 2.
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_short: Đi sâu hơn nữa vào lập trình trong khi xây dựng trò chơi
+            và câu chuyện tương tác. Đây là phần tiếp theo của Khóa học 2.
+          description_audience: 8-18 tuổi
           lessons:
             Artist:
               name: Họa sĩ
@@ -220,6 +221,8 @@ vi:
             kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn
             trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có
             thể chia sẻ với bạn bè của bạn!
+          description_short: Hãy sử dụng mã để tham gia cùng Anna và Elsa khi họ khám
+            phá sự kỳ diệu và vẻ đẹp của băng.
           lessons:
             Artist:
               name: Họa sĩ
@@ -235,9 +238,10 @@ vi:
             quyết các thách thức. Khi hoàn tất khóa học này, học sinh sẽ tạo ra chương
             trình sử dụng nhiều kỹ năng, bao gồm vòng lặp, hàm có tham số. Khuyến
             nghị cho lớp 4-8.
-          description_short: Sinh viên tham gia khóa học 4 cần phải hoàn thành các
-            khóa học 2 và 3.
-          description_audience: Lứa tuổi 10 + (sau khóa học 3)
+          description_short: Xây dựng các chương trình phức tạp hơn với các khái niệm
+            như vòng lặp và các hàm với các tham số. Đây là phần tiếp theo của Khóa
+            học 3.
+          description_audience: 9-18 tuổi
           lessons:
             Artist:
               name: Họa sĩ
@@ -2318,7 +2322,7 @@ vi:
             Drawing in Game Lab:
               name: Bản vẽ trong Kho trò chơi
         CSF_Secret_Sample:
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_audience: 8-18 tuổi
           lessons:
             Sample Stage:
               name: Giai đoạn mẫu
@@ -2589,7 +2593,7 @@ vi:
             Sample Stage:
               name: Giai đoạn mẫu
         artistExemplar:
-          description_audience: Lứa tuổi 8 + (sau khi khóa học 2)
+          description_audience: 8-18 tuổi
         teachercon:
           lesson_groups:
             required:
@@ -3299,6 +3303,8 @@ vi:
             Your Digital Footprint:
               name: Dấu chân kỹ thuật số
         coursec-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
             Programming in Maze:
               name: Lập trình trong mê cung
@@ -3315,6 +3321,8 @@ vi:
             Building a Foundation:
               name: Xây dựng nền tảng
         coursed-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
             More Programming with CS4FN:
               name: Lập trình nhiều hơn với CS4FN
@@ -3329,6 +3337,8 @@ vi:
             Introduction:
               name: Giới thiệu
         coursee-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lesson_groups:
             content:
               display_name: Nội dung
@@ -3344,6 +3354,8 @@ vi:
             Conditionals:
               name: Điều kiện
         coursef-draft:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lesson_groups:
             content:
               display_name: Nội dung
@@ -3801,6 +3813,10 @@ vi:
             Bounce:
               name: Bật lại
         coursea-2017:
+          title: Khóa học A
+          assignment_family_title: Khóa học A
+          description_audience: 'Tuổi: 4-7'
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -3809,6 +3825,11 @@ vi:
             Programming in Maze:
               name: Lập trình trong mê cung
         courseb-2017:
+          title: Khóa học B
+          assignment_family_title: Khóa học B
+          description_audience: 'Tuổi: 5-8'
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+            (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -3819,16 +3840,32 @@ vi:
             Programming with Rey and BB-8:
               name: Lập trình cùng Rey và robot BB-8
         coursec-2017:
+          title: Khóa học C
+          assignment_family_title: Khóa học C
+          description_audience: 'Tuổi: 6-10'
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
           lessons:
             Programming in Maze:
               name: Lập trình trong mê cung
             'Real-life Algorithms: Paper Planes':
               name: 'Thuật toán trong đời sống: Máy bay giấy'
         coursed-2017:
+          title: Khóa học D
+          assignment_family_title: Khóa học D
+          description_audience: 'Tuổi: 7-11'
+          description_short: Nhanh chóng bao quát các khái niệm từ Khóa học C, sau
+            đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn
+            thế nữa.
           lessons:
             Nested Loops:
               name: Vòng lặp lồng nhau
         coursee-2017:
+          title: Khóa học E
+          assignment_family_title: Khóa học E
+          description_audience: 'Tuổi: 8-12'
+          description_short: Nhanh chóng bao gồm các khái niệm trong Khóa học C &
+            D và sau đó đi xa hơn với các chức năng.
           lessons:
             Ice Age Play Lab:
               name: Kho dữ liệu trò chơi Kỷ băng hà
@@ -3849,6 +3886,12 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
         coursef-2017:
+          title: Khóa học F
+          assignment_family_title: Khóa học F
+          description_audience: 'Tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -4116,6 +4159,9 @@ vi:
             Complete Unit 2 Deeper Learning Reflections:
               name: Hoàn thành Phần 2 Cảm tưởng về việc học sâu hơn
         express-2017:
+          description_short: 'Giới thiệu về khoa học máy tính: kết hợp những gì tốt
+            nhất của chương trình giảng dạy tiểu học của chúng tôi dành cho học sinh
+            lớn hơn.'
           lesson_groups:
             content:
               display_name: Nội dung
@@ -4137,6 +4183,10 @@ vi:
             Nested Loops:
               name: Vòng lặp lồng nhau
         pre-express-2017:
+          title: Đọc trước
+          description_short: 'Giới thiệu về khoa học máy tính cho người đọc trước:
+            kết hợp những gì tốt nhất của các khóa học mẫu giáo và lớp một của chúng
+            tôi.'
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -4716,6 +4766,9 @@ vi:
                 CSS mới trên Dessert của trang thế giới. Sau đó, tất cả mọi người
                 áp dụng kiến thức mới này cho các trang web cá nhân của họ.
         coursea-2018:
+          assignment_family_title: Khóa học A
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lessons:
             'Programming: Happy Maps':
               name: Bản đồ thú vị
@@ -4774,6 +4827,8 @@ vi:
             Graph Paper Programming:
               name: lập trình đồ thị trên giấy
         courseb-2018:
+          assignment_family_title: Khóa học B
+          description_audience: 'Tuổi: 5-8'
           lessons:
             'Debugging: Unspotted Bugs':
               name: 'Gỡ lội: Những chú bọ không đốm'
@@ -4791,6 +4846,8 @@ vi:
               name: Di chuyển nó, di chuyển nó
         coursed-2018:
           title: Kịch bản khóa D mới
+          assignment_family_title: Khóa học D
+          description_audience: 'Tuổi: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -4811,6 +4868,10 @@ vi:
             Relay Programming:
               name: Chương trình chuyển tiếp
         coursec-2018:
+          assignment_family_title: Khóa học C
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lessons:
             Building a Foundation:
               name: Xây dựng nền tảng
@@ -4832,6 +4893,8 @@ vi:
             Functions with Parameters:
               name: Hàm và tham số
         coursee-2018:
+          assignment_family_title: Khóa học E
+          description_audience: 'Tuổi: 8-12'
           lessons:
             'Programming: My Robotic Friends':
               name: Bạn bè robot của tôi
@@ -4852,6 +4915,11 @@ vi:
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
         coursef-2018:
+          assignment_family_title: Khóa học F
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             'Programming: My Robotic Friends':
               name: Bạn bè robot của tôi
@@ -5431,8 +5499,8 @@ vi:
               name: Họa sĩ
         dance:
           title: Bữa tiệc khiêu vũ
-          description_short: Với Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara, và 25 nghệ sĩ khác!
+          description_short: Có Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara và 25 người khác!
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
             bè của mình!
           lessons:
@@ -5448,8 +5516,8 @@ vi:
               name: Họa sĩ
         aquatic:
           title: Minecraft Chuyến thám hiểm đại dương
-          description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới
-            cho Giờ Lập trình!
+          description_short: Sử dụng khả năng sáng tạo và giải quyết vấn đề của bạn
+            để khám phá và xây dựng thế giới dưới nước bằng mã!
           lessons:
             Aquatic:
               name: Minecraft
@@ -5475,6 +5543,10 @@ vi:
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
             tưởng dự án mở rộng.
         coursef-2019:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_variables:
               display_name: Các biến
@@ -5510,6 +5582,7 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursed-2019:
+          description_audience: 'Tuổi: 7-11'
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -5539,6 +5612,7 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2019:
+          description_audience: 'Tuổi: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5641,6 +5715,9 @@ vi:
           student_description: Hãy làm nhiều hơn nữa so với giờ đầu tiên với các ý
             tưởng dự án mở rộng.
         coursec-2019:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5668,6 +5745,8 @@ vi:
         gamelab:
           title: Phòng thí nghiệm trò chơi
         coursea-2019:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -5694,6 +5773,7 @@ vi:
               name: Học về chuỗi tuần tự cùng sóc Scrat
               description_student: Viết chương trình để Scrat tìm đến hạt sồi.
         courseb-2019:
+          description_audience: 'Tuổi: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6950,6 +7030,8 @@ vi:
             Text:
               name: Văn bản
         coursea-2020:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6972,6 +7054,7 @@ vi:
             Ocean Scene with Loops:
               name: Vòng lặp trong câu chuyện về biển
         courseb-2020:
+          description_audience: 'Tuổi: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -6991,6 +7074,9 @@ vi:
             'Loops: Getting Loopy':
               name: Tạo vòng lặp
         coursec-2020:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7010,6 +7096,7 @@ vi:
             'Events: The Big Event':
               name: Sự kiện lớn
         coursed-2020:
+          description_audience: 'Tuổi: 7-11'
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7039,6 +7126,7 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
         coursee-2020:
+          description_audience: 'Tuổi: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7054,6 +7142,10 @@ vi:
             'Functions: Songwriting':
               name: Sáng tác với tham số
         coursef-2020:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -7477,6 +7569,12 @@ vi:
           lesson_groups:
             lg_1:
               display_name: Nội dung
+        curriculum-sandbox-levels:
+          lessons:
+            Course A:
+              name: Khóa học A
+            Course B:
+              name: Khóa học B
         virustest:
           title: Mô phỏng dịch bệnh bùng phát
           description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh
@@ -7706,6 +7804,8 @@ vi:
               key: Tạo PT - hoàn thành nhiệm vụ
               name: Tạo PT - hoàn thành nhiệm vụ
         coursea-2021:
+          description_short: Giới thiệu về khoa học máy tính cho người đọc trước.
+          description_audience: 'Tuổi: 4-7'
           lessons:
             'Programming: Happy Maps':
               name: Bản đồ thú vị
@@ -7731,6 +7831,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
         courseb-2021:
+          description_audience: 'Tuổi: 5-8'
           lessons:
             Move It, Move It:
               key: Di chuyển nó, di chuyển nó
@@ -7752,6 +7853,9 @@ vi:
             csf_events:
               display_name: Các sự kiện
         coursec-2021:
+          description_short: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo
+            tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
+          description_audience: 'Tuổi: 6-10'
           lessons:
             Programming in Maze:
               key: Lập trình trong mê cung
@@ -7775,6 +7879,7 @@ vi:
             csf_events:
               display_name: Các sự kiện
         coursed-2021:
+          description_audience: 'Tuổi: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: lập trình đồ thị trên giấy
@@ -7811,6 +7916,7 @@ vi:
             lessonGroup-6:
               display_name: Công dân số
         coursee-2021:
+          description_audience: 'Tuổi: 8-12'
           lessons:
             Sequencing in the Maze:
               key: Chuỗi tuần tự trong mê cung
@@ -7823,7 +7929,7 @@ vi:
               name: Sáng tác với tham số
           lesson_groups:
             ramp_up:
-              display_name: Vòng lặp
+              display_name: Vòng lặp lồng nhau
             csf_digcit:
               display_name: Công dân số
             csf_nested_loops:
@@ -7831,6 +7937,10 @@ vi:
             csf_functions:
               display_name: Các hàm
         coursef-2021:
+          description_short: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học
+            Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng
+            bạn.
+          description_audience: 'Tuổi: 9-13'
           lessons:
             Envelope Variables:
               key: Các biến phong bì
@@ -7848,9 +7958,13 @@ vi:
             csf_digcit:
               display_name: Công dân số
             csf_variables:
-              display_name: Các biến
+              display_name: Cho vòng lặp
             csf_for_loops:
               display_name: Cho vòng lặp
+            lessonGroup-8:
+              display_name: Các biến
+            lessonGroup-9:
+              display_name: xóa
         express-2021:
           lessons:
             Dance Party:
@@ -7861,6 +7975,8 @@ vi:
               name: Gỡ lỗi với Scrat
             'Looking Ahead with Minecraft ':
               name: Nhìn về phía trước
+            lesson-1:
+              name: Bữa Tiệc Khiêu Vũ
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -7902,6 +8018,8 @@ vi:
             outbreak:
               display_name: Mô phỏng dịch bệnh bùng phát
             lessonGroup-3:
+              display_name: Các biến
+            variables:
               display_name: Các biến
         csd4-preview-2021:
           lessons:
@@ -7953,6 +8071,12 @@ vi:
               name: Bài học 14
             lesson15:
               name: Bài học 15
+            lesson17:
+              name: Bài học 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

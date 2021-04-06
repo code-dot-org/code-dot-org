@@ -68,6 +68,7 @@
   "topRight": "crwdns2478976:0crwdne2478976:0",
   "bottomLeft": "crwdns2478978:0crwdne2478978:0",
   "bottomRight": "crwdns2478980:0crwdne2478980:0",
+  "useSetpropBlock": "crwdns2485812:0crwdne2485812:0",
   "useTwoSetpropBlocks": "crwdns2478982:0crwdne2478982:0",
   "setSecondSpriteSize": "crwdns2478984:0crwdne2478984:0",
   "starterSprites": "crwdns2478986:0crwdne2478986:0",
@@ -135,5 +136,16 @@
   "madlibPrintVariable": "crwdns2484022:0crwdne2484022:0",
   "madlibNoSprites": "crwdns2484024:0crwdne2484024:0",
   "madlibNoBehavior": "crwdns2484026:0crwdne2484026:0",
-  "madlibExplore": "crwdns2484028:0crwdne2484028:0"
+  "madlibExplore": "crwdns2484028:0crwdne2484028:0",
+  "cloudOnlyMovedY": "crwdns2484914:0crwdne2484914:0",
+  "butterflyDidntMoveXY": "crwdns2484916:0crwdne2484916:0",
+  "spritelabFeedbackUseFishCostume": "crwdns2484918:0crwdne2484918:0",
+  "spriteLabFeedbackGiveFishBehavior": "crwdns2484920:0crwdne2484920:0",
+  "spritelabFeedbackCreateTwoDifferentSprites": "crwdns2484922:0crwdne2484922:0",
+  "spritelabFeedbackGiveSecondSpriteBehavior": "crwdns2484924:0crwdne2484924:0",
+  "growAndShrink": "crwdns2485814:0crwdne2485814:0",
+  "addPromptWithChoices": "crwdns2485816:0crwdne2485816:0",
+  "addAdditionalPrompts": "crwdns2485818:0crwdne2485818:0",
+  "answerPromptWithChoices": "crwdns2485820:0crwdne2485820:0",
+  "haikuBlock": "crwdns2485822:0crwdne2485822:0"
 }

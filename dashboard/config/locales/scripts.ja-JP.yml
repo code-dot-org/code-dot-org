@@ -15912,6 +15912,8 @@ ja:
               name: スプライトラボの紹介
             Sprites in Action:
               name: 実行中のスプライト
+            End of Course Project:
+              name: コース最後のプロジェクト
           lesson_groups:
             introduction:
               display_name: はじめに
@@ -16900,6 +16902,7 @@ ja:
               key: めいろ のプログラミング
               name: めいろ のプログラミング
               description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
+              description_teacher: アイスエイジのキャラクターを使って、生徒はスクラットを迷路の片側から反対側のどんぐりに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、スクラットをまっすぐ移動、左折、または右折させます。
             Programming in Harvester:
               key: 農夫と学ぶプログラミング
               name: 農夫と学ぶプログラミング
@@ -17081,7 +17084,6 @@ ja:
               key: プログラミングをリレーする
               name: プログラミングをリレーする
               description_student: コースの最初にプログラムで絵を描いことを覚えていますか？このレッスンでは、チームと協力してこれとよく似た作業を行います。
-              description_teacher: このアクティビティは、デバッグと永続性に関する短いレッスンから始まります。その後すぐに、生徒はチームに分かれ、一度に1つの命令を受けて一緒にプログラムを作成する時間との戦いに入ります。
             Debugging in Collector:
               key: コレクターでのデバッグ
               name: ローレルと学ぶデバッグ
@@ -17397,7 +17399,6 @@ ja:
               description_teacher: ここでは、生徒はスプライトラボを使って、独自のカスタマイズされたビヘイビアを作成します。
             Virtual Pet:
               key: バーチャルペット
-              name: スプライトラボでのバーチャルペット
               description_student: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
               description_teacher: このレッスンでは、生徒は希望どおりの外観と動作をするインタラクティブなバーチャルペットを作成します。生徒は、スプライトラボの「コスチューム」ツールを使って、ペットの外観をカスタマイズします。その後、学習したイベント、ビヘイビア、その他の概念を使って、ペットに命を吹き込みます。
             End of Course Project:
@@ -17410,19 +17411,27 @@ ja:
               name: アクセシビリティのための設計
               description_student: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
               description_teacher: このレッスンでは、生徒は架空のアプリのアクセシビリティソリューションをブレインストーミングおよび設計することで、アクセシビリティと共感の価値について学びます。
+            lesson-6:
+              name: スプライトラボの紹介
+            lesson-8:
+              name: 実行中のスプライト
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
             csf_digcit:
               display_name: デジタル シティズンシップ
             csf_variables:
-              display_name: 変数（へんすう）
+              display_name: ループ用
             csf_for_loops:
               display_name: ループ用
+            csf_sprites:
+              display_name: コンピューティングの影響
             end_of_course_project:
               display_name: コース最後のプロジェクト
             lessonGroup-8:
-              display_name: コンピューティングの影響
+              display_name: 変数（へんすう）
+            lessonGroup-9:
+              display_name: へらす
           name: コースf -2021
           student_description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
         express-2021:
@@ -17439,7 +17448,7 @@ ja:
             Programming with Angry Birds:
               key: めいろ のプログラミング
               name: めいろ のプログラミング
-              description_student: アングリーバードでシーケンスとアルゴリズムについて学びましょう。
+              description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
               description_teacher: アングリーバードゲームのキャラクターを使って、生徒はトリを迷路の片側から反対側のブタに移動させる一連のアルゴリズムを開発します。これを行うために、コードブロックを線形のシーケンスで積み上げ、トリをまっすぐ移動、左折、または右折させます。
             Debugging with Scrat:
               key: スクラットと学ぶデバッグ
@@ -17480,7 +17489,7 @@ ja:
             'Looking Ahead with Minecraft ':
               key: マインクラフトで先を見る
               name: マインクラフトで先を見る
-              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習します。
+              description_student: 溶岩を避けて！ここでは、マインクラフトの世界で条件文について学習し始めます。
               description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
             If/Else with Bee:
               key: みつばちと学ぶIf/Else
@@ -17491,7 +17500,6 @@ ja:
               key: 農夫と学ぶWhileループ
               name: 農夫と学ぶWhileループ
               description_student: ループはプログラミングで非常に役立ちます。このレッスンでは、新しい種類のループ、whileループについて説明します！
-              description_teacher: 生徒がこのレッスンに到達する頃には、`repeat`ループを使って練習をたくさん行ってきているはずなので、ここではそれを発展させていきます。_Whileループ_は、条件が満たされている間、コマンドを繰り返し続けるループです。「while」ループは、プログラマーがコマンドを繰り返す必要がある正確な回数を知らない場合に使われますが、ループを繰り返し続けるためにどの条件がtrueである必要があるかを知っています。たとえば、生徒は農夫のゲームで穴を埋めたり、土を掘ったりする操作を行います。穴の大きさや土の山の高さはわかりませんが、地面が平らにならない限り、穴を埋めて土を掘り続ける必要があることを生徒は知っています。
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'マインクラフトの条件文: ボヤージュ アクアティック'
               name: 'マインクラフトの条件文: ボヤージュ アクアティック'
@@ -17556,7 +17564,8 @@ ja:
             Alien Dance Party:
               key: エイリアンダンスパーティー
               name: エイリアンダンスパーティー
-              description_student: ゲームを作成する練習をして、友だちや家族と共有しましょう。
+              description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
+              description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Behaviors in Sprite Lab:
               key: スプライトラボで学ぶビヘイビア
               name: スプライトラボで学ぶビヘイビア
@@ -17571,6 +17580,10 @@ ja:
               key: コース最後のプロジェクト
               name: コース最後のプロジェクト
               description_student: プログラミングをたくさん行う準備をしましょう！プロジェクトの構築を開始する時が来ました。
+            lesson-1:
+              name: ダンスパーティー
+              description_student: お祝いの時間です！このレッスンでは、独自のインタラクティブなダンスパーティーをプログラムします。
+              description_teacher: このレッスンでは、生徒が自分のインタラクティブなダンスパーティーをプログラムします。ツールは音楽に応答するように構築されているため、このアクティビティにはサウンドが必要です。
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -17652,12 +17665,16 @@ ja:
               name: スプライトラボの紹介
             Sprites in Action:
               name: 実行中のスプライト
+            introducing-spritelab:
+              name: スプライトラボの紹介
           lesson_groups:
             ramp_up:
               display_name: はじめに
             introduction:
               display_name: スプライトラボ 入門
             lessonGroup-3:
+              display_name: 変数（へんすう）
+            variables:
               display_name: 変数（へんすう）
         csd4-preview-2021:
           description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
@@ -17878,6 +17895,15 @@ ja:
               name: レッスン14
             lesson15:
               name: レッスン15
+            lesson17:
+              name: レッスン15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'レッスン15: 評価日'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター サイエンスを教える方法を学びましょう！
           student_description: Code.orgのコンピューター サイエンス入門のこの無料セルフペースオンラインコースで、コンピューター

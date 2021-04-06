@@ -1006,6 +1006,7 @@ pl:
             '"x"': współrzędna x
             '"y"': współrzędna y
             '"direction"': kierunku ruchu
+            '"speed"': prędkość
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1277,6 +1278,10 @@ pl:
             '"height"': wysokość
       gamelab_setTint:
         text: zmień kolor {THIS} na {COLOR}
+      gamelab_setupScoreboard:
+        text: |-
+          narysuj tablicę wyników
+          {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
         text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"

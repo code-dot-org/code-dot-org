@@ -977,6 +977,7 @@ cs:
             '"x"': souřadnice X
             '"y"': souřadnice Y
             '"direction"': směr pohybu
+            '"speed"': rychlost
       gamelab_checkTouching:
         text: "{CONDITION} se {SPRITE1} dotkne {SPRITE2}"
         options:
@@ -989,6 +990,8 @@ cs:
         text: klik na {SPRITE}
       gamelab_comment:
         text: 'komentář: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: počet {SPRITE}
       gamelab_createNewSprite:
@@ -1026,6 +1029,8 @@ cs:
             '"frames"': Rámce
       gamelab_hideTitleScreen:
         text: skrýt titulní obrazovku
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} kostým je {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} je stisknuta  "
         options:

@@ -2389,7 +2389,19 @@
         "express_maze_debugging9_2019": "Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň Scrata k žaluďu.",
         "express_maze_debugging9_2020": "Na vytvorenie svojho programu použi bloky z panela nástrojov. Dostaň Scrata k žaluďu.",
         "outbreak_freeplay": "Vykonaj vo svojom projekte akékoľvek zmeny alebo vylepšenia. ",
-        "outbreak_freeplay_basic": "Vykonaj vo svojom projekte akékoľvek zmeny alebo vylepšenia. "
+        "outbreak_freeplay_basic": "Vykonaj vo svojom projekte akékoľvek zmeny alebo vylepšenia. ",
+        "CSDU4 - Design Mode - 4": "Vylepši tlačidlo tak, že si vyberieš zmysluplné ID. (Kliknutím zobrazíš úplné pokyny)",
+        "CourseD_EOC_artist": "Vytvor si vlastnú kresbu!",
+        "CourseD_EOC_bounce1": "Vytvor si vlastný basketbalový zápas!",
+        "CourseD_EOC_dance": "Vytvor si vlastný tanec!",
+        "CourseD_EOC_starwars": "Vytvor vlastnú Star Wars hru!",
+        "courseA_collector_loops_challenge2": "Pozbieraj všetky drahokamy! ",
+        "courseA_collector_preLoops1": "Toto je Laurel objaviteľka!\n\nStlač \"Spustiť\", aby si videl(a), ako pôjde k pokladu a zoberie ho. ",
+        "courseA_collector_preLoops2": "Výborne!  Teraz pridaj kód sám!\n\nPridaj blok \"získaj\" na koniec kódu a stač \"Spustiť\". ",
+        "courseA_collector_preLoops3": "Pridaj dva bloky `V -->` a jeden `získaj` na koniec kódu a stač \"Spustiť\". ",
+        "courseA_collector_preLoops4": "Vieš, ako vyriešiť tútu úlohu? ",
+        "courseA_collector_preLoops5": "Na vyriešenie úlohy musíš získať aspoň jeden z drahokamov.",
+        "courseA_collector_preLoops6": "Na vyriešenie úlohy musíš získať obidva."
       }
     }
   }

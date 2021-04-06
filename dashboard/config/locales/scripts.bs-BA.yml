@@ -3286,7 +3286,7 @@ bs:
               name: Pisanje pjesama
           lesson_groups:
             ramp_up:
-              display_name: Petlje
+              display_name: Ugniježdene Petlje
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_nested_loops:
@@ -3302,15 +3302,21 @@ bs:
             csf_digcit:
               display_name: Digitalno Državljanstvo
             csf_variables:
-              display_name: Varijable
+              display_name: Od-Do-Za Petlje
             csf_for_loops:
               display_name: Od-Do-Za Petlje
+            lessonGroup-8:
+              display_name: Varijable
+            lessonGroup-9:
+              display_name: ukloni
         express-2021:
           description: Naučite osnove računarstva i internet sigurnosti. Na kraju
             kursa, kreirajte svoju vlastitu igru ili priču koju možete podijeliti.
           lessons:
             Dance Party:
               key: Plesna zabava
+              name: Plesna zabava
+            lesson-1:
               name: Plesna zabava
           lesson_groups:
             csf_loops:
@@ -3352,6 +3358,8 @@ bs:
               display_name: Uvod
             lessonGroup-3:
               display_name: Varijable
+            variables:
+              display_name: Varijable
         csd4-preview-2021:
           lesson_groups:
             csd5_2:
@@ -3367,6 +3375,8 @@ bs:
             lesson14:
               name: Lekcija 14
             lesson15:
+              name: Lekcija 15
+            lesson17:
               name: Lekcija 15
         k5-onlinepd-2021:
           lessons:

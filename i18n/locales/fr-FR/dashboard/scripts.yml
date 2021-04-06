@@ -14157,8 +14157,7 @@ fr:
             Private and Personal Information:
               name: 'traduction manquante : en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
               description_student: Internet est amusant et excitant, mais il est également important de rester en sécurité. Cette leçon t'apprend la différence entre des informations qui peuvent être partagées,  en toute sécurité, et des informations privées.
-              description_teacher: |-
-                Développé par Common Sense Education, cette leçon porte sur la différence entre l'information qui peut être partagée en ligne en toute sécurité, et l'information qui ne l'est pas.\ R \ rTout en visitant des sites qui demandent des informations sur leur identité, les étudiants apprennent à adopter un processus d'enquête critique qui leur permet de se protéger eux-mêmes et leurs familles contre le vol d'identité. Dans cette leçon, les élèves apprennent à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Ils apprennent la différence entre les informations privées et les informations personnelles, ainsi que la façon de distinguer ce qui est sûr ou dangereux de partager en ligne.
+              description_teacher: Développé par Common Sense Education, cette leçon porte sur la différence entre l'information qui peut être partagée en ligne en toute sécurité, et l'information qui ne l'est pas.\ R \ rTout en visitant des sites qui demandent des informations sur leur identité, les étudiants apprennent à adopter un processus d'enquête critique qui leur permet de se protéger eux-mêmes et leurs familles contre le vol d'identité. Dans cette leçon, les élèves apprennent à réfléchir de manière critique sur les informations utilisateur que certains sites web demandent ou exigent. Ils apprennent la différence entre les informations privées et les informations personnelles, ainsi que la façon de distinguer ce qui est sûr ou dangereux de partager en ligne.
             About Me:
               name: À propos de Moi avec le Labo des Lutins
               description_student: En créant une affiche interactive avec le Labo des Lutins, les élèves appliqueront leur compréhension du partage d'informations personnelles et privées sur le Web.
@@ -14290,8 +14289,7 @@ fr:
             The Power of Words:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
-              description_teacher: |-
-                Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\r \ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. 
+              description_teacher: Les étudiants considèrent que, pendant qu'ils apprécient leurs sites Web préférés, ils peuvent rencontrer des messages d'autres enfants qui sont susceptibles de les mettre en colère, de les blesser ou de les rendre tristes ou craintifs. Ils explorent les moyens de gérer le cyberharcèlement et de réagir face à la langue bouleversante en ligne.\r \ rLes étudiants discutent de toutes les façons dont ils utilisent la technologie pour la communication et explorent les similitudes et les différences entre la communication en personne et en ligne. Les élèves réfléchissent ensuite, en groupes, aux moyens de réagir au cyberharcèlement. 
             Crowdsourcing:
               name: Production Participative
               description_student: Cette leçon t'initiera au crowdsourcing, le processus de construction d'un projet avec une équipe.
@@ -14834,6 +14832,10 @@ fr:
               name: Algorithmes
             Events:
               name: Événements
+        code-break-staging:
+          lessons:
+            Algorithms with Hill Harper:
+              name: Algorithmes avec Hill Harper
         no-lg:
           lessons:
             new stage:
@@ -15555,6 +15557,7 @@ fr:
             Color Images:
               key: Les Images En Couleur
               name: Les Images En Couleur
+              description_student: Découvrez comment les ordinateurs représentent des images couleur à l'aide de bits.
             Lossless Compression:
               key: Compression Sans Perte
               name: Compression Sans Perte
@@ -16009,7 +16012,7 @@ fr:
               key: Les Boucles dans Collecteur
               name: Les Boucles avec Laurel
               description_student: Programme Laurel l'Aventurière pour collecter des trésors dans une grotte ouverte.
-              description_teacher: Dans cette leçon, les élèves continuent d'apprendre le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles pour collecter des trésors dans les espaces ouverts des grottes. Un nouveau  bloc `collecte le trésor` est introduit pour l'aider dans son voyage.
+              description_teacher: 'Dans cette leçon, les élèves continuent d''apprendre le concept de boucles. Ici, Laurel L''Aventurière utilise des boucles pour collecter des trésors dans les espaces ouverts des grottes. Un nouveau  bloc `collecte le trésor` est introduit pour l''aider dans son voyage.'
             Loops in Artist:
               key: Les Boucles dans Artiste
               name: Dessiner des Jardins avec des Boucles
@@ -16119,8 +16122,8 @@ fr:
             Picturing Data:
               key: Représenter les Données
               name: Représenter les Données
-              description_student: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
-              description_teacher: Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.
+              description_student: 'Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d''un projet du Labo du Jeu et les visualiseront à l''aide de différents types de graphiques.'
+              description_teacher: 'Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d''un projet du Labo du Jeu et les visualiseront à l''aide de différents types de graphiques.'
             'End of Course Project: Create a Play Lab Game':
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
               description_teacher: 'Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! '
@@ -16155,7 +16158,6 @@ fr:
               key: Programmation de relais
               name: Programmation de relais
               description_student: Te rappelles-tu, au début du cours, lorsque tu as fait des dessins avec du code ? Dans cette leçon, tu vas travailler avec une équipe pour faire quelque chose de très similaire !
-              description_teacher: Cette activité débutera par une brève leçon sur le débogage et la persévérance, puis passera rapidement à une course contre la montre, pendant laquelle les élèves formeront des équipes et travailleront ensemble à la rédaction d'un programme, instruction par instruction.
             Debugging in Collector:
               key: Déboguer dans le Collecteur
               name: Déboguer avec Laurel
@@ -16190,12 +16192,12 @@ fr:
               key: Les Boucles Imbriquées dans l'Abeille
               name: Les Boucles Imbriquées dans le Labyrinthe
               description_student: Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée.
-              description_teacher: Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur "Exécuter".
+              description_teacher: 'Dans cette activité en ligne, les étudiants auront l''occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l''Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu''elle soit à l''intérieur d''une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l''une ou l''autre boucle affecteront leur programme quand ils cliqueront sur "Exécuter".'
             Conditionals with Cards:
               key: Instructions conditionnelles avec des cartes
               name: Instructions conditionnelles avec des cartes
               description_student: Il est temps de jouer à un jeu où tu ne gagnes des points que sous certaines conditions !
-              description_teacher: "Cette leçon montre comment les conditions peuvent être utilisées pour adapter un programme à des informations spécifiques. Nous n'avons pas toujours toutes les informations dont nous avons besoin quand nous écrivons un programme. Parfois, nous voudrons faire quelque chose de différent dans une situation par rapport à une autre, même si nous ne savons pas quelle situation sera vraie lorsque le code s'exécutera. C'est là qu'interviennent les conditions. Les conditions permettent à un ordinateur de prendre une décision, en fonction des informations qui sont vraies, chaque fois que le code est exécuté."
+              description_teacher: 'Cette leçon montre comment les conditions peuvent être utilisées pour adapter un programme à des informations spécifiques. Nous n''avons pas toujours toutes les informations dont nous avons besoin quand nous écrivons un programme. Parfois, nous voudrons faire quelque chose de différent dans une situation par rapport à une autre, même si nous ne savons pas quelle situation sera vraie lorsque le code s''exécutera. C''est là qu''interviennent les conditions. Les conditions permettent à un ordinateur de prendre une décision, en fonction des informations qui sont vraies, chaque fois que le code est exécuté.'
             Conditionals in Bee:
               key: Les Conditions dans l'Abeille
               name: Si/Sinon avec l'Abeille
@@ -16266,7 +16268,7 @@ fr:
               key: La Programmation et les Boucles avec l'Artiste
               name: Dessiner avec des Boucles
               description_student: Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !
-              description_teacher: Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.
+              description_teacher: 'Regardez les visages des étudiants s''illuminer alors qu''ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d''autocollants numériques ! Cette leçon s''appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d''être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -16276,7 +16278,7 @@ fr:
               key: Instructions conditionnelles
               name: Les Conditions avec la Fermière
               description_student: Tu pourras dire à l'ordinateur ce qu'il faut faire dans certaines conditions, dans cette série amusante et stimulante.
-              description_teacher: Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu'une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.
+              description_teacher: 'Cette leçon initie les élèves aux boucles `tant que` et aux déclarations `si / sinon`. Les _boucles Tant Que_ sont des boucles qui continuent de répéter des commandes tant qu''une condition est vraie. Les boucles Tant Que sont utilisées lorsque le programmeur ne connaît pas le nombre exact de fois que les commandes doivent être répétées, mais il sait quelle condition doit être vraie pour que la boucle continue de boucler. Les instructions `Si / Sinon` offrent une flexibilité dans la programmation, en exécutant des sections entières de code uniquement si quelque chose est vrai, sinon elle exécute autre chose.'
             Simon Says:
               key: Jacques A Dit
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires pour obtenir le bon résultat.
@@ -16297,9 +16299,9 @@ fr:
               description_student: Internet est amusant et excitant, mais il est également important de rester en sécurité. Cette leçon t'apprend la différence entre des informations qui peuvent être partagées,  en toute sécurité, et des informations privées.
             About Me:
               key: À Propos De Moi
-              name: À propos de Moi avec le Labo des Lutins
+              name: 'À propos de Moi avec le Labo des Lutins'
               description_student: En créant une affiche interactive avec le Labo des Lutins, les élèves appliqueront leur compréhension du partage d'informations personnelles et privées sur le Web.
-              description_teacher: "En créant une affiche interactive avec le Labo des Lutins, les élèves appliqueront leur compréhension du partage d'informations personnelles et privées sur le Web.\\ r"
+              description_teacher: 'En créant une affiche interactive avec le Labo des Lutins, les élèves appliqueront leur compréhension du partage d''informations personnelles et privées sur le Web.\ r'
             Digital Sharing:
               key: Partage Numérique
               name: Partage Numérique
@@ -16315,7 +16317,7 @@ fr:
               description_student: Plus de boucles imbriquées ! Cette fois, tu dois faire un dessin ÉTONNANT avec des boucles imbriquées.
             Nested Loops in Frozen:
               key: Les Boucles Imbriquées dans Frozen
-              name: Les Boucles Imbriquées avec Frozen
+              name: 'Les Boucles Imbriquées avec Frozen'
               description_student: 'Anna et Elsa ont d''excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. '
               description_teacher: Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !
             'Functions: Songwriting':
@@ -16345,7 +16347,7 @@ fr:
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
             End of Course Project:
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
-              description_teacher: "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs."
+              description_teacher: 'Les quatre leçons suivantes offrent aux étudiants l''occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l''expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d''exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l''opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c''est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.'
           lesson_groups:
             ramp_up:
               display_name: Progression
@@ -16386,7 +16388,7 @@ fr:
             Nested Loops in the Maze:
               key: Les Boucles imbriquées dans le Labyrinthe
               name: Les Boucles Imbriquées dans le Labyrinthe
-              description_student: "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle."
+              description_student: Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu places une boucle dans une autre boucle.
               description_teacher: Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur "Exécuter".
             The Power of Words:
               key: Le Pouvoir des Mots
@@ -16446,7 +16448,7 @@ fr:
               description_teacher: Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !
             End of Course Project:
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
-              description_teacher: "Les cinq prochaines leçons offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit, dans un projet de synthèse. Ce projet aidera les individus à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Il s'agit d'un projet de plusieurs leçons ou de plusieurs semaines où les élèves passent du temps à réfléchir en groupes, à se renseigner sur le processus de conception, à construire, puis à présenter leur travail final. \\r \\ rDans la phase « explorer », les étudiants joueront avec des programmes pré-construits de l'Artiste et du Labo des Lutins pour trouver de l'inspiration. Ensuite, les élèves apprendront le processus de conception et la façon de le mettre en œuvre dans leurs propres projets. Ils auront ensuite l'espace pour créer leur propre projet dans Artiste, le Labo des Lutins, ou toute autre interface que vous êtes à l'aise de fournir. (C'est probablement l'étape la plus longue du projet). Les élèves réviseront ensuite leur code après les tests et en fonction des commentaires des pairs. Enfin, les élèves pourront présenter leur travail fini à leurs camarades de classe."
+              description_teacher: 'Les cinq prochaines leçons offrent aux étudiants l''occasion de mettre leurs compétences en codage à profit, dans un projet de synthèse. Ce projet aidera les individus à acquérir de l''expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Il s''agit d''un projet de plusieurs leçons ou de plusieurs semaines où les élèves passent du temps à réfléchir en groupes, à se renseigner sur le processus de conception, à construire, puis à présenter leur travail final. \r \ rDans la phase « explorer », les étudiants joueront avec des programmes pré-construits de l''Artiste et du Labo des Lutins pour trouver de l''inspiration. Ensuite, les élèves apprendront le processus de conception et la façon de le mettre en œuvre dans leurs propres projets. Ils auront ensuite l''espace pour créer leur propre projet dans Artiste, le Labo des Lutins, ou toute autre interface que vous êtes à l''aise de fournir. (C''est probablement l''étape la plus longue du projet). Les élèves réviseront ensuite leur code après les tests et en fonction des commentaires des pairs. Enfin, les élèves pourront présenter leur travail fini à leurs camarades de classe.'
             lesson-1:
               name: Concevoir pour l'Accessibilité
               description_student: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
@@ -16598,7 +16600,8 @@ fr:
             Alien Dance Party:
               key: Soirée Dansante des Extraterrestres
               name: Soirée Dansante des Extraterrestres
-              description_student: Entraîne-toi à créer des jeux à partager avec tes amis et ta famille.
+              description_student: Crée un projet interactif qui peut être partagé avec tes camarades de classe.
+              description_teacher: 'Cette leçon présente le Labo des Lutins, une plate-forme où les élèves peuvent créer leurs propres animations et jeux interactifs. Aujourd''hui, en plus des comportements, les étudiants intégreront les entrées de l''utilisateur en tant qu''événements pour créer une « soirée dansante extraterrestre ».  '
             Behaviors in Sprite Lab:
               key: Les Comportements dans le Labo des Lutins
               name: Les Comportements dans le Labo des Lutins
@@ -16694,6 +16697,8 @@ fr:
               name: Codage d'une simulation
             Course F Introduction:
               name: Introduction au Labo des Lutins
+            lesson-3:
+              name: Créer un Chat-bot
             Sprites in Action:
               name: Les Lutins en Action
             introducing-spritelab:
@@ -16915,6 +16920,15 @@ fr:
               name: Leçon 14
             lesson15:
               name: Leçon 15
+            lesson17:
+              name: Leçon 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lesson 15 : Journée d''Évaluation'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
         k5-onlinepd-2021:
           description: "Apprenez à enseigner l'informatique en utilisant les Principes Fondamentaux de l'Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !"
           student_description: 'Apprenez à enseigner l''informatique en utilisant les Principes Fondamentaux de l''Informatique de Code.org avec ce cours en ligne gratuit et auto-rythmé !'
