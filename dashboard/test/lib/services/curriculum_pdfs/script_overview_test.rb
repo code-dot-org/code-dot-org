@@ -23,7 +23,7 @@ class Services::CurriculumPdfs::ScriptOverviewTest < ActiveSupport::TestCase
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
       assert Dir.glob(File.join(tmpdir, '**/*.pdf')).empty?
       PDF.expects(:generate_from_url).with do |url, _outpath|
-        url == Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true"
+        url == Rails.application.routes.url_helpers.script_url(script) + "?no_redirect=true&viewAs=Teacher"
       end
       Services::CurriculumPdfs.generate_script_overview_pdf(script, tmpdir)
     end
