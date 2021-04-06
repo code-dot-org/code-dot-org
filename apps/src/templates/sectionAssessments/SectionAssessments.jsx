@@ -273,9 +273,7 @@ class SectionAssessments extends Component {
                   </div>
                 )}
                 {totalStudentSubmissions <= 0 && (
-                  <div>
-                    <SafeMarkdown markdown={i18n.emptySurveyOverviewTable()} />
-                  </div>
+                  <SafeMarkdown markdown={i18n.emptySurveyOverviewTable()} />
                 )}
               </div>
             )}
