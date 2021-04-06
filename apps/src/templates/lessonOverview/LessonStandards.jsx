@@ -4,6 +4,8 @@ import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 export const styles = {
   frameworkName: {
@@ -79,6 +81,14 @@ export default class LessonStandards extends PureComponent {
       .value();
     return (
       <div>
+        <Button
+          __useDeprecatedTag
+          color={Button.ButtonColor.gray}
+          href="/"
+          style={{marginRight: 10}}
+          target="_blank"
+          text={i18n.fullCourseAlignment()}
+        />
         {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
           const expandMode = getChildExpandMode(this.props.expandMode, index);
