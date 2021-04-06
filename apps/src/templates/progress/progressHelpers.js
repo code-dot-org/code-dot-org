@@ -63,15 +63,12 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
  *   current user.
  */
 export function stageLocked(levels) {
-  // For lockable stages, there is a requirement that they have exactly one LevelGroup,
-  // and that it be the last level in the stage. Because LevelGroup's can have
-  // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
-  // on the client. However, it is the case that each page in the LG should have
-  // an identical locked/unlocked state.
-  // Given this, we should be able to look at the last level in our collection
-  // to determine whether the LG (and thus the stage) should be considered locked.
+  // For lockable stages, the last level in the stage is the LevelGroup, and
+  // its lock status represents the overall lock status of the stage.
   const level = levels[levels.length - 1];
-  return level.locked;
+  // Using !! here because this function is used to determine a required field
+  // so we can avoid prop validation warnings this way when locked is undefined
+  return !!level.locked;
 }
 
 /**
