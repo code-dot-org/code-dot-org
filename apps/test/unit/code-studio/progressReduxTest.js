@@ -643,6 +643,7 @@ describe('progressReduxTest', () => {
             readonlyAnswers: undefined,
             kind: LevelKind.unplugged,
             icon: null,
+            locked: undefined,
             isUnplugged: true,
             levelNumber: undefined,
             pageNumber: PUZZLE_PAGE_NONE,
