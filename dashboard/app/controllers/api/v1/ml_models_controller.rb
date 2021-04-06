@@ -54,7 +54,10 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     @user_ml_model = UserMlModel.find_by(model_id: params[:model_id])
     return head :forbidden unless @user_ml_model.user_id == current_user.id
     @user_ml_model.destroy
-    delete_from_s3(@user_ml_model.model_id)
+    deleted_from_s3 = delete_from_s3(@user_ml_model.model_id)
+    status =
+      @user_ml_model.destroyed? && deleted_from_s3 ? "success" : "failure"
+    render json: {id: @user_ml_model.id, status: status}
   end
 
   private
