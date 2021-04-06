@@ -55,7 +55,8 @@ class Ability
       :pd_foorm,
       Foorm::Form,
       Foorm::Library,
-      Foorm::LibraryQuestion
+      Foorm::LibraryQuestion,
+      :javabuilder_session
     ]
     cannot :index, Level
 
@@ -261,7 +262,8 @@ class Ability
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
-        Foorm::LibraryQuestion
+        Foorm::LibraryQuestion,
+        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -286,6 +288,12 @@ class Ability
         can :manage, Level, editor_experiment: editor_experiment
         can [:edit, :update], Script, editor_experiment: editor_experiment
         can [:edit, :update], Lesson, editor_experiment: editor_experiment
+      end
+    end
+
+    if user.persisted?
+      if Experiment.enabled?(user: user, experiment_name: 'csa-pilot')
+        can :get_access_token, :javabuilder_session
       end
     end
 
