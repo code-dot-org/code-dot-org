@@ -507,7 +507,8 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         currentPanel: action.currentPanel,
-        testData: {}
+        testData: {},
+        prediction: {}
       };
     }
 
