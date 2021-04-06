@@ -243,6 +243,11 @@ class Lesson < ApplicationRecord
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
+  def course_version_standards_url
+    course_version_name = script.get_course_version&.name
+    CDO.studio_url "/courses/#{course_version_name}/standards" if course_version_name
+  end
+
   def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
@@ -393,7 +398,8 @@ class Lesson < ApplicationRecord
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
-      lessonPlanPdfUrl: lesson_plan_pdf_url
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      courseVersionStandardsUrl: course_version_standards_url
     }
   end
 

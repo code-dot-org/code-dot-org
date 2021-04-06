@@ -74,21 +74,23 @@ function getDetailsOpen(expandMode) {
 
 export default class LessonStandards extends PureComponent {
   render() {
-    const {standards} = this.props;
+    const {standards, courseVersionStandardsUrl} = this.props;
     const standardsByFramework = _(standards)
       .orderBy('frameworkName')
       .groupBy('frameworkName')
       .value();
     return (
       <div>
-        <Button
-          __useDeprecatedTag
-          color={Button.ButtonColor.gray}
-          href="/"
-          style={{marginRight: 10}}
-          target="_blank"
-          text={i18n.fullCourseAlignment()}
-        />
+        {courseVersionStandardsUrl && (
+          <Button
+            __useDeprecatedTag
+            color={Button.ButtonColor.gray}
+            href={courseVersionStandardsUrl}
+            style={{marginBottom: 5}}
+            target="_blank"
+            text={i18n.fullCourseAlignment()}
+          />
+        )}
         {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
           const expandMode = getChildExpandMode(this.props.expandMode, index);
@@ -107,7 +109,8 @@ export default class LessonStandards extends PureComponent {
 }
 LessonStandards.propTypes = {
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
+  courseVersionStandardsUrl: PropTypes.string
 };
 
 class Framework extends PureComponent {
