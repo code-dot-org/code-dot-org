@@ -46,13 +46,8 @@ const styles = {
     borderColor: 'red'
   },
   wordBoxRTL: {
-    width: styleConstants['content-width'] - 475,
-    marginRight: 25,
-    marginTop: 25,
-    marginBottom: 25,
-    float: 'left',
-    borderWidth: 1,
-    borderColor: 'red'
+    marginLeft: 0,
+    marginRight: 25
   },
   actionBox: {
     float: 'right',
@@ -157,7 +152,7 @@ class JoinSection extends React.Component {
     const {enrolledInASection, isRtl} = this.props;
 
     // Adjust styles for RTL
-    const wordBoxStyle = isRtl ? styles.wordBoxRTL : styles.wordBox;
+    const wordBoxStyle = {...styles.wordBox, ...(isRtl && styles.wordBoxRTL)};
 
     return (
       <div
