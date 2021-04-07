@@ -56,7 +56,7 @@ describe('standardsEditorRedux reducer', () => {
   });
 
   it('sorts standards by framework', () => {
-    newStandard.frameworkShortcode = 'framework-0';
+    newStandard.frameworkName = 'Framework A';
     const nextState = standardsEditor(
       initialState,
       addStandard('standard', newStandard)
