@@ -1,7 +1,7 @@
 class VocabulariesController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
 
-  # GET /vocabulary/search
+  # GET /vocabularies/search
   def search
     render json: VocabularyAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end

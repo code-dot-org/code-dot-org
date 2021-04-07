@@ -1,5 +1,5 @@
 class ProgrammingExpressionsController < ApplicationController
-  # GET /programming_expression/search
+  # GET /programming_expressions/search
   def search
     programming_environment =
       if params.key? :programmingEnvironmentId
