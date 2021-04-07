@@ -740,12 +740,13 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      resources :ml_models, only: [:destroy] do
+      resources :ml_models, only: [:show, :destroy] do
         collection do
+          get 'names'
           post 'save'
-          get 'user_ml_model_names'
-          get 'user_ml_model_metadata'
-          get 'get_trained_model'
+        end
+        member do
+          get 'metadata'
         end
       end
 
