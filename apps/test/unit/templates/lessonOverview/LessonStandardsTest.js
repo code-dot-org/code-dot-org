@@ -42,16 +42,13 @@ describe('LessonStandards', () => {
 
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    frameworks.forEach(framework => {
-      expect(isOpen(framework)).to.be.false;
-    });
 
-    const parentCategories = wrapper.find('ParentCategory');
+    const parentCategories = wrapper.find('UnconnectedParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.false;
     });
-    const categories = wrapper.find('Category');
+    const categories = wrapper.find('UnconnectedCategory');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.false;
@@ -65,14 +62,12 @@ describe('LessonStandards', () => {
     );
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    expect(isOpen(frameworks.at(0))).to.be.true;
-    expect(isOpen(frameworks.at(1))).to.be.false;
 
-    const parentCategories = frameworks.at(0).find('ParentCategory');
+    const parentCategories = frameworks.at(0).find('UnconnectedParentCategory');
     expect(parentCategories.length).to.equal(1);
     expect(isOpen(parentCategories.at(0))).to.be.true;
 
-    const categories = parentCategories.at(0).find('Category');
+    const categories = parentCategories.at(0).find('UnconnectedCategory');
     expect(categories.length).to.equal(2);
     expect(isOpen(categories.at(0))).to.be.true;
     expect(isOpen(categories.at(1))).to.be.false;
@@ -85,21 +80,36 @@ describe('LessonStandards', () => {
     );
     const frameworks = wrapper.find('Framework');
     expect(frameworks.length).to.equal(2);
-    frameworks.forEach(framework => {
-      expect(isOpen(framework)).to.be.true;
-    });
 
-    const parentCategories = wrapper.find('ParentCategory');
+    const parentCategories = wrapper.find('UnconnectedParentCategory');
     expect(parentCategories.length > 0).to.be.true;
     parentCategories.forEach(parentCategory => {
       expect(isOpen(parentCategory)).to.be.true;
     });
 
-    const categories = wrapper.find('Category');
+    const categories = wrapper.find('UnconnectedCategory');
     expect(categories.length > 0).to.be.true;
     categories.forEach(category => {
       expect(isOpen(category)).to.be.true;
     });
+  });
+
+  it('renders without Full Course Alignment button by default', () => {
+    const standard = cspStandards[0];
+    const wrapper = mount(<LessonStandards standards={[standard]} />);
+    const button = wrapper.find('Button');
+    expect(button.length).to.equal(0);
+  });
+
+  it('renders with Full Course Alignment button when url is provided', () => {
+    const standard = cspStandards[0];
+    const url = '/path/to/standards';
+    const wrapper = mount(
+      <LessonStandards standards={[standard]} courseVersionStandardsUrl={url} />
+    );
+    const button = wrapper.find('Button');
+    expect(button.length).to.equal(1);
+    expect(button.prop('href')).to.equal(url);
   });
 });
 
