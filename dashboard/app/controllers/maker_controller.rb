@@ -133,6 +133,8 @@ class MakerController < ApplicationController
   # This route is need to convert the GET request from the Maker App into
   # a POST that can be used to login via Google OAuth
   def confirm_login
+    return_to = params[:user_return_to]
+    session[:user_return_to] = return_to if return_to.present?
   end
 
   # POST /maker/complete
