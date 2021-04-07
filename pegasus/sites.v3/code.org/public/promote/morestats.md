@@ -56,16 +56,12 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade.
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 
-
-## International K-12 computer science
-We are interested in seeing what's happening in computer science education internationally. [This](https://docs.google.com/document/d/1H171Mu2RKzD9Qvp38sjKu1vuXX524XqdHtUf0BFzpWI/edit?usp=sharing) crowd-sourced document tracks what we know about current policy and in-progress efforts.
-
-
 ## Outside resources
 
 ### K-12 education
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band.
+- See what is happening in K-12 computer science education internationally at [this Brookings report](https://www.brookings.edu/research/what-do-we-know-about-the-expansion-of-k-12-computer-science-education). 
 - The International Society for Technology in Education (ISTE) recently released [guidelines](https://www.iste.org/standards/computational-thinking) regarding the integration of computational thinking across disciplines. 
 - Access to computer science matters! [A longitudinal study described in this article](https://dl.acm.org/citation.cfm?doid=3363561.3343195) and [this summary](https://computinged.wordpress.com/2019/10/14/results-from-longitudinal-study-of-female-persistence-in-cs-ap-cs-matters-after-school-programs-and-internships-do-not/) report that the three best predictors of student persistence in computing-related majors were taking programming in high school, taking a computer science AP exam, and participating in the Aspirations awards program. 
 - The Kapor Center's report [Teacher Perspectives on COVID-19's Impact on K-12 Computer Science Instruction](https://www.kaporcenter.org/teacher-perspectives-on-covid-19s-impact-on-k-12-computer-science-instruction/) found that 18% of teachers temporarily suspended CS instruction, with higher rates from schools serving underrepresented students.

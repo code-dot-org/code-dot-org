@@ -3,8 +3,6 @@
 var assert = require('assert');
 var state = require('@cdo/apps/code-studio/clientState');
 var chai = require('chai');
-import sinon from 'sinon';
-import * as redux from '@cdo/apps/redux';
 
 chai.should();
 
@@ -78,17 +76,6 @@ describe('clientState#trackLines', function() {
 
     state.trackLines(true, -10);
     state.lines().should.equal(10);
-  });
-
-  it('does not track line counts when the DB is managing tracking', function() {
-    sinon.stub(redux, 'getStore').returns({
-      getState: () => {
-        return {progress: {usingDbProgress: true}};
-      }
-    });
-    state.trackLines(true, 10);
-    state.lines().should.equal(0);
-    redux.getStore.restore();
   });
 
   it('Does not record line counts when level progress does not have a line count', function() {

@@ -200,7 +200,10 @@ class P5LabVisualizationColumn extends React.Component {
 
         <GameButtons>
           {showPauseButton && (
-            <PauseButton pauseHandler={this.props.pauseHandler} />
+            <PauseButton
+              pauseHandler={this.props.pauseHandler}
+              marginRight={isShareView ? 10 : 0}
+            />
           )}
           <ArrowButtons />
 

@@ -7,6 +7,6 @@ class ProgrammingExpressionsController < ApplicationController
       elsif params.key? :programmingEnvironmentName
         ProgrammingEnvironment.find_by(name: params[:programmingEnvironmentName])
       end
-    render json: ProgrammingExpressionAutocomplete.get_search_matches(params[:query], params[:limit], programming_environment)
+    render json: ProgrammingExpressionAutocomplete.get_search_matches(params[:page], params[:query], programming_environment)
   end
 end
