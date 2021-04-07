@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-06 21:58:08 UTC",
+    "serialized_at": "2021-04-07 17:18:32 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -1264,6 +1264,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "7e800d16-2b68-4b95-9071-327a7a9ce611",
+        "lesson.key": "Simulating Experiments",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "key": "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2",
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021"
@@ -3113,17 +3126,6 @@
       }
     },
     {
-      "key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
-      "position": 3,
-      "properties": {
-        "progression_name": "Customize the simulation"
-      },
-      "seeding_key": {
-        "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4",
-        "lesson_activity.key": "eba207ca-a259-40be-93b5-0a9c0c906b80"
-      }
-    },
-    {
       "key": "de52214d-6afd-4af7-90e5-3e85484e0877",
       "position": 1,
       "properties": {
@@ -3144,6 +3146,19 @@
       "seeding_key": {
         "activity_section.key": "a69e0c65-f1b4-44a3-98b9-9217eb0cf485",
         "lesson_activity.key": "7e800d16-2b68-4b95-9071-327a7a9ce611"
+      }
+    },
+    {
+      "key": "b69c8e63-7778-4a44-b127-e4c083af98c9",
+      "position": 1,
+      "properties": {
+        "name": "Customize the simulation",
+        "description": "Throughout the main activity of this lesson, students are running and modifying a simulation that they did not program from scratch themselves. Students can actually program the simulation with blocks of code that they have seen in previous lessons.\n\nIn the last level of the lesson, students can explore this code and begin thinking about how to program a simulation themselves.",
+        "progression_name": "Customize"
+      },
+      "seeding_key": {
+        "activity_section.key": "b69c8e63-7778-4a44-b127-e4c083af98c9",
+        "lesson_activity.key": "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2"
       }
     },
     {
@@ -4485,7 +4500,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Power of Words - Unplugged Activity",
         "level_keys": [
@@ -4493,7 +4508,7 @@
         ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "PowerOfWords-Unplugged_2021"
@@ -6099,7 +6114,7 @@
       "activity_section_position": 1,
       "assessment": null,
       "properties": {
-        "progression": "Customize the simulation",
+        "progression": "Customize",
         "level_keys": [
           "simcustom_2021"
         ]
@@ -6113,7 +6128,7 @@
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4"
+        "activity_section.key": "b69c8e63-7778-4a44-b127-e4c083af98c9"
       },
       "level_keys": [
         "simcustom_2021"
@@ -6591,7 +6606,7 @@
       "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Designing for Accessibility - Unplugged Activity",
         "level_keys": [
@@ -7732,7 +7747,7 @@
         "lesson.key": "Simulating Experiments",
         "lesson_group.key": "csf_data",
         "script.name": "coursef-2021",
-        "activity_section.key": "00cb7a4d-b80d-42b6-ad3d-c9cd461276d4"
+        "activity_section.key": "b69c8e63-7778-4a44-b127-e4c083af98c9"
       }
     },
     {
@@ -8460,13 +8475,26 @@
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "change_log_from_2020_version_",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "change_log_from_2020_version_"
       }
     }
   ],
@@ -8728,6 +8756,12 @@
     {
       "seeding_key": {
         "resource.key": "curriculum_guide",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "change_log_from_2020_version_",
         "script.name": "coursef-2021"
       }
     }

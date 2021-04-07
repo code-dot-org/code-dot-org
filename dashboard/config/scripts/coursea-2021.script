@@ -163,3 +163,7 @@ level 'courseA_playLab_events7_2021', progression: 'Mini-project: Jorge the Dog'
 bonus 'courseA_playlab_events_challenge2_2021', progression: 'Challenge'
 bonus 'courseA_playlab_events_challenge1_2021', progression: 'Challenge'
 
+lesson_group 'lessonGroup-5', display_name: 'End of Course Project'
+lesson 'lesson-1', display_name: 'End of Course Project', has_lesson_plan: true
+level 'courseAB_EOC_2021', progression: 'Project'
+
