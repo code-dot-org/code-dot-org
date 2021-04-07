@@ -179,7 +179,12 @@ class StandardsEditor extends Component {
 
   render() {
     const columns = this.getColumns();
-    const searchBoxKey = this.state.frameworkShortcode;
+    const standardShortcodes = this.props.standards
+      .map(standard => standard.shortcode)
+      .join(',');
+    const searchBoxKey = `${
+      this.state.frameworkShortcode
+    },${standardShortcodes}`;
     return (
       <div>
         <label>
