@@ -915,7 +915,7 @@
       "key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n \tApps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are apps? How do we interact with them? What kinds of things do apps do?*\n\n**Discussion Goal:** Apps are designed to solve a problem by providing a service\n\n* Entertainment: images, movies, tv shows, etc.\n* Social: social media, chatting\n* Commerce: marketplaces\n* Finding Information: search engines, maps\n \n \tApps have screens or *User Interfaces* to display and collect information to and from users\n\n* These things collect information: Buttons, sliders, text boxes, etc.\n* This is the type of information that can be displayed: Sounds, images, video, text\n"
       },
       "seeding_key": {
         "activity_section.key": "d3ff1f3d-0b24-485b-b251-977501995fd2",
@@ -939,7 +939,7 @@
       "key": "038425cb-a49b-4d27-a74e-e206f8128143",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students in groups of two. Students should navigate to the App Exploration starting on level 2. \n\n**Levels 1-5:** There are five different sample apps. Depending on time, students can explore 3-5 different apps."
       },
       "seeding_key": {
         "activity_section.key": "038425cb-a49b-4d27-a74e-e206f8128143",
@@ -972,7 +972,7 @@
       "key": "c7fb7de9-7012-4a6e-a3ea-38985adb0df5",
       "position": 5,
       "properties": {
-        "description": "\n<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *With a partner, discuss the following and note down in your journal:*\n* *How does the user interact with the app?*\n* *What is the overall purpose of this app?*\n* *Who is the target audience?*\n\n**Share Out:** As a class, discuss student answers to the discussion questions."
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner, discuss the following and note down in your journal:*\n* *How does the user interact with the app?*\n* *What is the overall purpose of this app?*\n* *Who is the target audience?*\n\n**Share Out:** As a class, discuss student answers to the discussion questions."
       },
       "seeding_key": {
         "activity_section.key": "c7fb7de9-7012-4a6e-a3ea-38985adb0df5",
@@ -995,7 +995,7 @@
       "key": "f8496c85-e709-44b6-8919-23c7d7839f51",
       "position": 7,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** How Computers Work [r how_computers_work_-_what_makes_a_computer_a_computer/csp/2021]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** How Computers Work [r how_computers_work_-_what_makes_a_computer_a_computer/csp/2021]",
         "name": "Input & Output"
       },
       "seeding_key": {
@@ -1030,7 +1030,7 @@
       "key": "e41014d8-2c35-4ecc-8799-d5ed6b65fca1",
       "position": 10,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Levels 7-11:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 7-11:** With your partner, take another look at the sample apps you explored before by navigating to the App Investigations starting at level 7. Consider what the inputs and outputs are for the apps. Note these down in your journal.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1071,7 +1071,7 @@
       "key": "957fe328-2220-490c-ab1f-decbcc6ee8a4",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of your favorite app. Discuss with a partner what the user interface looks like and the inputs and outputs.*\n\n**Discussion Goal:** After students have shared with a partner, bring the class back together and discuss a few examples. \n"
       },
       "seeding_key": {
         "activity_section.key": "957fe328-2220-490c-ab1f-decbcc6ee8a4",
@@ -1082,7 +1082,7 @@
       "key": "05eab36c-27fe-48d6-b3b3-9ea5d3f05851",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal** Add to your journal the following terms along with your own definitions:\r\n\r\n* User Interface\r\n* Input\r\n* Output\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal** Add to your journal the following terms along with your own definitions:\r\n\r\n* User Interface\r\n* Input\r\n* Output\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "05eab36c-27fe-48d6-b3b3-9ea5d3f05851",
@@ -1116,7 +1116,7 @@
       "key": "3c2ed0ae-b83d-4f69-9a43-5f55dada7a69",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.*\n* *Compare your sketch with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is a common app that you use? Take a minute to sketch the User Interface of the main screen. Note how the user interacts with the app.*\n* *Compare your sketch with a partner and discuss common elements that both of your apps share*\n\n**Discussion Goal:** This prompt is designed to bring out students' prior experiences working with apps. If students aren't sure what app to choose, you can even ask them to pick to Code.org website. This discussion can pull out the fact that most apps contain images, buttons, and text that help users find and interact with information and content.\n"
       },
       "seeding_key": {
         "activity_section.key": "3c2ed0ae-b83d-4f69-9a43-5f55dada7a69",
@@ -1139,7 +1139,7 @@
       "key": "26ea61b2-cae8-4399-beaa-3eb2823ad75a",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Do This:** Direct students to Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1200,7 +1200,7 @@
       "key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> <span style=\"background-color: #FFFF00\"> **Discuss:** Have students answer the following</span>\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most element can do both, because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> <span style=\"background-color: #FFFF00\"> **Discuss:** Have students answer the following</span>\n\n**Discussion Goal:**\n\nWhat elements collect input?\n\n* Buttons\n* Text Input\n* Check Boxes & Radio Buttons\n* Dropdown\n\nWhat elements display output?\n\n* Images\n* Text\n\nDo you think there are any elements that can do both? \n\n* This is a tricky question! Most element can do both, because they can all be clicked and can change their content. Students will see this in action in the next few lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "1ed5a8c6-1a1f-466a-900f-81a99914d44e",
@@ -1235,7 +1235,7 @@
       "key": "5f20bf23-eb13-4af0-b61d-588821d0d451",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. \n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *People design user interfaces to meet a user's needs, but they don't always get it right.*\n* *Have you ever used an app where the user interface didn't actually meet your needs?*\n* *What was the problem?*\n* *What do you think the designers didn't understand about you or your needs?*\n\n**Discussion Goal:** The goal here is to help students understand the importance of considering the end user when designing an app. \n\nSome points that may come up:\n\n* Some apps have too much guidance on how to use them, and others too little.\n* An app may be designed for a phone, but the user wants to use it on a tablet.\n* Apps that are designed for teenagers may make assumptions about language usage or interests that aren't accurate. \n"
       },
       "seeding_key": {
         "activity_section.key": "5f20bf23-eb13-4af0-b61d-588821d0d451",
@@ -1258,7 +1258,7 @@
       "key": "e0e7e291-2820-4bb2-b24f-9ab9faee38af",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Distribute:** [r app_development_planning_guide/csp/2021]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Group:** Organize students into pairs."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** [r app_development_planning_guide/csp/2021]. Students will be using the Planning Guide for the rest of the unit. Read the Project Description together and make sure students understand the requirements. Direct students to the \"Investigate\" section. \r\n\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1:** Brainstorm Topic Ideas\r\n\r\n* Students have a lot of freedom in choosing their topics. If they are struggling with ideas, they could create an app for another class, for example: an overview of the periodic table for science class.  \r\n    \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Organize students into pairs."
       },
       "seeding_key": {
         "activity_section.key": "e0e7e291-2820-4bb2-b24f-9ab9faee38af",
@@ -1269,7 +1269,7 @@
       "key": "90bc1f5f-da14-4b4d-b929-e349e153bd85",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> You will work with a partner on this project. Collaboration is a big part of app development. Your team's diverse ideas will help make your app even better, because each partner can keep a lookout for bias. \r\n\r\nHere's an example: A team member puts in their app the phrase: \"All teenagers work after school to earn spending money\" because this is their experience - they work after school themselves. However, the other team member may not have an after school job, and because of this can point out the bias in that statement. \r\n\r\nCollaboration is key to catching bias in your work! \r\n\r\nHere's another example, this time in the design of an app. A team wants to make an app to encourage girls to sign up for a summer camp. One team member assumes that because this app is aimed at girls, the background should be pink. A girl on the team points out that she does not like pink, and using that color in the design may represent bias. \r\n\r\nAs you think about your topics and start designing your apps, remember to keep an eye out for bias and use your team mates to keep you accountable!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> You will work with a partner on this project. Collaboration is a big part of app development. Your team's diverse ideas will help make your app even better, because each partner can keep a lookout for bias. \r\n\r\nHere's an example: A team member puts in their app the phrase: \"All teenagers work after school to earn spending money\" because this is their experience - they work after school themselves. However, the other team member may not have an after school job, and because of this can point out the bias in that statement. \r\n\r\nCollaboration is key to catching bias in your work! \r\n\r\nHere's another example, this time in the design of an app. A team wants to make an app to encourage girls to sign up for a summer camp. One team member assumes that because this app is aimed at girls, the background should be pink. A girl on the team points out that she does not like pink, and using that color in the design may represent bias. \r\n\r\nAs you think about your topics and start designing your apps, remember to keep an eye out for bias and use your team mates to keep you accountable!",
         "remarks": true
       },
       "seeding_key": {
@@ -1281,7 +1281,7 @@
       "key": "21f99b85-1257-444e-9f09-ec0dd8fe253a",
       "position": 4,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 2:** Choose One Topic\r\n\r\n* Working with a partner students narrow down their ideas to one topic and explain what would be covered in their app. \r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 3:** Survey Your Classmates\r\n\r\n* The goal in this step is for students to understand the needs of their users. This will help inform the overall design of the app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 2:** Choose One Topic\r\n\r\n* Working with a partner students narrow down their ideas to one topic and explain what would be covered in their app. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 3:** Survey Your Classmates\r\n\r\n* The goal in this step is for students to understand the needs of their users. This will help inform the overall design of the app."
       },
       "seeding_key": {
         "activity_section.key": "21f99b85-1257-444e-9f09-ec0dd8fe253a",
@@ -1292,7 +1292,7 @@
       "key": "6044387a-331f-462f-b572-5ba71d8bfe9d",
       "position": 5,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Step 4:** Design the User Interface\n\n* Students use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \n\n\n**Steps 5+** will be completed later on in the unit.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 4:** Design the User Interface\n\n* Students use the screen templates to sketch out the design of their app, including arrows or notes to show how different elements are connected. \n\n\n**Steps 5+** will be completed later on in the unit.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1309,7 +1309,7 @@
       "key": "bb46228f-c941-4de4-8a16-cb3cbd1afcf9",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** *How did talking with the users of your app impact your design decisions?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did talking with the users of your app impact your design decisions?*"
       },
       "seeding_key": {
         "activity_section.key": "bb46228f-c941-4de4-8a16-cb3cbd1afcf9",
@@ -1378,7 +1378,7 @@
       "key": "a5b15724-3f07-4bc0-8481-f307334deb04",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Why is it important to plan out the design of an app?*\n\n**Discussion Goal:**\n* Planning can save time so the developers don't spend time designing faulty user interfaces\n* Planning can help the developers talk through and test out ideas with the users of the app\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is it important to plan out the design of an app?*\n\n**Discussion Goal:**\n* Planning can save time so the developers don't spend time designing faulty user interfaces\n* Planning can help the developers talk through and test out ideas with the users of the app\n"
       },
       "seeding_key": {
         "activity_section.key": "a5b15724-3f07-4bc0-8481-f307334deb04",
@@ -1401,7 +1401,7 @@
       "key": "ecea6124-1b85-4d53-bc07-5a94388ce996",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 5:** Direct students to Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 5:** Direct students to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "ecea6124-1b85-4d53-bc07-5a94388ce996",
@@ -1412,7 +1412,7 @@
       "key": "9224ac47-9581-419c-977c-393705bb9647",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Level 1:** On this level, students see a sample app they've looked at before along with the sketches for the screens. Students run the app and compare the screens to the original design.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:** On this level, students see a sample app they've looked at before along with the sketches for the screens. Students run the app and compare the screens to the original design.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1442,7 +1442,7 @@
       "key": "56a07763-6e3b-4a2d-b71c-89517875ee26",
       "position": 5,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Level 2** Here students will work on transferring their prototypes to screens in App Lab. Partners can work together sharing a computer, or they can divide the screens between themselves and work individually. After they are done, the individual screens can be shared to create a complete project (see slide for instructions).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2** Here students will work on transferring their prototypes to screens in App Lab. Partners can work together sharing a computer, or they can divide the screens between themselves and work individually. After they are done, the individual screens can be shared to create a complete project (see slide for instructions).",
         "progression_name": "Sample Prototype"
       },
       "seeding_key": {
@@ -1465,7 +1465,7 @@
       "key": "4e05d113-b69d-4316-83d3-d359b66b079a",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Were there any changes you had to make to your original design once you transferred it to a screen?*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Were there any changes you had to make to your original design once you transferred it to a screen?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -1517,7 +1517,7 @@
       "key": "60734281-0b48-4278-b651-6daa1b8242b0",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.*\n\n**Discussion Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\n\n* Instructions are not clear on what to do\n* Instructions use confusing words\n* Instructions don't actually accomplish what they're supposed to\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Write down three different reasons you would call a set of instructions \"bad\". Be ready to share with a neighbor.*\n\n**Discussion Goal:** Aim to hear a few different students share reasons that instructions are \"bad\". The point here is just to get students thinking and there's no specific answer you're driving towards. Some possible ideas, however, might include:\n\n* Instructions are not clear on what to do\n* Instructions use confusing words\n* Instructions don't actually accomplish what they're supposed to\n"
       },
       "seeding_key": {
         "activity_section.key": "60734281-0b48-4278-b651-6daa1b8242b0",
@@ -1540,7 +1540,7 @@
       "key": "02a63f32-732f-4afc-b43b-7c879d760fd1",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two, optionally forming a group of three.\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Distribute:** Give each group a small set of blocks (either LEGO or paper cutouts). Also have each group use a blank sheet of paper or a blank page in a journal.\r\n\r\n**Display:** Use the lesson slides to guide this activity."
+        "description": "**Group:** Place students in groups of two, optionally forming a group of three.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a small set of blocks (either LEGO or paper cutouts). Also have each group use a blank sheet of paper or a blank page in a journal.\r\n\r\n**Display:** Use the lesson slides to guide this activity."
       },
       "seeding_key": {
         "activity_section.key": "02a63f32-732f-4afc-b43b-7c879d760fd1",
@@ -1551,7 +1551,7 @@
       "key": "b2804970-6216-43c0-8140-57bac19b8ecb",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Step 1: Design:** Give students a couple minutes to create their design. Keep this quick since the bigger focus should be on the instructions."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 1: Design:** Give students a couple minutes to create their design. Keep this quick since the bigger focus should be on the instructions."
       },
       "seeding_key": {
         "activity_section.key": "b2804970-6216-43c0-8140-57bac19b8ecb",
@@ -1562,7 +1562,7 @@
       "key": "0c1ae976-6a66-4af9-b463-77a976b2e373",
       "position": 3,
       "properties": {
-        "description": "**Step 2: Record:** Either have students sketch their design or take a picture. Make sure the image is on a separate piece of paper or the back side of a sheet of paper.\r\n\r\n**Step 3: Write Instructions:** This is the most important step and should be given about 5 minutes. Encourage students to be as clear as possible while only using words. Encourage them to think about their brainstorm of \"bad\" instructions this morning to see if it can inspire them to make \"good\" ones.\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 4: Trade:** Have students take apart their design, and then trade instructions with another group. Make sure they keep their recording of the design hidden.\r\n\r\n**Step 5: Build:** Give students 3 minutes to follow the instructions from another group.\r\n\r\n**Step 6: Compare:** Give students 2 minutes to compare what they built with the picture of the actual target. In their groups they should discuss what they think went wrong or anything they're surprised worked out.\r\n\r\n**Step 7: Repeat:** Depending on how much time you have, encourage students to trade with one or two other groups. Make sure to save time for the wrap up.",
+        "description": "**Step 2: Record:** Either have students sketch their design or take a picture. Make sure the image is on a separate piece of paper or the back side of a sheet of paper.\r\n\r\n**Step 3: Write Instructions:** This is the most important step and should be given about 5 minutes. Encourage students to be as clear as possible while only using words. Encourage them to think about their brainstorm of \"bad\" instructions this morning to see if it can inspire them to make \"good\" ones.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 4: Trade:** Have students take apart their design, and then trade instructions with another group. Make sure they keep their recording of the design hidden.\r\n\r\n**Step 5: Build:** Give students 3 minutes to follow the instructions from another group.\r\n\r\n**Step 6: Compare:** Give students 2 minutes to compare what they built with the picture of the actual target. In their groups they should discuss what they think went wrong or anything they're surprised worked out.\r\n\r\n**Step 7: Repeat:** Depending on how much time you have, encourage students to trade with one or two other groups. Make sure to save time for the wrap up.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1589,7 +1589,7 @@
       "key": "66bce2fa-0951-4fbd-9df5-61df3e127cff",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** *When you or your classmates made mistakes following instructions today what \"went wrong\"? Try to be as specific as possible.*\n\n**Discussion Goal:** This wrap up includes two sets of prompts and should be run as back-to-back discussions. The first set helps students synthesize the challenges they encountered during the main activity. The second set prompts students to think about how they might design a new language that avoids these challenges.\n\nWhen running the first discussion ask students to share specific experiences during the lesson and prompt them to think about what went wrong. They might say things like \"if we'd just been more clear\" or \"we just need to include more detail\". This might be true, but eventually you should point out that human language is often ambiguous. In other words, it's not their fault! It's hard to do a good job with bad tools!\n\nWhen running the second discussion push students to think about what a language designed for giving instructions would look like. While specific answers aren't important, you should push them to build on their experiences in the main activity. For example, if they saw that words having two meanings was confusing in the main activity, they should suggest redesigning the language so each word has a single well-understood meaning. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When you or your classmates made mistakes following instructions today what \"went wrong\"? Try to be as specific as possible.*\n\n**Discussion Goal:** This wrap up includes two sets of prompts and should be run as back-to-back discussions. The first set helps students synthesize the challenges they encountered during the main activity. The second set prompts students to think about how they might design a new language that avoids these challenges.\n\nWhen running the first discussion ask students to share specific experiences during the lesson and prompt them to think about what went wrong. They might say things like \"if we'd just been more clear\" or \"we just need to include more detail\". This might be true, but eventually you should point out that human language is often ambiguous. In other words, it's not their fault! It's hard to do a good job with bad tools!\n\nWhen running the second discussion push students to think about what a language designed for giving instructions would look like. While specific answers aren't important, you should push them to build on their experiences in the main activity. For example, if they saw that words having two meanings was confusing in the main activity, they should suggest redesigning the language so each word has a single well-understood meaning. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "66bce2fa-0951-4fbd-9df5-61df3e127cff",
@@ -1612,7 +1612,7 @@
       "key": "3a70d4cf-cde3-4d20-8728-2c6a324f6772",
       "position": 4,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Discuss:** *Imagine we were going to redesign human language to be really good for giving clear instructions. What types of changes would we need to make?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine we were going to redesign human language to be really good for giving clear instructions. What types of changes would we need to make?*"
       },
       "seeding_key": {
         "activity_section.key": "3a70d4cf-cde3-4d20-8728-2c6a324f6772",
@@ -1677,7 +1677,7 @@
       "key": "6d2f680b-4fa6-43e1-a2d8-a7b2098a9ba9",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1716,7 +1716,7 @@
       "key": "c02dce63-9a96-4b10-a98e-8f9171466076",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Think about your experiences today and in the previous lesson. How is a programming language different from natural language?*\n\n**Discussion Goal:** Make this a quick discussion to help connect the previous lesson to this one. Help bring out some of the following points.\n\n* Programming languages are much more precise than natural language \n* Programming languages have very strict rules\n* Programming languages may feel a little awkward at first.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think about your experiences today and in the previous lesson. How is a programming language different from natural language?*\n\n**Discussion Goal:** Make this a quick discussion to help connect the previous lesson to this one. Help bring out some of the following points.\n\n* Programming languages are much more precise than natural language \n* Programming languages have very strict rules\n* Programming languages may feel a little awkward at first.\n"
       },
       "seeding_key": {
         "activity_section.key": "c02dce63-9a96-4b10-a98e-8f9171466076",
@@ -1739,7 +1739,7 @@
       "key": "41807fa2-2690-47b7-a379-d72b65c98c66",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Journal:** Go through each vocabulary word (Program Statement, Program, Sequential Programming, Event Driven Programming) and give students a chance to record each piece of information.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Go through each vocabulary word (Program Statement, Program, Sequential Programming, Event Driven Programming) and give students a chance to record each piece of information.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1802,7 +1802,7 @@
       "key": "7a601b2a-1894-4d11-a7ca-a5f1685b8733",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Optional Warmup Discussion:** This discussionis optional and included for instances where you need a warm up discussion on the board when students walk in. If your classroom is able to move directly to main activity you should feel free to skip this discussion in the interest of time.\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Your friend calls and says \"I can't get music to come out of my speakers, can you help?\". Write a quick list of everything you'd ask them or have them check to try to fix the problem.*\n\n**Optional Warmup Discussion:** This discussionis optional and included for instances where you need a warm up discussion on the board when students walk in. If your classroom is able to move directly to main activity you should feel free to skip this discussion in the interest of time.\n\n**Discussion Goal:** This prompt should help get students in the mindset of debugging. If students ask for more details tell them that this is all the information they have and that they should feel free to \n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -1826,7 +1826,7 @@
       "key": "5841c5e1-3add-448a-9f87-982c6d250a66",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the Debugging video and then show the debugging process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Debugging video and then show the debugging process.",
         "name": "Practice Time\r"
       },
       "seeding_key": {
@@ -1872,7 +1872,7 @@
       "key": "aaffbcc3-3b3e-43b4-8d6d-f2606f05352a",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *If you were using the debugging process then you should have some notes of good debugging tips. Share those with your neighbor and add any new ones you forgot to add. Be ready to share with the class.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings. Give the room an opportunity to share as many ideas as they can before sharing the provided slides with some recommended steps.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *If you were using the debugging process then you should have some notes of good debugging tips. Share those with your neighbor and add any new ones you forgot to add. Be ready to share with the class.*\n\n**Discussion Goal:** This discussion should help reinforce the fact that debugging is a skill that can be learned and that it is made up of many little steps and understandings. Give the room an opportunity to share as many ideas as they can before sharing the provided slides with some recommended steps.\n"
       },
       "seeding_key": {
         "activity_section.key": "aaffbcc3-3b3e-43b4-8d6d-f2606f05352a",
@@ -1883,7 +1883,7 @@
       "key": "3cf3f85b-0a34-4b3b-99dd-81ad1c1b5534",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Show the slide which lists some best practices in addition to those students may have mentioned."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide which lists some best practices in addition to those students may have mentioned."
       },
       "seeding_key": {
         "activity_section.key": "3cf3f85b-0a34-4b3b-99dd-81ad1c1b5534",
@@ -1906,7 +1906,7 @@
       "key": "2eced587-1673-49c0-972d-a3d61b80424e",
       "position": 4,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following vocabulary words and definitions to their journals: documentation and comment."
       },
       "seeding_key": {
         "activity_section.key": "2eced587-1673-49c0-972d-a3d61b80424e",
@@ -1974,7 +1974,7 @@
       "key": "69df2a29-cb56-44c7-9d41-ead37464f002",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *What makes a good partner?'*\n\n**Discussion Goal:** Make this a quick discussion and just aim to get a few ideas from around the room. For example, a good partner...\n\n* listens\n* contributes\n* shares the work evenly\n* and so on....\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes a good partner?'*\n\n**Discussion Goal:** Make this a quick discussion and just aim to get a few ideas from around the room. For example, a good partner...\n\n* listens\n* contributes\n* shares the work evenly\n* and so on....\n",
         "name": "What Makes a Good Partner?"
       },
       "seeding_key": {
@@ -2016,7 +2016,7 @@
       "key": "f400d836-3586-44b0-94ba-53164c90b275",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021]\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 6:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\n\n\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design/csp/2021] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 6:** Students fill out the chart on page 4, listing all of the Event Handlers in their programs. They should be able to determine these based on the Program Specification they designed.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Play the Pair Programming video found either in [r csp-unit-3-intro-to-app-design/csp/2021] or on Code Studio. Afterwards review the pair programming steps found in Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "f400d836-3586-44b0-94ba-53164c90b275",
@@ -2051,7 +2051,7 @@
       "key": "a6b9b889-ba8d-4137-bfcb-1f4ffe2ec47c",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *How does Pair Programming help when working on a project? How does it help with the debugging process in particular?*\n\n**Discussion Goal:** Use this prompt to reinforce not only the value of pair programming and collaboration while programming, but also to remind students of debugging practices they learned in the previous lesson. Possible answers include\n\n* Talking through my code with another person helps me figure out what to do\n* When I get stuck, there's someone there to help brainstorm a solution\n* There's more than one set of eyes to find bugs\n* Different partners bring different perspectives to a project\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How does Pair Programming help when working on a project? How does it help with the debugging process in particular?*\n\n**Discussion Goal:** Use this prompt to reinforce not only the value of pair programming and collaboration while programming, but also to remind students of debugging practices they learned in the previous lesson. Possible answers include\n\n* Talking through my code with another person helps me figure out what to do\n* When I get stuck, there's someone there to help brainstorm a solution\n* There's more than one set of eyes to find bugs\n* Different partners bring different perspectives to a project\n",
         "name": "Reflecting on Pair Programming\r"
       },
       "seeding_key": {
@@ -2063,7 +2063,7 @@
       "key": "876f759d-6a7a-4fc2-a3f3-65ce5407fb42",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Journal:** Have students add \"Pair Programming\" to their journals."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add \"Pair Programming\" to their journals."
       },
       "seeding_key": {
         "activity_section.key": "876f759d-6a7a-4fc2-a3f3-65ce5407fb42",
@@ -2096,7 +2096,7 @@
       "key": "e73973b6-2a2e-45f0-bf06-482fae5e854d",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Think of times when you've received helpful feedback on school work, a hobby, or a sport.*\n\n* *What makes good feedback?*\n* *What makes bad feedback?*\n\n**Discussion Goal:** This is an optional prompt if your class situation requires it. If you believe your students need more time to work on their apps then move right into work time.  This prompt, however is designed to get students thinking early about the differences between useful and unhelpful feedback.  For example, students may note that...\n\n* Good feedback: \n\t* Specific information beyond \"it's great\". \n\t* Explains why something needs work\n* Bad Feedback: \n\t* Is overly negative without constructive feedback\n\t* Does not go into enough detail\n "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think of times when you've received helpful feedback on school work, a hobby, or a sport.*\n\n* *What makes good feedback?*\n* *What makes bad feedback?*\n\n**Discussion Goal:** This is an optional prompt if your class situation requires it. If you believe your students need more time to work on their apps then move right into work time.  This prompt, however is designed to get students thinking early about the differences between useful and unhelpful feedback.  For example, students may note that...\n\n* Good feedback: \n\t* Specific information beyond \"it's great\". \n\t* Explains why something needs work\n* Bad Feedback: \n\t* Is overly negative without constructive feedback\n\t* Does not go into enough detail\n "
       },
       "seeding_key": {
         "activity_section.key": "e73973b6-2a2e-45f0-bf06-482fae5e854d",
@@ -2160,7 +2160,7 @@
       "key": "e84b5ead-1284-4ddc-84bb-020dd6ee80b1",
       "position": 4,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021].\n\n<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 7:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Direct students back to the [r app_development_planning_guide/csp/2021].\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 7:** Groups swap apps and gather feedback. It is ok to move ahead to this section even if students are not done with their apps yet. \n\nHere's what you should observe:\n\n* Group A lets Group B test their app. \n* Group A watches Group B use the app, and writes down improvements that come to mind.\n* Group A interviews Group B asking for specific improvements Group A can make. This may be different than what Group A came up with during the observation. These improvements are written down in the Activity Guide. \n* Group A and B swap and now Group A tests Group B's app while Group B watches. \n* After this, mix up the group pairings and repeat the steps above. \n\n![](https://images.code.org/c1047cb72698ab39e2bdf1f6f1ba6613-image-1611868434888.png)",
         "name": "Testing and Feedback - 10 mins\r",
         "progression_name": "Add More Code"
       },
@@ -2173,7 +2173,7 @@
       "key": "5395d19b-c509-43ed-8000-67c1f146723f",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Step 8:** Now return to your stations and pick at least one improvement to make to their app based on feedback. Write this down in the Planning Guide in Step 7.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Now return to your stations and pick at least one improvement to make to their app based on feedback. Write this down in the Planning Guide in Step 7.",
         "remarks": true
       },
       "seeding_key": {
@@ -2185,7 +2185,7 @@
       "key": "4a50ee01-fea8-485b-9210-49e547a03cc3",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Discuss:** *Why is it important to get feedback from others while building your app? What is the value of getting this feedback even if you aren't finished with your app?*\n\n**Discussion Goal:** Use this prompt as time allows. The goal is to reinforce the importance of feedback in the development of good software. Possible answers include:\n\n* Another person may find a bug that you have been overlooking\n* Something that seems obvious to you is not obvious to the user\n* Even if the app isn't finished, feedback can help guide the next steps\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is it important to get feedback from others while building your app? What is the value of getting this feedback even if you aren't finished with your app?*\n\n**Discussion Goal:** Use this prompt as time allows. The goal is to reinforce the importance of feedback in the development of good software. Possible answers include:\n\n* Another person may find a bug that you have been overlooking\n* Something that seems obvious to you is not obvious to the user\n* Even if the app isn't finished, feedback can help guide the next steps\n"
       },
       "seeding_key": {
         "activity_section.key": "4a50ee01-fea8-485b-9210-49e547a03cc3",
@@ -2226,7 +2226,7 @@
       "key": "25cd2d3b-a4c4-435f-b13b-ee1d42b18441",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students back in pairs with their project partner.\r\n\r\n<i class="fa fa-list-alt" aria-hidden="true"></i>  **Distribute:** Make sure students have access to the [r app_development_planning_guide/csp/2021]"
+        "description": "**Group:** Place students back in pairs with their project partner.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Make sure students have access to the [r app_development_planning_guide/csp/2021]"
       },
       "seeding_key": {
         "activity_section.key": "25cd2d3b-a4c4-435f-b13b-ee1d42b18441",
@@ -2250,7 +2250,7 @@
       "key": "15f48dad-56da-4bda-baa2-2c527eb728a1",
       "position": 3,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Code Studio:** Direct students to continue working on their app. When they are finished, they should hit \"Submit\" to turn in their app.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Direct students to continue working on their app. When they are finished, they should hit \"Submit\" to turn in their app.",
         "progression_name": "Submit your app"
       },
       "seeding_key": {
@@ -2262,7 +2262,7 @@
       "key": "d15a3084-9ae5-460e-a739-968817e6092a",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Reflection:** Direct students to the Reflection Section in the Planning Guide. There are two questions for students to complete. \r\n\r\n**Submit Projects:** Students should submit their final projects including both a link to the app and their planning guide.\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Reflection:** Direct students to the Reflection Section in the Planning Guide. There are two questions for students to complete. \r\n\r\n**Submit Projects:** Students should submit their final projects including both a link to the app and their planning guide.\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "d15a3084-9ae5-460e-a739-968817e6092a",
@@ -2309,7 +2309,7 @@
       "key": "7cf9caee-8212-41ea-91ff-4a6b9307a70b",
       "position": 1,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the Unit Assessment on Code Studio.",
         "name": "Unit Assessment - 25 mins\r"
       },
       "seeding_key": {
@@ -2321,7 +2321,7 @@
       "key": "42721b5f-7a1b-4bc8-8a79-9cdb8fde6dc2",
       "position": 2,
       "properties": {
-        "description": "<i class="fa fa-list-alt" aria-hidden="true"></i>  **Do This:** One student per group displays their app on the computer. Groups rotate around the room running the different apps. Students can leave comments on sticky notes at each station.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** One student per group displays their app on the computer. Groups rotate around the room running the different apps. Students can leave comments on sticky notes at each station.",
         "name": "Gallery Walk - 10 mins\r"
       },
       "seeding_key": {
