@@ -29,7 +29,7 @@ describe('ScriptOverview', () => {
   it('includes a ScriptOverviewTopRow/ProgressLegend on overview page', () => {
     const wrapper = shallow(<ScriptOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(ScriptOverviewTopRow)').length, 1);
-    assert.equal(wrapper.find('ProgressLegend').length, 1);
+    assert.equal(wrapper.find('Connect(ProgressLegend)').length, 1);
   });
 
   it('includes no ScriptOverviewTopRow/ProgressLegend if not on overview page', () => {
