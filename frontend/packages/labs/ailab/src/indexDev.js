@@ -5,25 +5,17 @@ import queryString from "query-string";
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
   minimal: {
-    datasets: ["candy"],
+    datasets: ["tacos_toy"],
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
     hideModelCard: true,
     hideColumnClicking: true,
-    hideSelectLabel: true,
+    hideSelectLabel: true
   },
 
-  "preload-metadata": {
-    hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true
-  },
-
-  "load-foods": { datasets: ["foods"] },
-
-  "ml-knn-train": {
-    datasets: ["candy", "titanic", "foods"],
+  "intro-ai-tacos": {
+    datasets: ["tacos_toy"],
     hideSelectLabel: true,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
@@ -31,34 +23,41 @@ const sampleModes = {
     hideSave: true
   },
 
-  "ml-knn-ailab": {
-    datasets: ["candy", "titanic", "foods"],
+  "intro-ai-foods": {
+    datasets: [
+      "boba_toy",
+      "cookies_toy",
+      "naan_toy",
+      "poke_toy",
+      "poutine_toy",
+      "raspado_toy",
+      "salad_toy",
+      "salsa_toy"
+    ],
     hideSelectLabel: true,
     hideSpecifyColumns: true,
     hideChooseReserve: true,
-    hideModelCard: true
+    hideModelCard: true,
+    hideSave: true
   },
 
-  "ml-svm-train": {
-    datasets: ["candy"],
+  safari: {
+    datasets: ["safari_toy"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
     hideChooseReserve: true,
-    hideModelCard: true
+    hideModelCard: true,
+    hideSave: true,
+    hideSelectTrainer: "knnRegress"
   },
 
-  "ml-svm-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
+  zoo: {
+    datasets: ["zoo"],
+    hideSpecifyColumns: true,
+    hideChooseReserve: true
   },
 
-  "ml-mini-project-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectTrainer: "knnClassify"
-  },
-
-  "ml-final-project-ailab": {
-    hideSelectTrainer: "knnClassify"
-  }
+  "final-project": {}
 };
 
 // Look for a ?mode= parameter on the URL
