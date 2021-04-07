@@ -55,6 +55,32 @@ describe('standardsEditorRedux reducer', () => {
     ]);
   });
 
+  it('sorts standards by framework', () => {
+    newStandard.frameworkShortcode = 'framework-0';
+    const nextState = standardsEditor(
+      initialState,
+      addStandard('standard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-4',
+      'shortcode-1',
+      'shortcode-3'
+    ]);
+  });
+
+  it('sorts standards within framework by shortcode', () => {
+    newStandard.shortcode = 'shortcode-2';
+    const nextState = standardsEditor(
+      initialState,
+      addStandard('standard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-1',
+      'shortcode-2',
+      'shortcode-3'
+    ]);
+  });
+
   it('removes standard', () => {
     const nextState = standardsEditor(
       initialState,
