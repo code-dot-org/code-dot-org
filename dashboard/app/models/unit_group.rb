@@ -90,6 +90,15 @@ class UnitGroup < ApplicationRecord
     UnitGroup.seed_from_hash(hash)
   end
 
+  def self.create_resource_from_hash(resource_data, course_version_id)
+    resource_attrs = resource_data.except('seeding_key')
+    resource_attrs['course_version_id'] = course_version_id
+    resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version_id)
+    resource.assign_attributes(resource_attrs)
+    resource.save! if resource.changed?
+    resource
+  end
+
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_scripts'])
@@ -100,24 +109,8 @@ class UnitGroup < ApplicationRecord
     course_version = unit_group.course_version
 
     if course_version
-      teacher_resources_imported = (hash['resources'] || []).map do |resource_data|
-        resource_attrs = resource_data.except('seeding_key')
-        resource_attrs['course_version_id'] = course_version.id
-        resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
-        resource.assign_attributes(resource_attrs)
-        resource.save! if resource.changed?
-        resource
-      end
-      unit_group.resources = teacher_resources_imported
-      student_resources_imported = (hash['student_resources'] || []).map do |resource_data|
-        resource_attrs = resource_data.except('seeding_key')
-        resource_attrs['course_version_id'] = course_version.id
-        resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
-        resource.assign_attributes(resource_attrs)
-        resource.save! if resource.changed?
-        resource
-      end
-      unit_group.student_resources = student_resources_imported
+      unit_group.resources = (hash['resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
+      unit_group.student_resources = (hash['student_resources'] || []).map {|resource_data| create_resource_from_hash(resource_data, course_version.id)}
     end
 
     unit_group.save!
