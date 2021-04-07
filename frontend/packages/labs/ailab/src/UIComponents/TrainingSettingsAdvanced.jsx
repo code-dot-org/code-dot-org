@@ -4,11 +4,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import {
   getShowChooseReserve,
-  getShowSelectTrainer,
   setPercentDataToReserve,
   setReserveLocation,
-  setSelectedTrainer,
-  getCompatibleTrainers,
   setKValue
 } from "../redux";
 import { styles } from "../constants";
@@ -16,13 +13,9 @@ import { styles } from "../constants";
 class TrainingSettingsAdvanced extends Component {
   static propTypes = {
     showChooseReserve: PropTypes.bool,
-    showSelectTrainer: PropTypes.bool,
     percentDataToReserve: PropTypes.number,
     setPercentDataToReserve: PropTypes.func,
     setReserveLocation: PropTypes.func,
-    selectedTrainer: PropTypes.string,
-    setSelectedTrainer: PropTypes.func,
-    compatibleTrainers: PropTypes.object,
     setKValue: PropTypes.func,
     kValue: PropTypes.number
   };
@@ -35,10 +28,6 @@ class TrainingSettingsAdvanced extends Component {
     this.props.setReserveLocation(event.target.value);
   };
 
-  handleChangeSelectTrainer = event => {
-    this.props.setSelectedTrainer(event.target.value);
-  };
-
   handleChangeKValue = event => {
     this.props.setKValue(parseInt(event.target.value));
   };
@@ -46,9 +35,7 @@ class TrainingSettingsAdvanced extends Component {
   render() {
     const {
       showChooseReserve,
-      showSelectTrainer,
       percentDataToReserve,
-      compatibleTrainers,
       selectedTrainer
     } = this.props;
 
@@ -78,52 +65,15 @@ class TrainingSettingsAdvanced extends Component {
             </form>
           </div>
         )}
-        {showSelectTrainer && (
           <div>
-            <br />
-            <br />
-            <div style={styles.largeText}>Pick an Algorithm</div>
-            <form>
-              <label>
-                <p>Which Machine Learning Algorithm would you like to use?</p>
-                <select
-                  value={this.props.selectedTrainer}
-                  onChange={this.handleChangeSelectTrainer}
-                >
-                  <option>{""}</option>
-                  {Object.keys(compatibleTrainers).map((trainerKey, index) => {
-                    return (
-                      <option key={index} value={trainerKey}>
-                        {compatibleTrainers[trainerKey]["name"]}
-                      </option>
-                    );
-                  })}
-                </select>
-                {this.props.selectedTrainer && (
-                  <div>
-                    <div style={styles.mediumText}>
-                      {compatibleTrainers[selectedTrainer]["mlType"]}
-                    </div>{" "}
-                    {compatibleTrainers[selectedTrainer]["description"]}
-                  </div>
-                )}
-              </label>
-              {(this.props.selectedTrainer === "knnClassify" ||
-                this.props.selectedTrainer === "knnRegress") && (
-                <div>
-                  <label>
-                    <p>What would you like the value of K to be?</p>
-                    <input
-                      /* value of input is handled by default */
-                      onChange={this.handleChangeKValue}
-                      type="text"
-                    />
-                  </label>
-                </div>
-              )}
-            </form>
+            <label>
+              <p>What would you like the value of K to be?</p>
+              <input
+                onChange={this.handleChangeKValue}
+                type="text"
+              />
+            </label>
           </div>
-        )}
       </div>
     );
   }
@@ -132,10 +82,7 @@ class TrainingSettingsAdvanced extends Component {
 export default connect(
   state => ({
     showChooseReserve: getShowChooseReserve(state),
-    showSelectTrainer: getShowSelectTrainer(state),
     percentDataToReserve: state.percentDataToReserve,
-    selectedTrainer: state.selectedTrainer,
-    compatibleTrainers: getCompatibleTrainers(state),
     kValue: state.kValue
   }),
   dispatch => ({
@@ -144,9 +91,6 @@ export default connect(
     },
     setReserveLocation(reserveLocation) {
       dispatch(setReserveLocation(reserveLocation));
-    },
-    setSelectedTrainer(selectedTrainer) {
-      dispatch(setSelectedTrainer(selectedTrainer));
     },
     setKValue(kValue) {
       dispatch(setKValue(kValue));

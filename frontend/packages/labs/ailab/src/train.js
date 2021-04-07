@@ -1,6 +1,5 @@
 /* Generic machine learning handlers that route to the selected trainer. */
 
-import SVMTrainer from "./trainers/SVMTrainer";
 import KNNTrainer from "./trainers/KNNTrainer";
 
 import { store } from "./index.js";
@@ -18,22 +17,11 @@ import {
 import { ColumnTypes, MLTypes, TestDataLocations } from "./constants.js";
 
 export const availableTrainers = {
-  binarySvm: {
-    name: "Binary SVM",
-    description:
-      "Uses the Support Vector Machine algorithm to classify an example as one of two options.",
-    mlType: MLTypes.CLASSIFICATION,
-    binary: true,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
-    labelType: ColumnTypes.CATEGORICAL
-  },
   knnClassify: {
     name: "KNN Classifier",
     description:
       "Uses the K-Nearest Neighbor algorithm to classify an example as one of N options.",
     mlType: MLTypes.CLASSIFICATION,
-    binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
     labelType: ColumnTypes.CATEGORICAL
   },
   knnRegress: {
@@ -41,8 +29,6 @@ export const availableTrainers = {
     description:
       "Uses the K-Nearest Neighbor algorithm to predict a floating point label.",
     mlType: MLTypes.REGRESSION,
-    binary: false,
-    supportedFeatureTypes: [ColumnTypes.CATEGORICAL, ColumnTypes.NUMERICAL],
     labelType: ColumnTypes.NUMERICAL
   }
 };
@@ -229,21 +215,7 @@ const prepareTestData = () => {
 let trainingState = {};
 const init = () => {
   const state = store.getState();
-  let trainer;
-  switch (getSelectedTrainer(state)) {
-    case "binarySvm":
-      trainer = new SVMTrainer();
-      break;
-    case "knnClassify":
-      trainer = new KNNTrainer();
-      break;
-    case "knnRegress":
-      trainer = new KNNTrainer();
-      break;
-    default:
-      trainer = new KNNTrainer();
-  }
-  trainingState.trainer = trainer;
+  trainingState.trainer =  new KNNTrainer();
   buildOptionNumberKeysByFeature(state);
   prepareTrainingData();
 };
