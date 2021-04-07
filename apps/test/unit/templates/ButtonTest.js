@@ -1,7 +1,7 @@
 import {assert} from '../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
-import {UnconnectedButton as Button} from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import sinon from 'sinon';
 
