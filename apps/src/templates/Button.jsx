@@ -9,7 +9,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {connect} from 'react-redux';
 
 const ButtonColor = {
   orange: 'orange',
@@ -56,10 +55,7 @@ const styles = {
   },
   updated: {lineHeight: '12px'},
   icon: {
-    marginRight: 5
-  },
-  iconRTL: {
-    marginLeft: 5
+    marginInlineEnd: 5
   },
   colors: {
     [ButtonColor.orange]: {
@@ -207,8 +203,7 @@ class Button extends React.Component {
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
     pendingText: PropTypes.string,
-    __useDeprecatedTag: PropTypes.bool,
-    isRtl: PropTypes.bool
+    __useDeprecatedTag: PropTypes.bool
   };
 
   onKeyDown = event => {
@@ -237,15 +232,11 @@ class Button extends React.Component {
       tabIndex,
       isPending,
       pendingText,
-      __useDeprecatedTag,
-      isRtl
+      __useDeprecatedTag
     } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
-
-    // Adjust styles if locale is RTL
-    const directionalIconStyle = isRtl ? styles.iconRTL : styles.icon;
 
     if (!href && !onClick) {
       throw new Error('Expect at least one of href/onClick');
@@ -294,7 +285,7 @@ class Button extends React.Component {
             <FontAwesome
               icon={icon}
               className={iconClassName}
-              style={{...directionalIconStyle, ...iconStyle}}
+              style={{...styles.icon, ...iconStyle}}
             />
           )}
           {isPending && pendingText && (
@@ -314,8 +305,4 @@ Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
 Button.ButtonHeight = ButtonHeight;
 
-export const UnconnectedButton = Button;
-
-export default connect(state => ({
-  isRtl: state.isRtl
-}))(Radium(Button));
+export default Radium(Button);
