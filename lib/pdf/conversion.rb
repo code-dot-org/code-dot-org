@@ -4,7 +4,7 @@ module PDF
   def self.generate_from_url(url, outpath, options={})
     invoke_generation_script(
       [
-        '-u', url,
+        '-u', Shellwords.escape(url),
         '-o', Shellwords.escape(outpath),
       ],
       options
