@@ -22,7 +22,7 @@ export default class CourseOverviewTopRow extends Component {
     id: PropTypes.number.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
-    studentResources: PropTypes.arrayOf(resourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
     useMigratedResources: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool
