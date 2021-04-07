@@ -33,25 +33,26 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     render json: user_ml_model_data.to_json
   end
 
-  # GET api/v1/ml_models/metadata/:model_id
+  # GET api/v1/ml_models/metadata/:id
   # Retrieve a trained ML model's metadata
   def user_ml_model_metadata
-    metadata = UserMlModel.where(model_id: params[:model_id])&.first&.metadata
+    metadata = UserMlModel.where(model_id: params[:id])&.first&.metadata
     return render_404 unless metadata
     render json: JSON.parse(metadata)
   end
 
-  # GET api/v1/ml_models/:model_id
+  # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def get_trained_model
-    model = download_from_s3(params[:model_id])
+    model = download_from_s3(params[:id])
     return render_404 unless model
     render json: model
   end
 
-  # DELETE api/v1/ml_models/:model_id
+  # DELETE api/v1/ml_models/:id
   def destroy
-    @user_ml_model = UserMlModel.find_by(model_id: params[:model_id])
+    @user_ml_model = UserMlModel.find_by(model_id: params[:id])
+    return head :not_found unless @user_ml_model
     return head :forbidden unless @user_ml_model.user_id == current_user.id
     @user_ml_model.destroy
     deleted_from_s3 = delete_from_s3(@user_ml_model.model_id)

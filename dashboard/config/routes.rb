@@ -740,11 +740,14 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      post 'ml_models/save', to: 'ml_models#save'
-      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
-      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
-      delete 'ml_models/:model_id', to: 'ml_models#destroy'
+      resources :ml_models, only: [:destroy] do
+        collection do
+          post 'save'
+          get 'user_ml_model_names'
+          get 'user_ml_model_metadata'
+          get 'get_trained_model'
+        end
+      end
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
