@@ -15,8 +15,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {makeEnum, reload} from '../utils';
-import logToCloud from '../logToCloud';
+import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
 import {getCurrentId} from '../code-studio/initApp/project';
 
@@ -355,18 +354,10 @@ WebLab.prototype.onFinish = function(submit) {
   }
 };
 
-WebLab.prototype.getMaxProjectCapacity = function() {
-  return getStore().getState().maxProjectCapacity;
-};
-
-WebLab.prototype.setProjectSize = function(bytes) {
-  getStore().dispatch(actions.changeProjectSize(bytes));
-};
-
 WebLab.prototype.getCodeAsync = function() {
   return new Promise((resolve, reject) => {
-    if (this.brambleHost !== null) {
-      this.brambleHost.syncFiles(err => {
+    if (this.brambleHost) {
+      this.syncBrambleFiles(err => {
         if (err) {
           reject(err);
         } else {
@@ -472,46 +463,15 @@ WebLab.prototype.onProjectChanged = function() {
   }
 };
 
-// Called by Bramble when the inspector mode has changed
-WebLab.prototype.onInspectorChanged = function(inspectorOn) {
-  getStore().dispatch(actions.changeInspectorOn(inspectorOn));
-};
-
-/*
- * Called by Bramble host to set our reference to its interfaces
- * @param {!Object} brambleHost host interfaces
- * @return {String} current project path (project id plus initial version)
+/**
+ * @returns {String} current project path (project id plus initial version)
  */
-WebLab.prototype.setBrambleHost = function(brambleHost) {
-  // Make brambleHost available for file sync operations as soon as it's
-  // initialized far enough to start building its UI.
-  // This makes operations like "Start Over" available even in cases where
-  // the mount operation throws an uncaught exception (like the missing
-  // index.html error).
-  brambleHost.onBrambleMountable(() => {
-    this.brambleHost = brambleHost;
-  });
-
-  brambleHost.onBrambleReady(() => {
-    brambleHost.onProjectChanged(this.onProjectChanged.bind(this));
-    brambleHost.onInspectorChanged(this.onInspectorChanged.bind(this));
-    // Enable the Finish/Submit/Unsubmit button if it is present:
-    let shareCell = document.getElementById('share-cell');
-    if (shareCell) {
-      shareCell.className = 'share-cell-enabled';
-    }
-    this.brambleHost.syncFiles(() => {});
-  });
+WebLab.prototype.getProjectId = function() {
   if (this.suppliedFilesVersionId) {
     return `${project.getCurrentId()}-${this.suppliedFilesVersionId}`;
   } else {
     return project.getCurrentId();
   }
-};
-
-// Called by Bramble host to get page constants
-WebLab.prototype.getPageConstants = function() {
-  return getStore().getState().pageConstants;
 };
 
 /**
@@ -563,10 +523,8 @@ WebLab.prototype.onFilesReady = function(files, filesVersionId) {
     // current version (until the browser page reloads)
     project.filesVersionId = filesVersionId;
   }
-  if (this.brambleHost) {
-    // Refresh the file tree after files have been synced with Bramble.
-    this.brambleHost.syncFiles(this.brambleHost.fileRefresh);
-  }
+
+  this.syncBrambleFiles(this.brambleHost?.fileRefresh);
 };
 
 /**
@@ -602,24 +560,62 @@ WebLab.prototype.getAppReducers = function() {
   return reducers;
 };
 
-/**
- * Expose New Relic page action hook for use by the enclosed Bramble application.
- */
-WebLab.prototype.addPageAction = function(...args) {
-  logToCloud.addPageAction(...args);
-};
-
-WebLab.prototype.PageAction = makeEnum(
-  logToCloud.PageAction.BrambleError,
-  logToCloud.PageAction.BrambleFilesystemResetSuccess,
-  logToCloud.PageAction.BrambleFilesystemResetFailed
-);
-
 WebLab.prototype.redux = function() {
   return {
     getStore,
     reducers,
     actions
+  };
+};
+
+WebLab.prototype.syncBrambleFiles = function(callback = () => {}) {
+  this.brambleHost?.syncFiles(
+    this.getCurrentFileEntries(),
+    this.getCurrentFilesVersionId(),
+    callback
+  );
+};
+
+/**
+ * Make brambleHost available for file sync operations as soon as it's initialized far
+ * enough to start building its UI. This makes operations like "Start Over" available
+ * even in cases where the mount operation throws an uncaught exception (like the missing
+ * index.html error).
+ * @param {Object} brambleHost
+ */
+WebLab.prototype.onBrambleMountable = function(brambleHost) {
+  this.brambleHost = brambleHost;
+};
+
+WebLab.prototype.onBrambleReady = function() {
+  if (!this.brambleHost) {
+    console.error(`No brambleHost set in WebLab.`);
+    return;
+  }
+
+  // Enable the Finish/Submit/Unsubmit button if it is present.
+  let shareCell = document.getElementById('share-cell');
+  if (shareCell) {
+    shareCell.className = 'share-cell-enabled';
+  }
+
+  this.syncBrambleFiles();
+};
+
+WebLab.prototype.brambleApi = function() {
+  return {
+    changeProjectFile: this.changeProjectFile.bind(this),
+    deleteProjectFile: this.deleteProjectFile.bind(this),
+    getCurrentFileEntries: this.getCurrentFileEntries.bind(this),
+    getCurrentFilesVersionId: this.getCurrentFilesVersionId.bind(this),
+    getProjectId: this.getProjectId.bind(this),
+    getStartSources: this.getStartSources.bind(this),
+    onBrambleMountable: this.onBrambleMountable.bind(this),
+    onBrambleReady: this.onBrambleReady.bind(this),
+    onProjectChanged: this.onProjectChanged.bind(this),
+    registerBeforeFirstWriteHook: this.registerBeforeFirstWriteHook.bind(this),
+    redux: this.redux.bind(this),
+    renameProjectFile: this.renameProjectFile.bind(this)
   };
 };
 
