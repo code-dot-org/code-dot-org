@@ -40,6 +40,7 @@ class ScriptOverview extends React.Component {
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape),
     showCourseUnitVersionWarning: PropTypes.bool,
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
@@ -92,6 +93,7 @@ class ScriptOverview extends React.Component {
       excludeCsfColumnInLegend,
       teacherResources,
       migratedTeacherResources,
+      studentResources,
       perLevelProgress,
       scriptCompleted,
       scriptId,
@@ -179,6 +181,7 @@ class ScriptOverview extends React.Component {
               isRtl={isRtl}
               teacherResources={teacherResources}
               migratedTeacherResources={migratedTeacherResources}
+              studentResources={studentResources}
               showAssignButton={showAssignButton}
               assignedSectionId={assignedSectionId}
               showCalendar={showCalendar}

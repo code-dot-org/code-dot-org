@@ -93,8 +93,21 @@ export default class ResourcesDropdown extends React.Component {
     return (
       <div style={styles.dropdown}>
         <DropdownButton
-          text={i18n.resources()}
-          color={Button.ButtonColor.blue}
+          text={
+            this.props.studentFacing
+              ? i18n.studentResources()
+              : i18n.resources()
+          }
+          color={
+            this.props.studentFacing
+              ? Button.ButtonColor.gray
+              : Button.ButtonColor.blue
+          }
+          size={
+            this.props.studentFacing
+              ? Button.ButtonSize.large
+              : Button.ButtonSize.default
+          }
           onClick={this.handleDropdownClick}
         >
           {dropdownResources}

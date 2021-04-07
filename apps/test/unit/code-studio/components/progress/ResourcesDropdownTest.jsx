@@ -95,4 +95,50 @@ describe('ResourcesDropdown', () => {
       )
     ).to.be.true;
   });
+
+  it('renders migrated resources for student', () => {
+    const wrapper = shallow(
+      <ResourcesDropdown
+        migratedResources={[
+          {
+            key: 'key1',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            key: 'key2',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+        studentFacing={true}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <DropdownButton
+            text={i18n.studentResources()}
+            color={Button.ButtonColor.gray}
+          >
+            <a
+              href="https://example.com/a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Curriculum
+            </a>
+            <a
+              href="https://example.com/b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vocabulary
+            </a>
+          </DropdownButton>
+        </div>
+      )
+    ).to.be.true;
+  });
 });

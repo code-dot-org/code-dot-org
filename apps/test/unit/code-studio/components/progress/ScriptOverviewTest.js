@@ -8,6 +8,7 @@ const defaultProps = {
   onOverviewPage: true,
   excludeCsfColumnInLegend: true,
   teacherResources: [],
+  studentResources: [],
   isSignedIn: true,
   isVerifiedTeacher: true,
   hasVerifiedResources: true,
