@@ -6,26 +6,35 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
 
+S3_BUCKET_NAME = 'cdo-data-sharing-internal'
+aws_account_id = Aws::STS::Client.new.get_caller_identity.account
+REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{aws_account_id}:role/redshift-s3"
+
+SUBMISSIONS_FROM_FILE_NAME = 'submissions.csv'
+SUBMISSIONS_TO_TABLE_NAME = 'analysis.foorm_submissions_reshaped'
+FORMS_FROM_FILE_NAME = 'forms.csv'
+FORMS_TO_TABLE_NAME = 'analysis_pii.foorm_forms_reshaped'
+
 def main
   redshift_client = RedshiftClient.instance
 
   # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
-  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'submissions.csv')
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_FROM_FILE_NAME)
   reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
-  AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'submissions.csv', reshaped_submissions, no_random: true)
-  write_submissions_to_redshift(redshift_client)
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, SUBMISSIONS_FROM_FILE_NAME, reshaped_submissions, no_random: true)
+  write_submissions_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
 
   # Processes and uploads Foorm forms to Redshift for analytics use via S3.
-  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'forms.csv')
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_FROM_FILE_NAME)
   reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
-  AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'forms.csv', reshaped_forms, no_random: true)
-  write_forms_to_redshift(redshift_client)
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, FORMS_FROM_FILE_NAME, reshaped_forms, no_random: true)
+  write_forms_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
 end
 
-def write_forms_to_redshift(redshift_client)
+def write_forms_to_redshift(client, arn)
   query = <<~SQL
-    DROP TABLE IF EXISTS analysis.foorm_forms_reshaped;
-    CREATE TABLE analysis.foorm_forms_reshaped
+    DROP TABLE IF EXISTS #{FORMS_TO_TABLE_NAME};
+    CREATE TABLE #{FORMS_TO_TABLE_NAME}
     (
       form_id                 int,
       form_name               varchar,
@@ -40,20 +49,20 @@ def write_forms_to_redshift(redshift_client)
       num_response_options    int
     );
 
-    COPY analysis.foorm_forms_reshaped
-    FROM 's3://cdo-data-sharing-internal/forms.csv'
-    IAM_ROLE 'arn:aws:iam::awsaccountIDHere:role/redshift-s3'
+    COPY #{FORMS_TO_TABLE_NAME}
+    FROM 's3://#{S3_BUCKET_NAME}/#{FORMS_FROM_FILE_NAME}'
+    IAM_ROLE '#{arn}'
     CSV
     IGNOREHEADER 1;
   SQL
 
-  redshift_client.exec(query)
+  client.exec(query)
 end
 
-def write_submissions_to_redshift(redshift_client)
+def write_submissions_to_redshift(client, arn)
   query = <<~SQL
-    DROP TABLE IF EXISTS analysis.foorm_submissions_reshaped;
-    CREATE TABLE IF NOT EXISTS analysis.foorm_submissions_reshaped
+    DROP TABLE IF EXISTS #{SUBMISSIONS_TO_TABLE_NAME};
+    CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_TO_TABLE_NAME}
     (
       submission_id    int,
       question_name    varchar,
@@ -62,20 +71,20 @@ def write_submissions_to_redshift(redshift_client)
       response_text    varchar(max)
     );
 
-    COPY analysis.foorm_submissions_reshaped
-    FROM 's3://cdo-data-sharing-internal/submissions.csv'
-    IAM_ROLE 'arn:aws:iam::awsaccountIDHere:role/redshift-s3'
+    COPY #{SUBMISSIONS_TO_TABLE_NAME}
+    FROM 's3://#{S3_BUCKET_NAME}/#{SUBMISSIONS_FROM_FILE_NAME}'
+    IAM_ROLE  '#{arn}'
     CSV
     IGNOREHEADER 1;
   SQL
 
-  redshift_client.exec(query)
+  client.exec(query)
 end
 
 begin
   main
 ensure
   # If processing fails at any point, delete CSVs from S3.
-  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'submissions.csv')
-  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'forms.csv')
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_FROM_FILE_NAME)
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_FROM_FILE_NAME)
 end
