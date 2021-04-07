@@ -43,25 +43,25 @@ class Foorm::Submission < ApplicationRecord
     parsed_answers = JSON.parse(answers)
 
     # Then, merge in formatted versions of each answer in the submission.
-    parsed_answers.each do |question_id, answer|
-      formatted_answers.merge! get_formatted_answer(question_id, answer)
+    parsed_answers.each do |question_name, answer|
+      formatted_answers.merge! get_formatted_answer(question_name, answer)
     end
 
     formatted_answers
   end
 
-  # For a given question_id-answer key-value pair from a submission's answers,
+  # For a given question_name-answer key-value pair from a submission's answers,
   # returns a hash with either a single key-value pair (for question types other than matrix) and a human readable response to a question,
   # or a hash with multiple values (for matrix questions) with a human readable response to each sub-question.
-  # @param [String] question_id
+  # @param [String] question_name
   # @param [String] answer the stored value representing a user's answer to a question (either a key that can be paired with a human readable answer, or the answer itself)
   # @return [Hash] a human readable version of the answer(s) associated with a given question ID
-  def get_formatted_answer(question_id, answer)
-    question_details = form.get_question_details(question_id)
+  def get_formatted_answer(question_name, answer)
+    question_details = form.get_question_details(question_name)
 
     # If question isn't in the Form, return as-is.
     # This is expected for metadata about the submission.
-    return {question_id => answer} if question_details.nil?
+    return {question_name => answer} if question_details.nil?
 
     case question_details[:type]
     when ANSWER_MATRIX
@@ -69,18 +69,18 @@ class Foorm::Submission < ApplicationRecord
 
       pairs = {}
       answer.each do |matrix_question_id, matrix_question_answer|
-        key = Foorm::Form.get_matrix_question_id(question_id, matrix_question_id)
+        key = Foorm::Form.get_matrix_question_id(question_name, matrix_question_id)
         pairs[key] = choices[matrix_question_answer]
       end
       return pairs
     when ANSWER_RATING, ANSWER_TEXT
-      return {question_id => answer}
+      return {question_name => answer}
     when ANSWER_SINGLE_SELECT
       choices = question_details[:choices]
-      return {question_id => choices[answer]}
+      return {question_name => choices[answer]}
     when ANSWER_MULTI_SELECT
       choices = question_details[:choices]
-      return {question_id => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
+      return {question_name => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
     end
 
     # Return blank hash if question_type not found

@@ -91,7 +91,8 @@ export const lessonShape = PropTypes.shape({
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string,
-  lessonPlanPdfUrl: PropTypes.string
+  lessonPlanPdfUrl: PropTypes.string,
+  courseVersionStandardsUrl: PropTypes.string
 });
 
 export const studentLessonShape = PropTypes.shape({
