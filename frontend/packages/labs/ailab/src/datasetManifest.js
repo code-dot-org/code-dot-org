@@ -165,21 +165,21 @@ export const allDatasets = [
     name: "Bubble Tea (Toy)",
     path: "datasets/boba_toy.csv",
     metadataPath: "datasets/boba_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/boba_toy.jpg"
   },
   {
     id: "cookies_toy",
     name: "Cookies (Toy)",
     path: "datasets/cookies_toy.csv",
     metadataPath: "datasets/cookies_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/cookies_toy.jpg"
   },
   {
     id: "naan_toy",
     name: "Naan (Toy)",
     path: "datasets/naan_toy.csv",
     metadataPath: "datasets/naan_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/naan_toy.jpg"
   },
   {
     id: "poke_toy",
@@ -193,42 +193,42 @@ export const allDatasets = [
     name: "Poutine (Toy)",
     path: "datasets/poutine_toy.csv",
     metadataPath: "datasets/poutine_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/poutine_toy.jpg"
   },
   {
     id: "raspado_toy",
     name: "Raspado (Toy)",
     path: "datasets/raspado_toy.csv",
     metadataPath: "datasets/raspado_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/raspado_toy.jpg"
   },
   {
     id: "salad_toy",
     name: "Salad (Toy)",
     path: "datasets/salad_toy.csv",
     metadataPath: "datasets/salad_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/salad_toy.jpg"
   },
   {
     id: "salsa_toy",
     name: "Salsa (Toy)",
     path: "datasets/salsa_toy.csv",
     metadataPath: "datasets/salsa_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/salsa_toy.jpg"
   },
   {
     id: "breakfast_toy",
     name: "Breakfast Quiz",
     path: "datasets/breakfast_toy.csv",
     metadataPath: "datasets/breakfast_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/breakfast_toy.jpg"
   },
   {
     id: "drink_toy",
     name: "Drink Quiz",
     path: "datasets/drink_toy.csv",
     metadataPath: "datasets/drink_toy.json",
-    imagePath: "datasets/temp.jpg"
+    imagePath: "datasets/drink_toy.jpg"
   },
   {
     id: "workout_toy",
