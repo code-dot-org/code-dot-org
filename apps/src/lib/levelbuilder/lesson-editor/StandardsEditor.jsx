@@ -179,6 +179,12 @@ class StandardsEditor extends Component {
 
   render() {
     const columns = this.getColumns();
+    const standardShortcodes = this.props.standards
+      .map(standard => standard.shortcode)
+      .join(',');
+    const searchBoxKey = `${
+      this.state.frameworkShortcode
+    },${standardShortcodes}`;
     return (
       <div>
         <label>
@@ -204,7 +210,7 @@ class StandardsEditor extends Component {
           // Specify a key in order to force this component to remount when
           // framework changes. Otherwise, it may return stale results when
           // a query is repeated after changing the framework.
-          key={this.state.frameworkShortcode}
+          key={searchBoxKey}
           onSearchSelect={this.onSearchSelect}
           searchUrl={'standards/search'}
           constructOptions={this.constructSearchOptions}
