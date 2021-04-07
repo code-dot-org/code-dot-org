@@ -13,7 +13,7 @@ AI Lab is a highly configurable environment providing a student experience for d
 - viewing per-column graphs and metadata
 - viewing custom [CrossTab](https://github.com/code-dot-org/ml-playground/pull/62) tables for comparing categorical columns
 - viewing scatter plot graphs for comparing continuous columns
-- using SVM or KNN classification or KNN regression to train a model
+- using KNN classification or KNN regression to train a model
 - choosing the subset of data to reserve for validation
 - measuring accuracy of the resulting trained model using reserved data
 - using the trained model by doing predictions
@@ -60,9 +60,9 @@ In main repo's `apps/` directory:
 yarn link @code-dot-org/ml-playground
 ```
 
-This will set up a symlink in main repo's `apps/node_modules/` to point at your local changes. 
+This will set up a symlink in main repo's `apps/node_modules/` to point at your local changes.
 
-Run 
+Run
 
 ```
 yarn run build

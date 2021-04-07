@@ -36,25 +36,6 @@ export const availableTrainers = {
 export const defaultRegressionTrainer = "knnRegress";
 export const defaultClassificationTrainer = "knnClassify";
 
-const filterTrainersByType = type => {
-  let trainersOfType = {};
-  const trainerKeys = Object.keys(availableTrainers).filter(
-    trainerKey => availableTrainers[trainerKey].mlType === type
-  );
-  trainerKeys.forEach(
-    trainerKey => (trainersOfType[trainerKey] = availableTrainers[trainerKey])
-  );
-  return trainersOfType;
-};
-
-export const getClassificationTrainers = () => {
-  return filterTrainersByType(MLTypes.CLASSIFICATION);
-};
-
-export const getRegressionTrainers = () => {
-  return filterTrainersByType(MLTypes.REGRESSION);
-};
-
 export const getMLType = trainerName => {
   if (availableTrainers[trainerName]) {
     return availableTrainers[trainerName].mlType;

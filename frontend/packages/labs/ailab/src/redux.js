@@ -1,7 +1,4 @@
 import {
-  availableTrainers,
-  getRegressionTrainers,
-  getClassificationTrainers,
   getMLType,
   defaultRegressionTrainer,
   defaultClassificationTrainer
@@ -17,8 +14,6 @@ import {
   uniqLabelFeaturesSelected,
   selectedColumnsHaveDatatype,
   numericalColumnsHaveOnlyNumbers,
-  trainerSelected,
-  compatibleLabelAndTrainer,
   namedModel
 } from "./validate.js";
 
@@ -823,21 +818,6 @@ export function getConvertedLabels(state, rawLabels) {
   return rawLabels.map(label => getConvertedLabel(state, label));
 }
 
-export function getCompatibleTrainers(state) {
-  let compatibleTrainers;
-  switch (true) {
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.CATEGORICAL:
-      compatibleTrainers = getClassificationTrainers();
-      break;
-    case state.columnsByDataType[state.labelColumn] === ColumnTypes.NUMERICAL:
-      compatibleTrainers = getRegressionTrainers();
-      break;
-    default:
-      compatibleTrainers = availableTrainers;
-  }
-  return compatibleTrainers;
-}
-
 export function isRegression(state) {
   const mlType = getMLType(getSelectedTrainer(state));
   return mlType === MLTypes.REGRESSION;
@@ -967,19 +947,6 @@ export function validationMessages(state) {
     errorString: "Numerical columns should contain only numbers.",
     successString: "Numerical columns contain only numbers."
   };
-  validationMessages["training"] = {
-    panel: "selectTrainer",
-    readyToTrain: trainerSelected(state),
-    errorString: "Please select a training algorithm.",
-    successString: "Training algorithm selected."
-  };
-  validationMessages["compatibleLabel"] = {
-    panel: "selectTrainer",
-    readyToTrain: compatibleLabelAndTrainer(state),
-    errorString:
-      "The label datatype must be compatible with the training algorithm.",
-    successString: "The label datatype and training algorithm are compatible."
-  };
   validationMessages["nameModel"] = {
     panel: "saveModel",
     readyToTrain: namedModel(state),
@@ -1083,7 +1050,7 @@ const panelList = [
   { id: "specifyColumns", label: "Columns" },
   { id: "dataDisplayLabel", label: "Label" },
   { id: "dataDisplayFeatures", label: "Features" },
-  { id: "selectTrainer", label: "Trainer" },
+  { id: "trainingSettings", label: "Trainer" },
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
@@ -1122,7 +1089,7 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "selectTrainer") {
+  if (panelId === "trainingSettings") {
     if (!uniqLabelFeaturesSelected(state)) {
       return false;
     }
@@ -1167,7 +1134,7 @@ function isPanelAvailable(state, panelId) {
     }
   }
 
-  if (panelId === "selectTrainer") {
+  if (panelId === "trainingSettings") {
     if (mode && mode.hideSpecifyColumns && mode.hideChooseReserve) {
       return false;
     }
@@ -1204,12 +1171,12 @@ export function getPanelButtons(state) {
     prev = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Back" }
       : null;
-    next = isPanelAvailable(state, "selectTrainer")
-      ? { panel: "selectTrainer", text: "Continue" }
+    next = isPanelAvailable(state, "trainingSettings")
+      ? { panel: "trainingSettings", text: "Continue" }
       : isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
       : null;
-  } else if (state.currentPanel === "selectTrainer") {
+  } else if (state.currentPanel === "trainingSettings") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelAvailable(state, "trainModel")
       ? { panel: "trainModel", text: "Train" }
