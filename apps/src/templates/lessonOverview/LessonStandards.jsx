@@ -2,6 +2,31 @@ import PropTypes from 'prop-types';
 import React, {PureComponent} from 'react';
 import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
+import color from '@cdo/apps/util/color';
+import Radium from 'radium';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
+export const styles = {
+  frameworkName: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontWeight: 'bold',
+    color: color.dark_charcoal
+  },
+  categoryShortcode: {
+    fontFamily: "'Gotham 7r', sans-serif",
+    fontWeight: 'bold',
+    color: color.link_color,
+    ':hover': {
+      textDecoration: 'underline'
+    }
+  },
+  standardShortcode: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontWeight: 'bold',
+    color: color.dark_charcoal
+  }
+};
 
 export const ExpandMode = {
   NONE: 'none',
@@ -49,13 +74,23 @@ function getDetailsOpen(expandMode) {
 
 export default class LessonStandards extends PureComponent {
   render() {
-    const {standards} = this.props;
+    const {standards, courseVersionStandardsUrl} = this.props;
     const standardsByFramework = _(standards)
       .orderBy('frameworkName')
       .groupBy('frameworkName')
       .value();
     return (
       <div>
+        {courseVersionStandardsUrl && (
+          <Button
+            __useDeprecatedTag
+            color={Button.ButtonColor.gray}
+            href={courseVersionStandardsUrl}
+            style={{marginBottom: 5}}
+            target="_blank"
+            text={i18n.fullCourseAlignment()}
+          />
+        )}
         {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
           const expandMode = getChildExpandMode(this.props.expandMode, index);
@@ -74,7 +109,8 @@ export default class LessonStandards extends PureComponent {
 }
 LessonStandards.propTypes = {
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
+  courseVersionStandardsUrl: PropTypes.string
 };
 
 class Framework extends PureComponent {
@@ -90,10 +126,9 @@ class Framework extends PureComponent {
       .orderBy(categoryKey, 'shortcode')
       .groupBy(categoryKey)
       .value();
-    const isOpen = getDetailsOpen(this.props.expandMode);
     return (
-      <details key={name} open={isOpen}>
-        <summary>{name}</summary>
+      <div>
+        <span style={styles.frameworkName}>{name}</span>
         <ul style={{listStyleType: 'none'}}>
           {Object.keys(standardsByCategory).map((categoryShortcode, index) => {
             const standards = standardsByCategory[categoryShortcode];
@@ -108,7 +143,7 @@ class Framework extends PureComponent {
             );
           })}
         </ul>
-      </details>
+      </div>
     );
   }
 }
@@ -118,7 +153,7 @@ Framework.propTypes = {
   expandMode: expandModeShape
 };
 
-class ParentCategory extends PureComponent {
+class UnconnectedParentCategory extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].parentCategoryDescription;
@@ -131,7 +166,7 @@ class ParentCategory extends PureComponent {
       <li key={shortcode}>
         <details open={isOpen}>
           <summary>
-            {shortcode}
+            <span style={styles.categoryShortcode}>{shortcode}</span>
             {' - '}
             {description}
           </summary>
@@ -159,13 +194,14 @@ class ParentCategory extends PureComponent {
     );
   }
 }
-ParentCategory.propTypes = {
+UnconnectedParentCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape
 };
+const ParentCategory = Radium(UnconnectedParentCategory);
 
-class Category extends PureComponent {
+class UnconnectedCategory extends PureComponent {
   render() {
     const {shortcode, standards} = this.props;
     const description = standards[0].categoryDescription;
@@ -173,7 +209,11 @@ class Category extends PureComponent {
     return (
       <li key={shortcode}>
         <details open={isOpen}>
-          <summary>{`${shortcode} - ${description}`}</summary>
+          <summary>
+            <span style={styles.categoryShortcode}>{shortcode}</span>
+            {' - '}
+            {description}
+          </summary>
           <ul>
             {standards.map(standard => (
               <Standard key={standard.shortcode} standard={standard} />
@@ -184,20 +224,23 @@ class Category extends PureComponent {
     );
   }
 }
-Category.propTypes = {
+UnconnectedCategory.propTypes = {
   shortcode: PropTypes.string.isRequired,
   standards: PropTypes.arrayOf(standardShape).isRequired,
   expandMode: expandModeShape
 };
+const Category = Radium(UnconnectedCategory);
 
 class Standard extends PureComponent {
   render() {
     const {standard} = this.props;
     return (
       <li key={standard.shortcode}>
-        {standard.shortcode}
-        {' - '}
-        {standard.description}
+        <summary>
+          <span style={styles.standardShortcode}>{standard.shortcode}</span>
+          {' - '}
+          {standard.description}
+        </summary>
       </li>
     );
   }
