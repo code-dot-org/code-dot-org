@@ -247,7 +247,7 @@ export function getAvailableDatasets(specificDatasets) {
     allDatasets.filter(dataset => specificDatasets.includes(dataset.id)) :
     allDatasets.filter(dataset => dataset.toy !== true);
 
-  // Sort dataset names alphabetically.
+  // Sort dataset names by alphabetical order.
   return availableDatasets.sort((a, b) => a.name.localeCompare(b.name));
 }
 
