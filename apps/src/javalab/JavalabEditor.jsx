@@ -7,21 +7,21 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState} from '@codemirror/state';
+import {editorSetup, lightMode} from './editorSetup';
+import {EditorState, tagExtension} from '@codemirror/state';
 import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import {oneDark} from '@codemirror/theme-one-dark';
+import color from '@cdo/apps/util/color';
 
 const style = {
   editor: {
     width: '100%',
-    height: 400,
-    backgroundColor: '#282c34'
+    height: 400
   },
   tabs: {
     display: 'flex'
   },
   tab: {
-    backgroundColor: '#282c34',
     textAlign: 'center',
     padding: 10
   },
@@ -35,10 +35,13 @@ const style = {
   }
 };
 
+const darkTabColor = '#282c34';
+
 class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
     // populated by redux
     setEditorText: PropTypes.func,
     setFilename: PropTypes.func,
@@ -61,14 +64,36 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidMount() {
+    const {isDarkMode} = this.props;
+    const extensions = [...editorSetup];
+
+    if (isDarkMode) {
+      extensions.push(tagExtension('style', oneDark));
+    } else {
+      extensions.push(tagExtension('style', lightMode));
+    }
     this.editor = new EditorView({
       state: EditorState.create({
         doc: this.props.editorText,
-        extensions: editorSetup
+        extensions: extensions
       }),
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isDarkMode !== this.props.isDarkMode) {
+      if (this.props.isDarkMode) {
+        this.editor.dispatch({
+          reconfigure: {style: oneDark}
+        });
+      } else {
+        this.editor.dispatch({
+          reconfigure: {style: lightMode}
+        });
+      }
+    }
   }
 
   dispatchEditorChange = () => {
@@ -104,7 +129,14 @@ class JavalabEditor extends React.Component {
     return (
       <div style={style.tabs}>
         <form style={style.renameForm} onSubmit={this.renameFileComplete}>
-          <div style={style.tab}>
+          <div
+            style={{
+              ...style.tab,
+              backgroundColor: this.props.isDarkMode
+                ? darkTabColor
+                : color.white
+            }}
+          >
             <input
               className="rename-file-input"
               type="text"
@@ -126,7 +158,14 @@ class JavalabEditor extends React.Component {
   displayFileNameAndRenameButton() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>{this.props.filename}</div>
+        <div
+          style={{
+            ...style.tab,
+            backgroundColor: this.props.isDarkMode ? darkTabColor : color.white
+          }}
+        >
+          {this.props.filename}
+        </div>
         <button
           type="button"
           onClick={this.activateRenameFile}
@@ -158,7 +197,13 @@ class JavalabEditor extends React.Component {
             ? this.displayFileRename()
             : this.displayFileNameAndRenameButton()}
         </div>
-        <div ref={el => (this._codeMirror = el)} style={style.editor} />
+        <div
+          ref={el => (this._codeMirror = el)}
+          style={{
+            ...style.editor,
+            backgroundColor: this.props.isDarkMode ? darkTabColor : color.white
+          }}
+        />
       </div>
     );
   }
