@@ -11,47 +11,53 @@ const sampleModes = {
     hideChooseReserve: true,
     hideModelCard: true,
     hideColumnClicking: true,
-    hideSelectLabel: true,
+    hideSelectLabel: true
   },
 
   "intro-ai-tacos": {
-    datasets:["tacos_toy"],
-    hideSelectLabel:true,
-    hideSpecifyColumns:true,
-    hideChooseReserve:true,
-    hideModelCard:true,
-    hideSave:true
+    datasets: ["tacos_toy"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideSave: true
   },
 
   "intro-ai-foods": {
-    datasets:["boba_toy", "cookies_toy", "naan_toy", "poke_toy", "poutine_toy", "raspado_toy", "salad_toy", "salsa_toy"],
-    hideSelectLabel:true,
-    hideSpecifyColumns:true,
-    hideChooseReserve:true,
-    hideModelCard:true,
-    hideSave:true
+    datasets: [
+      "boba_toy",
+      "cookies_toy",
+      "naan_toy",
+      "poke_toy",
+      "poutine_toy",
+      "raspado_toy",
+      "salad_toy",
+      "salsa_toy"
+    ],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideSave: true
   },
 
-  "safari": {
-    datasets:["safari_toy"],
-    hideSelectLabel:true,
-    hideSpecifyColumns:true,
-    hideChooseReserve:true,
-    hideModelCard:true,
-    hideSave:true,
-    hideSelectTrainer:"knnRegress"
+  safari: {
+    datasets: ["safari_toy"],
+    hideSelectLabel: true,
+    hideSpecifyColumns: true,
+    hideChooseReserve: true,
+    hideModelCard: true,
+    hideSave: true,
+    hideSelectTrainer: "knnRegress"
   },
 
-  "zoo": {
-    datasets:["zoo"],
-    hideSpecifyColumns:true,
-    hideChooseReserve:true
+  zoo: {
+    datasets: ["zoo"],
+    hideSpecifyColumns: true,
+    hideChooseReserve: true
   },
 
-  "final-project": {
-
-  }
-
+  "final-project": {}
 };
 
 // Look for a ?mode= parameter on the URL
