@@ -827,7 +827,21 @@
         "courseC_starWars_loops9": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Csak így tovább!\"_\n\nHasználd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
         "courseC_starWars_loops9_2018": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Csak így tovább!\"_\n\nHasználd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
         "courseC_starWars_loops9_2019": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Csak így tovább!\"_\n\nHasználd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
-        "courseC_starWars_loops9_2020": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Csak így tovább!\"_\n\nHasználd a korábban tanultakat, hogy minden fémdarabot megszerezz!"
+        "courseC_starWars_loops9_2020": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _\"Csak így tovább!\"_\n\nHasználd a korábban tanultakat, hogy minden fémdarabot megszerezz!",
+        "2-3 Artist Debugging 10": "A kontroller irányítórésze túl keskeny.\n\nKi tudod szélesíteni 10 képponttal?  \n\nElőször próbáld a kódot lefuttatni, hogy lásd, mi is a probléma.",
+        "2-3 Artist Debugging 11": "A hópelyhem nem teljes!\n\nTalán az ismétlések számánál lehet a probléma?",
+        "2-3 Artist Debugging Assessment 1": "**Értékelés:**\nEnnek a négyzetnek az oldalai 75 képponttal rövidebbek a kelleténél!\n\nHol a hiba a kódban?",
+        "2-3 Artist Nested Loops 1": "Korábban már használtál ciklusokat formák rajzolásához, most pedig a ciklusokba újabb ciklust teszünk bele!\n\nTegyél egy `ismételd` blokkot a meglévő kód köré, így tudod megrajzolni az ábrát.\n\n<br/>",
+        "2-3 Bee Conditionals 11": "Kiváncsi vagyok, mit találok itt!\n\nSegíts körberepülni a mezőn és nektárt gyűjteni - persze csak azokból a virágokban, amikben van nektár.",
+        "2-3 Bee Conditionals 15": "Ez a lépcsőszerű minta ismerős lehet.\n\nGyűjts nektárt azokból a virágokból, amikben van nektár. Ja, és a legkevesebb lépésből érd el a célod!",
+        "2-3 Bee Conditionals 2": "Szia! Én egy éhes méh vagyok! \n\nSegíts nekem összegyűjteni az összes nektárt a virágokból! A lehető legkevesebb blokkot használd.",
+        "2-3 Bee Conditionals 3": "Nézd ezt a rengeteg nektárt!\n\nSegíts nekem, hogy a lehető legkevesebb blokkot felhasználva összegyűjtsem az összeset, aztán mézet is csinálhassak belőlük. ",
+        "2-3 Bee Conditionals 5": "Ezek a mágikus lila virágok folyton változnak!\n\nMinden alkalommal, amikor ezt a feladatot megpróbálod, változni fog, hogy a lila virágokban van-e nektár vagy nincs... de amíg nem futtatod le a kódot, nem tudhatod, hogy melyik üres és melyik nem.\n\nVigyázz! Ne akarj olyan lila virágból nektárt gyűjteni, amelyikben nincs nektár!\nElőször ellenőrizned kell a virágokat egy `ha nektár = 1` blokk használatával.",
+        "2-3 Bee Conditionals Assessment 1": "**Értékelés:** Gyűjtsd össze az összes nektárt. \\\nVigyázz, ne próbálj meg nektárt gyűjteni nektárt azokból a lila virágokból, amikben egyáltalán nincs nektár!",
+        "Course 4 Artist Vars 11": "Ez a kicsit nehezebb kód ugyanazt a módszert követi, mint az előző feladaté - mire kell állítani a `sides` változót, hogy ki tudd rajzolni ezt a négyzetekből álló képet?\n\n<p style=\"font-size:small; padding: 15px 15px 15px 40px; background-color:#dcf3f3; border-radius:10px;\">\n\tCsak a móka kedvéért: Próbálj meg különböző számokat használni, és nézd meg, hogyan változik a minta!!\n</p>",
+        "Course 4 Artist Vars 6": "Ezzel a kóddal bármilyen szabályos sokszöget megrajzolhatsz. \n\nVan egy új változó, amiinek`sides` (oldalak) a neve, az értéke pedig 4-re van állítva. \n\nHasználhatod ezt a `sides` változót (akár egy matematikai művelet részeként) arra, hogy mindig a megfelelő szögben fordulj el - függetlenül a sokszög oldalainak számától!",
+        "NEW Course 4 Artist Vars 2": "Húzz egy szám blokkot a `legyen length értéke` blokkhoz, majd az `ismétled _ alkalommal` blokkhoz! A cél, hogy 50 képpont oldalú háromszögleket rajzolj - mindegy, hogy mennyit.",
+        "course2_bee_conditionals_challenge1": "Gyűjtsd össze az összes nektárt, és készítsd el az összes mézet! Csak a virágokból gyűjthetsz mézet, és csak a méhsejteknél csinálhatsz mézet. Minden helyen érdemes megvizsgálni, hogy virágnál vagy méhsejtnél vagyunk-e!"
       }
     }
   }

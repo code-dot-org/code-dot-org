@@ -14,6 +14,10 @@ import {
   getStore,
   registerReducers
 } from '@cdo/apps/redux';
+import resourcesEditor, {
+  initResources
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 
@@ -23,7 +27,7 @@ describe('ScriptEditor', () => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
-    registerReducers({...reducers, isRtl});
+    registerReducers({...reducers, isRtl, resources: resourcesEditor});
     store = getStore();
     store.dispatch(
       init(
@@ -41,6 +45,7 @@ describe('ScriptEditor', () => {
         {}
       )
     );
+    store.dispatch(initResources([]));
 
     defaultProps = {
       id: 1,
@@ -104,7 +109,7 @@ describe('ScriptEditor', () => {
       expect(wrapper.find('input').length).to.equal(25);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(12);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -154,6 +159,13 @@ describe('ScriptEditor', () => {
             {type: '', link: ''}
           ]
         );
+      });
+
+      it('uses new resource editor for migrated scripts', () => {
+        const wrapper = createWrapper({
+          isMigrated: true
+        });
+        expect(wrapper.find(MigratedResourcesEditor).length).to.equal(1);
       });
     });
 

@@ -9228,7 +9228,9 @@ it:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
             intro-categorical:
-              name: Lezione 5
+              name: Lezione 6
+            temp:
+              name: Lezione 20
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -9252,6 +9254,8 @@ it:
               name: Codifica di una simulazione
             Sprites in Action:
               name: Personaggi in azione
+            End of Course Project:
+              name: Progetto di fine corso
           lesson_groups:
             introduction:
               display_name: Introduzione
@@ -10421,6 +10425,11 @@ it:
           lessons:
             lesson-1:
               name: Lezione 1
+            lesson-2:
+              name: Lezione 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
         k5-onlinepd-2021:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare
@@ -10492,3 +10501,7 @@ it:
               display_name: Passi successivi
             Introduction:
               display_name: Introduzione
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lezione 1

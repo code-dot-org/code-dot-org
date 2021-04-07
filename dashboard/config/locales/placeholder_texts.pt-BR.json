@@ -45,7 +45,8 @@
           "b92274a5b4513e80f4bd6a8136581578": "Essa é a sombra mais estranha ",
           "f54929e86cc7510907895070d8b05979": "Eu já vi",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "1df9f02f4866a1996ba55a14b80e4125": "Qual a cor do meu chapéu?"
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!",
@@ -97,7 +98,14 @@
           "2cef5d66c57efe3994c85f4e1f312849": "Ah-ha! Eu encontrei duas varinhas! Para te ajudar, fique com a segunda!",
           "24a124016e7eec7a8fef5bc228541533": "Ah, não se preocupe! Tenho certeza que consigo encontrar",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "eb2a8486370211626bbcd04634b73593": "Olá! Qual seu nome?",
+          "09c9b4915a77a37699140b52b86e4cad": "Pareço ter perdido minha varinha. Você a viu em algum lugar? 1. Sim, 2. não",
+          "ede6020b3ffeeff2339ffbccaa0969df": "Não? Hmm, você gostaria de me ajudar a encontrá-lo? 1. Sim, 2. não",
+          "90a2bd046bc816f7d42c33d2a3b347d3": "Excelente! Em que direção poderia ser? 1. Direita, 2. esquerda",
+          "7222972741bf95c7d2bf97d1a104fbf0": "Pareço ter perdido minha varinha. Você a viu em algum lugar? 1. Sim, 2. não",
+          "c499da20fd7c64b89860a41b61d2dd88": "Não? Hmm, você gostaria de me ajudar a encontrá-lo? 1. Sim, 2. não",
+          "5282c58be05cdecc1308241480b66276": "Fim de jogo"
         },
         "FoodFight": {
           "62f1b3a41b5eef66a4b2382bb2ab24f4": "Pontuação",
@@ -113,7 +121,8 @@
           "5c95950acb6c51d88cc8869eb31f2bdf": "Você acertou!",
           "214e809e9d24f40cc42fa2f04f59a1cf": "Adivinhe a minha idade antes que eu devore esse pinguim!",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "919ba81fa27a3f187b7f51f1382c022f": "Quantos anos eu tenho?"
         },
         "courseF_playlab_variables1a": {
           "ea904c9d18bd602705f598372988aaa8": "O que eu devo gritar?",
@@ -133,12 +142,15 @@
           "ecb2903fb054395baf72ea1da127be32": "Você é bem alto para um",
           "ed4b32d6c8e019829b6f9f2ddb6b7dd2": "anos de idade,",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "16e30dcbd70ec5a152eedded32c69476": "Qual é o seu nome?",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?"
         },
         "courseF_playlab_variables4c_predictive1": {
           "d065635d5fffcb3739555ae93006081c": "Prazer em conhecê-lo,",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
         },
         "courseF_playlab_variables8c": {
           "bec312aa7dbfb0c284d221d2aa8e9ffd": "Parabéns,",
@@ -146,7 +158,9 @@
           "8460ae10541cf8ded22a4e899ddfc0bb": "Desculpe,",
           "8622f69e8cf70458a82fc22d8e46372f": ", eu não estava pensando na cor",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "105837607f006777512dc5b09322ea4f": "Por favor, escreva seu nome de código.",
+          "c216de13cd615c884ff2cc5894324e17": "Escolha uma cor."
         },
         "courseC_data wizard": {
           "d93dfc24c6ce3e53d8ee07416c743e60": "Um cachorro!",
@@ -157,7 +171,9 @@
           "5b402e6ea05e847a076e03ad74420c45": "pássaros!",
           "4b23c908b939eaf7918e07142b9e05e0": "Um dragão!",
           "7f945c111ba5ea6d7b1547601db6ba0e": "dragões!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Conte todos os animais!"
+          "71fc859f3abd22273bad5d0d8eda2173": "Conte todos os animais!",
+          "f62038e77820419cd978f7b722da560a": "Quantos irão aparecer?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conte os animais de estimação"
         },
         "courseC_data wizard_2020": {
           "d93dfc24c6ce3e53d8ee07416c743e60": "Um cachorro!",
@@ -168,11 +184,16 @@
           "5b402e6ea05e847a076e03ad74420c45": "pássaros!",
           "4b23c908b939eaf7918e07142b9e05e0": "Um dragão!",
           "7f945c111ba5ea6d7b1547601db6ba0e": "dragões!",
-          "71fc859f3abd22273bad5d0d8eda2173": "Conte todos os animais!"
+          "71fc859f3abd22273bad5d0d8eda2173": "Conte todos os animais!",
+          "f62038e77820419cd978f7b722da560a": "Quantos irão aparecer?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Conte os animais de estimação"
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "66ca156974a9909af6aea88ad5cb915b": "Mantenha os zumbis longe do alienígena, eles deixam ele triste!",
+          "66363f1551b4fdb85c85222c629013b2": "Defenda o alienígena!",
+          "3b3d1f8225a16aac3f372c3062d8b194": "Se ele ficar triste, deixe ele feliz de novo para mais pontos!"
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
@@ -185,7 +206,14 @@
         "Find the Wizard": {
           "0b895ef4c917e50663bc2a7327cbee3d": "Você me achou!",
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "Conte até três e vou desaparecer! Adivinhe um número entre 1 e 400 para me encontrar!",
+          "74e3efe12b17fe00c01147733fad486d": "Adivinhe um número para me encontrar!",
+          "3c5a6a6bfff469fd4c779912331f1049": "Bá!",
+          "0464d226582401370945003bc8850990": "Muahahahaha!",
+          "765366ef0f68387ed2a6ca3a8d24182d": "Alto demais!",
+          "cd4c7f8fdf063e832de1604e34dd4531": "Hihi!",
+          "0ceb38a3de45bf070e96e6657474f47d": "Baixo demais!"
         },
         "NEW Course 4 Play Lab Params 11": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
@@ -281,7 +309,8 @@
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "105837607f006777512dc5b09322ea4f": "Por favor, escreva seu nome de código."
         },
         "courseF_playlab_variables7b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
@@ -289,7 +318,9 @@
         },
         "courseF_playlab_variables7c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
-          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui",
+          "105837607f006777512dc5b09322ea4f": "Por favor, escreva seu nome de código.",
+          "c216de13cd615c884ff2cc5894324e17": "Escolha uma cor."
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
@@ -298,6 +329,10 @@
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
           "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "Por favor, tente outra vez.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "Fim de jogo!"
         }
       }
     }

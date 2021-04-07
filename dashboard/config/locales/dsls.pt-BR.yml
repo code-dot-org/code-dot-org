@@ -724,6 +724,12 @@ pt-BR:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: Verificação rápida de títulos
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de nível:** Esta pergunta de múltipla escolha pede aos estudantes que escolham como os cabeçalhos HTML serão exibidos em uma página web. Você pode ver quais alunos responderam corretamente à pergunta, indo até esse nível e puxando o Painel do Professor do lado direito.  Os alunos que responderam com sucesso à pergunta terão uma bolha verde.  Os alunos têm tantas chances quanto quiserem de responder corretamente, então adivinhar e verificar também pode levar a uma resposta correta.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -744,6 +750,12 @@ pt-BR:
           &lt;h6&gt; Waffles &lt;/h6&gt;
           </pre>
         title: Verificação rápida de títulos
+        teacher_markdown: |2-
+           <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de nível:** Esta pergunta de múltipla escolha pede aos estudantes que escolham como os cabeçalhos HTML serão exibidos em uma página web. Você pode ver quais alunos responderam corretamente à pergunta, indo até esse nível e puxando o Painel do Professor do lado direito.  Os alunos que responderam com sucesso à pergunta terão uma bolha verde.  Os alunos têm tantas chances quanto quiserem de responder corretamente, então adivinhar e verificar também pode levar a uma resposta correta.
+
+          <div class="clear"></div>
       CSD Header Size MC_2018_2019:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -785,6 +797,9 @@ pt-BR:
           ## Recursos
 
           * [Entrada e Saída - Guia de Atividade](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
+        teacher_markdown: "[Entrada e Saída - Exemplar](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/edit?usp=sharing)
+          - Guia de Atividades ([PDF](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1WbKCLz7VgLOJCHFcz8cnxFi4ibEXhBZYQEsDidEi8XY/export?format=doc))"
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Visão Geral
@@ -798,6 +813,9 @@ pt-BR:
           ## Recursos
 
           * [Algoritmo de Classificação de cartas - Guia de Atividade](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Algoritmo de ordenação de cartões](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Amostra ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Visão Geral
@@ -807,6 +825,9 @@ pt-BR:
           ## Recursos
 
           * [Armazenamento e Processamento - Guia de Atividades](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Armazenamento e Processamento - Exemplar](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          - Guia de Atividades ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Visão Geral
@@ -816,12 +837,18 @@ pt-BR:
           ## Resources
 
           * [Explorando Aplicativos - Guia de Atividade](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [Chave - Exploração de aplicativos](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          - Guia de atividades ([PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)"
       CSD U1 Lesson 9 Overview:
         markdown: "# Visão Geral\n\nNeste projeto, você desenhará seu próprio aplicativo,
           que resolve um problema que você mesmo irá definir.  \n\n## Recursos\n\n*[Aplicativos
           e Solução de Problemas - Guia de Projeto](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n*[Aplicativos
           e Solução de Problemas - Revisão por Pares](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n*[Aplicativos
           e Solução de Problemas - Rúbrica](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
+        teacher_markdown: |-
+          * [Aplicativos e resolução de problemas](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) - Exemplar - Guia de Projetos ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Aplicativos e resolução de problemas](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) - Exemplar - Revisão de Pares([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
       CSD U2 Design Project:
         content1: descrição aqui
         markdown: |+
@@ -850,6 +877,12 @@ pt-BR:
           Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
 
 
+        teacher_markdown: |-
+          # Projeto do site pessoal
+
+          Este nível dá início ao projeto do site pessoal que os estudantes continuarão trabalhando em toda a unidade. Você pode exigir que eles mostrem um esboço de diário antes de voltar ao Code Studio, ou deixá-los decidir por si mesmos quando estiverem prontos.
+
+          Os estudantes que terminarem cedo podem ser encorajados a adicionar novos conteúdos à página ou revisar o conteúdo que eles têm.
       CSD U2 Design Project_2018:
         content1: descrição aqui
         markdown: |+
@@ -878,6 +911,12 @@ pt-BR:
           Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
 
 
+        teacher_markdown: |-
+          # Projeto do site pessoal
+
+          Este nível dá início ao projeto do site pessoal que os estudantes continuarão trabalhando em toda a unidade. Você pode exigir que eles mostrem um esboço de diário antes de voltar ao Code Studio, ou deixá-los decidir por si mesmos quando estiverem prontos.
+
+          Os estudantes que terminarem cedo podem ser encorajados a adicionar novos conteúdos à página ou revisar o conteúdo que eles têm.
       CSD U2 Design Project_2018_2019:
         content1: descrição aqui
         markdown: |+
@@ -906,6 +945,12 @@ pt-BR:
           Depois de ter terminado a sua página web, compare-a com o seu esboço para se certificar de que não se esqueceu de nada. Peça ao seu parceiro para procurar também e pense em qualquer feedback recebido e se você deseja fazer alterações em sua página.
 
 
+        teacher_markdown: |-
+          # Projeto do site pessoal
+
+          Este nível dá início ao projeto do site pessoal que os estudantes continuarão trabalhando em toda a unidade. Você pode exigir que eles mostrem um esboço de diário antes de voltar ao Code Studio, ou deixá-los decidir por si mesmos quando estiverem prontos.
+
+          Os estudantes que terminarem cedo podem ser encorajados a adicionar novos conteúdos à página ou revisar o conteúdo que eles têm.
       CSD U2 Expression Exemplars:
         markdown: |
           # Exemplos de sites pessoais
@@ -947,6 +992,8 @@ pt-BR:
           ## Recursos
 
           * [O objetivo dos sites - Guia de atividades] (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [O propósito dos Websites - Exemplar](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))"
       CSD U2 L12 Overview:
         markdown: |
           # Visão global
@@ -964,6 +1011,9 @@ pt-BR:
 
           * [Internet Scavenger Hunt - Guia de atividades] (https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
           * [Animais estranhos, porém verdadeiros - Guia de atividades] (https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
+        teacher_markdown: "[Animais estranhos, porém reais - Key](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/edit)
+          ([PDF](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1PbQj738TPvNuncdLCggl38Dol6lL42AJGBwhEl19QBE/export?format=doc))"
       CSD U2 L2 Overview:
         content1: descrição aqui
         markdown: |
@@ -978,6 +1028,9 @@ pt-BR:
           ## Recursos
 
           * [Esboço de site pessoal - Guia de atividades] (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
+        teacher_markdown: "* [Rascunho de Website Pessoal](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))"
       CSD U2 L3 Overview:
         content1: descrição aqui
         markdown: |
@@ -1028,6 +1081,9 @@ pt-BR:
 
           * [Quando sua privacidade é importante? - Guia de atividades] (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
           * [Investigação Social -  Guia de atividades] (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |-
+          * [Quando Sua Privacidade Importa?](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) - Guia de Atividades Exemplar ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Investigação Social](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) - Guia de atividades ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
       CSD U2 L6 Overview:
         content1: descrição aqui
         markdown: |+
@@ -1063,6 +1119,7 @@ pt-BR:
 
           * [Visão geral do Creative Commons] (https://www.youtube.com/watch?v=HKfqoPYJdVc) - Vídeo
           * [Licenciando seu trabalho - Guia de atividades] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
+        teacher_markdown: "* [Licenciando Seu Trabalho - Guia de Atividades - Exemplar](https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)"
       CSD U2 Lesson 6 Overview:
         content1: descrição aqui
         markdown: |
@@ -1098,6 +1155,9 @@ pt-BR:
           * [Site pessoal - Guia do projeto] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)
           * [Site pessoal - Revisão por pares] (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
           * [Site Pessoal - Rubrica] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)
+        teacher_markdown: |-
+          * [Website Pessoal](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Exemplar de Guia de Projeto([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Website Pessoal](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) - Exemplar de avaliações dos pares([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc))
       CSD U2 PSP Programming:
         markdown: |+
           # O Processo de Solução de Problemas para Programação
@@ -1133,6 +1193,10 @@ pt-BR:
           * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
 
 
+        teacher_markdown: |-
+          # Revisar o processo de resolução de problemas
+
+          Revise as quatro etapas do Processo de Resolução de Problemas como uma classe.
       CSD U2 PSP Programming_2018:
         markdown: |+
           # O Processo de Solução de Problemas para Programação
@@ -1168,6 +1232,10 @@ pt-BR:
           * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
 
 
+        teacher_markdown: |-
+          # Revisar o processo de resolução de problemas
+
+          Revise as quatro etapas do Processo de Resolução de Problemas como uma classe.
       CSD U2 PSP Programming_2018_2019:
         markdown: |+
           # O Processo de Solução de Problemas para Programação
@@ -1203,6 +1271,10 @@ pt-BR:
           * Identifique algumas alterações incrementais que você poderia fazer na próxima interação
 
 
+        teacher_markdown: |-
+          # Revisar o processo de resolução de problemas
+
+          Revise as quatro etapas do Processo de Resolução de Problemas como uma classe.
       CSD U2 Top Websites:
         markdown: |
           # Melhores sites nos EUA
@@ -1265,6 +1337,9 @@ pt-BR:
           | Receita | Lista de fatos divertidos | Tutoriais |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instruções para expandir os sites dos alunos podem
+          ser mostradas no quadro para que você possa revisá-las como uma classe.  Clique
+          para mostrar aos alunos as páginas web de exemplo.
       CSD U2 expand project_2018:
         content1: descrição aqui
         markdown: |
@@ -1288,6 +1363,9 @@ pt-BR:
           | Receita | Lista de fatos divertidos | Tutoriais |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instruções para expandir os sites dos alunos podem
+          ser mostradas no quadro para que você possa revisá-las como uma classe.  Clique
+          para mostrar aos alunos as páginas web de exemplo.
       CSD U2 expand project_2018_2019:
         content1: descrição aqui
         markdown: |
@@ -1311,6 +1389,9 @@ pt-BR:
           | Receita | Lista de fatos divertidos | Tutoriais |
           |---------|--------------|--------------|
           | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
+        teacher_markdown: Estas instruções para expandir os sites dos alunos podem
+          ser mostradas no quadro para que você possa revisá-las como uma classe.  Clique
+          para mostrar aos alunos as páginas web de exemplo.
       CSD U2 image debug match:
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -1437,6 +1518,10 @@ pt-BR:
           ## Exemplos
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Ponto de controle de planejamento
+
+          Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
       CSD U2 project guide_2018:
         content1: descrição aqui
         markdown: |
@@ -1459,6 +1544,10 @@ pt-BR:
           ## Exemplos
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Ponto de controle de planejamento
+
+          Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
       CSD U2 project guide_2018_2019:
         content1: descrição aqui
         markdown: |
@@ -1481,6 +1570,10 @@ pt-BR:
           ## Exemplos
 
           [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
+        teacher_markdown: |-
+          # Ponto de controle de planejamento
+
+          Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
       CSD U3 - conditionals - Matching:
         answers:
         - text: cachorro.rotacao &lt; gato.rotacao
@@ -1659,6 +1752,23 @@ pt-BR:
           Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
 
 
+        teacher_markdown: |-
+          Aqui estão alguns sites para que os alunos possam começar a estudar.  Estes sites são geralmente apropriados para a escola, mas o conteúdo neles muda frequentemente, portanto ** sugerimos fortemente que você verifique cada site quanto a conteúdo inapropriado antes de compartilhá-lo com os alunos**.
+
+          ## Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Visão geral
+
+          Este site está focado em notícias sobre a Disney, mas você pode se surpreender com o grande papel que a CC desempenha em todas as suas diferentes formas de entretenimento. Como este não é um site focado em CC, você precisará usar a função de busca para encontrar artigos relevantes.
+
+          ### Campos relevantes
+
+          * Filme/TV
+          * Animação
+          * Robótica/Animatrónica
+          * Jogos
+
+          ## Vídeos do caminho crítico - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)
       CSD U3 Entertainment_2018_2019:
         markdown: |+
           # Iniciando sua pesquisa
@@ -1863,6 +1973,9 @@ pt-BR:
           ## Recursos
 
           * [CS in Entertainment - Guia de atividades] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+        teacher_markdown: "* [Ciência da Computação (CC) em Entretenimento](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/export?format=doc))"
       CSD U3 Lesson Overview 10:
         markdown: |
           # Visão global
@@ -1939,6 +2052,9 @@ pt-BR:
           * [Cartão interativo - Guia do projeto] (https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
           * [Cartão interativo - Rubrica] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [Cartão Interativo - Revisão por Pares] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+        teacher_markdown: |-
+          * [Cartão Interativo](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/) - Exemplo de Guia de Projeto ([PDF](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1AwrDq21LenIXUG-qMPUYlZ3Yf8DRjumH90LF5wtL4Vs/export?format=doc))
+          * [Cartão Interativo](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU) - Exemplo de Revisão de Pares ([PDF](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1CD8pVlK5ZLsmbuFkU3YJaYeoZqgcLxlBnVMEpbaxYlU/export?format=doc))
       CSD U3 Lesson Overview 2:
         markdown: |+
           Visão geral
@@ -1954,6 +2070,12 @@ pt-BR:
 
 
 
+        teacher_markdown: |-
+          [key]
+
+          * [Formas de Desenho](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1yLyHUtfKIgr4MhzTv_gSQTXGnq6QlD1DZJYIJXug27g/export?format=doc))
+
+          [/key]
       CSD U3 Lesson Overview 3:
         markdown: |+
           # Visão global
@@ -2023,6 +2145,9 @@ pt-BR:
           ## Recursos
 
           * [Planejamento de cenas de Sprite - Guia de atividades] (https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+        teacher_markdown: "* [Planejamento de cena - Sprite](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/edit)
+          - Exemplo de Guia de Atividades ([PDF](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1LCO-0sTzYBEAglx65F2fFVI5OtF6IbTeycIGqa1H4_Q/export?format=doc))"
       CSD U3 Lesson Overview 7:
         markdown: |+
           # Visão global
@@ -2058,6 +2183,9 @@ pt-BR:
 
           * [Variáveis Desconectadas- Guia de Atividade] (https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
           * [Quadro de Variáveis Desconectadas - Manipulativo] (https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+        teacher_markdown: "* [Variáveis desconectadas](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY)
+          - Chave do Guia de Atividades ([PDF](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1-uajFciILgNaTKN0j9uBu9CIwz7LbuMv-9jYQyBxYMY/export?format=doc))"
       CSD U3 Lesson Overview 9:
         markdown: |+
           # Visão global
@@ -2087,6 +2215,9 @@ pt-BR:
           * [Crie seu próprio jogo - Guia do projeto] (https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
           * [Faça o seu próprio jogo - Rubrica] (https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
           * [Faça seu próprio jogo - Revisão por pares] (https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
+        teacher_markdown: |-
+          * [Faça Seu Próprio Jogo](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing) - Exemplo de Guia de Projeto ([PDF](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/export?format=doc))
+          * [Faça Seu Próprio Jogo](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/edit) - Exemplo de revisão de pares ([PDF](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1eCE7xT-YWu1xRyxVLx4xCXggqihxJwtU6XkXcchqk6w/export?format=doc))
       CSD U3 SFLP Velocity:
         markdown: |
           # Visão global
@@ -2185,6 +2316,9 @@ pt-BR:
           ## Recursos
 
           * [Planejando seu jogo de plataforma - Guia do projeto] (https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
+        teacher_markdown: "* [Planejando seu jogo de plataforma](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit)
+          - Guia de projeto ([PDF](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/export?format=doc))"
       CSD U3 combining rep:
         content1: descrição aqui
         markdown: |+
@@ -2547,6 +2681,12 @@ pt-BR:
           ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
 
           ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "A mensagem em si é um donut, polegares para baixo e uma
+          cara zangada.  Os estudantes podem se divertir fazendo suas próprias interpretações
+          dos emojis.  Uma interpretação possível é que o remetente esperava um donut,
+          não recebeu um e ficou com raiva, mas não há uma resposta \"certa\" para
+          o que os emojis significam.\n    \n(Esconda esta mensagem indo ao seu painel
+          de professores à direita e escolhendo ver como um estudante)."
       CSD U5 Encryption 1_2018:
         content1: descrição aqui
         markdown: |
@@ -2559,6 +2699,12 @@ pt-BR:
           ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
 
           ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "A mensagem em si é um donut, polegares para baixo e uma
+          cara zangada.  Os estudantes podem se divertir fazendo suas próprias interpretações
+          dos emojis.  Uma interpretação possível é que o remetente esperava um donut,
+          não recebeu um e ficou com raiva, mas não há uma resposta \"certa\" para
+          o que os emojis significam.\n    \n(Esconda esta mensagem indo ao seu painel
+          de professores à direita e escolhendo ver como um estudante)."
       CSD U5 Encryption 1_2018_2019:
         content1: descrição aqui
         markdown: |
@@ -2571,6 +2717,12 @@ pt-BR:
           ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
 
           ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
+        teacher_markdown: "A mensagem em si é um donut, polegares para baixo e uma
+          cara zangada.  Os estudantes podem se divertir fazendo suas próprias interpretações
+          dos emojis.  Uma interpretação possível é que o remetente esperava um donut,
+          não recebeu um e ficou com raiva, mas não há uma resposta \"certa\" para
+          o que os emojis significam.\n    \n(Esconda esta mensagem indo ao seu painel
+          de professores à direita e escolhendo ver como um estudante)."
       CSD U5 Encryption 2:
         content1: descrição aqui
         markdown: |
@@ -2609,6 +2761,7 @@ pt-BR:
 
           * [Interpretando dados] (https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - Guia de atividades
           * [Interpretando dados] (https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - Recurso
+        teacher_markdown: "* Interpretando Dados - Exemplar ([PDF](https://docs.google.com/document/d/1WFjiEP9-V2v9IIjsqn0MI-o-Xyn19pg_6apNL-a1gGw/export?format=pdf))"
       CSD U5 crosstab warmup:
         content1: descrição aqui
         markdown: |-
@@ -2779,6 +2932,20 @@ pt-BR:
           a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
           armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
           oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** O aluno está na 9ª série.
+
+          **Byte 1:** O aluno tem 15 anos de idade.
+
+          **Byte 2** A primeira inicial do aluno é "J".
+
+          **byte 3*** A segunda inicial é "H".
+
+          [/key]
+
+          Para ocultar esta caixa quando você exibir o nível, clique no painel do professor no lado direito desta página e escolha a opção "Ver como aluno".
       CSD U5 student record_2018:
         content1: descrição aqui
         markdown: "# Registro de estudante\n\n<div style=\"float: right; height:209px;
@@ -2844,6 +3011,20 @@ pt-BR:
           a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
           armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
           oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** O aluno está na 9ª série.
+
+          **Byte 1:** O aluno tem 15 anos de idade.
+
+          **Byte 2** A primeira inicial do aluno é "J".
+
+          **byte 3*** A segunda inicial é "H".
+
+          [/key]
+
+          Para ocultar esta caixa quando você exibir o nível, clique no painel do professor no lado direito desta página e escolha a opção "Ver como aluno".
       CSD U5 student record_2018_2019:
         content1: descrição aqui
         markdown: "# Registro de estudante\n\n<div style=\"float: right; height:209px;
@@ -2909,6 +3090,20 @@ pt-BR:
           a idade do aluno como um número binário. </h4>\n * <h4>Os próximos oito
           armazenam a primeira inicial do aluno em ASCII. </h4>\n * <h4>Os últimos
           oito armazenam a última inicial do aluno em ASCII. </h4>\n\n<br/>\n<br/>\n"
+        teacher_markdown: |-
+          [key]
+
+          **Byte 0:** O aluno está na 9ª série.
+
+          **Byte 1:** O aluno tem 15 anos de idade.
+
+          **Byte 2** A primeira inicial do aluno é "J".
+
+          **byte 3*** A segunda inicial é "H".
+
+          [/key]
+
+          Para ocultar esta caixa quando você exibir o nível, clique no painel do professor no lado direito desta página e escolha a opção "Ver como aluno".
       CSD U6 LED create intro:
         content1: descrição aqui
         markdown: |
@@ -3124,6 +3319,10 @@ pt-BR:
         questions:
         - text: Leia o código e preveja como esse aplicativo será quando executar.
         title: Faça uma Predição
+        teacher_markdown: Para muitas das atividades de programação nesta unidade,
+          já foram criados elementos de modo de projeto.  Uma dica útil para os estudantes
+          é que eles podem pairar sobre qualquer um desses elementos para ver a identificação
+          do elemento.
       CSD U6 setProperty predict multi_2018:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -3138,6 +3337,10 @@ pt-BR:
         questions:
         - text: Leia o código e preveja como esse aplicativo será quando executar.
         title: Faça uma Predição
+        teacher_markdown: Para muitas das atividades de programação nesta unidade,
+          já foram criados elementos de modo de projeto.  Uma dica útil para os estudantes
+          é que eles podem pairar sobre qualquer um desses elementos para ver a identificação
+          do elemento.
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
@@ -3152,6 +3355,10 @@ pt-BR:
         questions:
         - text: Leia o código e preveja como esse aplicativo será quando executar.
         title: Faça uma Predição
+        teacher_markdown: Para muitas das atividades de programação nesta unidade,
+          já foram criados elementos de modo de projeto.  Uma dica útil para os estudantes
+          é que eles podem pairar sobre qualquer um desses elementos para ver a identificação
+          do elemento.
       CSD U6 tugowar stop:
         markdown: |
           # Pare
@@ -3183,6 +3390,9 @@ pt-BR:
           ## Recursos
 
           * [ASCII - Guia de atividades] (https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)
+        teacher_markdown: "* [ASCII](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/export?format=doc))"
       CSD-U5-SFLP Automating Data Decisions:
         markdown: |
           # Visão global
@@ -3193,6 +3403,7 @@ pt-BR:
 
           * [Automatizando Decisões de Dados] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - Recurso (copie como [MS Word] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
           * [Automatizando decisões de dados] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - Guia de atividades (copie como [MS Word] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+        teacher_markdown: "* Automatizando decisões de dados - Exemplar ([PDF](https://docs.google.com/document/d/10h895sg_wlnXX3rxZNjROO1mQdHdtu5ZR_SnBTt-Xu4/export?format=pdf))"
       CSD-U5-SFLP Combining Representations:
         markdown: |
           # Visão global
@@ -3204,6 +3415,8 @@ pt-BR:
 
           * [Registros de animais de estimação - Guia de atividades] (https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
           * [ASCII para tabela binária - referência] (https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+        teacher_markdown: "* [Informações sobre animais de estimação](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1_nU0Uvz4xydx8_iGP-VXIy0uWCuFJYQnXwWWmEmwfN8/export?format=pdf))"
       CSD-U5-SFLP Create a Representation:
         markdown: |
           # Visão global
@@ -3213,6 +3426,8 @@ pt-BR:
           ## Recursos
 
           * [Criar uma Representação - Guia do Projeto] (https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+        teacher_markdown: "* Crie uma representação - Guia de projeto ([Google Doc](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit)
+          | [PDF](https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/export?format=pdf))"
       CSD-U5-SFLP Interpreting Data:
         markdown: |
           # Visão global
@@ -3222,6 +3437,7 @@ pt-BR:
           ## Recursos
 
           * [Estruturando Dados] (https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - Guia de atividades
+        teacher_markdown: "* Estruturando dados - Exemplar ([PDF](https://docs.google.com/document/d/1XC8Ft6e3PTYrZQFuffpdCAEJaH1F4AxVU_sGVQbDEQU/export?format=pdf))"
       CSD-U5-SFLP Making Decisions with Data:
         markdown: |
           # Visão global
@@ -3231,6 +3447,9 @@ pt-BR:
           ## Recursos
 
           * [Fazendo Decisões com Dados] (https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - Guia de atividades
+        teacher_markdown: "* [Tomando decisões com dados](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/edit?usp=sharing)
+          - Exemplar ([PDF](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1MJ_Q6TF3pztGNIdKFhwZMC4kHZNXNvWQtbFPPQShQRk/export?format=doc))"
       CSD-U5-SFLP Patterns and Representation:
         markdown: |
           # Visão global
@@ -3246,6 +3465,9 @@ pt-BR:
           ## Recursos
 
           * [Representando informações] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - Guia de atividades (copie como [MS Word] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Documento Google] (https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+        teacher_markdown: |
+          * [Representando Informação](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/edit) - Exemplar 1 ([PDF](https://docs.google.com/document/d/11yxntV_uNFxT8sSJYddpQQIuCAzwqJZlBEsWMNE2y2M/export?format=pdf))
+          * [Representando Informação](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/edit) - Exemplar 2 ([PDF](https://docs.google.com/document/d/1GBbceT4Q9HpiR3nxNuiKx8SEDTq4Hv-8Z-mo1yfMqj4/export?format=pdf))
       CSD-U5-SFLP Problem Solving and Data:
         markdown: |
           # Visão global
@@ -3255,6 +3477,7 @@ pt-BR:
           ## Recursos
 
           * [Solução de problemas com dados] (https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - Guia de atividades
+        teacher_markdown: "* Resolvendo problemas com dados - Exemplar ([PDF](https://docs.google.com/document/d/1dNLqA8ejPyONEUcNmz0ZCigzeVAu4pt-_64sQUVQvok/export?format=pdf))"
       CSD-U5-SFLP Problem Solving with Big Data:
         markdown: |
           # Visão global
@@ -3274,6 +3497,13 @@ pt-BR:
           ## Recursos
 
           * [Assuntos de representação - Guia de atividades] (https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [Representatividade importa](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/edit?usp=sharing) - Exemplar ([PDF](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1iBGzpLZVxyU0v1rOQMydrs4EpaXScbsB0x2hvbY3qxA/export?format=doc))
+          * [Informações sobre refeições](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/edit?usp=sharing) - Recurso ([PDF](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1PAuIlPz-GEg3JsHpJd-rEnVcjP_DL3BAxT8wCmvrlGA/export?format=doc))
+
+          [/key]
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # Visão global
@@ -3294,6 +3524,12 @@ pt-BR:
           ## Recursos
           * [Representando números - Guia de atividades] (https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
           * [Cartões numéricos - Manipulativos] (https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * Representando números - Exemplar ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/key]
       CSD-U5-SFLP Representing Numbers Part 2:
         markdown: |
           # Visão global
@@ -3304,6 +3540,12 @@ pt-BR:
           ## Recursos
 
           * [Mantendo dados secretos - Guia de atividades] (https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * Representando números - Exemplar ([Google Doc](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8) | [PDF](https://docs.google.com/document/d/1vWSSAhfQzC5ZmEPZHTrShbwpYVBhjPLlB8bcOWbLHJ8/export?format=pdf))
+
+          [/key]
       CSD-U5-SFLP Solve a Data Problem:
         markdown: |
           # Visão global
@@ -3314,6 +3556,9 @@ pt-BR:
 
           * [Fazer uma recomendação] (https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - Guia do projeto
           * [Faça uma recomendação] (https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - Revisão por pares
+        teacher_markdown: |-
+          * Faça uma Recomendação - Guia de Projeto - Exemplar ([PDF](https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/export?format=pdf))
+          * Faça uma Recomendação - Revisão por Pares - Exemplar ([PDF](https://docs.google.com/document/d/1hcZ8Ps_2AQqQcBwHgoNngu7w0Cg3FNHBv4n2vvLFqYE/export?format=pdf))
       'CSD: getText vs getNumber':
         markdown: |
           # getText vs getNumber
@@ -3395,6 +3640,37 @@ pt-BR:
 
           Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
 
+        teacher_markdown: |-
+          Aqui estão alguns sites recomendados para que os estudantes iniciem suas pesquisas.  Embora estes sites sejam geralmente apropriados para a escola, o conteúdo dentro deles muda frequentemente, portanto ** sugerimos fortemente que você verifique cada site quanto a conteúdo inapropriado antes de compartilhá-lo com os estudantes**.
+
+          ### Tecnologia vestível
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Saúde e Segurança
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentação e Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricação
+
+          * [Semana da Indústria](http://www.industryweek.com/technology)
+          * [Impressão 3D](https://3dprinting.com/)
+
+          ### Arte e Design
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       CSDU6 Innovation_2018:
         markdown: |+
           # Pesquisa em Inovação
@@ -3430,6 +3706,37 @@ pt-BR:
 
           Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
 
+        teacher_markdown: |-
+          Aqui estão alguns sites recomendados para que os estudantes iniciem suas pesquisas.  Embora estes sites sejam geralmente apropriados para a escola, o conteúdo dentro deles muda frequentemente, portanto ** sugerimos fortemente que você verifique cada site quanto a conteúdo inapropriado antes de compartilhá-lo com os estudantes**.
+
+          ### Tecnologia vestível
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Saúde e Segurança
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentação e Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricação
+
+          * [Semana da Indústria](http://www.industryweek.com/technology)
+          * [Impressão 3D](https://3dprinting.com/)
+
+          ### Arte e Design
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       CSDU6 Innovation_2018_2019:
         markdown: |+
           # Pesquisa em Inovação
@@ -3465,6 +3772,37 @@ pt-BR:
 
           Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
 
+        teacher_markdown: |-
+          Aqui estão alguns sites recomendados para que os estudantes iniciem suas pesquisas.  Embora estes sites sejam geralmente apropriados para a escola, o conteúdo dentro deles muda frequentemente, portanto ** sugerimos fortemente que você verifique cada site quanto a conteúdo inapropriado antes de compartilhá-lo com os estudantes**.
+
+          ### Tecnologia vestível
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Saúde e Segurança
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentação e Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### Fabricação
+
+          * [Semana da Indústria](http://www.industryweek.com/technology)
+          * [Impressão 3D](https://3dprinting.com/)
+
+          ### Arte e Design
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       Choosing Good IDs:
         markdown: |+
           # Escolhendo bons IDs
@@ -3646,6 +3984,14 @@ pt-BR:
           * "home_title"
           * "home_loginButton"
           * "home_logo"
+        teacher_markdown: |-
+          #### Namespacing
+
+          Garantir que todos os alunos estejam criando identificações únicas para todos os elementos e que os nomes que os coloquem adequadamente irão contribuir muito para evitar problemas na próxima aula, por isso, vale a pena ser rígido aqui. Você pode fornecer aos alunos o Guia de Atividades de Design de Tela opcional para manter o controle de suas identificações de elementos.
+
+          #### Trabalhando juntos, separados
+
+          Ainda mais que a atividade de protótipo de papel, é fácil para os alunos nesta lição esquecer que eles precisam considerar como suas escolhas afetam sua equipe. Incentivar a discussão ativa entre as equipes enquanto projetam telas para garantir que todos eles estejam trabalhando para um objetivo comum.
       Design a Screen for your App_2018_2019:
         markdown: |
           # Simulando seu App
@@ -3665,6 +4011,14 @@ pt-BR:
           * "home_title"
           * "home_loginButton"
           * "home_logo"
+        teacher_markdown: |-
+          #### Namespacing
+
+          Garantir que todos os alunos estejam criando identificações únicas para todos os elementos e que os nomes que os coloquem adequadamente irão contribuir muito para evitar problemas na próxima aula, por isso, vale a pena ser rígido aqui. Você pode fornecer aos alunos o Guia de Atividades de Design de Tela opcional para manter o controle de suas identificações de elementos.
+
+          #### Trabalhando juntos, separados
+
+          Ainda mais que a atividade de protótipo de papel, é fácil para os alunos nesta lição esquecer que eles precisam considerar como suas escolhas afetam sua equipe. Incentivar a discussão ativa entre as equipes enquanto projetam telas para garantir que todos eles estejam trabalhando para um objetivo comum.
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Desenhando para Acessibilidade
@@ -5811,6 +6165,9 @@ pt-BR:
           ## Recursos
 
           * [O Processo de Solução de Problemas - Guia de Atividade](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+        teacher_markdown: "* [O processo de resolução de problemas](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/)
+          - Guia de atividades ([PDF](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/export?format=doc))"
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Visão Geral
@@ -5818,6 +6175,9 @@ pt-BR:
           ## Recursos
 
           * [Solução de Problemas - Guia de Atividade](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[Chave - Resolvendo problemas](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          - Guia de atividades ([PDF](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))"
       Unit 1 Lesson 4 Overview:
         markdown: |
           # Visão Geral
@@ -5826,6 +6186,9 @@ pt-BR:
           ## Recursos
 
           * [O que é um Computador - Guia de Atividade](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+        teacher_markdown: "[O que é um computador - Exemplar](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing)
+          - Guia de atividades ([PDF](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/export?format=doc))"
       Unit 1 Lesson 6 Overview:
         markdown: |
           # Solução de problemas - Computadores e lógica: Lição 6 - Processando com bits
@@ -5853,6 +6216,9 @@ pt-BR:
           ## Recursos
 
           * [Cores RGB - Guia de atividades] (https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+        teacher_markdown: "* [Cores RGB(https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/edit?copiedFromTrash)
+          - Guia de atividades([PDF](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/18-gTTz6gwgOkuQB9bOmNTgLOyDKpkwbNYMNwAkhfmm8/export?format=doc))"
       Unit 2 Lesson 16 Overview:
         markdown: |
           # Visão global
@@ -5865,6 +6231,13 @@ pt-BR:
           * [Site pessoal final - Revisão por pares] (https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
           * [Site pessoal final - Guia do projeto] (https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
           * [Site pessoal final - Rubrica] (https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+        teacher_markdown: |-
+          [key]
+
+          * [Website pessoal final](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/edit?usp=sharing) - Exemplar de guia de projeto ([PDF](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Ga7mVfKpC8L-MTQw7ebMINkuCiAuhcQmZwupV_9pvsg/export?format=doc))
+          * [Website pessoal final](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - Exemplar de avaliação dos pares ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
+
+          [/key]
       Unit 2 Lesson 7 Overview:
         markdown: |+
           # Visão global
@@ -8392,6 +8765,19 @@ pt-BR:
           href=\"/s/csd-post-survey-2018/stage/1/puzzle/1/page/1\" target=\"top\">
           Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+        teacher_markdown: "**Por favor, faça com que seus alunos preencham esta pesquisa!!!**\n\n*
+          Os resultados são vitais para nós (code.org) para sustentar nossos cursos
+          e fazer melhorias.\n* Haverá também uma pesquisa com professores, onde você
+          poderá fornecer suas próprias informações, sobre as quais você será notificado
+          por e-mail.\n\n**Para ver os resultados*** -- a pesquisa pós-curso é um
+          pouco diferente. A pesquisa que vive em sua própria unidade do curso, e
+          esta página simplesmente estabelece um link para ela.\n\n* Para visualizar
+          os resultados anonimizados da pesquisa em seu painel de professores, você
+          precisa (1) visualizar a pesquisa/avaliações, e então (2) selecionar a unidade
+          de pesquisa pós-curso como a unidade que você deseja visualizar.  \n\n*
+          *Mais instruções para visualizar os resultados da pesquisa pós-curso***:
+          [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)]
+          [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]"
       csd-post-survey-levelgroup-2018:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-pre-survey-2017-levelgroup:
@@ -8691,6 +9077,17 @@ pt-BR:
           class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
           target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+        teacher_markdown: |-
+          **Por favor, faça com que seus alunos preencham esta pesquisa!!!**
+
+          * Você pode ver os resultados anônimos da pesquisa no painel do seu professor
+          * Os resultados são vitais para nós (code.org) para sustentar nossos cursos e fazer melhorias.
+          * Haverá também uma pesquisa com professores, onde você poderá fornecer suas próprias informações, sobre as quais será notificado via e-mail.
+
+          **Nota:**
+
+          * O botão nesta página é redirecionado para [studio.code.org/s/csp-post-survey](https://studio.code.org/s/csp-post-survey)
+          * Se preferir, você pode definir "Pesquisa Pós-Curso para Alunos" como a unidade atual para sua seção a partir do menu suspenso no painel do professor.
       csd-post-survey-intro-2019:
         markdown: |+
           #Pesquisa de pós-curso sobre descobertas da CC
@@ -8716,6 +9113,12 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+        teacher_markdown: |-
+          [key]
+
+          * [Barcos de Alumínio - Exemplar](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing) - Guia de atividades([PDF](https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/export?format=pdf) | [DOCX](https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing))
+
+          [/key]
       csd-pre-survey-2017-levelgroup_2018:
         title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pre-survey-levelgroup_2019:

@@ -41,7 +41,9 @@
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "你赢了!",
-          "498cd895eb5a102c5aeb977e2b928dee": "谢谢！"
+          "498cd895eb5a102c5aeb977e2b928dee": "谢谢！",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "去拿硬币。别撞车！",
+          "6b90c9823ff75e6a78aa63b392e7315a": "分数： "
         },
         "courseF_extras_sim": {
           "a2e534e7e893bd7ddb5d2047ed29dc8e": "大象已被采集 "
@@ -278,6 +280,9 @@
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "请再试一次。",
           "af142a90df4becc2aa7ae0d3acb3cc90": "游戏结束！"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "分数： "
         }
       }
     }

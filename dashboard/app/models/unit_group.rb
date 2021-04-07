@@ -97,8 +97,8 @@ class UnitGroup < ApplicationRecord
     CourseOffering.add_course_offering(unit_group)
     course_version = unit_group.course_version
 
-    if course_version && hash['resources']
-      resources_imported = hash['resources'].map do |resource_data|
+    if course_version
+      resources_imported = (hash['resources'] || []).map do |resource_data|
         resource_attrs = resource_data.except('seeding_key')
         resource_attrs['course_version_id'] = course_version.id
         resource = Resource.find_or_initialize_by(key: resource_attrs['key'], course_version_id: course_version.id)
@@ -337,11 +337,14 @@ class UnitGroup < ApplicationRecord
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
+      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
+      is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
       versions: summarize_versions(user),
       show_assign_button: assignable?(user),
-      announcements: announcements
+      announcements: announcements,
+      course_version_id: course_version&.id
     }
   end
 
@@ -668,4 +671,8 @@ class UnitGroup < ApplicationRecord
     return !!family_name && !!version_year
   end
   # rubocop:enable Naming/PredicateName
+
+  def has_migrated_script?
+    !!default_scripts[0]&.is_migrated?
+  end
 end

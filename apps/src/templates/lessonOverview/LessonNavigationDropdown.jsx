@@ -108,10 +108,11 @@ export default class LessonNavigationDropdown extends Component {
         : this.createSectionsOfLessons();
 
     return (
-      <div style={styles.dropdown} className="uitest-lesson-dropdown-nav">
+      <div style={styles.dropdown}>
         <DropdownButton
           text={i18n.otherLessonsInUnit()}
           color={Button.ButtonColor.purple}
+          className="uitest-lesson-dropdown-nav"
         >
           {lessonsList.map((listItem, index) => (
             <a

@@ -18449,6 +18449,10 @@ in:
               name: crwdns2481836:0crwdne2481836:0
             superunsuper:
               name: crwdns2484808:0crwdne2484808:0
+            exemplars:
+              name: crwdns2485712:0crwdne2485712:0
+            temp:
+              name: crwdns2485714:0crwdne2485714:0
           title: crwdns2471290:0crwdne2471290:0
           description_audience: crwdns2471292:0crwdne2471292:0
           description_short: crwdns2471294:0crwdne2471294:0
@@ -18531,6 +18535,8 @@ in:
               name: crwdns2483660:0crwdne2483660:0
             Haiku Bot:
               name: crwdns2483662:0crwdne2483662:0
+            End of Course Project:
+              name: crwdns2485716:0crwdne2485716:0
           lesson_groups:
             Toolbox Levels:
               display_name: crwdns2471978:0crwdne2471978:0
@@ -18550,6 +18556,8 @@ in:
               display_name: crwdns2483664:0crwdne2483664:0
             haiku bot:
               display_name: crwdns2483666:0crwdne2483666:0
+            AB EOC:
+              display_name: crwdns2485718:0crwdne2485718:0
           title: crwdns2471980:0crwdne2471980:0
           description_audience: crwdns2471982:0crwdne2471982:0
           description_short: crwdns2471984:0crwdne2471984:0
@@ -21318,6 +21326,57 @@ in:
           lessons:
             lesson-1:
               name: crwdns2483326:0crwdne2483326:0
+              description_student: crwdns2485624:0crwdne2485624:0
+              description_teacher: crwdns2485626:0crwdne2485626:0
+            lesson-2:
+              name: crwdns2485628:0crwdne2485628:0
+              description_student: crwdns2485720:0crwdne2485720:0
+              description_teacher: crwdns2485722:0crwdne2485722:0
+            lesson-3:
+              name: crwdns2485724:0crwdne2485724:0
+              description_student: crwdns2485726:0crwdne2485726:0
+              description_teacher: crwdns2485728:0crwdne2485728:0
+            lesson-4:
+              name: crwdns2485730:0crwdne2485730:0
+              description_student: crwdns2485732:0crwdne2485732:0
+              description_teacher: crwdns2485734:0crwdne2485734:0
+            lesson-5:
+              name: crwdns2485736:0crwdne2485736:0
+            lesson-6:
+              name: crwdns2485738:0crwdne2485738:0
+            lesson-7:
+              name: crwdns2485740:0crwdne2485740:0
+            lesson-8:
+              name: crwdns2485742:0crwdne2485742:0
+            lesson-9:
+              name: crwdns2485744:0crwdne2485744:0
+            lesson-10:
+              name: crwdns2485746:0crwdne2485746:0
+            lesson-11:
+              name: crwdns2485748:0crwdne2485748:0
+            lesson-12:
+              name: crwdns2485750:0crwdne2485750:0
+            lesson-13:
+              name: crwdns2485752:0crwdne2485752:0
+            lesson-14:
+              name: crwdns2485754:0crwdne2485754:0
+            lesson-15:
+              name: crwdns2485756:0crwdne2485756:0
+            lesson-16:
+              name: crwdns2485758:0crwdne2485758:0
+            lesson-17:
+              name: crwdns2485760:0crwdne2485760:0
+            lesson-18:
+              name: crwdns2485762:0crwdne2485762:0
+            lesson-19:
+              name: crwdns2485764:0crwdne2485764:0
+            lesson-20:
+              name: crwdns2485766:0crwdne2485766:0
+          lesson_groups:
+            lessonGroup-2:
+              display_name: crwdns2485768:0crwdne2485768:0
+            lessonGroup-3:
+              display_name: crwdns2485770:0crwdne2485770:0
           name: crwdns2483328:0crwdne2483328:0
           title: crwdns2483330:0crwdne2483330:0
           description_audience: crwdns2483332:0crwdne2483332:0
@@ -21498,11 +21557,43 @@ in:
               name: crwdns2483568:0crwdne2483568:0
             Poem Bot:
               name: crwdns2484862:0crwdne2484862:0
+            Introducing Sprite Lab:
+              name: crwdns2485630:0crwdne2485630:0
+            write a haiku:
+              name: crwdns2485772:0crwdne2485772:0
+            Plan Your Haiku Poem:
+              name: crwdns2485774:0crwdne2485774:0
+            Programming Poem Bot:
+              name: crwdns2485776:0crwdne2485776:0
+            poetry circle:
+              name: crwdns2485778:0crwdne2485778:0
           lesson_groups:
             haiku bot:
               display_name: crwdns2483570:0crwdne2483570:0
             poem bot:
               display_name: crwdns2484864:0crwdne2484864:0
+            rampup:
+              display_name: crwdns2485632:0crwdne2485632:0
+              description: crwdns2485634:0crwdne2485634:0
+            write a haikut:
+              display_name: crwdns2485780:0crwdne2485780:0
+            plan your poem:
+              display_name: crwdns2485782:0crwdne2485782:0
+            poetry circle:
+              display_name: crwdns2485784:0crwdne2485784:0
+            Lesson 1:
+              display_name: crwdns2485786:0crwdne2485786:0
+              description: crwdns2485788:0crwdne2485788:0
+            Lesson 2:
+              display_name: crwdns2485790:0crwdne2485790:0
+            Lesson 3:
+              display_name: crwdns2485792:0crwdne2485792:0
+            Lesson 4:
+              display_name: crwdns2485794:0crwdne2485794:0
+            Lesson 5:
+              display_name: crwdns2485796:0crwdne2485796:0
+            Peom Bot:
+              display_name: crwdns2485798:0crwdne2485798:0
           name: crwdns2483572:0crwdne2483572:0
           title: crwdns2483574:0crwdne2483574:0
           description_audience: crwdns2483576:0crwdne2483576:0

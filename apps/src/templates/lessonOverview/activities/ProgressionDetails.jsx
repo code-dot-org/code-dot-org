@@ -1,17 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import LevelDetailsDialog from './LevelDetailsDialog';
 
 const styles = {
   progressionBox: {
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray,
     margin: '10px, 0px',
-    backgroundColor: color.lightest_gray,
     padding: '0px 10px 10px 10px'
   },
   description: {

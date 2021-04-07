@@ -33,7 +33,7 @@ const styles = {
     color: color.charcoal
   },
   lastEdit: {
-    paddingLeft: 15,
+    paddingLeft: 30,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,
@@ -51,6 +51,7 @@ const styles = {
     paddingTop: 5,
     fontSize: 11,
     paddingLeft: 15,
+    paddingRight: 15,
     fontFamily: '"Gotham", sans-serif',
     color: color.charcoal
   },

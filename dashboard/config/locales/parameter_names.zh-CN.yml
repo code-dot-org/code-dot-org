@@ -2,6 +2,7 @@
 zh-CN:
   data:
     parameter_names:
+      "???": "？？？"
       actor: 角色
       color: 颜色
       counter: counter

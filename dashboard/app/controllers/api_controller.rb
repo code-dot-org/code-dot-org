@@ -399,9 +399,14 @@ class ApiController < ApplicationController
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       teacher_viewing_student = current_user.students.include?(user)
-      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
+      render json: summarize_user_progress(script, user).merge(
+        {
+          signedIn: true,
+          teacherViewingStudent: teacher_viewing_student,
+        }
+      )
     else
-      render json: {}
+      render json: {signedIn: false}
     end
   end
 
@@ -414,6 +419,7 @@ class ApiController < ApplicationController
   # but not completed.)
   def user_progress_for_stage
     response = user_summary(current_user)
+    response[:signedIn] = !current_user.nil?
 
     script = Script.get_from_cache(params[:script])
     stage = script.lessons[params[:lesson_position].to_i - 1]

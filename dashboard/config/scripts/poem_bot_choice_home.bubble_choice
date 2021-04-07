@@ -4,5 +4,5 @@ display_name 'Customize Your Program'
 description 'Add a background, sound, and sprites to help your program come to life.'
 
 sublevels
-level 'Poem Bot_Choice1_Background'
 level 'Poem Bot_Choice2_Sprites'
+level 'Poem Bot_Choice1_Background'

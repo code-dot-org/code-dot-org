@@ -137,7 +137,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text, "question_index" => 7},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
-    assert_equal "translation missing: en-US.data.script.name.#{script.name}.title", level_response["name"]
+    assert_equal script.name, level_response["name"]
     assert_equal level1.id.to_s, level_response["id"]
     assert_equal expected_questions, level_response["questions"]
   end
@@ -243,13 +243,12 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    # Stage translation missing because we don't actually generate i18n files in tests.
     expected_response = {
       @student_1.id.to_s => {
         "student_name" => @student_1.name,
         "responses_by_assessment" => {
           level1.id.to_s => {
-            "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
+            "stage" => script.name,
             "puzzle" => 1,
             "question" => "Long assessment 1",
             "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
@@ -328,13 +327,12 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    # Stage translation missing because we don't actually generate i18n files in tests.
     expected_response = {
       @student_1.id.to_s => {
         "student_name" => @student_1.name,
           "responses_by_assessment" => {
             level1.id.to_s => {
-              "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
+              "stage" => script.name,
               "puzzle" => 1,
               "question" => "Long assessment 1",
               "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
@@ -539,10 +537,9 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     }
     assert_response :success
 
-    # All these are translation missing because we don't actually generate i18n files in tests
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "stage_name" => script.name,
         "levelgroup_results" => [
           {
             "type" => "text_match",
@@ -680,7 +677,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     expected_response = {
       level1.id.to_s => {
-        "stage_name" => "translation missing: en-US.data.script.name.#{script.name}.title",
+        "stage_name" => script.name,
         "levelgroup_results" => []
       }
     }

@@ -2355,7 +2355,7 @@ ca:
               name: Composició de cançons
           lesson_groups:
             ramp_up:
-              display_name: Bucles
+              display_name: Bucles imbricats
             csf_digcit:
               display_name: Ciutadania digital
             csf_nested_loops:

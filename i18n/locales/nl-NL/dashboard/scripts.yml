@@ -5455,6 +5455,12 @@ nl:
               name: Les 14
             lesson15:
               name: Les 15
+            lesson17:
+              name: Les 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

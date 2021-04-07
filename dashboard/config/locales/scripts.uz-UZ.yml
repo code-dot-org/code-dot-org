@@ -24178,7 +24178,9 @@ uz:
             visualizing:
               name: Visualizing Data
             intro-categorical:
-              name: Model va ma'lumotlar
+              name: 6-dars
+            temp:
+              name: 20-dars
           description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin
             maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy
@@ -24209,6 +24211,8 @@ uz:
               name: Spraytlar amalda
             video:
               name: Sprite Lab Videolari
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             introduction:
               display_name: Kirish
@@ -27105,6 +27109,11 @@ uz:
               name: Alien Dance Party
               description_student: Create an interactive project that can be shared
                 with classmates.
+              description_teacher: Ushbu darsda o‘quvchilar o‘z interaktiv animatsiyalari
+                va o‘yinlarini yaratishlari mumkin bo‘lgan "Sprite Lab" platformasi
+                bilan tanishtiriladi. Xatti-harakatdan tashqari, bugun talabalar "begonalar
+                raqs partiyasini" yaratish uchun foydalanuvchi kiritishlarini hodisa
+                sifatida qo‘shadilar.
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -28060,6 +28069,11 @@ uz:
           lessons:
             lesson-1:
               name: 1-dars
+            lesson-20:
+              name: '15-dars: Baholash kuni'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         k5-onlinepd-2021:
           description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org
             ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter
@@ -28109,3 +28123,7 @@ uz:
               display_name: Kirish
             Introduction:
               display_name: Kirish
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: 1-dars
