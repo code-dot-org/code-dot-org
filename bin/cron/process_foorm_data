@@ -15,6 +15,14 @@ SUBMISSIONS_TO_TABLE_NAME = 'analysis.foorm_submissions_reshaped'
 FORMS_FROM_FILE_NAME = 'forms.csv'
 FORMS_TO_TABLE_NAME = 'analysis_pii.foorm_forms_reshaped'
 
+# Main method responsible for reshaping Foorm data
+# and importing to our analytics database (Redshift).
+# For each of our Foorm models (Forms and Submissions), we:
+# 1) delete any existing files (if any) from previous iterations of this job,
+# 2) reshape each record from our database into a CSV format,
+# 3) write that CSV to an S3 bucket,
+# 4) copy the contents of that CSV into a Redshift table,
+# 5) delete the CSV from S3.
 def main
   redshift_client = RedshiftClient.instance
 
