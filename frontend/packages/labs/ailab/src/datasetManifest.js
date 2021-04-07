@@ -75,7 +75,7 @@ export const allDatasets = [
     path: "datasets/taco_toppings_toy.csv",
     metadataPath: "datasets/taco_toppings_toy.json",
     imagePath: "datasets/taco_toppings_toy.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "icecream_toy",
@@ -83,7 +83,7 @@ export const allDatasets = [
     path: "datasets/icecream_toppings_toy.csv",
     metadataPath: "datasets/icecream_toppings_toy.json",
     imagePath: "datasets/icecream_toppings_toy.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "pizza_toy",
@@ -91,7 +91,7 @@ export const allDatasets = [
     path: "datasets/pizza_toppings_toy.csv",
     metadataPath: "datasets/pizza_toppings_toy.json",
     imagePath: "datasets/pizza_toppings_toy.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "boba_toy",
@@ -99,7 +99,7 @@ export const allDatasets = [
     path: "datasets/boba_toy.csv",
     metadataPath: "datasets/boba_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "cookies_toy",
@@ -107,7 +107,7 @@ export const allDatasets = [
     path: "datasets/cookies_toy.csv",
     metadataPath: "datasets/cookies_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "naan_toy",
@@ -115,7 +115,7 @@ export const allDatasets = [
     path: "datasets/naan_toy.csv",
     metadataPath: "datasets/naan_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "poke_toy",
@@ -123,7 +123,7 @@ export const allDatasets = [
     path: "datasets/poke_toy.csv",
     metadataPath: "datasets/poke_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "poutine_toy",
@@ -131,7 +131,7 @@ export const allDatasets = [
     path: "datasets/poutine_toy.csv",
     metadataPath: "datasets/poutine_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "raspado_toy",
@@ -139,7 +139,7 @@ export const allDatasets = [
     path: "datasets/raspado_toy.csv",
     metadataPath: "datasets/raspado_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "salad_toy",
@@ -147,7 +147,7 @@ export const allDatasets = [
     path: "datasets/salad_toy.csv",
     metadataPath: "datasets/salad_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "salsa_toy",
@@ -155,7 +155,7 @@ export const allDatasets = [
     path: "datasets/salsa_toy.csv",
     metadataPath: "datasets/salsa_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "breakfast_toy",
@@ -163,7 +163,7 @@ export const allDatasets = [
     path: "datasets/breakfast_toy.csv",
     metadataPath: "datasets/breakfast_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "drink_toy",
@@ -171,7 +171,7 @@ export const allDatasets = [
     path: "datasets/drink_toy.csv",
     metadataPath: "datasets/drink_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "workout_toy",
@@ -179,7 +179,7 @@ export const allDatasets = [
     path: "datasets/workout_toy.csv",
     metadataPath: "datasets/workout_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "safari_toy",
@@ -187,7 +187,7 @@ export const allDatasets = [
     path: "datasets/safari_toy.csv",
     metadataPath: "datasets/safari_toy.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "medical_priority",
@@ -195,7 +195,7 @@ export const allDatasets = [
     path: "datasets/medical_priority.csv",
     metadataPath: "datasets/medical_priority.json",
     imagePath: "datasets/temp.jpg",
-    toy: true
+    isToy: true
   },
   {
     id: "nutrition",
@@ -245,7 +245,7 @@ export function getAvailableDatasets(specificDatasets) {
   // Filter datasets by a specified array (in Levelbuilder) or filter out toy datasets.
   let availableDatasets = (specificDatasets && specificDatasets.length > 1) ?
     allDatasets.filter(dataset => specificDatasets.includes(dataset.id)) :
-    allDatasets.filter(dataset => dataset.toy !== true);
+    allDatasets.filter(dataset => dataset.isToy !== true);
 
   // Sort dataset names by alphabetical order.
   return availableDatasets.sort((a, b) => a.name.localeCompare(b.name));
