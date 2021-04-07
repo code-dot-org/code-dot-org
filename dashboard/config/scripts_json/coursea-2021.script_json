@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-03-31 14:03:43 UTC",
+    "serialized_at": "2021-04-07 17:19:54 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -71,6 +71,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csf_events",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "End of Course Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "coursea-2021"
       }
     }
@@ -317,6 +329,25 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "End of Course Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.",
+        "student_overview": "Create your own artwork or game.",
+        "purpose": "This lesson gives students one last opportunity to creatively use their new computer science skills.",
+        "preparation": "* Code your own Artist and Play Lab projects in advance to inspire students!\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "coursea-2021"
       }
     }
@@ -1096,6 +1127,48 @@
         "lesson_activity.key": "98f951f7-63b2-4d62-82c9-d472b3505b68",
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "csf_events",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "71a032af-54cc-494d-8449-f02ce20f8aad",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cccafe00-da31-43f0-93cb-a49d10d5be0a",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "coursea-2021"
       }
     }
@@ -2655,6 +2728,73 @@
       "seeding_key": {
         "activity_section.key": "807c4bfd-ed3e-4400-a83a-a535c56f3155",
         "lesson_activity.key": "98f951f7-63b2-4d62-82c9-d472b3505b68"
+      }
+    },
+    {
+      "key": "4ae60932-ccb3-411c-bfb4-bc9e52149b27",
+      "position": 1,
+      "properties": {
+        "name": "Review",
+        "description": "Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in previous lessons using the Artist and Play Lab tools.\nReview the vocabulary words **loop** and **event**.",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ae60932-ccb3-411c-bfb4-bc9e52149b27",
+        "lesson_activity.key": "bd62a2bf-c616-4c2e-a17d-7ed49ea2520c"
+      }
+    },
+    {
+      "key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Project (or screen share) the level for this lesson.",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Today we are going to celebrate how much you have all learned by creating our own projects. You will be able to pick what you would like to make.  When you get the activity on your computer, click on any of the chooses to start. There are 3 drawing choices and 3 game choices. You can create whatever you like! At the end of class, we will share our projects with the class.",
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ab5b62b-a464-4801-a963-d23d293ea5ff",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "16e34527-4efe-46f1-970b-f365858958a9",
+      "position": 3,
+      "properties": {
+        "description": "As students work, support them by answering questions and giving ideas. Encourage them to share ideas to make the activity more collaborative.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All of the choices in this lesson are considered \"Free Play,\" which means there is no single right answer. If a student presses Finish, they will return to the list of choices. You can have students complete just one choice or as many as they are interested in completing as time allows."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16e34527-4efe-46f1-970b-f365858958a9",
+        "lesson_activity.key": "71a032af-54cc-494d-8449-f02ce20f8aad"
+      }
+    },
+    {
+      "key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
+      "position": 1,
+      "properties": {
+        "name": "Showcase",
+        "description": "To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement. \n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and playtest the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible."
+      },
+      "seeding_key": {
+        "activity_section.key": "adc355f7-34d5-450e-aa57-e001b2a7973c",
+        "lesson_activity.key": "cccafe00-da31-43f0-93cb-a49d10d5be0a"
       }
     }
   ],
@@ -5341,6 +5481,32 @@
       "level_keys": [
         "courseA_playlab_events_challenge1_2021"
       ]
+    },
+    {
+      "chapter": 104,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Project",
+        "level_keys": [
+          "courseAB_EOC_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021",
+        "activity_section.key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342"
+      },
+      "level_keys": [
+        "courseAB_EOC_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6579,6 +6745,18 @@
         "script.name": "coursea-2021",
         "activity_section.key": "40ddc694-3a85-4874-b3ad-71810e6a0474"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseAB_EOC_2021",
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursea-2021",
+        "activity_section.key": "d07826c3-fe5d-4ffa-a4ff-6bd799a62342"
+      }
     }
   ],
   "resources": [
@@ -7055,13 +7233,24 @@
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "change_log",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "change_log"
       }
     }
   ],
@@ -7379,6 +7568,12 @@
         "resource.key": "curriculum_guide",
         "script.name": "coursea-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "change_log",
+        "script.name": "coursea-2021"
+      }
     }
   ],
   "vocabularies": [
@@ -7651,6 +7846,26 @@
       "seeding_key": {
         "vocabulary.key": "event"
       }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -7813,6 +8028,18 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "vocabulary.key": "event"
       }
     }
@@ -8120,6 +8347,26 @@
         "lesson.key": "Events in Play Lab",
         "objective.key": "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93"
       }
+    },
+    {
+      "key": "7267ef0f-cb1a-42c2-aa5c-40cd949c9479",
+      "properties": {
+        "description": "Apply computer science concepts in an open-ended project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "7267ef0f-cb1a-42c2-aa5c-40cd949c9479"
+      }
+    },
+    {
+      "key": "0f72a34c-2667-4593-8f6f-ff11b0a92ec8",
+      "properties": {
+        "description": "Overcome obstacles such as time constraints or bugs."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0f72a34c-2667-4593-8f6f-ff11b0a92ec8"
+      }
     }
   ],
   "lessons_standards": [
@@ -8352,6 +8599,13 @@
         "lesson.key": "Events in Play Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
       }
     }
   ],

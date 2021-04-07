@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-04-06 22:03:24 UTC",
+    "serialized_at": "2021-04-07 17:19:47 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -4136,7 +4136,7 @@
       "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4162,7 +4162,7 @@
       "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4188,7 +4188,7 @@
       "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4214,7 +4214,7 @@
       "chapter": 26,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4240,7 +4240,7 @@
       "chapter": 27,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4266,7 +4266,7 @@
       "chapter": 28,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4292,7 +4292,7 @@
       "chapter": 29,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -4318,7 +4318,7 @@
       "chapter": 30,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -4344,7 +4344,7 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Star Wars Project",
         "level_keys": [
@@ -4370,7 +4370,7 @@
       "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4396,7 +4396,7 @@
       "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4422,7 +4422,7 @@
       "chapter": 34,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4448,7 +4448,7 @@
       "chapter": 35,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4474,7 +4474,7 @@
       "chapter": 36,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4500,7 +4500,7 @@
       "chapter": 37,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4526,7 +4526,7 @@
       "chapter": 38,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4552,7 +4552,7 @@
       "chapter": 39,
       "position": 9,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4578,7 +4578,7 @@
       "chapter": 40,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -9799,13 +9799,24 @@
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "change_log",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "change_log"
       }
     }
   ],
@@ -10067,6 +10078,12 @@
     {
       "seeding_key": {
         "resource.key": "curriculum_guide",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "change_log",
         "script.name": "coursed-2021"
       }
     }

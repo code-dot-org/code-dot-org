@@ -19323,9 +19323,12 @@ en:
           lessons:
             Analysis of Design:
               key: Analysis of Design
-              name: Analysis of Design
+              name: Designing With Empathy
               description_student: "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
-              description_teacher: To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various teapots. Students analyze each teapot, attempting to identify how specific user needs might have informed its design. By considering these design choices, and attempting to match each teapot with a potential user, students can begin to see how taking a user-centered approach to designing products (both physical and digital) can make those products more useful and usable. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.
+              description_teacher: |-
+                **Question of the Day:** How can we choose products based on the needs of a user?
+
+                To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.
             Understanding Your User:
               key: Understanding Your User
               name: Understanding Your User
@@ -19493,7 +19496,10 @@ en:
               key: Keeping Data Secret
               name: Keeping Data Secret
               description_student: "Students have a discussion on the different levels of security they would like for personal data. Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note. The class concludes with a discussion about the importance of both physical and digital security.\r\n"
-              description_teacher: Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.
+              description_teacher: |-
+                **Question of the Day: How can we keep data secret and protect it from misuse?**
+
+                Students continue to explore how data is represented in a punchcard, and begin considering whether some data should be protected from public view because it is too personal or sensitive. Once students understand the reasons for protecting data, they learn a binary encryption system that lets them encrypt and decrypt data in their punchcards, and eventually they are able to send secret messages to one another using this method. Class concludes with a discussion on the importance of protecting our information and how encryption is one way we can accomplish this.
             Combining Representations:
               key: Combining Representations
               name: Combining Representations
@@ -19503,7 +19509,10 @@ en:
               key: Project - Create a Representation
               name: Create a Representation
               description_student: "The class designs structures to represent their perfect day using the binary representation systems they've learned in this chapter. After deciding which pieces of information the record should capture, students decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Afterwards, they use the ASCII, binary number, and image formats they have learned to represent their perfect days and try to decipher what a partner's perfect day is like.\r\n"
-              description_teacher: In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.
+              description_teacher: |-
+                **Question of the Day: How can I represent complex information using binary systems?**
+
+                In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.
             Problem Solving and Data:
               key: Problem Solving and Data
               name: Problem Solving and Data
@@ -19537,8 +19546,11 @@ en:
             Project - Make a Recommendation:
               key: Project - Make a Recommendation
               name: Project - Make a Recommendation
-              description_student: To conclude this unit, the class designs ways to use data to make recommendations or predictions to help solve a problem. In the first several steps, students brainstorm problems, perform simple research, and define a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.
-              description_teacher: To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
+              description_student: 
+              description_teacher: |-
+                **Question of the Day: How can I use data to make my own recommendations?**
+
+                To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm. Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
@@ -20439,6 +20451,10 @@ en:
               name: On the Move with Events
               description_student: Create your own game or story.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+            lesson-1:
+              name: End of Course Project
+              description_student: Create your own artwork or game.
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20448,6 +20464,8 @@ en:
               display_name: Loops
             csf_events:
               display_name: Events
+            lessonGroup-5:
+              display_name: End of Course Project
           name: coursea-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb-2021:
@@ -20521,6 +20539,10 @@ en:
               name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            lesson-1:
+              name: End of Course Project
+              description_student: Create your own artwork or game.
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20532,6 +20554,12 @@ en:
               display_name: Impacts of Computing
             csf_events:
               display_name: Events
+            lessonGroup-6:
+              display_name: End of Course Project
+              description: |2-
+
+
+                ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
           name: courseb-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec-2021:
@@ -20605,7 +20633,7 @@ en:
               description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
             Sticker Art with Loops:
               key: Sticker Art with Loops
-              name: Sticker Art with Loops
+              name: 'Mini-Project: Sticker Art'
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             'Events: The Big Event':
@@ -20620,7 +20648,7 @@ en:
               description_teacher: This lesson combines **skill-building** around events with a **mini-project** where students get to build their own Flappy Bird game. At the end of the lesson, students will be able to customize their game by changing the visuals or rules.
             Events in Play Lab:
               key: Events in Play Lab
-              name: Chase Game with Events
+              name: 'Mini-Project: Chase Game'
               description_student: It's time to get creative and make a game in Play Lab!
               description_teacher: This lesson combines **skill-building** around events with a **mini-project** where students get to build their own animated game.
             Picturing Data:
