@@ -98,7 +98,7 @@ export const allDatasets = [
     name: "Bubble Tea",
     path: "datasets/boba_toy.csv",
     metadataPath: "datasets/boba_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/boba_toy.jpg",
     isToy: true
   },
   {
@@ -106,7 +106,7 @@ export const allDatasets = [
     name: "Cookies",
     path: "datasets/cookies_toy.csv",
     metadataPath: "datasets/cookies_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/cookies_toy.jpg",
     isToy: true
   },
   {
@@ -114,7 +114,7 @@ export const allDatasets = [
     name: "Naan",
     path: "datasets/naan_toy.csv",
     metadataPath: "datasets/naan_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/naan_toy.jpg",
     isToy: true
   },
   {
@@ -130,7 +130,7 @@ export const allDatasets = [
     name: "Poutine",
     path: "datasets/poutine_toy.csv",
     metadataPath: "datasets/poutine_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/poutine_toy.jpg",
     isToy: true
   },
   {
@@ -138,7 +138,7 @@ export const allDatasets = [
     name: "Raspado",
     path: "datasets/raspado_toy.csv",
     metadataPath: "datasets/raspado_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/raspado_toy.jpg",
     isToy: true
   },
   {
@@ -146,7 +146,7 @@ export const allDatasets = [
     name: "Salad",
     path: "datasets/salad_toy.csv",
     metadataPath: "datasets/salad_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/salad_toy.jpg",
     isToy: true
   },
   {
@@ -154,7 +154,7 @@ export const allDatasets = [
     name: "Salsa",
     path: "datasets/salsa_toy.csv",
     metadataPath: "datasets/salsa_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/salsa_toy.jpg",
     isToy: true
   },
   {
@@ -162,7 +162,7 @@ export const allDatasets = [
     name: "Breakfast Quiz",
     path: "datasets/breakfast_toy.csv",
     metadataPath: "datasets/breakfast_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/breakfast_toy.jpg",
     isToy: true
   },
   {
@@ -170,7 +170,7 @@ export const allDatasets = [
     name: "Drink Quiz",
     path: "datasets/drink_toy.csv",
     metadataPath: "datasets/drink_toy.json",
-    imagePath: "datasets/temp.jpg",
+    imagePath: "datasets/drink_toy.jpg",
     isToy: true
   },
   {
