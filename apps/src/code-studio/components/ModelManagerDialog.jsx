@@ -53,7 +53,8 @@ export default class ModelManagerDialog extends React.Component {
     selectedModel: undefined,
     models: [],
     isImportPending: false,
-    confirmDialogOpen: false
+    confirmDialogOpen: false,
+    deletionStatus: undefined
   };
 
   componentDidUpdate(prevProps) {
@@ -118,8 +119,11 @@ export default class ModelManagerDialog extends React.Component {
     $.ajax({
       url: `/api/v1/ml_models/${this.state.selectedModel.id}`,
       method: 'DELETE'
-    }).then(() => {
-      this.setState({confirmDialogOpen: false});
+    }).then(response => {
+      this.setState({
+        deletionStatus: response.status,
+        confirmDialogOpen: false
+      });
     });
   };
 
