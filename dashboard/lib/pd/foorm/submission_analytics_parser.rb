@@ -14,10 +14,11 @@ module Pd::Foorm
       response_text
     )
 
-    # Iterates over all Foorm Submissions, and exports them to a CSV.
-    # Each row represents an answer to a single question.
-    def self.reshape_all_submissions_and_export_to_csv
-      CSV.open('./test_submissions.csv', 'wb') do |csv|
+    # Iterates over all Foorm Submissions, returning a comma-separated string
+    # with each line represents a user's answer to a single question.
+    # @return [String] a CSV formatted string with each line containing an answer.
+    def self.reshape_all_submissions_into_csv
+      CSV.generate do |csv|
         csv << HEADERS
 
         # Loads 1000 records at a time to manage loading records into memory.
