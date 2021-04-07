@@ -66,7 +66,7 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   32 queries - two for each model, + one extra query each for Lessons,
+      #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
