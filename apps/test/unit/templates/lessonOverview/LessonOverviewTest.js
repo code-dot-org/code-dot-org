@@ -77,7 +77,8 @@ describe('LessonOverview', () => {
             link: '/docs/applab/playSound'
           }
         ],
-        standards: []
+        standards: [],
+        opportunityStandards: []
       },
       activities: [],
       announcements: [],
@@ -202,5 +203,35 @@ describe('LessonOverview', () => {
     );
 
     expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
+    expect(
+      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+    ).to.be.false;
+  });
+
+  it('renders opportunities header when opportunity standards are present', () => {
+    const standards = [
+      {
+        frameworkName: 'ngss',
+        parentCategoryShortcode: 'ESS',
+        parentCategoryDescription: 'Earth and Space Science',
+        categoryShortcode: 'ESS1',
+        categoryDescription: "Earth's Place in the Universe",
+        shortcode: '1-ESS1-1',
+        description:
+          'Use observations of the sun, moon, and stars to describe patterns that can be predicted.'
+      }
+    ];
+    const lesson = {
+      ...defaultProps.lesson,
+      opportunityStandards: standards
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
+    expect(
+      wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
+    ).to.be.true;
   });
 });

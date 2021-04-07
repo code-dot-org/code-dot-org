@@ -1,3 +1,4 @@
+@import "font";
 @import "markdown";
 @import "pdf_printing";
 
@@ -8,8 +9,9 @@
   }
 }
 
-// We only want to apply table styling to the text areas or it will apply on the progression details
+
 .activity-section-text {
+  // We only want to apply table styling to the text areas or it will apply on the progression details
   table {
     thead {
       th {
@@ -38,6 +40,11 @@
       }
     }
   }
+
+  // "slide" icons
+  .fa.fa-list-alt {
+    color: $purple;
+  }
 }
 
 .lessons-dropdown {
@@ -49,6 +56,8 @@
 .modal .level-details {
   a {
     color: $link_color;
+    font-family: $gotham-regular, sans-serif;
+    font-weight: normal;
     &:hover {
       color: $link_color;
       background: none;

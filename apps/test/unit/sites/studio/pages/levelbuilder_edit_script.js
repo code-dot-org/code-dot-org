@@ -13,7 +13,8 @@ describe('the level builder page init script', () => {
     initPage({
       script: {
         name: 'Test script',
-        stages: []
+        stages: [],
+        is_migrated: false
       },
       i18n: {
         stageDescriptions: [],

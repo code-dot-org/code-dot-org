@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-03 20:33:37 UTC",
+    "serialized_at": "2021-03-31 15:09:34 UTC",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -59,9 +59,21 @@
       }
     },
     {
-      "key": "Toolbox Levels",
+      "key": "AB EOC",
       "user_facing": true,
       "position": 4,
+      "properties": {
+        "display_name": "Course A and B EOC Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Toolbox Levels",
+      "user_facing": true,
+      "position": 5,
       "properties": {
         "display_name": "Toolbox Levels"
       },
@@ -73,7 +85,7 @@
     {
       "key": "Loom Levels",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Loom Levels"
       },
@@ -85,7 +97,7 @@
     {
       "key": "contagion",
       "user_facing": true,
-      "position": 6,
+      "position": 7,
       "properties": {
         "display_name": "Contagion"
       },
@@ -97,7 +109,7 @@
     {
       "key": "lesson group",
       "user_facing": true,
-      "position": 7,
+      "position": 8,
       "properties": {
         "display_name": "Contagion-Guided-Practice"
       },
@@ -109,7 +121,7 @@
     {
       "key": "haiku bot",
       "user_facing": true,
-      "position": 8,
+      "position": 9,
       "properties": {
         "display_name": "Haiku Bot"
       },
@@ -272,12 +284,27 @@
       }
     },
     {
-      "key": "Sprite Lab",
-      "name": "Sprite Lab Blocks",
+      "key": "End of Course Project",
+      "name": "End of Course Project",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "key": "Sprite Lab",
+      "name": "Sprite Lab Blocks",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -289,10 +316,10 @@
     {
       "key": "video",
       "name": "Sprite Lab Videos",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -304,10 +331,10 @@
     {
       "key": "how things spread",
       "name": "How Things Spread",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -319,10 +346,10 @@
     {
       "key": "contagion simulator setup",
       "name": "Contagion Simulator Setup",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -334,10 +361,10 @@
     {
       "key": "sometimes but not always",
       "name": "Sometimes, but Not Always",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -349,10 +376,10 @@
     {
       "key": "modifying your model",
       "name": "Modifying Your model",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -364,10 +391,10 @@
     {
       "key": "telling a data story",
       "name": "Telling a Data Story",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -379,10 +406,10 @@
     {
       "key": "how things spread gp",
       "name": "How Things Spread  - Guided Practice",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -394,10 +421,10 @@
     {
       "key": "contagion simulator gp",
       "name": "Contagion Simulator - Guided Practice",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -409,10 +436,10 @@
     {
       "key": "sometimes not always gp",
       "name": "Sometimes, Not Always - Practice",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -424,10 +451,10 @@
     {
       "key": "modifying your simulator gp",
       "name": "Modifying Your Simulator - Guided Practice",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -439,10 +466,10 @@
     {
       "key": "collecting data gp",
       "name": "Collecting Data Guided Practice",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -454,10 +481,10 @@
     {
       "key": "Haiku Bot",
       "name": "Haiku Bot",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -1582,6 +1609,31 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
+        "progression": "Project",
+        "level_keys": [
+          "courseAB_EOC_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "courseAB_EOC_2021"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
         "progression": "Text Input",
         "level_keys": [
           "sprite lab - ask and answer"
@@ -1602,7 +1654,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1627,7 +1679,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1652,7 +1704,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1677,7 +1729,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1702,7 +1754,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1727,7 +1779,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1752,7 +1804,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1777,7 +1829,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1802,7 +1854,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -1827,7 +1879,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -1852,7 +1904,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -1877,7 +1929,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -1902,7 +1954,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -1927,7 +1979,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1952,7 +2004,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -1977,7 +2029,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2002,7 +2054,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": null,
       "assessment": null,
@@ -2027,7 +2079,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": null,
       "assessment": null,
@@ -2052,7 +2104,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": null,
       "assessment": null,
@@ -2077,7 +2129,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 6,
       "activity_section_position": null,
       "assessment": null,
@@ -2102,7 +2154,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 7,
       "activity_section_position": null,
       "assessment": null,
@@ -2127,7 +2179,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2152,7 +2204,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2177,7 +2229,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2202,7 +2254,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2227,7 +2279,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": null,
       "assessment": null,
@@ -2252,7 +2304,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": null,
       "assessment": null,
@@ -2764,6 +2816,17 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseAB_EOC_2021",
+        "script_level.level_keys": [
+          "courseAB_EOC_2021"
+        ],
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "AB EOC",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "sprite lab - ask and answer",
         "script_level.level_keys": [
           "sprite lab - ask and answer"
@@ -3077,13 +3140,25 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }

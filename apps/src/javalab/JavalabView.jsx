@@ -10,6 +10,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 const style = {
   instructionsAndPreview: {
@@ -68,7 +69,8 @@ class JavalabView extends React.Component {
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    appendOutputLog: PropTypes.func
+    appendOutputLog: PropTypes.func,
+    channelId: PropTypes.string
   };
 
   state = {
@@ -85,7 +87,22 @@ class JavalabView extends React.Component {
       () => this.setState({loading: false, loadSuccess: false}),
       this.props.suppliedFilesVersionId
     );
+    this.getToken();
   }
+
+  getToken = () => {
+    // TODO: Use token to connect to Java Builder
+    $.ajax({
+      url: '/javabuilder/access_token',
+      type: 'get',
+      data: {
+        channelId: this.props.channelId,
+        projectVersion: project.getCurrentSourceVersionId()
+      }
+    })
+      .done()
+      .fail();
+  };
 
   run = () => {
     this.props.appendOutputLog('Running program...');
@@ -178,7 +195,8 @@ class JavalabView extends React.Component {
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
+    channelId: state.pageConstants.channelId
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log))

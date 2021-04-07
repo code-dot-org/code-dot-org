@@ -85,9 +85,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should not get show of ECSPD if not signed in" do
+  test "should get show of ECSPD if not signed in" do
     get :show, params: {id: 'ECSPD'}
-    assert_redirected_to_sign_in
+    assert_response :success
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
@@ -598,6 +598,30 @@ class ScriptsControllerTest < ActionController::TestCase
       resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
     }
     assert_equal [['curriculum', '/link/to/curriculum'], ['vocabulary', '/link/to/vocab']], Script.find_by_name(script.name).teacher_resources
+  end
+
+  test 'updates migrated teacher resources' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    script = create :script, hidden: true, is_migrated: true
+    stub_file_writes(script.name)
+
+    course_version = create :course_version, content_root: script
+    teacher_resources = [
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version),
+      create(:resource, course_version: course_version)
+    ]
+
+    post :update, params: {
+      id: script.id,
+      script: {name: script.name},
+      script_text: '',
+      resourceIds: teacher_resources.map(&:id),
+      is_migrated: true
+    }
+    assert_equal teacher_resources.map(&:key), Script.find_by_name(script.name).resources.map {|r| r[:key]}
   end
 
   test 'updates pilot_experiment' do

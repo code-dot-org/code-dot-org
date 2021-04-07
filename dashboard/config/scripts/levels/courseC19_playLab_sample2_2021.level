@@ -1,0 +1,945 @@
+<Studio>
+  <config><![CDATA[{
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return (Studio.background != \"cave\") && (Studio.sprite[0].value != \"hidden\") && (Studio.sprite[0].lastMove != Infinity) && (Studio.sprite[1].value != \"hidden\") && (Studio.sprite[1].lastMove != Infinity) && (Studio.sprite[2].value != \"hidden\") && (Studio.sprite[2].lastMove != Infinity) && (Studio.tickCount > 500) && (Studio.playerScore != 0);\r\n\r\n  //Commenting these out because this is the final presentation for the app. The game should not end automatically.\r\n  // The game still needs to end when the player wins or loses. (Kiki)\r\n//return Studio.trackedBehavior.hasLostGame;\r\n//return Studio.trackedBehavior.hasWonGame;\r\n\r\n}",
+    "failure_condition": "function () {\r\n // return (((Studio.sprite[1].value == \"hidden\") || (Studio.sprite[2].value == \"hidden\")) && (Studio.tickCount > 5)) || ((Studio.playerScore == 0) && (Studio.tickCount > 450));\r\n}",
+    "timeout_after_when_run": "true",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "edge_collisions": "true",
+    "projectile_collisions": "true",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "first_sprite_index": "0",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "hint_prompt_attempts_threshold": "3",
+    "parent_level_id": 26711,
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false",
+    "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "name_suffix": "_2021",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Alien Story",
+    "thumbnail_url": "https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG",
+    "preload_asset_list": null
+  },
+  "game_id": 33,
+  "published": true,
+  "created_at": "2021-04-02T20:28:50.000Z",
+  "level_num": "custom",
+  "user_id": 285,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-10-15 22:30:38 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"project_template_level_name\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:17:57 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"embed\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-04-03 17:19:04 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:09:02 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:10:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:16:39 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"hint_prompt_attempts_threshold\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:21:43 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2020-11-09 14:23:34 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"edge_collisions\",\"projectile_collisions\",\"encrypted_examples\",\"maze_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-02 20:39:41 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"short_instructions\",\"long_instructions\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-04-02 20:49:19 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"},{\"changed_at\":\"2021-04-02 21:00:11 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":8945,\"changed_by_email\":\"debbie.spear@code.org\"}]"
+}]]></config>
+  <blocks>
+    <initialization_blocks>
+      <xml>
+</xml>
+    </initialization_blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="true" movable="true" editable="true" id="when_run">
+          <next>
+            <block type="studio_setBackground" deletable="true" movable="true" editable="true">
+              <title name="VALUE">"space"</title>
+              <next>
+                <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                  <title name="TITLE"/>
+                  <title name="TEXT">Welcome to space!</title>
+                  <next>
+                    <block type="studio_playSound" deletable="true" movable="true" editable="true">
+                      <title name="SOUND">winpoint</title>
+                      <next>
+                        <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                          <title name="VALUE">"alien"</title>
+                          <value name="SPRITE">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">2</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                              <title name="TITLE"/>
+                              <title name="TEXT">This is Neila.</title>
+                              <next>
+                                <block type="studio_saySpriteParamsTime" deletable="true" movable="true" editable="true">
+                                  <value name="SPRITE">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">2</title>
+                                    </block>
+                                  </value>
+                                  <value name="TEXT">
+                                    <block type="text" deletable="true" movable="true" editable="true">
+                                      <title name="TEXT">Hi there!</title>
+                                    </block>
+                                  </value>
+                                  <value name="TIME">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">3</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                      <title name="VALUE">"spacebot"</title>
+                                      <value name="SPRITE">
+                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                          <title name="NUM">8</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                                          <title name="TITLE"/>
+                                          <title name="TEXT">Neila is trying to protect her home from the spacebots.</title>
+                                          <next>
+                                            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+                                              <value name="SPRITE">
+                                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                                  <title name="NUM">2</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="studio_setBackground" deletable="true" movable="true" editable="true">
+                                                  <title name="VALUE">"cloudy"</title>
+                                                  <next>
+                                                    <block type="studio_setSpriteEmotionParams" deletable="true" movable="true" editable="true">
+                                                      <title name="VALUE">2</title>
+                                                      <value name="SPRITE">
+                                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                                          <title name="NUM">8</title>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="studio_playSound" deletable="true" movable="true" editable="true">
+                                                          <title name="SOUND">losepoint</title>
+                                                          <next>
+                                                            <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                                                            <title name="TITLE"/>
+                                                            <title name="TEXT">The spacebots capture all of the wildlife.</title>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"monster"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">7</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"monster"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">11</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">9</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">12</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpritesWander" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <next>
+                                                            <block type="studio_setSpritesWander" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"dragon"</title>
+                                                            <next>
+                                                            <block type="studio_setSpritesWander" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"monster"</title>
+                                                            <next>
+                                                            <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                                                            <value name="VALUE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">6</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="controls_for" deletable="true" movable="true" editable="true">
+                                                            <title name="VAR">actor</title>
+                                                            <value name="FROM">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">7</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="TO">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">12</title>
+                                                            </block>
+                                                            </value>
+                                                            <value name="BY">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            <statement name="DO">
+                                                            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get" deletable="true" movable="true" editable="true">
+                                                            <title name="VAR">actor</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_stopSprite" deletable="true" movable="true" editable="true">
+                                                            <value name="SPRITE">
+                                                            <block type="variables_get" deletable="true" movable="true" editable="true">
+                                                            <title name="VAR">actor</title>
+                                                            </block>
+                                                            </value>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </statement>
+                                                            <next>
+                                                            <block type="studio_setBackground" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"space"</title>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"alien"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">2</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                                                            <title name="TITLE">Use the arrow keys.</title>
+                                                            <title name="TEXT">Can you help Neila scare the spacebots away?</title>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">4</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">12</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">5</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            <value name="SPRITE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">10</title>
+                                                            </block>
+                                                            </value>
+                                                            <next>
+                                                            <block type="studio_setSpritesWander" deletable="true" movable="true" editable="true">
+                                                            <title name="VALUE">"spacebot"</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollide" deletable="true" movable="true" editable="true">
+          <title name="SPRITE">7</title>
+          <title name="SPRITENAME">"dragon"</title>
+          <value name="GROUPMEMBER">
+            <block type="variables_get" deletable="true" movable="true" editable="true">
+              <title name="VAR">actor</title>
+            </block>
+          </value>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="variables_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteAndGroupCollide" deletable="true" movable="true" editable="true">
+          <title name="SPRITE">7</title>
+          <title name="SPRITENAME">"monster"</title>
+          <value name="GROUPMEMBER">
+            <block type="variables_get" deletable="true" movable="true" editable="true">
+              <title name="VAR">actor</title>
+            </block>
+          </value>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="variables_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+          <title name="VALUE">right</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+              <title name="DIR">2</title>
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+          <title name="VALUE">left</title>
+          <next>
+            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+              <title name="DIR">8</title>
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">2</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
+          <title name="SPRITE1">9</title>
+          <title name="SPRITE2">star</title>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
+          <title name="SPRITE1">3</title>
+          <title name="SPRITE2">star</title>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">4</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
+          <title name="SPRITE1">4</title>
+          <title name="SPRITE2">star</title>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">5</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">star</title>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided" deletable="true" movable="true" editable="true">
+          <title name="SPRITE1">11</title>
+          <title name="SPRITE2">star</title>
+          <next>
+            <block type="studio_vanishSprite" deletable="true" movable="true" editable="true">
+              <value name="SPRITE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">12</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_changeScore" deletable="true" movable="true" editable="true">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenArrow" deletable="true" movable="true" editable="true">
+          <title name="VALUE">down</title>
+          <next>
+            <block type="controls_if" deletable="true" movable="true" editable="true">
+              <mutation else="1"/>
+              <value name="IF0">
+                <block type="logic_compare" deletable="true" movable="true" editable="true">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="studio_getScore" deletable="true" movable="true" editable="true"/>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">5</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="studio_saySpriteParamsTime" deletable="true" movable="true" editable="true">
+                  <value name="SPRITE">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <value name="TEXT">
+                    <block type="text" deletable="true" movable="true" editable="true">
+                      <title name="TEXT">Nice job! They'll stay away now!</title>
+                    </block>
+                  </value>
+                  <value name="TIME">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">3</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                      <value name="VALUE">
+                        <block type="math_number" deletable="true" movable="true" editable="true">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                          <title name="VALUE">"monster"</title>
+                          <value name="SPRITE">
+                            <block type="math_number" deletable="true" movable="true" editable="true">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                              <value name="VALUE">
+                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                  <title name="NUM">1</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                  <title name="VALUE">"dragon"</title>
+                                  <value name="SPRITE">
+                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                      <title name="NUM">11</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="studio_saySpriteParamsTime" deletable="true" movable="true" editable="true">
+                                      <value name="SPRITE">
+                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                          <title name="NUM">2</title>
+                                        </block>
+                                      </value>
+                                      <value name="TEXT">
+                                        <block type="text" deletable="true" movable="true" editable="true">
+                                          <title name="TEXT">Look, all the wildlife are coming back!</title>
+                                        </block>
+                                      </value>
+                                      <value name="TIME">
+                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                          <title name="NUM">5</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                                          <value name="VALUE">
+                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                              <title name="NUM">1</title>
+                                            </block>
+                                          </value>
+                                          <next>
+                                            <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                              <title name="VALUE">"dragon"</title>
+                                              <value name="SPRITE">
+                                                <block type="math_number" deletable="true" movable="true" editable="true">
+                                                  <title name="NUM">6</title>
+                                                </block>
+                                              </value>
+                                              <next>
+                                                <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                                                  <value name="VALUE">
+                                                    <block type="math_number" deletable="true" movable="true" editable="true">
+                                                      <title name="NUM">1</title>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="studio_setSpriteParams" deletable="true" movable="true" editable="true">
+                                                      <title name="VALUE">"monster"</title>
+                                                      <value name="SPRITE">
+                                                        <block type="math_number" deletable="true" movable="true" editable="true">
+                                                          <title name="NUM">7</title>
+                                                        </block>
+                                                      </value>
+                                                      <next>
+                                                        <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                                                          <value name="VALUE">
+                                                            <block type="math_number" deletable="true" movable="true" editable="true">
+                                                            <title name="NUM">1</title>
+                                                            </block>
+                                                          </value>
+                                                          <next>
+                                                            <block type="studio_playSound" deletable="true" movable="true" editable="true">
+                                                            <title name="SOUND">winpoint</title>
+                                                            <next>
+                                                            <block type="studio_showTitleScreen" deletable="true" movable="true" editable="true">
+                                                            <title name="TITLE">The End</title>
+                                                            <title name="TEXT">Thanks for helping Neila!</title>
+                                                            </block>
+                                                            </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+              <statement name="ELSE">
+                <block type="studio_playSound" deletable="true" movable="true" editable="true">
+                  <title name="SOUND">wood</title>
+                  <next>
+                    <block type="studio_throw" deletable="true" movable="true" editable="true">
+                      <title name="SPRITE">1</title>
+                      <title name="VALUE">"star"</title>
+                      <title name="DIR">4</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="actor"/>
+            <arg name="speed"/>
+            <description>a patrol function that has a actor and speed parameter</description>
+          </mutation>
+          <title name="NAME">patrol</title>
+          <statement name="STACK">
+            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+              <title name="DIR">8</title>
+              <value name="SPRITE">
+                <block type="parameters_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="parameters_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">speed</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_waitParams" deletable="true" movable="true" editable="true">
+                  <value name="VALUE">
+                    <block type="math_number" deletable="true" movable="true" editable="true">
+                      <title name="NUM">2</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+                      <title name="DIR">2</title>
+                      <value name="SPRITE">
+                        <block type="parameters_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">actor</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="parameters_get" deletable="true" movable="true" editable="true">
+                          <title name="VAR">speed</title>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true">
+          <mutation>
+            <arg name="height"/>
+            <arg name="actor"/>
+            <description>jump function block with height and actor parameter</description>
+          </mutation>
+          <title name="NAME">jump</title>
+          <statement name="STACK">
+            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+              <title name="DIR">1</title>
+              <value name="SPRITE">
+                <block type="parameters_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="parameters_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">height</title>
+                </block>
+              </value>
+              <next>
+                <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+                  <title name="DIR">4</title>
+                  <value name="SPRITE">
+                    <block type="parameters_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">actor</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="parameters_get" deletable="true" movable="true" editable="true">
+                      <title name="VAR">height</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" deletable="true" movable="true" editable="true" usercreated="true">
+          <mutation>
+            <arg name="actor"/>
+            <arg name="speed"/>
+          </mutation>
+          <title name="NAME">move</title>
+          <statement name="STACK">
+            <block type="studio_moveDistanceParamsSprite" deletable="true" movable="true" editable="true">
+              <title name="DIR">2</title>
+              <value name="SPRITE">
+                <block type="parameters_get" deletable="true" movable="true" editable="true">
+                  <title name="VAR">actor</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="math_number" deletable="true" movable="true" editable="true">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_showTitleScreen">
+          <title name="TITLE">Text here</title>
+          <title name="TEXT">You can write something.</title>
+        </block>
+        <block type="studio_endGame">
+          <title name="VALUE">win</title>
+        </block>
+        <block type="studio_endGame">
+          <title name="VALUE">lose</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Ouch!</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_addGoal">
+          <title name="VALUE">7</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_stop">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_setSpriteSize">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSize.NORMAL</title>
+        </block>
+        <block type="studio_saySpriteParams">
+          <title name="SPRITE">0</title>
+          <value name="TEXT">
+            <block type="studio_getScore"/>
+          </value>
+        </block>
+        <block type="studio_setScore">
+          <value name="VALUE">
+            <block type="math_number" movable="false">
+              <title name="NUM">0</title>
+            </block>
+          </value>
+        </block>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+        <block type="studio_addPoints">
+          <title name="VALUE">10</title>
+        </block>
+        <block type="studio_removePoints">
+          <title name="VALUE">10</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_makeProjectile">
+          <title name="VALUE">???</title>
+          <title name="ACTION">"bounce"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">???</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">1</title>
+          <title name="VALUE">???</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">???</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">???</title>
+          <title name="SPRITE2">???</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"airplane"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_makeProjectile">
+          <title name="VALUE">"airplane"</title>
+          <title name="ACTION">"bounce"</title>
+        </block>
+        <block type="studio_repeatForever"/>
+        <block type="controls_repeat">
+          <title name="TIMES">???</title>
+        </block>
+        <block type="controls_if">
+          <value name="IF0">
+            <block type="logic_compare" next_connection_disabled="true">
+              <title name="OP">GT</title>
+              <value name="A">
+                <block type="studio_getScore" movable="false"/>
+              </value>
+              <value name="B">
+                <block type="math_number" movable="false">
+                  <title name="NUM">10</title>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

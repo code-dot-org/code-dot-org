@@ -20,7 +20,10 @@ body {
 
 .cm-scroller { overflow: auto; }
 
-.cm-wrap { border: 1px solid silver }
+.cm-wrap { 
+  border: 1px solid silver;
+  max-height: 100%;
+}
 
 #codeWorkspace {
   border: none !important;
