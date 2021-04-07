@@ -1,0 +1,81 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/cdo/redshift'
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+
+def main
+  redshift_client = RedshiftClient.instance
+
+  # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
+  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'submissions.csv')
+  reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
+  AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'submissions.csv', reshaped_submissions, no_random: true)
+  write_submissions_to_redshift(redshift_client)
+
+  # Processes and uploads Foorm forms to Redshift for analytics use via S3.
+  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'forms.csv')
+  reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+  AWS::S3.upload_to_bucket('cdo-data-sharing-internal', 'forms.csv', reshaped_forms, no_random: true)
+  write_forms_to_redshift(redshift_client)
+end
+
+def write_forms_to_redshift(redshift_client)
+  query = <<~SQL
+    DROP TABLE IF EXISTS analysis.foorm_forms_reshaped;
+    CREATE TABLE analysis.foorm_forms_reshaped
+    (
+      form_id                 int,
+      form_name               varchar,
+      form_version            int,
+      question_type           varchar,
+      question_name           varchar,
+      question_text           varchar(max),
+      matrix_item_name        varchar,
+      matrix_item_text        varchar(max),
+      is_facilitator_specific int,
+      response_options        varchar(max),
+      num_response_options    int
+    );
+
+    COPY analysis.foorm_forms_reshaped
+    FROM 's3://cdo-data-sharing-internal/forms.csv'
+    IAM_ROLE 'arn:aws:iam::awsaccountIDHere:role/redshift-s3'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  redshift_client.exec(query)
+end
+
+def write_submissions_to_redshift(redshift_client)
+  query = <<~SQL
+    DROP TABLE IF EXISTS analysis.foorm_submissions_reshaped;
+    CREATE TABLE IF NOT EXISTS analysis.foorm_submissions_reshaped
+    (
+      submission_id    int,
+      question_name    varchar,
+      matrix_item_name varchar,
+      response_value   varchar,
+      response_text    varchar(max)
+    );
+
+    COPY analysis.foorm_submissions_reshaped
+    FROM 's3://cdo-data-sharing-internal/submissions.csv'
+    IAM_ROLE 'arn:aws:iam::awsaccountIDHere:role/redshift-s3'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  redshift_client.exec(query)
+end
+
+begin
+  main
+ensure
+  # If processing fails at any point, delete CSVs from S3.
+  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'submissions.csv')
+  AWS::S3.delete_from_bucket('cdo-data-sharing-internal', 'forms.csv')
+end
