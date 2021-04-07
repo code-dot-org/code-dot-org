@@ -12,6 +12,8 @@ import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/
 import ResourceType, {
   resourceShape
 } from '@cdo/apps/templates/courseOverview/resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {connect} from 'react-redux';
 
 const styles = {
   input: {
@@ -36,7 +38,7 @@ const styles = {
   }
 };
 
-export default class CourseEditor extends Component {
+class CourseEditor extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -51,21 +53,30 @@ export default class CourseEditor extends Component {
     initialDescriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    initialTeacherResources: PropTypes.arrayOf(resourceShape),
+    initialMigratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired
+    initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
+    useMigratedResources: PropTypes.bool.isRequired,
+    courseVersionId: PropTypes.number,
+
+    // Provided by redux
+    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object)
   };
 
   constructor(props) {
     super(props);
 
-    const resources = [...props.initialTeacherResources];
-    // add empty entries to get to max
-    while (resources.length < Object.keys(ResourceType).length) {
-      resources.push({type: '', link: ''});
+    const teacherResources = [...props.initialTeacherResources];
+
+    if (!props.useMigratedResources) {
+      // add empty entries to get to max
+      while (teacherResources.length < Object.keys(ResourceType).length) {
+        teacherResources.push({type: '', link: ''});
+      }
     }
 
     this.state = {
@@ -74,7 +85,7 @@ export default class CourseEditor extends Component {
       announcements: this.props.initialAnnouncements,
       visible: this.props.initialVisible,
       pilotExperiment: this.props.initialPilotExperiment,
-      teacherResources: resources
+      teacherResources: teacherResources
     };
   }
 
@@ -263,17 +274,30 @@ export default class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Teacher Resources">
+          {this.props.migratedTeacherResources && (
+            <input
+              type="hidden"
+              name="resourceIds[]"
+              value={this.props.migratedTeacherResources.map(r => r.id)}
+            />
+          )}
           <div>
-            Select the Teacher Resources buttons you'd like to have show up on
-            the top of the course overview page
+            <div>
+              Select the Teacher Resources buttons you'd like to have show up on
+              the top of the course overview page
+            </div>
+
+            <ResourcesEditor
+              inputStyle={styles.input}
+              teacherResources={teacherResources}
+              migratedTeacherResources={this.props.migratedTeacherResources}
+              updateTeacherResources={teacherResources =>
+                this.setState({teacherResources})
+              }
+              courseVersionId={this.props.courseVersionId}
+              useMigratedResources={this.props.useMigratedResources}
+            />
           </div>
-          <ResourcesEditor
-            inputStyle={styles.input}
-            resources={teacherResources}
-            updateTeacherResources={teacherResources =>
-              this.setState({teacherResources})
-            }
-          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
@@ -294,3 +318,9 @@ export default class CourseEditor extends Component {
     );
   }
 }
+
+export const UnconnectedCourseEditor = CourseEditor;
+
+export default connect(state => ({
+  migratedTeacherResources: state.resources
+}))(CourseEditor);

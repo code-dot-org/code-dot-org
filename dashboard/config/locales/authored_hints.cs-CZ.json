@@ -2876,10 +2876,12 @@
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nK vymazání bloku, který je uprostřed tvého kódu, přesuň všechny bloky, které jsou umístěné pod blokem, který chceš vymazat, doprava a nech je tam chvilku ležet.\n\nDále klikni na blok, který chceš vymazat, a přetáhni ho doleva zpátky do panelu s bloky.\n\nNakonec vrať bloky z pravé strany zpátky na své místo."
         },
         "courseD_maze_ramp4_2019": {
-          "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud."
+          "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud.",
+          "courseC_maze_programming4_a": "Můžeš zatočit doprava nebo doleva, ze Scratova pohledu. Pokud jsi nasměrován doprava, otočka doprava tě nasměruje dolů."
         },
         "courseD_maze_ramp4_2020": {
-          "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud."
+          "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud.",
+          "courseC_maze_programming4_a": "Můžeš zatočit doprava nebo doleva, ze Scratova pohledu. Pokud jsi nasměrován doprava, otočka doprava tě nasměruje dolů."
         },
         "courseD_maze_ramp5": {
           "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
@@ -2913,11 +2915,13 @@
         },
         "courseD_maze_ramp5a_2019": {
           "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
-          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.",
+          "courseC_maze_programming5_b": "Nezapomeň, že všechny otáčky musíš zadávat ze Scratova pohledu."
         },
         "courseD_maze_ramp5a_2020": {
           "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
-          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+          "courseC_maze_programming5_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.",
+          "courseC_maze_programming5_b": "Nezapomeň, že všechny otáčky musíš zadávat ze Scratova pohledu."
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?",
@@ -2968,7 +2972,8 @@
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_b": "Aby ses držel cesty, posuň se vpřed a jednou zahni, pak se znovu posuň a zatoč na opačnou stranu. Posuň se vpřed ještě jednou, abys získal žalud.",
-          "courseC_maze_programming4_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
+          "courseC_maze_programming4_c": "Neboj se dělat chyby! Zkus přidávat bloky a spouštět kód, ať zjistíš, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš.",
+          "courseC_maze_programming4_a": "Můžeš zatočit doprava nebo doleva, ze Scratova pohledu. Pokud jsi nasměrován doprava, otočka doprava tě nasměruje dolů."
         },
         "courseD_scrat_ramp5": {
           "courseC_maze_programming5_a": "Zkus použít tlačítko \"Krok\" a spusť svůj kód řádek po řádku. Přijdeš na to, co udělat dál?"

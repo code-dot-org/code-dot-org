@@ -1381,7 +1381,7 @@
         },
         "course4_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_a": "首先，請確保您理解此函式_應該_如何運作。當農民沿著每條路徑走時，她只會嘗試收集玉米。反而，您如何才能讓她檢查這3種蔬菜中的每一種並僅選擇她發現的一種？\n\n在該函式中添加條件語句以檢查是否有玉米、南瓜和萵苣。",
-          "courseF_bee_fwp_challenge2_c": "**您的函式应该是这样的：**\n\n[blockly block] [0]",
+          "courseF_bee_fwp_challenge2_c": "**您的函式應該是這樣的：**\n\n[blockly block] [0]",
           "courseF_bee_fwp_challenge2_d": "\\*\\*您的主程式应该是这样的：\n\n\\*\\*<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
         "course4_collector_nested_loops_challenge2": {
@@ -4492,7 +4492,7 @@
           "courseC_maze_debugging2_c": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3": {
-          "courseC_maze_debugging3_a": "要從代碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_a": "要從程式碼中間移除一個積木，請將所有積木拖到工作區的另一部分。\n\n將要移除的積木拖回工具箱。\n\n最後，將其他積木放回它們所屬的位置。\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
           "courseC_maze_debugging3_b": "不知道哪裡出問題了嗎？試著執行幾次程式，看看會發生什麼事吧。"
         },
         "courseC_maze_debugging3_2018": {
@@ -4525,7 +4525,7 @@
         },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
-          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的代碼相同嗎？出了什麼問題？"
+          "courseC_maze_debugging5_b": "試著大聲說出 Scrat 應該做什麼。這與工作區中的程式碼相同嗎？出了什麼問題？"
         },
         "courseC_maze_debugging5_2018": {
           "courseC_maze_debugging5_a": "工作區中已經有許多有用的積木。不要全部移除它們喔！\n\n使用「步進」按鈕來檢查程式，並且找出有問題的地方。",
@@ -8253,7 +8253,7 @@
           "courseF_artist_variables_challenge2_d": "**解決方案：**\n\n ![Solution](https://images.code.org/1236e605d55d8cc9beafbca5425c8f75-image-1543523947735.png)"
         },
         "courseF_bee_conditionals10": {
-          "courseF_bee_conditionals10_a": "想象每處都有云。這對您簡化程式碼有幫助嗎？",
+          "courseF_bee_conditionals10_a": "想象每處都有雲。這對您簡化程式碼有幫助嗎？",
           "courseF_bee_conditionals10_b": "使用「if/else」積木檢查每個空間是否有花蜜或蜂蜜。",
           "courseF_bee_conditionals10_c": "「while」迴圈是否可以幫助走到這條路徑的盡頭？"
         },
@@ -8264,7 +8264,7 @@
         "courseF_bee_conditionals3": {
           "courseF_bee_conditionals3_a": "確保使用「if」語句檢查每個空間是否有花。",
           "courseF_bee_conditionals3_b": "一個「repeat」迴圈將對您很有用，從而您只需要使用一個「if」積木。",
-          "courseF_bee_conditionals3_c": "嘗試編寫程式碼以檢查第一朵雲。您可以迴圈檢查所有雲朵嗎？"
+          "courseF_bee_conditionals3_c": "嘗試編寫程式碼以檢查第一朵雲。您可以用迴圈檢查所有雲朵嗎？"
         },
         "courseF_bee_conditionals4": {
           "courseD_bee_conditionals4_a": "即使你可以看清楚整個路徑，你還是可以把每格當作有雲朵的方式來處理。",
@@ -8587,7 +8587,7 @@
         "courseF_bee_fwp_challenge2": {
           "courseF_bee_fwp_challenge2_a": "首先，請確保您理解此函式_應該_如何運作。當農民沿著每條路徑走時，她只會嘗試收集玉米。反而，您如何才能讓她檢查這3種蔬菜中的每一種並僅選擇她發現的一種？\n\n在該函式中添加條件語句以檢查是否有玉米、南瓜和萵苣。",
           "courseF_bee_fwp_challenge2_b": "您用完「move forward」積木了嗎？\n請嘗試在主程式中使用_第二個_「for」迴圈。",
-          "courseF_bee_fwp_challenge2_c": "**您的函式应该是这样的：**\n\n[blockly block] [0]",
+          "courseF_bee_fwp_challenge2_c": "**您的函式應該是這樣的：**\n\n[blockly block] [0]",
           "courseF_bee_fwp_challenge2_d": "\\*\\*您的主程式应该是这样的：\n\n\\*\\*<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter2</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">6</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n            <next>\n              <block type=\"procedures_callnoreturn\" inline=\"false\">\n                <mutation name=\"pick row\">\n                  <arg name=\"length\"/>\n                </mutation>\n                <value name=\"ARG0\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter2</title>\n                  </block>\n                </value>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n    </block></xml>"
         },
         "courseF_bee_variables_3_2018": {

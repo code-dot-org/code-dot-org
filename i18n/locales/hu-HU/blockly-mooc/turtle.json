@@ -60,7 +60,7 @@
   "jumpWestTooltip": "A művészt nyugat felé mozgatja rajzolás nélkül.",
   "left": "balra",
   "lengthFeedback": "Majdnem tökéletes, csak a mozgás hosszát gondold át újra.",
-  "lengthParameter": "hossza",
+  "lengthParameter": "length",
   "loopVariable": "számláló",
   "moveBackward": "menj visszafelé",
   "moveEastTooltip": "A művészt kelet felé mozgatja.",

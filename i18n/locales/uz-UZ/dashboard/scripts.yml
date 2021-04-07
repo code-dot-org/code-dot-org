@@ -14448,7 +14448,9 @@ uz:
             visualizing:
               name: Visualizing Data
             intro-categorical:
-              name: Model va ma'lumotlar
+              name: 6-dars
+            temp:
+              name: 20-dars
           description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
         outbreak:
@@ -14477,6 +14479,8 @@ uz:
               name: Spraytlar amalda
             video:
               name: Sprite Lab Videolari
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             introduction:
               display_name: Kirish
@@ -15293,7 +15297,7 @@ uz:
               key: 'Hodisalar: Katta Hodisa'
               name: Katta hodisa Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
-              description_teacher: "Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan."
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
             Events in Play Lab:
               key: Play Labdagi hodisalar
               name: Hodisalar bilan harakatda
@@ -15352,7 +15356,7 @@ uz:
               key: Yig‘uvchidagi sikllar
               name: Laurel bilan sikllar
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
-              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.
+              description_teacher: 'Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi ''get treasure'' bo‘limi tanishtiriladi.'
             Loops in Artist:
               key: Rassom bilan sikllar
               name: Drawing Gardens with Loops
@@ -15365,7 +15369,7 @@ uz:
             'Events: The Big Event':
               key: 'Hodisalar: Katta Hodisa'
               name: Katta hodisa Jr.
-              description_teacher: "Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan."
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
             Events in Play Lab:
               key: Play Labdagi hodisalar
               name: A Royal Battle with Events
@@ -15406,7 +15410,7 @@ uz:
               key: Debugging in Maze
               name: Debugging in Maze
               description_student: Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring.
-              description_teacher: "Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni."
+              description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
             Programming in Collector:
               key: Programming in Collector
               name: Laurel bilan xazina yig‘ish
@@ -15421,7 +15425,7 @@ uz:
               key: Ikkilik bilakuzuklar
               name: Ikkilik bilakuzuklar
               description_student: O‘zingizning ikkilik bilakuzugingizni yarating va komputerlar qanday qilib ma’lumotni eslab qolishini o‘rganing!
-              description_teacher: "Ikkilik sanoq tizimi komputerlar dunyosida juda muhim ahamiyatga ega. Bugungi kunda, komputerlarning ko‘pchiligi barcha turdagi ma’lumotni ikkilik ko‘rinishida saqlaydi. Bu dars haqiqiy hayotdan nimadirni olib uni birlar va nollar to‘plamiga tarjima qilishni ko‘rsatishga yordam beradi."
+              description_teacher: Ikkilik sanoq tizimi komputerlar dunyosida juda muhim ahamiyatga ega. Bugungi kunda, komputerlarning ko‘pchiligi barcha turdagi ma’lumotni ikkilik ko‘rinishida saqlaydi. Bu dars haqiqiy hayotdan nimadirni olib uni birlar va nollar to‘plamiga tarjima qilishni ko‘rsatishga yordam beradi.
             'Loops: My Loopy Robotic Friends':
               key: 'Loops: My Loopy Robotic Friends'
               name: Mening sikllashtirilgan robot do‘stlarim Jr.
@@ -15464,8 +15468,8 @@ uz:
             Picturing Data:
               key: Ma'lumotlarni tasvirlash
               name: Ma'lumotlarni tasvirlash
-              description_student: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
-              description_teacher: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
+              description_student: 'Ushbu ma''lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma''lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.'
+              description_teacher: 'Ushbu ma''lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma''lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.'
             'End of Course Project: Create a Play Lab Game':
               name: End of Course Project
               description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
@@ -15539,7 +15543,7 @@ uz:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+              description_teacher: 'Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana ''Run'' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.'
             Conditionals with Cards:
               key: Conditionals with Cards
               name: Conditionals with Cards
@@ -15652,9 +15656,9 @@ uz:
               name: Maxfiy va Shaxsiy ma'lumotlar
               description_student: Internet qiziqarli va maroqli, ammo xavfsiz bo‘lish ham muhim. Bu dars sizga tarqatish uchun xavfsiz bo‘lgan axborot va maxfiy qolishi kerak bo‘lgan axborotlar o‘rtasidagi farqni o‘rgatishadi. 
             About Me:
-              name: Men haqimda Sprite Lab bilan
+              name: 'Men haqimda Sprite Lab bilan'
               description_student: SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.
-              description_teacher: "SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.\\r"
+              description_teacher: 'SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma''lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.\r'
             Digital Sharing:
               key: Raqamli Ulashish
               name: Raqamli Ulashish
@@ -15670,7 +15674,7 @@ uz:
               description_student: Ko‘proq ichma-ich sikllar! Bu safar biz ichma-ich sikllar bilan AJOYIB chizmalar chizamiz.
             Nested Loops in Frozen:
               key: Frozen bilan ichma-ich sikllar
-              name: Frozen bilan ichma-ich sikllar
+              name: 'Frozen bilan ichma-ich sikllar'
               description_student: 'Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. '
               description_teacher: Endi talabalar o‘z siklarini qatlamlarga ajratishni bilib olishadi, ular ko‘plab chiroyli narsalar yarata olishadi.  Ushbu dars talabalarni Anna va Elzaning muzda uchish bo'yicha mukammal qobiliyatlaridan foydalangan holda o'zlarining portfoliosi uchun tayyor tasvirlarini yaratishda yordam beradigan bir qator mashqlarni bajaradi!
             'Functions: Songwriting':
@@ -15967,6 +15971,7 @@ uz:
               key: Alien Dance Party
               name: Alien Dance Party
               description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: 'Ushbu darsda o‘quvchilar o‘z interaktiv animatsiyalari va o‘yinlarini yaratishlari mumkin bo‘lgan "Sprite Lab" platformasi bilan tanishtiriladi. Xatti-harakatdan tashqari, bugun talabalar "begonalar raqs partiyasini" yaratish uchun foydalanuvchi kiritishlarini hodisa sifatida qo‘shadilar.'
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -16343,7 +16348,7 @@ uz:
             lesson12:
               name: 12-dars
             lesson13:
-              name: '13-dars'
+              name: 13-dars
             lesson14:
               name: 14-Dars
             lesson15:
@@ -16353,7 +16358,7 @@ uz:
             lesson17:
               name: 17-dars
             lesson18:
-              name: 18-dars
+              name: '18-dars'
             lesson19:
               name: 'Loyiha: Haqiqiy ma''lumotlar bilan ilova'
             lesson20:
@@ -16365,6 +16370,11 @@ uz:
           lessons:
             lesson-1:
               name: 1-dars
+            lesson-20:
+              name: '15-dars: Baholash kuni'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         k5-onlinepd-2021:
           description: "Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning \"Kompyuter savodxonligi asoslari\" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!"
           student_description: 'Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!'
@@ -16406,3 +16416,7 @@ uz:
               display_name: Kirish
             Introduction:
               display_name: Kirish
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: 1-dars

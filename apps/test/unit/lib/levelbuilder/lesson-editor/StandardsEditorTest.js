@@ -29,6 +29,7 @@ describe('StandardsEditor', () => {
     addStandard = sinon.spy();
     removeStandard = sinon.spy();
     defaultProps = {
+      standardType: 'standard',
       standards: fakeStandards,
       addStandard,
       removeStandard

@@ -11275,7 +11275,7 @@ fil:
             Ocean Scene with Loops:
               description_teacher: Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.
             'Events: The Big Event':
-              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
             Events in Play Lab:
               description_teacher: Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!
           lesson_groups:
@@ -11305,7 +11305,7 @@ fil:
               key: Mga Loops sa Harvester
               name: Mga Loops sa Harvester
             'Events: The Big Event':
-              description_teacher: "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan."
+              description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
@@ -11454,7 +11454,7 @@ fil:
               name: Naka--nest na mga Loops sa Artist
             Nested Loops in Frozen:
               key: Naka-nest na mga Loop sa Frozen
-              name: Naka-Nest na mga Loops sa Frozen
+              name: 'Naka-Nest na mga Loops sa Frozen'
             'Functions: Songwriting':
               key: 'Mga Function: Pagsusulat ng Awit'
               name: Pagsusulat ng Awit
@@ -11845,6 +11845,8 @@ fil:
             lesson14:
               name: Aralin 14
             lesson15:
+              name: Araling 15
+            lesson17:
               name: Araling 15
         k5-onlinepd-2021:
           lessons:

@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import standardsEditor, {
+import createStandardsEditor, {
   addStandard,
   removeStandard
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
@@ -27,20 +27,26 @@ const fakeStandards = [
 const getInitialState = () => _.cloneDeep(fakeStandards);
 
 describe('standardsEditorRedux reducer', () => {
-  let initialState;
-  beforeEach(() => (initialState = getInitialState()));
+  let initialState, standardsEditor, opportunityStandardsEditor, newStandard;
+  beforeEach(() => {
+    standardsEditor = createStandardsEditor('standard');
+    opportunityStandardsEditor = createStandardsEditor('opportunityStandard');
+    newStandard = {
+      frameworkShortcode: 'framework-1',
+      frameworkName: 'Framework One',
+      categoryShortcode: 'CS',
+      categoryDescription: 'Computing Systems',
+      shortcode: 'new-1',
+      description: 'fake description'
+    };
 
-  it('add standard', () => {
+    initialState = getInitialState();
+  });
+
+  it('adds standard', () => {
     const nextState = standardsEditor(
       initialState,
-      addStandard({
-        frameworkShortcode: 'framework-1',
-        frameworkName: 'Framework One',
-        categoryShortcode: 'CS',
-        categoryDescription: 'Computing Systems',
-        shortcode: 'new-1',
-        description: 'fake description'
-      })
+      addStandard('standard', newStandard)
     );
     assert.deepEqual(nextState.map(s => s.shortcode), [
       'shortcode-1',
@@ -52,8 +58,32 @@ describe('standardsEditorRedux reducer', () => {
   it('removes standard', () => {
     const nextState = standardsEditor(
       initialState,
-      removeStandard('framework-1', 'shortcode-1')
+      removeStandard('standard', {
+        frameworkShortcode: 'framework-1',
+        shortcode: 'shortcode-1'
+      })
     );
     assert.deepEqual(nextState.map(s => s.shortcode), ['shortcode-2']);
+  });
+
+  it('adds opportunity standard without adding regular standard', () => {
+    let nextState = opportunityStandardsEditor(
+      initialState,
+      addStandard('opportunityStandard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-1',
+      'shortcode-2',
+      'new-1'
+    ]);
+
+    nextState = standardsEditor(
+      initialState,
+      addStandard('opportunityStandard', newStandard)
+    );
+    assert.deepEqual(nextState.map(s => s.shortcode), [
+      'shortcode-1',
+      'shortcode-2'
+    ]);
   });
 });

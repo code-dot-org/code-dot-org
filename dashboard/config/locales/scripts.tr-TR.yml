@@ -24756,6 +24756,8 @@ tr:
               name: Simülasyon Kodlama
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            End of Course Project:
+              name: Ders Projesinin Sonu
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -27475,6 +27477,11 @@ tr:
               name: Uzaylı Dans Partisi
               description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje
                 oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını
+                ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını
+                içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans
+                partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil
+                edecektir.  '
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
@@ -28277,6 +28284,15 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+            lesson17:
+              name: Ders 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           description: Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar
             Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini

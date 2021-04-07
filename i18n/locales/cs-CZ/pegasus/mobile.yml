@@ -928,8 +928,9 @@
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
   pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
-  express-2020_name: Rychlý kurz (2019)
+  express-2020_name: Rychlý kurz (2020)
   accelerated_name: "Zrychlený kurz"
+  express_name: "Rychlý kurz"
   pre-express_name: Rychlý kurz pro předškoláky
   20-hour_name: Zrychlený kurz
   algebra_name: "Informatika v algebře"
@@ -1133,6 +1134,7 @@
   coursee-2018_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi.
   coursed-2019_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C, pak se posune dál s algoritmy, vnořenými cykly, podmínkami a dalším.
   coursee-2019_shortdescription_congrats: Rychle zopakuje pojmy z Kurzu C a D a pak se posune dále s funkcemi.
+  coursed-2020_shortdescription_congrats: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
   codeorg_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   codeintl_longdescription: "Nauč se základní pojmy informatiky pomocí tahání myší. Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies. Nauč se příkazy opakování, rozhodování a základní algoritmy. Dostupné v 34 jazycích."
   thinkersmithspanish_longdescription: "Použitím předdefinovaného \"slovníkového Robota\" budou žáci vedeni k objevování tak, aby prováděli specifické úkoly bez předchozí instruktáže. Tato pasáž učí žáky spojení mezi symboly a akcí, jakož i cennou dovednost ladění."

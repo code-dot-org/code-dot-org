@@ -2938,6 +2938,11 @@ class ScriptTest < ActiveSupport::TestCase
     assert_includes error.message, 'Legacy script levels are not allowed in migrated scripts.'
   end
 
+  test 'localized_title defaults to name' do
+    script = create :script, name: "test-localized-title-default"
+    assert_equal "test-localized-title-default", script.localized_title
+  end
+
   private
 
   def has_hidden_script?(scripts)

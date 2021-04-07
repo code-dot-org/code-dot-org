@@ -15657,6 +15657,8 @@ id:
               name: Membuat Kode Simulasi
             Sprites in Action:
               name: Sprite tengah Beraksi
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             introduction:
               display_name: Pendahuluan
@@ -16605,7 +16607,7 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak dan teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Aktif bergerak dengan Event
@@ -16665,7 +16667,7 @@ id:
               key: Loop dalam Kolektor
               name: Loop dengan Laurel
               description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
-              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
+              description_teacher: 'Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.'
             Loops in Artist:
               key: Loops in Artist
               name: Menggambar Taman dengan Loop
@@ -16680,7 +16682,7 @@ id:
               key: 'Event: Event Besar'
               name: The Big Event Jr.
               description_student: Gerak atau teriak ketika guru Anda menekan tombol pada remote raksasa.
-              description_teacher: "Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event."
+              description_teacher: Event adalah cara yang bagus untuk menambahkan keragaman pada algorithm yang telah ditulis sebelumnya. Kadang-kadang Anda ingin agar program Anda mampu menanggapi pengguna persis ketika pengguna menginginkannya. Itulah gunanya event.
             Events in Play Lab:
               key: Event dalam Play Lab
               name: Pertempuran Besar dengan Event
@@ -16724,7 +16726,7 @@ id:
               key: Debugging dalam Labirin
               name: Debugging dalam Labirin
               description_student: Carilah masalah dalam puzzle dan latih kemampuan debugging Anda.
-              description_teacher: "Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan."
+              description_teacher: Debugging merupakan elemen penting belajar memprogram. Dalam pelajaran ini, murid akan menjumpai puzzle yang telah dipecahkan secara tidak benar. Mereka harus menyelisik code yang ada untuk mengidentifikasi kesalahan, termasuk loop yang salah, blok yang hilang, blok ekstra, dan blok yang berantakan.
             Programming in Collector:
               key: Pemrograman dalam Kolektor
               name: Mengumpulkan Harta Karun bersama Laurel
@@ -16739,7 +16741,7 @@ id:
               key: Gelang biner
               name: Gelang biner
               description_student: Buat gelang binary Anda sendiri dan pelajari cara komputer mengingat informasi!
-              description_teacher: "Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off."
+              description_teacher: Binary luar biasa penting di dunia komputer. Mayoritas komputer dewasa ini menyimpan semua jenis informasi dalam bentuk binary. Pelajaran ini membantu memperlihatkan kemungkinan mengambil sesuatu dari kehidupan nyata dan menerjemahkannya ke dalam serangkaian on dan off.
             'Loops: My Loopy Robotic Friends':
               key: 'Loop: Teman-Teman Robot Saya yang Mengulang-ulang'
               name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
@@ -16782,8 +16784,8 @@ id:
             Picturing Data:
               key: Penggambaran Data
               name: Penggambaran Data
-              description_student: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
-              description_teacher: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
+              description_student: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
+              description_teacher: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
             'End of Course Project: Create a Play Lab Game':
               name: Proyek Akhir Kursus
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
@@ -16856,7 +16858,7 @@ id:
               key: Nested Loop dalam Lebah
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+              description_teacher: 'Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.'
             Conditionals with Cards:
               key: Bersyarat dengan kartu
               name: Bersyarat dengan kartu
@@ -16972,9 +16974,9 @@ id:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
             About Me:
               key: Tentang Saya
-              name: Tentang Saya dengan Sprite Lab
+              name: 'Tentang Saya dengan Sprite Lab'
               description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
-              description_teacher: "Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\\r"
+              description_teacher: 'Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\r'
             Digital Sharing:
               key: Berbagi Secara Digital
               name: Berbagi Secara Digital
@@ -16990,7 +16992,7 @@ id:
               description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
             Nested Loops in Frozen:
               key: Nested Loop dalam Frozen
-              name: Nested Loop dengan Frozen
+              name: 'Nested Loop dengan Frozen'
               description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
               description_teacher: Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!
             'Functions: Songwriting':
@@ -17289,6 +17291,7 @@ id:
               key: Pesta Dansa Alien
               name: Pesta Dansa Alien
               description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
+              description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".  '
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab
@@ -17613,6 +17616,15 @@ id:
               name: Pelajaran ke- 14
             lesson15:
               name: Pelajaran ke- 15
+            lesson17:
+              name: Pelajaran ke- 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Pelajaran 15: Hari Penilaian'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
         k5-onlinepd-2021:
           description: "Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!"
           student_description: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'

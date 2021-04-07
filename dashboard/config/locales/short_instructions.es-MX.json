@@ -3093,7 +3093,15 @@
         "outbreak_freeplay": "Realice las modificaciones o mejoras que desee en su proyecto. ",
         "outbreak_freeplay_basic": "Realice las modificaciones o mejoras que desee en su proyecto. ",
         "ramp_artist_loops4_2019": "Crea este patrón de estrellas haciendo un bucle con una secuencia de bloques \"avanzar\" y \"girar a la derecha 144 grados\".",
-        "ramp_artist_loops4_2020": "Crea este patrón de estrellas haciendo un bucle con una secuencia de bloques \"avanzar\" y \"girar a la derecha 144 grados\"."
+        "ramp_artist_loops4_2020": "Crea este patrón de estrellas haciendo un bucle con una secuencia de bloques \"avanzar\" y \"girar a la derecha 144 grados\".",
+        "4-5 Artist Patterns 1": "Dibuja este cuadrado utilizando un bucle.\n\nCada lado tiene 20 píxeles de longitud.",
+        "4-5 Maze Conditionals 5": "\"¡Quiero un girasol!\"  \n\nUtiliza una sentencia `if` para que el zombi llegue al girasol con el menor número de bloques.",
+        "4-5 Nested Loops 7": "Haz un bucle con este diseño repitiendo 10 veces. \n\n¿Cuánto hay que girar cada vez que se hace el bucle?",
+        "4-5 While Loops 4": "¡Vaya, mira eso! \n\nNo sé cuántas paladas de tierra necesita este agujero.\n¿Puedes escribir un programa que siga usando el bloque `llenar` hasta que el suelo esté igualado?  ",
+        "CourseD_EOC_artist": "¡Crea tu propio dibujo!",
+        "CourseD_EOC_bounce1": "¡Crea tu propio juego de baloncesto!",
+        "CourseD_EOC_dance": "¡Crea tu propio baile!",
+        "CourseD_EOC_starwars": "¡Crea tu propio juego de Star Wars!"
       }
     }
   }
