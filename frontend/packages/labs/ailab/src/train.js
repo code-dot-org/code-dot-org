@@ -7,7 +7,6 @@ import {
   getUniqueOptions,
   getCategoricalColumns,
   getSelectedCategoricalColumns,
-  getSelectedTrainer,
   setFeatureNumberKey,
   setTrainingExamples,
   setTrainingLabels,
