@@ -295,16 +295,14 @@ Dashboard::Application.routes.draw do
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/stage/14%{all}')
 
   resources :lessons, only: [:edit, :update]
-  resources :resources, only: [:create, :update]
-  resources :vocabularies, only: [:create, :update]
 
-  resources :resources, only: [] do
+  resources :resources, only: [:create, :update] do
     collection do
       get :search
     end
   end
 
-  resources :vocabularies, only: [] do
+  resources :vocabularies, only: [:create, :update] do
     collection do
       get :search
     end
