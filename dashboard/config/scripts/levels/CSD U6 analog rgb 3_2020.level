@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2020-02-18T17:34:59.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -174,7 +170,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove your `setProperty()` block into a an event handler for one of the sensors to make the app update continually.",
+    "long_instructions": "# Continuous Updates\r\n\r\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\r\n\r\nMove all of your variables and `setProperty()` blocks into an event handler for one of the sensors to make the app update continually.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -229,11 +225,18 @@
     "rubric_performance_level_2": "The program detects changes in light, temperature and sounds, and visibly changes color in response to at least one of these sensors.",
     "rubric_performance_level_3": "The program changes color and uses at least of the three analog sensors to detect changes in the environment.",
     "rubric_performance_level_4": "The program does use the analog sensors or does not change colors at all.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2020-02-18T17:34:59.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:18:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:00:47 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 03:05:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:11:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:57:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-20 23:01:06 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-21 00:10:46 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-27 20:18:02 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-03-16 23:00:47 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-03-11 03:05:27 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:11:20 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-29 05:57:05 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2021-04-07 17:48:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
