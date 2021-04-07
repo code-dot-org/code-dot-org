@@ -298,9 +298,23 @@ Dashboard::Application.routes.draw do
   resources :resources, only: [:create, :update]
   resources :vocabularies, only: [:create, :update]
 
-  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
-  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
-  get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
+  resources :resources, only: [] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :vocabularies, only: [] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :programming_expressions, only: [] do
+    collection do
+      get :search
+    end
+  end
 
   resources :standards, only: [] do
     collection do

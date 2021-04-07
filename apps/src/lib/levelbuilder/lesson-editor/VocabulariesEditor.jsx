@@ -236,7 +236,7 @@ class VocabulariesEditor extends Component {
             additionalQueryParams={{
               courseVersionId: this.props.courseVersionId
             }}
-            searchUrl={'vocabularysearch'}
+            searchUrl={'vocabulary/search'}
             constructOptions={this.constructSearchOptions}
           />
         </div>
