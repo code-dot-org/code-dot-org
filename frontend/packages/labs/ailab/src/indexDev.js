@@ -5,7 +5,7 @@ import queryString from "query-string";
 // A list of sample modes.  Should match the dropdown in index.html.
 const sampleModes = {
   minimal: {
-    datasets: ["candy"],
+    datasets: ["tacos_toy"],
     hideSpecifyColumns: true,
     hideSelectTrainer: "knnClassify",
     hideChooseReserve: true,
@@ -14,51 +14,44 @@ const sampleModes = {
     hideSelectLabel: true,
   },
 
-  "preload-metadata": {
-    hideSpecifyColumns: true,
-    hideSelectTrainer: "knnClassify",
-    hideChooseReserve: true
+  "intro-ai-tacos": {
+    datasets:["tacos_toy"],
+    hideSelectLabel:true,
+    hideSpecifyColumns:true,
+    hideChooseReserve:true,
+    hideModelCard:true,
+    hideSave:true
   },
 
-  "load-foods": { datasets: ["foods"] },
-
-  "ml-knn-train": {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
-    hideModelCard: true,
-    hideSave: true
+  "intro-ai-foods": {
+    datasets:["boba_toy", "cookies_toy", "naan_toy", "poke_toy", "poutine_toy", "raspado_toy", "salad_toy", "salsa_toy"],
+    hideSelectLabel:true,
+    hideSpecifyColumns:true,
+    hideChooseReserve:true,
+    hideModelCard:true,
+    hideSave:true
   },
 
-  "ml-knn-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectLabel: true,
-    hideSpecifyColumns: true,
-    hideChooseReserve: true,
-    hideModelCard: true
+  "safari": {
+    datasets:["safari_toy"],
+    hideSelectLabel:true,
+    hideSpecifyColumns:true,
+    hideChooseReserve:true,
+    hideModelCard:true,
+    hideSave:true,
+    hideSelectTrainer:"knnRegress"
   },
 
-  "ml-svm-train": {
-    datasets: ["candy"],
-    hideChooseReserve: true,
-    hideModelCard: true
+  "zoo": {
+    datasets:["zoo"],
+    hideSpecifyColumns:true,
+    hideChooseReserve:true
   },
 
-  "ml-svm-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
+  "final-project": {
 
-  "ml-mini-project-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideSelectTrainer: "knnClassify"
-  },
-
-  "ml-final-project-ailab": {
-    hideSelectTrainer: "knnClassify"
   }
+
 };
 
 // Look for a ?mode= parameter on the URL
