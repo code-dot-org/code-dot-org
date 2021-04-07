@@ -855,4 +855,44 @@ class LessonTest < ActiveSupport::TestCase
 
     [script, level1, level2, lesson, script_level]
   end
+
+  test 'course_version_standards_url returns nil without course version' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+    refute script.get_course_version
+    refute lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in unit group returns courses path' do
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    # family name and version year must be set in order for a unit group to have
+    # a course offering and course version.
+    unit_group = create :unit_group, family_name: 'my-family', version_year: '1999'
+    create :unit_group_unit, script: script, unit_group: unit_group, position: 1
+
+    # adds course offering and course version
+    CourseOffering.add_course_offering(unit_group)
+    assert script.get_course_version
+    assert_equal unit_group, script.get_course_version.content_root
+
+    expected_url = "/courses/#{unit_group.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
+  end
+
+  test 'course_version_standards_url in standalone script returns script path' do
+    script = create :script, is_course: true, family_name: 'my-family', version_year: '1999'
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, lesson_group: lesson_group, script: script
+
+    CourseOffering.add_course_offering(script)
+    assert script.get_course_version
+    assert_equal script, script.get_course_version.content_root
+
+    expected_url = "/s/#{script.name}/standards"
+    assert_equal expected_url, lesson.course_version_standards_url
+  end
 end
