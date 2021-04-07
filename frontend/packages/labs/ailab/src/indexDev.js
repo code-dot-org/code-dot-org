@@ -39,18 +39,6 @@ const sampleModes = {
     hideModelCard: true
   },
 
-  "ml-svm-train": {
-    datasets: ["candy"],
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
-
-  "ml-svm-ailab": {
-    datasets: ["candy", "titanic", "foods"],
-    hideChooseReserve: true,
-    hideModelCard: true
-  },
-
   "ml-mini-project-ailab": {
     datasets: ["candy", "titanic", "foods"],
     hideSelectTrainer: "knnClassify"
