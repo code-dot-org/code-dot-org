@@ -47,14 +47,13 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
+    const hasThirdParty = withGoogle | withMicrosoft | withClever;
 
     // explicitly constrain the container as a whole to the width of the
     // content. We expect that differing length of translations versus english
     // source text can cause unexpected layout changes, and this constraint
     // should help mitigate some of them.
     const containerStyle = {maxWidth: styleConstants['content-width']};
-    // anchor the privacy note to the bottom of the dialog
-    const privacyNoteStyle = {position: 'relative', bottom: '0px'};
 
     return (
       <div style={containerStyle}>
@@ -74,13 +73,15 @@ class LoginTypePicker extends Component {
             <EmailLoginCard onClick={setLoginType} />
           </CardContainer>
         </div>
-        <div style={privacyNoteStyle}>
-          <b>{i18n.note()}</b>
-          {' ' + i18n.emailAddressPolicy() + ' '}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-            {i18n.moreInfo()}
-          </a>
-        </div>
+        {!hasThirdParty && (
+          <div>
+            {i18n.thirdPartyProviderUpsell() + ' '}
+            <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
+              {i18n.learnHow()}
+            </a>
+            {' ' + i18n.connectAccountThirdPartyProviders()}
+          </div>
+        )}
         <DialogFooter>
           <Button
             __useDeprecatedTag
@@ -90,6 +91,13 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
+          <div>
+            <b>{i18n.note()}</b>
+            {' ' + i18n.emailAddressPolicy() + ' '}
+            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+              {i18n.moreInfo()}
+            </a>
+          </div>
         </DialogFooter>
       </div>
     );
