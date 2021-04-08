@@ -58,8 +58,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     deleted_from_s3 = delete_from_s3(@user_ml_model.model_id)
     status =
       @user_ml_model.destroyed? && deleted_from_s3 ? "success" : "failure"
-    render json: {id: @user_ml_model.id, status: status}
-    head :no_content
+    render json: {id: @user_ml_model.model_id, status: status}
   end
 
   private
