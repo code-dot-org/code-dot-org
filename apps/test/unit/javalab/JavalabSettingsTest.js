@@ -1,4 +1,4 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert} from '../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
@@ -25,13 +25,13 @@ describe('JavalabSettings', () => {
 
   it('shows children when clicked', () => {
     const wrapper = shallow(<JavalabSettings {...defaultProps} />);
-    wrapper.find('button').simulate('click');
+    wrapper.instance().toggleDropdown();
     assert.strictEqual(wrapper.find('a').length, 2);
   });
 
   it('passes through onClick and closes dropdown', () => {
     const wrapper = shallow(<JavalabSettings {...defaultProps} />);
-    wrapper.find('button').simulate('click');
+    wrapper.instance().toggleDropdown();
     assert(
       wrapper
         .find('a')
