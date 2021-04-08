@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-05 17:58:41 UTC",
+    "serialized_at": "2021-04-07 20:17:09 UTC",
     "seeding_key": {
       "script.name": "jess-test-script"
     }
@@ -148,6 +148,21 @@
       },
       "seeding_key": {
         "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "jess-test-script"
+      }
+    },
+    {
+      "key": "Self Paced Playground",
+      "name": "Self-Paced Playground",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Self Paced Playground",
         "lesson_group.key": "",
         "script.name": "jess-test-script"
       }
@@ -4273,13 +4288,25 @@
   "lessons_resources": [
 
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
 
   ],
   "lessons_vocabularies": [
 
   ],
+  "lessons_programming_expressions": [
+
+  ],
   "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
 
   ]
 }
