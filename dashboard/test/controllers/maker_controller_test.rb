@@ -297,6 +297,27 @@ class MakerControllerTest < ActionController::TestCase
     refute application.full_discount
   end
 
+  test "display_code: does not display secret code if no current_user" do
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: does not display secret code if no matching credential is found" do
+    user = create :user, :clever_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: nil
+  end
+
+  test "display_code: displays secret code if matching credential is found" do
+    user = create :user, :google_sso_provider
+    sign_in user
+
+    get :display_code
+    assert_select "#maker_code", count: 1, value: /.+/
+  end
+
   test "complete: fails if not given a signature" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
     sign_in @teacher

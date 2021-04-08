@@ -123,7 +123,7 @@ class MakerController < ApplicationController
   def display_code
     # Generate encrypted code to display to user
     user_auth = current_user&.find_credential(AuthenticationOption::GOOGLE)
-    if user_auth.nil_or_empty?
+    if user_auth.nil?
       @secret_code = nil
       return
     end
