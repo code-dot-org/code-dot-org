@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:56 UTC",
+    "serialized_at": "2021-04-08 19:49:14 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -1741,7 +1741,7 @@
       "key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we test the functions in the library? What does this help us to know?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\n\n* Re-read the documentation for each library function\n* Add a `console.log()` statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\n\t* For example: `console.log(StringsLibrary.firstLetter(\"pizza\"));`\n* Hit run to see the output. \n* Now add `console.log()` statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.\n\n**Discussion Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \n\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we test the functions in the library? What does this help us to know?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\n\n* Re-read the documentation for each library function\n* Add a [`console.log`(#BB77C7)](/docs/applab/console.log/) statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\n\t* For example: [`console.log(StringsLibrary.firstLetter(\"pizza\"));`(#BB77C7)](/docs/applab/console.log/)\n* Hit run to see the output. \n* Now add [`console.log()`(#BB77C7)](/docs/applab/console.log/) statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.\n\n**Discussion Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \n\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \n"
       },
       "seeding_key": {
         "activity_section.key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
@@ -1752,7 +1752,7 @@
       "key": "dec78b31-1fa2-45e5-962c-3b99e7bd1310",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate back to the States App and use `console.log` to test all of the library functions there."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate back to the States App and use [`console.log`(#BB77C7)](/docs/applab/console.log/) to test all of the library functions there."
       },
       "seeding_key": {
         "activity_section.key": "dec78b31-1fa2-45e5-962c-3b99e7bd1310",

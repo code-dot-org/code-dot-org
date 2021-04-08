@@ -759,10 +759,15 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      post 'ml_models/save', to: 'ml_models#save'
-      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
-      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
+      resources :ml_models, only: [:show, :destroy] do
+        collection do
+          get 'names'
+          post 'save'
+        end
+        member do
+          get 'metadata'
+        end
+      end
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do
