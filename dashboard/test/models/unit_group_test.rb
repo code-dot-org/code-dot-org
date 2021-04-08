@@ -81,6 +81,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
 
@@ -89,6 +90,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
     assert obj['properties']['is_stable']
     assert_equal 2, obj['resources'].length
+    assert_equal 1, obj['student_resources'].length
   end
 
   test "can seed unit group from hash" do
@@ -114,6 +116,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
     unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
     unit_group.destroy
@@ -124,6 +127,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
     assert_equal 3, seeded_unit_group.default_scripts.length
     assert_equal 2, seeded_unit_group.resources.length
+    assert_equal 1, seeded_unit_group.student_resources.length
   end
 
   test "can seed unit group and only update resources from course version" do
@@ -189,6 +193,32 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 1, seeded_unit_group.resources.length
     assert_equal 'updated name', seeded_unit_group.resources[0].name
     assert_equal 'updated name', resource.name
+  end
+
+  test "can seed from hash and update and remove student resources" do
+    unit_group = create(:unit_group, name: 'my-unit-group', is_stable: true, family_name: 'test', version_year: '2000')
+    CourseOffering.add_course_offering(unit_group)
+    course_version = unit_group.course_version
+    create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "script1"))
+    create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "script2"))
+    create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "script3"))
+
+    resource_to_update = create :resource, course_version: course_version
+    resource_to_delete = create :resource, course_version: course_version
+    unit_group.student_resources = [resource_to_update, resource_to_delete]
+
+    serialization = unit_group.serialize
+
+    hash = JSON.parse(serialization)
+    hash['student_resources'] = hash['student_resources'][0...1]
+    hash['student_resources'][0]['name'] = 'updated name'
+    seeded_unit_group = UnitGroup.seed_from_hash(hash)
+    assert_equal 'my-unit-group', seeded_unit_group.name
+    assert_equal 3, seeded_unit_group.default_unit_group_units.length
+    assert_equal 3, seeded_unit_group.default_scripts.length
+    assert_equal 1, seeded_unit_group.student_resources.length
+    resource_to_update.reload
+    assert_equal 'updated name', resource_to_update.name
   end
 
   test "stable?: true if unit_group has plc_course" do

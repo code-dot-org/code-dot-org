@@ -815,6 +815,16 @@
       "seeding_key": {
         "resource.key": "test-serialize-seeding-json-script-resource-1"
       }
+    },
+    {
+      "name": "fake name",
+      "url": "fake.url",
+      "key": "test-serialize-seeding-json-script-student-resource-1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "test-serialize-seeding-json-script-student-resource-1"
+      }
     }
   ],
   "lessons_resources": [
@@ -847,6 +857,14 @@
     {
       "seeding_key": {
         "resource.key": "test-serialize-seeding-json-script-resource-1",
+        "script.name": "test-serialize-seeding-json-script"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "test-serialize-seeding-json-script-student-resource-1",
         "script.name": "test-serialize-seeding-json-script"
       }
     }
