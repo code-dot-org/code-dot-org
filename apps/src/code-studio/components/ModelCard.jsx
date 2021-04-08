@@ -10,6 +10,7 @@ const styles = {
     backgroundColor: color.lighter_gray,
     borderRadius: 5,
     padding: 20,
+    margin: 10,
     whiteSpace: 'normal',
     lineHeight: 1.5,
     maxHeight: 'calc(80vh - 140px)',
@@ -77,16 +78,17 @@ export default class ModelCard extends React.Component {
         {modelId && metadata && (
           <div style={styles.container}>
             <h3 style={styles.bold}>{metadata.name}</h3>
+            <div style={{marginBottom: 10}}>
+              <span style={styles.bold}>Id: </span>
+              <span>{this.props.modelId}</span>
+            </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Summary</div>
               <p>
-                Predict {metadata.labelColumn} based on
-                {metadata.selectedFeatures?.join(', ')} with
+                Predict {metadata.labelColumn} based on{' '}
+                {metadata.selectedFeatures?.join(', ')} with{' '}
                 {metadata.summaryStat?.stat}% accuracy.
               </p>
-            </div>
-            <div style={styles.subPanel}>
-              <div style={styles.heading}>About the Data</div>
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Intended Uses</div>
