@@ -21,10 +21,11 @@ module Pd::Foorm
       num_response_options
     )
 
-    # Iterates over all Foorm Forms, and exports them to a CSV.
-    # Each row represents a single question.
-    def self.reshape_all_forms_and_export_to_csv
-      CSV.open('./test_forms.csv', 'wb') do |csv|
+    # Iterates over all Foorm Forms, returning a comma-separated string
+    # with each line represents a single question.
+    # @return [String] a CSV formatted string with each line containing a Form question.
+    def self.reshape_all_forms_into_csv
+      CSV.generate do |csv|
         csv << HEADERS
 
         # Loads 1000 records at a time to manage loading records into memory.
