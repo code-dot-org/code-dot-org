@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import PercentReserveSlider from "./PercentReserveSlider";
 import ColumnTypeSelector from "./ColumnTypeSelector";
+import SetKValue from "./SetKValue";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getShowChooseReserve } from "../redux";
@@ -26,6 +27,7 @@ class TrainingSettings extends Component {
           </div>
           {this.showChooseReserve && <PercentReserveSlider />}
           {!this.props.hideSpecifyColumns && <ColumnTypeSelector />}
+          {false && <SetKValue />}
         </div>
       </div>
     );

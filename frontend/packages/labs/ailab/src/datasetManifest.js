@@ -21,10 +21,10 @@ export const allDatasets = [
     imagePath: "datasets/billionaires.jpg"
   },
   {
-    id: "census_svm",
+    id: "census",
     name: "Partial Census Data",
-    path: "datasets/census_part_for_svm.csv",
-    metadataPath: "datasets/census_part_for_svm.json",
+    path: "datasets/census_part.csv",
+    metadataPath: "datasets/census_part.json",
     imagePath: "datasets/census.jpg"
   },
   {

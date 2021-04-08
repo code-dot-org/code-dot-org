@@ -1,6 +1,5 @@
 /* Validation checks to determine if app set up is ready for machine learning training */
 
-import { availableTrainers } from "./train.js";
 import { ColumnTypes } from "./constants.js";
 import { getSelectedNumericalColumns } from "./redux.js";
 
@@ -119,32 +118,6 @@ export function numericalColumnsHaveOnlyNumbers(state) {
     }
   });
   return columns.length === 0 || allNumbers;
-}
-
-// Checks that a training algorithm has been selected.
-// @return {boolean}
-export function trainerSelected(state) {
-  return !!state.selectedTrainer;
-}
-
-/* Checks that a training algorithm and the selected label datatype are
-compatible. Classification algorithms only work with categorical data, and
-regression algorithms only work with numerical data.
-@return {boolean}
- */
-export function compatibleLabelAndTrainer(state) {
-  const labelAndTrainerSelected =
-    oneLabelSelected(state) && trainerSelected(state);
-  const trainerLabelType = state.selectedTrainer
-    ? availableTrainers[state.selectedTrainer].labelType
-    : undefined;
-  const labelDatatype = state.labelColumn
-    ? state.columnsByDataType[state.labelColumn]
-    : undefined;
-  const compatible = labelAndTrainerSelected
-    ? trainerLabelType === labelDatatype
-    : false;
-  return compatible;
 }
 
 /* Checks that the model is named. */
