@@ -23,7 +23,8 @@ const style = {
   },
   tab: {
     textAlign: 'center',
-    padding: 10
+    padding: 10,
+    backgroundColor: color.white
   },
   button: {
     marginLeft: 10
@@ -32,10 +33,11 @@ const style = {
     marginBottom: 0,
     display: 'flex',
     alignItems: 'center'
+  },
+  darkBackground: {
+    backgroundColor: '#282c34'
   }
 };
-
-const darkTabColor = '#282c34';
 
 class JavalabEditor extends React.Component {
   static propTypes = {
@@ -132,9 +134,7 @@ class JavalabEditor extends React.Component {
           <div
             style={{
               ...style.tab,
-              backgroundColor: this.props.isDarkMode
-                ? darkTabColor
-                : color.white
+              ...(this.props.isDarkMode && style.darkBackground)
             }}
           >
             <input
@@ -161,7 +161,7 @@ class JavalabEditor extends React.Component {
         <div
           style={{
             ...style.tab,
-            backgroundColor: this.props.isDarkMode ? darkTabColor : color.white
+            ...(this.props.isDarkMode && style.darkBackground)
           }}
         >
           {this.props.filename}
@@ -201,7 +201,7 @@ class JavalabEditor extends React.Component {
           ref={el => (this._codeMirror = el)}
           style={{
             ...style.editor,
-            backgroundColor: this.props.isDarkMode ? darkTabColor : color.white
+            ...(this.props.isDarkMode && style.darkBackground)
           }}
         />
       </div>
