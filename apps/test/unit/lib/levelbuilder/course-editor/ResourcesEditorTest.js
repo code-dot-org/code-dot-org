@@ -6,13 +6,13 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 
 describe('ResourcesEditor', () => {
-  let defaultProps, updateResources;
+  let defaultProps, updateTeacherResources;
 
   beforeEach(() => {
-    updateResources = sinon.spy();
+    updateTeacherResources = sinon.spy();
     defaultProps = {
       inputStyle: {},
-      resources: [
+      teacherResources: [
         {link: '', type: ''},
         {link: '', type: ''},
         {link: '', type: ''},
@@ -24,7 +24,7 @@ describe('ResourcesEditor', () => {
         {link: '', type: ''},
         {link: '', type: ''}
       ],
-      updateResources,
+      updateTeacherResources,
       useMigratedResources: false
     };
   });
@@ -33,7 +33,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -54,7 +54,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -74,7 +74,7 @@ describe('ResourcesEditor', () => {
       }
     };
     wrapper.instance().handleChangeType(fakeEvent, 1);
-    expect(updateResources).to.have.been.calledWith([
+    expect(updateTeacherResources).to.have.been.calledWith([
       {link: '/foo', type: 'curriculum'},
       {link: '/link/to/vocab', type: 'vocabulary'},
       {link: '', type: ''},
@@ -92,7 +92,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -122,7 +122,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={undefined}
+        teacherResources={undefined}
         migratedTeacherResources={[
           {
             id: 1,
