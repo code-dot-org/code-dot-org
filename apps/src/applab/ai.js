@@ -1,3 +1,4 @@
+/*globals dashboard*/
 import $ from 'jquery';
 import designMode from './designMode';
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
@@ -6,7 +7,6 @@ function generateCodeDesignElements(modelId, modelData) {
   var x = 20;
   var y = 20;
   var SPACER_PIXELS = 20;
-  designMode.onInsertEvent(`var data = {};`);
   var inputFields = [];
   modelData.selectedFeatures.forEach(feature => {
     y = y + SPACER_PIXELS;
@@ -36,7 +36,7 @@ function generateCodeDesignElements(modelId, modelData) {
       input.id = 'design_' + fieldId;
       y = y + SPACER_PIXELS;
     }
-    var addFeature = `data.${alphaNumFeature} = getText("${fieldId}");`;
+    var addFeature = `var ${alphaNumFeature} = getText("${fieldId}");`;
     inputFields.push(addFeature);
   });
   y = y + 2 * SPACER_PIXELS;
@@ -54,14 +54,68 @@ function generateCodeDesignElements(modelId, modelData) {
   predictButton.textContent = 'Predict';
   var predictButtonId = alphaNumModelName + '_predict';
   designMode.updateProperty(predictButton, 'id', predictButtonId);
+
+  const paramsString = modelData.selectedFeatures
+    .map(feature => stripSpaceAndSpecial(feature))
+    .join(', ');
+
   var predictOnClick = `onEvent("${predictButtonId}", "click", function() {
     ${inputFields.join('\n\t\t')}
     setText("${predictionId}", '');
-    getPrediction("${modelData.name}", "${modelId}", data, function(value) {
+    Predict.doPredict${alphaNumModelName}(${paramsString}, function(value) {
       setText("${predictionId}", value);
     });
   });`;
   designMode.onInsertAICode(predictOnClick);
+}
+
+function generateBlock(modelId, modelData) {
+  var alphaNumModelName = stripSpaceAndSpecial(modelData.name);
+
+  const paramsString =
+    modelData.selectedFeatures
+      .map(feature => stripSpaceAndSpecial(feature))
+      .join(', ') + ', callback';
+
+  const codeCallString =
+    '  getPrediction("name", "' +
+    modelId +
+    '", {' +
+    modelData.selectedFeatures
+      .map(
+        feature =>
+          stripSpaceAndSpecial(feature) + ': ' + stripSpaceAndSpecial(feature)
+      )
+      .join(', ') +
+    '}, callback);';
+
+  const codeString = [
+    '// Do a prediction.',
+    'function doPredict' + alphaNumModelName + '(' + paramsString + ') { ',
+    "  console.log('doPredict');",
+    codeCallString,
+    '}'
+  ].join('\n');
+
+  const newLibraryJson = {
+    //channelId: "qbleGm2ajfT_e7MSV1_-dw",
+    description: 'doPredict',
+    dropletConfig: [
+      {
+        category: 'Functions',
+        comment: 'Do a prediction.',
+        func: 'doPredict' + alphaNumModelName, // + '(' + paramsString + ')', //'Predict.doPredict',
+        type: 'either'
+      }
+    ],
+    functions: ['doPredict' + alphaNumModelName],
+    name: 'Predict',
+    originalName: 'Predict',
+    source: codeString
+    //versionId: "qBczIDbLc.TzU3gc06jMTngKS6eGHXlz"
+  };
+
+  dashboard.project.setProjectLibraries([].concat([newLibraryJson]));
 }
 
 export default function autogenerateML(modelId) {
@@ -72,6 +126,7 @@ export default function autogenerateML(modelId) {
     })
       .then(modelData => {
         generateCodeDesignElements(modelId, modelData);
+        generateBlock(modelId, modelData);
         return resolve();
       })
       .fail((jqXhr, status) => {

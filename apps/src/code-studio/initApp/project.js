@@ -1288,6 +1288,10 @@ var projects = (module.exports = {
         library.fromLevelbuilder = true;
       });
     }
+
+    currentSources.libraries = updatedLibrariesList;
+    this.sourceHandler.setInitialLibrariesList(currentSources.libraries);
+
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
         this.saveSourceAndHtml_(
