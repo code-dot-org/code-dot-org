@@ -1,5 +1,4 @@
 import {SET_SCRIPT} from '@cdo/apps/redux/scriptSelectionRedux';
-import {SET_SECTION} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import {ViewType} from './sectionProgressConstants';
 
@@ -99,14 +98,6 @@ export default function sectionProgress(state = initialState, action) {
     return {
       ...state,
       showSectionProgressDetails: action.showSectionProgressDetails
-    };
-  }
-  if (action.type === SET_SECTION) {
-    // Setting the section is the first action to be called when switching
-    // sections, which requires us to reset our state. This might need to change
-    // once switching sections is in react/redux.
-    return {
-      ...initialState
     };
   }
   if (action.type === ADD_DATA_BY_SCRIPT) {
