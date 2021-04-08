@@ -2,16 +2,16 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
+import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
-describe('ResourcesDropdown', () => {
+describe('TeacherResourcesDropdown', () => {
   it('renders non-migrated resources for teacher', () => {
     const wrapper = shallow(
-      <ResourcesDropdown
-        resources={[
+      <TeacherResourcesDropdown
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: 'https://example.com/a'
@@ -28,7 +28,7 @@ describe('ResourcesDropdown', () => {
       wrapper.containsMatchingElement(
         <div>
           <DropdownButton
-            text={i18n.resources()}
+            text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
             <a
@@ -53,8 +53,8 @@ describe('ResourcesDropdown', () => {
 
   it('renders migrated resources for teacher', () => {
     const wrapper = shallow(
-      <ResourcesDropdown
-        migratedResources={[
+      <TeacherResourcesDropdown
+        migratedTeacherResources={[
           {
             key: 'key1',
             name: 'Curriculum',
@@ -73,7 +73,7 @@ describe('ResourcesDropdown', () => {
       wrapper.containsMatchingElement(
         <div>
           <DropdownButton
-            text={i18n.resources()}
+            text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
             <a

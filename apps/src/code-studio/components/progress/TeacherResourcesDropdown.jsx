@@ -17,10 +17,10 @@ const styles = {
   }
 };
 
-export default class ResourcesDropdown extends React.Component {
+export default class TeacherResourcesDropdown extends React.Component {
   static propTypes = {
-    resources: PropTypes.arrayOf(resourceShape),
-    migratedResources: PropTypes.arrayOf(migratedResourceShape),
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
 
     //For firehose
@@ -65,10 +65,14 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {resources, migratedResources, useMigratedResources} = this.props;
+    const {
+      teacherResources,
+      migratedTeacherResources,
+      useMigratedResources
+    } = this.props;
 
     const dropdownResources = useMigratedResources
-      ? migratedResources.map(resource => (
+      ? migratedTeacherResources.map(resource => (
           <a
             key={resource.key}
             href={resource.url}
@@ -79,7 +83,7 @@ export default class ResourcesDropdown extends React.Component {
             {resource.name}
           </a>
         ))
-      : resources.map(({type, link}, index) => (
+      : teacherResources.map(({type, link}, index) => (
           <a
             key={index}
             href={link}
@@ -93,7 +97,7 @@ export default class ResourcesDropdown extends React.Component {
     return (
       <div style={styles.dropdown}>
         <DropdownButton
-          text={i18n.resources()}
+          text={i18n.teacherResources()}
           color={Button.ButtonColor.blue}
           onClick={this.handleDropdownClick}
         >
