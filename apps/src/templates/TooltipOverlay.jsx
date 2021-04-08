@@ -160,9 +160,13 @@ export function textProvider(label) {
  * Simple provider that formats and renders the mouse coordinates.
  * @returns {function(): string}
  */
-export function coordinatesProvider(flip) {
+export function coordinatesProvider(flip = false, isRtl = false) {
   return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
-    return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
+    if (isRtl) {
+      return `y: ${Math.round(y)}, x: ${Math.round(props.mouseX)}`;
+    } else {
+      return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
+    }
   };
 }
