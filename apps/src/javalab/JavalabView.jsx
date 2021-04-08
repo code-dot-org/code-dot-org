@@ -125,25 +125,23 @@ class JavalabView extends React.Component {
     ];
   };
 
-  getButtonStyles = isSettings => {
+  getButtonStyles = isSettingsButton => {
     const {isDarkMode} = this.props;
     if (isDarkMode) {
       return style.singleButton;
-    }
-    if (isSettings) {
+    } else if (isSettingsButton) {
       return {...style.singleButton, backgroundColor: color.orange};
+    } else {
+      return {...style.singleButton, backgroundColor: color.cyan};
     }
-    return {...style.singleButton, backgroundColor: color.cyan};
   };
 
   renderJavalab() {
     const {isDarkMode} = this.props;
     if (isDarkMode) {
-      document.getElementsByTagName('body')[0].style.backgroundColor =
-        '#1b1c17';
+      document.body.style.backgroundColor = '#1b1c17';
     } else {
-      document.getElementsByTagName('body')[0].style.backgroundColor =
-        color.background_gray;
+      document.body.style.backgroundColor = color.background_gray;
     }
     return (
       <StudioAppWrapper>
@@ -186,7 +184,9 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.buttons}>
-                <JavalabSettings style={this.getButtonStyles(true)}>
+                <JavalabSettings
+                  style={this.getButtonStyles(true /* isSettingsButton */)}
+                >
                   {this.renderSettings()}
                 </JavalabSettings>
                 <button

@@ -141,6 +141,7 @@ class JavalabConsole extends React.Component {
             ...(this.props.isDarkMode ? style.darkMode : style.lightMode)
           }}
           ref={el => (this._consoleLogs = el)}
+          className="javalab-console"
         >
           <div style={style.consoleLogs}>{this.displayConsoleLogs()}</div>
           <div style={style.consoleInputWrapper}>
