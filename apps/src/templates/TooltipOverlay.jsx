@@ -164,7 +164,7 @@ export function coordinatesProvider(flip = false, isRtl = false) {
   return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
     if (isRtl) {
-      return `y: ${Math.round(y)}, x: ${Math.round(props.mouseX)}`;
+      return `${Math.round(y)} :y, ${Math.round(props.mouseX)} :x`;
     } else {
       return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
     }
