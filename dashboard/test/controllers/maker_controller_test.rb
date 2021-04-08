@@ -3,6 +3,8 @@ require 'test_helper'
 class MakerControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+
   setup do
     @student = create :student
     @teacher = create :teacher
@@ -311,6 +313,7 @@ class MakerControllerTest < ActionController::TestCase
   end
 
   test "display_code: displays secret code if matching credential is found" do
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     user = create :user, :google_sso_provider
     sign_in user
 
