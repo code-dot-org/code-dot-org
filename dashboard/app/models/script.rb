@@ -212,6 +212,7 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
+    deprecated
     is_course
     background
     show_calendar
@@ -1443,6 +1444,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
+      deprecated: deprecated,
       is_course: is_course?,
       background: background,
       is_migrated: is_migrated?,
@@ -1643,6 +1645,7 @@ class Script < ApplicationRecord
       :is_stable,
       :project_sharing,
       :tts,
+      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
