@@ -15,7 +15,8 @@ class PeerReviewsController < ApplicationController
   end
 
   def dashboard
-    plc_courses = Plc::Course.all.select {|course| !:deprecated && course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+    # fit both peer reviews to complete and deprecated within any
+    plc_courses = Plc::Course.all.select {|course| course.plc_course_units.map(&:script).any?(&:deprecated)}
 
     @course_list = plc_courses.map {|course| [course.name, course.id]}
 
