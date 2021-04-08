@@ -1704,15 +1704,6 @@ applabCommands.startWebRequest = function(opts) {
   req.send();
 };
 
-applabCommands.startWebRequestSync = function(opts) {
-  applabCommands.startWebRequest({
-    ...opts,
-    func: (status, contentType, responseText) => {
-      opts.func(responseText);
-    }
-  });
-};
-
 applabCommands.createRecord = function(opts) {
   // PARAMNAME: createRecord: table vs. tableName
   // PARAMNAME: createRecord: callback vs. callbackFunction
