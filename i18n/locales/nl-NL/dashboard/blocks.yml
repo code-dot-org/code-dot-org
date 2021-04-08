@@ -973,6 +973,7 @@ nl:
             '"x"': x positie
             '"y"': y positie
             '"direction"': bewegingsrichting
+            '"speed"': snelheid
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
         options:

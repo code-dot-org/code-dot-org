@@ -8,10 +8,10 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 
 describe('TeacherResourcesDropdown', () => {
-  it('renders resources for teacher', () => {
+  it('renders non-migrated resources for teacher', () => {
     const wrapper = shallow(
       <TeacherResourcesDropdown
-        resources={[
+        teacherResources={[
           {
             type: ResourceType.curriculum,
             link: 'https://example.com/a'
@@ -21,6 +21,7 @@ describe('TeacherResourcesDropdown', () => {
             link: 'https://example.com/b'
           }
         ]}
+        useMigratedResources={false}
       />
     );
     expect(
@@ -43,6 +44,51 @@ describe('TeacherResourcesDropdown', () => {
               rel="noopener noreferrer"
             >
               {i18n.vocabulary()}
+            </a>
+          </DropdownButton>
+        </div>
+      )
+    ).to.be.true;
+  });
+
+  it('renders migrated resources for teacher', () => {
+    const wrapper = shallow(
+      <TeacherResourcesDropdown
+        migratedTeacherResources={[
+          {
+            key: 'key1',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            key: 'key2',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+      />
+    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <DropdownButton
+            text={i18n.teacherResources()}
+            color={Button.ButtonColor.blue}
+          >
+            <a
+              href="https://example.com/a"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Curriculum
+            </a>
+            <a
+              href="https://example.com/b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vocabulary
             </a>
           </DropdownButton>
         </div>

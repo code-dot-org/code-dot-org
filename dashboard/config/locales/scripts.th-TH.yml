@@ -3399,7 +3399,7 @@ th:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
           lesson_groups:
             ramp_up:
-              display_name: ลูป
+              display_name: ลูปซ้อนลูป
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             csf_nested_loops:
@@ -3426,9 +3426,13 @@ th:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
             csf_variables:
-              display_name: ตัวแปร
+              display_name: การวนรอบ
             csf_for_loops:
               display_name: การวนรอบ
+            lessonGroup-8:
+              display_name: ตัวแปร
+            lessonGroup-9:
+              display_name: เอาออก
         express-2021:
           description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
             ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
@@ -3467,6 +3471,8 @@ th:
             For Loops with Bee:
               key: ลูป For ในเรื่องผึ้ง
               name: ลูป For ในเรื่องผึ้ง
+            lesson-1:
+              name: Dance Party
           lesson_groups:
             csf_loops:
               display_name: ลูป
@@ -3528,6 +3534,8 @@ th:
             outbreak:
               display_name: การจำลองการระบาด
             lessonGroup-3:
+              display_name: ตัวแปร
+            variables:
               display_name: ตัวแปร
         csd4-preview-2021:
           lesson_groups:

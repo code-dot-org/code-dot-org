@@ -1,6 +1,12 @@
-import {setFileName, setEditorText} from './javalabRedux';
+import {
+  setFileName,
+  setEditorText,
+  setFilesChanged,
+  getFilesChanged,
+  getFilename,
+  getEditorText
+} from './javalabRedux';
 import project from '@cdo/apps/code-studio/initApp/project';
-import header from '@cdo/apps/code-studio/header';
 import {getStore} from '../redux';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
@@ -11,14 +17,13 @@ function renameProjectFile(filename, newFilename) {
   if (filename === newFilename) {
     return;
   }
-  header.showProjectSaving();
   filesApi.renameFile(
     filename,
     newFilename,
     () => {
       // at this point project.filesVersionId will be updated and we can save
       // sources as well.
-      project.save();
+      project.autosave();
     },
     () => {
       console.warn(`Javalab: error file ${filename} not renamed`);
@@ -27,24 +32,29 @@ function renameProjectFile(filename, newFilename) {
   );
 }
 
-function onSave() {
-  header.showProjectSaving();
-  const filename = getStore().getState().javalab.filename;
-  const editorText = getStore().getState().javalab.editorText;
+function onSave(success, failure) {
   // TODO: enable multi-file
-  filesApi.putFile(
-    filename,
-    editorText,
-    () => {
-      // at this point project.filesVersionId will be updated and we can save
-      // sources as well.
-      project.save();
-    },
-    () => {
-      console.warn(`Javalab: error file ${filename} not saved`);
-      project.showSaveError_();
+  const storeState = getStore().getState();
+  // only save file if file content has changed.
+  if (getFilesChanged(storeState)) {
+    filesApi.putFile(
+      getFilename(storeState),
+      getEditorText(storeState),
+      /* success */
+      (xhr, filesVersionId) => {
+        // reset files changed to false on success
+        getStore().dispatch(setFilesChanged(false));
+        if (typeof success === 'function') {
+          success(xhr, filesVersionId);
+        }
+      },
+      failure
+    );
+  } else {
+    if (typeof success === 'function') {
+      success(null, project.filesVersionId);
     }
-  );
+  }
 }
 
 /**
@@ -106,4 +116,15 @@ function requestFileEntryAndWrite(fileEntry, success, failure) {
     });
 }
 
-module.exports = {renameProjectFile, onSave, loadFiles, populateFiles};
+// set project changed to true
+function onProjectChanged() {
+  project.projectChanged();
+}
+
+export default {
+  renameProjectFile,
+  onSave,
+  loadFiles,
+  populateFiles,
+  onProjectChanged
+};

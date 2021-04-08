@@ -967,6 +967,7 @@ hi:
             '"x"': x पोजीशन
             '"y"': y पोजीशन
             '"direction"': गतिविधि की दिशा
+            '"speed"': गति
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} {SPRITE2} को छूता है"
         options:

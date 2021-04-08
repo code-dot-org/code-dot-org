@@ -1766,7 +1766,15 @@ class User < ApplicationRecord
       user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
         new_result > user_level.best_result
+
       user_level.submitted = submitted
+      # We only lock levels of type LevelGroup
+      # When the student submits an assessment, lock the level so they no
+      # longer have access for the remainder of the autolock period
+      is_level_group = user_level.level.type === 'LevelGroup'
+      if submitted && is_level_group
+        user_level.locked = true
+      end
       if level_source_id && !is_navigator
         user_level.level_source_id = level_source_id
       end

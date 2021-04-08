@@ -2,9 +2,11 @@
 es-MX:
   data:
     parameter_names:
+      "???": "???"
       actor: actor
       color: color
       counter: contador
+      dir: dirección
       direction: dirección
       height: altura
       honey: miel
@@ -13,6 +15,7 @@ es-MX:
       min: mín.
       nectar units: néctar unidades
       nectars: néctares
+      numOctagons: número de octógonos
       points: puntos
       radius: radio
       sides: lados

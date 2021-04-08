@@ -14428,10 +14428,7 @@ id:
             Private and Personal Information:
               name: Informasi Privat dan Pribadi
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
-              description_teacher: |-
-                Dikembangkan oleh Common Sense Education, pelajaran ini membahas perbedaan antara informasi yang aman dibagikan secara online dengan informasi yang tidak aman.\r
-                \r
-                Sewaktu murid mengunjungi situs-situs yang meminta informasi tentang identitas, mereka belajar menerapkan proses penyelidikan kritis yang membantu mereka melindungi diri sendiri dan keluarga dari pencurian identitas. Dalam pelajaran ini, murid belajar berpikir kritis tentang informasi pengguna yang diminta atau dituntut oleh beberapa situs web. Mereka mempelajari perbedaan antara informasi privat dengan informasi pribadi serta cara membedakan informasi yang aman atau tidak aman dibagikan secara online.
+              description_teacher: "Dikembangkan oleh Common Sense Education, pelajaran ini membahas perbedaan antara informasi yang aman dibagikan secara online dengan informasi yang tidak aman.\\r\n\\r\nSewaktu murid mengunjungi situs-situs yang meminta informasi tentang identitas, mereka belajar menerapkan proses penyelidikan kritis yang membantu mereka melindungi diri sendiri dan keluarga dari pencurian identitas. Dalam pelajaran ini, murid belajar berpikir kritis tentang informasi pengguna yang diminta atau dituntut oleh beberapa situs web. Mereka mempelajari perbedaan antara informasi privat dengan informasi pribadi serta cara membedakan informasi yang aman atau tidak aman dibagikan secara online."
             About Me:
               name: Tentang Saya dengan Sprite Lab
               description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
@@ -14567,10 +14564,7 @@ id:
             The Power of Words:
               name: Kekuatan kata-Kata
               description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
-              description_teacher: |-
-                Murid mempertimbangkan bahwa ketika mereka sedang menikmati situs web favorit, mereka mungkin mendapati pesan dari anak-anak lain yang bisa membuat mereka marah, terluka, sedih, atau takut. Mereka mengeksplorasi cara-cara mengatasi perundungan maya (cyberbullying) dan cara menghadapi bahasa yang membuat susah secara online.\r
-                \r
-                Murid mendiskusikan semua cara mereka menggunakan teknologi untuk komunikasi dan mengeksplorasi kemiripan serta perbedaan antara komunikasi langsung dengan komunikasi online. Murid kemudian menggodok cara-cara menanggapi perundungan maya (cyberbullying). 
+              description_teacher: "Murid mempertimbangkan bahwa ketika mereka sedang menikmati situs web favorit, mereka mungkin mendapati pesan dari anak-anak lain yang bisa membuat mereka marah, terluka, sedih, atau takut. Mereka mengeksplorasi cara-cara mengatasi perundungan maya (cyberbullying) dan cara menghadapi bahasa yang membuat susah secara online.\\r\n\\r\nMurid mendiskusikan semua cara mereka menggunakan teknologi untuk komunikasi dan mengeksplorasi kemiripan serta perbedaan antara komunikasi langsung dengan komunikasi online. Murid kemudian menggodok cara-cara menanggapi perundungan maya (cyberbullying). "
             Crowdsourcing:
               name: Sumber kerumunan
               description_student: Pelajaran ini akan mengajari Anda tentang crowdsourcing, proses membuat proyek bersama tim.
@@ -15663,6 +15657,8 @@ id:
               name: Membuat Kode Simulasi
             Sprites in Action:
               name: Sprite tengah Beraksi
+            End of Course Project:
+              name: Proyek Akhir Kursus
           lesson_groups:
             introduction:
               display_name: Pendahuluan
@@ -16671,7 +16667,7 @@ id:
               key: Loop dalam Kolektor
               name: Loop dengan Laurel
               description_student: Program Laurel si petualang untuk mengumpulkan harta karun di gua terbuka.
-              description_teacher: Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.
+              description_teacher: 'Dalam pelajaran ini, murid melanjutkan belajar tentang konsep loop. Di sini, Laurel si Petualang menggunakan loop untuk mengumpulkan harta karus di kotak gua terbuka. Sebuah blok baru `get treasure` dimunculkan untuk membantunya dalam perjalanan.'
             Loops in Artist:
               key: Loops in Artist
               name: Menggambar Taman dengan Loop
@@ -16788,8 +16784,8 @@ id:
             Picturing Data:
               key: Penggambaran Data
               name: Penggambaran Data
-              description_student: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
-              description_teacher: Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.
+              description_student: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
+              description_teacher: 'Data dapat digunakan untuk membantu murid memahami dunia mereka dan menjawab pertanyaan yang menarik. Dalam pelajaran ini, murid akan mengumpulkan data dari proyek Play Lab dan memvisualkannya menggunakan berbagai jenis grafik.'
             'End of Course Project: Create a Play Lab Game':
               name: Proyek Akhir Kursus
               description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
@@ -16828,7 +16824,6 @@ id:
               key: Pemrograman bergiliran
               name: Pemrograman bergiliran
               description_student: Ingat pada awal kursus ini ketika Anda menggambar dengan code? Dalam pelajaran ini, Anda akan bekerja sama dengan tim untuk melakukan sesuatu yang sangat mirip!
-              description_teacher: Aktivitas ini akan dimulai dengan pelajaran singkat tentang debugging dan kegigihan, lalu segera beralih ke berpacu dengan waktu pada saat para siswa menyebar ke dalam tim dan bekerja sama untuk membuat sebuah program, satu instruksi setiap saat.
             Debugging in Collector:
               key: Debugging dalam Kolektor
               name: Debugging dengan Laurel
@@ -16863,7 +16858,7 @@ id:
               key: Nested Loop dalam Lebah
               name: Nested Loop dalam Labirin
               description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda membuat nested loop.
-              description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
+              description_teacher: 'Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.'
             Conditionals with Cards:
               key: Bersyarat dengan kartu
               name: Bersyarat dengan kartu
@@ -16948,7 +16943,7 @@ id:
               key: Pemrograman dan Loop dengan Artis
               name: Loop dengan Artis
               description_student: Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!
-              description_teacher: Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.
+              description_teacher: 'Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Conditional dalam Minecraft: Perjalanan Air'
               name: 'Conditional dalam Minecraft: Perjalanan Air'
@@ -16958,7 +16953,7 @@ id:
               key: Kondisi
               name: Conditional dengan Petani
               description_student: Anda harus memberi tahu komputer apa yang harus dilakukan dalam kondisi tertentu lewat serial yang seru dan menantang ini.
-              description_teacher: Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.
+              description_teacher: 'Pelajaran ini memperkenalkan murid dengan loop `while` dan pernyataan `if / else`. _While loops_ adalah loop yang terus mengulang perintah sepanjang kondisinya benar. While loop digunakan ketika pemrogram tidak tahu persis berapa kali perintah harus diulang, tetapi pemrogram tahu kondisi apa yang harus benar agar loop dapat terus mengulang. Pernyataan `If / Else` memberikan fleksibilitas dalam pemrograman dengan menjalankan seluruh bagian code hanya jika sesuatu itu benar, tetapi menjalankan code yang lain jika sebaliknya.'
             Simon Says:
               key: Simon Mengatakan
               description_student: Mainkan permainan dan pikirkan tentang perintah yang diperlukan untuk mendapat hasil yang tepat.
@@ -16979,9 +16974,9 @@ id:
               description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
             About Me:
               key: Tentang Saya
-              name: Tentang Saya dengan Sprite Lab
+              name: 'Tentang Saya dengan Sprite Lab'
               description_student: Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.
-              description_teacher: "Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\\r"
+              description_teacher: 'Lewat pembuatan poster interaktif dengan SpriteLab, murid akan menerapkan pemahaman mereka tentang berbagi informasi pribadi dan privat di web.\r'
             Digital Sharing:
               key: Berbagi Secara Digital
               name: Berbagi Secara Digital
@@ -16997,7 +16992,7 @@ id:
               description_student: Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop.
             Nested Loops in Frozen:
               key: Nested Loop dalam Frozen
-              name: Nested Loop dengan Frozen
+              name: 'Nested Loop dengan Frozen'
               description_student: 'Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. '
               description_teacher: Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!
             'Functions: Songwriting':
@@ -17075,7 +17070,7 @@ id:
             Nested Loops in the Maze:
               key: Nested Loop dalam Labirin
               name: Nested Loop dalam Labirin
-              description_student: "Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain."
+              description_student: Loop di dalam loop di dalam loop. Apa artinya? Pelajaran ini akan mengajari Anda apa yang terjadi ketika Anda meletakkan loop di dalam loop yang lain.
               description_teacher: Dalam aktivitas online ini, murid berkesempatan meningkatkan pemahaman mereka tentang loop ke level yang sepenuhnya baru. Lewat permainan dengan Lebah dan Tanaman vs Zombi, murid akan mempelajari cara memprogram sebuah loop agar berada di dalam loop lain. Mereka juga akan didorong untuk mencari tahu betapa perubahan kecil di dalam loop dapat memengaruhi program ketika mereka mengklik `Jalankan`.
             The Power of Words:
               key: Kekuatan kata-Kata
@@ -17295,7 +17290,8 @@ id:
             Alien Dance Party:
               key: Pesta Dansa Alien
               name: Pesta Dansa Alien
-              description_student: Berlatih membuat permainan untuk dibagikan kepada teman dan keluarga.
+              description_student: Buat proyek interaktif yang bisa dibagikan ke teman-teman sekelas.
+              description_teacher: 'Pelajaran ini menampilkan Sprite Lab, sebuah platform bagi murid untuk membuat animasi dan permainan interaktif mereka sendiri. Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai event untuk membuat "pesta dansa alien".  '
             Behaviors in Sprite Lab:
               key: Perilaku dalam Sprite Lab
               name: Perilaku dalam Sprite Lab
@@ -17620,6 +17616,15 @@ id:
               name: Pelajaran ke- 14
             lesson15:
               name: Pelajaran ke- 15
+            lesson17:
+              name: Pelajaran ke- 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Pelajaran 15: Hari Penilaian'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
         k5-onlinepd-2021:
           description: "Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!"
           student_description: 'Pelajari cara mengajarkan ilmu komputer menggunakan Dasar-Dasar Ilmu Komputer Code.org dengan kursus online yang gratis dan sesuai kemampuan diri ini!'

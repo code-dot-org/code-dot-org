@@ -2,13 +2,13 @@
   "script": {
     "name": "outbreak",
     "wrapup_video_id": null,
-    "hidden": true,
+    "hidden": false,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-03-30 18:28:28 UTC",
     "seeding_key": {
       "script.name": "outbreak"
     }
@@ -33,6 +33,7 @@
       "name": "Coding a Simulation",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -43,13 +44,23 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Welcome to Monster Town"
+        "progression": "Welcome to Monster Town",
+        "level_keys": [
+          "outbreak_story"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -68,9 +79,13 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Creating a Simulation"
+        "progression": "Creating a Simulation",
+        "level_keys": [
+          "outbreak1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -89,9 +104,13 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Programming with Events"
+        "progression": "Programming with Events",
+        "level_keys": [
+          "outbreak2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -110,9 +129,13 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Stopping the Outbreak with Masks"
+        "progression": "Stopping the Outbreak with Masks",
+        "level_keys": [
+          "outbreak3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -131,9 +154,13 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Learning from Simulations"
+        "progression": "Learning from Simulations",
+        "level_keys": [
+          "outbreak_story2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -152,9 +179,13 @@
     {
       "chapter": 6,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "More Monsters"
+        "progression": "More Monsters",
+        "level_keys": [
+          "outbreak4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -173,9 +204,13 @@
     {
       "chapter": 7,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Recovery"
+        "progression": "Recovery",
+        "level_keys": [
+          "outbreak5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -194,10 +229,14 @@
     {
       "chapter": 8,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Chance",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "outbreak6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -216,10 +255,14 @@
     {
       "chapter": 9,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
         "progression": "Vaccines",
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "outbreak7"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -238,9 +281,13 @@
     {
       "chapter": 10,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Share Your Message"
+        "progression": "Share Your Message",
+        "level_keys": [
+          "outbreak8"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -259,9 +306,13 @@
     {
       "chapter": 11,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Free Play"
+        "progression": "Free Play",
+        "level_keys": [
+          "outbreak_freeplay_choice"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -400,5 +451,29 @@
         "script.name": "outbreak"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
   ]
 }

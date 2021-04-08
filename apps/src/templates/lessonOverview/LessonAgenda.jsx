@@ -35,9 +35,16 @@ export default class LessonAgenda extends Component {
             </li>
             {activity.activitySections.map(section => (
               <li style={{marginLeft: 15}} key={section.key}>
-                <a href={`#activity-section-${section.key}`}>
-                  {section.displayName}
-                </a>
+                {section.duration > 0 && (
+                  <a href={`#section-${section.key}`}>{`${
+                    section.displayName
+                  } (${section.duration} ${i18n.minutes()})`}</a>
+                )}
+                {section.duration === 0 && (
+                  <a href={`#section-${section.key}`}>{`${
+                    section.displayName
+                  }`}</a>
+                )}
               </li>
             ))}
           </ul>

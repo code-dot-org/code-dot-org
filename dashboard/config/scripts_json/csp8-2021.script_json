@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:57:32 UTC",
+    "serialized_at": "2021-03-24 21:40:57 UTC",
     "seeding_key": {
       "script.name": "csp8-2021"
     }
@@ -302,7 +302,7 @@
       "key": "0a35f580-7b10-4f74-acc9-b0e1e9394531",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute:** Students should each get printed or digital copies of the Scoring Guidelines and Task Instructions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Scoring Guidelines and Task Instructions.",
         "name": "Review Create PT Submission Requirements and Scoring Guidelines\r"
       },
       "seeding_key": {
@@ -314,7 +314,7 @@
       "key": "8c069083-ba86-4109-adf2-5a1e44520714",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* written responses\n* PDF of program code\n\nThey should also know the Scoring Guidelines:\n\n* contains 6 rows, each worth 1 point\n* sometimes several rows apply to one written response to pick out specific aspects\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Scoring Guidelines and Task Instructions. For the Scoring Guidelines you can focus on only the first 3 columns for now: \"Reporting Category\", \"Task\", \"Scoring Criteria\". We'll dive into the decision rules later. Just get familiar with these documents.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* written responses\n* PDF of program code\n\nThey should also know the Scoring Guidelines:\n\n* contains 6 rows, each worth 1 point\n* sometimes several rows apply to one written response to pick out specific aspects\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
       },
       "seeding_key": {
         "activity_section.key": "8c069083-ba86-4109-adf2-5a1e44520714",
@@ -336,7 +336,7 @@
       "key": "2283f93e-5f97-4691-b557-97096e75acb8",
       "position": 5,
       "properties": {
-        "description": "[slide] Hopefully in your reading you concluded that for the Create PT you'll need to submit:\r\n\r\n* Video showing your programs main functionality, including input and output\r\n* A PDF of your program code\r\n* A PDF Written Response\r\n\r\nYou should also have noticed:\r\n\r\n* The Scoring Guidelines provide specific guidance on how each part of the task will be graded\r\n\r\nI'm sure that right now you have a lot of questions about what this task will look like and how it will be scored. Before we answer them, let's look at some examples first.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Hopefully in your reading you concluded that for the Create PT you'll need to submit:\r\n\r\n* Video showing your programs main functionality, including input and output\r\n* A PDF of your program code\r\n* A PDF Written Response\r\n\r\nYou should also have noticed:\r\n\r\n* The Scoring Guidelines provide specific guidance on how each part of the task will be graded\r\n\r\nI'm sure that right now you have a lot of questions about what this task will look like and how it will be scored. Before we answer them, let's look at some examples first.",
         "remarks": true
       },
       "seeding_key": {
@@ -348,7 +348,7 @@
       "key": "cf38f057-93c5-48c5-b47e-95379e05dd69",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** As a class, watch the video for Create PT Sample 1. \n\n[slide] **Distribute:** Provide pairs of students copies of Create PT Sample 1 (links available on student page for this lesson).  \n\n[slide] **Discuss:** *This is a Written Response for the Create PT. Read it to yourself first. Then with your partner spend a few minutes reviewing it. Be ready to share out the following answers.*\n\nAsk partners to spend a couple of minutes specifically discussing. Then have the whole class quickly share the results of their discussion.\n\n\n* Did anything surprise you in looking at this sample?\n* Do you think this scored well based on what you know about the scoring guidelines?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As a class, watch the video for Create PT Sample 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide pairs of students copies of Create PT Sample 1 (links available on student page for this lesson).  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *This is a Written Response for the Create PT. Read it to yourself first. Then with your partner spend a few minutes reviewing it. Be ready to share out the following answers.*\n\nAsk partners to spend a couple of minutes specifically discussing. Then have the whole class quickly share the results of their discussion.\n\n\n* Did anything surprise you in looking at this sample?\n* Do you think this scored well based on what you know about the scoring guidelines?\n",
         "name": "Create PT Sample 1\r"
       },
       "seeding_key": {
@@ -373,7 +373,7 @@
       "key": "d953a165-9fcb-47a1-8600-89d1001fb007",
       "position": 3,
       "properties": {
-        "description": "[slide] **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\n\n[slide] **Discuss:** *With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:*\n\n* What characteristics of this response made it score well?\n* What parts confused you?\n* What questions do you still have about the Scoring Guidelines or Task description?\n    \nAsk partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion.\n\n**Discussion Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\n\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\n\n    "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** The CSP Create PT Code.org Annotated Sample 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With your partner look over this annotated version of the sample to see how each row of the scoring guidelines was applied. You should be reading specifically to answer any of the questions you had about the task earlier. After looking it over we will discuss:*\n\n* What characteristics of this response made it score well?\n* What parts confused you?\n* What questions do you still have about the Scoring Guidelines or Task description?\n    \nAsk partners to spend a couple of minutes specifically discussing the prompts above. Then have the whole class share the results of their discussion.\n\n**Discussion Goal:** Students should understand from this example that the Scoring Guidelines are in many ways as important as the task description. The responses in this sample not only match the task description but address the particular \"gotchas\" of the scoring guidelines.\n\nStudents may still have questions about the individual prompts or scoring guidelines. Encourage them that you'll look at more examples which may help clarify.\n\n    "
       },
       "seeding_key": {
         "activity_section.key": "d953a165-9fcb-47a1-8600-89d1001fb007",
@@ -397,7 +397,7 @@
       "key": "e78c7b99-5e0c-4cb3-a3cc-757baa2efeb8",
       "position": 5,
       "properties": {
-        "description": "[slide] **Display:** Play both short videos for Samples 2 & 3. Students should have a basic understanding of what these apps are and how they work. \n\n* Sample 2: Magic 8 Ball app - when the screen is clicked, a recommendation appears and the icons change to indicate if it's a positive, neutral, or negative response.\n* Sample 3: Random Dog Picker app - this app should be familiar from a previous unit. A dog size is chosen from a dropdown menu, and a random dog in that size category is displayed on the screen. \n\n[slide] **Distribute:** Provide pairs of students copies of the Create PT Annotated Samples 2 & 3 (student links on code studio). Students should also pull up the Written Responses for each task so they can look at the submitted code segments. \n\n[slide] **Discuss:** *With your partner look at these samples - you can pick which to look at first. As you review this task with a partner ask yourself:*\n\n* Where and how specifically did this fall short? \n* Was there one major problem that caused ripple effects through the scoring?\n* Or were there several smaller issues?\n* Try to point out specific aspects of the Scoring Guidelines or Submission Requirements.\n    \nAsk partners to spend a couple minutes specifically discussing the questions above. Then have the whole class share the results of their discussion. Where possible call out ways that the discussion is answering questions raised earlier in the class about the Submission Requirements or Scoring Guidelines."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Play both short videos for Samples 2 & 3. Students should have a basic understanding of what these apps are and how they work. \n\n* Sample 2: Magic 8 Ball app - when the screen is clicked, a recommendation appears and the icons change to indicate if it's a positive, neutral, or negative response.\n* Sample 3: Random Dog Picker app - this app should be familiar from a previous unit. A dog size is chosen from a dropdown menu, and a random dog in that size category is displayed on the screen. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide pairs of students copies of the Create PT Annotated Samples 2 & 3 (student links on code studio). Students should also pull up the Written Responses for each task so they can look at the submitted code segments. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With your partner look at these samples - you can pick which to look at first. As you review this task with a partner ask yourself:*\n\n* Where and how specifically did this fall short? \n* Was there one major problem that caused ripple effects through the scoring?\n* Or were there several smaller issues?\n* Try to point out specific aspects of the Scoring Guidelines or Submission Requirements.\n    \nAsk partners to spend a couple minutes specifically discussing the questions above. Then have the whole class share the results of their discussion. Where possible call out ways that the discussion is answering questions raised earlier in the class about the Submission Requirements or Scoring Guidelines."
       },
       "seeding_key": {
         "activity_section.key": "e78c7b99-5e0c-4cb3-a3cc-757baa2efeb8",
@@ -420,7 +420,7 @@
       "key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.\n\n**Discussion Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\n\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students back to Create PT Annotated Sample 2. With a partner, ask students to discuss how they could rewrite 3b in order to earn the point.\n\n**Discussion Goal:** Encourage students to use specific programming language in their responses (i.e. variables, conditionals, loops, etc.).\n\nSample 3b response: The answers list manages complexity because without it, each element would need to be stored in its own variable which would increase the length of the code and opportunities for error. The variables would need to be carefully named to indicate if they are positive, neutral, or negative as this is how the program determines what icons to display. For example, one variable might be called positive0 and store the value \"Yes, absolutely\".\n"
       },
       "seeding_key": {
         "activity_section.key": "1eaa315e-6c86-492a-9885-3511be5cecb4",
@@ -431,7 +431,7 @@
       "key": "907a0384-0c76-4cac-bc96-dd528f989c58",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discussion:** *Based on the examples that you saw today write down on separate post-its / scratch piece of paper*\n\n**Discussion Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discussion:** *Based on the examples that you saw today write down on separate post-its / scratch piece of paper*\n\n**Discussion Goal:** The next lesson is designed to address these three specific prompts. Students will have time to dive deep on what counts as a computing innovation and how to choose one wisely. They will be provided a checklist of \"gotchas\" next to each part of the task to use while they complete. There is also time set aside to answer remaining questions. In other words, don't feel the need to respond to all of these prompts here. Use this conversation to synthesize what they saw and remind students that tomorrow you'll investigate all these questions more deeply.\n",
         "name": "Create PT: Advice, Gotchas, Questions\r"
       },
       "seeding_key": {
@@ -466,7 +466,7 @@
       "key": "eb1cbeb4-8828-4589-a08b-4c7d4de45a03",
       "position": 1,
       "properties": {
-        "description": "[slide]  <span style=\"background-color: #FFFF00\">**Discuss:** *Based on our review of the Create PT yesterday...* </span>\n\n**Discussion Goal**: The purpose of this discussion to warm up students' brains and recall the elements of the Create PT. Students should start thinking about choices in light of what they have to do for the Create PT, rather than simply out of interest or \"coolness.\"  Hopefully, the two go hand in hand.\n\nIn particular we'll looking to understand the requirements so that students select appropriately scoped projects.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  <span style=\"background-color: #FFFF00\">**Discuss:** *Based on our review of the Create PT yesterday...* </span>\n\n**Discussion Goal**: The purpose of this discussion to warm up students' brains and recall the elements of the Create PT. Students should start thinking about choices in light of what they have to do for the Create PT, rather than simply out of interest or \"coolness.\"  Hopefully, the two go hand in hand.\n\nIn particular we'll looking to understand the requirements so that students select appropriately scoped projects.\n"
       },
       "seeding_key": {
         "activity_section.key": "eb1cbeb4-8828-4589-a08b-4c7d4de45a03",
@@ -500,7 +500,7 @@
       "key": "1ef3f6fc-a8f4-4ce7-adfb-1e23ea70a50d",
       "position": 2,
       "properties": {
-        "description": "[slide] **Distribute**: [Create PT Survival Guide 2020-21](https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit\t\n) and optionally give students access to the Scoring Guidelines and Task Directions distributed in the previous lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: [Create PT Survival Guide 2020-21](https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit\t\n) and optionally give students access to the Scoring Guidelines and Task Directions distributed in the previous lesson."
       },
       "seeding_key": {
         "activity_section.key": "1ef3f6fc-a8f4-4ce7-adfb-1e23ea70a50d",
@@ -511,7 +511,7 @@
       "key": "24ff9f06-8524-4d95-bb4e-b12bcd36e5e7",
       "position": 3,
       "properties": {
-        "description": "[slide] **Task Overview (page 1) - 5 mins:** Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high level questions that come up.\r\n    \r\n[slide] **What is Required of My Program (page 2) - 5 mins:** Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Task Overview (page 1) - 5 mins:** Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high level questions that come up.\r\n    \r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **What is Required of My Program (page 2) - 5 mins:** Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
         "name": "The Create PT Survival Guide\r"
       },
       "seeding_key": {
@@ -535,7 +535,7 @@
       "key": "f1eee796-452a-471b-9e7a-af9d7ca49a11",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Function Requirement Activity 1 - Does It Count (pages 3 - 4) - 15 mins:** Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Function Requirement Activity 1 - Does It Count (pages 3 - 4) - 15 mins:** Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity."
       },
       "seeding_key": {
         "activity_section.key": "f1eee796-452a-471b-9e7a-af9d7ca49a11",
@@ -557,7 +557,7 @@
       "key": "f620fbad-e6df-48e4-85fa-8133fbd54413",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Function Requirements Activity 2 - Two Function Calls: (page 5) - 10 mins:** Ask students to \r\ncomplete the activity on page 5. This activity asks them to think through the different ways they might respond to response 3d. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Function Requirements Activity 2 - Two Function Calls: (page 5) - 10 mins:** Ask students to \r\ncomplete the activity on page 5. This activity asks them to think through the different ways they might respond to response 3d. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result."
       },
       "seeding_key": {
         "activity_section.key": "f620fbad-e6df-48e4-85fa-8133fbd54413",
@@ -579,7 +579,7 @@
       "key": "835268fb-ab04-4c0b-87be-562a107418ff",
       "position": 9,
       "properties": {
-        "description": "[slide] **Narrow it Down (page 6) - 5 mins:** As a class read the \"Narrow It Down\" section of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n[slide] **Practice Narrowing It Down (page 6) - 10 mins:** Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** *Lead a discussion about how to narrow down project ideas.*\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Narrow it Down (page 6) - 5 mins:** As a class read the \"Narrow It Down\" section of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Practice Narrowing It Down (page 6) - 10 mins:** Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** *Lead a discussion about how to narrow down project ideas.*\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n"
       },
       "seeding_key": {
         "activity_section.key": "835268fb-ab04-4c0b-87be-562a107418ff",
@@ -590,7 +590,7 @@
       "key": "9bf8c655-a3ee-4ca4-bf9d-1f7ab3408d7d",
       "position": 10,
       "properties": {
-        "description": "\n\n[slide] **Choosing a Project Idea (page 8) - 5 mins:** Quickly read this section with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can."
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Choosing a Project Idea (page 8) - 5 mins:** Quickly read this section with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can."
       },
       "seeding_key": {
         "activity_section.key": "9bf8c655-a3ee-4ca4-bf9d-1f7ab3408d7d",
@@ -601,7 +601,7 @@
       "key": "fb28a7a0-2aa7-4264-adc0-a07f209574fa",
       "position": 11,
       "properties": {
-        "description": "[slide]  **Brainstorm Ideas (page 8) - 10 mins:** Have students use this page to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Brainstorm Ideas (page 8) - 10 mins:** Have students use this page to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects."
       },
       "seeding_key": {
         "activity_section.key": "fb28a7a0-2aa7-4264-adc0-a07f209574fa",
@@ -623,7 +623,7 @@
       "key": "6e735715-49d0-456d-a87c-7fa6512de1d5",
       "position": 1,
       "properties": {
-        "description": "[slide] **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n[slide] **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Written Response Organizer (page 9) - 5 mins:** Quickly review this organizer with students. Encourage them to use it throughout the 12 class hours to track their progress and make sure they have every component needed to answer the questions.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 10) - 5 mins:** Review the sample schedule provided on page 10.",
         "name": "Make a Plan\r"
       },
       "seeding_key": {
@@ -699,7 +699,7 @@
       "key": "969dafe8-ae3a-4e29-83f0-ef855f36a128",
       "position": 2,
       "properties": {
-        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n[slide] **Discuss:** *Read page 12-13: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 11: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n[slide] **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
+        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Read page 12-13: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 11: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -711,7 +711,7 @@
       "key": "4a687458-fabd-43ee-b597-4d8ee8a1a3c6",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 14-15: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -723,7 +723,7 @@
       "key": "6f7b3c76-1ad4-4d76-8014-7b73149fd7d9",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** \n\n* Take out your Create PT timeline that we developed and reviewed.\n* Ask and answer any remaining questions.\n* Remind students of the overall timeline and that the official PT time is about to start.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Take out your Create PT timeline that we developed and reviewed.\n* Ask and answer any remaining questions.\n* Remind students of the overall timeline and that the official PT time is about to start.",
         "name": "Set",
         "progression_name": "Create PT Coding Workspace"
       },
@@ -736,7 +736,7 @@
       "key": "c317a118-315d-40dd-bb2a-8ad42c52f62a",
       "position": 1,
       "properties": {
-        "description": "[slide] **Links in Code Studio:**\n\n* Students can find links to AP documents on the student page in code studio associated with this lesson.\n* Students may use the [Create PT Template](https://docs.google.com/document/d/1GXTWA_q-xpN-nfLL6C8e6f28pQGps_QouzKMVHDFzEU/edit?usp=sharing) to record their Written Response. Remind students that these responses must be entered into the appropriate fields in the Digital Portfolio before submitting their work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Links in Code Studio:**\n\n* Students can find links to AP documents on the student page in code studio associated with this lesson.\n* Students may use the [Create PT Template](https://docs.google.com/document/d/1GXTWA_q-xpN-nfLL6C8e6f28pQGps_QouzKMVHDFzEU/edit?usp=sharing) to record their Written Response. Remind students that these responses must be entered into the appropriate fields in the Digital Portfolio before submitting their work.",
         "name": "GO! Complete Create Performance Task"
       },
       "seeding_key": {
@@ -764,7 +764,7 @@
       "key": "34f439e3-78bf-42c2-9487-8d15cc20ea8a",
       "position": 2,
       "properties": {
-        "description": "[slide] **Submitting:**\n\n* You are encouraged to submit and save work in the AP digital portfolio as you go!\n* At the designated end of the Task administration (having allowed for at least 12 hours of class time for work) students should submit their video of the program running,  written responses, and program code to their [AP Digital Portfolio](https://apstudents.collegeboard.org/digital-submission/submit-ap-csp-work). You can find more instructions as well by using the [AP Digital Portfolio: Student User Guide](https://apcentral.collegeboard.org/pdf/digital-portfolio-student-user-guide-ap-csp.pdf).\n\nBefore they submit their final work:\n\n * Encourage students to check over the Survival Guide checklists one more time to make sure they met the requirements.\n * Make sure they have all the components necessary for the Create Performance Task.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submitting:**\n\n* You are encouraged to submit and save work in the AP digital portfolio as you go!\n* At the designated end of the Task administration (having allowed for at least 12 hours of class time for work) students should submit their video of the program running,  written responses, and program code to their [AP Digital Portfolio](https://apstudents.collegeboard.org/digital-submission/submit-ap-csp-work). You can find more instructions as well by using the [AP Digital Portfolio: Student User Guide](https://apcentral.collegeboard.org/pdf/digital-portfolio-student-user-guide-ap-csp.pdf).\n\nBefore they submit their final work:\n\n * Encourage students to check over the Survival Guide checklists one more time to make sure they met the requirements.\n * Make sure they have all the components necessary for the Create Performance Task.",
         "name": "Students submit completed Create Performance Task"
       },
       "seeding_key": {
@@ -1089,54 +1089,6 @@
       "seeding_key": {
         "resource.key": "create-pt-survival-guide-20-21"
       }
-    },
-    {
-      "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
-      "key": "csp_unit_8_-_create_pt_prep",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "name": "CSP Unit 8 - Create PT Prep",
-      "url": "https://docs.google.com/presentation/d/130WMgJC9JxZ2bz7pO59i-0-XafKeKLADKSqIGx1ZcSQ/copy",
-      "key": "csp_unit_8_-_create_pt_prep",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_8_-_create_pt_prep"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Task Instructions",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp_ct_20-21_task_instructions",
-      "properties": {
-        "type": "Resource",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_task_instructions"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
-      "key": "apcsp_ct_20-21_scoring_guidelines",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
-      }
     }
   ],
   "lessons_resources": [
@@ -1267,6 +1219,9 @@
       }
     }
   ],
+  "scripts_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -1355,6 +1310,50 @@
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
         "objective.key": "f31a2fd3-f77b-46e7-93ad-37aeaf2a156a"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Complete the Task",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     }
   ]

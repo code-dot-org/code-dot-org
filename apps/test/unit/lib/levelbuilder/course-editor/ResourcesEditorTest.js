@@ -12,7 +12,7 @@ describe('ResourcesEditor', () => {
     updateTeacherResources = sinon.spy();
     defaultProps = {
       inputStyle: {},
-      resources: [
+      teacherResources: [
         {link: '', type: ''},
         {link: '', type: ''},
         {link: '', type: ''},
@@ -24,7 +24,8 @@ describe('ResourcesEditor', () => {
         {link: '', type: ''},
         {link: '', type: ''}
       ],
-      updateTeacherResources
+      updateTeacherResources,
+      useMigratedResources: false
     };
   });
 
@@ -32,7 +33,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -53,7 +54,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -91,7 +92,7 @@ describe('ResourcesEditor', () => {
     const wrapper = shallow(
       <ResourcesEditor
         {...defaultProps}
-        resources={[
+        teacherResources={[
           {type: ResourceType.curriculum, link: '/foo'},
           {link: '', type: ''},
           {link: '', type: ''},
@@ -115,6 +116,31 @@ describe('ResourcesEditor', () => {
       wrapper.state('errorString'),
       'Your resource types contains a duplicate'
     );
+  });
+
+  it('uses the new resource editor for migrated resources', () => {
+    const wrapper = shallow(
+      <ResourcesEditor
+        {...defaultProps}
+        teacherResources={undefined}
+        migratedTeacherResources={[
+          {
+            id: 1,
+            key: 'curriculum',
+            name: 'Curriculum',
+            url: 'https://example.com/a'
+          },
+          {
+            id: 2,
+            key: 'vocabulary',
+            name: 'Vocabulary',
+            url: 'https://example.com/b'
+          }
+        ]}
+        useMigratedResources={true}
+      />
+    );
+    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(1);
   });
 
   describe('Resource', () => {

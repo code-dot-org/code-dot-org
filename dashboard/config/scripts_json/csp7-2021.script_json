@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-15 12:56:45 UTC",
+    "serialized_at": "2021-03-24 21:40:56 UTC",
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -956,7 +956,7 @@
       "key": "bcce1c99-fdc8-4f83-af10-994ed40b4ea5",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** *Why would you want to make your code easier to work with or read?*\n\n**Discussion Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why would you want to make your code easier to work with or read?*\n\n**Discussion Goal:** This is a good time to remind students that when we write code, we aren't just writing for a computer - we are also writing for humans who will need to understand our code. Better organization can help others quickly understand our code so they can help debug or build upon the code. \n"
       },
       "seeding_key": {
         "activity_section.key": "bcce1c99-fdc8-4f83-af10-994ed40b4ea5",
@@ -967,7 +967,7 @@
       "key": "0a9e16b9-e27e-4ef3-a1a4-ecbaba11b800",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg) | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg) | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg)| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg)| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg)| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg)| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg)| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg)|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg)| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg)| **Say:** Let's open the envelope and check out how this function works. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg)| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg)| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg)| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg)| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg)| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg)| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg)| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg)| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Functions with Parameters and Return. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries19.svg) | **Distribute:** large and small sticky notes and envelopes. Hold off on distributing the Activity Guide until later in the activity. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries2.svg) | **Say:** Let's pretend that I want to make a cake. I need to decide how many tiers the cake will have, and what flavor the cake will be. I've decided to make a 3 tiered cake.<br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries3.svg)| **Say:** If I flip over the envelope, and open it up there's a recipe inside. This recipe is going to tell me how to make the cake I've specified. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries4.svg)| **Say:** To do this, I'm going to replace `tiers` with `3` and `flavor` with `lemon`, every time those words show up in the recipe. But notice - this recipe is pretty general. I could use it to make lots of different types and sizes of cake. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Do This:** Read through the recipe as a class. Make sure everyone understands how it works before moving on. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries5.svg)| **Say:** Ok, let's make our cake. Remember, each time I come across `tiers` or `flavor`, I'm going to replace that word with the appropriate value. Once I'm done, I will have baked a 3 layer lemon cake! <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** There are several steps to click through here. Take it slow so students can see each part. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries6.svg)| **Say:** This is a function! It should look familiar, but it has a few extra parts. This function has parameters. Parameters are used as plaeholders for values that will be passed through the function. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** Those values passed to the parameter are called arguments. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries7.svg)| **Say:** Let's think through how changing the arguments affects the output. Now I want a four layer chocolate cake. With a partner, discuss what my arguments will look like. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** I pass through the arguments `4` and `chocolate` to the parameters `tiers` and `flavor`. Then my function is ready. What will my cake look like? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries8.svg)|**Do This:** Distribute Activity Guides and direct students to Challenge #1. Students will create their own function envelopes and write a simple function that uses parameters which can be used to draw a house. When students are finished building their function envelopes, a partner tests out the code and draws the house on a spare sticky note. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries9.svg)| **Say:** Here's another function. This function is used to calculate the total cost of making a cake. Take note again of the arguments and parameters. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries10.svg)| **Say:** Let's open the envelope and check out how this function works. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries11.svg)| **Say:** There are a few new things here. First, we've created two local variables. Remember, the local variables are contained within the function and can't be updated or accessed outside of the function. We learned about this when we discussed variable scope. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> In this function, a decision (in this case, how much to charge per flavor) is made based on the argument passed through the parameter. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> Finally, the total is returned, but returned where? What does that mean? <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries12.svg)| **Say:** Before we talk more about that return, let's calculate the total cost of our original cake. <br><br> **Do This:** With a partner, determine what `flavorCost` and `total` equal after the function is run. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries13.svg)| **Say:** Now let's think about the return. If the program hits a return at any point in running a function, it will stop and a value will be \"returned\". Where is it returned? To the place in the program where the function was called.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries20.svg)| **Say:** So to get back to our example, the value 12 is returned, but where is it returned to? Where is it stored? <br><br> **Do This:** Take a moment to brainstorm with a partner. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries15.svg)| **Say:** Let's return to variable baggies! A function return value can be stored in a variable. Notice how the envelope is placed inside of a baggie. That means that the function would be evalued and whatever is returned would be stored in the variable `cakeCalculator`. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries16.svg)| **Say:** Here's how this looks in JavaScript. It's ok if it's a little confusing. You'll get to play with this in Code Studio in the next lesson. For now, notice how the statement is set up. A variable is set up with the name `cakeCalculator`. This gets the value that is returned from the function `cakeCost` which has two arguments `3` and `lemon` passed through the parameters. After the function is evaluated, `cakeCalculator` now stores the value 12. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries17.svg)| **Say:** We can also print to the console like so. <br><br> **Do This: Read through as a class. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Returns,-and-Libraries18.svg)| **Do This:** Direct students to complete Challenge #2 in their Activity Guides. Students create a new envelope function which calculates the cost of the house from Challenge #1. After students are finished, they share the envelopes with a partner who tests the code. |",
         "name": "Functions with Parameters and Return\r"
       },
       "seeding_key": {
@@ -979,7 +979,7 @@
       "key": "b4e5087b-1070-4f80-8dc4-8a7dd87df225",
       "position": 1,
       "properties": {
-        "description": "[slide] **Takeaways:** Review the slide with the class. \r\n\r\n* Functions with parameters and return values help us simplify our code\r\n* Functions can only return one value at a time\r\n* A function can have:\r\n\t* No parameters and no return values\r\n\t* Parameters, but no return values\r\n\t* Return values, but no parameters\r\n\t* Parameters and return values\r\n\r\n[slide] **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\r\n\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Takeaways:** Review the slide with the class. \r\n\r\n* Functions with parameters and return values help us simplify our code\r\n* Functions can only return one value at a time\r\n* A function can have:\r\n\t* No parameters and no return values\r\n\t* Parameters, but no return values\r\n\t* Return values, but no parameters\r\n\t* Parameters and return values\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\r\n\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "b4e5087b-1070-4f80-8dc4-8a7dd87df225",
@@ -1013,7 +1013,7 @@
       "key": "1e061fa5-3aa7-4163-bcbf-4d2fc7106e0b",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *Are clean and organized programs more useful for computers or people? Why? Try to give examples from programs you've written or seen in this class.*\n\nHave students silently journal their response, then discuss with a partner, and finally share with the class.\n\n**Discussion Goal:** Parameters and return values allow students to write programs that are more organized and cleaner. Naming functions helps students write programs that read more like descriptions of what they do, and they also help students reuse code.\n\nThis quick discussion sets up many of these realizations. Students will not leave this lesson able to \"do more\" than previously. Instead they'll be able to write programs that are cleaner, better organized, and better able to be used elsewhere. Long term, writing programs like this will actually help students write more complex code, but because they as programmers will better be able to understand their programs and reuse the code they write. This quick discussion does not need to cover all of those points and should just be a reminder of things they've already seen. Clean code is for humans, but in the long term it helps them write better programs.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Are clean and organized programs more useful for computers or people? Why? Try to give examples from programs you've written or seen in this class.*\n\nHave students silently journal their response, then discuss with a partner, and finally share with the class.\n\n**Discussion Goal:** Parameters and return values allow students to write programs that are more organized and cleaner. Naming functions helps students write programs that read more like descriptions of what they do, and they also help students reuse code.\n\nThis quick discussion sets up many of these realizations. Students will not leave this lesson able to \"do more\" than previously. Instead they'll be able to write programs that are cleaner, better organized, and better able to be used elsewhere. Long term, writing programs like this will actually help students write more complex code, but because they as programmers will better be able to understand their programs and reuse the code they write. This quick discussion does not need to cover all of those points and should just be a reminder of things they've already seen. Clean code is for humans, but in the long term it helps them write better programs.\n\n",
         "name": "Who is Clean Code For?\r"
       },
       "seeding_key": {
@@ -1047,7 +1047,7 @@
       "key": "5ab6371a-8e6b-4013-a414-9e69c0871ce3",
       "position": 1,
       "properties": {
-        "description": "[slide] **Do This:** Take a few minutes to review the takeaways from the previous lesson. \r\n\r\n**Group:** Place students with partners"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to review the takeaways from the previous lesson. \r\n\r\n**Group:** Place students with partners"
       },
       "seeding_key": {
         "activity_section.key": "5ab6371a-8e6b-4013-a414-9e69c0871ce3",
@@ -1075,7 +1075,7 @@
       "key": "5f2943b5-7ca7-4703-8b53-cbac5071d9ae",
       "position": 3,
       "properties": {
-        "description": "* How does calculate() work?\n* What are the arguments passed through the parameter in calculate() when it is called?\n* What types of data does the parameter require in the upgradeClickerCheck() function? Where can you find that information?\n* What is returned? What type of data?\n\n[slide] **Discuss:** *As a class, walk through the questions and the code. Make sure students understand the parts of the function.*"
+        "description": "* How does calculate() work?\n* What are the arguments passed through the parameter in calculate() when it is called?\n* What types of data does the parameter require in the upgradeClickerCheck() function? Where can you find that information?\n* What is returned? What type of data?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As a class, walk through the questions and the code. Make sure students understand the parts of the function.*"
       },
       "seeding_key": {
         "activity_section.key": "5f2943b5-7ca7-4703-8b53-cbac5071d9ae",
@@ -1086,7 +1086,7 @@
       "key": "6ed20688-69da-427b-936d-37244bae495f",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 30-36. Students discuss with a partner how they think the MOD operator works.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1103,7 +1103,7 @@
       "key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \r\n    \r\n[slide] **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** The MOD operator is just like any other operator - it takes two numbers, processes them, and then returns a value. Click through the animations one by one as students give answers to each arithmetic statement.  \r\n    \r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to practice using the MOD operator with a partner, solving the problem on the screen. Then click through to see the answer."
       },
       "seeding_key": {
         "activity_section.key": "99dea69f-df64-4782-8c16-50ae7bc56cbe",
@@ -1114,7 +1114,7 @@
       "key": "f041d05e-7a8a-40aa-befa-ad805d4613b7",
       "position": 6,
       "properties": {
-        "description": "[slide] MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\r\n\r\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\r\n\r\nNow let's get back to another app investigation with functions with parameters and return values.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> MOD can be a little tricky, but here's what you need to remember: it's the reaminder that is left after a number is divided by another number.\r\n\r\nWhy is this useful? A common usage is to determine if a number is even or odd. If you divide any number by two and there is no remainder, the number is even! You can also use MOD to determine if a number is divisible by another number.\r\n\r\nNow let's get back to another app investigation with functions with parameters and return values.",
         "remarks": true
       },
       "seeding_key": {
@@ -1126,7 +1126,7 @@
       "key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
       "position": 7,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 2, read likes 1-14 and discuss with their partner what's happening in these lines.\n\n**Discuss:** *Read through the lines together as a class, and clear up any misconceptions.*\n\n[slide] **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\n\n[slide] **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2, read likes 1-14 and discuss with their partner what's happening in these lines.\n\n**Discuss:** *Read through the lines together as a class, and clear up any misconceptions.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students carefully read the function on lines 15-34 before explaining to their partners how it works. If students have extra time, they can try the modify activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Talk through the app together as a class. Make sure students understand all the parts of the function and understand where to look in the comments for information."
       },
       "seeding_key": {
         "activity_section.key": "f7719909-f1dd-48e5-ac25-e979636ba00f",
@@ -1148,7 +1148,7 @@
       "key": "206218d5-88ac-4284-a47b-ae7a5be24d03",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Review:** Discuss the takeaways on the Wrap Up slide.\n\n**Discussion Goal:** Students are introduced to procedural abstraction on this slide, a concept they will return to throughout the unit. Spend a few minutes discussing what \"generalize\" means - focusing on how a single function can be used to accomplish many different tasks by using parameters. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Review:** Discuss the takeaways on the Wrap Up slide.\n\n**Discussion Goal:** Students are introduced to procedural abstraction on this slide, a concept they will return to throughout the unit. Spend a few minutes discussing what \"generalize\" means - focusing on how a single function can be used to accomplish many different tasks by using parameters. \n"
       },
       "seeding_key": {
         "activity_section.key": "206218d5-88ac-4284-a47b-ae7a5be24d03",
@@ -1193,7 +1193,7 @@
       "key": "4568613c-e3b0-4a68-8086-919369871765",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Use this quick discussion to review what students should already have seen about parameters and return values while also discussing them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\n\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Use this quick discussion to review what students should already have seen about parameters and return values while also discussing them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\n\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \n",
         "name": "Quick Warm Up\r"
       },
       "seeding_key": {
@@ -1255,7 +1255,7 @@
       "key": "945226c1-860c-445b-8cd8-c0fae4b92735",
       "position": 3,
       "properties": {
-        "description": "[slide] Today you're mostly going to practice what we've learned about programming with parameters and return values. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* [slide] Use console.log to call functions with parameters with different values to see how they run\r\n* Slow down the code with the speed slider to see how the code is running once your function is called",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today you're mostly going to practice what we've learned about programming with parameters and return values. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use console.log to call functions with parameters with different values to see how they run\r\n* Slow down the code with the speed slider to see how the code is running once your function is called",
         "remarks": true
       },
       "seeding_key": {
@@ -1267,7 +1267,7 @@
       "key": "f3a6b7ac-de6a-429d-a9ae-63b89f14b784",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Levels 1-5:** These levels involve functions with parameters and return values, working in the console"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 1-5:** These levels involve functions with parameters and return values, working in the console"
       },
       "seeding_key": {
         "activity_section.key": "f3a6b7ac-de6a-429d-a9ae-63b89f14b784",
@@ -1324,7 +1324,7 @@
       "key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** *What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "3fcc0a66-2a24-4e1e-9fad-43f87a5993ff",
@@ -1391,7 +1391,7 @@
       "key": "60211632-01b4-4a96-9e5b-50b11b6088b9",
       "position": 2,
       "properties": {
-        "description": "[slide] **Discuss:** *How do parameters and return change the way you write programs?*\n\nHave students share their ideas with a partner and then discuss as a class.\n\n**Discussion Goal:** This discussion should prompt students to better understand what turns out to be a slightly different make project. Today they're going to be taking on \"blank functions\" rather than \"blank screens\". This is because with parameters and return values you can chunk out your programs into pieces that have well-defined behavior. Remind students that this is known as procedural abstraction. If students don't land on these ideas don't aim to force it but return to this idea in the wrap up.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do parameters and return change the way you write programs?*\n\nHave students share their ideas with a partner and then discuss as a class.\n\n**Discussion Goal:** This discussion should prompt students to better understand what turns out to be a slightly different make project. Today they're going to be taking on \"blank functions\" rather than \"blank screens\". This is because with parameters and return values you can chunk out your programs into pieces that have well-defined behavior. Remind students that this is known as procedural abstraction. If students don't land on these ideas don't aim to force it but return to this idea in the wrap up.\n"
       },
       "seeding_key": {
         "activity_section.key": "60211632-01b4-4a96-9e5b-50b11b6088b9",
@@ -1402,7 +1402,7 @@
       "key": "53535097-5669-484d-a7ee-74e1922d2178",
       "position": 3,
       "properties": {
-        "description": "[slide] Today we're going to be working on another Make project, but this one is a little bit different than others we've done in the course. A lot of the code will already be written for us, and we'll be working on blank functions, rather than entirely blank programs. Thanks to the way that parameters and return work, it's easy to design programs this way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we're going to be working on another Make project, but this one is a little bit different than others we've done in the course. A lot of the code will already be written for us, and we'll be working on blank functions, rather than entirely blank programs. Thanks to the way that parameters and return work, it's easy to design programs this way.",
         "remarks": true
       },
       "seeding_key": {
@@ -1431,7 +1431,7 @@
       "key": "a9cf16f0-1cc9-4d9e-8839-62f1bc77adca",
       "position": 2,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n[slide] **Level 1 - Explore:** Have students explore the working Rock Paper Scissors app in Level 1. If students are not working in pairs they should still discuss with a neighbor.\n\n* What does each button do\n* How does the screen get updated after clicking each button\n\n",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1 - Explore:** Have students explore the working Rock Paper Scissors app in Level 1. If students are not working in pairs they should still discuss with a neighbor.\n\n* What does each button do\n* How does the screen get updated after clicking each button\n\n",
         "progression_name": "Try the Rock Paper Scissors App"
       },
       "seeding_key": {
@@ -1443,7 +1443,7 @@
       "key": "33326272-96c3-4c9c-9a5e-1b3d32d471d5",
       "position": 3,
       "properties": {
-        "description": "[slide] **Review:** Quickly review what students will be doing again before they move on to the next step."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Quickly review what students will be doing again before they move on to the next step."
       },
       "seeding_key": {
         "activity_section.key": "33326272-96c3-4c9c-9a5e-1b3d32d471d5",
@@ -1454,7 +1454,7 @@
       "key": "c6b30149-a1a1-4c69-b302-70ba089b312e",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide] if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [r parameters-and-return-make-activity-guide] if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Rock Paper Scissors App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Rock Paper Scissors App"
       },
       "seeding_key": {
@@ -1466,7 +1466,7 @@
       "key": "e6dee438-0916-46f4-8776-26e9210e4ac1",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *How could using parameters and return help you write programs collaboratively?*\n\n**Discussion Goal:** This should help review ideas that students saw in this project, in particuarly that parameters and return help break programs into chunks. It should also help them see that this approach could be used to collaboratively design programs. If teammates agree in advance what each function should do they can go off and write them separately before coming back together to make the entire app work.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How could using parameters and return help you write programs collaboratively?*\n\n**Discussion Goal:** This should help review ideas that students saw in this project, in particuarly that parameters and return help break programs into chunks. It should also help them see that this approach could be used to collaboratively design programs. If teammates agree in advance what each function should do they can go off and write them separately before coming back together to make the entire app work.\n"
       },
       "seeding_key": {
         "activity_section.key": "e6dee438-0916-46f4-8776-26e9210e4ac1",
@@ -1534,7 +1534,7 @@
       "key": "cca04cf3-24f9-4061-bd41-45c4f508e1a3",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *How could you share a function with another person so they could use it in their own program?*\n\n**Discussion Goal:** Guide student answers towards possible answers like these - \n\n* email code to each other\n* used a shared document\n* copy/paste functions from one tab to another\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How could you share a function with another person so they could use it in their own program?*\n\n**Discussion Goal:** Guide student answers towards possible answers like these - \n\n* email code to each other\n* used a shared document\n* copy/paste functions from one tab to another\n",
         "name": "Preview Libraries\r"
       },
       "seeding_key": {
@@ -1558,7 +1558,7 @@
       "key": "b8355f85-da8f-488a-8ef8-5845b826d8d2",
       "position": 1,
       "properties": {
-        "description": "[slide] **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "b8355f85-da8f-488a-8ef8-5845b826d8d2",
@@ -1581,7 +1581,7 @@
       "key": "8e798253-94ef-4e1e-9999-4e7b44f07624",
       "position": 3,
       "properties": {
-        "description": "[slide] **Video:** Watch the Libraries video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Libraries video."
       },
       "seeding_key": {
         "activity_section.key": "8e798253-94ef-4e1e-9999-4e7b44f07624",
@@ -1592,7 +1592,7 @@
       "key": "850f66d5-f527-4125-9d86-4d898a7f8b89",
       "position": 1,
       "properties": {
-        "description": "[slide] **Journal:** Have students add the following words to their journals: library, API"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following words to their journals: library, API"
       },
       "seeding_key": {
         "activity_section.key": "850f66d5-f527-4125-9d86-4d898a7f8b89",
@@ -1649,7 +1649,7 @@
       "key": "a629ed9d-83bf-40c3-b00e-6604024f2ab4",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** *Today we are going to learn how to use libraries to share code with one another. Usually you do this by writing functions with parameters and return values. Why do you think it's important to use parameters and return values when writing code for other people to use?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Today we are going to learn how to use libraries to share code with one another. Usually you do this by writing functions with parameters and return values. Why do you think it's important to use parameters and return values when writing code for other people to use?*"
       },
       "seeding_key": {
         "activity_section.key": "a629ed9d-83bf-40c3-b00e-6604024f2ab4",
@@ -1682,7 +1682,7 @@
       "key": "24235ed4-651a-4edd-a4ab-2ac22a365d0b",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 1 where they should run the app and try several different inputs.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 1 where they should run the app and try several different inputs.",
         "name": "Level 1",
         "progression_name": "States App"
       },
@@ -1695,7 +1695,7 @@
       "key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.*\n\nWhen the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With their partners, students look at the project code and discuss what happens when the button is clicked. After a few minutes, pull the class back together and discuss as a whole.*\n\nWhen the button is clicked, the screen is updated by calling several functions from a library which return text and images that is displayed.\n"
       },
       "seeding_key": {
         "activity_section.key": "0e8f86c8-2a5e-4aee-82b2-dfb9631c03b6",
@@ -1706,7 +1706,7 @@
       "key": "16ab6c73-a8e4-446c-96b1-f075d9abcda0",
       "position": 4,
       "properties": {
-        "description": "[slide] **Do This:** Now students should open the functions drawer and look specifically at each StateLibrary function. They should mouseover the functions for the documentation before discussing with a partner how these functions work. \r\n\r\n[slide] **Do This:** Then students click \"Manage Libraries\" and \"view code\" following the screenshots on the slide. Students read the library code and discuss how the functions actually work. They should consider if they were accurate in their predictions before looking at the library code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students should open the functions drawer and look specifically at each StateLibrary function. They should mouseover the functions for the documentation before discussing with a partner how these functions work. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Then students click \"Manage Libraries\" and \"view code\" following the screenshots on the slide. Students read the library code and discuss how the functions actually work. They should consider if they were accurate in their predictions before looking at the library code."
       },
       "seeding_key": {
         "activity_section.key": "16ab6c73-a8e4-446c-96b1-f075d9abcda0",
@@ -1717,7 +1717,7 @@
       "key": "6f5baa2c-5153-4a7c-9d5c-811ca73a4643",
       "position": 5,
       "properties": {
-        "description": "[slide]  **Discuss:** What are the benefits of hiding all of the code for filtering the dataset in a library? What information does the user need to know in order to use the library functions?\n\n**Benefits:** The project code is neat and organized. \n\n**Information:** The end user does not have to know all the inner workings of the functions - they just need to know the documentation for the functions so they can call them correctly and understand what will be returned (if anything).\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** What are the benefits of hiding all of the code for filtering the dataset in a library? What information does the user need to know in order to use the library functions?\n\n**Benefits:** The project code is neat and organized. \n\n**Information:** The end user does not have to know all the inner workings of the functions - they just need to know the documentation for the functions so they can call them correctly and understand what will be returned (if anything).\n"
       },
       "seeding_key": {
         "activity_section.key": "6f5baa2c-5153-4a7c-9d5c-811ca73a4643",
@@ -1728,7 +1728,7 @@
       "key": "8f8552d8-a185-4b5d-a72e-12d84fde0814",
       "position": 6,
       "properties": {
-        "description": "[slide] **Do This:** Students navigate to Level 2 where they run the Pigify app and try several inputs. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 2 where they run the Pigify app and try several inputs. \n",
         "name": "Level 2",
         "progression_name": "Pigify App"
       },
@@ -1741,7 +1741,7 @@
       "key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
       "position": 7,
       "properties": {
-        "description": "[slide]  **Discuss:** *Why should we test the functions in the library? What does this help us to know?*\n\n[slide] **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\n\n[slide] **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\n\n* Re-read the documentation for each library function\n* Add a `console.log()` statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\n\t* For example: `console.log(StringsLibrary.firstLetter(\"pizza\"));`\n* Hit run to see the output. \n* Now add `console.log()` statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.\n\n**Discussion Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \n\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we test the functions in the library? What does this help us to know?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Again, students open the functions drawer, look at the documentation for each function, and discuss how they work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test the Functions:** Now students practice testing the functions to understand how they work. Here are the steps:\n\n* Re-read the documentation for each library function\n* Add a `console.log()` statement to the end of the program and call a function. Put in a reasonable argument in the space for the parameter.\n\t* For example: `console.log(StringsLibrary.firstLetter(\"pizza\"));`\n* Hit run to see the output. \n* Now add `console.log()` statements to test the rest of the functions. Is the output what you would expect? Try several different inputs.\n\n**Discussion Goal:** Testing the functions allows the end user to understand the behavior of the function. It's helpful for debugging functions, in addition to looking at the code in the library. \n\nFor example: If I call a function whose documentation indicates that it will return the first letter of a string, and instead it returns the last number of a string, I know that there is a problem with the library function and not my project code. \n"
       },
       "seeding_key": {
         "activity_section.key": "d9d8f651-9671-4613-ad5f-3f4f4746300e",
@@ -1752,7 +1752,7 @@
       "key": "dec78b31-1fa2-45e5-962c-3b99e7bd1310",
       "position": 8,
       "properties": {
-        "description": "[slide] **Do This:** Now students navigate back to the States App and use `console.log` to test all of the library functions there."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Now students navigate back to the States App and use `console.log` to test all of the library functions there."
       },
       "seeding_key": {
         "activity_section.key": "dec78b31-1fa2-45e5-962c-3b99e7bd1310",
@@ -1763,7 +1763,7 @@
       "key": "f326a30d-5bbd-42ae-b443-5a4511f08cc0",
       "position": 9,
       "properties": {
-        "description": "[slide]  **Discuss:** *What makes a good library function? How can you make sure that the end users of your library have what they need in order to use your functions?*\n\n**Discussion Goal:** Hopefully through the process of testing, students will understand the importance of well-documented functions that do what they are expected to do! \n\nA good library function contains everything it needs within the function. Beware of global variables or references to element IDs that might not be present in the end user's projects\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes a good library function? How can you make sure that the end users of your library have what they need in order to use your functions?*\n\n**Discussion Goal:** Hopefully through the process of testing, students will understand the importance of well-documented functions that do what they are expected to do! \n\nA good library function contains everything it needs within the function. Beware of global variables or references to element IDs that might not be present in the end user's projects\n"
       },
       "seeding_key": {
         "activity_section.key": "f326a30d-5bbd-42ae-b443-5a4511f08cc0",
@@ -1774,7 +1774,7 @@
       "key": "7341b6e3-878c-47a0-bc0d-aa5d38ef70db",
       "position": 10,
       "properties": {
-        "description": "[slide] **Review:** Up to this point, students have either created their own algorithms from scratch, or modified existing ones (usually in Investigate Lessons). Now they have another tool to use: combining existing algorithms to make new algorithms. Here, this is accomplished with a library."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Up to this point, students have either created their own algorithms from scratch, or modified existing ones (usually in Investigate Lessons). Now they have another tool to use: combining existing algorithms to make new algorithms. Here, this is accomplished with a library."
       },
       "seeding_key": {
         "activity_section.key": "7341b6e3-878c-47a0-bc0d-aa5d38ef70db",
@@ -1785,7 +1785,7 @@
       "key": "02a03de7-45b4-476e-a213-ee9997cdb94b",
       "position": 11,
       "properties": {
-        "description": "[slide]  **Discuss:** *What are the benefits of using existing algorithms instead of brand new algorithms?*\n\n**Discussion Goal:** The benefits of using existing algorithms as building blocks for constructing other algorithms include: \n\n* reduced development time\n* reduced testing\n* simplification and identification of errors\n\nWe demonstrated the last two bullets in the exercise using console.log to test functions and isolate errors. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are the benefits of using existing algorithms instead of brand new algorithms?*\n\n**Discussion Goal:** The benefits of using existing algorithms as building blocks for constructing other algorithms include: \n\n* reduced development time\n* reduced testing\n* simplification and identification of errors\n\nWe demonstrated the last two bullets in the exercise using console.log to test functions and isolate errors. \n"
       },
       "seeding_key": {
         "activity_section.key": "02a03de7-45b4-476e-a213-ee9997cdb94b",
@@ -1807,7 +1807,7 @@
       "key": "75654951-a699-4901-a210-2989c7bd3f1d",
       "position": 13,
       "properties": {
-        "description": "[slide] Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\n\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\n\nThis is how our libraries work!\n\nThere's a term for using libraries or other forms of organization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \n\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can update the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now let's review Procedural Abstraction. In Lesson 2, we learned about Procedural Abstraction, where shared features of functions (also known as procedures) are extracted in order to generalize use. Procedural Abstraction encourages code reuse and manages complexity, because generalized functions can be used to accomplish many different tasks.\n\nNow let's extend that definition. Procedural Abstraction provides a name for a process and allows the procedure to be used only knowing what it does, and not necessarily how it does it.\n\nThis is how our libraries work!\n\nThere's a term for using libraries or other forms of organization in a program: Modularity - the subdivision of a computer program into separate subprograms. This is what we are doing when we organize functions into a library and then call them in another program. \n\nThe end user of the library only needs to know how the functions work, which they can learn through the documentation. This means that the creator of the library can update the functions for any number of reasons, such as making the functions more efficient, without having to notify the end users, as long as the function documentation does not need to be changed. The end users can expect the library to work as intended.",
         "remarks": true,
         "progression_name": "Pigify App"
       },
@@ -1820,7 +1820,7 @@
       "key": "dd9a121f-8363-4b8e-aff3-99a4fd23a45e",
       "position": 14,
       "properties": {
-        "description": "[slide] **Do This:** Review the takeaways on the slide. These are focused on the practicalities of creating and using libraries."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the takeaways on the slide. These are focused on the practicalities of creating and using libraries."
       },
       "seeding_key": {
         "activity_section.key": "dd9a121f-8363-4b8e-aff3-99a4fd23a45e",
@@ -1831,7 +1831,7 @@
       "key": "2b59e6f8-2fef-4f22-b0bb-a7f023476ee0",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:**  *Based on what you saw today, add reasons why someone would argue for the following three statements*\n\n* Libraries help programmers collaborate\n* Libraries help programmers reuse code\n* Libraries help programmers writer simpler programs",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Based on what you saw today, add reasons why someone would argue for the following three statements*\n\n* Libraries help programmers collaborate\n* Libraries help programmers reuse code\n* Libraries help programmers writer simpler programs",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -1854,7 +1854,7 @@
       "key": "2d6a6158-6c6f-4986-8e37-2a6a2c94b297",
       "position": 3,
       "properties": {
-        "description": "[slide] **Journal:** Students add to their journal the following word and definition: modularity. They may also want to update their definition for procedural abstraction based on earlier conversations and slides. \r\n\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journal the following word and definition: modularity. They may also want to update their definition for procedural abstraction based on earlier conversations and slides. \r\n\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "2d6a6158-6c6f-4986-8e37-2a6a2c94b297",
@@ -1910,7 +1910,7 @@
       "key": "962b98aa-fec0-49c6-886a-fa16b7f757de",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *How does using a library allow you to think about programming at \"a higher level\"?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** You'll return to this discussion later in the lesson so use this discussion as much to plant the ideas here in students heads as to really hit them home. The main goal you're aiming for is the first bullet in the remarks at the end of the warm up. Libraries take care of detailed tasks so you can focus on the big picture. Students likely will not mention the fact that this increases the need to debug and test code in the first place but this is another idea that will be explored in the lesson.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How does using a library allow you to think about programming at \"a higher level\"?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** You'll return to this discussion later in the lesson so use this discussion as much to plant the ideas here in students heads as to really hit them home. The main goal you're aiming for is the first bullet in the remarks at the end of the warm up. Libraries take care of detailed tasks so you can focus on the big picture. Students likely will not mention the fact that this increases the need to debug and test code in the first place but this is another idea that will be explored in the lesson.\n",
         "name": "Quick Warm Up\r"
       },
       "seeding_key": {
@@ -1956,7 +1956,7 @@
       "key": "1d96a50a-5170-48d5-b798-97db2292addf",
       "position": 2,
       "properties": {
-        "description": "[slide] Today you're mostly going to practice what we've learned about programming with libraries. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* [slide] Test library code using console.log. Call the function with many different values to make sure it works as you expect\r\n* It's much harder for someone to debug library code once it's sent to them. You'll need to make sure it works on your end.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today you're mostly going to practice what we've learned about programming with libraries. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Test library code using console.log. Call the function with many different values to make sure it works as you expect\r\n* It's much harder for someone to debug library code once it's sent to them. You'll need to make sure it works on your end.",
         "remarks": true
       },
       "seeding_key": {
@@ -1968,7 +1968,7 @@
       "key": "86ea97dd-b40f-4bfa-b288-fa533c804710",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Levels 1-2 Using Libraries:** These levels involve students using libraries. These levels focus on students understanding that libraries make the programs that they write simpler and higher level.\n\n* Level 1: Students build a simple app with the states library from the investigate lesson\n* Level 2: Students build a simple app with a new library that uses the cats data set.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 1-2 Using Libraries:** These levels involve students using libraries. These levels focus on students understanding that libraries make the programs that they write simpler and higher level.\n\n* Level 1: Students build a simple app with the states library from the investigate lesson\n* Level 2: Students build a simple app with a new library that uses the cats data set.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2019,7 +2019,7 @@
       "key": "802952ba-f17e-43c1-a793-babc56cc7ceb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *How do libraries let you write programs at a \"higher level\"? Why is testing important when building and sharing libraries?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** These discussions review the main things students should have seen in today's lesson and that were previewed in the Warm Up. Students should be able to better speak from experience about the fact that the programs they wrote were significantly simpler because they could just use library code. They should also have seen how testing of libraries is important because the user of their library is counting on the functions working exactly as they say they're supposed to. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How do libraries let you write programs at a \"higher level\"? Why is testing important when building and sharing libraries?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** These discussions review the main things students should have seen in today's lesson and that were previewed in the Warm Up. Students should be able to better speak from experience about the fact that the programs they wrote were significantly simpler because they could just use library code. They should also have seen how testing of libraries is important because the user of their library is counting on the functions working exactly as they say they're supposed to. \n"
       },
       "seeding_key": {
         "activity_section.key": "802952ba-f17e-43c1-a793-babc56cc7ceb",
@@ -2086,7 +2086,7 @@
       "key": "42b57c1a-9234-44ac-bc55-933dd2d07ccf",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** *Think back over all the different apps you've built this year. What blocks do you wish already came with App Lab to help you build those apps?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think back over all the different apps you've built this year. What blocks do you wish already came with App Lab to help you build those apps?*"
       },
       "seeding_key": {
         "activity_section.key": "42b57c1a-9234-44ac-bc55-933dd2d07ccf",
@@ -2136,7 +2136,7 @@
       "key": "93e8a0e9-84f0-4418-85e4-cdd2b8ab6c25",
       "position": 2,
       "properties": {
-        "description": "**Group:** Students may complete this project individually or in pairs.\n\n**Distribute:** Give students each a copy of the [Project Guide - Make a Library](\thttps://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing)\n\n\n\n[slide] **Project Description - 5 mins:** As a class review the project description, what they'll submit, and the steps. Make sure students are also aware that they have access to the rubric."
+        "description": "**Group:** Students may complete this project individually or in pairs.\n\n**Distribute:** Give students each a copy of the [Project Guide - Make a Library](\thttps://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing)\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Project Description - 5 mins:** As a class review the project description, what they'll submit, and the steps. Make sure students are also aware that they have access to the rubric."
       },
       "seeding_key": {
         "activity_section.key": "93e8a0e9-84f0-4418-85e4-cdd2b8ab6c25",
@@ -2147,7 +2147,7 @@
       "key": "0a3fac10-80a4-427b-b4dd-aff7ab13c8b5",
       "position": 3,
       "properties": {
-        "description": "[slide] **Step 1 - Brainstorm - 5 Mins:** Give students 5 minutes to brainstorm a theme for their library. Many specific ideas are given to students for the types of functions they could write, but ideally students will develop functions that are focused on a specific context they find interesting."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Brainstorm - 5 Mins:** Give students 5 minutes to brainstorm a theme for their library. Many specific ideas are given to students for the types of functions they could write, but ideally students will develop functions that are focused on a specific context they find interesting."
       },
       "seeding_key": {
         "activity_section.key": "0a3fac10-80a4-427b-b4dd-aff7ab13c8b5",
@@ -2158,7 +2158,7 @@
       "key": "9fbafaaf-f686-474f-9835-d72735c6b0e7",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should spend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 2 - Design - 10 mins:** Before students start writing the code for their project they should spend 10 minutes defining the way the different functions in their library should work. This means they'll need to write out the comments that describe the function, the different parameters, and what will be returned.",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2170,7 +2170,7 @@
       "key": "de5ddb4e-0e3a-44b0-bd5b-6a1debf17476",
       "position": 5,
       "properties": {
-        "description": "[slide] **Step 3 - Build - 20 mins:** Give students the remainder of time in class to work on building out their library. \r\n\r\n* Students should start by working on one of their functions that includes all four features. Students will need to develop a function like this as part of the Create PT and also will be answering questions about their function in the free response questions at the end of the project.\r\n* Circulate the room offering support to students. If they have successfully completed step 2 of their project guides then they should be able to write a lot of code very quickly to set up their functions and comments.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 3 - Build - 20 mins:** Give students the remainder of time in class to work on building out their library. \r\n\r\n* Students should start by working on one of their functions that includes all four features. Students will need to develop a function like this as part of the Create PT and also will be answering questions about their function in the free response questions at the end of the project.\r\n* Circulate the room offering support to students. If they have successfully completed step 2 of their project guides then they should be able to write a lot of code very quickly to set up their functions and comments.",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2205,7 +2205,7 @@
       "key": "52282b87-08f4-498a-b5a1-c5bb857c7e16",
       "position": 1,
       "properties": {
-        "description": "[slide] Today you are going to have more time to work on your library, but you're going to focus on testing it in two very different ways. In the first half of the lesson you'll still have work time to write your library, but you should develop tests like we practiced in this unit to make sure they're working as you expect.\r\n\r\nIn the second half of the lesson you'll share your library with a classmate who will try using it themselves and will give feedback. Next time we meety you'll be able to use this feedback and testing to make the final edits to your library.\r\n\r\nLet's get to it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today you are going to have more time to work on your library, but you're going to focus on testing it in two very different ways. In the first half of the lesson you'll still have work time to write your library, but you should develop tests like we practiced in this unit to make sure they're working as you expect.\r\n\r\nIn the second half of the lesson you'll share your library with a classmate who will try using it themselves and will give feedback. Next time we meety you'll be able to use this feedback and testing to make the final edits to your library.\r\n\r\nLet's get to it!",
         "remarks": true
       },
       "seeding_key": {
@@ -2235,7 +2235,7 @@
       "key": "ebeaa3b1-e291-4805-ba2a-802b7d17ab74",
       "position": 2,
       "properties": {
-        "description": "* [slide] **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\n* [slide] **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Tests Refresher:** Briefly review with students how to use `console.log` to write tests for their functions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Test:** Give students time to write tests for their functions and then continue to program to fix any errors they encounter.\n",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2247,7 +2247,7 @@
       "key": "af613240-6204-404e-bd99-4663df759de2",
       "position": 3,
       "properties": {
-        "description": "\n\n**Group:** Have students find a classmate with whom to share their library and give feedback. Students should trade project guides with their classmate.\n\n**Step 5 - Feedback - 20 mins:** Students will need to go through a series of steps to share their libraries and given feedback\n\n* [slide] **Export Your Library:** Walk students through the steps necessary to export their own library\n* [slide] **Import a Library:** Walk students through the steps necessary to import a library from their classmate.\n* [slide] **Give Feedback:** Walk students through ways that they can use a classmate's library to test it out. Make sure they give feedback on their classmate's project guide under Step 5.\n\n[slide] **Step 6 - Improve:** Students should return project guides to their classmates and review the feedback. Next class they'll have time to improve their libraries and prepare to submit them.",
+        "description": "\n\n**Group:** Have students find a classmate with whom to share their library and give feedback. Students should trade project guides with their classmate.\n\n**Step 5 - Feedback - 20 mins:** Students will need to go through a series of steps to share their libraries and given feedback\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Export Your Library:** Walk students through the steps necessary to export their own library\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Import a Library:** Walk students through the steps necessary to import a library from their classmate.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Give Feedback:** Walk students through ways that they can use a classmate's library to test it out. Make sure they give feedback on their classmate's project guide under Step 5.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 6 - Improve:** Students should return project guides to their classmates and review the feedback. Next class they'll have time to improve their libraries and prepare to submit them.",
         "progression_name": "Test a Classmate's Library"
       },
       "seeding_key": {
@@ -2321,7 +2321,7 @@
       "key": "b3ceda05-2687-4193-8a0b-799b0c833343",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.\n\n[slide] **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.\n\n**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 7 - Acknowledge Collaborators / Sources - 2 mins:** If students worked in pairs or imported some code from elsewhere they should acknowledge the sources of that code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8 - Free Response - 20 mins:** With students quickly review the questions students need to answer about one of the functions in their library. These questions are taken nearly exactly from the Create PT and should help students prepare to independently answer these questions when they complete that task.\n\n**Work Time - 18 mins:** Students should work on their free response answers early in the lesson. Once they've finished working on their responses they can go back to their project to make any final edits to their project code. Encourage students to review the Scoring Guidelines to make sure they're not missing anything in their projects.",
         "progression_name": "Build Your Library"
       },
       "seeding_key": {
@@ -2333,7 +2333,7 @@
       "key": "143a6d64-ff09-49db-9018-c7f739081244",
       "position": 1,
       "properties": {
-        "description": "[slide] **Submit Projects:** At the end of the lesson students should submit their projects in Code Studio and submit their completed project guides, including free response questions.\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit Projects:** At the end of the lesson students should submit their projects in Code Studio and submit their completed project guides, including free response questions.\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "143a6d64-ff09-49db-9018-c7f739081244",
@@ -2356,7 +2356,7 @@
       "key": "150e8978-6eb6-44a7-b550-ff9688040000",
       "position": 1,
       "properties": {
-        "description": "[slide]  Administer the Unit 7 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 7 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "tips": [
           {
             "type": "teachingTip",
@@ -3562,30 +3562,6 @@
       }
     },
     {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
       "name": "CSP Parameters and Return Make - Rock Paper Scissors App",
       "url": "https://docs.google.com/document/d/1SoiuvHw0tuSUZe9vL4hmRzyPrH_2IIOvD7LgkGtEph8/edit",
       "key": "parameters-and-return-make-activity-guide",
@@ -3599,54 +3575,6 @@
       }
     },
     {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
       "name": "Project Guide - Make a Library",
       "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
       "key": "project-make-a-library",
@@ -3657,80 +3585,6 @@
       },
       "seeding_key": {
         "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "Project Guide - Make a Library",
-      "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
-      "key": "project-make-a-library",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "Project Guide - Make a Library",
-      "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
-      "key": "project-make-a-library",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "project-make-a-library"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
-      }
-    },
-    {
-      "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1ZQLXktxB2DkyqqmCRjKnVRQKHrAv42_5rkjlEjH8af0/copy",
-      "key": "csp_unit_7_-_parameters_return_and_libraries",
-      "properties": {
-        "type": "Presentation",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
   ],
@@ -3831,6 +3685,9 @@
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
     }
+  ],
+  "scripts_resources": [
+
   ],
   "vocabularies": [
 
@@ -4110,6 +3967,470 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Library Part 3",
         "objective.key": "efa4b437-61f3-4a0f-a7cf-6e1f3056af68"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.H.2"
       }
     }
   ]

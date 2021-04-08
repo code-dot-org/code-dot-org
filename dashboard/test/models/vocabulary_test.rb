@@ -76,4 +76,23 @@ class VocabularyTest < ActiveSupport::TestCase
     vocab.key = "abcdefghijklmnopqrstuvwxyz_"
     assert vocab.valid?
   end
+
+  test 'serialize scripts that vocabulary is in' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    @levelbuilder = create :levelbuilder
+
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    script1 = create :script
+    script2 = create :script
+    script1.expects(:write_script_json).once
+    script2.expects(:write_script_json).once
+    create :unit_group_unit, unit_group: unit_group, script: script1, position: 1
+    create :unit_group_unit, unit_group: unit_group, script: script2, position: 2
+    lesson1 = create :lesson, script: script1
+    lesson2 = create :lesson, script: script2
+    vocabulary = create :vocabulary, course_version: course_version
+    vocabulary.lessons = [lesson1, lesson2]
+    vocabulary.serialize_scripts
+  end
 end

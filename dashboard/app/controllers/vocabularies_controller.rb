@@ -1,7 +1,7 @@
 class VocabulariesController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
 
-  # GET /vocabularysearch
+  # GET /vocabularies/search
   def search
     render json: VocabularyAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
   end
@@ -21,6 +21,7 @@ class VocabulariesController < ApplicationController
     vocabulary.course_version = course_version
     begin
       vocabulary.save!
+      vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     rescue ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid => e
       render status: 400, json: {error: e.message.to_json}
@@ -37,6 +38,7 @@ class VocabulariesController < ApplicationController
       end
     end
     if vocabulary && vocabulary.update!(vocabulary_params.except(:lesson_ids))
+      vocabulary.serialize_scripts
       render json: vocabulary.summarize_for_lesson_edit
     else
       render json: {status: 404, error: "Vocabulary #{vocabulary_params[:id]} not found"}

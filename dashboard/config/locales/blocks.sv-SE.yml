@@ -968,6 +968,7 @@ sv:
             '"x"': x-position
             '"y"': y-position
             '"direction"': rörelseriktning
+            '"speed"': hastighet
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} berör {SPRITE2}"
         options:

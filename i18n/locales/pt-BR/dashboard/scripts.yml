@@ -14315,10 +14315,7 @@ pt:
             Private and Personal Information:
               name: Informações Privadas e Pessoais
               description_student: A internet é divertida mas é importante estar seguro também. Esta lição ensina a diferença entre informações seguras para compartilhar e informações particulares.
-              description_teacher: |-
-                Desenvolvido pela Common Sense Education, esta lição trata da diferença entre informações seguras para compartilhar on-line e informações que não são.\r
-                \r
-                À medida que os estudantes visitam sites que solicitam informações sobre suas identidades, aprendem a adotar um processo crítico de investigação que os capacita a proteger a si mesmos e suas famílias contra roubo de identidade. Nesta lição, os alunos aprendem a pensar criticamente sobre as informações do usuário que alguns sites solicitam ou exigem. Eles aprendem a diferença entre informações privadas e informações pessoais, bem como distinguir o que é seguro ou não compartilhar on-line.
+              description_teacher: "Desenvolvido pela Common Sense Education, esta lição trata da diferença entre informações seguras para compartilhar on-line e informações que não são.\\r\n\\r\nÀ medida que os estudantes visitam sites que solicitam informações sobre suas identidades, aprendem a adotar um processo crítico de investigação que os capacita a proteger a si mesmos e suas famílias contra roubo de identidade. Nesta lição, os alunos aprendem a pensar criticamente sobre as informações do usuário que alguns sites solicitam ou exigem. Eles aprendem a diferença entre informações privadas e informações pessoais, bem como distinguir o que é seguro ou não compartilhar on-line."
             About Me:
               name: Sobre mim com o Sprite Lab
               description_student: Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.
@@ -14451,10 +14448,7 @@ pt:
             The Power of Words:
               name: O poder das palavras
               description_student: Bullying nunca é bom. Esta lição ensinará sobre o que é e o que não é bom dizer on-line.
-              description_teacher: |-
-                Os alunos consideram que, enquanto desfrutam de seus sites favoritos, podem encontrar mensagens de outras crianças que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram maneiras de lidar com o cyberbullying e como responder em face da perturbadora linguagem on-line.\r
-                \r
-                Os alunos discutem todas as maneiras pelas quais usam a tecnologia para comunicação e exploram as semelhanças e diferenças entre a comunicação pessoal e online. Os alunos então discutem maneiras de responder ao cyberbullying. 
+              description_teacher: "Os alunos consideram que, enquanto desfrutam de seus sites favoritos, podem encontrar mensagens de outras crianças que podem fazê-los sentir raiva, mágoa, tristeza ou medo. Eles exploram maneiras de lidar com o cyberbullying e como responder em face da perturbadora linguagem on-line.\\r\n\\r\nOs alunos discutem todas as maneiras pelas quais usam a tecnologia para comunicação e exploram as semelhanças e diferenças entre a comunicação pessoal e online. Os alunos então discutem maneiras de responder ao cyberbullying. "
             Crowdsourcing:
               name: Crowdsourcing
               description_student: Esta lição ensinará sobre crowdsourcing, o processo de construção de um projeto com uma equipe.
@@ -16257,7 +16251,7 @@ pt:
               key: Laços em coletor
               name: Repetições com Laurel
               description_student: Programe Laurel, o aventureiro, para coletar tesouros em uma caverna aberta.
-              description_teacher: Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.
+              description_teacher: 'Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.'
             Loops in Artist:
               key: Laços no Artista
               name: Desenho jardins com repetições
@@ -16368,8 +16362,8 @@ pt:
             Picturing Data:
               key: Estruturação de dados
               name: Estruturação de dados
-              description_student: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
-              description_teacher: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
+              description_student: 'Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.'
+              description_teacher: 'Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.'
             'End of Course Project: Create a Play Lab Game':
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! '
@@ -16405,7 +16399,6 @@ pt:
               key: Programação por revezamento
               name: Programação por revezamento
               description_student: Lembra no início do curso quando você fez desenhos com código? Nesta lição, você estará trabalhando com uma equipe para fazer algo muito semelhante!
-              description_teacher: Esta atividade começará com uma pequena aula sobre depuração e persistência, então irá mudar rapidamente para uma corrida contra o tempo à medida que os alunos se dividem em times e trabalham juntos para escrever um programa uma instrução por vez.
             Debugging in Collector:
               key: Depurando no coletor
               name: Depurando com Laurel
@@ -16440,7 +16433,7 @@ pt:
               key: Laços Aninhados na abelha
               name: Laços Aninhados no Labirinto
               description_student: Loops dentro de loops dentro de loops. O que isto significa? Esta lição ensinará o que acontece quando você cria um loop aninhado.
-              description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
+              description_teacher: 'Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar ''.'
             Conditionals with Cards:
               key: Condicionais com cartas
               name: Condicionais com cartas
@@ -16517,7 +16510,7 @@ pt:
               key: Programação e Loops com o Artista
               name: Desenhar com laços
               description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
-              description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
+              description_teacher: 'Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Condicionais no Minecraft: Viagem Aquática'
               name: 'Condicionais no Minecraft: Viagem Aquática'
@@ -16527,7 +16520,7 @@ pt:
               key: Condições
               name: Estruturas condicionais o Fazendeiro
               description_student: Você vai conseguir dizer ao computador o que fazer sob certas condições nesta série divertida e desafiadora.
-              description_teacher: Esta lição apresenta aos alunos loops `while` e declarações` if / else`. _Enquanto loops_ são loops que continuam repetindo comandos desde que uma condição seja verdadeira. Enquanto loops são usados ​​quando o programador não sabe o número exato de vezes que os comandos precisam ser repetidos, mas o programador sabe qual condição precisa ser verdadeira para que o loop continue em repetição. As instruções `If / Else` oferecem flexibilidade na programação executando seções inteiras de código apenas se algo for verdadeiro, caso contrário, ele executa outra coisa.
+              description_teacher: 'Esta lição apresenta aos alunos loops `while` e declarações` if / else`. _Enquanto loops_ são loops que continuam repetindo comandos desde que uma condição seja verdadeira. Enquanto loops são usados ​​quando o programador não sabe o número exato de vezes que os comandos precisam ser repetidos, mas o programador sabe qual condição precisa ser verdadeira para que o loop continue em repetição. As instruções `If / Else` oferecem flexibilidade na programação executando seções inteiras de código apenas se algo for verdadeiro, caso contrário, ele executa outra coisa.'
             Simon Says:
               key: Simon diz
               description_student: Jogue um jogo e pense em quais comandos são necessários para obter o resultado certo.
@@ -16548,7 +16541,7 @@ pt:
               description_student: A internet é divertida mas é importante estar seguro também. Esta lição ensina a diferença entre informações seguras para compartilhar e informações particulares.
             About Me:
               key: Sobre mim
-              name: Sobre mim com o Sprite Lab
+              name: 'Sobre mim com o Sprite Lab'
               description_student: Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.
               description_teacher: "Ao criar um pôster interativo com o SpriteLab, os alunos aplicarão seu entendimento sobre o compartilhamento de informações pessoais e privadas na web.\\r\n"
             Digital Sharing:
@@ -16566,7 +16559,7 @@ pt:
               description_student: Mais laços aninhados! Desta vez, você pode fazer alguns desenhos INCRÍVEIS com laços aninhados.
             Nested Loops in Frozen:
               key: Laços Aninhados na Frozen
-              name: Laços Aninhados com Frozen
+              name: 'Laços Aninhados com Frozen'
               description_student: 'Anna e Elsa têm excelentes habilidades de patinação no gelo, mas precisam de sua ajuda para criar padrões no gelo. Use loops aninhados para criar algo super legal. '
               description_teacher: Agora que os alunos sabem como estratificar seus loops, eles podem criar tantas coisas bonitas. Esta lição levará os alunos a uma série de exercícios para ajudá-los a criar suas próprias imagens prontas para o portfólio, usando as excelentes habilidades de patinação no gelo de Anna e Elsa!
             'Functions: Songwriting':
@@ -16639,7 +16632,7 @@ pt:
             Nested Loops in the Maze:
               key: Laços Aninhados no Labirinto
               name: Laços Aninhados no Labirinto
-              description_student: "Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço."
+              description_student: Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço.
               description_teacher: Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em `Executar '.
             The Power of Words:
               key: O poder das palavras
@@ -16856,7 +16849,8 @@ pt:
             Alien Dance Party:
               key: Festa dançante alienígena
               name: Festa dançante alienígena
-              description_student: Pratique desenvolvimento de jogos para compartilhar com seus amigos e familiares.
+              description_student: Crie um projeto interativo que possa ser compartilhado com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma na qual os alunos podem criar suas próprias animações e jogos interativos. Além dos comportamentos, hoje os alunos incorporam a entrada do usuário como eventos para criar uma "festa de dança alienígena".  '
             Behaviors in Sprite Lab:
               key: Comportamentos no Lab Sprite
               name: Comportamentos no Lab Sprite
@@ -17178,6 +17172,15 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lição 15: Dia da Avaliação'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           description: "Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!"
           student_description: 'Aprenda a ensinar ciência da computação usando os Fundamentos de Ciência da Computação da Code.org com este curso on-line gratuito e individualizado!'

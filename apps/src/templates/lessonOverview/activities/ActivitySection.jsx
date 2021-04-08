@@ -34,6 +34,9 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     width: '100%' // If there are tips for the activity section this is updated below
+  },
+  progression: {
+    marginBottom: 5
   }
 };
 
@@ -57,7 +60,7 @@ export default class ActivitySection extends Component {
             </span>
           )}
         </h3>
-        <div>
+        <div className="activity-section-text">
           <div
             style={{
               ...styles.textAndProgression
@@ -83,15 +86,17 @@ export default class ActivitySection extends Component {
               <EnhancedSafeMarkdown markdown={section.text} expandableImages />
             </div>
           </div>
-          <div>
-            {section.tips.map((tip, index) => {
-              return <LessonTip key={`tip-${index}`} tip={tip} />;
-            })}
-          </div>
         </div>
         {section.scriptLevels.length > 0 && (
-          <ProgressionDetails section={section} />
+          <div style={styles.progression}>
+            <ProgressionDetails section={section} />
+          </div>
         )}
+        <div className="activity-section-text">
+          {section.tips.map((tip, index) => {
+            return <LessonTip key={`tip-${index}`} tip={tip} />;
+          })}
+        </div>
       </div>
     );
   }

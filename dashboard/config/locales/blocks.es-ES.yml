@@ -955,12 +955,20 @@ es:
         text: establecer
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE}consigue el objetivo{TARGET}"
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: en{N} {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
+            '"frames"': fotogramas
+      gamelab_beginCollectingData:
+        text: empieza recopilación de datos {BREAK} valor {VALUE} con etiqueta {LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE} rebota {TARGET}"
       gamelab_changePropBy:
         text: cambiar {SPRITE} {PROPERTY} por {VAL}.
         options:
@@ -970,6 +978,7 @@ es:
             '"x"': posición x
             '"y"': posición y
             '"direction"': dirección de movimiento
+            '"speed"': velocidad
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
@@ -982,6 +991,10 @@ es:
         text: clic en sprite {SPRITE}
       gamelab_comment:
         text: 'comentario: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: número de {SPRITE}
       gamelab_createNewSprite:
         text: "hacer un nuevo sprite \n llamado {NAME} \n con disfraz {COSTUME} \n
           en {LOCATION}"
@@ -991,6 +1004,10 @@ es:
         text: poder arrastrastrarlos
       gamelab_edgesDisplace:
         text: limitacion de bloque {SPRITE} para moverse
+      gamelab_followingTargets:
+        text: siguientes objetivos
+      gamelab_getAllSprites:
+        text: todos los sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1009,12 +1026,23 @@ es:
             '"this"': este
             '"other"': otro
       gamelab_getTime:
+        text: tiempo en {UNIT}
         options:
           UNIT:
             '"seconds"': segundos
+            '"frames"': fotogramas
+      gamelab_hideHaiku:
+        text: ocultar haiku
       gamelab_hideTitleScreen:
         text: ocultar pantalla de título
+      gamelab_ifVarEquals:
+        text: |-
+          if {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} el disfraz es {COSTUME}"
       gamelab_isKeyPressed:
+        text: "{KEY} se pulsa"
         options:
           KEY:
             '"up"': arriba
@@ -1050,6 +1078,8 @@ es:
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} está tocando los bordes"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} está tocando {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
       gamelab_keyPressed:
@@ -1093,6 +1123,7 @@ es:
       gamelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       gamelab_locationModifier:
+        text: "{DISTANCE} píxeles {DIRECTION} de {LOCATION}"
         options:
           DIRECTION:
             '"North"': Norte
@@ -1107,6 +1138,8 @@ es:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
+      gamelab_makeNumSprites:
+        text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       gamelab_mirrorSprite:
         text: "{SPRITE} hacia {DIRECTION}"
         options:
@@ -1145,6 +1178,9 @@ es:
             '"East"': Este
             '"South"': Sur
             '"West"': Oeste
+      gamelab_printHaiku:
+        text: mostrar haiku {BREAK} título del poema {TITLE} autor del poema {AUTHOR}
+          linea 1 {LINE1} linea 2 {LINE2} linea 3 {LINE3}
       gamelab_printText:
         text: imprimir {TEXT}
       gamelab_randColor:
@@ -1187,12 +1223,17 @@ es:
       gamelab_setBackgroundImageAs:
         text: establecer fondo a {IMG}
       gamelab_setDefaultSpriteSize:
+        text: establecer el nuevo tamaño del sprite por defecto {SIZE}
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': extra pequeño
+            '50': pequeño
             '75': medio
-            '100': large
+            '100': grande
+      gamelab_setPrompt:
+        text: solicitar usuario {QUESTION} para la variable {VAR}
+      gamelab_setPromptWithChoices:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       gamelab_setProp:
         text: establecer {SPRITE} {PROPERTY} a {VAL}
         options:
@@ -1212,6 +1253,8 @@ es:
             '"height"': altura
       gamelab_setTint:
         text: cambiar color de {THIS} a {COLOR}
+      gamelab_setupScoreboard:
+        text: "dibujar marcador \n{SPRITE1COSTUME}tanteo{VAR1}{SPRITE2COSTUME}tanteo{VAR2}objetivo{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           simulación de la configuración con
@@ -1227,8 +1270,16 @@ es:
           CONDITION:
             '"when"': cuando
             '"while"': mientras
+      gamelab_stopCollectingData:
+        text: parar recopilación de datos
       gamelab_subjectSpritePointer:
         text: clic en sprite {SPRITE}
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: cayendo
       gamelab_turn:
         text: "{SPRITE} gira {DIRECTION} {N} grados"
         options:
@@ -1254,8 +1305,12 @@ es:
             '"d"': d
       gamelab_whenLeftArrow:
         text: cuando se presiona la flecha izquierda
+      gamelab_whenPromptAnswered:
+        text: cuando {VAR} respondió
       gamelab_whenRightArrow:
         text: cuando se presiona la flecha derecha
+      gamelab_whenSpriteCreated:
+        text: cuando {SPRITE} creado
       gamelab_whenTouching:
         text: cuando {SPRITE1} toca {SPRITE2}
       gamelab_whenUpArrow:
@@ -1283,6 +1338,10 @@ es:
         text: mientras {SPRITE1} está tocando {SPRITE2}
       gamelab_whileUpArrow:
         text: mientras se presiona la flecha arriba
+      gamelab_withPercentChance:
+        text: |-
+          si {NUM}% oportunidad
+          {STATEMENT}
       gamelab_xLocationOf:
         text: coordenada x de {SPRITE}
       gamelab_yLocationOf:
@@ -1302,6 +1361,8 @@ es:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": no es mi-etiqueta
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: solicitar usuario {QUESTION} para la variable {VAR} con opciones {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1480,6 +1541,8 @@ es:
           DANCE:
             MOVES.ClapHigh: pez
             MOVES.Clown: no es mi-etiqueta
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
         text: 'ubicación x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1738,6 +1801,7 @@ es:
             '"stoneBricks"': ladrillos de piedra
             '"mossyStoneBricks"': ladrillos de piedra musgosa
             '"crackedStoneBricks"': ladrillos de piedra quebrados
+            '"chiseledStoneBricks"': ladrillos de piedra decorativa
             '"blueCoralBlock"': bloque de coral azul
             '"pinkCoralBlock"': bloque de coral rosa
             '"magentaCoralBlock"': bloque de coral magenta

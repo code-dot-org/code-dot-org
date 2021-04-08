@@ -409,6 +409,7 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+            '"speed"': брзина
       gamelab_checkTouching:
         options:
           CONDITION:

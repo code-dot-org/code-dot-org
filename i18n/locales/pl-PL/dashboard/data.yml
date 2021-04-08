@@ -573,6 +573,12 @@ pl:
         codebreak_e12: 'Odcinek 12.0 - Sprzęt z Aloe Blacc, Bretem Taylorem i Paolą Mejią Minaya'
         csf21pilot_events: 'Sprite Lab: Duszki w akcji (CSF 2021 Pilotaż)'
         csf21pilot_prompts: 'Sprite Lab: Tekst i zachęty (Pilotaż CSF 2021) '
+        outbreak_mike: Epizod CodeBytes 3 z Mikiem - Symulator pandemii
+        poembot-pilot-prompts: Haiku Boty - Monituj z wyborem [PILOT]
+        poembot-pilot-text: Haiku Boty - Zachowanie tekstu [PILOT]
+        poembot-pilot-haiku: Haiku Boty - Pokaż swoje Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Lekcja 6
+        csd_ml_import_model: Importowanie modelu AI 
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

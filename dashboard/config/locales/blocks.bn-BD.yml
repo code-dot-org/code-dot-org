@@ -132,6 +132,7 @@ bn:
         options:
           PROPERTY:
             '"scale"': আকার
+            '"speed"': গতি
       gamelab_checkTouching:
         options:
           CONDITION:

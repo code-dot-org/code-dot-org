@@ -7081,10 +7081,7 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
-              description_teacher: |-
-                In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. 
-
-                Mentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online.
+              description_teacher: "In questa lezione realizzata da Common Sense Education si sottolinea la differenza tra dati sicuri da condividere online e dati che non lo sono. \n\nMentre gli studenti visitano siti che richiedono dati sulla loro identità, imparano ad adottare un processo di indagine critico che gli consenta di proteggere se stessi e le loro famiglie dal furto di identità. In questa lezione, gli studenti imparano a pensare in modo critico ai dati che alcuni siti web richiedono o esigono. Imparano la differenza tra dati personali e altre informazioni meno critiche e a distinguere ciò che è sicuro o non sicuro da condividere online."
             Nested Loops in Bee:
               name: Cicli annidati nel labirinto
               description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
@@ -7165,10 +7162,7 @@ it:
             The Power of Words:
               name: Cittadinanza digitale - Il potere delle parole
               description_student: Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato.
-              description_teacher: |-
-                Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.
-
-                Gli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. 
+              description_teacher: "Gli studenti sanno che mentre si divertono con i loro siti web preferiti potrebbero ricevere messaggi di altri bambini che possono farli sentire arrabbiati, feriti, tristi o spaventati. Esplorano le corrette modalità per gestire il cyberbullismo e come reagire al linguaggio violento o volgare online.\n\nGli studenti discutono i vari modi in cui usano la tecnologia per comunicare ed esplorano le somiglianze e le differenze tra la comunicazione di persona e quella online. Gli studenti quindi discutono diversi modi per reagire al cyberbullismo. "
             Crowdsourcing:
               name: Intelligenza collettiva
               description_teacher: In informatica affrontiamo alcuni problemi che possono scoraggiare. Sfide come la ricerca di grandi numeri primi o il sequenziamento del DNA sono quasi impossibili da risolvere come singoli individui. Affrontare queste attività in gruppo permette di ridimensionarle e renderle gestibili. Questa lezione mostrerà ai tuoi studenti quanto utile possa essere il lavoro di squadra nel settore dell'informatica.
@@ -7575,7 +7569,9 @@ it:
             AI for Oceans:
               name: L'Intelligenza Artificiale per il mare
             intro-categorical:
-              name: Lezione 5
+              name: Lezione 6
+            temp:
+              name: Lezione 20
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -7596,6 +7592,8 @@ it:
               name: Codifica di una simulazione
             Sprites in Action:
               name: Personaggi in azione
+            End of Course Project:
+              name: Progetto di fine corso
           lesson_groups:
             introduction:
               display_name: Introduzione
@@ -7960,7 +7958,6 @@ it:
               key: Programmazione a staffetta
               name: Programmazione a staffetta
               description_student: Ricordi quando facevi i primi disegni con il coding all'inizio del corso? In questa lezione lavorerai in gruppo per fare qualcosa di molto simile!
-              description_teacher: 'Questa attività inizierà con una breve lezione sulla correzione degli errori (debugging) e sulla perseveranza, poi partirà una corsa contro il tempo: gli studenti si suddividono in squadre e lavorano insieme per scrivere un programma un''istruzione alla volta.'
             Debugging in Collector:
               key: Debugging con la collezionista
               name: Debugging con la collezionista
@@ -7987,12 +7984,12 @@ it:
             Nested Loops in Bee:
               key: Cicli Annidati con l'Ape
               name: Cicli annidati nel labirinto
-              description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
+              description_teacher: 'In questa attività online, gli studenti avranno l''opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l''Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all''interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".'
             Conditionals with Cards:
               key: Istruzioni condizionali con le carte da gioco
               name: Istruzioni condizionali con le carte da gioco
               description_student: È ora di fare un gioco in cui guadagni punti solo a certe condizioni!
-              description_teacher: "In questa lezione viene mostrato come le istruzioni condizionali possano essere usate per adattare un programma a specifiche condizioni. Non sempre abbiamo tutte le informazioni necessarie quando scriviamo un programma. A volte si vuole fare qualcosa di diverso in una situazione rispetto ad un'altra, anche se non si sa a priori quale situazione sarà vera quando il codice verrà eseguito. È in questi casi che entrano in gioco le istruzioni condizionali. Queste permettono a un computer di prendere delle decisioni sulla base delle condizioni che sussisteranno ogni volta che il codice verrà eseguito."
+              description_teacher: 'In questa lezione viene mostrato come le istruzioni condizionali possano essere usate per adattare un programma a specifiche condizioni. Non sempre abbiamo tutte le informazioni necessarie quando scriviamo un programma. A volte si vuole fare qualcosa di diverso in una situazione rispetto ad un''altra, anche se non si sa a priori quale situazione sarà vera quando il codice verrà eseguito. È in questi casi che entrano in gioco le istruzioni condizionali. Queste permettono a un computer di prendere delle decisioni sulla base delle condizioni che sussisteranno ogni volta che il codice verrà eseguito.'
             Conditionals in Bee:
               key: Istruzioni condizionali con l'ape
               name: Istruzioni condizionali con l'ape
@@ -8054,7 +8051,7 @@ it:
             Conditionals:
               key: Istruzioni condizionali
               name: Istruzioni condizionali con la contadina
-              description_teacher: Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.
+              description_teacher: 'Questa lezione introduce gli studenti allo studio dei cicli `mentre` e delle istruzioni `se / altrimenti`. _I cicli mentre_ sono cicli che continuano a ripetere le istruzioni finché una certa condizione è vera. I cicli mentre sono usati quando il programmatore non conosce a priori il numero esatto di volte che le istruzioni devono essere ripetute, ma conosce quale condizione debba essere vera per consentire al ciclo di continuare. Le istruzioni `se / altrimenti` offrono flessibilità nella programmazione eseguendo intere sezioni di codice solo se una certa condizione è vera, altrimenti viene eseguito un insieme di istruzioni alternativo.'
             Simon Says:
               key: Simone Dice
             Alien Dance Party with Sprite Lab:
@@ -8077,7 +8074,7 @@ it:
               description_student: Ancora cicli annidati! Questa volta realizzerai alcuni disegni STRAORDINARI con i cicli annidati.
             Nested Loops in Frozen:
               key: Cicli annidati con Frozen
-              name: Cicli annidati con Frozen
+              name: 'Cicli annidati con Frozen'
             'Functions: Songwriting':
               key: 'Funzioni: Composizione di Canzoni'
               name: Composizione di canzoni
@@ -8123,7 +8120,7 @@ it:
               key: Cicli con l'Artista
             Nested Loops in the Maze:
               name: Cicli annidati nel labirinto
-              description_student: "Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo."
+              description_student: Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? In questa lezione imparerai cosa succede quando inserisci un ciclo all'interno di un altro ciclo.
               description_teacher: In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su "Esegui".
             The Power of Words:
               key: Cittadinanza digitale - Il potere delle parole
@@ -8439,7 +8436,7 @@ it:
             lesson12:
               name: Lezione 12
             lesson13:
-              name: 'Lezione 13'
+              name: Lezione 13
             lesson14:
               name: Lezione 14
             lesson15:
@@ -8449,7 +8446,7 @@ it:
             lesson17:
               name: Lezione 17
             lesson18:
-              name: Lezione 18
+              name: 'Lezione 18'
             lesson19:
               name: 'Lezione 19'
             lesson20:
@@ -8458,6 +8455,11 @@ it:
           lessons:
             lesson-1:
               name: Lezione 1
+            lesson-2:
+              name: Lezione 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
         k5-onlinepd-2021:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: "Guida online gratuita per imparare autonomamente come insegnare l'informatica usando il corso di Code.org \"Fondamenti di informatica\" (titolo originale: CSF - Computer Science Fundamentals)."
@@ -8521,3 +8523,7 @@ it:
               display_name: Passi successivi
             Introduction:
               display_name: Introduzione
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lezione 1

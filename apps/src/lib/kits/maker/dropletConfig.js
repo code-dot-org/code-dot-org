@@ -433,7 +433,6 @@ const microBitBlocks = [
   },
   {
     func: 'onBoardEvent',
-    docFunc: 'microbit-onBoardEvent',
     parent: api,
     category: MICROBIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
@@ -451,46 +450,39 @@ const microBitBlocks = [
   },
   {
     func: 'ledScreen',
-    docFunc: 'microbit-ledScreen',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'
   },
   {
     func: 'ledScreen.on',
-    docFunc: 'microbit-ledScreen.on',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
     paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.off',
-    docFunc: 'microbit-ledScreen.off',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
     paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.toggle',
-    docFunc: 'microbit-ledScreen.toggle',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
     paletteParams: ['x', 'y']
   },
   {
     func: 'ledScreen.clear',
-    docFunc: 'microbit-ledScreen.clear',
     category: MICROBIT_CATEGORY
   },
   {
     func: 'ledScreen.scrollNumber',
-    docFunc: 'microbit-ledScreen.scrollNumber',
     category: MICROBIT_CATEGORY,
     params: ['100'],
     paletteParams: ['number']
   },
   {
     func: 'ledScreen.scrollString',
-    docFunc: 'microbit-ledScreen.scrollString',
     category: MICROBIT_CATEGORY,
     params: ['"Hello World!"'],
     paletteParams: ['string']
@@ -498,7 +490,6 @@ const microBitBlocks = [
 
   {
     func: 'ledScreen.display',
-    docFunc: 'microbit-ledScreen.display',
     category: MICROBIT_CATEGORY,
     params: [
       '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
@@ -507,7 +498,6 @@ const microBitBlocks = [
   },
   {
     func: 'isPressed',
-    docFunc: 'microbit-isPressed',
     objectDropdown: {options: MB_BUTTON_VARS, dropdownOnly: true},
     category: MICROBIT_CATEGORY,
     blockPrefix: `${MB_BUTTON_VARS[0]}.`,
@@ -517,7 +507,6 @@ const microBitBlocks = [
   },
   {
     func: 'accelerometer.getOrientation',
-    docFunc: 'microbit-accelerometer.getOrientation',
     category: MICROBIT_CATEGORY,
     type: 'value',
     paletteParams: ['orientationType'],
@@ -526,7 +515,6 @@ const microBitBlocks = [
   },
   {
     func: 'accelerometer.getAcceleration',
-    docFunc: 'microbit-accelerometer.getAcceleration',
     category: MICROBIT_CATEGORY,
     type: 'value',
     paletteParams: ['orientationType'],
@@ -535,19 +523,16 @@ const microBitBlocks = [
   },
   {
     func: 'lightSensor.start',
-    docFunc: 'microbit-lightSensor.start',
     category: MICROBIT_CATEGORY,
     noAutocomplete: true
   },
   {
     func: 'lightSensor.value',
-    docFunc: 'microbit-lightSensor.value',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'
   },
   {
     func: 'lightSensor.getAveragedValue',
-    docFunc: 'microbit-lightSensor.getAveragedValue',
     category: MICROBIT_CATEGORY,
     params: ['500'],
     paletteParams: ['ms'],
@@ -555,33 +540,28 @@ const microBitBlocks = [
   },
   {
     func: 'lightSensor.setScale',
-    docFunc: 'microbit-lightSensor.setScale',
     category: MICROBIT_CATEGORY,
     params: ['0', '100'],
     paletteParams: ['low', 'high']
   },
   {
     func: 'lightSensor.threshold',
-    docFunc: 'microbit-lightSensor.threshold',
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
 
   {
     func: 'soundSensor.start',
-    docFunc: 'microbit-soundSensor.start',
     category: MICROBIT_CATEGORY,
     noAutocomplete: true
   },
   {
     func: 'soundSensor.value',
-    docFunc: 'microbit-soundSensor.value',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'
   },
   {
     func: 'soundSensor.getAveragedValue',
-    docFunc: 'microbit-soundSensor.getAveragedValue',
     category: MICROBIT_CATEGORY,
     params: ['500'],
     paletteParams: ['ms'],
@@ -589,34 +569,29 @@ const microBitBlocks = [
   },
   {
     func: 'soundSensor.setScale',
-    docFunc: 'microbit-soundSensor.setScale',
     category: MICROBIT_CATEGORY,
     params: ['0', '100'],
     paletteParams: ['low', 'high']
   },
   {
     func: 'soundSensor.threshold',
-    docFunc: 'microbit-soundSensor.threshold',
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
 
   {
     func: 'compass.getHeading',
-    docFunc: 'microbit-compass.getHeading',
     category: MICROBIT_CATEGORY,
     type: 'value'
   },
 
   {
     func: 'tempSensor.F',
-    docFunc: 'microbit-tempSensor.F',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'
   },
   {
     func: 'tempSensor.C',
-    docFunc: 'microbit-tempSensor.C',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty'
   }

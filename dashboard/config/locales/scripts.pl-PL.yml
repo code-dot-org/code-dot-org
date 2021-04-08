@@ -7,17 +7,20 @@ pl:
         csd_2018_category_name: Odkrycia Informatyki ('18-'19)
         csd_2019_category_name: Odkrycia Informatyki ('19-'20)
         csd_2020_category_name: Odkrycia Informatyki ('20-'21)
+        csd_2021_category_name: Odkrycia Informatyki ('21-'22)
         csd_pilot_category_name: Pilotaż Odkryć Informatyki
         csf_category_name: Podstawy Informatyki
         csf_2018_category_name: Podstawy Informatyki ('18-'19)
         csf_2019_category_name: Podstawy Informatyki ('19-'20)
         csf_2020_category_name: Podstawy Informatyki ('20-'21)
+        csf_2021_category_name: Podstawy Informatyki ('21-'22)
         csf_international_category_name: Podstawy Informatyki, Mędzynarodowe
         csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
         csp_category_name: Zasady Informatyki ('15-'16)
         csp_2018_category_name: Zasady Informatyki ('18-'19)
         csp_2019_category_name: Zasady Informatyki ('19-'20)
         csp_2020_category_name: Zasady Informatyki ('20-'21)
+        csp_2021_category_name: Zasady Informatyki ('21-'22)
         cspexams_category_name: Praktyczny Test Podstaw Informatyki
         csp17_category_name: Zasady Informatyki ('17-'18)
         full_course_category_name: Pełne Kursy
@@ -23836,6 +23839,7 @@ pl:
             oraz dyskutuj o społecznym oddziaływaniu informatyki i Internetu. W drugiej
             części tego kursu, zaprojektuj i utwórz projekt podsumowujący, który możesz
             udostępnić znajomym i rodzinie.
+          name: coursef-2020
         express-2020:
           title: Kurs ekspresowy (2020)
           description: Ucz się informatyki wypróbowując poniższe lekcje w swoim własnym
@@ -25691,11 +25695,17 @@ pl:
             appendix:
               name: Appendix
             intro-categorical:
-              name: Lekcja 5
+              name: Lekcja 6
             model-cards:
               name: Plac zabaw dla modeli kart
             bug-bash:
               name: Plac zabaw Bug Basha
+            superunsuper:
+              name: Bez nadzoru i nadzorowane
+            exemplars:
+              name: Wzory przypadkowo wykonane w LB
+            temp:
+              name: Lekcja 20
           title: Jednostka Ml/AI - CSD
           description_short: Jednostka ML/AI
           description: Obszar burzy mózgów / placu zabaw dla rozwoju jednostek ML/AI
@@ -25775,6 +25785,8 @@ pl:
               name: Gromadzenie danych - praktyka z przewodnikiem
             Haiku Bot:
               name: Bot Haiku
+            End of Course Project:
+              name: Koniec projektu kursu
           lesson_groups:
             Toolbox Levels:
               display_name: Poziomy przyborników
@@ -25797,6 +25809,8 @@ pl:
               display_name: wyświetlana nazwa grupy lekcji
             haiku bot:
               display_name: Bot Haiku
+            AB EOC:
+              display_name: Kurs A i B Projekt EOC
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -27885,10 +27899,6 @@ pl:
               description_student: Pamiętaj na początku kursu, gdy tworzysz rysunki
                 z kodem? Na tej lekcji będziesz pracować z zespołem, aby robić coś
                 bardzo podobnego!
-              description_teacher: Ta aktywność rozpocznie się krótką lekcją poświęconą
-                debugowaniu i wytrwałości, a następnie szybko przejdzie w wyścig z
-                czasem, gdy uczniowie dobiorą się w zespoły i będą pracować razem
-                nad programem instrukcja po instrukcji.
             Debugging in Collector:
               key: Debugowanie w interfejsie Collector
               name: Debugowanie z Laurel
@@ -28284,6 +28294,8 @@ pl:
                 pracę rówieśnikom."
             lesson-4:
               name: Lekcja kontekstowa
+              description_student: Dowiesz się, jak możesz się przeciwstawiać, gdy
+                jesteś świadkiem cybernękania.
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
@@ -28503,7 +28515,7 @@ pl:
                 swoich zindywidualizowanych zachowań.
             Virtual Pet:
               key: Wirtualny zwierzak
-              name: Wirtualny zwierzak z Sprite Lab
+              name: 'Mini-projekt: Wirtualny zwierzak'
               description_student: Na tej lekcji uczniowie będą tworzyć interaktywne
                 "Wirtualne zwierzątko domowe", które wygląda i zachowuje się tak,
                 jak oni chcą. Uczniowie będą używać narzędzia interfejsu Sprite Lab
@@ -28547,21 +28559,77 @@ pl:
               description_teacher: 'Na tej lekcji uczniowie będą się uczyć o dostępności
                 i wartości empatii za pomocą burzy mózgów i projektowania dostępnych
                 rozwiązań na aplikacje hipotetyczne. '
+            lesson-6:
+              name: Wprowadzenie Sprite Lab
+              description_student: Omówisz rolę komputerów i technologii w Twoim życiu,
+                koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom
+                możliwość wyboru sposobu ich używania.
+              description_teacher: Uczniowie omówią rolę komputerów i technologii
+                w ich życiu, koncentrując się na tym, jak aplikacje i narzędzia dają
+                użytkownikom możliwość wyboru sposobu ich używania. Uczniowie będą
+                logować się na swoje konta Code.org i przeglądać przykładowe projekty
+                podobne do tych, które będą tworzyć samodzielnie podczas kursu.
+            lesson-7:
+              name: Tworzenie duszków
+              description_student: 'Na tej lekcji będziesz pisał programy i dowiesz
+                się o duszkach i zachowaniach. '
+              description_teacher: 'Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Uczniowie
+                napiszą **programy** i poznają dwa pojęcia leżące u podstaw Sprite
+                Lab: **duszki** i **zachowania**. '
+            lesson-8:
+              name: Duszki w akcji
+              description_student: Będziesz pracować przez poziomy programowania i
+                zakończyć otwartym zadaniem „swobodnej gry”, w którym możesz zbudować,
+                co tylko zechcesz.
+              description_teacher: "Podczas tej lekcji uczniowie będą pracować nad
+                serią poziomów programowania na komputerze, kończąc na otwartym zadaniu
+                „swobodnej zabawy”, w którym mogą zbudować, co tylko zechcą. Będą
+                pisać programy reagujące na czasowe **zdarzenia** i działania użytkownika.
+                \n"
+            lesson-9:
+              name: Historie pustej przestrzeni
+              description_student: 'W tym ćwiczeniu użyjesz historii do wypełnienia
+                (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki
+                sposób komputery przyjmują i przechowują dane wejściowe od użytkownika,
+                a następnie wykorzystasz je podczas działania programu. '
+              description_teacher: 'W tym ćwiczeniu użyjesz historii do wypełnienia
+                (podobnie jak w Mad Libs), aby przygotować się do zrozumienia, w jaki
+                sposób komputery przyjmują i przechowują dane wejściowe od użytkownika,
+                a następnie wykorzystasz je podczas działania programu. '
+            lesson-10:
+              name: Przechowywanie i przetwarzanie tekstu
+              description_student: Na tej lekcji będziesz ćwiczyć zmienne w Sprite
+                Lab.
+              description_teacher: Uczniowie poćwiczą **zmienne** w Sprite Lab. Będą
+                pracować z danymi wejściowymi użytkownika, aby swoim **zmienny** nadać
+                wartości, a następnie wydrukują te wartości wraz z innym tekstem.
+            lesson-5:
+              name: Epidemia
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się
+                tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia.
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii
+                przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak
+                szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić
+                zarażanie. '
           lesson_groups:
             ramp_up:
               display_name: Intensyfikacja działań
             csf_digcit:
               display_name: Cyfrowe obywatelstwo
             csf_variables:
-              display_name: Zmienne
+              display_name: Pętle dla (for)
             csf_for_loops:
               display_name: Pętle dla (for)
             csf_sprites:
-              display_name: Duszki
+              display_name: Wplywy informatyki
             end_of_course_project:
               display_name: Koniec projektu kursu
             lessonGroup-8:
-              display_name: Wplywy informatyki
+              display_name: Zmienne
+            lessonGroup-9:
+              display_name: usuń
           name: coursef-2021
           student_description: Naucz się używać różnych rodzajów pętli, wydarzeń,
             funkcji i wyrażeń warunkowych. Badaj różne techniki rozwiązywania problemów
@@ -28590,12 +28658,12 @@ pl:
             Programming with Angry Birds:
               key: Programowanie z Angry Birds
               name: Programowanie z Angry Birds
-              description_student: Ucz się o sekwencjach i algorytmach z Angry Birds.
+              description_student: Twórz programy, aby pomóc Angry Bird przejść przez
+                labirynt.
               description_teacher: Przy pomocy postaci z gry Angry Birds uczniowie
                 opracowują algorytmy sekwencyjne, aby przeprowadzić ptaka z jednej
                 strony labiryntu do świnki po drugiej stronie. W tym celu układają
-                bloki kodu w porządku liniowym, przez co postaci poruszają się prosto,
-                skręcają w lewo lub w prawo.
+                bloki kodu w porządku liniowym.
             Debugging with Scrat:
               key: Debugwanie ze Scratem
               name: Debugwanie ze Scratem
@@ -28669,8 +28737,8 @@ pl:
             'Looking Ahead with Minecraft ':
               key: Patrząc w przyszłość z Minecraftem
               name: Patrząc w przyszłość z Minecraftem
-              description_student: Unikaj lawy! Teraz będziesz się uczyć o wyrażeniach
-                warunkowych w świecie Minecrafta.
+              description_student: Unikaj lawy! Teraz zaczniesz uczyć się o instrukcjach
+                warunkowych w świecie gry Minecraft.
               description_teacher: Ta lekcja została zasadniczo utworzona na potrzeby
                 Godziny Kodowania [Hour of Code] z zespołem Minecrafta. Uczniowie
                 będą mieli okazję przećwiczyć koncepcje, które poznali do tego momentu,
@@ -28690,17 +28758,6 @@ pl:
               name: Pętle "dopóki" przy pomocy interfejsu Farmer
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji
                 nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
-              description_teacher: "Do momentu, gdy uczniowie dojdą do tej lekcji,
-                powinni już mieć dużą praktykę w używaniu pętli \"powtórz\", zatem
-                nadszedł czas, aby połączyć ze sobą różne elementy. \r\n\r\n_Pętle
-                \"dopóki\"_ są pętlami, które nieustannie powtarzają komendy, gdy
-                spełniony jest warunek. Pętli \"dopóki\" używa się, gdy programista
-                nie zna dokładnej liczby powtórzeń, które trzeba wykonać, ale wie,
-                że warunek musi być spełniony, aby pętla wykonywała powtarzanie. Na
-                przykład uczniowie będą zajmować zasypywaniem dziur i wykopywaniem
-                błota w interfejsie Farmer. Nie będą znali wielkości dziur ani wysokości
-                stert błota, ale będą wiedzieli, że muszą zasypywać dziury i kopać
-                błoto tak długo, aż teren nie stanie się płaski."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
               name: 'Wyrażenia warunkowe w Minecrafcie: Wodna podróż'
@@ -28818,8 +28875,8 @@ pl:
             Alien Dance Party:
               key: Potańcówka ufoludków
               name: Potańcówka ufoludków
-              description_student: Ćwicz tworzenie gier, aby udostępniać je znajomym
-                i rodzinie.
+              description_student: Twórz projekt interaktywny, który możesz udostępnić
+                kolegom z klasy.
               description_teacher: Na tej lekcji wykorzystuje się interfejs Sprite
                 Lab, platformę, na której uczniowie mogą tworzyć swoją własną potańcówkę
                 ufoludków z interakcjami między postaciami i danych użytkownika. Uczniowie
@@ -28853,6 +28910,13 @@ pl:
                 budowanie swojego projektu.
               description_teacher: W trakcie tej lekcji podsumowującej uczniowie przechodzą
                 proces projektowania, tworzenia i przedstawiania swoich własnych projektów!
+            lesson-1:
+              name: Potańcówka
+              description_student: Czas na świętowanie! Na tej lekcji będziesz programować
+                swoją własną, interaktywną potańcówkę.
+              description_teacher: Na tej lekcji uczniowie będą programować swoją
+                własną interaktywną potańcówkę. Na tych zajęciach potrzebny jest dźwięk,
+                gdyż narzędzie zbudowano tak, aby reagowało na muzykę.
           lesson_groups:
             csf_warmup:
               display_name: Rozgrzewka
@@ -28872,6 +28936,8 @@ pl:
               display_name: Duszki
             end_of_course_project:
               display_name: Koniec projektu kursu
+            lessonGroup-9:
+              display_name: Rozgrzewka
           name: express-2021
           student_description: Ucz się informatyki wypróbowując poniższe lekcje w
             swoim własnym tempie! Ucz się tworzyć programy komputerowe, rozwijaj umiejętności
@@ -29009,6 +29075,12 @@ pl:
               name: Historie pustej przestrzeni
             texts-and-prompts:
               name: Przechowywanie i przetwarzanie tekstu
+            introducing-spritelab:
+              name: Wprowadzenie Sprite Lab
+            blank-space-stories:
+              name: Historie pustej przestrzeni
+            user-input-programs:
+              name: Utwórz Chat-Bot
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -29026,6 +29098,11 @@ pl:
             Sprites:
               display_name: Duszki
               description: Poznaj z duszkami podstawy kodowania!
+            variables:
+              display_name: Zmienne
+              description: Przechowuj wartości w zmiennych i wczytaj je później w
+                programie. Modyfikuj wartości przechowywane w zmiennych, aby tworzyć
+                ekscytujące interaktywne projekty!
           name: csf-2021-pilot
           title: Podstawy Informatyki 2021 Pilotaż
           description_audience: Ponadpodstawowy
@@ -29834,6 +29911,89 @@ pl:
           lessons:
             lesson-1:
               name: Lekcja 1
+              description_student: Na tej lekcji poznasz wartości inżynierii oprogramowania
+                i sposoby, w jakie je praktykujesz w innych aspektach swojego życia.
+                Pod koniec tej lekcji odkryjesz własną tożsamość inżynierii oprogramowania!
+              description_teacher: Wiara we własną tożsamość inżynierii oprogramowania
+                rozwija pewność siebie i wytrwałość. Ta lekcja wprowadza podstawowe
+                wartości inżynierii oprogramowania i bada typowe spostrzeżenia, jakie
+                mogą mieć uczniowie. Zastanawiają się oni, jak już praktykują wiele
+                z tych wartości, aby odkryć własną tożsamość inżynierii oprogramowania.
+            lesson-2:
+              name: Lekcja 2
+              description_student: Zbadasz, jak działa The Neighborhood i poznasz
+                niektóre kluczowe komponenty języka programowania Java. Spotykasz
+                „Malarza” i wprowadzisz zmiany w kodzie, aby dowiedzieć się, co potrafi
+                „Malarz".
+              description_teacher: 'Uczniowie korzystają z Java Lab, aby zbadać The
+                Neighborhood i zapoznają się z klasą „Malarz”. Badają kod startowy
+                i dokonują prostych modyfikacji, aby otrzymać różne wyniki za pomocą
+                obiektu „Malarz” i ćwiczą tworzenie obiektu „Malarz”, aby zidentyfikować
+                relacje między klasą a obiektem. '
+            lesson-3:
+              name: Korzystanie z poleceń
+              description_student: 'Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń
+                akcji w tej lekcji, aby przesunąć „Malarza” po okolicy. Dowiesz się
+                o niektórych zasadach Javy, których musisz przestrzegać, aby Malarz
+                się poruszał. '
+              description_teacher: Podczas tej lekcji uczniowie wdrażają rozwiązania
+                za pomocą poleceń akcji, aby poruszać „Malarzem” po okolicy. Rozwijają
+                umiejętności myślenia komputacyjnego, tłumacząc rozwiązania na kod
+                Java, ćwicząc powielanie wzorców. Podczas rozwiązywania tych problemów,
+                uczą się, jak ważne jest uwzględnianie wielkości liter i średników
+                w Javie, i są narażeni na użycie notacji kropkowej do wywoływania
+                poleceń „Malarz”.
+            lesson-4:
+              name: Warunki i debugowanie
+              description_student: 'Teraz, gdy wiesz, jak używać poleceń akcji, pomagasz
+                `Malarzowi` w podejmowaniu decyzji dotyczących interakcji z sąsiedztwem
+                za pomocą poleceń zbierających informacje. Dowiesz się również o debugowaniu
+                i zidentyfikujesz strategie do wykorzystania przez cały rok. '
+              description_teacher: 'Na tej lekcji uczniowie modyfikują programy przy
+                użyciu trzech poleceń zwrotnych: `isOnPaint ()`, `isOnBucket ()` i
+                `canMove ()`. Instrukcje logiczne, instrukcje warunkowe i instrukcje
+                powrotu są wprowadzane za pomocą instrukcji `jeżli` i poleceń powrotu`
+                Malarz`, aby mogli ćwiczyć używanie logiki warunkowej w swoich programach.
+                Pojęcia te zostaną omówione bardziej szczegółowo na przyszłych lekcjach
+                i utrwalone w trakcie kursu. Uczniowie opracowują również strategie
+                debugowania, identyfikując błędy składniowe i logiczne. '
+            lesson-5:
+              name: Więcej z obiektami
+            lesson-6:
+              name: Pętle "dopóki" i praktyka
+            lesson-7:
+              name: Więcej z warunkami
+            lesson-8:
+              name: Wprowadzenie do weryfikacji kodu
+            lesson-9:
+              name: Dziedziczenie i metody
+            lesson-10:
+              name: Więcej metod, więcej właściwości
+            lesson-11:
+              name: Metody malowania
+            lesson-12:
+              name: Malarz natryskowy
+            lesson-13:
+              name: Malarz stempli
+            lesson-14:
+              name: Skrajne przypadki
+            lesson-15:
+              name: Podsumowanie inżynierii oprogramowania
+            lesson-16:
+              name: 'Projekt: Osobisty Symbol - Dzień 1 '
+            lesson-17:
+              name: 'Projekt: Osobisty Symbol - Dzień 2'
+            lesson-18:
+              name: 'Projekt: Osobisty Symbol - Dzień 3'
+            lesson-19:
+              name: Dzień FRQ
+            lesson-20:
+              name: 'Lekcja 15: Dzień sprawdzianu'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -29922,6 +30082,10 @@ pl:
               name: Planowanie lekcji
             CS Teaching and Learning Practices:
               name: Praktyki nauczania i uczenia się informatyki
+            CS Teaching and Student Practices:
+              name: Nauczanie informatyki i praktyki uczniów
+            Implementation Approaches and Barriers:
+              name: Rozwiązywanie podejść do wdrażania i barier
           lesson_groups:
             k5_getting_started_1:
               display_name: Wstęp
@@ -29944,8 +30108,42 @@ pl:
               name: Prototyp Haiku
             Haiku Bot:
               name: Bot Haiku
+            Poem Bot:
+              name: Bot Haiku
+            write a haiku:
+              name: Napisz Haiku
+            Plan Your Haiku Poem:
+              name: Zaplanuj swoje Haiku
+            Programming Poem Bot:
+              name: Bot Haiku
+            poetry circle:
+              name: Koło poezji
           lesson_groups:
             haiku bot:
+              display_name: Bot Haiku
+            poem bot:
+              display_name: Bot Haiku
+            rampup:
+              display_name: Przyspieszenie kodowania
+              description: Naucz się podstaw kodowania z duszkami i tekstem!
+            write a haikut:
+              display_name: Napisz Haiku
+            plan your poem:
+              display_name: Zaplanuj swoje Haiku
+            poetry circle:
+              display_name: Koło poezji
+            Lesson 1:
+              display_name: Lekcja 1
+              description: Naucz się podstaw kodowania z duszkami i tekstem!
+            Lesson 2:
+              display_name: Lekcja 2
+            Lesson 3:
+              display_name: Lekcja 3
+            Lesson 4:
+              display_name: Lekcja 4
+            Lesson 5:
+              display_name: Lekcja 5
+            Peom Bot:
               display_name: Bot Haiku
           name: haikubot-pilot
           title: Bot Haiku

@@ -7,7 +7,9 @@
   width: 33%;
   padding: 5px;
 }
-
+div[dir= 'rtl'] .choice {
+  float: right;
+}
 .choice-container {
   width: 100%;
   position: relative;

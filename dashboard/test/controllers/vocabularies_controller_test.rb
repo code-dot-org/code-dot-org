@@ -6,6 +6,8 @@ class VocabulariesControllerTest < ActionController::TestCase
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
+    # We don't want to actually write to the file system here
+    Vocabulary.any_instance.stubs(:serialize_scripts)
   end
 
   test "can create vocabulary from params" do
@@ -35,6 +37,7 @@ class VocabulariesControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     course_version = create :course_version
     lesson = create :lesson
+    Vocabulary.any_instance.expects(:serialize_scripts).once
     vocabulary = create :vocabulary, word: 'word', definition: 'draft definition', course_version: course_version
     post :update, params: {id: vocabulary.id, word: 'word', definition: 'updated definition', courseVersionId: course_version.id, lessonIds: [lesson.id].to_json}
     assert_response :success

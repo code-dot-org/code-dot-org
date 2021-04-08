@@ -25398,10 +25398,6 @@ pt:
               description_student: Lembra no início do curso quando você fez desenhos
                 com código? Nesta lição, você estará trabalhando com uma equipe para
                 fazer algo muito semelhante!
-              description_teacher: Esta atividade começará com uma pequena aula sobre
-                depuração e persistência, então irá mudar rapidamente para uma corrida
-                contra o tempo à medida que os alunos se dividem em times e trabalham
-                juntos para escrever um programa uma instrução por vez.
             Debugging in Collector:
               key: Depurando no coletor
               name: Depurando com Laurel
@@ -25952,7 +25948,7 @@ pt:
               description_teacher: Aqui, os alunos usarão o Sprite Lab para criar
                 seus próprios comportamentos personalizados.
             Virtual Pet:
-              name: Pet Virtual com Sprite Lab
+              name: 'Mini-Projeto: Pet Virtual'
               description_student: Nesta lição, os alunos criarão um animal de estimação
                 virtual interativo que se parece e se comporta como deseja. Os alunos
                 usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência
@@ -25990,19 +25986,25 @@ pt:
               description_teacher: 'Nesta lição, os alunos aprenderão sobre acessibilidade
                 e o valor da empatia por meio de brainstorming e design de soluções
                 acessíveis para aplicativos hipotéticos. '
+            lesson-6:
+              name: Introdução ao Sprite Lab
+            lesson-8:
+              name: Sprites em Ação
           lesson_groups:
             ramp_up:
               display_name: Treinamento
             csf_digcit:
               display_name: Cidadania digital
             csf_variables:
-              display_name: variáveis
+              display_name: Laços para
             csf_for_loops:
               display_name: Laços para
             csf_sprites:
-              display_name: Sprite
-            lessonGroup-8:
               display_name: Impacto da computação
+            lessonGroup-8:
+              display_name: variáveis
+            lessonGroup-9:
+              display_name: remover
           student_description: Aprenda a usar diferentes tipos de loops, eventos,
             funções e condicionais. Investigue diferentes técnicas de solução de problemas
             e discuta os impactos sociais da computação e da Internet. Na segunda
@@ -26029,8 +26031,8 @@ pt:
             Programming with Angry Birds:
               key: Programando com Angry Birds
               name: Programando com Angry Birds
-              description_student: Aprenda sobre sequências e algoritmos com o Angry
-                Birds.
+              description_student: Crie programas para ajudar o Angry Bird a se mover
+                pelo labirinto.
               description_teacher: Usando os personagens do jogo Angry Birds, os alunos
                 desenvolverão algoritmos sequenciais para mover um pássaro de um lado
                 de um labirinto para o porco do outro lado. Para fazer isso, eles
@@ -26106,9 +26108,8 @@ pt:
                 de patinação no gelo de Anna e Elsa!
             'Looking Ahead with Minecraft ':
               name: Prevendo com o Minecraft
-              description_student: |2-
-
-                Evite a lava! Aqui você aprenderá sobre condicionais no mundo do Minecraft.
+              description_student: Evite a lava! Aqui você começará a aprender sobre
+                condicionais no mundo do Minecraft.
               description_teacher: Esta lição foi criada originalmente para a Hour
                 of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance
                 de praticar as idéias que aprenderam até o momento, além de obter
@@ -26129,17 +26130,6 @@ pt:
               name: While Loops com o agricultor
               description_student: 'Laços são muito úteis na codificação. Esta lição
                 ensinará sobre um novo tipo de laço: laços enquanto!'
-              description_teacher: "Quando os alunos chegam a esta lição, eles já
-                devem praticar bastante usando loops de repetição, então agora é hora
-                de misturar as coisas. \r\n\r\n_Enquanto loops_ são loops que continuam
-                repetindo comandos enquanto uma condição é atendida. Os loops `while`
-                são usados ​​quando o programador não sabe o número exato de vezes
-                que os comandos precisam ser repetidos, mas sabe qual condição precisa
-                ser verdadeira para que o loop continue repetindo. Por exemplo, os
-                alunos trabalharão para preencher buracos e cavar terra no Fazendeiro.
-                Eles não saberão o tamanho dos buracos ou a altura das montanhas de
-                terra, mas os alunos saberão que precisam continuar preenchendo os
-                buracos e cavando a terra enquanto o chão não for plano."
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Condicionais no Minecraft: Viagem Aquática'
               name: 'Condicionais no Minecraft: Viagem Aquática'
@@ -26250,8 +26240,12 @@ pt:
             Alien Dance Party:
               key: Festa dançante alienígena
               name: Festa dançante alienígena
-              description_student: Pratique desenvolvimento de jogos para compartilhar
-                com seus amigos e familiares.
+              description_student: Crie um projeto interativo que possa ser compartilhado
+                com os colegas de classe.
+              description_teacher: 'Esta lição apresenta o Sprite Lab, uma plataforma
+                na qual os alunos podem criar suas próprias animações e jogos interativos.
+                Além dos comportamentos, hoje os alunos incorporam a entrada do usuário
+                como eventos para criar uma "festa de dança alienígena".  '
             Behaviors in Sprite Lab:
               key: Comportamentos no Lab Sprite
               name: Comportamentos no Lab Sprite
@@ -26275,6 +26269,13 @@ pt:
             End of Course Project:
               description_student: Prepare essas mãos para muita codificação! É hora
                 de começar a construir seu projeto.
+            lesson-1:
+              name: Festa dançante
+              description_student: Hora de celebrar! Nesta lição, você programa sua
+                própria festa de dança interativa.
+              description_teacher: Nesta lição, os alunos irão programar sua própria
+                festa de dança interativa. Esta atividade requer som, pois a ferramenta
+                foi criada para responder à música.
           lesson_groups:
             csf_warmup:
               display_name: Aquecimento
@@ -26292,6 +26293,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            lessonGroup-9:
+              display_name: Aquecimento
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -26404,6 +26407,8 @@ pt:
               name: Introdução ao Sprite Lab
             Sprites in Action:
               name: Sprites em Ação
+            introducing-spritelab:
+              name: Introdução ao Sprite Lab
           lesson_groups:
             ramp_up:
               display_name: Introdução
@@ -26413,6 +26418,8 @@ pt:
               display_name: variáveis
             Sprites:
               display_name: Sprite
+            variables:
+              display_name: variáveis
         csd4-preview-2021:
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
             Através de uma série de desafios de design, você aprenderá a entender
@@ -27064,6 +27071,15 @@ pt:
               name: Lição 14
             lesson15:
               name: Lição 15
+            lesson17:
+              name: Lição 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Lição 15: Dia da Avaliação'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e

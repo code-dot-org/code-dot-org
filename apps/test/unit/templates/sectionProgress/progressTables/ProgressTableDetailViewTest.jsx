@@ -2,11 +2,15 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
-import ProgressTableDetailView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
-import ProgressTableContainer from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
+import ProgressTableDetailView, {
+  UnconnectedProgressTableDetailView
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailView';
+import ProgressTableContainer, {
+  UnconnectedProgressTableContainer
+} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
 import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableDetailCell';
-import ProgressTableLevelIcon from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIcon';
+import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import * as Sticky from 'reactabular-sticky';
@@ -17,6 +21,7 @@ import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgress
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import locales from '@cdo/apps/redux/localesRedux';
 import {fakeProgressTableReduxInitialState} from '@cdo/apps/templates/progress/progressTestHelpers';
+import sinon from 'sinon';
 
 const initialState = fakeProgressTableReduxInitialState();
 
@@ -70,12 +75,40 @@ describe('ProgressTableDetailView', () => {
     const contentViewHeaders = wrapper
       .find(ProgressTableContentView)
       .find(Sticky.Header);
-    // one ProgressTableLevelIcon for each of the 2 lessons
-    expect(contentViewHeaders.find(ProgressTableLevelIcon)).to.have.length(2);
+    // one ProgressTableLevelIconSet for each of the 2 lessons
+    expect(contentViewHeaders.find(ProgressTableLevelIconSet)).to.have.length(
+      2
+    );
   });
 
   it('renders the ProgressLegend', () => {
     const wrapper = setUp();
     expect(wrapper.find(ProgressLegend)).to.have.length(1);
+  });
+
+  it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
+    sinon.spy(
+      UnconnectedProgressTableDetailView.prototype,
+      'timeSpentCellFormatter'
+    );
+    sinon.spy(
+      UnconnectedProgressTableDetailView.prototype,
+      'lastUpdatedCellFormatter'
+    );
+    const container = setUp()
+      .find(UnconnectedProgressTableContainer)
+      .instance();
+    const rowData = container.state.rows[0];
+    container.onToggleRow(rowData);
+
+    // one call for each of the two lessons
+    expect(
+      UnconnectedProgressTableDetailView.prototype.timeSpentCellFormatter
+        .callCount
+    ).to.equal(2);
+    expect(
+      UnconnectedProgressTableDetailView.prototype.lastUpdatedCellFormatter
+        .callCount
+    ).to.equal(2);
   });
 });

@@ -283,9 +283,6 @@ The animation has been skipped.
 
     # Parallelize metadata construction because some objects will require an
     # extra S3 request to get version IDs or image dimensions.
-    #
-    # TODO: remove 'in_threads: 0' once the i18n-dev server RAM has been increased over 8 GB
-    # https://codedotorg.atlassian.net/browse/FND-1460
     Parallel.map(animation_objects.keys, in_threads: 0, finish: lambda do |name, _, result|
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.

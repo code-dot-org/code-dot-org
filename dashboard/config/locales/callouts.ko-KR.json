@@ -297,7 +297,7 @@
           "craft_callout_preplaced_house": "이 코드는 집짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요",
+          "craft_run_button_callout": "\"실행\"을 눌러 프로그램을 실행시켜보세요",
           "craft_drag_block_callout": "\"앞으로 이동\" 블록을 드래그하여 다른 블록 아래에 끼우세요."
         },
         "Overworld Move to Sheep_2019": {
@@ -394,7 +394,7 @@
           "replace_questions": "\"???\" 부분에 수를 입력하면 됩니다."
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "준비 되었을때 \"실행\"버튼을 눌러 프로그램을 시도해 보세요"
+          "craft2_run_button_callout": "준비 되었을 때 \"실행\" 버튼을 눌러 프로그램을 실행해 보세요."
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
@@ -1162,7 +1162,7 @@
           "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
         },
         "courseF_artist_for1": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 살고 있습니다."
+          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
         },
         "courseF_artist_for1_2018": {
           "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
@@ -1381,7 +1381,7 @@
           "AppLabHoCFinal11": "이제 설계 모드에 있습니다."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "\"실행\"을 눌러 이동을 시작하세요."
+          "MC_HOC_2016_New_Walk_callout2": "\"실행\" 버튼을 눌러 이동을 시작하세요."
         }
       }
     }

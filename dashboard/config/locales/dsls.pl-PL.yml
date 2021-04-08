@@ -1979,20 +1979,20 @@ pl-PL:
           sprawdza czy nie?\n\n\n"
       Terminology Recap:
         content1: opis tutaj
-        markdown: "# Zrób przerwę i powtórz\nWiadomości zaszyfrowane przy pomocy **Szyfru
-          Cezara** łamie się bardzo łatwo, zwłaszcza przy pomocy narzędzia komputacyjnego.
-          Teraz, gdy już zdobyłeś pewną praktykę w zakresie łamania szyfrów podstawieniowych
-          (nie było to zbyt trudne, prawda?) wypróbujmy czegoś trudniejszego.\n \n**Powtórz
-          terminologię:**\n\n* **Szyfrowanie** - proces kodowania wiadomości umożliwiający
-          zachowanie ich tajnego charakteru tak, aby tylko \"uprawnione\" strony mogły
-          je odczytać. \n* **Odszyfrowywanie** - proces stanowiący przeciwieństwo
-          cyfrowania, w ramach którego przyjmuje się tajną wiadomość i odtwarza oryginalny
-          tekst oryginalny. \n**Szyfr** - termin ogólny dla techniki (lub algorytmu),
-          w ramach której przeprowadza się zaszyfrowanie. \n* **Szyfr Cezara** - technika
-          \ szyfrowania polegająca na zamianie alfabetu na pewną liczbę znaków.\n*
-          **Łamanie szyfru** - Podczas próby odkodowania tajnej wiadomości  *bez*
-          znajomości wszystkich szczegółów szyfru, próbuje się **złamać* szyfr. \n\n\nKliknij
-          \"Kontynuuj\", aby zobaczyć **Kolejne wyzwanie**...\n\n \n"
+        markdown: "# Zrób przerwę i powtórz\n\nWiadomości zaszyfrowane przy pomocy
+          **Szyfru Cezara** łamie się bardzo łatwo, zwłaszcza przy pomocy narzędzia
+          komputerowego. Teraz, gdy już zdobyłeś pewną praktykę w zakresie łamania
+          szyfrów podstawieniowych (nie było to zbyt trudne, prawda?) wypróbujmy czegoś
+          trudniejszego.\n \n**Powtórz terminologię:**\n\n* **Szyfrowanie** - proces
+          kodowania wiadomości umożliwiający zachowanie ich tajnego charakteru tak,
+          aby tylko \"uprawnione\" strony mogły je odczytać. \n* **Odszyfrowywanie**
+          - proces stanowiący przeciwieństwo szyfrowania, w ramach którego na podstawie
+          tajnej wiadomości odtwarza się oryginalny tekst. \n**Szyfr** - termin oznaczający
+          technikę (lub algorytm) służącą do zaszyfrowania. \n* **Szyfr Cezara** -
+          technika  szyfrowania polegająca na przesunięciu alfabetu na pewną liczbę
+          liter.\n* **Łamanie szyfru** - Gdy próbujesz **złamać* szyfr odkodowują
+          tajną wiadomość  *bez* znajomości wszystkich szczegółów szyfru,. \n\n\nKliknij
+          Kontynuuj, aby zobaczyć **Kolejne wyzwanie**...\n\n \n"
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Podsumowanie

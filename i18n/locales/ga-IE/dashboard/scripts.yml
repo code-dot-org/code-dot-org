@@ -3993,7 +3993,6 @@ ga:
             Relay Programming:
               key: Códáil Sealaíochta
               name: Códáil Sealaíochta
-              description_teacher: Is é túsphointe an ghníomhaíocht seo ceacht gearr ar dhífhabhtú agus diongbháilteacht.  Ansin beidh rás in aghaidh an chloig leis na daltaí roinnte i bhfoirne, ag obair mar mheithil chun ríomhchlár a scríobh, treoir i ndiaidh treorach.
             Dance Party:
               key: Cóisir Dhamhsa
               name: Cóisir Dhamhsa
@@ -4035,7 +4034,7 @@ ga:
               key: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
             About Me:
-              name: Maidir Liomsa i Saotharlann na Sprideanna
+              name: 'Maidir Liomsa i Saotharlann na Sprideanna'
             'Functions: Songwriting':
               name: Ceapadh Ceoil
           lesson_groups:
@@ -4168,6 +4167,10 @@ ga:
               display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
             cspSurvey:
               display_name: Suirbhé
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

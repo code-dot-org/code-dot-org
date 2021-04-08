@@ -1,6 +1,7 @@
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
+import i18n from '@cdo/locale';
 import {UnconnectedProgressTableContainer as ProgressTableContainer} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContainer';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -14,12 +15,13 @@ import {
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2});
 const STUDENTS = fakeStudents(2);
+const CELL_FORMATTERS = [() => {}, () => {}, () => {}];
 
 const DEFAULT_PROPS = {
   onClickLesson: () => {},
   getTableWidth: () => 500,
   columnWidths: [50, 100, 75, 50],
-  lessonCellFormatter: () => {},
+  lessonCellFormatters: CELL_FORMATTERS,
   extraHeaderFormatters: [],
   extraHeaderLabels: [],
   children: <div />,
@@ -71,10 +73,38 @@ describe('ProgressTableContainer', () => {
   });
 
   it('passes extraHeaderLabels to the ProgressTableStudentList', () => {
-    const extraHeaderLabels = ['extraheader'];
-    const wrapper = setUp({extraHeaderLabels});
-    expect(
-      wrapper.find(ProgressTableStudentList).props().extraHeaderLabels
-    ).to.equal(extraHeaderLabels);
+    const extraHeaderLabel = 'extraheader';
+    const defaultHeaderLabel = i18n.lesson();
+    const wrapper = setUp({extraHeaderLabels: [extraHeaderLabel]});
+    expect(wrapper.find(ProgressTableStudentList).props().headers).eql([
+      defaultHeaderLabel,
+      extraHeaderLabel
+    ]);
+  });
+
+  it('adds rows to state when a row is toggled', () => {
+    const wrapper = setUp().instance();
+    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    const numDetailRows = wrapper.numDetailRows;
+    expect(numDetailRows).to.equal(CELL_FORMATTERS.length - 1);
+    const rowData = wrapper.state.rows[0];
+    wrapper.onToggleRow(rowData);
+    expect(wrapper.state.rows).to.have.lengthOf(
+      STUDENTS.length + numDetailRows
+    );
+  });
+
+  it('restores original rows when a row is toggled twice', () => {
+    const wrapper = setUp().instance();
+    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    const numDetailRows = wrapper.numDetailRows;
+    expect(numDetailRows).to.equal(CELL_FORMATTERS.length - 1);
+    const rowData = wrapper.state.rows[0];
+    wrapper.onToggleRow(rowData);
+    expect(wrapper.state.rows).to.have.lengthOf(
+      STUDENTS.length + numDetailRows
+    );
+    wrapper.onToggleRow(rowData);
+    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
   });
 });

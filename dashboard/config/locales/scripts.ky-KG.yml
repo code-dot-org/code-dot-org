@@ -1901,8 +1901,6 @@ ky:
                 Татаалыраак чиймелерди тартуу үчүн, окуучулар салынган функцияларды
                 биринин ичинен экинчисин чакырып пайдаланганды үйрөнүшөт.
           lesson_groups:
-            ramp_up:
-              display_name: Циклдер
             csf_nested_loops:
               display_name: Шартуулар
             csf_functions:
@@ -1933,7 +1931,7 @@ ky:
                 татаал дизайндарды жаратып, тапшырмаларды аткарышат. Аягында эркин
                 оюн деңгээлиндеги өз чыгармасын жаратуу мүмкүнчүлүгүн алышат.
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: Өзгөрмөлөр
         express-2021:
           lessons:
@@ -2007,6 +2005,8 @@ ky:
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
+              display_name: Өзгөрмөлөр
+            variables:
               display_name: Өзгөрмөлөр
         k5-onlinepd-2021:
           lessons:

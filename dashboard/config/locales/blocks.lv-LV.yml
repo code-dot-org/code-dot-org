@@ -207,6 +207,7 @@ lv:
         options:
           PROPERTY:
             '"scale"': izmērs
+            '"speed"': ātrums
       gamelab_checkTouching:
         options:
           CONDITION:

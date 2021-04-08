@@ -979,6 +979,7 @@ uz:
             '"x"': x holati
             '"y"': y pozitsiyasi
             '"direction"': harakatlanish yo‘nalishi
+            '"speed"': tezlik
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1}{SPRITE2} ga tegadi "
         options:

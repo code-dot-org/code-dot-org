@@ -2473,7 +2473,7 @@ ne:
               name: Songwriting
           lesson_groups:
             ramp_up:
-              display_name: Loops
+              display_name: Nested Loops
             csf_digcit:
               display_name: Digital Citizenship
             csf_nested_loops:
@@ -2495,9 +2495,11 @@ ne:
             csf_digcit:
               display_name: Digital Citizenship
             csf_variables:
-              display_name: Variables
+              display_name: For Loops
             csf_for_loops:
               display_name: For Loops
+            lessonGroup-8:
+              display_name: Variables
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2522,6 +2524,12 @@ ne:
               display_name: Introduction
             lessonGroup-3:
               display_name: Variables
+            variables:
+              display_name: Variables
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

@@ -678,8 +678,6 @@ ur:
             Conditionals:
               key: شرائط
           lesson_groups:
-            ramp_up:
-              display_name: لوپس
             csf_nested_loops:
               display_name: شرائط
         coursef-2021:
@@ -688,12 +686,16 @@ ur:
               key: لفافہ متغیرات
               name: لفافہ متغیرات
           lesson_groups:
-            csf_variables:
+            lessonGroup-8:
               display_name: متغیرات
+            lessonGroup-9:
+              display_name: ہٹانا
         express-2021:
           lessons:
             Dance Party:
               key: ڈانس پارٹی
+              name: ڈانس پارٹی
+            lesson-1:
               name: ڈانس پارٹی
           lesson_groups:
             csf_loops:
@@ -716,6 +718,8 @@ ur:
             outbreak:
               display_name: وباء کی سیمولیشن
             lessonGroup-3:
+              display_name: متغیرات
+            variables:
               display_name: متغیرات
         contagion-pilot:
           description_short: Sprite Lab کا استعمال کرتے ہوئے ایک وائرس کی وباء کے

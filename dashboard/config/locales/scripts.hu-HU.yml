@@ -3801,10 +3801,6 @@ hu:
             Relay Programming:
               key: Váltó programozás
               name: Váltó programozás
-              description_teacher: Ez a tevékenység egy rövid leckével kezdődik a
-                hibakeresésről és a kitartásról, majd gyorsan átalakul a verseny az
-                idővel játékká, a diákok csapatokra osztódnak és együtt dolgoznak,
-                hogy programot írjanak egy-egy utasításra.
             Dance Party:
               key: Táncos buli
               name: Táncos buli
@@ -3846,7 +3842,7 @@ hu:
               name: Dalszerzés paraméterekkel
           lesson_groups:
             ramp_up:
-              display_name: hurkok
+              display_name: Egymásba ágyazott ciklusok
             csf_sprites:
               display_name: manók
             csf_digcit:
@@ -3867,14 +3863,18 @@ hu:
               key: Szórakozás a For ciklussal
               name: Szórakozás a For ciklussal
           lesson_groups:
+            ramp_up:
+              display_name: manók
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_variables:
-              display_name: változók
+              display_name: Számláló ciklusok
             csf_for_loops:
               display_name: Számláló ciklusok
-            csf_sprites:
-              display_name: manók
+            lessonGroup-8:
+              display_name: változók
+            lessonGroup-9:
+              display_name: Eltávolít
         express-2021:
           lessons:
             Dance Party:
@@ -3888,6 +3888,8 @@ hu:
               description_teacher: A „Getting Loopy” című utasítások ismétlődésének
                 koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
                 amiben BB-8 lesz a segítségükre.
+            lesson-1:
+              name: Táncos buli
           lesson_groups:
             csf_loops:
               display_name: hurkok
@@ -3922,6 +3924,8 @@ hu:
               display_name: változók
             Sprites:
               display_name: manók
+            variables:
+              display_name: változók
         csd4-preview-2021:
           lesson_groups:
             cspSurvey:
@@ -3938,6 +3942,12 @@ hu:
               name: Lecke 14
             lesson15:
               name: Lecke 15
+            lesson17:
+              name: Lecke 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

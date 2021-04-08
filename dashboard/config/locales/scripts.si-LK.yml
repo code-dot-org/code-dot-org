@@ -2661,7 +2661,7 @@ si:
               name: ගීත ලිවීම
           lesson_groups:
             ramp_up:
-              display_name: ලූපයන්
+              display_name: නැවත නැවත සිදුවන ලුප
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_nested_loops:
@@ -2683,11 +2683,15 @@ si:
             csf_digcit:
               display_name: ඩිජිටල් පුරවැසිකම
             csf_variables:
-              display_name: විචල්‍යන්
+              display_name: ලූපයන් සඳහා
             csf_data:
               display_name: දත්ත
             csf_for_loops:
               display_name: ලූපයන් සඳහා
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+            lessonGroup-9:
+              display_name: ඉවත් කරන්න
         express-2021:
           lesson_groups:
             csf_loops:
@@ -2712,6 +2716,12 @@ si:
               display_name: හැදින්වීම
             lessonGroup-3:
               display_name: විචල්‍යන්
+            variables:
+              display_name: විචල්‍යන්
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

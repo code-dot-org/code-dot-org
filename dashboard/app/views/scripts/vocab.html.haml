@@ -1,0 +1,7 @@
+- data = {}
+- data[:unit_summary] = @unit_summary
+
+- content_for(:head) do
+  %script{ src: webpack_asset_path('js/scripts/vocab.js'), data: {unit_rollup: data.to_json}}
+
+#roll_up

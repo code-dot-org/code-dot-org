@@ -78,7 +78,7 @@ vi:
   courses: Các khóa học
   courses_page:
     title_student: Học Khoa học Máy tính
-    title_teacher: Giảng dạy với Code Studio
+    title_teacher: Dạy Khoa học Máy tính
   unplugged_activity: Hoạt động không dùng máy
   of: của
   more: NHIỀU HƠN
@@ -376,7 +376,7 @@ vi:
       help_us: Giúp đỡ chúng tôi
       teach: Dạy
       about: về chúng tôi
-      legal_privacy: Chính sách riêng tư
+      legal_privacy: Chính sách bảo mật
       legal_tos: Các điều khoản của Code.org
     user:
       classroom: Trang chủ giáo viên
@@ -404,7 +404,7 @@ vi:
       dance: Bữa Tiệc Khiêu Vũ
       eval: Eval
       flappy: Flappy bird
-      frozen: Bộ phim Frozen
+      frozen: Frozen
       gamelab: Phòng thí nghiệm trò chơi
       gamelab_jr: Kho Trò chơi (beta)
       gumball: Thế giới kì diệu của Gumball
@@ -597,8 +597,8 @@ vi:
       tạo nên Xưởng Mã.
     help_from_html: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp tạo
       ra hướng dẫn này.
-    help_from_html_old: Các kỹ sư từ Google, Microsoft, Facebook và Twitter đã giúp
-      tạo ra các tài liệu này.
+    help_from_html_old: Các kỹ sư từ Amazon, Google và Microsoft đã giúp tạo ra những
+      tài liệu này.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Bản Quyền Đã
       Được Bảo Hộ. < br / >Star Wars&#8482; &copy; %{current_year} Disney và Lucasfilm.
       Bản Quyền Đã Được Bảo Hộ. < br / >Frozen&#8482; &copy; %{current_year} Disney.
@@ -627,11 +627,11 @@ vi:
     copyright: Bản quyền
     more: Nhiều hơn
     feedback: Cung cấp thông tin phản hồi
-    translate: Giúp chúng tôi dịch sang ngôn ngữ của bạn
+    translate: Tình nguyện dịch nội dung của chúng tôi
     support: Trợ giúp và Cộng đồng
-    tos_short: Các điều khoản của Code.org
+    tos_short: Điều khoản
     tos: Các điều khoản của Code.org
-    privacy: Chính sách riêng tư
+    privacy: Chính sách bảo mật
     secure: Phiên bản an toàn
     report_abuse: Báo cáo lạm dụng
     built_on_code_studio: Được xây dựng trên Code Studio
@@ -724,8 +724,8 @@ vi:
       title: Bữa Tiệc Khiêu Vũ
     hoc:
       title: Mê cung cổ điển
-      body: Hãy thử những lớp khoa học máy tính că bản. Hàng triệu người đã thử học
-        các khóa này.
+      body: Hãy thử những điều cơ bản của khoa học máy tính. Hàng triệu người đã sử
+        dụng nó.
     flappy:
       title: Lập trình Flappy
       body: Muốn viết trò chơi của riêng bạn trong vòng chưa đầy 10 phút? Hãy thử
@@ -746,21 +746,21 @@ vi:
         người dùng của chúng tôi
     gamelab:
       title: Phòng thí nghiệm trò chơi
-      body: Game Lab là một môi trường lập trình, nơi bạn có thể tạo các hình động
-        và trò chơi đơn giản với các đối tượng và các nhân vật tương tác với nhau.
+      body: Game Lab là một môi trường lập trình nơi bạn có thể tạo các hoạt ảnh và
+        trò chơi đơn giản với các đối tượng và nhân vật tương tác với nhau.
       audience: 13 tuổi trở lên
       cta: Học cách làm
     hoc-encryption:
       body: Học sinh sẽ học các kỹ thuật tạo và giải mã các tin nhắn được mã hóa.
     weblab:
-      title: Web Lab (beta)
-      body: Web Lab là một môi trường lập trình, nơi bạn có thể tạo các trang web
-        đơn giản sử dụng HTML và CSS. Thiết kế trang web của bạn và chia sẻ trang
-        web của bạn chỉ trong vài giây.
+      title: Phòng thí nghiệm web (beta)
+      body: Web Lab là một môi trường lập trình nơi bạn có thể tạo các trang web đơn
+        giản bằng HTML và CSS. Thiết kế các trang web của bạn và chia sẻ trang web
+        của bạn trong vài giây.
       audience: 13 tuổi trở lên
       cta: Học cách làm
     frozen:
-      title: Bộ phim Frozen
+      title: Frozen
     starwars:
       title: Cuộc Chiến Giữa Các Vì Sao
     infinity:
@@ -787,20 +787,21 @@ vi:
       body: Trong bài học này, học viên sẽ sử dụng Widget nén văn bản để nén văn bản
         bằng cách thay thế các mẫu với các ký hiệu.
     unplugged:
+      title: Bài học không cần máy tính
       audience: 4 tuổi trở lên
       body: Chúng tôi đã biên soạn một danh sách các bài học không cắm phí cho bạn
         để sử dụng trong lớp học của bạn. Bây giờ bạn có thể dạy các nguyên tắc cơ
         bản của khoa học máy tính, cho dù bạn có máy tính trong lớp học hay không!
         Hãy thử sử dụng những bài học này như là một khóa học độc lập hoặc làm những
         bài học bổ sung cho bất kỳ khóa học về khoa học máy tính nào.
-      body_short: Nếu bạn không có máy tính, hãy thử các bài học cắm phít này trong
-        lớp học của bạn.
+      body_short: Nếu bạn không có máy tính, hãy thử các bài học không cần máy tính
+        này trong lớp học của bạn.
     unplugged_conditionals:
       title: Điều kiện
       body: Tìm hiểu về các thuật toán và tuyên bố có điều kiện trong hoạt động "không
         cắm phín" này bằng cách sử dụng một bộ bài.
     widgets:
-      title: Widget
+      title: Vật dụng
       body: Sinh viên có thể khám phá các khái niệm từ các Nguyên tắc Khoa học Máy
         tính của chúng tôi thực hành bằng cách sử dụng các công cụ kỹ thuật số này.
         Sử dụng các vật dụng một mình, hoặc tạo một bài học khái niệm đơn cho lớp
@@ -910,7 +911,7 @@ vi:
       mẹ về việc thu thập thông tin cá nhân của học sinh cho việc sử dụng và lợi ích
       của nhà trường, bao gồm các chương trình giáo dục như Code Studio.
     tos: Các điều khoản của Code.org
-    privacy: Chính sách riêng tư
+    privacy: Chính sách bảo mật
     privacy_notice: Thông tin bảo mật
     accept_label: Tôi đồng ý với cập nhật <a href="%{tos_url}" target="_blank">Điều
       khoản dịch vụ</a>và <a href="%{privacy_url}" target="_blank">Chính sách bảo

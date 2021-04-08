@@ -2620,7 +2620,7 @@ da:
               name: Sangskrivning
           lesson_groups:
             ramp_up:
-              display_name: Løkker
+              display_name: Indlejret Løkker
             csf_sprites:
               display_name: figure
             csf_digcit:
@@ -2641,18 +2641,24 @@ da:
               key: For loop sjov
               name: For loop sjov
           lesson_groups:
+            ramp_up:
+              display_name: figure
             csf_digcit:
               display_name: Digital statsborgerskab
             csf_variables:
-              display_name: Variabler
+              display_name: For Loops
             csf_for_loops:
               display_name: For Loops
-            csf_sprites:
-              display_name: figure
+            lessonGroup-8:
+              display_name: Variabler
+            lessonGroup-9:
+              display_name: fjern
         express-2021:
           lessons:
             Dance Party:
               key: Dance Party
+              name: Dance Party
+            lesson-1:
               name: Dance Party
           lesson_groups:
             csf_warmup:
@@ -2669,6 +2675,8 @@ da:
               display_name: For Loops
             csf_sprites:
               display_name: figure
+            lessonGroup-9:
+              display_name: Opvarmning
         pre-express-2021:
           lesson_groups:
             csf_loops:
@@ -2688,6 +2696,8 @@ da:
               display_name: Variabler
             Sprites:
               display_name: figure
+            variables:
+              display_name: Variabler
         contagion-pilot:
           description_short: 'Brug Sprite Lab til at programmere en simulation ud
             af et virusudbrud. '

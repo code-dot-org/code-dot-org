@@ -968,6 +968,7 @@ ga:
             '"x"': ionad x
             '"y"': ionad y
             '"direction"': treo gluaiseachta
+            '"speed"': luas
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} i dteagmháil le {SPRITE2}"
         options:

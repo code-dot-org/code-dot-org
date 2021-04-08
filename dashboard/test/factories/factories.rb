@@ -863,10 +863,22 @@ FactoryGirl.define do
     sequence(:name) {|n| "Framework #{n}"}
   end
 
+  factory :standard_category do
+    sequence(:shortcode) {|n| "category-#{n}"}
+    sequence(:description) {|n| "fake category description #{n}"}
+    category_type 'fake category type'
+  end
+
   factory :standard do
     framework
     sequence(:shortcode) {|n| "standard-#{n}"}
     sequence(:description) {|n| "fake description #{n}"}
+
+    trait :with_category do
+      after(:create) do |s|
+        s.category = create :standard_category, framework: s.framework
+      end
+    end
   end
 
   factory :concept do

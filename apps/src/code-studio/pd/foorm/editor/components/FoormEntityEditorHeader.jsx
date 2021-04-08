@@ -45,8 +45,7 @@ class FoormEntityEditorHeader extends Component {
     headerTitle: PropTypes.node,
 
     // populated by Redux
-    questions: PropTypes.object,
-    editorType: PropTypes.string
+    questions: PropTypes.object
   };
 
   constructor(props) {

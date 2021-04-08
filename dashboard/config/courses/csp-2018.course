@@ -27,5 +27,8 @@
     "version_year": "2018",
     "is_stable": true,
     "visible": true
-  }
+  },
+  "resources": [
+
+  ]
 }

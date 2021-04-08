@@ -600,10 +600,10 @@
         },
         "Geometric Sun": {
           "draw a door": {
-            "name": "ارسم باب"
+            "name": "ارسم باباً"
           },
           "draw grass": {
-            "name": "ارسم عشب"
+            "name": "ارسم عشباً"
           },
           "draw windows": {
             "name": "ارسم نوافذ"
@@ -769,26 +769,26 @@
         },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
-            "name": "الدالة 1"
+            "name": "الوظيفة  1"
           },
           "function 2": {
-            "name": "الدالة 2"
+            "name": "الوظيفة 2"
           }
         },
         "MC_HOC_2017_FP20x20_2019": {
           "function 1": {
-            "name": "الدالة 1"
+            "name": "الوظيفة  1"
           },
           "function 2": {
-            "name": "الدالة 2"
+            "name": "الوظيفة 2"
           }
         },
         "MC_HOC_2017_FP20x20_2020": {
           "function 1": {
-            "name": "الدالة 1"
+            "name": "الوظيفة  1"
           },
           "function 2": {
-            "name": "الدالة 2"
+            "name": "الوظيفة 2"
           }
         },
         "NEW Course 4 Artist Functions 11": {
@@ -1140,7 +1140,7 @@
         },
         "Robot Doodle": {
           "draw head": {
-            "name": "ارسم رأس"
+            "name": "ارسم رأساً"
           }
         },
         "Robot Doodle_2018": {
@@ -1404,10 +1404,10 @@
         },
         "courseD_artist_binary1": {
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           },
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           }
         },
         "courseD_artist_binary1_2018": {
@@ -1436,10 +1436,10 @@
         },
         "courseD_artist_binary2": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary2_2018": {
@@ -1468,10 +1468,10 @@
         },
         "courseD_artist_binary3": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary3_2018": {
@@ -1500,10 +1500,10 @@
         },
         "courseD_artist_binary4": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary4_2018": {
@@ -1532,10 +1532,10 @@
         },
         "courseD_artist_binary5": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary5_2018": {
@@ -1564,10 +1564,10 @@
         },
         "courseD_artist_binary6": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary6_2018": {
@@ -1596,10 +1596,10 @@
         },
         "courseD_artist_binary7": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary7_2018": {
@@ -1628,10 +1628,10 @@
         },
         "courseD_artist_binary8": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary8_2018": {
@@ -1660,10 +1660,10 @@
         },
         "courseD_artist_binary8_predict1": {
           "draw": {
-            "name": "تعادل"
+            "name": "ارسم"
           },
           "draw bit": {
-            "name": "ارسم بت"
+            "name": "ارسم bit"
           }
         },
         "courseD_artist_binary8_predict1_2018": {
@@ -1855,7 +1855,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw a plane of squares": {
-            "name": "ارسم سطح من المربعات"
+            "name": "ارسم خطاً من المربعات"
           }
         },
         "courseE_artist_concept4_2018": {
@@ -1881,7 +1881,7 @@
         },
         "courseE_artist_concept_challenge2": {
           "draw pinwheel": {
-            "name": "ارسم دولاب الهواء"
+            "name": "ارسم مروحة"
           }
         },
         "courseE_artist_concept_challenge2_2018": {
@@ -1894,10 +1894,10 @@
             "name": "إفعل شيئاً"
           },
           "draw hexagon": {
-            "name": "ارسم شكل سداسي"
+            "name": "ارسم شكلاً سداسياً"
           },
           "draw line of hexagons": {
-            "name": "ارسم خط من الأشكال السداسية"
+            "name": "ارسم خطاً من الأشكال السداسية"
           }
         },
         "courseE_artist_functions10_2018": {
@@ -2045,7 +2045,7 @@
             "name": "ارسم خط من المربعات"
           },
           "draw square": {
-            "name": "ارسم مربع"
+            "name": "ارسم مربعاً"
           }
         },
         "courseE_artist_functions8_2018": {
@@ -2176,10 +2176,10 @@
             "name": "إفعل شيئاً"
           },
           "draw triangle": {
-            "name": "ارسم مثلث"
+            "name": "ارسم مثلثاً"
           },
           "draw line of triangles": {
-            "name": "ارسم سطر من المثلثات"
+            "name": "ارسم سطراً من المثلثات"
           }
         },
         "courseE_artist_functions9_2018": {
@@ -2348,10 +2348,10 @@
         },
         "courseE_artist_functions_predict2": {
           "draw line of polygons": {
-            "name": "ارسم خط من المضلعات"
+            "name": "ارسم خطاً من المضلعات"
           },
           "draw polygon": {
-            "name": "ارسم مضلع"
+            "name": "ارسم مضلعاً"
           },
           "do something": {
             "name": "إفعل شيئاً"
@@ -2422,7 +2422,7 @@
         },
         "courseE_bee_functions4": {
           "move and get nectar": {
-            "name": "انتقل واحصل على رحيق"
+            "name": "تحرّك واحصل على رحيق"
           }
         },
         "courseE_bee_functions5": {
@@ -2515,15 +2515,15 @@
         },
         "courseE_farmer_functions10b": {
           "navigate": {
-            "name": "تصفَح"
+            "name": "تنقّل"
           }
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "قم بالفحص والالتقاط"
+            "name": "قم بالتحقّق والالتقاط"
           },
           "find pumpkin": {
-            "name": "اعثر على القرع"
+            "name": "اعثر على اليقطين"
           },
           "wander path": {
             "name": "تجول في المسار"
@@ -2585,7 +2585,7 @@
         },
         "courseE_farmer_functions2ba": {
           "corn and pumpkin": {
-            "name": "ذرة وقرع"
+            "name": "ذرة ويقطين"
           }
         },
         "courseE_farmer_functions2ba_2018": {
@@ -2614,7 +2614,7 @@
         },
         "courseE_farmer_functions3c": {
           "corn and pumpkin": {
-            "name": "ذرة وقرع"
+            "name": "ذرة ويقطين"
           }
         },
         "courseE_farmer_functions3c1_2018": {
@@ -2667,27 +2667,27 @@
         },
         "courseE_farmer_functions4b": {
           "corn and pumpkin": {
-            "name": "ذرة وقرع"
+            "name": "ذرة ويقطين"
           }
         },
         "courseE_farmer_functions5c": {
           "corn and pumpkin": {
-            "name": "ذرة وقرع"
+            "name": "ذرة ويقطين"
           }
         },
         "courseE_farmer_functions6c": {
           "corn and pumpkin": {
-            "name": "ذرة وقرع"
+            "name": "ذرة ويقطين"
           }
         },
         "courseE_farmer_functions8b": {
           "navigate": {
-            "name": "تصفَح"
+            "name": "تنقّل"
           }
         },
         "courseE_farmer_functions9b": {
           "navigate": {
-            "name": "تصفَح"
+            "name": "تنقّل"
           }
         },
         "courseE_playLab_challenge1": {

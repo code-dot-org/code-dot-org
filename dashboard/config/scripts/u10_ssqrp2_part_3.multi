@@ -17,3 +17,18 @@ wrong 'Users are prevented from leaving negative comments.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+**Explanation:** Since there are overall more people in large towns compared with small towns, they may have more “Happiness Moments” tagged. However, the overall amount of people in a place does not have any direct effect on the happiness level of a place.
+
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.A.3 - Not every effect of a computing innovation is anticipated in advance.
+
+:::
+
+
+MARKDOWN

@@ -741,7 +741,7 @@ class Level < ApplicationRecord
   end
 
   def show_help_and_tips_in_level_editor?
-    (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab)) &&
+    (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
     !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
   end
 
@@ -795,6 +795,27 @@ class Level < ApplicationRecord
         ['Any owner', ''],
         *Level.joins(:user).distinct.pluck('users.name, users.id').select {|a| !a[0].blank? && !a[1].blank?}.sort_by {|a| a[0]}
       ]
+    }
+  end
+
+  def summarize_for_lesson_show(can_view_teacher_markdown)
+    teacher_markdown_for_display = localized_teacher_markdown if can_view_teacher_markdown
+    {
+      name: name,
+      id: id.to_s,
+      icon: icon,
+      type: type,
+      isConceptLevel: concept_level?,
+      longInstructions: long_instructions,
+      shortInstructions: short_instructions,
+      videos: related_videos.map(&:summarize),
+      mapReference: map_reference,
+      referenceLinks: reference_links,
+      teacherMarkdown: teacher_markdown_for_display,
+      videoOptions: specified_autoplay_video&.summarize(false),
+      containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
+      status: SharedConstants::LEVEL_STATUS.not_tried,
+      thumbnailUrl: thumbnail_url
     }
   end
 

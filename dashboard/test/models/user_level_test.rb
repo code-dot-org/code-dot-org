@@ -283,6 +283,11 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal [@driver_user_level], @navigator_user_level.driver_user_levels
   end
 
+  test "virtual attribute `locked` sets `unlocked_at`" do
+    ul = UserLevel.create(user: @user, level: @level, locked: false)
+    assert_not_nil ul.send(:unlocked_at)
+  end
+
   test "authorized_teacher cant become locked" do
     teacher = create :teacher
     teacher.permission = UserPermission::AUTHORIZED_TEACHER
@@ -291,14 +296,14 @@ class UserLevelTest < ActiveSupport::TestCase
 
     script_level = create :script_level, levels: [@level], lesson: stage
 
-    ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
-    ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
+    ul_student = UserLevel.create(user: @user, level: @level, locked: true)
+    ul_teacher = UserLevel.create(user: teacher, level: @level, locked: true)
 
     assert_equal true, script_level.locked?(@user)
     assert_equal false, script_level.locked?(teacher)
 
-    assert_equal true, ul_student.locked?(stage)
-    assert_equal false, ul_teacher.locked?(stage)
+    assert_equal true, ul_student.show_as_locked?(stage)
+    assert_equal false, ul_teacher.show_as_locked?(stage)
   end
 
   test 'most_recent_driver returns nil if no pair programming' do

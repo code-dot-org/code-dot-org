@@ -968,6 +968,7 @@ fi:
             '"x"': x:än paikka
             '"y"': y:n paikka
             '"direction"': liikkeen suunta
+            '"speed"': nopeus
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} koskettaa {SPRITE2}"
         options:

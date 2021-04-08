@@ -961,6 +961,7 @@ da:
             '"x"': x-position
             '"y"': y-position
             '"direction"': bevægelses retning
+            '"speed"': hastighed
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} berører {SPRITE2}"
         options:

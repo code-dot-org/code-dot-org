@@ -12,3 +12,19 @@ This question refers to the chart from the previous question.
 Which of the following conclusions is BEST supported by the scatter plot?
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** In the picture below, you can see there are no data points below 10yrs on the y-axis. All of the other claims are contradicted by the data shown on the graph. 
+
+![](https://images.code.org/e0a9221c45b3fc44dd056f33e0531ccd-image-1616460159055.png)
+
+Students made and interpreted scatterplots similar to this one in [Lesson 4 - Exploring Two Columns](https://curriculum.code.org/csp-20/unit9/4/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.D: Extract information from data using a program.
+:::
+
+
+MARKDOWN

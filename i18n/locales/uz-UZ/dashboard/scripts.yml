@@ -13045,12 +13045,7 @@ uz:
               description_student: O'z o'yiningiz yoki hikoyangizni yarating!
               description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!
             Safety in My Online Neighborhood:
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Internetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin."
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         courseb-2020:
           title: Kurs B (2020)
@@ -13118,12 +13113,7 @@ uz:
             Digital Trails:
               name: Raqamli izlar
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Onlaynda qilayotgan ishingiz doimo onlayn bo‘lib turadimi? O‘quvchilar Internetda baham ko‘rgan ma'lumotlari raqamli iz yoki "iz" qoldirishini bilib olishadi. Buni qanday amalga oshirayotganiga qarab, bu iz katta yoki kichik, zararli yoki foydali bo‘lishi mumkin. O‘quvchilar turli marshrutlarni taqqoslaydilar va qanday ma'lumotlarni qoldirish haqida tanqidiy fikrlashadi.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nOnlaynda qilayotgan ishingiz doimo onlayn bo‘lib turadimi? O‘quvchilar Internetda baham ko‘rgan ma'lumotlari raqamli iz yoki \"iz\" qoldirishini bilib olishadi. Buni qanday amalga oshirayotganiga qarab, bu iz katta yoki kichik, zararli yoki foydali bo‘lishi mumkin. O‘quvchilar turli marshrutlarni taqqoslaydilar va qanday ma'lumotlarni qoldirish haqida tanqidiy fikrlashadi."
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         coursec-2020:
           title: Kurs C (2020)
@@ -13218,20 +13208,10 @@ uz:
               description_teacher: 'Ushbu yakunlovchi dars o‘quvchilarni o‘z Play Lab loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi! Ushbu jarayon muammosiz o‘tishini ta''minlash uchun biz o‘quvchilarga qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi kodlashgacha bosqichma-bosqich o‘tish tuzilmasini ta''minladik. Bundan tashqari, biz o''qituvchilarga taqdimotli finalni engillashtirishda yordam beradigan g''oyalarni taklif etamiz! '
             Putting a STOP to Online Meanness:
               description_student: Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Internet har xil qiziqarli odamlar bilan to‘lib toshgan, lekin ba'zida ularning ba'zilari bir-birlariga yomon munosabatda bo‘lishlari mumkin. Ushbu rolli o‘yin yordamida o‘quvchilaringizga nima uchun ko‘pincha real hayotda emas, balki Internetda yomon munosabatda bo‘lish osonroq bo‘lganini va buni ko‘rganlarida Internetdagi urush bilan qanday kurashish kerakligini tushuntiring.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternet har xil qiziqarli odamlar bilan to‘lib toshgan, lekin ba'zida ularning ba'zilari bir-birlariga yomon munosabatda bo‘lishlari mumkin. Ushbu rolli o‘yin yordamida o‘quvchilaringizga nima uchun ko‘pincha real hayotda emas, balki Internetda yomon munosabatda bo‘lish osonroq bo‘lganini va buni ko‘rganlarida Internetdagi urush bilan qanday kurashish kerakligini tushuntiring."
             Password Power-Up:
               description_student: Ushbu darsda siz parollar sizning ma'lumotlaringizni qanday himoya qilishi va yaxshi parolni tanlash haqida bilib olasiz.
-              description_teacher: |-
-                <img alt="" src="https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png" style="padding: 10px 0;">
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Kuchliroq va xavfsizroq onlayn parollar hamma uchun yaxshi g‘oya hisoblanadi. Qanday qilib biz bolalarga yaxshiroq parollar yaratishda va ularni eslab qolishda yordam bera olamiz? Ushbu darsdagi maslahatlardan bolalarga xavfsiz va esda qolarli parollarni yaratishda yordam berish uchun foydalaning.
+              description_teacher: "<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png\" style=\"padding: 10px 0;\">\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nKuchliroq va xavfsizroq onlayn parollar hamma uchun yaxshi g‘oya hisoblanadi. Qanday qilib biz bolalarga yaxshiroq parollar yaratishda va ularni eslab qolishda yordam bera olamiz? Ushbu darsdagi maslahatlardan bolalarga xavfsiz va esda qolarli parollarni yaratishda yordam berish uchun foydalaning."
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
         coursed-2020:
           title: Kurs D (2020)
@@ -13334,12 +13314,7 @@ uz:
               description_teacher: 'Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!'
             Be A Super Digital Citizen:
               description_student: Kiberhujumni ko‘rganingizda qanday qilib undan himoyada bo‘lishingizni bilib oling.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Onlayn vositalar bolalar uchun imkoniyat yaratmoqda va ushbu vositalar katta mas'uliyat bilan ham javob berishadi. Ammo bolalar har doim kiberhujumga duch kelganda nima qilish kerakligini biladimi? O‘zingizning o‘quvchilaringizga xatti-harakatlar qilish va nizolarni hal qilishning tegishli usullarini ko‘rsating.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nOnlayn vositalar bolalar uchun imkoniyat yaratmoqda va ushbu vositalar katta mas'uliyat bilan ham javob berishadi. Ammo bolalar har doim kiberhujumga duch kelganda nima qilish kerakligini biladimi? O‘zingizning o‘quvchilaringizga xatti-harakatlar qilish va nizolarni hal qilishning tegishli usullarini ko‘rsating."
           student_description: Talabalar sikllar, shartli operatorlar va hodisalar to'g'risida tushunchalarini rivojlantiradilar. Kodlashdan tashqari talabalar raqamli fuqarolik to'g'risida ma'lumot olishadi.
         coursee-2020:
           title: Kurs E (2020)
@@ -13393,12 +13368,7 @@ uz:
             Private and Personal Information:
               name: Maxfiy va Shaxsiy ma'lumotlar
               description_student: Internet qiziqarli va maroqli, ammo xavfsiz bo‘lish ham muhim. Bu dars sizga tarqatish uchun xavfsiz bo‘lgan axborot va maxfiy qolishi kerak bo‘lgan axborotlar o‘rtasidagi farqni o‘rgatishadi. 
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Boshqalar bilan baham ko‘rish va ular bilan bog‘lanish bizning o‘quvchilarimizning tabiatiga kiradi. Ammo Internetda bo‘lishish ba'zi xavflarga olib keladi. Qanday qilib biz bolalarga kuchli, ijobiy va xavfsiz munosabatlarni Internet orqali o‘rnatishda yordam bera olamiz? O‘quvchilaringizga shaxsiy narsalar va shaxsiy hayotda qolishi kerak bo‘lgan narsalar o‘rtasidagi farqni bilib olishga yordam bering.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nBoshqalar bilan baham ko‘rish va ular bilan bog‘lanish bizning o‘quvchilarimizning tabiatiga kiradi. Ammo Internetda bo‘lishish ba'zi xavflarga olib keladi. Qanday qilib biz bolalarga kuchli, ijobiy va xavfsiz munosabatlarni Internet orqali o‘rnatishda yordam bera olamiz? O‘quvchilaringizga shaxsiy narsalar va shaxsiy hayotda qolishi kerak bo‘lgan narsalar o‘rtasidagi farqni bilib olishga yordam bering."
             About Me:
               name: Men haqimda Sprite Lab bilan
               description_student: SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.
@@ -13532,12 +13502,7 @@ uz:
             The Power of Words:
               name: The Power of Words
               description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot beradi.
-              description_teacher: |-
-                ![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)
-
-                Ushbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.
-
-                Bolalar o‘sishi bilan ular tabiiy ravishda ko‘proq onlayn muloqot qilishni boshlaydilar. Ammo ular ko‘rgan narsalarning ba'zilari ularga ozor berishi, xafa qilishlari, g‘azablanishlari yoki hatto qo‘rqitishlari mumkin. O‘quvchilaringizga boshqalarga nisbatan hamdardlikni shakllantirishda va kiberhujumga duch kelganda ulardan foydalanish strategiyasini o‘rganishda yordam bering.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nBolalar o‘sishi bilan ular tabiiy ravishda ko‘proq onlayn muloqot qilishni boshlaydilar. Ammo ular ko‘rgan narsalarning ba'zilari ularga ozor berishi, xafa qilishlari, g‘azablanishlari yoki hatto qo‘rqitishlari mumkin. O‘quvchilaringizga boshqalarga nisbatan hamdardlikni shakllantirishda va kiberhujumga duch kelganda ulardan foydalanish strategiyasini o‘rganishda yordam bering."
             Crowdsourcing:
               name: Kraudsorsing
               description_student: Bu dars sizga jamoa bo‘lib ishlashni, jamoa bilan biron loyiha yaratishni o‘rgatadi.
@@ -14483,7 +14448,9 @@ uz:
             visualizing:
               name: Visualizing Data
             intro-categorical:
-              name: Model va ma'lumotlar
+              name: 6-dars
+            temp:
+              name: 20-dars
           description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
         outbreak:
@@ -14512,6 +14479,8 @@ uz:
               name: Spraytlar amalda
             video:
               name: Sprite Lab Videolari
+            End of Course Project:
+              name: End of Course Project
           lesson_groups:
             introduction:
               display_name: Kirish
@@ -15387,7 +15356,7 @@ uz:
               key: Yig‘uvchidagi sikllar
               name: Laurel bilan sikllar
               description_student: Program Laurel the adventurer to collect treasure in an open cave.
-              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.
+              description_teacher: 'Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi ''get treasure'' bo‘limi tanishtiriladi.'
             Loops in Artist:
               key: Rassom bilan sikllar
               name: Drawing Gardens with Loops
@@ -15499,8 +15468,8 @@ uz:
             Picturing Data:
               key: Ma'lumotlarni tasvirlash
               name: Ma'lumotlarni tasvirlash
-              description_student: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
-              description_teacher: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
+              description_student: 'Ushbu ma''lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma''lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.'
+              description_teacher: 'Ushbu ma''lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma''lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.'
             'End of Course Project: Create a Play Lab Game':
               name: End of Course Project
               description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
@@ -15540,7 +15509,6 @@ uz:
               key: Estafetali dasturlash
               name: Estafetali dasturlash
               description_student: Kursni boshida kod bilan chizmalar chizganingizni eslaysizmi? Bu darsda, xuddi shunga o‘xshash narsa qiish uchun biron jamoa bilan ishlaysiz!
-              description_teacher: Ushbu mashg'ulotda disk sozlamasi  va qat'iyatlilik bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar jamoalarga bo'linib, birgalikda birma-bir ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soat poygasiga o'tishadi.
             Debugging in Collector:
               key: Yig‘uvchi bilan debug qilish
               name: Debugging with Laurel
@@ -15575,7 +15543,7 @@ uz:
               key: Nested Loops in Bee
               name: Nested Loops in Maze
               description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
-              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+              description_teacher: 'Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana ''Run'' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.'
             Conditionals with Cards:
               key: Conditionals with Cards
               name: Conditionals with Cards
@@ -15659,7 +15627,7 @@ uz:
             Programming and Loops with the Artist:
               name: Drawing with Loops
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
-              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+              description_teacher: 'Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.'
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Minecraftda shartli bayonotlar: Suv sayohati'
               name: 'Minecraftda shartli bayonotlar: Suv sayohati'
@@ -15669,7 +15637,7 @@ uz:
               key: Shartli bayonotlar
               name: Conditionals with the Farmer
               description_student: Bu qiziqarli va qiyin bosqichda siz komputerga biron narsani ma’lum bir shart ostida bajarishni aytasiz.
-              description_teacher: Bu dars talabalarga `while` siklari va `if / else` bayonotlarini tanishtiradi.  _While sikllari_ biron shart bajarilmaguncha davom etaveradigan sikllardir.  While sikllari dasturchi buyruqlarni aynan necha marta takrorlanishini bilmagan holda, ammo dasturchi sikl davom etishi uchun qanaqa shart bajarilishi kerakligini bilgan holda ishlatiladi. `If / Else` bayonotlari agar nimadir to‘g‘ri bo‘lsa, kodning butun bo‘limini ishlatish orqali va aks holda boshqa bir narsani ishlatish orqali dasturlashda qulayliklar taklif qiladi.
+              description_teacher: 'Bu dars talabalarga `while` siklari va `if / else` bayonotlarini tanishtiradi.  _While sikllari_ biron shart bajarilmaguncha davom etaveradigan sikllardir.  While sikllari dasturchi buyruqlarni aynan necha marta takrorlanishini bilmagan holda, ammo dasturchi sikl davom etishi uchun qanaqa shart bajarilishi kerakligini bilgan holda ishlatiladi. `If / Else` bayonotlari agar nimadir to‘g‘ri bo‘lsa, kodning butun bo‘limini ishlatish orqali va aks holda boshqa bir narsani ishlatish orqali dasturlashda qulayliklar taklif qiladi.'
             Simon Says:
               key: Simon so'zlaydi
               description_student: "O‘ynang va natijaga erishish uchun qanday buyruqlar kerakligini o‘ylab ko‘ring.\n\n"
@@ -15688,9 +15656,9 @@ uz:
               name: Maxfiy va Shaxsiy ma'lumotlar
               description_student: Internet qiziqarli va maroqli, ammo xavfsiz bo‘lish ham muhim. Bu dars sizga tarqatish uchun xavfsiz bo‘lgan axborot va maxfiy qolishi kerak bo‘lgan axborotlar o‘rtasidagi farqni o‘rgatishadi. 
             About Me:
-              name: Men haqimda Sprite Lab bilan
+              name: 'Men haqimda Sprite Lab bilan'
               description_student: SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.
-              description_teacher: "SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.\\r"
+              description_teacher: 'SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma''lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.\r'
             Digital Sharing:
               key: Raqamli Ulashish
               name: Raqamli Ulashish
@@ -15706,7 +15674,7 @@ uz:
               description_student: Ko‘proq ichma-ich sikllar! Bu safar biz ichma-ich sikllar bilan AJOYIB chizmalar chizamiz.
             Nested Loops in Frozen:
               key: Frozen bilan ichma-ich sikllar
-              name: Frozen bilan ichma-ich sikllar
+              name: 'Frozen bilan ichma-ich sikllar'
               description_student: 'Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. '
               description_teacher: Endi talabalar o‘z siklarini qatlamlarga ajratishni bilib olishadi, ular ko‘plab chiroyli narsalar yarata olishadi.  Ushbu dars talabalarni Anna va Elzaning muzda uchish bo'yicha mukammal qobiliyatlaridan foydalangan holda o'zlarining portfoliosi uchun tayyor tasvirlarini yaratishda yordam beradigan bir qator mashqlarni bajaradi!
             'Functions: Songwriting':
@@ -15784,7 +15752,7 @@ uz:
             Nested Loops in the Maze:
               key: Labirintdagi ichma-ich sikllar
               name: Nested Loops in Maze
-              description_student: "Sikl ichidagi sikl ichida sikllar. Bu nimani anglatadi? Bu dars sizni biron sikl ichida boshqa siklni joylashtirganingizda nima sodir bo‘lishini o‘rgatadi."
+              description_student: Sikl ichidagi sikl ichida sikllar. Bu nimani anglatadi? Bu dars sizni biron sikl ichida boshqa siklni joylashtirganingizda nima sodir bo‘lishini o‘rgatadi.
               description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
             The Power of Words:
               key: The Power of Words
@@ -15816,12 +15784,7 @@ uz:
               key: AI for Oceans
               name: AI for Oceans
               description_student: 'O''quv qo''llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni ''baliqlar'' yoki ''baliqlar emas'' deb tasniflashadi. Keyin talabalar o''zlarining ma''lumot to''plamlarini boshqa dengizni o''z ichiga olgan holda kengaytirishlari kerak bo''ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo''lgan baliqlarning rasmlariga murojaat qilish uchun o''zlarining yorliqlarini tanlaydilar. Ushbu ma''lumotlar yangi tasvirlarni belgilashga qodir bo''lgan mashina o''rganish modeli uchun ishlatiladi. '
-              description_teacher: |
-                ** O'quv qo'llanmasining qisqacha mazmuni: ** Dastlabki talabalar okeandan chiqindilarni olib tashlash uchun ob'ektlarni " baliq yoki 'baliq emas 'deb tasniflashadi. Keyin talabalar o'zlarining o'quv ma'lumotlari to'plamini kengaytirishlari kerak bo'ladi. Suvga kiradigan boshqa dengiz jonivorlarini qo'shish. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Bu o'quv ma'lumotlari keyinchalik o'rganish imkoniyatiga ega bo'lishi kerak bo'lgan mashinani o'rganish modeli uchun ishlatiladi. U o'z-o'zidan yangi rasmlarni belgilay oladi.\r
-                \r
-                \r
-                ** To'g'rilikni tekshirish: ** Ushbu o'quv qo'llanma talabalarga ularning saviyasini to'g'ri to'ldirgan-qilmaganligini aytmaydi. Faoliyatning turli qismlaridan tezda o'tish mumkin. Talabalarni rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari mumkin. \r
-
+              description_teacher: "** O'quv qo'llanmasining qisqacha mazmuni: ** Dastlabki talabalar okeandan chiqindilarni olib tashlash uchun ob'ektlarni \" baliq yoki 'baliq emas 'deb tasniflashadi. Keyin talabalar o'zlarining o'quv ma'lumotlari to'plamini kengaytirishlari kerak bo'ladi. Suvga kiradigan boshqa dengiz jonivorlarini qo'shish. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Bu o'quv ma'lumotlari keyinchalik o'rganish imkoniyatiga ega bo'lishi kerak bo'lgan mashinani o'rganish modeli uchun ishlatiladi. U o'z-o'zidan yangi rasmlarni belgilay oladi.\\r\n\\r\n\\r\n** To'g'rilikni tekshirish: ** Ushbu o'quv qo'llanma talabalarga ularning saviyasini to'g'ri to'ldirgan-qilmaganligini aytmaydi. Faoliyatning turli qismlaridan tezda o'tish mumkin. Talabalarni rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari mumkin. \\r\n"
             Internet:
               key: Internet
               name: Internet
@@ -16007,7 +15970,8 @@ uz:
             Alien Dance Party:
               key: Alien Dance Party
               name: Alien Dance Party
-              description_student: Do‘stlaringiz va o‘rtoqlaringiz bilan o‘rtoqlashish uchun o‘yinlar yaratishni mashq qilib ko‘ring.
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: 'Ushbu darsda o‘quvchilar o‘z interaktiv animatsiyalari va o‘yinlarini yaratishlari mumkin bo‘lgan "Sprite Lab" platformasi bilan tanishtiriladi. Xatti-harakatdan tashqari, bugun talabalar "begonalar raqs partiyasini" yaratish uchun foydalanuvchi kiritishlarini hodisa sifatida qo‘shadilar.'
             Behaviors in Sprite Lab:
               key: Behaviors in Sprite Lab
               name: Behaviors in Sprite Lab
@@ -16384,7 +16348,7 @@ uz:
             lesson12:
               name: 12-dars
             lesson13:
-              name: '13-dars'
+              name: 13-dars
             lesson14:
               name: 14-Dars
             lesson15:
@@ -16394,7 +16358,7 @@ uz:
             lesson17:
               name: 17-dars
             lesson18:
-              name: 18-dars
+              name: '18-dars'
             lesson19:
               name: 'Loyiha: Haqiqiy ma''lumotlar bilan ilova'
             lesson20:
@@ -16406,6 +16370,11 @@ uz:
           lessons:
             lesson-1:
               name: 1-dars
+            lesson-20:
+              name: '15-dars: Baholash kuni'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         k5-onlinepd-2021:
           description: "Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning \"Kompyuter savodxonligi asoslari\" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!"
           student_description: 'Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!'
@@ -16447,3 +16416,7 @@ uz:
               display_name: Kirish
             Introduction:
               display_name: Kirish
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: 1-dars

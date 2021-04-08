@@ -2,7 +2,6 @@
 #
 # Table name: unit_groups_resources
 #
-#  id            :bigint           not null, primary key
 #  unit_group_id :integer
 #  resource_id   :integer
 #

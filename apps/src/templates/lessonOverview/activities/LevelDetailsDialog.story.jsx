@@ -111,6 +111,21 @@ const levelWithInstructions = {
   }
 };
 
+const levelWithContainedLevel = {
+  url: '/s/coursef-2021/stage/2/puzzle/2',
+  level: {
+    type: 'GamelabJr',
+    containedLevels: [
+      {
+        name: 'contained-free-response-level',
+        type: 'FreeResponse',
+        longInstructions:
+          '**Make a prediction**: What do you think will happen when you run this code?'
+      }
+    ]
+  }
+};
+
 export default storybook => {
   storybook.storiesOf('LevelDetailsDialog', module).addStoryTable([
     {
@@ -147,6 +162,17 @@ export default storybook => {
           {...defaultProps}
           scriptLevel={bubbleChoiceScriptLevel}
         />
+      )
+    },
+    {
+      name: 'Contained Levels',
+      story: () => (
+        <Provider store={getStore()}>
+          <LevelDetailsDialog
+            {...defaultProps}
+            scriptLevel={levelWithContainedLevel}
+          />
+        </Provider>
       )
     },
     {
