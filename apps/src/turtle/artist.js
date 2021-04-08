@@ -345,6 +345,8 @@ Artist.prototype.init = function(config) {
   var visualizationColumn = (
     <ArtistVisualizationColumn
       showFinishButton={!!config.level.freePlay && !config.level.isProjectLevel}
+      showSaveImageButton={!!config.level.enableDownloadImage}
+      displayCanvas={this.visualization.displayCanvas}
       iconPath={iconPath}
     />
   );

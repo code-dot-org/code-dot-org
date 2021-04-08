@@ -24,7 +24,7 @@ const createStoreWithLessonPlan = () => {
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
-  store.dispatch(init(sampleActivities, searchOptions));
+  store.dispatch(init(sampleActivities, searchOptions, []));
   store.dispatch(initResources([]));
   store.dispatch(initVocabularies([]));
   return store;
@@ -38,7 +38,7 @@ const createStoreWithoutLessonPlan = () => {
   });
   const store = createStoreWithReducers();
   store.dispatch(
-    init([sampleActivityForLessonWithoutLessonPlan], searchOptions)
+    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [])
   );
   store.dispatch(initResources([]));
   store.dispatch(initVocabularies([]));

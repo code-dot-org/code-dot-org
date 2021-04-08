@@ -15,7 +15,9 @@ class FoormEntityLoadButtons extends React.Component {
     resetSelectedData: PropTypes.func,
     onSelect: PropTypes.func,
     foormEntities: PropTypes.array,
+    foormEntityName: PropTypes.string,
     showCodeMirror: PropTypes.func,
+    isDisabled: PropTypes.bool,
 
     // populated by redux
     setLastSaved: PropTypes.func,
@@ -25,10 +27,10 @@ class FoormEntityLoadButtons extends React.Component {
   };
 
   getDropdownOptions() {
-    return this.props.foormEntities.map((dropdownOption, i) => {
+    return this.props.foormEntities.map((entity, i) => {
       return this.renderMenuItem(
-        () => this.props.onSelect(dropdownOption['id']),
-        dropdownOption['text'],
+        () => this.props.onSelect(entity['metadata']),
+        entity['text'],
         i
       );
     });
@@ -57,19 +59,27 @@ class FoormEntityLoadButtons extends React.Component {
   render() {
     return (
       <div>
-        <DropdownButton id="load_config" title="Load Form..." className="btn">
+        <DropdownButton
+          id="load_config"
+          title={`Load ${this.props.foormEntityName}...`}
+          className="btn"
+          disabled={this.props.isDisabled}
+        >
           {this.getDropdownOptions()}
         </DropdownButton>
         <Button
           onClick={() => this.initializeEmptyCodeMirror()}
           className="btn"
+          disabled={this.props.isDisabled}
         >
-          New Form
+          {`New ${this.props.foormEntityName}`}
         </Button>
       </div>
     );
   }
 }
+
+export const UnconnectedFoormEntityLoadButtons = FoormEntityLoadButtons;
 
 export default connect(
   null,

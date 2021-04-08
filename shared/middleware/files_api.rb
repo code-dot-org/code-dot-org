@@ -308,6 +308,10 @@ class FilesApi < Sinatra::Base
     File.extname(filename&.downcase) == '.html'
   end
 
+  def disallowed_html_tags
+    DCDO.get('disallowed_html_tags', ['script', 'iframe'])
+  end
+
   # Determine whether or not a file is a valid HTML file.
   # Returns true if:
   #   1. It does not belong to a WebLab project.
@@ -324,7 +328,7 @@ class FilesApi < Sinatra::Base
     return true unless project[:projectType]&.downcase == 'weblab'
 
     # Nokogiri element selector tags must start with //
-    disallowed_tag_selectors = DCDO.get('disallowed_html_tags', ['script']).map {|tag| '//' + tag}
+    disallowed_tag_selectors = disallowed_html_tags.map {|tag| '//' + tag}
     Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
   end
 

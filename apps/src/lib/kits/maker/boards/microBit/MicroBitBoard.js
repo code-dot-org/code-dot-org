@@ -10,8 +10,7 @@ import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {serialPortType} from '../../util/browserChecks';
-import {isNodeSerialAvailable} from '../../portScanning';
+import {isChromeOS, serialPortType} from '../../util/browserChecks';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -28,7 +27,7 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    this.nodeSerialAvailable = isNodeSerialAvailable();
+    this.chromeOS = isChromeOS();
 
     let portType = serialPortType(true);
 
@@ -63,7 +62,7 @@ export default class MicroBitBoard extends EventEmitter {
     const SERIAL_BAUD = 57600;
 
     let serialPort;
-    if (this.nodeSerialAvailable) {
+    if (!this.chromeOS) {
       serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
       return Promise.resolve(serialPort);
     } else {

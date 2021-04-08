@@ -25,7 +25,10 @@ module Foorm
       version: 0,
       questions: {pages: [{elements: [{name: "test"}]}]}
     }, response: :success
-    test_user_gets_response_for :update_questions, user: :student, method: :put, params: {id: 1}, response: :forbidden
+    test_user_gets_response_for :update_questions, user: :student, method: :put, params: {
+      id: 1,
+      questions: {pages: [{elements: [{name: "test"}]}]}
+    }, response: :forbidden
     test_user_gets_response_for :publish, user: :student, method: :put, params: {id: 1}, response: :forbidden
 
     test 'update succeeds on existing form' do

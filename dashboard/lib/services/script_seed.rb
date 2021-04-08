@@ -12,16 +12,18 @@
 
 module Services
   module ScriptSeed
-    prepend LessonPlanPdfs::ScriptSeed
+    prepend CurriculumPdfs::ScriptSeed
 
     # Holds data that we've already retrieved from the database. Used to look up
     # associations of objects without making additional queries.
     # Storing this data together in a "data object" makes it easier to pass around.
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
-      :script_levels, :levels_script_levels, :levels, :resources,
-      :lessons_resources, :vocabularies, :lessons_vocabularies, :programming_environments, :programming_expressions,
-      :lessons_programming_expressions, :objectives, :frameworks, :standards, :lessons_standards, keyword_init: true
+      :script_levels, :levels_script_levels, :levels,
+      :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
+      :vocabularies, :lessons_vocabularies, :programming_environments,
+      :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
+      :standards, :lessons_standards, :lessons_opportunity_standards, keyword_init: true
     )
 
     # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
@@ -43,13 +45,14 @@ module Services
 
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
-      resources = script.lessons.map(&:resources).flatten
+      resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq
       lessons_resources = script.lessons.map(&:lessons_resources).flatten
       vocabularies = script.lessons.map(&:vocabularies).flatten
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
       lessons_standards = script.lessons.map(&:lessons_standards).flatten
+      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten
 
       seed_context = SeedContext.new(
         script: script,
@@ -62,6 +65,8 @@ module Services
         levels: my_levels,
         resources: resources,
         lessons_resources: lessons_resources,
+        scripts_resources: script.scripts_resources,
+        scripts_student_resources: script.scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
         programming_environments: ProgrammingEnvironment.all,
@@ -70,7 +75,8 @@ module Services
         objectives: objectives,
         frameworks: Framework.all,
         standards: Standard.all,
-        lessons_standards: lessons_standards
+        lessons_standards: lessons_standards,
+        lessons_opportunity_standards: lessons_opportunity_standards
       )
       scope = {seed_context: seed_context}
 
@@ -84,11 +90,14 @@ module Services
         levels_script_levels: script.levels_script_levels.map {|lsl| ScriptSeed::LevelsScriptLevelSerializer.new(lsl, scope: scope).as_json},
         resources: resources.map {|r| ScriptSeed::ResourceSerializer.new(r, scope: scope).as_json},
         lessons_resources: lessons_resources.map {|lr| ScriptSeed::LessonsResourceSerializer.new(lr, scope: scope).as_json},
+        scripts_resources: script.scripts_resources.map {|sr| ScriptSeed::ScriptsResourceSerializer.new(sr, scope: scope).as_json},
+        scripts_student_resources: script.scripts_student_resources.map {|sr| ScriptSeed::ScriptsResourceSerializer.new(sr, scope: scope).as_json},
         vocabularies: vocabularies.map {|v| ScriptSeed::VocabularySerializer.new(v, scope: scope).as_json},
         lessons_vocabularies: lessons_vocabularies.map {|lv| ScriptSeed::LessonsVocabularySerializer.new(lv, scope: scope).as_json},
         lessons_programming_expressions: lessons_programming_expressions.map {|lpe| ScriptSeed::LessonsProgrammingExpressionSerializer.new(lpe, scope: scope).as_json},
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
+        lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
       }
       JSON.pretty_generate(data)
     end
@@ -162,11 +171,14 @@ module Services
       levels_script_levels_data = data['levels_script_levels']
       resources_data = data['resources']
       lessons_resources_data = data['lessons_resources']
+      scripts_resources_data = data['scripts_resources']
+      scripts_student_resources_data = data['scripts_student_resources']
       vocabularies_data = data['vocabularies']
       lessons_vocabularies_data = data['lessons_vocabularies']
       lessons_programming_expressions_data = data['lessons_programming_expressions']
       objectives_data = data['objectives']
       lessons_standards_data = data['lessons_standards'] || []
+      lessons_opportunity_standards_data = data['lessons_opportunity_standards'] || []
       seed_context = SeedContext.new
 
       Script.transaction do
@@ -202,6 +214,8 @@ module Services
 
         seed_context.resources = import_resources(resources_data, seed_context)
         seed_context.lessons_resources = import_lessons_resources(lessons_resources_data, seed_context)
+        seed_context.scripts_resources = import_scripts_resources(scripts_resources_data, seed_context)
+        seed_context.scripts_student_resources = import_scripts_student_resources(scripts_student_resources_data, seed_context)
         seed_context.vocabularies = import_vocabularies(vocabularies_data, seed_context)
         seed_context.lessons_vocabularies = import_lessons_vocabularies(lessons_vocabularies_data, seed_context)
         seed_context.programming_environments = ProgrammingEnvironment.all
@@ -211,6 +225,7 @@ module Services
         seed_context.frameworks = Framework.all
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
+        seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
         seed_context.script
       end
@@ -420,6 +435,51 @@ module Services
       LessonsResource.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_scripts_resources(scripts_resources_data, seed_context)
+      return [] unless seed_context.script.get_course_version
+      return [] unless scripts_resources_data
+
+      scripts_resources_to_import = scripts_resources_data.map do |lr_data|
+        resource_id = seed_context.resources.select {|r| r.key == lr_data['seeding_key']['resource.key']}.first&.id
+        raise 'No resource found' if resource_id.nil?
+
+        ScriptsResource.new(
+          script_id: seed_context.script.id,
+          resource_id: resource_id
+        )
+      end
+
+      # destroy_outdated_objects won't work on ScriptsResource objects because
+      # they do not have an id field. Work around this by inefficiently deleting
+      # all ScriptsResources using 1 query, and then re-importing all
+      # ScriptsResources in a single query. It may be possible to eliminate
+      # these extra queries by adding an id column to the ScriptsResource model.
+      seed_context.script.resources = []
+
+      ScriptsResource.import! scripts_resources_to_import, on_duplicate_key_update: get_columns(ScriptsResource)
+      ScriptsResource.where('script_id' => seed_context.script.id)
+    end
+
+    def self.import_scripts_student_resources(scripts_student_resources_data, seed_context)
+      return [] unless seed_context.script.get_course_version
+      return [] unless scripts_student_resources_data
+
+      scripts_student_resources_to_import = scripts_student_resources_data.map do |sr_data|
+        resource_id = seed_context.resources.select {|r| r.key == sr_data['seeding_key']['resource.key']}.first&.id
+        raise 'No resource found' if resource_id.nil?
+
+        ScriptsStudentResource.new(
+          script_id: seed_context.script.id,
+          resource_id: resource_id
+        )
+      end
+
+      seed_context.script.scripts_student_resources = []
+
+      ScriptsStudentResource.import! scripts_student_resources_to_import, on_duplicate_key_update: get_columns(ScriptsStudentResource)
+      ScriptsStudentResource.where('script_id' => seed_context.script.id)
+    end
+
     def self.import_vocabularies(vocabularies_data, seed_context)
       course_version_id = seed_context.script.get_course_version&.id
 
@@ -495,7 +555,7 @@ module Services
         programming_expression_id = seed_context.programming_expressions.select do |pe|
           pe.programming_environment_id == programming_environment_id && pe.key == lpe_data['seeding_key']['programming_expression.key']
         end.first&.id
-        raise 'No programming expression found' if programming_expression_id.nil?
+        raise "No programming expression with key #{lpe_data['seeding_key']['programming_expression.key']} found" if programming_expression_id.nil?
 
         LessonsProgrammingExpression.new(
           lesson_id: lesson_id,
@@ -556,6 +616,28 @@ module Services
 
       LessonsStandard.import! lessons_standards_to_import, on_duplicate_key_update: get_columns(LessonsStandard)
       LessonsStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
+      lessons_opportunity_standards_to_import = lessons_opportunity_standards_data.map do |ls_data|
+        lesson_id = seed_context.lessons.select {|l| l.key == ls_data['seeding_key']['lesson.key']}.first&.id
+        raise 'No lesson found' if lesson_id.nil?
+
+        standard_id = seed_context.standards.select {|s| s.shortcode == ls_data['seeding_key']['opportunity_standard.shortcode']}.first&.id
+        raise 'No standard found' if standard_id.nil?
+
+        LessonsOpportunityStandard.new(
+          lesson_id: lesson_id,
+          standard_id: standard_id
+        )
+      end
+
+      # inefficiently delete all LessonsStandards using 1 query per lesson, and
+      # then re-import all LessonsStandards in a single query.
+      seed_context.lessons.each {|l| l.opportunity_standards = []}
+
+      LessonsOpportunityStandard.import! lessons_opportunity_standards_to_import, on_duplicate_key_update: get_columns(LessonsOpportunityStandard)
+      LessonsOpportunityStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
@@ -713,6 +795,14 @@ module Services
       end
     end
 
+    class ScriptsResourceSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
     class VocabularySerializer < ActiveModel::Serializer
       attributes :key, :word, :definition, :properties, :seeding_key
 
@@ -746,6 +836,14 @@ module Services
     end
 
     class LessonsStandardSerializer < ActiveModel::Serializer
+      attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LessonsOpportunityStandardSerializer < ActiveModel::Serializer
       attributes :seeding_key
 
       def seeding_key

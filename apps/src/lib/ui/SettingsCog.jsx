@@ -135,6 +135,16 @@ class SettingsCog extends Component {
     return pageConstants && pageConstants.aiEnabled;
   }
 
+  levelbuilderModel() {
+    let model = {};
+    let pageConstants = getStore().getState().pageConstants;
+    if (pageConstants?.aiModelId && pageConstants?.aiModelName) {
+      model.id = pageConstants.aiModelId;
+      model.name = pageConstants.aiModelName;
+    }
+    return model;
+  }
+
   render() {
     const {isRunning, runModeIndicators} = this.props;
 
@@ -176,6 +186,7 @@ class SettingsCog extends Component {
             isOpen={this.state.managingModels}
             onClose={this.closeModelManager}
             autogenerateML={this.props.autogenerateML}
+            levelbuilderModel={this.levelbuilderModel()}
           />
         )}
         <ConfirmEnableMakerDialog

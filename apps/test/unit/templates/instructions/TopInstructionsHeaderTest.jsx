@@ -29,7 +29,8 @@ const DEFAULT_PROPS = {
   documentationUrl: '',
   teacherMarkdown: 'Some teacher only markdown',
   isEmbedView: false,
-  isCollapsed: false
+  isCollapsed: false,
+  collapsible: true
 };
 
 const setUp = (overrideProps = {}) => {

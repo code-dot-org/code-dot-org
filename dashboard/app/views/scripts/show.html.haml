@@ -1,3 +1,5 @@
+%link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
+
 -# This variable will get any data we need to pass along to scripts/show.js
 - script_data = @script.summarize(true, current_user)
 - additional_script_data = {course_name: @script.unit_group&.name,
@@ -17,11 +19,11 @@
 - content_for(:head) do
   %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
 
-
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
 
 = render partial: 'shared/check_admin'
+= render partial: 'shared/emulate_print_media'
 
 - if @current_user.try(:script_hidden?, @script)
   = render partial: 'hidden_script'

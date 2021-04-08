@@ -2,33 +2,42 @@ require 'honeybadger/ruby'
 
 # Returns a random donor's twitter handle.
 def get_random_donor_twitter
-  weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
+  donor, weight = get_random_donor
   if donor && donor[:twitter_s]
-    return donor[:twitter_s]
+    donor[:twitter_s]
   else
-    Honeybadger.notify(
-      error_class: 'Failed to pull a random donor twitter handle',
-      error_message: donor ? "Donor returned nil for weight #{weight}" : "Twitter handle was nil for donor #{donor}"
-    )
-    return '@microsoft'
+    report_failure(donor, weight)
+    '@microsoft'
   end
 end
 
-def get_random_donor_email_message
-  share_link = 'https://twitter.com/home?status=I%20just%20signed%20up%20to%20teach%20computer%20science%20using%20Code.org%21%20Thanks%20%40microsoft%20for%20supporting%20%40codeorg.%20'
-  link_html = "<a href=\"#{share_link}\">Tweet a message of thanks</a>"
-  rest_of_message = " to Microsoft, one of our donors"
+# @return [Hash] a donor name and their twitter handle
+def get_random_donor_name_and_twitter
+  donor, weight = get_random_donor
+  if donor && donor[:twitter_s]
+    {
+      name: donor[:name_s],
+      twitter: donor[:twitter_s]
+    }
+  else
+    report_failure(donor, weight)
+    {
+      name: 'Microsoft',
+      twitter: '@microsoft'
+    }
+  end
+end
+
+# @return [Array] a donor record and the random weight used to find that record
+def get_random_donor
   weight = SecureRandom.random_number
   donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
-  if donor && donor[:twitter_s]
-    link_html.sub!('%40microsoft', "%40#{donor[:twitter_s][1..-1]}")
-    rest_of_message.sub!('Microsoft', donor[:name_s])
-  else
-    Honeybadger.notify(
-      error_class: 'Failed to pull a random donor twitter handle',
-      error_message: donor ? "Donor returned nil for weight #{weight}" : "Twitter handle was nil for donor #{donor}"
-    )
-  end
-  link_html + rest_of_message
+  [donor, weight]
+end
+
+def report_failure(donor, weight)
+  Honeybadger.notify(
+    error_class: 'Failed to pull a random donor twitter handle',
+    error_message: donor ? "Donor returned nil for weight #{weight}" : "Twitter handle was nil for donor #{donor}"
+  )
 end

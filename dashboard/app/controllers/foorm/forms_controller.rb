@@ -2,6 +2,7 @@ module Foorm
   class FormsController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
+    before_action :require_questions, only: [:create, :update_questions]
     load_and_authorize_resource
 
     # GET '/foorm/forms/editor'
@@ -21,7 +22,7 @@ module Foorm
 
     # PUT foorm/form/:id/update_questions
     def update_questions
-      questions_json = get_questions
+      questions_json = params[:questions].as_json
       published_state = questions_json['published']
 
       if published_state.nil?
@@ -46,7 +47,7 @@ module Foorm
         return render(status: :conflict, plain: "Form with name #{form_name} and version #{form_version} already exists.")
       end
 
-      questions_json = get_questions
+      questions_json = params[:questions].as_json
       published = questions_json['published']
       published_params = params[:published]
       # If questions do not contain a published state, either use published state provided by params or default to false.
@@ -86,12 +87,8 @@ module Foorm
       end
     end
 
-    def get_questions
-      questions_json = params[:questions].as_json
-      unless questions_json
-        return render(status: :bad_request, plain: "no questions provided")
-      end
-      questions_json
+    def require_questions
+      render(status: :bad_request, plain: "no questions provided") unless params[:questions]
     end
   end
 end

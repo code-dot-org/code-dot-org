@@ -17,7 +17,7 @@ import 'react-select/dist/react-select.css';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
 import {
   setFormData,
-  addAvailableEntity,
+  addFetchableEntity,
   setLastSaved,
   setSaveError,
   setLastSavedQuestions
@@ -111,7 +111,7 @@ class FoormFormSaveBar extends Component {
     lastSaved: PropTypes.number,
     saveError: PropTypes.string,
     setFormData: PropTypes.func,
-    addAvailableForm: PropTypes.func,
+    addFetchableForm: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
     setLastSavedFormQuestions: PropTypes.func
@@ -212,7 +212,7 @@ class FoormFormSaveBar extends Component {
           showNewFormSave: false
         });
         // adds new form to form dropdown
-        this.props.addAvailableForm({
+        this.props.addFetchableForm({
           name: result.name,
           version: result.version,
           id: result.id
@@ -422,8 +422,8 @@ export default connect(
   }),
   dispatch => ({
     setFormData: formData => dispatch(setFormData(formData)),
-    addAvailableForm: formMetadata =>
-      dispatch(addAvailableEntity(formMetadata)),
+    addFetchableForm: formMetadata =>
+      dispatch(addFetchableEntity(formMetadata)),
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedFormQuestions: formQuestions =>

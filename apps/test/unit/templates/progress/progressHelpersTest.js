@@ -275,21 +275,40 @@ describe('progressHelpers', () => {
       return sectionLessonProgress[STUDENT_ID][LESSON_ID];
     };
 
-    it('summarizes all untried levels', () => {
+    it('returns null if all levels are untried', () => {
       const levels = fakeLevels(3);
       const studentProgress = fakeProgressForLevels(levels);
       const studentLessonProgress = getStudentLessonProgress(
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
-        isStarted: false,
-        incompletePercent: 100,
-        imperfectPercent: 0,
-        completedPercent: 0,
-        timeSpent: 0,
-        lastTimestamp: 0
-      });
+      assert.equal(studentLessonProgress, null);
+    });
+
+    it('returns null if all levels are bonus', () => {
+      const levels = fakeLevels(2);
+      levels[0].bonus = true;
+      levels[1].bonus = true;
+      const studentProgress = fakeProgressForLevels(levels);
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.equal(studentLessonProgress, null);
+    });
+
+    it('returns null if some levels are bonus and the rest are untried', () => {
+      const levels = fakeLevels(2);
+      const studentProgress = fakeProgressForLevels(levels);
+      studentProgress[1].status = LevelStatus.perfect;
+      levels[0].bonus = true;
+
+      const studentLessonProgress = getStudentLessonProgress(
+        studentProgress,
+        levels
+      );
+      assert.equal(studentLessonProgress, null);
     });
 
     it('summarizes all completed levels', () => {
@@ -304,7 +323,6 @@ describe('progressHelpers', () => {
         levels
       );
       assert.deepEqual(studentLessonProgress, {
-        isStarted: true,
         incompletePercent: 0,
         imperfectPercent: 0,
         completedPercent: 100,
@@ -324,7 +342,6 @@ describe('progressHelpers', () => {
         levels
       );
       assert.deepEqual(studentLessonProgress, {
-        isStarted: true,
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,
@@ -349,46 +366,12 @@ describe('progressHelpers', () => {
         levels
       );
       assert.deepEqual(studentLessonProgress, {
-        isStarted: true,
         incompletePercent: 50,
         imperfectPercent: 12.5,
         completedPercent: 37.5,
         timeSpent: 0,
         lastTimestamp: 0
       });
-    });
-
-    it('does not include bonus levels', () => {
-      const levels = fakeLevels(2);
-      const studentProgress = fakeProgressForLevels(levels);
-      studentProgress[1].status = LevelStatus.perfect;
-      levels[0].bonus = true;
-
-      const studentLessonProgress = getStudentLessonProgress(
-        studentProgress,
-        levels
-      );
-      assert.deepEqual(studentLessonProgress, {
-        isStarted: false,
-        incompletePercent: 100,
-        imperfectPercent: 0,
-        completedPercent: 0,
-        timeSpent: 0,
-        lastTimestamp: 0
-      });
-    });
-
-    it('returns null if all levels are bonus', () => {
-      const levels = fakeLevels(2);
-      levels[0].bonus = true;
-      levels[1].bonus = true;
-      const studentProgress = fakeProgressForLevels(levels);
-
-      const studentLessonProgress = getStudentLessonProgress(
-        studentProgress,
-        levels
-      );
-      assert.equal(studentLessonProgress, null);
     });
 
     it('computes correct timeSpent', () => {
@@ -405,7 +388,6 @@ describe('progressHelpers', () => {
         levels
       );
       assert.deepEqual(studentLessonProgress, {
-        isStarted: true,
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,
@@ -428,7 +410,6 @@ describe('progressHelpers', () => {
         levels
       );
       assert.deepEqual(studentLessonProgress, {
-        isStarted: true,
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,

@@ -219,7 +219,7 @@ export class UnconnectedTeacherHomepage extends Component {
                 buttonText={announcement.buttonText}
                 buttonLink={announcement.link}
                 newWindow={true}
-                analyticId={announcement.id}
+                googleAnalyticsId={announcement.id}
               />
               <div style={styles.clear} />
             </div>

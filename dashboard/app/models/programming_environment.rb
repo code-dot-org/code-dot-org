@@ -8,15 +8,18 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+# Indexes
 #
-# @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
+#  index_programming_environments_on_name  (name) UNIQUE
+#
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
-  has_many :programming_expressions
-
   validates_uniqueness_of :name
 
+  has_many :programming_expressions
+
+  # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
     editor_type
   )
@@ -42,5 +45,9 @@ class ProgrammingEnvironment < ApplicationRecord
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
     environment.update! properties
     environment.name
+  end
+
+  def summarize_for_lesson_edit
+    {id: id, name: name}
   end
 end

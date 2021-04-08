@@ -160,17 +160,20 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
       attempted += levelProgress.status === LevelStatus.attempted;
       imperfect += levelProgress.status === LevelStatus.passed;
       completed += completedStatuses.includes(levelProgress.status);
-      timeSpent += levelProgress.timeSpent;
-      lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp);
+      timeSpent += levelProgress.timeSpent || 0;
+      lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp || 0);
     }
   });
 
   const incomplete = filteredLevels.length - completed - imperfect;
   const isLessonStarted = attempted + imperfect + completed > 0;
 
+  if (!isLessonStarted) {
+    return null;
+  }
+
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
-    isStarted: isLessonStarted,
     incompletePercent: getPercent(incomplete),
     imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
@@ -267,8 +270,8 @@ export const levelProgressFromServer = serverProgress => {
     status: serverProgress.status || LevelStatus.not_tried,
     result: getLevelResult(serverProgress),
     paired: serverProgress.paired || false,
-    timeSpent: serverProgress.time_spent || 0,
-    lastTimestamp: serverProgress.last_progress_at || 0,
+    timeSpent: serverProgress.time_spent,
+    lastTimestamp: serverProgress.last_progress_at,
     // `pages` is used by multi-page assessments, and its presence
     // (or absence) is how we distinguish those from single-page assessments
     pages:

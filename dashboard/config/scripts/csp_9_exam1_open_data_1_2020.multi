@@ -12,3 +12,16 @@ A town decides to publicize data it has collected about electricity usage around
 
 Which of the following does this situation best demonstrate?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Open data is publicly available data shared by governments, organizations, and others.
+
+[Lesson 5 - Big, Open, and Crowdsourced Data](https://curriculum.code.org/csp-20/unit9/5/) included a synthesis of all the topics from the jigsaw activity in the wrap up.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.E: Explain how people participate in problem-solving processes at scale.
+
+:::
+
+MARKDOWN

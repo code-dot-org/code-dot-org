@@ -25,9 +25,11 @@ const styles = {
   }
 };
 
-// Parent component for editing Foorm forms. Will initially show a choice
-// between loading an existing form or an empty form.
-// After that choice is made, will render FoormEntityEditor with the chosen form to allow editing that form.
+/*
+Parent component for editing Foorm forms. Will initially show a choice
+between loading an existing form or an empty form.
+After that choice is made, will render FoormEntityEditor with the chosen form to allow editing that form.
+*/
 class FoormFormEditorManager extends React.Component {
   static propTypes = {
     populateCodeMirror: PropTypes.func,
@@ -35,9 +37,9 @@ class FoormFormEditorManager extends React.Component {
     categories: PropTypes.array,
 
     // populated by redux
-    hasJSONError: PropTypes.bool,
-    availableForms: PropTypes.array,
     questions: PropTypes.object,
+    hasJSONError: PropTypes.bool,
+    fetchableForms: PropTypes.array,
     formName: PropTypes.string,
     formVersion: PropTypes.number,
     isFormPublished: PropTypes.bool,
@@ -55,21 +57,23 @@ class FoormFormEditorManager extends React.Component {
     previewQuestions: null
   };
 
-  getAvailableFormChoices() {
-    return this.props.availableForms.map(formNameAndVersion => {
+  // Callback for FoormLoadButtons
+  getFetchableForms() {
+    return this.props.fetchableForms.map(formNameAndVersion => {
       const formName = formNameAndVersion['name'];
       const formVersion = formNameAndVersion['version'];
-      const formId = formNameAndVersion['id'];
 
       return {
-        id: formId,
+        metadata: formNameAndVersion,
         text: `${formName}, version ${formVersion}`
       };
     });
   }
 
   // Callback for FoormLoadButtons
-  loadFormData(formId) {
+  loadFormData(formMetadata) {
+    const formId = formMetadata.id;
+
     this.props.setLastSaved(null);
     this.props.setSaveError(null);
     $.ajax({
@@ -121,7 +125,7 @@ class FoormFormEditorManager extends React.Component {
     this.props.resetCodeMirror(formData['questions']);
   }
 
-  // Callback for FoormEditorPreview
+  // Callback for FoormEntityEditor
   fillFormWithLibraryItems() {
     $.ajax({
       url: '/api/v1/pd/foorm/forms/form_with_library_items',
@@ -214,11 +218,11 @@ class FoormFormEditorManager extends React.Component {
         </p>
         <FoormEntityLoadButtons
           resetCodeMirror={this.props.resetCodeMirror}
-          setSelectedData={this.props.setFormData}
           resetSelectedData={() => this.resetSelectedData()}
           showCodeMirror={() => this.showCodeMirror()}
-          onSelect={formId => this.loadFormData(formId)}
-          foormEntities={this.getAvailableFormChoices()}
+          onSelect={formMetadata => this.loadFormData(formMetadata)}
+          foormEntities={this.getFetchableForms()}
+          foormEntityName="Form"
         />
         {this.state.hasLoadError && (
           <div style={styles.loadError}>Could not load the selected form.</div>
@@ -246,7 +250,7 @@ class FoormFormEditorManager extends React.Component {
 export default connect(
   state => ({
     questions: state.foorm.questions || {},
-    availableForms: state.foorm.availableEntities || [],
+    fetchableForms: state.foorm.fetchableEntities || [],
     hasJSONError: state.foorm.hasJSONError,
     formName: state.foorm.formName,
     formVersion: state.foorm.formVersion,

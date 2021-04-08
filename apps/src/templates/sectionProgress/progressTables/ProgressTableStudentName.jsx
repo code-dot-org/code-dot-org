@@ -19,9 +19,10 @@ const styles = {
     textAlign: 'center'
   },
   collapser: {
-    paddingRight: '10px',
+    paddingRight: '8px',
     fontSize: '20px',
-    verticalAlign: 'middle'
+    verticalAlign: 'middle',
+    width: '11px'
   }
 };
 class ProgressTableStudentName extends React.PureComponent {
@@ -31,8 +32,9 @@ class ProgressTableStudentName extends React.PureComponent {
     sectionId: PropTypes.number.isRequired,
     scriptId: PropTypes.number,
     lastTimestamp: PropTypes.number,
-    localeCode: PropTypes.string,
     studentUrl: PropTypes.string.isRequired,
+    onToggleExpand: PropTypes.func.isRequired,
+    isExpanded: PropTypes.bool.isRequired,
 
     // redux provided
     showSectionProgressDetails: PropTypes.bool
@@ -64,13 +66,9 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 
   renderTooltip() {
-    const {lastTimestamp, localeCode} = this.props;
     const id = this.tooltipId();
-    if (localeCode) {
-      moment.locale(localeCode);
-    }
-    const timestamp = lastTimestamp
-      ? moment(lastTimestamp).calendar()
+    const timestamp = this.props.lastTimestamp
+      ? moment(this.props.lastTimestamp).calendar()
       : i18n.none();
     return (
       <ReactTooltip
@@ -90,7 +88,7 @@ class ProgressTableStudentName extends React.PureComponent {
   }
 
   render() {
-    const {name, studentUrl} = this.props;
+    const {name, studentUrl, onToggleExpand, isExpanded} = this.props;
     const tooltipId = this.tooltipId();
 
     return (
@@ -101,10 +99,9 @@ class ProgressTableStudentName extends React.PureComponent {
         aria-describedby={tooltipId}
       >
         {this.props.showSectionProgressDetails && (
-          // TODO: handle onClick to expand and collapse rows
           <CollapserIcon
-            isCollapsed={true}
-            onClick={() => {}}
+            isCollapsed={!isExpanded}
+            onClick={onToggleExpand}
             collapsedIconClass="fa-caret-right"
             expandedIconClass="fa-caret-down"
             style={styles.collapser}
