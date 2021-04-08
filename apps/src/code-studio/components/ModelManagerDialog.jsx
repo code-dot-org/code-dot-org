@@ -87,6 +87,7 @@ export default class ModelManagerDialog extends React.Component {
               name="model"
               ref={element => (this.root = element)}
               onChange={this.handleChange}
+              style={{marginBottom: 0}}
             >
               {this.state.models.map(model => (
                 <option key={model.id} value={model.id}>
