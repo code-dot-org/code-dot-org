@@ -22,6 +22,7 @@ export default class ResourcesDropdown extends React.Component {
     resources: PropTypes.arrayOf(resourceShape),
     migratedResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
+    studentFacing: PropTypes.bool,
 
     //For firehose
     unitGroupId: PropTypes.number,
