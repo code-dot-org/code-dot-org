@@ -93,7 +93,7 @@ export default class ResourcesDropdown extends React.Component {
     return (
       <div style={styles.dropdown}>
         <DropdownButton
-          text={i18n.resources()}
+          text={i18n.teacherResources()}
           color={Button.ButtonColor.blue}
           onClick={this.handleDropdownClick}
         >
