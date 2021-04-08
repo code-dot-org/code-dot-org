@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Api::V1::MlModelsControllerTest < ::ActionController::TestCase
   setup do
+    AWS::S3.stubs(:delete_from_bucket).returns(true)
     @owner = create :student
     @model = create :user_ml_model,  user: @owner
     @not_owner = create :student
