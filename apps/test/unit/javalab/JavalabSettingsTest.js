@@ -41,7 +41,8 @@ describe('JavalabSettings', () => {
     wrapper
       .find('a')
       .at(1)
-      .simulate('click');
+      .props()
+      .onClick();
     assert(clickSpy.calledOnce);
 
     // dropdown is closed
