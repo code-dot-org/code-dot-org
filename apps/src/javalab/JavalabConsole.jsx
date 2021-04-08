@@ -69,10 +69,10 @@ function moveCaretToEndOfDiv(element) {
 
 class JavalabConsole extends React.Component {
   static propTypes = {
-    isDarkMode: PropTypes.bool.isRequired,
     // populated by redux
     consoleLogs: PropTypes.array,
-    appendInputLog: PropTypes.func
+    appendInputLog: PropTypes.func,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -166,7 +166,8 @@ class JavalabConsole extends React.Component {
 
 export default connect(
   state => ({
-    consoleLogs: state.javalab.consoleLogs
+    consoleLogs: state.javalab.consoleLogs,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log))

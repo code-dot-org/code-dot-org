@@ -41,12 +41,12 @@ class JavalabEditor extends React.Component {
   static propTypes = {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
-    isDarkMode: PropTypes.bool.isRequired,
     // populated by redux
     setEditorText: PropTypes.func,
     setFilename: PropTypes.func,
     filename: PropTypes.string,
-    editorText: PropTypes.string
+    editorText: PropTypes.string,
+    isDarkMode: PropTypes.bool
   };
 
   constructor(props) {
@@ -212,7 +212,8 @@ class JavalabEditor extends React.Component {
 export default connect(
   state => ({
     filename: state.javalab.filename,
-    editorText: state.javalab.editorText
+    editorText: state.javalab.editorText,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
     setFilename: filename => dispatch(setFileName(filename)),
