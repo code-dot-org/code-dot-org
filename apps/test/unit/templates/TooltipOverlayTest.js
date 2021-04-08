@@ -173,7 +173,7 @@ describe('TooltipOverlay', () => {
       };
       const isRtl = true;
       expect(coordinatesProvider(false, isRtl)(props)).to.equal(
-        `y: ${props.mouseY}, x: ${props.mouseX}`
+        `${props.mouseY} :y, ${props.mouseX} :x`
       );
     });
   });
