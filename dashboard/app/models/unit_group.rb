@@ -41,6 +41,7 @@ class UnitGroup < ApplicationRecord
     !!plc_course
   end
 
+  include Rails.application.routes.url_helpers
   include SerializedToFileValidation
   include SerializedProperties
 
@@ -342,7 +343,7 @@ class UnitGroup < ApplicationRecord
         script.summarize(include_lessons, user).merge!(script.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
+      migrated_teacher_resources: (resources + get_rollup_pages).map(&:summarize_for_teacher_resources_dropdown),
       is_migrated: has_migrated_script?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
@@ -679,5 +680,22 @@ class UnitGroup < ApplicationRecord
 
   def has_migrated_script?
     !!default_scripts[0]&.is_migrated?
+  end
+
+  def get_rollup_pages
+    rollup_pages = []
+    if default_scripts.any? {|s| s.lessons.any? {|l| l.programming_expressions.empty?}}
+      rollup_pages.append(Resource.new(name: 'All Code', url: code_course_path(self), course_version_id: course_version.id))
+    end
+    if default_scripts.any? {|s| s.lessons.any? {|l| l.resources.empty?}}
+      rollup_pages.append(Resource.new(name: 'All Resources', url: resources_course_path(self), course_version_id: course_version.id))
+    end
+    if default_scripts.any? {|s| s.lessons.any? {|l| l.standards.empty?}}
+      rollup_pages.append(Resource.new(name: 'All Standards', url: standards_course_path(self), course_version_id: course_version.id))
+    end
+    if default_scripts.any? {|s| s.lessons.any? {|l| l.vocabularies.empty?}}
+      rollup_pages.append(Resource.new(name: 'All Vocabulary', url: vocab_course_path(self), course_version_id: course_version.id))
+    end
+    rollup_pages.compact
   end
 end
