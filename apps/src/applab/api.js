@@ -381,12 +381,30 @@ export function createRecord(table, record, onSuccess, onError) {
   });
 }
 
+export function createRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'createRecord', {
+    table: table,
+    record: record,
+    onSuccess: callback,
+    onError: callback
+  });
+}
+
 export function readRecords(table, searchParams, onSuccess, onError) {
   return Applab.executeCmd(null, 'readRecords', {
     table: table,
     searchParams: searchParams,
     onSuccess: onSuccess,
     onError: onError
+  });
+}
+
+export function readRecordsSync(table, callback) {
+  return Applab.executeCmd(null, 'readRecords', {
+    table: table,
+    searchParams: {},
+    onSuccess: callback,
+    onError: callback
   });
 }
 
@@ -399,12 +417,30 @@ export function updateRecord(table, record, onComplete, onError) {
   });
 }
 
+export function updateRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'updateRecord', {
+    table: table,
+    record: record,
+    onComplete: callback,
+    onError: callback
+  });
+}
+
 export function deleteRecord(table, record, onComplete, onError) {
   return Applab.executeCmd(null, 'deleteRecord', {
     table: table,
     record: record,
     onComplete: onComplete,
     onError: onError
+  });
+}
+
+export function deleteRecordSync(table, record, callback) {
+  return Applab.executeCmd(null, 'deleteRecord', {
+    table: table,
+    record: record,
+    onComplete: callback,
+    onError: callback
   });
 }
 

@@ -609,6 +609,16 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'createRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{name:'Alice'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'readRecords',
     parent: api,
     category: 'Data',
@@ -619,6 +629,15 @@ export var blocks = [
       "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
     ],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'readRecordsSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table'],
+    params: ['"mytable"'],
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'updateRecord',
@@ -633,12 +652,32 @@ export var blocks = [
     allowFunctionDrop: {2: true, 3: true}
   },
   {
+    func: 'updateRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', "{id:1, name:'Bob'}"],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
+  },
+  {
     func: 'deleteRecord',
     parent: api,
     category: 'Data',
     paletteParams: ['table', 'record', 'callback'],
     params: ['"mytable"', '{id:1}', 'function(success) {\n  \n}'],
     allowFunctionDrop: {2: true, 3: true}
+  },
+  {
+    func: 'deleteRecordSync',
+    parent: api,
+    category: 'Data',
+    paletteParams: ['table', 'record'],
+    params: ['"mytable"', '{id:1}'],
+    allowFunctionDrop: {2: true},
+    nativeIsAsync: true,
+    type: 'either'
   },
   {
     func: 'onRecordEvent',
