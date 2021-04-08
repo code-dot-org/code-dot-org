@@ -611,20 +611,36 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_select ".container .alert-danger", expected_error
   end
 
-  test 'maker_google_oauth2: logs in user if valid token' do
-    #Given I have a Google-Code.org account
+  test 'maker_google_oauth2: logs migrated in user if valid token' do
+    # Given I have a Google-Code.org account
     user = create :student, :google_sso_provider
     user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
 
-    #Generate token
+    # Generate token
     secret_code = Encryption.encrypt_string_utf8(
       Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
     )
 
-    #Go to function
+    # Go to function
     post :maker_google_oauth2, params: {secret_code: secret_code}
 
-    #Then I am signed in
+    # Then I am signed in
+    assert_equal user.id, signed_in_user_id
+  end
+
+  test 'maker_google_oauth2: logs non-migrated in user if valid token' do
+    # Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider, :demigrated
+
+    # Generate token
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user.uid + user.provider
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    # Then I am signed in
     assert_equal user.id, signed_in_user_id
   end
 
