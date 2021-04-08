@@ -19,7 +19,8 @@ export class AppLabTooltipOverlay extends React.Component {
     mouseX: PropTypes.number,
     mouseY: PropTypes.number,
     // Provided by redux
-    isInDesignMode: PropTypes.bool.isRequired
+    isInDesignMode: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool
   };
 
   state = {
@@ -82,7 +83,7 @@ export class AppLabTooltipOverlay extends React.Component {
 
   render() {
     const dragPoint = draggedElementDropPoint();
-    let tooltipProviders = [coordinatesProvider()];
+    let tooltipProviders = [coordinatesProvider(false, this.props.isRtl)];
     if (this.state.hoveredControlId) {
       tooltipProviders.push(this.getElementIdText);
     }
@@ -100,6 +101,7 @@ export class AppLabTooltipOverlay extends React.Component {
   }
 }
 export default connect(state => ({
+  isRtl: state.isRtl,
   isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN
 }))(AppLabTooltipOverlay);
 
