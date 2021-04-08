@@ -3,4 +3,4 @@
   "block": "var object = {\"key\": \"value\"};",
   "category": "Variables",
   "noAutocomplete": true
-},
+}
