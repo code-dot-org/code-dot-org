@@ -52,6 +52,7 @@ export default class ModelManagerDialog extends React.Component {
   state = {
     selectedModel: undefined,
     models: [],
+    isModelListPending: true,
     isImportPending: false,
     confirmDialogOpen: false,
     deletionStatus: undefined
@@ -80,10 +81,18 @@ export default class ModelManagerDialog extends React.Component {
         }).then(metadata => {
           this.props.levelbuilderModel.metadata = metadata;
           models.unshift(this.props.levelbuilderModel);
-          this.setState({models, selectedModel: models[0]});
+          this.setState({
+            isModelListPending: false,
+            models,
+            selectedModel: models[0]
+          });
         });
       } else {
-        this.setState({models, selectedModel: models[0]});
+        this.setState({
+          isModelListPending: false,
+          models,
+          selectedModel: models[0]
+        });
       }
     });
   };
@@ -107,12 +116,10 @@ export default class ModelManagerDialog extends React.Component {
 
   showDeleteConfirmation = () => {
     this.setState({confirmDialogOpen: true});
-    this.closeModelManager();
   };
 
   closeConfirmDialog = () => {
-    this.setState({confirmDialogOpen: false});
-    this.closeModelManager();
+    this.setState({confirmDialogOpen: false, deletionStatus: undefined});
   };
 
   deleteModel = () => {
@@ -120,16 +127,20 @@ export default class ModelManagerDialog extends React.Component {
       url: `/api/v1/ml_models/${this.state.selectedModel.id}`,
       method: 'DELETE'
     }).then(response => {
-      this.setState({
-        deletionStatus: response.status,
-        confirmDialogOpen: false
-      });
+      if (response.status === 'failure') {
+        this.setState({
+          deletionStatus: `Model with id ${response.id} could not be deleted.`
+        });
+      } else {
+        this.setState({confirmDialogOpen: false});
+      }
     });
   };
 
   render() {
     const {isOpen} = this.props;
-    const noModels = this.state.models.length === 0;
+    const noModels =
+      !this.state.isModelListPending && this.state.models.length === 0;
     const showDeleteButton =
       this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
@@ -154,7 +165,11 @@ export default class ModelManagerDialog extends React.Component {
                 </option>
               ))}
             </select>
-            {noModels && <div>You have not trained any A.I. models yet.</div>}
+            {noModels && (
+              <div style={styles.message}>
+                You have not trained any AI models yet.
+              </div>
+            )}
             <br />
             <Button
               text={'Import'}
@@ -207,6 +222,7 @@ export default class ModelManagerDialog extends React.Component {
                 iconClassName={'fa-trash'}
               />
             </div>
+            <p style={styles.message}>{this.state.deletionStatus}</p>
           </div>
           <div style={styles.right}>
             <ModelCard model={this.state.selectedModel} />
