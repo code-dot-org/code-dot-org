@@ -11,7 +11,7 @@ import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigne
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
@@ -120,9 +120,9 @@ class ScriptOverviewTopRow extends React.Component {
             viewAs === ViewType.Teacher &&
             ((!isMigrated && teacherResources.length > 0) ||
               (isMigrated && migratedTeacherResources.length > 0)) && (
-              <TeacherResourcesDropdown
-                teacherResources={teacherResources}
-                migratedTeacherResources={migratedTeacherResources}
+              <ResourcesDropdown
+                resources={teacherResources}
+                migratedResources={migratedTeacherResources}
                 unitId={scriptId}
                 useMigratedResources={isMigrated}
               />
