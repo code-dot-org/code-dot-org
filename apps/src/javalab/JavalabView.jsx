@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './javalabRedux';
+import {appendOutputLog, toggleDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -69,14 +69,15 @@ class JavalabView extends React.Component {
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
+    toggleDarkMode: PropTypes.func,
     channelId: PropTypes.string
   };
 
   state = {
     loading: true,
-    loadSuccess: null,
-    isDarkMode: false
+    loadSuccess: null
   };
 
   componentDidMount() {
@@ -115,17 +116,28 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
-  renderSettings() {
-    const {isDarkMode} = this.state;
+  renderSettings = () => {
+    const {isDarkMode} = this.props;
     return [
-      <a onClick={() => this.setState({isDarkMode: !this.state.isDarkMode})}>
+      <a onClick={this.props.toggleDarkMode}>
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
-  }
+  };
+
+  getButtonStyles = isSettings => {
+    const {isDarkMode} = this.props;
+    if (isDarkMode) {
+      return style.singleButton;
+    }
+    if (isSettings) {
+      return {...style.singleButton, backgroundColor: color.orange};
+    }
+    return {...style.singleButton, backgroundColor: color.cyan};
+  };
 
   renderJavalab() {
-    const {isDarkMode} = this.state;
+    const {isDarkMode} = this.props;
     if (isDarkMode) {
       document.getElementsByTagName('body')[0].style.backgroundColor =
         '#1b1c17';
@@ -151,18 +163,12 @@ class JavalabView extends React.Component {
               color: isDarkMode ? color.white : color.black
             }}
           >
-            <JavalabEditor
-              onCommitCode={this.props.onCommitCode}
-              isDarkMode={isDarkMode}
-            />
+            <JavalabEditor onCommitCode={this.props.onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
                   type="button"
-                  style={{
-                    ...style.singleButton,
-                    ...(!isDarkMode && {backgroundColor: color.cyan})
-                  }}
+                  style={this.getButtonStyles(false)}
                   onClick={() => {}}
                 >
                   <FontAwesome icon="stop" className="fa-2x" />
@@ -171,10 +177,7 @@ class JavalabView extends React.Component {
                 </button>
                 <button
                   type="button"
-                  style={{
-                    ...style.singleButton,
-                    ...(!isDarkMode && {backgroundColor: color.cyan})
-                  }}
+                  style={this.getButtonStyles(false)}
                   onClick={this.props.onContinue}
                 >
                   <FontAwesome icon="check" className="fa-2x" />
@@ -183,20 +186,12 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.buttons}>
-                <JavalabSettings
-                  style={{
-                    ...style.singleButton,
-                    ...(!isDarkMode && {backgroundColor: color.orange})
-                  }}
-                >
+                <JavalabSettings style={this.getButtonStyles(true)}>
                   {this.renderSettings()}
                 </JavalabSettings>
                 <button
                   type="button"
-                  style={{
-                    ...style.singleButton,
-                    ...(!isDarkMode && {backgroundColor: color.cyan})
-                  }}
+                  style={this.getButtonStyles(false)}
                   onClick={this.run}
                 >
                   <FontAwesome icon="play" className="fa-2x" />
@@ -205,7 +200,7 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.consoleStyle}>
-                <JavalabConsole isDarkMode={isDarkMode} />
+                <JavalabConsole />
               </div>
             </div>
           </div>
@@ -230,9 +225,11 @@ export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    channelId: state.pageConstants.channelId
+    channelId: state.pageConstants.channelId,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    appendOutputLog: log => dispatch(appendOutputLog(log))
+    appendOutputLog: log => dispatch(appendOutputLog(log)),
+    toggleDarkMode: () => dispatch(toggleDarkMode())
   })
 )(JavalabView);
