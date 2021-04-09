@@ -13,7 +13,7 @@ import Button from '@cdo/apps/templates/Button';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {testLessons} from './unitCalendarTestData';
 
@@ -155,8 +155,8 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <TeacherResourcesDropdown
-          teacherResources={[
+        <ResourcesDropdown
+          resources={[
             {
               type: ResourceType.curriculum,
               link: 'https://example.com/a'
@@ -196,8 +196,8 @@ describe('ScriptOverviewTopRow', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <TeacherResourcesDropdown
-          migratedTeacherResources={[
+        <ResourcesDropdown
+          migratedResources={[
             {
               id: 1,
               key: 'curriculum',
