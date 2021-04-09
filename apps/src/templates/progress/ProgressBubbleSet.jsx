@@ -112,28 +112,28 @@ class ProgressBubbleSet extends React.Component {
       ? styles.backgroundFirst
       : styles.backgroundLast;
 
+    const backgroundStyleProp = {
+      ...styles.background,
+      ...(level.isConceptLevel && styles.backgroundDiamond),
+      ...(isSublevel && styles.backgroundSublevel),
+      ...(level.isUnplugged && styles.backgroundPill),
+      ...(!isSublevel && index === 0 && backgroundFirstStyle),
+      ...(!isSublevel &&
+        !level.sublevels &&
+        index === levels.length - 1 &&
+        backgroundLastStyle)
+    };
+
+    const containerStyleProp = {
+      ...styles.container,
+      ...(level.isUnplugged && styles.pillContainer),
+      ...(level.isConceptLevel && styles.diamondContainer)
+    };
+
     return (
       <div style={styles.withBackground} key={index}>
-        <div
-          style={[
-            styles.background,
-            level.isConceptLevel && styles.backgroundDiamond,
-            isSublevel && styles.backgroundSublevel,
-            level.isUnplugged && styles.backgroundPill,
-            !isSublevel && index === 0 && backgroundFirstStyle,
-            !isSublevel &&
-              !level.sublevels &&
-              index === levels.length - 1 &&
-              backgroundLastStyle
-          ]}
-        />
-        <div
-          style={[
-            styles.container,
-            level.isUnplugged && styles.pillContainer,
-            level.isConceptLevel && styles.diamondContainer
-          ]}
-        >
+        <div style={backgroundStyleProp} />
+        <div style={containerStyleProp}>
           <ProgressBubble
             level={level}
             disabled={this.bubbleDisabled(level)}
