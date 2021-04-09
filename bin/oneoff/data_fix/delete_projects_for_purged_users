@@ -28,6 +28,7 @@ end_user_id = User.last.id
 
 BATCH_SIZE = 200
 
+purged_users = 0
 users_purged_of_project_objects = 0
 users_with_project_purge_errors = 0
 User.
@@ -35,10 +36,11 @@ User.
   where.not(purged_at: nil).
   find_in_batches(start: start_user_id, finish: end_user_id, batch_size: BATCH_SIZE) do |user_batch|
   user_batch.each do |user|
+    purged_users += 1
+    CDO.log.info "#{options[:actually_delete] ? 'Deleting' : 'DRY RUN is not deleting'} project objects for purged user id: #{user.id}"
     if options[:actually_delete]
       delete_project_backed_progress(user)
       users_purged_of_project_objects += 1
-      CDO.log.info "Deleting project S3 Objects for purged user: id=#{user.id}"
     end
   rescue => error
     users_with_project_purge_errors += 1
@@ -47,4 +49,5 @@ User.
 end
 
 CDO.log.info "Script completed"
+CDO.log.info "Iterated through #{purged_users} purged users."
 CDO.log.info "S3 Objects deleted for #{users_purged_of_project_objects} users with #{users_with_project_purge_errors} errors"
