@@ -119,7 +119,7 @@ class JavalabView extends React.Component {
   renderSettings = () => {
     const {isDarkMode} = this.props;
     return [
-      <a onClick={this.props.toggleDarkMode}>
+      <a onClick={this.props.toggleDarkMode} key="theme-setting">
         Switch to {isDarkMode ? 'light mode' : 'dark mode'}
       </a>
     ];
