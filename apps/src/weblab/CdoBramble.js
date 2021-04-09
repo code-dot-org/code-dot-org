@@ -36,23 +36,6 @@ export default class CdoBramble {
     this.lastSyncedVersionId = null;
   }
 
-  getInterface() {
-    return {
-      addFileCSS: this.addFileCSS.bind(this),
-      addFileHTML: this.addFileHTML.bind(this),
-      disableFullscreenPreview: this.disableFullscreenPreview.bind(this),
-      disableInspector: this.disableInspector.bind(this),
-      enableFullscreenPreview: this.enableFullscreenPreview.bind(this),
-      enableInspector: this.enableInspector.bind(this),
-      fileRefresh: this.fileRefresh.bind(this),
-      redo: this.redo.bind(this),
-      refreshPreview: this.refreshPreview.bind(this),
-      syncFiles: this.syncFiles.bind(this),
-      undo: this.undo.bind(this),
-      validateProjectChanged: this.validateProjectChanged.bind(this)
-    };
-  }
-
   init() {
     this.Bramble.load('#bramble', this.config());
 
@@ -760,10 +743,6 @@ export default class CdoBramble {
 
   refreshPreview() {
     this.brambleProxy?.refreshPreview();
-  }
-
-  fileRefresh(callback = () => {}) {
-    this.brambleProxy?.fileRefresh(callback);
   }
 
   enableFullscreenPreview(callback) {
