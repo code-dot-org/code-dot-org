@@ -2,6 +2,7 @@
 cs:
   data:
     parameter_names:
+      "???": "???"
       actor: postava
       color: barva
       counter: počítadlo

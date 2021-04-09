@@ -2,6 +2,7 @@
 de:
   data:
     shared_functions:
+      driving with arrow keys: fahren mit den Pfeiltasten
       growing: wachsend
       jittering: zitternd
       moving east: nach Osten gehend
@@ -15,3 +16,4 @@ de:
       spinning right: rechtsdrehend
       swimming left and right: links und rechts schwimmend
       wandering: wandernd
+      wobbling: wackelnd

@@ -28,6 +28,7 @@ class ProgrammingExpression < ApplicationRecord
 
   serialized_attrs %w(
     color
+    parameters
   )
 
   def self.properties_from_file(path, content)
@@ -50,7 +51,8 @@ class ProgrammingExpression < ApplicationRecord
         name: expression_config['func'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
-        color: ProgrammingExpression.get_category_color(expression_config['category'])
+        color: ProgrammingExpression.get_category_color(expression_config['category']),
+        parameters: expression_config['paletteParams']
       }
     end
   end
@@ -135,6 +137,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def summarize_for_lesson_show
-    {name: name, color: color, link: documentation_path}
+    {name: name, color: color, parameters: parameters, link: documentation_path}
   end
 end

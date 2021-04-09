@@ -7,9 +7,14 @@ import {
 import color from '@cdo/apps/util/color';
 import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
-import {removeProgrammingExpression} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+import {
+  addProgrammingExpression,
+  removeProgrammingExpression
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import * as Table from 'reactabular-table';
 import {lessonEditorTableStyles} from './TableConstants';
+import Button from '@cdo/apps/templates/Button';
+import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
 const styles = {
   search: {
@@ -41,6 +46,7 @@ class ProgrammingExpressionsEditor extends Component {
       .isRequired,
     programmingExpressions: PropTypes.arrayOf(programmingExpressionShape)
       .isRequired,
+    addProgrammingExpression: PropTypes.func.isRequired,
     removeProgrammingExpression: PropTypes.func.isRequired
   };
 
@@ -48,7 +54,8 @@ class ProgrammingExpressionsEditor extends Component {
     super(props);
     this.state = {
       confirmRemovalDialogOpen: false,
-      programmingExpressionForRemoval: null
+      programmingExpressionForRemoval: null,
+      addProgrammingExpressionOpen: false
     };
   }
 
@@ -155,6 +162,19 @@ class ProgrammingExpressionsEditor extends Component {
     this.handleRemoveProgrammingExpressionDialogClose();
   };
 
+  handleOpenAddProgrammingExpression = event => {
+    // Prevents button from trigger save
+    event.preventDefault();
+    this.setState({addProgrammingExpressionOpen: true});
+  };
+
+  handleCloseAddProgrammingExpression = programmingExpression => {
+    this.setState(
+      {addProgrammingExpressionOpen: false},
+      this.props.addProgrammingExpression(programmingExpression)
+    );
+  };
+
   render() {
     const columns = this.getColumns();
     return (
@@ -177,6 +197,18 @@ class ProgrammingExpressionsEditor extends Component {
           <Table.Header />
           <Table.Body rows={this.props.programmingExpressions} rowKey="id" />
         </Table.Provider>
+        <Button
+          text={'Add Introduced Code'}
+          onClick={this.handleOpenAddProgrammingExpression}
+          color={Button.ButtonColor.orange}
+        />
+        <FindProgrammingExpressionDialog
+          isOpen={this.state.addProgrammingExpressionOpen}
+          handleConfirm={this.handleCloseAddProgrammingExpression}
+          handleClose={() =>
+            this.setState({addProgrammingExpressionOpen: false})
+          }
+        />
       </div>
     );
   }
@@ -190,6 +222,7 @@ export default connect(
     programmingEnvironments: state.programmingEnvironments
   }),
   {
+    addProgrammingExpression,
     removeProgrammingExpression
   }
 )(ProgrammingExpressionsEditor);

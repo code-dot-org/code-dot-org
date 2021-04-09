@@ -15794,6 +15794,8 @@ tr:
               name: Simülasyon Kodlama
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
+            End of Course Project:
+              name: Ders Projesinin Sonu
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -16763,7 +16765,7 @@ tr:
               key: 'Olaylar: Büyük Olay'
               name: Büyük Olay Jr.
               description_student: "Öğretmenleriniz uzaktan düğmelere bastığında hareket edip seslenin.\n"
-              description_teacher: "Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir."
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
             Events in Play Lab:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
@@ -16823,7 +16825,7 @@ tr:
               key: Toplayıcıda Döngüler
               name: Toplayıcıda Döngüler
               description_student: Maceracı Laurel'in açık bir mağarada hazine toplaması için programla.
-              description_teacher: Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir 'hazineyi al' bloğu, macerasında ona yardım etmek için getirilir.
+              description_teacher: 'Bu derste öğrenciler, döngü kavramlarını öğrenmeye devam eder. Burada Maceracı Laurel, açık mağara alanlarında hazine toplamak için döngüleri kullanır. Yeni bir ''hazineyi al'' bloğu, macerasında ona yardım etmek için getirilir.'
             Loops in Artist:
               key: Sanatçı- Döngüler
               name: Sanatçıların Döngüleri
@@ -16838,7 +16840,7 @@ tr:
               key: 'Olaylar: Büyük Olay'
               name: Büyük Olay Jr.
               description_student: "Öğretmeniniz uzaktan düğmelere bastığında hareket edin veya seslenin.\n"
-              description_teacher: "Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir."
+              description_teacher: Olaylar, önceden yazılan bir algoritmaya değişiklik eklemek için harika bir yoldur. Bazen, programınızın tam olarak kullanıcı istediğini zaman, kullanıcıya cevap vermesini isteyebilirsiniz. Olaylar işte bunun içindir.
             Events in Play Lab:
               key: Play Lab' da Olaylar
               name: Play Lab' da Olaylar
@@ -16883,7 +16885,7 @@ tr:
               key: Labirentte Hata Ayıklama
               name: Labirentte Hata Ayıklama
               description_student: Bulmacalardaki problemleri bulun ve hata ayıklama becerilerinizi uygulayın.
-              description_teacher: "Hata ayıklama, program öğrenmenin esas bir ögesidir. Bu derste öğrenciler, yanlış bir şekilde çözülmüş bulmacalar ile karşılaşacaktır. Yanlış döngüler, eksik bloklar, ekstra bloklar ve düzensiz bloklar da dahil olmak üzere hataları belirlemek için var olan kodu girmeleri gerekecek."
+              description_teacher: Hata ayıklama, program öğrenmenin esas bir ögesidir. Bu derste öğrenciler, yanlış bir şekilde çözülmüş bulmacalar ile karşılaşacaktır. Yanlış döngüler, eksik bloklar, ekstra bloklar ve düzensiz bloklar da dahil olmak üzere hataları belirlemek için var olan kodu girmeleri gerekecek.
             Programming in Collector:
               key: Koleksiyoncu programlama
               name: Koleksiyoncu programlama
@@ -16898,7 +16900,7 @@ tr:
               key: İkilik Bileklikler
               name: İkilik Bileklikler
               description_student: Bizzat kendi ikili bileziğinizi oluşturun ve bilgisayarların bilgileri nasıl hatırladığını öğrenin!
-              description_teacher: "İkili sistem, bilgisayar dünyasında son derece önemlidir. Bilgisayarların çoğu bugün her türlü bilgiyi ikili biçimde saklarlar. Bu ders, bir şeyi gerçek hayattan nasıl alabileceğinizi ve onu bir dizi açık ve kapalı alana nasıl çevirebileceğinizi göstermede yardımcı olmaktadır."
+              description_teacher: İkili sistem, bilgisayar dünyasında son derece önemlidir. Bilgisayarların çoğu bugün her türlü bilgiyi ikili biçimde saklarlar. Bu ders, bir şeyi gerçek hayattan nasıl alabileceğinizi ve onu bir dizi açık ve kapalı alana nasıl çevirebileceğinizi göstermede yardımcı olmaktadır.
             'Loops: My Loopy Robotic Friends':
               key: 'Döngüler: Loopy robot dostlarım'
               name: 'Döngüler: Loopy robot dostlarım'
@@ -16941,8 +16943,8 @@ tr:
             Picturing Data:
               key: Verilerin Resmedilmesi
               name: Verilerin Resmedilmesi
-              description_student: Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
-              description_teacher: Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.
+              description_student: 'Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.'
+              description_teacher: 'Veriler, öğrencilerin kendi dünyalarını anlamasına ve ilginç soruları cevaplamasına yardım etmek için kullanılabilir. Bu derste öğrenciler, bir Oyun Laboratuvarı projesinden veri toplayacak ve bu veriyi, farklı türde grafikler kullanarak görselleştirecektir.'
             'End of Course Project: Create a Play Lab Game':
               name: Ders Projesinin Sonu
               description_student: Bol kodlama için elleri hazırla! Projenizi oluşturmaya başlamanın zamanı geldi.
@@ -17017,12 +17019,12 @@ tr:
               key: Arı -içiçe döngüler
               name: Labirentte İçiçe Döngüler
               description_student: Döngülerin içindeki döngülerin içindeki döngüler. Bu ne anlama geliyor? Bu ders, size, içiçe bir döngü oluşturduğunuzda ne olacağını öğretecektir.
-              description_teacher: Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.
+              description_teacher: 'Bu çevrimiçi etkinlikte, öğrenciler döngü anlayışlarını yepyeni bir seviyeye çekme fırsatına sahip olacaklar. Arı ve Bitkiler vs Zombiler ile oynayarak, öğrenciler bir döngünün başka bir döngünün içinde nasıl programlanacağını öğreneceklerdir. Ayrıca, her iki döngüde de küçük değişiklikler `Çalıştır`a tıklandığında programlarını etkileyeceğini anlamaya teşvik edilecekler.'
             Conditionals with Cards:
               key: Kartlarla Koşullu Önermeler
               name: Kartlarla Koşullu Önermeler
               description_student: Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!
-              description_teacher: "Bu ders, bir programı belirli bilgilere uyarlamak için koşulların nasıl kullanılabileceğini göstermektedir. Bir program yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar, koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin verir."
+              description_teacher: 'Bu ders, bir programı belirli bilgilere uyarlamak için koşulların nasıl kullanılabileceğini göstermektedir. Bir program yazarken bize lazım olan her bilgiye sahip olamayız. Bazen, kodunuz çalıştığında hangi durumun geçerli olacağını bilmeseniz de, bir durumda başka bir şeyden farklı bir şeyler yapmak isteyeceksinizdir. Koşullar, koşulların verildiği yerdir. Koşullar, bir bilgisayarın, kodunuz çalıştırıldığında her zaman doğru olan bilgiye dayalı olarak bir karar vermesine izin verir.'
             Conditionals in Bee:
               key: Koşullar-Arı
               name: Koşullar-Arı
@@ -17135,7 +17137,7 @@ tr:
               description_student: İnternet eğlenceli ve heyecanlıdır, fakat güvende kalmak da önemlidir. Bu ders size, paylaşmanın güvenli olduğu bilgi ile özel bilgi arasındaki farkı öğretecek.
             About Me:
               key: Hakkımda
-              name: Ben ve Hareketli Nesne Laboratuvarı Hakkında
+              name: 'Ben ve Hareketli Nesne Laboratuvarı Hakkında'
               description_student: "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar.\n"
               description_teacher: "Hareketli Nesne Laboratuvarı ile etkileşimli bir poster oluşturarak öğrenciler, kişisel ve özel bilgileri ağda paylaşma anlayışını uygulayacaklar.\\r\n"
             Digital Sharing:
@@ -17153,7 +17155,7 @@ tr:
               description_student: Daha iç içe döngüler! Bu sefer, iç içe geçmiş döngülerle biraz İLGİNÇ çizimler yapacaksınız.
             Nested Loops in Frozen:
               key: Frozen'da İç İçe Döngüler
-              name: Frozen ile İçiçe Döngüler
+              name: 'Frozen ile İçiçe Döngüler'
               description_student: 'Anna ve Elsa''nın mükemmel buz pateni yapma becerileri var ancak buzda desenler oluşturmak için yardımınıza ihtiyaçları var. Süper MUHTEŞEM bir şey oluşturmak için içiçe döngüleri kullanın.'
               description_teacher: Şimdi, öğrenciler döngülerini nasıl kademe kademe yapacaklarını bildiklerine göre çok güzel şeyler oluşturabilirler. Bu ders, öğrencilerin Anna ve Elsa'nın mükemmel buz pateni yapma becerilerini kullanarak kendi hazır resim dosyalarını oluşturmaları için bir dizi alıştırma yapmalarını sağlayacak!
             'Functions: Songwriting':
@@ -17458,6 +17460,7 @@ tr:
               key: Uzaylı Dans Partisi
               name: Uzaylı Dans Partisi
               description_student: Sınıflar ile paylaşılabilen etkileşimli bir proje oluşturun.
+              description_teacher: 'Bu ders, öğrencilerin kendi etkileşimli animasyonlarını ve oyunlarını oluşturabildiği bir platform olan Hareketli Nesne Laboratuvarını içerir. Davranışlara ek olarak günümüzde öğrenciler, "uzaylı dans partisi" oluşturmak için kullanıcı girdisini olaylar olarak dahil edecektir.  '
             Behaviors in Sprite Lab:
               key: Hareketli Nesne Laboratuvarındaki Davranışlar
               name: Hareketli Nesne Laboratuvarındaki Davranışlar
@@ -17784,6 +17787,15 @@ tr:
               name: Ders 14
             lesson15:
               name: Ders 15
+            lesson17:
+              name: Ders 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: 'Ders 15: Değerlendirme Günü'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           description: "Kişiye özel ücretsiz çevrimiçi kurs ile Code.org'un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin!"
           student_description: 'Kişiye özel ücretsiz çevrimiçi kurs ile Code.org''un Bilgisayar Bilimi Temellerini kullanarak bilgisayar biliminin nasıl öğretileceğini öğrenin!'

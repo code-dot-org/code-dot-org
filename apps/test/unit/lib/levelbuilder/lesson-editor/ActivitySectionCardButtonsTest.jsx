@@ -125,4 +125,24 @@ describe('ActivitySectionCardButtons', () => {
     handler();
     expect(appendSlide).to.have.been.calledOnce;
   });
+
+  it('add image pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+    const button = wrapper.find('AddButton').filter({displayText: 'Image'});
+    const handler = button.prop('handler');
+
+    expect(wrapper.state().uploadImageOpen).to.equal(false);
+    handler();
+    expect(wrapper.state().uploadImageOpen).to.equal(true);
+  });
+
+  it('add code doc pressed', () => {
+    const wrapper = shallow(<ActivitySectionCardButtons {...defaultProps} />);
+    const button = wrapper.find('AddButton').filter({displayText: 'Code Doc'});
+    const handler = button.prop('handler');
+
+    expect(wrapper.state().addProgrammingExpressionOpen).to.equal(false);
+    handler();
+    expect(wrapper.state().addProgrammingExpressionOpen).to.equal(true);
+  });
 });

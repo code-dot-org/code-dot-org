@@ -1056,26 +1056,25 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test'
     next_position = 1
     add_unit = ->(unit_name, lesson_names) do
-      create(:script).tap do |script|
+      create(:script, name: unit_name).tap do |script|
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script
-        I18n.stubs(:t).with("data.script.name.#{script.name}.title").returns(unit_name)
         lesson_names.each {|lesson_name| create :lesson, script: script, name: lesson_name, key: lesson_name, lesson_group: script.lesson_groups.first}
       end
     end
 
-    add_unit.call 'Unit 1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
-    add_unit.call 'Unit 2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
-    add_unit.call 'Unit 3', ['Unit 3 - Lesson 1']
+    add_unit.call 'pre-survey-unit-1', ['Unit 1 - Lesson 1', 'Unit 1 - Lesson 2']
+    add_unit.call 'pre-survey-unit-2', ['Unit 2 - Lesson 1', 'Unit 2 - Lesson 2']
+    add_unit.call 'pre-survey-unit-3', ['Unit 3 - Lesson 1']
 
     workshop = build :workshop
     workshop.expects(:pre_survey?).returns(true).twice
     workshop.stubs(:pre_survey_course_name).returns('pd-workshop-pre-survey-test')
 
     expected = [
-      ['Unit 1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
-      ['Unit 2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
-      ['Unit 3', ['Lesson 1: Unit 3 - Lesson 1']]
+      ['pre-survey-unit-1', ['Lesson 1: Unit 1 - Lesson 1', 'Lesson 2: Unit 1 - Lesson 2']],
+      ['pre-survey-unit-2', ['Lesson 1: Unit 2 - Lesson 1', 'Lesson 2: Unit 2 - Lesson 2']],
+      ['pre-survey-unit-3', ['Lesson 1: Unit 3 - Lesson 1']]
     ]
     assert_equal expected, workshop.pre_survey_units_and_lessons
   end
@@ -1452,15 +1451,20 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
+  test 'friday_institute workshops must be virtual' do
+    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
+    refute workshop.valid?
+
+    workshop.virtual = true
+    workshop.suppress_email = true
+    assert workshop.valid?
+  end
+
   test 'workshops third_party_provider must be nil or from specified list' do
     workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
     refute workshop.valid?
 
     workshop.third_party_provider = nil
-    assert workshop.valid?
-
-    # friday_institute is in list of approved third party providers
-    workshop.third_party_provider = 'friday_institute'
     assert workshop.valid?
   end
 

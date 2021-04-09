@@ -19,7 +19,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course'
 
-    @migrated_script = create :script, is_migrated: true, hidden: true
+    @migrated_script = create :script, is_migrated: true
     @unit_group_migrated = create :unit_group
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_script, position: 1
 
@@ -320,6 +320,21 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.has_verified_resources
     assert unit_group.visible?
     assert unit_group.is_stable?
+  end
+
+  test "update: persists teacher resources for migrated unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    resource = create :resource, course_version: course_version
+
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', resourceIds: [resource.id]}
+    unit_group.reload
+    assert_equal 1, unit_group.resources.length
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}

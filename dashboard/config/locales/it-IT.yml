@@ -77,7 +77,7 @@ it:
   heading_x_of_y: "%{heading} (pagina %{x} su %{y})"
   join_section:
     code:
-      title: Iscrivi una classe su Code.org
+      title: Iscriviti ad una classe su Code.org
       placeholder: Codice Classe (ABCDEF)
       instructions: 'Inserisci il codice di 6 lettere (per esempio: "ABCDEF") che
         il tuo insegnante ha condiviso per farti aggiungere alla sua classe.'

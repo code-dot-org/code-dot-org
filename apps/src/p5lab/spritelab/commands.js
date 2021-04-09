@@ -305,6 +305,10 @@ export const commands = {
     return validationCommands.getBackground();
   },
 
+  getEventLog() {
+    return validationCommands.getEventLog();
+  },
+
   getNumBehaviorsForAnimation(animation) {
     return validationCommands.getNumBehaviorsForAnimation(animation);
   },

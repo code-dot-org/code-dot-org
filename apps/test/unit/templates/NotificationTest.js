@@ -60,6 +60,11 @@ const findCourse = {
   dismissible: false
 };
 
+const firehoseAnalyticsData = {
+  user_id: 1,
+  important_data_point: 2
+};
+
 const store = createStore(combineReducers({isRtl}));
 
 function wrapped(element) {
@@ -77,7 +82,7 @@ describe('Notification', () => {
         buttonText={announcement.buttonText}
         buttonLink={announcement.link}
         newWindow={true}
-        analyticId={announcement.id}
+        firehoseAnalyticsData={firehoseAnalyticsData}
       />
     );
     expect(
@@ -117,7 +122,6 @@ describe('Notification', () => {
         buttonText={announcementNoLink.buttonText}
         buttonLink={announcementNoLink.link}
         newWindow={true}
-        analyticId={announcementNoLink.id}
       />
     );
     expect(

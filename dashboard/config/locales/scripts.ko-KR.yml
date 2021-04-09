@@ -19881,6 +19881,8 @@ ko:
               name: 스프라이트 만들기
             Sprites in Action:
               name: 스프라이트 인 액션
+            End of Course Project:
+              name: 과정말 프로젝트
           lesson_groups:
             Toolbox Levels:
               display_name: 툴박스 레벨
@@ -21340,9 +21342,9 @@ ko:
               key: 2진 팔찌
               name: 2진 팔찌
               description_student: 바이너리 팔찌를 만들고 컴퓨터의 정보 기억 방법을 배우세요
-              description_teacher: '바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의
-                정보를 바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수
-                있음을 보여주는데 도움을 줍니다. '
+              description_teacher: 바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를
+                바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을
+                보여주는데 도움을 줍니다.
             'Loops: My Loopy Robotic Friends':
               key: '루프: 내 루피 로봇 친구'
               name: 내 루피 로봇 친구 주니어
@@ -21503,9 +21505,9 @@ ko:
               name: 미로 내 중첩 루프
               description_student: 루프 안의 루프 안의 루프. 이것의 의미는? 이 레슨은 중첩 루프를 만들면 어떻게 되는지
                 가르쳐 줄거예요.
-              description_teacher: 이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
+              description_teacher: '이 온라인 활동에서 학생들은 루프에 대한 이해력을 완전히 새로운 차원으로 올려줄 기회를
                 가질 것입니다. 벌과 식물 대 좀비로 플레이하며 학생들은 루프를 또 다른 루프 안에 있도록 프로그램하는 방법을 배울 것입니다.
-                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 '실행'을 클릭하여 알아 봅니다.
+                또한 어느 한 루프 내 작은 변화가 프로그램에 어떤 영향을 미칠지 ''실행''을 클릭하여 알아 봅니다. '
             Conditionals with Cards:
               key: 조건선택 카드
               name: 조건선택 카드
@@ -22125,6 +22127,8 @@ ko:
               key: 외계인 댄스 파티
               name: 외계인 댄스 파티
               description_student: 학우들과 공유할 수 있는 인터랙티브 프로젝트를 만드세요.
+              description_teacher: '이 레슨은 학생들이 인터랙티브 애니메이션과 게임을 만들 수 있는 플랫폼인 스프라이트
+                랩으로 구성됩니다. 행동 외에, 오늘 학생들은 사용자 인풋을 이벤트로서 통합하여 "외계인 댄스 파티"를 만들 것입니다.   '
             Behaviors in Sprite Lab:
               key: 스프라이트 랩 내 행동
               name: 스프라이트 랩 내 행동
@@ -22729,10 +22733,21 @@ ko:
           student_description: '스프라이트 랩을 사용하여 바이러스 발생 시뮬레이션을 프로그래밍하세요. '
         ai-unit-pilot:
           lessons:
+            lesson1:
+              name: 머신 러닝 소개
             lesson14:
               name: 레슨 14
             lesson15:
               name: 레슨 15
+            lesson17:
+              name: 레슨 15
+        csa1-pilot:
+          lessons:
+            lesson-20:
+              name: '레슨 15: 평가일'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
         k5-onlinepd-2021:
           description: 이 무료이며 자기 진도에 맞춰 학습하는 온라인 과정으로 Code.org의 컴퓨터 과학 원리를 사용해 컴퓨터
             과학을 가르치는 방법을 배우세요!

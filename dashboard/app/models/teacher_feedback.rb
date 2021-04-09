@@ -49,11 +49,12 @@ class TeacherFeedback < ApplicationRecord
     script_level
   end
 
-  def self.get_student_level_feedback(student_id, level_id, teacher_id)
+  def self.get_student_level_feedback(student_id, level_id, teacher_id, script_id)
     where(
       student_id: student_id,
       level_id: level_id,
-      teacher_id: teacher_id
+      teacher_id: teacher_id,
+      script_id: script_id
     ).latest
   end
 

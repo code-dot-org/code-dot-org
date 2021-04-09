@@ -3074,7 +3074,7 @@ fi:
               name: Säveltäminen
           lesson_groups:
             ramp_up:
-              display_name: Silmukat
+              display_name: Sisäkkäiset silmukat
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
             csf_nested_loops:

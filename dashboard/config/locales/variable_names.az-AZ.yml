@@ -3,6 +3,7 @@ az:
   data:
     variable_names:
       actor: personaj
+      birds: quşlar
       counter: sayğac
       height: hündürlük
       honey: bal
@@ -17,5 +18,6 @@ az:
       score: xal
       size: ölçü
       speed: sürət
+      variable: dəyişən
       wizard: sehrbaz
       x: x

@@ -8386,6 +8386,12 @@ ka:
               name: გაკვეთილი 14
             lesson15:
               name: გაკვეთილი 15
+            lesson17:
+              name: გაკვეთილი 15
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

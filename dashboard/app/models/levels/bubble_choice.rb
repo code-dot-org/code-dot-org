@@ -141,8 +141,16 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
-        level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
-        level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
+        level_info[:perfect] = UserLevel.find_by(
+          level: level,
+          script: script_level.try(:script),
+          user_id: user_id
+          )&.perfect?
+        level_info[:status] = if level_info[:perfect]
+                                SharedConstants::LEVEL_STATUS.perfect
+                              else
+                                SharedConstants::LEVEL_STATUS.not_tried
+                              end
       else
         # Pass an empty status if the user is not logged in so the ProgressBubble
         # in the sublevel display can render correctly.

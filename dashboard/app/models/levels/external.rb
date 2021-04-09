@@ -75,7 +75,7 @@ class External < DSLDefined
   def summarize_for_lesson_show(can_view_teacher_markdown)
     super.merge(
       {
-        markdown: localized_replaced_markdown
+        markdown: localized_property('markdown')
       }
     )
   end

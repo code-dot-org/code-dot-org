@@ -13,6 +13,7 @@ km:
         Bounce: បាល់​លោត
         Flappy: Flappy Bird
         ArtistEC: វិចិត្រករ
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: សំរឹទ្ធ
@@ -59,6 +60,7 @@ km:
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: រង្វិល​ជុំ
         C4_conditionals: លក្ខខណ្ឌ
+        CSF_my_robotic_friends: មិត្តរ៉ូបូតរបស់ខ្ញុំ
         csp_applab_loops: រង្វិល​ជុំ
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
@@ -70,3 +72,7 @@ km:
         mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
         mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
         CSF_loops_AB: រង្វិល​ជុំ
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party

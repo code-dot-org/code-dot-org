@@ -1410,6 +1410,89 @@
               "length": "ប្រវែង"
             }
           }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "សង់ស្ពាន"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "សង់ស្ពាន"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "សង់ស្ពាន"
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "ទ្រោះត្រាយផ្លូវ"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "ទ្រោះត្រាយផ្លូវ"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "ទ្រោះត្រាយផ្លូវ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "ជួសជុលផ្លូវវែង"
+          },
+          "fix short path": {
+            "name": "ជួសជុលផ្លូវខ្លី"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "ជួសជុលផ្លូវវែង"
+          },
+          "fix short path": {
+            "name": "ជួសជុលផ្លូវខ្លី"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "ជួសជុលផ្លូវវែង"
+          },
+          "fix short path": {
+            "name": "ជួសជុលផ្លូវខ្លី"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build short bridge": {
+            "name": "សង់ស្ពានខ្លី"
+          },
+          "build long bridge": {
+            "name": "សង់ស្ពានវែង"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build short bridge": {
+            "name": "សង់ស្ពានខ្លី"
+          },
+          "build long bridge": {
+            "name": "សង់ស្ពានវែង"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build short bridge": {
+            "name": "សង់ស្ពានខ្លី"
+          },
+          "build long bridge": {
+            "name": "សង់ស្ពានវែង"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "ហ្វាំងសិនរបស់ខ្ញុំ"
+          }
         }
       }
     }

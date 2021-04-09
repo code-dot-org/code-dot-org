@@ -78,13 +78,15 @@ class LessonsController < ApplicationController
     end
 
     standards = fetch_standards(lesson_params['standards'] || [])
+    opportunity_standards = fetch_standards(lesson_params['opportunity_standards'] || [])
     programming_expressions = fetch_programming_expressions(lesson_params['programming_expressions'] || [])
     ActiveRecord::Base.transaction do
       @lesson.resources = resources.compact
       @lesson.vocabularies = vocabularies.compact
       @lesson.standards = standards.compact
+      @lesson.opportunity_standards = opportunity_standards.compact
       @lesson.programming_expressions = programming_expressions.compact
-      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :programming_expressions, :original_lesson_data))
+      @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :opportunity_standards, :programming_expressions, :original_lesson_data))
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
       @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
 
@@ -142,13 +144,15 @@ class LessonsController < ApplicationController
       :vocabularies,
       :programming_expressions,
       :objectives,
-      :standards
+      :standards,
+      :opportunity_standards
     )
     lp[:announcements] = JSON.parse(lp[:announcements]) if lp[:announcements]
     lp[:resources] = JSON.parse(lp[:resources]) if lp[:resources]
     lp[:vocabularies] = JSON.parse(lp[:vocabularies]) if lp[:vocabularies]
     lp[:programming_expressions] = JSON.parse(lp[:programming_expressions]) if lp[:programming_expressions]
     lp[:standards] = JSON.parse(lp[:standards]) if lp[:standards]
+    lp[:opportunity_standards] = JSON.parse(lp[:opportunity_standards]) if lp[:opportunity_standards]
     lp
   end
 

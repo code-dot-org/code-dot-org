@@ -670,6 +670,8 @@
   coursed_name: "Khóa học D"
   coursee-draft_name: Khóa học E
   coursee_name: "Khóa học E"
+  coursef-draft_name: Khóa học F
+  coursef_name: "Khóa học F"
   coursed-2018_name: Kịch bản khóa D mới
   accelerated_name: "Khóa học cấp tốc"
   20-hour_name: Khóa học cấp tốc
@@ -740,21 +742,25 @@
   coursec_shortdescription_congrats: "Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn."
   coursed_shortdescription_congrats: "Nhanh chóng bao quát các khái niệm từ Khóa học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế nữa."
   coursee_shortdescription_congrats: "Nhanh chóng bao gồm các khái niệm trong Khóa học C & D và sau đó đi xa hơn với các chức năng."
+  coursef_shortdescription_congrats: "Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn."
   coursea-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước.
   courseb-2017_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
   coursec-2017_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
   coursed-2017_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế nữa.
   coursee-2017_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2017_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
   coursea-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước.
   courseb-2018_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
   coursec-2018_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
   coursed-2018_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế nữa.
   coursee-2018_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2018_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
   coursea-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước.
   courseb-2019_shortdescription_congrats: Giới thiệu về khoa học máy tính cho người đọc trước. (Tương tự như Khóa học A, nhưng đa dạng hơn cho học sinh lớn tuổi hơn.)
   coursec-2019_shortdescription_congrats: Tìm hiểu kiến thức cơ bản về khoa học máy tính và tạo tác phẩm nghệ thuật, câu chuyện và trò chơi của riêng bạn.
   coursed-2019_shortdescription_congrats: Nhanh chóng bao quát các khái niệm từ Khóa học C, sau đó đi xa hơn với các thuật toán, vòng lặp lồng nhau, điều kiện và hơn thế nữa.
   coursee-2019_shortdescription_congrats: Nhanh chóng bao gồm các khái niệm trong Khóa học C & D và sau đó đi xa hơn với các chức năng.
+  coursef-2019_shortdescription_congrats: Tìm hiểu tất cả các khái niệm trong Cơ bản về Khoa học Máy tính và tạo ra tác phẩm nghệ thuật, câu chuyện hoặc trò chơi của riêng bạn.
   frozen_longdescription: "Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ với bạn bè của bạn!"
   starwars_longdescription: "Tìm hiểu để lập trình droids, và tạo trò chơi Star Wars của riêng bạn trong một thiên hà xa xôi."
   scratch_beyond_name: "Hãy sáng tạo trong lập trình"

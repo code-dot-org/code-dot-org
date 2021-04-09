@@ -6,6 +6,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import {resourceShape} from './resourceType';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
@@ -77,7 +78,8 @@ class CourseOverview extends Component {
         name: PropTypes.string.isRequired
       })
     ).isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape),
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
@@ -92,7 +94,8 @@ class CourseOverview extends Component {
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
+    useMigratedResources: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -149,6 +152,7 @@ class CourseOverview extends Component {
       sectionsInfo,
       sectionsForDropdown,
       teacherResources,
+      migratedTeacherResources,
       isTeacher,
       viewAs,
       scripts,
@@ -160,7 +164,8 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn
+      isSignedIn,
+      useMigratedResources
     } = this.props;
 
     const showNotification =
@@ -215,6 +220,10 @@ class CourseOverview extends Component {
             announcements={this.props.announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
+            firehoseAnalyticsId={{
+              user_id: userId,
+              unit_group_id: id
+            }}
           />
         )}
         <div style={styles.titleWrapper}>
@@ -244,8 +253,10 @@ class CourseOverview extends Component {
               sectionsForDropdown={sectionsForDropdown}
               id={id}
               title={title}
-              resources={teacherResources}
+              teacherResources={teacherResources}
+              migratedTeacherResources={migratedTeacherResources}
               showAssignButton={showAssignButton}
+              useMigratedResources={useMigratedResources}
             />
           </div>
         )}

@@ -1202,6 +1202,10 @@
           "recovering": "recuperando",
           "moving with arrow keys": "moverse con las flechas del teclado",
           "moving left and right": "moviéndose a la izquierda y a la derecha"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "deambulando 2",
+          "wandering 1": "deambulando 1"
         }
       }
     }

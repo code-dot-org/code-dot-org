@@ -299,10 +299,6 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Лупови
         coursef-2021:
           lesson_groups:
             lessonGroup-8:

@@ -231,7 +231,7 @@ class ActivitySectionCardButtons extends Component {
                 <AddButton displayText="Slide" handler={this.handleAddSlide} />
                 <AddButton
                   displayText="Image"
-                  handler={this.handleOpenAddUploadImage}
+                  handler={this.handleOpenUploadImage}
                 />
               </span>
             )}
