@@ -1,7 +1,8 @@
 import React from 'react';
-import ProgressTableLevelBubble, {BubbleSize} from './ProgressTableLevelBubble';
+import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
+import {BubbleSize} from '@cdo/apps/templates/progress/progressStyles';
 
 const statuses = [
   LevelStatus.locked,
