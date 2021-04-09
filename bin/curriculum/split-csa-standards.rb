@@ -47,6 +47,8 @@ def parse_csv_file(filename)
 
   # parse the input file, populating parent_categories, categories, standards.
   CSV.foreach(filename) do |row|
+    # use the header row to determine the display name for the parent category
+    # and category within this framework
     unless category_type
       raise "empty fields in header row: #{row.inspect}" unless row[0] && row[1]
       parent_category_type = row[0]
@@ -57,7 +59,6 @@ def parse_csv_file(filename)
     # if the parent category or category is blank, use the previous value
     last_parent_category = row[0]&.strip || last_parent_category
     last_category = row[1]&.strip || last_category
-
     unless last_parent_category && last_category
       raise "first row must contain parent category and category: #{row.inspect}"
     end
