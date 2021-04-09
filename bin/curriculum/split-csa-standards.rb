@@ -19,100 +19,123 @@ unless FILENAME
   EOS
   exit(1)
 end
-framework_shortcode = FILENAME.split('/').last.split('.').first
+
+FRAMEWORK_SHORTCODE = FILENAME.split('/').last.split('.').first
 
 Category = Struct.new(:framework, :parent, :category, :type, :description, keyword_init: true)
 Standard = Struct.new(:framework, :category, :standard, :description, keyword_init: true)
 
-parent_category_type = nil
-category_type = nil
+def main
+  parent_categories, categories, standards = parse_csv_file(FILENAME)
+  write_categories_csv(parent_categories, categories)
+  write_standards_csv(standards)
+end
 
-parent_categories = []
-categories = []
-standards = []
+# @param [String] filename A csv filename in format specified by usage info above
+# @return [Array<Array<Category, Standard>>] Array containing parent categories,
+#   categories, and standards.
+def parse_csv_file(filename)
+  parent_category_type = nil
+  category_type = nil
 
-last_parent_category = nil
-last_category = nil
+  last_parent_category = nil
+  last_category = nil
 
-# parse the input file, populating: parent_categories, categories, standards.
-CSV.foreach(FILENAME) do |row|
-  unless category_type
-    raise "empty fields in header row: #{row.inspect}" unless row[0] && row[1]
-    parent_category_type = row[0]
-    category_type = row[1]
-    next
-  end
+  parent_categories = []
+  categories = []
+  standards = []
 
-  # if the parent category or category is blank, use the previous value
-  last_parent_category = row[0].strip || last_parent_category
-  last_category = row[1].strip || last_category
+  # parse the input file, populating parent_categories, categories, standards.
+  CSV.foreach(filename) do |row|
+    unless category_type
+      raise "empty fields in header row: #{row.inspect}" unless row[0] && row[1]
+      parent_category_type = row[0]
+      category_type = row[1]
+      next
+    end
 
-  unless last_parent_category && last_category
-    raise "first row must contain parent category and category: #{row.inspect}"
-  end
+    # if the parent category or category is blank, use the previous value
+    last_parent_category = row[0]&.strip || last_parent_category
+    last_category = row[1]&.strip || last_category
 
-  # assume each cell starts with a shortcode followed by a space
-  parent_category_shortcode, parent_category_description = last_parent_category.split(' ', 2)
-  category_shortcode, category_description = last_category.split(' ', 2)
-  standard_shortcode, standard_description = row[2].strip.split(' ', 2)
+    unless last_parent_category && last_category
+      raise "first row must contain parent category and category: #{row.inspect}"
+    end
 
-  # create parent category if it does not exist already
-  unless parent_categories.find {|pc| pc[:category] == parent_category_shortcode}
-    parent_categories.push(
-      Category.new(
-        framework: framework_shortcode,
-        parent: nil,
-        category: parent_category_shortcode,
-        type: parent_category_type,
-        description: parent_category_description.strip
+    # assume each cell starts with a shortcode followed by a space
+    parent_category_shortcode, parent_category_description = last_parent_category.split(' ', 2)
+    category_shortcode, category_description = last_category.split(' ', 2)
+    standard_shortcode, standard_description = row[2].strip.split(' ', 2)
+
+    # create parent category if it does not exist already
+    unless parent_categories.find {|pc| pc[:category] == parent_category_shortcode}
+      parent_categories.push(
+        Category.new(
+          framework: FRAMEWORK_SHORTCODE,
+          parent: nil,
+          category: parent_category_shortcode,
+          type: parent_category_type,
+          description: parent_category_description.strip
+        )
       )
-    )
-  end
+    end
 
-  # create category if it does not exist already
-  unless categories.find {|pc| pc[:category] == category_shortcode}
-    categories.push(
-      Category.new(
-        framework: framework_shortcode,
-        parent: parent_category_shortcode,
+    # create category if it does not exist already
+    unless categories.find {|pc| pc[:category] == category_shortcode}
+      categories.push(
+        Category.new(
+          framework: FRAMEWORK_SHORTCODE,
+          parent: parent_category_shortcode,
+          category: category_shortcode,
+          type: category_type,
+          description: category_description.strip
+        )
+      )
+    end
+
+    # create standard unconditionally
+    standards.push(
+      Standard.new(
+        framework: FRAMEWORK_SHORTCODE,
         category: category_shortcode,
-        type: category_type,
-        description: category_description.strip
+        standard: standard_shortcode,
+        description: standard_description.strip
       )
     )
   end
 
-  # create standard unconditionally
-  standards.push(
-    Standard.new(
-      framework: framework_shortcode,
-      category: category_shortcode,
-      standard: standard_shortcode,
-      description: standard_description.strip
-    )
-  )
+  [parent_categories, categories, standards]
 end
 
-# assume location of output directory relative to the location of this file
-directory = "#{__dir__}/../../dashboard/config/standards/"
-categories_filename = "#{directory}#{framework_shortcode}_categories.csv"
-standards_filename = "#{directory}#{framework_shortcode}_standards.csv"
+def write_categories_csv(parent_categories, categories)
+  # assume location of output directory relative to the location of this file
+  directory = "#{__dir__}/../../dashboard/config/standards/"
+  filename = "#{directory}#{FRAMEWORK_SHORTCODE}_categories.csv"
 
-# generate categories csv. parent categories must appear before categories
-CSV.open(categories_filename, 'wb') do |csv|
-  csv << categories.first.to_h.keys
-  parent_categories.each do |pc|
-    csv << pc.to_h.values
-  end
-  categories.each do |pc|
-    csv << pc.to_h.values
+  # generate categories csv. parent categories must appear before categories
+  CSV.open(filename, 'wb') do |csv|
+    csv << categories.first.to_h.keys
+    parent_categories.each do |pc|
+      csv << pc.to_h.values
+    end
+    categories.each do |pc|
+      csv << pc.to_h.values
+    end
   end
 end
 
-# generate standards csv
-CSV.open(standards_filename, 'wb') do |csv|
-  csv << standards.first.to_h.keys
-  standards.each do |c|
-    csv << c.to_h.values
+def write_standards_csv(standards)
+  # assume location of output directory relative to the location of this file
+  directory = "#{__dir__}/../../dashboard/config/standards/"
+  filename = "#{directory}#{FRAMEWORK_SHORTCODE}_standards.csv"
+
+  # generate standards csv
+  CSV.open(filename, 'wb') do |csv|
+    csv << standards.first.to_h.keys
+    standards.each do |c|
+      csv << c.to_h.values
+    end
   end
 end
+
+main
