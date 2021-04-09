@@ -392,7 +392,6 @@ export const styles = {
     left: "50%",
     transform: "translateX(-25%)"
   },
-
   trainBot: {
     position: "relative",
     width: 300
@@ -414,6 +413,20 @@ export const styles = {
     width: "49%",
     marginTop: "30%",
     direction: "ltr"
+  },
+
+  generateResultsContainer: { overflow: "hidden", paddingTop: 20 },
+  generateResultsDataTable: {
+    paddingLeft: "70%",
+    width: "30%",
+    overflow: "hidden",
+    opacity: 0.3,
+    paddingTop: 20
+  },
+  generateResultsBotContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-25%)"
   },
 
   cardRow: {

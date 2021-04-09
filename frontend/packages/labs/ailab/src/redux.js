@@ -1217,6 +1217,11 @@ export function getPanelButtons(state) {
   } else if (state.currentPanel === "trainModel") {
     if (state.modelSize) {
       prev = null;
+      next = { panel: "generateResults", text: "Continue" };
+    }
+  } else if (state.currentPanel === "generateResults") {
+    if (state.modelSize) {
+      prev = null;
       next = { panel: "results", text: "Continue" };
     }
   } else if (state.currentPanel === "results") {
