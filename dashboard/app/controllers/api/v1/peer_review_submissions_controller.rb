@@ -25,7 +25,11 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     per = params[:per] || params[:limit] || 50
     user_query = params[:user_q]
 
+    # Retrieve all peer reviews
     reviews = PeerReview.all
+
+    # And pull out any that are tied to deprecated scripts/units
+    reviews = reviews.where(!script.deprecated?)
 
     if user_query.presence
       reviews =
