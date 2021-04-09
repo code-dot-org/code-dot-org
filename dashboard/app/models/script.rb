@@ -922,6 +922,10 @@ class Script < ApplicationRecord
     tts?
   end
 
+  def deprecated?
+    deprecated?
+  end
+
   # Generates TTS files for each level in a script.
   def tts_update
     levels.each(&:tts_update)
