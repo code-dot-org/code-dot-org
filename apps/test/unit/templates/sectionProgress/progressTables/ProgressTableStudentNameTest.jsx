@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   studentId: 1,
   sectionId: 1,
   scriptId: 1,
-  lastTimestamp: 1611964800000,
+  lastTimestamp: 1611964800,
   studentUrl: '/student-link',
   onToggleExpand: () => {},
   isExpanded: false

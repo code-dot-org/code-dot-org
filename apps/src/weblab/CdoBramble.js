@@ -449,7 +449,7 @@ export default class CdoBramble {
     };
 
     this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
-      !err && currentFileData.push({name: filename, data: fileData.toString()});
+      !err && currentFileData.push({name: filename, data: fileData});
       next(err);
     });
   }
@@ -551,7 +551,7 @@ export default class CdoBramble {
       // Map array of files to an object with structure {filename: fileData}
       const reduceToObj = filesArray =>
         filesArray.reduce((acc, val) => {
-          acc[val.name] = val.data;
+          acc[val.name] = val.data?.toString();
           return acc;
         }, {});
       const startObj = reduceToObj(startSourceFiles);

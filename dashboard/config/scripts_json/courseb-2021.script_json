@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-04-07 17:19:52 UTC",
+    "serialized_at": "2021-04-07 21:12:05 UTC",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -354,10 +354,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.",
-        "student_overview": "Create your own artwork or game.",
+        "overview": "In this **project** lesson, students apply what they have learned about sequencing and events in an open-ended project with Play Lab.",
+        "student_overview": "Create your own story or game.",
         "purpose": "This lesson gives students one last opportunity to creatively use their new computer science skills.",
-        "preparation": "* Code your own Artist and Play Lab projects in advance to inspire students!\n"
+        "preparation": "* Code your own Play Lab projects in advance to inspire students!\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -2851,7 +2851,7 @@
       "position": 1,
       "properties": {
         "name": "Review",
-        "description": "Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in previous lessons using the Artist and Play Lab tools.\nReview the vocabulary words **loop** and **event**.\n\n**Do This:** Project (or screen share) the level for this lesson.",
+        "description": "**Do this:**\n\n*Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in previous lessons using Play Lab.\n*Review the vocabulary word **event**.\n*If you created your own project example, share it now.",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -2863,8 +2863,9 @@
       "key": "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Project (or screen share) the level for this lesson.",
-        "progression_name": "Project"
+        "description": "**Do This:** Pull up the level for this lesson on the projector.",
+        "progression_name": "Project",
+        "name": "Planning a Play Lab Project"
       },
       "seeding_key": {
         "activity_section.key": "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c",
@@ -2876,7 +2877,7 @@
       "position": 2,
       "properties": {
         "remarks": true,
-        "description": "Today we are going to celebrate how much you have all learned by creating our own projects. You will be able to pick what you would like to make.  When you get the activity on your computer, click on any of the chooses to start. There are 3 drawing choices and 3 game choices. You can create whatever you like! At the end of class, we will share our projects with the class."
+        "description": "Today we will celebrate how much you have all learned by creating our own Play Lab projects. You might make a story or a game. You will be able to pick the actors to include in your project.  Today we will need to do some planning before we start! Planning is a very important part of coding a big project."
       },
       "seeding_key": {
         "activity_section.key": "0932ce4f-5756-4fd5-b1ec-e1c939906049",
@@ -2884,19 +2885,51 @@
       }
     },
     {
-      "key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8",
+      "key": "3ee111dc-4361-4c19-a350-9690c819f49a",
       "position": 3,
+      "properties": {
+        "name": "Planning",
+        "description": "**Do this:** Distribute the **planning guide** handout and review it with students. Students need to pick one set of actors and then circle the ones they actually want to include. Next to the image, students should describe how their project will work.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students aren't sure what to write, encourage them to think about how the actors will move or what they will say. You can also have students create a storyboard instead of write sentences."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ee111dc-4361-4c19-a350-9690c819f49a",
+        "lesson_activity.key": "381e6872-ab89-4df5-81a1-36e77c90b9a5"
+      }
+    },
+    {
+      "key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8",
+      "position": 4,
+      "properties": {
+        "description": "When you get to the activity on your computer, click on any of the choices. Start with your plan, but you can create whatever you like! At the end of class, we will share our projects with the class.",
+        "name": "Project",
+        "remarks": true,
+        "progression_name": "Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8",
+        "lesson_activity.key": "381e6872-ab89-4df5-81a1-36e77c90b9a5"
+      }
+    },
+    {
+      "key": "ec336597-2c69-4bfa-b542-abe5ccf06d5c",
+      "position": 5,
       "properties": {
         "description": "As students work, support them by answering questions and giving ideas. Encourage them to share ideas with each other to make the activity more collaborative.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "As students work, support them by answering questions and giving ideas. Encourage them to share ideas to make the activity more collaborative."
+            "markdown": "All of the choices in this lesson are considered \"Free Play,\" which means there is no single right answer. If a student presses Finish, they will return to the list of choices. You can have students complete just one choice or as many as they are interested in completing as time allows."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8",
+        "activity_section.key": "ec336597-2c69-4bfa-b542-abe5ccf06d5c",
         "lesson_activity.key": "381e6872-ab89-4df5-81a1-36e77c90b9a5"
       }
     },
@@ -5315,26 +5348,23 @@
       "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
-        "progression": "Project",
-        "level_keys": [
-          "courseAB_EOC_2021"
-        ]
+        "progression": "Project"
       },
       "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseAB_EOC_2021"
+          "courseB_EOC_2021"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "courseb-2021",
-        "activity_section.key": "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c"
+        "activity_section.key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8"
       },
       "level_keys": [
-        "courseAB_EOC_2021"
+        "courseB_EOC_2021"
       ]
     }
   ],
@@ -6445,14 +6475,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseAB_EOC_2021",
+        "level.key": "courseB_EOC_2021",
         "script_level.level_keys": [
-          "courseAB_EOC_2021"
+          "courseB_EOC_2021"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "courseb-2021",
-        "activity_section.key": "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c"
+        "activity_section.key": "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8"
       }
     }
   ],
@@ -6858,6 +6888,19 @@
       }
     },
     {
+      "name": "Play Lab Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
+      "key": "play_lab_project_planning_guide",
+      "properties": {
+        "type": "Handout",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "play_lab_project_planning_guide"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csf",
       "key": "teacher_forum",
@@ -7179,6 +7222,12 @@
         "lesson.key": "Events in Play Lab",
         "resource.key": "the_big_event_courses_a_b_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "play_lab_project_planning_guide"
+      }
     }
   ],
   "scripts_resources": [
@@ -7423,16 +7472,6 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -7574,12 +7613,6 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "loop"
       }
     },
     {

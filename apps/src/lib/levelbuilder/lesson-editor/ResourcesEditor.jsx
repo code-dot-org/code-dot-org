@@ -288,7 +288,7 @@ class ResourcesEditor extends Component {
             </label>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
-              searchUrl={'resourcesearch'}
+              searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
               additionalQueryParams={{
                 courseVersionId: this.props.courseVersionId
