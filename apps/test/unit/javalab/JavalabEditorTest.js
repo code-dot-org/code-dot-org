@@ -25,6 +25,7 @@ describe('Java Lab Editor Test', () => {
     defaultProps = {
       onCommitCode: () => {}
     };
+    window.appOptions = {level: {}};
   });
 
   afterEach(() => {
@@ -81,6 +82,35 @@ describe('Java Lab Editor Test', () => {
       // should have called project changed and updated redux
       expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
       expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+    });
+
+    it('updates state on Rename save and does not call JavalabFileManagement functions when in editBlocks mode', () => {
+      const editor = createWrapper();
+      window.appOptions.level.editBlocks = 'start_sources';
+
+      const activateRenameBtn = editor.find('button').first();
+      activateRenameBtn.invoke('onClick')();
+
+      // first input should be file rename text input
+      const renameInput = editor.find('input').first();
+      renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
+
+      // save button not clicked, should not yet have set project changed
+      // or change filename in redux
+      expect(JavalabFileManagement.onProjectChanged).to.not.have.been.called;
+      expect(store.getState().javalab.filename).to.not.equal(
+        'NewFilename.java'
+      );
+
+      // submit form, should trigger file rename
+      const form = editor.find('form').first();
+      // stub preventDefault function
+      form.invoke('onSubmit')({preventDefault: () => {}});
+      expect(JavalabFileManagement.renameProjectFile).to.not.have.been.called;
+      // should have called project changed and updated redux
+      expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
+      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+      window.appOptions.level.editBlocks = null;
     });
   });
 });
