@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-31 15:38:12 UTC",
+    "serialized_at": "2021-04-09 15:41:04 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -6375,6 +6375,46 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
+    },
+    {
+      "name": "All Code",
+      "url": "/courses/csd1-2021/code",
+      "key": "all_code",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/csd1-2021/resources",
+      "key": "all_resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csd1-2021/standards",
+      "key": "all_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csd1-2021/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
     }
   ],
   "lessons_resources": [
@@ -6703,7 +6743,34 @@
         "resource.key": "teacher_forum",
         "script.name": "csd1-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd1-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd1-2021"
+      }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

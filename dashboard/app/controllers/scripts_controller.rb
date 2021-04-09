@@ -163,6 +163,26 @@ class ScriptsController < ApplicationController
     @unit_summary = @script.summarize_for_rollup(@current_user)
   end
 
+  def add_rollup_resources
+    puts 'hi!'
+    @script = Script.find_by_name('csd1-2021')
+    course_version = @script.get_course_version
+    rollup_pages = []
+    if @script.lessons.any? {|l| !l.programming_expressions.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_course_path(@script), course_version_id: course_version.id))
+    end
+    if @script.lessons.any? {|l| !l.resources.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_course_path(@script), course_version_id: course_version.id))
+    end
+    if @script.lessons.any? {|l| !l.standards.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_course_path(@script), course_version_id: course_version.id))
+    end
+    if @script.lessons.any? {|l| !l.vocabularies.empty?}
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_course_path(@script), course_version_id: course_version.id))
+    end
+    render json: rollup_pages.map(&:summarize_for_teacher_resources_dropdown).to_json
+  end
+
   private
 
   def set_script_file

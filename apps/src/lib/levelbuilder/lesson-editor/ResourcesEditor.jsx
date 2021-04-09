@@ -250,6 +250,24 @@ class ResourcesEditor extends Component {
     return {options: resources};
   };
 
+  addRollupPages = () => {
+    $.ajax({
+      url: '/s/csd1-2021/add_rollup_resources',
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8'
+    })
+      .done(data => {
+        const resourceKeys = this.props.resources.map(resource => resource.key);
+        const resourcesAdded = data.filter(
+          r => resourceKeys.indexOf(r.key) === -1
+        );
+        resourcesAdded.forEach(resource => this.props.addResource(resource));
+      })
+      .fail(error => {
+        console.log('whomp whomp');
+      });
+  };
+
   render() {
     const columns = this.getColumns();
     return (
@@ -306,6 +324,13 @@ class ResourcesEditor extends Component {
           >
             <i className="fa fa-plus" style={{marginRight: 7}} /> Create New
             Resource
+          </button>
+          <button
+            onClick={this.addRollupPages}
+            style={styles.addButton}
+            type="button"
+          >
+            Add rollup pages
           </button>
         </div>
       </div>
