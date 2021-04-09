@@ -54,7 +54,6 @@ class CourseEditor extends Component {
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialTeacherResources: PropTypes.arrayOf(resourceShape),
-    initialMigratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
     hasVerifiedResources: PropTypes.bool.isRequired,
     hasNumberedUnits: PropTypes.bool.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -64,7 +63,8 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
 
     // Provided by redux
-    migratedTeacherResources: PropTypes.arrayOf(PropTypes.object)
+    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape)
   };
 
   constructor(props) {
@@ -273,12 +273,19 @@ class CourseEditor extends Component {
           </label>
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           {this.props.migratedTeacherResources && (
             <input
               type="hidden"
               name="resourceIds[]"
               value={this.props.migratedTeacherResources.map(r => r.id)}
+            />
+          )}
+          {this.props.studentResources && (
+            <input
+              type="hidden"
+              name="studentResourceIds[]"
+              value={this.props.studentResources.map(r => r.id)}
             />
           )}
           <div>
@@ -296,6 +303,20 @@ class CourseEditor extends Component {
               }
               courseVersionId={this.props.courseVersionId}
               useMigratedResources={this.props.useMigratedResources}
+            />
+          </div>
+          <div>
+            <div>
+              Select the Student Resource buttons you'd like to have show up on
+              the top of the course overview page
+            </div>
+
+            <ResourcesEditor
+              inputStyle={styles.input}
+              migratedResources={this.props.studentResources}
+              courseVersionId={this.props.courseVersionId}
+              useMigratedResources
+              studentFacing
             />
           </div>
         </CollapsibleEditorSection>
@@ -322,5 +343,6 @@ class CourseEditor extends Component {
 export const UnconnectedCourseEditor = CourseEditor;
 
 export default connect(state => ({
-  migratedTeacherResources: state.resources
+  migratedTeacherResources: state.resources,
+  studentResources: state.studentResources
 }))(CourseEditor);
