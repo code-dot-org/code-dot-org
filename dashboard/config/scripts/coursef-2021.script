@@ -44,7 +44,8 @@ level 'Virtual Pet 7_2021', progression: 'Mini-Project: Create a Virtual Pet'
 level 'Virtual Pet 8_2021', progression: 'Free Play'
 
 lesson_group 'lessonGroup-7', display_name: 'Digital Citizenship'
-lesson 'lesson-2', display_name: 'The Power of Words', has_lesson_plan: true
+lesson 'lesson-2', display_name: 'The Power of Words', has_lesson_plan: true, unplugged: true
+level 'PowerOfWords-Unplugged_2021', progression: 'The Power of Words - Unplugged Activity'
 
 lesson_group 'lessonGroup-8', display_name: 'Variables'
 lesson 'lesson-9', display_name: 'Blank Space Stories', has_lesson_plan: true, unplugged: true
@@ -129,7 +130,7 @@ lesson_group 'csf_data', display_name: 'Data and Simulations'
 lesson 'Simulating Experiments', display_name: 'Simulating Experiments', has_lesson_plan: true
 level 'simstarter_2021', progression: 'Run a simulation'
 level 'simconfig_2021', progression: 'Modify simulation variables'
-level 'simcustom_2021', progression: 'Customize the simulation'
+level 'simcustom_2021', progression: 'Customize'
 
 lesson 'lesson-5', display_name: 'Outbreak', has_lesson_plan: true
 level 'contagion_story', progression: 'Outbreak'
