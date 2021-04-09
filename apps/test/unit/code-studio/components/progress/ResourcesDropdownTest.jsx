@@ -28,7 +28,7 @@ describe('ResourcesDropdown', () => {
       wrapper.containsMatchingElement(
         <div>
           <DropdownButton
-            text={i18n.resources()}
+            text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
             <a
@@ -73,7 +73,7 @@ describe('ResourcesDropdown', () => {
       wrapper.containsMatchingElement(
         <div>
           <DropdownButton
-            text={i18n.resources()}
+            text={i18n.teacherResources()}
             color={Button.ButtonColor.blue}
           >
             <a
