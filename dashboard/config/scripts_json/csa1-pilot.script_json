@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-06 21:18:42 UTC",
+    "serialized_at": "2021-04-09 17:00:13 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -178,6 +178,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.",
+        "student_overview": "As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!\n",
+        "purpose": "* Confirm that students are grouped in Code Studio (A tutorial document is available here.)\n* Seat students based on their review groups.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -667,6 +670,62 @@
       "seeding_key": {
         "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "337dee6e-1d9e-473c-899d-5f8017167016",
+      "position": 3,
+      "properties": {
+        "name": "Review Request",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -2213,6 +2272,201 @@
         "activity_section.key": "141f0aed-bfc5-46cd-99e0-bc311dcd5aee",
         "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef"
       }
+    },
+    {
+      "key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "So far, we’ve focused on writing new code, but that’s only a fraction of a software engineer's job in industry. In reality, engineers spend a lot of time reading and working with other people’s code. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Lead students in a discussion about the visualization by clicking through the animation on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the visualization and give students a moment to process it independently.\n  * *What surprises you about this visualization? What do you want to know more about?*\n  * *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They then identify how to minimize time spent on bad code to foreshadow the value of code reviews. Answers to the second question may include:\n* Spend more time planning/designing\n* Review your own code\n* Have someone else review the code\n* Test the code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video. This video presents the value of code reviews and working together. It also normalizes the fact that everyone has bugs and code that code reviews can improve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In your own words, describe what a reviewer gains from a code review. How about the code author?\n\n**Discussion Goal:** This discussion is designed to help students think about both the benefits of a code review and the different roles involved in a code review."
+      },
+      "seeding_key": {
+        "activity_section.key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Throughout this course, we are going to use code reviews as a tool for improving our coding and collaboration skills. The people you are sitting with today are your review group - you will be reviewing one another’s code and revising your code based on your peers' feedback. Today we’re going to practice this process."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk students through the four steps of the code review process that we will be using this year. Note that the video has already discussed this information - the slide is here for reference and reinforcement."
+      },
+      "seeding_key": {
+        "activity_section.key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+      "position": 2,
+      "properties": {
+        "name": "Committing Code",
+        "duration": "7",
+        "remarks": true,
+        "description": "When software engineers commit code, they leave a short message about the current version. This process helps the engineer while programming and for anyone else who reads through the code in the future."
+      },
+      "seeding_key": {
+        "activity_section.key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of committing code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce possible scenarios for when to commit code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through how to commit using Code Studio. Highlight the fact that committing code is similar to hitting ‘save’ on a file or a game, but in addition to creating a checkpoint to come back to, software engineers leave short messages to help identify what makes one version different from another.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the purpose of commenting code. Make sure to touch on:\n  * Software engineers leave additional supports called comments both for themselves and for reviewers.\n  * Comments can include what they expect a code segment to do or describe how it works.\n  * Comments are indicated by // for a single-line comment or /* and */ for multi-line comments. These symbols are indicators to the computer that the text on these lines is for humans only. The computer will NOT read it as coded instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using the animation delay on the first slide of this sequence to let students think about when they might choose to commit or ‘save’ their code and ask them to share hypotheses.  \n\nNote that the code on Level 1 is pulled directly from the previous lesson. If students did not complete the level, they could leave comments to outline their code before committing it.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "ccef128d-659e-479f-856b-e6fa3c341352",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ccef128d-659e-479f-856b-e6fa3c341352",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "\nAfter several commits, a developer may be ready to share their code with others to get feedback about the program. "
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of feedback requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback, focusing on the importance of writing a clear and specific message about what they are asking the reviewer to look for. Highlight the fact that this is often called a pull request in industry.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return students to Code Studio and walk them through writing a message to their group and requesting feedback.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A pull request is a little bigger than the process described here. For a more technical overview, check out: https://www.atlassian.com/git/tutorials/making-a-pull-request."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+      "position": 3,
+      "properties": {
+        "name": "Writing Good Feedback",
+        "duration": "14",
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The next step of the code review is to review the author’s program actively. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it."
+      },
+      "seeding_key": {
+        "activity_section.key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Use the slides to give an overview of writing comments.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews - by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share ART - a mnemonic to help them craft their feedback statements.\n  * Ask questions\n  * Raise flags about confusing code\n  * Tag awesome code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice Activity Guide to each review group. Students are not working directly in the guide at the beginning of this activity, but having the document allows them to see the entire code segment while working with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** This activity gradually releases students to writing comments independently using the following steps:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click to display three sample feedback statements to the students asking each time whether they are valuable comments. Students should expand on their answers, explaining why or why not. If not, can they think of a better way of phrasing the information?\n  * Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n  * Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n  * Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a whole class, students share additional feedback that they may leave for the code on the screen and how that feedback is valuable to the developer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition to working in pairs, writing additional comments for the developer on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students review one member of their review group’s work in Code Studio, returning to Level 1.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+      "position": 5,
+      "properties": {
+        "name": "Returning Feedback",
+        "duration": "4",
+        "description": "**Do This:** Review the next three slides to discuss the process of returning feedback and the nature of code review as a process:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of returning feedback. Address both:\n  * How to return feedback on Code Studio.\n  * Before returning feedback, students should get in the habit of re-reading their review and doing a quick self-check: Are the notes true, necessary, and kind?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Returning feedback is not the end of the process!\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that code review is a process and often occurs as a cycle. Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students think about how they interact with feedback and write a short note to their group about the types of feedback they find most helpful.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review key vocabulary from the lesson.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
+    },
+    {
+      "key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What does ART stand for, and how can it be used to improve code reviews?\n\n**Question:** Look at the code segment on the right. Write two pieces of feedback for this author.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
     }
   ],
   "script_levels": [
@@ -2228,6 +2482,9 @@
 
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -2408,6 +2665,36 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "ba1b8d82-19de-4ec2-ad74-af3bfffa8047"
+      }
+    },
+    {
+      "key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc",
+      "properties": {
+        "description": "Summarize the values of code reviews"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc"
+      }
+    },
+    {
+      "key": "435e5ddc-9b18-481b-a531-0d4965d2d279",
+      "properties": {
+        "description": "Use ART when reviewing sample code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "435e5ddc-9b18-481b-a531-0d4965d2d279"
+      }
+    },
+    {
+      "key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07",
+      "properties": {
+        "description": "Use comments within code to improve readability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07"
       }
     }
   ],
