@@ -12,8 +12,7 @@ class SaveModel extends Component {
     setTrainedModelDetail: PropTypes.func,
     trainedModelDetails: PropTypes.object,
     labelColumn: PropTypes.string,
-    columnDescriptions: PropTypes.array,
-    saveStatus: PropTypes.string
+    columnDescriptions: PropTypes.array
   };
 
   constructor(props) {

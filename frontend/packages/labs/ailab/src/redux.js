@@ -1151,7 +1151,7 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
-  if (panelId === "save") {
+  if (panelId === "modelSummary") {
     if ([undefined, ""].includes(state.trainedModelDetails.name)) {
       return false;
     }
