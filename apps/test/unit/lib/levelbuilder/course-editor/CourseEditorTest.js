@@ -116,7 +116,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
-    assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
+    assert.equal(wrapper.find('ResourcesDropdown').length, 1);
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
   });
