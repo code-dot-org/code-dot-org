@@ -97,7 +97,7 @@ export default class ResourcesDropdown extends React.Component {
           text={
             this.props.studentFacing
               ? i18n.studentResources()
-              : i18n.resources()
+              : i18n.teacherResources()
           }
           color={
             this.props.studentFacing
