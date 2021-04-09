@@ -4,7 +4,7 @@ import {resourceShape} from './resourceType';
 import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import TeacherResourcesDropdown from '@cdo/apps/code-studio/components/progress/TeacherResourcesDropdown';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 const styles = {
   main: {
@@ -40,9 +40,9 @@ export default class CourseOverviewTopRow extends Component {
       <div style={styles.main} className="course-overview-top-row">
         {((useMigratedResources && migratedTeacherResources.length > 0) ||
           (!useMigratedResources && teacherResources.length > 0)) && (
-          <TeacherResourcesDropdown
-            teacherResources={teacherResources}
-            migratedTeacherResources={migratedTeacherResources}
+          <ResourcesDropdown
+            resources={teacherResources}
+            migratedResources={migratedTeacherResources}
             unitGroupId={id}
             useMigratedResources={useMigratedResources}
           />

@@ -21,8 +21,9 @@ describe('progressTableHelpers', () => {
     });
 
     it('returns timeSpent in minutes', () => {
-      const studentProgress = {timeSpent: 140}; // 140 seconds = 2 minutes
-      expect(timeSpentFormatter(studentProgress)).to.equal('2');
+      // 140 seconds rounds up to 3 minutes
+      const studentProgress = {timeSpent: 140};
+      expect(timeSpentFormatter(studentProgress)).to.equal('3');
     });
   });
 
@@ -43,7 +44,7 @@ describe('progressTableHelpers', () => {
 
     it('returns timestamp in month and day format', () => {
       const studentProgress = {lastTimestamp: 1614841198};
-      expect(lastUpdatedFormatter(studentProgress)).to.equal('1/19');
+      expect(lastUpdatedFormatter(studentProgress)).to.equal('3/4');
     });
   });
 });
