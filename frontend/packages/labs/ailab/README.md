@@ -130,8 +130,8 @@ Then commit the changed `package.json` and `yarn.lock` files so that the officia
 
 ### Verify symlink exists between code-dot-org repo and ML playground
 In main repo: 
- ``` 
+``` 
  cd apps/node_modules/@code-dot-org 
  ls -l 
- ```
-In the output, you should see something like this: ``` ml-playground -> ../../../../../.config/yarn/link/@code-dot-org/ml-playground ```
+```
+In the output, you should see something like this: `ml-playground -> ../../../../../.config/yarn/link/@code-dot-org/ml-playground`
