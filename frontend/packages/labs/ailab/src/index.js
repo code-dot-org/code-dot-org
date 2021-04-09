@@ -21,7 +21,7 @@ export const store = createStore(rootReducer);
 let saveTrainedModel = null;
 let onContinue = null;
 
-export const initAll = function(options) {
+export const initAll = function (options) {
   // Handle an optional mode.
   const mode = options && options.mode;
   onContinue = options && options.onContinue;
@@ -86,6 +86,5 @@ const startSaveTrainedModel = dataToSave => {
   store.dispatch(setSaveStatus("started"));
   saveTrainedModel(dataToSave, response => {
     store.dispatch(setSaveStatus(response.status));
-    // onContinue();
   });
 };

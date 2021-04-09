@@ -38,7 +38,10 @@ class PanelButtons extends Component {
     if (this.props.panelButtons.next.panel === "modelSummary") {
       this.props.startSaveTrainedModel(this.props.dataToSave);
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
-    } else if (this.props.panelButtons.next.panel === "finish") {
+    } else if (
+      this.props.panelButtons.next.panel === "continue" ||
+      this.props.panelButtons.next.panel === "finish"
+    ) {
       this.props.onContinue();
     } else {
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);

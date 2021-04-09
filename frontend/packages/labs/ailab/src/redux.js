@@ -512,14 +512,6 @@ export default function rootReducer(state = initialState, action) {
       };
     }
 
-    // if (action.currentPanel === "modelSummary") {
-    //   return {
-    //     ...state,
-    //     currentPanel: action.currentPanel,
-    //     trainedModelDetails: action.trainedModelDetails
-    //   };
-    // }
-
     return {
       ...state,
       currentPanel: action.currentPanel,
@@ -1095,7 +1087,8 @@ const panelList = [
   { id: "trainModel", label: "Train" },
   { id: "results", label: "Results" },
   { id: "predict", label: "Predict" },
-  { id: "saveModel", label: "Save" }
+  { id: "saveModel", label: "Save" },
+  { id: "modelSummary", label: "Finish" }
 ];
 */
 
@@ -1153,6 +1146,12 @@ function isPanelEnabled(state, panelId) {
 
   if (panelId === "modelSummary") {
     if ([undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
+  if (panelId === "finish") {
+    if (state.saveStatus !== "success") {
       return false;
     }
   }
@@ -1233,7 +1232,7 @@ export function getPanelButtons(state) {
       : null;
     next = isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
-      : { panel: "modelSummary", text: "Continue" };
+      : { panel: "continue", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
     next = isPanelAvailable(state, "modelSummary")
