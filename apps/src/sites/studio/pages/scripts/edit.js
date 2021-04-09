@@ -36,7 +36,12 @@ export default function initPage(scriptEditorData) {
       link
     })
   );
-  store.dispatch(initResources(scriptData.migrated_teacher_resources || []));
+  store.dispatch(
+    initResources(
+      'teacherResource',
+      scriptData.migrated_teacher_resources || []
+    )
+  );
 
   let announcements = scriptData.announcements || [];
 
