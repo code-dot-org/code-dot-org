@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { setTrainedModelDetail, getSelectedColumnDescriptions } from "../redux";
-import { styles, saveMessages, ModelNameMaxLength } from "../constants";
+import { styles, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
 
 class SaveModel extends Component {
@@ -25,7 +25,9 @@ class SaveModel extends Component {
   }
 
   toggleColumnDescriptions = () => {
-    this.setState({showColumnDescriptions: !this.state.showColumnDescriptions})
+    this.setState({
+      showColumnDescriptions: !this.state.showColumnDescriptions
+    });
   };
 
   handleChange = (event, field, isColumn) => {
@@ -36,8 +38,8 @@ class SaveModel extends Component {
     var fields = [];
 
     for (const columnDescription of this.props.columnDescriptions) {
-      const columnType = columnDescription.id === this.props.labelColumn
-        ? "label" : "feature";
+      const columnType =
+        columnDescription.id === this.props.labelColumn ? "label" : "feature";
       fields.push({
         id: columnDescription.id,
         isColumn: true,
@@ -46,7 +48,7 @@ class SaveModel extends Component {
       });
     }
     return fields;
-  }
+  };
 
   getUsesFields = () => {
     var fields = [];
@@ -58,7 +60,8 @@ class SaveModel extends Component {
     fields.push({
       id: "potentialMisuses",
       text: "How can this model be potentially misused?",
-      description: "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
+      description:
+        "Consider whether this model was trained on data that can identify subgroups, whether the data has adequate representation of subgroups, and whether this data could be used to inform decisions central to human life.",
       placeholder: "Write a brief description."
     });
 
@@ -72,7 +75,8 @@ class SaveModel extends Component {
     };
 
     const arrowIcon = this.state.showColumnDescriptions
-      ? 'fa fa-caret-up' : 'fa fa-caret-down';
+      ? "fa fa-caret-up"
+      : "fa fa-caret-down";
 
     const columnCount = this.getColumnFields().length;
 
@@ -94,7 +98,7 @@ class SaveModel extends Component {
             </div>
             <div>
               <span onClick={this.toggleColumnDescriptions}>
-                <i className={arrowIcon}/>
+                <i className={arrowIcon} />
                 <span> Column Descriptions ({columnCount})</span>
               </span>
               {this.state.showColumnDescriptions && (
@@ -108,15 +112,17 @@ class SaveModel extends Component {
                             <textarea
                               rows="1"
                               onChange={event =>
-                                this.handleChange(event, field.id, field.isColumn)
+                                this.handleChange(
+                                  event,
+                                  field.id,
+                                  field.isColumn
+                                )
                               }
                               placeholder={field.placeholder}
                             />
                           </div>
                         )}
-                        {field.answer && (
-                          <div>{field.answer}</div>
-                        )}
+                        {field.answer && <div>{field.answer}</div>}
                       </div>
                     );
                   })}
@@ -141,21 +147,12 @@ class SaveModel extends Component {
                         />
                       </div>
                     )}
-                    {field.answer && (
-                      <div>{field.answer}</div>
-                    )}
+                    {field.answer && <div>{field.answer}</div>}
                   </div>
                 );
               })}
             </div>
           </div>
-        </div>
-        <div>
-          {this.props.saveStatus && (
-            <div style={{ position: "absolute", bottom: 0 }}>
-              {saveMessages[this.props.saveStatus]}
-            </div>
-          )}
         </div>
       </div>
     );
@@ -167,8 +164,7 @@ export default connect(
     trainedModel: state.trainedModel,
     trainedModelDetails: state.trainedModelDetails,
     labelColumn: state.labelColumn,
-    columnDescriptions: getSelectedColumnDescriptions(state),
-    saveStatus: state.saveStatus
+    columnDescriptions: getSelectedColumnDescriptions(state)
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {
