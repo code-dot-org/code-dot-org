@@ -64,6 +64,7 @@ export default class CourseOverviewTopRow extends Component {
             migratedResources={studentResources}
             unitGroupId={id}
             useMigratedResources
+            studentFacing
           />
         )}
       </div>
