@@ -35,8 +35,8 @@ export const commands = {
   },
 
   // Action commands
-  addTarget(spriteArg, targetArg) {
-    actionCommands.addTarget(spriteArg, targetArg);
+  addTarget(spriteArg, targetArg, targetType) {
+    actionCommands.addTarget(spriteArg, targetArg, targetType);
   },
 
   bounceOff(spriteArg, targetArg) {
