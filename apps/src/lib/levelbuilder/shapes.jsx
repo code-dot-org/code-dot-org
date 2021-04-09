@@ -110,6 +110,11 @@ export const programmingExpressionShape = PropTypes.shape({
   programmingEnvironmentName: PropTypes.string.isRequired
 });
 
+export const frameworkShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired
+});
+
 export const standardShape = PropTypes.shape({
   frameworkShortcode: PropTypes.string.isRequired,
   frameworkName: PropTypes.string.isRequired,

@@ -3,14 +3,14 @@ import moment from 'moment';
 export function timeSpentFormatter(studentProgress) {
   if (studentProgress?.timeSpent) {
     const minutes = studentProgress.timeSpent / 60;
-    return `${Math.round(minutes)}`;
+    return `${Math.ceil(minutes)}`;
   }
   return missingDataFormatter(studentProgress, 'timeSpent');
 }
 
 export function lastUpdatedFormatter(studentProgress) {
   if (studentProgress?.lastTimestamp) {
-    return moment(studentProgress.lastTimestamp).format('M/D');
+    return moment.unix(studentProgress.lastTimestamp).format('M/D');
   }
   return missingDataFormatter(studentProgress, 'lastTimestamp');
 }

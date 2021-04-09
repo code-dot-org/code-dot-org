@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 15:41:21 UTC",
+    "serialized_at": "2021-04-07 17:29:41 UTC",
     "seeding_key": {
       "script.name": "csd5-2021"
     }
@@ -200,11 +200,11 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "Students have a discussion on the different levels of security they would like for personal data.  Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note.  The class concludes with a discussion about the importance of both physical and digital security.",
+        "overview": "**Question of the Day: How can we keep data secret and protect it from misuse?**\n\nStudents continue to explore how data is represented in a punchcard, and begin considering whether some data should be protected from public view because it is too personal or sensitive. Once students understand the reasons for protecting data, they learn a binary encryption system that lets them encrypt and decrypt data in their punchcards, and eventually they are able to send secret messages to one another using this method. Class concludes with a discussion on the importance of protecting our information and how encryption is one way we can accomplish this.",
         "student_overview": "Students have a discussion on the different levels of security they would like for personal data. Once the class has developed an understanding of the importance of privacy, they learn about the process of encrypting information by enciphering a note for a partner and deciphering the partner's note. The class concludes with a discussion about the importance of both physical and digital security.\r\n",
-        "purpose": "As students have been encoding and decoding with data, they have not been worried about the securing of the data that they are using.   In this lesson, they begin to think about how they can ensure that only the intended recipient can read the data that they send.  They will use a simple cipher to encode a message.  Students should understand that in order to encrypt a message, they need both an algorithm and a key, and that it is important that the key be kept secret.  ",
+        "purpose": "As students have been encoding and decoding with data, they have not been worried about the securing of the data that they are using even when that information has been highly personal or sensitive (such as addresses or phone numbers). In this lesson, they begin to think about how they can ensure that only the intended recipient can read the data that they send. The lesson is framed around the real-world issues of keeping medical history protected, allowing students to see how this issue extends to real-world scenarios and may be impacting their lives without them being aware of it.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Apply a method of encryption to ensure the secure transmission of data.**\r\n\r\n\tActivity Guide, page 2: The message at the top of the page should be decrypted correctly.  If the emojis are not correct, check the binary code in the third row to see whether the error happened in the decryption or decoding process. \r\n\r\n2. **Use both physical and digital security measures to secure data.**\r\n\r\n\tDiscussion: Students should identify several types of physical security that they use when keeping data safe, distinct from digital security such as using encryption."
+        "assessment_opportunities": "1. **Describe the reasons encryption is needed to protect personal data**\n\nActivity Guide Page 1: Students describe the data within a medical card that should be kept secret because it is too personal and brainstorm ways personal data could be used inappropriately if revealed.\n\n2. **Apply a method of encryption to ensure the secure transmission of data**\n\nActivity Guide, page 2: Students decrypt several medical records to reveal the conditions of their users. Use the answer key to check whether students have completed each decryption successfully.\n\n"
       },
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
@@ -220,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.",
+        "overview": "**Question of the Day: How can I represent complex information using binary systems?**\n\nIn this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.",
         "student_overview": "The class designs structures to represent their perfect day using the binary representation systems they've learned in this chapter. After deciding which pieces of information the record should capture, students decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Afterwards, they use the ASCII, binary number, and image formats they have learned to represent their perfect days and try to decipher what a partner's perfect day is like.\r\n",
         "purpose": "This lesson forces students to grapple with some of the challenges of representing information to a computer. Computers are good at representing some kinds of information like numbers or characters, but this forces people to represent information in ways that might not always capture the full analog experience of an object or event. The project also serves as a cumulative project for the chapter, bringing together the different representation systems students have learned. As students move into the next chapter they'll look more closely at how information is used to make decisions once it's in a format that can be input to a computer.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
@@ -382,9 +382,8 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "To conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm.  Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.",
-        "student_overview": "To conclude this unit, the class designs ways to use data to make recommendations or predictions to help solve a problem. In the first several steps, students brainstorm problems, perform simple research, and define a problem of their choosing. They then decide what kind of data they want to collect, how it could be collected, and how it could be used, before exchanging feedback and giving a final presentation.",
-        "purpose": "This project serves as an assessment for the second chapter of the unit. Students should demonstrate that they can apply the data problem solving process to a problem or domain that they are interested in.  Students complete many of the same activities, but linked together in one comprehensive project.  For example, students have previously used cross tabulation to find relationships between preferences and have created recommendation algorithms, but in this project, they will use the relationships that they find in the data to create their algorithms. The last step in the activity is intentionally vague on how students will present their work so that you may choose the method that makes the most sense for your classroom.",
+        "overview": "**Question of the Day: How can I use data to make my own recommendations?**\n\nTo conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm. Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.",
+        "purpose": "This project serves as an assessment for the second chapter of the unit. Students should demonstrate that they can apply the data problem-solving process to a problem or domain that they are interested in. Students complete many of the same activities but linked together in one comprehensive project. For example, students have previously used cross-tabulation to find relationships between preferences and have created recommendation algorithms, but in this project, they will use the relationships that they find in the data to create their algorithms. The last step in the activity is intentionally vague on how students will present their work so that you may choose the method that makes the most sense for your classroom.",
         "preparation": "* Print copies of the project guide\r\n* Print copies of the rubric\r\n* Print copies of the peer review guide",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio."
@@ -737,7 +736,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 40
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1",
@@ -1180,7 +1179,7 @@
       "position": 2,
       "properties": {
         "name": "Activity",
-        "duration": 150
+        "duration": 220
       },
       "seeding_key": {
         "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1",
@@ -1211,20 +1210,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b",
-        "lesson.key": "Project - Make a Recommendation",
-        "lesson_group.key": "csd5_2",
-        "script.name": "csd5-2021"
-      }
-    },
-    {
-      "key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
-      "position": 5,
-      "properties": {
-        "name": "Programming Extension",
-        "duration": 120
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb",
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
         "script.name": "csd5-2021"
@@ -1619,7 +1604,7 @@
       "key": "1cfdd35d-ad4c-4c95-a583-e099a12e53af",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n[slide] **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
+        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
       },
       "seeding_key": {
         "activity_section.key": "1cfdd35d-ad4c-4c95-a583-e099a12e53af",
@@ -2625,7 +2610,8 @@
       "key": "b5f6e7d0-04f2-4175-897c-236e80570d9e",
       "position": 1,
       "properties": {
-        "description": "**Display** the binary string from Code Studio Level 2."
+        "description": "**Prompt:** A school keeps track of several pieces of information about each student, including:\n\n- Their name\n- Their age\n- Their address\n- A home phone number\n- Any allergies they have\n- Emergency contact information\n\nWhat information in this list do you think is okay to be accessed by anyone who is interested? What about just your teachers? What about only you and your family?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "b5f6e7d0-04f2-4175-897c-236e80570d9e",
@@ -2636,11 +2622,11 @@
       "key": "95c12363-142c-4e82-bed6-76541ed021c4",
       "position": 2,
       "properties": {
-        "description": "**Prompt:**  Here's an example of a message that someone might send over the Internet to a friend.  What do you need to decode this message?",
+        "description": "**Discuss:** Have students write their responses individually in their journals, then share with a neighbor before finally having a full-class discussion.",
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "The prompt serves to kick off the review of what someone needs in an encoding system.  Students should understand that without knowing the system used to encode the string into binary, they have no way of knowing what it would mean.\r\n"
+            "markdown": "**Goal:** Students should determine that not all information in this record should be made public, but that there are also times when this information could be useful to specific people. For example: maybe allergies or emergency contact shouldn’t be available widely, but they could be useful for a teacher in case there’s an issue. There is no definitive right-or-wrong answer to this - it's more important to let students explain their reasoning and hear different opinions that may cause them to consider new situations for how this information could be used."
           }
         ]
       },
@@ -2653,7 +2639,7 @@
       "key": "d218e22a-9afa-4c47-8223-a1d2c45843c4",
       "position": 3,
       "properties": {
-        "description": "In the last few lessons, we've seen lots of different types of data that can be encoded into binary.  All of our encoding systems have a couple of things in common, though.",
+        "description": "We’ve seen how to represent data using different binary systems, but we haven’t talked about who has access to this data or how it could be used. In today’s lesson, we’ll look at situations where it could be important to protect our data and strategies we can use to keep data secret.",
         "remarks": true
       },
       "seeding_key": {
@@ -2662,49 +2648,10 @@
       }
     },
     {
-      "key": "0c5bb839-7d82-4e22-b5b0-bdd89bcac499",
+      "key": "722e1f66-5b33-47c5-a1d9-c56d501632ea",
       "position": 4,
       "properties": {
-        "description": "**Review:** Briefly review the characteristics of an encoding system:\r\n\r\n1. It needs to be unambiguous.\r\n2. Everyone needs to agree on it.\r\n\r\n**Display** the binary string and decoding key on Code Studio Level 3."
-      },
-      "seeding_key": {
-        "activity_section.key": "0c5bb839-7d82-4e22-b5b0-bdd89bcac499",
-        "lesson_activity.key": "434e1e94-f6aa-4bff-9376-154e62262354"
-      }
-    },
-    {
-      "key": "014b5ff3-cdfa-48c5-9562-ff5a2177468d",
-      "position": 5,
-      "properties": {
-        "description": "Give students time to decode the binary string and discuss what they think it means."
-      },
-      "seeding_key": {
-        "activity_section.key": "014b5ff3-cdfa-48c5-9562-ff5a2177468d",
-        "lesson_activity.key": "434e1e94-f6aa-4bff-9376-154e62262354"
-      }
-    },
-    {
-      "key": "019bca9a-bff1-4158-a5b6-1b818df8d215",
-      "position": 6,
-      "properties": {
-        "description": "**Prompt** What if I wanted to send a message that was secret, so only my friend could understand it?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Allow students to brainstorm ideas to keep message a secret.  In most cases, students may think of using a secret code rather than one publicly available.  This could work, but it's a lot of work to make a new code for every type of data, and you would have to repeat that work if your code was accidentally revealed.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "019bca9a-bff1-4158-a5b6-1b818df8d215",
-        "lesson_activity.key": "434e1e94-f6aa-4bff-9376-154e62262354"
-      }
-    },
-    {
-      "key": "722e1f66-5b33-47c5-a1d9-c56d501632ea",
-      "position": 7,
-      "properties": {
-        "description": "Today we're going to look at a system that will let us keep all types of messages secret."
+        "description": "**Question of the Day:** How can we keep data secret and protect it from misuse?"
       },
       "seeding_key": {
         "activity_section.key": "722e1f66-5b33-47c5-a1d9-c56d501632ea",
@@ -2715,7 +2662,7 @@
       "key": "07f6553a-9c00-4213-9728-c878c1cccea0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into pairs."
+        "description": "**Distribute:** Medical Record Activity Guide. Read through the introduction of the activity guide together, introducing the new Medical Punchcard.\n\n###***Medical Record Activity Guide***"
       },
       "seeding_key": {
         "activity_section.key": "07f6553a-9c00-4213-9728-c878c1cccea0",
@@ -2726,11 +2673,11 @@
       "key": "2c09cb98-721d-4c28-add5-bc717980da1e",
       "position": 2,
       "properties": {
-        "description": "**Distribute** one copy of the activity guide to each student.",
+        "description": "**Display:** Show the example of the medical punchcard, emphasizing how to decode the last row of Medical History. Emphasize that each square corresponds to a specific question, and that white represents a “yes” answer and black represents a “no” answer.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reducing Paper** This activity can be done online.  Rather than coloring in the squares, students can type \"B\" for every black square and \"W\" for every white square in the row.\r\n"
+            "markdown": "The focus in this lesson is on the Medical History section of the card, which is why students are not asked to decode the Binary numbers or ASCII codes. However, if students still need a bit more practice with these skills, this can also be an opportunity to reinforce these skills by talking through the other rows of the medical card."
           }
         ]
       },
@@ -2740,200 +2687,81 @@
       }
     },
     {
-      "key": "d98e63c8-b4d3-4383-9449-d8f44d4bfcc5",
+      "key": "cf021cc0-f490-4d43-879f-cdb8e6dbff0b",
       "position": 3,
       "properties": {
-        "description": "Here's the same system that we saw before, but with more emojis.  With your partner, decode the binary string and decide what you think the message means.",
-        "remarks": true,
-        "name": "Encoding and Decoding\r"
+        "description": "**Additional Practice:** Ask students to talk with a partner to decode two more examples of medical history displayed in the unit slides. Clicking the animation in the slide will reveal the answers when ready.\n\n**Prompt:** What are situations where this information would be useful for someone when making a decision? What are situations where this information could be inappropriate for someone when making a decision?"
       },
       "seeding_key": {
-        "activity_section.key": "d98e63c8-b4d3-4383-9449-d8f44d4bfcc5",
+        "activity_section.key": "cf021cc0-f490-4d43-879f-cdb8e6dbff0b",
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
       }
     },
     {
-      "key": "549b5d7c-db15-4273-8f83-56618b3b0fa1",
+      "key": "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc",
       "position": 4,
       "properties": {
-        "description": "Allow students to share out what they have found and their own interpretations of the emojis."
-      },
-      "seeding_key": {
-        "activity_section.key": "549b5d7c-db15-4273-8f83-56618b3b0fa1",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "f3d118ee-ef12-4ba0-a18a-b8b5f0211508",
-      "position": 5,
-      "properties": {
-        "description": "The next binary string uses the same emoji code you saw earlier, but the sender didn't want other people to read it.  With your partner, try to decode the message.",
-        "remarks": true,
-        "name": "Encryption and Decryption\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "f3d118ee-ef12-4ba0-a18a-b8b5f0211508",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "2bd80a4c-399b-4d9a-bc08-51b87dd2331c",
-      "position": 6,
-      "properties": {
-        "description": "Allow students to try to decode the message.  They may note that the binary codes are not in the encoding system that they have been given."
-      },
-      "seeding_key": {
-        "activity_section.key": "2bd80a4c-399b-4d9a-bc08-51b87dd2331c",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "55659494-2972-43b5-aec7-45a265f30fb3",
-      "position": 7,
-      "properties": {
-        "description": "This message has been encrypted.  That means that someone changed it so that we cannot read it.  In order to read the message, we'll first need to decrypt it.",
+        "description": "**Discuss:** Have students write their thoughts in their activity guide first, then share with a partner, and then bring to a full-class discussion.",
         "tips": [
           {
-            "type": "contentCorner",
-            "markdown": "Students may not understand the difference between encoding/decoding and encryption/decryption.  The main thing for students to understand is that the intentions between the two are very different.   \r\nEncoding is used to change the form of data, not to hide its meaning from others.  For example, ASCII is used to encode characters into binary, but the intention is that everyone should be able to decode the information.  The purpose is to make it easier to store and process information.\r\nEncryption is used to ensure that only the intended recipient of the information can read it.  It is used for security and privacy.\r\n"
-          }
-        ],
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "55659494-2972-43b5-aec7-45a265f30fb3",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "9a348337-d862-48b7-99d2-b07ea10354ee",
-      "position": 8,
-      "properties": {
-        "description": "**Vocabulary:**  Introduce the following terms.\r\n\r\n* **Encrypt:** to change information so that its meaning is hidden\r\n    * Someone has _encrypted_ the message, so we cannot understand it.\r\n* **Decrypt:** to change information so that its hidden meaning is shown\r\n    * We need to _decrypt_ the message before we can read it.\r\n\r\n**Model** the decryption of the first message.  \r\n\r\n1. Copy the rest of the binary string into the first row of the chart.\r\n2. Continue to repeat the key until you have reached the end of the chart.  (The last repetition will only have two bits.)\r\n3. For each bit on the third row of the chart, color in the square if and only if the two bits above it are the same.  For example, if the two bits above it are both white OR both black, color in the square.  Do not color in the square if the two bits are different.\r\n\r\nOnce the message has been decrypted, allow students to decode it and discuss what they think it means.\r\n\r\n**Circulate:** Support students as they decrypt the message on the second page."
-      },
-      "seeding_key": {
-        "activity_section.key": "9a348337-d862-48b7-99d2-b07ea10354ee",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "abd9aa87-caa5-41ea-8753-88e4d9324c51",
-      "position": 9,
-      "properties": {
-        "description": "Partners create their own emoji message and key, then encode and encrypt it.",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "In this encryption system, the method of encryption and decryption are identical and use the same key.  In most encryption systems, that is not the case.  This once has been chosen for the same of simplicity.\r\n"
-          }
-        ],
-        "name": "Encrypt Your Own Message\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "abd9aa87-caa5-41ea-8753-88e4d9324c51",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "91471e27-6ae2-41d6-a85a-0021b806deca",
-      "position": 10,
-      "properties": {
-        "description": "Students should post their encrypted messages publicly, while keeping their unencrypted messages and keys a secret.  Allow students time to look at their classmate's messages and try to decrypt them without a key."
-      },
-      "seeding_key": {
-        "activity_section.key": "91471e27-6ae2-41d6-a85a-0021b806deca",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "99ec82f1-684b-4956-8441-fbb342fffca7",
-      "position": 11,
-      "properties": {
-        "description": "**Prompt** Everyone has shared their encrypted data.  Do you think that you could decrypt anyone's data without the key?  How?  What makes it difficult?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this discussion is to highlight the value of encryption, and that even with knowledge of the algorithm, it's difficult to crack a code without the key.  Allow students the opportunity to share their ideas for how to crack this code and try them out, then have students dicuss what makes it difficult.\r\n"
+            "type": "teachingTip",
+            "markdown": "**Goal:** Students may discuss useful situations where doctors or nurses can use the medical information within the hospital. They may also mention that the information could be used in emergency situations outside of the hospital.\n\nWhen brainstorming inappropriate situations, try to guide the conversation towards places where these decisions can be exclusionary or discriminatory. For example, when applying for a job, it is inappropriate for an employer to not hire you if you have asthma. Or, when trying out for a sports team, it is inappropriate to be rejected because you broke a bone several years ago but it’s healed up now."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "99ec82f1-684b-4956-8441-fbb342fffca7",
+        "activity_section.key": "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc",
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
       }
     },
     {
-      "key": "edff2ac2-ceb7-485a-bc0b-287c9189a0e9",
-      "position": 12,
+      "key": "d5bc0645-a3b5-47e7-97e3-4d976728851d",
+      "position": 5,
       "properties": {
-        "description": "Pair up different groups and ask them to secretly trade keys.  They should then be able to decrypt the other group's message.\r\n\r\nAllow each of the groups to share out the emoji message they decrypted and what they think it means."
+        "remarks": true,
+        "description": "Keeping track or personal or sensitive data is important for very specific uses, but it’s also important to protect that data to make sure only the right people can view it. One way we can do that is by using a process called encryption."
       },
       "seeding_key": {
-        "activity_section.key": "edff2ac2-ceb7-485a-bc0b-287c9189a0e9",
+        "activity_section.key": "d5bc0645-a3b5-47e7-97e3-4d976728851d",
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
       }
     },
     {
-      "key": "90f63662-47ad-4219-9716-a593f388b99a",
-      "position": 13,
+      "key": "ff9399a1-cb17-477d-9a07-8b32c1e45c41",
+      "position": 6,
       "properties": {
-        "description": "**Prompt** How did you you keep your key safe when giving it to your partner?",
+        "description": "**Vocabulary:** Display the following vocabulary terms:\n\n- Encrypt - to change information so that its meaning is hidden\n- Decrypt - to change information so that its hidden meaning is shown"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9399a1-cb17-477d-9a07-8b32c1e45c41",
+        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
+      }
+    },
+    {
+      "key": "bc476ecb-65ea-4f30-a970-81feb995c71c",
+      "position": 7,
+      "properties": {
+        "description": "**Display:** Have students turn to the second page of their activity guide. Read through the introduction together to define the algorithm and key",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "The goal of the first discussion is to introduce the idea of physical security, which includes everything we do in the physical world, such as preventing physical access to computers and passwords.\r\n\r\nStudents should understand that physical security is as important as digital security when safeguarding information.  Some things students may do to keep their information safe might be to keep passwords in a safe place (or avoid writing them down entirely) and to keep devices locked away when they aren't in use.\r\n"
+            "type": "contentCorner",
+            "markdown": "Content Corner: Students may be initially confused about the difference between encoding/decoding and encryption/decryption. The main thing for students to understand is that the intentions between the two are very different.\n\nEncoding is used to change the form of data, not to hide its meaning from others. For example, ASCII is used to encode characters into binary, but the intention is that everyone can decode the information. The purpose is to make it easier to store and process information.\n\nEncryption is used to ensure that only the intended recipient of the information can read it using a secret key that only they know. It is used for security and privacy."
           }
-        ],
-        "name": "Reflection\r"
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "90f63662-47ad-4219-9716-a593f388b99a",
+        "activity_section.key": "bc476ecb-65ea-4f30-a970-81feb995c71c",
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
       }
     },
     {
-      "key": "ec93ecf1-eb43-4245-a044-a6430d88bc78",
-      "position": 14,
+      "key": "2542ba15-9826-443d-ae2a-a5fed44749a2",
+      "position": 8,
       "properties": {
-        "description": "Student should share out how they ensured that no one else could see the key they used to encrypt their data."
+        "description": "**Display:** Model the encryption algorithm as a class and demonstrate how the first four boxes of the example have been done for students. Have students complete the next four boxes on their own, then click the animation in the slide to check the answer together.\n\n**Do This:** Have students complete the other four examples, decrypting each row of medical history and using it to answer the questions below.\n\n**Circulate:** Monitor student progress, checking to make sure students are correctly applying the algorithm to the first square before continuing to the others. Encourage students to check in with their partners and talk through any inconsistencies between their work.\n\n**Extension:** For students who finish up early, distribute copies of the Secret Messages activity guide. Encourage students to create their own secret messages using ASCII, then trade them with another student and challenge them to decrypt it."
       },
       "seeding_key": {
-        "activity_section.key": "ec93ecf1-eb43-4245-a044-a6430d88bc78",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "fa7abbdc-10c2-4dee-8c31-d8552a1bd238",
-      "position": 15,
-      "properties": {
-        "description": "You used physical security to keep your key safe, by making sure that no one could physically access it.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "fa7abbdc-10c2-4dee-8c31-d8552a1bd238",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "a0e2b9e9-0ae4-4119-a41d-e0eaeb1c8beb",
-      "position": 16,
-      "properties": {
-        "description": "**Prompt** What is one way that you use physical security to keep your online data safe?\r\n\r\nAllow students to discuss the questions with their partners before sharing out to the class."
-      },
-      "seeding_key": {
-        "activity_section.key": "a0e2b9e9-0ae4-4119-a41d-e0eaeb1c8beb",
-        "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
-      }
-    },
-    {
-      "key": "b8a73c8d-798c-400e-9867-45d253acd221",
-      "position": 17,
-      "properties": {
-        "description": "To keep our data safe, we need to pay attention to digital and physical security.  Digital security includes using encryption or protecting things with passwords.  Physical security is keeping our devices and passwords physically safe.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b8a73c8d-798c-400e-9867-45d253acd221",
+        "activity_section.key": "2542ba15-9826-443d-ae2a-a5fed44749a2",
         "lesson_activity.key": "cf8ee96e-a948-4c2c-9565-beb1bee1bba1"
       }
     },
@@ -2941,13 +2769,8 @@
       "key": "cc154748-5e22-45df-9986-66cabc550f17",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** When people communicate on the Internet, they cannot rely on physical security to keep their keys safe.  Try to think of  a way that they could still communicate securely, even if someone could read everything that they sent.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal is not for students to come up with a viable solution, but for them to brainstorm different ways that they might try to solve the problem.\r\n"
-          }
-        ]
+        "description": "**Prompt:** What is another piece of personal information you think should be protected? How could it be used inappropriately when making a decision if it ever became public?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "cc154748-5e22-45df-9986-66cabc550f17",
@@ -2958,7 +2781,13 @@
       "key": "112b54ac-5751-4635-8275-23e6acc5947c",
       "position": 2,
       "properties": {
-        "description": "Allow students to brainstorm on their own, then share their ideas with a classmate."
+        "description": "**Discuss:** Have students reflect individually before sharing with a partner and as a class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** Students may come up with a variety of ideas beyond medical or personal information, such as personal profile pictures, family income information, or ancestral or historical information. Encourage them to reflect on situations where it would be inappropriate for that information to be used to make a decision."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "112b54ac-5751-4635-8275-23e6acc5947c",
@@ -2969,7 +2798,6 @@
       "key": "bf6e5553-2922-4f4f-adc9-d41dd3c0cd45",
       "position": 1,
       "properties": {
-        "name": "Keeping Data Secret",
         "progression_name": "Keeping Data Secret"
       },
       "seeding_key": {
@@ -3033,7 +2861,7 @@
       "key": "12af85e2-3f2d-421e-b2b6-16f8810d8835",
       "position": 1,
       "properties": {
-        "description": "**Group:** Have students sit in pairs so they can work collaboratively on this project.\n\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can. You don’t need to write down anything yet.\n\n**Distribute:** Give students copies of the Project Guide\n\n\n\n#### Project Guide - Create a Representation\n\n\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\n\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
+        "description": "**Group:** Have students sit in pairs so they can work collaboratively on this project.\n\n**Prompt:** Close your eyes and think about your perfect day. What is the weather like? What will you do? Who's there with you? Spend a minute thinking about as many details as you can. You don’t need to write down anything yet.\n\n**Distribute:** Give students copies of the Project Guide\n\n\n\n#### ***Project Guide - Create a Representation***\n\n\n**Step 1 - Describe Your Perfect Day:** Have students write down all the key details of their perfect day on their activity guides. It is fine for students to mix between bullets and complete sentences.\n\n**Step 2 - Share with a Partner:** Have students pick a neighbor to share their perfect day with. They should continue to update their information from Step 1 as they come up with more information about their perfect day."
       },
       "seeding_key": {
         "activity_section.key": "12af85e2-3f2d-421e-b2b6-16f8810d8835",
@@ -3084,12 +2912,6 @@
       "key": "fdf8c859-bb78-4442-9b6a-8065c023265c",
       "position": 5,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**ASCII and Binary:** Students will have access to the binary odometer and ASCII table in Code Studio. You may wish to give them paper copies if you are worried about computers being distracting for this otherwise unplugged activity\r\n\r\n**Use the Pixelator:** Students may wish to use the pixelator to compose their images. There's a level available on Code Studio. \r\n"
-          }
-        ],
         "description": "**Display:** Display the punch card from the project guide. Emphasize that the card has space for three numbers, an eight-character word, and an image. Explain that the class will need to agree on how they are going to use each row from the numbers, characters, and image sections of the punch card."
       },
       "seeding_key": {
@@ -3101,7 +2923,7 @@
       "key": "4e8ecb03-3abf-412e-96bb-102eb61294aa",
       "position": 6,
       "properties": {
-        "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:** Display the punch card from the project guide somewhere the whole class can see it. Have partners share the categories of information they wish to represent. Explain that the class will need to agree how they are going to use each row from the numbers, characters, and image sections of the punch card.",
+        "description": "**Step 5 - Full Class Activity - Agree on Classwide Punch Card:**  Have partners share the categories of information they wish to represent, recording them in the front of the room. Have the class decide what information they want to use for each number, their word, and their image.",
         "tips": [
           {
             "type": "discussionGoal",
@@ -4760,12 +4582,6 @@
       "position": 1,
       "properties": {
         "description": "**Prompt:** Thinking back over the last several lessons, list all of the times we’ve seen data that is used to make a recommendation. Here’s an example: we used survey data to make a recommendation about what pizza to order.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**A quick review:** This quick review serves to remind students of the types of problems that they can solve with data before they move onto defining their own data problem.  Students should move into working on the project as soon as possible.\r\n"
-          }
-        ],
         "name": "Journal"
       },
       "seeding_key": {
@@ -4817,7 +4633,8 @@
       "key": "24a8f1ab-d8eb-4738-b114-0534be713085",
       "position": 1,
       "properties": {
-        "description": "## Day 1 Activity\n\n**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide"
+        "description": "**Group:** Group students into pairs. If there is an odd number of students, a group of 3 can be made or a student can complete this project individually.\n\n**Distribute:** Give students copies of the project guide",
+        "name": "Day 1 Activity (40 mins)"
       },
       "seeding_key": {
         "activity_section.key": "24a8f1ab-d8eb-4738-b114-0534be713085",
@@ -4828,14 +4645,7 @@
       "key": "84929552-ebfc-43ef-a97d-f1857609d4ae",
       "position": 2,
       "properties": {
-        "description": "**Overview:** Read through the Overview of the project with students and answer any questions.\n\n**Sample App:** Display the Sample App. Have the class participate in the quiz multiple times.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students look at the code, most of it should be comprehensible.  The majority of the code works by sending users to new screens, which the students should remember from Unit 4.  The app also adds points to different vacation choices as the user clicks on different buttons.  This type of functionality should be familiar to students from Unit 3.  The only unfamiliar code should be the \"recommend()\" function, which finds the choice with the most points, then sends the user to that choice's screen.\n"
-          }
-        ],
-        "name": "Project Guide - Make a Recommendation"
+        "description": "####***Project Guide - Make a Recommendation***\n\n**Overview:** Read through the Overview of the project with students and answer any questions.\n\n**Sample App:** Display the Sample App. Have the class participate in the quiz multiple times."
       },
       "seeding_key": {
         "activity_section.key": "84929552-ebfc-43ef-a97d-f1857609d4ae",
@@ -4875,8 +4685,7 @@
       "key": "eaf9b941-778e-468d-ae6e-e353b3d0942b",
       "position": 5,
       "properties": {
-        "description": "**Step 1 - Define Your Problem:** Give students a few minutes to decide on their recommendation topic with their partner.",
-        "name": "Define"
+        "description": "**Step 1 - Define Your Problem:** Give students a few minutes to decide on their recommendation topic with their partner."
       },
       "seeding_key": {
         "activity_section.key": "eaf9b941-778e-468d-ae6e-e353b3d0942b",
@@ -4887,14 +4696,13 @@
       "key": "4bc50ef6-5978-4a80-943a-49fc0cffb23e",
       "position": 6,
       "properties": {
-        "description": "**Step 2 - Decide What Data You Need**",
+        "description": "####Prepare\n\n**Step 2 - Decide What Data You Need:** Give students time to think of the data that they need to help them make the recommendation to the user.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "The lesson plan assumes a very rigid structure for the algorithm, with four possible recommendations based on three multiple choice questions, each with four answer choices.  You may want to give students more freedom in creating their survey and algorithm.\n"
           }
-        ],
-        "name": "Prepare"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4bc50ef6-5978-4a80-943a-49fc0cffb23e",
@@ -4905,7 +4713,7 @@
       "key": "187a7588-ecb2-4b52-8d9c-d87ca320216b",
       "position": 7,
       "properties": {
-        "description": "Give students time to think of the data that they need to help them make the recommendation to the user.\n\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend.\n\n####Day 1 Wrap-up\n\n**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Before tomorrow’s lesson, students may also use this time to collect survey data from people outside the classroom."
+        "description": "\n**Step 3 - Create Your Survey**\n\nOnce students have decided on the data, they should put it in survey form.  In the initial survey, they will also need to include a question that asks about what they plan to recommend (e.g. a vacation spot).  They will use this data to make connections between a user's stated preferences and what they will eventually recommend.\n\n####Day 1 Wrap-up\n\n**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Before tomorrow’s lesson, students may also use this time to collect survey data from people outside the classroom."
       },
       "seeding_key": {
         "activity_section.key": "187a7588-ecb2-4b52-8d9c-d87ca320216b",
@@ -4916,7 +4724,8 @@
       "key": "43097b7a-83d4-475a-b618-96db7d3d4522",
       "position": 8,
       "properties": {
-        "description": "##Day 2 Activity\n\n####Day 2 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####Project Guide - Make a Recommendation \n\n**Step 4 - Collect Your Survey Data:** Have students survey each other in the classroom. Ideally, students should give the survey to at least twenty people in order to make sure there is enough data to interpret in the next step. This will take a large portion of this class period."
+        "description": "####Day 2 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####***Project Guide - Make a Recommendation***\n\n**Step 4 - Collect Your Survey Data:** Have students survey each other in the classroom. Ideally, students should give the survey to at least twenty people in order to make sure there is enough data to interpret in the next step. This will take a large portion of this class period.",
+        "name": "Day 2 Activity (45 mins)"
       },
       "seeding_key": {
         "activity_section.key": "43097b7a-83d4-475a-b618-96db7d3d4522",
@@ -4955,7 +4764,7 @@
       "key": "7dc83ff4-843e-4ef0-8b8f-fc42ec99c587",
       "position": 11,
       "properties": {
-        "description": "####Day 2 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track.\n\n##Day 3 Activity\n\n####Day 3 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####Project Guide - Make a Recommendation"
+        "description": "####Day 2 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "7dc83ff4-843e-4ef0-8b8f-fc42ec99c587",
@@ -4963,8 +4772,20 @@
       }
     },
     {
-      "key": "831f4bc1-6ea7-4419-b83d-0382e78db075",
+      "key": "ccc60270-6d7f-4def-96ba-d02c520dc917",
       "position": 12,
+      "properties": {
+        "name": "Day 3 Activity (45 mins)",
+        "description": "####Day 3 Warm-up\n\n**Distribute:** Re-distribute the Project Guide’s from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.\n\n####***Project Guide - Make a Recommendation***"
+      },
+      "seeding_key": {
+        "activity_section.key": "ccc60270-6d7f-4def-96ba-d02c520dc917",
+        "lesson_activity.key": "de11024e-5469-41b6-bc28-627c9515eff1"
+      }
+    },
+    {
+      "key": "831f4bc1-6ea7-4419-b83d-0382e78db075",
+      "position": 13,
       "properties": {
         "description": "**Step 7 - Try Out Your Algorithm:** Give students time to use their algorithm to make a recommendation to three of their classmates, then reflect on whether they believe the algorithm is effective.\n\n**Step 8 - Peer Review:** Read the instructions for Step 8 in the Project Guide. Clarify that the intent is to generate new ideas for how to improve your recommendation algorithm by having another team peer review it.\n\n**Distribute:** Pass out the Peer Review - Make a Recommendation worksheet to each student.\n\n####Peer Review - Make a Recommendation\n\n**Peer Review:** Have teams trade projects and complete a Peer Review for the other team. They should complete the chart and offer feedback to the team on their recommendation algorithm.\n\n**Creator’s Reflection:** Have teams look over the feedback and complete the Creator’s Reflection section of the activity guide. Teams should make edits to their Project Guide based on the feedback provided by another team.\n\n####Day 3 Wrap-up\n\n**Collect:** Collect students' project guides and again do a quick check-in to make sure students are on track."
       },
@@ -4975,9 +4796,10 @@
     },
     {
       "key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
-      "position": 13,
+      "position": 14,
       "properties": {
-        "description": "##Days 4 and 5 Activity\n\n####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project."
+        "description": "####Day 4 Warm-Up\n\n**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next steps for their project.",
+        "name": "Days 4 and 5 Activity (90 mins)"
       },
       "seeding_key": {
         "activity_section.key": "5eb7b7fb-3bd7-4ef4-bce1-ed0aeb6384a4",
@@ -4986,7 +4808,7 @@
     },
     {
       "key": "92566744-182e-416d-b7c7-2f5b2a92026b",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "**Step 9 - Finalize and Present:** Students should design some kind of presentation of their work to share with their classmates. While you may choose many different formats, suggested content for the presentation is provided. The presentation should include:\n\n- What choice you are helping the user to make\n- The types of data you collect to help the user make that choice\n- The relationships that you found when interpreting your survey data\n- The way you used this information to create your recommendation algorithm\n- The results of testing the algorithm on users",
         "tips": [
@@ -5003,7 +4825,7 @@
     },
     {
       "key": "2b7b1dfd-eb64-46b1-a225-5a4df7b10149",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "**Presentations:** Give teams time to present. Projects can be assessed using the rubric based on their presentation and project guide."
       },
@@ -5043,41 +4865,6 @@
       "seeding_key": {
         "activity_section.key": "93bab638-a445-4465-97f2-5e2060ff8dc2",
         "lesson_activity.key": "8cf50d08-eb2c-43e6-9a3d-1a4fdd2a5c9b"
-      }
-    },
-    {
-      "key": "a01af2f4-0a17-4ac3-8984-f6510c5bd2c1",
-      "position": 1,
-      "properties": {
-        "description": "Students can also \"Remix\" the sample app to create their own recommendation app based on this project.\r\n\r\nThe following will need to be altered in order for the student apps to work."
-      },
-      "seeding_key": {
-        "activity_section.key": "a01af2f4-0a17-4ac3-8984-f6510c5bd2c1",
-        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb"
-      }
-    },
-    {
-      "key": "85d9fb6e-4811-4afb-b160-2737e746851f",
-      "position": 2,
-      "properties": {
-        "description": "1. Change the \"intro\" screen to reflect the new topic.\r\n2. Change the text on the three \"question\" screens to reflect the new questions.\r\n3. Change the answer choices on each \"question\" screen.\r\n    * Students may choose a text button or an image.\r\n    * Each answer's element id will need to be changed, or the old element deleted and a new element created.\r\n4. Change the \"choice\" screens to reflect the new recommendation choices.\r\n    * Change the text and the image.",
-        "name": "In Design Mode:\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "85d9fb6e-4811-4afb-b160-2737e746851f",
-        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb"
-      }
-    },
-    {
-      "key": "acbb67ef-3a20-4598-8eb0-1b2e2c3d1fc2",
-      "position": 3,
-      "properties": {
-        "description": "1. Change the variable names of the choices.\r\n2. Change the rules to use the new variables and reflect the student's algorithm.\r\n3. In the rules for Question 3, update the list of choices passed to the \"recommend()\" function.",
-        "name": "In Code Mode:\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "acbb67ef-3a20-4598-8eb0-1b2e2c3d1fc2",
-        "lesson_activity.key": "5da91a98-c077-456c-b830-c2c921a8bfcb"
       }
     },
     {
@@ -5470,7 +5257,7 @@
       "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -5496,7 +5283,7 @@
       "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Keeping Data Secret",
         "level_keys": [
@@ -5730,7 +5517,7 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Sample App",
         "level_keys": [
@@ -6444,8 +6231,8 @@
       }
     },
     {
-      "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/",
+      "name": "Medical Records",
+      "url": "https://docs.google.com/document/d/1dwpyCS7QjQg9L6h-V8Xnc6r21P6VCiFCJckk_ZBlxco/view",
       "key": "keeping-data-secret",
       "properties": {
         "type": "Activity Guide",
@@ -6454,6 +6241,31 @@
       },
       "seeding_key": {
         "resource.key": "keeping-data-secret"
+      }
+    },
+    {
+      "name": "Unit 5 Data & Society",
+      "url": "https://docs.google.com/presentation/u/1/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "key": "unit_5_data_society",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_data_society"
+      }
+    },
+    {
+      "name": "Secret Messages 2021",
+      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "key": "secret_messages_2021",
+      "properties": {
+        "type": "Activity Guide",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "secret_messages_2021"
       }
     },
     {
@@ -6529,6 +6341,18 @@
       },
       "seeding_key": {
         "resource.key": "sample_marked_rubric_2"
+      }
+    },
+    {
+      "name": "Unit 5 Data & Society",
+      "url": "https://docs.google.com/presentation/u/1/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "key": "unit_5_data_society_1",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_data_society_1"
       }
     },
     {
@@ -6859,6 +6683,18 @@
       }
     },
     {
+      "name": "Unit 5 Data & Society ",
+      "url": "https://docs.google.com/presentation/u/1/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "key": "unit_5_data_society_2",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_data_society_2"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csd",
       "key": "teacher_forum",
@@ -7023,6 +6859,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "resource.key": "unit_5_data_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "resource.key": "secret_messages_2021"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Create a Representation",
         "resource.key": "computer-science-practices"
       }
@@ -7055,6 +6903,12 @@
       "seeding_key": {
         "lesson.key": "Project - Create a Representation",
         "resource.key": "sample_marked_rubric_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Create a Representation",
+        "resource.key": "unit_5_data_society_1"
       }
     },
     {
@@ -7259,6 +7113,12 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "resource.key": "peer_review_exemplar_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "unit_5_data_society_2"
       }
     }
   ],
@@ -7465,7 +7325,7 @@
     {
       "key": "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4",
       "properties": {
-        "description": "Apply a method of encryption to ensure the secure transmission of data."
+        "description": "Describe the reasons encryption is needed to protect personal data"
       },
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
@@ -7475,7 +7335,7 @@
     {
       "key": "42021a55-c97c-432b-9420-a62927cc2bba",
       "properties": {
-        "description": "Use both physical and digital security measures to secure data."
+        "description": "Apply a method of encryption to ensure the secure transmission of data."
       },
       "seeding_key": {
         "lesson.key": "Keeping Data Secret",
@@ -7882,5 +7742,8 @@
         "standard.shortcode": "2-IC-23"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 15:41:18 UTC",
+    "serialized_at": "2021-04-06 23:24:22 UTC",
     "seeding_key": {
       "script.name": "csd4-2021"
     }
@@ -81,18 +81,18 @@
   "lessons": [
     {
       "key": "Analysis of Design",
-      "name": "Analysis of Design",
+      "name": "Designing With Empathy",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "To kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various teapots. Students analyze each teapot, attempting to identify how specific user needs might have informed its design. By considering these design choices, and attempting to match each teapot with a potential user, students can begin to see how taking a user-centered approach to designing products (both physical and digital) can make those products more useful and usable. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.",
+        "overview": "**Question of the Day:** How can we choose products based on the needs of a user?\n\nTo kick off a unit devoted to group problem solving and developing products for other users, students begin by investigating the design of various shoes. Students look at a variety of shoes and attempt to match each shoe with a potential user. Students also provide feedback on these designs, using an “I Like…” / “I Wish…” / “I Wonder…” structure that will be repeated throughout the unit. To conclude the activity, students are asked to propose some changes to one of the teapots that would make it more useful or usable.",
         "student_overview": "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n",
-        "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\r\n\r\nThe problem solving process used throughout CS Discoveries is:\r\n\r\n* Define\r\n* Prepare\r\n* Try\r\n* Reflect\r\n\r\nIn this lesson, students look at real world objects to understand how the problem solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\r\n\r\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end user of a product before honing in on how it specifically applies to software design",
+        "purpose": "Students will enter this unit with an understanding of the problem solving process from prior units.\n\nThe problem solving process used throughout CS Discoveries is:\n\n* Define\n* Prepare\n* Try\n* Reflect\n\nIn this lesson, students look at real-world objects to understand how the problem-solving process can be applied to help others. Starting with this lesson, we will be reframing this process to include a layer of empathy, encouraging students to consider how others will experience and use the things they create.\n\nWe are purposefully starting out by looking at non-technical objects to encourage students to think more broadly about what it means to consider the end-user of a product before honing in on how it specifically applies to software design",
         "preparation": "* Print a copy of the activity guide for each student (or prepare to distribute the document digitally).\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "assessment_opportunities": "1. **Critically evaluate an object for how well its design meets a given set of needs**\r\n\r\n    In the discussion at the end of the activity, ensure that students are connecting specifics of the user descriptions to the features of the teapots that they have chosen for those respective users.\r\n   \r\n2. **Identify empathy for the user as an important component of the design process**\r\n\r\n    In the discussion at the end of the activity, check that students are referencing the user descriptions for their explanations, rather than general advantages and disadvantages of each teapot.",
+        "assessment_opportunities": "1. **Critically evaluate an object for how well its design meets a given set of needs**\n\nIn the discussion at the end of the activity, ensure that students are connecting specifics of the user descriptions to the features of the shoes that they have chosen for those respective users.   \n\n2. **Identify empathy for the user as an important component of the design process**\n\nIn the discussion at the end of the activity, check that students are referencing the user descriptions for their explanations, rather than the general advantages and disadvantages of each shoe.",
         "announcements": [
           {
             "notice": "Lesson Modifications",
@@ -596,19 +596,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c6c58364-dc46-4970-81f4-6470013dd502",
-        "lesson.key": "Analysis of Design",
-        "lesson_group.key": "csd4_1",
-        "script.name": "csd4-2021"
-      }
-    },
-    {
-      "key": "64bb59be-55db-47e1-8b1c-01f2f165acbc",
-      "position": 4,
-      "properties": {
-        "name": "Extension Activites"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "64bb59be-55db-47e1-8b1c-01f2f165acbc",
         "lesson.key": "Analysis of Design",
         "lesson_group.key": "csd4_1",
         "script.name": "csd4-2021"
@@ -1605,8 +1592,7 @@
       "key": "02c742eb-e175-4fbb-869a-4f1a5a9d8085",
       "position": 1,
       "properties": {
-        "description": "**Display:** Put up the [r pspe-image] to introduce students to the User-Centered Design Process as an extension of the Problem Solving Process they used in the first three units. The primary difference to note is that we've added _Empathize_ to the background of the entire process.\n\n**Prompt:** What does it mean to empathize? How might the concept of empathizing in a problem solving process be different from in other places you've heard of empathy?",
-        "name": "Introduction\r"
+        "description": "**Display:** Show the Problem Solving Process graphic, which now includes an *Empathize* section in the background of the entire process.\n\n#### Journal\n\n**Prompt:** We’ve used this Problem Solving Process several times throughout this course. In this unit, we’re adding a new element: **Empathize**. What does it mean to empathize? Where else have you heard this term before?"
       },
       "seeding_key": {
         "activity_section.key": "02c742eb-e175-4fbb-869a-4f1a5a9d8085",
@@ -1617,11 +1603,11 @@
       "key": "a6722c40-2f55-4b5c-8ffa-f9e3982f232b",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should discuss their ideas as a class. Eventually direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.",
+        "description": "**Discuss:** Students should write their responses in their journal first, then share their ideas with a partner before discussing as a full class. Eventually, direct conversation towards the fact that to empathize with other people means to consider their wants, needs, or concerns.",
         "tips": [
           {
             "type": "discussionGoal",
-            "markdown": "**Goal:** This discussion can be fairly free-flowing and open ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit.\r\n"
+            "markdown": "**Goal:** This discussion can be fairly free-flowing and open-ended. While you want to eventually arrive at a shared understanding of what it means to empathize, students will be working on their understanding of the word over the entire unit. There's no need to settle on a single fixed definition, so treat this discussion as an introduction to a theme of the unit.\n"
           }
         ]
       },
@@ -1631,8 +1617,19 @@
       }
     },
     {
-      "key": "e27ed593-a4f0-417e-a786-0f7aa8d8787c",
+      "key": "07dbc06d-25e3-4a72-a67e-cddd7c698a2b",
       "position": 3,
+      "properties": {
+        "description": "**Vocabulary:** Display the following vocabulary as a transition to the main activity:\n- Empathy - In design, paying attention to a user's feelings and needs when designing a product\n- User - Someone who uses an object, including software and hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "07dbc06d-25e3-4a72-a67e-cddd7c698a2b",
+        "lesson_activity.key": "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca"
+      }
+    },
+    {
+      "key": "e27ed593-a4f0-417e-a786-0f7aa8d8787c",
+      "position": 4,
       "properties": {
         "description": "This unit we are going to start thinking a lot more about designing for other people. This is still largely a problem solving process, but we will now need to think a lot more closely about the needs of our users. In other words, empathy will be an important theme as we learn more about design.",
         "remarks": true
@@ -1643,17 +1640,27 @@
       }
     },
     {
+      "key": "d523037f-e439-4bf8-8a69-a94a4723cecd",
+      "position": 5,
+      "properties": {
+        "description": "**Question of the Day:** How can we choose products based on the needs of a user?"
+      },
+      "seeding_key": {
+        "activity_section.key": "d523037f-e439-4bf8-8a69-a94a4723cecd",
+        "lesson_activity.key": "12bc2f76-7b4a-4453-a526-fc5a0bbb15ca"
+      }
+    },
+    {
       "key": "0aae65e7-d504-4b63-9b0e-f9145959ac27",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Hand out copies of the activity guide or have students take out their journals.",
+        "description": "**Distribute:** Hand out copies of the Determine the User Activity Guide.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Reducing Printed Materials**\r\n\r\nUnit 4 contains a lot of printed materials.  Classrooms with limited ability to print can choose one of the following options instead.\r\n\r\n**Option 1: Online Activity Guides**\r\n\r\nAll of our activity guides are available in editable Google Doc and Microsoft Doc formats.  Classrooms using Google or Microsoft products can distribute digital copies to students, who can complete most of the activity guides entirely online.\r\n\r\n**Option 2: Student Journals**\r\n\r\nMany of the activity guides can be converted into journal activities.  Teachers can project the instructions and prompts or allow students to view them online, then complete the activity itself in a journal.\r\n\r\nLook for teaching tips on relevant lessons to indicate when you may avoid printing by using one of these options.\r\n"
           }
-        ],
-        "name": "Who Was this Designed For?\r"
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0aae65e7-d504-4b63-9b0e-f9145959ac27",
@@ -1664,7 +1671,7 @@
       "key": "d525de1b-c25a-48e6-b371-e382b8186757",
       "position": 2,
       "properties": {
-        "description": "#### Determining the User\r\n\r\nThe first part of this activity asks students to match different teapots with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of teapots and the needs of users.\r\n\r\nWhile some of the users have an obvious connection to a specific teapot, arguments could be made for any number of connections. There are no right or wrong answers here - the discussion and ability to reasonably back up a decision are what matter.\r\n\r\n#### Critiquing Design"
+        "description": "###***Designing with Empathy***\n\n\n\n#### Determine the User\n\n**Overview:** Have students read through the Determine the User section of the activity guide. The first part of this activity asks students to match different shoes with the most likely user. Have students work through this activity in pairs, encouraging discussion about why exactly they are choosing to make each connection. This is a great place to discuss the design of shoes and the needs of users.\n\n**Circulate:** Monitor students as they complete the first page of the activity guide, asking students to justify some of the decisions that they made. It’s okay if students disagree about a particular shoe choice. There are no right or wrong answers here - the discussion and ability to reasonably justify a decision are what matter."
       },
       "seeding_key": {
         "activity_section.key": "d525de1b-c25a-48e6-b371-e382b8186757",
@@ -1675,8 +1682,13 @@
       "key": "0ffa0382-8df9-42a1-8f6b-62612e26f301",
       "position": 3,
       "properties": {
-        "description": "We're now going to learn how to critique a design. A critique is a careful criticism in which you give your opinion about the good and bad parts of something, such as a piece of writing or work of art. It's important that we see critiques as feedback towards improvement, as opposed to a final judgement. In this case we're going to critique objects in order to idenfity for whom they may have been designed.",
-        "remarks": true
+        "description": "**Share Out:** Have students discuss the following questions in small groups before bringing to a full class discussion:\n\n- Which users were the easiest to find matches for?\n- Which users were the hardest to find matches for?\n\nBased on your observations while circulating, you should also identify a few specific users to ask the class to discuss, especially users where multiple students chose different shoes. Encourage students to hear different justifications for their choices, emphasizing that the rationale is more important than the choice itself.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain teapot. You may want to challenge students to distinguish their own needs and preferences from those of the described users."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0ffa0382-8df9-42a1-8f6b-62612e26f301",
@@ -1684,56 +1696,12 @@
       }
     },
     {
-      "key": "d757187c-115c-4e18-bc17-cf4be778171d",
+      "key": "ee03bf4e-0d6c-494f-90aa-24d1b2ae3df7",
       "position": 4,
       "properties": {
-        "description": "This second activity gives students an opportunity to specifically critique four of the teapots. The structure of this page reflects the general approach we will be using for critique, using the three statements:",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The first step towards creating a design that can be effectively used by many people is to understand that not everyone thinks the same, or looks at an object or design in the same way. This is the first exercise in the students thinking outside of themselves and at how others may perceive items in the world\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d757187c-115c-4e18-bc17-cf4be778171d",
-        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
-      }
-    },
-    {
-      "key": "cdb7df1e-1085-4017-8ede-c5f48677929c",
-      "position": 5,
-      "properties": {
-        "description": "* I Like... (a strength)\r\n* I Wish... (a weakness)\r\n* What if... (a suggestion)\r\n\r\nYou may want to ask students to apply this critique process to more of the teapots, or objects around the room, to help reinforce the process."
-      },
-      "seeding_key": {
-        "activity_section.key": "cdb7df1e-1085-4017-8ede-c5f48677929c",
-        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
-      }
-    },
-    {
-      "key": "85223f43-9522-4542-8223-21affebb5a1b",
-      "position": 6,
-      "properties": {
-        "description": "**Discuss:** Students should talk about their answers on the worksheet either in their small groups or as a class. Questions could include:",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "As students discuss their reasoning for their choices, check to ensure that they are identifying the particular user's needs and characteristics, rather than general reasons to prefer a certain teapot.  You may want to challenge students to distinguish their own needs and preferences from those of the described users.\r\n\r\n"
-          }
-        ],
-        "name": "Discussing Design Choices\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "85223f43-9522-4542-8223-21affebb5a1b",
-        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
-      }
-    },
-    {
-      "key": "ee03bf4e-0d6c-494f-90aa-24d1b2ae3df7",
-      "position": 7,
-      "properties": {
-        "description": "* Which teapots did you choose for \"Someone who needs to serve tea at dinner party?\" Why did you choose those particular teapots?\r\n* Which teapots did you choose for \"Someone who likes metallic objects?\" Why did you choose those particular teapots?\r\n* Which users were the easiest to find matches for? \r\n* Which users were the hardest to find matches for?\r\n* For page 2, which teapot was your favorite? Why?"
+        "description": "We're now going to learn how to give feedback on a design. We’re going to give our opinion about the good and bad parts of these shoes. It's important to give feedback that acts as a positive step towards improvement, rather than feedback that is negative and judgemental that doesn’t help make the product better.",
+        "name": "Design Feedback",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ee03bf4e-0d6c-494f-90aa-24d1b2ae3df7",
@@ -1741,39 +1709,66 @@
       }
     },
     {
+      "key": "77d36a73-ea24-4f41-970a-2b2485d1be8e",
+      "position": 5,
+      "properties": {
+        "description": "**Design Feedback:** Have students read the Design Feedback section of the activity guide on the second page. This second activity gives students an opportunity to provide feedback on four of the shoes. The structure of this page reflects the general approach we will be using for feedback, using the three statements:\n\n- I Like... (a strength)\n- I Wish... (a weakness)\n- What if... (a suggestion)"
+      },
+      "seeding_key": {
+        "activity_section.key": "77d36a73-ea24-4f41-970a-2b2485d1be8e",
+        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
+      }
+    },
+    {
+      "key": "0158f751-e444-4cd5-ae72-c6daa9d0f859",
+      "position": 6,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they complete this activity, ensuring that students are giving actionable feedback that can lead to improvements rather than generic or unhelpful feedback that feels more like a judgement than a suggestion.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The first step towards creating a design that can be effectively used by many people is to understand that not everyone thinks the same, or looks at an object or design in the same way. This is the first exercise in the students thinking outside of themselves and at how others may perceive items in the world"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0158f751-e444-4cd5-ae72-c6daa9d0f859",
+        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
+      }
+    },
+    {
+      "key": "7a54430f-eea6-4be2-bbad-ecf7bf32f999",
+      "position": 7,
+      "properties": {
+        "description": "**Share Out:** Have students discuss the following questions in small groups before bringing them to a full class discussion:\n\n- Which shoe was your favorite? Why?\n- Which of these shoes do you think would be the favorite for someone in your family? Why?\n\nEncourage students to think about both themselves and other people in their lives, such as a family member. This helps emphasize that designing means thinking about more than just your own needs and desires, but considering how other people will react to a product as well."
+      },
+      "seeding_key": {
+        "activity_section.key": "7a54430f-eea6-4be2-bbad-ecf7bf32f999",
+        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
+      }
+    },
+    {
+      "key": "37c5161d-636f-481e-9a9d-3d3cfad75432",
+      "position": 8,
+      "properties": {
+        "remarks": true,
+        "description": "An important part of this activity is thinking about how different products are made for different people, and how there’s always room to improve a product so it is helpful to more users. Throughout this unit, we’ll continue to think about how different people use objects for different reasons so that we can design apps for as many users as possible!"
+      },
+      "seeding_key": {
+        "activity_section.key": "37c5161d-636f-481e-9a9d-3d3cfad75432",
+        "lesson_activity.key": "9057adaa-50f5-48cb-b7b7-1371ef765e1c"
+      }
+    },
+    {
       "key": "3fe573d7-2c09-4e1c-ae7e-d4029f905d35",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Pick one or two of the objects you analyzed today (in either activity):\r\n\r\n* What could you change to make this object more usable for you? Feel free to use words, pictures, or a combination of both.",
-        "name": "Improving on Designs\r"
+        "description": "**Prompt:** Pick one or two of the objects you analyzed today. What could you change to make this object more usable for you? Feel free to use words, pictures, or a combination of both",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "3fe573d7-2c09-4e1c-ae7e-d4029f905d35",
         "lesson_activity.key": "c6c58364-dc46-4970-81f4-6470013dd502"
-      }
-    },
-    {
-      "key": "5160f3fe-8acc-42fd-8ed0-7cd0b5c094e0",
-      "position": 1,
-      "properties": {
-        "description": "Bring in a variety of odd or uncommon objects (old tools, obscure kitchen utensils, and antique gadgets work well for this activity). Distribute the objects around the room and organize students into groups of 3-4. Allow the groups to circulate around the room and examine the objects. For each object, groups will discuss what they believe the object does and what kind of person might use it.\r\n\r\nWhen the class has had a chance to explore all of the objects, reconvene as a group and discuss:\r\n\r\n* What teams thought each object was\r\n* What each object _actually_ does\r\n* What features of each object gave clues to what it did, or what kind of person might use it.",
-        "name": "Exploring Everyday Things\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "5160f3fe-8acc-42fd-8ed0-7cd0b5c094e0",
-        "lesson_activity.key": "64bb59be-55db-47e1-8b1c-01f2f165acbc"
-      }
-    },
-    {
-      "key": "cbef6f54-161e-4fd2-82ee-c0e7fc9820f6",
-      "position": 2,
-      "properties": {
-        "description": "Ask students to find things they use in everyday life that they feel could benefit from a design overhaul. As a class discuss what is ineffective about the existing design and how it could be improved.",
-        "name": "Poorly Designed Products\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "cbef6f54-161e-4fd2-82ee-c0e7fc9820f6",
-        "lesson_activity.key": "64bb59be-55db-47e1-8b1c-01f2f165acbc"
       }
     },
     {
@@ -3090,7 +3085,7 @@
       "key": "c337ed3b-d951-4d8e-a4ee-d0568f19fa8d",
       "position": 3,
       "properties": {
-        "description": "Yesterday we used user interviews to identify a user's needs and interests, and brainstormed different apps that can address these items. That was just the first part of the design process - empathizing with a user. Today we'll continue that process and begin making a paper prototype for the app we brainstormed yesterday!",
+        "description": "Yesterday we used user interviews to identify a user's needs and interests, and brainstormed different apps that can address these items. That was just the first part of the design process - empathizing with a user. Today we'll continue that process and begin making a paper prototype for the app we brainstormed yesterday!\n\n**Question of the Day:** How can I develop an app prototype for a user?",
         "remarks": true
       },
       "seeding_key": {
@@ -3142,7 +3137,7 @@
       "key": "54a5e672-f71d-4cd7-9bb7-db4ad99104f5",
       "position": 4,
       "properties": {
-        "description": "**Decide Your Screens:** Students are provided space on their activity guide to sketch out their ideas for the screens of their app. This is an opportunity to make a quick first draft of their app. This should take about 10 minutes and focus primarily on",
+        "description": "**Navigation Diagram:** Students are provided space on their activity guide to sketch out their ideas for the screens of their app. This is an opportunity to make a quick first draft of their app. This should take about 10 minutes and focus primarily on:\n\n- How many screens they'll need\n- What information or functionality appears on each screen\n- How screens will be connected to one another",
         "tips": [
           {
             "type": "teachingTip",
@@ -3156,19 +3151,8 @@
       }
     },
     {
-      "key": "9cd83e30-4870-44d9-b561-6133aaf6fa35",
-      "position": 5,
-      "properties": {
-        "description": "* How many screens they'll need\r\n* What information or functionality appears on each screen\r\n* How screens will be connected to one another"
-      },
-      "seeding_key": {
-        "activity_section.key": "9cd83e30-4870-44d9-b561-6133aaf6fa35",
-        "lesson_activity.key": "32a5b027-028e-4d12-84eb-7b36009cc36e"
-      }
-    },
-    {
       "key": "8fe4701a-2679-43c1-8b88-b23615e04523",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "**Distribute:** Give each student up to six note cards for creating their screens as well as drawing supplies.\n\n**Do This:** Have students create their paper prototype screens based on their navigation diagram. Leave enough time for students to begin filling in the table for User Testing before Day 1 ends.\n\n**Circulate:** Monitor student progress as they create their screens, keeping an eye on time management. If possible, have a timer available for students to see so they know how much time they have remaining. Encourage students to start with the basics on their screens so they are usable, then add more details once all the screens have the basics and are usable.",
         "name": "Paper Prototyping\r"
@@ -3180,7 +3164,7 @@
     },
     {
       "key": "203872c5-4938-431c-9e37-36dc2fffc0c3",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "I’m really excited by the prototypes we’re developing! Tomorrow, you’ll get a chance to see what each other have made because we’ll be testing our prototypes, just like we did with the Text Your Grandkids app. Before we leave, we’re going to do one last step to prepare for our user testing tomorrow.",
         "remarks": true
@@ -3192,7 +3176,7 @@
     },
     {
       "key": "743d6e6b-6320-4157-962e-5789b717aa34",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "**Display:** Have students turn to page 4 of their Project Guide, which focuses on User Testing. Have students fill in the left-most column of the table with the main tasks they would like to test with a user. This will be the first activity students start with the next day.\n\n**Collect:** Decide how you would like to collect or store the notecards for students who have finished their paper prototype. You may decide to collect and redistribute them, or you may have students keep their materials in a specific location.",
         "name": "Wrap Up\r"
@@ -9301,5 +9285,8 @@
         "standard.shortcode": "2-IC-22"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
