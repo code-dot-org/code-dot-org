@@ -135,6 +135,10 @@ export const commands = {
     behaviorCommands.addBehavior(spriteArg, behavior);
   },
 
+  avoidingTargetsFunc(spriteArg) {
+    return behaviorCommands.avoidingTargetsFunc(this);
+  },
+
   Behavior(callback) {
     return behaviorCommands.Behavior(callback);
   },
