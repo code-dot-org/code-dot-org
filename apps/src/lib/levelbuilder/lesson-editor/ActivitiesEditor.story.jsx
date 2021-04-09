@@ -4,7 +4,7 @@ import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
@@ -20,7 +20,7 @@ import {
 const createStoreWithLessonPlan = () => {
   registerReducers({
     ...reducers,
-    resources: resourcesEditor,
+    resources: createResourcesReducer('lessonResource'),
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
@@ -33,7 +33,7 @@ const createStoreWithLessonPlan = () => {
 const createStoreWithoutLessonPlan = () => {
   registerReducers({
     ...reducers,
-    resources: resourcesEditor,
+    resources: createResourcesReducer('lessonResource'),
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();

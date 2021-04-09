@@ -10,7 +10,7 @@ import reducers, {
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/script-editor/scriptEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import ScriptEditor from '@cdo/apps/lib/levelbuilder/script-editor/ScriptEditor';
@@ -23,7 +23,11 @@ export default function initPage(scriptEditorData) {
 
   const locales = scriptEditorData.locales;
 
-  registerReducers({...reducers, resources: resourcesEditor, isRtl});
+  registerReducers({
+    ...reducers,
+    resources: createResourcesReducer('teacherResource'),
+    isRtl
+  });
   const store = getStore();
   store.dispatch(init(lessonGroups, scriptEditorData.levelKeyList));
   const teacherResources = (scriptData.teacher_resources || []).map(
