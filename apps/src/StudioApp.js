@@ -2079,9 +2079,8 @@ StudioApp.prototype.setConfigValues_ = function(config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  console.log(config.level);
+
   if (config.level.initializationBlocks) {
-    // What are initializationBlocks? Is this where I get the blocks to show things?
     var xml = parseXmlElement(config.level.initializationBlocks);
     this.initializationBlocks = Blockly.Generator.xmlToBlocks(
       'JavaScript',
