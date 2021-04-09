@@ -16,6 +16,7 @@
 class Foorm::Library < ApplicationRecord
   include Seeded
 
+  # To consider: should a Foorm::Library go through all of the same validations as a Foorm::Form?
   has_many :library_questions, primary_key: [:name, :version], foreign_key: [:library_name, :library_version]
   validates :name, :version, presence: true
 
