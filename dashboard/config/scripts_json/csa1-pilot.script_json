@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-06 21:18:42 UTC",
+    "serialized_at": "2021-04-09 17:00:13 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -178,6 +178,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.",
+        "student_overview": "As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!\n",
+        "purpose": "* Confirm that students are grouped in Code Studio (A tutorial document is available here.)\n* Seat students based on their review groups.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -670,6 +673,62 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
+    },
+    {
+      "key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "337dee6e-1d9e-473c-899d-5f8017167016",
+      "position": 3,
+      "properties": {
+        "name": "Review Request",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -691,7 +750,7 @@
       "key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
       "position": 2,
       "properties": {
-        "description": " [slide] **Display:** Show the \"Change the Face of Computer Science\" video."
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Change the Face of Computer Science\" video."
       },
       "seeding_key": {
         "activity_section.key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
@@ -704,7 +763,7 @@
       "properties": {
         "name": "Design Thinking: Brainstorm",
         "duration": "8",
-        "description": "[slide] **Distribute:** Hand out sticky notes to students, at least 20 sticky notes per student. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out sticky notes to students, at least 20 sticky notes per student. "
       },
       "seeding_key": {
         "activity_section.key": "a66ecc6b-8fa7-4e20-9f48-9ffc7aa5d61e",
@@ -727,7 +786,7 @@
       "key": "beee5f00-6076-4e55-8e59-19d2a08e6b0f",
       "position": 3,
       "properties": {
-        "description": " [slide] **Do This:** Ask a student to read the question on the slide to the whole class. Students write as many words/phrases as they can, one per sticky note, about the phrase \"software engineering\". Remind them to keep generating more ideas: there are no wrong answers",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student to read the question on the slide to the whole class. Students write as many words/phrases as they can, one per sticky note, about the phrase \"software engineering\". Remind them to keep generating more ideas: there are no wrong answers",
         "tips": [
           {
             "type": "teachingTip",
@@ -767,7 +826,7 @@
       "key": "bedc6269-35d4-43f3-85ff-794f3a67083d",
       "position": 6,
       "properties": {
-        "description": "**Do This:** In their group:\n* [slide] Students share out their sticky notes.\n* [slide] Students group similar sticky notes.\n* [slide] Students stick their sticky notes on the wall, keeping similar notes together.\n",
+        "description": "**Do This:** In their group:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students share out their sticky notes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students group similar sticky notes.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students stick their sticky notes on the wall, keeping similar notes together.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -786,7 +845,7 @@
       "properties": {
         "name": "Design Thinking: Gallery Walk and Discussion",
         "duration": "13",
-        "description": "[slide] **Do This:** Students explore other groups' sticky notes with a Gallery Walk. They take notes on what they notice and wonder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students explore other groups' sticky notes with a Gallery Walk. They take notes on what they notice and wonder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -803,7 +862,7 @@
       "key": "c0cdf7b6-c5a5-4361-be8e-2f83291a8ace",
       "position": 8,
       "properties": {
-        "description": "[slide] **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:**  Discuss the prompts as a class. Students may have common perceptions of “who” is a software engineer. Encourage them to think of different identities and how they intersect.\n\n[slide] **Discuss:** Where do we get this perception from? Why? What message does that send to us?\n\n**Discussion Goal:** Through popular culture and the media, everyone has formed images of who is a software engineer and what software engineering looks like. This discussion provides space for students to express openly their previous knowledge and experience.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:**  Discuss the prompts as a class. Students may have common perceptions of “who” is a software engineer. Encourage them to think of different identities and how they intersect.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Where do we get this perception from? Why? What message does that send to us?\n\n**Discussion Goal:** Through popular culture and the media, everyone has formed images of who is a software engineer and what software engineering looks like. This discussion provides space for students to express openly their previous knowledge and experience.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -845,7 +904,7 @@
       "key": "7d130709-6b97-42ff-9e12-03cc7a6b9776",
       "position": 11,
       "properties": {
-        "description": "[slide] **Display:** Show video of software engineers.\n\n[slide] **Discuss:** *From what you have just heard and your own previous computer science experience, what values are important for software engineering?*\n\n**Do This:** Use Think-Pair-Share to conduct the discussion. As students share out values, type them onto the slide.\n\n**Discussion Goal:** This discussion encourages students to share personal experiences with software engineering. As the software engineers will have discussed the values of problem solving, collaboration, creativity, and curiosity, students share experiences related to these values. Students begin making connections to growth mindset values and moving away from misconceptions (\"good at math\", \"born with it\") surrounding software engineering.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show video of software engineers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *From what you have just heard and your own previous computer science experience, what values are important for software engineering?*\n\n**Do This:** Use Think-Pair-Share to conduct the discussion. As students share out values, type them onto the slide.\n\n**Discussion Goal:** This discussion encourages students to share personal experiences with software engineering. As the software engineers will have discussed the values of problem solving, collaboration, creativity, and curiosity, students share experiences related to these values. Students begin making connections to growth mindset values and moving away from misconceptions (\"good at math\", \"born with it\") surrounding software engineering.",
         "tips": [
           {
             "type": "teachingTip",
@@ -862,7 +921,7 @@
       "key": "8fe9d7c4-72c6-4ea1-b914-15e4d8d6313d",
       "position": 12,
       "properties": {
-        "description": "[slide] **Discuss:** *When have you shown these characteristics, inside or outside of school? How?*\n\n**Discussion Goal:** The goal of this discussion is for students to realize that they have already displayed many of the traits of a software engineer, without realizing it."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you shown these characteristics, inside or outside of school? How?*\n\n**Discussion Goal:** The goal of this discussion is for students to realize that they have already displayed many of the traits of a software engineer, without realizing it."
       },
       "seeding_key": {
         "activity_section.key": "8fe9d7c4-72c6-4ea1-b914-15e4d8d6313d",
@@ -887,7 +946,7 @@
       "properties": {
         "name": "Call and Response",
         "remarks": true,
-        "description": "[slide] We will be using call and response this year to help build community and culture. You have shared out examples of how you represent these values, and we’re going to affirm these identities together. We’re going to focus on these four values.\n\nWhen I say, “I am a”, you say “problem solver”\n\n“I am a”\n\nWhen I say “I am”, you say “creative”\n\n“I am”\n\nWhen I say “I am a”, you say “collaborator”\n\n“I am a”\n\nWhen I say “I am a”, you say “learner”\n\n“I am a”\n\nThese four values are what we care about in a software engineer.\n\nWhen I say “I am a”, you say “software engineer”\n\n“I am a” ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We will be using call and response this year to help build community and culture. You have shared out examples of how you represent these values, and we’re going to affirm these identities together. We’re going to focus on these four values.\n\nWhen I say, “I am a”, you say “problem solver”\n\n“I am a”\n\nWhen I say “I am”, you say “creative”\n\n“I am”\n\nWhen I say “I am a”, you say “collaborator”\n\n“I am a”\n\nWhen I say “I am a”, you say “learner”\n\n“I am a”\n\nThese four values are what we care about in a software engineer.\n\nWhen I say “I am a”, you say “software engineer”\n\n“I am a” ",
         "tips": [
           {
             "type": "teachingTip",
@@ -906,7 +965,7 @@
       "properties": {
         "name": "Exit Ticket",
         "duration": "5",
-        "description": "[slide] **Do This:** \n* On a sticky note, students write which of the software engineering values they are the strongest at and which one they have the most room for growth.\n* Save these sticky notes. Students revisit these in Lesson 15 to reflect on their growth in their software engineering identity.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n* On a sticky note, students write which of the software engineering values they are the strongest at and which one they have the most room for growth.\n* Save these sticky notes. Students revisit these in Lesson 15 to reflect on their growth in their software engineering identity.\n"
       },
       "seeding_key": {
         "activity_section.key": "16d15350-6abe-4011-8a94-d471b4538e5a",
@@ -954,7 +1013,7 @@
       "key": "fb6de4b3-d519-4817-8855-fa3945f7eb1b",
       "position": 2,
       "properties": {
-        "description": " [slide] **Display:** Show the \"What is Java\" video.\n\n[slide] **Discuss:** *Can you name some apps or video games that use Java and were shared in the video? What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.\n\n",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"What is Java\" video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you name some apps or video games that use Java and were shared in the video? What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -972,7 +1031,7 @@
       "position": 3,
       "properties": {
         "remarks": true,
-        "description": "[slide] In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking to the right side of the slide, you can see what commands in Java look like. \n\nJava is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -991,7 +1050,7 @@
       "properties": {
         "name": "Adding Students to Your Section ",
         "duration": "10",
-        "description": "NOTE: This will take some time so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* [slide] Walk students through joining Code.org with a personal email account *or*\n* [slide] Walk students through joining Code.org with a Google Classroom account *or*\n* [slide] Walk students through joining Code.org with a Clever account.\n* Have students navigate to the course on the home page.\n* From the student's homepage, they should see a \"tile\" for CSA. \n* Click 'View Course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to start Lesson 2.\n",
+        "description": "NOTE: This will take some time so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a personal email account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Google Classroom account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Clever account.\n* Have students navigate to the course on the home page.\n* From the student's homepage, they should see a \"tile\" for CSA. \n* Click 'View Course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to start Lesson 2.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1022,7 +1081,7 @@
       "key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* [slide] Direct students to Level 1 on Code Studio to show students where they will explore the Java IDE. Point out the five main sections: instructions, editor, preview, console, and controls. \n* [slide] Have students look at the starter code in the editor and run the code."
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to show students where they will explore the Java IDE. Point out the five main sections: instructions, editor, preview, console, and controls. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students look at the starter code in the editor and run the code."
       },
       "seeding_key": {
         "activity_section.key": "f03d6578-8d00-4b71-95c4-b99523a1186b",
@@ -1033,7 +1092,7 @@
       "key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
       "position": 4,
       "properties": {
-        "description": "[slide] **Discuss:** *What happens when you run the starter code?*\n\n**Discussion Goal:** This is the first opportunity for students to trace code - a skill that they use throughout the course. Students should talk through the code out loud to demonstrate the tracing process. After running the code, students see the `Painter` move across the screen and paint one square.  \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you run the starter code?*\n\n**Discussion Goal:** This is the first opportunity for students to trace code - a skill that they use throughout the course. Students should talk through the code out loud to demonstrate the tracing process. After running the code, students see the `Painter` move across the screen and paint one square.  \n"
       },
       "seeding_key": {
         "activity_section.key": "ffe93a7a-585f-473c-a22e-1610aacf6cbd",
@@ -1056,7 +1115,7 @@
       "key": "75ccfe00-592b-4409-9a0b-52dc420f74c2",
       "position": 6,
       "properties": {
-        "description": "[slide] **Do This:** Students now modify the code to change the paint color and have the `Painter` move one square.\n\n**Discuss:** *What modifications did you make in the editor? How did that change the output when you ran your code?*\n\n**Discussion Goal:** Make sure that students can make modifications and share with classmates the changes they made in the editor.   ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now modify the code to change the paint color and have the `Painter` move one square.\n\n**Discuss:** *What modifications did you make in the editor? How did that change the output when you ran your code?*\n\n**Discussion Goal:** Make sure that students can make modifications and share with classmates the changes they made in the editor.   ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1075,7 +1134,7 @@
       "properties": {
         "name": "Classes and Objects",
         "duration": "15",
-        "description": "[slide] **Display:** Show the \"Welcome to The Neighborhood\" video.\n\n[slide] **Discuss:** *What feature did you use to make modifications to your code? What does compile mean? How does the “run” button compile the code?*\n\n**Discussion Goal:** Students discuss the code editor feature used to make changes to their code. Students define the word compile. Students make the connection of using the “run” button to compile their code.\n\n[slide] **Display:** Show the Objects and Classes video. \n\n[slide] **Discuss:** *What is a class? What is an object? What Is the relationship between the two?*\n\n**Discussion Goal:** Students summarize the definition of a class and object, based on the video’s definition. Students discuss the ‘instance of’ relationship between a class and object. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Welcome to The Neighborhood\" video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What feature did you use to make modifications to your code? What does compile mean? How does the “run” button compile the code?*\n\n**Discussion Goal:** Students discuss the code editor feature used to make changes to their code. Students define the word compile. Students make the connection of using the “run” button to compile their code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Objects and Classes video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a class? What is an object? What Is the relationship between the two?*\n\n**Discussion Goal:** Students summarize the definition of a class and object, based on the video’s definition. Students discuss the ‘instance of’ relationship between a class and object. "
       },
       "seeding_key": {
         "activity_section.key": "dea8cb65-11c3-4ac3-aff0-d9dac8c83638",
@@ -1087,7 +1146,7 @@
       "position": 8,
       "properties": {
         "remarks": true,
-        "description": "[slide] Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\nFormally, an object is \"an instance\" of the class. An object can know things and do things. \n\nWhen we say “an instance” we mean that it is a copy of the class with a unique set of information. Without the class, you can not create an object.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\nFormally, an object is \"an instance\" of the class. An object can know things and do things. \n\nWhen we say “an instance” we mean that it is a copy of the class with a unique set of information. Without the class, you can not create an object.\n"
       },
       "seeding_key": {
         "activity_section.key": "6f9deff1-0714-4306-9ee0-6122956ee7ab",
@@ -1098,7 +1157,7 @@
       "key": "5fdfdc33-524e-4ab7-ab89-3f984be35aee",
       "position": 9,
       "properties": {
-        "description": "[slide] **Discuss:** *What examples could represent a class and object?*\n\n**Discussion Goal:** Students make connections to real-world examples. Students can identify a class and object they could create for future use. When presenting examples, have students explain the relationship between the class and the object. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What examples could represent a class and object?*\n\n**Discussion Goal:** Students make connections to real-world examples. Students can identify a class and object they could create for future use. When presenting examples, have students explain the relationship between the class and the object. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1115,7 +1174,7 @@
       "key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
       "position": 10,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class. Have students run the code without the object.\n\nStudents create a `Painter` object and run the program again. Make sure students can identify:\n* The class name\n* The object name \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class. Have students run the code without the object.\n\nStudents create a `Painter` object and run the program again. Make sure students can identify:\n* The class name\n* The object name \n"
       },
       "seeding_key": {
         "activity_section.key": "1b3e7fec-d836-4dab-9543-ef57c5f0b762",
@@ -1156,7 +1215,7 @@
       "key": "532e4835-4799-46c3-ab2e-84837bd39842",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "tips": [
           {
             "type": "teachingTip",
@@ -1173,7 +1232,7 @@
       "key": "2320fb2a-b15a-4f84-b7b3-27c5eceaa726",
       "position": 3,
       "properties": {
-        "description": "[slide] **Discuss:** *Describe an object. Describe a class. How did you use the following software engineering values today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students look back at the software engineering values to determine which value they identified with today.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe an object. Describe a class. How did you use the following software engineering values today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students look back at the software engineering values to determine which value they identified with today.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1226,7 +1285,7 @@
       "position": 1,
       "properties": {
         "name": "Instructions for Computers",
-        "description": "[slide] **Discuss:** *Software is a set of specific instructions that enables a computer to perform a task. What are some examples of technologies that give users specific instructions to perform a task?* \n\n**Discussion Goal:** Students give examples of apps and technologies that give users specific instructions to perform a task.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Software is a set of specific instructions that enables a computer to perform a task. What are some examples of technologies that give users specific instructions to perform a task?* \n\n**Discussion Goal:** Students give examples of apps and technologies that give users specific instructions to perform a task.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1243,7 +1302,7 @@
       "key": "f6afd428-9b60-42b7-b333-2dc44e216d62",
       "position": 2,
       "properties": {
-        "description": "**Do This:** \n* [slide] In their journals or on scrap paper, have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* [slide] Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
+        "description": "**Do This:** \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In their journals or on scrap paper, have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1275,7 +1334,7 @@
       "properties": {
         "name": "Writing Commands in Java",
         "duration": "10",
-        "description": "**Do This:** Introduce students to using and writing commands in Java by walking students through the set of four slides on the following ideas:\n* [slide] `Painter` objects navigate The Neighborhood and complete tasks.\n* [slide] We have five action commands.\n* [slide] Click through the animation to break down the proper Java syntax to use a command.\nSummarize the syntactical elements of Java.\n\n[slide] **Discuss:** Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?\n\n**Discussion Goal:** Students compare the correct syntax to the incorrect syntax. Guide them towards the following: \n* Paint does not have the proper capitalization.\n* Commands are followed by parentheses.\n* Lines need to end with a semicolon.\n"
+        "description": "**Do This:** Introduce students to using and writing commands in Java by walking students through the set of four slides on the following ideas:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Painter` objects navigate The Neighborhood and complete tasks.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We have five action commands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to break down the proper Java syntax to use a command.\nSummarize the syntactical elements of Java.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?\n\n**Discussion Goal:** Students compare the correct syntax to the incorrect syntax. Guide them towards the following: \n* Paint does not have the proper capitalization.\n* Commands are followed by parentheses.\n* Lines need to end with a semicolon.\n"
       },
       "seeding_key": {
         "activity_section.key": "6d043043-2eb0-41a9-9681-72f860885638",
@@ -1288,7 +1347,7 @@
       "properties": {
         "name": "Movement Commands",
         "duration": "10",
-        "description": "**Group:** Pair students up at their stations.  \n\n**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* [slide] The move() command instructs the `Painter` to move forward in the direction that they are facing.\n    * [slide] Direct students to complete Level 1 on Code Studio.\n* [slide] The turnLeft() command instructs the Painter to turn 90 degrees to the left. The Painter can only face North, South, East, or West.\n    * [slide] Direct students to complete Levels 2-3 on Code Studio.\n"
+        "description": "**Group:** Pair students up at their stations.  \n\n**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The move() command instructs the `Painter` to move forward in the direction that they are facing.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 1 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The turnLeft() command instructs the Painter to turn 90 degrees to the left. The Painter can only face North, South, East, or West.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-3 on Code Studio.\n"
       },
       "seeding_key": {
         "activity_section.key": "3f4e4880-2336-495c-ac67-83bc264728f0",
@@ -1317,7 +1376,7 @@
       "properties": {
         "name": "Painting Commands",
         "duration": "10",
-        "description": "**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* [slide] The `takePaint()` command instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n    * [slide] Direct students to complete Level 4 on Code Studio.\n* [slide] The `paint(String color)` command instructs the Painter to apply one unit of paint from their tray onto the dot they are currently standing on.\n* [slide] Share with students that they can change the color the Painter paints by adding the name of a color in quotations inside the parentheses.\n    * [slide] Direct students to complete Level 5 on Code Studio.\n* [slide] The `scrapePaint()` command instructs the `Painter` to remove paint off of the dot they are currently standing on.\n    * [slide] Direct students to complete Level 6 on Code Studio.\n"
+        "description": "**Do This:** Use the following slides to introduce commands to students one at a time. After each command is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takePaint()` command instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 4 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paint(String color)` command instructs the Painter to apply one unit of paint from their tray onto the dot they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share with students that they can change the color the Painter paints by adding the name of a color in quotations inside the parentheses.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 5 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `scrapePaint()` command instructs the `Painter` to remove paint off of the dot they are currently standing on.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 6 on Code Studio.\n"
       },
       "seeding_key": {
         "activity_section.key": "62576f56-a293-4fa5-8c6a-751591e8c48b",
@@ -1346,7 +1405,7 @@
       "properties": {
         "name": "Review",
         "remarks": true,
-        "description": "[slide] As software engineers, our job is to create solutions to different problems and convert them into instructions for a computer.\n\n[slide] **Do This:** Click through the animation to show one command at a time. Before moving onto another command, have students share their understanding of the command. \n\n[slide] **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As software engineers, our job is to create solutions to different problems and convert them into instructions for a computer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to show one command at a time. Before moving onto another command, have students share their understanding of the command. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "da0e0980-e14f-425d-af6d-a64d79dd51ac",
@@ -1381,7 +1440,7 @@
       "position": 1,
       "properties": {
         "name": "Debugging: Predict",
-        "description": "[slide] **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students should notice several syntax errors in this code that will prevent the code from running. Use the word “syntax” to refer back to prior learning from Lesson 3. Ask students to identify each error and what strategies they used to help them find errors.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students should notice several syntax errors in this code that will prevent the code from running. Use the word “syntax” to refer back to prior learning from Lesson 3. Ask students to identify each error and what strategies they used to help them find errors.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1412,7 +1471,7 @@
       "properties": {
         "name": "Introduction to New Commands",
         "duration": "6",
-        "description": "**Do This:** Walk through the following slides with your students:\n* [slide] Review that yesterday’s commands told our `Painter` to do something.\n* [slide] Discuss that today’s commands will give our `Painter` information in the form of `true` or `false`.\n* [slide] Highlight the three information gathering commands they’ll work with today.\n* Show the \"Conditionals\" video. This video covers the basic concept of a conditional, as well as outlines the structure of an `if` statement, which students will be using today.\n* [slide] Click through the animation to review the structure of the basic `if` statement on the slide. Draw special attention to the fact that the code inside the `if` statement will only run if the command inside the `if( )` returns as `true`. Highlight that each of our information gathering commands will give us a piece of information, a Boolean that is either `true` or `false`. The `if` statement allows us to do something with that piece of information."
+        "description": "**Do This:** Walk through the following slides with your students:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review that yesterday’s commands told our `Painter` to do something.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss that today’s commands will give our `Painter` information in the form of `true` or `false`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight the three information gathering commands they’ll work with today.\n* Show the \"Conditionals\" video. This video covers the basic concept of a conditional, as well as outlines the structure of an `if` statement, which students will be using today.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animation to review the structure of the basic `if` statement on the slide. Draw special attention to the fact that the code inside the `if` statement will only run if the command inside the `if( )` returns as `true`. Highlight that each of our information gathering commands will give us a piece of information, a Boolean that is either `true` or `false`. The `if` statement allows us to do something with that piece of information."
       },
       "seeding_key": {
         "activity_section.key": "963e87ad-f513-4f33-932d-234733611167",
@@ -1437,7 +1496,7 @@
       "key": "26a0e83b-c1bd-4583-a08c-632539e36ab7",
       "position": 3,
       "properties": {
-        "description": "**Do This:**\n* [slide] Showcase the `isOnPaint()` command. Highlight a scenario where a `Painter` may need to check if they are on paint before they scrape paint -- maybe they want to create a mural by removing paint, or they need to clean up The Neighborhood.\n* [slide] Discuss the `isOnBucket()` command.\n",
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Showcase the `isOnPaint()` command. Highlight a scenario where a `Painter` may need to check if they are on paint before they scrape paint -- maybe they want to create a mural by removing paint, or they need to clean up The Neighborhood.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the `isOnBucket()` command.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1454,7 +1513,7 @@
       "key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
       "position": 4,
       "properties": {
-        "description": "**Group:** Group students into pairs. \n\n[slide] **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio. Remind them that they should use an if statement in each level in addition to the appropriate information gathering command. \n"
+        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio. Remind them that they should use an if statement in each level in addition to the appropriate information gathering command. \n"
       },
       "seeding_key": {
         "activity_section.key": "c0b03995-4976-4220-aa3a-89ed16839b6d",
@@ -1493,7 +1552,7 @@
       "key": "f5edb606-9830-4a63-8e0a-de634970596c",
       "position": 7,
       "properties": {
-        "description": "**Do This:**\n* [slide] Open The Neighborhood and run code on Level 3 to show a `Painter` trying to turn into a barrier. \n* [slide] Highlight that the `canMove()` command helps our `Painter` to know whether there is a barrier in front of them (i.e. - they can move!).\n\n[slide] **Do This:** Continuing to work in their pairs, instruct students to complete Level 3 on Code Studio.\n"
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Open The Neighborhood and run code on Level 3 to show a `Painter` trying to turn into a barrier. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that the `canMove()` command helps our `Painter` to know whether there is a barrier in front of them (i.e. - they can move!).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Continuing to work in their pairs, instruct students to complete Level 3 on Code Studio.\n"
       },
       "seeding_key": {
         "activity_section.key": "f5edb606-9830-4a63-8e0a-de634970596c",
@@ -1522,7 +1581,7 @@
       "properties": {
         "name": "Debugging Wall",
         "duration": "9",
-        "description": "[slide] **Discuss:** *Think back to the warm-up and your experience so far today with our new commands. What errors have you run into? What are some strategies you’ve used to identify bugs? How have you fixed them?*\n\n**Discussion Goal:** Students should share out both bugs they’ve encountered and ways that they’ve debugged their code. The goal of this discussion is to highlight that everyone has encountered bugs and that they’re a normal part of being a software engineer. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think back to the warm-up and your experience so far today with our new commands. What errors have you run into? What are some strategies you’ve used to identify bugs? How have you fixed them?*\n\n**Discussion Goal:** Students should share out both bugs they’ve encountered and ways that they’ve debugged their code. The goal of this discussion is to highlight that everyone has encountered bugs and that they’re a normal part of being a software engineer. "
       },
       "seeding_key": {
         "activity_section.key": "4608dfa8-4e64-4405-a19b-fa98a094a55b",
@@ -1563,7 +1622,7 @@
       "position": 12,
       "properties": {
         "remarks": true,
-        "description": "[slide] Now that we know we have some strategies to debug, we’re going to practice in The Neighborhood. There are two primary types of errors we’ll focus on debugging today: syntax errors and logic errors."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now that we know we have some strategies to debug, we’re going to practice in The Neighborhood. There are two primary types of errors we’ll focus on debugging today: syntax errors and logic errors."
       },
       "seeding_key": {
         "activity_section.key": "69313d6d-eb7b-4742-8eae-33990a61c67c",
@@ -1574,7 +1633,7 @@
       "key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
       "position": 13,
       "properties": {
-        "description": "**Do This:**\n* [slide] Review the examples of syntax errors on the slide.\n* [slide] Review the definition of logic errors on the slide. Ask students to give an example of a logic error they may have encountered.\n* [slide] Pair students and instruct them to complete the Debugging Challenge Choice Level 4 on Code Studio. There are two options for them to choose from, and each contains both logic and syntax errors.\n"
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to give an example of a logic error they may have encountered.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pair students and instruct them to complete the Debugging Challenge Choice Level 4 on Code Studio. There are two options for them to choose from, and each contains both logic and syntax errors.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7d120b2-b170-4b8f-8aa1-50b10baa092b",
@@ -1601,7 +1660,7 @@
       "key": "7bffb895-ac72-4c57-b754-6f801d98dbc9",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1618,7 +1677,7 @@
       "key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
       "position": 2,
       "properties": {
-        "description": "[slide] **Display:** Key Vocabulary\n\n---\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n\n---\n"
       },
       "seeding_key": {
         "activity_section.key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
@@ -2213,6 +2272,201 @@
         "activity_section.key": "141f0aed-bfc5-46cd-99e0-bc311dcd5aee",
         "lesson_activity.key": "ef4334d0-052e-4899-af77-8856485852ef"
       }
+    },
+    {
+      "key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "So far, we’ve focused on writing new code, but that’s only a fraction of a software engineer's job in industry. In reality, engineers spend a lot of time reading and working with other people’s code. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2565dc89-49d2-474e-92b3-b84dcf3c77e0",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Lead students in a discussion about the visualization by clicking through the animation on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the visualization and give students a moment to process it independently.\n  * *What surprises you about this visualization? What do you want to know more about?*\n  * *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They then identify how to minimize time spent on bad code to foreshadow the value of code reviews. Answers to the second question may include:\n* Spend more time planning/designing\n* Review your own code\n* Have someone else review the code\n* Test the code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video. This video presents the value of code reviews and working together. It also normalizes the fact that everyone has bugs and code that code reviews can improve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In your own words, describe what a reviewer gains from a code review. How about the code author?\n\n**Discussion Goal:** This discussion is designed to help students think about both the benefits of a code review and the different roles involved in a code review."
+      },
+      "seeding_key": {
+        "activity_section.key": "64cd2500-21e0-4f80-bf53-e84e44a68d81",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Throughout this course, we are going to use code reviews as a tool for improving our coding and collaboration skills. The people you are sitting with today are your review group - you will be reviewing one another’s code and revising your code based on your peers' feedback. Today we’re going to practice this process."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea3d468f-fa59-4c40-97ff-2917af94bedd",
+        "lesson_activity.key": "78ff1bba-28e7-41a6-ae73-31dd7339a0ab"
+      }
+    },
+    {
+      "key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Talk students through the four steps of the code review process that we will be using this year. Note that the video has already discussed this information - the slide is here for reference and reinforcement."
+      },
+      "seeding_key": {
+        "activity_section.key": "246ffdfd-a2e2-413f-a5bd-322d98ac74ef",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+      "position": 2,
+      "properties": {
+        "name": "Committing Code",
+        "duration": "7",
+        "remarks": true,
+        "description": "When software engineers commit code, they leave a short message about the current version. This process helps the engineer while programming and for anyone else who reads through the code in the future."
+      },
+      "seeding_key": {
+        "activity_section.key": "89c6a9b2-c0d9-4a20-8599-54bbce774f88",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+      "position": 3,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of committing code. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce possible scenarios for when to commit code.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Talk students through how to commit using Code Studio. Highlight the fact that committing code is similar to hitting ‘save’ on a file or a game, but in addition to creating a checkpoint to come back to, software engineers leave short messages to help identify what makes one version different from another.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the purpose of commenting code. Make sure to touch on:\n  * Software engineers leave additional supports called comments both for themselves and for reviewers.\n  * Comments can include what they expect a code segment to do or describe how it works.\n  * Comments are indicated by // for a single-line comment or /* and */ for multi-line comments. These symbols are indicators to the computer that the text on these lines is for humans only. The computer will NOT read it as coded instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using the animation delay on the first slide of this sequence to let students think about when they might choose to commit or ‘save’ their code and ask them to share hypotheses.  \n\nNote that the code on Level 1 is pulled directly from the previous lesson. If students did not complete the level, they could leave comments to outline their code before committing it.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c7697b7-63fb-4c95-b632-5520dfd15c1d",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "ccef128d-659e-479f-856b-e6fa3c341352",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ccef128d-659e-479f-856b-e6fa3c341352",
+        "lesson_activity.key": "4d77c5fd-db07-4bf7-8396-fd81dbbbb62d"
+      }
+    },
+    {
+      "key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+      "position": 1,
+      "properties": {
+        "remarks": true,
+        "description": "\nAfter several commits, a developer may be ready to share their code with others to get feedback about the program. "
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1f78c9-1710-49fd-96db-f26e0645f3ca",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Use the slides to guide students through both the reasoning behind and logistics of feedback requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback, focusing on the importance of writing a clear and specific message about what they are asking the reviewer to look for. Highlight the fact that this is often called a pull request in industry.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return students to Code Studio and walk them through writing a message to their group and requesting feedback.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A pull request is a little bigger than the process described here. For a more technical overview, check out: https://www.atlassian.com/git/tutorials/making-a-pull-request."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8822ff30-9d92-4cf0-af5e-83ed923d68a0",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+      "position": 3,
+      "properties": {
+        "name": "Writing Good Feedback",
+        "duration": "14",
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The next step of the code review is to review the author’s program actively. Code reviews are a powerful way of improving code and sharing knowledge. When reviewing, it is important to think about your feedback and how you convey that information to the human who wrote it."
+      },
+      "seeding_key": {
+        "activity_section.key": "07c662ef-6dbe-409e-ad4d-160317e73ca3",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+      "position": 4,
+      "properties": {
+        "description": "**Do This:** Use the slides to give an overview of writing comments.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews - by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share ART - a mnemonic to help them craft their feedback statements.\n  * Ask questions\n  * Raise flags about confusing code\n  * Tag awesome code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice Activity Guide to each review group. Students are not working directly in the guide at the beginning of this activity, but having the document allows them to see the entire code segment while working with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** This activity gradually releases students to writing comments independently using the following steps:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click to display three sample feedback statements to the students asking each time whether they are valuable comments. Students should expand on their answers, explaining why or why not. If not, can they think of a better way of phrasing the information?\n  * Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n  * Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n  * Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a whole class, students share additional feedback that they may leave for the code on the screen and how that feedback is valuable to the developer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students transition to working in pairs, writing additional comments for the developer on their activity guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students review one member of their review group’s work in Code Studio, returning to Level 1.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some additional places students may give feedback in lines 1-30 include:\n* Line 3 - The constructor is initialized incorrectly\n* Lines 11-14 - Good use of a `while` loop\n* Lines 28-30 - Interesting use of paint buckets as a tool for navigating and drawing\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a22170a4-313f-46dd-a740-e02c96e68dc5",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+      "position": 5,
+      "properties": {
+        "name": "Returning Feedback",
+        "duration": "4",
+        "description": "**Do This:** Review the next three slides to discuss the process of returning feedback and the nature of code review as a process:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of returning feedback. Address both:\n  * How to return feedback on Code Studio.\n  * Before returning feedback, students should get in the habit of re-reading their review and doing a quick self-check: Are the notes true, necessary, and kind?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Returning feedback is not the end of the process!\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Highlight that code review is a process and often occurs as a cycle. Developers request and receive feedback, then implement the changes and request more feedback. This process of improving the code step by step can happen several times before completing the product. Note that they will not be revising their code today but will take a moment to read through the comments left by their reviewer. In the future, they will continue this process by revising and resubmitting their code for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use the agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df6356e7-a386-4541-a0ce-15062d79cabe",
+        "lesson_activity.key": "337dee6e-1d9e-473c-899d-5f8017167016"
+      }
+    },
+    {
+      "key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students think about how they interact with feedback and write a short note to their group about the types of feedback they find most helpful.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review key vocabulary from the lesson.\n\n---"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
+    },
+    {
+      "key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+      "position": 2,
+      "properties": {
+        "name": "Assessment: Check For Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What does ART stand for, and how can it be used to improve code reviews?\n\n**Question:** Look at the code segment on the right. Write two pieces of feedback for this author.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
+        "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
+      }
     }
   ],
   "script_levels": [
@@ -2228,6 +2482,9 @@
 
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -2408,6 +2665,36 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "ba1b8d82-19de-4ec2-ad74-af3bfffa8047"
+      }
+    },
+    {
+      "key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc",
+      "properties": {
+        "description": "Summarize the values of code reviews"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "a46c934a-0c5d-4839-85ce-2b1b60fa7efc"
+      }
+    },
+    {
+      "key": "435e5ddc-9b18-481b-a531-0d4965d2d279",
+      "properties": {
+        "description": "Use ART when reviewing sample code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "435e5ddc-9b18-481b-a531-0d4965d2d279"
+      }
+    },
+    {
+      "key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07",
+      "properties": {
+        "description": "Use comments within code to improve readability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07"
       }
     }
   ],

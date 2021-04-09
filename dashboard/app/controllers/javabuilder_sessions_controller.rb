@@ -28,6 +28,7 @@ class JavabuilderSessionsController < ApplicationController
     session_id = SecureRandom.hex(18)
     payload = {
       iat: issued_at_time,
+      iss: CDO.dashboard_hostname,
       exp: expiration_time,
       sid: session_id,
       uid: current_user.id,

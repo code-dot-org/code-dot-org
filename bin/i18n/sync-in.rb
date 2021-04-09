@@ -51,6 +51,7 @@ def get_i18n_strings(level)
   elsif level.is_a?(Level)
     %w(
       display_name
+      bubble_choice_description
       short_instructions
       long_instructions
       failure_message_overrides
