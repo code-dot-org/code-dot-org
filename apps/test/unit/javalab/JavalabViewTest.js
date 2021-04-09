@@ -26,7 +26,9 @@ describe('Java Lab View Test', () => {
       setPageConstants({
         isProjectLevel: true,
         isReadOnlyWorkspace: false,
-        channelId: 'id'
+        channelId: 'id',
+        isEmbedView: false,
+        isShareView: false
       })
     );
     defaultProps = {
