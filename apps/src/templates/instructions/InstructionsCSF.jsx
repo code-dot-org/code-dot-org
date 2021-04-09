@@ -3,51 +3,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import CollapserButton from './CollapserButton';
-import ScrollButtons from './ScrollButtons';
 import ThreeColumns from './ThreeColumns';
-import PromptIcon from './PromptIcon';
-import HintDisplayLightbulb from '../HintDisplayLightbulb';
-import HintPrompt from './HintPrompt';
-import InlineFeedback from './InlineFeedback';
-import InlineHint from './InlineHint';
-import ChatBubble from './ChatBubble';
-import LegacyButton from '../LegacyButton';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '../SafeMarkdown';
-import {getOuterHeight, scrollTo, shouldDisplayChatTips} from './utils';
 import {levenshtein} from '../../utils';
-import color from '../../util/color';
-import commonStyles from '../../commonStyles';
-import Instructions from './Instructions';
 import styleConstants from '../../styleConstants';
+import InstructionsCsfLeftCol from './InstructionsCsfLeftCol';
+import InstructionsCsfRightCol from './InstructionsCsfRightCol';
+import InstructionsCsfMiddleCol from './InstructionsCsfMiddleCol';
 
 var instructions = require('../../redux/instructions');
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
-const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
-
 // Minecraft-specific styles
 const craftStyles = {
   body: {
     // $below-header-background from craft/style.scss
     backgroundColor: '#646464'
-  },
-  collapserButton: {
-    padding: 5,
-    marginBottom: 0
-  },
-  scrollButtons: {
-    left: 38
-  },
-  scrollButtonsRtl: {
-    right: 38
   }
 };
 
@@ -82,44 +56,6 @@ const styles = {
     bottom: HEADER_HEIGHT + RESIZER_HEIGHT,
     right: 0,
     marginRight: 0
-  },
-  collapserButton: {
-    position: 'absolute',
-    right: 0,
-    marginTop: 5,
-    marginRight: 5
-  },
-  scrollButtons: {
-    position: 'relative',
-    top: 50,
-    left: 25
-  },
-  scrollButtonsRtl: {
-    position: 'relative',
-    top: 50,
-    right: 25
-  },
-  // bubble has pointer cursor by default. override that if no hints
-  noAuthoredHints: {
-    cursor: 'default',
-    marginBottom: 0
-  },
-  authoredHints: {
-    // raise by 20 so that the lightbulb "floats" without causing the original
-    // icon to move. This strangeness happens in part because prompt-icon-cell
-    // is managed outside of React
-    marginBottom: 0
-  },
-  instructions: {
-    padding: '5px 0'
-  },
-  instructionsWithTips: {
-    width: 'calc(100% - 20px)',
-    float: 'right'
-  },
-  instructionsWithTipsRtl: {
-    width: 'calc(100% - 20px)',
-    float: 'left'
   }
 };
 
@@ -180,11 +116,11 @@ class InstructionsCSF extends React.Component {
   };
 
   state = {
-    rightColWidth: {
-      collapsed: undefined,
-      uncollapsed: undefined,
-      empty: 10
-    },
+    rightColWidth: 0,
+    rightColHeight: 0,
+    leftColWidth: 0,
+    leftColHeight: 0,
+    middleColHeight: 0,
     promptForHint: false,
     displayScrollButtons: true
   };
@@ -208,8 +144,6 @@ class InstructionsCSF extends React.Component {
         }
       }.bind(this)
     );
-
-    this.updateRightColumnWidth();
   }
 
   /**
@@ -245,9 +179,13 @@ class InstructionsCSF extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    this.updateRightColumnWidth();
+    this.setCanScrollInstructions();
+    this.calculateRenderedHeight();
+    this.props.adjustMaxNeededHeight();
+  }
 
-    const contentContainer = this.instructions.parentElement;
+  setCanScrollInstructions() {
+    const contentContainer = this.getScrollTarget();
     const canScroll =
       contentContainer.scrollHeight > contentContainer.clientHeight;
     if (canScroll !== this.state.displayScrollButtons) {
@@ -257,22 +195,9 @@ class InstructionsCSF extends React.Component {
         displayScrollButtons: canScroll
       });
     }
+  }
 
-    const gotNewHint = prevProps.hints.length !== this.props.hints.length;
-    if (gotNewHint) {
-      const images = ReactDOM.findDOMNode(
-        this.instructions
-      ).getElementsByTagName('img');
-      for (let i = 0, image; (image = images[i]); i++) {
-        image.onload =
-          image.onload || this.scrollInstructionsToBottom.bind(this);
-      }
-    }
-
-    if (this.props.feedback || this.state.promptForHint || gotNewHint) {
-      this.scrollInstructionsToBottom();
-    }
-
+  calculateRenderedHeight() {
     const minHeight = this.getMinHeight();
     const maxHeight = this.getMaxHeight();
     const heightOutOfBounds =
@@ -285,35 +210,7 @@ class InstructionsCSF extends React.Component {
       );
       this.props.setInstructionsRenderedHeight(newHeight);
     }
-
-    this.props.adjustMaxNeededHeight();
   }
-
-  updateRightColumnWidth = () => {
-    if (
-      this.shouldDisplayCollapserButton() &&
-      this.getRightColWidth() === undefined
-    ) {
-      // Update right col width now that we know how much space it needs, and
-      // rerender if it has changed. One thing to note is that if we end up
-      // resizing our column significantly, it can result in our maxNeededHeight
-      // being inaccurate. This isn't that big a deal except that it means when we
-      // adjust maxNeededHeight below, it might not be as large as we want.
-      const width = $(ReactDOM.findDOMNode(this.collapser)).outerWidth(true);
-
-      // setting state in componentDidUpdate will trigger another
-      // re-render and is discouraged; unfortunately in this case we
-      // can't do it earlier in the lifecycle as we need to examine the
-      // actual DOM to determine the desired value. We are careful to
-      // only actually update the state when it has changed, which will
-      // prevent the possibility of an infinite loop and should serve to
-      // minimize excess rerenders.
-      let rightColWidth = Object.assign({}, this.state.rightColWidth);
-      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({rightColWidth});
-    }
-  };
 
   /**
    * @param {boolean} collapsed whether or not the height should be
@@ -323,34 +220,37 @@ class InstructionsCSF extends React.Component {
    * the height of the little icon if we're not collapsed
    */
   getMinHeight(collapsed = this.props.collapsed) {
-    const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    const scrollButtonsHeight =
-      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
+    const {leftColHeight, rightColHeight} = this.state;
+    const middleColHeight = this.getMinInstructionsHeight();
 
-    const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
+    return (
+      Math.max(leftColHeight, middleColHeight, rightColHeight) +
+      this.contentWrapperHeight()
+    );
+  }
+
+  // this doesn't make any sense...
+  getMinInstructionsHeight(collapsed = this.props.collapsed) {
     const instructionsHeight = Math.min(
-      getOuterHeight(this.instructions, true),
+      this.state.middleColHeight,
       this.props.maxHeight
     );
+
     const minInstructionsHeight =
-      this.props.collapsed ||
-      this.props.overlayVisible ||
-      this.props.isEmbedView
+      collapsed || this.props.overlayVisible || this.props.isEmbedView
         ? instructionsHeight
         : 0;
 
-    const domNode = $(ReactDOM.findDOMNode(this));
-    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
+    return minInstructionsHeight;
+  }
 
-    const leftColHeight = minIconHeight;
-    const middleColHeight = minInstructionsHeight;
-    const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
-    return (
-      Math.max(leftColHeight, middleColHeight, rightColHeight) +
-      margins +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT
-    );
+  getMarginsHeight() {
+    const domNode = $(ReactDOM.findDOMNode(this));
+    return domNode.outerHeight(true) - domNode.outerHeight(false);
+  }
+
+  contentWrapperHeight() {
+    return this.getMarginsHeight() + HEADER_HEIGHT + RESIZER_HEIGHT;
   }
 
   /**
@@ -360,24 +260,10 @@ class InstructionsCSF extends React.Component {
    * @returns {number} The max height of the top instructions
    */
   getMaxHeight(collapsed = this.props.collapsed) {
-    const collapseButtonHeight = getOuterHeight(this.collapser, true);
-    const scrollButtonsHeight =
-      !collapsed && this.scrollButtons ? this.scrollButtons.getMinHeight() : 0;
-
-    const minIconHeight = this.icon ? getOuterHeight(this.icon, true) : 0;
-    const instructionsHeight = getOuterHeight(this.instructions, true);
-
-    const domNode = $(ReactDOM.findDOMNode(this));
-    const margins = domNode.outerHeight(true) - domNode.outerHeight(false);
-
-    const leftColHeight = minIconHeight;
-    const middleColHeight = instructionsHeight;
-    const rightColHeight = collapseButtonHeight + scrollButtonsHeight;
+    const {leftColHeight, middleColHeight, rightColHeight} = this.state;
     return (
       Math.max(leftColHeight, middleColHeight, rightColHeight) +
-      margins +
-      HEADER_HEIGHT +
-      RESIZER_HEIGHT
+      this.contentWrapperHeight()
     );
   }
 
@@ -385,41 +271,8 @@ class InstructionsCSF extends React.Component {
    * @return {Element} scrollTarget
    */
   getScrollTarget = () => {
-    return this.instructions.parentElement;
-  };
-
-  /**
-   * Manually scroll instructions to bottom. When we have multiple
-   * elements in instructions, "bottom" is defined as 10 pixels above
-   * the top of the bottommost element. This is so we don't scroll past
-   * the beginning of a long element, and so we scroll to a position
-   * such that you can see that there is an element above it which you
-   * can scroll up to.
-   */
-  scrollInstructionsToBottom() {
-    const instructions = this.instructions;
-    const contentContainer = instructions.parentElement;
-    if (instructions.children.length > 1) {
-      const lastChild = instructions.children[instructions.children.length - 1];
-      scrollTo(contentContainer, lastChild.offsetTop - 10);
-    } else {
-      scrollBy(contentContainer, contentContainer.scrollHeight);
-    }
-  }
-
-  /**
-   * Handle a click to the hint display bubble (lightbulb)
-   */
-  handleClickBubble = () => {
-    // If we don't have authored hints to display, clicking bubble shouldnt do anything
-    if (this.props.hasAuthoredHints && this.props.hasUnseenHint) {
-      this.setState({
-        promptForHint: true
-      });
-      if (this.props.collapsed) {
-        this.props.handleClickCollapser();
-      }
-    }
+    // can't seem to get this to work with refs
+    return document.querySelector('.csf-top-instructions').parentElement;
   };
 
   dismissHintPrompt = () => {
@@ -428,96 +281,53 @@ class InstructionsCSF extends React.Component {
     });
   };
 
-  showHint = () => {
-    this.dismissHintPrompt();
-    this.props.showNextHint();
-    this.props.clearFeedback();
+  shouldDisplayHintPrompt = () => {
+    return this.state && this.state.promptForHint && !this.props.collapsed;
   };
 
-  shouldDisplayHintPrompt() {
-    return this.state && this.state.promptForHint && !this.props.collapsed;
-  }
+  hasShortInstructions = () => {
+    return (
+      !!this.props.shortInstructions &&
+      !this.shortAndLongInstructionsAreEquivalent()
+    );
+  };
 
-  shouldDisplayCollapserButton() {
-    // if we have "extra" (non-instruction) content, we should always
-    // give the option of collapsing it
-    if (
-      this.props.hints.length ||
-      this.shouldDisplayHintPrompt() ||
-      this.props.feedback
-    ) {
-      return true;
-    }
-
-    // Otherwise, only show the button if we have two versions of
-    // instruction we want to toggle between
-    return this.props.longInstructions && !this.shouldIgnoreShortInstructions();
-  }
-
-  shouldIgnoreShortInstructions() {
-    // If we have no short instructions, always ignore them.
-    if (!this.props.shortInstructions) {
-      return true;
-    }
-
-    // Otherwise, if we have no long instructions, never ignore the short ones.
-    // Note that we would only decide to ignore short instructions in
-    // the absense of long instructions when the short instructions
-    // themselves were less than 10 characters, which can easily happen
-    // in ideo- or logographic languages.
-    if (!this.props.longInstructions) {
+  shortAndLongInstructionsAreEquivalent() {
+    if (!this.props.shortInstructions || !this.props.longInstructions) {
       return false;
     }
-
-    // if short instructions and long instructions have a Levenshtein
-    // Edit Distance of less than or equal to 10, ignore short
-    // instructions and only show long.
-    let dist = levenshtein(
+    const dist = levenshtein(
       this.props.longInstructions,
       this.props.shortInstructions
     );
     return dist <= 10;
   }
 
-  shouldDisplayShortInstructions() {
-    return (
-      !this.shouldIgnoreShortInstructions() &&
-      (this.props.collapsed || !this.props.longInstructions)
-    );
-  }
+  requestHint = () => {
+    this.setState({
+      promptForHint: true
+    });
+    this.props.collapsed && this.props.handleClickCollapser();
+  };
 
-  getAvatar() {
-    // Show the "sad" avatar if there is failure feedback. Otherwise,
-    // show the default avatar.
-    return this.props.feedback && this.props.feedback.isFailure
-      ? this.props.failureAvatar
-      : this.props.smallStaticAvatar;
-  }
+  setRightColWidth = width => {
+    this.setState({rightColWidth: width || 0});
+  };
 
-  /**
-   * this.state.rightColWidth contains three key/value pairs, reflecting the
-   * three different possible states for the right column content. This simple
-   * helper method returns the key corresponding to our current state.
-   *
-   * @returns {string} the key to this.state.rightColWidth which represents our
-   *          current state
-   */
-  getCurrentRightColWidthProperty() {
-    if (this.shouldDisplayCollapserButton()) {
-      return this.props.collapsed ? 'collapsed' : 'uncollapsed';
-    } else {
-      return 'empty';
-    }
-  }
+  setRightColHeight = height => {
+    this.setState({rightColHeight: height || 0});
+  };
 
-  getRightColWidth() {
-    return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
-  }
+  setLeftColWidth = width => {
+    this.setState({leftColWidth: width || 0});
+  };
 
-  legacyButtonClicked = () => {
-    this.props.hideOverlay();
-    this.props.setInstructionsRenderedHeight(this.getMinHeight());
-    this.props.adjustMaxNeededHeight();
+  setLeftColHeight = height => {
+    this.setState({leftColHeight: height || 0});
+  };
+
+  setMiddleColHeight = height => {
+    this.setState({middleColHeight: height || 0});
   };
 
   render() {
@@ -530,18 +340,6 @@ class InstructionsCSF extends React.Component {
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const markdown = this.shouldDisplayShortInstructions()
-      ? this.props.shortInstructions
-      : this.props.longInstructions;
-
-    const ttsUrl = this.shouldDisplayShortInstructions()
-      ? this.props.ttsShortInstructionsUrl
-      : this.props.ttsLongInstructionsUrl;
-
-    const leftColWidth =
-      (this.getAvatar() ? PROMPT_ICON_WIDTH : 10) +
-      (this.props.hasAuthoredHints ? AUTHORED_HINTS_EXTRA_WIDTH : 0);
-
     return (
       <div style={mainStyle}>
         <ThreeColumns
@@ -552,169 +350,33 @@ class InstructionsCSF extends React.Component {
             ],
             left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
           }}
-          leftColWidth={leftColWidth}
-          rightColWidth={this.getRightColWidth() || 0}
+          leftColWidth={this.state.leftColWidth}
+          rightColWidth={this.state.rightColWidth}
           height={this.props.height - HEADER_HEIGHT - RESIZER_HEIGHT}
         >
-          <div
-            style={[
-              commonStyles.bubble,
-              this.props.hasAuthoredHints
-                ? styles.authoredHints
-                : styles.noAuthoredHints
-            ]}
-          >
-            <div
-              className={classNames({
-                'prompt-icon-cell': true,
-                authored_hints: this.props.hasAuthoredHints
-              })}
-              onClick={this.handleClickBubble}
-            >
-              {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
-              {this.getAvatar() && (
-                <PromptIcon
-                  src={this.getAvatar()}
-                  ref={c => {
-                    this.icon = c;
-                  }}
-                />
-              )}
-            </div>
-          </div>
-          <div
-            ref={c => {
-              this.instructions = c;
-            }}
-            className="csf-top-instructions"
-            style={[
-              styles.instructions,
-              shouldDisplayChatTips(this.props.skinId) &&
-                (this.props.isRtl
-                  ? styles.instructionsWithTipsRtl
-                  : styles.instructionsWithTips)
-            ]}
-          >
-            <ChatBubble
-              ttsUrl={ttsUrl}
-              textToSpeechEnabled={this.props.textToSpeechEnabled}
-              isMinecraft={this.props.isMinecraft}
-              skinId={this.props.skinId}
-            >
-              <Instructions
-                ref={c => {
-                  this.instructions = c;
-                }}
-                longInstructions={markdown}
-                onResize={this.props.adjustMaxNeededHeight}
-                inputOutputTable={
-                  this.props.collapsed ? undefined : this.props.inputOutputTable
-                }
-                imgURL={this.props.aniGifURL}
-                inTopPane
-                isBlockly={this.props.isBlockly}
-                noInstructionsWhenCollapsed={false}
-              />
-              {this.props.shortInstructions2 && (
-                <div className="secondary-instructions">
-                  <SafeMarkdown markdown={this.props.shortInstructions2} />
-                </div>
-              )}
-              {this.props.overlayVisible && (
-                <div>
-                  <hr />
-                  <LegacyButton
-                    type="primary"
-                    onClick={this.legacyButtonClicked}
-                  >
-                    {i18n.dialogOK()}
-                  </LegacyButton>
-                </div>
-              )}
-            </ChatBubble>
-            {!this.props.collapsed &&
-              this.props.hints &&
-              this.props.hints.map(hint => (
-                <InlineHint
-                  key={hint.hintId}
-                  borderColor={color.yellow}
-                  markdown={hint.markdown}
-                  ttsUrl={hint.ttsUrl}
-                  ttsMessage={hint.ttsMessage}
-                  block={hint.block}
-                  video={hint.hintVideo}
-                />
-              ))}
-            {/*
-              The `key` prop on the InlineFeedback component is a workaround for a React 15.x problem
-              with efficiently updating inline blockly xml within this message. By providing a
-              changing key prop, we force the component to entirely unmount and re-mount when the
-              message contents change.  This may not be a problem once we upgrade to React 16.
-            */}
-            {this.props.feedback && !this.props.collapsed && (
-              <InlineFeedback
-                key={this.props.feedback.message}
-                borderColor={
-                  this.props.isMinecraft ? color.white : color.charcoal
-                }
-                message={this.props.feedback.message}
-                isMinecraft={this.props.isMinecraft}
-                skinId={this.props.skinId}
-                textToSpeechEnabled={this.props.textToSpeechEnabled}
-              />
-            )}
-            {this.shouldDisplayHintPrompt() && (
-              <HintPrompt
-                borderColor={color.yellow}
-                onConfirm={this.showHint}
-                onDismiss={this.dismissHintPrompt}
-                isMinecraft={this.props.isMinecraft}
-                skinId={this.props.skinId}
-                textToSpeechEnabled={this.props.textToSpeechEnabled}
-              />
-            )}
-          </div>
-          <div>
-            <CollapserButton
-              ref={c => {
-                this.collapser = c;
-              }}
-              style={[
-                styles.collapserButton,
-                this.props.isMinecraft && craftStyles.collapserButton,
-                !this.shouldDisplayCollapserButton() && commonStyles.hidden
-              ]}
-              collapsed={this.props.collapsed}
-              onClick={this.props.handleClickCollapser}
-              isMinecraft={this.props.isMinecraft}
-              isRtl={this.props.isRtl}
-            />
-            {!this.props.collapsed && (
-              <ScrollButtons
-                style={[
-                  this.props.isRtl
-                    ? styles.scrollButtonsRtl
-                    : styles.scrollButtons,
-                  this.props.isMinecraft &&
-                    (this.props.isRtl
-                      ? craftStyles.scrollButtonsRtl
-                      : craftStyles.scrollButtons)
-                ]}
-                ref={c => {
-                  this.scrollButtons = c;
-                }}
-                getScrollTarget={this.getScrollTarget}
-                visible={this.state.displayScrollButtons}
-                height={
-                  this.props.height -
-                  HEADER_HEIGHT -
-                  RESIZER_HEIGHT -
-                  styles.scrollButtons.top
-                }
-                isMinecraft={this.props.isMinecraft}
-              />
-            )}
-          </div>
+          <InstructionsCsfLeftCol
+            requestHint={this.requestHint}
+            setColWidth={this.setLeftColWidth}
+            setColHeight={this.setLeftColHeight}
+          />
+          <InstructionsCsfMiddleCol
+            dismissHintPrompt={this.dismissHintPrompt}
+            shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
+            hasShortInstructions={this.hasShortInstructions}
+            adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
+            promptForHint={this.state.promptForHint}
+            setColHeight={this.setMiddleColHeight}
+          />
+          <InstructionsCsfRightCol
+            hasShortInstructions={this.hasShortInstructions()}
+            promptForHint={this.state.promptForHint}
+            displayScrollButtons={this.state.displayScrollButtons}
+            getScrollTarget={this.getScrollTarget}
+            handleClickCollapser={this.props.handleClickCollapser}
+            setColWidth={this.setRightColWidth}
+            setColHeight={this.setRightColHeight}
+            shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
+          />
         </ThreeColumns>
       </div>
     );
