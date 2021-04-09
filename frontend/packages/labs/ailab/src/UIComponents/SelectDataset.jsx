@@ -128,22 +128,31 @@ class SelectDataset extends Component {
         </div>
         {!specifiedDatasets && (
           <div style={{ ...styles.contents, marginTop: 20 }}>
-            <div>or import a CSV File</div>
-            <input
-              className="csv-input"
-              type="file"
-              accept=".csv,.xls,.xlsx"
-              ref={input => {
-                this.filesInput = input;
-              }}
-              name="file"
-              placeholder={null}
-              onChange={this.handleUploadSelect}
-            />
-            <p />
-            <button type="button" onClick={this.handleUpload}>
-              Upload
-            </button>
+            <div style={{ float: "left", width: "33.33%" }}>
+              <div style={{ fontSize: 13.33, paddingTop: 4 }}>
+                Or import a CSV file
+              </div>
+            </div>
+            <div
+              style={{ float: "left", width: "33.33%", textAlign: "center" }}
+            >
+              <input
+                className="csv-input"
+                type="file"
+                accept=".csv,.xls,.xlsx"
+                ref={input => {
+                  this.filesInput = input;
+                }}
+                name="file"
+                placeholder={null}
+                onChange={this.handleUploadSelect}
+              />
+            </div>
+            <div style={{ float: "left", width: "33.33%", textAlign: "right" }}>
+              <button type="button" onClick={this.handleUpload}>
+                Upload
+              </button>
+            </div>
           </div>
         )}
       </div>
