@@ -58,9 +58,9 @@ class ResourcesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
     resourceContext: PropTypes.string.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
 
     // Provided by redux
-    resources: PropTypes.arrayOf(resourceShape).isRequired,
     addResource: PropTypes.func.isRequired,
     editResource: PropTypes.func.isRequired,
     removeResource: PropTypes.func.isRequired
@@ -320,9 +320,7 @@ class ResourcesEditor extends Component {
 export const UnconnectedResourcesEditor = ResourcesEditor;
 
 export default connect(
-  state => ({
-    resources: state.resources
-  }),
+  state => ({}),
   {
     addResource,
     editResource,
