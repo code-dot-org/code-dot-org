@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-04-07 21:12:52 UTC",
+    "serialized_at": "2021-04-09 20:52:35 UTC",
     "seeding_key": {
       "script.name": "coursea-2021"
     }
@@ -314,13 +314,13 @@
     },
     {
       "key": "Events in Play Lab",
-      "name": "On the Move with Events",
+      "name": "Mini-Project: On the Move with Play Lab",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
+        "overview": "In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!",
         "student_overview": "Create your own game or story.",
         "purpose": "Students will further develop their understanding of events using Play Lab today. Events are very common in most computer programs. In this activity, students will use events to make a character move around the screen, make noises, and change backgrounds based on user-initiated events.",
         "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - (Optional) Pick a couple of puzzles to do as a group with your class.\n - Review ***CSF Lesson Recommendations**.\n - Make sure every student has a reflection journal.",
@@ -2711,7 +2711,7 @@
       "key": "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001",
       "position": 1,
       "properties": {
-        "description": "####Journaling\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n#### Journal Prompts:\n\n - What was today’s lesson about?\n - Draw one of the ***Feeling Faces** that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of a face that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote-controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -5258,7 +5258,7 @@
       "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Create a Story",
         "level_keys": [
@@ -5284,7 +5284,7 @@
       "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5310,7 +5310,7 @@
       "chapter": 96,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5336,7 +5336,7 @@
       "chapter": 97,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
@@ -5362,7 +5362,7 @@
       "chapter": 98,
       "position": 5,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
@@ -5388,7 +5388,7 @@
       "chapter": 99,
       "position": 6,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
@@ -5414,7 +5414,7 @@
       "chapter": 100,
       "position": 7,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
@@ -5440,7 +5440,7 @@
       "chapter": 101,
       "position": 8,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Mini-project: Jorge the Dog",
         "level_keys": [
@@ -5466,7 +5466,7 @@
       "chapter": 102,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5492,7 +5492,7 @@
       "chapter": 103,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5520,7 +5520,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project"
+        "progression": "Project",
+        "level_keys": [
+          "courseAB_EOC_2021"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -7623,6 +7626,9 @@
         "script.name": "coursea-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
