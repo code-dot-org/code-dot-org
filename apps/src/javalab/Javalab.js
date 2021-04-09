@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '../redux';
 import JavalabView from './JavalabView';
-import javalab from './javalabRedux';
+import javalab, {getEditorText} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {onSave} from './JavalabFileManagement';
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -101,6 +102,15 @@ Javalab.prototype.init = function(config) {
   });
 
   registerReducers({javalab});
+
+  if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
+    showLevelBuilderSaveButton(() => ({
+      // This is what you will save as start_blocks
+      // Need to sync with Molly on where I should get this information for real, especially with multifile
+      start_blocks: getEditorText(getStore().getState())
+    }));
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
