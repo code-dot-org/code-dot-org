@@ -250,9 +250,3 @@ export function getAvailableDatasets(specificDatasets) {
   // Sort dataset names by alphabetical order.
   return availableDatasets.sort((a, b) => a.name.localeCompare(b.name));
 }
-
-export function getDefaultLabelForDataset(datasetId) {
-  return allDatasets.find(dataset => {
-    return dataset.id === datasetId;
-  });
-}

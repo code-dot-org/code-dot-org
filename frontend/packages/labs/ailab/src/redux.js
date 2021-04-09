@@ -52,7 +52,6 @@ const SET_TEST_DATA = "SET_TEST_DATA";
 const SET_PREDICTION = "SET_PREDICTION";
 const SET_MODEL_SIZE = "SET_MODEL_SIZE";
 const SET_TRAINED_MODEL = "SET_TRAINED_MODEL";
-const SET_TRAINED_MODEL_DETAILS = "SET_TRAINED_MODEL_DETAILS";
 const SET_TRAINED_MODEL_DETAIL = "SET_TRAINED_MODEL_DETAIL";
 const SET_CURRENT_PANEL = "SET_CURRENT_PANEL";
 const SET_CURRENT_COLUMN = "SET_CURRENT_COLUMN";
@@ -61,7 +60,6 @@ const SET_HIGHLIGHT_DATASET = "SET_HIGHLIGHT_DATASET";
 const SET_RESULTS_PHASE = "SET_RESULTS_PHASE";
 const SET_INSTRUCTIONS_KEY_CALLBACK = "SET_INSTRUCTIONS_KEY_CALLBACK";
 const SET_SAVE_STATUS = "SET_SAVE_STATUS";
-const SET_COLUMN_REF = "SET_COLUMN_REF";
 
 // Action creators
 export function setMode(mode) {
@@ -92,19 +90,11 @@ export function setSelectedTrainer(selectedTrainer) {
   return { type: SET_SELECTED_TRAINER, selectedTrainer };
 }
 
-export function setKValue(kValue) {
-  return { type: SET_K_VALUE, kValue };
-}
-
 export const setColumnsByDataType = (column, dataType) => ({
   type: SET_COLUMNS_BY_DATA_TYPE,
   column,
   dataType
 });
-
-export function setSelectedFeatures(selectedFeatures) {
-  return { type: SET_SELECTED_FEATURES, selectedFeatures };
-}
 
 export function addSelectedFeature(selectedFeature) {
   return { type: ADD_SELECTED_FEATURE, selectedFeature };
@@ -139,10 +129,6 @@ export function setFeatureNumberKey(featureNumberKey) {
 
 export function setPercentDataToReserve(percentDataToReserve) {
   return { type: SET_PERCENT_DATA_TO_RESERVE, percentDataToReserve };
-}
-
-export function setReserveLocation(reserveLocation) {
-  return { type: SET_RESERVE_LOCATION, reserveLocation };
 }
 
 export function setAccuracyCheckExamples(accuracyCheckExamples) {
@@ -185,10 +171,6 @@ export function setTrainedModel(trainedModel) {
   return { type: SET_TRAINED_MODEL, trainedModel };
 }
 
-export function setTrainedModelDetails(trainedModelDetails) {
-  return { type: SET_TRAINED_MODEL_DETAILS, trainedModelDetails };
-}
-
 export function setTrainedModelDetail(field, value, isColumn) {
   return { type: SET_TRAINED_MODEL_DETAIL, field, value, isColumn };
 }
@@ -219,10 +201,6 @@ export function setResultsPhase(phase) {
 
 export function setSaveStatus(status) {
   return { type: SET_SAVE_STATUS, status };
-}
-
-export function setColumnRef(columnId, ref) {
-  return { type: SET_COLUMN_REF, columnId, ref };
 }
 
 const initialState = {
@@ -443,12 +421,6 @@ export default function rootReducer(state = initialState, action) {
       trainedModel: action.trainedModel
     };
   }
-  if (action.type === SET_TRAINED_MODEL_DETAILS) {
-    return {
-      ...state,
-      trainedModelDetails: action.trainedModelDetails
-    };
-  }
   if (action.type === SET_TRAINED_MODEL_DETAIL) {
     let trainedModelDetails = state.trainedModelDetails;
 
@@ -573,16 +545,6 @@ export default function rootReducer(state = initialState, action) {
       saveStatus: action.status
     };
   }
-  if (action.type === SET_COLUMN_REF) {
-    return {
-      ...state,
-      columnRefs: {
-        ...state.columnRefs,
-        action: action.columnId,
-        ref: action.ref
-      }
-    };
-  }
   return state;
 }
 
@@ -694,15 +656,6 @@ export function getOptionFrequencies(state, column) {
     }
   }
   return optionFrequencies;
-}
-
-export function getOptionFrequenciesByColumn(state) {
-  let optionFrequenciesByColumn = {};
-  getSelectedCategoricalColumns(state).map(
-    column =>
-      (optionFrequenciesByColumn[column] = getOptionFrequencies(state, column))
-  );
-  return optionFrequenciesByColumn;
 }
 
 export function getUniqueOptionsByColumn(state) {
@@ -964,13 +917,6 @@ export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
 }
 
-export function getEmptyCellDetails(state) {
-  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
-    return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
-  });
-  return emptyCellLocations;
-}
-
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -1013,13 +959,6 @@ export function getTrainedModelDataToSave(state) {
   return dataToSave;
 }
 
-export function getShowSelectLabels(state) {
-  return (
-    !(state.mode && state.mode.hideSelectLabel) &&
-    getSelectableLabels(state).length > 0
-  );
-}
-
 export function getSpecifiedDatasets(state) {
   return state.mode && state.mode.datasets;
 }
@@ -1030,10 +969,6 @@ export function getShowColumnClicking(state) {
 
 export function getShowChooseReserve(state) {
   return !(state.mode && state.mode.hideChooseReserve);
-}
-
-export function getShowSelectTrainer(state) {
-  return !(state.mode && state.mode.hideSelectTrainer);
 }
 
 export function getPredictAvailable(state) {
