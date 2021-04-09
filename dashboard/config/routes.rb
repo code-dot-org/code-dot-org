@@ -309,7 +309,7 @@ Dashboard::Application.routes.draw do
   end
 
   # Redirects from old /stage url to new /lessons url for levels
-  get '/s/:script_name/stage/:position/puzzle/:number(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{number}%{all}')
+  get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
