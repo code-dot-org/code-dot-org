@@ -21831,6 +21831,10 @@ en:
               description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.
             lesson-8:
               name: Introduction to Code Reviews
+              description_student: 'As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!
+
+'
+              description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.
             lesson-9:
               name: Inheritance and Methods
             lesson-10:
@@ -21861,7 +21865,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa1-pilot
-          title: ''
+          title: Object Oriented Programming
           description_audience: ''
           description_short: ''
           description: ''
