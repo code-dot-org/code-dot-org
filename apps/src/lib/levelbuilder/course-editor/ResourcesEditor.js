@@ -98,6 +98,7 @@ export default class ResourcesEditor extends Component {
         {useMigratedResources ? (
           <MigratedResourceEditor
             courseVersionId={this.props.courseVersionId}
+            resourceContext="teacherResource"
           />
         ) : (
           teacherResources
