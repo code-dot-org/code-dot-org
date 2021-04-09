@@ -70,7 +70,8 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
         scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        scriptIsVisible: false
+        scriptIsVisible: false,
+        frameworks: []
       }
     };
   });

@@ -31,6 +31,7 @@ describe('StandardsEditor', () => {
     defaultProps = {
       standardType: 'standard',
       standards: fakeStandards,
+      frameworks: [],
       addStandard,
       removeStandard
     };
