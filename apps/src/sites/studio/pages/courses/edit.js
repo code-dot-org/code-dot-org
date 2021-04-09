@@ -22,6 +22,7 @@ function showCourseEditor() {
   const store = getStore();
   store.dispatch(
     initResources(
+      'teacherResource',
       courseEditorData.course_summary.migrated_teacher_resources || []
     )
   );

@@ -45,7 +45,7 @@ $(document).ready(function() {
   store.dispatch(
     init(activities, searchOptions, lessonData.programmingEnvironments)
   );
-  store.dispatch(initResources(lessonData.resources || []));
+  store.dispatch(initResources('lessonResource', lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
   store.dispatch(
     initProgrammingExpressions(lessonData.programmingExpressions || [])

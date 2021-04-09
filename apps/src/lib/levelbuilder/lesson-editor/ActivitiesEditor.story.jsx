@@ -17,15 +17,17 @@ import {
   searchOptions
 } from '../../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
 
+const resourcesEditor = createResourcesReducer('lessonResource');
+
 const createStoreWithLessonPlan = () => {
   registerReducers({
     ...reducers,
-    resources: createResourcesReducer('lessonResource'),
+    resources: resourcesEditor,
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
   store.dispatch(init(sampleActivities, searchOptions, []));
-  store.dispatch(initResources([]));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };
@@ -33,14 +35,14 @@ const createStoreWithLessonPlan = () => {
 const createStoreWithoutLessonPlan = () => {
   registerReducers({
     ...reducers,
-    resources: createResourcesReducer('lessonResource'),
+    resources: resourcesEditor,
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
   store.dispatch(
     init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [])
   );
-  store.dispatch(initResources([]));
+  store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
   return store;
 };
