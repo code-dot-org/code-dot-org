@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-07 17:18:32 UTC",
+    "serialized_at": "2021-04-09 00:06:34 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -4552,7 +4552,7 @@
       "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4578,7 +4578,7 @@
       "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Video: Text and Prompts",
         "level_keys": [
@@ -4604,7 +4604,7 @@
       "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4630,7 +4630,7 @@
       "chapter": 32,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4656,7 +4656,7 @@
       "chapter": 33,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4682,7 +4682,7 @@
       "chapter": 34,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4708,7 +4708,7 @@
       "chapter": 35,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4734,7 +4734,7 @@
       "chapter": 36,
       "position": 8,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4760,7 +4760,7 @@
       "chapter": 37,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -8173,7 +8173,7 @@
     },
     {
       "name": "Text and Prompts",
-      "url": "https://docs.google.com/presentation/d/1NdnCMX6-DyKcx5DAVS-EPPCEJ95bZDAnu6aDTFJJZPo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
       "key": "text_and_prompts",
       "properties": {
         "type": "Slides",
@@ -8765,6 +8765,9 @@
         "script.name": "coursef-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {
