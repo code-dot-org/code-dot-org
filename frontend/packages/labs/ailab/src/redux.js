@@ -512,6 +512,14 @@ export default function rootReducer(state = initialState, action) {
       };
     }
 
+    // if (action.currentPanel === "modelSummary") {
+    //   return {
+    //     ...state,
+    //     currentPanel: action.currentPanel,
+    //     trainedModelDetails: action.trainedModelDetails
+    //   };
+    // }
+
     return {
       ...state,
       currentPanel: action.currentPanel,
@@ -788,7 +796,7 @@ function isEmpty(object) {
 export function getConvertedValue(state, rawValue, column) {
   const convertedValue =
     getCategoricalColumns(state).includes(column) &&
-    !isEmpty(state.featureNumberKey)
+      !isEmpty(state.featureNumberKey)
       ? getKeyByValue(state.featureNumberKey[column], rawValue)
       : rawValue;
   return convertedValue;
@@ -1191,8 +1199,8 @@ export function getPanelButtons(state) {
     next = isPanelAvailable(state, "dataDisplayLabel")
       ? { panel: "dataDisplayLabel", text: "Continue" }
       : isPanelAvailable(state, "dataDisplayFeatures")
-      ? { panel: "dataDisplayFeatures", text: "Continue" }
-      : null;
+        ? { panel: "dataDisplayFeatures", text: "Continue" }
+        : null;
   } else if (state.currentPanel === "dataDisplayLabel") {
     prev = isPanelAvailable(state, "selectDataset")
       ? { panel: "selectDataset", text: "Back" }
@@ -1207,8 +1215,8 @@ export function getPanelButtons(state) {
     next = isPanelAvailable(state, "selectTrainer")
       ? { panel: "selectTrainer", text: "Continue" }
       : isPanelAvailable(state, "trainModel")
-      ? { panel: "trainModel", text: "Train" }
-      : null;
+        ? { panel: "trainModel", text: "Train" }
+        : null;
   } else if (state.currentPanel === "selectTrainer") {
     prev = { panel: "dataDisplayFeatures", text: "Back" };
     next = isPanelAvailable(state, "trainModel")
@@ -1225,13 +1233,18 @@ export function getPanelButtons(state) {
       : null;
     next = isPanelAvailable(state, "saveModel")
       ? { panel: "saveModel", text: "Continue" }
-      : { panel: "continue", text: "Continue" };
+      : { panel: "modelSummary", text: "Continue" };
   } else if (state.currentPanel === "saveModel") {
     prev = { panel: "results", text: "Back" };
-    next = isPanelAvailable(state, "save")
-      ? { panel: "save", text: "Save" }
+    next = isPanelAvailable(state, "modelSummary")
+      ? { panel: "modelSummary", text: "Save" }
       : null;
-  }
+  } else if (state.currentPanel === "modelSummary") {
+  prev = { panel: "saveModel", text: "Back" };
+  next = isPanelAvailable(state, "finish")
+    ? { panel: "finish", text: "Finish" }
+    : null;
+}
 
   if (prev) {
     prev.enabled = isPanelEnabled(state, prev.panel);

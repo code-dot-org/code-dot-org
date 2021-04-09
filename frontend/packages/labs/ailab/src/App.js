@@ -10,6 +10,7 @@ import TrainModel from "./UIComponents/TrainModel";
 import Results from "./UIComponents/Results";
 import Predict from "./UIComponents/Predict";
 import SaveModel from "./UIComponents/SaveModel";
+import ModelSummary from "./UIComponents/ModelSummary";
 import { styles } from "./constants";
 import { connect } from "react-redux";
 import {
@@ -34,9 +35,10 @@ class PanelButtons extends Component {
   };
 
   onClickNext = () => {
-    if (this.props.panelButtons.next.panel === "save") {
+    if (this.props.panelButtons.next.panel === "modelSummary") {
       this.props.startSaveTrainedModel(this.props.dataToSave);
-    } else if (this.props.panelButtons.next.panel === "continue") {
+      this.props.setCurrentPanel(this.props.panelButtons.next.panel);
+    } else if (this.props.panelButtons.next.panel === "finish") {
       this.props.onContinue();
     } else {
       this.props.setCurrentPanel(this.props.panelButtons.next.panel);
@@ -218,6 +220,14 @@ class App extends Component {
           <BodyContainer>
             <ContainerFullWidth>
               <SaveModel />
+            </ContainerFullWidth>
+          </BodyContainer>
+        )}
+
+        {currentPanel === "modelSummary" && (
+          <BodyContainer>
+            <ContainerFullWidth>
+              <ModelSummary />
             </ContainerFullWidth>
           </BodyContainer>
         )}

@@ -86,6 +86,6 @@ const startSaveTrainedModel = dataToSave => {
   store.dispatch(setSaveStatus("started"));
   saveTrainedModel(dataToSave, response => {
     store.dispatch(setSaveStatus(response.status));
-    onContinue();
+    // onContinue();
   });
 };
