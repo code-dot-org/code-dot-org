@@ -418,7 +418,7 @@ export const styles = {
 
   cardRow: {
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 11
   },
 
   disabledButton: {
