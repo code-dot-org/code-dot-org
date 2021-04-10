@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_27_012046) do
+ActiveRecord::Schema.define(version: 2021_04_02_163219) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1498,6 +1498,13 @@ ActiveRecord::Schema.define(version: 2021_03_27_012046) do
     t.index ["script_id", "resource_id"], name: "index_scripts_resources_on_script_id_and_resource_id", unique: true
   end
 
+  create_table "scripts_student_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "script_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "script_id"], name: "index_scripts_student_resources_on_resource_id_and_script_id"
+    t.index ["script_id", "resource_id"], name: "index_scripts_student_resources_on_script_id_and_resource_id", unique: true
+  end
+
   create_table "secret_pictures", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "path", null: false
@@ -1729,6 +1736,13 @@ ActiveRecord::Schema.define(version: 2021_03_27_012046) do
     t.integer "resource_id"
     t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
     t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
+  end
+
+  create_table "unit_groups_student_resources", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "unit_group_id"
+    t.integer "resource_id"
+    t.index ["resource_id", "unit_group_id"], name: "index_ug_student_resources_on_resource_id_and_unit_group_id"
+    t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
   create_table "user_geos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|

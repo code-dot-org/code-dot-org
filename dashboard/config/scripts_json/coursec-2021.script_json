@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-04-02 21:07:31 UTC",
+    "serialized_at": "2021-04-07 17:19:50 UTC",
     "seeding_key": {
       "script.name": "coursec-2021"
     }
@@ -51,21 +51,9 @@
       }
     },
     {
-      "key": "csf_binary",
-      "user_facing": true,
-      "position": 3,
-      "properties": {
-        "display_name": "Binary"
-      },
-      "seeding_key": {
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
       "key": "csf_loops",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Loops"
       },
@@ -77,7 +65,7 @@
     {
       "key": "csf_events",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Events"
       },
@@ -89,7 +77,7 @@
     {
       "key": "csf_data",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Data"
       },
@@ -101,7 +89,7 @@
     {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 7,
+      "position": 6,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -233,32 +221,12 @@
       }
     },
     {
-      "key": "Binary Bracelets",
-      "name": "Binary Bracelets",
+      "key": "Loops: My Loopy Robotic Friends",
+      "name": "My Loopy Robotic Friends Jr.",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
-      "properties": {
-        "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
-        "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
-        "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
-        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- Make sure every student has a reflection journal.\n- (Optional) Write a short message on the board in binary.",
-        "creative_commons_license": "Creative Commons BY-NC-SA"
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "Loops: My Loopy Robotic Friends",
-      "name": "My Loopy Robotic Friends Jr.",
-      "absolute_position": 8,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
       "properties": {
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. In order to program their \"robots\" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.",
         "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.",
@@ -275,10 +243,10 @@
     {
       "key": "Loops with Rey and BB-8",
       "name": "Loops with Rey and BB-8",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
         "overview": "This **skill-building** lesson builds has students using loops to help _BB-8_ traverse a maze more efficiently than before.",
         "student_overview": "Help _BB-8_ through mazes using loops! ",
@@ -295,10 +263,10 @@
     {
       "key": "Loops in Harvester",
       "name": "Harvesting Crops with Loops",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "overview": "In this **skill-building** lesson, students loop new actions in order to help the harvester collect multiple veggies growing in large bunches.",
         "student_overview": "Let's use loops to help the harvester collect some veggies!",
@@ -315,10 +283,10 @@
     {
       "key": "Sticker Art with Loops",
       "name": "Mini-Project: Sticker Art",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "This **mini-project** lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
         "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!",
@@ -335,10 +303,10 @@
     {
       "key": "Events: The Big Event",
       "name": "The Big Event",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
         "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
         "student_overview": "Play a fun game to learn about events. ",
@@ -355,10 +323,10 @@
     {
       "key": "Build a Flappy Game",
       "name": "Build a Flappy Game",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
         "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own Flappy Bird game. At the end of the lesson, students will be able to customize their game by changing the visuals or rules.",
         "student_overview": "Build you own Flappy Bird game however you like, then share it with your friends!",
@@ -375,10 +343,10 @@
     {
       "key": "Events in Play Lab",
       "name": "Mini-Project: Chase Game",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
         "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own animated game.",
         "student_overview": "It's time to get creative and make a game in Play Lab!",
@@ -395,10 +363,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 14,
       "properties": {
         "overview": "In this **exploratory** lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs. Data can be used to help students understand their world and answer interesting questions. ",
         "student_overview": "Data can be used to understand our world and answer interesting questions. ",
@@ -408,6 +376,26 @@
       },
       "seeding_key": {
         "lesson.key": "Picturing Data",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "Binary Bracelets",
+      "name": "Binary Bracelets",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "overview": "This **exploratory** lesson introduces the concept of binary which is how computers today store all sorts of information.",
+        "student_overview": "Create your very own binary bracelet and learn how computers remember information!",
+        "purpose": "In this lesson students will learn how information is represented in a way such that a computer can interpret and store it. When learning binary, students will have the opportunity to write codes and share them with peers as secret messages. This can then be related back to how computers read a program, translate it to binary, use the information in some way, then reply back in a way humans can understand. For example, when we type a sentence into a document then press save, a computer translates the sentence into binary, stores the information, then posts a message indicating the document has been saved.",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Gather markers for the bracelets. Other decorations like beads and pipecleaners are optional.\n- Print one ***worksheet** and one ***assessment** per student.\n- Make sure every student has a reflection journal.\n- (Optional) Write a short message on the board in binary.",
+        "creative_commons_license": "Creative Commons BY-NC-SA"
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
         "lesson_group.key": "csf_data",
         "script.name": "coursec-2021"
       }
@@ -830,87 +818,6 @@
         "lesson_activity.key": "c6ddc263-f624-4d04-a67d-87cf4a90a03e",
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590",
-      "position": 1,
-      "properties": {
-        "name": "Warm Up",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
-      "position": 2,
-      "properties": {
-        "name": "Main Activity ",
-        "duration": 20
-      },
-      "seeding_key": {
-        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "e7277b3e-9177-451e-bef9-1e53d41b6131",
-      "position": 4,
-      "properties": {
-        "name": "Wrap Up",
-        "duration": 5
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "8667da08-85cd-4d60-a4f1-ff2608e4d240",
-      "position": 5,
-      "properties": {
-        "name": "Assessment",
-        "duration": 15
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8667da08-85cd-4d60-a4f1-ff2608e4d240",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021"
-      }
-    },
-    {
-      "key": "af629d31-87ab-476d-a2d3-6da008802f3c",
-      "position": 6,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c",
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
         "script.name": "coursec-2021"
       }
     },
@@ -1427,6 +1334,87 @@
       "seeding_key": {
         "lesson_activity.key": "81828841-d023-4593-896d-b4ce1481da6f",
         "lesson.key": "Picturing Data",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity ",
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "e7277b3e-9177-451e-bef9-1e53d41b6131",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "8667da08-85cd-4d60-a4f1-ff2608e4d240",
+      "position": 5,
+      "properties": {
+        "name": "Assessment",
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8667da08-85cd-4d60-a4f1-ff2608e4d240",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "key": "af629d31-87ab-476d-a2d3-6da008802f3c",
+      "position": 6,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c",
+        "lesson.key": "Binary Bracelets",
         "lesson_group.key": "csf_data",
         "script.name": "coursec-2021"
       }
@@ -2267,152 +2255,6 @@
       "seeding_key": {
         "activity_section.key": "ca5c3cdd-6fa3-4e44-a85b-661236ab1852",
         "lesson_activity.key": "c6ddc263-f624-4d04-a67d-87cf4a90a03e"
-      }
-    },
-    {
-      "key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
-      "position": 1,
-      "properties": {
-        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\n**Binary** - *Say it with me: Bye-nair-ee* \n\nA way of representing information using only two options",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
-        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
-      }
-    },
-    {
-      "key": "a4178e11-f338-4b3a-a74b-27cf0bf02398",
-      "position": 2,
-      "properties": {
-        "description": "####Off and On\n\n- If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\t- Put the message aside and move on to prepping for the activity.\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "a4178e11-f338-4b3a-a74b-27cf0bf02398",
-        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
-      }
-    },
-    {
-      "key": "f77e3c90-8113-43bb-a9d1-31dd1827e961",
-      "position": 3,
-      "properties": {
-        "remarks": true,
-        "description": "- Wires carry information through the machine in the form of electricity.\n\t- The two options that a computer uses with respect to this electrical information are \"off\" and \"on.\" Just like the lights in this room!\n\t\t- When computers represent information using only two options, it's called \"Binary.\"\n\t- That theme of two options doesn't stop when the information gets to its destination.\n- Computers also _store_ information using binary.\n\t- Binary isn't always off and on.\n\t\t- Hard Disk Drives store information using magnetic positive and magnetic negative.\n\t\t- DVDs store information as either reflective or non-reflective.\n\t- How do you suppose we can convert real-life things that we want to store in a computer into binary?\n\t\t- Let's start with letters.\n\t\t- Use the ***Worksheet** to show how a computer might represent capital letters.\n\t\t\t- This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n\t\t\t- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n\t\t\t- Fun fact: A grouping of four bits is called a nibble.\n\t\t\t- Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\t\t- Go over a few examples of converting letters into binary, then back.\n\t\t- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n\t\t- When the class can figure out that encoded letter on their own, you can move on to the activity."
-      },
-      "seeding_key": {
-        "activity_section.key": "f77e3c90-8113-43bb-a9d1-31dd1827e961",
-        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
-      }
-    },
-    {
-      "key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
-      "position": 1,
-      "properties": {
-        "name": "Binary Bracelets",
-        "progression_name": "Binary Bracelets - Unplugged Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
-        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e"
-      }
-    },
-    {
-      "key": "9ef02596-61a9-4eee-b8b5-db290a9721d0",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9ef02596-61a9-4eee-b8b5-db290a9721d0",
-        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
-      }
-    },
-    {
-      "key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
-      "position": 2,
-      "properties": {
-        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of **binary**, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](https://code.org/curriculum/course2/14/key.png)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
-        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
-      }
-    },
-    {
-      "key": "1432f5df-3984-49d1-a829-436765d5cbc0",
-      "position": 3,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If your class has extra budget for materials, try doing this exercise using thread (or pipe cleaners) and beads to create the binary bracelets instead of pen and paper. You can provide any combination of two colors in beads to the students, but black and white tend to be easiest, given the way that the key is done.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1432f5df-3984-49d1-a829-436765d5cbc0",
-        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
-      }
-    },
-    {
-      "key": "2148291c-0083-4da5-9b64-e609fabea255",
-      "position": 4,
-      "properties": {
-        "description": "After the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned."
-      },
-      "seeding_key": {
-        "activity_section.key": "2148291c-0083-4da5-9b64-e609fabea255",
-        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
-      }
-    },
-    {
-      "key": "02945b11-d2db-485d-9002-9aff256a4ed4",
-      "position": 1,
-      "properties": {
-        "description": "####Flash Chat: What did we learn?\n\n- What else do you think is represented as binary inside of a computer?\n- How else might you represent binary instead of boxes that are filled or not filled?\n- What was your favorite part about that activity?",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "02945b11-d2db-485d-9002-9aff256a4ed4",
-        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131"
-      }
-    },
-    {
-      "key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
-      "position": 2,
-      "properties": {
-        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Use the activity worksheet to write out the rest of your name or your favorite word in binary.\n - Imagine a world where we spoke in binary, saying \"on\" or \"off\", but nothing else. Draw two characters trying to talk to each other in binary."
-      },
-      "seeding_key": {
-        "activity_section.key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
-        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131"
-      }
-    },
-    {
-      "key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
-      "position": 1,
-      "properties": {
-        "description": "- Hand out the ***assessment** and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
-      },
-      "seeding_key": {
-        "activity_section.key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
-        "lesson_activity.key": "8667da08-85cd-4d60-a4f1-ff2608e4d240"
-      }
-    },
-    {
-      "key": "3b646703-3875-4421-bdd8-865e9c2ace35",
-      "position": 1,
-      "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Binary Images**\r\n\r\n- There are several great resources on the web for taking this activity to the next level.\r\n- If your students are interested in how images (or even music) can be represented as binary, you can find more details in Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf)."
-      },
-      "seeding_key": {
-        "activity_section.key": "3b646703-3875-4421-bdd8-865e9c2ace35",
-        "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c"
       }
     },
     {
@@ -3378,6 +3220,152 @@
       }
     },
     {
+      "key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
+      "position": 1,
+      "properties": {
+        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\n**Binary** - *Say it with me: Bye-nair-ee* \n\nA way of representing information using only two options",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "e55d7d37-4ddc-467f-9a9d-f02a31886572",
+        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
+      }
+    },
+    {
+      "key": "a4178e11-f338-4b3a-a74b-27cf0bf02398",
+      "position": 2,
+      "properties": {
+        "description": "####Off and On\n\n- If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\t- Put the message aside and move on to prepping for the activity.\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4178e11-f338-4b3a-a74b-27cf0bf02398",
+        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
+      }
+    },
+    {
+      "key": "f77e3c90-8113-43bb-a9d1-31dd1827e961",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "- Wires carry information through the machine in the form of electricity.\n\t- The two options that a computer uses with respect to this electrical information are \"off\" and \"on.\" Just like the lights in this room!\n\t\t- When computers represent information using only two options, it's called \"Binary.\"\n\t- That theme of two options doesn't stop when the information gets to its destination.\n- Computers also _store_ information using binary.\n\t- Binary isn't always off and on.\n\t\t- Hard Disk Drives store information using magnetic positive and magnetic negative.\n\t\t- DVDs store information as either reflective or non-reflective.\n\t- How do you suppose we can convert real-life things that we want to store in a computer into binary?\n\t\t- Let's start with letters.\n\t\t- Use the ***Worksheet** to show how a computer might represent capital letters.\n\t\t\t- This is a good time to mention that each spot where you have a binary option is called a \"binary digit\" or \"bit\" for short.\n\t\t\t- Ask if anyone knows what a grouping of eight bits is called (it's a byte.)\n\t\t\t- Fun fact: A grouping of four bits is called a nibble.\n\t\t\t- Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\t\t- Go over a few examples of converting letters into binary, then back.\n\t\t- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n\t\t- When the class can figure out that encoded letter on their own, you can move on to the activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "f77e3c90-8113-43bb-a9d1-31dd1827e961",
+        "lesson_activity.key": "d0de2b60-38a6-42fb-8d87-e63dc5e8b590"
+      }
+    },
+    {
+      "key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
+      "position": 1,
+      "properties": {
+        "name": "Binary Bracelets",
+        "progression_name": "Binary Bracelets - Unplugged Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d",
+        "lesson_activity.key": "db2b05a4-6b86-4a5a-bc7c-bef62469a26e"
+      }
+    },
+    {
+      "key": "9ef02596-61a9-4eee-b8b5-db290a9721d0",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You know your classroom best. As the teacher, decide if students should do this individually or if students should work in pairs or small groups.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9ef02596-61a9-4eee-b8b5-db290a9721d0",
+        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
+      }
+    },
+    {
+      "key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
+      "position": 2,
+      "properties": {
+        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of **binary**, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](https://code.org/curriculum/course2/14/key.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b312d8ee-86f9-478f-9a9d-539be3e6dd50",
+        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
+      }
+    },
+    {
+      "key": "1432f5df-3984-49d1-a829-436765d5cbc0",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If your class has extra budget for materials, try doing this exercise using thread (or pipe cleaners) and beads to create the binary bracelets instead of pen and paper. You can provide any combination of two colors in beads to the students, but black and white tend to be easiest, given the way that the key is done.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1432f5df-3984-49d1-a829-436765d5cbc0",
+        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
+      }
+    },
+    {
+      "key": "2148291c-0083-4da5-9b64-e609fabea255",
+      "position": 4,
+      "properties": {
+        "description": "After the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned."
+      },
+      "seeding_key": {
+        "activity_section.key": "2148291c-0083-4da5-9b64-e609fabea255",
+        "lesson_activity.key": "9e63f3f7-8f63-4f7c-a04a-bad461b0e5a1"
+      }
+    },
+    {
+      "key": "02945b11-d2db-485d-9002-9aff256a4ed4",
+      "position": 1,
+      "properties": {
+        "description": "####Flash Chat: What did we learn?\n\n- What else do you think is represented as binary inside of a computer?\n- How else might you represent binary instead of boxes that are filled or not filled?\n- What was your favorite part about that activity?",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "02945b11-d2db-485d-9002-9aff256a4ed4",
+        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131"
+      }
+    },
+    {
+      "key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
+      "position": 2,
+      "properties": {
+        "description": "**Prompts:**\n\n - What was today’s lesson about?\n - How did you feel during today’s lesson?\n - Use the activity worksheet to write out the rest of your name or your favorite word in binary.\n - Imagine a world where we spoke in binary, saying \"on\" or \"off\", but nothing else. Draw two characters trying to talk to each other in binary."
+      },
+      "seeding_key": {
+        "activity_section.key": "8988c901-48ad-4e67-81a0-8a2645be5b27",
+        "lesson_activity.key": "e7277b3e-9177-451e-bef9-1e53d41b6131"
+      }
+    },
+    {
+      "key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
+      "position": 1,
+      "properties": {
+        "description": "- Hand out the ***assessment** and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ab38e6e-a0b5-4cac-ace3-4336e3b01746",
+        "lesson_activity.key": "8667da08-85cd-4d60-a4f1-ff2608e4d240"
+      }
+    },
+    {
+      "key": "3b646703-3875-4421-bdd8-865e9c2ace35",
+      "position": 1,
+      "properties": {
+        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\r\n\r\n**Binary Images**\r\n\r\n- There are several great resources on the web for taking this activity to the next level.\r\n- If your students are interested in how images (or even music) can be represented as binary, you can find more details in Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf)."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b646703-3875-4421-bdd8-865e9c2ace35",
+        "lesson_activity.key": "af629d31-87ab-476d-a2d3-6da008802f3c"
+      }
+    },
+    {
       "key": "87256b2e-55f1-4ca5-825e-d84ae553b1d6",
       "position": 1,
       "properties": {
@@ -3501,7 +3489,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "My Robotic Friends - Unplugged Activity",
         "level_keys": [
@@ -3527,7 +3515,7 @@
       "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Maze Intro - Programming with Blocks ",
         "level_keys": [
@@ -3553,7 +3541,7 @@
       "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3579,7 +3567,7 @@
       "chapter": 5,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3605,7 +3593,7 @@
       "chapter": 6,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3631,7 +3619,7 @@
       "chapter": 7,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3657,7 +3645,7 @@
       "chapter": 8,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3683,7 +3671,7 @@
       "chapter": 9,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3709,7 +3697,7 @@
       "chapter": 10,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -3736,7 +3724,7 @@
       "chapter": 11,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3762,7 +3750,7 @@
       "chapter": 12,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -3788,7 +3776,7 @@
       "chapter": 13,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -3814,7 +3802,7 @@
       "chapter": 14,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -3840,7 +3828,7 @@
       "chapter": 15,
       "position": 13,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -3866,7 +3854,7 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video:  Debugging with the Step Button",
         "level_keys": [
@@ -3892,7 +3880,7 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3918,7 +3906,7 @@
       "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3944,7 +3932,7 @@
       "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3970,7 +3958,7 @@
       "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -3996,7 +3984,7 @@
       "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4022,7 +4010,7 @@
       "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4048,7 +4036,7 @@
       "chapter": 23,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4075,7 +4063,7 @@
       "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4101,7 +4089,7 @@
       "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4127,7 +4115,7 @@
       "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4153,7 +4141,7 @@
       "chapter": 27,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4179,7 +4167,7 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: The Collector",
         "level_keys": [
@@ -4205,7 +4193,7 @@
       "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4231,7 +4219,7 @@
       "chapter": 30,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4257,7 +4245,7 @@
       "chapter": 31,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4283,7 +4271,7 @@
       "chapter": 32,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4309,7 +4297,7 @@
       "chapter": 33,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4335,7 +4323,7 @@
       "chapter": 34,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4361,7 +4349,7 @@
       "chapter": 35,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4388,7 +4376,7 @@
       "chapter": 36,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4414,7 +4402,7 @@
       "chapter": 37,
       "position": 10,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4440,7 +4428,7 @@
       "chapter": 38,
       "position": 11,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4466,7 +4454,7 @@
       "chapter": 39,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4492,7 +4480,7 @@
       "chapter": 40,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4518,7 +4506,7 @@
       "chapter": 41,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4544,7 +4532,7 @@
       "chapter": 42,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4570,7 +4558,7 @@
       "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Artist Intro with JR Hildebrand",
         "level_keys": [
@@ -4596,7 +4584,7 @@
       "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4622,7 +4610,7 @@
       "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4648,7 +4636,7 @@
       "chapter": 46,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4674,7 +4662,7 @@
       "chapter": 47,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4700,7 +4688,7 @@
       "chapter": 48,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4726,7 +4714,7 @@
       "chapter": 49,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4752,7 +4740,7 @@
       "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -4779,7 +4767,7 @@
       "chapter": 51,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -4805,7 +4793,7 @@
       "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -4831,7 +4819,7 @@
       "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4857,7 +4845,7 @@
       "chapter": 54,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -4883,33 +4871,7 @@
       "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Binary Bracelets - Unplugged Activity",
-        "level_keys": [
-          "BinaryBracelets-Unplugged_2021"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "BinaryBracelets-Unplugged_2021"
-        ],
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021",
-        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d"
-      },
-      "level_keys": [
-        "BinaryBracelets-Unplugged_2021"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "My Loopy Robotic Friends - Unplugged Activity",
         "level_keys": [
@@ -4932,10 +4894,10 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Programming with Rey and BB-8",
         "level_keys": [
@@ -4958,10 +4920,10 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -4984,10 +4946,10 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5010,10 +4972,10 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Repeat Blocks with BB-8",
         "level_keys": [
@@ -5036,10 +4998,10 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5062,10 +5024,10 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5088,10 +5050,10 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5114,10 +5076,10 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5140,10 +5102,10 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5166,10 +5128,10 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5193,10 +5155,10 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 11,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5219,10 +5181,10 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 12,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5245,10 +5207,10 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5271,10 +5233,10 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5297,10 +5259,10 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 15,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5323,10 +5285,10 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 16,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5349,10 +5311,10 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: The Harvester",
         "level_keys": [
@@ -5375,10 +5337,10 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5401,10 +5363,10 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5427,10 +5389,10 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5453,10 +5415,10 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5479,10 +5441,10 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5505,10 +5467,10 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5531,10 +5493,10 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 79,
       "position": 8,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -5557,10 +5519,10 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 80,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "challenge": true,
@@ -5584,10 +5546,10 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 81,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5610,10 +5572,10 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 82,
       "position": 11,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5636,10 +5598,10 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 83,
       "position": 12,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Practice",
         "level_keys": [
@@ -5662,10 +5624,10 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 84,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Prediction",
         "level_keys": [
@@ -5688,10 +5650,10 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 85,
       "position": 14,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5714,10 +5676,10 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 86,
       "position": 15,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -5740,10 +5702,10 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5766,10 +5728,10 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5792,10 +5754,10 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5818,10 +5780,10 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5844,10 +5806,10 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5870,10 +5832,10 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5896,10 +5858,10 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5922,10 +5884,10 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 8,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Sticker Art",
         "level_keys": [
@@ -5948,10 +5910,10 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -5974,10 +5936,10 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "The Big Event - Unplugged Activity",
         "level_keys": [
@@ -6000,10 +5962,10 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Video: Code Your Own Flappy Game",
         "level_keys": [
@@ -6026,10 +5988,10 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6052,10 +6014,10 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6078,10 +6040,10 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6104,10 +6066,10 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill Building",
         "level_keys": [
@@ -6130,10 +6092,10 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6156,10 +6118,10 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6182,10 +6144,10 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6208,10 +6170,10 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6234,10 +6196,10 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6260,10 +6222,10 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Flappy Game",
         "level_keys": [
@@ -6286,10 +6248,10 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6312,10 +6274,10 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6338,10 +6300,10 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6364,10 +6326,10 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6390,10 +6352,10 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Skill-Building",
         "level_keys": [
@@ -6416,10 +6378,10 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6442,10 +6404,10 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6468,10 +6430,10 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 8,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6494,10 +6456,10 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6520,10 +6482,10 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 10,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6546,10 +6508,10 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 11,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Mini-project: Chase Game",
         "level_keys": [
@@ -6572,10 +6534,10 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Free Play",
         "level_keys": [
@@ -6598,10 +6560,10 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 13,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Challenge",
         "level_keys": [
@@ -6624,10 +6586,10 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Picturing Data",
         "level_keys": [
@@ -6650,15 +6612,44 @@
       ]
     },
     {
+      "chapter": 122,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": null,
+      "properties": {
+        "progression": "Binary Bracelets - Unplugged Activity",
+        "level_keys": [
+          "BinaryBracelets-Unplugged_2021"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryBracelets-Unplugged_2021"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021",
+        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d"
+      },
+      "level_keys": [
+        "BinaryBracelets-Unplugged_2021"
+      ]
+    },
+    {
       "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "progression": "Exploration: Sample Project"
+        "progression": "Exploration: Sample Project",
+        "level_keys": [
+          "courseF_EOC_samples_2021"
+        ]
       },
       "named_level": null,
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "courseF_EOC_samples_2021"
@@ -6676,7 +6667,7 @@
       "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6702,7 +6693,7 @@
       "chapter": 125,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6728,7 +6719,7 @@
       "chapter": 126,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6754,7 +6745,7 @@
       "chapter": 127,
       "position": 5,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6780,7 +6771,7 @@
       "chapter": 128,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -6806,7 +6797,7 @@
       "chapter": 129,
       "position": 7,
       "activity_section_position": 6,
-      "assessment": false,
+      "assessment": null,
       "properties": {
         "progression": "Project",
         "level_keys": [
@@ -7476,18 +7467,6 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursec-2021",
         "activity_section.key": "8d556f84-689c-4046-bd40-a955e56ef116"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "BinaryBracelets-Unplugged_2021",
-        "script_level.level_keys": [
-          "BinaryBracelets-Unplugged_2021"
-        ],
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "csf_binary",
-        "script.name": "coursec-2021",
-        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d"
       }
     },
     {
@@ -8296,6 +8275,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "BinaryBracelets-Unplugged_2021",
+        "script_level.level_keys": [
+          "BinaryBracelets-Unplugged_2021"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "csf_data",
+        "script.name": "coursec-2021",
+        "activity_section.key": "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_EOC_samples_2021",
         "script_level.level_keys": [
           "courseF_EOC_samples_2021"
@@ -8580,82 +8571,6 @@
       }
     },
     {
-      "name": "Bits Versus Bytes",
-      "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
-      "key": "csf-bit-byte-video",
-      "properties": {
-        "type": "Student Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "csf-bit-byte-video"
-      }
-    },
-    {
-      "name": "Binary Bracelets",
-      "url": "https://youtu.be/3S2YfoO4_CM",
-      "key": "unplugged-video-binary-bracelets",
-      "properties": {
-        "type": "Unplugged Video",
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-binary-bracelets.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "unplugged-video-binary-bracelets"
-      }
-    },
-    {
-      "name": "Binary Bracelets",
-      "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
-      "key": "lesson-in-action-binary-bracelets",
-      "properties": {
-        "type": "Lesson in Action Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "lesson-in-action-binary-bracelets"
-      }
-    },
-    {
-      "name": "Binary Bracelets",
-      "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
-      "key": "csf-binary-bracelets-activity",
-      "properties": {
-        "type": "Worksheet",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-binary-bracelets-activity"
-      }
-    },
-    {
-      "name": "Binary Bracelets",
-      "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
-      "key": "csf-binary-bracelets-assessment",
-      "properties": {
-        "type": "Assessment",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csf-binary-bracelets-assessment"
-      }
-    },
-    {
-      "name": "Binary Bracelets",
-      "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
-      "key": "assessment-answer-binary-bracelets",
-      "properties": {
-        "type": "Assessment Answer Key",
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "assessment-answer-binary-bracelets"
-      }
-    },
-    {
       "name": "Feeling Faces Emotion Image",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
       "key": "feeling_faces_emotion_image",
@@ -8744,6 +8659,82 @@
       }
     },
     {
+      "name": "Bits Versus Bytes",
+      "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+      "key": "csf-bit-byte-video",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "csf-bit-byte-video"
+      }
+    },
+    {
+      "name": "Binary Bracelets",
+      "url": "https://youtu.be/3S2YfoO4_CM",
+      "key": "unplugged-video-binary-bracelets",
+      "properties": {
+        "type": "Unplugged Video",
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2014/C2-binary-bracelets.mp4"
+      },
+      "seeding_key": {
+        "resource.key": "unplugged-video-binary-bracelets"
+      }
+    },
+    {
+      "name": "Binary Bracelets",
+      "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
+      "key": "lesson-in-action-binary-bracelets",
+      "properties": {
+        "type": "Lesson in Action Video",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson-in-action-binary-bracelets"
+      }
+    },
+    {
+      "name": "Binary Bracelets",
+      "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
+      "key": "csf-binary-bracelets-activity",
+      "properties": {
+        "type": "Worksheet",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csf-binary-bracelets-activity"
+      }
+    },
+    {
+      "name": "Binary Bracelets",
+      "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+      "key": "csf-binary-bracelets-assessment",
+      "properties": {
+        "type": "Assessment",
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csf-binary-bracelets-assessment"
+      }
+    },
+    {
+      "name": "Binary Bracelets",
+      "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
+      "key": "assessment-answer-binary-bracelets",
+      "properties": {
+        "type": "Assessment Answer Key",
+        "audience": "Teacher",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "assessment-answer-binary-bracelets"
+      }
+    },
+    {
       "name": "Play Lab Project Planning Guide (Exemplar)",
       "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
       "key": "play-lab-project-planning-guide-exemplar",
@@ -8782,13 +8773,24 @@
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "change_log",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "change_log"
       }
     }
   ],
@@ -8887,42 +8889,6 @@
       "seeding_key": {
         "lesson.key": "Programming in Artist",
         "resource.key": "csf-turns-angles-doc"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "csf-bit-byte-video"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "unplugged-video-binary-bracelets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "lesson-in-action-binary-bracelets"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "csf-binary-bracelets-activity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "csf-binary-bracelets-assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "resource.key": "assessment-answer-binary-bracelets"
       }
     },
     {
@@ -9029,6 +8995,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "csf-bit-byte-video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "unplugged-video-binary-bracelets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "lesson-in-action-binary-bracelets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "csf-binary-bracelets-activity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "csf-binary-bracelets-assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "resource.key": "assessment-answer-binary-bracelets"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "resource.key": "play-lab-project-planning-guide-exemplar"
       }
@@ -9050,6 +9052,12 @@
     {
       "seeding_key": {
         "resource.key": "curriculum_guide",
+        "script.name": "coursec-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "change_log",
         "script.name": "coursec-2021"
       }
     }
@@ -9186,6 +9194,116 @@
       }
     },
     {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
       "key": "binary",
       "word": "Binary",
       "definition": "A way of representing information using only two options.",
@@ -9193,116 +9311,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "binary"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
       }
     }
   ],
@@ -9387,12 +9395,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "vocabulary.key": "binary"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Loops: My Loopy Robotic Friends",
         "vocabulary.key": "loop"
       }
@@ -9455,6 +9457,12 @@
       "seeding_key": {
         "lesson.key": "Events in Play Lab",
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "vocabulary.key": "binary"
       }
     }
   ],
@@ -9600,36 +9608,6 @@
       "seeding_key": {
         "lesson.key": "Programming in Artist",
         "objective.key": "d47b51d2-9114-4dfd-ad21-810573d85543"
-      }
-    },
-    {
-      "key": "9a785141-1fe6-4728-996c-2fbb8781b62c",
-      "properties": {
-        "description": "Encode letters into binary."
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "9a785141-1fe6-4728-996c-2fbb8781b62c"
-      }
-    },
-    {
-      "key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353",
-      "properties": {
-        "description": "Decode binary back to letters."
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353"
-      }
-    },
-    {
-      "key": "ce1f4117-76f3-4359-a554-683a878f82cb",
-      "properties": {
-        "description": "Relate the idea of storing letters on paper to the idea of storing information in a computer."
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "ce1f4117-76f3-4359-a554-683a878f82cb"
       }
     },
     {
@@ -9843,6 +9821,36 @@
       }
     },
     {
+      "key": "9a785141-1fe6-4728-996c-2fbb8781b62c",
+      "properties": {
+        "description": "Encode letters into binary."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "9a785141-1fe6-4728-996c-2fbb8781b62c"
+      }
+    },
+    {
+      "key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353",
+      "properties": {
+        "description": "Decode binary back to letters."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353"
+      }
+    },
+    {
+      "key": "ce1f4117-76f3-4359-a554-683a878f82cb",
+      "properties": {
+        "description": "Relate the idea of storing letters on paper to the idea of storing information in a computer."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "ce1f4117-76f3-4359-a554-683a878f82cb"
+      }
+    },
+    {
       "key": "03ac24d5-21f0-45e5-b15a-3354a578b67d",
       "properties": {
         "description": "Use a planned design as a blueprint for creation."
@@ -9939,20 +9947,6 @@
         "lesson.key": "Programming in Artist",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
       }
     },
     {
@@ -10132,6 +10126,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
@@ -10160,6 +10168,12 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "ccmath",
+        "opportunity_standard.shortcode": "2.MD.10"
+      }
+    }
   ]
 }

@@ -80,6 +80,9 @@ module Pd::Foorm
         if question_data[:type] == TYPE_PANEL_DYNAMIC
           elements = question_data[:templateElements]
         end
+
+        # Facilitator-specific questions are identified
+        # as panels that are named "facilitators"
         if question_data[:name] == 'facilitators'
           is_facilitator_question = true
         end
@@ -161,11 +164,6 @@ module Pd::Foorm
         end
       end
       choices_obj
-    end
-
-    def self.fill_question_placeholders(question)
-      question && question.sub!("{panel.facilitator_name}", "my facilitator")
-      question
     end
   end
 end
