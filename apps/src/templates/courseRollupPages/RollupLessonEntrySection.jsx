@@ -66,12 +66,15 @@ export default class RollupLessonEntrySection extends Component {
               <p>{i18n.rollupNoVocab()}</p>
             )}
           {this.props.objectToRollUp === 'Code' &&
-            this.props.lesson.programmingExpressions.length > 0 &&
-            this.props.lesson.programmingExpressions.map(expression => (
-              <li key={expression.name}>
-                <StyledCodeBlock programmingExpression={expression} />
-              </li>
-            ))}
+            this.props.lesson.programmingExpressions.length > 0 && (
+              <ul>
+                {this.props.lesson.programmingExpressions.map(expression => (
+                  <li key={expression.name}>
+                    <StyledCodeBlock programmingExpression={expression} />
+                  </li>
+                ))}
+              </ul>
+            )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
               <p>{i18n.rollupNoCode()}</p>
