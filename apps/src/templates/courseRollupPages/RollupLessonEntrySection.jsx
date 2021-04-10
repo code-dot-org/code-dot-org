@@ -45,9 +45,12 @@ export default class RollupLessonEntrySection extends Component {
 
     return (
       <div style={styles.main}>
-        <div style={styles.object}>
-          <h4>{this.props.objectToRollUp}</h4>
-        </div>
+        {(this.props.objectToRollUp === 'Resources' ||
+          this.props.objectToRollUp === 'Prep') && (
+          <div style={styles.object}>
+            <h4>{this.props.objectToRollUp}</h4>
+          </div>
+        )}
         <div style={styles.entries}>
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length > 0 &&
