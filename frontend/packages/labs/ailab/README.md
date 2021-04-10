@@ -80,7 +80,7 @@ In main repo:
 bin/dashboard-server 
 ``` 
 
-In main repo's `apps/` directory, run 
+In main repo's `apps/` directory: 
 ``` 
 yarn start 
 ```
@@ -92,9 +92,9 @@ In this repo:
 yarn run build
 ```
 
-Then the main repo's `apps` build will pick up changes. 
+Then the local Code Studio apps build will pick up changes. 
 
-See ML-playground changes at http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1.
+See AI Lab changes at http://localhost-studio.code.org:3000/s/allthethings/stage/43/puzzle/1.
 
 Note that running `yarn start` will erase this build, and so for now it seems best to alternate between using `yarn start` for testing the standalone build, and using `yarn run build` to make a single build for consumption by the main repo.
 
@@ -128,7 +128,7 @@ yarn
 
 Then commit the changed `package.json` and `yarn.lock` files so that the official build pipeline uses the new version.
 
-### Verify symlink exists between code-dot-org repo and ML playground
+### Verifying a symlink exists between the main repo and ML playground
 In main repo: 
 ``` 
  cd apps/node_modules/@code-dot-org 
