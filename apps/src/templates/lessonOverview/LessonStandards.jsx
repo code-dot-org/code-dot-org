@@ -4,6 +4,8 @@ import _ from 'lodash';
 import {standardShape} from './lessonPlanShapes';
 import color from '@cdo/apps/util/color';
 import Radium from 'radium';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 
 export const styles = {
   frameworkName: {
@@ -72,13 +74,23 @@ function getDetailsOpen(expandMode) {
 
 export default class LessonStandards extends PureComponent {
   render() {
-    const {standards} = this.props;
+    const {standards, courseVersionStandardsUrl} = this.props;
     const standardsByFramework = _(standards)
       .orderBy('frameworkName')
       .groupBy('frameworkName')
       .value();
     return (
       <div>
+        {courseVersionStandardsUrl && (
+          <Button
+            __useDeprecatedTag
+            color={Button.ButtonColor.gray}
+            href={courseVersionStandardsUrl}
+            style={{marginBottom: 5}}
+            target="_blank"
+            text={i18n.fullCourseAlignment()}
+          />
+        )}
         {Object.keys(standardsByFramework).map((frameworkName, index) => {
           const standards = standardsByFramework[frameworkName];
           const expandMode = getChildExpandMode(this.props.expandMode, index);
@@ -97,7 +109,8 @@ export default class LessonStandards extends PureComponent {
 }
 LessonStandards.propTypes = {
   standards: PropTypes.arrayOf(standardShape).isRequired,
-  expandMode: expandModeShape
+  expandMode: expandModeShape,
+  courseVersionStandardsUrl: PropTypes.string
 };
 
 class Framework extends PureComponent {

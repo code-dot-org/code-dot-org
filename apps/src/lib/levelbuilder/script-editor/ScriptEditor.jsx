@@ -836,13 +836,13 @@ class ScriptEditor extends React.Component {
               </div>
               <ResourcesEditor
                 inputStyle={styles.input}
-                teacherResources={this.state.teacherResources}
-                updateTeacherResources={teacherResources =>
+                resources={this.state.teacherResources}
+                updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
                 useMigratedResources={this.props.isMigrated}
                 courseVersionId={this.props.initialCourseVersionId}
-                migratedTeacherResources={this.props.migratedTeacherResources}
+                migratedResources={this.props.migratedTeacherResources}
               />
             </div>
           </div>

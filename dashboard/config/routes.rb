@@ -295,12 +295,24 @@ Dashboard::Application.routes.draw do
   get '/s/csp10-2020/lockable/1(*all)', to: redirect(path: '/s/csp10-2020/lessons/14%{all}')
 
   resources :lessons, only: [:edit, :update]
-  resources :resources, only: [:create, :update]
-  resources :vocabularies, only: [:create, :update]
 
-  get '/resourcesearch', to: 'resources#search', defaults: {format: 'json'}
-  get '/vocabularysearch', to: 'vocabularies#search', defaults: {format: 'json'}
-  get '/programmingexpressionsearch', to: 'programming_expressions#search', defaults: {format: 'json'}
+  resources :resources, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :vocabularies, only: [:create, :update] do
+    collection do
+      get :search
+    end
+  end
+
+  resources :programming_expressions, only: [] do
+    collection do
+      get :search
+    end
+  end
 
   resources :standards, only: [] do
     collection do
@@ -748,10 +760,15 @@ Dashboard::Application.routes.draw do
       get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
       get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
-      post 'ml_models/save', to: 'ml_models#save'
-      get 'ml_models/names', to: 'ml_models#user_ml_model_names'
-      get 'ml_models/:model_id', to: 'ml_models#get_trained_model'
-      get 'ml_models/:model_id/metadata', to: 'ml_models#user_ml_model_metadata'
+      resources :ml_models, only: [:show, :destroy] do
+        collection do
+          get 'names'
+          post 'save'
+        end
+        member do
+          get 'metadata'
+        end
+      end
 
       resources :teacher_feedbacks, only: [:index, :create] do
         collection do

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-05 18:06:38 UTC",
+    "serialized_at": "2021-04-07 19:12:25 UTC",
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -894,7 +894,7 @@
       "position": 1,
       "properties": {
         "name": "Warm Up",
-        "duration": 10
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "9ca8c23c-8a83-49ad-8730-a9dbf170d403",

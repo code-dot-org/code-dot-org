@@ -9,7 +9,7 @@ import {
   addStandard,
   removeStandard
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
-import {standardShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
 const styles = {
@@ -36,6 +36,7 @@ class StandardsEditor extends Component {
   static propTypes = {
     standardType: PropTypes.string.isRequired,
     standards: PropTypes.arrayOf(standardShape).isRequired,
+    frameworks: PropTypes.arrayOf(frameworkShape).isRequired,
 
     // provided by redux
     addStandard: PropTypes.func.isRequired,
@@ -179,6 +180,12 @@ class StandardsEditor extends Component {
 
   render() {
     const columns = this.getColumns();
+    const standardShortcodes = this.props.standards
+      .map(standard => standard.shortcode)
+      .join(',');
+    const searchBoxKey = `${
+      this.state.frameworkShortcode
+    },${standardShortcodes}`;
     return (
       <div>
         <label>
@@ -186,16 +193,11 @@ class StandardsEditor extends Component {
         </label>
         <select onChange={this.handleSelectFramework} style={styles.select}>
           <option value="">(none)</option>
-          <option value="iste">ISTE Standards for Students</option>
-          <option value="ccela">
-            Common Core English Language Arts Standards
-          </option>
-          <option value="ccmath">Common Core Math Standards</option>
-          <option value="ngss">Next Generation Science Standards</option>
-          <option value="csta">
-            CSTA K-12 Computer Science Standards (2017)
-          </option>
-          <option value="csp2021">CSP Conceptual Framework</option>
+          {this.props.frameworks.map(framework => (
+            <option key={framework.shortcode} value={framework.shortcode}>
+              {framework.name}
+            </option>
+          ))}
         </select>
         <label>
           <strong>Select a Standard to add</strong>
@@ -204,7 +206,7 @@ class StandardsEditor extends Component {
           // Specify a key in order to force this component to remount when
           // framework changes. Otherwise, it may return stale results when
           // a query is repeated after changing the framework.
-          key={this.state.frameworkShortcode}
+          key={searchBoxKey}
           onSearchSelect={this.onSearchSelect}
           searchUrl={'standards/search'}
           constructOptions={this.constructSearchOptions}
