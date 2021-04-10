@@ -8,8 +8,6 @@ import HintDisplayLightbulb from '../HintDisplayLightbulb';
 import {getOuterHeight} from './utils';
 import commonStyles from '../../commonStyles';
 
-var instructions = require('../../redux/instructions');
-
 const PROMPT_ICON_WIDTH = 60; // 50 + 10 for padding
 const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 
@@ -132,19 +130,7 @@ export default connect(
       feedback: state.instructions.feedback
     };
   },
-  function propsFromDispatch(dispatch) {
-    return {
-      hideOverlay: function() {
-        dispatch(instructions.hideOverlay());
-      },
-      setInstructionsRenderedHeight(height) {
-        dispatch(instructions.setInstructionsRenderedHeight(height));
-      },
-      clearFeedback(height) {
-        dispatch(instructions.setFeedback(null));
-      }
-    };
-  },
+  null,
   null,
   {withRef: true}
 )(Radium(InstructionsCsfLeftCol));
