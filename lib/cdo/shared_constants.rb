@@ -580,8 +580,6 @@ module SharedConstants
     }
   JSON
 
-  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
-
   # Subset of Ruby Logger::Severity constants.
   # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb
   # We don't use 2 irrelevant severity levels DEBUG (0) and INFO (1).
