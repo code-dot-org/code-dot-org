@@ -108,4 +108,12 @@ class CachingTest < ActionDispatch::IntegrationTest
       get '/s/course1/lessons/3/levels/1'
     end
   end
+
+  test 'redirects old stage url without hitting database' do
+    assert_queries(0, ignore_filters: [], capture_filters: []) do
+      get '/s/course1/stage/3/puzzle/1'
+    end
+    assert_response :redirect
+    assert_redirected_to '/s/course1/lessons/3/levels/1'
+  end
 end
