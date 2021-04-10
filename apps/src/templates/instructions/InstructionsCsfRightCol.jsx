@@ -10,8 +10,6 @@ import commonStyles from '../../commonStyles';
 import styleConstants from '../../styleConstants';
 import {getOuterHeight} from './utils';
 
-var instructions = require('../../redux/instructions');
-
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
@@ -188,19 +186,7 @@ export default connect(
       isRtl: state.isRtl
     };
   },
-  function propsFromDispatch(dispatch) {
-    return {
-      hideOverlay: function() {
-        dispatch(instructions.hideOverlay());
-      },
-      setInstructionsRenderedHeight(height) {
-        dispatch(instructions.setInstructionsRenderedHeight(height));
-      },
-      clearFeedback(height) {
-        dispatch(instructions.setFeedback(null));
-      }
-    };
-  },
+  null,
   null,
   {withRef: true}
 )(Radium(InstructionsCsfRightCol));

@@ -65,16 +65,11 @@ class InstructionsCSF extends React.Component {
     handleClickCollapser: PropTypes.func,
     adjustMaxNeededHeight: PropTypes.func,
     overlayVisible: PropTypes.bool,
-    skinId: PropTypes.string,
     isMinecraft: PropTypes.bool.isRequired,
-    isBlockly: PropTypes.bool.isRequired,
-    inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     noVisualization: PropTypes.bool,
     hideOverlay: PropTypes.func.isRequired,
-    aniGifURL: PropTypes.string,
     isRtl: PropTypes.bool.isRequired,
     isEmbedView: PropTypes.bool,
-
     hints: PropTypes.arrayOf(
       PropTypes.shape({
         hintId: PropTypes.string.isRequired,
@@ -83,28 +78,15 @@ class InstructionsCSF extends React.Component {
         video: PropTypes.string
       })
     ).isRequired,
-    hasUnseenHint: PropTypes.bool.isRequired,
-    showNextHint: PropTypes.func.isRequired,
-    hasAuthoredHints: PropTypes.bool.isRequired,
-
     collapsed: PropTypes.bool.isRequired,
 
     shortInstructions: PropTypes.string,
-    shortInstructions2: PropTypes.string,
     longInstructions: PropTypes.string,
 
-    clearFeedback: PropTypes.func.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
     }),
-
-    smallStaticAvatar: PropTypes.string,
-    failureAvatar: PropTypes.string,
-
-    ttsShortInstructionsUrl: PropTypes.string,
-    ttsLongInstructionsUrl: PropTypes.string,
-    textToSpeechEnabled: PropTypes.bool,
 
     height: PropTypes.number.isRequired,
     maxHeight: PropTypes.number.isRequired,
@@ -387,33 +369,19 @@ export default connect(
   function propsFromStore(state) {
     return {
       overlayVisible: state.instructions.overlayVisible,
-      skinId: state.pageConstants.skinId,
       isMinecraft: !!state.pageConstants.isMinecraft,
-      isBlockly: !!state.pageConstants.isBlockly,
-      aniGifURL: state.pageConstants.aniGifURL,
-      inputOutputTable: state.pageConstants.inputOutputTable,
       isRtl: state.isRtl,
       noVisualization: state.pageConstants.noVisualization,
       feedback: state.instructions.feedback,
       collapsed: state.instructions.isCollapsed,
       hints: state.authoredHints.seenHints,
-      hasUnseenHint: state.authoredHints.unseenHints.length > 0,
-      hasAuthoredHints: state.instructions.hasAuthoredHints,
-      showNextHint: state.pageConstants.showNextHint,
       height: state.instructions.renderedHeight,
       maxHeight: Math.min(
         state.instructions.maxAvailableHeight,
         state.instructions.maxNeededHeight
       ),
-      ttsShortInstructionsUrl: state.pageConstants.ttsShortInstructionsUrl,
-      ttsLongInstructionsUrl: state.pageConstants.ttsLongInstructionsUrl,
-      textToSpeechEnabled:
-        state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
       shortInstructions: state.instructions.shortInstructions,
-      shortInstructions2: state.instructions.shortInstructions2,
-      longInstructions: state.instructions.longInstructions,
-      smallStaticAvatar: state.pageConstants.smallStaticAvatar,
-      failureAvatar: state.pageConstants.failureAvatar
+      longInstructions: state.instructions.longInstructions
     };
   },
   function propsFromDispatch(dispatch) {
@@ -423,9 +391,6 @@ export default connect(
       },
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
-      },
-      clearFeedback(height) {
-        dispatch(instructions.setFeedback(null));
       }
     };
   },
