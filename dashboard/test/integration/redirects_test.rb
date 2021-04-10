@@ -56,6 +56,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/course1/lessons/1/levels/1'
   end
 
+  test 'redirects urls with stage and puzzle to lessons and levels' do
+    get '/s/allthethings/stage/1/puzzle/1'
+    assert_redirected_to '/s/allthethings/lessons/1/levels/1'
+
+    get '/s/allthethings/stage/40/puzzle/1/sublevel/1'
+    assert_redirected_to '/s/allthethings/lessons/40/levels/1/sublevel/1'
+
+    get '/s/allthethings/stage/33/puzzle/1/page/1'
+    assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
+  end
+
   test 'old script id paths redirect to named paths' do
     %w(2:Hour%20of%20Code 4:events 7:jigsaw).map {|s| s.split ':'}.each do |before, after|
       get "/s/#{before}"
