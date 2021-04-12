@@ -305,20 +305,22 @@ class CourseEditor extends Component {
               useMigratedResources={this.props.useMigratedResources}
             />
           </div>
-          <div>
+          {this.props.useMigratedResources && (
             <div>
-              Select the Student Resource buttons you'd like to have show up on
-              the top of the course overview page
-            </div>
+              <div>
+                Select the Student Resource buttons you'd like to have show up
+                on the top of the course overview page
+              </div>
 
-            <ResourcesEditor
-              inputStyle={styles.input}
-              migratedResources={this.props.studentResources}
-              courseVersionId={this.props.courseVersionId}
-              useMigratedResources
-              studentFacing
-            />
-          </div>
+              <ResourcesEditor
+                inputStyle={styles.input}
+                migratedResources={this.props.studentResources}
+                courseVersionId={this.props.courseVersionId}
+                useMigratedResources
+                studentFacing
+              />
+            </div>
+          )}
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
