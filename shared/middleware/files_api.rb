@@ -309,7 +309,7 @@ class FilesApi < Sinatra::Base
   end
 
   def valid_html_content?(body)
-    disallowed_tags = DCDO.get('disallowed_html_tags', ['script', 'iframe', 'meta[http-equiv]'])
+    disallowed_tags = DCDO.get('disallowed_html_tags', [])
 
     # Applicable Nokogiri selector rules:
     #   Element selectors must start with //
