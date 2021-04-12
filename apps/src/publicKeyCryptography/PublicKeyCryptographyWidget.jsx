@@ -201,14 +201,14 @@ export default class PublicKeyCryptographyWidget extends React.Component {
             selectedCharacter={selectedCharacter}
             onChange={this.setSelectedCharacter}
           />
-          {selectedCharacter && <WidgetContinueButton />}
-          {selectedCharacter && (
-            <StartOverButton onClick={this.onStartOverClick} />
-          )}
-          <div style={style.characterViewWrapper}>
-            {this.renderCharacterView(selectedCharacter)}
-          </div>
         </Provider>
+        {selectedCharacter && <WidgetContinueButton />}
+        {selectedCharacter && (
+          <StartOverButton onClick={this.onStartOverClick} />
+        )}
+        <div style={style.characterViewWrapper}>
+          {this.renderCharacterView(selectedCharacter)}
+        </div>
       </div>
     );
   }
