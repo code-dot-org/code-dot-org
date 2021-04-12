@@ -320,6 +320,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  # Redirects from old /stage/x/extras url to new /lessons/x/extras url
+  get '/s/:script_name/stage/:position/extras', to: redirect(path: '/s/%{script_name}/lessons/%{position}/extras')
+
   # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
   get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
 
