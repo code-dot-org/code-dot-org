@@ -33,7 +33,6 @@ class InstructionsCsfLeftCol extends React.Component {
     // from redux
     hasUnseenHint: PropTypes.bool.isRequired,
     hasAuthoredHints: PropTypes.bool.isRequired,
-    collapsed: PropTypes.bool.isRequired,
     smallStaticAvatar: PropTypes.string,
     failureAvatar: PropTypes.string,
     feedback: PropTypes.shape({
@@ -85,6 +84,8 @@ class InstructionsCsfLeftCol extends React.Component {
   };
 
   render() {
+    const {hasAuthoredHints} = this.props;
+
     return (
       <div
         ref={c => {
@@ -92,39 +93,30 @@ class InstructionsCsfLeftCol extends React.Component {
         }}
         style={[
           commonStyles.bubble,
-          this.props.hasAuthoredHints
-            ? styles.authoredHints
-            : styles.noAuthoredHints
+          hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
         ]}
       >
         <div
-          className={classNames({
-            'prompt-icon-cell': true,
-            authored_hints: this.props.hasAuthoredHints
+          className={classNames('prompt-icon-cell', {
+            authored_hints: hasAuthoredHints
           })}
           onClick={this.handleClickBubble}
         >
-          {this.props.hasAuthoredHints && <HintDisplayLightbulb />}
-          {this.getAvatar() && (
-            <PromptIcon
-              src={this.getAvatar()}
-              ref={c => {
-                this.icon = c;
-              }}
-            />
-          )}
+          {hasAuthoredHints && <HintDisplayLightbulb />}
+          {this.getAvatar() && <PromptIcon src={this.getAvatar()} />}
         </div>
       </div>
     );
   }
 }
 
+export const UnconnectedInstructionsCsfLeftCol = Radium(InstructionsCsfLeftCol);
+
 export default connect(
   function propsFromStore(state) {
     return {
       hasUnseenHint: state.authoredHints.unseenHints.length > 0,
       hasAuthoredHints: state.instructions.hasAuthoredHints,
-      collapsed: state.instructions.isCollapsed,
       smallStaticAvatar: state.pageConstants.smallStaticAvatar,
       failureAvatar: state.pageConstants.failureAvatar,
       feedback: state.instructions.feedback

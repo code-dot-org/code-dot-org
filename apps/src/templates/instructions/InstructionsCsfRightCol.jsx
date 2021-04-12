@@ -6,28 +6,17 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import CollapserButton from './CollapserButton';
 import ScrollButtons from './ScrollButtons';
-import commonStyles from '../../commonStyles';
 import styleConstants from '../../styleConstants';
 import {getOuterHeight} from './utils';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-// Minecraft-specific styles
-const craftStyles = {
-  collapserButton: {
-    padding: 5,
-    marginBottom: 0
-  },
-  scrollButtons: {
-    left: 38
-  },
-  scrollButtonsRtl: {
-    right: 38
-  }
-};
-
 const styles = {
+  column: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
   collapserButton: {
     position: 'absolute',
     right: 0,
@@ -42,6 +31,18 @@ const styles = {
     position: 'relative',
     top: 50,
     margin: '0px'
+  },
+  craftStyles: {
+    collapserButton: {
+      padding: 5,
+      marginBottom: 0
+    },
+    scrollButtons: {
+      left: 38
+    },
+    scrollButtonsRtl: {
+      right: 38
+    }
   }
 };
 
@@ -112,11 +113,9 @@ class InstructionsCsfRightCol extends React.Component {
     const scrollButtonWidth = this.props.displayScrollButtons
       ? $(ReactDOM.findDOMNode(this.scrollButtons)).outerWidth(true)
       : 0;
-    const width = Math.max(collapserWidth, scrollButtonWidth);
-    return width;
+    return Math.max(collapserWidth, scrollButtonWidth);
   }
 
-  // do I need collapse param?
   getColumnHeight(collapsed = this.props.collapsed) {
     const collapseButtonHeight = getOuterHeight(this.collapser, true);
     const scrollButtonsHeight =
@@ -125,40 +124,40 @@ class InstructionsCsfRightCol extends React.Component {
   }
 
   render() {
+    const displayCollapserButton = this.shouldDisplayCollapserButton();
+
     const scrollButtonsHeight =
       this.props.height -
       HEADER_HEIGHT -
       RESIZER_HEIGHT -
-      (this.shouldDisplayCollapserButton()
-        ? styles.scrollButtonsBelowCollapser.top
-        : 0);
+      (displayCollapserButton ? styles.scrollButtonsBelowCollapser.top : 0);
 
     return (
-      <div style={{display: 'flex', justifyContent: 'center'}}>
-        <CollapserButton
-          ref={c => {
-            this.collapser = c;
-          }}
-          style={[
-            styles.collapserButton,
-            this.props.isMinecraft && craftStyles.collapserButton,
-            !this.shouldDisplayCollapserButton() && commonStyles.hidden
-          ]}
-          collapsed={this.props.collapsed}
-          onClick={this.props.handleClickCollapser}
-          isMinecraft={this.props.isMinecraft}
-          isRtl={this.props.isRtl}
-        />
+      <div style={styles.column}>
+        {displayCollapserButton && (
+          <CollapserButton
+            ref={c => {
+              this.collapser = c;
+            }}
+            style={[
+              styles.collapserButton,
+              this.props.isMinecraft && styles.craftStyles.collapserButton
+            ]}
+            collapsed={this.props.collapsed}
+            onClick={this.props.handleClickCollapser}
+            isMinecraft={this.props.isMinecraft}
+            isRtl={this.props.isRtl}
+          />
+        )}
         {this.props.displayScrollButtons && (
           <ScrollButtons
             style={[
               styles.scrollButtons,
               this.props.isMinecraft &&
                 (this.props.isRtl
-                  ? craftStyles.scrollButtonsRtl
-                  : craftStyles.scrollButtons),
-              this.shouldDisplayCollapserButton() &&
-                styles.scrollButtonsBelowCollapser
+                  ? styles.craftStyles.scrollButtonsRtl
+                  : styles.craftStyles.scrollButtons),
+              displayCollapserButton && styles.scrollButtonsBelowCollapser
             ]}
             ref={c => {
               this.scrollButtons = c;
@@ -173,6 +172,10 @@ class InstructionsCsfRightCol extends React.Component {
     );
   }
 }
+
+export const UnconnectedInstructionsCsfRightCol = Radium(
+  InstructionsCsfRightCol
+);
 
 export default connect(
   function propsFromStore(state) {

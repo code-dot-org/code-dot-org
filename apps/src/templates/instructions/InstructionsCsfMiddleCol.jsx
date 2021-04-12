@@ -34,10 +34,11 @@ class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
     dismissHintPrompt: PropTypes.func.isRequired,
     shouldDisplayHintPrompt: PropTypes.func.isRequired,
-    hasShortInstructions: PropTypes.func.isRequired,
+    hasShortInstructions: PropTypes.bool.isRequired,
     adjustMaxNeededHeight: PropTypes.func.isRequired,
     promptForHint: PropTypes.bool.isRequired,
     setColHeight: PropTypes.func.isRequired,
+    getMinInstructionsHeight: PropTypes.func.isRequired,
 
     // from redux:
     overlayVisible: PropTypes.bool,
@@ -120,7 +121,6 @@ class InstructionsCsfMiddleCol extends React.Component {
       scrollBy(contentContainer, contentContainer.scrollHeight);
     }
   }
-  //  maureen deal with scroll instructionstobottom
 
   showHint = () => {
     this.props.dismissHintPrompt();
@@ -130,14 +130,16 @@ class InstructionsCsfMiddleCol extends React.Component {
 
   shouldDisplayShortInstructions() {
     return (
-      this.props.hasShortInstructions() &&
+      this.props.hasShortInstructions &&
       (this.props.collapsed || !this.props.longInstructions)
     );
   }
 
   closeOverlay = () => {
     this.props.hideOverlay();
-    this.props.setInstructionsRenderedHeight(this.getMinHeight());
+    this.props.setInstructionsRenderedHeight(
+      this.props.getMinInstructionsHeight()
+    );
     this.props.adjustMaxNeededHeight();
   };
 
@@ -242,6 +244,10 @@ class InstructionsCsfMiddleCol extends React.Component {
   }
 }
 
+export const UnconnectedInstructionsCsfMiddleCol = Radium(
+  InstructionsCsfMiddleCol
+);
+
 export default connect(
   function propsFromStore(state) {
     return {
@@ -273,7 +279,7 @@ export default connect(
       setInstructionsRenderedHeight(height) {
         dispatch(instructions.setInstructionsRenderedHeight(height));
       },
-      clearFeedback(height) {
+      clearFeedback() {
         dispatch(instructions.setFeedback(null));
       }
     };
