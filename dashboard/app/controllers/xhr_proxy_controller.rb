@@ -120,12 +120,6 @@ class XhrProxyController < ApplicationController
     channel_id = params[:c]
     url = params[:u]
 
-    headers = {}
-    ALLOWED_WEB_REQUEST_HEADERS.each do |header|
-      headers[header] = request.headers[header]
-    end
-    headers.compact!
-
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError => e
@@ -147,7 +141,6 @@ class XhrProxyController < ApplicationController
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
       infer_content_type: false,
-      headers: headers,
     )
   end
 end
