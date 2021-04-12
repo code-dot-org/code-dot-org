@@ -849,20 +849,22 @@ class ScriptEditor extends React.Component {
                 migratedResources={this.props.migratedTeacherResources}
               />
             </div>
-            <h4>Student Resources</h4>
-            <div>
+            {this.props.isMigrated && (
               <div>
-                Select the Student Resources buttons you'd like to have show up
-                on the top of the script overview page
+                <h4>Student Resources</h4>
+                <div>
+                  Select the Student Resources buttons you'd like to have show
+                  up on the top of the script overview page
+                </div>
+                <ResourcesEditor
+                  inputStyle={styles.input}
+                  useMigratedResources
+                  courseVersionId={this.props.initialCourseVersionId}
+                  migratedResources={this.props.studentResources}
+                  studentFacing
+                />
               </div>
-              <ResourcesEditor
-                inputStyle={styles.input}
-                useMigratedResources
-                courseVersionId={this.props.initialCourseVersionId}
-                migratedResources={this.props.studentResources}
-                studentFacing
-              />
-            </div>
+            )}
           </div>
         </CollapsibleEditorSection>
         {this.props.isMigrated && (
