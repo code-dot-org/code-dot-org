@@ -243,6 +243,10 @@ class Lesson < ApplicationRecord
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
+  def course_version_standards_url
+    script.get_course_version&.all_standards_url
+  end
+
   def summarize(include_bonus_levels = false, for_edit: false)
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
@@ -344,6 +348,7 @@ class Lesson < ApplicationRecord
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
   def summarize_for_lesson_edit
+    lesson_standards = standards.sort_by {|s| [s.framework.name, s.shortcode]}
     {
       id: id,
       name: name,
@@ -364,7 +369,9 @@ class Lesson < ApplicationRecord
       programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      standards: standards.map(&:summarize_for_lesson_edit),
+      standards: lesson_standards.map(&:summarize_for_lesson_edit),
+      frameworks: Framework.all.map(&:summarize_for_lesson_edit),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,
       scriptPath: script_path(script),
@@ -389,9 +396,11 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
       objectives: objectives.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
+      opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
-      lessonPlanPdfUrl: lesson_plan_pdf_url
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      courseVersionStandardsUrl: course_version_standards_url
     }
   end
 

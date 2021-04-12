@@ -1,0 +1,4 @@
+%h3 Pilot Experiments
+- Experiment::PILOT_EXPERIMENTS.each do |pilot|
+  %p
+    = link_to pilot[:label], show_pilot_path(pilot_name: pilot[:name])

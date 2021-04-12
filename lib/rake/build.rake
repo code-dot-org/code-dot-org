@@ -121,7 +121,7 @@ namespace :build do
       if CDO.daemon
         ChatClient.log 'Updating <b>pegasus</b> database...'
         begin
-          RakeUtils.rake 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
+          RakeUtils.rake_stream_output 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
         rescue => e
           ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
           raise e

@@ -1,0 +1,23 @@
+name 'poembot_lesson 3_markdown'
+title 'Outbreak: Code a Simulation'
+description 'description here'
+
+markdown <<MARKDOWN
+# Poem Bot: Lesson 2
+
+
+<img src="https://images.code.org/36455e75aa6e692c8fe61feb7486f99c-image-1615329933168.png" style="float:left; padding-right:10px" alt="drawing" width="100"/>
+
+<br/>
+
+In this unplugged lesson, you'll will dissect your poem to create a map of the haiku program. 
+
+Link to Planning Worksheet: https://docs.google.com/document/d/1_zObO7LLogr8HrBXHV-IWnVAsHy-ZqiBSE-F1bOpRlo/edit?usp=sharing 
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

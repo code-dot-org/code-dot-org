@@ -11,12 +11,6 @@
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "project_sharing": true,
-      "teacher_resources": [
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "show_calendar": true,
       "is_migrated": true,
       "has_lesson_plan": true,
@@ -25,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:39:58 UTC",
+    "serialized_at": "2021-04-09 01:22:55 UTC",
     "seeding_key": {
       "script.name": "csd1-2021"
     }
@@ -564,7 +558,7 @@
       "position": 4,
       "properties": {
         "name": "Activity",
-        "duration": 30
+        "duration": 35
       },
       "seeding_key": {
         "lesson_activity.key": "b58f7f0f-78a4-4965-8f0d-9512076d5e0f",
@@ -5743,11 +5737,11 @@
   "resources": [
     {
       "name": "Aluminum Boats",
-      "url": "https://studio.code.org/s/csd1-2021/stage/1/puzzle/1",
+      "url": "https://docs.google.com/a/code.org/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit?usp=sharing",
       "key": "aluminum-boats-exemplar-2020",
       "properties": {
         "type": "Exemplar",
-        "audience": "Teacher"
+        "audience": "Verified Teacher"
       },
       "seeding_key": {
         "resource.key": "aluminum-boats-exemplar-2020"
@@ -6370,6 +6364,17 @@
       "seeding_key": {
         "resource.key": "solving-problems-activity-guide-game-2020"
       }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
     }
   ],
   "lessons_resources": [
@@ -6693,6 +6698,14 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd1-2021"
+      }
+    }
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -7377,5 +7390,8 @@
         "standard.shortcode": "1B-AP-16"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -73,7 +73,10 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
+// Represents a migrated resource, backed by the
+// Resource model in Rails
 export const resourceShape = PropTypes.shape({
+  id: PropTypes.number,
   key: PropTypes.string.isRequired,
   markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -105,6 +108,11 @@ export const programmingExpressionShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const frameworkShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired
 });
 
 export const standardShape = PropTypes.shape({

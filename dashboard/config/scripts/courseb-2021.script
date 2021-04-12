@@ -1,5 +1,4 @@
 hideable_lessons true
-teacher_resources [["teacherForum", "https://forum.code.org/c/csf"], ["curriculumGuide", "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"]]
 lesson_extras_available true
 project_widget_visible true
 project_widget_types ["playlab_k1", "artist_k1"]
@@ -19,20 +18,20 @@ level 'MoveItMoveIt-Unplugged_2021', progression: 'Move It Move it Video  - Unpl
 
 lesson 'Sequencing in Maze', display_name: 'Sequencing with Angry Birds', has_lesson_plan: true
 level 'courseAB_video_NewIntro_2021', progression: 'Video - Maze Intro: Programming with Blocks'
-level 'coursea_maze_ramp1_2021', progression: 'Practice'
-level 'courseA_maze_ramp2_2021', progression: 'Practice'
-level 'courseA_maze_ramp3a_2021', progression: 'Practice'
-level 'courseA_maze_ramp3b_2021', progression: 'Practice'
-level 'courseA_maze_ramp4a_2021', progression: 'Practice'
-level 'courseA_maze_ramp5a_2021', progression: 'Practice'
+level 'coursea_maze_ramp1_2021', progression: 'Skill Building'
+level 'courseA_maze_ramp2_2021', progression: 'Skill Building'
+level 'courseA_maze_ramp3a_2021', progression: 'Skill Building'
+level 'courseA_maze_ramp3b_2021', progression: 'Skill Building'
+level 'courseA_maze_ramp4a_2021', progression: 'Skill Building'
+level 'courseA_maze_ramp5a_2021', progression: 'Skill Building'
 
 lesson 'Programming in Maze', display_name: 'Programming with Angry Birds', has_lesson_plan: true
-level 'elementary_video_pairProgramming_2021', progression: 'Pair Programming'
-level 'courseA_maze_seq1_2021', progression: 'Practice'
-level 'courseA_maze_seq5_2021', progression: 'Practice'
-level 'courseA_maze_seq5a_2021', progression: 'Practice'
-level 'courseA_maze_seq6_2021', progression: 'Practice'
-level 'courseA_maze_seq8_2021', progression: 'Practice'
+level 'elementary_video_pairProgramming_2021', progression: 'Video: Pair Programming'
+level 'courseA_maze_seq1_2021', progression: 'Skill Building'
+level 'courseA_maze_seq5_2021', progression: 'Skill Building'
+level 'courseA_maze_seq5a_2021', progression: 'Skill Building'
+level 'courseA_maze_seq6_2021', progression: 'Skill Building'
+level 'courseA_maze_seq8_2021', progression: 'Skill Building'
 level 'courseA_maze_seq10_2021', progression: 'Challenge', challenge: true
 level 'courseA_maze_seq11_2021', progression: 'Practice'
 level 'courseA_maze_seq12_2021', progression: 'Practice'
@@ -41,17 +40,17 @@ bonus 'courseA_maze_seq_challenge1_2021', progression: 'Challenge'
 bonus 'courseA_maze_seq_challenge2_2021', progression: 'Challenge'
 
 lesson 'Programming in Harvester', display_name: 'Programming with Harvester', has_lesson_plan: true
-level 'courseA_harvester_intro_2021', progression: 'The Harvester'
-level 'courseA_harvester_seq1_2021', progression: 'Practice'
-level 'courseA_harvester_seq2_2021', progression: 'Practice'
-level 'courseA_harvester_seq3_2021', progression: 'Practice'
-level 'courseAB_video_debugging_2021', progression: 'Debugging with the Step Button'
-level 'courseA_harvester_seq4_2021', progression: 'Practice'
-level 'courseA_harvester_seq5_2021', progression: 'Practice'
-level 'courseA_harvester_seq6_2021', progression: 'Practice'
-level 'courseA_harvester_seq7_2021', progression: 'Practice'
-level 'courseA_harvester_seq8_2021', progression: 'Practice'
-level 'courseA_harvester_seq9_2021', progression: 'Practice'
+level 'courseA_harvester_intro_2021', progression: 'Video: The Harvester'
+level 'courseA_harvester_seq1_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq2_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq3_2021', progression: 'Skill Building'
+level 'courseAB_video_debugging_2021', progression: 'Video: Debugging with the Step Button'
+level 'courseA_harvester_seq4_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq5_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq6_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq7_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq8_2021', progression: 'Skill Building'
+level 'courseA_harvester_seq9_2021', progression: 'Skill Building'
 level 'courseA_harvester_seq10_2021', progression: 'Challenge', challenge: true
 level 'courseA_harvester_seq12_2021', progression: 'Practice'
 level 'courseA_harvester_seq11_2021', progression: 'Practice'
@@ -59,33 +58,33 @@ level 'courseA_harvester_seq13_2021', progression: 'Practice'
 
 lesson_group 'csf_loops', display_name: 'Loops'
 lesson 'Loops: Getting Loopy', display_name: 'Getting Loopy', has_lesson_plan: true, unplugged: true
-level 'GettingLoopy-Unplugged_2021', progression: 'Getting Loopy - Unplugged Video'
+level 'GettingLoopy-Unplugged_2021', progression: 'Video: Getting Loopy'
 
 lesson 'Loops in Harvester', display_name: 'Loops with Harvester', has_lesson_plan: true
-level 'courseA_harvester_loops1_2021', progression: 'Practice'
-level 'courseA_harvester_loops2_2021', progression: 'Practice'
+level 'courseA_harvester_loops1_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops2_2021', progression: 'Skill Building'
 level 'courseA_harvester_loops_video_2021', progression: 'Video: Repeat Blocks'
-level 'courseA_harvester_loops3_2021', progression: 'Practice'
-level 'courseA_harvester_loops4_2021', progression: 'Practice'
-level 'courseA_harvester_loops5_2021', progression: 'Practice'
-level 'courseA_harvester_loops5a_2021', progression: 'Practice'
-level 'courseA_harvester_loops5b_2021', progression: 'Practice'
-level 'courseA_harvester_loops6_2021', progression: 'Practice'
-level 'courseA_harvester_loops7_2021', progression: 'Practice'
+level 'courseA_harvester_loops3_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops4_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops5_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops5a_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops5b_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops6_2021', progression: 'Skill Building'
+level 'courseA_harvester_loops7_2021', progression: 'Skill Building'
 level 'courseA_harvester_loops9_2021', progression: 'Challenge', challenge: true
 level 'courseA_harvester_loops10_2021', progression: 'Practice'
 level 'courseA_harvester_loops11_2021', progression: 'Practice'
 
 lesson 'Loops in Collector', display_name: 'Loops with Laurel', has_lesson_plan: true
 level 'courseAB_video_collector_2021', progression: 'Video: The Collector'
-level 'courseB_collector_loops1_2021', progression: 'Practice'
-level 'courseB_collector_loops2_2021', progression: 'Practice'
+level 'courseB_collector_loops1_2021', progression: 'Skill Building'
+level 'courseB_collector_loops2_2021', progression: 'Skill Building'
 level 'courseA_video_Loops_2021', progression: 'Video: Using the Repeat Block'
-level 'courseB_collector_loops3_2021', progression: 'Practice'
-level 'courseB_collector_loops4_2021', progression: 'Practice'
-level 'courseB_collector_loops5_2021', progression: 'Practice'
-level 'courseB_collector_loops6_2021', progression: 'Practice'
-level 'courseB_collector_loops7_2021', progression: 'Practice'
+level 'courseB_collector_loops3_2021', progression: 'Skill Building'
+level 'courseB_collector_loops4_2021', progression: 'Skill Building'
+level 'courseB_collector_loops5_2021', progression: 'Skill Building'
+level 'courseB_collector_loops6_2021', progression: 'Skill Building'
+level 'courseB_collector_loops7_2021', progression: 'Skill Building'
 level 'courseB_collector_loops8_2021', progression: 'Challenge', challenge: true
 level 'courseB_collector_loops9_2021', progression: 'Practice'
 level 'courseB_collector_loops10_2021', progression: 'Practice'
@@ -95,13 +94,13 @@ bonus 'courseB_collector_loops_challenge2a_2021', progression: 'Challenge'
 
 lesson 'Loops in Artist', display_name: 'Drawing Gardens with Loops', has_lesson_plan: true
 level 'courseB_video_ArtistIntro_2021', progression: 'Video: The Artist in Code Studio'
-level 'courseB_artist_loops1_2021', progression: 'Practice'
+level 'courseB_artist_loops1_2021', progression: 'Skill Building'
 level 'courseB_video_artistLoops_2021', progression: 'Video: Repeat Blocks with the Artist'
-level 'courseB_artist_loops2_2021', progression: 'Practice'
-level 'courseB_artist_loops3_2021', progression: 'Practice'
-level 'courseB_artist_loops4_2021', progression: 'Practice'
-level 'courseB_artist_loops5_2021', progression: 'Practice'
-level 'courseB_artist_loops6_2021', progression: 'Practice'
+level 'courseB_artist_loops2_2021', progression: 'Skill Building'
+level 'courseB_artist_loops3_2021', progression: 'Skill Building'
+level 'courseB_artist_loops4_2021', progression: 'Skill Building'
+level 'courseB_artist_loops5_2021', progression: 'Skill Building'
+level 'courseB_artist_loops6_2021', progression: 'Skill Building'
 level 'courseB_artist_loops7_2021', progression: 'Challenge', challenge: true
 level 'courseB_artist_loops8_2021', progression: 'Practice'
 level 'courseB_artist_loops9_2021', progression: 'Practice'
@@ -129,4 +128,11 @@ level 'courseB_playlab_events7_2021', progression: 'Mini-Project: Royal Battle'
 level 'courseB_playlab_eventsFP_2021', progression: 'Free Play'
 bonus 'courseB_playlab_events_challenge1_2021', progression: 'Challenge'
 bonus 'courseB_playlab_events_challenge2_2021', progression: 'Challenge'
+
+lesson_group 'lessonGroup-6', display_name: 'End of Course Project'
+lesson_group_description '
+
+![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)'
+lesson 'lesson-1', display_name: 'End of Course Project', has_lesson_plan: true
+level 'courseAB_EOC_2021', progression: 'Project'
 

@@ -5,7 +5,9 @@ import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import LessonStandards, {
+  ExpandMode
+} from '@cdo/apps/templates/lessonOverview/LessonStandards';
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
 import {lessonShape} from './rollupShapes';
 
@@ -43,9 +45,12 @@ export default class RollupLessonEntrySection extends Component {
 
     return (
       <div style={styles.main}>
-        <div style={styles.object}>
-          <h4>{this.props.objectToRollUp}</h4>
-        </div>
+        {(this.props.objectToRollUp === 'Resources' ||
+          this.props.objectToRollUp === 'Prep') && (
+          <div style={styles.object}>
+            <h4>{this.props.objectToRollUp}</h4>
+          </div>
+        )}
         <div style={styles.entries}>
           {this.props.objectToRollUp === 'Vocabulary' &&
             this.props.lesson.vocabularies.length > 0 &&
@@ -61,12 +66,15 @@ export default class RollupLessonEntrySection extends Component {
               <p>{i18n.rollupNoVocab()}</p>
             )}
           {this.props.objectToRollUp === 'Code' &&
-            this.props.lesson.programmingExpressions.length > 0 &&
-            this.props.lesson.programmingExpressions.map(expression => (
-              <li key={expression.name}>
-                <StyledCodeBlock programmingExpression={expression} />
-              </li>
-            ))}
+            this.props.lesson.programmingExpressions.length > 0 && (
+              <ul>
+                {this.props.lesson.programmingExpressions.map(expression => (
+                  <li key={expression.name}>
+                    <StyledCodeBlock programmingExpression={expression} />
+                  </li>
+                ))}
+              </ul>
+            )}
           {this.props.objectToRollUp === 'Code' &&
             this.props.lesson.programmingExpressions.length <= 0 && (
               <p>{i18n.rollupNoCode()}</p>
@@ -113,7 +121,10 @@ export default class RollupLessonEntrySection extends Component {
             !this.props.lesson.preparation && <p>{i18n.rollupNoPrep()}</p>}
           {this.props.objectToRollUp === 'Standards' &&
             this.props.lesson.standards.length > 0 && (
-              <LessonStandards standards={this.props.lesson.standards} />
+              <LessonStandards
+                standards={this.props.lesson.standards}
+                expandMode={ExpandMode.ALL}
+              />
             )}
           {this.props.objectToRollUp === 'Standards' &&
             this.props.lesson.standards.length <= 0 && (

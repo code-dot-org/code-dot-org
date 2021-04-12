@@ -875,6 +875,25 @@ class LessonsControllerTest < ActionController::TestCase
     refute @lesson.standards.include?(standard_to_remove)
   end
 
+  test 'update lesson removing and adding opportunity standards' do
+    standard_to_keep = create :standard
+    standard_to_add = create :standard
+    standard_to_remove = create :standard
+
+    @lesson.opportunity_standards << standard_to_keep
+    @lesson.opportunity_standards << standard_to_remove
+
+    sign_in @levelbuilder
+    new_standards_data = [standard_to_add, standard_to_keep].map(&:summarize_for_lesson_edit).to_json
+    new_update_params = @update_params.merge({opportunityStandards: new_standards_data})
+    put :update, params: new_update_params
+    @lesson.reload
+    assert_equal 2, @lesson.opportunity_standards.count
+    assert @lesson.opportunity_standards.include?(standard_to_add)
+    assert @lesson.opportunity_standards.include?(standard_to_keep)
+    refute @lesson.opportunity_standards.include?(standard_to_remove)
+  end
+
   test 'lesson is not partially updated if any data is bad' do
     resource = create :resource
 

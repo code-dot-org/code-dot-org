@@ -1,4 +1,5 @@
 login_required true
+hideable_lessons true
 teacher_resources [["lessonPlans", "https://curriculum.code.org/ai-unit-pilot/ai-unit/"], ["vocabulary", "https://curriculum.code.org/ai-unit-pilot/ai-unit/vocab"], ["standardMappings", "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"]]
 curriculum_path 'https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}'
 pilot_experiment 'ai-unit-pilot'
@@ -68,6 +69,7 @@ level 'ml-use models applab-practice choice', progression: 'You Choose: Improve 
 
 lesson 'lesson11', display_name: 'Customizing Your App', has_lesson_plan: true
 level 'CSD AIL11 autoSFLP_pilot-2021', progression: 'Lesson Overview'
+level 'ml-customize-raspado', progression: 'Raspado Recommender'
 level 'ml-use model card-example3A', progression: 'Driver Alert System'
 level 'ml-use model card-example3_EditA', progression: 'Driver Alert System'
 level 'ml-use model card-example3_EditB', progression: 'Driver Alert System'
