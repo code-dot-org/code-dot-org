@@ -6,13 +6,20 @@ cs:
         csd_category_name: Objevujeme informatiku (2017-2018)
         csd_2018_category_name: Objevujeme informatiku (2018-2019)
         csd_2019_category_name: Objevujeme informatiku (2019-2020)
+        csd_2020_category_name: Objevujeme informatiku (2020-2021)
+        csd_2021_category_name: Objevujeme informatiku (2021-2022)
         csf_category_name: Základy informatiky
         csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
         csp_category_name: Principy informatiky 2015-2016
+        csp_2018_category_name: Principy informatiky (2018-2019)
+        csp_2019_category_name: Principy informatiky (2019-2020)
+        csp_2020_category_name: Principy informatiky (2020-2021)
+        csp_2021_category_name: Principy informatiky (2021-2022)
         cspexams_category_name: Praktický test z principů informatiky
         csp17_category_name: Principy informatiky 2016-2017
         hoc_category_name: Hodina kódu
         math_category_name: Matematické
+        tts_category_name: Převod textu na řeč
         other_category_name: Ostatní
       name:
         course1:
@@ -339,6 +346,8 @@ cs:
             Infinity postavami.
         algebrademo:
           lessons:
+            Defining Simple Functions:
+              name: Tvorba jednoduchých funkcí
             Defining Variables:
               name: Definující proměnné
             Evaluation Blocks:
@@ -347,12 +356,29 @@ cs:
               name: Návrhový předpis
         K5PD:
           lessons:
+            'Programming Concept: Conditionals':
+              name: 'Principy programování: Podmínky'
+            'Programming Concept: Events':
+              name: 'Principy programování: Události'
+            'Programming Concept: Functions':
+              name: 'Principy programování: Funkce'
+            'Programming Concept: Loops':
+              name: 'Principy programování: Smyčky'
+            Reflection:
+              name: Reflexe
             Teacher Dashboard:
               name: Katedra učitele
             Unplugged lessons:
               name: Lekce bez počítače
+            Writing computer programs:
+              name: Psaní počítačových programů
         netsim:
           title: Simulátor Internetu
+          lessons:
+            Packets and Reliability:
+              name: Pakety a spolehlivost
+            Routers and addresses:
+              name: Routery a adresy
         20-hour:
           title: Zrychlený úvodní kurz informatiky
           description: Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky
@@ -477,6 +503,14 @@ cs:
           lessons:
             Binary Numbers:
               name: Binární čísla
+            Bytes and File Sizes:
+              name: Bajty a velikosti souborů
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
+            Sending Formatted Text:
+              name: Zasílání formátovaného textu
+            Sending Numbers:
+              name: Zasílání čísel
             Text Compression:
               name: Komprese textu
         algebraPD:
@@ -500,6 +534,12 @@ cs:
           lessons:
             Text Compression:
               name: Komprese textu
+        CSPLessonSamples:
+          lessons:
+            Lesson 14:
+              name: Lekce 14
+            Lesson 15:
+              name: Lekce 15
         cspunit3:
           description_short: Programování
           lessons:
@@ -546,9 +586,19 @@ cs:
             Wrap-Up:
               name: Rekapitulace
           student_description: 'Fáze 2 Online: Promíchané letní studium'
+        sciencePD3:
+          lessons:
+            Welcome Back!:
+              name: Vítejte zpět!
         cspunit2:
           description_short: Programování
           lessons:
+            Cracking the Code:
+              name: Lámání kódu
+            DNS in the Real World:
+              name: DNS ve skutečném světě
+            Encryption Algorithms:
+              name: Klíče a hesla
             The Internet:
               name: Internet je pro všechny
         algebraPD2a:
@@ -742,6 +792,10 @@ cs:
               name: Skládání písniček
             The Big Event:
               name: Velká událost
+        sciencePD3_pre1:
+          lessons:
+            Welcome Back!:
+              name: Vítejte zpět!
         ECSPD3-Unit2:
           lessons:
             Getting Started:
@@ -863,6 +917,10 @@ cs:
               name: 'Calc: Definice proměnných'
             'Calc: Evaluation Blocks':
               name: 'Calc: bloky vyhodnocení'
+            'Eval: Defining Functions':
+              name: 'Eval: Tvorba funkcí'
+            'Eval: Functions':
+              name: 'Eval: Funkce'
             'Eval: Strings and Images':
               name: 'Eval: Řetězce a obrázky'
             'Eval: Writing Contracts':
@@ -917,6 +975,10 @@ cs:
           lessons:
             Binary Numbers:
               name: Binární čísla
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
+            Sending Numbers:
+              name: Zasílání čísel
             The Internet:
               name: Internet
         csp2-2017:
@@ -926,6 +988,8 @@ cs:
             csp2_2:
               display_name: 'Kapitola 2: Práce s daty a jejich zobrazení'
           lessons:
+            Bytes and File Sizes:
+              name: Bajty a velikosti souborů
             Text Compression:
               name: Komprese textu
         csp3-2017:
@@ -938,6 +1002,8 @@ cs:
               name: Vytvářející funkce
         csp4-2017:
           lessons:
+            Cracking the Code:
+              name: Lámání kódu
             Simple Encryption:
               name: Jednoduché šifrování
         csp5-2017:
@@ -969,6 +1035,9 @@ cs:
               display_name: Obsah
             practice:
               display_name: Výukové postupy
+          lessons:
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
@@ -1295,6 +1364,8 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Conditionals with Cards:
               name: Podmínky s kartami
+            Impacts of Computing:
+              name: Dopady počítačů
             Digital Citizenship:
               name: Digitální občanství
             'Unplugged: Binary':
@@ -1366,6 +1437,10 @@ cs:
               name: Vítejte!
             Wrap-Up:
               name: Rekapitulace
+        sciencepd3-2016:
+          lessons:
+            Welcome Back!:
+              name: Vítejte zpět!
         csp3-support:
           lesson_groups:
             required:
@@ -1401,6 +1476,8 @@ cs:
           lessons:
             Binary:
               name: Binární
+            Snowflakes:
+              name: Sněhové vločky
         sciencepd5:
           lessons:
             Welcome!:
@@ -1419,6 +1496,10 @@ cs:
           lesson_groups:
             content:
               display_name: Obsah
+        unit6-csd-draft:
+          lessons:
+            UI and Input:
+              name: Uživatelské rozhraní a vstupy
         csd6-draft:
           lesson_groups:
             csd6_1:
@@ -1426,10 +1507,14 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            UI and Input:
+              name: Uživatelské rozhraní a vstupy
             Lists:
               name: Seznamy
             For Loops:
               name: Cykly "For"
+            Analog Input:
+              name: Analogový vstup
             Map:
               name: Mapa
             Functions with Parameters:
@@ -1450,6 +1535,10 @@ cs:
           lessons:
             Introduction:
               name: Úvod
+        workshop-maker:
+          lessons:
+            Analog Input:
+              name: Analogový vstup
         coursee-ramp:
           lessons:
             Introduction:
@@ -1469,8 +1558,12 @@ cs:
               name: Seznamy
             For Loops:
               name: Cykly "For"
+            Analog Input:
+              name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
+            Analog Input_:
+              name: Analogový vstup
             Functions with Parameters_:
               name: Funkce s Parametry
         csd3-draft:
@@ -1658,6 +1751,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1672,6 +1767,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
         cspnovice:
@@ -1747,6 +1844,8 @@ cs:
             content:
               display_name: Obsah
         express-2017:
+          title: Rychlý kurz
+          assignment_family_title: Rychlý kurz
           lesson_groups:
             content:
               display_name: Obsah
@@ -1821,6 +1920,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1880,6 +1981,8 @@ cs:
               name: Cykly pokud (while) s farmářkou
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             Nested Loops:
               name: Vnořené cykly
         new-e:
@@ -1888,6 +1991,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Conditionals:
@@ -1904,6 +2009,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Ice Age Play Lab:
@@ -1949,6 +2056,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -1969,6 +2078,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Introduction:
@@ -1992,6 +2103,8 @@ cs:
               name: Seznamy
             For Loops:
               name: Cykly "For"
+            Analog Input:
+              name: Analogový vstup
         csd3-1819draft:
           title: CSD Kapitola 3 - Animace and hry
           description_short: Programování
@@ -2051,6 +2164,8 @@ cs:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a Velký projekt
         express-2018:
+          title: Rychlý kurz
+          assignment_family_title: Rychlý kurz
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
@@ -2078,6 +2193,8 @@ cs:
               name: Cykly dokud (until) v bludišti
             Programming in Maze:
               name: Programujeme s Angry Birds
+            Debugging in Maze:
+              name: Ladění se Scratem
             Programming in Collector:
               name: Sbíráme poklady s Laurel
             Programming in Artist:
@@ -2222,6 +2339,8 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Analog Input:
+              name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
         coursee-2018:
@@ -2231,6 +2350,8 @@ cs:
               name: Moji robotičtí přátelé
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             Programming in Artist:
               name: Malujeme s pomocí kódu
             'Loops: My Loopy Robotic Friends':
@@ -2266,6 +2387,8 @@ cs:
               name: Moji robotičtí přátelé
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             Programming in Artist:
               name: Malujeme s pomocí kódu
             'Loops: My Loopy Robotic Friends':
@@ -2293,8 +2416,12 @@ cs:
             csp1_2:
               display_name: 'Kapitola 2: Objev Internetu'
           lessons:
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
             Binary Numbers:
               name: Binární čísla
+            Sending Numbers:
+              name: Zasílání čísel
             The Internet:
               name: Internet
         csd1-2018:
@@ -2316,6 +2443,8 @@ cs:
             csp2_1_2018:
               display_name: 'Kapitola 2: Digitální informace'
           lessons:
+            Bytes and File Sizes:
+              name: Bajty a velikosti souborů
             Text Compression:
               name: Komprese textu
         csp3-2018:
@@ -2536,6 +2665,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Conditionals with Cards:
@@ -2715,6 +2846,8 @@ cs:
               display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
+            csf_impacts:
+              display_name: Dopady počítačů
             csf_nested_loops:
               display_name: Vnořené cykly
             csf_functions:
@@ -2724,6 +2857,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Nested Loops:
@@ -2791,6 +2926,8 @@ cs:
               name: Programujeme s Angry Birds
             Relay Programming:
               name: Štafetové programování
+            Debugging in Maze:
+              name: Ladění se Scratem
             Programming in Collector:
               name: Sbíráme poklady s Laurel
             Programming in Artist:
@@ -2942,6 +3079,8 @@ cs:
               display_name: Sekvence
             csf_loops:
               display_name: Cykly
+            csf_impacts:
+              display_name: Dopady počítačů
             csf_events:
               display_name: Události
           lessons:
@@ -3031,6 +3170,8 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Analog Input:
+              name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
         csp4-pilot:
@@ -3053,8 +3194,12 @@ cs:
             csp1_2:
               display_name: 'Kapitola 2: Objev Internetu'
           lessons:
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
             Binary Numbers:
               name: Binární čísla
+            Sending Numbers:
+              name: Zasílání čísel
             The Internet:
               name: Internet
         csp2-2019:
@@ -3062,6 +3207,8 @@ cs:
             csp2_1_2018:
               display_name: 'Kapitola 2: Digitální informace'
           lessons:
+            Bytes and File Sizes:
+              name: Bajty a velikosti souborů
             Text Compression:
               name: Komprese textu
         csp3-2019:
@@ -3089,6 +3236,8 @@ cs:
             required:
               display_name: Přehled
           lessons:
+            Sending Binary Messages:
+              name: Zasílání binárních zpráv
             Binary Numbers:
               name: Binární čísla
         time4csdemo:
@@ -3104,6 +3253,8 @@ cs:
               name: 'Programování: Moji robotičtí přátelé'
             Building a Foundation:
               name: Budování základů
+            Debugging with Scrat:
+              name: Ladění se Scratem
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotičtí přátelé (ml.)'
             Build a Flappy Game:
@@ -3447,6 +3598,8 @@ cs:
               display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
+            csf_impacts:
+              display_name: Dopady počítačů
           lessons:
             Conditionals:
               name: Podmínky
@@ -3466,6 +3619,8 @@ cs:
               display_name: Postavy
             csf_digcit:
               display_name: Digitální občanství
+            csf_impacts:
+              display_name: Dopady počítačů
           lessons:
             Conditionals:
               name: Podmínky
@@ -3518,6 +3673,8 @@ cs:
             csd6_2:
               display_name: 'Kapitola 2: Stavba fyzického prototypu'
           lessons:
+            Analog Input:
+              name: Analogový vstup
             Functions with Parameters:
               name: Funkce s Parametry
         csd3-2020:
@@ -3569,6 +3726,8 @@ cs:
               display_name: Sekvence
             csf_loops:
               display_name: Cykly
+            csf_impacts:
+              display_name: Dopady počítačů
             csf_events:
               display_name: Události
           lessons:
@@ -3784,6 +3943,8 @@ cs:
               display_name: Vnořené cykly
             csf_functions:
               display_name: Funkce
+            csf_impacts:
+              display_name: Dopady počítačů
           lessons:
             Sequencing in the Maze:
               description_teacher: "V této sadě úloh studenti začnou se seznámením
@@ -3844,7 +4005,7 @@ cs:
             AI for Oceans:
               name: AI pomáhá oceánům
         express-2020:
-          title: Rychlý kurz (2019)
+          title: Rychlý kurz (2020)
           lesson_groups:
             csf_sequencing:
               display_name: Sekvence
@@ -3873,6 +4034,8 @@ cs:
               name: Cykly dokud (until) v bludišti
             Programming with Angry Birds:
               name: Programujeme s Angry Birds
+            Debugging with Scrat:
+              name: Ladění se Scratem
             Collecting Treasure with Laurel:
               name: Sbíráme poklady s Laurel
             Creating Art with Code:
@@ -4114,6 +4277,9 @@ cs:
               display_name: 'Kapitola 2: Řešení datových problémů'
         csd6-2021:
           lessons:
+            Analog Input:
+              key: Analogový vstup
+              name: Analogový vstup
             Functions with Parameters:
               key: Funkce s Parametry
               name: Funkce s Parametry
@@ -4187,6 +4353,8 @@ cs:
               display_name: Sekvence
             csf_loops:
               display_name: Cykly
+            csf_impacts:
+              display_name: Dopady počítačů
             csf_events:
               display_name: Události
         coursec-2021:
@@ -4414,7 +4582,7 @@ cs:
               name: Funkce s farmářkou
           lesson_groups:
             ramp_up:
-              display_name: Cykly
+              display_name: Vnořené cykly
             csf_sprites:
               display_name: Postavy
             csf_digcit:
@@ -4423,6 +4591,8 @@ cs:
               display_name: Podmínky
             csf_functions:
               display_name: Funkce
+            csf_impacts:
+              display_name: Dopady počítačů
         coursef-2021:
           title: Kurz F (2019)
           lessons:
@@ -4457,12 +4627,14 @@ cs:
               display_name: Cykly "For"
             csf_for_loops:
               display_name: Cykly "For"
+            csf_sprites:
+              display_name: Dopady počítačů
             lessonGroup-8:
               display_name: Proměnné
             lessonGroup-9:
               display_name: odstranit
         express-2021:
-          title: Rychlý kurz (2019)
+          title: Rychlý kurz (2021)
           lessons:
             Dance Party:
               key: Taneční večírek
@@ -4476,6 +4648,9 @@ cs:
             Programming with Angry Birds:
               key: Programujeme s Angry Birds
               name: Programujeme s Angry Birds
+            Debugging with Scrat:
+              key: Ladění se Scratem
+              name: Ladění se Scratem
             Collecting Treasure with Laurel:
               key: Sbíráme poklady s Laurel
               name: Sbíráme poklady s Laurel
@@ -4599,6 +4774,14 @@ cs:
           description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
           student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+        ai-unit-pilot:
+          lessons:
+            lesson14:
+              name: Lekce 14
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

@@ -2356,7 +2356,7 @@ mi:
               name: Te Tito Waiata
           lesson_groups:
             ramp_up:
-              display_name: Ngā Koromeke
+              display_name: Ngā Koromeke Tauroto
             csf_digcit:
               display_name: Te Kirirarautanga Matihiko
             csf_nested_loops:
@@ -2415,6 +2415,10 @@ mi:
               display_name: Ngā Taurangi
             variables:
               display_name: Ngā Taurangi
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":

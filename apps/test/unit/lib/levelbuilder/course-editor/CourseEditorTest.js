@@ -1,7 +1,7 @@
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
   stubRedux,
   restoreRedux,
@@ -9,6 +9,7 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import resourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
@@ -31,13 +32,14 @@ const defaultProps = {
   hasNumberedUnits: false,
   courseFamilies: ['CSP', 'CSD', 'CSF'],
   versionYearOptions: ['2017', '2018', '2019'],
-  initialAnnouncements: []
+  initialAnnouncements: [],
+  useMigratedResources: false
 };
 
 describe('CourseEditor', () => {
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, resources: resourcesEditor});
   });
 
   afterEach(() => {
@@ -92,6 +94,21 @@ describe('CourseEditor', () => {
         {type: '', link: ''}
       ]);
     });
+
+    it('uses the migrated resource component for migrated resources', () => {
+      const wrapper = shallow(
+        <CourseEditor
+          {...defaultProps}
+          useMigratedResources
+          initialMigratedTeacherResources={[
+            {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
+          ]}
+        />
+      );
+      expect(wrapper.find('ResourcesEditor').length).to.equal(1);
+      expect(wrapper.find('ResourcesEditor').props().useMigratedResources).to.be
+        .true;
+    });
   });
 
   it('renders full course editor page', () => {
@@ -99,7 +116,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('textarea').length, 3);
     assert.equal(wrapper.find('CourseScriptsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
-    assert.equal(wrapper.find('TeacherResourcesDropdown').length, 1);
+    assert.equal(wrapper.find('ResourcesDropdown').length, 1);
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
   });

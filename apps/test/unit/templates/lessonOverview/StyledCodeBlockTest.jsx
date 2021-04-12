@@ -24,7 +24,7 @@ describe('StyledCodeBlock', () => {
         name: 'test block',
         parameters: ['x', 'y']
       };
-      const expected = '[`test block(x,y)`(#c0ffee)](https://example.com)';
+      const expected = '[`test block(x, y)`(#c0ffee)](https://example.com)';
       expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
     });
 

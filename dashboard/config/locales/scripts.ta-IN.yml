@@ -699,8 +699,6 @@ ta:
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
           lesson_groups:
-            ramp_up:
-              display_name: சுழற்சிகள்
             csf_functions:
               display_name: செயல்பாடுகள்
         coursef-2021:

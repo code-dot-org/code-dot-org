@@ -1335,7 +1335,7 @@ tr:
         text: yukarı ok basıldığında
       gamelab_withPercentChance:
         text: |-
-          eğer %{NUM} şans varsa
+          eğer % {NUM} şans varsa
           {STATEMENT}
       gamelab_xLocationOf:
         text: x {SPRITE} koordinatı

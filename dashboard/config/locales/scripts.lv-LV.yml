@@ -2220,7 +2220,7 @@ lv:
               name: Dziesmu rakstīšana
           lesson_groups:
             ramp_up:
-              display_name: Cikli
+              display_name: Cikls ciklā
             csf_digcit:
               display_name: Digitālā pilsonība
             csf_nested_loops:

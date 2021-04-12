@@ -411,7 +411,7 @@ az-AZ:
   learn_sign_up_button: Qeydiyyatdan keçin
   hoc2014_try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
   carousel_heading_international: Sizin dilinizdə olan dərsliklər
-  carousel_heading_university: Onlayn universitet kursları
+  carousel_heading_university: Onlayn kurslar və məktəblər
   carousel_heading_webpages: Veb səhifələr düzəltməyi öyrənin
   participants: iştirakçılar
   previous: Əvvəlki
@@ -627,6 +627,7 @@ az-AZ:
   user_header_settings: Mənim hesabım
   user_header_logout: Çıxın
   user_header_signin: Daxil olun
+  user_header_artist: Rəssam
   user_header_playlab: Oyun labı
   user_header_dance: Rəqs şənliyi
   user_header_minecraft: Minecraft
