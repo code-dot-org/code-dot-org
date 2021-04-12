@@ -174,7 +174,8 @@ class FilesTest < FilesApiTestBase
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
     # follow the same validity rules.
     valid_html = '<div></div>'
-    invalid_html = '<script src="index.js"></script>'
+    invalid_html_1 = '<script src="index.js"></script>'
+    invalid_html_2 = '<meta http-equiv="refresh">'
 
     # WebLab
     StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
@@ -182,7 +183,11 @@ class FilesTest < FilesApiTestBase
     assert successful?
     @api.delete_object(filename)
 
-    @api.put_object(filename, invalid_html)
+    @api.put_object(filename, invalid_html_1)
+    assert bad_request?
+    @api.delete_object(filename)
+
+    @api.put_object(filename, invalid_html_2)
     assert bad_request?
     @api.delete_object(filename)
 
@@ -192,7 +197,7 @@ class FilesTest < FilesApiTestBase
     assert successful?
     @api.delete_object(filename)
 
-    @api.put_object(filename, invalid_html)
+    @api.put_object(filename, invalid_html_1)
     assert successful?
     @api.delete_object(filename)
 
@@ -203,7 +208,7 @@ class FilesTest < FilesApiTestBase
     assert bad_request?
     @api.delete_object(filename)
 
-    @api.put_object(filename, invalid_html)
+    @api.put_object(filename, invalid_html_1)
     assert bad_request?
     @api.delete_object(filename)
 
