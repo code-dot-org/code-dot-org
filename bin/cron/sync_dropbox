@@ -52,7 +52,7 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     stdout, stderr, _ = Open3.capture3(command)
     if stdout == "" && stderr == ""
       HooksUtils.get_unstaged_files.each do |filename|
-        ChatClient.log("<@#{DevelopersTopic.dotd}> INVALID FILENAME: #{filename}", color: 'red') if HooksUtils.prohibited?(filename)
+        ChatClient.log("<@#{DevelopersTopic.dotd}> INVALID FILENAME: #{filename}", color: 'red') if HooksUtils.prohibited?(filename) && Time.now.sec % 59 == 0
       end
     else
       error_message = <<~ERROR_MSG
