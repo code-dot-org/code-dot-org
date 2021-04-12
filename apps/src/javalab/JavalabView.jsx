@@ -1,6 +1,5 @@
 import React from 'react';
 import JavalabConsole from './JavalabConsole';
-import {loadFiles} from './JavalabFileManagement';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
@@ -74,19 +73,12 @@ class JavalabView extends React.Component {
   };
 
   state = {
-    loading: true,
-    loadSuccess: null
+    loading: false,
+    loadSuccess: true
   };
 
   componentDidMount() {
     this.props.onMount();
-    loadFiles(
-      /* success */
-      () => this.setState({loading: false, loadSuccess: true}),
-      /* failure */
-      () => this.setState({loading: false, loadSuccess: false}),
-      this.props.suppliedFilesVersionId
-    );
     this.getToken();
   }
 

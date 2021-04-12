@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setEditorText, setFileName} from './javalabRedux';
+import {setSource, renameFile} from './javalabRedux';
 import PropTypes from 'prop-types';
 import PaneHeader, {
   PaneSection,
@@ -40,10 +40,9 @@ class JavalabEditor extends React.Component {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     // populated by redux
-    setEditorText: PropTypes.func,
-    setFilename: PropTypes.func,
-    filename: PropTypes.string,
-    editorText: PropTypes.string
+    setSource: PropTypes.func,
+    renameFile: PropTypes.func,
+    sources: PropTypes.object
   };
 
   constructor(props) {
@@ -61,9 +60,13 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidMount() {
+    let docText = '';
+    // TODO: support multi-file
+    const filename = Object.keys(this.props.sources)[0];
+    docText = this.props.sources[filename].text;
     this.editor = new EditorView({
       state: EditorState.create({
-        doc: this.props.editorText,
+        doc: docText,
         extensions: editorSetup
       }),
       parent: this._codeMirror,
@@ -80,7 +83,10 @@ class JavalabEditor extends React.Component {
       this.editor.update([tr]);
       // if there are changes to the editor, update redux.
       if (!tr.changes.empty && tr.newDoc) {
-        this.props.setEditorText(tr.newDoc.toString());
+        this.props.setSource(
+          Object.keys(this.props.sources)[0],
+          tr.newDoc.toString()
+        );
         this.onProjectChanged();
       }
     };
@@ -88,16 +94,20 @@ class JavalabEditor extends React.Component {
 
   renameFileComplete(e) {
     e.preventDefault();
-    const {filename, setFilename} = this.props;
+    const {sources, renameFile} = this.props;
     const {newFilename} = this.state;
+    const filename = Object.keys(sources)[0];
     renameProjectFile(filename, newFilename);
-    setFilename(newFilename);
+    renameFile(filename, newFilename);
     this.onProjectChanged();
     this.setState({renameFileActive: false});
   }
 
   activateRenameFile() {
-    this.setState({newFilename: this.props.filename, renameFileActive: true});
+    this.setState({
+      newFilename: Object.keys(this.props.sources)[0],
+      renameFileActive: true
+    });
   }
 
   displayFileRename() {
@@ -126,7 +136,7 @@ class JavalabEditor extends React.Component {
   displayFileNameAndRenameButton() {
     return (
       <div style={style.tabs}>
-        <div style={style.tab}>{this.props.filename}</div>
+        <div style={style.tab}>{Object.keys(this.props.sources)[0]}</div>
         <button
           type="button"
           onClick={this.activateRenameFile}
@@ -166,11 +176,11 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    filename: state.javalab.filename,
-    editorText: state.javalab.editorText
+    sources: state.javalab.sources
   }),
   dispatch => ({
-    setFilename: filename => dispatch(setFileName(filename)),
-    setEditorText: editorText => dispatch(setEditorText(editorText))
+    setSource: (filename, source) => dispatch(setSource(filename, source)),
+    renameFile: (oldFilename, newFilename) =>
+      dispatch(renameFile(oldFilename, newFilename))
   })
 )(JavalabEditor);
