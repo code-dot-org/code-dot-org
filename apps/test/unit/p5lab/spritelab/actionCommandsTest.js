@@ -1,5 +1,7 @@
 /* global p5 */
+import sinon from 'sinon';
 import {expect} from '../../../util/reconfiguredChai';
+import * as coreLibrary from '@cdo/apps/p5lab/spritelab/coreLibrary';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
@@ -10,6 +12,59 @@ describe('Action Commands', () => {
   beforeEach(function() {
     p5Wrapper = createP5Wrapper();
     makeSprite = spriteCommands.makeSprite.bind(p5Wrapper.p5);
+  });
+
+  describe('addTarget', () => {
+    it('adds targets to follow', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'follow');
+      expect(sprite.targetSet).to.deep.equal({follow: ['costume1'], avoid: []});
+      commands.addTarget({name: spriteName}, 'costume2', 'follow');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: ['costume1', 'costume2'],
+        avoid: []
+      });
+    });
+
+    it('adds targets to avoid', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({follow: [], avoid: ['costume1']});
+      commands.addTarget({name: spriteName}, 'costume2', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: [],
+        avoid: ['costume1', 'costume2']
+      });
+    });
+
+    it('can follow and avoid at the same time', () => {
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'follow');
+      commands.addTarget({name: spriteName}, 'costume2', 'avoid');
+      expect(sprite.targetSet).to.deep.equal({
+        follow: ['costume1'],
+        avoid: ['costume2']
+      });
+    });
+
+    it('console.warn on unknown target types', () => {
+      sinon.stub(console, 'warn');
+      makeSprite({name: spriteName});
+      const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
+      expect(sprite.targetSet).to.be.undefined;
+      commands.addTarget({name: spriteName}, 'costume1', 'other');
+      expect(console.warn).to.have.been.calledOnceWith(
+        'unkknown targetType: other'
+      );
+      expect(sprite.targetSet).to.be.undefined;
+      console.warn.restore();
+    });
   });
 
   describe('bounceOff', () => {
