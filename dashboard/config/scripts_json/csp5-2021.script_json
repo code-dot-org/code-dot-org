@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:51 UTC",
+    "serialized_at": "2021-04-10 20:46:42 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -6191,6 +6191,19 @@
       }
     },
     {
+      "name": "Introduction to Lists - Part 1",
+      "url": "https://youtu.be/n1exiRH00x0",
+      "key": "introduction_to_lists_-_part_1",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_1.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_1"
+      }
+    },
+    {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
       "key": "csp_lists_make_-_reminder_app",
@@ -6298,6 +6311,12 @@
       "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "introduction_to_lists_-_part_1"
       }
     },
     {
@@ -6482,6 +6501,9 @@
     }
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -7610,5 +7632,8 @@
         "standard.shortcode": "CRD-2.B.2"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
