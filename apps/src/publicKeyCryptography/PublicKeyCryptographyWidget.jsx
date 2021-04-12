@@ -15,6 +15,10 @@ import FontAwesome from '../templates/FontAwesome';
 import WidgetContinueButton from '../templates/WidgetContinueButton';
 import StartOverButton from './StartOverButton';
 import ToggleGroup from '../templates/ToggleGroup';
+import {createStore, combineReducers} from 'redux';
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import {Provider} from 'react-redux';
 
 // Magic strings for view modes
 const ALICE_VIEW = 'alice';
@@ -184,19 +188,27 @@ export default class PublicKeyCryptographyWidget extends React.Component {
 
   render() {
     const {selectedCharacter} = this.state;
+    const store = createStore(
+      combineReducers({
+        isRtl,
+        responsive
+      })
+    );
     return (
       <div style={style.root}>
-        <CharacterSelect
-          selectedCharacter={selectedCharacter}
-          onChange={this.setSelectedCharacter}
-        />
-        {selectedCharacter && <WidgetContinueButton />}
-        {selectedCharacter && (
-          <StartOverButton onClick={this.onStartOverClick} />
-        )}
-        <div style={style.characterViewWrapper}>
-          {this.renderCharacterView(selectedCharacter)}
-        </div>
+        <Provider store={store}>
+          <CharacterSelect
+            selectedCharacter={selectedCharacter}
+            onChange={this.setSelectedCharacter}
+          />
+          {selectedCharacter && <WidgetContinueButton />}
+          {selectedCharacter && (
+            <StartOverButton onClick={this.onStartOverClick} />
+          )}
+          <div style={style.characterViewWrapper}>
+            {this.renderCharacterView(selectedCharacter)}
+          </div>
+        </Provider>
       </div>
     );
   }
