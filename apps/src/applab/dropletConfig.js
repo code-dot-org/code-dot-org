@@ -1190,17 +1190,11 @@ if (experiments.isEnabled(experiments.APPLAB_ML)) {
       noAutocomplete: true
     },
     {
-      func: 'declareAssign_object',
-      block: `var object = {"key": "value"};`,
-      category: 'Variables',
-      noAutocomplete: true
-    },
-    {
       func: 'getValue',
       parent: dontMarshalApi,
       category: 'Variables',
       paletteParams: ['object', '"key"'],
-      params: ['object', '"key"'],
+      params: ['{"key": "value"}', '"key"'],
       dontMarshal: true
     },
     {
