@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '../redux';
 import JavalabView from './JavalabView';
-import javalab from './javalabRedux';
+import javalab, {getSources, setAllSources} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {onSave} from './JavalabFileManagement';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -63,7 +62,7 @@ Javalab.prototype.init = function(config) {
 
   config.useFilesApi = true;
 
-  config.getCodeAsync = this.getCodeAsync.bind(this);
+  config.getCode = this.getCode.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
 
@@ -101,6 +100,10 @@ Javalab.prototype.init = function(config) {
   });
 
   registerReducers({javalab});
+
+  if (window.appOptions.level.lastAttempt) {
+    getStore().dispatch(setAllSources(window.appOptions.level.lastAttempt));
+  }
 
   ReactDOM.render(
     <Provider store={getStore()}>
@@ -148,15 +151,9 @@ Javalab.prototype.onContinue = function() {
   });
 };
 
-Javalab.prototype.getCodeAsync = function() {
-  return new Promise((resolve, reject) => {
-    onSave(
-      /* success */
-      () => resolve(this.getCurrentFilesVersionId() || ''),
-      /* failure - couldn't save files, don't try to overwrite any sources */
-      reject
-    );
-  });
+Javalab.prototype.getCode = function() {
+  const storeState = getStore().getState();
+  return getSources(storeState);
 };
 
 Javalab.prototype.getCurrentFilesVersionId = function() {
