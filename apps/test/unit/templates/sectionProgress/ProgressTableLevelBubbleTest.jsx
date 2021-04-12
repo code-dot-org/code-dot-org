@@ -147,7 +147,6 @@ describe('ProgressTableLevelBubble', () => {
     const wrapper = mount(
       <ProgressTableLevelBubble {...defaultProps} bubbleSize={BubbleSize.dot} />
     );
-    console.log('text', wrapper.find(unitTestExports.BasicBubble).text());
     expect(wrapper.find(unitTestExports.BasicBubble).text()).to.equal('');
   });
 
