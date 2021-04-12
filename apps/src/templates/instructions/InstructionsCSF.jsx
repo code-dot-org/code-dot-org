@@ -148,7 +148,7 @@ class InstructionsCSF extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate(nextProps) {
     const gotNewFeedback = !this.props.feedback && nextProps.feedback;
     if (gotNewFeedback) {
       this.setState({
@@ -160,7 +160,7 @@ class InstructionsCSF extends React.Component {
     }
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate() {
     this.setCanScrollInstructions();
     this.calculateRenderedHeight();
     this.props.adjustMaxNeededHeight();
@@ -203,7 +203,7 @@ class InstructionsCSF extends React.Component {
    */
   getMinHeight(collapsed = this.props.collapsed) {
     const {leftColHeight, rightColHeight} = this.state;
-    const middleColHeight = this.getMinInstructionsHeight();
+    const middleColHeight = this.getMinInstructionsHeight(collapsed);
 
     return (
       Math.max(leftColHeight, middleColHeight, rightColHeight) +
@@ -211,20 +211,13 @@ class InstructionsCSF extends React.Component {
     );
   }
 
-  // this doesn't make any sense...
-  getMinInstructionsHeight(collapsed = this.props.collapsed) {
-    const instructionsHeight = Math.min(
-      this.state.middleColHeight,
-      this.props.maxHeight
-    );
-
-    const minInstructionsHeight =
-      collapsed || this.props.overlayVisible || this.props.isEmbedView
-        ? instructionsHeight
-        : 0;
-
-    return minInstructionsHeight;
-  }
+  getMinInstructionsHeight = (collapsed = this.props.collapsed) => {
+    if (collapsed || this.props.overlayVisible || this.props.isEmbedView) {
+      return Math.min(this.state.middleColHeight, this.props.maxHeight);
+    } else {
+      return 0;
+    }
+  };
 
   getMarginsHeight() {
     const domNode = $(ReactDOM.findDOMNode(this));
@@ -253,7 +246,8 @@ class InstructionsCSF extends React.Component {
    * @return {Element} scrollTarget
    */
   getScrollTarget = () => {
-    // can't seem to get this to work with refs
+    // couldn't manage to get the parent element when using ref
+    // so used querySelector instead
     return document.querySelector('.csf-top-instructions').parentElement;
   };
 
@@ -322,6 +316,8 @@ class InstructionsCSF extends React.Component {
       this.props.overlayVisible && styles.withOverlay
     ];
 
+    const hasShortInstructions = this.hasShortInstructions();
+
     return (
       <div style={mainStyle}>
         <ThreeColumns
@@ -344,13 +340,14 @@ class InstructionsCSF extends React.Component {
           <InstructionsCsfMiddleCol
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
-            hasShortInstructions={this.hasShortInstructions}
+            hasShortInstructions={hasShortInstructions}
             adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
             promptForHint={this.state.promptForHint}
             setColHeight={this.setMiddleColHeight}
+            getMinInstructionsHeight={this.getMinInstructionsHeight}
           />
           <InstructionsCsfRightCol
-            hasShortInstructions={this.hasShortInstructions()}
+            hasShortInstructions={hasShortInstructions}
             promptForHint={this.state.promptForHint}
             displayScrollButtons={this.state.displayScrollButtons}
             getScrollTarget={this.getScrollTarget}
