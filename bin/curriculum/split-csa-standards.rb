@@ -10,7 +10,7 @@ unless FILENAME
       * the part of the filename before .csv is the framework shortcode.
       * the csv contains 3 columns, which will be interpreted as:
         parent category, category, standard
-      * The csv file has a header row. The values in the header rown for the
+      * The csv file has a header row. The values in the header row for the
         parent category and category columns will be used as the "category type"
         for these categories.
       * the first token in each cell is the shortcode and the rest is the description.
