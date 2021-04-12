@@ -967,6 +967,9 @@ class ScriptsControllerTest < ActionController::TestCase
   test_user_gets_response_for :code, response: :success, user: :teacher, params: -> {{id: @migrated_script.name}}
   test_user_gets_response_for :code, response: :forbidden, user: :teacher, params: -> {{id: @unmigrated_script.name}}
 
+  test_user_gets_response_for :instructions, response: :success, user: :levelbuilder, params: -> {{id: @migrated_script.name}}
+  test_user_gets_response_for :instructions, response: :success, user: :levelbuilder, params: -> {{id: @unmigrated_script.name}}
+
   def stub_file_writes(script_name)
     filenames_to_stub = ["#{Rails.root}/config/scripts/#{script_name}.script", "#{Rails.root}/config/scripts_json/#{script_name}.script_json"]
     File.stubs(:write).with do |filename, _|
