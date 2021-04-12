@@ -5,11 +5,12 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "pilot_experiment": "haikubot-pilot"
+      "pilot_experiment": "haikubot-pilot",
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-05 18:01:29 UTC",
+    "serialized_at": "2021-04-06 20:29:23 UTC",
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }
@@ -695,21 +696,21 @@
       "properties": {
         "progression": "Poem Bot Prototype",
         "level_keys": [
-          "poembot_lesson 5_markdown"
+          "Poem Bot_Choice1_Background"
         ]
       },
       "named_level": null,
       "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
-          "poembot_lesson 5_markdown"
+          "Poem Bot_Choice1_Background"
         ],
         "lesson.key": "poetry circle",
         "lesson_group.key": "Peom Bot",
         "script.name": "haikubot-pilot"
       },
       "level_keys": [
-        "poembot_lesson 5_markdown"
+        "Poem Bot_Choice1_Background"
       ]
     }
   ],
@@ -969,9 +970,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poembot_lesson 5_markdown",
+        "level.key": "Poem Bot_Choice1_Background",
         "script_level.level_keys": [
-          "poembot_lesson 5_markdown"
+          "Poem Bot_Choice1_Background"
         ],
         "lesson.key": "poetry circle",
         "lesson_group.key": "Peom Bot",

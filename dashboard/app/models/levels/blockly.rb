@@ -599,7 +599,10 @@ class Blockly < Level
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
-    block_xml.xpath("//block[@type=\"variables_get\"]").each do |variable|
+    variables_get = block_xml.xpath("//block[@type=\"variables_get\"]")
+    variables_set = block_xml.xpath("//block[@type=\"variables_set\"]")
+    variables = variables_get + variables_set
+    variables.each do |variable|
       variable_name = variable.at_xpath('./title[@name="VAR"]')
       next unless variable_name
       localized_name = I18n.t(

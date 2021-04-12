@@ -1,3 +1,4 @@
+hideable_lessons true
 pilot_experiment 'haikubot-pilot'
 
 lesson_group 'Peom Bot', display_name: 'Poem Bot'
@@ -33,5 +34,5 @@ level 'Poem Bot_Fat Level_2', progression: 'Finish your Haiku'
 level 'Poem Bot Choice Home', progression: 'Customize Your Program'
 
 lesson 'poetry circle', display_name: 'Poetry Circle', has_lesson_plan: false
-level 'poembot_lesson 5_markdown', progression: 'Poem Bot Prototype'
+level 'Poem Bot_Choice1_Background', progression: 'Poem Bot Prototype'
 
