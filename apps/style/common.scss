@@ -1732,6 +1732,12 @@ a.WireframeButtons_active, div.WireframeButtons_active {
   margin-left: -400px;
 }
 
+html[dir='rtl'] .instructions-markdown img {
+  float: right !important;
+  padding-left: 10px !important;
+  padding-right: 0px !important;
+}
+
 @import "RotateContainer";
 @import "HideToolbarHelper";
 @import "blockly";
