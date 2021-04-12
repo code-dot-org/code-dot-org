@@ -36,6 +36,23 @@ export default class CdoBramble {
     this.lastSyncedVersionId = null;
   }
 
+  getInterface() {
+    return {
+      addFileCSS: this.addFileCSS.bind(this),
+      addFileHTML: this.addFileHTML.bind(this),
+      disableFullscreenPreview: this.disableFullscreenPreview.bind(this),
+      disableInspector: this.disableInspector.bind(this),
+      enableFullscreenPreview: this.enableFullscreenPreview.bind(this),
+      enableInspector: this.enableInspector.bind(this),
+      fileRefresh: this.fileRefresh.bind(this),
+      redo: this.redo.bind(this),
+      refreshPreview: this.refreshPreview.bind(this),
+      syncFiles: this.syncFiles.bind(this),
+      undo: this.undo.bind(this),
+      validateProjectChanged: this.validateProjectChanged.bind(this)
+    };
+  }
+
   init() {
     this.Bramble.load('#bramble', this.config());
 
@@ -432,7 +449,7 @@ export default class CdoBramble {
     };
 
     this.getFileData(this.prependProjectPath(filename), (err, fileData) => {
-      !err && currentFileData.push({name: filename, data: fileData.toString()});
+      !err && currentFileData.push({name: filename, data: fileData});
       next(err);
     });
   }
@@ -534,7 +551,7 @@ export default class CdoBramble {
       // Map array of files to an object with structure {filename: fileData}
       const reduceToObj = filesArray =>
         filesArray.reduce((acc, val) => {
-          acc[val.name] = val.data;
+          acc[val.name] = val.data?.toString();
           return acc;
         }, {});
       const startObj = reduceToObj(startSourceFiles);
@@ -743,6 +760,10 @@ export default class CdoBramble {
 
   refreshPreview() {
     this.brambleProxy?.refreshPreview();
+  }
+
+  fileRefresh(callback = () => {}) {
+    this.brambleProxy?.fileRefresh(callback);
   }
 
   enableFullscreenPreview(callback) {
