@@ -98,7 +98,7 @@ class ProgressTableLevelBubble extends React.PureComponent {
  * @param {node} children the content to render inside the bubble
  */
 function BasicBubble({shape, size, progressStyle, children}) {
-  let bubbleStyle = mainBubbleStyle(shape, size, progressStyle);
+  const bubbleStyle = mainBubbleStyle(shape, size, progressStyle);
   if (shape === BubbleShape.diamond) {
     return (
       <DiamondContainer size={size} bubbleStyle={bubbleStyle}>
