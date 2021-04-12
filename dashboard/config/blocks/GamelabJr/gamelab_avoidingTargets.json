@@ -1,0 +1,13 @@
+{
+  "category": "SL1",
+  "config": {
+    "func": "avoidingTargets",
+    "blockText": "avoiding targets",
+    "returnType": "Behavior",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ]
+  }
+}
