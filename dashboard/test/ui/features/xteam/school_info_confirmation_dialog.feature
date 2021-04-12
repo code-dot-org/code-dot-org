@@ -15,8 +15,6 @@ Feature: School Info Confirmation Dialog
 Scenario: School Info Confirmation Dialog
   # Teacher account is created with partial school info
   Given I create a teacher named "Teacher_Chuba" and go home
-  # Wait for homepage to load before reloading the page.
-  Then I wait until element "#header-banner" is visible
   # The date of the teacher's account is updated to 7 days ago to simulate time travel
   # This enables the condition (see school_info_interstitial helper.rb) that checks
   # the age of the account to determine when to show the school info interstitial.
@@ -38,7 +36,6 @@ Scenario: School Info Confirmation Dialog
   # One week later, the teacher does not see the prompt
   And eight days pass for user "Teacher_Chuba"
   Then I reload the page
-  Then I wait until element "#header-banner" is visible
   And element ".modal" is not visible
 
   # One year later, the teacher sees the school info confirmation dialog
