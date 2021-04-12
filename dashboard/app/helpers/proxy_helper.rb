@@ -12,8 +12,7 @@ module ProxyHelper
     expiry_time:,
     infer_content_type:,
     redirect_limit: 5,
-    no_transform: false,
-    headers: {}
+    no_transform: false
   )
     if redirect_limit == 0
       render_error_response 500, 'Redirect loop'
@@ -46,7 +45,7 @@ module ProxyHelper
 
     # Get the media.
     query_string = query.empty? ? '' : "?#{query}" # don't include the ? if the query is empty
-    media = http.request_get(path + query_string, headers)
+    media = http.request_get(path + query_string)
 
     # generate content-type from file name if we weren't given one
     if media.content_type.nil?

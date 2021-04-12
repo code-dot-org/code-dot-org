@@ -11,9 +11,9 @@ aws_account_id = Aws::STS::Client.new.get_caller_identity.account
 REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{aws_account_id}:role/redshift-s3"
 
 SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
-SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis.foorm_submissions_reshaped'
+SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
 FORMS_S3_CSV_NAME = 'forms.csv'
-FORMS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_forms_reshaped'
+FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 
 # Main method responsible for reshaping Foorm data
 # and importing to our analytics database (Redshift).
