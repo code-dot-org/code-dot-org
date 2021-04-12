@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-09 17:00:13 UTC",
+    "serialized_at": "2021-04-12 20:08:35 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -196,6 +196,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students are introduced to inheritance by deriving a subclass of `Painter` with more commands. Students use the keyword `super` with constructors and learn how to write their own methods in the `PainterPlus` class. Students discover that methods that are called must be defined in their own class or the superclass. In future lessons, students add additional methods and subclasses of `Painter`.",
+        "student_overview": "By now, you have noticed that your `Painter` has limited commands to move around The Neighborhood. In this lesson, you create a new type of `Painter` that can do everything the `Painter` can as well as something the `Painter` can't!",
+        "preparation": "Have several sticky notes ready for the debugging wall"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -211,6 +214,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this lesson, students continue to apply the principle of inheritance in their code by further expanding the `PainterPlus` class with three additional methods: `turnAround()`, `takeAllPaint()`, and `moveFast()`. To practice Java syntax and algorithmic thinking, students construct a step-by-step process for implementing each of the methods by hand before coding it in Java. By continuing to write and use new methods, students experience the benefits of reusability.\n",
+        "student_overview": "In this lesson, you give your `PainterPlus` class new ways to move around and interact with The Neighborhood. You consider edge cases when implementing your new methods.",
+        "preparation": "Print and cut enough copies for your class of the Java Syntax and PainterPlus Methods Cards (one set of cards per group)\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -726,6 +732,60 @@
       "seeding_key": {
         "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -2467,6 +2527,261 @@
         "activity_section.key": "b50e4930-b3c2-470c-926d-3d20ed907eb5",
         "lesson_activity.key": "c28beaa9-3d00-4bfd-8b70-4ec15b17fa8b"
       }
+    },
+    {
+      "key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+      "position": 1,
+      "properties": {
+        "name": "Art",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a logo that you like. On a sticky note, draw a quick sketch of the logo. Can an object of the class Painter recreate that logo? If not, what other commands does `Painter` need?*\n\n**Discussion Goal:** Allow students time to share their logos with others and discuss the second part of the prompt. The goal is to make connections between the classroom and students’ lives by providing motivation for today’s lesson (can we recreate the art?). Students also recall prior knowledge of commands and brainstorm ideas for new commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "Thanks, everyone, for sharing out your ideas! Today we will be learning how to add methods to your own class to build on the existing `Painter` class."
+      },
+      "seeding_key": {
+        "activity_section.key": "a1d2fd84-957b-4da9-b3b4-4e26e73ed36a",
+        "lesson_activity.key": "e6d5e7ff-9b4b-44cf-9b00-25d55b6856ec"
+      }
+    },
+    {
+      "key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to review the `turnLeft()` command. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level is purposefully similar to previous levels. The goal here is to provide students the motivation behind the upcoming subclass `PainterPlus` and the `turnRight(`) method.\n\nRemind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81009920-75b3-4c7c-baa8-2793d1bb84b8",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the minimum number of `turnLeft()` commands needed? In order to make your code more efficient, what command would you like to add to the `Painter` class?*\n\n**Discussion Goal:** The goal is for students to notice that a `turnRight()` command would make the code more efficient and introduce the possibility that they have the ability to decide what methods are available in a class."
+      },
+      "seeding_key": {
+        "activity_section.key": "13c776a8-fa3a-4b7d-8363-530e82537607",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We cannot modify `Painter` because that class is protected, but we can create a type of `Painter` that can use all of the `Painter`'s methods and build new ones!",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, the motivation for inheritance is to write a new class that builds on the existing `Painter` class in order to add a new method. Since students cannot modify `Painter`, they instead write a subclass that inherits all of the methods of `Painter`. In future lessons, students write subclasses that are more specialized versions of `Painter`, such as `SprayPainter`, that will build on the concept of an “is-a” relationship (a `SprayPainter` is-a `Painter`)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "73fed29c-d8a3-4b19-95c9-007a2a15de3e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Subclasses video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does fully discuss the definitions of subclass and superclass. While it is tempting to explain these terms, the goal here is to provide enough information for students to write their own class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "60ef4e5a-ae03-4997-b27a-1fe4b908a851",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+      "position": 5,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display the slide with the self-check question. Give students time to think to themselves. Poll for responses by asking for raised hands.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the correct answer. Emphasize that for the relationship between two classes to be an inheritance hierarchy, you must be able to say that the subclass is-a superclass.\n\n**Discussion Goal:** This self-check allows students to confirm that they remember the relationship between a superclass and a subclass in an inheritance hierarchy before moving on. If they chose a different answer, they have an opportunity to address their misconception rather than re-learning this information in the future.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have time and feel students could use a movement break, ask students to move to a different corner of the room corresponding to their answer, where corner one corresponds to answer A, corner two corresponds to answer B, etc. Other options for polling for answers include asking students to raise one finger for answer A, two fingers for answer B, etc."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ae5b0d-929a-4bc2-befd-5ac84b81201e",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Review the syntax for subclasses and constructors, then introduce students to the concept through The Neighborhood. Note that the video has already gone over this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for the header of a subclass using the `extends` keyword. At this point, introduce the visibility `public` as being available to any other part of the program. Later on, we will discuss when we would want to mark certain parts of the code as `private`. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for a constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the call to `super` inside of a subclass’s constructor.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-4 on Code Studio, where they write the `PainterPlus` class, initialize a `PainterPlus` object, and complete the puzzle.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These levels purposefully have the same puzzle as the `Painter` puzzle. Encourage students to think about the relationship between the `PainterPlus` and the `Painter` classes (a `PainterPlus` is a `Painter`) and what commands they can call on for their `PainterPlus` object (any `Painter` command). \n\nRemind students to use your agreed-upon signal to indicate that they have completed the levels.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4667c8e6-412d-4df2-87aa-a3becd9bf1a1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+      "position": 7,
+      "properties": {
+        "remarks": true,
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` command. We’re now going to learn how to add our commands."
+      },
+      "seeding_key": {
+        "activity_section.key": "2b281802-e4be-4735-8f4e-ffcad5443f00",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Methods\" video.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Note that the video does not go into depth on the definitions of `public` (visibility) and `void` (return type). While it is tempting to go into the details, the goal here is to provide enough information for students to write their own method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94e31fd5-229c-4de4-922d-217fcb202af1",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax for methods. Note that the video has discussed this material; the slides are here for reference and reinforcement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to Level 6 on Code Studio to write the `turnRight()` method. This level has the same puzzle as Level 4, but now students define and use `turnRight()`.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8c81a29-cbc9-471e-96a0-7c8c95ef5e2c",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+      "position": 10,
+      "properties": {
+        "description": "**Discuss:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Predict what would happen if we tried to call our new `turnRight()` method on a `Painter`, not a `PainterPlus`.\n\n**Discussion Goal:**\n* The goal is for students to notice that the `turnRight()` command made the code more efficient.\n* Students make predictions about the code. Since they haven’t seen this before, there is no expectation for student responses: encourage students to share any ideas. Don't guide students towards a correct answer - they will test out their hypotheses next.\n\n**Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e80d12b2-7829-451f-b8dd-ea426576b07b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+      "position": 11,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to use your agreed-upon signal to indicate that they have completed the level."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fb0765c-b71f-4810-94b8-8826ec3c74cb",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happens when you call `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Help students understand that the `Painter` object cannot `turnRight()` because that method has not been defined in the `Painter` class (or theoretically any classes the `Painter` itself inherited methods from). Currently, the only class that can use the `turnRight()` command is `PainterPlus`. In the future, students create more classes that inherit from `PainterPlus` and can themselves use `turnRight()`. \n\nDo This: Ask a student volunteer to add a sticky note to the debugging wall describing the bug that happens when an object tries to use a method that is not available to them. "
+      },
+      "seeding_key": {
+        "activity_section.key": "f6834d01-de77-4635-b04f-618ddcac8f0b",
+        "lesson_activity.key": "684eecaf-ab8e-4092-9e6b-e98d26b1d856"
+      }
+    },
+    {
+      "key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss:** *What is one key takeaway you have from today’s lesson? What is still confusing?*\n\n**Discussion Goal:** Since this lesson introduced many new concepts, the main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information and that throughout the course, there may be times where they feel lost or confused. Ask students to share strategies for when they are confused -- what resources do they have? ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Make a note of any content that students bring up as confusing, and review with smaller groups. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea1ccb67-3412-4dea-b09a-b31d463311f0",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+      "position": 3,
+      "properties": {
+        "name": "Assessment: Check for Understanding",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Think of an example of inheritance in your own life. What is the superclass? What is the subclass? Remember that Painter was the superclass, while PainterPlus was the subclass.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e095da4f-3541-4197-bba6-79ade4f4676f",
+        "lesson_activity.key": "8693380e-0359-4b2a-84ae-67ec676d7131"
+      }
+    },
+    {
+      "key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ec25b59-ab5e-4503-bd3f-19f0c0e1b629",
+        "lesson_activity.key": "47ff481c-00c6-48c9-b494-651c21b529d2"
+      }
     }
   ],
   "script_levels": [
@@ -2695,6 +3010,46 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "0f9f53f9-ea24-4c4e-9b20-5efd5a964d07"
+      }
+    },
+    {
+      "key": "31e2755a-fc47-4b08-9f90-4cf3d473b410",
+      "properties": {
+        "description": "Explain inheritance and why it is used"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "31e2755a-fc47-4b08-9f90-4cf3d473b410"
+      }
+    },
+    {
+      "key": "275ecca7-2b94-4e6d-a272-cf8595451b75",
+      "properties": {
+        "description": "Write a subclass that extends a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "275ecca7-2b94-4e6d-a272-cf8595451b75"
+      }
+    },
+    {
+      "key": "73521095-a123-43f9-a508-8e733ec3b582",
+      "properties": {
+        "description": "Write a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "73521095-a123-43f9-a508-8e733ec3b582"
+      }
+    },
+    {
+      "key": "d7c14398-0068-4e7e-a022-21732806521b",
+      "properties": {
+        "description": "Write a method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "d7c14398-0068-4e7e-a022-21732806521b"
       }
     }
   ],
