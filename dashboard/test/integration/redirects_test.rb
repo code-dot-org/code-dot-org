@@ -67,6 +67,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
   end
 
+  test 'redirects urls with lockable and puzzle to lockable and levels' do
+    @unit = create :script, name: 'test-script'
+    @lesson_group = create :lesson_group, script: @unit
+    @lockable_lesson = create(:lesson, script: @unit, lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 1, relative_position: 1)
+    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
+    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+
+    get '/s/test-script/lockable/1/puzzle/1'
+    assert_redirected_to '/s/test-script/lockable/1/levels/1'
+  end
+
   test 'old script id paths redirect to named paths' do
     %w(2:Hour%20of%20Code 4:events 7:jigsaw).map {|s| s.split ':'}.each do |before, after|
       get "/s/#{before}"
