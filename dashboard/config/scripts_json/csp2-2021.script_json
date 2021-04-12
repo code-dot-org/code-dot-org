@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:38 UTC",
+    "serialized_at": "2021-04-09 23:20:51 UTC",
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -1662,7 +1662,7 @@
       "key": "25774a9d-55d5-49ec-acf8-f971694c01c6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level 2 of the lesson on Code Studio.\n\n**Group:**  Place students in pairs.  Each student should log into the Internet Simulator.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Follow the steps below to get familiar with this new version of the Internet Simulator.*\n\n* Join a different router than your partner\n* Ask your partner for their IP address.\n* Using only the simulator, have a conversation about one of these topics: Your favorite movie, Your favorite band/artist, The one superpower you wish you had\n* Try to discover every way the simulator is different than last time.",
+        "description": "**Group:**  Place students in pairs. Direct students to level 1 of the lesson on Code Studio.  Each student should log into the Internet Simulator.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Follow the steps below to get familiar with this new version of the Internet Simulator.*\n\n* Join a different router than your partner\n* Ask your partner for their IP address.\n* Using only the simulator, have a conversation about one of these topics: Your favorite movie, Your favorite band/artist, The one superpower you wish you had\n* Try to discover every way the simulator is different than last time.",
         "name": "New Version of the Internet Simulator (5 mins)\r"
       },
       "seeding_key": {
@@ -2631,7 +2631,7 @@
       "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -2709,7 +2709,7 @@
       "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Internet Simulator",
         "level_keys": [
@@ -3100,7 +3100,8 @@
       "url": "https://youtu.be/5o8CwafCxnU?t=249",
       "key": "the-internet-ip-addresses-and-dns-video",
       "properties": {
-        "audience": "Teacher"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the-internet-ip-addresses-and-dns-video"
@@ -3288,6 +3289,9 @@
     }
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -3951,5 +3955,8 @@
         "standard.shortcode": "IOC-1.F.10"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

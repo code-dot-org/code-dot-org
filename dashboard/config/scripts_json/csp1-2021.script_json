@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-02 23:43:11 UTC",
+    "serialized_at": "2021-04-09 23:43:08 UTC",
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -86,7 +86,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Welcome to CSP",
@@ -462,7 +463,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 14: Assessment Day",
@@ -4408,7 +4410,7 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Computer Science is Changing Everything",
         "level_keys": [
@@ -5060,7 +5062,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Color Sampling Widget"
+        "progression": "Color Sampling Widget",
+        "level_keys": [
+          "U1 Sampling Widget"
+        ]
       },
       "named_level": null,
       "bonus": false,
@@ -6211,6 +6216,42 @@
       }
     },
     {
+      "name": "Copyright Overview",
+      "url": "https://youtu.be/GPNWvU_IphU",
+      "key": "copyright_overview",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "name": "Copyright in Practice",
+      "url": "https://youtu.be/ITASCSxnBqw",
+      "key": "copyright_in_practice",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "name": "Creative Commons Copyright",
+      "url": "https://youtu.be/wC-m23T7cPM",
+      "key": "creative_commons_copyright",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
       "name": "The Ethics of Computer-Generated Actors",
       "url": "https://mediaethicsinitiative.org/2019/02/13/the-ethics-of-computer-generated-actors/",
       "key": "the-ethics-of-computer-generated-actors",
@@ -6448,6 +6489,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "resource.key": "the-ethics-of-computer-generated-actors"
       }
@@ -6496,6 +6555,9 @@
         "script.name": "csp1-2021"
       }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
 
