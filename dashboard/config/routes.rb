@@ -320,8 +320,11 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  # Redirects from old /stage url to new /lessons url for levels
+  # Redirects from old /stage/x/puzzle url to new /lessons/x/levels url
   get '/s/:script_name/stage/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lessons/%{position}/levels/%{all}')
+
+  # Redirects from old /lockable/x/puzzle url to new /lockable/x/levels url
+  get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
   resources :scripts, path: '/s/' do
     # /s/xxx/reset
