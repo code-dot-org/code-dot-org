@@ -187,6 +187,11 @@ function interpreterGetValue(object, key) {
 export function getValue(object, key, calledWithinInterpreter) {
   const objectContents = calledWithinInterpreter ? object.properties : object;
   const keyData = key.data;
+  const valueData = objectContents[keyData];
+  if (valueData === undefined) {
+    outputWarning(key + ' is not in ' + object);
+    return undefined;
+  }
   return objectContents[keyData].data;
 }
 
