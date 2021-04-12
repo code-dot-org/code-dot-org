@@ -67,6 +67,25 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
   end
 
+  test 'redirects urls with stage for lesson extras' do
+    script = create :script, name: 'script-with-bonus', lesson_extras_available: true
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+    create :script_level, script: script, lesson: lesson
+    create :script_level, script: script, lesson: lesson, bonus: true
+
+    @teacher = create(:teacher)
+    create(:section, user: @teacher, script: script, stage_extras: true, id: 999999)
+
+    sign_in(@teacher)
+
+    get '/s/script-with-bonus'
+    assert :success
+
+    get '/s/script-with-bonus/stage/1/extras?section_id=999999'
+    assert_redirected_to '/s/script-with-bonus/lessons/1/extras?section_id=999999'
+  end
+
   test 'redirects urls with lockable and puzzle to lockable and levels' do
     @unit = create :script, name: 'test-script'
     @lesson_group = create :lesson_group, script: @unit
