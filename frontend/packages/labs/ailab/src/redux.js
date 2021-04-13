@@ -1150,6 +1150,12 @@ function isPanelEnabled(state, panelId) {
     }
   }
 
+  if (panelId === "saveModel") {
+    if (![undefined, ""].includes(state.trainedModelDetails.name)) {
+      return false;
+    }
+  }
+
   if (panelId === "finish") {
     if (state.saveStatus !== "success") {
       return false;
