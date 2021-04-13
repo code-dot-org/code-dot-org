@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
@@ -69,7 +70,8 @@ class ScriptOverviewTopRow extends React.Component {
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
-    isMigrated: PropTypes.bool
+    isMigrated: PropTypes.bool,
+    pdfUrls: PropTypes.arrayOf(PropTypes.string)
   };
 
   render() {
@@ -138,6 +140,18 @@ class ScriptOverviewTopRow extends React.Component {
                 useMigratedResources={isMigrated}
               />
             )}
+          {this.props.pdfUrls && this.props.pdfUrls.length > 0 && (
+            <DropdownButton
+              text={i18n.printingOptions()}
+              color={Button.ButtonColor.blue}
+            >
+              {this.props.pdfUrls.map(url => (
+                <a key={url} href={url}>
+                  {url}
+                </a>
+              ))}
+            </DropdownButton>
+          )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
