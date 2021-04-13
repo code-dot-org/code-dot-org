@@ -316,9 +316,10 @@ class FilesApi < Sinatra::Base
     #   Attribute selectors must start with @
     #   (Example: "//div[@name]" will return all <div>s that have a 'name' attribute.)
     disallowed_tag_selectors = disallowed_tags.map do |tag|
-      attr_selector_index = tag.index('[')
-      tag.insert(attr_selector_index + 1, '@') if attr_selector_index
-      '//' + tag
+      tag_dup = tag.dup
+      attr_selector_index = tag_dup.index('[')
+      tag_dup.insert(attr_selector_index + 1, '@') if attr_selector_index
+      '//' + tag_dup
     end
 
     Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
