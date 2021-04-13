@@ -1925,7 +1925,10 @@ class Script < ApplicationRecord
 
   def get_pdfs_for_script_overview
     if is_migrated?
-      [Services::CurriculumPdfs.get_script_overview_url(self)]
+      [
+        Services::CurriculumPdfs.get_script_overview_url(self),
+        Services::CurriculumPdfs.get_script_resources_url(self)
+      ]
     end
   end
 end

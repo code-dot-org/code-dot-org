@@ -10,6 +10,18 @@ module Services
     module Resources
       extend ActiveSupport::Concern
       class_methods do
+        def get_script_resources_pathname(script)
+          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
+          subdirectory = File.dirname(get_script_overview_pathname(script))
+          return Pathname.new(File.join(subdirectory, filename))
+        end
+
+        def get_script_resources_url(script)
+          pathname = get_script_resources_pathname(script)
+          return nil unless pathname.present?
+          File.join(get_base_url, pathname)
+        end
+
         def generate_script_resources_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
@@ -30,9 +42,8 @@ module Services
           end
 
           # Merge all gathered PDFs
-          filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_overview_pathname(script))
-          destination = File.join(directory, subdirectory, filename)
+          pathname = get_script_resources_pathname(script)
+          destination = File.join(directory, pathname)
           FileUtils.mkdir_p(File.dirname(destination))
           PDF.merge_local_pdfs(destination, *pdfs)
           FileUtils.remove_entry_secure(pdfs_dir)
