@@ -17,11 +17,12 @@ const styles = {
   }
 };
 
-export default class TeacherResourcesDropdown extends React.Component {
+export default class ResourcesDropdown extends React.Component {
   static propTypes = {
-    teacherResources: PropTypes.arrayOf(resourceShape),
-    migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    resources: PropTypes.arrayOf(resourceShape),
+    migratedResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
+    studentFacing: PropTypes.bool,
 
     //For firehose
     unitGroupId: PropTypes.number,
@@ -65,14 +66,10 @@ export default class TeacherResourcesDropdown extends React.Component {
   };
 
   render() {
-    const {
-      teacherResources,
-      migratedTeacherResources,
-      useMigratedResources
-    } = this.props;
+    const {resources, migratedResources, useMigratedResources} = this.props;
 
     const dropdownResources = useMigratedResources
-      ? migratedTeacherResources.map(resource => (
+      ? migratedResources.map(resource => (
           <a
             key={resource.key}
             href={resource.url}
@@ -83,7 +80,7 @@ export default class TeacherResourcesDropdown extends React.Component {
             {resource.name}
           </a>
         ))
-      : teacherResources.map(({type, link}, index) => (
+      : resources.map(({type, link}, index) => (
           <a
             key={index}
             href={link}
@@ -97,8 +94,21 @@ export default class TeacherResourcesDropdown extends React.Component {
     return (
       <div style={styles.dropdown}>
         <DropdownButton
-          text={i18n.teacherResources()}
-          color={Button.ButtonColor.blue}
+          text={
+            this.props.studentFacing
+              ? i18n.studentResources()
+              : i18n.teacherResources()
+          }
+          color={
+            this.props.studentFacing
+              ? Button.ButtonColor.gray
+              : Button.ButtonColor.blue
+          }
+          size={
+            this.props.studentFacing
+              ? Button.ButtonSize.large
+              : Button.ButtonSize.default
+          }
           onClick={this.handleDropdownClick}
         >
           {dropdownResources}

@@ -36,7 +36,11 @@ export default function createStandardsReducer(standardType) {
       case INIT:
         return action.standards;
       case ADD_STANDARD: {
-        newState = newState.concat([action.newStandard]);
+        newState = _.sortBy(
+          newState.concat([action.newStandard]),
+          'frameworkName',
+          'shortcode'
+        );
         break;
       }
       case REMOVE_STANDARD: {

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-04-07 17:18:32 UTC",
+    "serialized_at": "2021-04-09 21:32:26 UTC",
     "seeding_key": {
       "script.name": "coursef-2021"
     }
@@ -4500,7 +4500,7 @@
       "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "The Power of Words - Unplugged Activity",
         "level_keys": [
@@ -8090,7 +8090,7 @@
     },
     {
       "name": "The Power of Words: Lesson Slides",
-      "url": "https://drive.google.com/open?id=1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so",
+      "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
       "key": "the_power_of_words_lesson_slides",
       "properties": {
         "type": "Slides",
@@ -8173,7 +8173,7 @@
     },
     {
       "name": "Text and Prompts",
-      "url": "https://docs.google.com/presentation/d/1NdnCMX6-DyKcx5DAVS-EPPCEJ95bZDAnu6aDTFJJZPo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview",
       "key": "text_and_prompts",
       "properties": {
         "type": "Slides",
@@ -8496,6 +8496,30 @@
       "seeding_key": {
         "resource.key": "change_log_from_2020_version_"
       }
+    },
+    {
+      "name": "Cross-Curricular Standards Guidance",
+      "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview",
+      "key": "cross-curricular_standards_guidance",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_standards_guidance"
+      }
+    },
+    {
+      "name": "Cross-Curricular Extension Activities",
+      "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
+      "key": "cross-curricular_extension_activities",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities"
+      }
     }
   ],
   "lessons_resources": [
@@ -8764,7 +8788,22 @@
         "resource.key": "change_log_from_2020_version_",
         "script.name": "coursef-2021"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cross-curricular_standards_guidance",
+        "script.name": "coursef-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "cross-curricular_extension_activities",
+        "script.name": "coursef-2021"
+      }
     }
+  ],
+  "scripts_student_resources": [
+
   ],
   "vocabularies": [
     {

@@ -17830,6 +17830,8 @@ en:
               name: Module 8
             Module 7:
               name: Module 7
+            Self Paced Playground:
+              name: Self-Paced Playground
           student_description: ''
           name: jess-test-script
         csd2-virtual:
@@ -19323,7 +19325,7 @@ en:
           lessons:
             Analysis of Design:
               key: Analysis of Design
-              name: Designing With Empathy
+              name: Analysis of Design
               description_student: "The class explores a variety of different teapot designs to consider design choices. Building on this, students explore the relationship between users, their needs, and the design of objects they use.\r\n"
               description_teacher: |-
                 **Question of the Day:** How can we choose products based on the needs of a user?
@@ -20450,11 +20452,11 @@ en:
               key: Events in Play Lab
               name: On the Move with Events
               description_student: Create your own game or story.
-              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
+              description_teacher: In this **mini-project**, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
             lesson-1:
               name: End of Course Project
-              description_student: Create your own artwork or game.
-              description_teacher: In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.
+              description_student: Tell a story with the Artist!
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and loops in an open-ended project with the Artist.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -20541,8 +20543,8 @@ en:
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
             lesson-1:
               name: End of Course Project
-              description_student: Create your own artwork or game.
-              description_teacher: In this **project** lesson, students apply what they have learned about sequencing, loops, and events in an open-ended project with the Artist or Play Lab.
+              description_student: Create your own story or game.
+              description_teacher: In this **project** lesson, students apply what they have learned about sequencing and events in an open-ended project with Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
@@ -21829,6 +21831,10 @@ en:
               description_teacher: Students expand their knowledge of control structures and Boolean expressions using `if-else` statements and the `!` (not) logical operator. Students practice using the `if-else` statement and `!` (not) to solve more complex problems in addition to the `Painter` commands they have used so far.
             lesson-8:
               name: Introduction to Code Reviews
+              description_student: 'As a software engineer, you want to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you practice using code reviews to provide feedback and discuss strategies for giving and using feedback. These strategies will be useful throughout the year!
+
+'
+              description_teacher: In this course, students envision themselves as software engineers and model real-world career skills. Software engineers use code reviews throughout industry to develop code that is easy for others to read, maintain, and modify over time. Students are introduced to a code review process to lay the groundwork for skills they continue to build throughout the course.
             lesson-9:
               name: Inheritance and Methods
             lesson-10:
@@ -21859,7 +21865,7 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
           name: csa1-pilot
-          title: ''
+          title: Object Oriented Programming
           description_audience: ''
           description_short: ''
           description: ''

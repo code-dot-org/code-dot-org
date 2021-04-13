@@ -29,16 +29,52 @@ export const commands = {
     };
   },
 
+  avoidingTargetsFunc(p5Inst) {
+    return spriteArg => {
+      const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
+      const spritePosition = sprite.position;
+
+      if (!sprite.targetSet?.avoid) {
+        return;
+      }
+
+      const range = 100;
+      const targetsInRange = sprite.targetSet.avoid
+        .map(x => coreLibrary.getSpriteArray({costume: x}))
+        .flat()
+        .filter(target => spritePosition.dist(target.position) < range);
+
+      if (targetsInRange.length === 0) {
+        return;
+      }
+
+      // Find the average position of all the targets in range
+      let totalX = 0;
+      let totalY = 0;
+      targetsInRange.forEach(target => {
+        totalX += target.position.x;
+        totalY += target.position.y;
+      });
+      const averagePosition = p5Inst.createVector(
+        totalX / targetsInRange.length,
+        totalY / targetsInRange.length
+      );
+
+      actionCommands.moveToward(spriteArg, -5, averagePosition);
+      actionCommands.edgesDisplace.apply(p5Inst, [spriteArg]);
+    };
+  },
+
   followingTargetsFunc(p5Inst) {
     return spriteArg => {
       const sprite = coreLibrary.getSpriteArray(spriteArg)[0];
       const spritePosition = sprite.position;
 
-      if (!sprite.targetSet) {
+      if (!sprite.targetSet?.follow) {
         return;
       }
 
-      const targets = sprite.targetSet
+      const targets = sprite.targetSet.follow
         .map(x => coreLibrary.getSpriteArray({costume: x}))
         .flat();
 

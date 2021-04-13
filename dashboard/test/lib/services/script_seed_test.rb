@@ -66,7 +66,7 @@ module Services
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
       #   4 queries to set up course offering and course version
-      #   32 queries - two for each model, + one extra query each for Lessons,
+      #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
@@ -89,7 +89,7 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(100) do
+      assert_queries(102) do
         ScriptSeed.seed_from_json(json)
       end
 
@@ -136,6 +136,7 @@ module Services
       script.lessons.each {|l| l.resources.destroy_all}
       script.lessons.each {|l| l.vocabularies.destroy_all}
       script.resources.destroy_all
+      script.student_resources.destroy_all
       script.freeze
       expected_counts = get_counts
 
@@ -336,6 +337,30 @@ module Services
       assert_equal(
         ['updated name', 'New Resource Name'],
         script.resources.map(&:name)
+      )
+    end
+
+    test 'seed updates script student resources' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        script.student_resources.first.update!(name: 'updated name')
+        script.student_resources.create(
+          name: 'New Resource Name',
+          url: "fake.url",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal(
+        ['updated name', 'New Resource Name'],
+        script.student_resources.map(&:name)
       )
     end
 
@@ -643,6 +668,27 @@ module Services
       assert_equal expected_counts, get_counts
     end
 
+    # Resources are owned by the course version. We need to make sure all the
+    # resources we need for this script are created, but we should never remove
+    # a resource because it might be in use by another script or lesson in this course
+    # version.
+    test 'seed deletes scripts_student_resources but not resources' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        script.student_resources = []
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['ScriptsStudentResource'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
     # Vocabulary is owned by the course version. We need to make sure all the
     # vocabulary we need for this script are created, but we should never remove
     # any vocabulary because it might be in use by another lesson in this course
@@ -826,7 +872,7 @@ module Services
     def get_counts
       [
         Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
-        LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, Vocabulary, LessonsVocabulary,
+        LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
         LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
       ].map {|c| [c.name, c.count]}.to_h
     end
@@ -857,6 +903,10 @@ module Services
         assert_resources_equal(
           s1.resources,
           s2.resources
+        )
+        assert_resources_equal(
+          s1.student_resources,
+          s2.student_resources
         )
         assert_vocabularies_equal(
           s1.lessons.map(&:vocabularies).flatten,
@@ -1015,6 +1065,11 @@ module Services
       (1..num_resources_per_script).each do |r|
         resource = create :resource, key: "#{script.name}-resource-#{r}", course_version: course_version
         ScriptsResource.find_or_create_by!(resource: resource, script: script)
+      end
+
+      (1..num_resources_per_script).each do |r|
+        resource = create :resource, key: "#{script.name}-student-resource-#{r}", course_version: course_version
+        ScriptsStudentResource.find_or_create_by!(resource: resource, script: script)
       end
 
       sl_num = 1

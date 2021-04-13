@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:46 UTC",
+    "serialized_at": "2021-04-10 20:18:56 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -96,7 +96,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Variables Explore",
@@ -212,7 +213,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Conditionals Explore",
@@ -1211,7 +1213,7 @@
       "position": 2,
       "properties": {
         "name": "Sample Apps",
-        "description": "[slide] **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
         "progression_name": "Sample Apps"
       },
       "seeding_key": {
@@ -1223,7 +1225,7 @@
       "key": "3f56591b-6048-4a63-a8c6-0cd2a41f728e",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3f56591b-6048-4a63-a8c6-0cd2a41f728e",
@@ -1286,7 +1288,7 @@
       "key": "4b14afac-5056-4a47-b941-941a4bbc0d28",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1314,7 +1316,7 @@
       "key": "d852d374-2f98-4aad-b6d9-7f32550d7e38",
       "position": 1,
       "properties": {
-        "description": "[slide] \r\n **Journal:** Have students add the following words to their journals: Expression, Variable, Assignment Operator.  \r\n\r\n* **Expression:** a combination of operators and values that evaluates to a single value.\r\n* **Variable** an abstraction inside the program that can hold a value.  Each variable has associated data storage that represents one value at a time.\r\n* **Assignment operator:** allows a program to change the value represented by a variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Journal:** Have students add the following words to their journals: Expression, Variable, Assignment Operator.  \r\n\r\n* **Expression:** a combination of operators and values that evaluates to a single value.\r\n* **Variable** an abstraction inside the program that can hold a value.  Each variable has associated data storage that represents one value at a time.\r\n* **Assignment operator:** allows a program to change the value represented by a variable."
       },
       "seeding_key": {
         "activity_section.key": "d852d374-2f98-4aad-b6d9-7f32550d7e38",
@@ -1392,7 +1394,7 @@
       "key": "23f77e06-84ca-4eb8-babf-ecaa982de927",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "23f77e06-84ca-4eb8-babf-ecaa982de927",
@@ -1403,7 +1405,7 @@
       "key": "5a46f9da-f01b-4222-b43f-4b87560c65e3",
       "position": 1,
       "properties": {
-        "description": "[slide] **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "5a46f9da-f01b-4222-b43f-4b87560c65e3",
@@ -1414,7 +1416,7 @@
       "key": "c032d228-77cb-4be6-b527-13c756a145df",
       "position": 2,
       "properties": {
-        "description": "[slide] **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
         "name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins",
         "progression_name": "Investigation #1: Thermostat App v.1 (Levels 1 - 2) - 10 mins"
       },
@@ -1438,7 +1440,7 @@
       "key": "25028e71-71dc-44ef-a17b-09ea33205f3b",
       "position": 4,
       "properties": {
-        "description": "[slide] **Display:** Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. \r\n\r\n[slide] **Modify:** have groups return to their original seats. Give them a couple of minutes to work on modifying the app to change the degrees by two when the up and down arrows are clicked."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** have groups return to their original seats. Give them a couple of minutes to work on modifying the app to change the degrees by two when the up and down arrows are clicked."
       },
       "seeding_key": {
         "activity_section.key": "25028e71-71dc-44ef-a17b-09ea33205f3b",
@@ -1449,7 +1451,7 @@
       "key": "ac5c4280-580d-43e9-9210-675bf64c19c4",
       "position": 5,
       "properties": {
-        "description": "[slide] **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the `Math.round` command: Discuss with a partner how this command might work. Try deleting `Math.round` in lines 3, 15, and 28. What happens? Add it back in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the `Math.round` command: Discuss with a partner how this command might work. Try deleting `Math.round` in lines 3, 15, and 28. What happens? Add it back in.",
         "name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins",
         "progression_name": "Investigation #2: Thermostat App v.2 (Level 3) - 10 mins"
       },
@@ -1473,7 +1475,7 @@
       "key": "99f96442-f5ae-4fa9-a1a7-04157d63e578",
       "position": 7,
       "properties": {
-        "description": "[slide] **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n[slide] **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
         "name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins",
         "progression_name": "Investigation #3: Thermostat App v.3 (Levels 4 - 5) - 8 mins"
       },
@@ -1521,7 +1523,7 @@
       "key": "cef2237e-cdb6-4432-b9a0-8561ff2257a4",
       "position": 11,
       "properties": {
-        "description": "[slide] **Display:** Talk through the pattern with students."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
       },
       "seeding_key": {
         "activity_section.key": "cef2237e-cdb6-4432-b9a0-8561ff2257a4",
@@ -1566,7 +1568,7 @@
       "key": "55b83c45-4852-4653-9233-4f394b2d4e52",
       "position": 15,
       "properties": {
-        "description": "[slide]  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
       },
       "seeding_key": {
         "activity_section.key": "55b83c45-4852-4653-9233-4f394b2d4e52",
@@ -1589,7 +1591,7 @@
       "key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Goal Answers:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Goal Answers:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
       },
       "seeding_key": {
         "activity_section.key": "a92a4981-bc11-4b59-9d59-8ba16786e7f0",
@@ -1600,7 +1602,7 @@
       "key": "88cd7335-fc01-4d7b-bdfc-0d04f43da198",
       "position": 3,
       "properties": {
-        "description": "[slide] **Journal:** Add to your journal the definition for variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Add to your journal the definition for variable."
       },
       "seeding_key": {
         "activity_section.key": "88cd7335-fc01-4d7b-bdfc-0d04f43da198",
@@ -1671,7 +1673,7 @@
       "key": "dacf61fa-be2c-41a3-b662-bb1d08bb21a2",
       "position": 2,
       "properties": {
-        "description": "Today you're mostly going to practice what we've learned about programming with variables. As always you should be using the debugging process to help you as you work on issues. \r\n\r\n[slide] Let's review the debugging process first. Debugging is the process of finding and fixing problems in code. We previously talked about these four steps: Describe, Hunt, Try, and Document. \r\n\r\n[slide] Today we're going to also focus on three particular debugging skills\r\n\r\n1. Slowing down code with the speed slider\r\n2. Using console.log to get output\r\n3. Using the Watch area to watch your variables change values",
+        "description": "Today you're mostly going to practice what we've learned about programming with variables. As always you should be using the debugging process to help you as you work on issues. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let's review the debugging process first. Debugging is the process of finding and fixing problems in code. We previously talked about these four steps: Describe, Hunt, Try, and Document. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we're going to also focus on three particular debugging skills\r\n\r\n1. Slowing down code with the speed slider\r\n2. Using console.log to get output\r\n3. Using the Watch area to watch your variables change values",
         "remarks": true
       },
       "seeding_key": {
@@ -1683,7 +1685,7 @@
       "key": "632abe5c-75c6-4f65-94c3-c4b87f8e8138",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Do This:** Direct students to Code Studio, Lesson 3 Level 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 3 Level 2.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1726,11 +1728,11 @@
       "key": "1adf5772-0b76-42e4-85c2-2bbff867d6b3",
       "position": 6,
       "properties": {
-        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n[slide] **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n[slide] **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
+        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": " [slide] **Reviewing a Map Level:** Level 9 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in Level 9 prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\r\n"
+            "markdown": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reviewing a Map Level:** Level 9 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in Level 9 prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\r\n"
           }
         ]
       },
@@ -1744,7 +1746,7 @@
       "position": 7,
       "properties": {
         "name": "Debugging Scope Issues",
-        "description": "[slide] **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
         "progression_name": "Debugging Scope Issues"
       },
       "seeding_key": {
@@ -1757,7 +1759,7 @@
       "position": 8,
       "properties": {
         "name": "Putting it Together",
-        "description": "[slide] **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** This level asks students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.",
         "progression_name": "Putting it Together"
       },
       "seeding_key": {
@@ -1769,7 +1771,7 @@
       "key": "30356bfd-701e-492c-b96e-64c78f98fecc",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
         "name": "Synthesizing Discussion\r"
       },
       "seeding_key": {
@@ -1873,7 +1875,7 @@
       "key": "186a5f67-e29f-4ec7-baf0-1b1cc95c5e04",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
         "name": "Build the Photo Liker\r"
       },
       "seeding_key": {
@@ -1896,7 +1898,7 @@
       "key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
       "position": 3,
       "properties": {
-        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n[slide] **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "dbf96951-86d1-4e2b-9745-d8b1482943a5",
@@ -1935,7 +1937,7 @@
       "key": "0bfe24ca-d4a0-41be-b453-65d23b2365ac",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Photo Liker app"
       },
       "seeding_key": {
@@ -1958,7 +1960,7 @@
       "key": "636619c6-58cc-422c-977e-eca29602cf4e",
       "position": 2,
       "properties": {
-        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",
@@ -1998,7 +2000,7 @@
       "key": "36a7c7a0-5fac-40d7-8fb7-839dddddfd07",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discuss:** *Imagine you want to make a decision about what to wear to an event. Name two pieces of information you'd want. How would you use them in your decision?*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you want to make a decision about what to wear to an event. Name two pieces of information you'd want. How would you use them in your decision?*",
         "name": "Preview Conditionals\r"
       },
       "seeding_key": {
@@ -2039,7 +2041,7 @@
       "key": "877e5e85-7456-49d4-91ab-70b5b54f8239",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2067,7 +2069,7 @@
       "key": "87a276e9-7f77-4cac-99cf-6d3f71dde6eb",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Video:** [CS Principles: Conditionals - Part 1 Boolean Expressions - Video](https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s)\tAs a class watch the video on Boolean expressions. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video:** [CS Principles: Conditionals - Part 1 Boolean Expressions - Video](https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s)\tAs a class watch the video on Boolean expressions. \n\n",
         "progression_name": "Conditionals: Boolean Expressions"
       },
       "seeding_key": {
@@ -2079,7 +2081,7 @@
       "key": "2aab6591-9d0e-48d4-a7cc-8ac4148ecc33",
       "position": 2,
       "properties": {
-        "description": "[slide] **Journal:** Have students add the following words and definitions to their journals: Boolean Value and Boolean Expression.\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add the following words and definitions to their journals: Boolean Value and Boolean Expression.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "2aab6591-9d0e-48d4-a7cc-8ac4148ecc33",
@@ -2102,7 +2104,7 @@
       "key": "84400ab9-232d-46ee-8fc1-3a0e959f3042",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *A water park will let a visitor on a ride if they are 48 or more inches tall OR they are 14 years old or older. Make a flowchart for this decision. Make sure to use comparison operators (`<`, `>`, `==`, etc. ) and logical operators (`&&`, `||`, `!`) when you write your Boolean expression.*\n\n**Optional Warmup Discussion:** This discussion is optional and helpful further synthesize key points from the previous lesson. If you are able to quickly move to the main activity and believe your class does not need this revew consider skipping this discussion.\n\nHave partners share their responses at their tables. Then discuss answers briefly as a class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *A water park will let a visitor on a ride if they are 48 or more inches tall OR they are 14 years old or older. Make a flowchart for this decision. Make sure to use comparison operators (`<`, `>`, `==`, etc. ) and logical operators (`&&`, `||`, `!`) when you write your Boolean expression.*\n\n**Optional Warmup Discussion:** This discussion is optional and helpful further synthesize key points from the previous lesson. If you are able to quickly move to the main activity and believe your class does not need this revew consider skipping this discussion.\n\nHave partners share their responses at their tables. Then discuss answers briefly as a class.\n",
         "name": "Preview the Lesson\r"
       },
       "seeding_key": {
@@ -2114,7 +2116,7 @@
       "key": "85ebbbf7-a9fa-4f3a-bdfe-04cbf8202068",
       "position": 2,
       "properties": {
-        "description": "[slide] In everyday conversation it is common to switch between using the words \"when\" and \"if\". Here's some examples of what this looks like\r\n\r\n* \"When the user clicks the button...\"\r\n* \"If the user clicks the button...\"\r\n* \"When the user has more than 100 points...\"\r\n* \"If the user has more than 100 points...\"\r\n\r\nToday we want to be careful about how we use these words. To make things simple, we're going to use the following rules.\r\n\r\n* \"when\": Means there is an [`onEvent`(#fff176)](/docs/applab/onEvent/) to respond to user input. The app does something \"when\" the user clicks.\r\n* \"if\": Means there is a conditional statement that decides what pieces of code to run. The app does something \"if\" a boolean expression evaluates to true.\r\n\r\nWe'll talk more about this later but for now keep an eye out for the difference between \"when\" and \"if\".",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In everyday conversation it is common to switch between using the words \"when\" and \"if\". Here's some examples of what this looks like\r\n\r\n* \"When the user clicks the button...\"\r\n* \"If the user clicks the button...\"\r\n* \"When the user has more than 100 points...\"\r\n* \"If the user has more than 100 points...\"\r\n\r\nToday we want to be careful about how we use these words. To make things simple, we're going to use the following rules.\r\n\r\n* \"when\": Means there is an [`onEvent`(#fff176)](/docs/applab/onEvent/) to respond to user input. The app does something \"when\" the user clicks.\r\n* \"if\": Means there is a conditional statement that decides what pieces of code to run. The app does something \"if\" a boolean expression evaluates to true.\r\n\r\nWe'll talk more about this later but for now keep an eye out for the difference between \"when\" and \"if\".",
         "remarks": true
       },
       "seeding_key": {
@@ -2155,7 +2157,7 @@
       "key": "3a3fe7fd-c0cf-4816-a366-0d3a729efa1c",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2173,7 +2175,7 @@
       "key": "f2c55ec1-7adb-49b3-a878-e93045d8ed20",
       "position": 4,
       "properties": {
-        "description": "[slide]  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
       },
       "seeding_key": {
         "activity_section.key": "f2c55ec1-7adb-49b3-a878-e93045d8ed20",
@@ -2216,7 +2218,7 @@
       "key": "e344df9b-29ac-4652-ad59-3729140048c0",
       "position": 8,
       "properties": {
-        "description": "[slide] **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n\n[slide] **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n[slide]  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 5 - Lemon Squeeze App Pt 2** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "name": "Investigation 2: If-Else Statements",
         "duration": "10",
         "tips": [
@@ -2257,7 +2259,7 @@
       "key": "084f73ba-22aa-4103-9788-a1b4f5b8dc21",
       "position": 11,
       "properties": {
-        "description": "[slide] **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 6 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
         "name": "Investigation 3: Logical Operators AND OR",
         "duration": "10"
       },
@@ -2270,7 +2272,7 @@
       "key": "1ef6e1bb-0e0b-4bd5-ab5e-fab53c0531dc",
       "position": 12,
       "properties": {
-        "description": "[slide]  **Level 7 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 7 - Lemon Squeeze App Pt 3:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2309,7 +2311,7 @@
       "key": "07b9bce1-e52d-406b-8d8b-b43ea6a3ca76",
       "position": 1,
       "properties": {
-        "description": "[slide] **Discussion:** *What is the difference between an if-statement, an if-else statement, and an if-else-if statement? How are they similar?*\n\n**Discussion Goal:** Some key points to call out in this discussion.\n\n* These statements are more the same than different. They all use boolean expressions to decide whether to run certain pieces of code.\n* if-statements check if one boolean expression is true. If it is, a piece of code is run. Otherwise the code runs as normally.\n* if-else statements add the functionality that if the condition is false it can still run some code before returning to running the program as normal\n* if-else-if statements can check more than one boolean expression. They will only run the code for the first boolean expression that evaluates to true.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussion:** *What is the difference between an if-statement, an if-else statement, and an if-else-if statement? How are they similar?*\n\n**Discussion Goal:** Some key points to call out in this discussion.\n\n* These statements are more the same than different. They all use boolean expressions to decide whether to run certain pieces of code.\n* if-statements check if one boolean expression is true. If it is, a piece of code is run. Otherwise the code runs as normally.\n* if-else statements add the functionality that if the condition is false it can still run some code before returning to running the program as normal\n* if-else-if statements can check more than one boolean expression. They will only run the code for the first boolean expression that evaluates to true.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "07b9bce1-e52d-406b-8d8b-b43ea6a3ca76",
@@ -2320,7 +2322,7 @@
       "key": "3df72f6e-9562-4fdc-a3d4-f586602597b2",
       "position": 2,
       "properties": {
-        "description": "[slide] **Review Patterns:** Have students read the pattern introduced in Level 9. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\r\n\r\n---",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review Patterns:** Have students read the pattern introduced in Level 9. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\r\n\r\n---",
         "progression_name": "Patterns: If-else-if"
       },
       "seeding_key": {
@@ -2385,7 +2387,7 @@
       "key": "5b134614-44e0-4d4f-b32a-2d26a770d77c",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n[slide] **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 2. Then briefly remind students about debugging skills that they will be using in today's activity.",
         "name": "Practice Time"
       },
       "seeding_key": {
@@ -2492,7 +2494,7 @@
       "key": "53096640-f36f-41dc-8526-46403f7f9466",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Discuss:** *What aspects of working with conditionals do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with conditionals do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "53096640-f36f-41dc-8526-46403f7f9466",
@@ -2578,7 +2580,7 @@
       "key": "ec96799e-59da-4205-8c28-5065461fba5a",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n[slide] **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss with a neighbor.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n**Distribute:** Make sure students have access to scrap paper and pencils / paper for drawing flow charts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Explore:** Have students explore the working Museum Ticket Generator App in Level 2. If students are not working in pairs they should still discuss with a neighbor.",
         "name": "Try the Museum Ticket Generator"
       },
       "seeding_key": {
@@ -2590,7 +2592,7 @@
       "key": "0762e48d-f16c-4caa-b03a-8c935ee87352",
       "position": 2,
       "properties": {
-        "description": "[slide] **Discuss:** \n\n* *What does this app do?*\n\t* Generates a ticket to a museum based on input data from the user.\n* *What are the inputs?*\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* *What are the outputs?*\n\t* The ticket generated at the bottom of the screen\t\n* *What variables do you think would be necessary for this app to work?*\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* *What kinds of conditional logic do you think are necessary to make it work?*\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does this app do?*\n\t* Generates a ticket to a museum based on input data from the user.\n* *What are the inputs?*\n\t* The dropdowns for age and day of the week\n\t* The discount code text field\n\t* The button to generate the ticket\n* *What are the outputs?*\n\t* The ticket generated at the bottom of the screen\t\n* *What variables do you think would be necessary for this app to work?*\n\t* The input information listed above will all need variables (age, day, discountCode), but they may want variables for other information calculated during the app.\n* *What kinds of conditional logic do you think are necessary to make it work?*\n\t* The pricing rules help you know what to write. They'll definitely need to use if-else-if statements and AND / OR operators in order to implement these rules since they include multiple conditions to check.\n",
         "progression_name": "Try to the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2631,7 +2633,7 @@
       "key": "e58c2bc4-3d07-44c0-9c63-bfdaea8cad37",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n[slide] **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [Conditionals Make Activity Guide](https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Museum Ticket Generator App. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Museum Ticket Generator App"
       },
       "seeding_key": {
@@ -2654,7 +2656,7 @@
       "key": "c07afc03-908a-45fa-b85e-224813f88e95",
       "position": 2,
       "properties": {
-        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",
@@ -2706,7 +2708,7 @@
       "key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
       "position": 2,
       "properties": {
-        "description": "[slide]  **Discuss:**\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0cd588ef-22a1-4fb1-bd83-65136c8ac23c",
@@ -2740,7 +2742,7 @@
       "key": "3203cd09-f46f-4393-b7a3-0235b21f5ebd",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students in pairs.\n\n\n[slide] **Do This:** Direct students to Level 1 for the lesson on Code Studio.\n\n**Level 1 - Explore Song Lyrics:** This level is a continuation of the Explore activity in the warmup. Students should watch the code run slowly to see how the code that is running will jump down to the bottom of the program (the function declaration) when the name of the function is used (the function call).",
+        "description": "**Group:** Group students in pairs.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 for the lesson on Code Studio.\n\n**Level 1 - Explore Song Lyrics:** This level is a continuation of the Explore activity in the warmup. Students should watch the code run slowly to see how the code that is running will jump down to the bottom of the program (the function declaration) when the name of the function is used (the function call).",
         "name": "Investigate ",
         "progression_name": "Explore Functions"
       },
@@ -2765,7 +2767,7 @@
       "key": "29352a16-df31-41ca-9d30-78031eb9ca48",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n[slide]  **Level 3 - Investigate Score Clicker**\n\n* Discuss: Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* Modify: Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n[slide]  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* Modify: Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* Discuss: After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Investigate Score Clicker**\n\n* Discuss: Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* Modify: Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* Modify: Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* Discuss: After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
       },
       "seeding_key": {
         "activity_section.key": "29352a16-df31-41ca-9d30-78031eb9ca48",
@@ -2787,7 +2789,7 @@
       "key": "00f2c766-8cc8-492e-991f-863c6f6c9cb1",
       "position": 1,
       "properties": {
-        "description": "[slide]  **Journal:** Review the updateScreen pattern with students. Afterwards have them add to their journal definition for a function and a function call.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Review the updateScreen pattern with students. Afterwards have them add to their journal definition for a function and a function call.",
         "name": "Synthesizing Discussion\r"
       },
       "seeding_key": {
@@ -2799,7 +2801,7 @@
       "key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
       "position": 2,
       "properties": {
-        "description": "[slide]   **Discuss:** *Reflecting on today's lesson about functions:*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *Reflecting on today's lesson about functions:*\n\n**Discussion Goal:** Use this quick discussion to identify any open questions that students have at the conclusion of the lesson. These can help you know where to focus attention in the next lesson.\n "
       },
       "seeding_key": {
         "activity_section.key": "77fc56a8-5b01-4580-8bd1-70c6fd1761b1",
@@ -2903,7 +2905,7 @@
       "key": "c712f72c-3683-46b8-86e0-e3c691007619",
       "position": 2,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 10 Level 2"
       },
       "seeding_key": {
         "activity_section.key": "c712f72c-3683-46b8-86e0-e3c691007619",
@@ -2914,7 +2916,7 @@
       "key": "bec79917-faa2-4bf2-a142-cdc76b8c87cc",
       "position": 3,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n[slide]  **Do This:** Direct students to Code Studio, Lesson 10 Level 2\n\nToday you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson and a number of the activities feature discussions. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n**Distribute:** Optionally pass out a plastic cup or other manipulative they can place on their computer when they are stuck as a signal that they need support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 10 Level 2\n\nToday you're mostly going to practice what we've learned about programming with functions. I'm here to help you when you need, and you can put this cup on your computer when you need help. However, I first want to remind you of the following:\n\n* Use your debugging skills. Try to zoom in on precisely where you're getting stuck.\n* Talk to your partner! That's what they're there for!\n* Hover over blocks to read the documentation about how they work.\n* Read the resources in the Help & Tips tab \n* Talk to the group next to you. If another group asks for help make sure to take some time to talk it through with them.",
         "remarks": true
       },
       "seeding_key": {
@@ -2954,7 +2956,7 @@
       "key": "38385f40-eb86-4bf1-98ff-b5b3546deb27",
       "position": 6,
       "properties": {
-        "description": "[slide]  **Display:** Scope Practice video. This video is located in the slides."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Scope Practice video. This video is located in the slides."
       },
       "seeding_key": {
         "activity_section.key": "38385f40-eb86-4bf1-98ff-b5b3546deb27",
@@ -2971,7 +2973,7 @@
             "markdown": "Level 7 is a Map Level, which contains a review of variable scope. It is highly recommended that you watch the video in the slides prior to the lesson. Slides are available for this lesson if you would like to optinally review as a class.\n"
           }
         ],
-        "description": "[slide]   **Levels 6 - 7 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Levels 6 - 7 Function Scope:** These two levels return to a topic that was covered in the variables lessons as well: variable scope. While students do not need a deep understanding of scope at this point, they will in some instances encounter debugging challenges that arise because of it."
       },
       "seeding_key": {
         "activity_section.key": "a34eab70-e4bf-4879-b875-48b79b58c242",
@@ -3021,7 +3023,7 @@
       "key": "0a280b61-a5d6-4525-a042-ac90042ab129",
       "position": 1,
       "properties": {
-        "description": "[slide]   **Discuss:** *What aspects of working with functions clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *What aspects of working with functions clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n"
       },
       "seeding_key": {
         "activity_section.key": "0a280b61-a5d6-4525-a042-ac90042ab129",
@@ -3095,7 +3097,7 @@
       "key": "a1304aea-d070-4d7a-a800-4c325232b0a3",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n[slide] **Do This:** Have students explore the working Quote Maker App in Level 1.",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the working Quote Maker App in Level 1.",
         "name": "Build the Quote Maker App\r"
       },
       "seeding_key": {
@@ -3107,7 +3109,7 @@
       "key": "cb0f94aa-f9b2-41af-86c9-72c0d6e286be",
       "position": 2,
       "properties": {
-        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n[slide] **Discuss:**\n\n* *What does this app do?*\n\t* Display a quote with user-defined fonts and background colors.\n* *What are the inputs?*\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* *What are the outputs?*\n\t* The fully designed quote displayed at the bottom of the screen\t\n* *How could a function be used in this app?*\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
+        "description": "If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n* *What does this app do?*\n\t* Display a quote with user-defined fonts and background colors.\n* *What are the inputs?*\n\t* The dropdowns for background color and font family. \n\t* The quote text field\n\t* The slider to generate the font size\n* *What are the outputs?*\n\t* The fully designed quote displayed at the bottom of the screen\t\n* *How could a function be used in this app?*\n\t* Students may struggle with this question, and it's ok to not have it fully answered before \tbeginning the project. \n\t* A function can be used to update the screen.\n\t* The function contains the conditional that is checked everytime the user interacts with the screen.   \n\n",
         "progression_name": "Quote Maker App"
       },
       "seeding_key": {
@@ -3147,7 +3149,7 @@
       "key": "6af09862-3230-4627-a5b9-8af30923ade8",
       "position": 5,
       "properties": {
-        "description": "[slide] **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n[slide] **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level two where they complete the Quote Maker App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Quote Maker App"
       },
       "seeding_key": {
@@ -3170,7 +3172,7 @@
       "key": "66b42a37-65e7-4f14-a73f-a9a27c78e4da",
       "position": 2,
       "properties": {
-        "description": "[slide] Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",
@@ -3262,7 +3264,7 @@
       "key": "93ab2341-2bf1-49be-9c6e-4ef96c81b71d",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Discuss:** *For each app, discuss the following:*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *For each app, discuss the following:*"
       },
       "seeding_key": {
         "activity_section.key": "93ab2341-2bf1-49be-9c6e-4ef96c81b71d",
@@ -3273,7 +3275,7 @@
       "key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
       "position": 4,
       "properties": {
-        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n[slide] **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
+        "description": "* *What does this app do?*\n* *What are the inputs?*\n* *What are the outputs?*\n* *What variables do you think would be necessary for this app to work?*\n* *What kinds of conditional logic do you think are necessary to make it work?*\n* *How could a function be used in this app?*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Each student should have a copy of the Practice PT Decision Maker App Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "0a84ea89-a26c-4c1e-af1b-8e16b3ad7da9",
@@ -3323,7 +3325,7 @@
       "key": "1a5f73b4-b8ab-4ae9-b307-e3ad8129ab82",
       "position": 8,
       "properties": {
-        "description": "[slide]  **Display:** Show the steps students will complete today in the Planning Guide.\n\n**Step 1:** Brainstorm App Ideas\n\t\n* Students come up with three distinct ideas\n\n**Step 2:** Choose one Idea\n\n**Step 3:** Survey Your Classmates\n\t\n* Students discuss with two classmates the decision their app will help the user make and decide what information is needed to make this decision. \n\n**Step 4:** Storing Information\n\t\n* Variables needed for storing information are listed in this section. \n\n**Step 5:** Flowchart\n\t\n* Students create a flowchart, following the \"Can I adopt a cat?\" sample flowchart from the Conditionals Explore lesson. \n\n**Step 6:** Design User Interface\n\t\n* There is space for students to design up to three screens. There are no screen requirements for the app, so students may use only one screen."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the steps students will complete today in the Planning Guide.\n\n**Step 1:** Brainstorm App Ideas\n\t\n* Students come up with three distinct ideas\n\n**Step 2:** Choose one Idea\n\n**Step 3:** Survey Your Classmates\n\t\n* Students discuss with two classmates the decision their app will help the user make and decide what information is needed to make this decision. \n\n**Step 4:** Storing Information\n\t\n* Variables needed for storing information are listed in this section. \n\n**Step 5:** Flowchart\n\t\n* Students create a flowchart, following the \"Can I adopt a cat?\" sample flowchart from the Conditionals Explore lesson. \n\n**Step 6:** Design User Interface\n\t\n* There is space for students to design up to three screens. There are no screen requirements for the app, so students may use only one screen."
       },
       "seeding_key": {
         "activity_section.key": "1a5f73b4-b8ab-4ae9-b307-e3ad8129ab82",
@@ -3391,7 +3393,7 @@
       "key": "57ed8999-1c5b-451a-a418-95f1364a6f20",
       "position": 2,
       "properties": {
-        "description": "[slide] **Do This:** Students now transition to Code Studio where they will build their app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now transition to Code Studio where they will build their app."
       },
       "seeding_key": {
         "activity_section.key": "57ed8999-1c5b-451a-a418-95f1364a6f20",
@@ -3402,7 +3404,7 @@
       "key": "cf257f2a-6281-4429-aab4-c598277bd1c8",
       "position": 3,
       "properties": {
-        "description": "[slide]  **Display:** Display the steps for today along with the debugging steps on the board while students work."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Display the steps for today along with the debugging steps on the board while students work."
       },
       "seeding_key": {
         "activity_section.key": "cf257f2a-6281-4429-aab4-c598277bd1c8",
@@ -3518,7 +3520,7 @@
       "key": "b943a9d9-9895-451a-9131-4b2098712d5b",
       "position": 2,
       "properties": {
-        "description": "[slide] **Group:** Put students in groups of 3-4.\n\n[slide]  **Do This:** Direct students to Level 1 in Code Studio. They should pull out their Planning Guides and with their group complete Step 8: Testing.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Put students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Level 1 in Code Studio. They should pull out their Planning Guides and with their group complete Step 8: Testing.",
         "progression_name": "Test Your Decision Maker App"
       },
       "seeding_key": {
@@ -3530,7 +3532,7 @@
       "key": "245295f8-6af2-43ad-b3e4-ba9c339cd70c",
       "position": 3,
       "properties": {
-        "description": "[slide] **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n[slide] **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n\n\n**Submit:** Students complete a final check of their completed projects on Level 2. The rubric is displayed in the instruction box.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 8:** Testing\n\n* Each app is tested by at least two students.\n* The creator of the app watches these students use the app and records feedback from the testers and things the creator noticed while observing someone else using the app. For example, the creator may notice that the user has difficulty figuring out which button to click on the app to make it run. The creator notes this down in the Planning Guide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 9:** Pick Improvements\n\n* In the Planning Guide, students pick at least one improvement that they can make based on feedback from their peers.\n\n**Step 10:** Complete Your app\n\n* Students use the feedback to update their app on Level 1. \n\n\n\n**Submit:** Students complete a final check of their completed projects on Level 2. The rubric is displayed in the instruction box.",
         "progression_name": "Submit Your Decision Maker App"
       },
       "seeding_key": {
@@ -3554,7 +3556,7 @@
       "key": "52ebb17c-745f-4fd6-80a2-ed3a243adf25",
       "position": 2,
       "properties": {
-        "description": "[slide] **Reflection:** Complete the two reflection questions in the Planning Guide\n\n* **Question 1:** Provide a written response that:\n\t* describes the overall purpose of the program \n\t* describes the functionality of your app\n\t* describes the input and outputs of your app\n\t(Approx 150 words)\n\n* **Question 2:** This project was created using a development process that required you to incorporate the ideas of your partner and feedback from your classmates. Provide a written response that describes one part of your app that was improved through input from EITHER your partner or feedback you received from classmates. Include:\n\t* Who specifically provided the idea or recommendation\n\t* What their idea or recommendation was\n\t* The specific change you made to your app’s user interface or functionality in response to the recommendation\n\t* How you believe this change improved your app\n\t(Approx 150 words)\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** Complete the two reflection questions in the Planning Guide\n\n* **Question 1:** Provide a written response that:\n\t* describes the overall purpose of the program \n\t* describes the functionality of your app\n\t* describes the input and outputs of your app\n\t(Approx 150 words)\n\n* **Question 2:** This project was created using a development process that required you to incorporate the ideas of your partner and feedback from your classmates. Provide a written response that describes one part of your app that was improved through input from EITHER your partner or feedback you received from classmates. Include:\n\t* Who specifically provided the idea or recommendation\n\t* What their idea or recommendation was\n\t* The specific change you made to your app’s user interface or functionality in response to the recommendation\n\t* How you believe this change improved your app\n\t(Approx 150 words)\n"
       },
       "seeding_key": {
         "activity_section.key": "52ebb17c-745f-4fd6-80a2-ed3a243adf25",
@@ -3577,11 +3579,11 @@
       "key": "3ed5adcb-4c30-43e9-a7ef-f7c8c97f1e69",
       "position": 1,
       "properties": {
-        "description": "[slide]  Administer the Unit 4 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 4 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
           }
         ],
         "progression_name": "Unit 4 Exam"
@@ -3868,7 +3870,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3894,7 +3896,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3920,7 +3922,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3946,7 +3948,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3972,7 +3974,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3998,7 +4000,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4024,7 +4026,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4050,7 +4052,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4076,7 +4078,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4102,7 +4104,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Putting it Together",
         "level_keys": [
@@ -5038,7 +5040,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5064,7 +5066,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5090,7 +5092,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5116,7 +5118,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5142,7 +5144,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5168,7 +5170,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5194,7 +5196,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5220,7 +5222,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -5246,7 +5248,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -6581,6 +6583,18 @@
       }
     },
     {
+      "name": "Debugging Global vs Local Variables",
+      "url": "https://youtu.be/Vlj1_X474to",
+      "key": "debugging_global_vs_local_variables",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
       "name": "CSP Variables Make - Photo Liker App",
       "url": "https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit",
       "key": "variables-make-activity-guide",
@@ -6641,6 +6655,18 @@
       },
       "seeding_key": {
         "resource.key": "song-lyrics-functions"
+      }
+    },
+    {
+      "name": "Debugging Variable Scope: Functions",
+      "url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view?usp=sharing",
+      "key": "debugging_variable_scope_functions",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_variable_scope_functions"
       }
     },
     {
@@ -6764,6 +6790,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables Make",
         "resource.key": "variables-make-activity-guide"
       }
@@ -6896,6 +6928,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "resource.key": "debugging_variable_scope_functions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Functions Make",
         "resource.key": "guide_to_make_lessons"
       }
@@ -6974,6 +7012,9 @@
     }
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -7907,5 +7948,8 @@
         "standard.shortcode": "3B-AP-14"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }
