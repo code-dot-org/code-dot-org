@@ -1,22 +1,22 @@
 - if Homepage.show_professional_learning_banner(request)
   = inline_css 'homepage_below_hero_plane_banner.css'
 
+  - closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."
+  - sign_up_text = "Sign up for Professional Learning! Middle and High School applications now open."
+  - text = Homepage.teacher_applications_closing_soon() ? closing_soon_text : sign_up_text
+
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}
       .nonphone.col-80.tablet-feature
         .left.col-80.animateSlideInFromLeft
           .banner
             %img{src: "/images/homepage/professional-learning-2018-banner.png"}
-            .text
-              Sign up for Professional Learning! Middle
-              %br/
-              and High School applications now open.
+            .text= text
         .right.col-20
           %button
             Join us
       .phone.phone-feature
-        .text
-          Sign up for Professional Learning! Middle and High School applications now open.
+        .text= text
         %button
           Join us
 

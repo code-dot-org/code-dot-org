@@ -6,6 +6,7 @@
 - data[:nominated] = params[:nominated]
 - data[:linkSuffix] = link_suffix
 - data[:style] = style
+- data[:closingSoon] = DCDO.get("teacher_applications_closing_soon", CDO.default_teacher_applications_closing_soon)
 
 -# Professional Learning is only available in the US
 - if I18n.locale == :"en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)

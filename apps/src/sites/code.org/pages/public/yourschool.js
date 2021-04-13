@@ -41,6 +41,9 @@ function showYourSchool() {
           yourschoolElement.data('parameters-locale') === 'en-US' &&
           yourschoolElement.data('parameters-teacher-applications-active')
         }
+        teacherApplicationsClosingSoon={yourschoolElement.data(
+          'parameters-teacher-applications-closing-soon'
+        )}
       />
     </Provider>,
     yourschoolElement[0]

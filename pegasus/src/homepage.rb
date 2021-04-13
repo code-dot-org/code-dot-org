@@ -509,6 +509,10 @@ class Homepage
     request.locale == "en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)
   end
 
+  def self.teacher_applications_closing_soon
+    DCDO.get("teacher_applications_closing_soon", CDO.default_teacher_applications_closing_soon)
+  end
+
   def self.show_courses_banner(request)
     false
   end
