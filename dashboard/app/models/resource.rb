@@ -97,7 +97,7 @@ class Resource < ApplicationRecord
     }
   end
 
-  def summarize_for_teacher_resources_dropdown
+  def summarize_for_resources_dropdown
     {
       id: id,
       key: key,
