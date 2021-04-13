@@ -79,10 +79,18 @@ class ScriptOverviewTopRow extends React.Component {
     const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
     const options = [];
     if (scriptOverviewPdfUrl) {
-      options.push({name: i18n.printLessonPlans(), url: scriptOverviewPdfUrl});
+      options.push({
+        key: 'lessonPlans',
+        name: i18n.printLessonPlans(),
+        url: scriptOverviewPdfUrl
+      });
     }
     if (scriptResourcesPdfUrl) {
-      options.push({name: i18n.printHandouts(), url: scriptResourcesPdfUrl});
+      options.push({
+        key: 'scriptResources',
+        name: i18n.printHandouts(),
+        url: scriptResourcesPdfUrl
+      });
     }
     return options;
   };
@@ -162,7 +170,7 @@ class ScriptOverviewTopRow extends React.Component {
                 color={Button.ButtonColor.blue}
               >
                 {pdfDropdownOptions.map(option => (
-                  <a key={option.name} href={option.url}>
+                  <a key={option.key} href={option.url}>
                     {option.name}
                   </a>
                 ))}
