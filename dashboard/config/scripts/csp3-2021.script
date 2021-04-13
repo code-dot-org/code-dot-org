@@ -32,13 +32,13 @@ level 'CSP U3 L2 Design Mode ids_2021', progression: 'Design Mode Exploration'
 level 'CSP U3 L2 Copy an App_2021', progression: 'Copy an App'
 level 'U3L2 CSP CFU ID names_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Project - Designing an App Part 1', display_name: 'Project   Designing an App Part 1', has_lesson_plan: true
+lesson 'Project - Designing an App Part 1', display_name: 'Project   Designing an App Part 1', has_lesson_plan: true, unplugged: true
 
 lesson 'Project - Designing an App Part 2', display_name: 'Project   Designing an App Part 2', has_lesson_plan: true
 level 'CSP U3 Bird Quiz Storyboard_2021', progression: 'Sample Prototype'
 level 'CSP U3 L4 Design Screens_2021', progression: 'Build Your Screens'
 
-lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages', has_lesson_plan: true
+lesson 'The Need for Programming Languages', display_name: 'The Need for Programming Languages', has_lesson_plan: true, unplugged: true
 level 'U3L5 CSP CFU natural language_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'Intro to Programming', display_name: 'Intro to Programming', has_lesson_plan: true
