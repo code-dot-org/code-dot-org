@@ -48,7 +48,8 @@ class YourSchool extends Component {
     prefillData: censusFormPrefillDataShape,
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
-    showProfessionalLearningBanner: PropTypes.bool
+    showProfessionalLearningBanner: PropTypes.bool,
+    teacherApplicationsClosingSoon: PropTypes.bool
   };
 
   state = {
@@ -131,6 +132,7 @@ class YourSchool extends Component {
             useSignUpText={false}
             style={styles.banner}
             linkSuffix={'middle-high'}
+            closingSoon={this.props.teacherApplicationsClosingSoon}
           />
         )}
         <YourSchoolResources />

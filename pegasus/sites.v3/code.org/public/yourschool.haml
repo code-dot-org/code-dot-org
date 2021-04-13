@@ -26,6 +26,7 @@ social:
 - census_announcement['school_year'] = current_census_year
 - census_announcement['locale'] = request.locale
 - census_announcement['teacher_applications_active'] = DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active).to_s
+- census_announcement['teacher_applications_closing_soon'] = DCDO.get("teacher_applications_closing_soon", CDO.default_teacher_applications_closing_soon).to_s
 
 = inline_css 'trophy_announcement_sparkle.css'
 
