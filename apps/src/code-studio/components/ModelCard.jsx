@@ -49,7 +49,7 @@ export default class ModelCard extends React.Component {
             <h3 style={styles.bold}>{metadata.name}</h3>
             <div style={{marginBottom: 10}}>
               <span style={styles.bold}>Id: </span>
-              <span>{this.props.modelId}</span>
+              <span>{this.props.model.id}</span>
             </div>
             <div style={styles.subPanel}>
               <div style={styles.heading}>Summary</div>
