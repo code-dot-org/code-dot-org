@@ -221,6 +221,8 @@ class JavalabView extends React.Component {
   }
 }
 
+// We use the UnconnectedJavalabView to make this component testable with our version of react-redux.
+export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
@@ -232,4 +234,4 @@ export default connect(
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     toggleDarkMode: () => dispatch(toggleDarkMode())
   })
-)(JavalabView);
+)(UnconnectedJavalabView);
