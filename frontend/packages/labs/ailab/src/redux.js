@@ -971,7 +971,7 @@ export function getEmptyCellDetails(state) {
   return emptyCellLocations;
 }
 
-export function getPresetDataDescription(state) {
+export function getDataDescription(state) {
   // If this a dataset from the internal collection that already has a description, use that.
   if (
     state.metadata
@@ -987,6 +987,13 @@ export function getPresetDataDescription(state) {
   } else {
     return undefined;
   }
+}
+
+function getDatasetDetails(state) {
+  const datasetDetails = {}
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  return datasetDetails;
 }
 
 export function getTrainedModelDataToSave(state) {
@@ -1013,6 +1020,7 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
+  dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
 

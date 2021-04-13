@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import {
   setTrainedModelDetail,
   getSelectedColumnDescriptions,
-  getPresetDataDescription
+  getDataDescription
 } from "../redux";
 import { styles, saveMessages, ModelNameMaxLength } from "../constants";
 import Statement from "./Statement";
@@ -18,7 +18,7 @@ class SaveModel extends Component {
     labelColumn: PropTypes.string,
     columnDescriptions: PropTypes.array,
     saveStatus: PropTypes.string,
-    presetDataDescription: PropTypes.string
+    dataDescription: PropTypes.string
   };
 
   constructor(props) {
@@ -80,7 +80,7 @@ class SaveModel extends Component {
       id: "datasetDescription",
       text: "Describe the dataset.",
       placeholder: "How was the data collected? Who collected it? When was it collected?",
-      answer: this.props.presetDataDescription
+      answer: this.props.dataDescription
     };
 
     const arrowIcon = this.state.showColumnDescriptions
@@ -201,7 +201,7 @@ export default connect(
     labelColumn: state.labelColumn,
     columnDescriptions: getSelectedColumnDescriptions(state),
     saveStatus: state.saveStatus,
-    presetDataDescription: getPresetDataDescription(state)
+    dataDescription: getDataDescription(state)
   }),
   dispatch => ({
     setTrainedModelDetail(field, value, isColumn) {
