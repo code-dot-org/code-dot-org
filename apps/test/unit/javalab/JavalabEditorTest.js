@@ -1,9 +1,7 @@
 import React from 'react';
-import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
-import JavalabFileManagement from '@cdo/apps/javalab/JavalabFileManagement';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -20,8 +18,6 @@ describe('Java Lab Editor Test', () => {
     stubRedux();
     registerReducers({javalab});
     store = getStore();
-    sinon.stub(JavalabFileManagement, 'renameProjectFile');
-    sinon.stub(JavalabFileManagement, 'onProjectChanged');
     defaultProps = {
       onCommitCode: () => {}
     };
@@ -29,8 +25,6 @@ describe('Java Lab Editor Test', () => {
 
   afterEach(() => {
     restoreRedux();
-    JavalabFileManagement.renameProjectFile.restore();
-    JavalabFileManagement.onProjectChanged.restore();
   });
 
   const createWrapper = overrideProps => {
@@ -56,7 +50,7 @@ describe('Java Lab Editor Test', () => {
       expect(submitBtn.prop('value')).to.equal('Save');
     });
 
-    it('calls JavalabFileManagement functions and updates state on Rename save', () => {
+    it('updates state on Rename save', () => {
       const editor = createWrapper();
 
       const activateRenameBtn = editor.find('button').first();
@@ -66,21 +60,17 @@ describe('Java Lab Editor Test', () => {
       const renameInput = editor.find('input').first();
       renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
 
-      // save button not clicked, should not yet have set project changed
-      // or change filename in redux
-      expect(JavalabFileManagement.onProjectChanged).to.not.have.been.called;
-      expect(store.getState().javalab.filename).to.not.equal(
-        'NewFilename.java'
-      );
+      // save button not clicked, should not yet have changed filename in redux
+
+      expect(store.getState().javalab.sources['NewFilename.java']).to.be
+        .undefined;
 
       // submit form, should trigger file rename
       const form = editor.find('form').first();
       // stub preventDefault function
       form.invoke('onSubmit')({preventDefault: () => {}});
-      expect(JavalabFileManagement.renameProjectFile).to.have.been.calledOnce;
-      // should have called project changed and updated redux
-      expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
-      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+      expect(store.getState().javalab.sources['NewFilename.java']).to.not.be
+        .undefined;
     });
   });
 });
