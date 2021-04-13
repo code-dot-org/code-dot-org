@@ -40,7 +40,7 @@ const createStoreWithoutLessonPlan = () => {
   });
   const store = createStoreWithReducers();
   store.dispatch(
-    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [])
+    init([sampleActivityForLessonWithoutLessonPlan], searchOptions, [], false)
   );
   store.dispatch(initResources('lessonResource', []));
   store.dispatch(initVocabularies([]));
