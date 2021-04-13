@@ -13,15 +13,18 @@ import {
 import {populateFiles} from '@cdo/apps/javalab/JavalabFileManagement';
 
 describe('JavalabFileManagement', () => {
+  let appOptions;
   beforeEach(() => {
     stubRedux();
     registerReducers({javalab});
+    appOptions = window.appOptions;
     window.appOptions = {level: {}};
     sinon.stub(getStore(), 'dispatch');
   });
 
   afterEach(() => {
     restoreRedux();
+    window.appOptions = appOptions;
   });
 
   describe('populateFiles', () => {

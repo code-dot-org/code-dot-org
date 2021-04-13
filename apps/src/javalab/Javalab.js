@@ -103,6 +103,8 @@ Javalab.prototype.init = function(config) {
 
   registerReducers({javalab});
 
+  // If we're in editBlock mode (for editing start_sources) we set up the save button to save
+  // the project file information into start_souurces on the level.
   if (config.level.editBlocks) {
     config.level.lastAttempt = '';
     showLevelBuilderSaveButton(() => ({
