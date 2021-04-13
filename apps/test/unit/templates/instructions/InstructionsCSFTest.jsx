@@ -32,20 +32,10 @@ describe('InstructionsCSF', () => {
         longInstructions: 'Use this new block.'
       })
     );
-
-    // Avoid `attachTo: document.body` Warning
-    const div = document.createElement('div');
-    div.setAttribute('id', 'container');
-    document.body.appendChild(div);
   });
 
   afterEach(() => {
     restoreRedux();
-
-    const div = document.getElementById('container');
-    if (div) {
-      document.body.removeChild(div);
-    }
   });
 
   it('can change feedback when rendering different blockly blocks', () => {

@@ -246,9 +246,7 @@ class InstructionsCSF extends React.Component {
    * @return {Element} scrollTarget
    */
   getScrollTarget = () => {
-    // couldn't manage to get the parent element when using ref
-    // so used querySelector instead
-    return document.querySelector('.csf-top-instructions').parentElement;
+    return this.instructions.parentElement;
   };
 
   dismissHintPrompt = () => {
@@ -338,6 +336,10 @@ class InstructionsCSF extends React.Component {
             setColHeight={this.setLeftColHeight}
           />
           <InstructionsCsfMiddleCol
+            ref={instructions =>
+              (this.instructions =
+                instructions && instructions.getWrappedInstance().instructions)
+            }
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
             hasShortInstructions={hasShortInstructions}
