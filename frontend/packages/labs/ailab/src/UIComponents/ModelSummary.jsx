@@ -4,6 +4,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { saveMessages } from "../constants";
 import Statement from "./Statement";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 class ModelSummary extends Component {
   static propTypes = {
@@ -11,8 +13,28 @@ class ModelSummary extends Component {
     saveStatus: PropTypes.string
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoading: true
+    };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 2000);
+  }
+
   render() {
-    const { trainedModelDetails } = this.props;
+    const { trainedModelDetails, saveStatus } = this.props;
+
+    let loadStatus = this.state.isLoading ? (
+      <FontAwesomeIcon icon={faSpinner} />
+    ) : (
+      saveMessages[saveStatus]
+    );
 
     return (
       <div>
@@ -24,10 +46,8 @@ class ModelSummary extends Component {
           {trainedModelDetails.potentialMisuses}
         </p>
         <div>
-          {this.props.saveStatus && (
-            <div style={{ position: "absolute", bottom: 0 }}>
-              {saveMessages[this.props.saveStatus]}
-            </div>
+          {saveStatus === "success" && (
+            <div style={{ position: "absolute", bottom: 0 }}>{loadStatus}</div>
           )}
         </div>
       </div>
