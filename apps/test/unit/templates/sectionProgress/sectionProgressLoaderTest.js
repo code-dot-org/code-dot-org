@@ -186,9 +186,9 @@ const fullExpectedResult = {
   },
   studentLastUpdateByScript: {
     123: {
-      '100': 0,
-      '101': timeInSeconds * 1000,
-      '102': (timeInSeconds + 1) * 1000
+      '100': null,
+      '101': timeInSeconds,
+      '102': timeInSeconds + 1
     }
   }
 };

@@ -86,7 +86,7 @@ export function loadScriptProgress(scriptId, sectionId) {
         sectionProgress.studentLastUpdateByScript = {
           [scriptId]: {
             ...sectionProgress.studentLastUpdateByScript[scriptId],
-            ...processStudentTimestamps(data.student_last_updates)
+            ...data.student_last_updates
           }
         };
       });
@@ -111,11 +111,6 @@ export function loadScriptProgress(scriptId, sectionId) {
       getStore().dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   });
-}
-
-function processStudentTimestamps(timestamps) {
-  const studentTimestamps = _.mapValues(timestamps, seconds => seconds * 1000);
-  return studentTimestamps;
 }
 
 function postProcessDataByScript(scriptData) {

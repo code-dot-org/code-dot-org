@@ -348,6 +348,7 @@ class Lesson < ApplicationRecord
   # Key names are converted to camelCase here so they can easily be consumed by
   # the client.
   def summarize_for_lesson_edit
+    lesson_standards = standards.sort_by {|s| [s.framework.name, s.shortcode]}
     {
       id: id,
       name: name,
@@ -368,7 +369,8 @@ class Lesson < ApplicationRecord
       programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
-      standards: standards.map(&:summarize_for_lesson_edit),
+      standards: lesson_standards.map(&:summarize_for_lesson_edit),
+      frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,

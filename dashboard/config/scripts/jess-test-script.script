@@ -130,3 +130,5 @@ level 'VPL - CSD Module 7 - Alternative Unit', progression: 'Preview: Alternate 
 level 'VPL - CSD Module 8 - Alternative Unit', progression: 'Preview: Alternate Units to Unit 6 (~10 mins)'
 level 'VPL - CSD - Module 7 Wrap Up', progression: 'Module 7 Asynchronous Wrap Up (~10 mins)'
 
+lesson 'Self Paced Playground', display_name: 'Self-Paced Playground', has_lesson_plan: false
+

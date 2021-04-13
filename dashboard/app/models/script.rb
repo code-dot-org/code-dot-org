@@ -42,6 +42,8 @@ class Script < ApplicationRecord
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :scripts_resources
   has_many :scripts_resources
+  has_many :scripts_student_resources, dependent: :destroy
+  has_many :student_resources, through: :scripts_student_resources, source: :resource
   has_many :users, through: :user_scripts
   has_many :user_scripts
   has_many :hint_view_requests
@@ -94,7 +96,8 @@ class Script < ApplicationRecord
         },
         :script_levels,
         :levels,
-        :resources
+        :resources,
+        :student_resources
       ]
     )
   end
@@ -1422,7 +1425,8 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,
