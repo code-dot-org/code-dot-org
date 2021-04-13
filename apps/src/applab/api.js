@@ -584,3 +584,18 @@ export function getPrediction(modelName, modelId, testValues, callback) {
     callback
   });
 }
+
+export function getValue(object, key) {
+  return Applab.executeCmd(null, 'getValue', {
+    object,
+    key
+  });
+}
+
+export function addPair(object, key, value) {
+  return Applab.executeCmd(null, 'addPair', {
+    object,
+    key,
+    value
+  });
+}
