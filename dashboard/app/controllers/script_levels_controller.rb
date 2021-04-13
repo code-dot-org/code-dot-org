@@ -265,15 +265,17 @@ class ScriptLevelsController < ApplicationController
           level_id: level_summary[:level_id], user_id: user.id, script: @script
         )
         level_summary[:perfect] = ul&.perfect?
+
+        level = Level.find(level_summary[:level_id])
         localized_level_description = I18n.t(
-          ul.level.name,
+          level.name,
           scope: [:data, :bubble_choice_description],
-          default: ul.level.bubble_choice_description
+          default: level.bubble_choice_description
         )
         localized_level_display_name = I18n.t(
-          ul.level.name,
+          level.name,
           scope: [:data, :display_name],
-          default: ul.level.display_name
+          default: level.display_name
         ) || I18n.t('lesson_extras.bonus_level')
         level_summary[:description] = localized_level_description
         level_summary[:display_name] = localized_level_display_name
