@@ -72,11 +72,6 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string
   };
 
-  state = {
-    loading: false,
-    loadSuccess: true
-  };
-
   componentDidMount() {
     this.props.onMount();
     this.getToken();
@@ -106,7 +101,7 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
-  renderJavalab() {
+  render() {
     return (
       <StudioAppWrapper>
         <div style={style.javalab}>
@@ -169,17 +164,6 @@ class JavalabView extends React.Component {
           </div>
         </div>
       </StudioAppWrapper>
-    );
-  }
-
-  render() {
-    return this.state.loading ? (
-      <div className="loading" />
-    ) : this.state.loadSuccess ? (
-      this.renderJavalab()
-    ) : (
-      // TODO: improve error messaging/styling
-      <div>Sorry, we encountered an error</div>
     );
   }
 }

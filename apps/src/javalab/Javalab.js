@@ -95,9 +95,13 @@ Javalab.prototype.init = function(config) {
 
   registerReducers({javalab});
 
-  // TODO: verify format of lastAttempt/startSources
   const startSources = config.level.lastAttempt || config.level.startSources;
-  if (startSources) {
+  // if startSources exists and contains at least one key, use startSources
+  if (
+    startSources &&
+    typeof startSources === 'object' &&
+    Object.keys(startSources).length > 0
+  ) {
     getStore().dispatch(setAllSources(startSources));
   }
 
