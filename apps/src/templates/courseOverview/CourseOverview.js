@@ -80,6 +80,7 @@ class CourseOverview extends Component {
     ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape),
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
@@ -153,6 +154,7 @@ class CourseOverview extends Component {
       sectionsForDropdown,
       teacherResources,
       migratedTeacherResources,
+      studentResources,
       isTeacher,
       viewAs,
       scripts,
@@ -246,20 +248,20 @@ class CourseOverview extends Component {
           }
         />
         {showNotification && <VerifiedResourcesNotification />}
-        {isTeacher && (
-          <div>
-            <CourseOverviewTopRow
-              sectionsInfo={sectionsInfo}
-              sectionsForDropdown={sectionsForDropdown}
-              id={id}
-              title={title}
-              teacherResources={teacherResources}
-              migratedTeacherResources={migratedTeacherResources}
-              showAssignButton={showAssignButton}
-              useMigratedResources={useMigratedResources}
-            />
-          </div>
-        )}
+        <div>
+          <CourseOverviewTopRow
+            sectionsInfo={sectionsInfo}
+            sectionsForDropdown={sectionsForDropdown}
+            id={id}
+            title={title}
+            teacherResources={teacherResources}
+            migratedTeacherResources={migratedTeacherResources}
+            studentResources={studentResources}
+            showAssignButton={showAssignButton}
+            useMigratedResources={useMigratedResources}
+            isTeacher={isTeacher}
+          />
+        </div>
         {scripts.map((script, index) => (
           <CourseScript
             key={index}
