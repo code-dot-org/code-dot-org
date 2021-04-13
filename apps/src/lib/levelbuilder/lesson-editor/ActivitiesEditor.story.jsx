@@ -24,7 +24,7 @@ const createStoreWithLessonPlan = () => {
     vocabularies: vocabulariesEditor
   });
   const store = createStoreWithReducers();
-  store.dispatch(init(sampleActivities, searchOptions, []));
+  store.dispatch(init(sampleActivities, searchOptions, [], false));
   store.dispatch(initResources([]));
   store.dispatch(initVocabularies([]));
   return store;
