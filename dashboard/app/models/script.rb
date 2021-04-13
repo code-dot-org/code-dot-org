@@ -1455,7 +1455,8 @@ class Script < ApplicationRecord
       weeklyInstructionalMinutes: weekly_instructional_minutes,
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       courseVersionId: get_course_version&.id,
-      pdfUrls: get_pdfs_for_script_overview
+      scriptOverviewPdfUrl: get_pdf_for_script_overview,
+      scriptResourcesPdfUrl: get_pdf_for_script_resources
     }
 
     #TODO: lessons should be summarized through lesson groups in the future
@@ -1923,12 +1924,15 @@ class Script < ApplicationRecord
     "#{script_json_directory}/#{script_name}.script_json"
   end
 
-  def get_pdfs_for_script_overview
+  def get_pdf_for_script_overview
     if is_migrated?
-      [
-        Services::CurriculumPdfs.get_script_overview_url(self),
-        Services::CurriculumPdfs.get_script_resources_url(self)
-      ]
+      Services::CurriculumPdfs.get_script_overview_url(self)
+    end
+  end
+
+  def get_pdf_for_script_resources
+    if is_migrated?
+      Services::CurriculumPdfs.get_script_resources_url(self)
     end
   end
 end

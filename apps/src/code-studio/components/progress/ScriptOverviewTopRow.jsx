@@ -71,7 +71,20 @@ class ScriptOverviewTopRow extends React.Component {
     weeklyInstructionalMinutes: PropTypes.number,
     showCalendar: PropTypes.bool,
     isMigrated: PropTypes.bool,
-    pdfUrls: PropTypes.arrayOf(PropTypes.string)
+    scriptOverviewPdfUrl: PropTypes.string,
+    scriptResourcesPdfUrl: PropTypes.string
+  };
+
+  compilePdfDropdownOptions = () => {
+    const {scriptOverviewPdfUrl, scriptResourcesPdfUrl} = this.props;
+    const options = [];
+    if (scriptOverviewPdfUrl) {
+      options.push({name: i18n.printLessonPlans(), url: scriptOverviewPdfUrl});
+    }
+    if (scriptResourcesPdfUrl) {
+      options.push({name: i18n.printHandouts(), url: scriptResourcesPdfUrl});
+    }
+    return options;
   };
 
   render() {
@@ -96,6 +109,8 @@ class ScriptOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated
     } = this.props;
+
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
@@ -140,17 +155,19 @@ class ScriptOverviewTopRow extends React.Component {
                 useMigratedResources={isMigrated}
               />
             )}
-          {this.props.pdfUrls && this.props.pdfUrls.length > 0 && (
-            <DropdownButton
-              text={i18n.printingOptions()}
-              color={Button.ButtonColor.blue}
-            >
-              {this.props.pdfUrls.map(url => (
-                <a key={url} href={url}>
-                  {url}
-                </a>
-              ))}
-            </DropdownButton>
+          {pdfDropdownOptions.length > 0 && (
+            <div style={{marginRight: 5}}>
+              <DropdownButton
+                text={i18n.printingOptions()}
+                color={Button.ButtonColor.blue}
+              >
+                {pdfDropdownOptions.map(option => (
+                  <a key={option.name} href={option.url}>
+                    {option.name}
+                  </a>
+                ))}
+              </DropdownButton>
+            </div>
           )}
           {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton

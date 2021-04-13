@@ -293,7 +293,8 @@ progress.renderCourseProgress = function(scriptData) {
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
         isMigrated={scriptData.is_migrated}
-        pdfUrls={scriptData.pdfUrls}
+        scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
+        scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
       />
     </Provider>,
     mountPoint
