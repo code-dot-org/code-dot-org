@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Radium from 'radium';
 import {connect} from 'react-redux';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
@@ -152,19 +151,19 @@ class InstructionsCsfMiddleCol extends React.Component {
       ? this.props.ttsShortInstructionsUrl
       : this.props.ttsLongInstructionsUrl;
 
+    const tipsStyle = shouldDisplayChatTips(this.props.skinId)
+      ? this.props.isRtl
+        ? styles.instructionsWithTipsRtl
+        : styles.instructionsWithTips
+      : {};
+
     return (
       <div
         ref={c => {
           this.instructions = c;
         }}
         className="csf-top-instructions"
-        style={[
-          styles.instructions,
-          shouldDisplayChatTips(this.props.skinId) &&
-            (this.props.isRtl
-              ? styles.instructionsWithTipsRtl
-              : styles.instructionsWithTips)
-        ]}
+        style={{...styles.instructions, ...tipsStyle}}
       >
         <ChatBubble
           ttsUrl={ttsUrl}
@@ -244,9 +243,7 @@ class InstructionsCsfMiddleCol extends React.Component {
   }
 }
 
-export const UnconnectedInstructionsCsfMiddleCol = Radium(
-  InstructionsCsfMiddleCol
-);
+export const UnconnectedInstructionsCsfMiddleCol = InstructionsCsfMiddleCol;
 
 export default connect(
   function propsFromStore(state) {
@@ -286,4 +283,4 @@ export default connect(
   },
   null,
   {withRef: true}
-)(Radium(InstructionsCsfMiddleCol));
+)(InstructionsCsfMiddleCol);
