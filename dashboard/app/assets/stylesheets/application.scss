@@ -2919,6 +2919,19 @@ $modal-no-icon-gap: 22px;
 
 .instructions-markdown {
   padding-top: 19px;
+
+  .instructor-image {
+    float: left;
+    padding-right: 10px;
+  }
+}
+
+html[dir="rtl"] .instructions-markdown {
+  .instructor-image {
+    float: right;
+    padding-left: 10px;
+    padding-right: 0;
+  }
 }
 
 .markdown-level-header-text {
