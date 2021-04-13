@@ -45,7 +45,7 @@ describe('LessonEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, []));
+    store.dispatch(init(sampleActivities, searchOptions, [], false));
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));

@@ -32,6 +32,13 @@ const assertChecked = (wrapper, name, checked) => {
   expect(label.find('input').props().checked).to.equal(checked);
 };
 
+const assertDisabled = (wrapper, name, disabled) => {
+  const label = wrapper
+    .find('.level-token-checkboxes')
+    .findWhere(n => n.name() === 'label' && n.text().includes(name));
+  expect(label.find('input').props().disabled).to.equal(disabled);
+};
+
 describe('LevelTokenDetails', () => {
   let setScriptLevelField;
   let defaultProps;
@@ -41,7 +48,8 @@ describe('LevelTokenDetails', () => {
       setScriptLevelField,
       scriptLevel: defaultScriptLevel,
       activitySectionPosition: 5,
-      activityPosition: 1
+      activityPosition: 1,
+      lessonExtrasAvailableForScript: false
     };
   });
 
@@ -55,6 +63,21 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'bonus', false);
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
+  });
+
+  it('bonus is disabled if lesson extras are not available for script', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    assertDisabled(wrapper, 'bonus', true);
+  });
+
+  it('bonus is enabled if lesson extras are available for script', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails
+        {...defaultProps}
+        lessonExtrasAvailableForScript={true}
+      />
+    );
+    assertDisabled(wrapper, 'bonus', false);
   });
 
   it('shows checked checkboxes', () => {
