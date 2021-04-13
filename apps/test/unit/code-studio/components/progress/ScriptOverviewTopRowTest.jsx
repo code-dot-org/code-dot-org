@@ -26,6 +26,7 @@ const defaultProps = {
   viewAs: ViewType.Student,
   isRtl: false,
   teacherResources: [],
+  studentResources: [],
   showAssignButton: true,
   isMigrated: false
 };

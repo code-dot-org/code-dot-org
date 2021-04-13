@@ -57,6 +57,7 @@ const styles = {
 class ResourcesEditor extends Component {
   static propTypes = {
     courseVersionId: PropTypes.number,
+    resourceContext: PropTypes.string.isRequired,
 
     // Provided by redux
     resources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -196,7 +197,7 @@ class ResourcesEditor extends Component {
   }
 
   onSearchSelect = e => {
-    this.props.addResource(e.resource);
+    this.props.addResource(this.props.resourceContext, e.resource);
   };
 
   constructResourceOption = resource => ({
@@ -206,11 +207,11 @@ class ResourcesEditor extends Component {
   });
 
   addResource = resource => {
-    this.props.addResource(resource);
+    this.props.addResource(this.props.resourceContext, resource);
   };
 
   saveEditResource = resource => {
-    this.props.editResource(resource);
+    this.props.editResource(this.props.resourceContext, resource);
   };
 
   handleRemoveResourceDialogOpen = resource => {
@@ -222,7 +223,10 @@ class ResourcesEditor extends Component {
   };
 
   removeResource = () => {
-    this.props.removeResource(this.state.resourceToRemove.key);
+    this.props.removeResource(
+      this.props.resourceContext,
+      this.state.resourceToRemove.key
+    );
     this.handleRemoveResourceDialogClose();
   };
 
