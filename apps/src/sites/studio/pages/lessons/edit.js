@@ -43,7 +43,12 @@ $(document).ready(function() {
   const store = getStore();
 
   store.dispatch(
-    init(activities, searchOptions, lessonData.programmingEnvironments)
+    init(
+      activities,
+      searchOptions,
+      lessonData.programmingEnvironments,
+      lessonData.lessonExtrasAvailableForScript
+    )
   );
   store.dispatch(initResources(lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
