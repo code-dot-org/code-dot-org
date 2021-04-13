@@ -429,7 +429,7 @@ If you run into an error message about `Could not find MIME type database in the
 
 - `brew install shared-mime-info`
 
-(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies).)
+(More info on mimemagic dependencies [here](https://github.com/mimemagicrb/mimemagic#dependencies), including help for OSes that don't support Homebrew.)
 
 #### Xcode Set Up
 
