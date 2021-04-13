@@ -92,7 +92,13 @@ function loadFiles(success, failure, version) {
 
 function populateFiles(fileEntries, success, failure) {
   if (fileEntries.length === 0) {
-    // TODO: make starter code more customizable
+    // TODO: enable multi-file
+    const startSources = window.appOptions.level.startSources;
+    if (startSources) {
+      const filename = Object.keys(startSources)[0];
+      getStore().dispatch(setFileName(filename));
+      getStore().dispatch(setEditorText(startSources[filename].text));
+    }
     success();
   } else {
     // TODO: enable multi-file
