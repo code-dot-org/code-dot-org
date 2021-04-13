@@ -9,7 +9,7 @@ import PaneHeader, {
 import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
-import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
 
 const style = {
   editor: {
@@ -50,7 +50,6 @@ class JavalabEditor extends React.Component {
 
     this.activateRenameFile = this.activateRenameFile.bind(this);
     this.renameFileComplete = this.renameFileComplete.bind(this);
-    this.onProjectChanged = onProjectChanged.bind(this);
 
     this.state = {
       renameFileActive: false,
@@ -87,7 +86,7 @@ class JavalabEditor extends React.Component {
           Object.keys(this.props.sources)[0],
           tr.newDoc.toString()
         );
-        this.onProjectChanged();
+        projectChanged();
       }
     };
   };
@@ -97,9 +96,8 @@ class JavalabEditor extends React.Component {
     const {sources, renameFile} = this.props;
     const {newFilename} = this.state;
     const filename = Object.keys(sources)[0];
-    renameProjectFile(filename, newFilename);
     renameFile(filename, newFilename);
-    this.onProjectChanged();
+    projectChanged();
     this.setState({renameFileActive: false});
   }
 

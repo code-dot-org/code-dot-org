@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore, registerReducers} from '../redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import JavalabView from './JavalabView';
 import javalab, {getSources, setAllSources} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -60,14 +59,9 @@ Javalab.prototype.init = function(config) {
 
   config.pinWorkspaceToBottom = true;
 
-  config.useFilesApi = true;
-
   config.getCode = this.getCode.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
-
-  // if a version is provided in the url, use that version for files.
-  const suppliedFilesVersionId = queryParams('version');
 
   const onMount = () => {
     // NOTE: Most other apps call studioApp.init(). Like WebLab, Ailab, and Fish, we don't.
@@ -101,8 +95,10 @@ Javalab.prototype.init = function(config) {
 
   registerReducers({javalab});
 
-  if (window.appOptions.level.lastAttempt) {
-    getStore().dispatch(setAllSources(window.appOptions.level.lastAttempt));
+  // TODO: verify format of lastAttempt/startSources
+  const startSources = config.level.lastAttempt || config.level.startSources;
+  if (startSources) {
+    getStore().dispatch(setAllSources(startSources));
   }
 
   ReactDOM.render(
@@ -111,7 +107,6 @@ Javalab.prototype.init = function(config) {
         onMount={onMount}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
-        suppliedFilesVersionId={suppliedFilesVersionId}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -154,10 +149,6 @@ Javalab.prototype.onContinue = function() {
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
   return getSources(storeState);
-};
-
-Javalab.prototype.getCurrentFilesVersionId = function() {
-  return project.filesVersionId;
 };
 
 Javalab.prototype.onCommitCode = function() {
