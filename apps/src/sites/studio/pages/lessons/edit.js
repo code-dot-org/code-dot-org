@@ -7,7 +7,7 @@ import reducers, {
   init,
   mapActivityDataForEditor
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import createStandardsReducer, {
@@ -34,7 +34,7 @@ $(document).ready(function() {
   registerReducers({
     ...reducers,
     instructionsDialog: instructionsDialog,
-    resources: resourcesEditor,
+    resources: createResourcesReducer('lessonResource'),
     vocabularies: vocabulariesEditor,
     programmingExpressions: programmingExpressionsEditor,
     standards: createStandardsReducer('standard'),
@@ -50,7 +50,7 @@ $(document).ready(function() {
       lessonData.lessonExtrasAvailableForScript
     )
   );
-  store.dispatch(initResources(lessonData.resources || []));
+  store.dispatch(initResources('lessonResource', lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
   store.dispatch(
     initProgrammingExpressions(lessonData.programmingExpressions || [])
