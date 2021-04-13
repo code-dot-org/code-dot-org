@@ -92,23 +92,25 @@ describe('scriptEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
 
-  it('getSerializedLessonGroups', () => {
-    let serializedLessonGroups = getSerializedLessonGroups(
-      initialState.lessonGroups,
-      initialState.levelKeyList
-    );
+  describe('getSerializedLessonGroups', () => {
+    it('serializes default state', () => {
+      let serializedLessonGroups = getSerializedLessonGroups(
+        initialState.lessonGroups,
+        initialState.levelKeyList
+      );
 
-    // Verify that the JSON contains serialized lesson groups.
-    expect(serializedLessonGroups).to.equal(
-      "lesson_group 'lg-key', display_name: 'Display Name'\n" +
-        "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n\n" +
-        "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
-        "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
-        "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
-        "lesson 'd', display_name: 'D', has_lesson_plan: true\n\n" +
-        "lesson 'e', display_name: 'E', has_lesson_plan: true\n\n" +
-        "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
-    );
+      // Verify that the JSON contains serialized lesson groups.
+      expect(serializedLessonGroups).to.equal(
+        "lesson_group 'lg-key', display_name: 'Display Name'\n" +
+          "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n\n" +
+          "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
+          "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
+          "lesson_group 'lg-key-2', display_name: 'Display Name 2'\n" +
+          "lesson 'd', display_name: 'D', has_lesson_plan: true\n\n" +
+          "lesson 'e', display_name: 'E', has_lesson_plan: true\n\n" +
+          "lesson 'f', display_name: 'F', has_lesson_plan: false\n\n"
+      );
+    });
   });
 
   it('mapLessonGroupDataForEditor', () => {
