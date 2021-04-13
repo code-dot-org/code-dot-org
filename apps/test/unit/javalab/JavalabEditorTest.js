@@ -14,7 +14,7 @@ import {
 import javalab from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
-  let defaultProps, store;
+  let defaultProps, store, appOptions;
 
   beforeEach(() => {
     stubRedux();
@@ -25,6 +25,7 @@ describe('Java Lab Editor Test', () => {
     defaultProps = {
       onCommitCode: () => {}
     };
+    appOptions = window.appOptions;
     window.appOptions = {level: {}};
   });
 
@@ -32,6 +33,7 @@ describe('Java Lab Editor Test', () => {
     restoreRedux();
     JavalabFileManagement.renameProjectFile.restore();
     JavalabFileManagement.onProjectChanged.restore();
+    window.appOptions = appOptions;
   });
 
   const createWrapper = overrideProps => {
@@ -87,25 +89,18 @@ describe('Java Lab Editor Test', () => {
     it('updates state on Rename save and does not call JavalabFileManagement functions when in editBlocks mode', () => {
       const editor = createWrapper();
       window.appOptions.level.editBlocks = 'start_sources';
-
-      const activateRenameBtn = editor.find('button').first();
-      activateRenameBtn.invoke('onClick')();
-
-      // first input should be file rename text input
-      const renameInput = editor.find('input').first();
-      renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
-
-      // save button not clicked, should not yet have set project changed
-      // or change filename in redux
-      expect(JavalabFileManagement.onProjectChanged).to.not.have.been.called;
-      expect(store.getState().javalab.filename).to.not.equal(
-        'NewFilename.java'
-      );
-
-      // submit form, should trigger file rename
-      const form = editor.find('form').first();
-      // stub preventDefault function
-      form.invoke('onSubmit')({preventDefault: () => {}});
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .setState({
+          newFilename: 'NewFilename.java',
+          renameFileActive: true
+        });
+      const e = {preventDefault: sinon.stub()};
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .renameFileComplete(e);
       expect(JavalabFileManagement.renameProjectFile).to.not.have.been.called;
       // should have called project changed and updated redux
       expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
