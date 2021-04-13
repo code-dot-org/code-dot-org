@@ -337,6 +337,7 @@ describe('entry tests', () => {
           ['build/package/css/courses.css', 'style/courses.scss'],
           ['build/package/css/scripts.css', 'style/scripts.scss'],
           ['build/package/css/lessons.css', 'style/lessons.scss'],
+          ['build/package/css/rollups.css', 'style/rollups.scss'],
           [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
