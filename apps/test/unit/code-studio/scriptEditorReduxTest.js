@@ -20,6 +20,7 @@ const getInitialState = () => ({
       id: 1,
       key: 'lg-key',
       displayName: 'Display Name',
+      description: 'My Description',
       position: 1,
       userFacing: true,
       lessons: [
@@ -102,6 +103,7 @@ describe('scriptEditorRedux reducer tests', () => {
       // Verify that the JSON contains serialized lesson groups.
       expect(serializedLessonGroups).to.equal(
         "lesson_group 'lg-key', display_name: 'Display Name'\n" +
+          "lesson_group_description 'My Description'\n" +
           "lesson 'a', display_name: 'A', has_lesson_plan: true, unplugged: true\n\n" +
           "lesson 'b', display_name: 'B', has_lesson_plan: false\n\n" +
           "lesson 'c', display_name: 'C', has_lesson_plan: true\n\n" +
