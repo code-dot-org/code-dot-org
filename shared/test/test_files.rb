@@ -170,6 +170,12 @@ class FilesTest < FilesApiTestBase
   end
 
   def test_upload_html_file
+    # Mocha requires that all calls to DCDO.get be stubbed in order to stub the return value
+    # for DCDO.get('disallowed_html_tags', []), which is the only call we care about in this test.
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+    DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
+    DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
+
     filename = 'index.html'
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
     # follow the same validity rules.
