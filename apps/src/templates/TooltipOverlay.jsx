@@ -164,16 +164,8 @@ export function coordinatesProvider(flip = false, isRtl = false) {
   return props => {
     const y = flip ? props.height - props.mouseY : props.mouseY;
     if (isRtl) {
-      return [
-        '\u202A',
-        Math.round(y),
-        ' :y',
-        ', ',
-        Math.round(props.mouseX),
-        ' :',
-        'x',
-        '\u202C'
-      ].join(''); // We have to use unicode to explicitly set the SVG text to LTR when the documen is using RTL
+      // We have to use unicode to explicitly set the SVG text to LTR when the document is using RTL
+      return `\u202A${Math.round(y)} :y, ${Math.round(props.mouseX)} :x\u202C`;
     } else {
       return `x: ${Math.round(props.mouseX)}, y: ${Math.round(y)}`;
     }
