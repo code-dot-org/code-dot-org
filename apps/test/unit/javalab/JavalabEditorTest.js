@@ -61,7 +61,6 @@ describe('Java Lab Editor Test', () => {
       renameInput.invoke('onChange')({target: {value: 'NewFilename.java'}});
 
       // save button not clicked, should not yet have changed filename in redux
-
       expect(store.getState().javalab.sources['NewFilename.java']).to.be
         .undefined;
 
