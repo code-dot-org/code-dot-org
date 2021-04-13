@@ -4,8 +4,15 @@ import $ from 'jquery';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 import ModelCard from './ModelCard';
+import color from '@cdo/apps/util/color';
+
+const DEFAULT_MARGIN = 7;
 
 const styles = {
+  dialog: {
+    padding: '0 15px',
+    cursor: 'default'
+  },
   left: {
     float: 'left',
     width: '40%',
@@ -17,6 +24,19 @@ const styles = {
     width: '60%',
     padding: 20,
     boxSizing: 'border-box'
+  },
+  header: {
+    textAlign: 'center',
+    fontSize: 24,
+    marginTop: 20
+  },
+  message: {
+    color: color.dark_charcoal,
+    textAlign: 'left',
+    margin: DEFAULT_MARGIN,
+    overflow: 'hidden',
+    lineHeight: '15px',
+    whiteSpace: 'pre-wrap'
   }
 };
 
@@ -30,14 +50,17 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   state = {
-    selectedModelId: undefined,
+    selectedModel: undefined,
     models: [],
-    isImportPending: false
+    isModelListPending: true,
+    isImportPending: false,
+    confirmDialogOpen: false,
+    deletionStatus: undefined
   };
 
   componentDidUpdate(prevProps) {
     if (this.props.isOpen && !prevProps.isOpen) {
-      this.setState({selectedModelId: undefined, models: []});
+      this.setState({selectedModel: undefined, models: []});
       this.getModelList();
     }
   }
@@ -52,10 +75,30 @@ export default class ModelManagerDialog extends React.Component {
       method: 'GET'
     }).then(models => {
       if (this.props.levelbuilderModel?.id) {
-        models.unshift(this.props.levelbuilderModel);
+        $.ajax({
+          url: `/api/v1/ml_models/${this.props.levelbuilderModel.id}`,
+          method: 'GET'
+        }).then(metadata => {
+          this.props.levelbuilderModel.metadata = metadata;
+          models.unshift(this.props.levelbuilderModel);
+          this.setState({
+            isModelListPending: false,
+            models,
+            selectedModel: models[0]
+          });
+        });
+      } else {
+        this.setState({
+          isModelListPending: false,
+          models,
+          selectedModel: models[0]
+        });
       }
-      this.setState({models});
     });
+  };
+
+  getModelById = id => {
+    return this.state.models.find(model => model.id === id);
   };
 
   importMLModel = async () => {
@@ -67,12 +110,39 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   handleChange = e => {
-    this.setState({selectedModelId: e.target.value});
+    const model = this.getModelById(e.target.value);
+    this.setState({selectedModel: model});
+  };
+
+  showDeleteConfirmation = () => {
+    this.setState({confirmDialogOpen: true});
+  };
+
+  closeConfirmDialog = () => {
+    this.setState({confirmDialogOpen: false, deletionStatus: undefined});
+  };
+
+  deleteModel = () => {
+    $.ajax({
+      url: `/api/v1/ml_models/${this.state.selectedModel.id}`,
+      method: 'DELETE'
+    }).then(response => {
+      if (response.status === 'failure') {
+        this.setState({
+          deletionStatus: `Model with id ${response.id} could not be deleted.`
+        });
+      } else {
+        this.setState({confirmDialogOpen: false});
+      }
+    });
   };
 
   render() {
     const {isOpen} = this.props;
-    const noModels = this.state.models.length === 0;
+    const noModels =
+      !this.state.isModelListPending && this.state.models.length === 0;
+    const showDeleteButton =
+      this.state.selectedModel?.id !== this.props.levelbuilderModel?.id;
 
     return (
       <div>
@@ -80,8 +150,9 @@ export default class ModelManagerDialog extends React.Component {
           isOpen={isOpen}
           handleClose={this.closeModelManager}
           useUpdatedStyles
+          style={styles.dialog}
         >
-          <h2>AI Trained Models</h2>
+          <h1 style={styles.header}>AI Trained Models</h1>
           <div style={styles.left}>
             <select
               name="model"
@@ -94,7 +165,11 @@ export default class ModelManagerDialog extends React.Component {
                 </option>
               ))}
             </select>
-            {noModels && <div>You have not trained any A.I. models yet.</div>}
+            {noModels && (
+              <div style={styles.message}>
+                You have not trained any AI models yet.
+              </div>
+            )}
             <br />
             <Button
               text={'Import'}
@@ -104,9 +179,53 @@ export default class ModelManagerDialog extends React.Component {
               isPending={this.state.isImportPending}
               pendingText={'Importing...'}
             />
+            {showDeleteButton && (
+              <Button
+                text={'Delete'}
+                color={Button.ButtonColor.red}
+                onClick={this.showDeleteConfirmation}
+                disabled={noModels}
+                icon={'trash'}
+                iconClassName={'fa-trash'}
+              />
+            )}
           </div>
           <div style={styles.right}>
-            <ModelCard modelId={this.state.selectedModelId} />
+            <ModelCard model={this.state.selectedModel} />
+          </div>
+        </BaseDialog>
+        <BaseDialog
+          isOpen={this.state.confirmDialogOpen}
+          handleClose={this.closeConfirmDialog}
+          useUpdatedStyles
+          style={styles.dialog}
+        >
+          <h1 style={styles.header}>
+            Are you sure you would like to delete this model?
+          </h1>
+          <div style={styles.left}>
+            <p style={styles.message}>
+              This model will be permanently deleted, and you will not be able
+              to use this model in any App Lab projects.
+            </p>
+            <div>
+              <Button
+                text={'No'}
+                color={Button.ButtonColor.orange}
+                onClick={this.closeConfirmDialog}
+              />
+              <Button
+                text={'Delete'}
+                color={Button.ButtonColor.red}
+                onClick={this.deleteModel}
+                icon={'trash'}
+                iconClassName={'fa-trash'}
+              />
+            </div>
+            <p style={styles.message}>{this.state.deletionStatus}</p>
+          </div>
+          <div style={styles.right}>
+            <ModelCard model={this.state.selectedModel} />
           </div>
         </BaseDialog>
       </div>

@@ -75,3 +75,13 @@ Resources:
       LoggingConfiguration:
         DestinationBucketName: 'cdo-logs'
         LogFilePrefix: 's3/cdo-curriculum-devel'
+  DataSharingInternalBucket:
+    Type: 'AWS::S3::Bucket'
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: 'cdo-data-sharing-internal'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true

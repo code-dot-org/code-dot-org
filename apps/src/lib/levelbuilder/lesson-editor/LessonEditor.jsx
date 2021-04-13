@@ -391,6 +391,7 @@ class LessonEditor extends Component {
                   courseVersionId={
                     this.state.originalLessonData.courseVersionId
                   }
+                  resourceContext="lessonResource"
                 />
               ) : (
                 <h4>

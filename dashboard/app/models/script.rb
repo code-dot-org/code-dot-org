@@ -837,19 +837,6 @@ class Script < ApplicationRecord
     ].include?(name)
   end
 
-  def localize_long_instructions?
-    # Don't ever show non-English markdown instructions for Course 1 - 4, the
-    # 20-hour course, or the pre-2017 minecraft courses.
-    !(
-      csf_international? ||
-      twenty_hour? ||
-      [
-        ScriptConstants::MINECRAFT_NAME,
-        ScriptConstants::MINECRAFT_DESIGNER_NAME
-      ].include?(name)
-    )
-  end
-
   def beta?
     Script.beta? name
   end
@@ -1425,7 +1412,8 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_teacher_resources_dropdown),
+      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,

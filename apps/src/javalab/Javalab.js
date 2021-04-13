@@ -6,6 +6,7 @@ import JavalabView from './JavalabView';
 import javalab, {getSources, setAllSources} from './javalabRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -94,6 +95,14 @@ Javalab.prototype.init = function(config) {
   });
 
   registerReducers({javalab});
+  // If we're in editBlock mode (for editing start_sources) we set up the save button to save
+  // the project file information into start_sources on the level.
+  if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
+    showLevelBuilderSaveButton(() => ({
+      start_sources: getSources(getStore().getState())
+    }));
+  }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   // if startSources exists and contains at least one key, use startSources
