@@ -10,6 +10,7 @@ import {EditorView} from '@codemirror/view';
 import {editorSetup} from './editorSetup';
 import {EditorState} from '@codemirror/state';
 import {renameProjectFile, onProjectChanged} from './JavalabFileManagement';
+import {Tabs, Tab} from 'react-draggable-tab';
 
 const style = {
   editor: {
@@ -56,7 +57,13 @@ class JavalabEditor extends React.Component {
     this.state = {
       renameFileActive: false,
       showFileManagementPanel: false,
-      newFilename: null
+      newFilename: null,
+      tabs: [
+        {
+          filename: props.filename,
+          key: props.filename
+        }
+      ]
     };
   }
 
@@ -69,6 +76,78 @@ class JavalabEditor extends React.Component {
       parent: this._codeMirror,
       dispatch: this.dispatchEditorChange()
     });
+  }
+
+  makeListeners(key) {
+    return {
+      onDoubleClick: e => {
+        console.log('onDoubleClick', key, e);
+        this.handleTabDoubleClick(key, e);
+      }
+    };
+  }
+
+  handleTabSelect(e, key, currentTabs) {
+    const tabs = currentTabs.map(tab => {
+      return {
+        key: tab.key,
+        filename: tab.props.title
+      };
+    });
+    this.setState({selectedTab: key, tabs});
+  }
+
+  handleTabClose(e, key, currentTabs) {
+    const tabs = currentTabs.map(tab => {
+      return {
+        key: tab.key,
+        filename: tab.props.title
+      };
+    });
+    this.setState({tabs});
+  }
+
+  handleTabPositionChange(e, key, currentTabs) {
+    const tabs = currentTabs.map(tab => {
+      return {
+        key: tab.key,
+        filename: tab.props.title
+      };
+    });
+    this.setState({tabs});
+  }
+
+  handleTabAddButtonClick(e, currentTabs) {
+    // key must be unique
+    const key = 'newTab_' + Date.now();
+    let newTab = {
+      key,
+      filename: 'untitled'
+    };
+    const tabs = currentTabs.map(tab => {
+      return {
+        key: tab.key,
+        filename: tab.props.title
+      };
+    });
+    let newTabs = tabs.concat([newTab]);
+
+    this.setState({
+      tabs: newTabs,
+      selectedTab: key
+    });
+  }
+
+  handleTabDoubleClick(key) {
+    this.setState({
+      editTabKey: key,
+      dialogOpen: true
+    });
+  }
+
+  shouldTabClose(e, key) {
+    console.log('should tab close', e, key);
+    return window.confirm('close?');
   }
 
   dispatchEditorChange = () => {
@@ -140,6 +219,7 @@ class JavalabEditor extends React.Component {
   }
 
   render() {
+    const {tabs} = this.state;
     return (
       <div style={this.props.style}>
         <PaneHeader hasFocus={true}>
@@ -153,12 +233,36 @@ class JavalabEditor extends React.Component {
           />
           <PaneSection>Editor</PaneSection>
         </PaneHeader>
-        <div>
-          {this.state.renameFileActive
-            ? this.displayFileRename()
-            : this.displayFileNameAndRenameButton()}
-        </div>
-        <div ref={el => (this._codeMirror = el)} style={style.editor} />
+        <Tabs
+          selectedTab={
+            this.state.selectedTab
+              ? this.state.selectedTab
+              : tabs
+              ? tabs[0].key
+              : ''
+          }
+          onTabSelect={this.handleTabSelect.bind(this)}
+          onTabAddButtonClick={this.handleTabAddButtonClick.bind(this)}
+          onTabPositionChange={this.handleTabPositionChange.bind(this)}
+          tabs={tabs.map(tab => (
+            <Tab
+              key={tab.key}
+              title={tab.filename}
+              disableClose
+              {...this.makeListeners(tab.key)}
+            >
+              <div ref={el => (this._codeMirror = el)} style={style.editor} />
+              {/*TODO: We'll want to make a separate editor for each file*/}
+            </Tab>
+          ))}
+          shortCutKeys={{
+            close: ['alt+command+w', 'alt+ctrl+w'],
+            create: ['alt+command+t', 'alt+ctrl+t'],
+            moveRight: ['alt+command+tab', 'alt+ctrl+tab'],
+            moveLeft: ['shift+alt+command+tab', 'shift+alt+ctrl+tab']
+          }}
+          keepSelectedTab={true}
+        />
       </div>
     );
   }
