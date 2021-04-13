@@ -971,6 +971,24 @@ export function getEmptyCellDetails(state) {
   return emptyCellLocations;
 }
 
+export function getPresetDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata
+    && state.metadata
+    && state.metadata.card
+    && state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
