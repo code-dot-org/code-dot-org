@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:46 UTC",
+    "serialized_at": "2021-04-10 20:18:56 UTC",
     "seeding_key": {
       "script.name": "csp4-2021"
     }
@@ -96,7 +96,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Variables Explore",
@@ -212,7 +213,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Conditionals Explore",
@@ -3581,7 +3583,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "### Topic Coverage\r\n\r\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\r\n\r\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\r\n\r\nWithin our own course we recommend that you use them in a variety of ways:\r\n\r\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\r\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\r\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\r\n\r\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\r\n\r\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing)\r\n"
+            "markdown": "### Topic Coverage\n\nThe College Board has provided a bank of questions to help formatively assess student understanding of the content in the framework. These questions are mapped to topics with each topic having a handful of questions available.\n\nThe College Board has a few strict guidelines about how topic questions can be used. In particular, students may not receive a grade based on performance on topic questions nor can they be used for teacher evaluation. Beyond these requirements, however, they are primarily intended to formatively assess student progress and learning as they prepare for the end of course exam.\n\nWithin our own course we recommend that you use them in a variety of ways:\n\n* Throughout the unit assign topic questions to students related to the topics students are learning about that day or that week\n* Prior to the unit assessment assign topic questions to help students practice and prepare for the summative assessment\n* After the unit assessment use these topic questions to help students track their progress towards preparation for the AP assessment\n\n![](https://curriculum.code.org/media/uploads/topics4_exilLPP.png)\n\nClick for more info: [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1pjzi6hjYC6WJPjVGiCfsevZcfQQ-c7TgAlprjXjNrwo/edit?usp=sharing)\n"
           }
         ],
         "progression_name": "Unit 4 Exam"
@@ -3868,7 +3870,7 @@
       "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3894,7 +3896,7 @@
       "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Assigning Numbers and Strings",
         "level_keys": [
@@ -3920,7 +3922,7 @@
       "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3946,7 +3948,7 @@
       "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3972,7 +3974,7 @@
       "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -3998,7 +4000,7 @@
       "chapter": 16,
       "position": 6,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4024,7 +4026,7 @@
       "chapter": 17,
       "position": 7,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Variables and Operators",
         "level_keys": [
@@ -4050,7 +4052,7 @@
       "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4076,7 +4078,7 @@
       "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging Scope Issues",
         "level_keys": [
@@ -4102,7 +4104,7 @@
       "chapter": 20,
       "position": 10,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Putting it Together",
         "level_keys": [
@@ -5038,7 +5040,7 @@
       "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5064,7 +5066,7 @@
       "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5090,7 +5092,7 @@
       "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5116,7 +5118,7 @@
       "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5142,7 +5144,7 @@
       "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Declare and Call Functions",
         "level_keys": [
@@ -5168,7 +5170,7 @@
       "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5194,7 +5196,7 @@
       "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Function Scope",
         "level_keys": [
@@ -5220,7 +5222,7 @@
       "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -5246,7 +5248,7 @@
       "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "When to Declare Functions",
         "level_keys": [
@@ -6581,6 +6583,18 @@
       }
     },
     {
+      "name": "Debugging Global vs Local Variables",
+      "url": "https://youtu.be/Vlj1_X474to",
+      "key": "debugging_global_vs_local_variables",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
       "name": "CSP Variables Make - Photo Liker App",
       "url": "https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit",
       "key": "variables-make-activity-guide",
@@ -6641,6 +6655,18 @@
       },
       "seeding_key": {
         "resource.key": "song-lyrics-functions"
+      }
+    },
+    {
+      "name": "Debugging Variable Scope: Functions",
+      "url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view?usp=sharing",
+      "key": "debugging_variable_scope_functions",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "debugging_variable_scope_functions"
       }
     },
     {
@@ -6764,6 +6790,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "resource.key": "debugging_global_vs_local_variables"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Variables Make",
         "resource.key": "variables-make-activity-guide"
       }
@@ -6896,6 +6928,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "resource.key": "debugging_variable_scope_functions"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Functions Make",
         "resource.key": "guide_to_make_lessons"
       }
@@ -6974,6 +7012,9 @@
     }
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -7907,5 +7948,8 @@
         "standard.shortcode": "3B-AP-14"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

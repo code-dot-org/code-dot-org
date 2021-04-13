@@ -42,6 +42,16 @@ export const getSources = state => {
   return state.javalab.sources;
 };
 
+export const getProjectFileInfo = state => {
+  // TODO: enable multi-file
+  let data = {};
+  data[state.javalab.filename] = {
+    text: state.javalab.editorText,
+    visible: true
+  };
+  return data;
+};
+
 // Reducer
 export default function reducer(state = initialState, action) {
   if (action.type === APPEND_CONSOLE_LOG) {

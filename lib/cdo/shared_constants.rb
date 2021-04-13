@@ -275,6 +275,9 @@ module SharedConstants
       "appendItem": null,
       "removeItem": null,
       "join": null,
+      "declareAssign_object": null,
+      "getValue": null,
+      "addPair": null,
 
       // Functions
       "functionParams_none": null,

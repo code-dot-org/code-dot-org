@@ -1,4 +1,5 @@
 import React from 'react';
+import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
@@ -12,7 +13,7 @@ import {
 import javalab from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
-  let defaultProps, store;
+  let defaultProps, store, appOptions;
 
   beforeEach(() => {
     stubRedux();
@@ -21,10 +22,13 @@ describe('Java Lab Editor Test', () => {
     defaultProps = {
       onCommitCode: () => {}
     };
+    appOptions = window.appOptions;
+    window.appOptions = {level: {}};
   });
 
   afterEach(() => {
     restoreRedux();
+    window.appOptions = appOptions;
   });
 
   const createWrapper = overrideProps => {
@@ -77,6 +81,25 @@ describe('Java Lab Editor Test', () => {
       expect(store.getState().javalab.sources['NewFilename.java']).to.not.be
         .undefined;
       expect(store.getState().javalab.sources['MyClass.java']).to.be.undefined;
+    });
+
+    it('updates state on Rename save and does not call JavalabFileManagement functions when in editBlocks mode', () => {
+      const editor = createWrapper();
+      window.appOptions.level.editBlocks = 'start_sources';
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .setState({
+          newFilename: 'NewFilename.java',
+          renameFileActive: true
+        });
+      const e = {preventDefault: sinon.stub()};
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .renameFileComplete(e);
+      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+      window.appOptions.level.editBlocks = null;
     });
   });
 });
