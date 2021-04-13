@@ -14,7 +14,7 @@ import {
   getStore,
   registerReducers
 } from '@cdo/apps/redux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import MigratedResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
@@ -27,7 +27,11 @@ describe('ScriptEditor', () => {
     sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
-    registerReducers({...reducers, isRtl, resources: resourcesEditor});
+    registerReducers({
+      ...reducers,
+      isRtl,
+      resources: createResourcesReducer('teacherResource')
+    });
     store = getStore();
     store.dispatch(
       init(
