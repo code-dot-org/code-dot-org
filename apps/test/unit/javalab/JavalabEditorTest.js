@@ -53,6 +53,10 @@ describe('Java Lab Editor Test', () => {
     it('updates state on Rename save', () => {
       const editor = createWrapper();
 
+      // should have default file in redux
+      expect(store.getState().javalab.sources['MyClass.java']).to.not.be
+        .undefined;
+
       const activateRenameBtn = editor.find('button').first();
       activateRenameBtn.invoke('onClick')();
 
@@ -63,6 +67,8 @@ describe('Java Lab Editor Test', () => {
       // save button not clicked, should not yet have changed filename in redux
       expect(store.getState().javalab.sources['NewFilename.java']).to.be
         .undefined;
+      expect(store.getState().javalab.sources['MyClass.java']).to.not.be
+        .undefined;
 
       // submit form, should trigger file rename
       const form = editor.find('form').first();
@@ -70,6 +76,7 @@ describe('Java Lab Editor Test', () => {
       form.invoke('onSubmit')({preventDefault: () => {}});
       expect(store.getState().javalab.sources['NewFilename.java']).to.not.be
         .undefined;
+      expect(store.getState().javalab.sources['MyClass.java']).to.be.undefined;
     });
   });
 });
