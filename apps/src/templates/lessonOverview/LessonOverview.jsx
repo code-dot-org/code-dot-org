@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import Button from '@cdo/apps/templates/Button';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
@@ -57,6 +58,10 @@ const styles = {
   },
   titleNoTopMargin: {
     marginTop: 0
+  },
+  dropdowns: {
+    display: 'flex',
+    justifyContent: 'flex-end'
   }
 };
 
@@ -71,8 +76,29 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
+  compilePdfDropdownOptions = () => {
+    const {lessonPlanPdfUrl, scriptResourcesPdfUrl} = this.props.lesson;
+    const options = [];
+    if (lessonPlanPdfUrl) {
+      options.push({
+        key: 'lessonPlan',
+        name: i18n.printLessonPlan(),
+        url: lessonPlanPdfUrl
+      });
+    }
+    if (scriptResourcesPdfUrl) {
+      options.push({
+        key: 'scriptResource',
+        name: i18n.printHandouts(),
+        url: scriptResourcesPdfUrl
+      });
+    }
+    return options;
+  };
+
   render() {
     const {lesson, announcements, isSignedIn, viewAs} = this.props;
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -83,17 +109,22 @@ class LessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div>
-              {lesson.lessonPlanPdfUrl && (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.gray}
-                  download
-                  href={lesson.lessonPlanPdfUrl}
-                  style={{marginRight: 10}}
-                  target="_blank"
-                  text={i18n.printLessonPlan()}
-                />
+            <div style={styles.dropdowns}>
+              {pdfDropdownOptions.length > 0 && (
+                <div style={{marginRight: 5}}>
+                  <DropdownButton
+                    color={Button.ButtonColor.gray}
+                    href={lesson.lessonPlanPdfUrl}
+                    target="_blank"
+                    text={i18n.printingOptions()}
+                  >
+                    {pdfDropdownOptions.map(option => (
+                      <a key={option.key} href={option.url}>
+                        {option.name}
+                      </a>
+                    ))}
+                  </DropdownButton>
+                </div>
               )}
               <LessonNavigationDropdown lesson={lesson} />
             </div>
