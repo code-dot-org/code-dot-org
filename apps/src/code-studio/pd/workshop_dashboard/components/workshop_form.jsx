@@ -438,7 +438,7 @@ export class WorkshopForm extends React.Component {
                   <p>
                     <strong>
                       This functionality is disabled for all academic year
-                      workshops and virtual CSF workshops.
+                      workshops.
                     </strong>
                   </p>
                   <p>
