@@ -91,7 +91,8 @@ class ProgressLesson extends React.Component {
     showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.string,
+    lockableAuthorized: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -165,9 +166,12 @@ class ProgressLesson extends React.Component {
     // Treat the stage as locked if either
     // (a) it is locked for this user (in the case of a student)
     // (b) it is locked for all students in the section (in the case of a teacher)
+    // (c)
     const locked =
       lesson.lockable &&
-      (stageLocked(levels) || lessonLockedForSection(lesson.id));
+      (stageLocked(levels) ||
+        lessonLockedForSection(lesson.id) ||
+        (!this.props.lockableAuthorized && viewAs === ViewType.Teacher));
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
@@ -192,9 +196,7 @@ class ProgressLesson extends React.Component {
         <div
           style={{
             ...styles.main,
-            ...(hiddenOrLocked &&
-              viewAs !== ViewType.Teacher &&
-              styles.translucent)
+            ...(hiddenOrLocked && styles.translucent)
           }}
         >
           <div style={styles.heading}>
@@ -250,7 +252,7 @@ class ProgressLesson extends React.Component {
             <ProgressLessonContent
               description={description}
               levels={levels}
-              disabled={locked && viewAs !== ViewType.Teacher}
+              disabled={locked}
               selectedSectionId={selectedSectionId}
             />
           )}
@@ -276,7 +278,10 @@ export default connect(state => ({
   viewAs: state.viewAs,
   showLockIcon:
     !!state.teacherSections.selectedSectionId ||
+    (state.viewAs === ViewType.Teacher &&
+      !state.stageLock.lockableAuthorized) ||
     state.viewAs === ViewType.Student,
+  lockableAuthorized: state.stageLock.lockableAuthorized,
   lessonLockedForSection: lessonId =>
     lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
