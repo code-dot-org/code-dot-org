@@ -1505,7 +1505,7 @@
         "courseA_artist_loops7_2019": {
           "courseA_artist_loops7_a": "Não consegue descobrir onde colocar o laço? Tente escrever o código passo-a-passo e procure um padrão.",
           "courseA_artist_loops7_b": "Escreva o código para uma onda primeiro, depois repita para desenhar as outras duas.",
-          "courseA_artist_loops7_c": "Lembre-se, você pode colocar mais de 1 bloco dentro de um laço <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml>."
+          "courseA_artist_loops7_c": "Lembre-se que você pode olocar mais de um bloco em um laço <xml><block type=\"controls_repeat\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>."
         },
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_a": "Não consegue descobrir onde colocar o laço? Tente escrever o código passo-a-passo e procure um padrão.",
@@ -2878,8 +2878,8 @@
           "courseB_iceage_loops3_b": "Para repetir o código, remova uma 'repetição' do lopp <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, então coloque o bloco que você quiser dentro dele."
         },
         "courseB_iceage_loops3_2019": {
-          "courseB_iceage_loops3_a": "Use este novo bloco!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
-          "courseB_iceage_loops3_b": "Para repetir o código, arraste um laço de `repetição` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>, então coloque o bloco que você quiser dentro dele."
+          "courseB_iceage_loops3_a": "Use este novo bloco!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n\n<title name=\"TIMES\" config=\"3-10\">5</title>\n</block></xml>",
+          "courseB_iceage_loops3_b": "Para repetir o código, remova uma 'repetição' do lopp <xml><block type=\"controls_repeat_simplified\">\n\n<title name=\"TIMES\">???</title>\n</block></xml>, então coloque o bloco que você quiser dentro dele."
         },
         "courseB_iceage_loops3_2020": {
           "courseB_iceage_loops3_a": "Use este novo bloco!\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",

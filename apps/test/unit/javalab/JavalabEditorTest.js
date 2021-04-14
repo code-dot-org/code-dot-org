@@ -14,7 +14,7 @@ import {
 import javalab from '@cdo/apps/javalab/javalabRedux';
 
 describe('Java Lab Editor Test', () => {
-  let defaultProps, store;
+  let defaultProps, store, appOptions;
 
   beforeEach(() => {
     stubRedux();
@@ -25,12 +25,15 @@ describe('Java Lab Editor Test', () => {
     defaultProps = {
       onCommitCode: () => {}
     };
+    appOptions = window.appOptions;
+    window.appOptions = {level: {}};
   });
 
   afterEach(() => {
     restoreRedux();
     JavalabFileManagement.renameProjectFile.restore();
     JavalabFileManagement.onProjectChanged.restore();
+    window.appOptions = appOptions;
   });
 
   const createWrapper = overrideProps => {
@@ -81,6 +84,28 @@ describe('Java Lab Editor Test', () => {
       // should have called project changed and updated redux
       expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
       expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+    });
+
+    it('updates state on Rename save and does not call JavalabFileManagement functions when in editBlocks mode', () => {
+      const editor = createWrapper();
+      window.appOptions.level.editBlocks = 'start_sources';
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .setState({
+          newFilename: 'NewFilename.java',
+          renameFileActive: true
+        });
+      const e = {preventDefault: sinon.stub()};
+      editor
+        .find('JavalabEditor')
+        .instance()
+        .renameFileComplete(e);
+      expect(JavalabFileManagement.renameProjectFile).to.not.have.been.called;
+      // should have called project changed and updated redux
+      expect(JavalabFileManagement.onProjectChanged).to.have.been.calledOnce;
+      expect(store.getState().javalab.filename).to.equal('NewFilename.java');
+      window.appOptions.level.editBlocks = null;
     });
   });
 });

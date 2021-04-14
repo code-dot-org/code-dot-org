@@ -48,24 +48,44 @@ es:
       gather: recoger
       green1: green1
       green2: green2
+      guess: adivinar
       height: altura
       honey: miel
       i: i
       left: izquierda
+      legangle: angulopierna
+      leglength: longitudpierna
       length: longitud
+      level: nivel
+      marginX: margenX
+      marginY: margenY
+      myName: miNombre
       name: nombre
       nectar: néctar
       nectars: néctares
+      padYOffset: desplazamientoYpad
+      player_score: puntuación_jugador
       points: puntos
+      punchLine: lineagolpe
       random: aleatorio
+      red1: rojo1
+      red2: rojo2
       repeat: repetir
+      repetitions: repeticiones
       right: derecha
       score: puntuación
+      screenHeight: alturaPantalla
+      screenWidth: anchoPantalla
+      set sides: fijar lados
       shout: gritar
       sides: lados
       size: tamaño
       speed: velocidad
+      startX: inicioX
+      startY: inicioY
       variable: variables
       width: ancho
       wizard: mago
       x: x
+      your var 1: tu var 1
+      your var 2: tu var 2
