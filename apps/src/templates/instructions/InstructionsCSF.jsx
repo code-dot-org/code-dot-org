@@ -60,6 +60,22 @@ const styles = {
   }
 };
 
+/**
+ * InstructionsCSF is made up of 3 ThreeColumns:
+ * Left column: displays an avatar and a lightbulb (if hints are available) used for requesting hints
+ * Middle column: displays the chat bubble with either short or long instructions, hints (if available)
+ * and feedback (if available)
+ * Right column: displays an expand and collapse button (if instructions are expandable/collapsible)
+ * and arrows for scrolling the middle column if it overflows the container
+
+ * Why do we have width calculations?
+ * The ThreeColumns component requires explicit widths of the left and right columns. We get these
+ * widths by using callbacks setRightColWidth and setLeftColWidth. After the left and right columns render
+ * or update, the widths are recalculated.
+
+ * Why do we have height calculations?
+ * The height calculations are used to determine how far the instructions resizer can be dragged
+*/
 class InstructionsCSF extends React.Component {
   static propTypes = {
     teacherViewingStudentWork: PropTypes.bool,
@@ -289,19 +305,21 @@ class InstructionsCSF extends React.Component {
     this.props.collapsed && this.props.handleClickCollapser();
   };
 
+  // needed to set width for ThreeColumns
   setRightColWidth = width => {
     width !== this.state.rightColWidth &&
       this.setState({rightColWidth: width || 0});
   };
 
-  setRightColHeight = height => {
-    height !== this.state.rightColHeight &&
-      this.setState({rightColHeight: height || 0});
-  };
-
+  // needed to set width for ThreeColumns
   setLeftColWidth = width => {
     width !== this.state.leftColWidth &&
       this.setState({leftColWidth: width || 0});
+  };
+
+  setRightColHeight = height => {
+    height !== this.state.rightColHeight &&
+      this.setState({rightColHeight: height || 0});
   };
 
   setLeftColHeight = height => {
@@ -323,6 +341,11 @@ class InstructionsCSF extends React.Component {
       this.props.overlayVisible && styles.withOverlay
     ];
 
+    const threeColumnsStyles = {
+      container: [styles.body, this.props.isMinecraft && craftStyles.body],
+      left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
+    };
+
     const hasShortAndLongInstructions = this.hasShortAndLongInstructions();
 
     return (
@@ -331,13 +354,7 @@ class InstructionsCSF extends React.Component {
         ref={wrapper => (this.instructionsCsfWrapper = wrapper)}
       >
         <ThreeColumns
-          styles={{
-            container: [
-              styles.body,
-              this.props.isMinecraft && craftStyles.body
-            ],
-            left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
-          }}
+          styles={threeColumnsStyles}
           leftColWidth={this.state.leftColWidth}
           rightColWidth={this.state.rightColWidth}
           height={this.props.height - HEADER_HEIGHT - RESIZER_HEIGHT}
