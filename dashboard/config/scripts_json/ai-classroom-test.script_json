@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-12 23:22:37 UTC",
+    "serialized_at": "2021-04-14 18:00:00 UTC",
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -56,31 +56,6 @@
       "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introduction to AI Lab",
-        "level_keys": [
-          "ml-classroom vocab-1"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-classroom vocab-1"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      },
-      "level_keys": [
-        "ml-classroom vocab-1"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
         "progression": "Explore AI Lab",
         "level_keys": [
           "ml-class test-ai lab 1"
@@ -101,33 +76,8 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": null,
-      "assessment": null,
-      "properties": {
-        "progression": "Explore AI Lab",
-        "level_keys": [
-          "ml-class test-ai lab 2"
-        ]
-      },
-      "named_level": null,
-      "bonus": null,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ml-class test-ai lab 2"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      },
-      "level_keys": [
-        "ml-class test-ai lab 2"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 2,
+      "position": 2,
       "activity_section_position": null,
       "assessment": null,
       "properties": {
@@ -154,31 +104,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "ml-classroom vocab-1",
-        "script_level.level_keys": [
-          "ml-classroom vocab-1"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ml-class test-ai lab 1",
         "script_level.level_keys": [
           "ml-class test-ai lab 1"
-        ],
-        "lesson.key": "ailab-explore",
-        "lesson_group.key": "",
-        "script.name": "ai-classroom-test"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ml-class test-ai lab 2",
-        "script_level.level_keys": [
-          "ml-class test-ai lab 2"
         ],
         "lesson.key": "ailab-explore",
         "lesson_group.key": "",

@@ -10,9 +10,9 @@ is_migrated true
 lesson_group 'csp_unit2_2020', display_name: 'Unit 2: The Internet'
 lesson_group_description '### Unit Philosophy and Pedagogy
 
-* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates the way different features or "layers" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Within a lesson, students will be presented with challenges that are modeled closely on those that the original inventors of the internet needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of not just how the internet works, but why it was designed that way. By the end of the unit, students will have "invented the internet" themselves! 
+* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or "layers" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet\'s original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have "invented the internet" themselves! 
 
-* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and the development of a supportive and inclusive classroom culture. 
+* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. 
 
 ### Major Assessment and Projects
 

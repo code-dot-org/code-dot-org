@@ -1,0 +1,8 @@
+lesson_group 'lesson group', display_name: 'lesson group display name'
+lesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true
+
+lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
+level 'OPL - CSD-PL AYWS1 Debugging Intro', progression: 'Module 1 Overview'
+level 'VPL - CSD - Module 1 Summer Review Overview', progression: 'Summer Workshop Review (~ 10 - 20 mins)'
+level 'OPL - CSD-PL AYWS1 Debugging Intro (Clone)', progression: 'Copy'
+
