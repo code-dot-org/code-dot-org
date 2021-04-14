@@ -447,6 +447,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_follow_up_after_days(30)
   end
 
+  # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
     session = create :pd_session, workshop: workshop
