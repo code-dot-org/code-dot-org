@@ -5034,6 +5034,7 @@ sk:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programovanie na štvorčekový papier
+              description_teacher: '„Naprogramovaním“ spolužiakov tak, aby kreslili obrázky, žiaci dostanú príležitosť zábavným a prístupným spôsobom na vlastnej koži „zažiť“ a tým aj lepšie pochopiť vzťah medzi napísaným kódom a jeho výsledkom. V hlavnej aktivite žiaci pomocou symbolov vytvoria inštrukcie, podľa ktorých má ich spolužiak vyfarbovať štvorčeky v mriežke tak, aby zreprodukoval existujúci obrázok. Ak vám zostane čas, hodinu môžete zakončiť s obrázkami, ktoré si vytvoria žiaci sami.  '
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
               description_teacher: 'V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.'
@@ -6732,6 +6733,7 @@ sk:
             csp_libraries:
               display_name: Knižnice
         csd2-2020:
+          title: CSD Lekcia 2 - Vývoj webových stránok ('20-'21)
           lesson_groups:
             csd2_1:
               display_name: 'Kapitola 1: Obsah webu a HTML'
@@ -6749,7 +6751,7 @@ sk:
             CS Discoveries Post Course survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
         csd1-2020:
-          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
           description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
           lesson_groups:
             cspSurvey:
@@ -7005,6 +7007,9 @@ sk:
             Events in Play Lab:
               name: Udalosti v pohybe
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
+            Safety in My Online Neighborhood:
+              name: Bezpečný pohyb na internete.
+              description_teacher: V spolupráci s Common Sense Education, táto lekcia oboznámi študentom s tým, že webové stránky často požadú informácie, ktoré sú súkromné a diskutuje s nimi o tom, ako na takého požiadavky zodpovedne reagovať. Študenti tiež zistia, že môžu navštíviť mnohé zaujímavé online miesta, ale nato, aby zostali v bezpečí musia dodržiavať určité pravidlá.
           student_description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         courseb-2020:
           title: Kurz B (2019)
@@ -7140,6 +7145,7 @@ sk:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programovanie na štvorčekový papier
+              description_teacher: '„Naprogramovaním“ spolužiakov tak, aby kreslili obrázky, žiaci dostanú príležitosť zábavným a prístupným spôsobom na vlastnej koži „zažiť“ a tým aj lepšie pochopiť vzťah medzi napísaným kódom a jeho výsledkom. V hlavnej aktivite žiaci pomocou symbolov vytvoria inštrukcie, podľa ktorých má ich spolužiak vyfarbovať štvorčeky v mriežke tak, aby zreprodukoval existujúci obrázok. Ak vám zostane čas, hodinu môžete zakončiť s obrázkami, ktoré si vytvoria žiaci sami.  '
             Introduction to Online Puzzles:
               name: Predstavenie online úloh
               description_teacher: 'V týchto úlohách študenti začnú úvodom (alebo opakovaním - podľa toho, ako pokročilá je vaša trieda) do online pracovného prostredia Code.org. Videá vám vysvetlia ako funguje pracovné prostredie, vrátane tlačidiel `Spustiť`, `Obnoviť` a `Krok`. Videá tiež ukážu ako presúvať bloky a ako ich vymazať či spájať. Následne si študenti precvičia svoje schopnosti v _postupnostiach_ a _odstraňovaní chýb_. Potom študenti uvidia nové typy úloh ako napríklad Zberateľka, Umelec a Záhradníčka.'
@@ -7784,7 +7790,7 @@ sk:
             outbreak:
               display_name: Simulácia napadnutia
         csd1-2021:
-          title: CSD Kapitola 1 - Riešenie problémov a výpočtová technika ('20-'21)
+          title: CSD Lekcia 1 - Riešenie Problémov a Výpočtová Technika ('20-'21)
           description: "Riešenie problémov a výpočtová technika je vysoko interaktívny a kooperatívny úvod do oblasti informatiky, uvedený v širšom kontexte riešenia úloh. Precvičíte si použitie procesu riešenia problémov na riešenie viacerých úloh, výziev, a scenárov z každodennej praxe. Ďalej sa naučíte ako počítače vkladajú, ukladajú, spracúvajú a posielajú na výstup informácie, ktoré pomáhajú ľuďom riešiť úlohy. Kapitolu uzatvára projekt, v ktorom navrhnete aplikáciu, ktorá pomôže vyriešiť príklad podľa vášho výberu."
           lessons:
             Intro to Problem Solving:
@@ -7847,7 +7853,10 @@ sk:
             Programming for Entertainment:
               key: Programovanie pre zábavu
               name: Programovanie pre zábavu
-              description_student: "**Otázka dňa: Aké využitie má informatika v zábavnom priemysle?**\\r\n\\r\nNa začiatku nášho kurzu sa zamyslíme nad „problémami“ nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie."
+              description_student: |-
+                **Otázka dňa: Aké využitie má informatika v zábavnom priemysle?**\r
+                \r
+                Na začiatku nášho kurzu sa zamyslíme nad „problémami“ nudy a seba-vyjadrenia a nad spôsobmi, ako k týmto problémom pristupujeme v našom živote. Preskúmame, akú úlohu v tejto oblasti zohrávajú informatika a programovanie  - či ako špecifická forma zábavy alebo ako prostriedok na seba-vyjadrenie.
             Plotting Shapes:
               key: Tvorba tvarov
               name: Tvorba tvarov
@@ -8017,6 +8026,9 @@ sk:
           description_short: Predstavenie informatiky pre predškolákov.
           description_audience: 'Vek: 4-7'
           lessons:
+            Safety in My Online Neighborhood:
+              key: Bezpečný pohyb na internete.
+              name: Bezpečný pohyb na internete.
             Learn to Drag and Drop:
               key: Nauč sa presunúť a pustiť
               name: Nauč sa presunúť a pustiť
@@ -8054,6 +8066,8 @@ sk:
             Events in Play Lab:
               name: Udalosti v pohybe
               description_teacher: V tejto online aktivite sa študenti naučia, ako v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas na kreativitu! Vytvorme v Play Labe celý príbeh!
+            lesson-1:
+              name: Záverečný projekt
           lesson_groups:
             csf_digcit:
               display_name: Digitálne občianstvo
@@ -8063,6 +8077,8 @@ sk:
               display_name: Cykly
             csf_events:
               display_name: Udalosti
+            lessonGroup-5:
+              display_name: Záverečný projekt
           student_description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         courseb-2021:
           title: Kurz B (2019)
@@ -8107,6 +8123,8 @@ sk:
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
+            lesson-1:
+              name: Záverečný projekt
           lesson_groups:
             csf_digcit:
               display_name: Digitálne občianstvo
@@ -8118,6 +8136,8 @@ sk:
               display_name: Vplyv Informatiky
             csf_events:
               display_name: Udalosti
+            lessonGroup-6:
+              display_name: Záverečný projekt
           student_description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.
         coursec-2021:
           title: Kurz C (2019)
@@ -8158,7 +8178,7 @@ sk:
               description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré sa naučili doteraz a vyskúšať si využitie podmienok!
             Sticker Art with Loops:
               key: Pečiatkovanie v cykloch
-              name: Pečiatkovanie v cykloch
+              name: 'Pečiatkovanie v cykloch'
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. 
             'Events: The Big Event':
               key: 'Udalosti: Veľká udalosť'
@@ -8168,7 +8188,7 @@ sk:
               name: Vytvor si vlastnú hru Flappy
               description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia pomocou rôznych pozadí či vytvorením vlastných pravidiel. 
             Events in Play Lab:
-              name: Naháňačka s udalosťami
+              name: 'Naháňačka s udalosťami'
             Picturing Data:
               key: Zobrazenie dát v grafoch
               name: Zobrazenie dát v grafoch
@@ -8428,6 +8448,8 @@ sk:
               description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením na vytvorenie vlastnej kresby.
             Editing Behaviors:
               name: Správania v Sprite Labe
+            Virtual Pet:
+              name: 'Mini-Projekt: Virtuálny maznáčik'
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
@@ -8435,6 +8457,8 @@ sk:
               name: Predstavenie Sprite Labu
             lesson-8:
               name: Postavy v akcii
+            lesson-2:
+              name: Objav silu slov
           lesson_groups:
             ramp_up:
               display_name: Príprava
@@ -8452,6 +8476,8 @@ sk:
               display_name: Premenné
             lessonGroup-9:
               display_name: odstráň
+            lessonGroup-7:
+              display_name: Digitálne občianstvo
         express-2021:
           title: Zrýchlený kurz (2019)
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať s priateľmi.

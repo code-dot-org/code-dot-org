@@ -1098,6 +1098,12 @@ zh-TW:
   coursed-2019_gradelevel: 年級 8+
   coursee-2019_gradelevel: 年齡 8-12
   coursef-2019_gradelevel: 年齡 9-13
+  coursea-2020_gradelevel: 年齡 4-7
+  courseb-2020_gradelevel: 年齡 5-8
+  coursec-2020_gradelevel: 年齡 6-10
+  coursed-2020_gradelevel: 年級 8+
+  coursee-2020_gradelevel: 年齡 8-12
+  coursef-2020_gradelevel: 年齡 9-13
   accelerated_gradelevel: 年齡 10-18
   codeorg_platformtext: 主流的瀏覽器、手機、平板
   codeintl_platformtext: 主流的瀏覽器、手機、平板
@@ -1548,6 +1554,8 @@ zh-TW:
   header_legal_privacy: 隱私政策
   header_legal_tos: 服務條款
   header_tutorials: 所有教程
+  header_screen_reader_hamburger: 選單
+  header_screen_reader_help: 說明選單
   app_lab_documentation: App Lab 說明文件
   app_lab_tutorials: App Lab 教程
   game_lab_documentation: Game Lab 說明文件
@@ -1733,6 +1741,8 @@ zh-TW:
     target='_blank'>了解更多</a>
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
     Future Engineer* 是一項由童年到職業的全面計畫，旨在鼓勵、教育和培養低收入或弱勢的兒童和青少年投身電腦科學事業。[瞭解更多](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: 如果你是法國的學生或教師，請瀏覽 [Amazon
+    Future Engineer - France](%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: 進一步瞭解亞馬遜未來工程師（Amazon
     Future Engineer）
   hoc2018_dance_amazon_about_future_engineer_title: 有關亞馬遜未來工程師計畫 (Amazon Future Engineer)
@@ -1787,11 +1797,23 @@ zh-TW:
   page_not_available_title: 沒有可用的頁面
   page_not_available_description: 我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎mail 給我們[support@code.org](%{support_email_link})，告知您的需求
   page_not_available_button: 返回主頁
+  hoc2020_mc_available_code_org: 可於 Code.org 取得
+  hoc2020_mc_available_mee: 可於 Minecraft 教育版取得
+  hoc2020_mc_mee_description: 現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新
+    Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。
   footer_powered_by_aws: Powered by Amazon Web Services
+  footer_built_on_github: 構建於 Microsoft 的 Github
+  codebytes_skinny_banner_title: 12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。
+  codebytes_skinny_banner_description: '每天加入我們 CS 教育週的 CodeBytes，20 分鐘的計算機科學互動課程。每天兩次直播，CodeBytes
+    是學生參與虛擬 #HourOfCode 的好方法！'
   codebytes_skinny_banner_english_only: 僅有英語版本
+  codebytes_skinny_banner_learn: 前往 [code.org/codebytes](%{code_bytes_url}) 了解更多。
   footer_privacy_policy: 隱私政策
+  footer_privacy_policy_updated: 隱私政策（更新）
   footer_about: 關於
   footer_partners: 合作夥伴
+  footer_blog: 網誌
   footer_donate: 贊助
+  footer_store: 商店
   footer_support: 支援
   footer_terms: 條款

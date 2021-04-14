@@ -17516,6 +17516,8 @@ in:
               name: crwdns2461784:0crwdne2461784:0
             Module 7:
               name: crwdns2461786:0crwdne2461786:0
+            Self Paced Playground:
+              name: crwdns2485842:0crwdne2485842:0
           student_description: crwdns2478348:0crwdne2478348:0
           name: crwdns2484108:0crwdne2484108:0
         csd2-virtual:
@@ -20061,6 +20063,10 @@ in:
               name: crwdns2476542:0crwdne2476542:0
               description_student: crwdns2482814:0crwdne2482814:0
               description_teacher: crwdns2482816:0crwdne2482816:0
+            lesson-1:
+              name: crwdns2485844:0crwdne2485844:0
+              description_student: crwdns2485846:0crwdne2485846:0
+              description_teacher: crwdns2485848:0crwdne2485848:0
           lesson_groups:
             csf_digcit:
               display_name: crwdns2476544:0crwdne2476544:0
@@ -20070,6 +20076,8 @@ in:
               display_name: crwdns2476548:0crwdne2476548:0
             csf_events:
               display_name: crwdns2476550:0crwdne2476550:0
+            lessonGroup-5:
+              display_name: crwdns2485850:0crwdne2485850:0
           name: crwdns2476552:0crwdne2476552:0
           student_description: crwdns2478538:0crwdne2478538:0
         courseb-2021:
@@ -20138,6 +20146,10 @@ in:
               name: crwdns2476608:0crwdne2476608:0
               description_student: crwdns2482862:0crwdne2482862:0
               description_teacher: crwdns2482864:0crwdne2482864:0
+            lesson-1:
+              name: crwdns2485852:0crwdne2485852:0
+              description_student: crwdns2485854:0crwdne2485854:0
+              description_teacher: crwdns2485856:0crwdne2485856:0
           lesson_groups:
             csf_digcit:
               display_name: crwdns2476610:0crwdne2476610:0
@@ -20149,6 +20161,9 @@ in:
               display_name: crwdns2476616:0crwdne2476616:0
             csf_events:
               display_name: crwdns2476618:0crwdne2476618:0
+            lessonGroup-6:
+              display_name: crwdns2485858:0crwdne2485858:0
+              description: crwdns2485860:0crwdne2485860:0
           name: crwdns2476620:0crwdne2476620:0
           student_description: crwdns2478540:0crwdne2478540:0
         coursec-2021:
@@ -20647,6 +20662,10 @@ in:
               name: crwdns2484836:0crwdne2484836:0
               description_student: crwdns2484910:0crwdne2484910:0
               description_teacher: crwdns2484912:0crwdne2484912:0
+            lesson-2:
+              name: crwdns2485862:0crwdne2485862:0
+              description_student: crwdns2485864:0crwdne2485864:0
+              description_teacher: crwdns2485866:0crwdne2485866:0
           lesson_groups:
             ramp_up:
               display_name: crwdns2477002:0crwdne2477002:0
@@ -20666,6 +20685,8 @@ in:
               display_name: crwdns2483682:0crwdne2483682:0
             lessonGroup-9:
               display_name: crwdns2484838:0crwdne2484838:0
+            lessonGroup-7:
+              display_name: crwdns2485868:0crwdne2485868:0
           name: crwdns2477016:0crwdne2477016:0
           student_description: crwdns2478548:0crwdne2478548:0
         express-2021:
@@ -21342,12 +21363,20 @@ in:
               description_teacher: crwdns2485734:0crwdne2485734:0
             lesson-5:
               name: crwdns2485736:0crwdne2485736:0
+              description_student: crwdns2485870:0crwdne2485870:0
+              description_teacher: crwdns2485872:0crwdne2485872:0
             lesson-6:
               name: crwdns2485738:0crwdne2485738:0
+              description_student: crwdns2485874:0crwdne2485874:0
+              description_teacher: crwdns2485876:0crwdne2485876:0
             lesson-7:
               name: crwdns2485740:0crwdne2485740:0
+              description_student: crwdns2485878:0crwdne2485878:0
+              description_teacher: crwdns2485880:0crwdne2485880:0
             lesson-8:
               name: crwdns2485742:0crwdne2485742:0
+              description_student: crwdns2485882:0crwdne2485882:0
+              description_teacher: crwdns2485884:0crwdne2485884:0
             lesson-9:
               name: crwdns2485744:0crwdne2485744:0
             lesson-10:

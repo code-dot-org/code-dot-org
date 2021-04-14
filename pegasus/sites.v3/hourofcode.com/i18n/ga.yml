@@ -7864,13 +7864,13 @@ ga:
   tutorial_mbbuttons_string_platforms: Windows, Mac OS, Linux, or Chromebook
   tutorial_meteor_string_platforms: Windows, Mac OS, Linux, or Chromebook
   tutorial_ballbounce_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mitcodi_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mitdoodle_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_talktome_string_platforms: Chrome, Firefox, Safari, Android tablet, Android
-    phone
+    phone, iPad, iPhone
   tutorial_mobilecspmap_string_platforms: Chrome, Firefox, Android tablet, Android
     phone
   tutorial_ozorandom_string_platforms: ''

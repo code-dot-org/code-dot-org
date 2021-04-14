@@ -1076,6 +1076,12 @@
   coursed-2019_gradelevel: 8年级以上
   coursee-2019_gradelevel: 年龄 8-12
   coursef-2019_gradelevel: 年龄 9-13
+  coursea-2020_gradelevel: 年龄 4-7
+  courseb-2020_gradelevel: 年龄 5-8
+  coursec-2020_gradelevel: 年龄 6-10
+  coursed-2020_gradelevel: 8年级以上
+  coursee-2020_gradelevel: 年龄 8-12
+  coursef-2020_gradelevel: 年龄 9-13
   accelerated_gradelevel: "10-18 岁"
   codeorg_platformtext: "现代浏览器、智能手机、平板电脑"
   codeintl_platformtext: "现代浏览器、智能手机、平板电脑"
