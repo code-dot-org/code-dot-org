@@ -133,7 +133,7 @@ class ScrollButtons extends React.Component {
     const upStyle = {
       opacity: this.props.visible ? 1 : 0,
       top: this.getMargin(),
-      marginBottom: '3px'
+      margin: '0 0 3px 0'
     };
 
     const downStyle = {
