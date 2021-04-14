@@ -1948,7 +1948,7 @@
   "verifiedResourcesDetails": "This course provides extra resources which are only available to verified teachers.",
   "verifiedResourcesLessonDetails": "This lesson contains extra resources or levels which are only available to verified teachers.",
   "verifiedResourcesNotice": "Accessing locked lessons and answer keys",
-  "verifiedTeacherLockedWarning": "This lesson is locked. In order to be able to unlock it you must become a verified teacher.",
+  "verifiedTeacherLockedWarning": "This lesson is locked - you need to become a verified teacher to unlock it. [Learn more](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-).",
   "verifyStatementsforCode": "Please verify the following statements before you can receive a code.",
   "verifySignature": "By signing below you commit to teach the second semester of CS Discoveries, including Unit 6, by the '20-'21 school year.",
   "verifySingleCode": "I have not received or used another discount code from Code.org to purchase a Circuit Playground kit.",
