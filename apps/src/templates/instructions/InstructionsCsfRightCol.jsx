@@ -49,13 +49,13 @@ const styles = {
 class InstructionsCsfRightCol extends React.Component {
   static propTypes = {
     shouldDisplayHintPrompt: PropTypes.func.isRequired,
-    hasShortInstructions: PropTypes.bool.isRequired,
     promptForHint: PropTypes.bool.isRequired,
     displayScrollButtons: PropTypes.bool.isRequired,
     getScrollTarget: PropTypes.func.isRequired,
     handleClickCollapser: PropTypes.func.isRequired,
     setColWidth: PropTypes.func.isRequired,
     setColHeight: PropTypes.func.isRequired,
+    hasShortAndLongInstructions: PropTypes.bool.isRequired,
 
     // from redux
     collapsed: PropTypes.bool.isRequired,
@@ -71,7 +71,6 @@ class InstructionsCsfRightCol extends React.Component {
       message: PropTypes.string.isRequired,
       isFailure: PropTypes.bool
     }),
-    longInstructions: PropTypes.string,
     height: PropTypes.number.isRequired,
     isMinecraft: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired
@@ -100,10 +99,7 @@ class InstructionsCsfRightCol extends React.Component {
 
     // Otherwise, only show the button if we have two versions of
     // instruction we want to toggle between
-    const hasShortAndLongInstructions =
-      this.props.longInstructions && this.props.hasShortInstructions;
-
-    return hasExtraContent || hasShortAndLongInstructions;
+    return hasExtraContent || this.props.hasShortAndLongInstructions;
   }
 
   getColumnWidth() {
@@ -184,7 +180,6 @@ export default connect(
       collapsed: state.instructions.isCollapsed,
       hints: state.authoredHints.seenHints,
       feedback: state.instructions.feedback,
-      longInstructions: state.instructions.longInstructions,
       height: state.instructions.renderedHeight,
       isMinecraft: !!state.pageConstants.isMinecraft,
       isRtl: state.isRtl

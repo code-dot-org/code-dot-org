@@ -33,10 +33,10 @@ class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
     dismissHintPrompt: PropTypes.func.isRequired,
     shouldDisplayHintPrompt: PropTypes.func.isRequired,
-    hasShortInstructions: PropTypes.bool.isRequired,
     adjustMaxNeededHeight: PropTypes.func.isRequired,
     promptForHint: PropTypes.bool.isRequired,
     getMinInstructionsHeight: PropTypes.func.isRequired,
+    hasShortAndLongInstructions: PropTypes.bool.isRequired,
 
     // from redux:
     overlayVisible: PropTypes.bool,
@@ -118,8 +118,8 @@ class InstructionsCsfMiddleCol extends React.Component {
 
   shouldDisplayShortInstructions() {
     return (
-      this.props.hasShortInstructions &&
-      (this.props.collapsed || !this.props.longInstructions)
+      (this.props.hasShortAndLongInstructions && this.props.collapsed) ||
+      !this.props.longInstructions
     );
   }
 

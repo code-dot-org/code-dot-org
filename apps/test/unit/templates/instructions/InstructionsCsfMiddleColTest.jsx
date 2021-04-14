@@ -12,7 +12,7 @@ import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},
   shouldDisplayHintPrompt: () => {},
-  hasShortInstructions: true,
+  hasShortAndLongInstructions: true,
   adjustMaxNeededHeight: () => {},
   promptForHint: false,
   setColHeight: () => {},
@@ -45,6 +45,44 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('InstructionsCsfMiddleCol', () => {
+  it('passes short instructions to Instructions component if in a collapsed state with both short and long instructions', () => {
+    const shortInstructions = 'test short instructions';
+    const wrapper = setUp({
+      hasShortAndLongInstructions: true,
+      collapsed: true,
+      shortInstructions
+    });
+    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+      shortInstructions
+    );
+  });
+
+  it('passes short instructions to Instructions component if not in a collapsed state with no long instructions', () => {
+    const shortInstructions = 'test short instructions';
+    const longInstructions = undefined;
+    const wrapper = setUp({
+      hasShortAndLongInstructions: false,
+      collapsed: false,
+      shortInstructions,
+      longInstructions
+    });
+    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+      shortInstructions
+    );
+  });
+
+  it('passes long instructions to Instructions component if not in a collapsed state with both short and long instructions', () => {
+    const longInstructions = 'test long instructions';
+    const wrapper = setUp({
+      hasShortAndLongInstructions: true,
+      collapsed: false,
+      longInstructions
+    });
+    expect(wrapper.find(Instructions).props().longInstructions).to.equal(
+      longInstructions
+    );
+  });
+
   it('passes inputOutputTable to Instructions when not collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: false, inputOutputTable});
@@ -53,7 +91,7 @@ describe('InstructionsCsfMiddleCol', () => {
     );
   });
 
-  it('passes undefed for inputOutputTable to Instructions when collapsed', () => {
+  it('passes undefined for inputOutputTable to Instructions when collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: true, inputOutputTable});
     expect(wrapper.find(Instructions).props().inputOutputTable).to.equal(

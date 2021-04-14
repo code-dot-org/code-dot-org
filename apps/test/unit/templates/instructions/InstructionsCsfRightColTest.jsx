@@ -8,7 +8,7 @@ import ScrollButtons from '@cdo/apps/templates/instructions/ScrollButtons';
 
 const DEFAULT_PROPS = {
   shouldDisplayHintPrompt: () => {},
-  hasShortInstructions: false,
+  hasShortAndLongInstructions: false,
   promptForHint: false,
   displayScrollButtons: false,
   getScrollTarget: () => {},
@@ -18,7 +18,6 @@ const DEFAULT_PROPS = {
   collapsed: false,
   hints: [],
   feedback: undefined,
-  longInstructions: 'longgggg instructions',
   height: 225,
   isMinecraft: false,
   isRtl: false
@@ -56,8 +55,7 @@ describe('InstructionsCsfRightCol', () => {
 
   it('displays collapser button if there are long and short instructions', () => {
     const wrapper = setUp({
-      hasShortInstructions: true,
-      longInstructions: 'some long instructions'
+      hasShortAndLongInstructions: true
     });
     expect(wrapper.find(CollapserButton)).to.have.length(1);
   });
@@ -80,8 +78,7 @@ describe('InstructionsCsfRightCol', () => {
     // set up with short and long instructions so collapser is displayed
     const handleClickCollapserSpy = sinon.spy();
     const wrapper = setUp({
-      hasShortInstructions: true,
-      longInstructions: 'some long instructions',
+      hasShortAndLongInstructions: true,
       handleClickCollapser: handleClickCollapserSpy
     });
     wrapper.find(CollapserButton).simulate('click');

@@ -221,8 +221,10 @@ class InstructionsCSF extends React.Component {
   };
 
   getMarginsHeight() {
-    const domNode = $(ReactDOM.findDOMNode(this));
-    return domNode.outerHeight(true) - domNode.outerHeight(false);
+    return (
+      getOuterHeight(this.instructionsCsfWrapper, true) -
+      getOuterHeight(this.instructionsCsfWrapper, false)
+    );
   }
 
   contentWrapperHeight() {
@@ -260,23 +262,25 @@ class InstructionsCSF extends React.Component {
     return this.state && this.state.promptForHint && !this.props.collapsed;
   };
 
-  hasShortInstructions = () => {
-    return (
-      !!this.props.shortInstructions &&
-      !this.shortAndLongInstructionsAreEquivalent()
-    );
-  };
+  hasShortAndLongInstructions = () => {
+    const shortInstructionsExist = !!this.props.shortInstructions;
 
-  shortAndLongInstructionsAreEquivalent() {
-    if (!this.props.shortInstructions || !this.props.longInstructions) {
-      return false;
-    }
+    // In information theory, linguistics, and computer science, the Levenshtein distance
+    // is a string metric for measuring the difference between two sequences.
     const dist = levenshtein(
       this.props.longInstructions,
       this.props.shortInstructions
     );
-    return dist <= 10;
-  }
+
+    // if the levenshtein distance between short and long instructions is <= 10
+    // we consider the instructions to be equivalent
+    const shortAndLongInstructionsAreEquivalent = dist <= 10;
+
+    const hasValidShortInstructions =
+      shortInstructionsExist && !shortAndLongInstructionsAreEquivalent;
+
+    return hasValidShortInstructions && !!this.props.longInstructions;
+  };
 
   requestHint = () => {
     this.setState({
@@ -319,10 +323,13 @@ class InstructionsCSF extends React.Component {
       this.props.overlayVisible && styles.withOverlay
     ];
 
-    const hasShortInstructions = this.hasShortInstructions();
+    const hasShortAndLongInstructions = this.hasShortAndLongInstructions();
 
     return (
-      <div style={mainStyle}>
+      <div
+        style={mainStyle}
+        ref={wrapper => (this.instructionsCsfWrapper = wrapper)}
+      >
         <ThreeColumns
           styles={{
             container: [
@@ -347,13 +354,12 @@ class InstructionsCSF extends React.Component {
             }
             dismissHintPrompt={this.dismissHintPrompt}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
-            hasShortInstructions={hasShortInstructions}
             adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
             promptForHint={this.state.promptForHint}
             getMinInstructionsHeight={this.getMinInstructionsHeight}
+            hasShortAndLongInstructions={hasShortAndLongInstructions}
           />
           <InstructionsCsfRightCol
-            hasShortInstructions={hasShortInstructions}
             promptForHint={this.state.promptForHint}
             displayScrollButtons={this.state.displayScrollButtons}
             getScrollTarget={this.getScrollTarget}
@@ -361,6 +367,7 @@ class InstructionsCSF extends React.Component {
             setColWidth={this.setRightColWidth}
             setColHeight={this.setRightColHeight}
             shouldDisplayHintPrompt={this.shouldDisplayHintPrompt}
+            hasShortAndLongInstructions={hasShortAndLongInstructions}
           />
         </ThreeColumns>
       </div>
