@@ -14,6 +14,12 @@ const sampleModes = {
     hideSelectLabel: true
   },
 
+  "preload-metadata": {
+    hideSpecifyColumns: true,
+    hideSelectTrainer: "knnClassify",
+    hideChooseReserve: true
+  },
+
   "intro-ai-tacos": {
     datasets: ["tacos_toy"],
     hideSelectLabel: true,

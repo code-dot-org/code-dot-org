@@ -917,6 +917,37 @@ export function readyToTrain(state) {
   return uniqLabelFeaturesSelected(state);
 }
 
+export function getEmptyCellDetails(state) {
+  const emptyCellLocations = emptyCellFinder(state).map(cellDetails => {
+    return `Column: ${cellDetails.column} Row: ${cellDetails.row}`;
+  });
+  return emptyCellLocations;
+}
+
+export function getDataDescription(state) {
+  // If this a dataset from the internal collection that already has a description, use that.
+  if (
+    state.metadata
+    && state.metadata.card
+    && state.metadata.card.description
+  ) {
+    return state.metadata.card.description;
+  } else if (
+    state.trainedModelDetails && state.trainedModelDetails.datasetDescription
+  ) {
+    return state.trainedModelDetails.datasetDescription;
+  } else {
+    return undefined;
+  }
+}
+
+function getDatasetDetails(state) {
+  const datasetDetails = {}
+  datasetDetails.description = getDataDescription(state);
+  datasetDetails.numRows = state.data.length;
+  return datasetDetails;
+}
+
 export function getTrainedModelDataToSave(state) {
   const dataToSave = {};
 
@@ -941,12 +972,9 @@ export function getTrainedModelDataToSave(state) {
     dataToSave.columns = state.trainedModelDetails.columns;
   }
 
+  dataToSave.datasetDetails = getDatasetDetails(state);
   dataToSave.potentialUses = state.trainedModelDetails.potentialUses;
   dataToSave.potentialMisuses = state.trainedModelDetails.potentialMisuses;
-
-  dataToSave.identifySubgroup = !!state.trainedModelDetails.identifySubgroup;
-  dataToSave.representSubgroup = !!state.trainedModelDetails.representSubgroup;
-  dataToSave.decisionsLife = !!state.trainedModelDetails.decisionsLife;
 
   dataToSave.selectedTrainer = getSelectedTrainer(state);
   dataToSave.selectedFeatures = state.selectedFeatures;
