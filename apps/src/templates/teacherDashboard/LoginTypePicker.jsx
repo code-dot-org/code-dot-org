@@ -55,6 +55,13 @@ class LoginTypePicker extends Component {
     // should help mitigate some of them.
     const containerStyle = {maxWidth: styleConstants['content-width']};
 
+    // anchor email address policy note to footer just above 'Cancel' button
+    const emailPolicyNoteStyle = {
+      position: 'absolute',
+      top: '0px',
+      zIndex: '600'
+    };
+
     return (
       <div style={containerStyle}>
         <Heading1>{title}</Heading1>
@@ -83,6 +90,13 @@ class LoginTypePicker extends Component {
           </div>
         )}
         <DialogFooter>
+          <div style={emailPolicyNoteStyle}>
+            <b>{i18n.note()}</b>
+            {' ' + i18n.emailAddressPolicy() + ' '}
+            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+              {i18n.moreInfo()}
+            </a>
+          </div>
           <Button
             __useDeprecatedTag
             onClick={handleCancel}
@@ -91,13 +105,6 @@ class LoginTypePicker extends Component {
             color={Button.ButtonColor.gray}
             disabled={disabled}
           />
-          <div>
-            <b>{i18n.note()}</b>
-            {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-              {i18n.moreInfo()}
-            </a>
-          </div>
         </DialogFooter>
       </div>
     );
