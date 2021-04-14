@@ -10,7 +10,8 @@
 
 = render partial: 'workshop_logistics'
 
-= render partial: 'supply_list'
+- if !@workshop.virtual?
+  = render partial: 'supply_list'
 
 = render partial: 'workshop_notes'
 
@@ -18,7 +19,8 @@
 
 = render partial: 'how_to_cancel'
 
-= render partial: 'covid_19'
+- if !@workshop.virtual?
+  = render partial: 'covid_19'
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
   %h3
@@ -45,9 +47,7 @@
   - elsif @workshop.course == Pd::Workshop::COURSE_CSP
     = render partial: 'csp_pre_course_reading'
 
-%p
-  If you have any accessibility needs or food allergies, please contact the workshop organizer to discuss appropriate accommodation plans and to answer any of your questions. You can reach them at
-  = mail_to(@workshop.organizer.email) + '.'
+= render partial: 'accessibility'
 
 %p
   Thank you,
