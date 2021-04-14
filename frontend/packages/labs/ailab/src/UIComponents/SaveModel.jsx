@@ -106,7 +106,6 @@ class SaveModel extends Component {
             </div>
             <div key={dataDescriptionField.id} style={styles.cardRow}>
               <label>{dataDescriptionField.text}</label>
-              <div>
               {!dataDescriptionField.answer && (
                 <div>
                   <textarea
@@ -122,7 +121,6 @@ class SaveModel extends Component {
               {dataDescriptionField.answer && (
                 <div>{dataDescriptionField.answer}</div>
               )}
-              </div>
             </div>
             <div>
               <span onClick={this.toggleColumnDescriptions}>
