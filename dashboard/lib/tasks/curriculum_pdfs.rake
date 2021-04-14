@@ -36,9 +36,10 @@ namespace :curriculum_pdfs do
 
   desc 'Generate any PDFs that we would expect to have been generated automatically but for whatever reason haven\'t been.'
   task generate_missing_pdfs: :environment do
-    Dir.mktmpdir("pdf_generation") do |dir|
-      any_pdf_generated = false
-      get_pdf_enabled_scripts.each do |script|
+    get_pdf_enabled_scripts.each do |script|
+      Dir.mktmpdir("pdf_generation") do |dir|
+        any_pdf_generated = false
+
         get_pdfless_lessons(script).each do |lesson|
           puts "Generating missing PDF for #{lesson.key} (from #{script.name})"
           Services::CurriculumPdfs.generate_lesson_pdf(lesson, dir)
@@ -47,23 +48,25 @@ namespace :curriculum_pdfs do
         end
 
         unless Services::CurriculumPdfs.script_overview_pdf_exists_for?(script)
+          puts "Generating missing Script Overview PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_overview_pdf(script, dir)
           any_pdf_generated = true
         end
 
         unless Services::CurriculumPdfs.script_resources_pdf_exists_for?(script)
+          puts "Generating missing Script Resources PDF for #{script.name}"
           Services::CurriculumPdfs.generate_script_resources_pdf(script, dir)
           any_pdf_generated = true
         end
-      end
 
-      if any_pdf_generated
-        puts "Generated all missing PDFs, uploading results to S3"
-        Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
-      else
-        puts "No missing PDFs found to generate"
+        if any_pdf_generated
+          puts "Generated all missing PDFs for #{script.name}, uploading results to S3"
+          Services::CurriculumPdfs.upload_generated_pdfs_to_s3(dir)
+        end
       end
     end
+
+    puts "Finished generating missing PDFs"
   end
 
   task generate_all_pdfs: :environment do
