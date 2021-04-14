@@ -17782,7 +17782,10 @@ de:
             Programming for Entertainment:
               key: Programmieren zur Unterhaltung
               name: Programmieren zur Unterhaltung
-              description_student: "**Frage des Tages: Wie wird Informatik in der Unterhaltung verwendet?**\\r\n\\r \nDie Klasse wird gebeten, sich mit den „Problemen“ der Langeweile und des Selbstausdrucks auseinanderzusetzen und darüber nachzudenken, wie sie diese Probleme in ihrem eigenen Leben angeht. Von dort aus wird sie untersuchen, wie die Informatik im Allgemeinen und das Programmieren im Besonderen entweder in einer bestimmten Form der Unterhaltung oder als Medium der Selbstdarstellung eine Rolle spielt."
+              description_student: |-
+                **Frage des Tages: Wie wird Informatik in der Unterhaltung verwendet?**\r
+                \r 
+                Die Klasse wird gebeten, sich mit den „Problemen“ der Langeweile und des Selbstausdrucks auseinanderzusetzen und darüber nachzudenken, wie sie diese Probleme in ihrem eigenen Leben angeht. Von dort aus wird sie untersuchen, wie die Informatik im Allgemeinen und das Programmieren im Besonderen entweder in einer bestimmten Form der Unterhaltung oder als Medium der Selbstdarstellung eine Rolle spielt.
             Plotting Shapes:
               key: Formen plotten
               name: Formen plotten
@@ -17889,7 +17892,8 @@ de:
             Analysis of Design:
               key: Analyse der Planung
               name: Analyse der Planung
-              description_teacher: Zum Auftakt einer Lerneinheit, die sich der Problemlösung in der Gruppe und der Entwicklung von Produkten für andere Benutzer widmet, untersuchen die Studierenden zunächst das Design verschiedener Teekannen. Die SchülerInnen analysieren jede einzelne Teekanne und versuchen herauszufinden, wie spezifische Bedürfnisse der Benutzer das Design beeinflusst haben könnten. Indem sie diese Designmöglichkeiten in Betracht ziehen und versuchen, jede Teekanne einem potentiellen Benutzer zuzuordnen, können die SchülerInnen erkennen, wie eine benutzerzentrierte Herangehensweise an das Design von Produkten (sowohl physisch als auch digital) diese Produkte nützlicher und benutzerfreundlicher machen kann. Zum Abschluss der Aktivität werden die SchülerInnen gebeten, einige Änderungen an einer der Teekannen vorzuschlagen, die sie nützlicher oder brauchbarer machen würden.
+              description_teacher: |-
+                Zum Auftakt einer Lerneinheit, die sich der Problemlösung in der Gruppe und der Entwicklung von Produkten für andere Benutzer widmet, untersuchen die Studierenden zunächst das Design verschiedener Teekannen. Die SchülerInnen analysieren jede einzelne Teekanne und versuchen herauszufinden, wie spezifische Bedürfnisse der Benutzer das Design beeinflusst haben könnten. Indem sie diese Designmöglichkeiten in Betracht ziehen und versuchen, jede Teekanne einem potentiellen Benutzer zuzuordnen, können die SchülerInnen erkennen, wie eine benutzerzentrierte Herangehensweise an das Design von Produkten (sowohl physisch als auch digital) diese Produkte nützlicher und benutzerfreundlicher machen kann. Zum Abschluss der Aktivität werden die SchülerInnen gebeten, einige Änderungen an einer der Teekannen vorzuschlagen, die sie nützlicher oder brauchbarer machen würden.
             Understanding Your User:
               key: Den Benutzer verstehen
               name: Den Benutzer verstehen
@@ -17995,7 +17999,8 @@ de:
             Keeping Data Secret:
               key: Daten geheim halten
               name: Daten geheim halten
-              description_teacher: Die SchülerInnen führen eine Diskussion über die verschiedenen Sicherheitsstufen, die sie sich für personenbezogene Daten wünschen. Sobald die Klasse ein Verständnis für die Bedeutung des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung von Informationen kennen, indem sie eine Mitteilung für einen Partner verschlüsseln und die Mitteilung des Partners entschlüsseln. Die Lektion endet mit einer Diskussion über die Bedeutung sowohl der physischen als auch der digitalen Sicherheit.
+              description_teacher: |-
+                Die SchülerInnen führen eine Diskussion über die verschiedenen Sicherheitsstufen, die sie sich für personenbezogene Daten wünschen. Sobald die Klasse ein Verständnis für die Bedeutung des Datenschutzes entwickelt hat, lernen sie den Prozess der Verschlüsselung von Informationen kennen, indem sie eine Mitteilung für einen Partner verschlüsseln und die Mitteilung des Partners entschlüsseln. Die Lektion endet mit einer Diskussion über die Bedeutung sowohl der physischen als auch der digitalen Sicherheit.
             Combining Representations:
               key: Kombinieren von Darstellungen
               name: Kombinieren von Darstellungen
@@ -18021,7 +18026,9 @@ de:
               key: Automatisierung von Datenentscheidungen
               name: Automatisierung von Datenentscheidungen
             Project - Make a Recommendation:
-              description_teacher: Zum Abschluss dieser Lerneinheit entwerfen die SchülerInnen eine „Empfehlungsmaschine“ auf der Grundlage von Daten, die sie von ihren KlassenkameradInnen erheben und analysieren. Nachdem sich die SchülerInnen ein Beispiel für eine Empfehlungs-App angesehen haben, folgen sie einem Projektleitfaden, um diese mehrtägige Aktivität abzuschließen. Bei den ersten Schritten wählen die SchülerInnen aus, welche Art der Wahl sie dem Benutzer erleichtern möchten, welche Daten sie für die Empfehlung benötigen, erstellen dazu eine Befragung und sammeln Informationen über die Entscheidungen ihrer KlassenkameradInnen. Dann interpretieren sie die Daten und verwenden das Gelernte zur Erstellung des Empfehlungsalgorithmus. Zum Schluss verwenden sie ihre Algorithmen, um einigen KlassenkameradInnen Empfehlungen zu geben. Die SchülerInnen lassen ihr Projekt durch SchulkollegInnen bewerten und nehmen alle notwendigen Aktualisierungen ihrer Projekte vor, bevor sie eine Präsentation vor der Klasse vorbereiten.
+              description_student: ' '
+              description_teacher: |-
+                Zum Abschluss dieser Lerneinheit entwerfen die SchülerInnen eine „Empfehlungsmaschine“ auf der Grundlage von Daten, die sie von ihren KlassenkameradInnen erheben und analysieren. Nachdem sich die SchülerInnen ein Beispiel für eine Empfehlungs-App angesehen haben, folgen sie einem Projektleitfaden, um diese mehrtägige Aktivität abzuschließen. Bei den ersten Schritten wählen die SchülerInnen aus, welche Art der Wahl sie dem Benutzer erleichtern möchten, welche Daten sie für die Empfehlung benötigen, erstellen dazu eine Befragung und sammeln Informationen über die Entscheidungen ihrer KlassenkameradInnen. Dann interpretieren sie die Daten und verwenden das Gelernte zur Erstellung des Empfehlungsalgorithmus. Zum Schluss verwenden sie ihre Algorithmen, um einigen KlassenkameradInnen Empfehlungen zu geben. Die SchülerInnen lassen ihr Projekt durch SchulkollegInnen bewerten und nehmen alle notwendigen Aktualisierungen ihrer Projekte vor, bevor sie eine Präsentation vor der Klasse vorbereiten.
             Post-Project Test:
               key: Test nach dem Projekt
               name: Test nach dem Projekt
@@ -18608,6 +18615,8 @@ de:
               name: Aktionen mit Ereignissen
               description_student: Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!
               description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!
+            lesson-1:
+              name: Projekt am Ende des Kurses
           lesson_groups:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
@@ -18617,6 +18626,8 @@ de:
               display_name: Schleifen
             csf_events:
               display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         courseb-2021:
           title: Kurs B (2019)
@@ -18683,6 +18694,8 @@ de:
               name: Royal Battle mit Ereignissen
               description_student: Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen.
               description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!
+            lesson-1:
+              name: Projekt am Ende des Kurses
           lesson_groups:
             csf_digcit:
               display_name: Digitalen Staatsbürgerschaft
@@ -18694,6 +18707,8 @@ de:
               display_name: Auswirkungen der Datenverarbeitung
             csf_events:
               display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         coursec-2021:
           title: Kurs C (2019)
@@ -18758,7 +18773,7 @@ de:
               description_teacher: Diese Lektion wurde ursprünglich für die Hour of Code gemeinsam mit dem Team von Minecraft erstellt. Die SchülerInnen erhalten die Gelegenheit, Ideen, die sie bis zu diesem Zeitpunkt gelernt haben, in die Praxis umzusetzen und einen kleinen Einblick in Bedingungen zu bekommen!
             Sticker Art with Loops:
               key: Sticker-Kunst mit Schleifen
-              name: Sticker-Kunst mit Schleifen
+              name: 'Sticker-Kunst mit Schleifen'
               description_student: In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!
               description_teacher: Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.
             'Events: The Big Event':
@@ -18773,7 +18788,7 @@ de:
               description_teacher: In dieser speziellen Phase können die SchülerInnen ihr eigenes Flappy Bird-Spiel erstellen, indem sie mit Hilfe von Eventhandlern Mausklicks und Kollisionen von Objekten erkennen. Am Ende dieses Levels können die SchülerInnen ihr Spiel anpassen, indem sie die Grafik oder die Regeln ändern.
             Events in Play Lab:
               key: Veranstaltungen im Play Lab
-              name: Verfolgungsspiel mit Ereignissen
+              name: 'Verfolgungsspiel mit Ereignissen'
               description_student: Es ist an der Zeit, kreativ zu werden und ein Spiel in Play Lab zu entwickeln!
               description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!
             Picturing Data:
@@ -19142,6 +19157,9 @@ de:
               name: Einführung Sprite Lab
             lesson-8:
               name: Sprites in Aktion
+            lesson-2:
+              name: Die Macht der Worte
+              description_student: Mobbing ist nie in Ordnung. In dieser Lektion erfahren Sie, was man im Internet sagen darf und was nicht.
           lesson_groups:
             ramp_up:
               display_name: Hochfahren (Ramp-Up)
@@ -19161,6 +19179,8 @@ de:
               display_name: Variablen
             lessonGroup-9:
               display_name: entfernen
+            lessonGroup-7:
+              display_name: Digitalen Staatsbürgerschaft
           student_description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
         express-2021:
           title: Expresskurs (2019)
@@ -19651,7 +19671,6 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-          title: ' '
           description_audience: ' '
           description_short: ' '
           description: ' '

@@ -3,6 +3,7 @@ sk:
   data:
     shared_functions:
       driving with arrow keys: ovládanie pomocou šípok
+      fluttering: chvenie
       growing: rásť
       jittering: chvieť sa
       moving east: posúvať sa na východ
@@ -18,3 +19,4 @@ sk:
       spinning right: točenie vpravo
       swimming left and right: plávať vľavo a vpravo
       wandering: túlať sa
+      wobbling: kolísanie

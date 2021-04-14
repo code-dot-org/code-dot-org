@@ -68,7 +68,7 @@ class ProgressTableStudentName extends React.PureComponent {
   renderTooltip() {
     const id = this.tooltipId();
     const timestamp = this.props.lastTimestamp
-      ? moment(this.props.lastTimestamp).calendar()
+      ? moment.unix(this.props.lastTimestamp).calendar()
       : i18n.none();
     return (
       <ReactTooltip

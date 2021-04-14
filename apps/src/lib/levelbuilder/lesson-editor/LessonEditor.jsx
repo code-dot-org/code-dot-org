@@ -185,6 +185,7 @@ class LessonEditor extends Component {
       announcements
     } = this.state;
     const {relatedLessons, standards, opportunityStandards} = this.props;
+    const frameworks = this.props.initialLessonData.frameworks;
     return (
       <div style={styles.editor}>
         <h1>Editing Lesson "{displayName}"</h1>
@@ -390,6 +391,7 @@ class LessonEditor extends Component {
                   courseVersionId={
                     this.state.originalLessonData.courseVersionId
                   }
+                  resourceContext="lessonResource"
                 />
               ) : (
                 <h4>
@@ -446,11 +448,13 @@ class LessonEditor extends Component {
               <StandardsEditor
                 standardType={'standard'}
                 standards={standards}
+                frameworks={frameworks}
               />
               <h3>Opportunity Standards</h3>
               <StandardsEditor
                 standardType={'opportunityStandard'}
                 standards={opportunityStandards}
+                frameworks={frameworks}
               />
             </CollapsibleEditorSection>
           </div>

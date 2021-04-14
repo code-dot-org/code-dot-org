@@ -2305,6 +2305,8 @@ hr:
               display_name: Varijable
             lessonGroup-9:
               display_name: ukloni
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
         express-2021:
           lesson_groups:
             csf_loops:

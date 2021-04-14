@@ -1,12 +1,14 @@
 zh-TW:
   data:
     variable_names:
+      "???": "???"
       Blue: 藍
       Green: 綠
       Red: 紅
       actor: 角色
       armlength: armlength
       binary: 二進制（Binary）
+      birds: 鳥
       bodylength: bodylength
       cats: 全部小貓
       color: 顏色

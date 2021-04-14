@@ -11,7 +11,31 @@ lesson 'CS Principles Pre-survey', display_name: 'CS Principles Pre-survey', loc
 level 'csp-pre-survey-levelgroup_2021', assessment: true
 
 lesson_group 'csp_unit1_2020', display_name: 'Unit 1: Digital Information'
-lesson 'Welcome to CSP', display_name: 'Welcome to CSP', has_lesson_plan: true
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+
+* **Establishing a Strong Classroom Culture:** This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.
+
+
+* **Empowering "Deciders":**  An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be "deciders" about the impacts of computing on modern life. Other units will emphasize empowering units as "creators."
+
+### Major Assessment and Projects
+
+The unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.
+* IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 2.1 Binary Numbers
+* 2.2 Data Compression
+* 5.5 Legal and Ethical Concerns.'
+lesson 'Welcome to CSP', display_name: 'Welcome to CSP', has_lesson_plan: true, unplugged: true
 level 'Computer Science is Changing Everything_2021', progression: 'Computer Science is Changing Everything'
 level 'csp_socialBelonging_control_2021', progression: 'Check For Understanding', assessment: true
 
@@ -51,7 +75,7 @@ level 'CSP U1L10 Color Pixelation Widget 1_2021', progression: 'Pixelation Widge
 level 'CSP U1L10 More Shades of Color_2021', progression: 'More Shades of Color'
 level 'CSP U1L10 Color Pixelation Widget 2_2021', progression: 'Pixelation Widget: Color'
 level 'CSP U1L10 Color Pixelation Widget 3_2021', progression: 'Pixelation Widget: Color'
-level 'CSP U1L10 Color Sampling_2021', progression: 'Color Sampling'
+level 'U1 Sampling Widget', progression: 'Color Sampling Widget'
 level 'CSP U1L10 Color Pixelation Widget 4_2021', progression: 'Pixelation Widget: Color'
 level 'U1L10 Multiple Choice analog vs digital_2021', progression: 'Assessment: Check For Understanding', assessment: true
 level 'U1L10 CFU Sampling_2021', progression: 'Assessment: Check For Understanding', assessment: true
