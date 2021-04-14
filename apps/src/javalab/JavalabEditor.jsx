@@ -59,13 +59,12 @@ class JavalabEditor extends React.Component {
   }
 
   componentDidMount() {
-    let docText = '';
     // TODO: support multi-file
     const filename = Object.keys(this.props.sources)[0];
-    docText = this.props.sources[filename].text;
+    let doc = this.props.sources[filename].text;
     this.editor = new EditorView({
       state: EditorState.create({
-        doc: docText,
+        doc: doc,
         extensions: editorSetup
       }),
       parent: this._codeMirror,

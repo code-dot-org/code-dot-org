@@ -53,7 +53,7 @@ describe('Java Lab Editor Test', () => {
       expect(submitBtn.prop('value')).to.equal('Save');
     });
 
-    it('updates state on Rename save', () => {
+    it('updates state on rename save', () => {
       const editor = createWrapper();
       const oldFilename = 'MyClass.java'; // default filename
       const newFilename = 'NewFilename.java';
