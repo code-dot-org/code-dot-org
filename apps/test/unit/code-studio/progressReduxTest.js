@@ -1064,6 +1064,7 @@ describe('progressReduxTest', () => {
             id: '1',
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
+            user_facing: false,
             big_questions: ' - Why'
           }
         ],
@@ -1076,6 +1077,7 @@ describe('progressReduxTest', () => {
       assert.equal(groups.length, 1);
       assert.equal(groups[0].lessonGroup.displayName, 'Lesson Group');
       assert.equal(groups[0].lessonGroup.description, 'This is a lesson group');
+      assert.equal(groups[0].lessonGroup.userFacing, false);
     });
 
     it('returns a single group if all lessons have the same lesson group', () => {
@@ -1085,6 +1087,7 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: 'This is a lesson group',
+            user_facing: false,
             big_questions: 'Why?'
           }
         ],
@@ -1115,7 +1118,8 @@ describe('progressReduxTest', () => {
             id: 1,
             display_name: 'Lesson Group',
             description: null,
-            big_questions: null
+            big_questions: null,
+            user_facing: false
           }
         ],
         stages: [
