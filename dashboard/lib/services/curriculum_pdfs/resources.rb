@@ -69,7 +69,11 @@ module Services
           if file.available_content_types.include? "appliction/pdf"
             file.download_to_file(path)
           else
-            file.export_as_file(path)
+            # The intuitive option here would be to use
+            # file.export_as_file(path, "application/pdf"); unfortunately, that
+            # method applies some restrictive file size limits that for
+            # whatever reason hitting the URI directly does not.
+            IO.copy_stream(URI.open("https://docs.google.com/document/d/#{file.id}/export?format=pdf"), path)
           end
         end
 
@@ -79,6 +83,8 @@ module Services
           return path if File.exist?(path)
 
           if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
+            # We don't want to export forms
+            next if resource.url.start_with?("https://docs.google.com/forms")
             begin
               export_from_google(resource.url, path)
               return path
