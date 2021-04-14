@@ -1,6 +1,6 @@
 @import "font";
-@import "markdown";
-@import "pdf_printing";
+@import "curriculum/markdown";
+@import "curriculum/pdf_printing";
 
 @media print {
   /* we have components that we never want to include in a print view */
