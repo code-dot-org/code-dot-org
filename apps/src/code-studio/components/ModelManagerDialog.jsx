@@ -54,6 +54,7 @@ export default class ModelManagerDialog extends React.Component {
     models: [],
     isModelListPending: true,
     isImportPending: false,
+    isDeletePending: false,
     confirmDialogOpen: false,
     deletionStatus: undefined
   };
@@ -123,16 +124,19 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   deleteModel = () => {
+    this.setState({isDeletePending: true});
     $.ajax({
       url: `/api/v1/ml_models/${this.state.selectedModel.id}`,
       method: 'DELETE'
     }).then(response => {
       if (response.status === 'failure') {
         this.setState({
-          deletionStatus: `Model with id ${response.id} could not be deleted.`
+          deletionStatus: `Model with id ${response.id} could not be deleted.`,
+          isDeletePending: false
         });
       } else {
-        this.setState({confirmDialogOpen: false});
+        this.setState({confirmDialogOpen: false, isDeletePending: false});
+        this.getModelList();
       }
     });
   };
@@ -220,6 +224,8 @@ export default class ModelManagerDialog extends React.Component {
                 onClick={this.deleteModel}
                 icon={'trash'}
                 iconClassName={'fa-trash'}
+                pendingText={'Deleting...'}
+                isPending={this.state.isDeletePending}
               />
             </div>
             <p style={styles.message}>{this.state.deletionStatus}</p>
