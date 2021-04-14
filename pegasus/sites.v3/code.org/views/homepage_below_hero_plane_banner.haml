@@ -1,9 +1,6 @@
 - if Homepage.show_professional_learning_banner(request)
   = inline_css 'homepage_below_hero_plane_banner.css'
-
-  - closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."
-  - sign_up_text = "Sign up for Professional Learning! Middle and High School applications now open."
-  - text = Homepage.teacher_applications_closing_soon() ? closing_soon_text : sign_up_text
+  - text = Homepage.professional_learning_banner_text()
 
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}

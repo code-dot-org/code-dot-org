@@ -49,7 +49,7 @@ class YourSchool extends Component {
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     showProfessionalLearningBanner: PropTypes.bool,
-    teacherAppsClosingSoon: PropTypes.bool
+    teacherApplicationMode: PropTypes.bool
   };
 
   state = {
@@ -132,7 +132,7 @@ class YourSchool extends Component {
             useSignUpText={false}
             style={styles.banner}
             linkSuffix={'middle-high'}
-            closingSoon={this.props.teacherAppsClosingSoon}
+            teacherApplicationMode={this.props.teacherApplicationMode}
           />
         )}
         <YourSchoolResources />
