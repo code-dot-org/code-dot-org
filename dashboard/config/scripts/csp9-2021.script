@@ -26,7 +26,7 @@ level 'CSP U9L4 Making Crosstabs and Scatter Plots_2021', progression: 'Crosstab
 level 'Which Type of Chart_2021', progression: 'What Type of Chart?'
 level 'U9L4 CFU Two Column vs One_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big, Open, and Crowdsourced Data', has_lesson_plan: true
+lesson 'Big Data, Crowdsourcing, and Machine Learning', display_name: 'Big, Open, and Crowdsourced Data', has_lesson_plan: true, unplugged: true
 
 lesson 'Machine Learning and Bias', display_name: 'Machine Learning and Bias', has_lesson_plan: true
 level 'Oceans_Video_Machine_Learning_2021', progression: 'AI for Oceans - Machine Learning'

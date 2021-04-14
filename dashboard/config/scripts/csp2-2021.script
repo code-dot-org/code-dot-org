@@ -8,11 +8,33 @@ curriculum_umbrella 'CSP'
 is_migrated true
 
 lesson_group 'csp_unit2_2020', display_name: 'Unit 2: The Internet'
+lesson_group_description '### Unit Philosophy and Pedagogy
+
+* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or "layers" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet\'s original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have "invented the internet" themselves! 
+
+* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. 
+
+### Major Assessment and Projects
+
+The unit project asks students to design a policy position for an imaginary political candidate related to an "Internet Dilemma." Students must analyze news stories about their topic to identify impacted groups, explain those groups interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+### AP Connections
+
+This unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+* CSN-1: that computer systems and networks facilitate how data are transferred
+* IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences
+
+This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+* 4.1 The Internet
+* 4.2 Fault Tolerance
+* 5.2 Digital Divide'
 lesson 'Welcome to the Internet', display_name: 'Welcome to the Internet', has_lesson_plan: true
 level 'CSP U2L1 Internet Simulator: Sending Text_2021', progression: 'Internet Simulator'
 level 'U2L1 CFU how use internet_2021', progression: 'Check For Understanding', assessment: true
 
-lesson 'Building a Network', display_name: 'Building a Network', has_lesson_plan: true
+lesson 'Building a Network', display_name: 'Building a Network', has_lesson_plan: true, unplugged: true
 level 'U2L1 CFU paths_2021', progression: 'Check For Understanding', assessment: true
 
 lesson 'The Need for Addressing', display_name: 'The Need for Addressing', has_lesson_plan: true
