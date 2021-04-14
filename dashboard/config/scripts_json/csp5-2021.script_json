@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-10 20:46:42 UTC",
+    "serialized_at": "2021-04-13 22:17:38 UTC",
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -96,7 +96,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Lists Explore",
@@ -211,7 +212,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Loops Explore",
@@ -326,7 +328,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Traversals Explore",
@@ -441,7 +444,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 1",
@@ -470,7 +474,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 2",
@@ -499,7 +504,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 3",
@@ -528,7 +534,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 4",
@@ -557,7 +564,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Semester Hackathon Part 5",
@@ -585,7 +593,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 18: Assessment Day",
@@ -4320,7 +4329,7 @@
       "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Introduction to Loops",
         "level_keys": [
@@ -5256,7 +5265,7 @@
       "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5282,7 +5291,7 @@
       "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
@@ -5308,7 +5317,7 @@
       "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Hackathon Project",
         "level_keys": [
