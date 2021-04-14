@@ -1,26 +1,46 @@
 import sinon from 'sinon';
-import {expect, assert} from '../../util/reconfiguredChai';
+import ReactDOM from 'react-dom';
+import {expect} from '../../util/reconfiguredChai';
 import Javalab from '@cdo/apps/javalab/Javalab';
 import project from '@cdo/apps/code-studio/initApp/project';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp
+} from '@cdo/apps/StudioApp';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import javalabRedux, {setEditorText} from '@cdo/apps/javalab/javalabRedux';
-var filesApi = require('@cdo/apps/clientApi').files;
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setAllSources} from '@cdo/apps/javalab/javalabRedux';
 
 describe('Javalab', () => {
   let javalab;
+  let config;
 
   beforeEach(() => {
     javalab = new Javalab();
+    stubRedux();
+    registerReducers(commonReducers);
     sinon.stub(project, 'autosave');
+    sinon.stub(ReactDOM, 'render');
+    sinon.stub(getStore(), 'dispatch');
+    stubStudioApp();
+    javalab.studioApp_ = studioApp();
+    config = {
+      level: {},
+      skin: {}
+    };
   });
 
   afterEach(() => {
     project.autosave.restore();
+    ReactDOM.render.restore();
+    restoreRedux();
+    restoreStudioApp();
   });
 
   describe('beforeUnload', () => {
@@ -46,46 +66,54 @@ describe('Javalab', () => {
     });
   });
 
-  describe('getCodeAsync', () => {
-    let store;
-
-    beforeEach(() => {
-      sinon.stub(filesApi, 'putFile');
-      stubRedux();
-      registerReducers({javalabRedux});
-      store = getStore();
-    });
-
-    afterEach(() => {
-      filesApi.putFile.restore();
-      restoreRedux();
-    });
-
-    it('triggers file put if there are changes', () => {
-      // set editor text
-      store.dispatch(setEditorText('New Text'));
-
-      // getCodeAsync is called on autosave/save
-      javalab.getCodeAsync(
-        () => {
-          expect(filesApi.putFile).to.have.been.calledOnce;
-        },
-        () => {
-          assert.fail('getCodeAsync failed');
+  describe('populates sources', () => {
+    it('with start_sources if there are any and there is no lastAttempt', () => {
+      config.level = {
+        startSources: {
+          'File.java': {
+            text: 'Some code',
+            visible: true
+          }
         }
+      };
+
+      javalab.init(config);
+
+      expect(getStore().dispatch).to.have.been.calledWith(
+        setAllSources(config.level.startSources)
       );
     });
 
-    it('does not trigger file put if there are no changes', () => {
-      // getCodeAsync is called on autosave/save
-      javalab.getCodeAsync(
-        () => {
-          // if there were no changes putFile should not be called
-          expect(filesApi.putFile).to.not.have.been.called;
+    it('with lastAttempt if there is one', () => {
+      config.level = {
+        startSources: {
+          'File.java': {
+            text: 'Some code',
+            visible: true
+          }
         },
-        () => {
-          assert.fail('getCodeAsync failed');
+        lastAttempt: {
+          'MyClass.java': {
+            text: 'Some code 2',
+            visible: true
+          }
         }
+      };
+      javalab.init(config);
+
+      expect(getStore().dispatch).to.have.been.calledWith(
+        setAllSources(config.level.lastAttempt)
+      );
+    });
+
+    it('does not populate if start sources are empty', () => {
+      config.level = {
+        startSources: {}
+      };
+      javalab.init(config);
+
+      expect(getStore().getState().javalab.sources).to.not.equal(
+        config.level.startSources
       );
     });
   });

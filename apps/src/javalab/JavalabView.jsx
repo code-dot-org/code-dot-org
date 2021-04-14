@@ -1,6 +1,5 @@
 import React from 'react';
 import JavalabConsole from './JavalabConsole';
-import {loadFiles} from './JavalabFileManagement';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
 import JavalabSettings from './JavalabSettings';
@@ -75,20 +74,8 @@ class JavalabView extends React.Component {
     channelId: PropTypes.string
   };
 
-  state = {
-    loading: true,
-    loadSuccess: null
-  };
-
   componentDidMount() {
     this.props.onMount();
-    loadFiles(
-      /* success */
-      () => this.setState({loading: false, loadSuccess: true}),
-      /* failure */
-      () => this.setState({loading: false, loadSuccess: false}),
-      this.props.suppliedFilesVersionId
-    );
     this.getToken();
   }
 
@@ -136,7 +123,7 @@ class JavalabView extends React.Component {
     }
   };
 
-  renderJavalab() {
+  render() {
     const {isDarkMode} = this.props;
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -206,17 +193,6 @@ class JavalabView extends React.Component {
           </div>
         </div>
       </StudioAppWrapper>
-    );
-  }
-
-  render() {
-    return this.state.loading ? (
-      <div className="loading" />
-    ) : this.state.loadSuccess ? (
-      this.renderJavalab()
-    ) : (
-      // TODO: improve error messaging/styling
-      <div>Sorry, we encountered an error</div>
     );
   }
 }
