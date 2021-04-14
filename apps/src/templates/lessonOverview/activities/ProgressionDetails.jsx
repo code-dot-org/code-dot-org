@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import LevelDetailsDialog from './LevelDetailsDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   progressionBox: {
@@ -25,6 +26,17 @@ export default class ProgressionDetails extends Component {
 
   handleBubbleClick = level => {
     this.setState({previewingLevel: level});
+    firehoseClient.putRecord(
+      {
+        study: 'lesson-plan',
+        study_group: 'teacher-lesson-plan',
+        event: 'click-level',
+        data_json: JSON.stringify({
+          levelId: level.id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   convertScriptLevelForProgression = scriptLevel => {

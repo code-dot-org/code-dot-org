@@ -16,6 +16,7 @@ import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMar
 import _ from 'lodash';
 import styleConstants from '@cdo/apps/styleConstants';
 import {connect} from 'react-redux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -205,6 +206,20 @@ class LevelDetailsDialog extends Component {
     }
   }
 
+  recordSeeFullLevelClick = level => {
+    firehoseClient.putRecord(
+      {
+        study: 'lesson-plan',
+        study_group: 'teacher-lesson-plan',
+        event: 'click-see-full-level',
+        data_json: JSON.stringify({
+          levelId: level.id
+        })
+      },
+      {includeUserId: true}
+    );
+  };
+
   handleBubbleChoiceBubbleClick = clickedObject => {
     const previousSelected = this.state.selectedLevel;
     const clonedScriptLevel = _.cloneDeep(this.state.scriptLevel);
@@ -286,6 +301,9 @@ class LevelDetailsDialog extends Component {
           <Button
             href={level.url || scriptLevel.url}
             target={'_blank'}
+            onClick={() => {
+              this.recordSeeFullLevelClick(level);
+            }}
             text={i18n.seeFullLevel()}
             color={'orange'}
             __useDeprecatedTag
