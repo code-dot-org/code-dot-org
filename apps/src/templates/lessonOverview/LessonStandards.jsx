@@ -32,7 +32,7 @@ export const ExpandMode = {
   ALL: 'all'
 };
 
-const expandModeShape = PropTypes.oneOf(
+const expandModeShape = PropTypes.oneOf([
   // The component should not be expanded.
   ExpandMode.NONE,
 
@@ -42,7 +42,7 @@ const expandModeShape = PropTypes.oneOf(
 
   // This component and all its descendants should be expanded.
   ExpandMode.ALL
-);
+]);
 
 /**
  * Given the parents expand mode and the index of the child, returns what the
