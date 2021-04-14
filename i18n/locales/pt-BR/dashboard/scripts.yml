@@ -15419,7 +15419,8 @@ pt:
             Programming for Entertainment:
               key: Programação para entretenimento
               name: Programação para entretenimento
-              description_student: "Solicita-se à classe que considere \"problemas\" como tédio e autoexpressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão."
+              description_student: |-
+                Solicita-se à classe que considere "problemas" como tédio e autoexpressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão.
             Plotting Shapes:
               key: Formas de plotagem
               name: Formas de plotagem
@@ -15509,7 +15510,8 @@ pt:
             Analysis of Design:
               key: Análise de Design
               name: Análise de Design
-              description_teacher: Para iniciar uma unidade dedicada à solução de problemas em grupo e ao desenvolvimento de produtos para outros usuários, os alunos começam investigando o design de vários bules. Os alunos analisam cada bule de chá, tentando identificar como as necessidades específicas do usuário podem ter informado seu design. Ao considerar essas opções de design e tentar combinar cada bule com um usuário em potencial, os alunos podem começar a ver como uma abordagem centrada no usuário para projetar produtos (físicos e digitais) pode torná-los mais úteis e utilizáveis. Para concluir a atividade, os alunos são solicitados a propor algumas alterações em um dos bules que a tornariam mais útil ou utilizável.
+              description_teacher: |-
+                Para iniciar uma unidade dedicada à solução de problemas em grupo e ao desenvolvimento de produtos para outros usuários, os alunos começam investigando o design de vários bules. Os alunos analisam cada bule de chá, tentando identificar como as necessidades específicas do usuário podem ter informado seu design. Ao considerar essas opções de design e tentar combinar cada bule com um usuário em potencial, os alunos podem começar a ver como uma abordagem centrada no usuário para projetar produtos (físicos e digitais) pode torná-los mais úteis e utilizáveis. Para concluir a atividade, os alunos são solicitados a propor algumas alterações em um dos bules que a tornariam mais útil ou utilizável.
             Understanding Your User:
               key: Entendendo seu usuário
               name: Entendendo seu usuário
@@ -15610,7 +15612,8 @@ pt:
             Keeping Data Secret:
               key: Mantendo o segredo dos dados
               name: Mantendo o segredo dos dados
-              description_teacher: Os alunos discutem os diferentes níveis de segurança que desejam para dados pessoais. Depois que a classe desenvolve um entendimento da importância da privacidade, ela aprende sobre o processo de criptografia de informações, criptografando uma nota para um parceiro e decifrando a nota do parceiro. A turma termina com uma discussão sobre a importância da segurança física e digital.
+              description_teacher: |-
+                Os alunos discutem os diferentes níveis de segurança que desejam para dados pessoais. Depois que a classe desenvolve um entendimento da importância da privacidade, ela aprende sobre o processo de criptografia de informações, criptografando uma nota para um parceiro e decifrando a nota do parceiro. A turma termina com uma discussão sobre a importância da segurança física e digital.
             Combining Representations:
               key: Combinando Representações
               name: Combinando Representações
@@ -15636,7 +15639,8 @@ pt:
               key: Automatizando decisões de dados
               name: Automatizando decisões de dados
             Project - Make a Recommendation:
-              description_teacher: Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
+              description_teacher: |-
+                Para concluir esta unidade, os alunos projetam um mecanismo de recomendação com base nos dados que eles coletam e analisam de seus colegas de classe. Depois de observar um exemplo de aplicativo de recomendação, os alunos seguem um guia do projeto para concluir esta atividade de vários dias. Nas primeiras etapas, os alunos escolhem a escolha que desejam ajudar o usuário a fazer, quais dados precisam dar à recomendação, criam uma pesquisa e coletam informações sobre as escolhas de seus colegas de classe. Eles então interpretam os dados e usam o que aprenderam para criar o algoritmo de recomendação. Por fim, eles usam seus algoritmos para fazer recomendações a alguns colegas de classe. Os alunos realizam uma revisão por pares e fazem as atualizações necessárias em seus projetos antes de preparar uma apresentação para a classe.
             Post-Project Test:
               key: Teste pós-projeto
               name: Teste pós-projeto
@@ -16341,7 +16345,7 @@ pt:
               description_teacher: Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!
             Sticker Art with Loops:
               key: Adesivo de arte com loops
-              name: Adesivo de arte com loops
+              name: 'Adesivo de arte com loops'
               description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
               description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
             'Events: The Big Event':
@@ -16356,7 +16360,7 @@ pt:
               description_teacher: Nesta etapa especial, os alunos constroem seu próprio jogo Flappy Bird usando manipuladores de eventos para detectar cliques do mouse e colisões de objetos. No final do nível, os alunos poderão personalizar seu jogo alterando os visuais ou regras.
             Events in Play Lab:
               key: Eventos no Laboratório de jogos
-              name: Jogo de perseguição com eventos
+              name: 'Jogo de perseguição com eventos'
               description_student: É hora de ser criativo e criar um jogo no Play Lab!
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
             Picturing Data:
@@ -16706,6 +16710,9 @@ pt:
               name: Introdução ao Sprite Lab
             lesson-8:
               name: Sprites em Ação
+            lesson-2:
+              name: O poder das palavras
+              description_student: Bullying nunca é bom. Esta lição ensinará sobre o que é e o que não é bom dizer on-line.
           lesson_groups:
             ramp_up:
               display_name: Treinamento
@@ -16721,6 +16728,8 @@ pt:
               display_name: variáveis
             lessonGroup-9:
               display_name: remover
+            lessonGroup-7:
+              display_name: Cidadania digital
           student_description: Aprenda a usar diferentes tipos de loops, eventos, funções e condicionais. Investigue diferentes técnicas de solução de problemas e discuta os impactos sociais da computação e da Internet. Na segunda parte deste curso, projete e crie um projeto principal que você possa compartilhar com amigos e familiares.
         express-2021:
           title: Curso Expresso (2019)

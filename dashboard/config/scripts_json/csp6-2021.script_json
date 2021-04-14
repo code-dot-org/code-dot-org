@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-24 21:40:53 UTC",
+    "serialized_at": "2021-04-13 23:04:02 UTC",
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -30,7 +30,8 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 6: Algorithms"
+        "display_name": "Unit 6: Algorithms",
+        "description": "### Unit Philosophy and Pedagogy\n\n\n* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit6_2020",
@@ -60,7 +61,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
@@ -89,7 +91,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
@@ -118,7 +121,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Unreasonable Time",
@@ -176,7 +180,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
@@ -204,7 +209,8 @@
             "type": "information",
             "visibility": "Teacher-only"
           }
-        ]
+        ],
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
@@ -2347,6 +2353,9 @@
   "scripts_resources": [
 
   ],
+  "scripts_student_resources": [
+
+  ],
   "vocabularies": [
 
   ],
@@ -2824,5 +2833,8 @@
         "standard.shortcode": "CSN-2.B.5"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

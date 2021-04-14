@@ -1,10 +1,10 @@
 import React from 'react';
 import JavalabConsole from './JavalabConsole';
-import {loadFiles} from './JavalabFileManagement';
 import {connect} from 'react-redux';
 import JavalabEditor from './JavalabEditor';
+import JavalabSettings from './JavalabSettings';
 import PaneHeader, {PaneSection} from '@cdo/apps/templates/PaneHeader';
-import {appendOutputLog} from './javalabRedux';
+import {appendOutputLog, toggleDarkMode} from './javalabRedux';
 import PropTypes from 'prop-types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -21,8 +21,7 @@ const style = {
   },
   editorAndConsole: {
     width: '60%',
-    position: 'relative',
-    color: color.white
+    position: 'relative'
   },
   preview: {
     backgroundColor: color.light_gray,
@@ -69,24 +68,14 @@ class JavalabView extends React.Component {
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isDarkMode: PropTypes.bool.isRequired,
     appendOutputLog: PropTypes.func,
+    toggleDarkMode: PropTypes.func,
     channelId: PropTypes.string
-  };
-
-  state = {
-    loading: true,
-    loadSuccess: null
   };
 
   componentDidMount() {
     this.props.onMount();
-    loadFiles(
-      /* success */
-      () => this.setState({loading: false, loadSuccess: true}),
-      /* failure */
-      () => this.setState({loading: false, loadSuccess: false}),
-      this.props.suppliedFilesVersionId
-    );
     this.getToken();
   }
 
@@ -114,7 +103,33 @@ class JavalabView extends React.Component {
     this.props.appendOutputLog('Compiled!');
   };
 
-  renderJavalab() {
+  renderSettings = () => {
+    const {isDarkMode} = this.props;
+    return [
+      <a onClick={this.props.toggleDarkMode} key="theme-setting">
+        Switch to {isDarkMode ? 'light mode' : 'dark mode'}
+      </a>
+    ];
+  };
+
+  getButtonStyles = isSettingsButton => {
+    const {isDarkMode} = this.props;
+    if (isDarkMode) {
+      return style.singleButton;
+    } else if (isSettingsButton) {
+      return {...style.singleButton, backgroundColor: color.orange};
+    } else {
+      return {...style.singleButton, backgroundColor: color.cyan};
+    }
+  };
+
+  render() {
+    const {isDarkMode} = this.props;
+    if (isDarkMode) {
+      document.body.style.backgroundColor = '#1b1c17';
+    } else {
+      document.body.style.backgroundColor = color.background_gray;
+    }
     return (
       <StudioAppWrapper>
         <div style={style.javalab}>
@@ -127,13 +142,18 @@ class JavalabView extends React.Component {
               </div>
             </InstructionsWithWorkspace>
           </div>
-          <div style={style.editorAndConsole}>
+          <div
+            style={{
+              ...style.editorAndConsole,
+              color: isDarkMode ? color.white : color.black
+            }}
+          >
             <JavalabEditor onCommitCode={this.props.onCommitCode} />
             <div style={style.consoleAndButtons}>
               <div style={style.buttons}>
                 <button
                   type="button"
-                  style={style.singleButton}
+                  style={this.getButtonStyles(false)}
                   onClick={() => {}}
                 >
                   <FontAwesome icon="stop" className="fa-2x" />
@@ -142,7 +162,7 @@ class JavalabView extends React.Component {
                 </button>
                 <button
                   type="button"
-                  style={style.singleButton}
+                  style={this.getButtonStyles(false)}
                   onClick={this.props.onContinue}
                 >
                   <FontAwesome icon="check" className="fa-2x" />
@@ -151,18 +171,14 @@ class JavalabView extends React.Component {
                 </button>
               </div>
               <div style={style.buttons}>
-                <button
-                  type="button"
-                  style={style.singleButton}
-                  onClick={this.compile}
+                <JavalabSettings
+                  style={this.getButtonStyles(true /* isSettingsButton */)}
                 >
-                  <FontAwesome icon="cubes" className="fa-2x" />
-                  <br />
-                  Compile
-                </button>
+                  {this.renderSettings()}
+                </JavalabSettings>
                 <button
                   type="button"
-                  style={style.singleButton}
+                  style={this.getButtonStyles(false)}
                   onClick={this.run}
                 >
                   <FontAwesome icon="play" className="fa-2x" />
@@ -179,26 +195,21 @@ class JavalabView extends React.Component {
       </StudioAppWrapper>
     );
   }
-
-  render() {
-    return this.state.loading ? (
-      <div className="loading" />
-    ) : this.state.loadSuccess ? (
-      this.renderJavalab()
-    ) : (
-      // TODO: improve error messaging/styling
-      <div>Sorry, we encountered an error</div>
-    );
-  }
 }
 
+// We use the UnconnectedJavalabView to make this component's methods testable.
+// This is a deprecated pattern but calling shallow().dive().instance() on the
+// connected JavalabView does not give us access to the methods owned by JavalabView.
+export const UnconnectedJavalabView = JavalabView;
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    channelId: state.pageConstants.channelId
+    channelId: state.pageConstants.channelId,
+    isDarkMode: state.javalab.isDarkMode
   }),
   dispatch => ({
-    appendOutputLog: log => dispatch(appendOutputLog(log))
+    appendOutputLog: log => dispatch(appendOutputLog(log)),
+    toggleDarkMode: () => dispatch(toggleDarkMode())
   })
-)(JavalabView);
+)(UnconnectedJavalabView);

@@ -3027,6 +3027,8 @@ fi:
               display_name: Muuttujat
             lessonGroup-9:
               display_name: poista
+            lessonGroup-7:
+              display_name: Digitaalinen kansalaisuus
         express-2021:
           lessons:
             Dance Party:

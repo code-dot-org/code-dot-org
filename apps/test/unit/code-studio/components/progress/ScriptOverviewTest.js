@@ -12,7 +12,7 @@ const defaultProps = {
   isSignedIn: true,
   isVerifiedTeacher: true,
   hasVerifiedResources: true,
-  perLevelProgress: {},
+  perLevelResults: {},
   scriptCompleted: false,
   scriptId: 123,
   scriptName: 'csp1',

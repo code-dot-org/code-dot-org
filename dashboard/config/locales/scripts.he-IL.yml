@@ -6267,6 +6267,8 @@ he:
             ASCII and Binary Representation:
               key: ייצוג ASCII וייצוג בינארי
               name: ייצוג ASCII וייצוג בינארי
+            Project - Make a Recommendation:
+              description_student: " "
             Post-Project Test:
               description_student: " "
               description_teacher: " "
@@ -6647,7 +6649,6 @@ he:
           description: " "
           student_description: " "
         csa1-pilot:
-          title: " "
           description_audience: " "
           description_short: " "
           description: " "

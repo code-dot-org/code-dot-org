@@ -14659,7 +14659,10 @@ uz:
             Programming for Entertainment:
               key: Programming for Entertainment
               name: Programming for Entertainment
-              description_student: "**Question of the Day: How is computer science used in entertainment?**\\r\n\\r\nO‘quvchilardan zerikish va o‘zini rivojlantirish \"muammolari\"ni ko‘rib chiqish va bu muammolarga o‘z hayotlarida qanday yondashishlari haqida o‘ylash talab qilinadi. U yerdan ular umuman qanday qilib kompyuter fanlari va dasturlash maxsus hordiqda yoki o‘zini namoyon qilish vositasi sifatida qanday rol o‘ynashini o‘rganadilar."
+              description_student: |-
+                **Question of the Day: How is computer science used in entertainment?**\r
+                \r
+                O‘quvchilardan zerikish va o‘zini rivojlantirish "muammolari"ni ko‘rib chiqish va bu muammolarga o‘z hayotlarida qanday yondashishlari haqida o‘ylash talab qilinadi. U yerdan ular umuman qanday qilib kompyuter fanlari va dasturlash maxsus hordiqda yoki o‘zini namoyon qilish vositasi sifatida qanday rol o‘ynashini o‘rganadilar.
             Plotting Shapes:
               key: Plotting Shapes
               name: Plotting Shapes
@@ -14759,7 +14762,8 @@ uz:
             Analysis of Design:
               key: Analysis of Design
               name: Analysis of Design
-              description_teacher: 'Muammoni guruhlarga ajratish va boshqa foydalanuvchilar uchun mahsulot ishlab chiqarishga bag‘ishlangan bo‘limni boshlash uchun o‘quvchilar turli xil choynaklar dizaynini o‘rganishni boshlaydilar. O‘quvchilar har bir choynakni tahlil qilib, foydalanuvchining o‘ziga xos ehtiyojlari uning dizayni to‘g‘risida qanday ma''lumot berganligini aniqlashga harakat qiladilar. Ushbu dizayn tanlovlarini ko‘rib chiqib, har bir choynakni ma''lum bir foydalanuvchi uchun moslashtirishga harakat qilib, o‘quvchilar mahsulotlarni loyihalashda foydalanuvchi tomonidan yo‘naltirilgan yondashuv (ikkalasi: jismoniy hamda raqamli) ushbu mahsulotlarni yanada foydali va foydalanishga yaroqli bo‘lishini ko‘rishni boshlaydilar. Mashg‘ulotni yakunlash uchun o‘quvchilardan choynaklardan biriga foydali yoki foydalanishga yaroqli bo‘lgan ba''zi bir o‘zgartirishlarni taklif qilishlari so‘raladi.'
+              description_teacher: |-
+                Muammoni guruhlarga ajratish va boshqa foydalanuvchilar uchun mahsulot ishlab chiqarishga bag‘ishlangan bo‘limni boshlash uchun o‘quvchilar turli xil choynaklar dizaynini o‘rganishni boshlaydilar. O‘quvchilar har bir choynakni tahlil qilib, foydalanuvchining o‘ziga xos ehtiyojlari uning dizayni to‘g‘risida qanday ma'lumot berganligini aniqlashga harakat qiladilar. Ushbu dizayn tanlovlarini ko‘rib chiqib, har bir choynakni ma'lum bir foydalanuvchi uchun moslashtirishga harakat qilib, o‘quvchilar mahsulotlarni loyihalashda foydalanuvchi tomonidan yo‘naltirilgan yondashuv (ikkalasi: jismoniy hamda raqamli) ushbu mahsulotlarni yanada foydali va foydalanishga yaroqli bo‘lishini ko‘rishni boshlaydilar. Mashg‘ulotni yakunlash uchun o‘quvchilardan choynaklardan biriga foydali yoki foydalanishga yaroqli bo‘lgan ba'zi bir o‘zgartirishlarni taklif qilishlari so‘raladi.
             Understanding Your User:
               key: Understanding Your User
               name: Understanding Your User
@@ -14871,7 +14875,8 @@ uz:
             Keeping Data Secret:
               key: Keeping Data Secret
               name: Keeping Data Secret
-              description_teacher: O‘quvchilar shaxsiy ma'lumotlar uchun xavfsizlikni istagan har xil muhokamalar olib borishadi. Sinf o‘quvchilari maxfiylikning ahamiyati to‘g‘risida tushunchalarni rivojlantirgandan so‘ng, ular sherigi uchun yozuvni shifrlash va uning yozuvini ochish orqali ma'lumotlarni shifrlash jarayoni to‘g‘risida bilib oladilar. O‘quvchilar jismoniy va raqamli xavfsizlikning ahamiyati to‘g‘risida fikr-mulohaza yuritib, xulosa chiqaradilar.
+              description_teacher: |-
+                O‘quvchilar shaxsiy ma'lumotlar uchun xavfsizlikni istagan har xil muhokamalar olib borishadi. Sinf o‘quvchilari maxfiylikning ahamiyati to‘g‘risida tushunchalarni rivojlantirgandan so‘ng, ular sherigi uchun yozuvni shifrlash va uning yozuvini ochish orqali ma'lumotlarni shifrlash jarayoni to‘g‘risida bilib oladilar. O‘quvchilar jismoniy va raqamli xavfsizlikning ahamiyati to‘g‘risida fikr-mulohaza yuritib, xulosa chiqaradilar.
             Combining Representations:
               key: Combining Representations
               name: Combining Representations
@@ -14897,7 +14902,8 @@ uz:
               key: Automating Data Decisions
               name: Automating Data Decisions
             Project - Make a Recommendation:
-              description_teacher: Ushbu bo‘limni yakunlash uchun o‘quvchilar sinfdoshlari orqali to‘plagan va tahlil qilgan ma'lumotlarga asoslanib tavsiya qilinadigan dvijokni yaratadilar. Tavsiya qilingan dasturning namunasini ko‘rib chiqib, o‘quvchilar ushbu ko‘p kunlik ishni bajarish uchun loyiha qo‘llanmasiga amal qilishadi. Dastlabki bir necha bosqichda o‘quvchilar foydalanuvchiga qanday tanlov qilishda yordam berishni, qanday ma'lumotlarni tavsiya qilishlari, so‘rovnoma tuzishlari va sinfdoshlarining tanlovi to‘g‘risida ma'lumot to‘plashlari kerakligini tanlaydilar. Keyin ular ma'lumotlarni sharhlaydilar va tavsiya qilinadigan algoritmini yaratish uchun o‘rganganlaridan foydalanadilar. Va nihoyat, ular bir nechta sinfdoshlariga tavsiyalar berish uchun o‘zlarining algoritmlaridan foydalanadilar. O‘quvchilar sinfga taqdimot tayyorlashdan oldin o‘zaro sinab ko‘radilar va o‘zlarining loyihalari uchun zarur bo‘lgan qo‘shimchalarni kiritadilar.
+              description_teacher: |-
+                Ushbu bo‘limni yakunlash uchun o‘quvchilar sinfdoshlari orqali to‘plagan va tahlil qilgan ma'lumotlarga asoslanib tavsiya qilinadigan dvijokni yaratadilar. Tavsiya qilingan dasturning namunasini ko‘rib chiqib, o‘quvchilar ushbu ko‘p kunlik ishni bajarish uchun loyiha qo‘llanmasiga amal qilishadi. Dastlabki bir necha bosqichda o‘quvchilar foydalanuvchiga qanday tanlov qilishda yordam berishni, qanday ma'lumotlarni tavsiya qilishlari, so‘rovnoma tuzishlari va sinfdoshlarining tanlovi to‘g‘risida ma'lumot to‘plashlari kerakligini tanlaydilar. Keyin ular ma'lumotlarni sharhlaydilar va tavsiya qilinadigan algoritmini yaratish uchun o‘rganganlaridan foydalanadilar. Va nihoyat, ular bir nechta sinfdoshlariga tavsiyalar berish uchun o‘zlarining algoritmlaridan foydalanadilar. O‘quvchilar sinfga taqdimot tayyorlashdan oldin o‘zaro sinab ko‘radilar va o‘zlarining loyihalari uchun zarur bo‘lgan qo‘shimchalarni kiritadilar.
             Post-Project Test:
               key: Loyiha yakuniy testi
               name: Loyiha yakuniy testi
@@ -15303,6 +15309,8 @@ uz:
               name: Hodisalar bilan harakatda
               description_student: O'z o'yiningiz yoki hikoyangizni yarating!
               description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!
+            lesson-1:
+              name: End of Course Project
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
@@ -15312,6 +15320,8 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+            lessonGroup-5:
+              display_name: End of Course Project
           name: coursea-2021
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         courseb-2021:
@@ -15375,6 +15385,8 @@ uz:
               name: A Royal Battle with Events
               description_student: Use events to create a story or make an interactive game.
               description_teacher: Bu onlayn mashg‘ulotda, talabalarda Play Labda hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi va Play Labda biron o‘yin yarating!
+            lesson-1:
+              name: End of Course Project
           lesson_groups:
             csf_digcit:
               display_name: Raqamli Fuqarolik
@@ -15386,6 +15398,8 @@ uz:
               display_name: Kompyuterlar ta'siri
             csf_events:
               display_name: Hodisalar
+            lessonGroup-6:
+              display_name: End of Course Project
           name: courseb-2021
           student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
         coursec-2021:
@@ -15447,7 +15461,7 @@ uz:
               description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
             Sticker Art with Loops:
               key: Sticker Art with Loops
-              name: Sticker Art with Loops
+              name: 'Sticker Art with Loops'
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
             'Events: The Big Event':
@@ -15462,7 +15476,7 @@ uz:
               description_teacher: Bu maxsus bosqichda, talabalar obyektlar to‘qnashuvi va sichqoncha bosilishini taniy oladigan hodisa tinglovchilaridan foydalangan holda o‘zlarining Flappy Bird o‘yinini yaratishadi. Bu bosqichning oxirida talabalar tasvirlar yoki qoidalarni o‘zgartirgan holda o‘z o‘yinlarini yarata oladilar.
             Events in Play Lab:
               key: Play Labdagi hodisalar
-              name: Chase Game with Events
+              name: 'Chase Game with Events'
               description_student: Yaratuvchan bo‘lishning ayni vaqti va Play Labda biron o‘yin yarating!
               description_teacher: Bu onlayn mashg‘ulotda, talabalalarda Play Labda hodisalardan qanday foydalanishni o‘rganishga va biron animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha ko‘nikmalarini qo‘llab ko‘rishga imkoniyat bo‘ladi. Yaratuvchan bo‘lishning vaqti keldi! Play Labda o‘yin yarating!
             Picturing Data:
@@ -15826,6 +15840,9 @@ uz:
               name: Sprite laboratoriyasi bilan tanishish
             lesson-8:
               name: Spraytlar amalda
+            lesson-2:
+              name: The Power of Words
+              description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot beradi.
           lesson_groups:
             ramp_up:
               display_name: Ramp-Up
@@ -15843,6 +15860,8 @@ uz:
               display_name: O‘zgaruvchilar
             lessonGroup-9:
               display_name: o‘chirish
+            lessonGroup-7:
+              display_name: Raqamli Fuqarolik
           name: Kurs F 2021
           student_description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         express-2021:

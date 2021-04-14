@@ -47,7 +47,7 @@ sv:
         text: efter {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: ändra {COLOR} {METHOD} via {AMOUNT}
@@ -216,13 +216,13 @@ sv:
         text: 'varje {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_everySecondsRange:
         text: 'varje {N} {UNIT} från {START} till {STOP} '
         options:
           UNIT:
-            measures: Åtgärder
+            measures: Takter
             seconds: Sekunder
       Dancelab_everyVerseChorus:
         text: 'varje {UNIT} '
@@ -252,7 +252,7 @@ sv:
         text: "{UNIT} har passerat"
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_ifDanceIs:
         text: |-
@@ -275,7 +275,7 @@ sv:
         text: om {UNIT} is {OP} {N} {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
           OP:
             '">"': ">"
@@ -467,7 +467,7 @@ sv:
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} åtgärder"
+        text: "{N} takter"
       Dancelab_onPointerDown:
         text: när pekaren förs nedåt
       Dancelab_onPointerDrag:
