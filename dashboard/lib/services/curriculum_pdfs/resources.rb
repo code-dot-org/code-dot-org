@@ -12,7 +12,9 @@ module Services
       class_methods do
         def get_script_resources_pathname(script)
           filename = ActiveStorage::Filename.new(script.localized_title + " - Resources.pdf").sanitized
-          subdirectory = File.dirname(get_script_overview_pathname(script))
+          script_overview_pathname = get_script_overview_pathname(script)
+          return nil unless script_overview_pathname
+          subdirectory = File.dirname(script_overview_pathname)
           return Pathname.new(File.join(subdirectory, filename))
         end
 

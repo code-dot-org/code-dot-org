@@ -163,7 +163,7 @@ class ScriptOverviewTopRow extends React.Component {
                 useMigratedResources={isMigrated}
               />
             )}
-          {pdfDropdownOptions.length > 0 && (
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 text={i18n.printingOptions()}
