@@ -19870,9 +19870,16 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            lesson-1:
+              name: tess test
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
+              description: "### Unit Philosophy and Pedagogy\n\n* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates the way different features or \"layers\" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Within a lesson, students will be presented with challenges that are modeled closely on those that the original inventors of the internet needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of not just how the internet works, but why it was designed that way. By the end of the unit, students will have \"invented the internet\" themselves! \n\n* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and the development of a supportive and inclusive classroom culture. \n\n### Major Assessment and Projects\n\nThe unit project asks students to design a policy position for an imaginary political candidate related to an \"Internet Dilemma.\" Students must analyze news stories about their topic to identify impacted groups, explain those groups interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CSN-1: that computer systems and networks facilitate how data are transferred\n* IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 4.1 The Internet\n* 4.2 Fault Tolerance\n* 5.2 Digital Divide"
+            lessonGroup-2:
+              display_name: Tess test
+              big_questions: Big question
+              description: helllo
           name: csp2-2021
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
         csp3-2021:
@@ -21885,10 +21892,16 @@ en:
 '
             lesson-12:
               name: SprayPainter
+              description_student: Your `PainterPlus` has several ways to move around and interact with The Neighborhood. In this lesson, you develop a new type of `Painter` called `SprayPainter` with a `sprayPaint` method. With the `SprayPainter`, you create a mural and more interesting artwork in The Neighborhood.
+              description_teacher: 'In this lesson, students apply their knowledge of methods and classes to write a new type of `Painter`, the `SprayPainter`, from scratch, including writing a new method with parameters: `sprayPaint(String color1, String color 2)`. The new `SprayPainter` class is implemented to create an abstract mural.'
             lesson-13:
               name: StampPainter
+              description_student: You now have a `PainterPlus` and a `SprayPainter` that can be used to create artwork in The Neighborhood. In this lesson, you learn about pixel art and explore the opportunities of using technology in art and design. You develop a new type of `Painter` called the `StampPainter` that can paint custom shapes.
+              description_teacher: In this lesson, students continue to apply the principle of inheritance in their code by implementing the `StampPainter` class -- an extension of the `PainterPlus` class that paints customized shapes and images. This lesson serves as reinforcement to the previous lesson on inheritance. Students continue to practice deriving a new class based on an existing class, only adding new methods.
             lesson-14:
               name: Edge Cases
+              description_student: In this lesson, you expand your software engineering skills to perform test-driven development. You explore new edge cases in The Neighborhood and make decisions about how you solve these problems. You discover that there is not always a single correct answer to solving problems – sometimes you have to make your own decisions about how you choose to handle edge cases!
+              description_teacher: Before, students were given the starting Neighborhood; now, students design their own Neighborhood. The focus of the lesson is answering questions that do not have a single correct answer. Students discover the trade-offs in design decisions and practice justifying their decisions.
             lesson-15:
               name: Software Engineering Wrap Up
             lesson-16:
