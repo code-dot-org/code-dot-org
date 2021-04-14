@@ -288,12 +288,10 @@ class CourseEditor extends Component {
               value={this.props.studentResources.map(r => r.id)}
             />
           )}
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the course overview page:
           <div>
-            <div>
-              Select the Teacher Resources buttons you'd like to have show up on
-              the top of the course overview page
-            </div>
-
+            <h4>Teacher Resources</h4>
             <ResourcesEditor
               inputStyle={styles.input}
               resources={teacherResources}
@@ -307,11 +305,7 @@ class CourseEditor extends Component {
           </div>
           {this.props.useMigratedResources && (
             <div>
-              <div>
-                Select the Student Resource buttons you'd like to have show up
-                on the top of the course overview page
-              </div>
-
+              <h4>Student Resources</h4>
               <ResourcesEditor
                 inputStyle={styles.input}
                 migratedResources={this.props.studentResources}

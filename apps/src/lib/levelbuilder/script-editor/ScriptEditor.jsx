@@ -811,7 +811,7 @@ class ScriptEditor extends React.Component {
           )}
         </CollapsibleEditorSection>
 
-        <CollapsibleEditorSection title="Teacher Resources Settings">
+        <CollapsibleEditorSection title="Resources Dropdowns">
           <label>
             Has Resources for Verified Teachers
             <input
@@ -831,13 +831,12 @@ class ScriptEditor extends React.Component {
               </p>
             </HelpTip>
           </label>
+          Select the resources you'd like to have show up in the dropdown at the
+          top of the script overview page:
           <div>
             <h4>Teacher Resources</h4>
             <div>
-              <div>
-                Select the Teacher Resources buttons you'd like to have show up
-                on the top of the script overview page
-              </div>
+              <div />
               <ResourcesEditor
                 inputStyle={styles.input}
                 resources={this.state.teacherResources}
