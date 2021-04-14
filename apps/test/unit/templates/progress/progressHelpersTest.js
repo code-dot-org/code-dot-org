@@ -62,20 +62,7 @@ describe('progressHelpers', () => {
       );
     });
 
-    it('returns false for a lockable stage when not authorized', () => {
-      const localState = {
-        ...state,
-        stageLock: {
-          lockableAuthorized: false
-        }
-      };
-      assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
-        false
-      );
-    });
-
-    it('returns true for a lockable stage when authorized', () => {
+    it('returns true for a lockable stage as teacher', () => {
       const localState = {
         ...state,
         stageLock: {
