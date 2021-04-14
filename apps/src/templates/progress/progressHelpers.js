@@ -25,11 +25,6 @@ export function lessonIsVisible(lesson, state, viewAs) {
     throw new Error('missing param viewAs in lessonIsVisible');
   }
 
-  // Don't show stage if not authorized to see lockable
-  if (lesson.lockable && !state.stageLock.lockableAuthorized) {
-    return false;
-  }
-
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.teacherSections.selectedSectionId;
 
