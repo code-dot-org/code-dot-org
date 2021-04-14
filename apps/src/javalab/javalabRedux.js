@@ -2,12 +2,14 @@ const APPEND_CONSOLE_LOG = 'javalab/APPEND_CONSOLE_LOG';
 const SET_EDITOR_TEXT = 'javalab/SET_EDITOR_TEXT';
 const SET_FILENAME = 'javalab/SET_FILENAME';
 const SET_FILES_CHANGED = 'javalab/SET_FILES_CHANGED';
+const TOGGLE_DARK_MODE = 'javalab/TOGGLE_DARK_MODE';
 
 const initialState = {
   consoleLogs: [],
   editorText: '',
   filename: 'MyClass.java',
-  filesChanged: false
+  filesChanged: false,
+  isDarkMode: false
 };
 
 // Action Creators
@@ -34,6 +36,10 @@ export const setFileName = filename => ({
 export const setFilesChanged = filesChanged => ({
   type: SET_FILES_CHANGED,
   filesChanged
+});
+
+export const toggleDarkMode = () => ({
+  type: TOGGLE_DARK_MODE
 });
 
 // Selectors
@@ -84,6 +90,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       filesChanged: action.filesChanged
+    };
+  }
+  if (action.type === TOGGLE_DARK_MODE) {
+    return {
+      ...state,
+      isDarkMode: !state.isDarkMode
     };
   }
   return state;
