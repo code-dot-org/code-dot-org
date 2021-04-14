@@ -3,7 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import { navigateToHref } from '../../utils';
+import {navigateToHref} from '../../utils';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
