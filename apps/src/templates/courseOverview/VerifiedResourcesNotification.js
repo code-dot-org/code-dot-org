@@ -3,12 +3,19 @@ import React from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
-export default function VerifiedResourcesNotification({width}) {
+export default function VerifiedResourcesNotification({
+  width,
+  inLesson = false
+}) {
   return (
     <Notification
-      type={NotificationType.information}
+      type={NotificationType.warning}
       notice={i18n.verifiedResourcesNotice()}
-      details={i18n.verifiedResourcesDetails()}
+      details={
+        inLesson
+          ? i18n.verifiedResourcesLessonDetails()
+          : i18n.verifiedResourcesDetails()
+      }
       buttonText={i18n.learnMore()}
       buttonLink="https://support.code.org/hc/en-us/articles/115001550131"
       dismissible={true}
@@ -17,5 +24,6 @@ export default function VerifiedResourcesNotification({width}) {
   );
 }
 VerifiedResourcesNotification.propTypes = {
-  width: PropTypes.number
+  width: PropTypes.number,
+  inLesson: PropTypes.bool
 };
