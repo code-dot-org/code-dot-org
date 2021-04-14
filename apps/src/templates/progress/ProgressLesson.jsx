@@ -18,6 +18,7 @@ import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   outer: {
@@ -261,7 +262,7 @@ class ProgressLesson extends React.Component {
           </div>
           {lesson.lockable && teacherNotLockableAuthorized && (
             <div style={styles.notAuthorizedWarning}>
-              {i18n.verifiedTeacherLockedWarning()}
+              <SafeMarkdown markdown={i18n.verifiedTeacherLockedWarning()} />
             </div>
           )}
           {!this.state.collapsed && (
