@@ -46,6 +46,12 @@ const styles = {
   },
   resourcesRow: {
     display: 'flex'
+  },
+  buttonMarginLTR: {
+    marginLeft: 5
+  },
+  buttonMarginRTL: {
+    marginRight: 5
   }
 };
 
@@ -95,6 +101,12 @@ class ScriptOverviewTopRow extends React.Component {
       isMigrated
     } = this.props;
 
+    // Adjust styles if locale is RTL
+    const hasButtonMargin = studentResources.length > 0;
+    const buttonMarginStyle = isRtl
+      ? styles.buttonMarginRTL
+      : styles.buttonMarginLTR;
+
     return (
       <div style={styles.buttonRow} className="script-overview-top-row">
         {!professionalLearningCourse && viewAs === ViewType.Student && (
@@ -120,7 +132,7 @@ class ScriptOverviewTopRow extends React.Component {
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={studentResources.length > 0 ? {marginLeft: 5} : {}}
+              style={hasButtonMargin ? buttonMarginStyle : {}}
             />
             {assignedSectionId && <Assigned />}
           </div>
