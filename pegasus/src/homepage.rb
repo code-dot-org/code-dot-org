@@ -506,11 +506,12 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    request.locale == "en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)
+    accepting_teacher_apps_status = DCDO.get("accepting_teacher_apps_status", CDO.default_accepting_teacher_apps_status)
+    request.locale == "en-US" && (accepting_teacher_apps_status == "open" || accepting_teacher_apps_status == "closing-soon")
   end
 
   def self.teacher_applications_closing_soon
-    DCDO.get("teacher_applications_closing_soon", CDO.default_teacher_applications_closing_soon)
+    DCDO.get("accepting_teacher_apps_status", CDO.default_accepting_teacher_apps_status) == "closing-soon"
   end
 
   def self.show_courses_banner(request)

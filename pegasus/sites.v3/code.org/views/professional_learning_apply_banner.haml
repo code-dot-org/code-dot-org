@@ -6,10 +6,11 @@
 - data[:nominated] = params[:nominated]
 - data[:linkSuffix] = link_suffix
 - data[:style] = style
-- data[:closingSoon] = DCDO.get("teacher_applications_closing_soon", CDO.default_teacher_applications_closing_soon)
+- accepting_teacher_apps_status = DCDO.get("accepting_teacher_apps_status", CDO.default_accepting_teacher_apps_status)
+- data[:closingSoon] = accepting_teacher_apps_status == "closing-soon"
 
 -# Professional Learning is only available in the US
-- if I18n.locale == :"en-US" && DCDO.get("teacher_applications_active", CDO.default_teacher_applications_active)
+- if I18n.locale == :"en-US" && (accepting_teacher_apps_status == "open" || accepting_teacher_apps_status == "closing-soon")
   %script{src: webpack_asset_path('js/code.org/views/professional_learning_apply_banner.js'), data: {props: data.to_json}}
 
   #apply-banner-container
