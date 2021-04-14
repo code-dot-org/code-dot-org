@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import { navigateToHref } from '../../utils';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -297,6 +298,13 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result
         });
         resolve(result);
+        if (section.id < 0) {
+          window.history.back();
+          let lastUrl = window.location.href;
+          if (lastUrl.endsWith('/home')) {
+            navigateToHref(`/teacher_dashboard/sections/${result.id}/manage`);
+          }
+        }
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
