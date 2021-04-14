@@ -84,7 +84,7 @@ module Services
 
           if resource.url.start_with?("https://docs.google.com/", "https://drive.google.com/")
             # We don't want to export forms
-            next if resource.url.start_with?("https://docs.google.com/forms")
+            return nil if resource.url.start_with?("https://docs.google.com/forms")
             begin
               export_from_google(resource.url, path)
               return path
