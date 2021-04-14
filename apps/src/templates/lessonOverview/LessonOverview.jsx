@@ -165,7 +165,6 @@ class LessonOverview extends Component {
                 <LessonStandards
                   standards={lesson.standards}
                   expandMode={ExpandMode.FIRST}
-                  courseVersionStandardsUrl={lesson.courseVersionStandardsUrl}
                 />
               </div>
             )}

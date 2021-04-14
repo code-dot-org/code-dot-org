@@ -93,24 +93,6 @@ describe('LessonStandards', () => {
       expect(isOpen(category)).to.be.true;
     });
   });
-
-  it('renders without Full Course Alignment button by default', () => {
-    const standard = cspStandards[0];
-    const wrapper = mount(<LessonStandards standards={[standard]} />);
-    const button = wrapper.find('Button');
-    expect(button.length).to.equal(0);
-  });
-
-  it('renders with Full Course Alignment button when url is provided', () => {
-    const standard = cspStandards[0];
-    const url = '/path/to/standards';
-    const wrapper = mount(
-      <LessonStandards standards={[standard]} courseVersionStandardsUrl={url} />
-    );
-    const button = wrapper.find('Button');
-    expect(button.length).to.equal(1);
-    expect(button.prop('href')).to.equal(url);
-  });
 });
 
 function isOpen(wrapper) {
