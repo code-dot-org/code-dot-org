@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-04-13 21:05:43 UTC",
+    "serialized_at": "2021-04-14 16:46:47 UTC",
     "seeding_key": {
       "script.name": "csa1-pilot"
     }
@@ -304,6 +304,9 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "overview": "In this lesson, students examine open-source code and connect real-world applications and the concepts they have learned in this unit. Students review the core values of software engineering and reflect on how they used them. Through discovery, students affirm the core values of software engineering.\n",
+        "student_overview": "You have learned a lot about being a software engineer! You revisit the core values of software engineering and reflect on how you used these throughout the unit. You also explore open source code and discover how much you now know about programming and software engineering.\n",
+        "preparation": "* Prepare sticky notes for each student\n* Enter words/phrases from Lesson 1 onto Lesson 15 slide\n* Preview Open-Source code options\n* Print a copy of the Unit 1 Guide for each student"
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -996,6 +999,48 @@
       "seeding_key": {
         "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918",
         "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up",
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "d9c7d873-2de7-4d17-8ce2-8751f028e755",
+      "position": 2,
+      "properties": {
+        "name": "Activity",
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot"
+      }
+    },
+    {
+      "key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up",
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot"
       }
@@ -3822,6 +3867,221 @@
         "activity_section.key": "de3b27ae-10cc-4e5d-977b-442deac4454e",
         "lesson_activity.key": "0a424029-f0af-4786-a467-f61ec374a918"
       }
+    },
+    {
+      "key": "a0ab2dad-7ce5-42fa-8dfb-a5f40e522756",
+      "position": 1,
+      "properties": {
+        "name": "Software Engineering Discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display: Upon entering the classroom, students should see the inspirational quote. Read the quote to your students.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0ab2dad-7ce5-42fa-8dfb-a5f40e522756",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "110b0e39-447f-41cf-8ce7-c9253ae1d929",
+      "position": 2,
+      "properties": {
+        "remarks": true,
+        "description": "“I became a sponge. A new chapter began in my own education, and I majored in software development in the real world.” \n\nJust like Erik, at this point, you have become a sponge and started a new chapter in AP Computer Science A. In class today, you will reflect on the software engineering values you learned from Lesson 1. "
+      },
+      "seeding_key": {
+        "activity_section.key": "110b0e39-447f-41cf-8ce7-c9253ae1d929",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "b7299445-2504-4f7d-9785-f290a2d7a0a7",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Hand out at least three sticky notes to each student.\n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Ask a student to read the question on the slide out loud for the class. Students write down three words/phrases on the sticky note about the phrase “software engineering.” (2 min) \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Ask a student to read the definition of a software engineer out loud for the class.\n\n**Group:** Divide students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask groups to share their words/phrases from their sticky notes and record on the slide common themes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give students times to think about their words/phrases before writing them down. Then let everyone share their answers in smaller groups. Then have groups share out those common words/phrases. As groups share out their responses, type common words/phrases on the slide.  "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7299445-2504-4f7d-9785-f290a2d7a0a7",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "2dc6da19-ca84-4cc7-88f8-c95d71a8116f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What has changed? What values are important for software engineering?\n\n**Discussion Goal:** Discuss the prompts as a class. This discussion provides an opportunity for students to reflect and see the growth in their responses from lesson one to lesson fifteen. As students discuss software engineering values, guide students towards growth mindset values they have developed over Unit 1. "
+      },
+      "seeding_key": {
+        "activity_section.key": "2dc6da19-ca84-4cc7-88f8-c95d71a8116f",
+        "lesson_activity.key": "8dd604b9-4497-4e41-9139-24e3ad1b72bf"
+      }
+    },
+    {
+      "key": "44f4d30c-14f8-4230-bcb7-cec708c7baad",
+      "position": 1,
+      "properties": {
+        "name": "Open-Source Code",
+        "duration": "5",
+        "remarks": true,
+        "description": "So far in class, you have been writing code on Code Studio to navigate your Painter through The Neighborhood. In today’s lesson, we will look at open-source code. Open-source code is code that anyone can inspect, modify, and enhance. Here is an example of open-source code on the slide."
+      },
+      "seeding_key": {
+        "activity_section.key": "44f4d30c-14f8-4230-bcb7-cec708c7baad",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "3d1cec41-86f5-4968-9d88-addf4118d7d9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show students open-source code and have them share with a partner the parts of the code that look familiar.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students look at the open-source code and discuss with a partner the keywords or coding segments that look familiar.  Do not explain to students what the code does. \n\nIdeas of what partners could discuss: class, control structure, while loop, and curly braces."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3d1cec41-86f5-4968-9d88-addf4118d7d9",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "54a5b9b9-ef1e-4e90-ac3a-b007e3ff56ab",
+      "position": 3,
+      "properties": {
+        "name": "Open-Source Activity Guide",
+        "duration": "20",
+        "description": "**Group:** Divide students into groups of four. Divide the four code options evenly among the groups.\n\n**Distribute:** Give each group one of the four Activity Guide options. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions on how groups should work together to complete the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Slide shows a visual representation of each open-source code option.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Review the instructions on the activity guide as a whole class. Remind students they will annotate the code. \n\nThere are four open source code options. Each option offers differentiation based on student interest or ability. \n\nGive each group one paper. The group chooses one recorder and one speaker to share their results.  \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "54a5b9b9-ef1e-4e90-ac3a-b007e3ff56ab",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "81667af6-13a0-4048-960c-bfee9457f18f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students share out information about the code they investigated, focusing on:\n* Vocab words from previous lessons\n* What is happening in the program\n* What they would say in a code review\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have multiple groups with the same code, then have each group from that option only share one question from their activity guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81667af6-13a0-4048-960c-bfee9457f18f",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "d6ecd1e3-ed77-4d5d-a329-d1b6428bc311",
+      "position": 5,
+      "properties": {
+        "name": "Real-World Code Discussion",
+        "duration": "5",
+        "remarks": true,
+        "description": "Looking at open source code helps people become better programmers. Because open-source code is public, you can study it to learn to make better software."
+      },
+      "seeding_key": {
+        "activity_section.key": "d6ecd1e3-ed77-4d5d-a329-d1b6428bc311",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "3013960d-4250-4280-8262-884ffd654e7a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What connections can you make from the open-source code to the code you have written in this unit?*\n\n**Discussion Goal:** Students should make a connection to how code looks in real-world programs. The code used in their Neighborhood programs are similar to the open-source code:\n* Conditional statements\n* Boolean expressions\n* Class and objects\n* Methods and commands  \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3013960d-4250-4280-8262-884ffd654e7a",
+        "lesson_activity.key": "d9c7d873-2de7-4d17-8ce2-8751f028e755"
+      }
+    },
+    {
+      "key": "1860caec-bfea-40fe-ad3f-33b889d5bbaa",
+      "position": 1,
+      "properties": {
+        "name": "Exit Ticket",
+        "remarks": true,
+        "description": "In Lesson 1, we affirmed our software identities together. Now that you have the mindset of a software engineer let's reaffirm these identities again. \n\n\nWhen I say, “I am a,” you say, “problem solver.”\n\n“I am a...”\n\nWhen I say “I am,” you say “creative.”\n\n“I am...”\n\nWhen I say “I am a,” you say “collaborator.”\n\n“I am a...”\n\nWhen I say “I am a,” you say “learner.”\n\n“I am a...”\n\nWhen I say “I am a,” you say “software engineer.”\n\n“I am a...” \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1860caec-bfea-40fe-ad3f-33b889d5bbaa",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "cce64166-6516-449a-84e8-fe9a08375b3f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On a sticky note, students write their name and one of the software engineering values they most identify with.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students need to write their names on sticky notes. Save these sticky notes and place them on the students' desk as an affirmation when they return to start day one of the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cce64166-6516-449a-84e8-fe9a08375b3f",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "af9350bd-b0e1-4ed2-a274-d2ed5a31e97b",
+      "position": 3,
+      "properties": {
+        "remarks": true,
+        "description": "Tomorrow we will begin our unit project. You will be creating a personal symbol using the classes and methods we have made throughout this unit that represents something meaningful and interesting to you. Your symbol can represent a hobby, a favorite item or concept, or an abstract idea. Start thinking about what you might want to make for your project!"
+      },
+      "seeding_key": {
+        "activity_section.key": "af9350bd-b0e1-4ed2-a274-d2ed5a31e97b",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "306769c6-c7a6-478f-aa06-d6123730addf",
+      "position": 4,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 1 Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "306769c6-c7a6-478f-aa06-d6123730addf",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
+    },
+    {
+      "key": "5838bd4d-f552-45e8-9516-8839d4c86434",
+      "position": 5,
+      "properties": {
+        "remarks": true,
+        "description": "The next five lessons are an opportunity to Show What You Know! We begin with the unit project, then we will spend a day practicing how to answer AP-style free-response questions, and we will wrap up the unit with a multiple-choice assessment. You've learned so much this unit, and now you're ready to show it off! \n\nThe Unit 1 Guide will help you remember all you've learned so far. Go over all of the lessons and think to yourself if you can truly say \"I can..\" with each lesson objective. Review the vocabulary. Look over the reference section for code. You don't need to memorize Painter commands for the assessments, but it's helpful to remember how everything works together. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The unit guide provides a review of the objectives, vocabulary, and programming concepts to help students prepare for the assessment. If time permits, you can choose to quickly review any parts of the unit that are still confusing for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5838bd4d-f552-45e8-9516-8839d4c86434",
+        "lesson_activity.key": "2afaa48f-af3d-44a5-9e2a-ec87c67648c7"
+      }
     }
   ],
   "script_levels": [
@@ -4220,6 +4480,26 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "objective.key": "2f740223-bbca-40a6-8dcc-93d2bf29ac25"
+      }
+    },
+    {
+      "key": "63c88531-7d2e-4628-a2dc-18cc1c02f851",
+      "properties": {
+        "description": "Examine open source code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "63c88531-7d2e-4628-a2dc-18cc1c02f851"
+      }
+    },
+    {
+      "key": "f151a0f3-96dd-40bb-ba0e-50b5a859059c",
+      "properties": {
+        "description": "Affirm the core values of software engineering"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "f151a0f3-96dd-40bb-ba0e-50b5a859059c"
       }
     }
   ],
