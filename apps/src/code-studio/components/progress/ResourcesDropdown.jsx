@@ -22,6 +22,7 @@ export default class ResourcesDropdown extends React.Component {
     resources: PropTypes.arrayOf(resourceShape),
     migratedResources: PropTypes.arrayOf(migratedResourceShape),
     useMigratedResources: PropTypes.bool.isRequired,
+    studentFacing: PropTypes.bool,
 
     //For firehose
     unitGroupId: PropTypes.number,
@@ -93,8 +94,21 @@ export default class ResourcesDropdown extends React.Component {
     return (
       <div style={styles.dropdown}>
         <DropdownButton
-          text={i18n.teacherResources()}
-          color={Button.ButtonColor.blue}
+          text={
+            this.props.studentFacing
+              ? i18n.studentResources()
+              : i18n.teacherResources()
+          }
+          color={
+            this.props.studentFacing
+              ? Button.ButtonColor.gray
+              : Button.ButtonColor.blue
+          }
+          size={
+            this.props.studentFacing
+              ? Button.ButtonSize.large
+              : Button.ButtonSize.default
+          }
           onClick={this.handleDropdownClick}
         >
           {dropdownResources}

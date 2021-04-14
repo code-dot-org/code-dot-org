@@ -277,6 +277,7 @@ progress.renderCourseProgress = function(scriptData) {
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={teacherResources}
         migratedTeacherResources={scriptData.migrated_teacher_resources}
+        studentResources={scriptData.student_resources || []}
         showCourseUnitVersionWarning={
           scriptData.show_course_unit_version_warning
         }

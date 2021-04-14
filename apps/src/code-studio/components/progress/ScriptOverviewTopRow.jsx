@@ -64,6 +64,7 @@ class ScriptOverviewTopRow extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
+    studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
     showAssignButton: PropTypes.bool,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
     weeklyInstructionalMinutes: PropTypes.number,
@@ -85,6 +86,7 @@ class ScriptOverviewTopRow extends React.Component {
       isRtl,
       teacherResources,
       migratedTeacherResources,
+      studentResources,
       showAssignButton,
       assignedSectionId,
       showCalendar,
@@ -102,14 +104,23 @@ class ScriptOverviewTopRow extends React.Component {
               href={`/s/${scriptName}/next`}
               text={NEXT_BUTTON_TEXT[scriptProgress]}
               size={Button.ButtonSize.large}
+              style={{marginRight: 10}}
             />
+            {studentResources.length > 0 && (
+              <ResourcesDropdown
+                migratedResources={studentResources}
+                unitId={scriptId}
+                useMigratedResources={true}
+                studentFacing
+              />
+            )}
             <Button
               __useDeprecatedTag
               href="//support.code.org"
               text={i18n.getHelp()}
               color={Button.ButtonColor.white}
               size={Button.ButtonSize.large}
-              style={{marginLeft: 10}}
+              style={studentResources.length > 0 ? {marginLeft: 5} : {}}
             />
             {assignedSectionId && <Assigned />}
           </div>

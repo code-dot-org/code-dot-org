@@ -9,7 +9,7 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import resourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
@@ -39,7 +39,10 @@ const defaultProps = {
 describe('CourseEditor', () => {
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections, resources: resourcesEditor});
+    registerReducers({
+      teacherSections,
+      resources: createResourcesReducer('teacherResource')
+    });
   });
 
   afterEach(() => {
