@@ -2500,6 +2500,8 @@ ne:
               display_name: For Loops
             lessonGroup-8:
               display_name: Variables
+            lessonGroup-7:
+              display_name: Digital Citizenship
         express-2021:
           lesson_groups:
             csf_loops:

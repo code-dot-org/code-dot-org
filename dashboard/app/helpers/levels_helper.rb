@@ -491,7 +491,7 @@ module LevelsHelper
   end
 
   def disallowed_html_tags
-    DCDO.get('disallowed_html_tags', ['script', 'iframe'])
+    DCDO.get('disallowed_html_tags', [])
   end
 
   # Options hash for Blockly

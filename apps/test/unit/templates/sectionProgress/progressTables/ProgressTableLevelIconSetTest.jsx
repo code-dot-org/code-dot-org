@@ -3,7 +3,10 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
-import {LETTER_BUBBLE_CONTAINER_WIDTH} from '@cdo/apps/templates/progress/progressStyles';
+import {
+  bubbleContainerWidths,
+  BubbleSize
+} from '@cdo/apps/templates/progress/progressStyles';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
@@ -29,7 +32,7 @@ describe('ProgressTableLevelIconSet', () => {
     const wrapper = mount(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
     const sublevelSpacer = wrapper.find(unitTestExports.SublevelSpacer);
     expect(sublevelSpacer.childAt(0).props().style.width).to.equal(
-      2 * LETTER_BUBBLE_CONTAINER_WIDTH
+      2 * bubbleContainerWidths[BubbleSize.letter]
     );
   });
 });

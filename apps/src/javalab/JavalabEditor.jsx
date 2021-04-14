@@ -90,7 +90,10 @@ class JavalabEditor extends React.Component {
     e.preventDefault();
     const {filename, setFilename} = this.props;
     const {newFilename} = this.state;
-    renameProjectFile(filename, newFilename);
+    // We don't want to actually save the file if we're editing startSources.
+    if (!window.appOptions.level.editBlocks) {
+      renameProjectFile(filename, newFilename);
+    }
     setFilename(newFilename);
     this.onProjectChanged();
     this.setState({renameFileActive: false});

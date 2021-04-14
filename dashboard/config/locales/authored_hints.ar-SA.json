@@ -3,21 +3,21 @@
     "data": {
       "authored_hints": {
         "2-3 Artist 1 new": {
-          "2-3_Artist_1_new_a": "إذا استخدمت الكتلة لجعلي \" اتحرك للأمام 100 نقطة\" سوف أقوم برسم خط مستقيم تلقائياً.",
+          "2-3_Artist_1_new_a": "إذا استخدمت القطعة البرمجية لتجعلني \"أتحرك للأمام 100 نقطة\" سوف أقوم برسم خط مستقيم تلقائياً.",
           "2-3_Artist_1_new_b": "هل تواجه مشكلة في الدوارن عند الزاوية؟ استخدم \" اتجه لليمين 90 درجة\"."
         },
         "2-3 Artist 11": {
           "2-3_Artist_11_a": "هل تواجه مشكلة عند الزوايا؟ تحتاج إلى الانتقال 360 درجة في 8 اتجاهات, ما هو ناتج 360/8 ؟ "
         },
         "2-3 Artist 12": {
-          "2-3_Artist_12_a": "هناك 360 درجة للدائرة, أذا إلتف الرسام درجة واحدة في كل مرة داخل الدائرة, سوف يحتاج إلى أن يقوم بها 360 مرة."
+          "2-3_Artist_12_a": "هناك 360 درجة في الدائرة، لذا إذا استدار الفنان درجةً واحدة في كل مرة من خلال حلقة التكرار، فسيحتاج إلى المرور 360 مرة."
         },
         "2-3 Artist 2 new": {
-          "2-3_Artist_2_new_a": "يظهر ان الرسام ليس موجه عند الاتجاه الصحيح, هل يمكنك تغير اتجاهه أولا قبل رسم الخط؟"
+          "2-3_Artist_2_new_a": "يظهر ان الفنان ليس متجهاً للاتجاه الصحيح, هل يمكنك تغير اتجاهه أولا قبل رسم الخط؟"
         },
         "2-3 Artist 3new": {
           "2-3_Artist_3new_a": "ما هو ناتج 100-70؟ طبقاً للقصة، هذا هو طول القبعة الذي يجب أن يكون!",
-          "2-3_Artist_3new_b": "يظهر ان الرسام ليس موجه عند الاتجاه الصحيح, هل يمكنك تغير اتجاهه أولا قبل رسم الخط؟"
+          "2-3_Artist_3new_b": "يظهر ان الفنان ليس متجهاً للاتجاه الصحيح, هل يمكنك تغير اتجاهه أولا قبل رسم الخط؟"
         },
         "2-3 Artist 4": {
           "2-3_Artist_4_a": "لإنهاء البيت, كل ما علينا القيام به هو رسم مربع!"
@@ -42,15 +42,15 @@
           "2-3_Artist_Debugging_2_a": "كل مسافة قدرها 75 بكسل."
         },
         "2-3 Artist Debugging 3": {
-          "2-3_Artist_Debugging_3_a": "إحدى الاستدارات أصغر من اللازم بـ 15 درحة.",
+          "2-3_Artist_Debugging_3_a": "إحدى الاستدارات أصغر من اللازم بـ 15 درجة.",
           "2-3_Artist_Debugging_3_b": "إذا كان البرنامج يعمل بسرعة كبيرة لا تسمح برؤية ما يحدث، جرب إبطاءه باستعمال شريط التمرير."
         },
         "2-3 Artist Debugging 7": {
-          "2-3_Artist_Debugging_7_a": "ماذا يحدث إذا جعلت الرسام يتحرك أو يقفز إلى الخلف بعد أن رسم الخط الأول؟"
+          "2-3_Artist_Debugging_7_a": "ماذا يحدث إذا جعلت الفنان يتحرك أو يقفز إلى الخلف بعد أن رسم الخط الأول؟"
         },
         "2-3 Artist Debugging 9": {
           "2-3_Artist_Debugging_9_a": "يحتاج الفنان أن يستدير 60 درجة نحو اليسار قبل البدء بالرسم!",
-          "2-3_Artist_Debugging_9_b": "ليس عليك إضافة كتلة أخرى للحصول على دورة كاملة، فقط أضف 60 درجة لكتلة \"استدر يسارا\" الموجودة هناك مسبقا!"
+          "2-3_Artist_Debugging_9_b": "ليس عليك إضافة قطعة أخرى للحصول على دورة كاملة، فقط أضف 60 درجة لكتلة \"استدر يسارا\" الموجودة هناك مسبقا!"
         },
         "2-3 Artist Functions 1": {
           "2-3_Artist_Functions_1_a": "لكل من المربعات جوانب بطول 100 بكسل، هذا يعني أن عليك التحرك نحو الأمام بمقدار 175 بكسل قبل رسم مربعك الثاني.",
@@ -72,7 +72,7 @@
           "2-3_Artist_Functions_4_a": "يحتاج الفنان أن يستدير 120 درجة بين كل مربع لإكمال التصميم."
         },
         "2-3 Artist Loops New 11": {
-          "2-3_Artist_Loops_New_11_b": "استدارتك الجديدة يجب أن تكون في **نهاية** البرنامج وداخل الحلقة التكرارية."
+          "2-3_Artist_Loops_New_11_b": "الدوران الجديد يجب أن يكون في **نهاية** البرنامج داخل حلقة التكرار."
         },
         "2-3 Artist Loops New 12": {
           "2-3_Artist Loops_New_12_a": "قبل البدء برسم المعين، يحتاج الفنان أن يستدير إلى اليسار بمقدار 60 درجة للوصول إلى الطريق الصحيح.",
@@ -87,11 +87,11 @@
           "2-3_Artist_Loops_New_9_b": "الشكل V هو فقط نصف مربع. ما هو البرنامج لرسم نصف مربع؟"
         },
         "2-3 Artist Nested Loops 1": {
-          "2-3_Artist_Nested_Loops_1_a": "تذكر أن تضع كل الكتل الرمادية داخل الحلقة التكرارية."
+          "2-3_Artist_Nested_Loops_1_a": "تذكر أن تضع كل القطع الرمادية داخل حلقة التكرار."
         },
         "2-3 Artist Nested Loops 3": {
           "2-3_Artist_Nested_Loops_3_a": "هل تحتاج مساعدة في الزوايا؟ \n**360/12 = 30**",
-          "2-3_Artist_Nested_Loops_3_b": "تذكر أن تضع كل الكتل الرمادية كتلة الاستدارة داخل الحلقة التكرارية."
+          "2-3_Artist_Nested_Loops_3_b": "تذكر أن تضع كل القطع الرمادية وقطعة \"الدوران\" داخل حلقة تكرار."
         },
         "2-3 Artist Nested Loops 4": {
           "2-3_Artist_Nested_Loops_3_a": "هل تحتاج مساعدة في الزوايا؟ \n**360/12 = 30**"
@@ -100,29 +100,29 @@
           "2-3_Artist_Nested_Loops_5_a": "حاول أن تستخدم القطعة \"القفز إلى الأمام\" للانتقال من أعلى مربع إلى المكان الذي سوف تبدأ منه رسم المربع التالي. \n\nإذا كانت مربعاتك بطول 20 نقطة ومتباعدة عن بعضها 20 نقطة، كم مقدار القفزة التي تحتاجها؟"
         },
         "2-3 Artist Nested Loops 7": {
-          "2-3_Artist_Nested_Loops_7_a": "كم المقدار الذي يجب أن تستديره في كل حلقة تكرارية؟\n\nماهو ناتج 360/10 ؟"
+          "2-3_Artist_Nested_Loops_7_a": "كم مقدار الدوران المطلوب في كل حلقة تكرار؟\n\nماهو ناتج 360/10 ؟"
         },
         "2-3 Artist Nested Loops 9": {
           "2-3_Artist_Nested_Loops_9_a": "هل تحتاج مساعدة للحصول على الزاوية الصحيحة؟\n\n**360 / 12 = 30**"
         },
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "هل تواجه صعوبة في معرفة كيفية وضع الكتل في الأسفل؟ حاول معاملة الزهرة الحمراء بنفس طريقة الزهرة البنفسجية!",
-          "2-3_Bee_Conditionals_14_b": "لو كانت الوردة الحمراء وردة بنفسجية، هل يمكنك معرفة كيفية استخدام كتلة \"كرر\" إضافية لتختصر البرنامج؟"
+          "2-3_Bee_Conditionals_14_b": "لو كانت الوردة الحمراء وردة بنفسجية، هل يمكنك معرفة كيفية استخدام حلقة \"تكرار\" إضافية لتختصر البرنامج؟"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "تذكر: الأزهار البنفسجية تحتوي فقط على 0 أو 1 رحيق ويمكن للرحيق أن يتغير كل مرة يتم فيها تشغيل البرنامج."
         },
         "2-3 Bee Conditionals 3": {
-          "2-3_Bee_Conditionals_3_a": "سيكون البرنامج أقصر لو استخدمت حلقة في كل مرة تتحرك إلى الأمام، وحلقة أخرى لجمع الرحيق، وحلقة ثالثة لصنع العسل."
+          "2-3_Bee_Conditionals_3_a": "سيكون البرنامج أقصر لو استخدمت حلقة تكرار في كل مرة تتحرك إلى الأمام، وحلقة أخرى لجمع الرحيق، وحلقة ثالثة لصنع العسل."
         },
         "2-3 Bee Conditionals 6": {
           "2-3_Bee_Conditionals_6_a": "تذكر: يتغير الرحيق في الأزهار البنفسجية بين 0 و 1 وذلك عند تشغيل برنامجك!"
         },
         "2-3 Bee Debugging 1": {
-          "2-3_Bee_Debugging_1_a": "بمجرد أن تجد وتصحح الكتلة البرمجية الخاطئة، هل تجد أي نمط متكرر يمكنك تبسيطه عن طريق استخدام الحلقة \"كرر\"؟"
+          "2-3_Bee_Debugging_1_a": "بمجرد أن تجد القطع البرمجية الخاطئة وتصححها، هل تجد أي نمط متكرر يمكنك تبسيطه عن طريق استخدام حلقة \"التكرار\"؟"
         },
         "2-3 Bee Debugging 2": {
-          "2-3_Bee_Debugging_2_a": "بمجرد أن تجد وتصحح الكتلة البرمجية الخاطئة، هل تجد أي نمط متكرر يمكنك تبسيطه عن طريق استخدام الحلقة \"كرر\"؟"
+          "2-3_Bee_Debugging_2_a": "بمجرد العثور على الكتلة غير الصحيحة وإصلاحها، هل ترى أي نط متكرر يمكن جعله أكثر بساطة باستخدام حلقة \"التكرار\"؟"
         },
         "2-3 Bee Debugging 4": {
           "2-3_Bee_Debugging_4_a": "هل هناك أي مكان تفعل فيه النحلة شيئًا لا معنى له؟ ماذا يحدث عند تغيير هذه الكتلة؟"
@@ -141,53 +141,53 @@
           "2-3_Bee_Functions_8_b": "تذكر أن تبني برنامجك داخل قطعة الوظيفة الخضراء.\n\n![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)"
         },
         "2-3 Bee Loops 2": {
-          "2-3_Bee_Loops_2_a": "يجب أن تنتهي بأربع قطع داخل الحلقة التكرارية."
+          "2-3_Bee_Loops_2_a": "يجب أن تنتهي بأربع قطع داخل حلقة التكرار."
         },
         "2-3 Bee Loops 3": {
-          "2-3_Bee_Loops_3_a": "يجب أن يكون لديك 6 قطع داخل الحلقة التكرارية."
+          "2-3_Bee_Loops_3_a": "يجب أن يكون لديك 6 قطع داخل حلقة التكرار."
         },
         "2-3 Bee Loops 3B": {
-          "2-3_Bee_Loops_3B_a": "سوف تحتاج حلقتين تكراريتين \"تكرار\" مختلفتين، الواحدة تلو الأخرى."
+          "2-3_Bee_Loops_3B_a": "سوف تحتاج إلى حلقتي \"تكرار\" مختلفتين، الواحدة تلو الأخرى."
         },
         "2-3 Bee Loops 4": {
-          "2-3_Bee_Loops_4_a": "يجب أن تنتهي بخمس قطع داخل الحلقة التكرارية."
+          "2-3_Bee_Loops_4_a": "يجب أن تنتهي بخمس قطع داخل حلقة التكرار."
         },
         "2-3 Bee Loops 4A": {
-          "2-3_Bee_Loops_4A_a": "أول عمل سوف يكون استدارة، بدلاً من التحرك.",
-          "2-3_Bee_Loops_4A_b": "آخر جزء من البرنامج يمكن إكماله بالكتابة خارج الحلقة التكرارية.",
+          "2-3_Bee_Loops_4A_a": "أول حركة ستكون الدوران، بدلاً من التحرك.",
+          "2-3_Bee_Loops_4A_b": "آخر جزء من البرنامج يمكن إكماله بالكتابة خارج حلقة التكرار.",
           "2-3_Bee_Loops_4A_c": "إذا لم تتمكن من اكتشاف الحلقات بعد، حاول أولاً كتابة البرنامج بالطريقة المعتادة الطويلة، ثم انظر ما الذي يمكنك دمجه في حلقة \"تكرار\" في النهاية."
         },
         "2-3 Bee Loops 5": {
-          "2-3_Bee_Loops_5_a": "إذا لم تستطع تحديد الكتل التي يجب وضعها داخل حلقة \"تكرار\" على الفور، ابدأ بكتابة كل خطوة والبحث عن نمط."
+          "2-3_Bee_Loops_5_a": "إذا لم تستطع تحديد الكتل التي يجب وضعها داخل حلقة \"التكرار\" على الفور، ابدأ بكتابة كل خطوة والبحث عن نمط."
         },
         "2-3 Bee Loops 6": {
-          "2-3_Bee_Loops_6_a": "إذا لم تستطع معرفة ما يجب أن يكون في حلقة \"تكرار\"، جرّب سحب القطع خارج الحلقة واحدة تلو الأخرى وانظر إذا كان يمكنك العثور على نمط مناسب.",
-          "2-3_Bee_Loops_6_b": "يجب أن يكون هناك 6 قطع داخل حلقة \"تكرار\" عندما تنتهي من عملك."
+          "2-3_Bee_Loops_6_a": "إذا لم تستطع معرفة ما يجب أن يكون في حلقة \"التكرار\"، جرّب سحب القطع خارج الحلقة واحدة تلو الأخرى وانظر إذا كان يمكنك العثور على نمط مناسب.",
+          "2-3_Bee_Loops_6_b": "يجب أن يكون هناك 6 قطع داخل حلقة \"التكرار\" عندما تنتهي من عملك."
         },
         "2-3 Bee Loops 7": {
-          "2-3_Bee_Loops_7_a": "أول عمل سوف يكون استدارة، بدلاً من التحرك.",
-          "2-3_Bee_Loops_7_b": "إذا لم تستطع تصور الحلقة التكرارية من البداية، حاول كتابة البرنامج بالطريقة الطويلة، ثم ابحث عن نمط.  "
+          "2-3_Bee_Loops_7_a": "أول عمل سوف يكون الدوران، بدلاً من التحرك.",
+          "2-3_Bee_Loops_7_b": "إذا لم تستطع تصور حلقة التكرار من البداية، حاول كتابة البرنامج بالطريقة الطويلة، ثم ابحث عن نمط.  "
         },
         "2-3 Maze 1": {
-          "2-3_Maze_1_a": "لاستخدام الكتلة \"تحرك إلى الأمام\"، اسحب الكتلة من منطقة الكتل البرمجية إلى منطقة العمل وصلها إلى الكتلة \"عند التشغيل\"."
+          "2-3_Maze_1_a": "لاستخدام القطعة \"تحرك إلى الأمام\"، اسحبها من صندوق الأدوات إلى مساحة العمل و أوصلها بالقطعة \"عند التشغيل\"."
         },
         "2-3 Maze 16": {
-          "2-3_Maze_16_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم الحلقات التكرارية.",
-          "2-3_Maze_16_b": "لوضع الكثير من الكتل البرمجية داخل حلقة \"كرر\"، قم فقط بسحب الحلقة إلى مساحة العمل، ثم اسحب كل الكتل من بداية البرنامج إلى داخل الحلقة! \n\nصلها كلها إلى الكتلة \"بدء التشغيل\" وسيكون برنامجك جاهزاً!"
+          "2-3_Maze_16_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم حلقات التكرار.",
+          "2-3_Maze_16_b": "لوضع الكثير من القطع البرمجية داخل حلقة \"التكرار\"، قم فقط بسحب الحلقة إلى مساحة العمل، ثم اسحب كل القطع من بداية البرنامج إلى داخل الحلقة! \n\nقم بتوصيل كل شيء مرة أخرى إلى كتلة \"عند التشغيل\" وسيكون برنامجك جاهزاً!"
         },
         "2-3 Maze 6": {
           "2-3_Maze_6_a": "هناك طريقتان لحل هذا اللغز!"
         },
         "2-3 Maze Loops 17": {
-          "2-3_Maze_Loops_17_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم الحلقات التكرارية.",
+          "2-3_Maze_Loops_17_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم حلقات التكرار.",
           "2-3_Maze_Loops_17_b": "هل تم حذف كتلة البداية؟ انقر فوق \"البدء من جديد\" للحصول عليها مرة أخرى!"
         },
         "2-3 Maze Loops 18": {
-          "2-3_Maze_Loops_18_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم الحلقات التكرارية."
+          "2-3_Maze_Loops_18_a": "إذا كان من الصعب رؤية النمط، حاول أولاً كتابة البرنامج كاملا ثم شاهد ما الأشياء التي يتم تكررها مرارًا وتكرارًا قبل أن تستخدم حلقات التكرار."
         },
         "2-3 Maze Loops 19": {
-          "2-3_Maze_Loops_19_a": "إذا واجهتك مشكلة ، فحاول كتابة الشفرة بدون حلقات التكرار أولاً والبحث عن النمط المناسب.",
-          "2-3_Maze_Loops_19_b": "وضع حلقة تكرارية داخل أخرى يمكن أن يساعد في تقليل عدد الكتل المستخدمة."
+          "2-3_Maze_Loops_19_a": "إذا واجهتك مشكلة ، فحاول كتابة الكود بدون حلقات التكرار أولاً والبحث عن النمط المناسب.",
+          "2-3_Maze_Loops_19_b": "يمكن أن يساعد وضع حلقة تكرار واحدة داخل أخرى في تقليل عدد الكتل المستخدمة."
         },
         "2-3 Maze Loops 20": {
           "2-3_Maze_Loops_20_a": "ابحث عن نمط الدرج في هذه المتاهة للعثور على مكان يمكن استخدام حلقة التكرار فيه."
@@ -1156,10 +1156,10 @@
           "courseA_artist_loops_challenge1_d": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_a": "المربع البرمجي مثل هذا:  <xml>  <block type=\"simple_move_up_left\"/></xml> سوف يتيح للفنان التحرك بشكل مائل!"
+          "courseA_artist_loops_challenge2_a": "القطعة البرمجية مثل هذا:  <xml>  <block type=\"simple_move_up_left\"/></xml> سوف تتيح للفنان التحرك بشكل مائل!"
         },
         "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_a": "المربع البرمجي مثل هذا:  <xml>  <block type=\"simple_move_up_right\"/></xml> سوف يتيح للفنان التحرك بشكل مائل!",
+          "courseB_artist_loops_challenge1_a": "القطعة البرمجية مثل هذا:  <xml>  <block type=\"simple_move_up_right\"/></xml> سوف تتيح للفنان التحرك بشكل مائل!",
           "courseB_artist_loops_challenge1_b": "عند انتهائك من هذا النرد، \"انتقل\" إلى التالي!",
           "courseB_artist_loops_challenge1_c": "أنت سوف تحتاج إلى \"التحرك\" أو القفز\" فوق بعض السطور مرتين."
         },
@@ -1167,17 +1167,17 @@
           "courseA_collector_loops_challenge1_b": "لا تحتاج لاستخدام حلقة إذا كنت تقوم بشيء ما مرة واحدة فقط."
         },
         "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>يمكنك فعل هذا بواسطة 14  مربع برمجي. انقر على تلميح واحد إضافي لرؤية الحل. ",
-          "courseB_collector_loops_challenge1_d": "جرب هذا![blockly block][0]"
+          "courseB_collector_loops_challenge1_c": "تحرك ناحية الشرق مرتين ما بين كل مسار <xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>يمكنك فعل هذا بواسطة 14 قطعة برمجية. \nانقر على تلميح واحد إضافي لرؤية الحل. ",
+          "courseB_collector_loops_challenge1_d": "جرب هذا!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course1_collector_loops_challenge4": {
-          "courseB_collector_loops_challenge2_a": "في حالة حدوث شيء ما خطأ، فلا تخشي البدء من جديد. لا تستسلم!",
-          "courseB_collector_loops_challenge2_b": "إذا قمت بتكرار هذا النمط، لن تستيطع لوريل ضرب الحائط في الجزء السفلي من هذا الكهف![blockly block][0]",
-          "courseB_collector_loops_challenge2_c": "جرب استخدام المربع البرمجي \"تكرار\" لتجميع الكومة النهائية من الكنز!",
-          "courseB_collector_loops_challenge2_d": "جرب هذا الحل![blockly block][0]"
+          "courseB_collector_loops_challenge2_a": "في حالة حدوث شيء ما خطأ، فلا تخشَ البدء من جديد. لا تستسلم!",
+          "courseB_collector_loops_challenge2_b": "إذا قمت بتكرار هذا النمط، لن تستيطع لوريل ضرب الحائط في الجزء السفلي من هذا الكهف!\n\n<xml><block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block></xml>",
+          "courseB_collector_loops_challenge2_c": "جرب استخدام حلقة \"التكرار\" لتجميع الكومة النهائية من الكنز!",
+          "courseB_collector_loops_challenge2_d": "جرب هذا الحل!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_a": "أنت لست في حاجة إلى إضافة المربعات البرمجية أو  إزالتها لحل هذا اللغز."
+          "courseB_maze_seq_challenge2_a": "أنت لست في حاجة إلى إضافة القطع البرمجية أو  إزالتها لحل هذا اللغز."
         },
         "course1_maze_seq_challenge1": {
           "courseA_maze_seq_challenge2_a": "حاول عَدّ الفراغات بأصبعك. تذكر ألّا تحسب الفراغ الذي بدأت منه!"
@@ -1213,15 +1213,15 @@
           "courseC_harvester_loops_challenge2_d": "النمط الحلزوني يمكن برمجته باستخدام 18 قطعة برمجية!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
         "course2_maze_programming_challenge2": {
-          "courseC_maze_programming_challenge2_b": "الحل الأقصر سوف يستخدم 5 قطع فقط, لكنه يستخدم قطعة `كرر` البرمجية!"
+          "courseC_maze_programming_challenge2_b": "الحل الأقصر سوف يستخدم 5 قطع فقط, لكنه يستخدم حلقة \"التكرار\" البرمجية!"
         },
         "course3_artist_functions_challenge2": {
           "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nالقطعة البرمجية \"اقفز إلى\" تقوم بتحريك الفنان زومبي إلى أي بِكسِل في الشبكة، متى شئت. أنه يعمل بتحريكه عدد من بِكسِلات إلى اليمين وعدد من بِكسِلات إلى الأسفل. وتحسب هذه دائمَا من أعلى يسار الزاوية، الذي يعني أنه ليس من المهم أين يقع الفنان الزومبي _قبل_ تنفيذ الأمر.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
         },
         "course3_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "لماذا يعمل النصف الأول من هذا البرنامج؟ فكر في السبب وراء حاجة النحل للتحرك للخلف. ما مقدار الرحيق الذي تقوم النحلة بتجمعيه كل مرة عند تحركها فوق الزهور؟",
-          "courseD_bee_debugging_challenge1_b": "في طريق العودة، هل يتبع النحل نفس النمط. ما مقدار العسل الذي يحتاجه النحل في كل مرة من أجل أن يتحرك للأمام فوق قرص عسل خلية النحل؟",
-          "courseD_bee_debugging_challenge1_c": " بعد صنع النحل للعسل بالصف السفلي، كرر هذه الأوامر التالية:-   كرر  مرتان:    -   التحرك قدماً     -   صنع عدد 3 مرات من العسل-   التحرك للخلف"
+          "courseD_bee_debugging_challenge1_b": "في طريق العودة، هل يتبع النحل نفس النمط. ما مقدار العسل الذي يحتاجه النحل في كل مرة حتى يتحرك للأمام فوق خلية النحل؟",
+          "courseD_bee_debugging_challenge1_c": "بعد صنع النحل للعسل بالصف السفلي، كرر هذه الأوامر التالية:-\n\nكررها مرتين:\n\n-   التحرك قدماً\n-   صنع عدد 3 مرات من العسل\n-   التحرك للخلف"
         },
         "course3_bee_functions_challenge1": {
           "courseE_bee_functions_challenge1_a": "إذا كان اللغز يبدو صعباً، حاول بناء جزء من الدالة كل مرة. \n\nأضف بعض القطع، ثم جربها. أضف المزيد، ثم حاول مرة اخرى. قريبا، سوف تنجح!",
@@ -1239,9 +1239,9 @@
           "courseF_bee_functions_challenge2_b": "**الحل:**<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">4</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"maze_untilBlocked\">\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"maze_if\">\n                    <title name=\"DIR\">isPathRight</title>\n                    <statement name=\"DO\">\n                      <block type=\"procedures_callnoreturn\" id=\"function\">\n                        <mutation name=\"move and check\"/>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnLeft</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n  <block type=\"procedures_defnoreturn\" editable=\"false\" usercreated=\"true\">\n    <mutation/>\n    <title name=\"NAME\">check nectar or honey</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifElseFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">nectarRemaining</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_nectar\"/>\n            </statement>\n          </block>\n        </statement>\n        <statement name=\"ELSE\">\n          <block type=\"bee_whileNectarAmount\">\n            <title name=\"ARG1\">honeyAvailable</title>\n            <title name=\"OP\">&gt;</title>\n            <title name=\"ARG2\">0</title>\n            <statement name=\"DO\">\n              <block type=\"maze_honey\"/>\n            </statement>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  <block type=\"procedures_defnoreturn\" deletable=\"false\" movable=\"false\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">move and check</title>\n    <statement name=\"STACK\">\n      <block type=\"controls_repeat_ext\" inline=\"true\">\n        <value name=\"TIMES\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">2</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"procedures_callnoreturn\">\n            <mutation name=\"check nectar or honey\"/>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"maze_untilBlocked\">\n                    <statement name=\"DO\">\n                      <block type=\"maze_move\">\n                        <title name=\"DIR\">moveForward</title>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_turn\">\n                        <title name=\"DIR\">turnRight</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </statement>\n  </block>\n</xml>"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "قم بتجميع المجوهرات المتبقية في هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_c": "في النهاية، قم بتجميع الكنز المتبقي. اضف هذه المربعات البرمجية إلى برنامجك.<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_d": "ها هو الحل المتكامل لهذا اللغز.<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseD_collector_debugging_challenge2_b": "قم بجمع المجوهرات المتبقية في هذا الصف، لاحقاُ.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nأضف هذه القطع البرمجية إلى برنامجك.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_c": "في النهاية، قم بجمع الكنز المتبقي. أضف هذه القطع البرمجية إلى برنامجك.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_d": "ها هو الحل المتكامل لهذا اللغز.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "course3_farmer_condLoops_challenge1": {
           "courseD_farmer_condLoops_challenge1_b": "في العادة، أنت كل ما عليك هو \"التقاط القرع\" إذا كنت في منطقة القرع. ما الذي تحتاجه لفعله غير ذلك إذا كنت في منطقة القرع؟"
@@ -1651,21 +1651,21 @@
           "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذا المربع البرمجي لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2019": {
-          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذا المربع البرمجي لالتقاطه!\n\n[blockly block][0]"
+          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذا المربع البرمجي لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops1_2020": {
-          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذا المربع البرمجي لالتقاطه!\n\n[blockly block][0]"
+          "courseA_harvester_loops1_a": "بمجرد أن تتحرَّك إلى بعض الذرة، استخدِم هذا المربع البرمجي لالتقاطه!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2": {
           "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** مربعات برمجية من `تحرَّك للغرب` <xml><block type=\"maze_moveWest\"/></xml>\n\nو**أربعة** مربعات برمجية من `التقط الذرة` <xml><block type=\"harvester_corn\"/></xml>.",
           "courseA_harvester_loops2_b": "إذا ما زلت تواجه مشكلة، فحاول أن تقول الخطوات بصوتٍ مرتفع."
         },
         "courseA_harvester_loops2_2019": {
-          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** كتل برمجية من `تحرَّك للغرب`\n[blockly block][0]\nو**أربعة** كتل برمجية من[blockly block][1].",
+          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** كتل برمجية من `تحرَّك للغرب`\n<xml><block type=\"maze_moveWest\"/></xml>\nو**أربعة** كتل برمجية من<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
           "courseA_harvester_loops2_b": "إذا ما زلت تواجه مشكلة، فحاول أن تقول الخطوات بصوتٍ مرتفع."
         },
         "courseA_harvester_loops2_2020": {
-          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** كتل برمجية من `تحرَّك للغرب`\n[blockly block][0]\nو**أربعة** كتل برمجية من[blockly block][1].",
+          "courseA_harvester_loops2_a": "سيحتوي الكود البرمجي الخاص بك على **أربعة** كتل برمجية من `تحرَّك للغرب`\n<xml><block type=\"maze_moveWest\"/></xml>\nو**أربعة** كتل برمجية من<xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
           "courseA_harvester_loops2_b": "إذا ما زلت تواجه مشكلة، فحاول أن تقول الخطوات بصوتٍ مرتفع."
         },
         "courseA_harvester_loops3": {
@@ -1673,12 +1673,12 @@
           "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب المربع البرمجي `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )، ثم ضع المربع البرمجي الذي تريده بداخله."
         },
         "courseA_harvester_loops3_2019": {
-          "courseA_harvester_loops3_a": "استخدِم المربع البرمجي `repeat` مثل ذلك لمساعدتك!\n\n[blockly block][0]",
-          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب المربع البرمجي `repeat` ([blockly block][0] )، ثم ضع المربع البرمجي الذي تريده بداخله."
+          "courseA_harvester_loops3_a": "استخدِم المربع البرمجي `repeat` مثل ذلك لمساعدتك!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب المربع البرمجي `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )، ثم ضع المربع البرمجي الذي تريده بداخله."
         },
         "courseA_harvester_loops3_2020": {
-          "courseA_harvester_loops3_a": "استخدِم المربع البرمجي `repeat` مثل ذلك لمساعدتك!\n\n[blockly block][0]",
-          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب المربع البرمجي `repeat` ([blockly block][0] )، ثم ضع المربع البرمجي الذي تريده بداخله."
+          "courseA_harvester_loops3_a": "استخدِم المربع البرمجي `repeat` مثل ذلك لمساعدتك!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "لتكرار الكود البرمجي، اسحب المربع البرمجي `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )، ثم ضع المربع البرمجي الذي تريده بداخله."
         },
         "courseA_harvester_loops4": {
           "courseA_harvester_loops4_a": "لا تخف من الضغط على `تشغيل` لترى ما سيحدث!",
@@ -1698,13 +1698,13 @@
           "courseA_harvester_loops5_c": "استخدِم هذا المسار لالتقاط الذرة كله!"
         },
         "courseA_harvester_loops5_2019": {
-          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n",
-          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي النهائي الخاص بك على حلقة برمجية **واحدة** من `repeat`  [blockly block][0]، ومربع برمجي **واحد** من `تحرَّك للجنوب`    [blockly block][1]، ومربع برمجي **واحد** من `تحرَّك للشرق`    [blockly block][2].",
+          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.",
+          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي النهائي الخاص بك على حلقة برمجية **واحدة** من `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>، ومربع برمجي **واحد** من `تحرَّك للجنوب`    <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، ومربع برمجي **واحد** من `تحرَّك للشرق`    <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "استخدِم هذا المسار لالتقاط الذرة كله!"
         },
         "courseA_harvester_loops5_2020": {
-          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.\n",
-          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي النهائي الخاص بك على حلقة برمجية **واحدة** من `repeat`  [blockly block][0]، ومربع برمجي **واحد** من `تحرَّك للجنوب`    [blockly block][1]، ومربع برمجي **واحد** من `تحرَّك للشرق`    [blockly block][2].",
+          "courseA_harvester_loops5_a": "إذا علقت، حاول حل اللغز في جزئين، جزء واحد قبل الزاوية والجزء الآخر بعد الزاوية.",
+          "courseA_harvester_loops5_b": "سيحتوي الكود البرمجي النهائي الخاص بك على حلقة برمجية **واحدة** من `repeat`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>، ومربع برمجي **واحد** من `تحرَّك للجنوب`    <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، ومربع برمجي **واحد** من `تحرَّك للشرق`    <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
           "courseA_harvester_loops5_c": "استخدِم هذا المسار لالتقاط الذرة كله!"
         },
         "courseA_harvester_loops5a": {
@@ -1713,13 +1713,13 @@
           "courseA_harvester_loops5a_c": "استخدِم هذا المسار للتحرُّك في اتجاه واحد، ثم في الاتجاه الآخر."
         },
         "courseA_harvester_loops5a_2019": {
-          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة برمجية واحدة من `repeat` [blockly block][0]، واحدة تلو الأخرى.",
-          "courseA_harvester_loops5a_b": "سوف تكرِّر إحدى الحلقات البرمجية المربع البرمجي `تحرَّك للجنوب` [blockly block][0]، وستكرر الحلقة البرمجية الأخرى المربع البرمجي `تحرَّك للشرق` [blockly block][1]",
+          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة برمجية واحدة من `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>، واحدة تلو الأخرى.",
+          "courseA_harvester_loops5a_b": "سوف تكرِّر إحدى الحلقات البرمجية المربع البرمجي `تحرَّك للجنوب` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، وستكرر الحلقة البرمجية الأخرى المربع البرمجي `تحرَّك للشرق` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "استخدِم هذا المسار للتحرُّك في اتجاه واحد، ثم في الاتجاه الآخر."
         },
         "courseA_harvester_loops5a_2020": {
-          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة برمجية واحدة من `repeat` [blockly block][0]، واحدة تلو الأخرى.",
-          "courseA_harvester_loops5a_b": "سوف تكرِّر إحدى الحلقات البرمجية المربع البرمجي `تحرَّك للجنوب` [blockly block][0]، وستكرر الحلقة البرمجية الأخرى المربع البرمجي `تحرَّك للشرق` [blockly block][1]",
+          "courseA_harvester_loops5a_a": "ستحتاج إلى حلقة برمجية واحدة من `repeat` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml>، واحدة تلو الأخرى.",
+          "courseA_harvester_loops5a_b": "سوف تكرِّر إحدى الحلقات البرمجية المربع البرمجي `تحرَّك للجنوب` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml>، وستكرر الحلقة البرمجية الأخرى المربع البرمجي `تحرَّك للشرق` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
           "courseA_harvester_loops5a_c": "استخدِم هذا المسار للتحرُّك في اتجاه واحد، ثم في الاتجاه الآخر."
         },
         "courseA_harvester_loops5b": {
@@ -1754,11 +1754,11 @@
           "courseA_harvester_loops7_b": "استخدِم حلقتين برمجيتين لمتابعة هذا المسار."
         },
         "courseA_harvester_loops7_2019": {
-          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتين برمجيتين من `repeat` [blockly block][0]، واحدة تلو الأخرى!",
+          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتين برمجيتين من `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>، واحدة تلو الأخرى!",
           "courseA_harvester_loops7_b": "استخدِم حلقتين برمجيتين لمتابعة هذا المسار."
         },
         "courseA_harvester_loops7_2020": {
-          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتين برمجيتين من `repeat` [blockly block][0]، واحدة تلو الأخرى!",
+          "courseA_harvester_loops7_a": "ستحتاج إلى حلقتين برمجيتين من `repeat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>، واحدة تلو الأخرى!",
           "courseA_harvester_loops7_b": "استخدِم حلقتين برمجيتين لمتابعة هذا المسار."
         },
         "courseA_harvester_loops9": {
@@ -1912,46 +1912,46 @@
           "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp2_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp2_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2018": {
           "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2018": {
           "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3b_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2018": {
           "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2018": {
           "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2019": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp5a_2020": {
-          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n[blockly block][0]"
+          "1": "من المفترض أن يبدو الكود البرمجي الخاص بك على هذا النحو:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_seq1": {
           "courseA_maze_seq1_a": "إذا واجهتك صعوبة في تحريك الطير، تأكد من أن المربعات البرمجية مستقرة في أماكنها تحت <xml>\n  <block type=\"when_run\"/>\n</xml>",
@@ -3574,20 +3574,20 @@
           "courseC_artist_loop1_b": "<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>\n\nاستخدم أي نمط ترغب به!"
         },
         "courseC_artist_loops1a": {
-          "courseC_artist_loops1a_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "استخدم هذا المربع البرمجي لرسم الملصق![blockly block][0]"
+          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2018": {
-          "courseC_artist_loops1a_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "استخدم هذا المربع البرمجي لرسم الملصق![blockly block][0]"
+          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n<xml>\n<block type=\"jump_to_xy\">\n    <title name=\"XPOS\">200</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2019": {
-          "courseC_artist_loops1a_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "استخدم هذا المربع البرمجي لرسم الملصق![blockly block][0]"
+          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1a_2020": {
-          "courseC_artist_loops1a_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "استخدم هذا المربع البرمجي لرسم الملصق![blockly block][0]"
+          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
         },
         "courseC_artist_loops1b_2019": {
           "courseC_artist_loops1b_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nيمكنك استخدام إما اليمين وإما اليسار، وأي عدد من الدرجات."
@@ -3596,11 +3596,11 @@
           "courseC_artist_loops1b_a": "هذا هو المربع البرمجي الأول الذي ستحتاجه:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nيمكنك استخدام إما اليمين وإما اليسار، وأي عدد من الدرجات."
         },
         "courseC_artist_loops2a": {
-          "courseC_artist_loops2a_a": "في داخل الحلقة الخاصة بك، سترغب في الانتقال إلى خيار \"القفز فوق 200، القفز إلى أقل من 200، ثم ارسم ملصق الطائر، وبعد ذلك قم باللف بمقدار 30 درجة.",
+          "courseC_artist_loops2a_a": "داخل الحلقة، سترغب في \"القفز إلى 200 فوق 200 لأسفل\"، ثم ارسم ملصق الطيور، ثم استدر 30 درجة.",
           "courseC_artist_loops2a_b": "انقر فوق الرقم الموجود أعلى حلقة \"تكرار\" لتغيير عدد مرات التكرار."
         },
         "courseC_artist_loops2a_2018": {
-          "courseC_artist_loops2a_a": "في داخل الحلقة الخاصة بك، سترغب في الانتقال إلى خيار \"القفز فوق 200، القفز إلى أقل من 200، ثم ارسم ملصق الطائر، وبعد ذلك قم باللف بمقدار 30 درجة.",
+          "courseC_artist_loops2a_a": "داخل الحلقة، سترغب في \"القفز إلى 200 فوق 200 لأسفل\"، ثم ارسم ملصق الطيور، ثم استدر 30 درجة.",
           "courseC_artist_loops2a_b": "انقر فوق الرقم الموجود أعلى حلقة \"تكرار\" لتغيير عدد مرات التكرار."
         },
         "courseC_artist_loops2a_2019": {
@@ -3612,12 +3612,12 @@
           "courseC_artist_loops2a_b": "انقر فوق الرقم الموجود أعلى حلقة \"تكرار\" لتغيير عدد مرات التكرار."
         },
         "courseC_artist_loops3a": {
-          "courseC_artist_loops3a_a": "سترغب في إضافة مربع برمجي واحد فقط داخل الحلقة الخاصة بك بعد ملصق الطائر.",
-          "courseC_artist_loops3a_b": "استخدم القائمة المنسدلة في المربع البرمجي \"رسم ملصق\" للبحث عن ملصق الخفاش."
+          "courseC_artist_loops3a_a": "سترغب في إضافة قطعة برمجية واحدة فقط داخل حلقتك بعد ملصق الطائر.",
+          "courseC_artist_loops3a_b": "استخدم القائمة المنسدلة في القطعة البرمجية \"رسم ملصق\" للبحث عن ملصق الخفاش."
         },
         "courseC_artist_loops3a_2018": {
-          "courseC_artist_loops3a_a": "سترغب في إضافة مربع برمجي واحد فقط داخل الحلقة الخاصة بك بعد ملصق الطائر.",
-          "courseC_artist_loops3a_b": "استخدم القائمة المنسدلة في المربع البرمجي \"رسم ملصق\" للبحث عن ملصق الخفاش."
+          "courseC_artist_loops3a_a": "سترغب في إضافة قطعة برمجية واحدة فقط داخل حلقتك بعد ملصق الطائر.",
+          "courseC_artist_loops3a_b": "استخدم القائمة المنسدلة في القطعة البرمجية \"رسم ملصق\" للبحث عن ملصق الخفاش."
         },
         "courseC_artist_loops3a_2019": {
           "courseC_artist_loops3a_a": "يجب عليك إضافة بلوكة واحدة داخر دالةكرر, بعد الملصق الأول.",
@@ -3628,17 +3628,17 @@
           "courseC_artist_loops3a_b": "يجب أن يكون برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nيمكنك استخدام أي ملصقات تعجبك!"
         },
         "courseC_artist_loops4a": {
-          "courseC_artist_loops4a_a": "استخدم هذا المربع البرمجي من أجل القفز للأمام:<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>تذكر أن تقوم بتغيير طول المسافة!"
+          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nتذكر تغيير المسافة!"
         },
         "courseC_artist_loops4a_2018": {
-          "courseC_artist_loops4a_a": "استخدم هذا المربع البرمجي من أجل القفز للأمام:<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>تذكر أن تقوم بتغيير طول المسافة!"
+          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">100</title>\n  </block>\n</xml>\n\nتذكر تغيير المسافة!"
         },
         "courseC_artist_loops4a_2019": {
-          "courseC_artist_loops4a_a": "استخدم هذا المربع البرمجي من أجل القفز للأمام:<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>تذكر أن تقوم بتغيير طول المسافة!",
+          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nتذكر تغيير المسافة!",
           "courseC_artist_loops4a_b": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops4a_2020": {
-          "courseC_artist_loops4a_a": "استخدم هذا المربع البرمجي من أجل القفز للأمام:<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>تذكر أن تقوم بتغيير طول المسافة!",
+          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nتذكر تغيير المسافة!",
           "courseC_artist_loops4a_b": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5a": {
@@ -3654,21 +3654,21 @@
           "courseC_artist_loops5a_a": "استخدم القائمة المنسدلة في القطعة البرمجية \"ارسم ملصق\" لتغير الرسمة."
         },
         "courseC_artist_loops5b": {
-          "courseC_artist_loops5b_a": "استخدم المربع البرمجي هذا لتعيين النمط الخاص بالأسطر الخاصة بك:<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، سترغب في التحرك للخلف بنفس المقدار الذي تتحرك به للأمام."
+          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، ستحتاج إلى الرجوع للخلف بنفس المقدار الذي تتحرك به للأمام."
         },
         "courseC_artist_loops5b_2018": {
-          "courseC_artist_loops5b_a": "استخدم المربع البرمجي هذا لتعيين النمط الخاص بالأسطر الخاصة بك:<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، سترغب في التحرك للخلف بنفس المقدار الذي تتحرك به للأمام."
+          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، ستحتاج إلى الرجوع للخلف بنفس المقدار الذي تتحرك به للأمام."
         },
         "courseC_artist_loops5b_2019": {
-          "courseC_artist_loops5b_a": "استخدم المربع البرمجي هذا لتعيين النمط الخاص بالأسطر الخاصة بك:<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، سترغب في التحرك للخلف بنفس المقدار الذي تتحرك به للأمام.",
+          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، ستحتاج إلى الرجوع للخلف بنفس المقدار الذي تتحرك به للأمام.",
           "courseC_artist_loops5b_c": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops5b_2020": {
-          "courseC_artist_loops5b_a": "استخدم المربع البرمجي هذا لتعيين النمط الخاص بالأسطر الخاصة بك:<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
-          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، سترغب في التحرك للخلف بنفس المقدار الذي تتحرك به للأمام.",
+          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، ستحتاج إلى الرجوع للخلف بنفس المقدار الذي تتحرك به للأمام.",
           "courseC_artist_loops5b_c": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC_artist_loops6a": {
@@ -3787,19 +3787,19 @@
         },
         "courseC_artist_prog5_2018": {
           "courseC_artist_prog5_a": "قم بإبطاء المنزلق إلى كل الطريق حتى يمكنك تشغيل تعليماتك البرمجية سطر بعد سطر لاكتشاف أين وقع الخطأ.",
-          "courseC_artist_prog5_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_artist_prog5_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_artist_prog5_c": "يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية استخدامها!",
           "courseC_artist_prog5_d": "يجب أن تكون كل استدارة 90 درجة يمينًا."
         },
         "courseC_artist_prog5_2019": {
           "courseC_artist_prog5_a": "قم بإبطاء المنزلق إلى كل الطريق حتى يمكنك تشغيل تعليماتك البرمجية سطر بعد سطر لاكتشاف أين وقع الخطأ.",
-          "courseC_artist_prog5_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_artist_prog5_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_artist_prog5_c": "يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية استخدامها!",
           "courseC_artist_prog5_d": "يجب أن تكون كل استدارة 90 درجة يمينًا."
         },
         "courseC_artist_prog5_2020": {
           "courseC_artist_prog5_a": "قم بإبطاء المنزلق إلى كل الطريق حتى يمكنك تشغيل تعليماتك البرمجية سطر بعد سطر لاكتشاف أين وقع الخطأ.",
-          "courseC_artist_prog5_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_artist_prog5_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_artist_prog5_c": "يمكنك استخدام القائمة المنسدلةفي البلوكة لتغير كيفية استخدامها!",
           "courseC_artist_prog5_d": "يجب أن تكون كل استدارة 90 درجة يمينًا."
         },
@@ -3835,21 +3835,21 @@
           "courseC_artist_prog7_b": "-   هل يعمل كل شيء على ما يرام بعد الخطوة الأولى؟/\n-   هل ما زال يعمل بعد الخطوة الثانية؟/\n-   أين يحدث الخطأ؟",
           "courseC_artist_prog7_c": "يمكنك استخدام القائمة المنسدلة على المربعات البرمجية \"التفاف\" لمعرفة أي من الزوايا تحتاج إليها!",
           "courseC_artist_prog7_d": "يجب أن تقوم بما يلي:\n\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n\nكرر هذا النمط عدد 2 مرة!",
-          "courseC_artist_prog7_e": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_artist_prog7_e": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_artist_prog7_2019": {
           "courseC_artist_prog7_a": "كل زاوية هي إما 45 أو 90 درجة",
           "courseC_artist_prog7_b": "-   هل يعمل كل شيء على ما يرام بعد الخطوة الأولى؟/\n-   هل ما زال يعمل بعد الخطوة الثانية؟/\n-   أين يحدث الخطأ؟",
           "courseC_artist_prog7_c": "يمكنك استخدام القائمة المنسدلة على المربعات البرمجية \"التفاف\" لمعرفة أي من الزوايا تحتاج إليها!",
           "courseC_artist_prog7_d": "يجب أن تقوم بما يلي:\n\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n\nكرر هذا النمط عدد 2 مرة!",
-          "courseC_artist_prog7_e": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_artist_prog7_e": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_artist_prog7_2020": {
           "courseC_artist_prog7_a": "كل زاوية هي إما 45 أو 90 درجة",
           "courseC_artist_prog7_b": "-   هل يعمل كل شيء على ما يرام بعد الخطوة الأولى؟/\n-   هل ما زال يعمل بعد الخطوة الثانية؟/\n-   أين يحدث الخطأ؟",
           "courseC_artist_prog7_c": "يمكنك استخدام القائمة المنسدلة على المربعات البرمجية \"التفاف\" لمعرفة أي من الزوايا تحتاج إليها!",
           "courseC_artist_prog7_d": "يجب أن تقوم بما يلي:\n\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n-   تحرك للأمام\n-   استدر يمينًا 45 درجة\n\nكرر هذا النمط عدد 2 مرة!",
-          "courseC_artist_prog7_e": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_artist_prog7_e": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "يمكنك رسم هذا الشكل كمستطيل مع خط في الوسط أو مربعين مختلفين!"
@@ -3913,15 +3913,15 @@
         },
         "courseC_collector_prog2_2018": {
           "courseC_collector_prog2_a": "يمكنك استخدام 4 قطع برمجية <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> أو استخدم <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتجعل برنامجك قصيراً.",
-          "courseC_collector_prog2_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_collector_prog2_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_collector_prog2_2019": {
           "courseC_collector_prog2_a": "يمكنك استخدام 4 قطع برمجية <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> أو استخدم <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتجعل برنامجك قصيراً.",
-          "courseC_collector_prog2_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_collector_prog2_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_collector_prog2_2020": {
           "courseC_collector_prog2_a": "يمكنك استخدام 4 قطع برمجية <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> أو استخدم <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتجعل برنامجك قصيراً.",
-          "courseC_collector_prog2_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_collector_prog2_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "البرنامج سوف يشغل القطع البرمجية المتصلة فقط بـ <xml><block type=\"when_run\"/></xml> block.",
@@ -3950,17 +3950,17 @@
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_a": "إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.",
-          "courseC_collector_prog4_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_collector_prog4_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_collector_prog4_c": "استخدم هذا الخيار للمسار."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_a": "إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.",
-          "courseC_collector_prog4_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_collector_prog4_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_collector_prog4_c": "استخدم هذا الخيار للمسار."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_a": "إذا عجزت عن الحل, جرب كتابة الخطوات على ورقة.",
-          "courseC_collector_prog4_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
+          "courseC_collector_prog4_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن.",
           "courseC_collector_prog4_c": "استخدم هذا الخيار للمسار."
         },
         "courseC_collector_prog5": {
@@ -4473,38 +4473,38 @@
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
           "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
-          "courseC_maze_debugging_challenge1_c": "إذا علقت ولم تصل في بحثك، يمكنك دوماً البدء من جديد، والبحث عن طريق جديد!"
+          "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge1_2018": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
           "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
-          "courseC_maze_debugging_challenge1_c": "إذا علقت ولم تصل في بحثك، يمكنك دوماً البدء من جديد، والبحث عن طريق جديد!"
+          "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge1_2019": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
           "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
-          "courseC_maze_debugging_challenge1_c": "إذا علقت ولم تصل في بحثك، يمكنك دوماً البدء من جديد، والبحث عن طريق جديد!"
+          "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge1_2020": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
           "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
-          "courseC_maze_debugging_challenge1_c": "إذا علقت ولم تصل في بحثك، يمكنك دوماً البدء من جديد، والبحث عن طريق جديد!"
+          "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge2": {
-          "courseC_maze_debugging_challenge2_b": "في حال علقت، جرب عملية تصحيح أخطاء التعليمات البرمجية. أين يحدث الخطأ؟",
-          "courseC_maze_debugging_challenge2_c": "يوجد مسارين مختلفين يمكنك اتباعهم فقط من خلال التقدم للأمام، والانعطاف أربع مرات. في حالة وجدت طريق واحد لاستخدام الحلقة، فقد يوجد العديد من ذلك![][0]"
+          "courseC_maze_debugging_challenge2_b": "إذا واجهتك مشكلة، جرب عملية تصحيح أخطاء الأوامر البرمجية. \nأين يحدث الخطأ؟",
+          "courseC_maze_debugging_challenge2_c": "هناك مساران مختلفان يمكنك اتباعهما بالتقدم للأمام والدوران أربع مرات. إذا وجدت طريقاً واحداً لاستخدام حلقة التكرار، فقد يكون هناك المزيد!"
         },
         "courseC_maze_debugging_challenge2_2018": {
-          "courseC_maze_debugging_challenge2_b": "في حال علقت، جرب عملية تصحيح أخطاء التعليمات البرمجية. أين يحدث الخطأ؟",
-          "courseC_maze_debugging_challenge2_c": "يوجد مسارين مختلفين يمكنك اتباعهم فقط من خلال التقدم للأمام، والانعطاف أربع مرات. في حالة وجدت طريق واحد لاستخدام الحلقة، فقد يوجد العديد من ذلك![][0]"
+          "courseC_maze_debugging_challenge2_b": "إذا واجهتك مشكلة، جرب عملية تصحيح أخطاء الأوامر البرمجية. \nأين يحدث الخطأ؟",
+          "courseC_maze_debugging_challenge2_c": "هناك مساران مختلفان يمكنك اتباعهما بالتقدم للأمام والدوران أربع مرات. إذا وجدت طريقاً واحداً لاستخدام حلقة التكرار، فقد يكون هناك المزيد!"
         },
         "courseC_maze_debugging_challenge2_2019": {
-          "courseC_maze_debugging_challenge2_b": "في حال علقت، جرب عملية تصحيح أخطاء التعليمات البرمجية. أين يحدث الخطأ؟",
-          "courseC_maze_debugging_challenge2_c": "يوجد مسارين مختلفين يمكنك اتباعهم فقط من خلال التقدم للأمام، والانعطاف أربع مرات. في حالة وجدت طريق واحد لاستخدام الحلقة، فقد يوجد العديد من ذلك![][0]"
+          "courseC_maze_debugging_challenge2_b": "إذا واجهتك مشكلة، جرب عملية تصحيح أخطاء الأوامر البرمجية. \nأين يحدث الخطأ؟",
+          "courseC_maze_debugging_challenge2_c": "هناك مساران مختلفان يمكنك اتباعهما بالتقدم للأمام والدوران أربع مرات. إذا وجدت طريقاً واحداً لاستخدام حلقة التكرار، فقد يكون هناك المزيد!"
         },
         "courseC_maze_debugging_challenge2_2020": {
-          "courseC_maze_debugging_challenge2_b": "في حال علقت، جرب عملية تصحيح أخطاء التعليمات البرمجية. أين يحدث الخطأ؟",
-          "courseC_maze_debugging_challenge2_c": "يوجد مسارين مختلفين يمكنك اتباعهم فقط من خلال التقدم للأمام، والانعطاف أربع مرات. في حالة وجدت طريق واحد لاستخدام الحلقة، فقد يوجد العديد من ذلك![][0]"
+          "courseC_maze_debugging_challenge2_b": "إذا واجهتك مشكلة، جرب عملية تصحيح أخطاء الأوامر البرمجية. \nأين يحدث الخطأ؟",
+          "courseC_maze_debugging_challenge2_c": "هناك مساران مختلفان يمكنك اتباعهما بالتقدم للأمام والدوران أربع مرات. إذا وجدت طريقاً واحداً لاستخدام حلقة التكرار، فقد يكون هناك المزيد!"
         },
         "courseC_maze_loops_challenge1a": {
           "courseC_maze_loops_challenge1_a": "فكر في هذا المسار على أنه مكون من مسارين. كل واحد منهم له نمط يمكن تكراره.",
@@ -4588,17 +4588,17 @@
           "courseC_maze_programming5_c": "سيتكون الحل من قطعتين \"تقدم للأمام\"، ثم دوران، وقطعتين  أخريين \"تقدم للأمام\"."
         },
         "courseC_maze_programming5_2018": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "يحتاج الطائر إلى الدوران ليكمل حل اللغز. هل يمكنك معرفة أي اتجاه؟",
           "courseC_maze_programming5_c": "سيتكون الحل من قطعتين \"تقدم للأمام\"، ثم دوران، وقطعتين  أخريين \"تقدم للأمام\"."
         },
         "courseC_maze_programming5_2019": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "يحتاج الطائر إلى الدوران ليكمل حل اللغز. هل يمكنك معرفة أي اتجاه؟",
           "courseC_maze_programming5_c": "سيتكون الحل من قطعتين \"تقدم للأمام\"، ثم دوران، وقطعتين  أخريين \"تقدم للأمام\"."
         },
         "courseC_maze_programming5_2020": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "يحتاج الطائر إلى الدوران ليكمل حل اللغز. هل يمكنك معرفة أي اتجاه؟",
           "courseC_maze_programming5_c": "سيتكون الحل من قطعتين \"تقدم للأمام\"، ثم دوران، وقطعتين  أخريين \"تقدم للأمام\"."
         },
@@ -4648,15 +4648,15 @@
         },
         "courseC_maze_programming8_2018": {
           "courseC_maze_programming8_a": "تذكر يمكنك استخدام زر \" الخطوة\" لتتبع كودك البرمجي سطرا سطرا في حال واجهتك مشكلة.",
-          "courseC_maze_programming8_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming8_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_maze_programming8_2019": {
           "courseC_maze_programming8_a": "تذكر يمكنك استخدام زر \" الخطوة\" لتتبع كودك البرمجي سطرا سطرا في حال واجهتك مشكلة.",
-          "courseC_maze_programming8_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming8_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_maze_programming8_2020": {
           "courseC_maze_programming8_a": "تذكر يمكنك استخدام زر \" الخطوة\" لتتبع كودك البرمجي سطرا سطرا في حال واجهتك مشكلة.",
-          "courseC_maze_programming8_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming8_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "يوجد هناك العديد من الطرق للوصول إلى الخنزير. تتبع باصبعك الطريق الصحيح ومن ثم اكتب الكود!"
@@ -5687,8 +5687,8 @@
         },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_a": "لماذا يعمل النصف الأول من هذا البرنامج؟ فكر في السبب وراء حاجة النحل للتحرك للخلف. ما مقدار الرحيق الذي تقوم النحلة بتجمعيه كل مرة عند تحركها فوق الزهور؟",
-          "courseD_bee_debugging_challenge1_b": "في طريق العودة، هل يتبع النحل نفس النمط. ما مقدار العسل الذي يحتاجه النحل في كل مرة من أجل أن يتحرك للأمام فوق قرص عسل خلية النحل؟",
-          "courseD_bee_debugging_challenge1_c": " بعد صنع النحل للعسل بالصف السفلي، كرر هذه الأوامر التالية:-   كرر  مرتان:    -   التحرك قدماً     -   صنع عدد 3 مرات من العسل-   التحرك للخلف"
+          "courseD_bee_debugging_challenge1_b": "في طريق العودة، هل يتبع النحل نفس النمط. ما مقدار العسل الذي يحتاجه النحل في كل مرة حتى يتحرك للأمام فوق خلية النحل؟",
+          "courseD_bee_debugging_challenge1_c": "بعد صنع النحل للعسل بالصف السفلي، كرر هذه الأوامر التالية:-\n\nكررها مرتين:\n\n-   التحرك قدماً\n-   صنع عدد 3 مرات من العسل\n-   التحرك للخلف"
         },
         "courseD_bee_debugging_challenge1a": {
           "courseD_bee_debugging_challenge1_a": "لماذا يعمل النصف الأول من هذا البرنامج؟ فكر في السبب وراء حاجة النحل للتحرك للخلف. ما مقدار الرحيق الذي تقوم النحلة بتجمعيه كل مرة عند تحركها فوق الزهور؟",
@@ -5697,59 +5697,59 @@
         },
         "courseD_bee_nestedLoops1": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_b": "جرب كتابة التعليمات البرمجية لجانب واحد للمربع أولاً. هل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_b": "جرب كتابة الأوامر البرمجية لجانب واحد من المربع أولاً. \nهل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1_2018": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_b": "جرب كتابة التعليمات البرمجية لجانب واحد للمربع أولاً. هل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_b": "جرب كتابة الأوامر البرمجية لجانب واحد من المربع أولاً. \nهل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1_2019": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_b": "جرب كتابة التعليمات البرمجية لجانب واحد للمربع أولاً. هل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_b": "جرب كتابة الأوامر البرمجية لجانب واحد من المربع أولاً. \nهل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1_2020": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_b": "جرب كتابة التعليمات البرمجية لجانب واحد للمربع أولاً. هل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_b": "جرب كتابة الأوامر البرمجية لجانب واحد من المربع أولاً. \nهل يمكنك وضع ذلك بحلقة للحصول على كل رحيق العسل؟ ",
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1a": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1a_2018": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1a_2019": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops1a_2020": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
-          "courseD_bee_nestedLoops1_c": "تذكر استخدام المربع البرمجي \"الحصول على الرحيق\" بمجرد أنت تتواجد على مربع بزهور."
+          "courseD_bee_nestedLoops1_c": "تذكر استخدام القطعة البرمجية \"الحصول على الرحيق\" عند وجودك على مربع الزهور."
         },
         "courseD_bee_nestedLoops2": {
-          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من مربع برمجي واحد داخل الحلقة."
+          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل حلقة أخرى.",
+          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل الحلقة."
         },
         "courseD_bee_nestedLoops2_2018": {
-          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من مربع برمجي واحد داخل الحلقة."
+          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل حلقة أخرى.",
+          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل الحلقة."
         },
         "courseD_bee_nestedLoops2_2019": {
-          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من مربع برمجي واحد داخل الحلقة."
+          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل حلقة أخرى.",
+          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل الحلقة."
         },
         "courseD_bee_nestedLoops2_2020": {
-          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من مربع برمجي واحد داخل الحلقة."
+          "courseD_bee_nestedLoops2_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع عش واحد على شكل حلقة \"تكرار\" داخل حلقة أخرى.",
+          "courseD_bee_nestedLoops2_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_bee_nestedLoops2_c": "تذكر أنه يمكنك وضع أكثر من قطعة برمجية واحدة داخل الحلقة."
         },
         "courseD_bee_nestedLoops7": {
           "courseD_bee_nestedLoops7_a": "ستحتاج إلى تكرار خيار \"الحصول على رحيق العسل\" داخل مربع \"تكرار\" آخر الذي يكون لديه كذلك مربع برمجي \"التحرك إلى الأمام\" بداخله.",
@@ -5964,10 +5964,10 @@
           "courseD_collector_debugging9_b": "تعرّف على كيفية حل اللغز، ثم تحرك خطوة بعد خطوة لجعل الأوامر البرمجية مطابقة لما تفكّر فيه."
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "أبدأ بتجميع فقط عدد \"اثنان\" من المجوهرات من كل كومة من \"الكومتين\" الأوليتين.![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)استخدم هذه المربعات البرمجية.<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "قم بتجميع المجوهرات المتبقية في هذا الصف، لاحقاً.![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)اضف هذه المربعات البرمجية إلى البرنامج الخاص بك.<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_c": "في النهاية، قم بتجميع الكنز المتبقي. اضف هذه المربعات البرمجية إلى برنامجك.<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
-          "courseD_collector_debugging_challenge2_d": "ها هو الحل المتكامل لهذا اللغز.<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseD_collector_debugging_challenge2_a": "ابدأ بجمع \\*\\* جوهرتين\\*\\* فقط من كل **كومة** من الكومتين.\n\n\\[] [0]\nاستخدم هذه القطع البرمجية.\n\n[1][blockly block]",
+          "courseD_collector_debugging_challenge2_b": "قم بجمع المجوهرات المتبقية في هذا الصف، لاحقاُ.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\nأضف هذه القطع البرمجية إلى برنامجك.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_c": "في النهاية، قم بجمع الكنز المتبقي. أضف هذه القطع البرمجية إلى برنامجك.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>",
+          "courseD_collector_debugging_challenge2_d": "ها هو الحل المتكامل لهذا اللغز.\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_collector_nested_loops_challenge2": {
           "courseD_bee_nested_loops_challenge2_a": "تذكر أنه يمكنك \"تكرار\" أمر واحد، أو نمط أطول. يمكنك حتى \"تكرار\" المربع البرمجي \"تكرار\"!",
@@ -6481,34 +6481,34 @@
           "courseC_maze_programming4_b": "لمتابعة المسار تقدّم للأمام ثم أدر في اتجاه واحد ، ثم تحرك مجددًا واستدر في الاتجاه المعاكس. تقدّم للأمام مرةً أخرى للوصول إلى شجرة البلوط."
         },
         "courseD_maze_intro5a_2019": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الدوران هو من منظور ريد.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_intro5a_2020": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الدوران هو من منظور ريد.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_nestedLoops3": {
-          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_maze_nestedLoops3_c": "جرب كتابة التعليمات البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
+          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل أخرى.",
+          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_maze_nestedLoops3_c": "جرب كتابة الأوامر البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
         },
         "courseD_maze_nestedLoops3_2018": {
-          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_maze_nestedLoops3_c": "جرب كتابة التعليمات البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
+          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل أخرى.",
+          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_maze_nestedLoops3_c": "جرب كتابة الأوامر البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
         },
         "courseD_maze_nestedLoops3_2019": {
-          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_maze_nestedLoops3_c": "جرب كتابة التعليمات البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
+          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل أخرى.",
+          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_maze_nestedLoops3_c": "جرب كتابة الأوامر البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
         },
         "courseD_maze_nestedLoops3_2020": {
-          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، أنت سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل للأخر.",
-          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط.",
-          "courseD_maze_nestedLoops3_c": "جرب كتابة التعليمات البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
+          "courseD_maze_nestedLoops3_a": "لحل هذا اللغز، سوف تحتاج إلي صنع \"عش\" واحد على شكل حلقة \"تكرار\" داخل أخرى.",
+          "courseD_maze_nestedLoops3_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط.",
+          "courseD_maze_nestedLoops3_c": "جرب كتابة الأوامر البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
         },
         "courseD_maze_nestedLoops4": {
           "courseD_maze_nestedLoops4_a": "جرب استخدام هذا المسار عبر المتاهة.![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
@@ -6532,19 +6532,19 @@
         },
         "courseD_maze_nestedLoops5": {
           "courseD_maze_nestedLoops5_a": "ابحث عن نمط تدريج السلم في هذه المتاهة للبحث عن الحلقة المتداخلة حيث يمكنك استخدامها.",
-          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط."
+          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط."
         },
         "courseD_maze_nestedLoops5_2018": {
           "courseD_maze_nestedLoops5_a": "ابحث عن نمط تدريج السلم في هذه المتاهة للبحث عن الحلقة المتداخلة حيث يمكنك استخدامها.",
-          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط."
+          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط."
         },
         "courseD_maze_nestedLoops5_2019": {
           "courseD_maze_nestedLoops5_a": "ابحث عن نمط تدريج السلم في هذه المتاهة للبحث عن الحلقة المتداخلة حيث يمكنك استخدامها.",
-          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط."
+          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط."
         },
         "courseD_maze_nestedLoops5_2020": {
           "courseD_maze_nestedLoops5_a": "ابحث عن نمط تدريج السلم في هذه المتاهة للبحث عن الحلقة المتداخلة حيث يمكنك استخدامها.",
-          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة التعليمات البرمجية على الورق خطوة بخطوة وابحث عن النمط."
+          "courseD_maze_nestedLoops5_b": "لا يمكنك معرفة أين تضع الحلقات؟ جرب كتابة الأوامر البرمجية على الورق خطوةً خطوة وابحث عن النمط."
         },
         "courseD_maze_nestedLoops6": {
           "courseD_maze_nestedLoops6_a": "إذا علقت ولم تفلح، جرب استخدام التعليمات البرمجية على الورق بدون الحلقات أولاً، ثم ابحث عن الأنماط.",
@@ -6571,51 +6571,51 @@
           "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp1_2018": {
-          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على المربعات البرمجية الثلاثة تمامًا مع بعضها، ثم انقر على \"تشغيل\" مرة أخرى.",
-          "courseC_maze_programming1_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على القطع البرمجية الثلاث جميعها معاً، ثم انقر على \"تشغيل\" مرة أخرى.",
+          "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp1_2019": {
-          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على المربعات البرمجية الثلاثة تمامًا مع بعضها، ثم انقر على \"تشغيل\" مرة أخرى.",
-          "courseC_maze_programming1_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على القطع البرمجية الثلاث جميعها معاً، ثم انقر على \"تشغيل\" مرة أخرى.",
+          "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp1_2020": {
-          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على المربعات البرمجية الثلاثة تمامًا مع بعضها، ثم انقر على \"تشغيل\" مرة أخرى.",
-          "courseC_maze_programming1_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming1_a": "إذا لم يصل الطير إلى الخنزير، تأكد من النقر على القطع البرمجية الثلاث جميعها معاً، ثم انقر على \"تشغيل\" مرة أخرى.",
+          "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "لاستخدام القطعة البرمجية \"تحرك إلى الأمام\"، اسحبه من صندوق الأدوات وضعه في مساحة العمل، واجعله متصلاً بـ \"عند التشغيل\" .",
           "courseC_maze_programming2_b": "تأكد من الضغط على القطع البرمجية الثلاث معًا وتوصيلها بـ \"عند التشغيل\"."
         },
         "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_a": "لاستخدام المربع البرمجي \"تحرك إلى الأمام\"، اسحبه من مربع الأدوات ووضعه في مساحة العمل، وصله بالمربع البرمجي \"عند التشغيل\" .",
-          "courseC_maze_programming2_b": "تأكد من النقر على المربعات البرمجية الثلاثة معًا وربطها بالمربع البرمجي \"عند التشغيل\"."
+          "courseC_maze_programming2_a": "لاستخدام القطعة البرمجية \"تحرك إلى الأمام\"، اسحبها من صندوق الأدوات وضعها في مساحة العمل متصلة بـقطعة \"عند التشغيل\" .",
+          "courseC_maze_programming2_b": "تأكد من النقر على القطع البرمجية الثلاث معًا وربطها بالقطعة \"عند التشغيل\"."
         },
         "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_a": "لاستخدام المربع البرمجي \"تحرك إلى الأمام\"، اسحبه من مربع الأدوات ووضعه في مساحة العمل، وصله بالمربع البرمجي \"عند التشغيل\" .",
-          "courseC_maze_programming2_b": "تأكد من النقر على المربعات البرمجية الثلاثة معًا وربطها بالمربع البرمجي \"عند التشغيل\"."
+          "courseC_maze_programming2_a": "لاستخدام القطعة البرمجية \"تحرك إلى الأمام\"، اسحبها من صندوق الأدوات وضعها في مساحة العمل متصلة بـقطعة \"عند التشغيل\" .",
+          "courseC_maze_programming2_b": "تأكد من النقر على القطع البرمجية الثلاث معًا وربطها بالقطعة \"عند التشغيل\"."
         },
         "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_a": "لاستخدام المربع البرمجي \"تحرك إلى الأمام\"، اسحبه من مربع الأدوات ووضعه في مساحة العمل، وصله بالمربع البرمجي \"عند التشغيل\" .",
-          "courseC_maze_programming2_b": "تأكد من النقر على المربعات البرمجية الثلاثة معًا وربطها بالمربع البرمجي \"عند التشغيل\"."
+          "courseC_maze_programming2_a": "لاستخدام القطعة البرمجية \"تحرك إلى الأمام\"، اسحبها من صندوق الأدوات وضعها في مساحة العمل متصلة بـقطعة \"عند التشغيل\" .",
+          "courseC_maze_programming2_b": "تأكد من النقر على القطع البرمجية الثلاث معًا وربطها بالقطعة \"عند التشغيل\"."
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)لحذف قطعة برمجية من منتصف الكود، اسحب هذه القطعة مع ما تحتها  إلى مكان آخر في مساحة العمل.  ثم اسحب القطعة البرمجية التي ترغب بحذفها إلى صندوق الأدوات. \nوفي النهاية، قد بإعادة القطع البرمجية الأخرى مكانها وتأكد أنها متصلة بالكود."
         },
         "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)لحذف المربع البرمجي من منتصف التعليمات البرمجية الخاصة بك، اسحب كل المربعات البرمجية في الأسفل بعيداً إلى جهة اليمين، والسماح بوضعهم في مساحة العمل لفترة وجيزة.  انقر على المربع البرمجي الذي ترغب في حذفه، ثم اسحبه مرة أخرى إلى مربع الأدوات.وفي النهاية، ضع المربعات البرمجية الأخرى مرة أخرى في مكانها حيث يجب وضعها."
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلحذف القطع البرمجية من منتصف الأوامر البرمجية، اسحب القطعة المراد حذفها مع ما تحتها إلى أي مكان داخل مساحة العمل، ثم اسحبها مرة أخرى إلى صندوق الأدوات. وفي النهاية، قم بإعادة باقي القطع البرمجية إلى مكانها."
         },
         "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)لحذف المربع البرمجي من منتصف التعليمات البرمجية الخاصة بك، اسحب كل المربعات البرمجية في الأسفل بعيداً إلى جهة اليمين، والسماح بوضعهم في مساحة العمل لفترة وجيزة.  انقر على المربع البرمجي الذي ترغب في حذفه، ثم اسحبه مرة أخرى إلى مربع الأدوات.وفي النهاية، ضع المربعات البرمجية الأخرى مرة أخرى في مكانها حيث يجب وضعها."
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلحذف القطع البرمجية من منتصف الأوامر البرمجية، اسحب القطعة المراد حذفها مع ما تحتها إلى أي مكان داخل مساحة العمل، ثم اسحبها مرة أخرى إلى صندوق الأدوات. وفي النهاية، قم بإعادة باقي القطع البرمجية إلى مكانها."
         },
         "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)لحذف المربع البرمجي من منتصف التعليمات البرمجية الخاصة بك، اسحب كل المربعات البرمجية في الأسفل بعيداً إلى جهة اليمين، والسماح بوضعهم في مساحة العمل لفترة وجيزة.  انقر على المربع البرمجي الذي ترغب في حذفه، ثم اسحبه مرة أخرى إلى مربع الأدوات.وفي النهاية، ضع المربعات البرمجية الأخرى مرة أخرى في مكانها حيث يجب وضعها."
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلحذف القطع البرمجية من منتصف الأوامر البرمجية، اسحب القطعة المراد حذفها مع ما تحتها إلى أي مكان داخل مساحة العمل، ثم اسحبها مرة أخرى إلى صندوق الأدوات. وفي النهاية، قم بإعادة باقي القطع البرمجية إلى مكانها."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_a": "يمكنك الدوران يمينًا أو يسارًا من وجهة نظر الطير. \nإذا كنت تواجه اليمين، فالدوران إلى اليمين سيجعلك باتجاه للأسفل.",
           "courseC_maze_programming4_b": "لاتباع المسار، تحرك للأمام واستدِر بطريق واحدة، ثم تحرك مرة أخرى واستدِر إلى الاتجاه المعاكس. تحرك للأمام مرة أخرى للوصول إلى الخنزير."
         },
         "courseD_maze_ramp4_2018": {
-          "courseC_maze_programming4_a": "يمكنك الالتفاف يمينًا أو يسارًا من وجهة نظر الطير. إذا كنت تواجه اليمين، فالتفاف إلى اليمين سيجعلك تشير للأسفل.",
+          "courseC_maze_programming4_a": "يمكنك الالتفاف يمينًا أو يسارًا من جهة نظر الطير. إذا كنت تواجه اليمين، فالتفاف إلى اليمين سيجعلك تشير للأسفل.",
           "courseC_maze_programming4_b": "لاتباع المسار، تحرك للأمام ولف بطريق واحدة، ثم تحرك مرة أخرى ودر إلى الاتجاه المعاكس. تحرك للأمام مرة أخرى للوصول إلى الخنزير."
         },
         "courseD_maze_ramp4_2019": {
@@ -6632,19 +6632,19 @@
           "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5_2018": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5_2019": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5_2020": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5a": {
           "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل الأوامر البرمجية الخاصة بك خطوة خطوة. هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
@@ -6652,19 +6652,19 @@
           "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرّب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ما سيحدث، حتى إذا كنت تعتقد أنك لم تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5a_2018": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5a_2019": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الدوران هو من منظور سكرات.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5a_2020": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الدوران هو من منظور سكرات.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5b": {
           "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل الأوامر البرمجية الخاصة بك خطوة خطوة. هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
@@ -6672,19 +6672,19 @@
           "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرّب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ما سيحدث، حتى إذا كنت تعتقد أنك لم تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5b_2018": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5b_2019": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp5b_2020": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "تذكّر أن الالتفافات هي من منظور الطير.",
-          "courseC_maze_programming5_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming5_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "هناك طريقتان لحل هذا اللغز!",
@@ -6881,39 +6881,39 @@
           "courseD_playLab_cond6_c": "أضف القطعة البرمجية \"انتظر ثانية واحدة\" أعلى حلقة \"تكرار للأبد\" التي تتحقق من موضع القرصان (لكن ليس داخل بيان \"إذا\") لمنع إزالة النقاط بسرعة كبيرة."
         },
         "courseD_scrat_ramp1": {
-          "courseC_maze_programming1_a": "إذا لم يتمكن الطائر سكرات من الوصول إلى البلوط، فتأكد من أن المربعات البرمجية البالغ عددها ثلاثة قد تم إطباقها سوياً بشكل كامل، ثم انقر على \"تشغيل\" مرة أخرى.",
-          "courseC_maze_programming1_b": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming1_a": "إذا لم يصل سكرات إلى البلوط، فتأكد من قطع الكتل الثلاثة بالكامل متصلة معًا، ثم انقر فوق \"تشغيل\" مرة أخرى.",
+          "courseC_maze_programming1_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_a": "لاستخدام المربع البرمجي \"تحرك إلى الأمام\"، اسحبه من مربع الأدوات ووضعه في مساحة العمل، وصله بالمربع البرمجي \"عند التشغيل\" .",
-          "courseC_maze_programming2_b": "تأكد من أن كل المربعات البرمجية \"تحرك إلى الأمام\" الثلاث مرفقة بالمربع البرمجي \"عند التشغيل\"."
+          "courseC_maze_programming2_a": "لاستخدام القطعة البرمجية \"تحرك إلى الأمام\"، اسحبها من صندوق الأدوات وضعها في مساحة العمل متصلة بـقطعة \"عند التشغيل\" .",
+          "courseC_maze_programming2_b": "تأكد من أن القطع البرمجية الثلاث \"تحرك إلى الأمام\" جميعها متصلة بالقطعة \"عند التشغيل\"."
         },
         "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)لحذف المربع البرمجي من منتصف التعليمات البرمجية الخاصة بك، اسحب كل المربعات البرمجية في الأسفل بعيداً إلى جهة اليمين، والسماح بوضعهم في مساحة العمل لفترة وجيزة.  انقر على المربع البرمجي الذي ترغب في حذفه، ثم اسحبه مرة أخرى إلى مربع الأدوات.وفي النهاية، ضع المربعات البرمجية الأخرى مرة أخرى في مكانها حيث يجب وضعها.",
-          "courseC_maze_programming3_b": "تذكر بأن الإدارة ناحيتي اليمين واليسار تأتي من منظور الطائر سكرات."
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلحذف القطع البرمجية من منتصف الأوامر البرمجية، اسحب القطعة المراد حذفها مع ما تحتها إلى أي مكان داخل مساحة العمل، ثم اسحبها مرة أخرى إلى صندوق الأدوات. وفي النهاية، قم بإعادة باقي القطع البرمجية إلى مكانها.",
+          "courseC_maze_programming3_b": "تذكر بأن الدوران باتجاه اليمين واليسار يأتي من جهة وقوف الطائر سكرات."
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_a": "يمكنك الدوران يميناً أو يساراً من وجهة نظر سكرات. إذا كنت متجه إلى اليمين، فإن الإتجاه نحو اليمين سيجعلك تشير إلى الأسفل.",
           "courseC_maze_programming4_b": "لمتابعة المسار تقدّم للأمام ثم أدر في اتجاه واحد ، ثم تحرك مجددًا واستدر في الاتجاه المعاكس. تقدّم للأمام مرةً أخرى للوصول إلى شجرة البلوط.",
-          "courseC_maze_programming4_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseC_maze_programming4_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_scrat_ramp5": {
-          "courseC_maze_programming5_a": "جرب استخدام الزر \"خطوة\" لتشغيل التعليمات البرمجية الخاصة بك سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
+          "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
           "courseC_maze_programming5_b": "ما طول المسافة اللازم عليك قطعها كي تصل إلى الزاوية؟",
           "courseC_maze_programming5_c": "ستحتاج إلى الانعطاف لليسار عند الزاوية للحصول على البلوط."
         },
         "courseD_scrat_ramp6": {
-          "courseC_maze_programming6a_a": "استخدم حلقة \"تكرار\" لتعيين تحرك الطائر سكرات!"
+          "courseC_maze_programming6a_a": "استخدم حلقة \"التكرار\" لتعيين تحرك الطائر سكرات!"
         },
         "courseD_scrat_ramp7": {
           "courseD_scrat_programming6_a": "هناك طريقتان لحل هذا اللغز!",
-          "courseD_scrat_programming6_b": "تذكر أن تقوم بالانعطاف أولاً قبل التحرك لكون الطائر سكرات يصادف الاتجاه الخاطيء.",
-          "courseD_scrat_programming6_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseD_scrat_programming6_b": "تذكر أن تقوم بالدوران أولاً قبل التحرك لكون الطائر سكرات يتجه بالاتجاه الخاطيء.",
+          "courseD_scrat_programming6_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_b": "لا تنسى استخدام زر \" الخطوة\" لتراجع الكود البرمجي قطعة قطعة لتكتشف الخطأ.",
           "courseD_maze_ramp7_a": "استخدم حلقة \"التكرار\" لتكرار تنفيذ أمر برمجي واحد أو عدة أوامر برمجية أكثر من مرّة.",
-          "courseD_maze_ramp7_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseD_maze_ramp7_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseE_artist_concept1": {
           "courseE_artist_concept1_a": "الأشكال السداسية لها جوانب قياسها 50 بِكسِل والدوران 60 درجة إلى اليمين.",
@@ -8608,8 +8608,8 @@
         },
         "courseC_video_angles": {
           "courseD_scrat_programming6_a": "هناك طريقتان لحل هذا اللغز!",
-          "courseD_scrat_programming6_b": "تذكر أن تقوم بالانعطاف أولاً قبل التحرك لكون الطائر سكرات يصادف الاتجاه الخاطيء.",
-          "courseD_scrat_programming6_c": "لا تخشى ارتكاب الأخطاء! جرب إضافة المربعات البرمجية وتشغيل التعليمات البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
+          "courseD_scrat_programming6_b": "تذكر أن تقوم بالدوران أولاً قبل التحرك لكون الطائر سكرات يتجه بالاتجاه الخاطيء.",
+          "courseD_scrat_programming6_c": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_a": "لرسم جانب، استخدم القطعة البرمجية \"تقدم للأمام بـ 100 بكسل\"، وغيّر رقم 100 إلى 200.",
@@ -8626,30 +8626,30 @@
           "courseE_farmer_ramp12e_b": "سيبدو حل هذا اللغز مشابهًا كثيرًا لحلّ اللغز الأخير، ولكنه يتحوَّل في الاتجاه الآخر."
         },
         "outbreak1": {
-          "step1": "استخدم هذه الكتل لإنشاء الصور المتحركة الخاصة بك:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nتم العثور على هذه الكتلة في فئة **الصور المتحركة** من مربع الأدوات.",
-          "step2": "قم بتغيير حجم الصور النمتحركة للوحوش بهذه الكتلة: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nتم العثور عليه في فئة **الإجراءات** من مربع الأدوات.",
-          "step3": "اجعل جميع الصور المتحركة للوحوش تبدأ بالتحرك من خلال: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nتم العثور على هذه الكتلة في فئة **الإجراءات** من مربع الأدوات."
+          "step1": "استخدم هذه القطع البرمجية لإنشاء الرسوم المتحركة الخاصة بك:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nتم العثور على هذه القطعة في فئة **الرسوم المتحركة** من صندوق الأدوات.",
+          "step2": "قم بتغيير حجم الرسوم المتحركة للوحوش بهذه القطعة البرمجية: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nتم العثور عليه في فئة **الإجراءات** من صندوق الأدوات.",
+          "step3": "اجعل جميع الرسوم المتحركة للوحوش تبدأ بالتحرك من خلال: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nتم العثور على هذه القطعة في فئة **الإجراءات** من صندوق الأدوات."
         },
         "outbreak2": {
-          "hint1": "انقر فوق زر `+` في كتلة الحدث. واملأ المكان الفارغ في كتلة `تغيير الزي` مع وجود كتلة \"الموضوع\" بالداخل.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "انقر فوق زر `+` في قطعة \"الحدث\". واملأ المكان الفارغ في قطعة \"تغيير الزي\" مع وجود كتلة \"الموضوع\" بالداخل.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak3": {
-          "hint1": "لوضع أقنعة وجه على الوحوش، استخدم كتلة `تغيير الزي` مع حدث `عند النقر`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nتأكد من سحب الكتلة الحمراء الصغيرة `التي تم النقر عليها` أيضًا!",
-          "hint2": "يجب أن يبدو الرمز الجديد لهذا المستوى على النحو التالي:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "لوضع أقنعة وجه على الوحوش، استخدم قطعة `تغيير الزي` مع حدث `عند النقر`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nتأكد من سحب القطعة الحمراء الصغيرة `التي تم النقر عليها` أيضًا!",
+          "hint2": "يجب أن يبدو الكود الجديد لهذا المستوى على النحو التالي:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "outbreak4": {
-          "challenge": "## هل تبحث عن تحدٍ إضافي؟\n\nيمكنك أيضًا جعل الوحوش تتحرك بشكل أسرع أو أبطأ.\n\n1.  انقر فوق `تعديل` في هذه الكتلة <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  قم زيادة أو تقليل الرقم في هذه الكتلة: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nلجعل الوحوش تتحرك بشكل أبطأ، اختر رقمًا عشريًا مثل `0.5` أو `0.25`. ولجعلها تتحرك بشكل أسرع، اختر أي رقم أكبر من 1."
+          "challenge": "## هل تبحث عن تحدٍ إضافي؟\n\nيمكنك أيضًا جعل الوحوش تتحرك بشكل أسرع أو أبطأ.\n\n1.  انقر فوق `تعديل` في هذه القطعة <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  قم زيادة أو تقليل الرقم في هذه القطعة: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nلجعل الوحوش تتحرك بشكل أبطأ، اختر رقمًا عشريًا مثل `0.5` أو `0.25`. ولجعلها تتحرك بشكل أسرع، اختر أي رقم أكبر من 1."
         },
         "outbreak5": {
-          "solution2": "يجب أن يبدو الرمز البرمجي الجديد الخاص على هذا النحو:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+          "solution2": "يجب أن يبدو الكود الجديد الخاص على هذا النحو:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_subjectSpritePointer\"></block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "outbreak6": {
-          "hint2": "تأكد من نقل كتل \"الإجراء\" الأخرى إلى داخل كتلة `إذا كانت هناك احتمالية`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "hint2": "تأكد من نقل قطع \"الإجراء\" الأخرى إلى داخل القطعة `إذا كانت هناك احتمالية`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChance\">\n        <value name=\"NUM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">90</title>\n          </block>\n        </value>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n            <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"sick\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"recovering\">recovering</title>\n              </block>\n            </value>\n          </block>\n        </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "hint1": "ستحتاج إلى إضافة 3 أحداث `عند اللمس` أخرى للتحقق من جميع المجموعات الممكنة من `اللمسات` بين الوحوش السليمة والمصابة.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "outbreak7": {
-          "whenclicked": "## اللقاحات\n\nيمكنك محاكاة إعطاء اللقاح للوحوش عند النقر عليها. ومن أجل القيام بذلك، استخدم كتلة `تغيير الزي` مع هذا الحدث:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
-          "verionhistory": "هل أنت في حيرة من أمرك؟ يمكنك دائمًا إعادة تعيين التعليمات البرمجية الخاصة بك عن طريق النقر فوق `سجل الإصدارات` أدناه ثم اختيار \"البدء من جديد\"."
+          "whenclicked": "## اللقاحات\n\nيمكنك محاكاة إعطاء اللقاح للوحوش عند النقر عليها. ومن أجل القيام بذلك، استخدم قطعة `تغيير الزي` مع هذا الحدث:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "هل أنت في حيرة من أمرك؟ يمكنك دائمًا إعادة تعيين الأوامر البرمجية الخاصة بك عن طريق النقر فوق `سجل الإصدارات` أدناه ثم اختيار \"البدء من جديد\"."
         }
       }
     }

@@ -1,0 +1,12 @@
+{
+  "func": "getValue",
+  "category": "Variables",
+  "paletteParams": [
+    "object",
+    "\"key\""
+  ],
+  "params": [
+    "{\"key\": \"value\"}",
+    "\"key\""
+  ]
+}

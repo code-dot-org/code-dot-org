@@ -2,14 +2,18 @@ import * as coreLibrary from '../coreLibrary';
 import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
-  addTarget(spriteArg, targetCostume) {
+  addTarget(spriteArg, targetCostume, targetType) {
+    if (!['follow', 'avoid'].includes(targetType)) {
+      console.warn(`unkknown targetType: ${targetType}`);
+      return;
+    }
     let sprites = coreLibrary.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
       if (!sprite.targetSet) {
-        sprite.targetSet = [];
+        sprite.targetSet = {follow: [], avoid: []};
       }
-      if (!sprite.targetSet.includes(targetCostume)) {
-        sprite.targetSet.push(targetCostume);
+      if (!sprite.targetSet[targetType].includes(targetCostume)) {
+        sprite.targetSet[targetType].push(targetCostume);
       }
     });
   },

@@ -16868,6 +16868,8 @@ ja:
               name: プレイ ラボのイベント
               description_student: 独自のゲームやストーリーを作成しましょう。
               description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってストーリーを作りましょう！
+            lesson-1:
+              name: コース最後のプロジェクト
           lesson_groups:
             csf_digcit:
               display_name: デジタル シティズンシップ
@@ -16877,6 +16879,8 @@ ja:
               display_name: くりかえし
             csf_events:
               display_name: イベント
+            lessonGroup-5:
+              display_name: コース最後のプロジェクト
           name: コースa -2021
           student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
         courseb-2021:
@@ -16944,6 +16948,8 @@ ja:
               name: プレイ ラボのイベント
               description_student: イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。
               description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            lesson-1:
+              name: コース最後のプロジェクト
           lesson_groups:
             csf_digcit:
               display_name: デジタル シティズンシップ
@@ -16955,6 +16961,8 @@ ja:
               display_name: コンピューティングの影響
             csf_events:
               display_name: イベント
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
           student_description: 本コースではコンピューター サイエンスとインターネットの安全性の基礎を学びます。コースの最後に、共有できる独自のゲームやストーリーを作成します。
         coursec-2021:
           title: コース C (2020)
@@ -17415,6 +17423,9 @@ ja:
               name: スプライトラボの紹介
             lesson-8:
               name: 実行中のスプライト
+            lesson-2:
+              name: 言葉の力
+              description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
           lesson_groups:
             ramp_up:
               display_name: ランプアップ
@@ -17432,6 +17443,8 @@ ja:
               display_name: 変数（へんすう）
             lessonGroup-9:
               display_name: へらす
+            lessonGroup-7:
+              display_name: デジタル シティズンシップ
           name: コースf -2021
           student_description: このコースでは、さまざまな種類のループ、イベント、関数、条件文を使用する方法を学びます。さまざまな問題解決手法を調査し、コンピューティングとインターネットの社会的影響について話し合います。このコースの後半では、友人や家族と共有できるキャップストーンプロジェクトを設計して作成します。
         express-2021:

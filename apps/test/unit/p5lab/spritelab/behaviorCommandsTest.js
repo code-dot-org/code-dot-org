@@ -25,7 +25,7 @@ describe('Behavior Commands', () => {
       makeSprite({animation: 'target', location: {x: 125, y: 200}});
       makeSprite({animation: 'target', location: {x: 125, y: 125}});
 
-      actionCommands.addTarget({name: 'subject'}, 'target');
+      actionCommands.addTarget({name: 'subject'}, 'target', 'follow');
 
       behaviorCommands.followingTargetsFunc(p5Wrapper.p5)({
         name: 'subject'
@@ -40,6 +40,47 @@ describe('Behavior Commands', () => {
         name: 'subject'
       });
 
+      expect(spriteCommands.getProp({name: 'subject'}, 'x')).to.equal(200);
+      expect(spriteCommands.getProp({name: 'subject'}, 'y')).to.equal(200);
+    });
+  });
+
+  describe('avoidingTargetsFunc', () => {
+    it('moves away from the average position of targets in range', () => {
+      p5Wrapper.p5._predefinedSpriteAnimations = {target: animation};
+      makeSprite({name: 'subject', location: {x: 200, y: 200}});
+      makeSprite({animation: 'target', location: {x: 150, y: 250}});
+      makeSprite({animation: 'target', location: {x: 150, y: 150}});
+
+      actionCommands.addTarget({name: 'subject'}, 'target', 'avoid');
+
+      behaviorCommands.avoidingTargetsFunc(p5Wrapper.p5)({
+        name: 'subject'
+      });
+      expect(spriteCommands.getProp({name: 'subject'}, 'x')).to.equal(205);
+      expect(spriteCommands.getProp({name: 'subject'}, 'y')).to.equal(200);
+    });
+
+    it('does not move if there are no targets', () => {
+      makeSprite({name: 'subject', location: {x: 200, y: 200}});
+      behaviorCommands.avoidingTargetsFunc(p5Wrapper.p5)({
+        name: 'subject'
+      });
+
+      expect(spriteCommands.getProp({name: 'subject'}, 'x')).to.equal(200);
+      expect(spriteCommands.getProp({name: 'subject'}, 'y')).to.equal(200);
+    });
+
+    it('does not move if there are no targets in range', () => {
+      p5Wrapper.p5._predefinedSpriteAnimations = {target: animation};
+      makeSprite({name: 'subject', location: {x: 200, y: 200}});
+      makeSprite({animation: 'target', location: {x: 100, y: 100}});
+
+      actionCommands.addTarget({name: 'subject'}, 'target', 'avoid');
+
+      behaviorCommands.avoidingTargetsFunc(p5Wrapper.p5)({
+        name: 'subject'
+      });
       expect(spriteCommands.getProp({name: 'subject'}, 'x')).to.equal(200);
       expect(spriteCommands.getProp({name: 'subject'}, 'y')).to.equal(200);
     });
