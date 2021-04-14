@@ -14,14 +14,7 @@ const AUTHORED_HINTS_EXTRA_WIDTH = 30; // 40 px, but 10 overlap with prompt icon
 const styles = {
   // bubble has pointer cursor by default. override that if no hints
   noAuthoredHints: {
-    cursor: 'default',
-    marginBottom: 0
-  },
-  authoredHints: {
-    // raise by 20 so that the lightbulb "floats" without causing the original
-    // icon to move. This strangeness happens in part because prompt-icon-cell
-    // is managed outside of React
-    marginBottom: 0
+    cursor: 'default'
   }
 };
 
@@ -93,7 +86,7 @@ class InstructionsCsfLeftCol extends React.Component {
         }}
         style={[
           commonStyles.bubble,
-          hasAuthoredHints ? styles.authoredHints : styles.noAuthoredHints
+          !hasAuthoredHints && styles.noAuthoredHints
         ]}
       >
         <div
