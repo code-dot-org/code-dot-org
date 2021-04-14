@@ -193,19 +193,28 @@ class LessonOverview extends Component {
                 {lesson.resources['Teacher'] && (
                   <div>
                     <h5>{i18n.forTheTeachers()}</h5>
-                    <ResourceList resources={lesson.resources['Teacher']} />
+                    <ResourceList
+                      resources={lesson.resources['Teacher']}
+                      pageType="teacher-lesson-plan"
+                    />
                   </div>
                 )}
                 {lesson.resources['Student'] && (
                   <div>
                     <h5>{i18n.forTheStudents()}</h5>
-                    <ResourceList resources={lesson.resources['Student']} />
+                    <ResourceList
+                      resources={lesson.resources['Student']}
+                      pageType="teacher-lesson-plan"
+                    />
                   </div>
                 )}
                 {lesson.resources['All'] && (
                   <div>
                     <h5>{i18n.forAll()}</h5>
-                    <ResourceList resources={lesson.resources['All']} />
+                    <ResourceList
+                      resources={lesson.resources['All']}
+                      pageType="teacher-lesson-plan"
+                    />
                   </div>
                 )}
               </div>
