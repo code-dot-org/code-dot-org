@@ -249,6 +249,14 @@ class EditSectionForm extends Component {
               disabled={isSaveInProgress}
             />
           )}
+          <RestrictAccessField
+            value={section.restrictSection}
+            onChange={restrictSection =>
+              editSectionProperties({restrictSection})
+            }
+            disabled={isSaveInProgress}
+            loginType={this.props.section.loginType}
+          />
         </div>
         <DialogFooter>
           <Button
@@ -447,6 +455,38 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
   </div>
 );
 PairProgrammingField.propTypes = FieldProps;
+
+/**
+ * TODO: RestrictAccessField
+ * - Replace strings with i18n implementation (commented)
+ * - Replace Learn More CTA Placeholder with live URL
+ **/
+
+const RestrictAccessField = ({value, onChange, disabled, loginType}) => (
+  <div>
+    {/* <FieldName>{i18n.restrictSectionAccess()}</FieldName> */}
+    <FieldName>{`Restrict access to the section`}</FieldName>
+    <FieldDescription>
+      {loginType === 'email'
+        ? `If set to ‘yes,’ students will not be able to join this section using the section code.
+          You can still add students to the section manually by moving or copying them from another 
+          section.`
+        : `If set to ‘yes,’ students will not be able to join this section using the selection code. 
+          You can still add students to the section manually on the Manage Students tab.`}{' '}
+      {/* {i18n.explainRestrictedSection(loginType)}{' '} */}
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        {`Learn more.`}
+        {/* {i18n.restrictSectionAccessLearnMore()} */}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={restrictSection => onChange(restrictSection)}
+      disabled={disabled}
+    />
+  </div>
+);
+RestrictAccessField.propTypes = {...FieldProps, loginType: PropTypes.string};
 
 const TtsAutoplayField = ({value, onChange, disabled, isEnglish}) => (
   <div>
