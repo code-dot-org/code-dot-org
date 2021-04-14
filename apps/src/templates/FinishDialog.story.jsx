@@ -76,7 +76,7 @@ const mockProgress = {
   courseId: null,
   currentStageId: 40,
   hasFullProgress: false,
-  levelProgress: {
+  levelResults: {
     1815: 17,
     1818: 100,
     1819: 30,
