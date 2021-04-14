@@ -21,6 +21,13 @@ module Services
           File.join(get_base_url, pathname)
         end
 
+        def script_overview_pdf_exists_for?(script)
+          AWS::S3.cached_exists_in_bucket?(
+            S3_BUCKET,
+            get_script_overview_pathname(script).to_s
+          )
+        end
+
         def generate_script_overview_pdf(script, directory="/tmp/")
           ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
