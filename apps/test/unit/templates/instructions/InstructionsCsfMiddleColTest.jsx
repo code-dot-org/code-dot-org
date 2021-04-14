@@ -45,12 +45,6 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('InstructionsCsfMiddleCol', () => {
-  it('calls setColHeight when the component mounts', () => {
-    const setColHeightSpy = sinon.spy();
-    setUp({setColHeight: setColHeightSpy});
-    expect(setColHeightSpy.calledOnce).to.be.true;
-  });
-
   it('passes inputOutputTable to Instructions when not collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: false, inputOutputTable});
