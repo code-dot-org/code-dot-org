@@ -5,10 +5,10 @@
     "hidden": true,
     "login_required": false,
     "properties": {
-      "peer_reviews_to_complete": 0
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-04-12 22:49:42 UTC",
     "seeding_key": {
       "script.name": "kaitie-test-script"
     }
@@ -32,6 +32,7 @@
       "name": "Module 1",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -46,6 +47,7 @@
       "name": "Module 2",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -60,6 +62,7 @@
       "name": "Module 3",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -74,6 +77,7 @@
       "name": "Module 4",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -88,6 +92,7 @@
       "name": "Module 5",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
       },
@@ -102,6 +107,7 @@
       "name": "Module 6",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -116,6 +122,7 @@
       "name": "Module 7",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -130,6 +137,7 @@
       "name": "Module 8",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
       },
@@ -138,15 +146,40 @@
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       }
+    },
+    {
+      "key": "CS Principles: Functions",
+      "name": "CS Principles: Functions",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
     }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 1 Overview (~5 minutes)"
+        "progression": "Module 1 Overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -165,9 +198,13 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Wrapping up Unit 3 (~20 minutes)"
+        "progression": "Wrapping up Unit 3 (~20 minutes)",
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -186,9 +223,13 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Unit 4 Overview (~30 minutes)"
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -207,9 +248,13 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Unit 4 Overview (~30 minutes)"
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -228,9 +273,13 @@
     {
       "chapter": 5,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Unit 4 Overview (~30 minutes)"
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -249,9 +298,13 @@
     {
       "chapter": 6,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Unit 4 Overview (~30 minutes)"
+        "progression": "Unit 4 Overview (~30 minutes)",
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -270,9 +323,13 @@
     {
       "chapter": 7,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introducing EIPM (~25 minutes)"
+        "progression": "Introducing EIPM (~25 minutes)",
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -291,9 +348,13 @@
     {
       "chapter": 8,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Introducing EIPM (~25 minutes)"
+        "progression": "Introducing EIPM (~25 minutes)",
+        "level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -312,9 +373,13 @@
     {
       "chapter": 9,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 1 Asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 1 Asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -333,9 +398,13 @@
     {
       "chapter": 10,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 2 Overview (~5 minutes)"
+        "progression": "Module 2 Overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL AYWS2 Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -354,9 +423,13 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - Variables Practice overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -375,9 +448,13 @@
     {
       "chapter": 12,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP-PL - U4 L03 Variables numbers practice 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -396,9 +473,13 @@
     {
       "chapter": 13,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables numbers practice 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -417,9 +498,13 @@
     {
       "chapter": 14,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -438,9 +523,13 @@
     {
       "chapter": 15,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -459,9 +548,13 @@
     {
       "chapter": 16,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -480,9 +573,13 @@
     {
       "chapter": 17,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -501,9 +598,13 @@
     {
       "chapter": 18,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL8 - U4 L03 Variables operator practice 6"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -522,9 +623,13 @@
     {
       "chapter": 19,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -543,9 +648,13 @@
     {
       "chapter": 20,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Practice (~35 minutes)"
+        "progression": "Variables Practice (~35 minutes)",
+        "level_keys": [
+          "CSP - PL - Practice Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -564,9 +673,13 @@
     {
       "chapter": 21,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Make (~30 minutes)"
+        "progression": "Variables Make (~30 minutes)",
+        "level_keys": [
+          "CSP - Variables Make overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -585,9 +698,13 @@
     {
       "chapter": 22,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Make (~30 minutes)"
+        "progression": "Variables Make (~30 minutes)",
+        "level_keys": [
+          "CSP - PL U4 L04 Variables Make Project_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -606,9 +723,13 @@
     {
       "chapter": 23,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Make (~30 minutes)"
+        "progression": "Variables Make (~30 minutes)",
+        "level_keys": [
+          "CSP - PL - U4 L04 Variables Make Project Submit_2020"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -627,9 +748,13 @@
     {
       "chapter": 24,
       "position": 15,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Variables Make (~30 minutes)"
+        "progression": "Variables Make (~30 minutes)",
+        "level_keys": [
+          "CSP - PL - Make Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -648,9 +773,13 @@
     {
       "chapter": 25,
       "position": 16,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Collaborative and Independent Work (~10 minutes)"
+        "progression": "Collaborative and Independent Work (~10 minutes)",
+        "level_keys": [
+          "CSP-PL - Unit 4 Wrap-up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -669,9 +798,13 @@
     {
       "chapter": 26,
       "position": 17,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Collaborative and Independent Work (~10 minutes)"
+        "progression": "Collaborative and Independent Work (~10 minutes)",
+        "level_keys": [
+          "CSP - PL - Collaboration Reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -690,9 +823,13 @@
     {
       "chapter": 27,
       "position": 18,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 2 Asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 2 Asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 2 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -711,9 +848,13 @@
     {
       "chapter": 28,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 3 Overview (~5 minutes)"
+        "progression": "Module 3 Overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -732,9 +873,13 @@
     {
       "chapter": 29,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Understanding the Context for Lists (~55 minutes)"
+        "progression": "Understanding the Context for Lists (~55 minutes)",
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -753,9 +898,13 @@
     {
       "chapter": 30,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Understanding the Context for Lists (~55 minutes)"
+        "progression": "Understanding the Context for Lists (~55 minutes)",
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -774,9 +923,13 @@
     {
       "chapter": 31,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Understanding the Context for Lists (~55 minutes)"
+        "progression": "Understanding the Context for Lists (~55 minutes)",
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -795,9 +948,13 @@
     {
       "chapter": 32,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
+        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)",
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -816,9 +973,13 @@
     {
       "chapter": 33,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
+        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)",
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -837,9 +998,13 @@
     {
       "chapter": 34,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
+        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)",
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -858,9 +1023,13 @@
     {
       "chapter": 35,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
+        "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)",
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -879,9 +1048,13 @@
     {
       "chapter": 36,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 3 Asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 3 Asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -900,9 +1073,13 @@
     {
       "chapter": 37,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 4 Overview (~5 minutes)"
+        "progression": "Module 4 Overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -921,9 +1098,13 @@
     {
       "chapter": 38,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Content of the Lists EIPM sequence (~25 minutes)"
+        "progression": "Content of the Lists EIPM sequence (~25 minutes)",
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -942,9 +1123,13 @@
     {
       "chapter": 39,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "The Lists EIPM sequence (~25 minutes)"
+        "progression": "The Lists EIPM sequence (~25 minutes)",
+        "level_keys": [
+          "CSP - Lists EIPM reflection"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -963,9 +1148,13 @@
     {
       "chapter": 40,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Mental models in Unit 5 (~35 minutes)"
+        "progression": "Mental models in Unit 5 (~35 minutes)",
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -984,9 +1173,13 @@
     {
       "chapter": 41,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Traversals and datasets (~15 minutes)",
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1005,9 +1198,13 @@
     {
       "chapter": 42,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Traversals and datasets (~15 minutes)",
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1026,9 +1223,13 @@
     {
       "chapter": 43,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Traversals and datasets (~15 minutes)",
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1047,9 +1248,13 @@
     {
       "chapter": 44,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Traversals and datasets (~15 minutes)",
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1068,9 +1273,13 @@
     {
       "chapter": 45,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Traversals and datasets (~15 minutes)",
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1089,9 +1298,13 @@
     {
       "chapter": 46,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 4 Asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 4 Asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1110,9 +1323,13 @@
     {
       "chapter": 47,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 5 overview (~5 minutes)"
+        "progression": "Module 5 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 5 - Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1131,9 +1348,13 @@
     {
       "chapter": 48,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Understanding Unit 7 (~5 minutes)"
+        "progression": "Understanding Unit 7 (~5 minutes)",
+        "level_keys": [
+          "CSP-PL M5 - Intro to Unit 7"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1152,9 +1373,13 @@
     {
       "chapter": 49,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
+        "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)",
+        "level_keys": [
+          "CSP-PL M5 - Param Explore"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1173,9 +1398,13 @@
     {
       "chapter": 50,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1194,9 +1423,13 @@
     {
       "chapter": 51,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Return Practice Part 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1215,9 +1448,13 @@
     {
       "chapter": 52,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Return Practice Part 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1236,9 +1473,13 @@
     {
       "chapter": 53,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Return Practice Part 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1257,9 +1498,13 @@
     {
       "chapter": 54,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Return Practice Part 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1278,9 +1523,13 @@
     {
       "chapter": 55,
       "position": 9,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Return Practice Part 5"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1299,9 +1548,13 @@
     {
       "chapter": 56,
       "position": 10,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Investigate Calculator App"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1320,9 +1573,13 @@
     {
       "chapter": 57,
       "position": 11,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "PL U7 Param Practice App 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1341,9 +1598,13 @@
     {
       "chapter": 58,
       "position": 12,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+        "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)",
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 10"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1362,9 +1623,13 @@
     {
       "chapter": 59,
       "position": 13,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Creating inclusive classrooms (~15 minutes)"
+        "progression": "Creating inclusive classrooms (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M5 - Inclusive Classrooms"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1383,9 +1648,13 @@
     {
       "chapter": 60,
       "position": 14,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 5 Asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 5 Asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 5 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1404,9 +1673,13 @@
     {
       "chapter": 61,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 6 overview (~5 minutes)"
+        "progression": "Module 6 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1425,9 +1698,13 @@
     {
       "chapter": 62,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Requirements of the Create Performance Task (~20 minutes)"
+        "progression": "Requirements of the Create Performance Task (~20 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1446,9 +1723,13 @@
     {
       "chapter": 63,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Digging into the Create PT Survival Guide (~40 minutes)"
+        "progression": "Digging into the Create PT Survival Guide (~40 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1467,9 +1748,13 @@
     {
       "chapter": 64,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Role of the teacher during the Create PT (~15 minutes)"
+        "progression": "Role of the teacher during the Create PT (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1488,9 +1773,13 @@
     {
       "chapter": 65,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
+        "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1509,9 +1798,13 @@
     {
       "chapter": 66,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 7 overview (~5 minutes)"
+        "progression": "Module 7 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1530,9 +1823,13 @@
     {
       "chapter": 67,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Overview of Unit 9 - Data (~10 minutes)"
+        "progression": "Overview of Unit 9 - Data (~10 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1551,9 +1848,13 @@
     {
       "chapter": 68,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using the Google Trends tool (~20 minutes)"
+        "progression": "Using the Google Trends tool (~20 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1572,9 +1873,13 @@
     {
       "chapter": 69,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using the Data Visualizer tool (~45 minutes)"
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1593,9 +1898,13 @@
     {
       "chapter": 70,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using the Data Visualizer tool (~45 minutes)"
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1614,9 +1923,13 @@
     {
       "chapter": 71,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using the Data Visualizer tool (~45 minutes)"
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1635,9 +1948,13 @@
     {
       "chapter": 72,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Using the Data Visualizer tool (~45 minutes)"
+        "progression": "Using the Data Visualizer tool (~45 minutes)",
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1656,9 +1973,13 @@
     {
       "chapter": 73,
       "position": 8,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 7 asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1677,9 +1998,13 @@
     {
       "chapter": 74,
       "position": 1,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 8 overview (~5 minutes)"
+        "progression": "Module 8 overview (~5 minutes)",
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1698,9 +2023,13 @@
     {
       "chapter": 75,
       "position": 2,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Connecting to the CS community (~15 minutes)"
+        "progression": "Connecting to the CS community (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Community 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1719,9 +2048,13 @@
     {
       "chapter": 76,
       "position": 3,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Connecting to the CS community (~15 minutes)"
+        "progression": "Connecting to the CS community (~15 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Community 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1740,9 +2073,13 @@
     {
       "chapter": 77,
       "position": 4,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1761,9 +2098,13 @@
     {
       "chapter": 78,
       "position": 5,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1782,9 +2123,13 @@
     {
       "chapter": 79,
       "position": 6,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
+        "progression": "Preparing students for the AP multiple choice exam (~60 minutes)",
+        "level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1803,9 +2148,13 @@
     {
       "chapter": 80,
       "position": 7,
+      "activity_section_position": null,
       "assessment": null,
       "properties": {
-        "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
+        "progression": "Module 8 asynchronous wrap-up (~10 minutes)",
+        "level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ]
       },
       "named_level": null,
       "bonus": null,
@@ -1819,6 +2168,31 @@
       },
       "level_keys": [
         "CSP - Module 8 Wrap Up"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": null,
+      "properties": {
+        "progression": "CS Principles: Functions",
+        "level_keys": [
+          "CS Principles: Functions"
+        ]
+      },
+      "named_level": null,
+      "bonus": null,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      },
+      "level_keys": [
+        "CS Principles: Functions"
       ]
     }
   ],
@@ -2702,6 +3076,47 @@
         "lesson_group.key": "",
         "script.name": "kaitie-test-script"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CS Principles: Functions",
+        "script_level.level_keys": [
+          "CS Principles: Functions"
+        ],
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

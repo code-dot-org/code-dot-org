@@ -289,9 +289,9 @@ class CourseEditor extends Component {
 
             <ResourcesEditor
               inputStyle={styles.input}
-              teacherResources={teacherResources}
-              migratedTeacherResources={this.props.migratedTeacherResources}
-              updateTeacherResources={teacherResources =>
+              resources={teacherResources}
+              migratedResources={this.props.migratedTeacherResources}
+              updateResources={teacherResources =>
                 this.setState({teacherResources})
               }
               courseVersionId={this.props.courseVersionId}

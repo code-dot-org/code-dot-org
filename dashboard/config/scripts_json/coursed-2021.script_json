@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-04-05 15:55:07 UTC",
+    "serialized_at": "2021-04-07 17:19:47 UTC",
     "seeding_key": {
       "script.name": "coursed-2021"
     }
@@ -9799,13 +9799,24 @@
     },
     {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview",
+      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Change Log",
+      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
+      "key": "change_log",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "change_log"
       }
     }
   ],
@@ -10067,6 +10078,12 @@
     {
       "seeding_key": {
         "resource.key": "curriculum_guide",
+        "script.name": "coursed-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "change_log",
         "script.name": "coursed-2021"
       }
     }
@@ -11393,6 +11410,19 @@
     }
   ],
   "lessons_opportunity_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-5-ETS1-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "ngss",
+        "opportunity_standard.shortcode": "3-5-ETS1-1"
+      }
+    }
   ]
 }
