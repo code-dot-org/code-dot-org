@@ -5828,6 +5828,8 @@ ru:
               display_name: Переменные
             lessonGroup-9:
               display_name: Удалить
+            lessonGroup-7:
+              display_name: Цифровое гражданство
         express-2021:
           title: Экспресс-курс (2017)
           description_audience: 'Возраст: 9-18'

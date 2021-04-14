@@ -215,7 +215,7 @@ az:
         infinity:
           lessons:
             Infinity:
-              name: Sonsuzluq
+              name: Sonsuz sayda
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -1985,6 +1985,8 @@ az:
               display_name: dəyişənlər
             lessonGroup-9:
               display_name: sil
+            lessonGroup-7:
+              display_name: Rəqəmsal vətəndaşlıq
         express-2021:
           lessons:
             Dance Party:

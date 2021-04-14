@@ -21179,6 +21179,8 @@ ko:
               description_student: 게임 또는 스토리 만들기
               description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
                 코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 스토리를 만들 시간입니다!
+            lesson-1:
+              name: 과정말 프로젝트
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -21188,6 +21190,8 @@ ko:
               display_name: 반복
             csf_events:
               display_name: 이벤트
+            lessonGroup-5:
+              display_name: 과정말 프로젝트
           name: 과정 a-2021
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
             게임 또는 스토리를 만드세요.
@@ -21275,6 +21279,8 @@ ko:
               description_student: 이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요.
               description_teacher: 이 온라인 활동에서 학생들은 플레이 랩에서 이벤트를 사용하는 방법을 배우고 배웠던 모든
                 코딩 기술을 적용하여 애니메이션 게임을 만듭니다. 창의력을 발휘해 플레이 랩에서 게임을 만들 시간입니다!
+            lesson-1:
+              name: 과정말 프로젝트
           lesson_groups:
             csf_digcit:
               display_name: 디지털 시민의식
@@ -21286,6 +21292,8 @@ ko:
               display_name: 컴퓨팅의 영향
             csf_events:
               display_name: 이벤트
+            lessonGroup-6:
+              display_name: 과정말 프로젝트
           name: 과정 b-2021
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의
             게임 또는 스토리를 만드세요.
@@ -21931,6 +21939,10 @@ ko:
               name: 스프라이트 인 액션
             lesson-10:
               name: 텍스트 저장 및 검색
+            lesson-2:
+              name: 말의 힘
+              description_student: 괴롭힘은 어떤 경우에도 괜찮지 않습니다. 이 레슨은 온라인에서 말해도 괜찮은 것과 그렇지
+                않은 것에 대해 말해 줍니다.
           lesson_groups:
             ramp_up:
               display_name: 램프 업
@@ -21948,6 +21960,8 @@ ko:
               display_name: 변수
             lessonGroup-9:
               display_name: 삭제
+            lessonGroup-7:
+              display_name: 디지털 시민의식
           name: 과정 f-2021
           student_description: 여러 종류의 루프와 이벤트, 함수, 조건을 사용하는 방법을 배우세요. 다른 문제해결 기법을
             조사하고 컴퓨팅과 인터넷의 사회적 영향을 토론하세요. 이 과정의 두 번째 부분에서는 친구, 가족과 공유할 수 있는 최고 기준이

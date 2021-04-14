@@ -19999,6 +19999,11 @@ fil:
                 loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli,
                 sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling
                 sining sa libreng laro na antas.
+            lesson-2:
+              name: Ang Kapangyarihan ng mga Salita
+              description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling
+                ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng
+                sabihin online.
           lesson_groups:
             ramp_up:
               display_name: Pabilisin
@@ -20014,6 +20019,8 @@ fil:
               display_name: Mga variable
             lessonGroup-9:
               display_name: tanggalin
+            lessonGroup-7:
+              display_name: Digital na Pagkamamamayan
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga
             event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga
             pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng

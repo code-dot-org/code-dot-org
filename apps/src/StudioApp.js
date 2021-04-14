@@ -559,7 +559,7 @@ StudioApp.prototype.init = function(config) {
     document.body.appendChild(startDialogDiv);
     const progress = getStore().getState().progress;
     const isComplete =
-      progress.levelProgress[progress.currentLevelId] >=
+      progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
     ReactDOM.render(
       <ChallengeDialog
@@ -3418,7 +3418,7 @@ StudioApp.prototype.isNotStartedLevel = function(config) {
   } else {
     return (
       config.readonlyWorkspace &&
-      progress.levelProgress[progress.currentLevelId] === undefined
+      progress.levelResults[progress.currentLevelId] === undefined
     );
   }
 };

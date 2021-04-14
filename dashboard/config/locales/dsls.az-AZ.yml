@@ -229,11 +229,21 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 0
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 1
+        - text: |-
+            Təkərlər/tərəf: 2
+            Pəncərələr/tərəf: 6
+        - text: |-
+            Təkərlər/tərəf: 3
+            Pəncərələr/tərəf: 2
         title: Cütləşdirmə
+        content1: Nəqliyyat vasitələrinin hər biri kiçik parçalara ayrılıb.  Hər bir
+          nəqliyyat vasitəsini onun parçalanmış hissələri ilə uyğunlaşdırın.
       4-5 Computational Thinking Multi 1:
         answers:
         - {}
@@ -363,7 +373,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hansı bloklar tapmacanı həll edir?
       4-5 maze match 1:
         answers:
         - {}
@@ -380,7 +390,7 @@ az-AZ:
         - {}
         - {}
         questions:
-        - {}
+        - text: Hansı bloklar tapmacanı həll edir?
       CSD Header Size MC:
         answers:
         - {}
@@ -1767,3 +1777,12 @@ az-AZ:
         - {}
         questions:
         - {}
+      Unit 1 Lesson 1 Overview:
+        markdown: Sinif mümkün qədər qəpiklərə dəstək olacaq alüminium folqa qayıqlar
+          dizayn etmək üçün qrup şəklində işləyir. Dərs sonunda qruplar fəaliyyətdəki
+          təcrübələrini əks etdirir və kursun qalan hissəsi üçün edəcəyi problem həll
+          növləri ilə əlaqələr qurur.
+        teacher_markdown: Sinif mümkün qədər qəpiklərə dəstək olacaq alüminium folqa
+          qayıqlar dizayn etmək üçün qrup şəklində işləyir. Dərs sonunda qruplar fəaliyyətdəki
+          təcrübələrini əks etdirir və kursun qalan hissəsi üçün edəcəyi problem həll
+          növləri ilə əlaqələr qurur.
