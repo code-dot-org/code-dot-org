@@ -1,3 +1,4 @@
+import {assert} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLesson as ProgressLesson} from '@cdo/apps/templates/progress/ProgressLesson';
@@ -8,7 +9,6 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {expect, assert} from '../../../util/reconfiguredChai';
 
 describe('ProgressLesson', () => {
   const defaultProps = {
@@ -25,7 +25,8 @@ describe('ProgressLesson', () => {
     showLockIcon: true,
     lessonIsVisible: () => true,
     lessonLockedForSection: () => false,
-    lockableAuthorized: true
+    lockableAuthorized: true,
+    userId: 1
   };
 
   it('renders with gray background when not hidden', () => {
@@ -89,6 +90,17 @@ describe('ProgressLesson', () => {
         viewAs={ViewType.Teacher}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
+      />
+    );
+    assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
+  });
+
+  it('disables bubbles when signed out', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        userId={null}
       />
     );
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
@@ -177,6 +189,30 @@ describe('ProgressLesson', () => {
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorized={false}
         viewAs={ViewType.Teacher}
+      />
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(0)
+        .props().icon,
+      'caret-down'
+    );
+    assert.equal(
+      wrapper
+        .find('FontAwesome')
+        .at(1)
+        .props().icon,
+      'lock'
+    );
+  });
+
+  it('has a locked icon when signed out', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        lesson={fakeLesson('lesson1', 1, true)}
+        userId={null}
       />
     );
     assert.equal(
@@ -338,9 +374,22 @@ describe('ProgressLesson', () => {
         lockableAuthorized={false}
       />
     );
-    expect(wrapper.text()).to.include(
-      'This lesson is locked. In order to be able to unlock it you must become a verified teacher.'
+    assert.equal(
+      wrapper.find('SafeMarkdown').props().markdown,
+      'This lesson is locked - you need to become a verified teacher to unlock it. [Learn more.](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-)'
     );
+  });
+
+  it('does not show not verified warning on lockable lesson when viewing as verified teacher', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Teacher}
+        lesson={fakeLesson('lesson1', 1, true)}
+        lockableAuthorized={true}
+      />
+    );
+    assert.equal(wrapper.find('SafeMarkdown').length, 0);
   });
 
   it('shows Lesson Resources button when viewing as a student and student_lesson_plan_html_url is not null', () => {
