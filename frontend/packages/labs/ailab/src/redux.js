@@ -978,7 +978,7 @@ export function getTrainedModelDataToSave(state) {
 
   // If the first column has a description, assume descriptions are in the
   // metadata for that dataset and use them; otherwise, use manually entered
-  // column desscriptions.
+  // column descriptions.
   if (
     state.metadata &&
     state.metadata.fields &&
@@ -1058,6 +1058,8 @@ const panelList = [
 ];
 */
 
+// Is a panel ready to be visited?  This determines whether a visible
+// nav button is enabled or disabled.
 function isPanelEnabled(state, panelId) {
   if (panelId === "specifyColumns") {
     if (state.data.length === 0) {
@@ -1119,6 +1121,8 @@ function isPanelEnabled(state, panelId) {
   return true;
 }
 
+// Is a panel available to be shown?  This determines what panels
+// can possible be visited in the app.
 function isPanelAvailable(state, panelId) {
   const mode = state.mode;
 

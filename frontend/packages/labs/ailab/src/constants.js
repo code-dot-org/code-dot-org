@@ -193,11 +193,11 @@ export const styles = {
   },
 
   selectDatasetItemHighlighted: {
-    backgroundColor: "#d6f2fa",
+    backgroundColor: "#d6f2fa"
   },
 
   selectDatasetItemSelected: {
-    backgroundColor: "#94e3fa",
+    backgroundColor: "#94e3fa"
   },
 
   selectDatasetImage: {
@@ -381,7 +381,12 @@ export const styles = {
     color: featureColor
   },
 
-  trainModelContainer: { overflow: "hidden", paddingTop: 20 },
+  trainModelContainer: {
+    position: "relative",
+    overflow: "hidden",
+    paddingTop: 20,
+    width: "50%"
+  },
   trainModelDataTable: {
     width: "30%",
     overflow: "hidden",
