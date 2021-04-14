@@ -375,6 +375,7 @@ class Lesson < ApplicationRecord
       programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
       objectives: objectives.map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
+      frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       courseVersionId: lesson_group.script.get_course_version&.id,
       scriptIsVisible: !script.hidden,

@@ -180,6 +180,47 @@ export function appendItem(
   }
 }
 
+function interpreterGetValue(object, key) {
+  return getValue(object, key, dmapiValidateType, true);
+}
+
+export function getValue(
+  object,
+  key,
+  validateType = apiValidateType,
+  calledWithinInterpreter
+) {
+  validateType({}, 'getValue', 'key', key, 'string');
+
+  const objectContents = calledWithinInterpreter ? object.properties : object;
+  const keyData = key.data;
+  const valueData = objectContents[keyData];
+  if (valueData === undefined) {
+    outputWarning(key + ' is not in ' + object);
+    return undefined;
+  }
+  return objectContents[keyData].data;
+}
+
+function interpreterAddPair(object, key, value) {
+  return addPair(object, key, value, dmapiValidateType, true);
+}
+
+export function addPair(
+  object,
+  key,
+  value,
+  validateType = apiValidateType,
+  calledWithinInterpreter
+) {
+  validateType({}, 'addPair', 'key', key, 'string');
+
+  const newKey = key.data;
+  const objectContents = calledWithinInterpreter ? object.properties : object;
+  objectContents[newKey] = value;
+  return objectContents;
+}
+
 // ImageData RGB helper functions
 
 // TODO: more parameter validation (data array type, length), error output
@@ -277,6 +318,8 @@ const interpreterFunctions = {
   insertItem: interpreterInsertItem,
   removeItem: interpreterRemoveItem,
   appendItem: interpreterAppendItem,
+  getValue: interpreterGetValue,
+  addPair: interpreterAddPair,
   getRed: interpreterGetRed,
   getGreen: interpreterGetGreen,
   getBlue: interpreterGetBlue,

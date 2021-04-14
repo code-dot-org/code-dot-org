@@ -27,16 +27,16 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   end
 
   # GET api/v1/ml_models/names
-  # Retrieve the names and ids of a user's trained ML models.
+  # Retrieve the names, ids and metadata of a user's trained ML models.
   def names
-    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {"id": user_ml_model.model_id, "name": user_ml_model.name}}
+    user_ml_model_data = UserMlModel.where(user_id: current_user&.id).map {|user_ml_model| {id: user_ml_model.model_id, name: user_ml_model.name, metadata: JSON.parse(user_ml_model.metadata)}}
     render json: user_ml_model_data.to_json
   end
 
   # GET api/v1/ml_models/:id/metadata
   # Retrieve a trained ML model's metadata
   def metadata
-    metadata = UserMlModel.where(user_id: current_user&.id, model_id: params[:id])&.first&.metadata
+    metadata = UserMlModel.where(model_id: params[:id])&.first&.metadata
     return render_404 unless metadata
     render json: JSON.parse(metadata)
   end
@@ -58,8 +58,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     deleted_from_s3 = delete_from_s3(@user_ml_model.model_id)
     status =
       @user_ml_model.destroyed? && deleted_from_s3 ? "success" : "failure"
-    render json: {id: @user_ml_model.id, status: status}
-    head :no_content
+    render json: {id: @user_ml_model.model_id, status: status}
   end
 
   private

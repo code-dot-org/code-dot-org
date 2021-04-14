@@ -13,6 +13,7 @@ describe('ResourcesEditor', () => {
     removeResource = sinon.spy();
     defaultProps = {
       resources: resourceTestData,
+      resourceContext: 'testResource',
       addResource,
       editResource,
       removeResource

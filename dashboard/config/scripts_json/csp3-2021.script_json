@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-03-26 23:10:49 UTC",
+    "serialized_at": "2021-04-09 23:33:09 UTC",
     "seeding_key": {
       "script.name": "csp3-2021"
     }
@@ -3124,7 +3124,7 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3150,7 +3150,7 @@
       "chapter": 31,
       "position": 2,
       "activity_section_position": 2,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3176,7 +3176,7 @@
       "chapter": 32,
       "position": 3,
       "activity_section_position": 3,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3202,7 +3202,7 @@
       "chapter": 33,
       "position": 4,
       "activity_section_position": 4,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3228,7 +3228,7 @@
       "chapter": 34,
       "position": 5,
       "activity_section_position": 5,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3254,7 +3254,7 @@
       "chapter": 35,
       "position": 6,
       "activity_section_position": 6,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -3280,7 +3280,7 @@
       "chapter": 36,
       "position": 7,
       "activity_section_position": 7,
-      "assessment": null,
+      "assessment": false,
       "properties": {
         "progression": "Debugging",
         "level_keys": [
@@ -4002,6 +4002,30 @@
       "seeding_key": {
         "resource.key": "app_development_planning_guide"
       }
+    },
+    {
+      "name": "How To Debug",
+      "url": "https://youtu.be/auv10y-dN4s",
+      "key": "how_to_debug",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://youtu.be/q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
     }
   ],
   "lessons_resources": [
@@ -4067,6 +4091,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "how_to_debug"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "csp-unit-3-intro-to-app-design"
       }
@@ -4075,6 +4105,12 @@
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 3",
         "resource.key": "app_development_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Designing an App Part 3",
+        "resource.key": "pair_programming"
       }
     },
     {
@@ -4115,6 +4151,9 @@
     }
   ],
   "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
 
   ],
   "vocabularies": [
@@ -4894,5 +4933,8 @@
         "standard.shortcode": "3A-AP-23"
       }
     }
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

@@ -74,7 +74,14 @@ module Services
             StringIO.new(CDO.gdrive_export_secret&.to_json || "")
           )
           file = @google_drive_session.file_by_url(url)
-          file.export_as_file(path)
+
+          # If file is already a PDF, we can just download it; otherwise, we
+          # need to export to convert it.
+          if file.available_content_types.include? "appliction/pdf"
+            file.download_to_file(path)
+          else
+            file.export_as_file(path)
+          end
         end
 
         def fetch_resource_pdf(resource, directory="/tmp/")
