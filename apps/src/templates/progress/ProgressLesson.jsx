@@ -75,6 +75,12 @@ const styles = {
   },
   unlockedIcon: {
     color: color.orange
+  },
+  notAuthorizedWarning: {
+    color: color.red,
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontStyle: 'italic',
+    marginTop: 10
   }
 };
 
@@ -163,15 +169,18 @@ class ProgressLesson extends React.Component {
       : lesson.name;
     const caret = this.state.collapsed ? 'caret-right' : 'caret-down';
 
+    const teacherNotLockableAuthorized =
+      !this.props.lockableAuthorized && viewAs === ViewType.Teacher;
+
     // Treat the stage as locked if either
     // (a) it is locked for this user (in the case of a student)
     // (b) it is locked for all students in the section (in the case of a teacher)
-    // (c)
+    // (c) teacher is not verified and can't access lockable content
     const locked =
       lesson.lockable &&
       (stageLocked(levels) ||
         lessonLockedForSection(lesson.id) ||
-        (!this.props.lockableAuthorized && viewAs === ViewType.Teacher));
+        teacherNotLockableAuthorized);
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
@@ -196,7 +205,9 @@ class ProgressLesson extends React.Component {
         <div
           style={{
             ...styles.main,
-            ...(hiddenOrLocked && styles.translucent)
+            ...(hiddenOrLocked &&
+              teacherNotLockableAuthorized &&
+              styles.translucent)
           }}
         >
           <div style={styles.heading}>
@@ -248,6 +259,12 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
+          {lesson.lockable && teacherNotLockableAuthorized && (
+            <div style={styles.notAuthorizedWarning}>
+              This lesson is locked. In order to be able to unlock it you must
+              become a verified teacher.
+            </div>
+          )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
