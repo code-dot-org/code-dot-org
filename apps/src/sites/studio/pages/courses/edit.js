@@ -18,12 +18,19 @@ function showCourseEditor() {
     courseEditorData.course_summary.teacher_resources || []
   ).map(([type, link]) => ({type, link}));
 
-  registerReducers({resources: createResourcesReducer('teacherResource')});
+  registerReducers({
+    resources: createResourcesReducer('teacherResource'),
+    studentResources: createResourcesReducer('studentResource')
+  });
   const store = getStore();
   store.dispatch(
     initResources(
       'teacherResource',
       courseEditorData.course_summary.migrated_teacher_resources || []
+    ),
+    initResources(
+      'studentResource',
+      courseEditorData.course_summary.student_resources || []
     )
   );
 

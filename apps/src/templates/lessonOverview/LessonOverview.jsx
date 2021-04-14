@@ -62,6 +62,11 @@ const styles = {
   dropdowns: {
     display: 'flex',
     justifyContent: 'flex-end'
+  },
+  standardsHeaderAndButton: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 };
 
@@ -175,11 +180,22 @@ class LessonOverview extends Component {
             )}
             {lesson.standards.length > 0 && (
               <div>
-                <h2>{i18n.standards()}</h2>
+                <div style={styles.standardsHeaderAndButton}>
+                  <h2>{i18n.standards()}</h2>
+                  {lesson.courseVersionStandardsUrl && (
+                    <Button
+                      __useDeprecatedTag
+                      color={Button.ButtonColor.gray}
+                      href={lesson.courseVersionStandardsUrl}
+                      style={{marginLeft: 50}}
+                      target="_blank"
+                      text={i18n.fullCourseAlignment()}
+                    />
+                  )}
+                </div>
                 <LessonStandards
                   standards={lesson.standards}
                   expandMode={ExpandMode.FIRST}
-                  courseVersionStandardsUrl={lesson.courseVersionStandardsUrl}
                 />
               </div>
             )}

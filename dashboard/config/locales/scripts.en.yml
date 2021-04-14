@@ -18788,6 +18788,40 @@ en:
               name: Exemplars I Accidentally Made in LB
             temp:
               name: TEMP LEVELS - DELETE LATER
+            lesson1:
+              name: Introduction to Machine Learning
+            lesson2:
+              name: How Computers Learn
+            lesson3:
+              name: Patterns in Data
+            lesson4:
+              name: Classification with Machine Learning
+            lesson5:
+              name: Training a Model with Features
+            lesson6:
+              name: Importing a Model in App Lab
+            lesson7:
+              name: The Need for Model Cards
+            lesson8:
+              name: Numerical Data in AI Lab
+            lesson9:
+              name: Regression With Machine Learning
+            lesson10:
+              name: Using Model Cards in App Lab
+            lesson11:
+              name: Customizing Your App
+            lesson12:
+              name: Making Data Decisions
+            lesson13:
+              name: AI for Social Good (Unplugged)
+            lesson14:
+              name: AI Code of Ethics (Unplugged)
+            lesson15:
+              name: Planning Your App
+            lesson16:
+              name: 'Project: App with Real-World Data'
+            ailab-explore:
+              name: Explore AI Lab
           lesson_groups: {}
           title: ML/AI Unit - CSD
           description_audience: ''
@@ -19870,9 +19904,16 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            lesson-1:
+              name: tess test
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
+              description: "### Unit Philosophy and Pedagogy\n\n* **Inventing the Internet with the Internet Simulator:** This unit features many different versions of the Internet Simulator, a digital widget that simulates how different features or \"layers\" of the Internet work. As students move from lesson to lesson, the version of the Internet Simulator they use will have slightly more functionality than the last. Lessons will present students with challenges that closely mimic those that the internet's original inventors needed to solve. Students will collaboratively design and test solutions to those problems to develop an intuitive understanding of how the internet works and why it was designed that way. By the end of the unit, students will have \"invented the internet\" themselves! \n\n* **Continuing to Establish a Strong Classroom Culture:** Much like the Digital Information unit that comes before it, this unit emphasizes collaborative problem solving and developing a supportive and inclusive classroom culture. \n\n### Major Assessment and Projects\n\nThe unit project asks students to design a policy position for an imaginary political candidate related to an \"Internet Dilemma.\" Students must analyze news stories about their topic to identify impacted groups, explain those groups interests, explain technical background about the dilemma, and then recommend a policy solution that the candidate should advocate for. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CSN-1: that computer systems and networks facilitate how data are transferred\n* IOC-1: and that while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 4.1 The Internet\n* 4.2 Fault Tolerance\n* 5.2 Digital Divide"
+            lessonGroup-2:
+              display_name: Tess test
+              big_questions: Big question
+              description: helllo
           name: csp2-2021
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
         csp3-2021:
@@ -20132,6 +20173,45 @@ en:
           lesson_groups:
             csp_lists:
               display_name: Lists
+              description: |-
+                ### Unit Philosophy and Pedagogy
+
+                * **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the "Hackathon" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most "Create-PT-like" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.
+
+                * **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.
+
+                * **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.
+
+
+
+                ### Major Assessment and Projects
+
+                The unit project asks students to spend five days as part of a "Hackathon" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+
+                ### AP Connections
+
+                This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+                * CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.
+                * AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.
+                * AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+                * AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.
+
+                This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+                * 3.2 Data Abstraction
+                * 3.4 Strings
+                * 3.8 Iteration
+                * 3.10 Lists
+                * 3.16 Simulations
+
+                The College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.
+
+                * 3.b.i
+                * 3.b.ii
+                * 3.b.iii
+                * 3.b.iv
+                * 3.b.v
             csp_loops:
               display_name: Loops
             csp_traversals:
@@ -20179,6 +20259,34 @@ en:
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
+              description: |-
+                ### Unit Philosophy and Pedagogy
+
+
+                * **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.
+
+                * **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.
+
+
+                ### Major Assessment and Projects
+
+                This unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.
+
+                ### AP Connections
+
+                This unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the "Standards" page for this unit.
+
+                * AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+                * AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.
+                * CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.
+
+                This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+
+                * 3.9 Developing Algorithms
+                * 3.11 Binary Search
+                * 3.17 Algorithmic Efficiency
+                * 3.18 Undecidable Problems
+                * 4.3 Parallel and Distributed Computing
           name: csp6-2021
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
         csp7-2021:
@@ -20245,6 +20353,7 @@ en:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
+              description: "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
             csp_libraries:
               display_name: Libraries
           name: csp7-2021
@@ -21703,8 +21812,42 @@ en:
           name: csd5-preview-2021
           student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
         testtess:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            new lesson:
+              name: lesson display name
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: testtess
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: |-
+            I get the error only when trying to add this markdown chunk.
+             ### Unit Philosophy and Pedagogy
+            * **Intro to EIPM:** This unit is students' first experience with the Explore, Investigate, Practice, Make lesson sequence, or EIPM. This structured approach to teaching programming is covered in detail in the curriculum guide and we highly recommend that you watch the [accompanying video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3) to better understand what EIPM should look like in the classroom. When used effectively, it supports deep learning of content and helps maintain a collaborative classroom culture, even as you move into more complex programming concepts.
+            * **Scaffolding Towards Independent Projects:** A major goal of this course is to empower students to design and build projects independently. The Create PT in Unit 8 offers students enormous freedoms to scope and build projects, and even this unit begins scaffolding towards that goal. Individual EIPM sequences of lessons gradually prepare students for scoped, independent Make projects. The unit project has a few requirements, but students are largely free to choose the design, topic, and implementation of their ideas. As you teach the unit, look for the opportunities to scaffold the skills and knowledge students will need to creatively and independently tackle the unit project.
+            ### Major Assessment and Projects
+            The unit project asks students to design an app that makes a recommendation based on input information from the user. Students are given a great deal of freedom to choose their topic, design their user interface, and decide how to actually program their app's behavior. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.
+            ### AP Connections
+            This unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the "Standards" page for this unit.
+            * CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.
+            * AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.
+            * AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+            * AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.
+            This unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).
+            * 1.4 Identifying and Correcting Errors
+            * 3.1 Variables and Assignment
+            * 3.3 Mathematical Expressions
+            * 3.5 Boolean Expressions
+            * 3.6 Conditionals
+            * 3.7 Nested Conditionals
+            * 3.15 Random Values
+            The College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.
+            * 3.a.i.
+            * 3.a.ii.
+            * 3.a.iii
+          student_description: ''
         contagion-pilot:
           lessons:
             new lesson:
@@ -21885,12 +22028,24 @@ en:
 '
             lesson-12:
               name: SprayPainter
+              description_student: Your `PainterPlus` has several ways to move around and interact with The Neighborhood. In this lesson, you develop a new type of `Painter` called `SprayPainter` with a `sprayPaint` method. With the `SprayPainter`, you create a mural and more interesting artwork in The Neighborhood.
+              description_teacher: 'In this lesson, students apply their knowledge of methods and classes to write a new type of `Painter`, the `SprayPainter`, from scratch, including writing a new method with parameters: `sprayPaint(String color1, String color 2)`. The new `SprayPainter` class is implemented to create an abstract mural.'
             lesson-13:
               name: StampPainter
+              description_student: You now have a `PainterPlus` and a `SprayPainter` that can be used to create artwork in The Neighborhood. In this lesson, you learn about pixel art and explore the opportunities of using technology in art and design. You develop a new type of `Painter` called the `StampPainter` that can paint custom shapes.
+              description_teacher: In this lesson, students continue to apply the principle of inheritance in their code by implementing the `StampPainter` class -- an extension of the `PainterPlus` class that paints customized shapes and images. This lesson serves as reinforcement to the previous lesson on inheritance. Students continue to practice deriving a new class based on an existing class, only adding new methods.
             lesson-14:
               name: Edge Cases
+              description_student: In this lesson, you expand your software engineering skills to perform test-driven development. You explore new edge cases in The Neighborhood and make decisions about how you solve these problems. You discover that there is not always a single correct answer to solving problems – sometimes you have to make your own decisions about how you choose to handle edge cases!
+              description_teacher: Before, students were given the starting Neighborhood; now, students design their own Neighborhood. The focus of the lesson is answering questions that do not have a single correct answer. Students discover the trade-offs in design decisions and practice justifying their decisions.
             lesson-15:
               name: Software Engineering Wrap Up
+              description_student: 'You have learned a lot about being a software engineer! You revisit the core values of software engineering and reflect on how you used these throughout the unit. You also explore open source code and discover how much you now know about programming and software engineering.
+
+'
+              description_teacher: 'In this lesson, students examine open-source code and connect real-world applications and the concepts they have learned in this unit. Students review the core values of software engineering and reflect on how they used them. Through discovery, students affirm the core values of software engineering.
+
+'
             lesson-16:
               name: 'Project: Personal Symbol - Day 1'
             lesson-17:
@@ -22215,6 +22370,21 @@ en:
               display_name: Poem Bot - Spring Forum 2021
           name: poembot-springforum21
           title: Poem Bot for Spring Forum 2021
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-playground:
+          lessons:
+            new lesson:
+              name: lesson display name
+            Module 1:
+              name: Module 1
+          lesson_groups:
+            lesson group:
+              display_name: lesson group display name
+          name: pl-playground
+          title: PL Playground
           description_audience: ''
           description_short: ''
           description: ''

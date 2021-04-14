@@ -1,0 +1,7 @@
+name 'courseF_labels_predict_multi'
+question 'This code might look familiar but read it carefully. What will be printed if the user types in "pizza"?'
+wrong '"One pizza coming right up!"', feedback: 'Incorrect. The variable labels do not match.'
+wrong '"One meal coming right up!"', feedback: 'Incorrect. The label of a variable is never printed.'
+wrong '"One food coming right up!"', feedback: 'Incorrect. The label of a variable is never printed.'
+right '"One  coming right up!"', feedback: 'Correct! The variable labels do not match.'
+wrong 'Nothing will get printed.', feedback: 'Incorrect. The event and the print block will still work.'

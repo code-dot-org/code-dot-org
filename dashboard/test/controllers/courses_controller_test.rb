@@ -337,6 +337,21 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 1, unit_group.resources.length
   end
 
+  test "update: persists student resources for migrated unit groups" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    course_version = create :course_version, :with_unit_group
+    unit_group = course_version.content_root
+    unit_group.update!(name: 'csp-2017')
+    script = create :script, hidden: true, is_migrated: true
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    resource = create :resource, course_version: course_version
+
+    post :update, params: {course_name: 'csp-2017', scripts: [], title: 'Computer Science Principles', studentResourceIds: [resource.id]}
+    unit_group.reload
+    assert_equal 1, unit_group.student_resources.length
+  end
+
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{course_name: @unit_group_migrated.name}}
   test_user_gets_response_for :vocab, response: 404, user: :teacher, params: -> {{course_name: @unit_group_unmigrated.name}}
 
