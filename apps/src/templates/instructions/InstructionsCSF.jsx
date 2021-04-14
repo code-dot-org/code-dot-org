@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import ThreeColumns from './ThreeColumns';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import {levenshtein} from '../../utils';
+import {getOuterHeight} from './utils';
 import styleConstants from '../../styleConstants';
 import InstructionsCsfLeftCol from './InstructionsCsfLeftCol';
 import InstructionsCsfRightCol from './InstructionsCsfRightCol';
@@ -213,7 +214,7 @@ class InstructionsCSF extends React.Component {
 
   getMinInstructionsHeight = (collapsed = this.props.collapsed) => {
     if (collapsed || this.props.overlayVisible || this.props.isEmbedView) {
-      return Math.min(this.state.middleColHeight, this.props.maxHeight);
+      return Math.min(this.getMiddleColHeight(), this.props.maxHeight);
     } else {
       return 0;
     }
@@ -234,10 +235,10 @@ class InstructionsCSF extends React.Component {
    * current collapsed state.
    * @returns {number} The max height of the top instructions
    */
-  getMaxHeight(collapsed = this.props.collapsed) {
-    const {leftColHeight, middleColHeight, rightColHeight} = this.state;
+  getMaxHeight() {
+    const {leftColHeight, rightColHeight} = this.state;
     return (
-      Math.max(leftColHeight, middleColHeight, rightColHeight) +
+      Math.max(leftColHeight, this.getMiddleColHeight(), rightColHeight) +
       this.contentWrapperHeight()
     );
   }
@@ -285,24 +286,28 @@ class InstructionsCSF extends React.Component {
   };
 
   setRightColWidth = width => {
-    this.setState({rightColWidth: width || 0});
+    width !== this.state.rightColWidth &&
+      this.setState({rightColWidth: width || 0});
   };
 
   setRightColHeight = height => {
-    this.setState({rightColHeight: height || 0});
+    height !== this.state.rightColHeight &&
+      this.setState({rightColHeight: height || 0});
   };
 
   setLeftColWidth = width => {
-    this.setState({leftColWidth: width || 0});
+    width !== this.state.leftColWidth &&
+      this.setState({leftColWidth: width || 0});
   };
 
   setLeftColHeight = height => {
-    this.setState({leftColHeight: height || 0});
+    height !== this.state.leftColHeight &&
+      this.setState({leftColHeight: height || 0});
   };
 
-  setMiddleColHeight = height => {
-    this.setState({middleColHeight: height || 0});
-  };
+  getMiddleColHeight() {
+    return this.instructions ? getOuterHeight(this.instructions, true) : 0;
+  }
 
   render() {
     const mainStyle = [
@@ -345,7 +350,6 @@ class InstructionsCSF extends React.Component {
             hasShortInstructions={hasShortInstructions}
             adjustMaxNeededHeight={this.props.adjustMaxNeededHeight}
             promptForHint={this.state.promptForHint}
-            setColHeight={this.setMiddleColHeight}
             getMinInstructionsHeight={this.getMinInstructionsHeight}
           />
           <InstructionsCsfRightCol

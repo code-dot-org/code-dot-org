@@ -9,7 +9,7 @@ import ChatBubble from './ChatBubble';
 import LegacyButton from '../LegacyButton';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '../SafeMarkdown';
-import {scrollTo, shouldDisplayChatTips, getOuterHeight} from './utils';
+import {scrollTo, shouldDisplayChatTips} from './utils';
 import color from '../../util/color';
 import Instructions from './Instructions';
 
@@ -36,7 +36,6 @@ class InstructionsCsfMiddleCol extends React.Component {
     hasShortInstructions: PropTypes.bool.isRequired,
     adjustMaxNeededHeight: PropTypes.func.isRequired,
     promptForHint: PropTypes.bool.isRequired,
-    setColHeight: PropTypes.func.isRequired,
     getMinInstructionsHeight: PropTypes.func.isRequired,
 
     // from redux:
@@ -72,13 +71,7 @@ class InstructionsCsfMiddleCol extends React.Component {
     setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
 
-  componentDidMount() {
-    this.updateDimensions();
-  }
-
   componentDidUpdate(prevProps) {
-    this.updateDimensions();
-
     const gotNewHint = prevProps.hints.length !== this.props.hints.length;
     if (gotNewHint) {
       this.handleHintOnLoad();
@@ -87,10 +80,6 @@ class InstructionsCsfMiddleCol extends React.Component {
     if (this.props.feedback || this.props.promptForHint || gotNewHint) {
       this.scrollInstructionsToBottom();
     }
-  }
-
-  updateDimensions() {
-    this.props.setColHeight(getOuterHeight(this.instructions, true));
   }
 
   handleHintOnLoad() {
